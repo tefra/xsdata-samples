@@ -12,5 +12,5 @@ class AllTransportOrganisationsRefStructure(AllOrganisationsRefStructure):
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

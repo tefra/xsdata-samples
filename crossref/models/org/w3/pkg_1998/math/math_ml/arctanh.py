@@ -15,5 +15,5 @@ class Arctanh:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

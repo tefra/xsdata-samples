@@ -2,12 +2,18 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 from travelport.models.action_status_1 import ActionStatus1
-from travelport.models.air_create_reservation_req_check_price_variance_type import AirCreateReservationReqCheckPriceVarianceType
+from travelport.models.air_create_reservation_req_check_price_variance_type import (
+    AirCreateReservationReqCheckPriceVarianceType,
+)
 from travelport.models.air_pricing_solution import AirPricingSolution
-from travelport.models.air_pricing_ticketing_modifiers import AirPricingTicketingModifiers
+from travelport.models.air_pricing_ticketing_modifiers import (
+    AirPricingTicketingModifiers,
+)
 from travelport.models.associated_remark_1 import AssociatedRemark1
 from travelport.models.auto_seat_assignment import AutoSeatAssignment
-from travelport.models.base_create_with_form_of_payment_req_1 import BaseCreateWithFormOfPaymentReq1
+from travelport.models.base_create_with_form_of_payment_req_1 import (
+    BaseCreateWithFormOfPaymentReq1,
+)
 from travelport.models.delivery_info_1 import DeliveryInfo1
 from travelport.models.payment_1 import Payment1
 from travelport.models.pocket_itinerary_remark import PocketItineraryRemark
@@ -90,6 +96,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
         one of the AirPricingSolutions. False – Continue booking other
         AirPricingSolutions even if there is a booking failure.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -100,7 +107,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     third_party_information: list[ThirdPartyInformation1] = field(
         default_factory=list,
@@ -109,7 +116,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,
@@ -117,7 +124,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "PointOfSale",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -127,7 +134,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 16,
-        }
+        },
     )
     action_status: list[ActionStatus1] = field(
         default_factory=list,
@@ -136,7 +143,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     payment: list[Payment1] = field(
         default_factory=list,
@@ -145,7 +152,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     delivery_info: None | DeliveryInfo1 = field(
         default=None,
@@ -153,7 +160,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "DeliveryInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     auto_seat_assignment: list[AutoSeatAssignment] = field(
         default_factory=list,
@@ -162,7 +169,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     specific_seat_assignment: list[SpecificSeatAssignment] = field(
         default_factory=list,
@@ -171,7 +178,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     associated_remark: list[AssociatedRemark1] = field(
         default_factory=list,
@@ -180,7 +187,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     pocket_itinerary_remark: list[PocketItineraryRemark] = field(
         default_factory=list,
@@ -189,7 +196,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     review_booking: list[ReviewBooking1] = field(
         default_factory=list,
@@ -198,23 +205,25 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
-    air_pricing_ticketing_modifiers: list[AirPricingTicketingModifiers] = field(
+    air_pricing_ticketing_modifiers: list[
+        AirPricingTicketingModifiers
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingTicketingModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     retain_reservation: TypeRetainReservation = field(
         default=TypeRetainReservation.NONE,
         metadata={
             "name": "RetainReservation",
             "type": "Attribute",
-        }
+        },
     )
     source: None | str = field(
         default=None,
@@ -222,28 +231,28 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "Source",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     override_mct: bool = field(
         default=False,
         metadata={
             "name": "OverrideMCT",
             "type": "Attribute",
-        }
+        },
     )
     restrict_waitlist: bool = field(
         default=False,
         metadata={
             "name": "RestrictWaitlist",
             "type": "Attribute",
-        }
+        },
     )
     create_passive_for_hold: bool = field(
         default=False,
         metadata={
             "name": "CreatePassiveForHold",
             "type": "Attribute",
-        }
+        },
     )
     channel_id: None | str = field(
         default=None,
@@ -252,7 +261,7 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 4,
-        }
+        },
     )
     nscc: None | str = field(
         default=None,
@@ -261,33 +270,33 @@ class AirCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     check_price_variance_type: AirCreateReservationReqCheckPriceVarianceType = field(
         default=AirCreateReservationReqCheckPriceVarianceType.AMOUNT,
         metadata={
             "name": "CheckPriceVarianceType",
             "type": "Attribute",
-        }
+        },
     )
     check_price_variance_value: Decimal = field(
         default=Decimal("0.0"),
         metadata={
             "name": "CheckPriceVarianceValue",
             "type": "Attribute",
-        }
+        },
     )
     split_reservation: bool = field(
         default=False,
         metadata={
             "name": "SplitReservation",
             "type": "Attribute",
-        }
+        },
     )
     prefer_complete_itinerary: bool = field(
         default=True,
         metadata={
             "name": "PreferCompleteItinerary",
             "type": "Attribute",
-        }
+        },
     )

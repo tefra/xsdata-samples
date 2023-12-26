@@ -88,118 +88,118 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="oda:OPK_01",
+                id='oda:OPK_01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="oda:OPK_01",
-                                version="any",
+                                id='oda:OPK_01',
+                                version='any',
                                 from_date=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                 to_date=XmlDateTime(2011, 12, 17, 9, 30, 47, 0, 0)
                             ),
                         ]
                     ),
                 ],
-                version="1",
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="naptPoi_data",
-                            xmlns="naptPoi",
-                            xmlns_url="http://www.naptan.org.uk/naptan",
-                            description="UK NaPTAN SPOI datas"
+                            id='naptPoi_data',
+                            xmlns='naptPoi',
+                            xmlns_url='http://www.naptan.org.uk/naptan',
+                            description='UK NaPTAN SPOI datas'
                         ),
                         Codespace(
-                            id="napt_metadata",
-                            xmlns="napt",
-                            xmlns_url="http://www.naptan.org.uk/naptan",
-                            description="UK NaPTAN Stop Place codes"
+                            id='napt_metadata',
+                            xmlns='napt',
+                            xmlns_url='http://www.naptan.org.uk/naptan',
+                            description='UK NaPTAN Stop Place codes'
                         ),
                         Codespace(
-                            id="tbd",
-                            xmlns="tbd",
-                            xmlns_url="http://www.intdata.co.uk/data",
-                            description="Other interchange DATA SOURCE "
+                            id='tbd',
+                            xmlns='tbd',
+                            xmlns_url='http://www.intdata.co.uk/data',
+                            description='Other interchange DATA SOURCE '
                         ),
                         Codespace(
-                            id="oda",
-                            xmlns="iso3166-2",
-                            xmlns_url="http://www.oda.org.uk/data/",
-                            description="data from Olympica Developmnet Authority"
+                            id='oda',
+                            xmlns='iso3166-2',
+                            xmlns_url='http://www.oda.org.uk/data/',
+                            description='data from Olympica Developmnet Authority'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="oda"
+                        ref='oda'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ResourceFrame(
-                            id="napt:Types",
+                            id='napt:Types',
                             created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
-                            version="001",
+                            version='001',
                             name=MultilingualString(
-                                value="NaPTAN Types"
+                                value='NaPTAN Types'
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
                                 choice=[
                                     ValueSet(
-                                        id="napt:Stop_types",
-                                        version="any",
+                                        id='napt:Stop_types',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="UK NaPTAN Zone  Types"
+                                            value='UK NaPTAN Zone  Types'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfZone(
-                                                    id="napt:type_of_zone@PIE",
-                                                    version="any",
+                                                    id='napt:type_of_zone@PIE',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Point of Interest Entrance"
+                                                        value='Point of Interest Entrance'
                                                     )
                                                 ),
                                                 TypeOfZone(
-                                                    id="napt:type_of_zone@POI",
-                                                    version="any",
+                                                    id='napt:type_of_zone@POI',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Point of Interest"
+                                                        value='Point of Interest'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ValueSet(
-                                        id="napt:Bus_Stop_types",
-                                        version="any",
+                                        id='napt:Bus_Stop_types',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="NAPTAN Type of Place"
+                                            value='NAPTAN Type of Place'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfPlace(
-                                                    id="napt:type_of_place@Park",
-                                                    version="any",
+                                                    id='napt:type_of_place@Park',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Park"
+                                                        value='Park'
                                                     )
                                                 ),
                                                 TypeOfPlace(
-                                                    id="napt:type_of_place@Venue",
-                                                    version="any",
+                                                    id='napt:type_of_place@Venue',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Park"
+                                                        value='Park'
                                                     )
                                                 ),
                                             ]
@@ -209,24 +209,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="oda:CAL_01",
-                            version="any",
+                            id='oda:CAL_01',
+                            version='any',
                             name=MultilingualString(
-                                value="Olympic Park2 2012  "
+                                value='Olympic Park2 2012  '
                             ),
                             service_calendar=ServiceCalendar(
-                                id="oda:SC_01",
-                                version="any",
+                                id='oda:SC_01',
+                                version='any',
                                 from_date=XmlDate(2012, 7, 27),
                                 to_date=XmlDate(2012, 8, 7)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="oda:DT01_Very_Busy",
-                                        version="any",
+                                        id='oda:DT01_Very_Busy',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Busy Day"
+                                            value='Busy Day'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -238,25 +238,25 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB01_ingress"
+                                                    version='any',
+                                                    ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB02_during"
+                                                    version='any',
+                                                    ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB03_egress"
+                                                    version='any',
+                                                    ref='oda:TMB03_egress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     DayType(
-                                        id="oda:DT02_Busy",
-                                        version="any",
+                                        id='oda:DT02_Busy',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Busy Day"
+                                            value='Busy Day'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -268,25 +268,25 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB01_ingress"
+                                                    version='any',
+                                                    ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB02_during"
+                                                    version='any',
+                                                    ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB03_egress"
+                                                    version='any',
+                                                    ref='oda:TMB03_egress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     DayType(
-                                        id="oda:DT03_Normal",
-                                        version="any",
+                                        id='oda:DT03_Normal',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Busy Day"
+                                            value='Busy Day'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -298,25 +298,25 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB01_ingress"
+                                                    version='any',
+                                                    ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB02_during"
+                                                    version='any',
+                                                    ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB03_egress"
+                                                    version='any',
+                                                    ref='oda:TMB03_egress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     DayType(
-                                        id="oda:DT04_QUIET",
-                                        version="any",
+                                        id='oda:DT04_QUIET',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Quiet Day"
+                                            value='Quiet Day'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -328,16 +328,16 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB01_ingress"
+                                                    version='any',
+                                                    ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB02_during"
+                                                    version='any',
+                                                    ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB03_egress"
+                                                    version='any',
+                                                    ref='oda:TMB03_egress'
                                                 ),
                                             ]
                                         )
@@ -347,24 +347,24 @@ obj = PublicationDelivery(
                             timebands=TimebandsInFrameRelStructure(
                                 timeband=[
                                     Timeband(
-                                        id="oda:TMB01_ingress",
-                                        version="any",
+                                        id='oda:TMB01_ingress',
+                                        version='any',
                                         start_time=XmlTime(9, 0, 0, 0),
                                         end_time_or_day_offset_or_duration=[
                                             XmlTime(10, 0, 0, 0),
                                         ]
                                     ),
                                     Timeband(
-                                        id="oda:TMB02_during",
-                                        version="any",
+                                        id='oda:TMB02_during',
+                                        version='any',
                                         start_time=XmlTime(11, 0, 0, 0),
                                         end_time_or_day_offset_or_duration=[
                                             XmlTime(15, 0, 0, 0),
                                         ]
                                     ),
                                     Timeband(
-                                        id="oda:TMB03_egress",
-                                        version="any",
+                                        id='oda:TMB03_egress',
+                                        version='any',
                                         start_time=XmlTime(15, 0, 0, 0),
                                         end_time_or_day_offset_or_duration=[
                                             XmlTime(19, 0, 0, 0),
@@ -375,358 +375,358 @@ obj = PublicationDelivery(
                             day_type_assignments=DayTypeAssignmentsInFrameRelStructure(
                                 day_type_assignment=[
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-07-27",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-07-27',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Friday 2012-07-27 Opening"
+                                            value='Friday 2012-07-27 Opening'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 27),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT01_Very_Busy"
+                                            version='any',
+                                            ref='oda:DT01_Very_Busy'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-07-28",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-07-28',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2012-07-28"
+                                            value='Saturday 2012-07-28'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 28),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT01_Very_Busy"
+                                            version='any',
+                                            ref='oda:DT01_Very_Busy'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-07-29",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-07-29',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2012-07-29"
+                                            value='Sunday 2012-07-29'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 29),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT01_Very_Busy"
+                                            version='any',
+                                            ref='oda:DT01_Very_Busy'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-07-30",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-07-30',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2012-07-30"
+                                            value='Monday 2012-07-30'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 30),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT02_Busy"
+                                            version='any',
+                                            ref='oda:DT02_Busy'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-07-31",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-07-31',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Tuesday 2012-07-31"
+                                            value='Tuesday 2012-07-31'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 7, 31),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT03_Normal"
+                                            version='any',
+                                            ref='oda:DT03_Normal'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-08-01",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-08-01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Wednesday 2012-08-01"
+                                            value='Wednesday 2012-08-01'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 1),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT03_Normal"
+                                            version='any',
+                                            ref='oda:DT03_Normal'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-08-02",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-08-02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Thusday 2012-08-02"
+                                            value='Thusday 2012-08-02'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 2),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT02_Busy"
+                                            version='any',
+                                            ref='oda:DT02_Busy'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-08-03",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-08-03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Friday 2012-08-03"
+                                            value='Friday 2012-08-03'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 3),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT02_Busy"
+                                            version='any',
+                                            ref='oda:DT02_Busy'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-08-04",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-08-04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday2012-08-04"
+                                            value='Saturday2012-08-04'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 4),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT02_Busy"
+                                            version='any',
+                                            ref='oda:DT02_Busy'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="oda:DayAsgn_2012-08-05",
-                                        version="any",
+                                        id='oda:DayAsgn_2012-08-05',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2012-08-05"
+                                            value='Sunday 2012-08-05'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2012, 8, 5),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="oda:DT02_Busy"
+                                            version='any',
+                                            ref='oda:DT02_Busy'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         SiteFrame(
-                            id="oda:OPK_fr002",
-                            version="any",
+                            id='oda:OPK_fr002',
+                            version='any',
                             name=MultilingualString(
-                                value="Olympic Park - Simple"
+                                value='Olympic Park - Simple'
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
                                 choice=[
                                     AvailabilityCondition(
-                                        id="oda:Avl_Very_Busy_ingress",
-                                        version="any",
+                                        id='oda:Avl_Very_Busy_ingress',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT01_Very_Busy"
+                                                    version='any',
+                                                    ref='oda:DT01_Very_Busy'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB01_ingress"
+                                                    version='any',
+                                                    ref='oda:TMB01_ingress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Very_Busy_during",
-                                        version="any",
+                                        id='oda:Avl_Very_Busy_during',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT01_Very_Busy"
+                                                    version='any',
+                                                    ref='oda:DT01_Very_Busy'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB02_during"
+                                                    version='any',
+                                                    ref='oda:TMB02_during'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Very_Busy_egress",
-                                        version="any",
+                                        id='oda:Avl_Very_Busy_egress',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT01_Very_Busy"
+                                                    version='any',
+                                                    ref='oda:DT01_Very_Busy'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB03_egress"
+                                                    version='any',
+                                                    ref='oda:TMB03_egress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Very_Busy_other",
-                                        version="any",
+                                        id='oda:Avl_Very_Busy_other',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT01_Very_Busy"
+                                                    version='any',
+                                                    ref='oda:DT01_Very_Busy'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Busy_ingress",
-                                        version="any",
+                                        id='oda:Avl_Busy_ingress',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT02_Busy"
+                                                    version='any',
+                                                    ref='oda:DT02_Busy'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB01_ingress"
+                                                    version='any',
+                                                    ref='oda:TMB01_ingress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Busy_during",
-                                        version="any",
+                                        id='oda:Avl_Busy_during',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT02_Busy"
+                                                    version='any',
+                                                    ref='oda:DT02_Busy'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB02_during"
+                                                    version='any',
+                                                    ref='oda:TMB02_during'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Busy_egress",
-                                        version="any",
+                                        id='oda:Avl_Busy_egress',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT02_Busy"
+                                                    version='any',
+                                                    ref='oda:DT02_Busy'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB03_egress"
+                                                    version='any',
+                                                    ref='oda:TMB03_egress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Busy_other",
-                                        version="any",
+                                        id='oda:Avl_Busy_other',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT02_Busy"
+                                                    version='any',
+                                                    ref='oda:DT02_Busy'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Normal_ingress",
-                                        version="any",
+                                        id='oda:Avl_Normal_ingress',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT03_Normal"
+                                                    version='any',
+                                                    ref='oda:DT03_Normal'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB01_ingress"
+                                                    version='any',
+                                                    ref='oda:TMB01_ingress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Normal_during",
-                                        version="any",
+                                        id='oda:Avl_Normal_during',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT03_Normal"
+                                                    version='any',
+                                                    ref='oda:DT03_Normal'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB02_during"
+                                                    version='any',
+                                                    ref='oda:TMB02_during'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Normal_egress",
-                                        version="any",
+                                        id='oda:Avl_Normal_egress',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT03_Normal"
+                                                    version='any',
+                                                    ref='oda:DT03_Normal'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
-                                                    version="any",
-                                                    ref="oda:TMB03_egress"
+                                                    version='any',
+                                                    ref='oda:TMB03_egress'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="oda:Avl_Normal_other",
-                                        version="any",
+                                        id='oda:Avl_Normal_other',
+                                        version='any',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="oda:DT03_Normal"
+                                                    version='any',
+                                                    ref='oda:DT03_Normal'
                                                 ),
                                             ]
                                         )
@@ -736,56 +736,56 @@ obj = PublicationDelivery(
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK",
-                                        version="any",
+                                        id='naptPoi:8100OPK',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="London 2012 Olympic Park"
+                                            value='London 2012 Olympic Park'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Queen Elizabeth II Olympic Park"
+                                                value='Queen Elizabeth II Olympic Park'
                                             ),
                                         ],
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90')
                                             )
                                         ),
                                         levels=LevelsRelStructure(
                                             level_ref_or_level=[
                                                 Level(
-                                                    id="naptPoi:8100OPK_Lvl_01",
+                                                    id='naptPoi:8100OPK_Lvl_01',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Ground "
+                                                        value='Ground '
                                                     ),
-                                                    public_code="A"
+                                                    public_code='A'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="2012 Olympic Park Stratford Entrance"
+                                                        value='2012 Olympic Park Stratford Entrance'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -796,39 +796,39 @@ obj = PublicationDelivery(
                                                                     184435.0,
                                                                     538185.0,
                                                                 ],
-                                                                srs_name="UKOS"
+                                                                srs_name='UKOS'
                                                             )
                                                         )
                                                     ),
                                                     postal_address=PostalAddress(
-                                                        id="naptPoi:8100OPK_E1_addr1",
-                                                        version="any",
+                                                        id='naptPoi:8100OPK_E1_addr1',
+                                                        version='any',
                                                         building_name=MultilingualString(
-                                                            value="Olympic Park Entrance"
+                                                            value='Olympic Park Entrance'
                                                         ),
                                                         address_line1=MultilingualString(
-                                                            value="Station Street  "
+                                                            value='Station Street  '
                                                         ),
                                                         town=MultilingualString(
-                                                            value="Stratford"
+                                                            value='Stratford'
                                                         ),
-                                                        post_code="E15"
+                                                        post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_Lvl_01"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E1_C1",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E1_C1',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - incoming"
+                                                                    value='Entrance to Security gate - incoming'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
@@ -837,162 +837,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_VB_i",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT20M"),
                                                                             average_delay=XmlDuration("PT30M"),
                                                                             maximum_likely_delay=XmlDuration("PT60M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_B_i",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT25M"),
                                                                             average_delay=XmlDuration("PT25M"),
                                                                             maximum_likely_delay=XmlDuration("PT50M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_N_i",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT40M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C1_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E1_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -1002,10 +1002,10 @@ obj = PublicationDelivery(
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E1_C2",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E1_C2',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - Going Out"
+                                                                    value='Entrance to Security gate - Going Out'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
@@ -1014,162 +1014,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_VB_e",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_B_e",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT25M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_N_e",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT12M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E1_C2_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E1_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -1183,16 +1183,16 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_E2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="2012 Olympic Park North Entrance"
+                                                        value='2012 Olympic Park North Entrance'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -1203,39 +1203,39 @@ obj = PublicationDelivery(
                                                                     1856565.33,
                                                                     37409.715,
                                                                 ],
-                                                                srs_name="UKOS"
+                                                                srs_name='UKOS'
                                                             )
                                                         )
                                                     ),
                                                     postal_address=PostalAddress(
-                                                        id="naptPoi:8100OPK_E2_addr1",
-                                                        version="any",
+                                                        id='naptPoi:8100OPK_E2_addr1',
+                                                        version='any',
                                                         building_name=MultilingualString(
-                                                            value="North Entrance"
+                                                            value='North Entrance'
                                                         ),
                                                         address_line1=MultilingualString(
-                                                            value="Temple Mill Lane"
+                                                            value='Temple Mill Lane'
                                                         ),
                                                         town=MultilingualString(
-                                                            value="Stratford"
+                                                            value='Stratford'
                                                         ),
-                                                        post_code="E15"
+                                                        post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_Lvl_01"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E2_C1",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E2_C1',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - incoming"
+                                                                    value='Entrance to Security gate - incoming'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
@@ -1244,162 +1244,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_VB_i",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT20M"),
                                                                             average_delay=XmlDuration("PT30M"),
                                                                             maximum_likely_delay=XmlDuration("PT60M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_B_i",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT25M"),
                                                                             average_delay=XmlDuration("PT25M"),
                                                                             maximum_likely_delay=XmlDuration("PT50M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_N_i",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT40M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C1_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E2_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -1409,10 +1409,10 @@ obj = PublicationDelivery(
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E2_C2",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E2_C2',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - Going Out"
+                                                                    value='Entrance to Security gate - Going Out'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
@@ -1421,162 +1421,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_VB_e",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_B_e",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT25M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_N_e",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT12M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E2_C2_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E2_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -1590,16 +1590,16 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_E3",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E3',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="2012 Olympic Park South Entrance"
+                                                        value='2012 Olympic Park South Entrance'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -1610,39 +1610,39 @@ obj = PublicationDelivery(
                                                                     183681.0,
                                                                     538232.0,
                                                                 ],
-                                                                srs_name="UKOS"
+                                                                srs_name='UKOS'
                                                             )
                                                         )
                                                     ),
                                                     postal_address=PostalAddress(
-                                                        id="naptPoi:8100OPK_E3_Addr1",
-                                                        version="any",
+                                                        id='naptPoi:8100OPK_E3_Addr1',
+                                                        version='any',
                                                         building_name=MultilingualString(
-                                                            value="South Entrance"
+                                                            value='South Entrance'
                                                         ),
                                                         address_line1=MultilingualString(
-                                                            value="Burford Road"
+                                                            value='Burford Road'
                                                         ),
                                                         town=MultilingualString(
-                                                            value="Stratford"
+                                                            value='Stratford'
                                                         ),
-                                                        post_code="E15"
+                                                        post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_Lvl_01"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E3_C1",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E3_C1',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - incoming"
+                                                                    value='Entrance to Security gate - incoming'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
@@ -1651,162 +1651,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_VB_i",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT20M"),
                                                                             average_delay=XmlDuration("PT30M"),
                                                                             maximum_likely_delay=XmlDuration("PT60M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_B_i",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT25M"),
                                                                             average_delay=XmlDuration("PT25M"),
                                                                             maximum_likely_delay=XmlDuration("PT50M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_N_i",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT40M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C1_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E3_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -1816,10 +1816,10 @@ obj = PublicationDelivery(
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E3_C2",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E3_C2',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - Going Out"
+                                                                    value='Entrance to Security gate - Going Out'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
@@ -1828,162 +1828,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_VB_e",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_B_e",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT25M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_N_e",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT12M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E3_C2_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E3_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -1997,16 +1997,16 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_E4",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E4',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="2012 Olympic Park East Entrance"
+                                                        value='2012 Olympic Park East Entrance'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -2017,39 +2017,39 @@ obj = PublicationDelivery(
                                                                     183839.455,
                                                                     537322.929,
                                                                 ],
-                                                                srs_name="UKOS"
+                                                                srs_name='UKOS'
                                                             )
                                                         )
                                                     ),
                                                     postal_address=PostalAddress(
-                                                        id="naptPoi:8100OPK_E4_addr1",
-                                                        version="any",
+                                                        id='naptPoi:8100OPK_E4_addr1',
+                                                        version='any',
                                                         building_name=MultilingualString(
-                                                            value="Park West Entrance"
+                                                            value='Park West Entrance'
                                                         ),
                                                         address_line1=MultilingualString(
-                                                            value="Warton Road"
+                                                            value='Warton Road'
                                                         ),
                                                         town=MultilingualString(
-                                                            value="Stratford"
+                                                            value='Stratford'
                                                         ),
-                                                        post_code="E15"
+                                                        post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_Lvl_01"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E4_C1",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E4_C1',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - incoming"
+                                                                    value='Entrance to Security gate - incoming'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
@@ -2058,162 +2058,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_VB_i",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT20M"),
                                                                             average_delay=XmlDuration("PT30M"),
                                                                             maximum_likely_delay=XmlDuration("PT60M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_B_i",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT25M"),
                                                                             average_delay=XmlDuration("PT25M"),
                                                                             maximum_likely_delay=XmlDuration("PT50M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_N_i",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT40M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C1_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E4_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -2223,10 +2223,10 @@ obj = PublicationDelivery(
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_E4_C2",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_E4_C2',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - Going Out"
+                                                                    value='Entrance to Security gate - Going Out'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
@@ -2235,162 +2235,162 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_VB_d",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_VB_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_VB_e",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT20M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_B_d",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_B_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT30M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_B_e",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT25M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_B_o",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_N_d",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_N_d',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_during"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_during'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=2,
                                                                             minimum_likely_delay=XmlDuration("PT4M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_N_e",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT12M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_E4_C2_Del_N_o",
+                                                                            id='naptPoi:8100OPK_E4_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -2408,45 +2408,45 @@ obj = PublicationDelivery(
                                         spaces=PointOfInterestSpacesRelStructure(
                                             point_of_interest_space_ref_or_point_of_interest_space=[
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_SPC_1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bridge between Velodrome etc, and Hockey Centre etc"
+                                                        value='Bridge between Velodrome etc, and Hockey Centre etc'
                                                     )
                                                 ),
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_SPC_2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bridge between Basketball  etc, and Handball Arana etc"
+                                                        value='Bridge between Basketball  etc, and Handball Arana etc'
                                                     )
                                                 ),
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_SPC_3",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_3',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bridge between Waterpolo  etc, and Stadium  Centre etc"
+                                                        value='Bridge between Waterpolo  etc, and Stadium  Centre etc'
                                                     )
                                                 ),
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_SPC_4",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_4',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bridge between Velodrome etc, and Hockey Centre etc"
+                                                        value='Bridge between Velodrome etc, and Hockey Centre etc'
                                                     )
                                                 ),
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_SPC_5",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_5',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bridge between Aquatics  etc, and Stadium etc"
+                                                        value='Bridge between Aquatics  etc, and Stadium etc'
                                                     )
                                                 ),
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_SPC_6",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_6',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bridge between Northen Entrance etc, and Velodrome  Centre etc"
+                                                        value='Bridge between Northen Entrance etc, and Velodrome  Centre etc'
                                                     )
                                                 ),
                                             ]
@@ -2454,26 +2454,26 @@ obj = PublicationDelivery(
                                         path_links=SitePathLinksRelStructure(
                                             path_link_ref_or_site_path_link=[
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_E1_to_pj1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E1_to_pj1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from stratford entrance to pj1"
+                                                        value='from stratford entrance to pj1'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2481,27 +2481,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj11_to_SPC_4",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj11_to_SPC_4',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pJ  to Bridge 4"
+                                                        value='from pJ  to Bridge 4'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_4"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_4'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2509,31 +2509,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj1_to_V5-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj1_to_V5-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj1  to Aquatics E1"
+                                                        value='from pj1  to Aquatics E1'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2541,31 +2541,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj1_to_V4-E2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj1_to_V4-E2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj1 to WaterPolo  E2"
+                                                        value='from pj1 to WaterPolo  E2'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL_E2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL_E2'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2573,31 +2573,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC_3_to_V5-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_3_to_V5-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from Bridge3 to WaterPolo E1"
+                                                        value='from Bridge3 to WaterPolo E1'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_3"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_3'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2605,31 +2605,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC_4_to_V5-E2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_4_to_V5-E2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from Bridge5 to Aquatics E2"
+                                                        value='from Bridge5 to Aquatics E2'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_5"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_5'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA_E2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA_E2'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2637,31 +2637,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_E2_to_pj12",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E2_to_pj12',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from Northern entrance to pj12"
+                                                        value='from Northern entrance to pj12'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj12"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj12'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2669,207 +2669,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj12_to_SPC_6",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj12_to_SPC_6',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pJ12  to Bridge 6"
+                                                        value='from pJ12  to Bridge 6'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj12"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_6"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj12_to_V9-E1",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj12  to Eton Manor E1"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj12"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V9_EMAN"
-                                                        ),
-                                                        entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V9_EMAN_E1"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_E4_to_pj13",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from Eastern entrance to pj13"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
-                                                        ),
-                                                        entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E4"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj13"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj13_to_E3",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pJ12  to Southern Entrance6"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj12"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
-                                                        ),
-                                                        entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E3"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj13_to_V11",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj12  to Warm up"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj12"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V11_WARM"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC_6_to_pj11",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from Bridge6 to pj11 "
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_6"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj11"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj11_to_SPC_1",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pJ11  to Bridge 1"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj11"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj12'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_6'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2877,31 +2697,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj11_to_V7-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj12_to_V9-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj11  to Velodrome"
+                                                        value='from pj12  to Eton Manor E1'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj11"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj12'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V7_VELO"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V9_EMAN'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V7_VELO_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V9_EMAN_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2909,31 +2729,63 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj11_to_V8-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E4_to_pj13',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj11  to BMX"
+                                                        value='from Eastern entrance to pj13'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PointOfInterestRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
+                                                        ),
+                                                        entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E4'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj13'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj13_to_E3',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pJ12  to Southern Entrance6'
+                                                    ),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj11"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj12'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V8_BMXT"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V8_BMXT_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E3'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2941,31 +2793,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj11_to_V6-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj13_to_V11',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj11  to Basketball"
+                                                        value='from pj12  to Warm up'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj11"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj12'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB"
-                                                        ),
-                                                        entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V11_WARM'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -2973,27 +2821,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj11_to_pj9",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_6_to_pj11',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj11  to pj9"
+                                                        value='from Bridge6 to pj11 '
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj11"
+                                                        place_ref=PointOfInterestSpaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_6'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj9"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj11'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3001,59 +2849,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj9_to_V6-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj11_to_SPC_1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from p9  to Basketball"
+                                                        value='from pJ11  to Bridge 1'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj9"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB"
-                                                        ),
-                                                        entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB_E1"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj9_to_SPC_2",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pJ9  to Bridge 2"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj9"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj11'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3061,199 +2877,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC_1_to_pj10",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj11_to_V7-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from Bridge1 to pj10 "
+                                                        value='from pj11  to Velodrome'
                                                     ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_1"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj10"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC_2_to_pj8",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from Bridge2 to pj8 "
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_2"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj8"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj10_to_pj8",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj10 to pj8"
-                                                    ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj10"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj8"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj10_to_SPC_4",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj10 to SPC4"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj10"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_4"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj8_to_pj6",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj8  to pj6"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj8"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj6"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj8_to_pj7",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj8  to pj7"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj8"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj7"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj8_to_V2-E1",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj8  to Handball"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj8"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj11'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V3_HAND"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V7_VELO'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V3_HAND_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V7_VELO_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3261,31 +2909,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj10_to_V3-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj11_to_V8-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj10  to Hockey 1 E1"
+                                                        value='from pj11  to BMX'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj10"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj11'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V8_BMXT'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V8_BMXT_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3293,31 +2941,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj10_to_V3-E2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj11_to_V6-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj10  to Hockey 1 E2"
+                                                        value='from pj11  to Basketball'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj10"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj11'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK_E2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3325,31 +2973,59 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_E3_to_pj2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj11_to_pj9',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from Southern entrance to pj2"
+                                                        value='from pj11  to pj9'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj11'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj9'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj9_to_V6-E1',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from p9  to Basketball'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj9'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E3"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3357,27 +3033,55 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC5_to_pj2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj9_to_SPC_2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from Bridge5 to pj2"
+                                                        value='from pJ9  to Bridge 2'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj9'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PointOfInterestSpaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_2'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_SPC_1_to_pj10',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from Bridge1 to pj10 '
+                                                    ),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_5"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj10'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3385,111 +3089,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj2_to_pj3",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC_2_to_pj8',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj2  to pj3"
+                                                        value='from Bridge2 to pj8 '
                                                     ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj2"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj3"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj3_to_pj5",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj3  to pj5"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj3"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj5"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_pj2_to_pj4",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from pj2  to pj4"
-                                                    ),
-                                                    distance=Decimal("20"),
-                                                    from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj2"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj4"
-                                                        )
-                                                    ),
-                                                    transfer_duration=TransferDurationStructure(
-                                                        default_duration=XmlDuration("PT1M"),
-                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
-                                                    ),
-                                                    site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
-                                                    )
-                                                ),
-                                                SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC_4_to_pj3",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="from Bridge4 to pj3"
-                                                    ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_4"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj3"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj8'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3497,27 +3117,55 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_SPC_3_to_pj5",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj10_to_pj8',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from Bridge3to pj5"
+                                                        value='from pj10 to pj8'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj10'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj8'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj10_to_SPC_4',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj10 to SPC4'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj10'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestSpaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_SPC_3"
-                                                        )
-                                                    ),
-                                                    to=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj5"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_4'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3525,27 +3173,87 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj4_to_V1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj8_to_pj6',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj4   to Stadium"
+                                                        value='from pj8  to pj6'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj4"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj8'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj6'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj8_to_pj7',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj8  to pj7'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj8'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj7'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj8_to_V2-E1',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj8  to Handball'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj8'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V1_STDM"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V3_HAND'
+                                                        ),
+                                                        entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V3_HAND_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3553,27 +3261,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj6_to_V1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj10_to_V3-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj6   to Stadium"
+                                                        value='from pj10  to Hockey 1 E1'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj6"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj10'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V1_STDM"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK'
+                                                        ),
+                                                        entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3581,27 +3293,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj7_to_V1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj10_to_V3-E2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj7   to Stadium"
+                                                        value='from pj10  to Hockey 1 E2'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj7"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj10'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V1_STDM"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK'
+                                                        ),
+                                                        entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK_E2'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3609,27 +3325,31 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj5_to_pj4",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_E3_to_pj2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj5 to p4"
+                                                        value='from Southern entrance to pj2'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj5"
+                                                        place_ref=PointOfInterestRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
+                                                        ),
+                                                        entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E3'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj4"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj2'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3637,27 +3357,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj5_to_pj8",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_SPC5_to_pj2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj5 to p8"
+                                                        value='from Bridge5 to pj2'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
-                                                        place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj5"
+                                                        place_ref=PointOfInterestSpaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_5'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj8"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj2'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3665,27 +3385,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_pj4_to_pj6",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj2_to_pj3',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj4  to pj6"
+                                                        value='from pj2  to pj3'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj4"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj6"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj3'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3693,27 +3413,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_p5_to_pj6",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj3_to_pj5',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj5  to pj6"
+                                                        value='from pj3  to pj5'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj5"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj3'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj6"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj5'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3721,27 +3441,27 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="naptPoi:8100OPK_p5_to_pj8",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj2_to_pj4',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="from pj5  to pj8"
+                                                        value='from pj2  to pj4'
                                                     ),
-                                                    distance=Decimal("20"),
+                                                    distance=Decimal('20'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj5"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_pj8"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj4'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3749,8 +3469,288 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_SPC_4_to_pj3',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from Bridge4 to pj3'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PointOfInterestSpaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_4'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj3'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_SPC_3_to_pj5',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from Bridge3to pj5'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PointOfInterestSpaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_SPC_3'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj5'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj4_to_V1',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj4   to Stadium'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj4'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PointOfInterestRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V1_STDM'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj6_to_V1',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj6   to Stadium'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj6'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PointOfInterestRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V1_STDM'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj7_to_V1',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj7   to Stadium'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj7'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PointOfInterestRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V1_STDM'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj5_to_pj4',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj5 to p4'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj5'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj4'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj5_to_pj8',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj5 to p8'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj5'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj8'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_pj4_to_pj6',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj4  to pj6'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj4'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj6'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_p5_to_pj6',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj5  to pj6'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj5'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj6'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
+                                                    )
+                                                ),
+                                                SitePathLink(
+                                                    id='naptPoi:8100OPK_p5_to_pj8',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='from pj5  to pj8'
+                                                    ),
+                                                    distance=Decimal('20'),
+                                                    from_value=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj5'
+                                                        )
+                                                    ),
+                                                    to=PathLinkEndStructure(
+                                                        place_ref=PlaceRefStructure(
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_pj8'
+                                                        )
+                                                    ),
+                                                    transfer_duration=TransferDurationStructure(
+                                                        default_duration=XmlDuration("PT1M"),
+                                                        mobility_restricted_traveller_duration=XmlDuration("PT5M")
+                                                    ),
+                                                    site_ref=PointOfInterestRefStructure(
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     )
                                                 ),
                                             ]
@@ -3758,146 +3758,146 @@ obj = PublicationDelivery(
                                         path_junctions=PathJunctionsRelStructure(
                                             path_junction_ref_or_path_junction=[
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between aquatics centres and sotratfor entrance"
+                                                        value='Between aquatics centres and sotratfor entrance'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Near s jouth entrance centres"
+                                                        value='Near s jouth entrance centres'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj3",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj3',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between south entrance and PJ3, PJ4 and Bridge4 "
+                                                        value='Between south entrance and PJ3, PJ4 and Bridge4 '
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj4",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj4',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between pj2  and stadium3"
+                                                        value='Between pj2  and stadium3'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj5",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj5',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between pridgeS 3 and pj3, pj4, pj6, pj8"
+                                                        value='Between pridgeS 3 and pj3, pj4, pj6, pj8'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj6",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj6',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between stadium  and pj3, pj4, pj7, pj8"
+                                                        value='Between stadium  and pj3, pj4, pj7, pj8'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj7",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj7',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between stadium  and pj8"
+                                                        value='Between stadium  and pj8'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj8",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj8',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between bridge 2 and pj5, pj6, pj7, pj10 "
+                                                        value='Between bridge 2 and pj5, pj6, pj7, pj10 '
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj9",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj9',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between bridge 2 and pj1 and bascketball arean"
+                                                        value='Between bridge 2 and pj1 and bascketball arean'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj10",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj10',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between bridge 1 and pj8 and hockey arean"
+                                                        value='Between bridge 1 and pj8 and hockey arean'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj11",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj11',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between bridge 1 and pj9and basketball area, velodrom, bmxn"
+                                                        value='Between bridge 1 and pj9and basketball area, velodrom, bmxn'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj12",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj12',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between bridge 1 and North entrance"
+                                                        value='Between bridge 1 and North entrance'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                                 PathJunction(
-                                                    id="naptPoi:8100OPK_pj13",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_pj13',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Between southern entrance 1 and eastern entrance"
+                                                        value='Between southern entrance 1 and eastern entrance'
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("-180"),
-                                                        latitude=Decimal("-90")
+                                                        longitude=Decimal('-180'),
+                                                        latitude=Decimal('-90')
                                                     )
                                                 ),
                                             ]
@@ -3905,26 +3905,26 @@ obj = PublicationDelivery(
                                         navigation_paths=NavigationPathsRelStructure(
                                             navigation_path_ref_or_navigation_path=[
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.1i_OPK-E1_to_V1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.1i_OPK-E1_to_V1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Olympic Stadium"
+                                                        value='From Stratford  entrance E3 to Olympic Stadium'
                                                     ),
-                                                    distance=Decimal("500"),
+                                                    distance=Decimal('500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V1_STDM"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V1_STDM'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3934,30 +3934,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.2i_OPK-E1_to_V2-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.2i_OPK-E1_to_V2-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Handball Arena"
+                                                        value='From Stratford  entrance E3 to Handball Arena'
                                                     ),
-                                                    distance=Decimal("1000"),
+                                                    distance=Decimal('1000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V3_HAND"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V3_HAND'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V3_HAND_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V3_HAND_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -3967,30 +3967,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.3i_OPK-E1_to_V3-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.3i_OPK-E1_to_V3-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Hockey Centre "
+                                                        value='From Stratford  entrance E3 to Hockey Centre '
                                                     ),
-                                                    distance=Decimal("1500"),
+                                                    distance=Decimal('1500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4000,30 +4000,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.4i_OPK-E1_to_V4-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.4i_OPK-E1_to_V4-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Aquatics Centre "
+                                                        value='From Stratford  entrance E3 to Aquatics Centre '
                                                     ),
-                                                    distance=Decimal("100"),
+                                                    distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4033,30 +4033,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.5i_OPK-E1_to_V5-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.5i_OPK-E1_to_V5-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Water Polo Arena "
+                                                        value='From Stratford  entrance E3 to Water Polo Arena '
                                                     ),
-                                                    distance=Decimal("100"),
+                                                    distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL_E2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL_E2'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4066,30 +4066,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.6i_OPK-E1_to_V6-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.6i_OPK-E1_to_V6-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Velodrome"
+                                                        value='From Stratford  entrance E3 to Velodrome'
                                                     ),
-                                                    distance=Decimal("1750"),
+                                                    distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4099,30 +4099,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.7i_OPK-E1_to_V7-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.7i_OPK-E1_to_V7-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Basketball"
+                                                        value='From Stratford  entrance E3 to Basketball'
                                                     ),
-                                                    distance=Decimal("1750"),
+                                                    distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V7_VELO"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V7_VELO'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V7_VELO_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V7_VELO_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4132,30 +4132,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.8i_OPK-E1_to_V8-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.8i_OPK-E1_to_V8-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="FromStratford  entrance E3 to BMX Track"
+                                                        value='FromStratford  entrance E3 to BMX Track'
                                                     ),
-                                                    distance=Decimal("1850"),
+                                                    distance=Decimal('1850'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V8_BMXT"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V8_BMXT'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V8_BMXT_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V8_BMXT_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4166,188 +4166,188 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l01",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Entrance to aquatics vicinity"
+                                                                        value='Entrance to aquatics vicinity'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_E1_to_pj1"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_E1_to_pj1'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l02",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l02',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="quatics vicinity to bridge 4"
+                                                                        value='quatics vicinity to bridge 4'
                                                                     ),
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        ref="naptPoi:8100OPK_pj11_to_SPC_4"
+                                                                        ref='naptPoi:8100OPK_pj11_to_SPC_4'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l03",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l03',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="from bridge 4 to Stadium vicinity "
+                                                                        value='from bridge 4 to Stadium vicinity '
                                                                     ),
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_SPC_4_to_pj3"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_SPC_4_to_pj3'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.RIGHT,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l04",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l04',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Stadium vicinity to Stadium vicinity "
+                                                                        value='Stadium vicinity to Stadium vicinity '
                                                                     ),
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj3_to_pj5"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj3_to_pj5'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l05",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l05',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Stadium vicinity to handball  area  vicinity ea"
+                                                                        value='Stadium vicinity to handball  area  vicinity ea'
                                                                     ),
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj5_to_pj8"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj5_to_pj8'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l06",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l06',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Handball vicinity to haHockey  arvicinity ea"
+                                                                        value='Handball vicinity to haHockey  arvicinity ea'
                                                                     ),
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj10_to_pj8"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj10_to_pj8'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l07",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l07',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="hockey vicinity to bridge 2"
+                                                                        value='hockey vicinity to bridge 2'
                                                                     ),
                                                                 ],
                                                                 order=7,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj10_to_SPC_4"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj10_to_SPC_4'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.RIGHT,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l08",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l08',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="bridge2  to velo vicinity "
+                                                                        value='bridge2  to velo vicinity '
                                                                     ),
                                                                 ],
                                                                 order=8,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj11_to_SPC_4"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj11_to_SPC_4'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N1_l09",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N1_l09',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="to BMX"
+                                                                        value='to BMX'
                                                                     ),
                                                                 ],
                                                                 order=9,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj11_to_V8-E1"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj11_to_V8-E1'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -4357,30 +4357,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.9i_OPK-E1_to_V9-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.9i_OPK-E1_to_V9-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Eton Manor"
+                                                        value='From Stratford  entrance E3 to Eton Manor'
                                                     ),
-                                                    distance=Decimal("2000"),
+                                                    distance=Decimal('2000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V9_EMAN"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V9_EMAN'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V9_EMAN_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V9_EMAN_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4390,30 +4390,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.10i_OPK-E1_to_V10-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.10i_OPK-E1_to_V10-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Press Centre"
+                                                        value='From Stratford  entrance E3 to Press Centre'
                                                     ),
-                                                    distance=Decimal("1700"),
+                                                    distance=Decimal('1700'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V10_PRSC"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V10_PRSC'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V10_PRSC_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V10_PRSC_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4423,26 +4423,26 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.11i_OPK-E1_to_V11-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.11i_OPK-E1_to_V11-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Stratford  entrance E3 to Warm Um area"
+                                                        value='From Stratford  entrance E3 to Warm Um area'
                                                     ),
-                                                    distance=Decimal("1200"),
+                                                    distance=Decimal('1200'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V11_WARM"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V11_WARM'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4452,26 +4452,26 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.1o_OPK-E1_to_V1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.1o_OPK-E1_to_V1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Olympic Stadium to Stratford  entrance E3  "
+                                                        value='From Olympic Stadium to Stratford  entrance E3  '
                                                     ),
-                                                    distance=Decimal("500"),
+                                                    distance=Decimal('500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V1_STDM"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V1_STDM'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4481,30 +4481,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.2o_OPK-E1_to_V2-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.2o_OPK-E1_to_V2-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Handball Arena to Stratford  entrance E3 "
+                                                        value='From Handball Arena to Stratford  entrance E3 '
                                                     ),
-                                                    distance=Decimal("1000"),
+                                                    distance=Decimal('1000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V3_HAND"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V3_HAND'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V3_HAND_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V3_HAND_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4514,30 +4514,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.3o_OPK-E1_to_V3-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.3o_OPK-E1_to_V3-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Hockey Centre to Stratford  entrance E3 "
+                                                        value='From Hockey Centre to Stratford  entrance E3 '
                                                     ),
-                                                    distance=Decimal("1500"),
+                                                    distance=Decimal('1500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V2_HOCK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V2_HOCK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4547,30 +4547,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.4o_OPK-E1_to_V4-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.4o_OPK-E1_to_V4-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Aquatics Centre to Stratford  entrance E3 "
+                                                        value='From Aquatics Centre to Stratford  entrance E3 '
                                                     ),
-                                                    distance=Decimal("100"),
+                                                    distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V4_AQUA_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V4_AQUA_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4580,30 +4580,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.5o_OPK-E1_to_V5-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.5o_OPK-E1_to_V5-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Water Polo to Stratford  entrance E3 Arena "
+                                                        value='From Water Polo to Stratford  entrance E3 Arena '
                                                     ),
-                                                    distance=Decimal("100"),
+                                                    distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V5_WPOL_E2"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V5_WPOL_E2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4613,30 +4613,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.6o_OPK-E1_to_V6-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.6o_OPK-E1_to_V6-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From   Velodrome to Stratford  entrance E3 "
+                                                        value='From   Velodrome to Stratford  entrance E3 '
                                                     ),
-                                                    distance=Decimal("1750"),
+                                                    distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V6_BKTB_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V6_BKTB_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4646,30 +4646,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.7o_OPK-E1_to_V7-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.7o_OPK-E1_to_V7-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Basketball to Stratford  entrance E3 "
+                                                        value='From Basketball to Stratford  entrance E3 '
                                                     ),
-                                                    distance=Decimal("1750"),
+                                                    distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V7_VELO"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V7_VELO'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V7_VELO_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V7_VELO_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4679,30 +4679,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.8o_V8-E1_to_OPK-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.8o_V8-E1_to_OPK-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From BMX Track to Stratford Entrance  E3  "
+                                                        value='From BMX Track to Stratford Entrance  E3  '
                                                     ),
-                                                    distance=Decimal("1850"),
+                                                    distance=Decimal('1850'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V8_BMXT"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V8_BMXT'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V8_BMXT_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V8_BMXT_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4713,189 +4713,189 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l01",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="to BMX"
+                                                                        value='to BMX'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj11_to_V8-E1"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj11_to_V8-E1'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l02",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l02',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="bridge2  to velo vicinity "
+                                                                        value='bridge2  to velo vicinity '
                                                                     ),
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj11_to_SPC_4"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj11_to_SPC_4'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l03",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l03',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="hockey vicinity to bridge 2"
+                                                                        value='hockey vicinity to bridge 2'
                                                                     ),
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj10_to_SPC_4"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj10_to_SPC_4'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l04",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l04',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Handball vicinity to haHockey  arvicinity ea"
+                                                                        value='Handball vicinity to haHockey  arvicinity ea'
                                                                     ),
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj10_to_pj8"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj10_to_pj8'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.LEFT,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l05",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l05',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Stadium vicinity to handball arvicinity ea"
+                                                                        value='Stadium vicinity to handball arvicinity ea'
                                                                     ),
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj5_to_pj8"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj5_to_pj8'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l06",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l06',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Stadium vicinity to Stadium vicinity "
+                                                                        value='Stadium vicinity to Stadium vicinity '
                                                                     ),
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj3_to_pj5"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj3_to_pj5'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l07",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l07',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="from bridge 4 to Stadium vicinity "
+                                                                        value='from bridge 4 to Stadium vicinity '
                                                                     ),
                                                                 ],
                                                                 order=7,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_SPC_4_to_pj3"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_SPC_4_to_pj3'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.LEFT,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l08",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l08',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="quatics vicinity to bridge 4"
+                                                                        value='quatics vicinity to bridge 4'
                                                                     ),
                                                                 ],
                                                                 order=8,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_pj11_to_SPC_4"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_pj11_to_SPC_4'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="naptPoi:8100OPK_N2_l09",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_N2_l09',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Entrance to aquatics vicinity"
+                                                                        value='Entrance to aquatics vicinity'
                                                                     ),
                                                                 ],
                                                                 order=9,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="naptPoi:8100OPK_E1_to_pj1"
+                                                                        version='any',
+                                                                        ref='naptPoi:8100OPK_E1_to_pj1'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -4905,30 +4905,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.9o_OPK-E1_to_V9-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.9o_OPK-E1_to_V9-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Eton Manor to Stratford entrance E3 "
+                                                        value='From Eton Manor to Stratford entrance E3 '
                                                     ),
-                                                    distance=Decimal("2000"),
+                                                    distance=Decimal('2000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V9_EMAN"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V9_EMAN'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V9_EMAN_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V9_EMAN_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4938,30 +4938,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.10o_OPK-E1_to_V10-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.10o_OPK-E1_to_V10-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From Press Centre to Stratford  entrance E3 "
+                                                        value='From Press Centre to Stratford  entrance E3 '
                                                     ),
-                                                    distance=Decimal("1700"),
+                                                    distance=Decimal('1700'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V10_PRSC"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V10_PRSC'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V10_PRSC_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V10_PRSC_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -4971,26 +4971,26 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="naptPoi:8100OPK_N3.11o_OPK-E1_to_V11-E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_N3.11o_OPK-E1_to_V11-E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="From  Warm Um area to Stratford  entrance E3 "
+                                                        value='From  Warm Um area to Stratford  entrance E3 '
                                                     ),
-                                                    distance=Decimal("1200"),
+                                                    distance=Decimal('1200'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_V11_WARM"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_V11_WARM'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
-                                                            version="any",
-                                                            ref="naptPoi:8100OPK_E1"
+                                                            version='any',
+                                                            ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -5003,71 +5003,71 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V1_STDM",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V1_STDM',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="2012 Olympic Stadium"
+                                            value='2012 Olympic Stadium'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V2_HOCK",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V2_HOCK',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hockey Centre"
+                                            value='Hockey Centre'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V2_HOCK_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V2_HOCK_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Hockey Centre Entrance 1"
+                                                        value='Hockey Centre Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
                                                     entrance_type=EntranceEnumeration.DOOR
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V2_HOCK_E2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V2_HOCK_E2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Hockey Centre Entrance 2"
+                                                        value='Hockey Centre Entrance 2'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -5077,36 +5077,36 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V3_HAND",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V3_HAND',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Handball Arena"
+                                            value='Handball Arena'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V3_HAND_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V3_HAND_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Handball Arena Entrance 1"
+                                                        value='Handball Arena Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -5119,52 +5119,52 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V4_AQUA",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V4_AQUA',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Aquatics Centre"
+                                            value='Aquatics Centre'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V4_AQUA_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V4_AQUA_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Aquatics Centre Entrance 1"
+                                                        value='Aquatics Centre Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
                                                     entrance_type=EntranceEnumeration.DOOR
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V4_AQUA_E2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V4_AQUA_E2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Aquatics Centre Entrance 2"
+                                                        value='Aquatics Centre Entrance 2'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -5174,91 +5174,52 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V5_WPOL",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V5_WPOL',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Water Polo Arena"
+                                            value='Water Polo Arena'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V5_WPOL_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V5_WPOL_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Water Polo Arena Entrance 1"
+                                                        value='Water Polo Arena Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
                                                     entrance_type=EntranceEnumeration.DOOR
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V5_WPOL_E2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V5_WPOL_E2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Water Polo Arena Entrance 2"
+                                                        value='Water Polo Arena Entrance 2'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
-                                                            ),
-                                                        ]
-                                                    ),
-                                                    entrance_type=EntranceEnumeration.DOOR
-                                                ),
-                                            ]
-                                        )
-                                    ),
-                                    PointOfInterest(
-                                        id="naptPoi:8100OPK_V6_BKTB",
-                                        version="any",
-                                        name=MultilingualString(
-                                            value="Basketball Arena"
-                                        ),
-                                        types=TypeOfZoneRefsRelStructure(
-                                            type_of_zone_ref=[
-                                                TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
-                                                ),
-                                            ]
-                                        ),
-                                        parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
-                                        ),
-                                        entrances=SiteEntrancesRelStructure(
-                                            choice=[
-                                                PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V6_BKTB_E1",
-                                                    version="any",
-                                                    name=MultilingualString(
-                                                        value="Basketball A rena Entrance 1"
-                                                    ),
-                                                    types=TypeOfZoneRefsRelStructure(
-                                                        type_of_zone_ref=[
-                                                            TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -5268,36 +5229,75 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V7_VELO",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V6_BKTB',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Velodrome"
+                                            value='Basketball Arena'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V7_VELO_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V6_BKTB_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Velodrome Entrance 1"
+                                                        value='Basketball A rena Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
+                                                            ),
+                                                        ]
+                                                    ),
+                                                    entrance_type=EntranceEnumeration.DOOR
+                                                ),
+                                            ]
+                                        )
+                                    ),
+                                    PointOfInterest(
+                                        id='naptPoi:8100OPK_V7_VELO',
+                                        version='any',
+                                        name=MultilingualString(
+                                            value='Velodrome'
+                                        ),
+                                        types=TypeOfZoneRefsRelStructure(
+                                            type_of_zone_ref=[
+                                                TypeOfZoneRef(
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
+                                                ),
+                                            ]
+                                        ),
+                                        parent_site_ref=PointOfInterestRefStructure(
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
+                                        ),
+                                        entrances=SiteEntrancesRelStructure(
+                                            choice=[
+                                                PointOfInterestEntrance(
+                                                    id='naptPoi:8100OPK_V7_VELO_E1',
+                                                    version='any',
+                                                    name=MultilingualString(
+                                                        value='Velodrome Entrance 1'
+                                                    ),
+                                                    types=TypeOfZoneRefsRelStructure(
+                                                        type_of_zone_ref=[
+                                                            TypeOfZoneRef(
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -5310,46 +5310,46 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V8_BMXT",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V8_BMXT',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BMX Track"
+                                            value='BMX Track'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V8_BMXT_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V8_BMXT_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="BMX Track Entrance 1"
+                                                        value='BMX Track Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_V8_BMXT_E1_C1",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_V8_BMXT_E1_C1',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to BMX gate - incoming"
+                                                                    value='Entrance to BMX gate - incoming'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
@@ -5359,108 +5359,108 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_i",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT15M"),
                                                                             maximum_likely_delay=XmlDuration("PT25M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT31M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_i",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT5M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_o",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_i",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_i',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_ingress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_ingress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=1,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_o",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C1_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -5470,10 +5470,10 @@ obj = PublicationDelivery(
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="naptPoi:8100OPK_V8_BMXT_E1_C2",
-                                                                version="any",
+                                                                id='naptPoi:8100OPK_V8_BMXT_E1_C2',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Entrance to Security gate - Going Out"
+                                                                    value='Entrance to Security gate - Going Out'
                                                                 ),
                                                                 order=1,
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
@@ -5483,108 +5483,108 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_e",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT10M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_o",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_VB_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Very_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Very_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_e",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT8M"),
                                                                             average_delay=XmlDuration("PT10M"),
                                                                             maximum_likely_delay=XmlDuration("PT20M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_o",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_B_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Busy_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Busy_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_e",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_e',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_egress"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_egress'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=3,
                                                                             minimum_likely_delay=XmlDuration("PT6M"),
                                                                             average_delay=XmlDuration("PT3M"),
                                                                             maximum_likely_delay=XmlDuration("PT6M")
                                                                         ),
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_o",
+                                                                            id='naptPoi:8100OPK_V8_BMXT_E1_C2_Del_N_o',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="any",
-                                                                                            ref="oda:Avl_Normal_other"
+                                                                                            version='any',
+                                                                                            ref='oda:Avl_Normal_other'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="any",
+                                                                            version='any',
                                                                             order=99,
                                                                             minimum_likely_delay=XmlDuration("PT3M"),
                                                                             average_delay=XmlDuration("PT3M"),
@@ -5601,36 +5601,36 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V9_EMAN",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V9_EMAN',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Manor"
+                                            value='Eton Manor'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V9_EMAN_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V9_EMAN_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Eton MANor Entrance 1"
+                                                        value='Eton MANor Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -5640,36 +5640,36 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V10_PRSC",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V10_PRSC',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Media Centre"
+                                            value='Media Centre'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPK_V10_PRSC_E1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V10_PRSC_E1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Media Centre Entrance 1"
+                                                        value='Media Centre Entrance 1'
                                                     ),
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
-                                                                version="any",
-                                                                ref="napt:type_of_zone@PIE"
+                                                                version='any',
+                                                                ref='napt:type_of_zone@PIE'
                                                             ),
                                                         ]
                                                     ),
@@ -5680,85 +5680,85 @@ obj = PublicationDelivery(
                                         spaces=PointOfInterestSpacesRelStructure(
                                             point_of_interest_space_ref_or_point_of_interest_space=[
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_V10_PRSC_S1",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V10_PRSC_S1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Press Centre"
+                                                        value='Press Centre'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-180"),
-                                                            latitude=Decimal("-90"),
-                                                            altitude=Decimal("-1000"),
-                                                            precision=Decimal("0.0")
+                                                            longitude=Decimal('-180'),
+                                                            latitude=Decimal('-90'),
+                                                            altitude=Decimal('-1000'),
+                                                            precision=Decimal('0.0')
                                                         )
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_V10_PRSC"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_V10_PRSC'
                                                     ),
                                                     public_use=PublicUseEnumeration.AUTHORISED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.COVERED,
                                                     gated=GatedEnumeration.GATED_AREA,
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_Lvl_01"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_Lvl_01'
                                                     )
                                                 ),
                                                 PointOfInterestSpace(
-                                                    id="naptPoi:8100OPK_V10_PRSC_S2",
-                                                    version="any",
+                                                    id='naptPoi:8100OPK_V10_PRSC_S2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Brodcasting Centre"
+                                                        value='Brodcasting Centre'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-180"),
-                                                            latitude=Decimal("-90"),
-                                                            altitude=Decimal("-1000"),
-                                                            precision=Decimal("0.0")
+                                                            longitude=Decimal('-180'),
+                                                            latitude=Decimal('-90'),
+                                                            altitude=Decimal('-1000'),
+                                                            precision=Decimal('0.0')
                                                         )
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_V10_PRSC"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_V10_PRSC'
                                                     ),
                                                     public_use=PublicUseEnumeration.AUTHORISED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.COVERED,
                                                     gated=GatedEnumeration.GATED_AREA,
                                                     site_ref=PointOfInterestRefStructure(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="any",
-                                                        ref="naptPoi:8100OPK_Lvl_01"
+                                                        version='any',
+                                                        ref='naptPoi:8100OPK_Lvl_01'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK_V11_WARM",
-                                        version="any",
+                                        id='naptPoi:8100OPK_V11_WARM',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Warm up Area"
+                                            value='Warm up Area'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    version="any",
-                                                    ref="napt:type_of_zone@POI"
+                                                    version='any',
+                                                    ref='napt:type_of_zone@POI'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                 ]

@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.air_exchange_multi_quote_port_type_service_input import AirExchangeMultiQuotePortTypeServiceInput
-from travelport.models.air_exchange_multi_quote_port_type_service_output import AirExchangeMultiQuotePortTypeServiceOutput
+from travelport.models.air_exchange_multi_quote_port_type_service_input import (
+    AirExchangeMultiQuotePortTypeServiceInput,
+)
+from travelport.models.air_exchange_multi_quote_port_type_service_output import (
+    AirExchangeMultiQuotePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

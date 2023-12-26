@@ -52,6 +52,7 @@ class ActionStatus6:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "ActionStatus"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -61,7 +62,7 @@ class ActionStatus6:
         metadata={
             "name": "Remark",
             "type": "Element",
-        }
+        },
     )
     type_value: None | ActionStatusType6 = field(
         default=None,
@@ -69,28 +70,28 @@ class ActionStatus6:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     ticket_date: None | str = field(
         default=None,
         metadata={
             "name": "TicketDate",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     queue_category: None | str = field(
         default=None,
@@ -99,7 +100,7 @@ class ActionStatus6:
             "type": "Attribute",
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     airport_code: None | str = field(
         default=None,
@@ -107,7 +108,7 @@ class ActionStatus6:
             "name": "AirportCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -116,7 +117,7 @@ class ActionStatus6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -125,7 +126,7 @@ class ActionStatus6:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -134,26 +135,26 @@ class ActionStatus6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus7 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

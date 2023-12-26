@@ -12,5 +12,6 @@ class DiagnosticHandleDddiConfigurationEnumSimple(Enum):
         DynamicallyDefineDataIdentifier shall be handled as volatile
         data.
     """
+
     NON_VOLATILE = "NON-VOLATILE"
     VOLATILE = "VOLATILE"

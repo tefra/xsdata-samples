@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .class_of_use_ref import ClassOfUseRef
 from .distribution_channel_ref import DistributionChannelRef
 from .facility_set_ref import FacilitySetRef
@@ -43,9 +43,11 @@ class FareTableSpecificsStructure:
             "name": "OperatorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    network_ref_or_group_of_lines_ref: Optional[object] = field(
+    network_ref_or_group_of_lines_ref: Optional[
+        Union[NetworkRef, GroupOfLinesRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -61,9 +63,11 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[
+        Union[FlexibleLineRef, LineRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,9 +83,17 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            StopPlaceRef,
+            ParkingRef,
+            PointOfInterestRef,
+            ServiceSiteRef,
+            SiteRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -112,7 +124,7 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     tariff_zone_ref: Optional[TariffZoneRef] = field(
         default=None,
@@ -120,7 +132,7 @@ class FareTableSpecificsStructure:
             "name": "TariffZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_section_ref: Optional[FareSectionRef] = field(
         default=None,
@@ -128,7 +140,7 @@ class FareTableSpecificsStructure:
             "name": "FareSectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     direction_type: Optional[RelativeDirectionEnumeration] = field(
         default=None,
@@ -136,7 +148,7 @@ class FareTableSpecificsStructure:
             "name": "DirectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     routing_type: Optional[RoutingTypeEnumeration] = field(
         default=None,
@@ -144,7 +156,7 @@ class FareTableSpecificsStructure:
             "name": "RoutingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_class: Optional[FareClassEnumeration] = field(
         default=None,
@@ -152,7 +164,7 @@ class FareTableSpecificsStructure:
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -160,9 +172,11 @@ class FareTableSpecificsStructure:
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[object] = field(
+    service_facility_set_ref_or_site_facility_set_ref_or_facility_set_ref: Optional[
+        Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -183,7 +197,7 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
         default=None,
@@ -191,7 +205,7 @@ class FareTableSpecificsStructure:
             "name": "TypeOfProductCategoryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_service_ref: Optional[TypeOfServiceRef] = field(
         default=None,
@@ -199,9 +213,16 @@ class FareTableSpecificsStructure:
             "name": "TypeOfServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            TemplateServiceJourneyRef,
+            ServiceJourneyRef,
+            TrainNumberRef,
+            GroupOfServicesRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -227,7 +248,7 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
         default=None,
@@ -235,9 +256,11 @@ class FareTableSpecificsStructure:
             "name": "TypeOfFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[object] = field(
+    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[
+        Union[DistributionChannelRef, GroupOfDistributionChannelsRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -253,7 +276,7 @@ class FareTableSpecificsStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     payment_method: Optional[PaymentMethodEnumeration] = field(
         default=None,
@@ -261,7 +284,7 @@ class FareTableSpecificsStructure:
             "name": "PaymentMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_payment_method_ref: Optional[TypeOfPaymentMethodRef] = field(
         default=None,
@@ -269,7 +292,7 @@ class FareTableSpecificsStructure:
             "name": "TypeOfPaymentMethodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_travel_document_ref: Optional[TypeOfTravelDocumentRef] = field(
         default=None,
@@ -277,5 +300,5 @@ class FareTableSpecificsStructure:
             "name": "TypeOfTravelDocumentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

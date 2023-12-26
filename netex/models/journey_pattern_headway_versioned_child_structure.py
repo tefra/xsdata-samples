@@ -1,10 +1,12 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .border_point_ref import BorderPointRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
-from .journey_headway_versioned_child_structure import JourneyHeadwayVersionedChildStructure
+from .journey_headway_versioned_child_structure import (
+    JourneyHeadwayVersionedChildStructure,
+)
 from .journey_pattern_ref import JourneyPatternRef
 from .parking_point_ref import ParkingPointRef
 from .relief_point_ref import ReliefPointRef
@@ -17,11 +19,20 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class JourneyPatternHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildStructure):
+class JourneyPatternHeadwayVersionedChildStructure(
+    JourneyHeadwayVersionedChildStructure
+):
     class Meta:
         name = "JourneyPatternHeadway_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            ServiceJourneyPatternRef,
+            ServicePatternRef,
+            DeadRunJourneyPatternRef,
+            JourneyPatternRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -47,9 +58,19 @@ class JourneyPatternHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildS
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -90,5 +111,5 @@ class JourneyPatternHeadwayVersionedChildStructure(JourneyHeadwayVersionedChildS
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

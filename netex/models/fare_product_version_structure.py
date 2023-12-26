@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .access_rights_in_product_rel_structure import AccessRightsInProductRelStructure
+from typing import Optional, Union
+from .access_rights_in_product_rel_structure import (
+    AccessRightsInProductRelStructure,
+)
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .authority_ref import AuthorityRef
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -17,12 +19,16 @@ from .generic_parameter_assignment_version_structure import (
 from .operator_ref import OperatorRef
 from .preassigned_fare_product_ref import PreassignedFareProductRef
 from .sale_discount_right_ref import SaleDiscountRightRef
-from .service_access_right_version_structure import ServiceAccessRightVersionStructure
+from .service_access_right_version_structure import (
+    ServiceAccessRightVersionStructure,
+)
 from .supplement_product_ref import SupplementProductRef
 from .tariff_refs_rel_structure import TariffRefsRelStructure
 from .third_party_product_ref import ThirdPartyProductRef
 from .type_of_fare_product_ref import TypeOfFareProductRef
-from .type_of_fare_product_refs_rel_structure import TypeOfFareProductRefsRelStructure
+from .type_of_fare_product_refs_rel_structure import (
+    TypeOfFareProductRefsRelStructure,
+)
 from .usage_discount_right_ref import UsageDiscountRightRef
 from .validable_elements_rel_structure import ValidableElementsRelStructure
 
@@ -40,7 +46,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "name": "ChargingMomentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     charging_moment_type: Optional[ChargingMomentEnumeration] = field(
         default=None,
@@ -48,9 +54,11 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "name": "ChargingMomentType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    type_of_fare_product_ref_or_types_of_fare_product: Optional[object] = field(
+    type_of_fare_product_ref_or_types_of_fare_product: Optional[
+        Union[TypeOfFareProductRef, TypeOfFareProductRefsRelStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -66,9 +74,11 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[
+        Union[AuthorityRef, OperatorRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -84,7 +94,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     condition_summary: Optional[ConditionSummary] = field(
         default=None,
@@ -92,9 +102,20 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "name": "ConditionSummary",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            SupplementProductRef,
+            PreassignedFareProductRef,
+            AmountOfPriceUnitProductRef,
+            UsageDiscountRightRef,
+            ThirdPartyProductRef,
+            CappedDiscountRightRef,
+            SaleDiscountRightRef,
+            FareProductRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -140,9 +161,15 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[
+        Union[
+            GenericParameterAssignmentsRelStructure,
+            GenericParameterAssignment,
+            GenericParameterAssignmentInContext,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -163,7 +190,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     validable_elements: Optional[ValidableElementsRelStructure] = field(
         default=None,
@@ -171,27 +198,29 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "name": "validableElements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    access_rights_in_product: Optional[AccessRightsInProductRelStructure] = field(
+    access_rights_in_product: Optional[
+        AccessRightsInProductRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "accessRightsInProduct",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tariffs: Optional[TariffRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     prices: Optional[FareProductPricesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

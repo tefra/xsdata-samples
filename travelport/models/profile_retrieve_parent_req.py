@@ -2,9 +2,13 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_2 import BaseReq2
 from travelport.models.profile_data_filter_1 import ProfileDataFilter1
-from travelport.models.provisioning_code_profile_type_1 import ProvisioningCodeProfileType1
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
+)
 from travelport.models.type_parent_profile_level import TypeParentProfileLevel
-from travelport.models.unique_profile_id_profile_type_1 import UniqueProfileIdProfileType1
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -40,6 +44,7 @@ class ProfileRetrieveParentReq(BaseReq2):
         ‘Agency’, ‘AgencyGroup’, ‘BranchGroup’, ‘Branch’, ‘Account’ and
         ‘Traveler Group’.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -48,56 +53,58 @@ class ProfileRetrieveParentReq(BaseReq2):
         metadata={
             "name": "ProfileID",
             "type": "Element",
-        }
+        },
     )
-    provisioning_code: None | ProfileRetrieveParentReq.ProvisioningCode = field(
-        default=None,
-        metadata={
-            "name": "ProvisioningCode",
-            "type": "Element",
-        }
+    provisioning_code: None | ProfileRetrieveParentReq.ProvisioningCode = (
+        field(
+            default=None,
+            metadata={
+                "name": "ProvisioningCode",
+                "type": "Element",
+            },
+        )
     )
     unique_profile_id: None | ProfileRetrieveParentReq.UniqueProfileId = field(
         default=None,
         metadata={
             "name": "UniqueProfileID",
             "type": "Element",
-        }
+        },
     )
     profile_data_filter: None | ProfileDataFilter1 = field(
         default=None,
         metadata={
             "name": "ProfileDataFilter",
             "type": "Element",
-        }
+        },
     )
     parent_profile_id: None | int = field(
         default=None,
         metadata={
             "name": "ParentProfileID",
             "type": "Attribute",
-        }
+        },
     )
     parent_summary: bool = field(
         default=False,
         metadata={
             "name": "ParentSummary",
             "type": "Attribute",
-        }
+        },
     )
     show_data_unmasked: bool = field(
         default=False,
         metadata={
             "name": "ShowDataUnmasked",
             "type": "Attribute",
-        }
+        },
     )
     parent_level_to_return: TypeParentProfileLevel = field(
         default=TypeParentProfileLevel.AGENCY,
         metadata={
             "name": "ParentLevelToReturn",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -110,13 +117,14 @@ class ProfileRetrieveParentReq(BaseReq2):
             Specify the Profile Type (limited to only the ones where
             ProvisioningCode is relevant)
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | ProvisioningCodeProfileType1 = field(
             default=None,
@@ -124,7 +132,7 @@ class ProfileRetrieveParentReq(BaseReq2):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -142,13 +150,14 @@ class ProfileRetrieveParentReq(BaseReq2):
             determine 'AgencyCode' by Agent's WAB/target Branch or Agent's
             agency.
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 6,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | UniqueProfileIdProfileType1 = field(
             default=None,
@@ -156,7 +165,7 @@ class ProfileRetrieveParentReq(BaseReq2):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         agency_code: None | str = field(
             default=None,
@@ -165,5 +174,5 @@ class ProfileRetrieveParentReq(BaseReq2):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 25,
-            }
+            },
         )

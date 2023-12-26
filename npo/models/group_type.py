@@ -17,7 +17,7 @@ class GroupType(BaseMediaType):
             "name": "poSeriesID",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     is_ordered: None | bool = field(
         default=None,
@@ -25,7 +25,7 @@ class GroupType(BaseMediaType):
             "name": "isOrdered",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | GroupTypeEnum = field(
         default=None,
@@ -33,12 +33,12 @@ class GroupType(BaseMediaType):
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     default_element: None | int = field(
         default=None,
         metadata={
             "name": "defaultElement",
             "type": "Attribute",
-        }
+        },
     )

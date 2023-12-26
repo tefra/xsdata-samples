@@ -26,6 +26,7 @@ class QueueNextModifiers:
     queue_session_token
         Queue Session Token to hold session token for multiple queue
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -34,7 +35,7 @@ class QueueNextModifiers:
         metadata={
             "name": "NextOnQueue",
             "type": "Attribute",
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -43,19 +44,19 @@ class QueueNextModifiers:
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     re_queue_current: None | bool = field(
         default=None,
         metadata={
             "name": "ReQueueCurrent",
             "type": "Attribute",
-        }
+        },
     )
     queue_session_token: None | str = field(
         default=None,
         metadata={
             "name": "QueueSessionToken",
             "type": "Attribute",
-        }
+        },
     )

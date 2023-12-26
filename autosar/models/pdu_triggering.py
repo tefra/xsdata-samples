@@ -8,13 +8,17 @@ from .annotation import (
 )
 from .category_string import CategoryString
 from .i_pdu_port_subtypes_enum import IPduPortSubtypesEnum
-from .i_signal_triggering_ref_conditional import ISignalTriggeringRefConditional
+from .i_signal_triggering_ref_conditional import (
+    ISignalTriggeringRefConditional,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .pdu_subtypes_enum import PduSubtypesEnum
 from .ref import Ref
-from .sec_oc_crypto_service_mapping_subtypes_enum import SecOcCryptoServiceMappingSubtypesEnum
+from .sec_oc_crypto_service_mapping_subtypes_enum import (
+    SecOcCryptoServiceMappingSubtypesEnum,
+)
 from .short_name_fragment import ShortNameFragment
 from .trigger_i_pdu_send_condition import TriggerIPduSendCondition
 
@@ -109,6 +113,7 @@ class PduTriggering:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PDU-TRIGGERING"
 
@@ -119,7 +124,7 @@ class PduTriggering:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["PduTriggering.ShortNameFragments"] = field(
         default=None,
@@ -127,7 +132,7 @@ class PduTriggering:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -135,7 +140,7 @@ class PduTriggering:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -143,7 +148,7 @@ class PduTriggering:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -151,7 +156,7 @@ class PduTriggering:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -159,7 +164,7 @@ class PduTriggering:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -167,7 +172,7 @@ class PduTriggering:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["PduTriggering.Annotations"] = field(
         default=None,
@@ -175,7 +180,7 @@ class PduTriggering:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     i_pdu_port_refs: Optional["PduTriggering.IPduPortRefs"] = field(
         default=None,
@@ -183,7 +188,7 @@ class PduTriggering:
             "name": "I-PDU-PORT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     i_pdu_ref: Optional["PduTriggering.IPduRef"] = field(
         default=None,
@@ -191,7 +196,7 @@ class PduTriggering:
             "name": "I-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     i_signal_triggerings: Optional["PduTriggering.ISignalTriggerings"] = field(
         default=None,
@@ -199,23 +204,27 @@ class PduTriggering:
             "name": "I-SIGNAL-TRIGGERINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sec_oc_crypto_mapping_ref: Optional["PduTriggering.SecOcCryptoMappingRef"] = field(
+    sec_oc_crypto_mapping_ref: Optional[
+        "PduTriggering.SecOcCryptoMappingRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SEC-OC-CRYPTO-MAPPING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    trigger_i_pdu_send_conditions: Optional["PduTriggering.TriggerIPduSendConditions"] = field(
+    trigger_i_pdu_send_conditions: Optional[
+        "PduTriggering.TriggerIPduSendConditions"
+    ] = field(
         default=None,
         metadata={
             "name": "TRIGGER-I-PDU-SEND-CONDITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -223,14 +232,14 @@ class PduTriggering:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -238,14 +247,14 @@ class PduTriggering:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -256,7 +265,7 @@ class PduTriggering:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -267,7 +276,7 @@ class PduTriggering:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -278,7 +287,7 @@ class PduTriggering:
                 "name": "I-PDU-PORT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -289,7 +298,7 @@ class PduTriggering:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -300,18 +309,20 @@ class PduTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ISignalTriggerings:
-        i_signal_triggering_ref_conditional: List[ISignalTriggeringRefConditional] = field(
+        i_signal_triggering_ref_conditional: List[
+            ISignalTriggeringRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "I-SIGNAL-TRIGGERING-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -322,7 +333,7 @@ class PduTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -333,5 +344,5 @@ class PduTriggering:
                 "name": "TRIGGER-I-PDU-SEND-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

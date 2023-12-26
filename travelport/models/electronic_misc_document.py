@@ -45,6 +45,7 @@ class ElectronicMiscDocument:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -55,7 +56,7 @@ class ElectronicMiscDocument:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -64,14 +65,14 @@ class ElectronicMiscDocument:
             "type": "Attribute",
             "required": True,
             "length": 13,
-        }
+        },
     )
     primary_document_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "PrimaryDocumentIndicator",
             "type": "Attribute",
-        }
+        },
     )
     in_conjunction_with: None | str = field(
         default=None,
@@ -79,7 +80,7 @@ class ElectronicMiscDocument:
             "name": "InConjunctionWith",
             "type": "Attribute",
             "length": 13,
-        }
+        },
     )
     associated_ticket_number: None | str = field(
         default=None,
@@ -87,7 +88,7 @@ class ElectronicMiscDocument:
             "name": "AssociatedTicketNumber",
             "type": "Attribute",
             "length": 13,
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -95,40 +96,40 @@ class ElectronicMiscDocument:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssueDate",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

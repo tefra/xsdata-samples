@@ -9,5 +9,6 @@ class ShowSeeEnumSimple(Enum):
         reference.
     :cvar SHOW_SEE: The word "see"is rendered before the reference.
     """
+
     NO_SHOW_SEE = "NO-SHOW-SEE"
     SHOW_SEE = "SHOW-SEE"

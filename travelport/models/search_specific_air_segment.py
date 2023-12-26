@@ -25,6 +25,7 @@ class SearchSpecificAirSegment:
     segment_index
         The sequential AirSegment number that this segment connected to.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -34,7 +35,7 @@ class SearchSpecificAirSegment:
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class SearchSpecificAirSegment:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -52,7 +53,7 @@ class SearchSpecificAirSegment:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -62,7 +63,7 @@ class SearchSpecificAirSegment:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -72,12 +73,12 @@ class SearchSpecificAirSegment:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     segment_index: None | int = field(
         default=None,
         metadata={
             "name": "SegmentIndex",
             "type": "Attribute",
-        }
+        },
     )

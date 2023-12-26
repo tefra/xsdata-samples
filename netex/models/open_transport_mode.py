@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .open_transport_mode_value_structure import OpenTransportModeValueStructure
+from .open_transport_mode_value_structure import (
+    OpenTransportModeValueStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

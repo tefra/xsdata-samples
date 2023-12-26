@@ -13,23 +13,23 @@ class Diagram:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     documentation: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     resolution: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

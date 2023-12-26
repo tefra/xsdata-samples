@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .compound_train_ref import CompoundTrainRef
 from .equipments_rel_structure import EquipmentsRelStructure
@@ -23,7 +23,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -31,7 +31,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     registration_number: Optional[str] = field(
         default=None,
@@ -39,7 +39,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "name": "RegistrationNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operational_number: Optional[str] = field(
         default=None,
@@ -47,7 +47,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "name": "OperationalNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -55,7 +55,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operator_ref: Optional[OperatorRef] = field(
         default=None,
@@ -63,9 +63,11 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "name": "OperatorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -86,7 +88,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     actual_vehicle_equipments: Optional[EquipmentsRelStructure] = field(
         default=None,
@@ -94,5 +96,5 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "name": "actualVehicleEquipments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

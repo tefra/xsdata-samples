@@ -11,6 +11,7 @@ class DiagnosticIndicatorTypeEnumSimple(Enum):
     :cvar RED_STOP_LAMP: Red Stop Lamp
     :cvar WARNING: Warning
     """
+
     AMBER_WARNING = "AMBER-WARNING"
     MALFUNCTION = "MALFUNCTION"
     PROTECT_LAMP = "PROTECT-LAMP"

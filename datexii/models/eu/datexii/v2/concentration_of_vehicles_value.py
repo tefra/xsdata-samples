@@ -16,6 +16,7 @@ class ConcentrationOfVehiclesValue(DataValue):
         expressed in the number of vehicles per kilometre of road.
     :ivar concentration_of_vehicles_value_extension:
     """
+
     concentration_of_vehicles: Optional[int] = field(
         default=None,
         metadata={
@@ -23,7 +24,7 @@ class ConcentrationOfVehiclesValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     concentration_of_vehicles_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +32,5 @@ class ConcentrationOfVehiclesValue(DataValue):
             "name": "concentrationOfVehiclesValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

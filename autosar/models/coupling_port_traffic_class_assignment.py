@@ -31,6 +31,7 @@ class CouplingPortTrafficClassAssignment:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COUPLING-PORT-TRAFFIC-CLASS-ASSIGNMENT"
 
@@ -41,23 +42,27 @@ class CouplingPortTrafficClassAssignment:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CouplingPortTrafficClassAssignment.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CouplingPortTrafficClassAssignment.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    prioritys: Optional["CouplingPortTrafficClassAssignment.Prioritys"] = field(
+    prioritys: Optional[
+        "CouplingPortTrafficClassAssignment.Prioritys"
+    ] = field(
         default=None,
         metadata={
             "name": "PRIORITYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     traffic_class: Optional[PositiveInteger] = field(
         default=None,
@@ -65,14 +70,14 @@ class CouplingPortTrafficClassAssignment:
             "name": "TRAFFIC-CLASS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -80,7 +85,7 @@ class CouplingPortTrafficClassAssignment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -91,7 +96,7 @@ class CouplingPortTrafficClassAssignment:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -100,6 +105,7 @@ class CouplingPortTrafficClassAssignment:
         :ivar priority: Defines a priority which is mapped onto a
             Traffic Class.
         """
+
         priority: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
@@ -107,5 +113,5 @@ class CouplingPortTrafficClassAssignment:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 8,
-            }
+            },
         )

@@ -15,5 +15,5 @@ class TGlobalBusinessRuleTask(TGlobalTask):
         default=TImplementationValue.UNSPECIFIED,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

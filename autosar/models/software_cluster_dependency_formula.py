@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .category_string import CategoryString
-from .software_cluster_dependency_compare_condition import SoftwareClusterDependencyCompareCondition
-from .software_cluster_dependency_logical_operator_enum import SoftwareClusterDependencyLogicalOperatorEnum
+from .software_cluster_dependency_compare_condition import (
+    SoftwareClusterDependencyCompareCondition,
+)
+from .software_cluster_dependency_logical_operator_enum import (
+    SoftwareClusterDependencyLogicalOperatorEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -30,6 +34,7 @@ class SoftwareClusterDependencyFormula:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-FORMULA"
 
@@ -39,7 +44,7 @@ class SoftwareClusterDependencyFormula:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     operator: Optional[SoftwareClusterDependencyLogicalOperatorEnum] = field(
         default=None,
@@ -47,7 +52,7 @@ class SoftwareClusterDependencyFormula:
             "name": "OPERATOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     parts: Optional["SoftwareClusterDependencyFormula.Parts"] = field(
         default=None,
@@ -55,14 +60,14 @@ class SoftwareClusterDependencyFormula:
             "name": "PARTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -70,24 +75,28 @@ class SoftwareClusterDependencyFormula:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class Parts:
-        software_cluster_dependency_compare_condition: List[SoftwareClusterDependencyCompareCondition] = field(
+        software_cluster_dependency_compare_condition: List[
+            SoftwareClusterDependencyCompareCondition
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOFTWARE-CLUSTER-DEPENDENCY-COMPARE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        software_cluster_dependency_formula: List["SoftwareClusterDependencyFormula"] = field(
+        software_cluster_dependency_formula: List[
+            "SoftwareClusterDependencyFormula"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOFTWARE-CLUSTER-DEPENDENCY-FORMULA",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

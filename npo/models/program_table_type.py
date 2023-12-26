@@ -15,5 +15,5 @@ class ProgramTableType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )

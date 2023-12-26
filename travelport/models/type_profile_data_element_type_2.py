@@ -8,6 +8,7 @@ class TypeProfileDataElementType2(Enum):
     """
     Specify which fixed field type this field refers to.
     """
+
     TRAVEL_DOCUMENT = "TravelDocument"
     ACCOUNTING_REFERENCE = "AccountingReference"
     POLICY_REFERENCE = "PolicyReference"

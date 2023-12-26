@@ -22,6 +22,7 @@ class HotelReservationCriteria:
     passive_only
         Search for Passives Only
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -30,7 +31,7 @@ class HotelReservationCriteria:
         metadata={
             "name": "CheckInDate",
             "type": "Element",
-        }
+        },
     )
     hotel_chain_code: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class HotelReservationCriteria:
             "name": "HotelChainCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     hotel_code: None | str = field(
         default=None,
@@ -46,14 +47,14 @@ class HotelReservationCriteria:
             "name": "HotelCode",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )
     hotel_confirmation: None | str = field(
         default=None,
         metadata={
             "name": "HotelConfirmation",
             "type": "Attribute",
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -62,12 +63,12 @@ class HotelReservationCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     passive_only: bool = field(
         default=False,
         metadata={
             "name": "PassiveOnly",
             "type": "Attribute",
-        }
+        },
     )

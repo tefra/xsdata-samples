@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.calculate_tax_port_type_service_input import CalculateTaxPortTypeServiceInput
-from travelport.models.calculate_tax_port_type_service_output import CalculateTaxPortTypeServiceOutput
+from travelport.models.calculate_tax_port_type_service_input import (
+    CalculateTaxPortTypeServiceInput,
+)
+from travelport.models.calculate_tax_port_type_service_output import (
+    CalculateTaxPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

@@ -44,7 +44,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -52,7 +52,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -60,7 +60,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -68,14 +68,14 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -83,7 +83,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -92,7 +92,7 @@ class CoctMt020000Uv01ActAppointmentRequest:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -107,7 +107,7 @@ class CoctMt020000Uv01ActRequest:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -115,7 +115,7 @@ class CoctMt020000Uv01ActRequest:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -123,7 +123,7 @@ class CoctMt020000Uv01ActRequest:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -131,14 +131,14 @@ class CoctMt020000Uv01ActRequest:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -146,7 +146,7 @@ class CoctMt020000Uv01ActRequest:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -155,7 +155,7 @@ class CoctMt020000Uv01ActRequest:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -170,7 +170,7 @@ class CoctMt020000Uv01ReferencedOrder:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -178,7 +178,7 @@ class CoctMt020000Uv01ReferencedOrder:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -186,7 +186,7 @@ class CoctMt020000Uv01ReferencedOrder:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_request: Optional[CoctMt020000Uv01ActRequest] = field(
         default=None,
@@ -195,16 +195,36 @@ class CoctMt020000Uv01ReferencedOrder:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipSequel.OREF,
         metadata={
@@ -212,7 +232,7 @@ class CoctMt020000Uv01ReferencedOrder:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -227,7 +247,7 @@ class CoctMt020000Uv01ScheduleRequest:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -235,7 +255,7 @@ class CoctMt020000Uv01ScheduleRequest:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -243,25 +263,47 @@ class CoctMt020000Uv01ScheduleRequest:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    act_appointment_request: Optional[CoctMt020000Uv01ActAppointmentRequest] = field(
+    act_appointment_request: Optional[
+        CoctMt020000Uv01ActAppointmentRequest
+    ] = field(
         default=None,
         metadata={
             "name": "actAppointmentRequest",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipSequel.SCH,
         metadata={
@@ -269,7 +311,7 @@ class CoctMt020000Uv01ScheduleRequest:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -284,7 +326,7 @@ class CoctMt020000Uv01Appointment:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -292,7 +334,7 @@ class CoctMt020000Uv01Appointment:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -300,7 +342,7 @@ class CoctMt020000Uv01Appointment:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -308,14 +350,14 @@ class CoctMt020000Uv01Appointment:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -323,7 +365,7 @@ class CoctMt020000Uv01Appointment:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     referenced_order: List[CoctMt020000Uv01ReferencedOrder] = field(
         default_factory=list,
@@ -332,7 +374,7 @@ class CoctMt020000Uv01Appointment:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     schedule_request: List[CoctMt020000Uv01ScheduleRequest] = field(
         default_factory=list,
@@ -341,14 +383,14 @@ class CoctMt020000Uv01Appointment:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -356,7 +398,7 @@ class CoctMt020000Uv01Appointment:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -365,5 +407,5 @@ class CoctMt020000Uv01Appointment:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

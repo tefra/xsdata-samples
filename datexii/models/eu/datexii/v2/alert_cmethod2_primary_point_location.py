@@ -14,6 +14,7 @@ class AlertCMethod2PrimaryPointLocation:
     The point is specified by a reference to a point in a pre-defined
     ALERT-C location table.
     """
+
     alert_clocation: Optional[AlertCLocation] = field(
         default=None,
         metadata={
@@ -21,13 +22,15 @@ class AlertCMethod2PrimaryPointLocation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    alert_cmethod2_primary_point_location_extension: Optional[ExtensionType] = field(
+    alert_cmethod2_primary_point_location_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "alertCMethod2PrimaryPointLocationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

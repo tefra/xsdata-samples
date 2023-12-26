@@ -16,5 +16,5 @@ class Edge(DiagramElement):
         metadata={
             "type": "Element",
             "min_occurs": 2,
-        }
+        },
     )

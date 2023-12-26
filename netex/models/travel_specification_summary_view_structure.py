@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .class_of_use_ref import ClassOfUseRef
 from .companion_profile_ref import CompanionProfileRef
@@ -8,12 +8,20 @@ from .group_of_operators_ref import GroupOfOperatorsRef
 from .group_ticket_ref import GroupTicketRef
 from .operator_ref import OperatorRef
 from .passenger_seat_ref import PassengerSeatRef
-from .series_constraint_refs_rel_structure import SeriesConstraintRefsRelStructure
+from .series_constraint_refs_rel_structure import (
+    SeriesConstraintRefsRelStructure,
+)
 from .service_facility_set import ServiceFacilitySet
-from .train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
+from .train_component_label_assignment_ref import (
+    TrainComponentLabelAssignmentRef,
+)
 from .train_element_ref import TrainElementRef
-from .travel_specification_journey_refs_rel_structure import TravelSpecificationJourneyRefsRelStructure
-from .travel_specification_summary_endpoint_structure import TravelSpecificationSummaryEndpointStructure
+from .travel_specification_journey_refs_rel_structure import (
+    TravelSpecificationJourneyRefsRelStructure,
+)
+from .travel_specification_summary_endpoint_structure import (
+    TravelSpecificationSummaryEndpointStructure,
+)
 from .type_of_fare_product_ref import TypeOfFareProductRef
 from .type_of_product_category_ref import TypeOfProductCategoryRef
 from .user_profile_ref import UserProfileRef
@@ -29,7 +37,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "Origin",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     destination: Optional[TravelSpecificationSummaryEndpointStructure] = field(
         default=None,
@@ -37,7 +45,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "Destination",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start: Optional[XmlDateTime] = field(
         default=None,
@@ -45,7 +53,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "Start",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end: Optional[XmlDateTime] = field(
         default=None,
@@ -53,7 +61,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "End",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     duration: Optional[XmlDuration] = field(
         default=None,
@@ -61,14 +69,14 @@ class TravelSpecificationSummaryViewStructure:
             "name": "Duration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     journeys: Optional[TravelSpecificationJourneyRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     series_constraints: Optional[SeriesConstraintRefsRelStructure] = field(
         default=None,
@@ -76,9 +84,11 @@ class TravelSpecificationSummaryViewStructure:
             "name": "seriesConstraints",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    operator_ref_or_group_of_operators_ref: Optional[object] = field(
+    operator_ref_or_group_of_operators_ref: Optional[
+        Union[OperatorRef, GroupOfOperatorsRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -94,7 +104,7 @@ class TravelSpecificationSummaryViewStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
         default=None,
@@ -102,7 +112,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "TypeOfProductCategoryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
         default=None,
@@ -110,7 +120,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "TypeOfFareProductRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_class: Optional[FareClassEnumeration] = field(
         default=None,
@@ -118,7 +128,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -126,9 +136,11 @@ class TravelSpecificationSummaryViewStructure:
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    companion_profile_ref_or_user_profile_ref: Optional[object] = field(
+    companion_profile_ref_or_user_profile_ref: Optional[
+        Union[CompanionProfileRef, UserProfileRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -144,7 +156,7 @@ class TravelSpecificationSummaryViewStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     group_ticket_ref: Optional[GroupTicketRef] = field(
         default=None,
@@ -152,7 +164,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "GroupTicketRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_users: Optional[int] = field(
         default=None,
@@ -160,7 +172,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "MaximumNumberOfUsers",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     train_element_ref: Optional[TrainElementRef] = field(
         default=None,
@@ -168,15 +180,17 @@ class TravelSpecificationSummaryViewStructure:
             "name": "TrainElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    train_component_label_assignment_ref: Optional[TrainComponentLabelAssignmentRef] = field(
+    train_component_label_assignment_ref: Optional[
+        TrainComponentLabelAssignmentRef
+    ] = field(
         default=None,
         metadata={
             "name": "TrainComponentLabelAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     passenger_seat_ref: Optional[PassengerSeatRef] = field(
         default=None,
@@ -184,7 +198,7 @@ class TravelSpecificationSummaryViewStructure:
             "name": "PassengerSeatRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     service_facility_set: Optional[ServiceFacilitySet] = field(
         default=None,
@@ -192,5 +206,5 @@ class TravelSpecificationSummaryViewStructure:
             "name": "ServiceFacilitySet",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

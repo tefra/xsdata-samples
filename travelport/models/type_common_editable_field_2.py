@@ -34,6 +34,7 @@ class TypeCommonEditableField2(TypeFieldRef2):
         Inheritable attribute is not valid in a Template Modify Request if
         the InheritableControlInd is False for that particular Field/Group
     """
+
     class Meta:
         name = "typeCommonEditableField"
 
@@ -42,33 +43,33 @@ class TypeCommonEditableField2(TypeFieldRef2):
         metadata={
             "name": "MinOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     label: None | str = field(
         default=None,
         metadata={
             "name": "Label",
             "type": "Attribute",
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )

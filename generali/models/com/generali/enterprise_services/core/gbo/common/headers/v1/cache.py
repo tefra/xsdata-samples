@@ -1,7 +1,11 @@
 from dataclasses import dataclass
-from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.cache_type import CacheType
+from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.cache_type import (
+    CacheType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+)
 
 
 @dataclass
@@ -12,5 +16,6 @@ class Cache(CacheType):
     – this allows for future extensibility of the service
     implementation)</description>
     """
+
     class Meta:
         namespace = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"

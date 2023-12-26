@@ -26,51 +26,51 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Encoding of calendar example"
+        value='Encoding of calendar example'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             ServiceCalendarFrame(
-                id="ust:Otober2019_Week2",
-                version="any",
+                id='ust:Otober2019_Week2',
+                version='any',
                 name=MultilingualString(
-                    value="Calender Example for Netex   GD"
+                    value='Calender Example for Netex   GD'
                 ),
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="ust",
-                            xmlns="ust",
-                            xmlns_url="http://www.estp-es.eu/stuff",
-                            description="Day typess"
+                            id='ust',
+                            xmlns='ust',
+                            xmlns_url='http://www.estp-es.eu/stuff',
+                            description='Day typess'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="ust"
+                        ref='ust'
                     )
                 ),
                 service_calendar=ServiceCalendar(
-                    id="ust:Otober2019_Week2",
-                    version="any",
+                    id='ust:Otober2019_Week2',
+                    version='any',
                     from_date=XmlDate(2010, 10, 4),
                     to_date=XmlDate(2010, 10, 17)
                 ),
                 day_types=DayTypesInFrameRelStructure(
                     fare_day_type_or_organisation_day_type_or_day_type=[
                         DayType(
-                            id="ust:DT_01",
-                            version="any",
+                            id='ust:DT_01',
+                            version='any',
                             name=MultilingualString(
-                                value="Monday to Friday"
+                                value='Monday to Friday'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -87,10 +87,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_02",
-                            version="any",
+                            id='ust:DT_02',
+                            version='any',
                             name=MultilingualString(
-                                value="Saturday &amp; Sunday"
+                                value='Saturday & Sunday'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -104,10 +104,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_11",
-                            version="any",
+                            id='ust:DT_11',
+                            version='any',
                             name=MultilingualString(
-                                value="Monday to Thursday"
+                                value='Monday to Thursday'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -123,10 +123,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_12",
-                            version="any",
+                            id='ust:DT_12',
+                            version='any',
                             name=MultilingualString(
-                                value="Friday A"
+                                value='Friday A'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -139,10 +139,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_13",
-                            version="any",
+                            id='ust:DT_13',
+                            version='any',
                             name=MultilingualString(
-                                value="Saturday A"
+                                value='Saturday A'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -155,10 +155,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_14",
-                            version="any",
+                            id='ust:DT_14',
+                            version='any',
                             name=MultilingualString(
-                                value="Sunday A"
+                                value='Sunday A'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -171,10 +171,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_21",
-                            version="any",
+                            id='ust:DT_21',
+                            version='any',
                             name=MultilingualString(
-                                value="Monday to Saturday "
+                                value='Monday to Saturday '
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -192,10 +192,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_22",
-                            version="any",
+                            id='ust:DT_22',
+                            version='any',
                             name=MultilingualString(
-                                value="Sunday B"
+                                value='Sunday B'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -208,10 +208,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_31",
-                            version="any",
+                            id='ust:DT_31',
+                            version='any',
                             name=MultilingualString(
-                                value="Monday &amp; Tuesday"
+                                value='Monday & Tuesday'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -225,10 +225,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_32",
-                            version="any",
+                            id='ust:DT_32',
+                            version='any',
                             name=MultilingualString(
-                                value="Wednesday &amp; Thursday"
+                                value='Wednesday & Thursday'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -242,10 +242,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         DayType(
-                            id="ust:DT_33",
-                            version="any",
+                            id='ust:DT_33',
+                            version='any',
                             name=MultilingualString(
-                                value="Friday B"
+                                value='Friday B'
                             ),
                             properties=PropertiesOfDayRelStructure(
                                 property_of_day=[
@@ -262,115 +262,115 @@ obj = PublicationDelivery(
                 operating_days=OperatingDaysInFrameRelStructure(
                     operating_day=[
                         OperatingDay(
-                            id="ust:277",
-                            version="any",
+                            id='ust:277',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 4),
                             name=MultilingualString(
-                                value="Monday Schoolday"
+                                value='Monday Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:278",
-                            version="any",
+                            id='ust:278',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 5),
                             name=MultilingualString(
-                                value="Tuesday Schoolday"
+                                value='Tuesday Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:279",
-                            version="any",
+                            id='ust:279',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 6),
                             name=MultilingualString(
-                                value="Wednesday Schoolday"
+                                value='Wednesday Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:280",
-                            version="any",
+                            id='ust:280',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 7),
                             name=MultilingualString(
-                                value="Thursday Schoolday"
+                                value='Thursday Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:281",
-                            version="any",
+                            id='ust:281',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 8),
                             name=MultilingualString(
-                                value="Frida  Schoolday"
+                                value='Frida  Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:282",
-                            version="any",
+                            id='ust:282',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 9),
                             name=MultilingualString(
-                                value="Saturday"
+                                value='Saturday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:283",
-                            version="any",
+                            id='ust:283',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 10),
                             name=MultilingualString(
-                                value="Sunday"
+                                value='Sunday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:284",
-                            version="any",
+                            id='ust:284',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 11),
                             name=MultilingualString(
-                                value="Monday Non Schoolday"
+                                value='Monday Non Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:285",
-                            version="any",
+                            id='ust:285',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 12),
                             name=MultilingualString(
-                                value="Tuesday Non  Schoolday"
+                                value='Tuesday Non  Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:286",
-                            version="any",
+                            id='ust:286',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 13),
                             name=MultilingualString(
-                                value="Wednesday Non  Schoolday"
+                                value='Wednesday Non  Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:287",
-                            version="any",
+                            id='ust:287',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 14),
                             name=MultilingualString(
-                                value="Thursday Non  Schoolday"
+                                value='Thursday Non  Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:288",
-                            version="any",
+                            id='ust:288',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 15),
                             name=MultilingualString(
-                                value="Friday Non  Schoolday"
+                                value='Friday Non  Schoolday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:289",
-                            version="any",
+                            id='ust:289',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 16),
                             name=MultilingualString(
-                                value="Saturday"
+                                value='Saturday'
                             )
                         ),
                         OperatingDay(
-                            id="ust:290",
-                            version="any",
+                            id='ust:290',
+                            version='any',
                             calendar_date=XmlDate(2010, 10, 17),
                             name=MultilingualString(
-                                value="Sunday"
+                                value='Sunday'
                             )
                         ),
                     ]
@@ -378,679 +378,679 @@ obj = PublicationDelivery(
                 day_type_assignments=DayTypeAssignmentsInFrameRelStructure(
                     day_type_assignment=[
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-04_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-04_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-04_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-04_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-04_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-04_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-04_DT_31",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-04_DT_31',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_31"
+                                version='any',
+                                ref='ust:DT_31'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-05_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-05_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:278"
+                                version='any',
+                                ref='ust:278'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-05_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-05_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-05_DT_05",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-05_DT_05',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-05_DT_31",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-05_DT_31',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_31"
+                                version='any',
+                                ref='ust:DT_31'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-06_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-06_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:279"
+                                version='any',
+                                ref='ust:279'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-06_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-06_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-06_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-06_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-06_DT_32",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-06_DT_32',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_32"
+                                version='any',
+                                ref='ust:DT_32'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-07_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-07_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:280"
+                                version='any',
+                                ref='ust:280'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-07_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-07_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-07_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-07_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-07_DT_32",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-07_DT_32',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_32"
+                                version='any',
+                                ref='ust:DT_32'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-08_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-08_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:281"
+                                version='any',
+                                ref='ust:281'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-08_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-08_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-08_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-08_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-08_DT_33",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-08_DT_33',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_33"
+                                version='any',
+                                ref='ust:DT_33'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-09_DT_02",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-09_DT_02',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:282"
+                                version='any',
+                                ref='ust:282'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_02"
+                                version='any',
+                                ref='ust:DT_02'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-09_DT_13",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-09_DT_13',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_13"
+                                version='any',
+                                ref='ust:DT_13'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-09_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-09_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-10_DT_02",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-10_DT_02',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:283"
+                                version='any',
+                                ref='ust:283'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_02"
+                                version='any',
+                                ref='ust:DT_02'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-10_DT_14",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-10_DT_14',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_14"
+                                version='any',
+                                ref='ust:DT_14'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-10_DT_22",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-10_DT_22',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_22"
+                                version='any',
+                                ref='ust:DT_22'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-11_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-11_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-11_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-11_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-11_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-11_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-11_DT_31",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-11_DT_31',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_31"
+                                version='any',
+                                ref='ust:DT_31'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-12_DT_12",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-12_DT_12',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:278"
+                                version='any',
+                                ref='ust:278'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-12_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-12_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-12_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-12_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-12_DT_31",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-12_DT_31',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_31"
+                                version='any',
+                                ref='ust:DT_31'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-13_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-13_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:279"
+                                version='any',
+                                ref='ust:279'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-13_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-13_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-13_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-13_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-13_DT_32",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-13_DT_32',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_32"
+                                version='any',
+                                ref='ust:DT_32'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-14_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-14_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:280"
+                                version='any',
+                                ref='ust:280'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-14_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-14_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-14_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-14_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-14_DT_32",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-14_DT_32',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_32"
+                                version='any',
+                                ref='ust:DT_32'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-15_DT_01",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-15_DT_01',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:281"
+                                version='any',
+                                ref='ust:281'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_01"
+                                version='any',
+                                ref='ust:DT_01'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-15_DT_11",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-15_DT_11',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_11"
+                                version='any',
+                                ref='ust:DT_11'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-15_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-15_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-15_DT_33",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-15_DT_33',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_33"
+                                version='any',
+                                ref='ust:DT_33'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-16_DT_02",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-16_DT_02',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:282"
+                                version='any',
+                                ref='ust:282'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_02"
+                                version='any',
+                                ref='ust:DT_02'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-16_DT_13",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-16_DT_13',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_13"
+                                version='any',
+                                ref='ust:DT_13'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-10-16_DT_21",
-                            version="any",
+                            id='ust:DayAsgn_2010-10-16_DT_21',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_21"
+                                version='any',
+                                ref='ust:DT_21'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-17-10_DT_02",
-                            version="any",
+                            id='ust:DayAsgn_2010-17-10_DT_02',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:283"
+                                version='any',
+                                ref='ust:283'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_02"
+                                version='any',
+                                ref='ust:DT_02'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-17-10_DT_14",
-                            version="any",
+                            id='ust:DayAsgn_2010-17-10_DT_14',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_14"
+                                version='any',
+                                ref='ust:DT_14'
                             )
                         ),
                         DayTypeAssignment(
-                            id="ust:DayAsgn_2010-17-10_DT_22",
-                            version="any",
+                            id='ust:DayAsgn_2010-17-10_DT_22',
+                            version='any',
                             order=1,
                             operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                version="any",
-                                ref="ust:277"
+                                version='any',
+                                ref='ust:277'
                             ),
                             fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                version="any",
-                                ref="ust:DT_22"
+                                version='any',
+                                ref='ust:DT_22'
                             )
                         ),
                     ]

@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.type_commission_level_4 import TypeCommissionLevel4
-from travelport.models.type_commission_modifier_4 import TypeCommissionModifier4
+from travelport.models.type_commission_modifier_4 import (
+    TypeCommissionModifier4,
+)
 from travelport.models.type_commission_type_4 import TypeCommissionType4
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
@@ -34,6 +36,7 @@ class Commission7:
         This is enabled to override CAT-35 commission error during air
         ticketing. PROVIDER SUPPORTED:Worldspan and JAL
     """
+
     class Meta:
         name = "Commission"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -43,7 +46,7 @@ class Commission7:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     level: None | TypeCommissionLevel4 = field(
         default=None,
@@ -51,7 +54,7 @@ class Commission7:
             "name": "Level",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | TypeCommissionType4 = field(
         default=None,
@@ -59,21 +62,21 @@ class Commission7:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     modifier: None | TypeCommissionModifier4 = field(
         default=None,
         metadata={
             "name": "Modifier",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -82,7 +85,7 @@ class Commission7:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 15,
-        }
+        },
     )
     percentage: None | str = field(
         default=None,
@@ -90,19 +93,19 @@ class Commission7:
             "name": "Percentage",
             "type": "Attribute",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     commission_override: bool = field(
         default=False,
         metadata={
             "name": "CommissionOverride",
             "type": "Attribute",
-        }
+        },
     )

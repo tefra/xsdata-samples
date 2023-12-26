@@ -13,6 +13,7 @@ class ReentrancyLevelEnumSimple(Enum):
     :cvar SINGLE_CORE_REENTRANT: Pseudo-concurrent execution (i.e.
         preemption) of this entity is possible on single core systems.
     """
+
     MULTICORE_REENTRANT = "MULTICORE-REENTRANT"
     NON_REENTRANT = "NON-REENTRANT"
     SINGLE_CORE_REENTRANT = "SINGLE-CORE-REENTRANT"

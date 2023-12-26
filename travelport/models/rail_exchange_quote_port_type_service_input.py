@@ -16,7 +16,7 @@ class RailExchangeQuotePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class RailExchangeQuotePortTypeServiceInput:
                 "name": "RailExchangeQuoteReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/rail_v52_0",
-            }
+            },
         )

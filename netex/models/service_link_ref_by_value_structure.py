@@ -12,5 +12,5 @@ class ServiceLinkRefByValueStructure(LinkRefByValueStructure):
         metadata={
             "name": "nameOfPointRefClass",
             "type": "Attribute",
-        }
+        },
     )

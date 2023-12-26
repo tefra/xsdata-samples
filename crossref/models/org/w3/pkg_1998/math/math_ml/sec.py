@@ -15,5 +15,5 @@ class Sec:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

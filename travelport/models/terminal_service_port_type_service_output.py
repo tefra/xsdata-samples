@@ -17,7 +17,7 @@ class TerminalServicePortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +28,14 @@ class TerminalServicePortTypeServiceOutput:
                 "name": "TerminalRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/terminal_v33_0",
-            }
+            },
         )
         fault: None | TerminalServicePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +45,28 @@ class TerminalServicePortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | TerminalServicePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +77,5 @@ class TerminalServicePortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v33_0",
-                    }
+                    },
                 )

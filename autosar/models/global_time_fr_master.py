@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
+from .communication_connector_subtypes_enum import (
+    CommunicationConnectorSubtypesEnum,
+)
 from .global_time_crc_support_enum import GlobalTimeCrcSupportEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -91,6 +93,7 @@ class GlobalTimeFrMaster:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "GLOBAL-TIME-FR-MASTER"
 
@@ -101,15 +104,17 @@ class GlobalTimeFrMaster:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["GlobalTimeFrMaster.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "GlobalTimeFrMaster.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +122,7 @@ class GlobalTimeFrMaster:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +130,7 @@ class GlobalTimeFrMaster:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +138,7 @@ class GlobalTimeFrMaster:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +146,7 @@ class GlobalTimeFrMaster:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,7 +154,7 @@ class GlobalTimeFrMaster:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["GlobalTimeFrMaster.Annotations"] = field(
         default=None,
@@ -157,15 +162,17 @@ class GlobalTimeFrMaster:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_connector_ref: Optional["GlobalTimeFrMaster.CommunicationConnectorRef"] = field(
+    communication_connector_ref: Optional[
+        "GlobalTimeFrMaster.CommunicationConnectorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     immediate_resume_time: Optional[TimeValue] = field(
         default=None,
@@ -173,7 +180,7 @@ class GlobalTimeFrMaster:
             "name": "IMMEDIATE-RESUME-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_system_wide_global_time_master: Optional[Boolean] = field(
         default=None,
@@ -181,7 +188,7 @@ class GlobalTimeFrMaster:
             "name": "IS-SYSTEM-WIDE-GLOBAL-TIME-MASTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_period: Optional[TimeValue] = field(
         default=None,
@@ -189,7 +196,7 @@ class GlobalTimeFrMaster:
             "name": "SYNC-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -197,7 +204,7 @@ class GlobalTimeFrMaster:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_secured: Optional[GlobalTimeCrcSupportEnum] = field(
         default=None,
@@ -205,14 +212,14 @@ class GlobalTimeFrMaster:
             "name": "CRC-SECURED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -220,14 +227,14 @@ class GlobalTimeFrMaster:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -238,7 +245,7 @@ class GlobalTimeFrMaster:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -249,7 +256,7 @@ class GlobalTimeFrMaster:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -260,5 +267,5 @@ class GlobalTimeFrMaster:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

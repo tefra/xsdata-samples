@@ -27,6 +27,7 @@ class BaseReservation4:
         reason.
     customer_number
     """
+
     class Meta:
         name = "BaseReservation"
 
@@ -37,7 +38,7 @@ class BaseReservation4:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     general_remark: list[GeneralRemark4] = field(
         default_factory=list,
@@ -46,7 +47,7 @@ class BaseReservation4:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     restriction: list[Restriction5] = field(
         default_factory=list,
@@ -55,7 +56,7 @@ class BaseReservation4:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     passive_info: None | PassiveInfo4 = field(
         default=None,
@@ -63,7 +64,7 @@ class BaseReservation4:
             "name": "PassiveInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -73,7 +74,7 @@ class BaseReservation4:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     create_date: None | str = field(
         default=None,
@@ -81,7 +82,7 @@ class BaseReservation4:
             "name": "CreateDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     modified_date: None | str = field(
         default=None,
@@ -89,12 +90,12 @@ class BaseReservation4:
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     customer_number: None | str = field(
         default=None,
         metadata={
             "name": "CustomerNumber",
             "type": "Attribute",
-        }
+        },
     )

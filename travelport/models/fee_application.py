@@ -14,6 +14,7 @@ class FeeApplication:
         The code associated to the fee application. The  choices are: 1, 2,
         3, 4, 5, K, F
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,7 +22,7 @@ class FeeApplication:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -29,5 +30,5 @@ class FeeApplication:
             "name": "Code",
             "type": "Attribute",
             "length": 1,
-        }
+        },
     )

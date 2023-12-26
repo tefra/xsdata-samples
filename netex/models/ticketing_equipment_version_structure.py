@@ -1,12 +1,16 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .installed_equipment_version_structure import (
+    InstalledEquipmentVersionStructure,
+)
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .queue_management_enumeration import QueueManagementEnumeration
 from .ticket_type_enumeration import TicketTypeEnumeration
 from .ticketing_facility_enumeration import TicketingFacilityEnumeration
-from .ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from .ticketing_service_facility_enumeration import (
+    TicketingServiceFacilityEnumeration,
+)
 from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -24,7 +28,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     ticket_machines: Optional[bool] = field(
         default=None,
@@ -32,7 +36,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "TicketMachines",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_machines: Optional[int] = field(
         default=None,
@@ -40,7 +44,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "NumberOfMachines",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     height_of_machine_interface: Optional[Decimal] = field(
         default=None,
@@ -48,7 +52,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "HeightOfMachineInterface",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     ticketing_facility_list: List[TicketingFacilityEnumeration] = field(
         default_factory=list,
@@ -57,16 +61,18 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    ticketing_service_facility_list: List[TicketingServiceFacilityEnumeration] = field(
+    ticketing_service_facility_list: List[
+        TicketingServiceFacilityEnumeration
+    ] = field(
         default_factory=list,
         metadata={
             "name": "TicketingServiceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     ticket_office: Optional[bool] = field(
         default=None,
@@ -74,7 +80,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "TicketOffice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     ticket_counter: Optional[bool] = field(
         default=None,
@@ -82,7 +88,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "TicketCounter",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_tills: Optional[int] = field(
         default=None,
@@ -90,7 +96,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "NumberOfTills",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     queue_management: Optional[QueueManagementEnumeration] = field(
         default=None,
@@ -98,7 +104,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "QueueManagement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_methods: List[PaymentMethodEnumeration] = field(
         default_factory=list,
@@ -107,7 +113,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     ticket_types_available: List[TicketTypeEnumeration] = field(
         default_factory=list,
@@ -116,7 +122,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     scope_of_tickets_available: List[TicketingFacilityEnumeration] = field(
         default_factory=list,
@@ -125,7 +131,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     low_counter_access: Optional[bool] = field(
         default=None,
@@ -133,7 +139,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "LowCounterAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     height_of_low_counter: Optional[Decimal] = field(
         default=None,
@@ -141,7 +147,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "HeightOfLowCounter",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     induction_loops: Optional[bool] = field(
         default=None,
@@ -149,7 +155,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "InductionLoops",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tactile_interface_available: Optional[bool] = field(
         default=None,
@@ -157,7 +163,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "TactileInterfaceAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     audio_interface_available: Optional[bool] = field(
         default=None,
@@ -165,7 +171,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "AudioInterfaceAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     disabled_priority: Optional[bool] = field(
         default=None,
@@ -173,7 +179,7 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "DisabledPriority",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheelchair_suitable: Optional[bool] = field(
         default=None,
@@ -181,5 +187,5 @@ class TicketingEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "WheelchairSuitable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

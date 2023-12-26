@@ -27,6 +27,7 @@ class TypeCreditCardType2(TypePaymentCard2):
     bank_state_code
         State code associated with the issuing bank.
     """
+
     class Meta:
         name = "typeCreditCardType"
 
@@ -35,35 +36,35 @@ class TypeCreditCardType2(TypePaymentCard2):
         metadata={
             "name": "ExtendedPayment",
             "type": "Attribute",
-        }
+        },
     )
     customer_reference: None | str = field(
         default=None,
         metadata={
             "name": "CustomerReference",
             "type": "Attribute",
-        }
+        },
     )
     acceptance_override: None | bool = field(
         default=None,
         metadata={
             "name": "AcceptanceOverride",
             "type": "Attribute",
-        }
+        },
     )
     third_party_payment: bool = field(
         default=False,
         metadata={
             "name": "ThirdPartyPayment",
             "type": "Attribute",
-        }
+        },
     )
     bank_name: None | str = field(
         default=None,
         metadata={
             "name": "BankName",
             "type": "Attribute",
-        }
+        },
     )
     bank_country_code: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class TypeCreditCardType2(TypePaymentCard2):
             "name": "BankCountryCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     bank_state_code: None | str = field(
         default=None,
@@ -79,5 +80,5 @@ class TypeCreditCardType2(TypePaymentCard2):
             "name": "BankStateCode",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )

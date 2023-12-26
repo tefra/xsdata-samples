@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_link_ref import ActivationLinkRef
 from .activation_point import ActivationPoint
 from .activation_point_ref import ActivationPointRef
@@ -17,7 +17,9 @@ from .parking_point_ref import ParkingPointRef
 from .path_junction import PathJunction
 from .path_link_ref import PathLinkRef
 from .point_2 import Point2
-from .point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
+from .point_in_link_sequence_versioned_child_structure import (
+    PointInLinkSequenceVersionedChildStructure,
+)
 from .point_ref import PointRef
 from .railway_junction import RailwayJunction
 from .railway_link_ref import RailwayLinkRef
@@ -46,11 +48,47 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStructure):
+class PointOnSectionVersionedChildStructure(
+    PointInLinkSequenceVersionedChildStructure
+):
     class Meta:
         name = "PointOnSection_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
+            PointRef,
+            BorderPoint,
+            FareScheduledStopPoint,
+            ScheduledStopPoint,
+            PathJunction,
+            RoutePoint,
+            ParkingPoint,
+            GaragePoint,
+            ReliefPoint,
+            TimingPoint,
+            WireJunction,
+            RoadJunction,
+            RailwayJunction,
+            TrafficControlPoint,
+            BeaconPoint,
+            ActivationPoint,
+            Point2,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -211,9 +249,21 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice_2: Optional[object] = field(
+    choice_2: Optional[
+        Union[
+            ServiceLinkRef,
+            LineLinkRef,
+            PathLinkRef,
+            TimingLinkRef,
+            RouteLinkRef,
+            WireLinkRef,
+            RoadLinkRef,
+            RailwayLinkRef,
+            ActivationLinkRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -264,7 +314,7 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     reverse: Optional[bool] = field(
         default=None,
@@ -272,5 +322,5 @@ class PointOnSectionVersionedChildStructure(PointInLinkSequenceVersionedChildStr
             "name": "Reverse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

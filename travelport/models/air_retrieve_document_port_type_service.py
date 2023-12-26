@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.air_retrieve_document_port_type_service_input import AirRetrieveDocumentPortTypeServiceInput
-from travelport.models.air_retrieve_document_port_type_service_output import AirRetrieveDocumentPortTypeServiceOutput
+from travelport.models.air_retrieve_document_port_type_service_input import (
+    AirRetrieveDocumentPortTypeServiceInput,
+)
+from travelport.models.air_retrieve_document_port_type_service_output import (
+    AirRetrieveDocumentPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

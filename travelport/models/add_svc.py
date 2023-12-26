@@ -27,6 +27,7 @@ class AddSvc:
         default value is set as the date next to the last airsegment arrival
         date. 1P only
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
@@ -35,21 +36,21 @@ class AddSvc:
         metadata={
             "name": "RFIC",
             "type": "Attribute",
-        }
+        },
     )
     rfisc: None | str = field(
         default=None,
         metadata={
             "name": "RFISC",
             "type": "Attribute",
-        }
+        },
     )
     svc_description: None | str = field(
         default=None,
         metadata={
             "name": "SvcDescription",
             "type": "Attribute",
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class AddSvc:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -67,12 +68,12 @@ class AddSvc:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )

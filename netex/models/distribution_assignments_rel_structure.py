@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .distribution_assignment import DistributionAssignment
 from .distribution_assignment_ref import DistributionAssignmentRef
@@ -12,7 +12,9 @@ class DistributionAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "distributionAssignments_RelStructure"
 
-    distribution_assignment_ref_or_distribution_assignment: List[object] = field(
+    distribution_assignment_ref_or_distribution_assignment: List[
+        Union[DistributionAssignmentRef, DistributionAssignment]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class DistributionAssignmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

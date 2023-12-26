@@ -19,7 +19,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "name": "CheckConstraintRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -27,7 +27,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_likely_delay: Optional[XmlDuration] = field(
         default=None,
@@ -35,7 +35,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "name": "MinimumLikelyDelay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     average_delay: Optional[XmlDuration] = field(
         default=None,
@@ -43,7 +43,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "name": "AverageDelay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_likely_delay: Optional[XmlDuration] = field(
         default=None,
@@ -51,5 +51,5 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "name": "MaximumLikelyDelay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

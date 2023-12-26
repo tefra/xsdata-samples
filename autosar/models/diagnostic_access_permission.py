@@ -7,8 +7,12 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_environmental_condition_subtypes_enum import DiagnosticEnvironmentalConditionSubtypesEnum
-from .diagnostic_security_level_subtypes_enum import DiagnosticSecurityLevelSubtypesEnum
+from .diagnostic_environmental_condition_subtypes_enum import (
+    DiagnosticEnvironmentalConditionSubtypesEnum,
+)
+from .diagnostic_security_level_subtypes_enum import (
+    DiagnosticSecurityLevelSubtypesEnum,
+)
 from .diagnostic_session_subtypes_enum import DiagnosticSessionSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -90,6 +94,7 @@ class DiagnosticAccessPermission:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-ACCESS-PERMISSION"
 
@@ -100,15 +105,17 @@ class DiagnosticAccessPermission:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticAccessPermission.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticAccessPermission.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +123,7 @@ class DiagnosticAccessPermission:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +131,7 @@ class DiagnosticAccessPermission:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +139,7 @@ class DiagnosticAccessPermission:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +147,7 @@ class DiagnosticAccessPermission:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +155,7 @@ class DiagnosticAccessPermission:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticAccessPermission.Annotations"] = field(
         default=None,
@@ -156,7 +163,7 @@ class DiagnosticAccessPermission:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -164,38 +171,44 @@ class DiagnosticAccessPermission:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    diagnostic_session_refs: Optional["DiagnosticAccessPermission.DiagnosticSessionRefs"] = field(
+    diagnostic_session_refs: Optional[
+        "DiagnosticAccessPermission.DiagnosticSessionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-SESSION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    environmental_condition_ref: Optional["DiagnosticAccessPermission.EnvironmentalConditionRef"] = field(
+    environmental_condition_ref: Optional[
+        "DiagnosticAccessPermission.EnvironmentalConditionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ENVIRONMENTAL-CONDITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    security_level_refs: Optional["DiagnosticAccessPermission.SecurityLevelRefs"] = field(
+    security_level_refs: Optional[
+        "DiagnosticAccessPermission.SecurityLevelRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SECURITY-LEVEL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +216,14 @@ class DiagnosticAccessPermission:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +234,7 @@ class DiagnosticAccessPermission:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,18 +245,20 @@ class DiagnosticAccessPermission:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DiagnosticSessionRefs:
-        diagnostic_session_ref: List["DiagnosticAccessPermission.DiagnosticSessionRefs.DiagnosticSessionRef"] = field(
+        diagnostic_session_ref: List[
+            "DiagnosticAccessPermission.DiagnosticSessionRefs.DiagnosticSessionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-SESSION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -254,7 +269,7 @@ class DiagnosticAccessPermission:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -265,18 +280,20 @@ class DiagnosticAccessPermission:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class SecurityLevelRefs:
-        security_level_ref: List["DiagnosticAccessPermission.SecurityLevelRefs.SecurityLevelRef"] = field(
+        security_level_ref: List[
+            "DiagnosticAccessPermission.SecurityLevelRefs.SecurityLevelRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-LEVEL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -287,5 +304,5 @@ class DiagnosticAccessPermission:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

@@ -19,8 +19,15 @@ class ComputationMethodEnum(Enum):
         taken over a time period.
     :cvar MOVING_AVERAGE_OF_SAMPLES: Moving average of sample values.
     """
-    ARITHMETIC_AVERAGE_OF_SAMPLES_BASED_ON_AFIXED_NUMBER_OF_SAMPLES = "arithmeticAverageOfSamplesBasedOnAFixedNumberOfSamples"
-    ARITHMETIC_AVERAGE_OF_SAMPLES_IN_ATIME_PERIOD = "arithmeticAverageOfSamplesInATimePeriod"
-    HARMONIC_AVERAGE_OF_SAMPLES_IN_ATIME_PERIOD = "harmonicAverageOfSamplesInATimePeriod"
+
+    ARITHMETIC_AVERAGE_OF_SAMPLES_BASED_ON_AFIXED_NUMBER_OF_SAMPLES = (
+        "arithmeticAverageOfSamplesBasedOnAFixedNumberOfSamples"
+    )
+    ARITHMETIC_AVERAGE_OF_SAMPLES_IN_ATIME_PERIOD = (
+        "arithmeticAverageOfSamplesInATimePeriod"
+    )
+    HARMONIC_AVERAGE_OF_SAMPLES_IN_ATIME_PERIOD = (
+        "harmonicAverageOfSamplesInATimePeriod"
+    )
     MEDIAN_OF_SAMPLES_IN_ATIME_PERIOD = "medianOfSamplesInATimePeriod"
     MOVING_AVERAGE_OF_SAMPLES = "movingAverageOfSamples"

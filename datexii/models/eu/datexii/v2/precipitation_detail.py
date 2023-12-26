@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import FloatingPointMetreDistanceValue
-from datexii.models.eu.datexii.v2.precipitation_intensity_value import PrecipitationIntensityValue
-from datexii.models.eu.datexii.v2.precipitation_type_enum import PrecipitationTypeEnum
+from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import (
+    FloatingPointMetreDistanceValue,
+)
+from datexii.models.eu.datexii.v2.precipitation_intensity_value import (
+    PrecipitationIntensityValue,
+)
+from datexii.models.eu.datexii.v2.precipitation_type_enum import (
+    PrecipitationTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -23,13 +29,14 @@ class PrecipitationDetail:
         melted in water form.
     :ivar precipitation_detail_extension:
     """
+
     precipitation_type: Optional[PrecipitationTypeEnum] = field(
         default=None,
         metadata={
             "name": "precipitationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     precipitation_intensity: Optional[PrecipitationIntensityValue] = field(
         default=None,
@@ -37,7 +44,7 @@ class PrecipitationDetail:
             "name": "precipitationIntensity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     deposition_depth: Optional[FloatingPointMetreDistanceValue] = field(
         default=None,
@@ -45,7 +52,7 @@ class PrecipitationDetail:
             "name": "depositionDepth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     precipitation_detail_extension: Optional[ExtensionType] = field(
         default=None,
@@ -53,5 +60,5 @@ class PrecipitationDetail:
             "name": "precipitationDetailExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

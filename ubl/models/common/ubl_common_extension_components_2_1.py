@@ -4,14 +4,18 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
     Id,
     Name,
 )
-from ubl.models.common.ubl_extension_content_data_type_2_1 import ExtensionContentType
+from ubl.models.common.ubl_extension_content_data_type_2_1 import (
+    ExtensionContentType,
+)
 from ubl.models.common.ubl_unqualified_data_types_2_1 import (
     CodeType,
     IdentifierType,
     TextType,
 )
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+)
 
 
 @dataclass(frozen=True)
@@ -116,7 +120,7 @@ class UblextensionType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     name: Optional[Name] = field(
         default=None,
@@ -124,7 +128,7 @@ class UblextensionType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     extension_agency_id: Optional[ExtensionAgencyId] = field(
         default=None,
@@ -132,7 +136,7 @@ class UblextensionType:
             "name": "ExtensionAgencyID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     extension_agency_name: Optional[ExtensionAgencyName] = field(
         default=None,
@@ -140,7 +144,7 @@ class UblextensionType:
             "name": "ExtensionAgencyName",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     extension_version_id: Optional[ExtensionVersionId] = field(
         default=None,
@@ -148,7 +152,7 @@ class UblextensionType:
             "name": "ExtensionVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     extension_agency_uri: Optional[ExtensionAgencyUri] = field(
         default=None,
@@ -156,7 +160,7 @@ class UblextensionType:
             "name": "ExtensionAgencyURI",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     extension_uri: Optional[ExtensionUri] = field(
         default=None,
@@ -164,7 +168,7 @@ class UblextensionType:
             "name": "ExtensionURI",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     extension_reason_code: Optional[ExtensionReasonCode] = field(
         default=None,
@@ -172,7 +176,7 @@ class UblextensionType:
             "name": "ExtensionReasonCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     extension_reason: Optional[ExtensionReason] = field(
         default=None,
@@ -180,7 +184,7 @@ class UblextensionType:
             "name": "ExtensionReason",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     extension_content: Optional[ExtensionContent] = field(
         default=None,
@@ -189,7 +193,7 @@ class UblextensionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
             "required": True,
-        }
+        },
     )
 
 
@@ -212,7 +216,7 @@ class UblextensionsType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 

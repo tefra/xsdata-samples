@@ -10,6 +10,7 @@ class PncGatewayTypeEnumSimple(Enum):
     :cvar PASSIVE: The passive PncGateway functionality shall be
         performed
     """
+
     ACTIVE = "ACTIVE"
     NONE = "NONE"
     PASSIVE = "PASSIVE"

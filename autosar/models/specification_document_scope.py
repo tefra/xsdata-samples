@@ -89,6 +89,7 @@ class SpecificationDocumentScope:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SPECIFICATION-DOCUMENT-SCOPE"
 
@@ -99,15 +100,17 @@ class SpecificationDocumentScope:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SpecificationDocumentScope.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SpecificationDocumentScope.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +118,7 @@ class SpecificationDocumentScope:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +126,7 @@ class SpecificationDocumentScope:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +134,7 @@ class SpecificationDocumentScope:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +142,7 @@ class SpecificationDocumentScope:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +150,7 @@ class SpecificationDocumentScope:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SpecificationDocumentScope.Annotations"] = field(
         default=None,
@@ -155,7 +158,7 @@ class SpecificationDocumentScope:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alternative_name: Optional[String] = field(
         default=None,
@@ -163,7 +166,7 @@ class SpecificationDocumentScope:
             "name": "ALTERNATIVE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     in_scope: Optional[Boolean] = field(
         default=None,
@@ -171,30 +174,34 @@ class SpecificationDocumentScope:
             "name": "IN-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    custom_documentation_ref: Optional["SpecificationDocumentScope.CustomDocumentationRef"] = field(
+    custom_documentation_ref: Optional[
+        "SpecificationDocumentScope.CustomDocumentationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CUSTOM-DOCUMENTATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    document_element_scopes: Optional["SpecificationDocumentScope.DocumentElementScopes"] = field(
+    document_element_scopes: Optional[
+        "SpecificationDocumentScope.DocumentElementScopes"
+    ] = field(
         default=None,
         metadata={
             "name": "DOCUMENT-ELEMENT-SCOPES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -202,14 +209,14 @@ class SpecificationDocumentScope:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -220,7 +227,7 @@ class SpecificationDocumentScope:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -231,7 +238,7 @@ class SpecificationDocumentScope:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -242,7 +249,7 @@ class SpecificationDocumentScope:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -253,5 +260,5 @@ class SpecificationDocumentScope:
                 "name": "DOCUMENT-ELEMENT-SCOPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

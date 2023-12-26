@@ -7,17 +7,27 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_operation_cycle_subtypes_enum import DiagnosticOperationCycleSubtypesEnum
+from .diagnostic_operation_cycle_subtypes_enum import (
+    DiagnosticOperationCycleSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .process_design_subtypes_enum import ProcessDesignSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .swc_service_dependency_in_composition_instance_ref import SwcServiceDependencyInCompositionInstanceRef
-from .swc_service_dependency_in_executable_instance_ref import SwcServiceDependencyInExecutableInstanceRef
-from .swc_service_dependency_in_system_instance_ref import SwcServiceDependencyInSystemInstanceRef
-from .swc_service_dependency_subtypes_enum import SwcServiceDependencySubtypesEnum
+from .swc_service_dependency_in_composition_instance_ref import (
+    SwcServiceDependencyInCompositionInstanceRef,
+)
+from .swc_service_dependency_in_executable_instance_ref import (
+    SwcServiceDependencyInExecutableInstanceRef,
+)
+from .swc_service_dependency_in_system_instance_ref import (
+    SwcServiceDependencyInSystemInstanceRef,
+)
+from .swc_service_dependency_subtypes_enum import (
+    SwcServiceDependencySubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -101,6 +111,7 @@ class DiagnosticOperationCyclePortMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-OPERATION-CYCLE-PORT-MAPPING"
 
@@ -111,15 +122,17 @@ class DiagnosticOperationCyclePortMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticOperationCyclePortMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticOperationCyclePortMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -127,7 +140,7 @@ class DiagnosticOperationCyclePortMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -135,7 +148,7 @@ class DiagnosticOperationCyclePortMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -143,7 +156,7 @@ class DiagnosticOperationCyclePortMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -151,7 +164,7 @@ class DiagnosticOperationCyclePortMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -159,15 +172,17 @@ class DiagnosticOperationCyclePortMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticOperationCyclePortMapping.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticOperationCyclePortMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -175,62 +190,74 @@ class DiagnosticOperationCyclePortMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    operation_cycle_ref: Optional["DiagnosticOperationCyclePortMapping.OperationCycleRef"] = field(
+    operation_cycle_ref: Optional[
+        "DiagnosticOperationCyclePortMapping.OperationCycleRef"
+    ] = field(
         default=None,
         metadata={
             "name": "OPERATION-CYCLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    process_ref: Optional["DiagnosticOperationCyclePortMapping.ProcessRef"] = field(
+    process_ref: Optional[
+        "DiagnosticOperationCyclePortMapping.ProcessRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    swc_flat_service_dependency_ref: Optional["DiagnosticOperationCyclePortMapping.SwcFlatServiceDependencyRef"] = field(
+    swc_flat_service_dependency_ref: Optional[
+        "DiagnosticOperationCyclePortMapping.SwcFlatServiceDependencyRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SWC-FLAT-SERVICE-DEPENDENCY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    swc_service_dependency_in_executable_iref: Optional[SwcServiceDependencyInExecutableInstanceRef] = field(
+    swc_service_dependency_in_executable_iref: Optional[
+        SwcServiceDependencyInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    swc_service_dependency_in_system_iref: Optional[SwcServiceDependencyInSystemInstanceRef] = field(
+    swc_service_dependency_in_system_iref: Optional[
+        SwcServiceDependencyInSystemInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    swc_service_dependency_iref: Optional[SwcServiceDependencyInCompositionInstanceRef] = field(
+    swc_service_dependency_iref: Optional[
+        SwcServiceDependencyInCompositionInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -238,14 +265,14 @@ class DiagnosticOperationCyclePortMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -256,7 +283,7 @@ class DiagnosticOperationCyclePortMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -267,7 +294,7 @@ class DiagnosticOperationCyclePortMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -278,7 +305,7 @@ class DiagnosticOperationCyclePortMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -289,7 +316,7 @@ class DiagnosticOperationCyclePortMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -300,5 +327,5 @@ class DiagnosticOperationCyclePortMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -17,6 +17,7 @@ class AvailableDiscount:
     description
     discount_qualifier
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,14 +28,14 @@ class AvailableDiscount:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     percent: None | str = field(
         default=None,
@@ -42,19 +43,19 @@ class AvailableDiscount:
             "name": "Percent",
             "type": "Attribute",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     discount_qualifier: None | str = field(
         default=None,
         metadata={
             "name": "DiscountQualifier",
             "type": "Attribute",
-        }
+        },
     )

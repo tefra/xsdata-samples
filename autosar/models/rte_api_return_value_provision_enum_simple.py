@@ -10,5 +10,6 @@ class RteApiReturnValueProvisionEnumSimple(Enum):
     :cvar RETURN_VALUE_PROVIDED: The RTE API shall provide a return
         value.
     """
+
     NO_RETURN_VALUE_PROVIDED = "NO-RETURN-VALUE-PROVIDED"
     RETURN_VALUE_PROVIDED = "RETURN-VALUE-PROVIDED"

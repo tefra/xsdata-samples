@@ -16,11 +16,11 @@ class TermSearchType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

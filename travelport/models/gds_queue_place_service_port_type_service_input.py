@@ -17,14 +17,14 @@ class GdsQueuePlaceServicePortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | GdsQueuePlaceServicePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +35,7 @@ class GdsQueuePlaceServicePortTypeServiceInput:
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +46,5 @@ class GdsQueuePlaceServicePortTypeServiceInput:
                 "name": "GdsQueuePlaceReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/gdsQueue_v52_0",
-            }
+            },
         )

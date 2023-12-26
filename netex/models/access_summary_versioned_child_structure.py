@@ -19,7 +19,7 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     count: Optional[int] = field(
         default=None,
@@ -28,7 +28,7 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     transition: Optional[TransitionEnumeration] = field(
         default=None,
@@ -36,5 +36,5 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
             "name": "Transition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

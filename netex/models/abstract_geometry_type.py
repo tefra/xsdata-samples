@@ -12,12 +12,12 @@ class AbstractGeometryType(AbstractGmltype):
         metadata={
             "name": "srsName",
             "type": "Attribute",
-        }
+        },
     )
     srs_dimension: Optional[int] = field(
         default=None,
         metadata={
             "name": "srsDimension",
             "type": "Attribute",
-        }
+        },
     )

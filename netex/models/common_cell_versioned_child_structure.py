@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .fare_table_column_ref_structure import FareTableColumnRefStructure
 from .fare_table_ref import FareTableRef
@@ -21,7 +21,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -29,9 +29,11 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    standard_fare_table_ref_or_fare_table_ref: Optional[object] = field(
+    standard_fare_table_ref_or_fare_table_ref: Optional[
+        Union[StandardFareTableRef, FareTableRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -47,7 +49,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     column_ref: Optional[FareTableColumnRefStructure] = field(
         default=None,
@@ -55,7 +57,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "name": "ColumnRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     row_ref: Optional[FareTableRowRefStructure] = field(
         default=None,
@@ -63,11 +65,11 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "name": "RowRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

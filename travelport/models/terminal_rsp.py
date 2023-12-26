@@ -11,6 +11,7 @@ class TerminalRsp(BaseRsp4):
     """
     The response from the host for a terminal command.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
@@ -20,5 +21,5 @@ class TerminalRsp(BaseRsp4):
             "name": "TerminalCommandResponse",
             "type": "Element",
             "required": True,
-        }
+        },
     )

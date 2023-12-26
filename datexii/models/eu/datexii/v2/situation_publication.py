@@ -12,12 +12,13 @@ class SituationPublication(PayloadPublication):
     """
     A publication containing zero or more traffic/travel situations.
     """
+
     situation: List[Situation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     situation_publication_extension: Optional[ExtensionType] = field(
         default=None,
@@ -25,5 +26,5 @@ class SituationPublication(PayloadPublication):
             "name": "situationPublicationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

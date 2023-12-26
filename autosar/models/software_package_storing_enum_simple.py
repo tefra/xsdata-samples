@@ -9,6 +9,7 @@ class SoftwarePackageStoringEnumSimple(Enum):
     :cvar UCM: Storing in UCM (subordinate).
     :cvar UCM_MASTER: Storing in Ucm Master.
     """
+
     NONE = "NONE"
     UCM = "UCM"
     UCM_MASTER = "UCM-MASTER"

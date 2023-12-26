@@ -16,6 +16,7 @@ class TypeRemark4:
         Contains the Provider Code of the provider for which this element is
         used
     """
+
     class Meta:
         name = "typeRemark"
 
@@ -23,14 +24,14 @@ class TypeRemark4:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -39,5 +40,5 @@ class TypeRemark4:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

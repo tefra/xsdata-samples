@@ -19,6 +19,7 @@ class OperationStatusEnum(Enum):
         due to a technical defect.
     :cvar UNKNOWN: There is no information about the operation status.
     """
+
     IN_OPERATION = "inOperation"
     LIMITED_OPERATION = "limitedOperation"
     NOT_IN_OPERATION = "notInOperation"

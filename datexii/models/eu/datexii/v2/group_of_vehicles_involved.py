@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.vehicle_characteristics import VehicleCharacteristics
+from datexii.models.eu.datexii.v2.vehicle_characteristics import (
+    VehicleCharacteristics,
+)
 from datexii.models.eu.datexii.v2.vehicle_status_enum import VehicleStatusEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -18,13 +20,14 @@ class GroupOfVehiclesInvolved:
     :ivar vehicle_characteristics:
     :ivar group_of_vehicles_involved_extension:
     """
+
     number_of_vehicles: Optional[int] = field(
         default=None,
         metadata={
             "name": "numberOfVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_status: Optional[VehicleStatusEnum] = field(
         default=None,
@@ -32,7 +35,7 @@ class GroupOfVehiclesInvolved:
             "name": "vehicleStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_characteristics: Optional[VehicleCharacteristics] = field(
         default=None,
@@ -40,7 +43,7 @@ class GroupOfVehiclesInvolved:
             "name": "vehicleCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_vehicles_involved_extension: Optional[ExtensionType] = field(
         default=None,
@@ -48,5 +51,5 @@ class GroupOfVehiclesInvolved:
             "name": "groupOfVehiclesInvolvedExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

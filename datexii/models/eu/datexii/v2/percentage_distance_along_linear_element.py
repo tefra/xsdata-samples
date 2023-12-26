@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.distance_along_linear_element import DistanceAlongLinearElement
+from datexii.models.eu.datexii.v2.distance_along_linear_element import (
+    DistanceAlongLinearElement,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -19,6 +21,7 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
         percentage of the total length of the linear object.
     :ivar percentage_distance_along_linear_element_extension:
     """
+
     percentage_distance_along: Optional[float] = field(
         default=None,
         metadata={
@@ -26,13 +29,15 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    percentage_distance_along_linear_element_extension: Optional[ExtensionType] = field(
+    percentage_distance_along_linear_element_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "percentageDistanceAlongLinearElementExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

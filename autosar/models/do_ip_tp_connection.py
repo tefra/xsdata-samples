@@ -34,6 +34,7 @@ class DoIpTpConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DO-IP-TP-CONNECTION"
 
@@ -43,23 +44,27 @@ class DoIpTpConnection:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    do_ip_source_address_ref: Optional["DoIpTpConnection.DoIpSourceAddressRef"] = field(
+    do_ip_source_address_ref: Optional[
+        "DoIpTpConnection.DoIpSourceAddressRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DO-IP-SOURCE-ADDRESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    do_ip_target_address_ref: Optional["DoIpTpConnection.DoIpTargetAddressRef"] = field(
+    do_ip_target_address_ref: Optional[
+        "DoIpTpConnection.DoIpTargetAddressRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DO-IP-TARGET-ADDRESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_sdu_ref: Optional["DoIpTpConnection.TpSduRef"] = field(
         default=None,
@@ -67,14 +72,14 @@ class DoIpTpConnection:
             "name": "TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -82,7 +87,7 @@ class DoIpTpConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -93,7 +98,7 @@ class DoIpTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -104,7 +109,7 @@ class DoIpTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -115,5 +120,5 @@ class DoIpTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

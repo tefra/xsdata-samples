@@ -17,14 +17,14 @@ class HotelCancelServicePortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | HotelCancelServicePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +35,7 @@ class HotelCancelServicePortTypeServiceInput:
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +46,5 @@ class HotelCancelServicePortTypeServiceInput:
                 "name": "HotelCancelReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )

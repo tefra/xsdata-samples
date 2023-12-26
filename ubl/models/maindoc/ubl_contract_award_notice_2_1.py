@@ -27,7 +27,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
 )
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+)
 
 
 @dataclass(frozen=True)
@@ -38,7 +40,7 @@ class ContractAwardNoticeType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -46,7 +48,7 @@ class ContractAwardNoticeType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -54,7 +56,7 @@ class ContractAwardNoticeType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -62,7 +64,7 @@ class ContractAwardNoticeType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -70,7 +72,7 @@ class ContractAwardNoticeType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -78,7 +80,7 @@ class ContractAwardNoticeType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -86,7 +88,7 @@ class ContractAwardNoticeType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -94,7 +96,7 @@ class ContractAwardNoticeType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     contract_folder_id: Optional[ContractFolderId] = field(
         default=None,
@@ -103,7 +105,7 @@ class ContractAwardNoticeType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -112,7 +114,7 @@ class ContractAwardNoticeType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -120,7 +122,7 @@ class ContractAwardNoticeType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -128,7 +130,7 @@ class ContractAwardNoticeType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     regulatory_domain: Tuple[RegulatoryDomain, ...] = field(
         default_factory=tuple,
@@ -136,7 +138,7 @@ class ContractAwardNoticeType:
             "name": "RegulatoryDomain",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     publish_award_indicator: Optional[bool] = field(
         default=None,
@@ -144,7 +146,7 @@ class ContractAwardNoticeType:
             "name": "PublishAwardIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     previous_document_reference: Tuple[PreviousDocumentReference, ...] = field(
         default_factory=tuple,
@@ -152,7 +154,7 @@ class ContractAwardNoticeType:
             "name": "PreviousDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     minutes_document_reference: Tuple[MinutesDocumentReference, ...] = field(
         default_factory=tuple,
@@ -160,7 +162,7 @@ class ContractAwardNoticeType:
             "name": "MinutesDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -168,7 +170,7 @@ class ContractAwardNoticeType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     contracting_party: Optional[ContractingParty] = field(
         default=None,
@@ -177,7 +179,7 @@ class ContractAwardNoticeType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     originator_customer_party: Optional[OriginatorCustomerParty] = field(
         default=None,
@@ -185,7 +187,7 @@ class ContractAwardNoticeType:
             "name": "OriginatorCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -193,7 +195,7 @@ class ContractAwardNoticeType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tendering_terms: Optional[TenderingTerms] = field(
         default=None,
@@ -201,7 +203,7 @@ class ContractAwardNoticeType:
             "name": "TenderingTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tendering_process: Optional[TenderingProcess] = field(
         default=None,
@@ -209,7 +211,7 @@ class ContractAwardNoticeType:
             "name": "TenderingProcess",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     procurement_project: Optional[ProcurementProject] = field(
         default=None,
@@ -217,7 +219,7 @@ class ContractAwardNoticeType:
             "name": "ProcurementProject",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
         default_factory=tuple,
@@ -225,7 +227,7 @@ class ContractAwardNoticeType:
             "name": "ProcurementProjectLot",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tender_result: Tuple[TenderResult, ...] = field(
         default_factory=tuple,
@@ -234,7 +236,7 @@ class ContractAwardNoticeType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 

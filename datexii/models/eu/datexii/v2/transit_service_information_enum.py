@@ -53,6 +53,7 @@ class TransitServiceInformationEnum(Enum):
         specified service is subject to temporary changes.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     CANCELLATIONS = "cancellations"
     DELAY_DUE_TO_BAD_WEATHER = "delayDueToBadWeather"
     DELAY_DUE_TO_REPAIRS = "delayDueToRepairs"
@@ -69,7 +70,9 @@ class TransitServiceInformationEnum(Enum):
     SERVICE_DELAYS_OF_UNCERTAIN_DURATION = "serviceDelaysOfUncertainDuration"
     SERVICE_FULLY_BOOKED = "serviceFullyBooked"
     SERVICE_NOT_OPERATING = "serviceNotOperating"
-    SERVICE_NOT_OPERATING_SUBSTITUTE_SERVICE_AVAILABLE = "serviceNotOperatingSubstituteServiceAvailable"
+    SERVICE_NOT_OPERATING_SUBSTITUTE_SERVICE_AVAILABLE = (
+        "serviceNotOperatingSubstituteServiceAvailable"
+    )
     SERVICE_SUSPENDED = "serviceSuspended"
     SERVICE_WITHDRAWN = "serviceWithdrawn"
     SHUTTLE_SERVICE_OPERATING = "shuttleServiceOperating"

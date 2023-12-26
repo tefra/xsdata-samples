@@ -123,6 +123,7 @@ class CanFrameTriggering:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-FRAME-TRIGGERING"
 
@@ -133,15 +134,17 @@ class CanFrameTriggering:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CanFrameTriggering.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CanFrameTriggering.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -149,7 +152,7 @@ class CanFrameTriggering:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -157,7 +160,7 @@ class CanFrameTriggering:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -165,7 +168,7 @@ class CanFrameTriggering:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -173,7 +176,7 @@ class CanFrameTriggering:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -181,7 +184,7 @@ class CanFrameTriggering:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CanFrameTriggering.Annotations"] = field(
         default=None,
@@ -189,7 +192,7 @@ class CanFrameTriggering:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     frame_port_refs: Optional["CanFrameTriggering.FramePortRefs"] = field(
         default=None,
@@ -197,7 +200,7 @@ class CanFrameTriggering:
             "name": "FRAME-PORT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     frame_ref: Optional["CanFrameTriggering.FrameRef"] = field(
         default=None,
@@ -205,7 +208,7 @@ class CanFrameTriggering:
             "name": "FRAME-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_triggerings: Optional["CanFrameTriggering.PduTriggerings"] = field(
         default=None,
@@ -213,7 +216,7 @@ class CanFrameTriggering:
             "name": "PDU-TRIGGERINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -221,15 +224,17 @@ class CanFrameTriggering:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    absolutely_scheduled_timings: Optional["CanFrameTriggering.AbsolutelyScheduledTimings"] = field(
+    absolutely_scheduled_timings: Optional[
+        "CanFrameTriggering.AbsolutelyScheduledTimings"
+    ] = field(
         default=None,
         metadata={
             "name": "ABSOLUTELY-SCHEDULED-TIMINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_addressing_mode: Optional[CanAddressingModeType] = field(
         default=None,
@@ -237,7 +242,7 @@ class CanFrameTriggering:
             "name": "CAN-ADDRESSING-MODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_fd_frame_support: Optional[Boolean] = field(
         default=None,
@@ -245,7 +250,7 @@ class CanFrameTriggering:
             "name": "CAN-FD-FRAME-SUPPORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_frame_rx_behavior: Optional[CanFrameRxBehaviorEnum] = field(
         default=None,
@@ -253,7 +258,7 @@ class CanFrameTriggering:
             "name": "CAN-FRAME-RX-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_frame_tx_behavior: Optional[CanFrameTxBehaviorEnum] = field(
         default=None,
@@ -261,7 +266,7 @@ class CanFrameTriggering:
             "name": "CAN-FRAME-TX-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     identifier: Optional[Integer] = field(
         default=None,
@@ -269,7 +274,7 @@ class CanFrameTriggering:
             "name": "IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     j_1939_requestable: Optional[Boolean] = field(
         default=None,
@@ -277,7 +282,7 @@ class CanFrameTriggering:
             "name": "J-1939-REQUESTABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rx_identifier_range: Optional[RxIdentifierRange] = field(
         default=None,
@@ -285,7 +290,7 @@ class CanFrameTriggering:
             "name": "RX-IDENTIFIER-RANGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rx_mask: Optional[PositiveInteger] = field(
         default=None,
@@ -293,7 +298,7 @@ class CanFrameTriggering:
             "name": "RX-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tx_mask: Optional[PositiveInteger] = field(
         default=None,
@@ -301,14 +306,14 @@ class CanFrameTriggering:
             "name": "TX-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -316,14 +321,14 @@ class CanFrameTriggering:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -334,7 +339,7 @@ class CanFrameTriggering:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -345,18 +350,20 @@ class CanFrameTriggering:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FramePortRefs:
-        frame_port_ref: List["CanFrameTriggering.FramePortRefs.FramePortRef"] = field(
+        frame_port_ref: List[
+            "CanFrameTriggering.FramePortRefs.FramePortRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FRAME-PORT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -367,7 +374,7 @@ class CanFrameTriggering:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -378,27 +385,31 @@ class CanFrameTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class PduTriggerings:
-        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = field(
+        pdu_triggering_ref_conditional: List[
+            PduTriggeringRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-TRIGGERING-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AbsolutelyScheduledTimings:
-        ttcan_absolutely_scheduled_timing: List[TtcanAbsolutelyScheduledTiming] = field(
+        ttcan_absolutely_scheduled_timing: List[
+            TtcanAbsolutelyScheduledTiming
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-ABSOLUTELY-SCHEDULED-TIMING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

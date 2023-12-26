@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .component_in_composition_instance_ref import ComponentInCompositionInstanceRef
+from .component_in_composition_instance_ref import (
+    ComponentInCompositionInstanceRef,
+)
 from .executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
 from .execution_time_type_enum import ExecutionTimeTypeEnum
 from .identifier import Identifier
@@ -104,6 +106,7 @@ class ExecutionTimeConstraint:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "EXECUTION-TIME-CONSTRAINT"
 
@@ -114,15 +117,17 @@ class ExecutionTimeConstraint:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ExecutionTimeConstraint.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ExecutionTimeConstraint.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -130,7 +135,7 @@ class ExecutionTimeConstraint:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -138,7 +143,7 @@ class ExecutionTimeConstraint:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -146,7 +151,7 @@ class ExecutionTimeConstraint:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -154,7 +159,7 @@ class ExecutionTimeConstraint:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -162,7 +167,7 @@ class ExecutionTimeConstraint:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ExecutionTimeConstraint.Annotations"] = field(
         default=None,
@@ -170,7 +175,7 @@ class ExecutionTimeConstraint:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["ExecutionTimeConstraint.TraceRefs"] = field(
         default=None,
@@ -178,15 +183,17 @@ class ExecutionTimeConstraint:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    timing_condition_ref: Optional["ExecutionTimeConstraint.TimingConditionRef"] = field(
+    timing_condition_ref: Optional[
+        "ExecutionTimeConstraint.TimingConditionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -194,7 +201,7 @@ class ExecutionTimeConstraint:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     component_iref: Optional[ComponentInCompositionInstanceRef] = field(
         default=None,
@@ -202,7 +209,7 @@ class ExecutionTimeConstraint:
             "name": "COMPONENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     executable_ref: Optional["ExecutionTimeConstraint.ExecutableRef"] = field(
         default=None,
@@ -210,7 +217,7 @@ class ExecutionTimeConstraint:
             "name": "EXECUTABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     execution_time_type: Optional[ExecutionTimeTypeEnum] = field(
         default=None,
@@ -218,7 +225,7 @@ class ExecutionTimeConstraint:
             "name": "EXECUTION-TIME-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum: Optional[MultidimensionalTime] = field(
         default=None,
@@ -226,7 +233,7 @@ class ExecutionTimeConstraint:
             "name": "MAXIMUM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum: Optional[MultidimensionalTime] = field(
         default=None,
@@ -234,14 +241,14 @@ class ExecutionTimeConstraint:
             "name": "MINIMUM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -249,14 +256,14 @@ class ExecutionTimeConstraint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -267,7 +274,7 @@ class ExecutionTimeConstraint:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -278,7 +285,7 @@ class ExecutionTimeConstraint:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -289,7 +296,7 @@ class ExecutionTimeConstraint:
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -300,7 +307,7 @@ class ExecutionTimeConstraint:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -311,7 +318,7 @@ class ExecutionTimeConstraint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -322,5 +329,5 @@ class ExecutionTimeConstraint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

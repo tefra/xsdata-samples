@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass
-from travelport.models.type_integer_restriction_2 import TypeIntegerRestriction2
+from travelport.models.type_integer_restriction_2 import (
+    TypeIntegerRestriction2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -11,6 +13,7 @@ class WholeNumberRestriction2(TypeIntegerRestriction2):
 
     Min and max lengths are inclusive.
     """
+
     class Meta:
         name = "WholeNumberRestriction"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

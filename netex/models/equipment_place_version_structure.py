@@ -18,7 +18,7 @@ class EquipmentPlaceVersionStructure(PlaceVersionStructure):
             "name": "equipmentPositions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     place_equipments: Optional[EquipmentsRelStructure] = field(
         default=None,
@@ -26,5 +26,5 @@ class EquipmentPlaceVersionStructure(PlaceVersionStructure):
             "name": "placeEquipments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

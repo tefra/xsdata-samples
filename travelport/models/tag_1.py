@@ -24,6 +24,7 @@ class Tag1:
     agency_id
         The agency that owns the tag
     """
+
     class Meta:
         name = "Tag"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -36,7 +37,7 @@ class Tag1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     label: None | str = field(
         default=None,
@@ -45,7 +46,7 @@ class Tag1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -54,14 +55,14 @@ class Tag1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -69,7 +70,7 @@ class Tag1:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     agency_id: None | int = field(
         default=None,
@@ -77,5 +78,5 @@ class Tag1:
             "name": "AgencyID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -11,6 +11,7 @@ class HotelUpsellAdd:
     """
     Add command for adding HotelUpsellQualify,HotelUpsellOffer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,12 +21,12 @@ class HotelUpsellAdd:
             "name": "HotelUpsellQualify",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     hotel_upsell_offer: None | HotelUpsellOffer = field(
         default=None,
         metadata={
             "name": "HotelUpsellOffer",
             "type": "Element",
-        }
+        },
     )

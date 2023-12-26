@@ -8,6 +8,7 @@ class TypeFixedFieldDataFormat(Enum):
     """
     Data Type of the field.
     """
+
     STRING = "String"
     FLOAT = "Float"
     BOOLEAN = "Boolean"

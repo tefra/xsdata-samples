@@ -23,6 +23,7 @@ class Emdcommission:
         Currency of the commission amount applied.Applicable only with type
         - Amount
     """
+
     class Meta:
         name = "EMDCommission"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -33,7 +34,7 @@ class Emdcommission:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | Decimal = field(
         default=None,
@@ -41,7 +42,7 @@ class Emdcommission:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     currency_code: None | str = field(
         default=None,
@@ -49,5 +50,5 @@ class Emdcommission:
             "name": "CurrencyCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )

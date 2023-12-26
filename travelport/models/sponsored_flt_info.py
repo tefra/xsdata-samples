@@ -20,6 +20,7 @@ class SponsoredFltInfo:
     flt_key
         The unique identifying key for the sponsored flight.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class SponsoredFltInfo:
             "name": "SponsoredLNB",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     neutral_lnb: None | int = field(
         default=None,
@@ -37,7 +38,7 @@ class SponsoredFltInfo:
             "name": "NeutralLNB",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     flt_key: None | str = field(
         default=None,
@@ -46,5 +47,5 @@ class SponsoredFltInfo:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )

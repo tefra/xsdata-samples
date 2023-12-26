@@ -12,5 +12,5 @@ class TimingLinkRefByValueStructure(LinkRefByValueStructure):
         metadata={
             "name": "nameOfPointRefClass",
             "type": "Attribute",
-        }
+        },
     )

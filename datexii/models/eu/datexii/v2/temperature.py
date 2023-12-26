@@ -22,13 +22,14 @@ class Temperature:
         forecast or measurement period.
     :ivar temperature_extension:
     """
+
     air_temperature: Optional[TemperatureValue] = field(
         default=None,
         metadata={
             "name": "airTemperature",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dew_point_temperature: Optional[TemperatureValue] = field(
         default=None,
@@ -36,7 +37,7 @@ class Temperature:
             "name": "dewPointTemperature",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     maximum_temperature: Optional[TemperatureValue] = field(
         default=None,
@@ -44,7 +45,7 @@ class Temperature:
             "name": "maximumTemperature",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     minimum_temperature: Optional[TemperatureValue] = field(
         default=None,
@@ -52,7 +53,7 @@ class Temperature:
             "name": "minimumTemperature",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     temperature_extension: Optional[ExtensionType] = field(
         default=None,
@@ -60,5 +61,5 @@ class Temperature:
             "name": "temperatureExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

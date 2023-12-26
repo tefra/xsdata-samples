@@ -1,10 +1,14 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from datexii.models.eu.datexii.v2.charge_band_versioned_reference import ChargeBandVersionedReference
+from datexii.models.eu.datexii.v2.charge_band_versioned_reference import (
+    ChargeBandVersionedReference,
+)
 from datexii.models.eu.datexii.v2.currency_enum import CurrencyEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.means_of_payment_enum import MeansOfPaymentEnum
+from datexii.models.eu.datexii.v2.means_of_payment_enum import (
+    MeansOfPaymentEnum,
+)
 from datexii.models.eu.datexii.v2.used_payment_card import UsedPaymentCard
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -29,13 +33,14 @@ class IndividualCharge:
     :ivar used_payment_card:
     :ivar individual_charge_extension:
     """
+
     charge_band_reference: Optional[ChargeBandVersionedReference] = field(
         default=None,
         metadata={
             "name": "chargeBandReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_paid: Optional[Decimal] = field(
         default=None,
@@ -46,7 +51,7 @@ class IndividualCharge:
             "required": True,
             "total_digits": 8,
             "fraction_digits": 2,
-        }
+        },
     )
     charge_currency: Optional[CurrencyEnum] = field(
         default=None,
@@ -54,7 +59,7 @@ class IndividualCharge:
             "name": "chargeCurrency",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     used_means_of_payment: Optional[MeansOfPaymentEnum] = field(
         default=None,
@@ -62,7 +67,7 @@ class IndividualCharge:
             "name": "usedMeansOfPayment",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     with_reservation: Optional[bool] = field(
         default=None,
@@ -70,7 +75,7 @@ class IndividualCharge:
             "name": "withReservation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     used_payment_card: Optional[UsedPaymentCard] = field(
         default=None,
@@ -78,7 +83,7 @@ class IndividualCharge:
             "name": "usedPaymentCard",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     individual_charge_extension: Optional[ExtensionType] = field(
         default=None,
@@ -86,5 +91,5 @@ class IndividualCharge:
             "name": "individualChargeExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -16,6 +18,7 @@ class BaseReferenceComponentOptionalTypeIds:
         @schemeName and @schemeAgencyName to identify type of
         Identifier.</description>
     """
+
     class Meta:
         global_type = False
 
@@ -26,5 +29,5 @@ class BaseReferenceComponentOptionalTypeIds:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "min_occurs": 1,
-        }
+        },
     )

@@ -18,6 +18,7 @@ class Humidity:
         meteorological screen.
     :ivar humidity_extension:
     """
+
     relative_humidity: Optional[PercentageValue] = field(
         default=None,
         metadata={
@@ -25,7 +26,7 @@ class Humidity:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     humidity_extension: Optional[ExtensionType] = field(
         default=None,
@@ -33,5 +34,5 @@ class Humidity:
             "name": "humidityExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

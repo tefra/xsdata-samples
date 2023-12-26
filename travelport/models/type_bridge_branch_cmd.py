@@ -16,6 +16,7 @@ class TypeBridgeBranchCmd:
     branch_code
         The Branch Provisioning Code
     """
+
     class Meta:
         name = "typeBridgeBranchCmd"
 
@@ -25,7 +26,7 @@ class TypeBridgeBranchCmd:
             "name": "BranchID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )
     branch_code: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class TypeBridgeBranchCmd:
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )

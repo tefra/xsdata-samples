@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.vessel_type_vessel_interests import VesselTypeVesselInterests
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.vessel_type_vessel_interests import (
+    VesselTypeVesselInterests,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -15,7 +21,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "ImoNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     top: Optional[bool] = field(
         default=None,
@@ -23,7 +29,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "Top",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     flag: Optional[str] = field(
         default=None,
@@ -31,7 +37,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "Flag",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
@@ -39,7 +45,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "Name",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     segment: Optional[str] = field(
         default=None,
@@ -47,7 +53,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "Segment",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     gross_tonnage: Optional[Decimal] = field(
         default=None,
@@ -55,7 +61,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "GrossTonnage",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     dwt: Optional[Decimal] = field(
         default=None,
@@ -63,7 +69,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "DWT",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     score: Optional[int] = field(
         default=None,
@@ -71,7 +77,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "Score",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     classification_society: Optional[str] = field(
         default=None,
@@ -79,7 +85,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "ClassificationSociety",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     built_year: Optional[int] = field(
         default=None,
@@ -87,7 +93,7 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "BuiltYear",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     vessel_interests: Optional[VesselTypeVesselInterests] = field(
         default=None,
@@ -95,5 +101,5 @@ class VesselType(BaseIdentifiedComponentType):
             "name": "VesselInterests",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

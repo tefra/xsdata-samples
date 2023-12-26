@@ -16,6 +16,7 @@ class IncludedInBase3:
         this attribute shows the amount included in the base fare for the
         specific fee or tax
     """
+
     class Meta:
         name = "IncludedInBase"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -25,5 +26,5 @@ class IncludedInBase3:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )

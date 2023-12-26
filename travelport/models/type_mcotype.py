@@ -8,6 +8,7 @@ class TypeMcotype(Enum):
     """
     The available types for an MCO.
     """
+
     AGENCY_SERVICE_FEE = "AgencyServiceFee"
     EXCHANGE_RESIDUAL = "ExchangeResidual"
     AIRLINE_SERVICE_FEE = "AirlineServiceFee"

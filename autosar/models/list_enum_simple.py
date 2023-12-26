@@ -9,5 +9,6 @@ class ListEnumSimple(Enum):
     :cvar UNNUMBER: This indicates that it is an enumeration (bulleted
         list)
     """
+
     NUMBER = "NUMBER"
     UNNUMBER = "UNNUMBER"

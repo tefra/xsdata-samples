@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.booking_base_req import BookingBaseReq
-from travelport.models.booking_end_req_session_activity import BookingEndReqSessionActivity
+from travelport.models.booking_end_req_session_activity import (
+    BookingEndReqSessionActivity,
+)
 from travelport.models.queue_selector_1 import QueueSelector1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedBooking_v52_0"
@@ -21,6 +23,7 @@ class BookingEndReq(BookingBaseReq):
         must follow)
     queue_selector
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -30,7 +33,7 @@ class BookingEndReq(BookingBaseReq):
             "name": "SessionActivity",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     queue_selector: list[QueueSelector1] = field(
         default_factory=list,
@@ -39,5 +42,5 @@ class BookingEndReq(BookingBaseReq):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 4,
-        }
+        },
     )

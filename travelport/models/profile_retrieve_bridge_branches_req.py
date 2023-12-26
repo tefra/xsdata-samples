@@ -17,6 +17,7 @@ class ProfileRetrieveBridgeBranchesReq(BaseReq5):
     user_name
         The login name of the agent.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -25,7 +26,7 @@ class ProfileRetrieveBridgeBranchesReq(BaseReq5):
         metadata={
             "name": "AgentID",
             "type": "Element",
-        }
+        },
     )
     user_name: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class ProfileRetrieveBridgeBranchesReq(BaseReq5):
             "type": "Element",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

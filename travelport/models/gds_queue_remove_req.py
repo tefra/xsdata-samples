@@ -23,6 +23,7 @@ class GdsQueueRemoveReq(BaseReq1):
     remove_duplicates
         Remove duplicate PNRs from queues. Provider Supported 1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -32,14 +33,14 @@ class GdsQueueRemoveReq(BaseReq1):
             "name": "QueueSelector",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     queue_session_token: None | str = field(
         default=None,
         metadata={
             "name": "QueueSessionToken",
             "type": "Attribute",
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class GdsQueueRemoveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class GdsQueueRemoveReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -67,12 +68,12 @@ class GdsQueueRemoveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     remove_duplicates: None | bool = field(
         default=None,
         metadata={
             "name": "RemoveDuplicates",
             "type": "Attribute",
-        }
+        },
     )

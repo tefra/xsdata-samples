@@ -25,6 +25,7 @@ class FlexrayNmScheduleVariantSimple(Enum):
         transmitted in the static segment (using the FlexRay NM Vector
         support) and NM-Data is transmitted in the dynamic segment
     """
+
     SCHEDULE_VARIANT_1 = "SCHEDULE-VARIANT-1"
     SCHEDULE_VARIANT_2 = "SCHEDULE-VARIANT-2"
     SCHEDULE_VARIANT_3 = "SCHEDULE-VARIANT-3"

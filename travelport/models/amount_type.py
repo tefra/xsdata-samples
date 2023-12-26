@@ -15,6 +15,7 @@ class AmountType(Enum):
     TEXT
         Amount field has text.
     """
+
     DUE = "Due"
     PAID = "Paid"
     TEXT = "Text"

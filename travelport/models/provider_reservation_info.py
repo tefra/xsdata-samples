@@ -1,8 +1,12 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlTime
-from travelport.models.provider_reservation_details import ProviderReservationDetails
-from travelport.models.provider_reservation_display_details_list import ProviderReservationDisplayDetailsList
+from travelport.models.provider_reservation_details import (
+    ProviderReservationDetails,
+)
+from travelport.models.provider_reservation_display_details_list import (
+    ProviderReservationDisplayDetailsList,
+)
 from travelport.models.type_element_status_1 import TypeElementStatus1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
@@ -63,6 +67,7 @@ class ProviderReservationInfo:
     agent_override
         AgentSine value that was used during PNR creation or End Transact.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -71,14 +76,14 @@ class ProviderReservationInfo:
         metadata={
             "name": "ProviderReservationDetails",
             "type": "Element",
-        }
+        },
     )
     provider_reservation_display_details_list: None | ProviderReservationDisplayDetailsList = field(
         default=None,
         metadata={
             "name": "ProviderReservationDisplayDetailsList",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -86,7 +91,7 @@ class ProviderReservationInfo:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -96,7 +101,7 @@ class ProviderReservationInfo:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -105,7 +110,7 @@ class ProviderReservationInfo:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     create_date: None | XmlDateTime = field(
         default=None,
@@ -113,21 +118,21 @@ class ProviderReservationInfo:
             "name": "CreateDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     host_create_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "HostCreateDate",
             "type": "Attribute",
-        }
+        },
     )
     host_create_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "HostCreateTime",
             "type": "Attribute",
-        }
+        },
     )
     modified_date: None | XmlDateTime = field(
         default=None,
@@ -135,49 +140,49 @@ class ProviderReservationInfo:
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     imported: None | bool = field(
         default=None,
         metadata={
             "name": "Imported",
             "type": "Attribute",
-        }
+        },
     )
     ticketing_modifiers_ref: None | str = field(
         default=None,
         metadata={
             "name": "TicketingModifiersRef",
             "type": "Attribute",
-        }
+        },
     )
     in_queue_mode: None | bool = field(
         default=None,
         metadata={
             "name": "InQueueMode",
             "type": "Attribute",
-        }
+        },
     )
     group_ref: None | str = field(
         default=None,
         metadata={
             "name": "GroupRef",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     owning_pcc: None | str = field(
         default=None,
@@ -186,7 +191,7 @@ class ProviderReservationInfo:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     agent_override: None | str = field(
         default=None,
@@ -195,5 +200,5 @@ class ProviderReservationInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

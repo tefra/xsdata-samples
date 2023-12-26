@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .onward_service_link_derived_view_structure import OnwardServiceLinkDerivedViewStructure
+from .onward_service_link_derived_view_structure import (
+    OnwardServiceLinkDerivedViewStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

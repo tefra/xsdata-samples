@@ -17,6 +17,7 @@ class TypeResultMessage4:
     type_value
         Indicates the type of message (Warning, Error, Info)
     """
+
     class Meta:
         name = "typeResultMessage"
 
@@ -24,7 +25,7 @@ class TypeResultMessage4:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     code: None | int = field(
         default=None,
@@ -32,12 +33,12 @@ class TypeResultMessage4:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | TypeResultMessageType4 = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

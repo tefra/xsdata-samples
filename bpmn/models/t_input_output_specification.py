@@ -20,7 +20,7 @@ class TInputOutputSpecification(TBaseElement):
             "name": "dataInput",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_output: List[DataOutput] = field(
         default_factory=list,
@@ -28,7 +28,7 @@ class TInputOutputSpecification(TBaseElement):
             "name": "dataOutput",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     input_set: List[InputSet] = field(
         default_factory=list,
@@ -37,7 +37,7 @@ class TInputOutputSpecification(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "min_occurs": 1,
-        }
+        },
     )
     output_set: List[OutputSet] = field(
         default_factory=list,
@@ -46,5 +46,5 @@ class TInputOutputSpecification(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "min_occurs": 1,
-        }
+        },
     )

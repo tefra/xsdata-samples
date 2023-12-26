@@ -15,5 +15,5 @@ class FalseType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

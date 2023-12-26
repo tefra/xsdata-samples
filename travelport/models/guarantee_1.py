@@ -36,6 +36,7 @@ class Guarantee1:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "Guarantee"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -45,14 +46,14 @@ class Guarantee1:
         metadata={
             "name": "CreditCard",
             "type": "Element",
-        }
+        },
     )
     other_guarantee_info: None | OtherGuaranteeInfo1 = field(
         default=None,
         metadata={
             "name": "OtherGuaranteeInfo",
             "type": "Element",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -60,21 +61,21 @@ class Guarantee1:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     reuse_fop: None | str = field(
         default=None,
         metadata={
             "name": "ReuseFOP",
             "type": "Attribute",
-        }
+        },
     )
     external_reference: None | str = field(
         default=None,
@@ -82,26 +83,26 @@ class Guarantee1:
             "name": "ExternalReference",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )
     reusable: bool = field(
         default=False,
         metadata={
             "name": "Reusable",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

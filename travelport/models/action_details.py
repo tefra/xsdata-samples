@@ -22,6 +22,7 @@ class ActionDetails:
     text
         The type of action the agent performed for Provider: 1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -32,33 +33,33 @@ class ActionDetails:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     agent_sine: None | str = field(
         default=None,
         metadata={
             "name": "AgentSine",
             "type": "Attribute",
-        }
+        },
     )
     event_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EventDate",
             "type": "Attribute",
-        }
+        },
     )
     event_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EventTime",
             "type": "Attribute",
-        }
+        },
     )
     text: None | str = field(
         default=None,
         metadata={
             "name": "Text",
             "type": "Attribute",
-        }
+        },
     )

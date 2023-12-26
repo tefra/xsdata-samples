@@ -15,5 +15,5 @@ class Forall:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

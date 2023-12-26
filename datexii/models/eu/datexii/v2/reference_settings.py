@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versioned_reference import PredefinedNonOrderedLocationGroupVersionedReference
+from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versioned_reference import (
+    PredefinedNonOrderedLocationGroupVersionedReference,
+)
 from datexii.models.eu.datexii.v2.traffic_status_enum import TrafficStatusEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -23,13 +25,16 @@ class ReferenceSettings:
         associated predefined location set.
     :ivar reference_settings_extension:
     """
-    predefined_non_ordered_location_group_reference: Optional[PredefinedNonOrderedLocationGroupVersionedReference] = field(
+
+    predefined_non_ordered_location_group_reference: Optional[
+        PredefinedNonOrderedLocationGroupVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_status_default: Optional[TrafficStatusEnum] = field(
         default=None,
@@ -37,7 +42,7 @@ class ReferenceSettings:
             "name": "trafficStatusDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     reference_settings_extension: Optional[ExtensionType] = field(
         default=None,
@@ -45,5 +50,5 @@ class ReferenceSettings:
             "name": "referenceSettingsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

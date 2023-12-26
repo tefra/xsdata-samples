@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .navigation_path import NavigationPath
 from .navigation_path_ref import NavigationPathRef
@@ -12,7 +12,9 @@ class NavigationPathsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "navigationPaths_RelStructure"
 
-    navigation_path_ref_or_navigation_path: List[object] = field(
+    navigation_path_ref_or_navigation_path: List[
+        Union[NavigationPathRef, NavigationPath]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class NavigationPathsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

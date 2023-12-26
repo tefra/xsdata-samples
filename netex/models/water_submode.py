@@ -13,5 +13,5 @@ class WaterSubmode:
         default=WaterSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

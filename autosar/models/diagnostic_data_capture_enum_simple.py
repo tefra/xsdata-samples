@@ -12,5 +12,6 @@ class DiagnosticDataCaptureEnumSimple(Enum):
         intention to capture the environment data synchronously within
         the capture API function.
     """
+
     CAPTURE_ASYNCHRONOUSLY_TO_REPORTING = "CAPTURE-ASYNCHRONOUSLY-TO-REPORTING"
     CAPTURE_SYNCHRONOUSLY_TO_REPORTING = "CAPTURE-SYNCHRONOUSLY-TO-REPORTING"

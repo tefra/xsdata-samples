@@ -62,6 +62,7 @@ class SocketConnectionBundle:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOCKET-CONNECTION-BUNDLE"
 
@@ -72,23 +73,27 @@ class SocketConnectionBundle:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SocketConnectionBundle.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SocketConnectionBundle.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    bundled_connections: Optional["SocketConnectionBundle.BundledConnections"] = field(
+    bundled_connections: Optional[
+        "SocketConnectionBundle.BundledConnections"
+    ] = field(
         default=None,
         metadata={
             "name": "BUNDLED-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     differentiated_service_field: Optional[PositiveInteger] = field(
         default=None,
@@ -96,7 +101,7 @@ class SocketConnectionBundle:
             "name": "DIFFERENTIATED-SERVICE-FIELD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     flow_label: Optional[PositiveInteger] = field(
         default=None,
@@ -104,7 +109,7 @@ class SocketConnectionBundle:
             "name": "FLOW-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     path_mtu_discovery_enabled: Optional[Boolean] = field(
         default=None,
@@ -112,7 +117,7 @@ class SocketConnectionBundle:
             "name": "PATH-MTU-DISCOVERY-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdus: Optional["SocketConnectionBundle.Pdus"] = field(
         default=None,
@@ -120,7 +125,7 @@ class SocketConnectionBundle:
             "name": "PDUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     server_port_ref: Optional["SocketConnectionBundle.ServerPortRef"] = field(
         default=None,
@@ -128,7 +133,7 @@ class SocketConnectionBundle:
             "name": "SERVER-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     udp_checksum_handling: Optional[UdpChecksumCalculationEnum] = field(
         default=None,
@@ -136,7 +141,7 @@ class SocketConnectionBundle:
             "name": "UDP-CHECKSUM-HANDLING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -144,14 +149,14 @@ class SocketConnectionBundle:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -159,7 +164,7 @@ class SocketConnectionBundle:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -170,7 +175,7 @@ class SocketConnectionBundle:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -181,18 +186,20 @@ class SocketConnectionBundle:
                 "name": "SOCKET-CONNECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class Pdus:
-        socket_connection_ipdu_identifier: List[SocketConnectionIpduIdentifier] = field(
+        socket_connection_ipdu_identifier: List[
+            SocketConnectionIpduIdentifier
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-CONNECTION-IPDU-IDENTIFIER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -203,5 +210,5 @@ class SocketConnectionBundle:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
+from .communication_cluster_subtypes_enum import (
+    CommunicationClusterSubtypesEnum,
+)
 from .do_ip_logic_address import DoIpLogicAddress
 from .do_ip_tp_connection import DoIpTpConnection
 from .identifier import Identifier
@@ -88,6 +90,7 @@ class DoIpTpConfig:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DO-IP-TP-CONFIG"
 
@@ -98,7 +101,7 @@ class DoIpTpConfig:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["DoIpTpConfig.ShortNameFragments"] = field(
         default=None,
@@ -106,7 +109,7 @@ class DoIpTpConfig:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +117,7 @@ class DoIpTpConfig:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +125,7 @@ class DoIpTpConfig:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +133,7 @@ class DoIpTpConfig:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +141,7 @@ class DoIpTpConfig:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,7 +149,7 @@ class DoIpTpConfig:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DoIpTpConfig.Annotations"] = field(
         default=None,
@@ -154,7 +157,7 @@ class DoIpTpConfig:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -162,15 +165,17 @@ class DoIpTpConfig:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_cluster_ref: Optional["DoIpTpConfig.CommunicationClusterRef"] = field(
+    communication_cluster_ref: Optional[
+        "DoIpTpConfig.CommunicationClusterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     do_ip_logic_addresss: Optional["DoIpTpConfig.DoIpLogicAddresss"] = field(
         default=None,
@@ -178,7 +183,7 @@ class DoIpTpConfig:
             "name": "DO-IP-LOGIC-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_connections: Optional["DoIpTpConfig.TpConnections"] = field(
         default=None,
@@ -186,14 +191,14 @@ class DoIpTpConfig:
             "name": "TP-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -201,14 +206,14 @@ class DoIpTpConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -219,7 +224,7 @@ class DoIpTpConfig:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -230,7 +235,7 @@ class DoIpTpConfig:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,7 +246,7 @@ class DoIpTpConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -252,7 +257,7 @@ class DoIpTpConfig:
                 "name": "DO-IP-LOGIC-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -263,5 +268,5 @@ class DoIpTpConfig:
                 "name": "DO-IP-TP-CONNECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

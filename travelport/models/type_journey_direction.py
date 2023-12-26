@@ -8,5 +8,6 @@ class TypeJourneyDirection(Enum):
     """
     Outbound and Return directions.
     """
+
     OUTWARD = "Outward"
     RETURN = "Return"

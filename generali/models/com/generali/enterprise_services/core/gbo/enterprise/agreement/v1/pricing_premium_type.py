@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -13,7 +15,7 @@ class PricingPremiumType:
             "name": "Gross",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     actual: Optional[Decimal] = field(
         default=None,
@@ -21,7 +23,7 @@ class PricingPremiumType:
             "name": "Actual",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     minimum_acceptable: Optional[Decimal] = field(
         default=None,
@@ -29,5 +31,5 @@ class PricingPremiumType:
             "name": "MinimumAcceptable",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

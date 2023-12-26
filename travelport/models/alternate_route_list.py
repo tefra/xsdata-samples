@@ -10,6 +10,7 @@ class AlternateRouteList:
     """
     Identifies the alternate routes for the request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class AlternateRouteList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

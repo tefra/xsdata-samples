@@ -17,7 +17,7 @@ class TrainNumberVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     for_advertisement: Optional[str] = field(
         default=None,
@@ -25,7 +25,7 @@ class TrainNumberVersionStructure(DataManagedObjectStructure):
             "name": "ForAdvertisement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     for_production: Optional[str] = field(
         default=None,
@@ -33,5 +33,5 @@ class TrainNumberVersionStructure(DataManagedObjectStructure):
             "name": "ForProduction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -12,6 +12,7 @@ class AvailabilityEnum(Enum):
     :cvar UNKNOWN: There is no information about whether the element in
         question is available or not.
     """
+
     AVAILABLE = "available"
     NOT_AVAILABLE = "notAvailable"
     UNKNOWN = "unknown"

@@ -1,12 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .passenger_equipment_version_structure import PassengerEquipmentVersionStructure
+from .passenger_equipment_version_structure import (
+    PassengerEquipmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class RubbishDisposalEquipmentVersionStructure(PassengerEquipmentVersionStructure):
+class RubbishDisposalEquipmentVersionStructure(
+    PassengerEquipmentVersionStructure
+):
     class Meta:
         name = "RubbishDisposalEquipment_VersionStructure"
 
@@ -16,7 +20,7 @@ class RubbishDisposalEquipmentVersionStructure(PassengerEquipmentVersionStructur
             "name": "SharpsDispsal",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     recycling: Optional[bool] = field(
         default=None,
@@ -24,5 +28,5 @@ class RubbishDisposalEquipmentVersionStructure(PassengerEquipmentVersionStructur
             "name": "Recycling",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

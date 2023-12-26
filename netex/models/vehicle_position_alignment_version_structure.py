@@ -13,13 +13,15 @@ class VehiclePositionAlignmentVersionStructure(VersionedChildStructure):
     class Meta:
         name = "VehiclePositionAlignment_VersionStructure"
 
-    vehicle_stopping_position_ref: Optional[VehicleStoppingPositionRef] = field(
+    vehicle_stopping_position_ref: Optional[
+        VehicleStoppingPositionRef
+    ] = field(
         default=None,
         metadata={
             "name": "VehicleStoppingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_position_ref: Optional[BoardingPositionRef] = field(
         default=None,
@@ -27,7 +29,7 @@ class VehiclePositionAlignmentVersionStructure(VersionedChildStructure):
             "name": "BoardingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_place_entrance_ref: Optional[StopPlaceEntranceRef] = field(
         default=None,
@@ -35,11 +37,11 @@ class VehiclePositionAlignmentVersionStructure(VersionedChildStructure):
             "name": "StopPlaceEntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

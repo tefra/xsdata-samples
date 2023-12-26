@@ -15,19 +15,19 @@ class ParagraphType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     body: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     image: None | ImageType2 = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )

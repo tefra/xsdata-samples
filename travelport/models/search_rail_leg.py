@@ -14,6 +14,7 @@ class SearchRailLeg:
     """
     Holds Origin, Destination, and Departure times for a Rail Leg to search for.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -24,7 +25,7 @@ class SearchRailLeg:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     search_destination: list[TypeSearchLocation1] = field(
         default_factory=list,
@@ -33,14 +34,14 @@ class SearchRailLeg:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     rail_segment_list: None | RailSegmentList = field(
         default=None,
         metadata={
             "name": "RailSegmentList",
             "type": "Element",
-        }
+        },
     )
     search_dep_time: list[TypeFlexibleTimeSpec1] = field(
         default_factory=list,
@@ -48,7 +49,7 @@ class SearchRailLeg:
             "name": "SearchDepTime",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     search_arv_time: list[TypeTimeSpec1] = field(
         default_factory=list,
@@ -56,12 +57,12 @@ class SearchRailLeg:
             "name": "SearchArvTime",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_leg_modifiers: None | RailLegModifiers = field(
         default=None,
         metadata={
             "name": "RailLegModifiers",
             "type": "Element",
-        }
+        },
     )

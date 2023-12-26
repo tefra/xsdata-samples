@@ -15,19 +15,19 @@ class DurationRangeFacetItemType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     begin: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     end: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

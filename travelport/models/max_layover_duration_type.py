@@ -21,6 +21,7 @@ class MaxLayoverDurationType:
         It will be applied for all International-to-International
         connections.
     """
+
     domestic: None | int = field(
         default=None,
         metadata={
@@ -28,7 +29,7 @@ class MaxLayoverDurationType:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 9999,
-        }
+        },
     )
     gateway: None | int = field(
         default=None,
@@ -37,7 +38,7 @@ class MaxLayoverDurationType:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 9999,
-        }
+        },
     )
     international: None | int = field(
         default=None,
@@ -46,5 +47,5 @@ class MaxLayoverDurationType:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 9999,
-        }
+        },
     )

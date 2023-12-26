@@ -10,5 +10,6 @@ class ParkingRouteDirectionEnum(Enum):
     :cvar TOWARDS_PARKING_SITE: Towards parking site.
     :cvar AWAY_FROM_PARKING_SITE: Away from parking site.
     """
+
     TOWARDS_PARKING_SITE = "towardsParkingSite"
     AWAY_FROM_PARKING_SITE = "awayFromParkingSite"

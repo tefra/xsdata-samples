@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.action_ref import ActionRef
 from travelport.models.fixed_field_group_ref import FixedFieldGroupRef
-from travelport.models.type_fixed_field_data_format import TypeFixedFieldDataFormat
+from travelport.models.type_fixed_field_data_format import (
+    TypeFixedFieldDataFormat,
+)
 from travelport.models.type_masked_2 import TypeMasked2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -68,6 +70,7 @@ class FixedField:
         Defines if field as editable or not.
     overriden
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -77,7 +80,7 @@ class FixedField:
             "name": "FixedFieldGroupRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     action_ref: list[ActionRef] = field(
         default_factory=list,
@@ -85,7 +88,7 @@ class FixedField:
             "name": "ActionRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -93,70 +96,70 @@ class FixedField:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     label: None | str = field(
         default=None,
         metadata={
             "name": "Label",
             "type": "Attribute",
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     hide: bool = field(
         default=False,
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )
     search_option: bool = field(
         default=False,
         metadata={
             "name": "SearchOption",
             "type": "Attribute",
-        }
+        },
     )
     search_option_display_order: None | int = field(
         default=None,
         metadata={
             "name": "SearchOptionDisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MinOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -166,7 +169,7 @@ class FixedField:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     data_type: None | TypeFixedFieldDataFormat = field(
         default=None,
@@ -174,7 +177,7 @@ class FixedField:
             "name": "DataType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     component: None | str = field(
         default=None,
@@ -182,7 +185,7 @@ class FixedField:
             "name": "Component",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -191,21 +194,21 @@ class FixedField:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     encrypted: bool = field(
         default=False,
         metadata={
             "name": "Encrypted",
             "type": "Attribute",
-        }
+        },
     )
     masked: TypeMasked2 = field(
         default=TypeMasked2.NOT_MASKED,
         metadata={
             "name": "Masked",
             "type": "Attribute",
-        }
+        },
     )
     searchable: None | bool = field(
         default=None,
@@ -213,26 +216,26 @@ class FixedField:
             "name": "Searchable",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     read_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReadOnly",
             "type": "Attribute",
-        }
+        },
     )
     overriden: bool = field(
         default=False,
         metadata={
             "name": "Overriden",
             "type": "Attribute",
-        }
+        },
     )

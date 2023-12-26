@@ -14,6 +14,7 @@ class OwnershipTypeEnum(Enum):
     :cvar UNKNOWN: An unknown kind of ownership.
     :cvar OTHER: Other kind of ownership.
     """
+
     PUBLIC = "public"
     PRIVATE = "private"
     PUBLIC_PRIVATE = "publicPrivate"

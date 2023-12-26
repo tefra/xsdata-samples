@@ -16,7 +16,7 @@ class SystemInfoPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class SystemInfoPortTypeServiceInput:
                 "name": "SystemInfoReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/system_v32_0",
-            }
+            },
         )

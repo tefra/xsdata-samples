@@ -15,5 +15,5 @@ class Naturalnumbers:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

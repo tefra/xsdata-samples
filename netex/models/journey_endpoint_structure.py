@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .destination_display_ref import DestinationDisplayRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .multilingual_string import MultilingualString
@@ -17,9 +17,11 @@ class JourneyEndpointStructure:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[object] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: Optional[
+        Union[FareScheduledStopPointRef, ScheduledStopPointRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -35,7 +37,7 @@ class JourneyEndpointStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     destination_display_ref: Optional[DestinationDisplayRef] = field(
         default=None,
@@ -43,7 +45,7 @@ class JourneyEndpointStructure:
             "name": "DestinationDisplayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     place_ref: Optional[PlaceRef] = field(
         default=None,
@@ -51,5 +53,5 @@ class JourneyEndpointStructure:
             "name": "PlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

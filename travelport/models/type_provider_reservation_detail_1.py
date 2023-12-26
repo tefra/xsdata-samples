@@ -18,6 +18,7 @@ class TypeProviderReservationDetail1:
     supplier_code
         Represents Carrier Code for ACH PNR Retrieve.
     """
+
     class Meta:
         name = "typeProviderReservationDetail"
 
@@ -29,7 +30,7 @@ class TypeProviderReservationDetail1:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class TypeProviderReservationDetail1:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -47,5 +48,5 @@ class TypeProviderReservationDetail1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )

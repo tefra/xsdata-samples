@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
-from .fare_price_versioned_child_structure import FarePriceVersionedChildStructure
+from .fare_price_versioned_child_structure import (
+    FarePriceVersionedChildStructure,
+)
 from .fare_product_ref import FareProductRef
 from .preassigned_fare_product_ref import PreassignedFareProductRef
 from .sale_discount_right_ref import SaleDiscountRightRef
@@ -14,11 +16,24 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
+class FareProductPriceVersionedChildStructure(
+    FarePriceVersionedChildStructure
+):
     class Meta:
         name = "FareProductPrice_VersionedChildStructure"
 
-    choice_2: Optional[object] = field(
+    choice_2: Optional[
+        Union[
+            SupplementProductRef,
+            PreassignedFareProductRef,
+            AmountOfPriceUnitProductRef,
+            UsageDiscountRightRef,
+            ThirdPartyProductRef,
+            CappedDiscountRightRef,
+            SaleDiscountRightRef,
+            FareProductRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -64,5 +79,5 @@ class FareProductPriceVersionedChildStructure(FarePriceVersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

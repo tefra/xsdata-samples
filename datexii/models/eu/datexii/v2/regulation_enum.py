@@ -29,6 +29,7 @@ class RegulationEnum(Enum):
     :cvar UNKNOWN: The regulation is unknown.
     :cvar OTHER: Other.
     """
+
     PERMITTED = "permitted"
     PROHIBITED = "prohibited"
     PUNISHABLE = "punishable"

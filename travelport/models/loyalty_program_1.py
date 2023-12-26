@@ -27,6 +27,7 @@ class LoyaltyProgram1:
         true.
     level
     """
+
     class Meta:
         name = "LoyaltyProgram"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -36,7 +37,7 @@ class LoyaltyProgram1:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -45,14 +46,14 @@ class LoyaltyProgram1:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     alliance_level: None | str = field(
         default=None,
         metadata={
             "name": "AllianceLevel",
             "type": "Attribute",
-        }
+        },
     )
     membership_program: None | str = field(
         default=None,
@@ -61,26 +62,26 @@ class LoyaltyProgram1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     level: None | object = field(
         default=None,
         metadata={
             "name": "Level",
             "type": "Attribute",
-        }
+        },
     )

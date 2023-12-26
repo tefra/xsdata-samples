@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.booking_rules_fare_reference import BookingRulesFareReference
+from travelport.models.booking_rules_fare_reference import (
+    BookingRulesFareReference,
+)
 from travelport.models.charges_rules import ChargesRules
 from travelport.models.document_required import DocumentRequired
 from travelport.models.restriction_2 import Restriction2
@@ -25,6 +27,7 @@ class BookingRules:
     gender_dob_required
         Vendor populates if gender/DOB data is required in book.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -34,7 +37,7 @@ class BookingRules:
             "name": "BookingRulesFareReference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rule_info: list[BookingRules.RuleInfo] = field(
         default_factory=list,
@@ -42,7 +45,7 @@ class BookingRules:
             "name": "RuleInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     restriction: list[Restriction2] = field(
         default_factory=list,
@@ -50,7 +53,7 @@ class BookingRules:
             "name": "Restriction",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     document_required: list[DocumentRequired] = field(
         default_factory=list,
@@ -58,14 +61,14 @@ class BookingRules:
             "name": "DocumentRequired",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     gender_dob_required: None | bool = field(
         default=None,
         metadata={
             "name": "GenderDobRequired",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -75,5 +78,5 @@ class BookingRules:
             metadata={
                 "name": "ChargesRules",
                 "type": "Element",
-            }
+            },
         )

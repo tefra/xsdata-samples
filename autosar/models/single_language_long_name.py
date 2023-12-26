@@ -25,6 +25,7 @@ class SingleLanguageLongName:
         AUTOSAR tools to manage the timestamp.
     :ivar content:
     """
+
     class Meta:
         name = "SINGLE-LANGUAGE-LONG-NAME"
 
@@ -33,7 +34,7 @@ class SingleLanguageLongName:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -41,7 +42,7 @@ class SingleLanguageLongName:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -76,5 +77,5 @@ class SingleLanguageLongName:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )

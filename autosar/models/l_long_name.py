@@ -35,6 +35,7 @@ class LLongName:
         blueprint.
     :ivar content:
     """
+
     class Meta:
         name = "L-LONG-NAME"
 
@@ -43,7 +44,7 @@ class LLongName:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -51,7 +52,7 @@ class LLongName:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     l: Optional[LEnumSimple] = field(
         default=None,
@@ -59,14 +60,14 @@ class LLongName:
             "name": "L",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     blueprint_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -101,5 +102,5 @@ class LLongName:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )

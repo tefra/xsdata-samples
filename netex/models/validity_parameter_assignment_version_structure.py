@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .access_right_parameter_assignment_version_structure import AccessRightParameterAssignmentVersionStructure
+from typing import Optional, Union
+from .access_right_parameter_assignment_version_structure import (
+    AccessRightParameterAssignmentVersionStructure,
+)
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor_ref import FareQuotaFactorRef
 from .geographical_interval_ref import GeographicalIntervalRef
@@ -14,11 +16,15 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignmentVersionStructure):
+class ValidityParameterAssignmentVersionStructure(
+    AccessRightParameterAssignmentVersionStructure
+):
     class Meta:
         name = "ValidityParameterAssignment_VersionStructure"
 
-    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: Optional[object] = field(
+    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: Optional[
+        Union[TimeIntervalRef, ParkingChargeBandRef, TimeStructureFactorRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -39,9 +45,11 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    geographical_interval_ref_or_geographical_structure_factor_ref: Optional[object] = field(
+    geographical_interval_ref_or_geographical_structure_factor_ref: Optional[
+        Union[GeographicalIntervalRef, GeographicalStructureFactorRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -57,9 +65,13 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[object] = field(
+    fare_quota_factor_ref_or_fare_demand_factor_ref_or_quality_structure_factor_ref: Optional[
+        Union[
+            FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -80,5 +92,5 @@ class ValidityParameterAssignmentVersionStructure(AccessRightParameterAssignment
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

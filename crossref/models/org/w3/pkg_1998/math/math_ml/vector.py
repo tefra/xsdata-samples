@@ -15,5 +15,5 @@ class Vector:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -29,6 +29,7 @@ class LifeCyclePeriod:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIFE-CYCLE-PERIOD"
 
@@ -38,7 +39,7 @@ class LifeCyclePeriod:
             "name": "DATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ar_release_version: Optional[RevisionLabelString] = field(
         default=None,
@@ -46,7 +47,7 @@ class LifeCyclePeriod:
             "name": "AR-RELEASE-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     product_release: Optional[RevisionLabelString] = field(
         default=None,
@@ -54,14 +55,14 @@ class LifeCyclePeriod:
             "name": "PRODUCT-RELEASE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -69,5 +70,5 @@ class LifeCyclePeriod:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

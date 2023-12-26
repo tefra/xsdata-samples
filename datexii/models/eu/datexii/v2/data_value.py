@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.computation_method_enum import ComputationMethodEnum
+from datexii.models.eu.datexii.v2.computation_method_enum import (
+    ComputationMethodEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 
@@ -46,13 +48,14 @@ class DataValue:
         ideal/perfect quality. The method of calculation is supplier
         specific and needs to be agreed between supplier and client.
     """
+
     data_error: Optional[bool] = field(
         default=None,
         metadata={
             "name": "dataError",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     reason_for_data_error: Optional[MultilingualString] = field(
         default=None,
@@ -60,7 +63,7 @@ class DataValue:
             "name": "reasonForDataError",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     data_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -68,53 +71,53 @@ class DataValue:
             "name": "dataValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accuracy: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     computational_method: Optional[ComputationMethodEnum] = field(
         default=None,
         metadata={
             "name": "computationalMethod",
             "type": "Attribute",
-        }
+        },
     )
     number_of_incomplete_inputs: Optional[int] = field(
         default=None,
         metadata={
             "name": "numberOfIncompleteInputs",
             "type": "Attribute",
-        }
+        },
     )
     number_of_input_values_used: Optional[int] = field(
         default=None,
         metadata={
             "name": "numberOfInputValuesUsed",
             "type": "Attribute",
-        }
+        },
     )
     smoothing_factor: Optional[float] = field(
         default=None,
         metadata={
             "name": "smoothingFactor",
             "type": "Attribute",
-        }
+        },
     )
     standard_deviation: Optional[float] = field(
         default=None,
         metadata={
             "name": "standardDeviation",
             "type": "Attribute",
-        }
+        },
     )
     supplier_calculated_data_quality: Optional[float] = field(
         default=None,
         metadata={
             "name": "supplierCalculatedDataQuality",
             "type": "Attribute",
-        }
+        },
     )

@@ -29,6 +29,7 @@ class EcucConfigurationVariantEnumSimple(Enum):
         implementation uses only PreCompileTime configuration
         parameters.
     """
+
     PRECONFIGURED_CONFIGURATION = "PRECONFIGURED-CONFIGURATION"
     RECOMMENDED_CONFIGURATION = "RECOMMENDED-CONFIGURATION"
     VARIANT_LINK_TIME = "VARIANT-LINK-TIME"

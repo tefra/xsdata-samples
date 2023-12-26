@@ -54,6 +54,7 @@ class CustomFieldGroup:
         Defines if field as editable or not.
     overriden
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -63,7 +64,7 @@ class CustomFieldGroup:
             "name": "CustomField",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class CustomFieldGroup:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -81,14 +82,14 @@ class CustomFieldGroup:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -97,75 +98,75 @@ class CustomFieldGroup:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     label: None | str = field(
         default=None,
         metadata={
             "name": "Label",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     hide: bool = field(
         default=False,
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MinOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     inheritable_control_ind: bool = field(
         default=False,
         metadata={
             "name": "InheritableControlInd",
             "type": "Attribute",
-        }
+        },
     )
     read_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReadOnly",
             "type": "Attribute",
-        }
+        },
     )
     overriden: bool = field(
         default=False,
         metadata={
             "name": "Overriden",
             "type": "Attribute",
-        }
+        },
     )

@@ -17,7 +17,7 @@ class ProfileSearchFieldPortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +28,16 @@ class ProfileSearchFieldPortTypeServiceOutput:
                 "name": "ProfileSearchFieldRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            }
+            },
         )
-        fault: None | ProfileSearchFieldPortTypeServiceOutput.Body.Fault = field(
-            default=None,
-            metadata={
-                "name": "Fault",
-                "type": "Element",
-            }
+        fault: None | ProfileSearchFieldPortTypeServiceOutput.Body.Fault = (
+            field(
+                default=None,
+                metadata={
+                    "name": "Fault",
+                    "type": "Element",
+                },
+            )
         )
 
         @dataclass
@@ -45,28 +47,28 @@ class ProfileSearchFieldPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | ProfileSearchFieldPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +79,5 @@ class ProfileSearchFieldPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

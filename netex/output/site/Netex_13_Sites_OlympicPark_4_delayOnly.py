@@ -19,206 +19,206 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     description=MultilingualString(
-        value="OPK Example - exchange of just the delays for a previously exchanged site. "
+        value='OPK Example - exchange of just the delays for a previously exchanged site. '
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             SiteFrame(
-                id="naptPoi:8100OPKXX",
-                version="any",
+                id='naptPoi:8100OPKXX',
+                version='any',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="naptPoi_data",
-                            xmlns="naptPoi",
-                            xmlns_url="http://www.naptan.org.uk/pois",
-                            description="UK NaPTAN POIs"
+                            id='naptPoi_data',
+                            xmlns='naptPoi',
+                            xmlns_url='http://www.naptan.org.uk/pois',
+                            description='UK NaPTAN POIs'
                         ),
                         Codespace(
-                            id="oda_data",
-                            xmlns="oda",
-                            xmlns_url="http://www.oda.org.uk/data/",
-                            description="data from Olympica Developmnet Authority"
+                            id='oda_data',
+                            xmlns='oda',
+                            xmlns_url='http://www.oda.org.uk/data/',
+                            description='data from Olympica Developmnet Authority'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="oda_data"
+                        ref='oda_data'
                     )
                 ),
                 check_constraints=CheckConstraintInFrameRelStructure(
                     check_constraint=[
                         CheckConstraint(
-                            id="naptPoi:8100OPK_E1_C1",
-                            version="any",
+                            id='naptPoi:8100OPK_E1_C1',
+                            version='any',
                             order=1,
                             delays=CheckConstraintDelaysRelStructure(
                                 check_constraint_delay_ref_or_check_constraint_delay=[
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_VB_i",
+                                        id='naptPoi:8100OPK_E1_C1_Del_VB_i',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Very_Busy_ingress"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Very_Busy_ingress'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT10M"),
                                         average_delay=XmlDuration("PT40M"),
                                         maximum_likely_delay=XmlDuration("PT80M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_VB_d",
+                                        id='naptPoi:8100OPK_E1_C1_Del_VB_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Very_Busy_during"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Very_Busy_during'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=2,
                                         minimum_likely_delay=XmlDuration("PT8M"),
                                         average_delay=XmlDuration("PT15M"),
                                         maximum_likely_delay=XmlDuration("PT30M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_VB_o",
+                                        id='naptPoi:8100OPK_E1_C1_Del_VB_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Very_Busy_other"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Very_Busy_other'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=3,
                                         minimum_likely_delay=XmlDuration("PT3M"),
                                         average_delay=XmlDuration("PT3M"),
                                         maximum_likely_delay=XmlDuration("PT6M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_B_i",
+                                        id='naptPoi:8100OPK_E1_C1_Del_B_i',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Busy_ingress"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Busy_ingress'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=4,
                                         minimum_likely_delay=XmlDuration("PT25M"),
                                         average_delay=XmlDuration("PT25M"),
                                         maximum_likely_delay=XmlDuration("PT50M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_B_d",
+                                        id='naptPoi:8100OPK_E1_C1_Del_B_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Busy_during"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Busy_during'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=5,
                                         minimum_likely_delay=XmlDuration("PT6M"),
                                         average_delay=XmlDuration("PT15M"),
                                         maximum_likely_delay=XmlDuration("PT30M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_B_o",
+                                        id='naptPoi:8100OPK_E1_C1_Del_B_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Busy_other"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Busy_other'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=6,
                                         minimum_likely_delay=XmlDuration("PT3M"),
                                         average_delay=XmlDuration("PT3M"),
                                         maximum_likely_delay=XmlDuration("PT6M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_N_i",
+                                        id='naptPoi:8100OPK_E1_C1_Del_N_i',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Normal_ingress"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Normal_ingress'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=7,
                                         minimum_likely_delay=XmlDuration("PT10M"),
                                         average_delay=XmlDuration("PT20M"),
                                         maximum_likely_delay=XmlDuration("PT40M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_N_d",
+                                        id='naptPoi:8100OPK_E1_C1_Del_N_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Normal_during"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Normal_during'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=7,
                                         minimum_likely_delay=XmlDuration("PT4M"),
                                         average_delay=XmlDuration("PT10M"),
                                         maximum_likely_delay=XmlDuration("PT20M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C1_Del_N_o",
+                                        id='naptPoi:8100OPK_E1_C1_Del_N_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Normal_other"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Normal_other'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=8,
                                         minimum_likely_delay=XmlDuration("PT3M"),
                                         average_delay=XmlDuration("PT3M"),
@@ -228,168 +228,168 @@ obj = PublicationDelivery(
                             )
                         ),
                         CheckConstraint(
-                            id="naptPoi:8100OPK_E1_C2",
-                            version="any",
+                            id='naptPoi:8100OPK_E1_C2',
+                            version='any',
                             order=1,
                             delays=CheckConstraintDelaysRelStructure(
                                 check_constraint_delay_ref_or_check_constraint_delay=[
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_VB_d",
+                                        id='naptPoi:8100OPK_E1_C2_Del_VB_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Very_Busy_during"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Very_Busy_during'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT8M"),
                                         average_delay=XmlDuration("PT15M"),
                                         maximum_likely_delay=XmlDuration("PT30M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_VB_e",
+                                        id='naptPoi:8100OPK_E1_C2_Del_VB_e',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Very_Busy_egress"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Very_Busy_egress'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT10M"),
                                         average_delay=XmlDuration("PT20M"),
                                         maximum_likely_delay=XmlDuration("PT30M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_VB_o",
+                                        id='naptPoi:8100OPK_E1_C2_Del_VB_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Very_Busy_other"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Very_Busy_other'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT3M"),
                                         average_delay=XmlDuration("PT3M"),
                                         maximum_likely_delay=XmlDuration("PT6M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_B_d",
+                                        id='naptPoi:8100OPK_E1_C2_Del_B_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Busy_during"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Busy_during'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT6M"),
                                         average_delay=XmlDuration("PT15M"),
                                         maximum_likely_delay=XmlDuration("PT30M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_B_e",
+                                        id='naptPoi:8100OPK_E1_C2_Del_B_e',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Busy_egress"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Busy_egress'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT8M"),
                                         average_delay=XmlDuration("PT15M"),
                                         maximum_likely_delay=XmlDuration("PT25M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_B_o",
+                                        id='naptPoi:8100OPK_E1_C2_Del_B_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Busy_other"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Busy_other'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT3M"),
                                         average_delay=XmlDuration("PT3M"),
                                         maximum_likely_delay=XmlDuration("PT6M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_N_d",
+                                        id='naptPoi:8100OPK_E1_C2_Del_N_d',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Normal_during"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Normal_during'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT4M"),
                                         average_delay=XmlDuration("PT10M"),
                                         maximum_likely_delay=XmlDuration("PT20M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_N_e",
+                                        id='naptPoi:8100OPK_E1_C2_Del_N_e',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Normal_egress"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Normal_egress'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT6M"),
                                         average_delay=XmlDuration("PT12M"),
                                         maximum_likely_delay=XmlDuration("PT20M")
                                     ),
                                     CheckConstraintDelay(
-                                        id="naptPoi:8100OPK_E1_C2_Del_N_o",
+                                        id='naptPoi:8100OPK_E1_C2_Del_N_o',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        value="EXTERNAL",
-                                                        ref="oda:Avl_Normal_other"
+                                                        value='EXTERNAL',
+                                                        ref='oda:Avl_Normal_other'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         order=1,
                                         minimum_likely_delay=XmlDuration("PT3M"),
                                         average_delay=XmlDuration("PT3M"),

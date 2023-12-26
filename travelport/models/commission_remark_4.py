@@ -33,6 +33,7 @@ class CommissionRemark4:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "CommissionRemark"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -42,7 +43,7 @@ class CommissionRemark4:
         metadata={
             "name": "ProviderReservationLevel",
             "type": "Element",
-        }
+        },
     )
     passenger_type_level: list[CommissionRemark4.PassengerTypeLevel] = field(
         default_factory=list,
@@ -50,21 +51,21 @@ class CommissionRemark4:
             "name": "PassengerTypeLevel",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -73,21 +74,21 @@ class CommissionRemark4:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     el_stat: None | TypeElementStatus5 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -102,12 +103,13 @@ class CommissionRemark4:
         commission_cap
             Commission cap for the Airline.
         """
+
         amount: None | str = field(
             default=None,
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-            }
+            },
         )
         percentage: None | str = field(
             default=None,
@@ -115,14 +117,14 @@ class CommissionRemark4:
                 "name": "Percentage",
                 "type": "Attribute",
                 "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-            }
+            },
         )
         commission_cap: None | str = field(
             default=None,
             metadata={
                 "name": "CommissionCap",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -138,6 +140,7 @@ class CommissionRemark4:
         commission_cap
             Commission cap for the Airline.
         """
+
         traveler_type: None | str = field(
             default=None,
             metadata={
@@ -146,14 +149,14 @@ class CommissionRemark4:
                 "required": True,
                 "min_length": 3,
                 "max_length": 5,
-            }
+            },
         )
         amount: None | str = field(
             default=None,
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-            }
+            },
         )
         percentage: None | str = field(
             default=None,
@@ -161,12 +164,12 @@ class CommissionRemark4:
                 "name": "Percentage",
                 "type": "Attribute",
                 "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-            }
+            },
         )
         commission_cap: None | str = field(
             default=None,
             metadata={
                 "name": "CommissionCap",
                 "type": "Attribute",
-            }
+            },
         )

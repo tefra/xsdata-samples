@@ -17,5 +17,5 @@ class BaseSearchRsp2(BaseRsp2):
             "name": "NextResultReference",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )

@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
-from .passenger_comms_facility_enumeration import PassengerCommsFacilityEnumeration
+from .passenger_comms_facility_enumeration import (
+    PassengerCommsFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -13,5 +15,5 @@ class PassengerCommsFacility:
         default=PassengerCommsFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

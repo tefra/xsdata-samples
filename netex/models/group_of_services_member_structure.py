@@ -1,12 +1,16 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
+from typing import Optional, Union
+from .abstract_group_member_versioned_child_structure import (
+    AbstractGroupMemberVersionedChildStructure,
+)
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_ref import DeadRunRef
 from .group_of_services_ref_structure import GroupOfServicesRefStructure
 from .journey_designator import JourneyDesignator
-from .notice_assignment_views_rel_structure import NoticeAssignmentViewsRelStructure
+from .notice_assignment_views_rel_structure import (
+    NoticeAssignmentViewsRelStructure,
+)
 from .service_designator import ServiceDesignator
 from .service_journey_ref import ServiceJourneyRef
 from .special_service_ref import SpecialServiceRef
@@ -18,16 +22,31 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupOfServicesMemberStructure(AbstractGroupMemberVersionedChildStructure):
+class GroupOfServicesMemberStructure(
+    AbstractGroupMemberVersionedChildStructure
+):
     group_of_services_ref: Optional[GroupOfServicesRefStructure] = field(
         default=None,
         metadata={
             "name": "GroupOfServicesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            DatedVehicleJourneyRef,
+            DatedSpecialServiceRef,
+            SpecialServiceRef,
+            TemplateServiceJourneyRef,
+            ServiceJourneyRef,
+            DeadRunRef,
+            VehicleJourneyRef,
+            TrainNumberRef,
+            JourneyDesignator,
+            ServiceDesignator,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -83,7 +102,7 @@ class GroupOfServicesMemberStructure(AbstractGroupMemberVersionedChildStructure)
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentViewsRelStructure] = field(
         default=None,
@@ -91,5 +110,5 @@ class GroupOfServicesMemberStructure(AbstractGroupMemberVersionedChildStructure)
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

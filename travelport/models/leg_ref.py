@@ -9,6 +9,7 @@ class LegRef:
     """
     Reference to a Leg.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class LegRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

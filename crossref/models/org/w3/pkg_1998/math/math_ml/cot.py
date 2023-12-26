@@ -15,5 +15,5 @@ class Cot:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

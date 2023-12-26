@@ -18,6 +18,7 @@ class PaymentCardBrandsEnum(Enum):
     :cvar V_PAY: V PAY
     :cvar OTHER: Other
     """
+
     AMERICAN_EXPRESS = "americanExpress"
     CIRRUS = "cirrus"
     DINERS_CLUB = "dinersClub"

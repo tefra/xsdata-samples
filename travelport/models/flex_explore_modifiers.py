@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.flex_explore_modifiers_type import FlexExploreModifiersType
+from travelport.models.flex_explore_modifiers_type import (
+    FlexExploreModifiersType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -30,6 +32,7 @@ class FlexExploreModifiers:
         Type=Group. Group names are defined in the Search Control Console.
         Supported Providers:  1G/1V/1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -41,7 +44,7 @@ class FlexExploreModifiers:
             "max_occurs": 59,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     type_value: None | FlexExploreModifiersType = field(
         default=None,
@@ -49,14 +52,14 @@ class FlexExploreModifiers:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     radius: None | int = field(
         default=None,
         metadata={
             "name": "Radius",
             "type": "Attribute",
-        }
+        },
     )
     group_name: None | str = field(
         default=None,
@@ -64,5 +67,5 @@ class FlexExploreModifiers:
             "name": "GroupName",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )

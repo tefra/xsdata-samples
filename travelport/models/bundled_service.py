@@ -29,6 +29,7 @@ class BundledService:
     occurrence
         How many of the service are included in the bundled service.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -38,47 +39,47 @@ class BundledService:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     carrier_sub_code: None | bool = field(
         default=None,
         metadata={
             "name": "CarrierSubCode",
             "type": "Attribute",
-        }
+        },
     )
     service_type: None | str = field(
         default=None,
         metadata={
             "name": "ServiceType",
             "type": "Attribute",
-        }
+        },
     )
     service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )
     booking: None | TypeBooking = field(
         default=None,
         metadata={
             "name": "Booking",
             "type": "Attribute",
-        }
+        },
     )
     occurrence: None | int = field(
         default=None,
         metadata={
             "name": "Occurrence",
             "type": "Attribute",
-        }
+        },
     )

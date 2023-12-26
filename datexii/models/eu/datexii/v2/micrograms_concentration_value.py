@@ -17,6 +17,7 @@ class MicrogramsConcentrationValue(DataValue):
         (microgrammes/cubic metre).
     :ivar micrograms_concentration_value_extension:
     """
+
     micrograms_concentration: Optional[float] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class MicrogramsConcentrationValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     micrograms_concentration_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class MicrogramsConcentrationValue(DataValue):
             "name": "microgramsConcentrationValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

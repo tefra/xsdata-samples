@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_implementation_data_type_subtypes_enum import AbstractImplementationDataTypeSubtypesEnum
-from .mode_declaration_group_subtypes_enum import ModeDeclarationGroupSubtypesEnum
+from .abstract_implementation_data_type_subtypes_enum import (
+    AbstractImplementationDataTypeSubtypesEnum,
+)
+from .mode_declaration_group_subtypes_enum import (
+    ModeDeclarationGroupSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -31,16 +35,19 @@ class ModeRequestTypeMap:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MODE-REQUEST-TYPE-MAP"
 
-    implementation_data_type_ref: Optional["ModeRequestTypeMap.ImplementationDataTypeRef"] = field(
+    implementation_data_type_ref: Optional[
+        "ModeRequestTypeMap.ImplementationDataTypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mode_group_ref: Optional["ModeRequestTypeMap.ModeGroupRef"] = field(
         default=None,
@@ -48,14 +55,14 @@ class ModeRequestTypeMap:
             "name": "MODE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -63,7 +70,7 @@ class ModeRequestTypeMap:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -74,7 +81,7 @@ class ModeRequestTypeMap:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -85,5 +92,5 @@ class ModeRequestTypeMap:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

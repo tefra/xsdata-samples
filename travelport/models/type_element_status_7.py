@@ -11,6 +11,7 @@ class TypeElementStatus7(Enum):
     error conditions when value provided in "Key" attribute is not
     retained in response
     """
+
     A = "A"
     M = "M"
     C = "C"

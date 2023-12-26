@@ -113,7 +113,7 @@ class CoctMt530000UvActDefinition:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -121,7 +121,7 @@ class CoctMt530000UvActDefinition:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -129,7 +129,7 @@ class CoctMt530000UvActDefinition:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -137,21 +137,21 @@ class CoctMt530000UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -159,7 +159,7 @@ class CoctMt530000UvActDefinition:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -168,7 +168,7 @@ class CoctMt530000UvActDefinition:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -183,7 +183,7 @@ class CoctMt530000UvActReference:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -191,7 +191,7 @@ class CoctMt530000UvActReference:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -199,7 +199,7 @@ class CoctMt530000UvActReference:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -207,14 +207,14 @@ class CoctMt530000UvActReference:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -222,7 +222,7 @@ class CoctMt530000UvActReference:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMood] = field(
         default=None,
@@ -230,7 +230,7 @@ class CoctMt530000UvActReference:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -245,7 +245,7 @@ class CoctMt530000UvDataEnterer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -253,7 +253,7 @@ class CoctMt530000UvDataEnterer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -261,14 +261,14 @@ class CoctMt530000UvDataEnterer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -276,7 +276,7 @@ class CoctMt530000UvDataEnterer:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -284,7 +284,7 @@ class CoctMt530000UvDataEnterer:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -292,7 +292,7 @@ class CoctMt530000UvDataEnterer:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -301,14 +301,14 @@ class CoctMt530000UvDataEnterer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -317,14 +317,14 @@ class CoctMt530000UvDataEnterer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -339,7 +339,7 @@ class CoctMt530000UvLabeledDrug:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -347,7 +347,7 @@ class CoctMt530000UvLabeledDrug:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -355,21 +355,21 @@ class CoctMt530000UvLabeledDrug:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: Optional[EnExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     expiration_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -377,14 +377,14 @@ class CoctMt530000UvLabeledDrug:
             "name": "expirationTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassManufacturedMaterial] = field(
         default=None,
@@ -392,7 +392,7 @@ class CoctMt530000UvLabeledDrug:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: Optional[EntityDeterminer] = field(
         default=None,
@@ -400,7 +400,7 @@ class CoctMt530000UvLabeledDrug:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -415,7 +415,7 @@ class CoctMt530000UvMaterial:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -423,7 +423,7 @@ class CoctMt530000UvMaterial:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -431,21 +431,21 @@ class CoctMt530000UvMaterial:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: Optional[EnExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     lot_number_text: Optional[St] = field(
         default=None,
@@ -453,7 +453,7 @@ class CoctMt530000UvMaterial:
             "name": "lotNumberText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     expiration_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -461,14 +461,14 @@ class CoctMt530000UvMaterial:
             "name": "expirationTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassManufacturedMaterial] = field(
         default=None,
@@ -476,7 +476,7 @@ class CoctMt530000UvMaterial:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: Optional[EntityDeterminer] = field(
         default=None,
@@ -484,7 +484,7 @@ class CoctMt530000UvMaterial:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -499,7 +499,7 @@ class CoctMt530000UvMaterialKind2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -507,7 +507,7 @@ class CoctMt530000UvMaterialKind2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -515,28 +515,28 @@ class CoctMt530000UvMaterialKind2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cv] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[St] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassMaterial] = field(
         default=None,
@@ -544,7 +544,7 @@ class CoctMt530000UvMaterialKind2:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: Optional[EntityDeterminerDetermined] = field(
         default=None,
@@ -552,7 +552,7 @@ class CoctMt530000UvMaterialKind2:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -567,7 +567,7 @@ class CoctMt530000UvOrganization:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -575,7 +575,7 @@ class CoctMt530000UvOrganization:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -583,42 +583,42 @@ class CoctMt530000UvOrganization:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[OnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassOrganization] = field(
         default=None,
@@ -626,7 +626,7 @@ class CoctMt530000UvOrganization:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -635,7 +635,7 @@ class CoctMt530000UvOrganization:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -650,7 +650,7 @@ class CoctMt530000UvPlace:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -658,7 +658,7 @@ class CoctMt530000UvPlace:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -666,28 +666,28 @@ class CoctMt530000UvPlace:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: Optional[AdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassPlace] = field(
         default=None,
@@ -695,7 +695,7 @@ class CoctMt530000UvPlace:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -704,7 +704,7 @@ class CoctMt530000UvPlace:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -719,7 +719,7 @@ class CoctMt530000UvPrecondition2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -727,7 +727,7 @@ class CoctMt530000UvPrecondition2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -735,7 +735,7 @@ class CoctMt530000UvPrecondition2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -743,7 +743,7 @@ class CoctMt530000UvPrecondition2:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -751,7 +751,7 @@ class CoctMt530000UvPrecondition2:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     criterion: Optional["CoctMt530000UvCriterion"] = field(
         default=None,
@@ -759,16 +759,36 @@ class CoctMt530000UvPrecondition2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipConditional.PRCN,
         metadata={
@@ -776,14 +796,14 @@ class CoctMt530000UvPrecondition2:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -791,7 +811,7 @@ class CoctMt530000UvPrecondition2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -806,7 +826,7 @@ class CoctMt530000UvProduct2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -814,7 +834,7 @@ class CoctMt530000UvProduct2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -822,7 +842,7 @@ class CoctMt530000UvProduct2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -830,7 +850,7 @@ class CoctMt530000UvProduct2:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     specimen: Optional[CoctMt080000UvSpecimen] = field(
         default=None,
@@ -838,14 +858,14 @@ class CoctMt530000UvProduct2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -854,14 +874,14 @@ class CoctMt530000UvProduct2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -876,7 +896,7 @@ class CoctMt530000UvRecordTarget:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -884,7 +904,7 @@ class CoctMt530000UvRecordTarget:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -892,7 +912,7 @@ class CoctMt530000UvRecordTarget:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     patient: Optional[CoctMt050000Uv01Patient] = field(
         default=None,
@@ -900,14 +920,14 @@ class CoctMt530000UvRecordTarget:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -916,14 +936,14 @@ class CoctMt530000UvRecordTarget:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -938,7 +958,7 @@ class CoctMt530000UvResponsibleParty1:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -946,7 +966,7 @@ class CoctMt530000UvResponsibleParty1:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -954,7 +974,7 @@ class CoctMt530000UvResponsibleParty1:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090102Uv02AssignedPerson] = field(
         default=None,
@@ -963,14 +983,14 @@ class CoctMt530000UvResponsibleParty1:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -979,7 +999,7 @@ class CoctMt530000UvResponsibleParty1:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -994,7 +1014,7 @@ class CoctMt530000UvResponsibleParty2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1002,7 +1022,7 @@ class CoctMt530000UvResponsibleParty2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1010,7 +1030,7 @@ class CoctMt530000UvResponsibleParty2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -1019,14 +1039,14 @@ class CoctMt530000UvResponsibleParty2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -1035,14 +1055,14 @@ class CoctMt530000UvResponsibleParty2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1057,7 +1077,7 @@ class CoctMt530000UvVerifier:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1065,7 +1085,7 @@ class CoctMt530000UvVerifier:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1073,7 +1093,7 @@ class CoctMt530000UvVerifier:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -1081,14 +1101,14 @@ class CoctMt530000UvVerifier:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -1096,7 +1116,7 @@ class CoctMt530000UvVerifier:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Cs] = field(
         default=None,
@@ -1104,7 +1124,7 @@ class CoctMt530000UvVerifier:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -1112,7 +1132,7 @@ class CoctMt530000UvVerifier:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -1121,14 +1141,14 @@ class CoctMt530000UvVerifier:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationVerifier] = field(
         default=None,
@@ -1136,14 +1156,14 @@ class CoctMt530000UvVerifier:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1158,7 +1178,7 @@ class CoctMt530000UvBirthplace:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1166,7 +1186,7 @@ class CoctMt530000UvBirthplace:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1174,7 +1194,7 @@ class CoctMt530000UvBirthplace:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     birthplace: Optional[CoctMt530000UvPlace] = field(
         default=None,
@@ -1182,16 +1202,32 @@ class CoctMt530000UvBirthplace:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassPassive.BIRTHPL,
         metadata={
@@ -1199,7 +1235,7 @@ class CoctMt530000UvBirthplace:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1214,7 +1250,7 @@ class CoctMt530000UvCriterion:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1222,7 +1258,7 @@ class CoctMt530000UvCriterion:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1230,21 +1266,21 @@ class CoctMt530000UvCriterion:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
@@ -1252,7 +1288,7 @@ class CoctMt530000UvCriterion:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     interpretation_code: Optional[Ce] = field(
         default=None,
@@ -1261,7 +1297,7 @@ class CoctMt530000UvCriterion:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     precondition: List[CoctMt530000UvPrecondition2] = field(
         default_factory=list,
@@ -1269,14 +1305,14 @@ class CoctMt530000UvCriterion:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -1284,7 +1320,7 @@ class CoctMt530000UvCriterion:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -1293,7 +1329,7 @@ class CoctMt530000UvCriterion:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: str = field(
         default="false",
@@ -1301,7 +1337,7 @@ class CoctMt530000UvCriterion:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1316,7 +1352,7 @@ class CoctMt530000UvDefinition:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1324,7 +1360,7 @@ class CoctMt530000UvDefinition:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1332,7 +1368,7 @@ class CoctMt530000UvDefinition:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_definition: Optional[CoctMt530000UvActDefinition] = field(
         default=None,
@@ -1341,16 +1377,36 @@ class CoctMt530000UvDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipSequel.INST,
         metadata={
@@ -1358,14 +1414,14 @@ class CoctMt530000UvDefinition:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -1373,7 +1429,7 @@ class CoctMt530000UvDefinition:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1388,7 +1444,7 @@ class CoctMt530000UvHealthCareFacility:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1396,7 +1452,7 @@ class CoctMt530000UvHealthCareFacility:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1404,21 +1460,21 @@ class CoctMt530000UvHealthCareFacility:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     location: Optional[CoctMt530000UvPlace] = field(
         default=None,
@@ -1426,23 +1482,25 @@ class CoctMt530000UvHealthCareFacility:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    service_provider_organization: Optional[CoctMt530000UvOrganization] = field(
+    service_provider_organization: Optional[
+        CoctMt530000UvOrganization
+    ] = field(
         default=None,
         metadata={
             "name": "serviceProviderOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassServiceDeliveryLocation] = field(
         default=None,
@@ -1450,7 +1508,7 @@ class CoctMt530000UvHealthCareFacility:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1465,7 +1523,7 @@ class CoctMt530000UvManufacturedProduct:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1473,7 +1531,7 @@ class CoctMt530000UvManufacturedProduct:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1481,14 +1539,14 @@ class CoctMt530000UvManufacturedProduct:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     manufactured_labeled_drug: Optional[CoctMt530000UvLabeledDrug] = field(
         default=None,
@@ -1497,7 +1555,7 @@ class CoctMt530000UvManufacturedProduct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     manufactured_material: Optional[CoctMt530000UvMaterial] = field(
         default=None,
@@ -1506,7 +1564,7 @@ class CoctMt530000UvManufacturedProduct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     manufacturer_organization: Optional[CoctMt530000UvOrganization] = field(
         default=None,
@@ -1515,14 +1573,14 @@ class CoctMt530000UvManufacturedProduct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassManufacturedProduct] = field(
         default=None,
@@ -1530,7 +1588,7 @@ class CoctMt530000UvManufacturedProduct:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1545,7 +1603,7 @@ class CoctMt530000UvMaterialPart:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1553,7 +1611,7 @@ class CoctMt530000UvMaterialPart:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1561,7 +1619,7 @@ class CoctMt530000UvMaterialPart:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     part_material_kind: Optional[CoctMt530000UvMaterialKind2] = field(
         default=None,
@@ -1570,14 +1628,14 @@ class CoctMt530000UvMaterialPart:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassPartitive] = field(
         default=None,
@@ -1585,7 +1643,7 @@ class CoctMt530000UvMaterialPart:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1600,7 +1658,7 @@ class CoctMt530000UvRole:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1608,7 +1666,7 @@ class CoctMt530000UvRole:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1616,7 +1674,7 @@ class CoctMt530000UvRole:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -1624,14 +1682,14 @@ class CoctMt530000UvRole:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     scoping_organization: Optional[CoctMt530000UvOrganization] = field(
         default=None,
@@ -1640,23 +1698,32 @@ class CoctMt530000UvRole:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue]] = field(
+    class_code: Optional[
+        Union[
+            RoleClassMutualRelationship,
+            RoleClassPassive,
+            str,
+            RoleClassOntological,
+            RoleClassPartitive,
+            RoleClassRootValue,
+        ]
+    ] = field(
         default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1671,7 +1738,7 @@ class CoctMt530000UvSourceOf1:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1679,7 +1746,7 @@ class CoctMt530000UvSourceOf1:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1687,7 +1754,7 @@ class CoctMt530000UvSourceOf1:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -1695,7 +1762,7 @@ class CoctMt530000UvSourceOf1:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     pause_quantity: Optional[PqExplicit] = field(
         default=None,
@@ -1703,7 +1770,7 @@ class CoctMt530000UvSourceOf1:
             "name": "pauseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -1711,7 +1778,7 @@ class CoctMt530000UvSourceOf1:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -1719,7 +1786,7 @@ class CoctMt530000UvSourceOf1:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_reference: Optional[CoctMt530000UvActReference] = field(
         default=None,
@@ -1728,23 +1795,45 @@ class CoctMt530000UvSourceOf1:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Optional[Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev]] = field(
+    type_code: Optional[
+        Union[
+            ActRelationshipConditional,
+            ActRelationshipHasComponent,
+            ActRelationshipOutcome,
+            ActRelationshipCostTracking,
+            ActRelationshipPosting,
+            str,
+            ActRelationshipHasSupport,
+            ActRelationshipTemporallyPertains,
+            ActRelationshipPertainsValue,
+            ActRelationshipSequel,
+            XActRelationshipDocument,
+            XActRelationshipEntry,
+            XActRelationshipEntryRelationship,
+            XActRelationshipExternalReference,
+            XActRelationshipPatientTransport,
+            XActRelationshipPertinentInfo,
+            XActRelationshipRelatedAuthorizations,
+            XActReplaceOrRevise,
+            XSuccReplPrev,
+        ]
+    ] = field(
         default=None,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     inversion_ind: Optional[str] = field(
         default=None,
@@ -1752,14 +1841,14 @@ class CoctMt530000UvSourceOf1:
             "name": "inversionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -1767,7 +1856,7 @@ class CoctMt530000UvSourceOf1:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -1775,7 +1864,7 @@ class CoctMt530000UvSourceOf1:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1790,7 +1879,7 @@ class CoctMt530000UvAnimal:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1798,7 +1887,7 @@ class CoctMt530000UvAnimal:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1806,7 +1895,7 @@ class CoctMt530000UvAnimal:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
@@ -1814,28 +1903,28 @@ class CoctMt530000UvAnimal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     quantity: Optional[PqExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administrative_gender_code: Optional[Ce] = field(
         default=None,
@@ -1843,7 +1932,7 @@ class CoctMt530000UvAnimal:
             "name": "administrativeGenderCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     birth_time: Optional[TsExplicit] = field(
         default=None,
@@ -1851,7 +1940,7 @@ class CoctMt530000UvAnimal:
             "name": "birthTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     strain_text: Optional[St] = field(
         default=None,
@@ -1859,7 +1948,7 @@ class CoctMt530000UvAnimal:
             "name": "strainText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     gender_status_code: Optional[Ce] = field(
         default=None,
@@ -1867,7 +1956,7 @@ class CoctMt530000UvAnimal:
             "name": "genderStatusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     as_role: List[CoctMt530000UvRole] = field(
         default_factory=list,
@@ -1876,7 +1965,7 @@ class CoctMt530000UvAnimal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     birthplace: Optional[CoctMt530000UvBirthplace] = field(
         default=None,
@@ -1884,14 +1973,14 @@ class CoctMt530000UvAnimal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClass = field(
         init=False,
@@ -1900,7 +1989,7 @@ class CoctMt530000UvAnimal:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -1909,7 +1998,7 @@ class CoctMt530000UvAnimal:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1924,7 +2013,7 @@ class CoctMt530000UvConditions:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1932,7 +2021,7 @@ class CoctMt530000UvConditions:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1940,7 +2029,7 @@ class CoctMt530000UvConditions:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -1948,7 +2037,7 @@ class CoctMt530000UvConditions:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -1956,7 +2045,7 @@ class CoctMt530000UvConditions:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     criterion: Optional[CoctMt530000UvCriterion] = field(
         default=None,
@@ -1964,14 +2053,14 @@ class CoctMt530000UvConditions:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipConditional] = field(
         default=None,
@@ -1979,14 +2068,14 @@ class CoctMt530000UvConditions:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -1994,7 +2083,7 @@ class CoctMt530000UvConditions:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2009,7 +2098,7 @@ class CoctMt530000UvDevice:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2017,7 +2106,7 @@ class CoctMt530000UvDevice:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2025,7 +2114,7 @@ class CoctMt530000UvDevice:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     manufactured_product: Optional[CoctMt530000UvManufacturedProduct] = field(
         default=None,
@@ -2034,14 +2123,14 @@ class CoctMt530000UvDevice:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetDevice] = field(
         default=None,
@@ -2049,14 +2138,14 @@ class CoctMt530000UvDevice:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2071,7 +2160,7 @@ class CoctMt530000UvEntity:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2079,7 +2168,7 @@ class CoctMt530000UvEntity:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2087,42 +2176,42 @@ class CoctMt530000UvEntity:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     quantity: List[PqExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -2130,7 +2219,7 @@ class CoctMt530000UvEntity:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     risk_code: Optional[Ce] = field(
         default=None,
@@ -2138,7 +2227,7 @@ class CoctMt530000UvEntity:
             "name": "riskCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     handling_code: Optional[Ce] = field(
         default=None,
@@ -2146,7 +2235,7 @@ class CoctMt530000UvEntity:
             "name": "handlingCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     as_role: List[CoctMt530000UvRole] = field(
         default_factory=list,
@@ -2155,14 +2244,14 @@ class CoctMt530000UvEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassRoot] = field(
         default=None,
@@ -2170,7 +2259,7 @@ class CoctMt530000UvEntity:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2179,7 +2268,7 @@ class CoctMt530000UvEntity:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -2194,7 +2283,7 @@ class CoctMt530000UvLocation:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2202,7 +2291,7 @@ class CoctMt530000UvLocation:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2210,7 +2299,7 @@ class CoctMt530000UvLocation:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     health_care_facility: Optional[CoctMt530000UvHealthCareFacility] = field(
         default=None,
@@ -2219,14 +2308,14 @@ class CoctMt530000UvLocation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetLocation] = field(
         default=None,
@@ -2234,14 +2323,14 @@ class CoctMt530000UvLocation:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2256,7 +2345,7 @@ class CoctMt530000UvMaterialKind:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2264,7 +2353,7 @@ class CoctMt530000UvMaterialKind:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2272,21 +2361,21 @@ class CoctMt530000UvMaterialKind:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[St] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     material_part: List[CoctMt530000UvMaterialPart] = field(
         default_factory=list,
@@ -2295,14 +2384,14 @@ class CoctMt530000UvMaterialKind:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassMaterial] = field(
         default=None,
@@ -2310,7 +2399,7 @@ class CoctMt530000UvMaterialKind:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: Optional[EntityDeterminerDetermined] = field(
         default=None,
@@ -2318,7 +2407,7 @@ class CoctMt530000UvMaterialKind:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -2333,7 +2422,7 @@ class CoctMt530000UvPerson:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2341,7 +2430,7 @@ class CoctMt530000UvPerson:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2349,21 +2438,21 @@ class CoctMt530000UvPerson:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[PnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administrative_gender_code: Optional[Ce] = field(
         default=None,
@@ -2371,7 +2460,7 @@ class CoctMt530000UvPerson:
             "name": "administrativeGenderCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     birth_time: Optional[TsExplicit] = field(
         default=None,
@@ -2379,7 +2468,7 @@ class CoctMt530000UvPerson:
             "name": "birthTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     multiple_birth_ind: Optional[Bl] = field(
         default=None,
@@ -2387,7 +2476,7 @@ class CoctMt530000UvPerson:
             "name": "multipleBirthInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     multiple_birth_order_number: Optional[Int] = field(
         default=None,
@@ -2395,7 +2484,7 @@ class CoctMt530000UvPerson:
             "name": "multipleBirthOrderNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     marital_status_code: Optional[Ce] = field(
         default=None,
@@ -2403,7 +2492,7 @@ class CoctMt530000UvPerson:
             "name": "maritalStatusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     religious_affiliation_code: Optional[Ce] = field(
         default=None,
@@ -2411,7 +2500,7 @@ class CoctMt530000UvPerson:
             "name": "religiousAffiliationCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     race_code: Optional[Ce] = field(
         default=None,
@@ -2419,7 +2508,7 @@ class CoctMt530000UvPerson:
             "name": "raceCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     ethnic_group_code: Optional[Ce] = field(
         default=None,
@@ -2427,7 +2516,7 @@ class CoctMt530000UvPerson:
             "name": "ethnicGroupCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     as_role: List[CoctMt530000UvRole] = field(
         default_factory=list,
@@ -2436,7 +2525,7 @@ class CoctMt530000UvPerson:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     birthplace: Optional[CoctMt530000UvBirthplace] = field(
         default=None,
@@ -2444,14 +2533,14 @@ class CoctMt530000UvPerson:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClass = field(
         init=False,
@@ -2460,7 +2549,7 @@ class CoctMt530000UvPerson:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2469,7 +2558,7 @@ class CoctMt530000UvPerson:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -2484,7 +2573,7 @@ class CoctMt530000UvPrecondition1:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2492,7 +2581,7 @@ class CoctMt530000UvPrecondition1:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2500,7 +2589,7 @@ class CoctMt530000UvPrecondition1:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -2508,7 +2597,7 @@ class CoctMt530000UvPrecondition1:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -2516,7 +2605,7 @@ class CoctMt530000UvPrecondition1:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     criterion: Optional[CoctMt530000UvCriterion] = field(
         default=None,
@@ -2524,16 +2613,36 @@ class CoctMt530000UvPrecondition1:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipConditional.PRCN,
         metadata={
@@ -2541,14 +2650,14 @@ class CoctMt530000UvPrecondition1:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -2556,7 +2665,7 @@ class CoctMt530000UvPrecondition1:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2571,7 +2680,7 @@ class CoctMt530000UvProduct1:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2579,7 +2688,7 @@ class CoctMt530000UvProduct1:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2587,7 +2696,7 @@ class CoctMt530000UvProduct1:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     manufactured_product: Optional[CoctMt530000UvManufacturedProduct] = field(
         default=None,
@@ -2596,14 +2705,14 @@ class CoctMt530000UvProduct1:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -2612,14 +2721,14 @@ class CoctMt530000UvProduct1:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2634,7 +2743,7 @@ class CoctMt530000UvAdministerableMaterial:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2642,7 +2751,7 @@ class CoctMt530000UvAdministerableMaterial:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2650,7 +2759,7 @@ class CoctMt530000UvAdministerableMaterial:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administerable_material_kind: Optional[CoctMt530000UvMaterialKind] = field(
         default=None,
@@ -2659,16 +2768,32 @@ class CoctMt530000UvAdministerableMaterial:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassPassive.ADMM,
         metadata={
@@ -2676,7 +2801,7 @@ class CoctMt530000UvAdministerableMaterial:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -2691,7 +2816,7 @@ class CoctMt530000UvObservationRange:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2699,7 +2824,7 @@ class CoctMt530000UvObservationRange:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2707,14 +2832,14 @@ class CoctMt530000UvObservationRange:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
@@ -2722,7 +2847,7 @@ class CoctMt530000UvObservationRange:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     interpretation_code: Optional[Ce] = field(
         default=None,
@@ -2731,7 +2856,7 @@ class CoctMt530000UvObservationRange:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     precondition: List[CoctMt530000UvPrecondition1] = field(
         default_factory=list,
@@ -2739,14 +2864,14 @@ class CoctMt530000UvObservationRange:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -2754,7 +2879,7 @@ class CoctMt530000UvObservationRange:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -2763,7 +2888,7 @@ class CoctMt530000UvObservationRange:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: str = field(
         default="false",
@@ -2771,7 +2896,7 @@ class CoctMt530000UvObservationRange:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2786,7 +2911,7 @@ class CoctMt530000UvRelatedEntity:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2794,7 +2919,7 @@ class CoctMt530000UvRelatedEntity:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2802,35 +2927,35 @@ class CoctMt530000UvRelatedEntity:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     related_person: Optional[CoctMt530000UvPerson] = field(
         default=None,
@@ -2839,7 +2964,7 @@ class CoctMt530000UvRelatedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     related_animal: Optional[CoctMt530000UvAnimal] = field(
         default=None,
@@ -2848,7 +2973,7 @@ class CoctMt530000UvRelatedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     related_entity: Optional[CoctMt530000UvEntity] = field(
         default=None,
@@ -2857,7 +2982,7 @@ class CoctMt530000UvRelatedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     scoping_person: Optional[CoctMt530000UvPerson] = field(
         default=None,
@@ -2866,7 +2991,7 @@ class CoctMt530000UvRelatedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     scoping_animal: Optional[CoctMt530000UvAnimal] = field(
         default=None,
@@ -2875,7 +3000,7 @@ class CoctMt530000UvRelatedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     scoping_entity: Optional[CoctMt530000UvEntity] = field(
         default=None,
@@ -2884,14 +3009,14 @@ class CoctMt530000UvRelatedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassMutualRelationship] = field(
         default=None,
@@ -2899,7 +3024,7 @@ class CoctMt530000UvRelatedEntity:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -2914,7 +3039,7 @@ class CoctMt530000UvAuthor:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2922,7 +3047,7 @@ class CoctMt530000UvAuthor:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2930,7 +3055,7 @@ class CoctMt530000UvAuthor:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -2938,14 +3063,14 @@ class CoctMt530000UvAuthor:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -2953,7 +3078,7 @@ class CoctMt530000UvAuthor:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -2961,7 +3086,7 @@ class CoctMt530000UvAuthor:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -2969,7 +3094,7 @@ class CoctMt530000UvAuthor:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     related_entity: Optional[CoctMt530000UvRelatedEntity] = field(
         default=None,
@@ -2978,7 +3103,7 @@ class CoctMt530000UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     patient: Optional[CoctMt050000Uv01Patient] = field(
         default=None,
@@ -2986,7 +3111,7 @@ class CoctMt530000UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -2995,14 +3120,14 @@ class CoctMt530000UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -3011,14 +3136,14 @@ class CoctMt530000UvAuthor:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3033,7 +3158,7 @@ class CoctMt530000UvConsumable:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3041,7 +3166,7 @@ class CoctMt530000UvConsumable:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3049,16 +3174,18 @@ class CoctMt530000UvConsumable:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    administerable_material: Optional[CoctMt530000UvAdministerableMaterial] = field(
+    administerable_material: Optional[
+        CoctMt530000UvAdministerableMaterial
+    ] = field(
         default=None,
         metadata={
             "name": "administerableMaterial",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     medication: Optional[CoctMt230100UvMedication] = field(
         default=None,
@@ -3066,14 +3193,14 @@ class CoctMt530000UvConsumable:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -3082,14 +3209,14 @@ class CoctMt530000UvConsumable:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3104,7 +3231,7 @@ class CoctMt530000UvInformant:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3112,7 +3239,7 @@ class CoctMt530000UvInformant:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3120,7 +3247,7 @@ class CoctMt530000UvInformant:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     function_code: Optional[Ce] = field(
         default=None,
@@ -3128,14 +3255,14 @@ class CoctMt530000UvInformant:
             "name": "functionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -3143,7 +3270,7 @@ class CoctMt530000UvInformant:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     related_entity: Optional[CoctMt530000UvRelatedEntity] = field(
         default=None,
@@ -3152,7 +3279,7 @@ class CoctMt530000UvInformant:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     patient: Optional[CoctMt050000Uv01Patient] = field(
         default=None,
@@ -3160,7 +3287,7 @@ class CoctMt530000UvInformant:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -3169,14 +3296,14 @@ class CoctMt530000UvInformant:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -3185,14 +3312,14 @@ class CoctMt530000UvInformant:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3207,7 +3334,7 @@ class CoctMt530000UvPerformer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3215,7 +3342,7 @@ class CoctMt530000UvPerformer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3223,7 +3350,7 @@ class CoctMt530000UvPerformer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     function_code: Optional[Ce] = field(
         default=None,
@@ -3231,14 +3358,14 @@ class CoctMt530000UvPerformer:
             "name": "functionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -3246,7 +3373,7 @@ class CoctMt530000UvPerformer:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     related_entity: Optional[CoctMt530000UvRelatedEntity] = field(
         default=None,
@@ -3255,7 +3382,7 @@ class CoctMt530000UvPerformer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     patient: Optional[CoctMt050000Uv01Patient] = field(
         default=None,
@@ -3263,7 +3390,7 @@ class CoctMt530000UvPerformer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -3272,14 +3399,14 @@ class CoctMt530000UvPerformer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationPhysicalPerformer] = field(
         default=None,
@@ -3287,14 +3414,14 @@ class CoctMt530000UvPerformer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3309,7 +3436,7 @@ class CoctMt530000UvReferenceRange:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3317,7 +3444,7 @@ class CoctMt530000UvReferenceRange:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3325,7 +3452,7 @@ class CoctMt530000UvReferenceRange:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -3333,7 +3460,7 @@ class CoctMt530000UvReferenceRange:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     observation_range: Optional[CoctMt530000UvObservationRange] = field(
         default=None,
@@ -3342,16 +3469,36 @@ class CoctMt530000UvReferenceRange:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipPertainsValue.REFV,
         metadata={
@@ -3359,14 +3506,14 @@ class CoctMt530000UvReferenceRange:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -3374,7 +3521,7 @@ class CoctMt530000UvReferenceRange:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -3389,7 +3536,7 @@ class CoctMt530000UvSubject2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3397,7 +3544,7 @@ class CoctMt530000UvSubject2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3405,7 +3552,7 @@ class CoctMt530000UvSubject2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -3413,7 +3560,7 @@ class CoctMt530000UvSubject2:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     awareness_code: Optional[Ce] = field(
         default=None,
@@ -3421,7 +3568,7 @@ class CoctMt530000UvSubject2:
             "name": "awarenessCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     patient: Optional[CoctMt050000Uv01Patient] = field(
         default=None,
@@ -3429,7 +3576,7 @@ class CoctMt530000UvSubject2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     related_entity: Optional[CoctMt530000UvRelatedEntity] = field(
         default=None,
@@ -3438,7 +3585,7 @@ class CoctMt530000UvSubject2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     specimen: Optional[CoctMt080000UvSpecimen] = field(
         default=None,
@@ -3446,14 +3593,14 @@ class CoctMt530000UvSubject2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetSubject] = field(
         default=None,
@@ -3461,14 +3608,14 @@ class CoctMt530000UvSubject2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3483,7 +3630,7 @@ class CoctMt530000UvControlActEvent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3491,7 +3638,7 @@ class CoctMt530000UvControlActEvent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3499,14 +3646,14 @@ class CoctMt530000UvControlActEvent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -3514,7 +3661,7 @@ class CoctMt530000UvControlActEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -3523,7 +3670,7 @@ class CoctMt530000UvControlActEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     effective_time: Optional[TsExplicit] = field(
         default=None,
@@ -3532,7 +3679,7 @@ class CoctMt530000UvControlActEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     reason_code: Optional[Cv] = field(
         default=None,
@@ -3540,7 +3687,7 @@ class CoctMt530000UvControlActEvent:
             "name": "reasonCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     responsible_party: Optional[CoctMt530000UvResponsibleParty1] = field(
         default=None,
@@ -3549,7 +3696,7 @@ class CoctMt530000UvControlActEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -3557,14 +3704,14 @@ class CoctMt530000UvControlActEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClassControlAct = field(
         init=False,
@@ -3572,7 +3719,7 @@ class CoctMt530000UvControlActEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -3580,7 +3727,7 @@ class CoctMt530000UvControlActEvent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3595,7 +3742,7 @@ class CoctMt530000UvSubject1:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3603,7 +3750,7 @@ class CoctMt530000UvSubject1:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3611,7 +3758,7 @@ class CoctMt530000UvSubject1:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     control_act_event: Optional[CoctMt530000UvControlActEvent] = field(
         default=None,
@@ -3620,30 +3767,50 @@ class CoctMt530000UvSubject1:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -3651,7 +3818,7 @@ class CoctMt530000UvSubject1:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -3666,7 +3833,7 @@ class CoctMt530000UvEncounter:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3674,7 +3841,7 @@ class CoctMt530000UvEncounter:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3682,28 +3849,28 @@ class CoctMt530000UvEncounter:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -3711,7 +3878,7 @@ class CoctMt530000UvEncounter:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -3719,7 +3886,7 @@ class CoctMt530000UvEncounter:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -3727,7 +3894,7 @@ class CoctMt530000UvEncounter:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -3735,7 +3902,7 @@ class CoctMt530000UvEncounter:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -3743,7 +3910,7 @@ class CoctMt530000UvEncounter:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     admission_referral_source_code: Optional[Ce] = field(
         default=None,
@@ -3751,7 +3918,7 @@ class CoctMt530000UvEncounter:
             "name": "admissionReferralSourceCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     length_of_stay_quantity: Optional[PqExplicit] = field(
         default=None,
@@ -3759,7 +3926,7 @@ class CoctMt530000UvEncounter:
             "name": "lengthOfStayQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     discharge_disposition_code: Optional[Ce] = field(
         default=None,
@@ -3767,7 +3934,7 @@ class CoctMt530000UvEncounter:
             "name": "dischargeDispositionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     pre_admit_test_ind: Optional[Bl] = field(
         default=None,
@@ -3775,7 +3942,7 @@ class CoctMt530000UvEncounter:
             "name": "preAdmitTestInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     special_courtesies_code: List[Ce] = field(
         default_factory=list,
@@ -3783,7 +3950,7 @@ class CoctMt530000UvEncounter:
             "name": "specialCourtesiesCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     special_arrangement_code: List[Ce] = field(
         default_factory=list,
@@ -3791,7 +3958,7 @@ class CoctMt530000UvEncounter:
             "name": "specialArrangementCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
@@ -3799,7 +3966,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     record_target: Optional[CoctMt530000UvRecordTarget] = field(
         default=None,
@@ -3808,7 +3975,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
@@ -3817,7 +3984,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt530000UvPerformer] = field(
         default_factory=list,
@@ -3825,7 +3992,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -3833,7 +4000,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
         default=None,
@@ -3842,7 +4009,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     informant: List[CoctMt530000UvInformant] = field(
         default_factory=list,
@@ -3850,7 +4017,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[CoctMt530000UvVerifier] = field(
         default_factory=list,
@@ -3858,7 +4025,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     location: List[CoctMt530000UvLocation] = field(
         default_factory=list,
@@ -3866,7 +4033,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: Optional[CoctMt530000UvDefinition] = field(
         default=None,
@@ -3874,7 +4041,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[CoctMt530000UvConditions] = field(
         default_factory=list,
@@ -3882,7 +4049,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of1: List[CoctMt530000UvSourceOf1] = field(
         default_factory=list,
@@ -3891,7 +4058,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of2: List["CoctMt530000UvSourceOf3"] = field(
         default_factory=list,
@@ -3900,7 +4067,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[CoctMt530000UvSubject1] = field(
         default=None,
@@ -3909,7 +4076,7 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     target_of: List["CoctMt530000UvSourceOf2"] = field(
         default_factory=list,
@@ -3918,14 +4085,14 @@ class CoctMt530000UvEncounter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -3934,7 +4101,7 @@ class CoctMt530000UvEncounter:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XClinicalStatementEncounterMood] = field(
         default=None,
@@ -3942,7 +4109,7 @@ class CoctMt530000UvEncounter:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -3957,7 +4124,7 @@ class CoctMt530000UvProcedure:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3965,7 +4132,7 @@ class CoctMt530000UvProcedure:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3973,28 +4140,28 @@ class CoctMt530000UvProcedure:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -4002,7 +4169,7 @@ class CoctMt530000UvProcedure:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -4010,7 +4177,7 @@ class CoctMt530000UvProcedure:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -4018,7 +4185,7 @@ class CoctMt530000UvProcedure:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -4026,7 +4193,7 @@ class CoctMt530000UvProcedure:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -4034,7 +4201,7 @@ class CoctMt530000UvProcedure:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     interruptible_ind: Optional[Bl] = field(
         default=None,
@@ -4042,7 +4209,7 @@ class CoctMt530000UvProcedure:
             "name": "interruptibleInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -4050,7 +4217,7 @@ class CoctMt530000UvProcedure:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Ce] = field(
         default=None,
@@ -4058,7 +4225,7 @@ class CoctMt530000UvProcedure:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     method_code: List[Ce] = field(
         default_factory=list,
@@ -4066,7 +4233,7 @@ class CoctMt530000UvProcedure:
             "name": "methodCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     approach_site_code: List[Cd] = field(
         default_factory=list,
@@ -4074,7 +4241,7 @@ class CoctMt530000UvProcedure:
             "name": "approachSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     target_site_code: List[Cd] = field(
         default_factory=list,
@@ -4082,7 +4249,7 @@ class CoctMt530000UvProcedure:
             "name": "targetSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
@@ -4090,7 +4257,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     device: List[CoctMt530000UvDevice] = field(
         default_factory=list,
@@ -4098,7 +4265,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     product: List[CoctMt530000UvProduct2] = field(
         default_factory=list,
@@ -4106,7 +4273,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     record_target: Optional[CoctMt530000UvRecordTarget] = field(
         default=None,
@@ -4115,7 +4282,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
@@ -4124,7 +4291,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt530000UvPerformer] = field(
         default_factory=list,
@@ -4132,7 +4299,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -4140,7 +4307,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
         default=None,
@@ -4149,7 +4316,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     informant: List[CoctMt530000UvInformant] = field(
         default_factory=list,
@@ -4157,7 +4324,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[CoctMt530000UvVerifier] = field(
         default_factory=list,
@@ -4165,7 +4332,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     location: List[CoctMt530000UvLocation] = field(
         default_factory=list,
@@ -4173,7 +4340,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: Optional[CoctMt530000UvDefinition] = field(
         default=None,
@@ -4181,7 +4348,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[CoctMt530000UvConditions] = field(
         default_factory=list,
@@ -4189,7 +4356,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of1: List[CoctMt530000UvSourceOf1] = field(
         default_factory=list,
@@ -4198,7 +4365,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of2: List["CoctMt530000UvSourceOf3"] = field(
         default_factory=list,
@@ -4207,7 +4374,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[CoctMt530000UvSubject1] = field(
         default=None,
@@ -4216,7 +4383,7 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     target_of: List["CoctMt530000UvSourceOf2"] = field(
         default_factory=list,
@@ -4225,14 +4392,14 @@ class CoctMt530000UvProcedure:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassProcedure] = field(
         default=None,
@@ -4240,7 +4407,7 @@ class CoctMt530000UvProcedure:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XClinicalStatementProcedureMood] = field(
         default=None,
@@ -4248,7 +4415,7 @@ class CoctMt530000UvProcedure:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -4256,7 +4423,7 @@ class CoctMt530000UvProcedure:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -4271,7 +4438,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4279,7 +4446,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4287,28 +4454,28 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -4316,7 +4483,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -4324,7 +4491,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -4332,7 +4499,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -4340,7 +4507,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -4348,7 +4515,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     repeat_number: Optional[IvlInt] = field(
         default=None,
@@ -4356,7 +4523,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Ce] = field(
         default=None,
@@ -4364,7 +4531,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     route_code: Optional[Ce] = field(
         default=None,
@@ -4372,7 +4539,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "routeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     approach_site_code: List[Cd] = field(
         default_factory=list,
@@ -4380,7 +4547,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "approachSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     dose_quantity: Optional[IvlPq] = field(
         default=None,
@@ -4388,7 +4555,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "doseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     rate_quantity: Optional[IvlPq] = field(
         default=None,
@@ -4396,7 +4563,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "rateQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     dose_check_quantity: List[RtoQtyQty] = field(
         default_factory=list,
@@ -4404,7 +4571,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "doseCheckQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     max_dose_quantity: Optional[RtoPqPq] = field(
         default=None,
@@ -4412,7 +4579,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "maxDoseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administration_unit_code: Optional[Ce] = field(
         default=None,
@@ -4420,7 +4587,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "administrationUnitCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
@@ -4428,7 +4595,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     consumable: Optional[CoctMt530000UvConsumable] = field(
         default=None,
@@ -4436,7 +4603,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     record_target: Optional[CoctMt530000UvRecordTarget] = field(
         default=None,
@@ -4445,7 +4612,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
@@ -4454,7 +4621,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt530000UvPerformer] = field(
         default_factory=list,
@@ -4462,7 +4629,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -4470,7 +4637,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
         default=None,
@@ -4479,7 +4646,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     informant: List[CoctMt530000UvInformant] = field(
         default_factory=list,
@@ -4487,7 +4654,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[CoctMt530000UvVerifier] = field(
         default_factory=list,
@@ -4495,7 +4662,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     location: List[CoctMt530000UvLocation] = field(
         default_factory=list,
@@ -4503,7 +4670,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: Optional[CoctMt530000UvDefinition] = field(
         default=None,
@@ -4511,7 +4678,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[CoctMt530000UvConditions] = field(
         default_factory=list,
@@ -4519,7 +4686,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of1: List[CoctMt530000UvSourceOf1] = field(
         default_factory=list,
@@ -4528,7 +4695,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of2: List["CoctMt530000UvSourceOf3"] = field(
         default_factory=list,
@@ -4537,7 +4704,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[CoctMt530000UvSubject1] = field(
         default=None,
@@ -4546,7 +4713,7 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     target_of: List["CoctMt530000UvSourceOf2"] = field(
         default_factory=list,
@@ -4555,14 +4722,14 @@ class CoctMt530000UvSubstanceAdministration:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -4571,7 +4738,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XClinicalStatementSubstanceMood] = field(
         default=None,
@@ -4579,7 +4746,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -4587,7 +4754,7 @@ class CoctMt530000UvSubstanceAdministration:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -4602,7 +4769,7 @@ class CoctMt530000UvSupply:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4610,7 +4777,7 @@ class CoctMt530000UvSupply:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4618,28 +4785,28 @@ class CoctMt530000UvSupply:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -4647,7 +4814,7 @@ class CoctMt530000UvSupply:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -4655,7 +4822,7 @@ class CoctMt530000UvSupply:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -4663,7 +4830,7 @@ class CoctMt530000UvSupply:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: List[Ce] = field(
         default_factory=list,
@@ -4671,7 +4838,7 @@ class CoctMt530000UvSupply:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -4679,7 +4846,7 @@ class CoctMt530000UvSupply:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     repeat_number: Optional[IvlInt] = field(
         default=None,
@@ -4687,7 +4854,7 @@ class CoctMt530000UvSupply:
             "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     independent_ind: Optional[Bl] = field(
         default=None,
@@ -4695,7 +4862,7 @@ class CoctMt530000UvSupply:
             "name": "independentInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Ce] = field(
         default=None,
@@ -4703,14 +4870,14 @@ class CoctMt530000UvSupply:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     quantity: Optional[PqExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     expected_use_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -4718,7 +4885,7 @@ class CoctMt530000UvSupply:
             "name": "expectedUseTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
@@ -4726,7 +4893,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     product: List[CoctMt530000UvProduct1] = field(
         default_factory=list,
@@ -4734,7 +4901,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     record_target: Optional[CoctMt530000UvRecordTarget] = field(
         default=None,
@@ -4743,7 +4910,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
@@ -4752,7 +4919,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt530000UvPerformer] = field(
         default_factory=list,
@@ -4760,7 +4927,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -4768,7 +4935,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
         default=None,
@@ -4777,7 +4944,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     informant: List[CoctMt530000UvInformant] = field(
         default_factory=list,
@@ -4785,7 +4952,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[CoctMt530000UvVerifier] = field(
         default_factory=list,
@@ -4793,7 +4960,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     location: List[CoctMt530000UvLocation] = field(
         default_factory=list,
@@ -4801,7 +4968,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: Optional[CoctMt530000UvDefinition] = field(
         default=None,
@@ -4809,7 +4976,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[CoctMt530000UvConditions] = field(
         default_factory=list,
@@ -4817,7 +4984,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of1: List[CoctMt530000UvSourceOf1] = field(
         default_factory=list,
@@ -4826,7 +4993,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of2: List["CoctMt530000UvSourceOf3"] = field(
         default_factory=list,
@@ -4835,7 +5002,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[CoctMt530000UvSubject1] = field(
         default=None,
@@ -4844,7 +5011,7 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     target_of: List["CoctMt530000UvSourceOf2"] = field(
         default_factory=list,
@@ -4853,14 +5020,14 @@ class CoctMt530000UvSupply:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassSupply] = field(
         default=None,
@@ -4868,7 +5035,7 @@ class CoctMt530000UvSupply:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XClinicalStatementSupplyMood] = field(
         default=None,
@@ -4876,7 +5043,7 @@ class CoctMt530000UvSupply:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -4891,7 +5058,7 @@ class CoctMt530000UvComponent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4899,7 +5066,7 @@ class CoctMt530000UvComponent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4907,7 +5074,7 @@ class CoctMt530000UvComponent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -4915,7 +5082,7 @@ class CoctMt530000UvComponent:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -4923,7 +5090,7 @@ class CoctMt530000UvComponent:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     observation: Optional["CoctMt530000UvObservation"] = field(
         default=None,
@@ -4931,16 +5098,18 @@ class CoctMt530000UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration: Optional[CoctMt530000UvSubstanceAdministration] = field(
+    substance_administration: Optional[
+        CoctMt530000UvSubstanceAdministration
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     supply: Optional[CoctMt530000UvSupply] = field(
         default=None,
@@ -4948,7 +5117,7 @@ class CoctMt530000UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure: Optional[CoctMt530000UvProcedure] = field(
         default=None,
@@ -4956,7 +5125,7 @@ class CoctMt530000UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter: Optional[CoctMt530000UvEncounter] = field(
         default=None,
@@ -4964,7 +5133,7 @@ class CoctMt530000UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     act: Optional["CoctMt530000UvAct"] = field(
         default=None,
@@ -4972,7 +5141,7 @@ class CoctMt530000UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     organizer: Optional["CoctMt530000UvOrganizer"] = field(
         default=None,
@@ -4980,7 +5149,7 @@ class CoctMt530000UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     act_reference: Optional[CoctMt530000UvActReference] = field(
         default=None,
@@ -4989,14 +5158,14 @@ class CoctMt530000UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -5004,14 +5173,14 @@ class CoctMt530000UvComponent:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -5019,7 +5188,7 @@ class CoctMt530000UvComponent:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -5034,7 +5203,7 @@ class CoctMt530000UvOrganizer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5042,7 +5211,7 @@ class CoctMt530000UvOrganizer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5050,28 +5219,28 @@ class CoctMt530000UvOrganizer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -5079,7 +5248,7 @@ class CoctMt530000UvOrganizer:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -5087,7 +5256,7 @@ class CoctMt530000UvOrganizer:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -5095,7 +5264,7 @@ class CoctMt530000UvOrganizer:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: List[Ce] = field(
         default_factory=list,
@@ -5103,7 +5272,7 @@ class CoctMt530000UvOrganizer:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -5111,7 +5280,7 @@ class CoctMt530000UvOrganizer:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
@@ -5119,7 +5288,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     record_target: Optional[CoctMt530000UvRecordTarget] = field(
         default=None,
@@ -5128,7 +5297,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
@@ -5137,7 +5306,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt530000UvPerformer] = field(
         default_factory=list,
@@ -5145,7 +5314,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -5153,7 +5322,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
         default=None,
@@ -5162,7 +5331,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     informant: List[CoctMt530000UvInformant] = field(
         default_factory=list,
@@ -5170,7 +5339,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[CoctMt530000UvVerifier] = field(
         default_factory=list,
@@ -5178,7 +5347,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     location: List[CoctMt530000UvLocation] = field(
         default_factory=list,
@@ -5186,7 +5355,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: Optional[CoctMt530000UvDefinition] = field(
         default=None,
@@ -5194,7 +5363,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[CoctMt530000UvConditions] = field(
         default_factory=list,
@@ -5202,7 +5371,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component: List[CoctMt530000UvComponent] = field(
         default_factory=list,
@@ -5210,7 +5379,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of1: List[CoctMt530000UvSourceOf1] = field(
         default_factory=list,
@@ -5219,7 +5388,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of2: List["CoctMt530000UvSourceOf3"] = field(
         default_factory=list,
@@ -5228,7 +5397,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[CoctMt530000UvSubject1] = field(
         default=None,
@@ -5237,7 +5406,7 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     target_of: List["CoctMt530000UvSourceOf2"] = field(
         default_factory=list,
@@ -5246,14 +5415,14 @@ class CoctMt530000UvOrganizer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassContainer] = field(
         default=None,
@@ -5261,7 +5430,7 @@ class CoctMt530000UvOrganizer:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -5270,7 +5439,7 @@ class CoctMt530000UvOrganizer:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -5285,7 +5454,7 @@ class CoctMt530000UvSourceOf2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5293,7 +5462,7 @@ class CoctMt530000UvSourceOf2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5301,7 +5470,7 @@ class CoctMt530000UvSourceOf2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -5309,7 +5478,7 @@ class CoctMt530000UvSourceOf2:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     pause_quantity: Optional[PqExplicit] = field(
         default=None,
@@ -5317,7 +5486,7 @@ class CoctMt530000UvSourceOf2:
             "name": "pauseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -5325,7 +5494,7 @@ class CoctMt530000UvSourceOf2:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -5333,7 +5502,7 @@ class CoctMt530000UvSourceOf2:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     observation: Optional["CoctMt530000UvObservation"] = field(
         default=None,
@@ -5341,16 +5510,18 @@ class CoctMt530000UvSourceOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration: Optional[CoctMt530000UvSubstanceAdministration] = field(
+    substance_administration: Optional[
+        CoctMt530000UvSubstanceAdministration
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     supply: Optional[CoctMt530000UvSupply] = field(
         default=None,
@@ -5358,7 +5529,7 @@ class CoctMt530000UvSourceOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure: Optional[CoctMt530000UvProcedure] = field(
         default=None,
@@ -5366,7 +5537,7 @@ class CoctMt530000UvSourceOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter: Optional[CoctMt530000UvEncounter] = field(
         default=None,
@@ -5374,7 +5545,7 @@ class CoctMt530000UvSourceOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     act: Optional["CoctMt530000UvAct"] = field(
         default=None,
@@ -5382,7 +5553,7 @@ class CoctMt530000UvSourceOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     organizer: Optional[CoctMt530000UvOrganizer] = field(
         default=None,
@@ -5390,30 +5561,52 @@ class CoctMt530000UvSourceOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Optional[Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev]] = field(
+    type_code: Optional[
+        Union[
+            ActRelationshipConditional,
+            ActRelationshipHasComponent,
+            ActRelationshipOutcome,
+            ActRelationshipCostTracking,
+            ActRelationshipPosting,
+            str,
+            ActRelationshipHasSupport,
+            ActRelationshipTemporallyPertains,
+            ActRelationshipPertainsValue,
+            ActRelationshipSequel,
+            XActRelationshipDocument,
+            XActRelationshipEntry,
+            XActRelationshipEntryRelationship,
+            XActRelationshipExternalReference,
+            XActRelationshipPatientTransport,
+            XActRelationshipPertinentInfo,
+            XActRelationshipRelatedAuthorizations,
+            XActReplaceOrRevise,
+            XSuccReplPrev,
+        ]
+    ] = field(
         default=None,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -5421,7 +5614,7 @@ class CoctMt530000UvSourceOf2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -5429,7 +5622,7 @@ class CoctMt530000UvSourceOf2:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -5444,7 +5637,7 @@ class CoctMt530000UvObservation:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5452,7 +5645,7 @@ class CoctMt530000UvObservation:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5460,14 +5653,14 @@ class CoctMt530000UvObservation:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -5475,7 +5668,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     derivation_expr: Optional[St] = field(
         default=None,
@@ -5483,14 +5676,14 @@ class CoctMt530000UvObservation:
             "name": "derivationExpr",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -5498,7 +5691,7 @@ class CoctMt530000UvObservation:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -5506,7 +5699,7 @@ class CoctMt530000UvObservation:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -5514,7 +5707,7 @@ class CoctMt530000UvObservation:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -5522,7 +5715,7 @@ class CoctMt530000UvObservation:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -5530,7 +5723,7 @@ class CoctMt530000UvObservation:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     repeat_number: Optional[IvlInt] = field(
         default=None,
@@ -5538,7 +5731,7 @@ class CoctMt530000UvObservation:
             "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -5546,7 +5739,7 @@ class CoctMt530000UvObservation:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Ce] = field(
         default=None,
@@ -5554,14 +5747,14 @@ class CoctMt530000UvObservation:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     interpretation_code: List[Ce] = field(
         default_factory=list,
@@ -5569,7 +5762,7 @@ class CoctMt530000UvObservation:
             "name": "interpretationCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     method_code: List[Ce] = field(
         default_factory=list,
@@ -5577,7 +5770,7 @@ class CoctMt530000UvObservation:
             "name": "methodCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     target_site_code: List[Cd] = field(
         default_factory=list,
@@ -5585,7 +5778,7 @@ class CoctMt530000UvObservation:
             "name": "targetSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
@@ -5593,7 +5786,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     record_target: Optional[CoctMt530000UvRecordTarget] = field(
         default=None,
@@ -5602,7 +5795,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
@@ -5611,7 +5804,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt530000UvPerformer] = field(
         default_factory=list,
@@ -5619,7 +5812,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -5627,7 +5820,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
         default=None,
@@ -5636,7 +5829,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     informant: List[CoctMt530000UvInformant] = field(
         default_factory=list,
@@ -5644,7 +5837,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[CoctMt530000UvVerifier] = field(
         default_factory=list,
@@ -5652,7 +5845,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     location: List[CoctMt530000UvLocation] = field(
         default_factory=list,
@@ -5660,7 +5853,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: Optional[CoctMt530000UvDefinition] = field(
         default=None,
@@ -5668,7 +5861,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[CoctMt530000UvConditions] = field(
         default_factory=list,
@@ -5676,7 +5869,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reference_range: List[CoctMt530000UvReferenceRange] = field(
         default_factory=list,
@@ -5685,7 +5878,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of1: List[CoctMt530000UvSourceOf1] = field(
         default_factory=list,
@@ -5694,7 +5887,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of2: List["CoctMt530000UvSourceOf3"] = field(
         default_factory=list,
@@ -5703,7 +5896,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[CoctMt530000UvSubject1] = field(
         default=None,
@@ -5712,7 +5905,7 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     target_of: List[CoctMt530000UvSourceOf2] = field(
         default_factory=list,
@@ -5721,14 +5914,14 @@ class CoctMt530000UvObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -5736,7 +5929,7 @@ class CoctMt530000UvObservation:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XClinicalStatementObservationMood] = field(
         default=None,
@@ -5744,7 +5937,7 @@ class CoctMt530000UvObservation:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -5752,7 +5945,7 @@ class CoctMt530000UvObservation:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -5767,7 +5960,7 @@ class CoctMt530000UvSourceOf3:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5775,7 +5968,7 @@ class CoctMt530000UvSourceOf3:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5783,7 +5976,7 @@ class CoctMt530000UvSourceOf3:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -5791,7 +5984,7 @@ class CoctMt530000UvSourceOf3:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     pause_quantity: Optional[PqExplicit] = field(
         default=None,
@@ -5799,7 +5992,7 @@ class CoctMt530000UvSourceOf3:
             "name": "pauseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -5807,7 +6000,7 @@ class CoctMt530000UvSourceOf3:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -5815,7 +6008,7 @@ class CoctMt530000UvSourceOf3:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     observation: Optional[CoctMt530000UvObservation] = field(
         default=None,
@@ -5823,16 +6016,18 @@ class CoctMt530000UvSourceOf3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration: Optional[CoctMt530000UvSubstanceAdministration] = field(
+    substance_administration: Optional[
+        CoctMt530000UvSubstanceAdministration
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     supply: Optional[CoctMt530000UvSupply] = field(
         default=None,
@@ -5840,7 +6035,7 @@ class CoctMt530000UvSourceOf3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure: Optional[CoctMt530000UvProcedure] = field(
         default=None,
@@ -5848,7 +6043,7 @@ class CoctMt530000UvSourceOf3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter: Optional[CoctMt530000UvEncounter] = field(
         default=None,
@@ -5856,7 +6051,7 @@ class CoctMt530000UvSourceOf3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     act: Optional["CoctMt530000UvAct"] = field(
         default=None,
@@ -5864,7 +6059,7 @@ class CoctMt530000UvSourceOf3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     organizer: Optional[CoctMt530000UvOrganizer] = field(
         default=None,
@@ -5872,30 +6067,52 @@ class CoctMt530000UvSourceOf3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Optional[Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev]] = field(
+    type_code: Optional[
+        Union[
+            ActRelationshipConditional,
+            ActRelationshipHasComponent,
+            ActRelationshipOutcome,
+            ActRelationshipCostTracking,
+            ActRelationshipPosting,
+            str,
+            ActRelationshipHasSupport,
+            ActRelationshipTemporallyPertains,
+            ActRelationshipPertainsValue,
+            ActRelationshipSequel,
+            XActRelationshipDocument,
+            XActRelationshipEntry,
+            XActRelationshipEntryRelationship,
+            XActRelationshipExternalReference,
+            XActRelationshipPatientTransport,
+            XActRelationshipPertinentInfo,
+            XActRelationshipRelatedAuthorizations,
+            XActReplaceOrRevise,
+            XSuccReplPrev,
+        ]
+    ] = field(
         default=None,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -5903,7 +6120,7 @@ class CoctMt530000UvSourceOf3:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -5911,7 +6128,7 @@ class CoctMt530000UvSourceOf3:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -5926,7 +6143,7 @@ class CoctMt530000UvAct:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5934,7 +6151,7 @@ class CoctMt530000UvAct:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5942,14 +6159,14 @@ class CoctMt530000UvAct:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -5957,14 +6174,14 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -5972,7 +6189,7 @@ class CoctMt530000UvAct:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -5980,7 +6197,7 @@ class CoctMt530000UvAct:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -5988,7 +6205,7 @@ class CoctMt530000UvAct:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -5996,7 +6213,7 @@ class CoctMt530000UvAct:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -6004,7 +6221,7 @@ class CoctMt530000UvAct:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -6012,7 +6229,7 @@ class CoctMt530000UvAct:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Ce] = field(
         default=None,
@@ -6020,7 +6237,7 @@ class CoctMt530000UvAct:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[CoctMt530000UvSubject2] = field(
         default_factory=list,
@@ -6028,7 +6245,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     record_target: Optional[CoctMt530000UvRecordTarget] = field(
         default=None,
@@ -6037,7 +6254,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     responsible_party: List[CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
@@ -6046,7 +6263,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt530000UvPerformer] = field(
         default_factory=list,
@@ -6054,7 +6271,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[CoctMt530000UvAuthor] = field(
         default_factory=list,
@@ -6062,7 +6279,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: Optional[CoctMt530000UvDataEnterer] = field(
         default=None,
@@ -6071,7 +6288,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     informant: List[CoctMt530000UvInformant] = field(
         default_factory=list,
@@ -6079,7 +6296,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[CoctMt530000UvVerifier] = field(
         default_factory=list,
@@ -6087,7 +6304,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     location: List[CoctMt530000UvLocation] = field(
         default_factory=list,
@@ -6095,7 +6312,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: Optional[CoctMt530000UvDefinition] = field(
         default=None,
@@ -6103,7 +6320,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[CoctMt530000UvConditions] = field(
         default_factory=list,
@@ -6111,7 +6328,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of1: List[CoctMt530000UvSourceOf1] = field(
         default_factory=list,
@@ -6120,7 +6337,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     source_of2: List[CoctMt530000UvSourceOf3] = field(
         default_factory=list,
@@ -6129,7 +6346,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[CoctMt530000UvSubject1] = field(
         default=None,
@@ -6138,7 +6355,7 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     target_of: List[CoctMt530000UvSourceOf2] = field(
         default_factory=list,
@@ -6147,14 +6364,14 @@ class CoctMt530000UvAct:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -6162,7 +6379,7 @@ class CoctMt530000UvAct:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XClinicalStatementActMood] = field(
         default=None,
@@ -6170,7 +6387,7 @@ class CoctMt530000UvAct:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -6178,5 +6395,5 @@ class CoctMt530000UvAct:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )

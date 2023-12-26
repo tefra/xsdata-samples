@@ -50,6 +50,7 @@ class AuthorityOperationTypeEnum(Enum):
         motion.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ACCIDENT_INVESTIGATION_WORK = "accidentInvestigationWork"
     BOMB_SQUAD_IN_ACTION = "bombSquadInAction"
     CIVIL_EMERGENCY = "civilEmergency"

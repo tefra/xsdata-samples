@@ -12,12 +12,16 @@ from travelport.models.contract_1 import Contract1
 from travelport.models.field_data_1 import FieldData1
 from travelport.models.field_group_data_1 import FieldGroupData1
 from travelport.models.form_of_payment_2 import FormOfPayment2
-from travelport.models.loyalty_program_enrollment_1 import LoyaltyProgramEnrollment1
+from travelport.models.loyalty_program_enrollment_1 import (
+    LoyaltyProgramEnrollment1,
+)
 from travelport.models.policy_reference_1 import PolicyReference1
 from travelport.models.travel_document_1 import TravelDocument1
 from travelport.models.traveler_group_info_1 import TravelerGroupInfo1
 from travelport.models.traveler_info_1 import TravelerInfo1
-from travelport.models.type_profile_entity_status_1 import TypeProfileEntityStatus1
+from travelport.models.type_profile_entity_status_1 import (
+    TypeProfileEntityStatus1,
+)
 from travelport.models.type_profile_type_3 import TypeProfileType3
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -69,6 +73,7 @@ class ProfileSummary1:
     version
         Version number of the profile.
     """
+
     class Meta:
         name = "ProfileSummary"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -78,126 +83,128 @@ class ProfileSummary1:
         metadata={
             "name": "AgencyGroupInfo",
             "type": "Element",
-        }
+        },
     )
     agency_info: None | AgencyInfo2 = field(
         default=None,
         metadata={
             "name": "AgencyInfo",
             "type": "Element",
-        }
+        },
     )
     branch_group_info: None | BranchGroupInfo1 = field(
         default=None,
         metadata={
             "name": "BranchGroupInfo",
             "type": "Element",
-        }
+        },
     )
     branch_info: None | BranchInfo1 = field(
         default=None,
         metadata={
             "name": "BranchInfo",
             "type": "Element",
-        }
+        },
     )
     agent_info: None | AgentInfo1 = field(
         default=None,
         metadata={
             "name": "AgentInfo",
             "type": "Element",
-        }
+        },
     )
     account_info: None | AccountInfo1 = field(
         default=None,
         metadata={
             "name": "AccountInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_group_info: None | TravelerGroupInfo1 = field(
         default=None,
         metadata={
             "name": "TravelerGroupInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_info: None | TravelerInfo1 = field(
         default=None,
         metadata={
             "name": "TravelerInfo",
             "type": "Element",
-        }
+        },
     )
-    immediate_parent_profile: list[ProfileSummary1.ImmediateParentProfile] = field(
+    immediate_parent_profile: list[
+        ProfileSummary1.ImmediateParentProfile
+    ] = field(
         default_factory=list,
         metadata={
             "name": "ImmediateParentProfile",
             "type": "Element",
-        }
+        },
     )
     contract: list[Contract1] = field(
         default_factory=list,
         metadata={
             "name": "Contract",
             "type": "Element",
-        }
+        },
     )
     alternate_contact: list[AlternateContact1] = field(
         default_factory=list,
         metadata={
             "name": "AlternateContact",
             "type": "Element",
-        }
+        },
     )
     travel_document: list[TravelDocument1] = field(
         default_factory=list,
         metadata={
             "name": "TravelDocument",
             "type": "Element",
-        }
+        },
     )
     accounting_reference: list[AccountingReference1] = field(
         default_factory=list,
         metadata={
             "name": "AccountingReference",
             "type": "Element",
-        }
+        },
     )
     policy_reference: list[PolicyReference1] = field(
         default_factory=list,
         metadata={
             "name": "PolicyReference",
             "type": "Element",
-        }
+        },
     )
     loyalty_program_enrollment: list[LoyaltyProgramEnrollment1] = field(
         default_factory=list,
         metadata={
             "name": "LoyaltyProgramEnrollment",
             "type": "Element",
-        }
+        },
     )
     form_of_payment: list[FormOfPayment2] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
             "type": "Element",
-        }
+        },
     )
     field_data: list[FieldData1] = field(
         default_factory=list,
         metadata={
             "name": "FieldData",
             "type": "Element",
-        }
+        },
     )
     field_group_data: list[FieldGroupData1] = field(
         default_factory=list,
         metadata={
             "name": "FieldGroupData",
             "type": "Element",
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -205,7 +212,7 @@ class ProfileSummary1:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -213,7 +220,7 @@ class ProfileSummary1:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | TypeProfileEntityStatus1 = field(
         default=None,
@@ -221,7 +228,7 @@ class ProfileSummary1:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -230,7 +237,7 @@ class ProfileSummary1:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
 
     @dataclass
@@ -244,17 +251,18 @@ class ProfileSummary1:
             If immediate parent is a control branch, it will be true other
             wise doesn't show this attribute.
         """
+
         immediate_parent_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ImmediateParentRef",
                 "type": "Attribute",
-            }
+            },
         )
         control_branch: None | bool = field(
             default=None,
             metadata={
                 "name": "ControlBranch",
                 "type": "Attribute",
-            }
+            },
         )

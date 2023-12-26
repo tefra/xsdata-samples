@@ -25,6 +25,7 @@ class PersonCategoryEnum(Enum):
     :cvar TRAFFIC_WARDEN: A member of the local traffic warden service.
     :cvar VERY_IMPORTANT_PERSON: A very important person.
     """
+
     ADULT = "adult"
     CHILD = "child"
     EMERGENCY_SERVICES_PERSON = "emergencyServicesPerson"

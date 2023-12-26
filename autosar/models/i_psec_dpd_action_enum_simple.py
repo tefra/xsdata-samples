@@ -10,6 +10,7 @@ class IPsecDpdActionEnumSimple(Enum):
     :cvar TRAP: tries to establish the connection after traffic is sent
         to the peer.
     """
+
     CLEAR = "CLEAR"
     RESTART = "RESTART"
     TRAP = "TRAP"

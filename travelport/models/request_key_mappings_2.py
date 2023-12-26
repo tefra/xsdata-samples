@@ -11,6 +11,7 @@ class RequestKeyMappings2:
     All the elements for which mapping key sent in the request is different from
     the mapping key comes in the response.
     """
+
     class Meta:
         name = "RequestKeyMappings"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -21,5 +22,5 @@ class RequestKeyMappings2:
             "name": "KeyMapping",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

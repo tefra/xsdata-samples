@@ -18,6 +18,7 @@ class ParkingSiteOvercrowdingStatusEnum(Enum):
     :cvar UNKNOWN: The overcrowding level is unknown.
     :cvar OTHER: Other.
     """
+
     OVERCROWDING = "overcrowding"
     NO_OVERCROWDING = "noOvercrowding"
     OVERCROWDING_LEVEL1 = "overcrowdingLevel1"

@@ -26,6 +26,7 @@ class PrePayCustomer:
     loyalty_card
         Customer loyalty card detail
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -34,7 +35,7 @@ class PrePayCustomer:
         metadata={
             "name": "PersonName",
             "type": "Element",
-        }
+        },
     )
     email: list[Email1] = field(
         default_factory=list,
@@ -43,7 +44,7 @@ class PrePayCustomer:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     address: list[TypeStructuredAddress1] = field(
         default_factory=list,
@@ -51,7 +52,7 @@ class PrePayCustomer:
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     related_traveler: list[RelatedTraveler] = field(
         default_factory=list,
@@ -59,7 +60,7 @@ class PrePayCustomer:
             "name": "RelatedTraveler",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard1] = field(
         default_factory=list,
@@ -68,5 +69,5 @@ class PrePayCustomer:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

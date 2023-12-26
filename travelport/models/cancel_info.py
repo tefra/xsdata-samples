@@ -57,6 +57,7 @@ class CancelInfo:
         An enumerated type indicating when the deadline drop time goes into
         effect. Enumerated values are “AfterBooking” and “BeforeArrival”.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -65,7 +66,7 @@ class CancelInfo:
         metadata={
             "name": "CancellationPolicy",
             "type": "Element",
-        }
+        },
     )
     text: list[str] = field(
         default_factory=list,
@@ -73,84 +74,84 @@ class CancelInfo:
             "name": "Text",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     non_refundable_stay_indicator: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "NonRefundableStayIndicator",
             "type": "Attribute",
-        }
+        },
     )
     cancel_deadline: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CancelDeadline",
             "type": "Attribute",
-        }
+        },
     )
     tax_inclusive: None | bool = field(
         default=None,
         metadata={
             "name": "TaxInclusive",
             "type": "Attribute",
-        }
+        },
     )
     fee_inclusive: None | bool = field(
         default=None,
         metadata={
             "name": "FeeInclusive",
             "type": "Attribute",
-        }
+        },
     )
     cancel_penalty_amount: None | str = field(
         default=None,
         metadata={
             "name": "CancelPenaltyAmount",
             "type": "Attribute",
-        }
+        },
     )
     number_of_nights: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfNights",
             "type": "Attribute",
-        }
+        },
     )
     cancel_penalty_percent: None | float = field(
         default=None,
         metadata={
             "name": "CancelPenaltyPercent",
             "type": "Attribute",
-        }
+        },
     )
     cancel_penalty_percent_applies_to: None | str = field(
         default=None,
         metadata={
             "name": "CancelPenaltyPercentAppliesTo",
             "type": "Attribute",
-        }
+        },
     )
     method: None | str = field(
         default=None,
         metadata={
             "name": "Method",
             "type": "Attribute",
-        }
+        },
     )
     supported: None | bool = field(
         default=None,
         metadata={
             "name": "Supported",
             "type": "Attribute",
-        }
+        },
     )
     url: None | str = field(
         default=None,
         metadata={
             "name": "URL",
             "type": "Attribute",
-        }
+        },
     )
     offset_time_unit: None | str = field(
         default=None,
@@ -159,7 +160,7 @@ class CancelInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )
     offset_unit_multiplier: None | int = field(
         default=None,
@@ -168,7 +169,7 @@ class CancelInfo:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 999,
-        }
+        },
     )
     offset_drop_time: None | str = field(
         default=None,
@@ -177,5 +178,5 @@ class CancelInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )

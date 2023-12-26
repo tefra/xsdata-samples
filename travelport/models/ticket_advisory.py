@@ -22,6 +22,7 @@ class TicketAdvisory:
         DECH can also be used. Only certain services support this attribute.
         Providers: ACH, RCH, 1G, 1V, 1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -31,19 +32,19 @@ class TicketAdvisory:
             "required": True,
             "min_length": 1,
             "max_length": 500,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     language_code: None | str = field(
         default=None,
         metadata={
             "name": "LanguageCode",
             "type": "Attribute",
-        }
+        },
     )

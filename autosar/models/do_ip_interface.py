@@ -15,8 +15,12 @@ from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .socket_connection_bundle_subtypes_enum import SocketConnectionBundleSubtypesEnum
-from .static_socket_connection_subtypes_enum import StaticSocketConnectionSubtypesEnum
+from .socket_connection_bundle_subtypes_enum import (
+    SocketConnectionBundleSubtypesEnum,
+)
+from .static_socket_connection_subtypes_enum import (
+    StaticSocketConnectionSubtypesEnum,
+)
 from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -136,6 +140,7 @@ class DoIpInterface:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DO-IP-INTERFACE"
 
@@ -146,7 +151,7 @@ class DoIpInterface:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["DoIpInterface.ShortNameFragments"] = field(
         default=None,
@@ -154,7 +159,7 @@ class DoIpInterface:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -162,7 +167,7 @@ class DoIpInterface:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -170,7 +175,7 @@ class DoIpInterface:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -178,7 +183,7 @@ class DoIpInterface:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -186,7 +191,7 @@ class DoIpInterface:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -194,7 +199,7 @@ class DoIpInterface:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DoIpInterface.Annotations"] = field(
         default=None,
@@ -202,7 +207,7 @@ class DoIpInterface:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alive_check_response_timeout: Optional[TimeValue] = field(
         default=None,
@@ -210,23 +215,27 @@ class DoIpInterface:
             "name": "ALIVE-CHECK-RESPONSE-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    do_ip_routing_activations: Optional["DoIpInterface.DoIpRoutingActivations"] = field(
+    do_ip_routing_activations: Optional[
+        "DoIpInterface.DoIpRoutingActivations"
+    ] = field(
         default=None,
         metadata={
             "name": "DO-IP-ROUTING-ACTIVATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    doip_channel_collection_ref: Optional["DoIpInterface.DoipChannelCollectionRef"] = field(
+    doip_channel_collection_ref: Optional[
+        "DoIpInterface.DoipChannelCollectionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DOIP-CHANNEL-COLLECTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     doip_connection_refs: Optional["DoIpInterface.DoipConnectionRefs"] = field(
         default=None,
@@ -234,7 +243,7 @@ class DoIpInterface:
             "name": "DOIP-CONNECTION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     general_inactivity_time: Optional[TimeValue] = field(
         default=None,
@@ -242,7 +251,7 @@ class DoIpInterface:
             "name": "GENERAL-INACTIVITY-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     initial_inactivity_time: Optional[TimeValue] = field(
         default=None,
@@ -250,7 +259,7 @@ class DoIpInterface:
             "name": "INITIAL-INACTIVITY-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     initial_vehicle_announcement_time: Optional[TimeValue] = field(
         default=None,
@@ -258,7 +267,7 @@ class DoIpInterface:
             "name": "INITIAL-VEHICLE-ANNOUNCEMENT-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_activation_line_dependent: Optional[Boolean] = field(
         default=None,
@@ -266,7 +275,7 @@ class DoIpInterface:
             "name": "IS-ACTIVATION-LINE-DEPENDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_tester_connections: Optional[PositiveInteger] = field(
         default=None,
@@ -274,15 +283,17 @@ class DoIpInterface:
             "name": "MAX-TESTER-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    socket_connection_refs: Optional["DoIpInterface.SocketConnectionRefs"] = field(
+    socket_connection_refs: Optional[
+        "DoIpInterface.SocketConnectionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SOCKET-CONNECTION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_mac_address_for_identification: Optional[Boolean] = field(
         default=None,
@@ -290,7 +301,7 @@ class DoIpInterface:
             "name": "USE-MAC-ADDRESS-FOR-IDENTIFICATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_vehicle_identification_sync_status: Optional[Boolean] = field(
         default=None,
@@ -298,7 +309,7 @@ class DoIpInterface:
             "name": "USE-VEHICLE-IDENTIFICATION-SYNC-STATUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vehicle_announcement_count: Optional[PositiveInteger] = field(
         default=None,
@@ -306,7 +317,7 @@ class DoIpInterface:
             "name": "VEHICLE-ANNOUNCEMENT-COUNT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vehicle_announcement_interval: Optional[TimeValue] = field(
         default=None,
@@ -314,14 +325,14 @@ class DoIpInterface:
             "name": "VEHICLE-ANNOUNCEMENT-INTERVAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -329,14 +340,14 @@ class DoIpInterface:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -347,7 +358,7 @@ class DoIpInterface:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -358,7 +369,7 @@ class DoIpInterface:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -369,7 +380,7 @@ class DoIpInterface:
                 "name": "DO-IP-ROUTING-ACTIVATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -380,18 +391,20 @@ class DoIpInterface:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class DoipConnectionRefs:
-        doip_connection_ref: List["DoIpInterface.DoipConnectionRefs.DoipConnectionRef"] = field(
+        doip_connection_ref: List[
+            "DoIpInterface.DoipConnectionRefs.DoipConnectionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DOIP-CONNECTION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -402,18 +415,20 @@ class DoIpInterface:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class SocketConnectionRefs:
-        socket_connection_ref: List["DoIpInterface.SocketConnectionRefs.SocketConnectionRef"] = field(
+        socket_connection_ref: List[
+            "DoIpInterface.SocketConnectionRefs.SocketConnectionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-CONNECTION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -424,5 +439,5 @@ class DoIpInterface:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

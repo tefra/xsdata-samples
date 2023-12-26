@@ -12,5 +12,5 @@ class CodespaceAssignmentRef:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

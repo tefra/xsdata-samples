@@ -14,7 +14,7 @@ class ContextualisedRequestStructure:
             "name": "ServiceRequestContext",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     request_timestamp: Optional[XmlDateTime] = field(
         default=None,
@@ -23,7 +23,7 @@ class ContextualisedRequestStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     account_id: Optional[str] = field(
         default=None,
@@ -31,7 +31,7 @@ class ContextualisedRequestStructure:
             "name": "AccountId",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     account_key: Optional[str] = field(
         default=None,
@@ -39,7 +39,7 @@ class ContextualisedRequestStructure:
             "name": "AccountKey",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     address: Optional[str] = field(
         default=None,
@@ -47,7 +47,7 @@ class ContextualisedRequestStructure:
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     requestor_ref: Optional[str] = field(
         default=None,
@@ -56,7 +56,7 @@ class ContextualisedRequestStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     message_identifier: Optional[str] = field(
         default=None,
@@ -64,7 +64,7 @@ class ContextualisedRequestStructure:
             "name": "MessageIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -72,7 +72,7 @@ class ContextualisedRequestStructure:
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -80,5 +80,5 @@ class ContextualisedRequestStructure:
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

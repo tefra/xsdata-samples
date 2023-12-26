@@ -15,12 +15,12 @@ class TSignal(TRootElement):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     structure_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "structureRef",
             "type": "Attribute",
-        }
+        },
     )

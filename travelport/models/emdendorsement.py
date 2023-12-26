@@ -10,6 +10,7 @@ class Emdendorsement:
 
     Supported providers are 1V/1G/1P
     """
+
     class Meta:
         name = "EMDEndorsement"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -19,5 +20,5 @@ class Emdendorsement:
         metadata={
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

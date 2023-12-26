@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.fare_restriction_date_end_date_indicator import FareRestrictionDateEndDateIndicator
+from travelport.models.fare_restriction_date_end_date_indicator import (
+    FareRestrictionDateEndDateIndicator,
+)
 from travelport.models.type_fare_directionality import TypeFareDirectionality
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -24,6 +26,7 @@ class FareRestrictionDate:
         This field indicates the end date/last date for which travel on the
         fare component being validated must be commenced or completed
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -32,26 +35,26 @@ class FareRestrictionDate:
         metadata={
             "name": "Direction",
             "type": "Attribute",
-        }
+        },
     )
     start_date: None | str = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     end_date: None | str = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-        }
+        },
     )
     end_date_indicator: None | FareRestrictionDateEndDateIndicator = field(
         default=None,
         metadata={
             "name": "EndDateIndicator",
             "type": "Attribute",
-        }
+        },
     )

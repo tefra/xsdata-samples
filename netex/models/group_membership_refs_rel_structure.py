@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
 from .fare_zone_ref import FareZoneRef
@@ -17,7 +17,17 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "groupMembershipRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            StopAreaRef,
+            AccessZoneRef,
+            TransportAdministrativeZoneRef,
+            AdministrativeZoneRef,
+            FareZoneRef,
+            TariffZoneRef,
+            ZoneRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -58,5 +68,5 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeHotelPnrElement(Enum):
     """
     Defines the list of available data types for modifications.
     """
+
     GUARANTEE = "Guarantee"
     ASSOCIATED_REMARK = "AssociatedRemark"
     HOTEL_SPECIAL_REQUEST = "HotelSpecialRequest"

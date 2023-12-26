@@ -16,15 +16,18 @@ class FlightTimeTableRsp(BaseSearchRsp1):
     flight_time_table_list
         Provider: 1G,1V.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    flight_time_table_list: None | FlightTimeTableRsp.FlightTimeTableList = field(
-        default=None,
-        metadata={
-            "name": "FlightTimeTableList",
-            "type": "Element",
-        }
+    flight_time_table_list: None | FlightTimeTableRsp.FlightTimeTableList = (
+        field(
+            default=None,
+            metadata={
+                "name": "FlightTimeTableList",
+                "type": "Element",
+            },
+        )
     )
 
     @dataclass
@@ -36,5 +39,5 @@ class FlightTimeTableRsp(BaseSearchRsp1):
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

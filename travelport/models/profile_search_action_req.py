@@ -15,6 +15,7 @@ class ProfileSearchActionReq(BaseReq5):
     consuming_system
         Action Consuming System (Universal Desktop, 3rd party system).
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -26,5 +27,5 @@ class ProfileSearchActionReq(BaseReq5):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

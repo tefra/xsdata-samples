@@ -97,6 +97,7 @@ class SdgPrimitiveAttribute:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SDG-PRIMITIVE-ATTRIBUTE"
 
@@ -107,15 +108,17 @@ class SdgPrimitiveAttribute:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SdgPrimitiveAttribute.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SdgPrimitiveAttribute.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +126,7 @@ class SdgPrimitiveAttribute:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +134,7 @@ class SdgPrimitiveAttribute:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +142,7 @@ class SdgPrimitiveAttribute:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +150,7 @@ class SdgPrimitiveAttribute:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +158,7 @@ class SdgPrimitiveAttribute:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SdgPrimitiveAttribute.Annotations"] = field(
         default=None,
@@ -163,7 +166,7 @@ class SdgPrimitiveAttribute:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lower_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -171,7 +174,7 @@ class SdgPrimitiveAttribute:
             "name": "LOWER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -179,7 +182,7 @@ class SdgPrimitiveAttribute:
             "name": "UPPER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity_infinite: Optional[Boolean] = field(
         default=None,
@@ -187,7 +190,7 @@ class SdgPrimitiveAttribute:
             "name": "UPPER-MULTIPLICITY-INFINITE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     gid: Optional[NmtokenString] = field(
         default=None,
@@ -195,7 +198,7 @@ class SdgPrimitiveAttribute:
             "name": "GID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max: Optional[LimitValue] = field(
         default=None,
@@ -203,7 +206,7 @@ class SdgPrimitiveAttribute:
             "name": "MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_length: Optional[PositiveInteger] = field(
         default=None,
@@ -211,7 +214,7 @@ class SdgPrimitiveAttribute:
             "name": "MAX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min: Optional[LimitValue] = field(
         default=None,
@@ -219,7 +222,7 @@ class SdgPrimitiveAttribute:
             "name": "MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_length: Optional[PositiveInteger] = field(
         default=None,
@@ -227,7 +230,7 @@ class SdgPrimitiveAttribute:
             "name": "MIN-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern: Optional[RegularExpression] = field(
         default=None,
@@ -235,14 +238,14 @@ class SdgPrimitiveAttribute:
             "name": "PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -250,14 +253,14 @@ class SdgPrimitiveAttribute:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -268,7 +271,7 @@ class SdgPrimitiveAttribute:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -279,5 +282,5 @@ class SdgPrimitiveAttribute:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

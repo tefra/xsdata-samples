@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .activation_link_ref import ActivationLinkRef
 from .activation_link_ref_by_value import ActivationLinkRefByValue
 from .line_link_ref import LineLinkRef
@@ -30,7 +30,30 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            ServiceLinkRef,
+            LineLinkRef,
+            PathLinkRef,
+            TimingLinkRef,
+            RouteLinkRef,
+            WireLinkRef,
+            RoadLinkRef,
+            RailwayLinkRef,
+            ActivationLinkRef,
+            ServiceLinkRefByValue,
+            LineLinkRefByValue,
+            PathLinkRefByValue,
+            TimingLinkRefByValue,
+            RouteLinkRefByValue,
+            WireLinkRefByValue,
+            RoadLinkRefByValue,
+            RailwayLinkRefByValue,
+            ActivationLinkRefByValue,
+            ModalLinkRefByValue,
+            LinkRefByValue,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -136,5 +159,5 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

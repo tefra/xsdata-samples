@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = (
+    "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+)
 
 
 @dataclass
@@ -15,7 +17,7 @@ class Location:
             "name": "GlobalLocationID",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     local_location_id: Optional[str] = field(
         default=None,
@@ -23,5 +25,5 @@ class Location:
             "name": "LocalLocationID",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -62,7 +62,7 @@ class OrderType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -70,7 +70,7 @@ class OrderType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -78,7 +78,7 @@ class OrderType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -86,7 +86,7 @@ class OrderType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -94,7 +94,7 @@ class OrderType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -103,7 +103,7 @@ class OrderType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     sales_order_id: Optional[SalesOrderId] = field(
         default=None,
@@ -111,7 +111,7 @@ class OrderType:
             "name": "SalesOrderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -119,7 +119,7 @@ class OrderType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -127,7 +127,7 @@ class OrderType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -136,7 +136,7 @@ class OrderType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -144,7 +144,7 @@ class OrderType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     order_type_code: Optional[OrderTypeCode] = field(
         default=None,
@@ -152,7 +152,7 @@ class OrderType:
             "name": "OrderTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -160,15 +160,17 @@ class OrderType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
-    requested_invoice_currency_code: Optional[RequestedInvoiceCurrencyCode] = field(
+    requested_invoice_currency_code: Optional[
+        RequestedInvoiceCurrencyCode
+    ] = field(
         default=None,
         metadata={
             "name": "RequestedInvoiceCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     document_currency_code: Optional[DocumentCurrencyCode] = field(
         default=None,
@@ -176,7 +178,7 @@ class OrderType:
             "name": "DocumentCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     pricing_currency_code: Optional[PricingCurrencyCode] = field(
         default=None,
@@ -184,7 +186,7 @@ class OrderType:
             "name": "PricingCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     tax_currency_code: Optional[TaxCurrencyCode] = field(
         default=None,
@@ -192,7 +194,7 @@ class OrderType:
             "name": "TaxCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customer_reference: Optional[CustomerReference] = field(
         default=None,
@@ -200,7 +202,7 @@ class OrderType:
             "name": "CustomerReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     accounting_cost_code: Optional[AccountingCostCode] = field(
         default=None,
@@ -208,7 +210,7 @@ class OrderType:
             "name": "AccountingCostCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     accounting_cost: Optional[AccountingCost] = field(
         default=None,
@@ -216,7 +218,7 @@ class OrderType:
             "name": "AccountingCost",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     line_count_numeric: Optional[LineCountNumeric] = field(
         default=None,
@@ -224,7 +226,7 @@ class OrderType:
             "name": "LineCountNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     validity_period: Tuple[ValidityPeriod, ...] = field(
         default_factory=tuple,
@@ -232,7 +234,7 @@ class OrderType:
             "name": "ValidityPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     quotation_document_reference: Optional[QuotationDocumentReference] = field(
         default=None,
@@ -240,7 +242,7 @@ class OrderType:
             "name": "QuotationDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     order_document_reference: Tuple[OrderDocumentReference, ...] = field(
         default_factory=tuple,
@@ -248,15 +250,17 @@ class OrderType:
             "name": "OrderDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    originator_document_reference: Optional[OriginatorDocumentReference] = field(
+    originator_document_reference: Optional[
+        OriginatorDocumentReference
+    ] = field(
         default=None,
         metadata={
             "name": "OriginatorDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     catalogue_reference: Optional[CatalogueReference] = field(
         default=None,
@@ -264,15 +268,17 @@ class OrderType:
             "name": "CatalogueReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+    additional_document_reference: Tuple[
+        AdditionalDocumentReference, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     contract: Tuple[Contract, ...] = field(
         default_factory=tuple,
@@ -280,7 +286,7 @@ class OrderType:
             "name": "Contract",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     project_reference: Tuple[ProjectReference, ...] = field(
         default_factory=tuple,
@@ -288,7 +294,7 @@ class OrderType:
             "name": "ProjectReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -296,7 +302,7 @@ class OrderType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     buyer_customer_party: Optional[BuyerCustomerParty] = field(
         default=None,
@@ -305,7 +311,7 @@ class OrderType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     seller_supplier_party: Optional[SellerSupplierParty] = field(
         default=None,
@@ -314,7 +320,7 @@ class OrderType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     originator_customer_party: Optional[OriginatorCustomerParty] = field(
         default=None,
@@ -322,7 +328,7 @@ class OrderType:
             "name": "OriginatorCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     freight_forwarder_party: Optional[FreightForwarderParty] = field(
         default=None,
@@ -330,7 +336,7 @@ class OrderType:
             "name": "FreightForwarderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     accounting_customer_party: Optional[AccountingCustomerParty] = field(
         default=None,
@@ -338,7 +344,7 @@ class OrderType:
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     delivery: Tuple[Delivery, ...] = field(
         default_factory=tuple,
@@ -346,7 +352,7 @@ class OrderType:
             "name": "Delivery",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     delivery_terms: Tuple[DeliveryTerms, ...] = field(
         default_factory=tuple,
@@ -354,7 +360,7 @@ class OrderType:
             "name": "DeliveryTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     payment_means: Tuple[PaymentMeans, ...] = field(
         default_factory=tuple,
@@ -362,7 +368,7 @@ class OrderType:
             "name": "PaymentMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     payment_terms: Tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
@@ -370,7 +376,7 @@ class OrderType:
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     transaction_conditions: Optional[TransactionConditions] = field(
         default=None,
@@ -378,7 +384,7 @@ class OrderType:
             "name": "TransactionConditions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     allowance_charge: Tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
@@ -386,7 +392,7 @@ class OrderType:
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tax_exchange_rate: Optional[TaxExchangeRate] = field(
         default=None,
@@ -394,7 +400,7 @@ class OrderType:
             "name": "TaxExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     pricing_exchange_rate: Optional[PricingExchangeRate] = field(
         default=None,
@@ -402,7 +408,7 @@ class OrderType:
             "name": "PricingExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     payment_exchange_rate: Optional[PaymentExchangeRate] = field(
         default=None,
@@ -410,7 +416,7 @@ class OrderType:
             "name": "PaymentExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     destination_country: Optional[DestinationCountry] = field(
         default=None,
@@ -418,7 +424,7 @@ class OrderType:
             "name": "DestinationCountry",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tax_total: Tuple[TaxTotal, ...] = field(
         default_factory=tuple,
@@ -426,7 +432,7 @@ class OrderType:
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     anticipated_monetary_total: Optional[AnticipatedMonetaryTotal] = field(
         default=None,
@@ -434,7 +440,7 @@ class OrderType:
             "name": "AnticipatedMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     order_line: Tuple[OrderLine, ...] = field(
         default_factory=tuple,
@@ -443,7 +449,7 @@ class OrderType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 

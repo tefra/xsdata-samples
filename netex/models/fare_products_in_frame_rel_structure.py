@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
 from .capped_discount_right import CappedDiscountRight
 from .frame_containment_structure import FrameContainmentStructure
@@ -17,7 +17,17 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareProductsInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            SupplementProduct,
+            PreassignedFareProduct,
+            AmountOfPriceUnitProduct,
+            CappedDiscountRight,
+            UsageDiscountRight,
+            ThirdPartyProduct,
+            SaleDiscountRight,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -58,5 +68,5 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

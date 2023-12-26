@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_agency_hierarchy_reference_3 import TypeAgencyHierarchyReference3
+from travelport.models.type_agency_hierarchy_reference_3 import (
+    TypeAgencyHierarchyReference3,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
@@ -16,6 +18,7 @@ class TypeAgencyHierarchyLongReference3(TypeAgencyHierarchyReference3):
         After new profile  implementation: Agent: UserName, others levels:
         Name.
     """
+
     class Meta:
         name = "typeAgencyHierarchyLongReference"
 
@@ -25,7 +28,7 @@ class TypeAgencyHierarchyLongReference3(TypeAgencyHierarchyReference3):
             "name": "ProfileVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_name: None | str = field(
         default=None,
@@ -34,5 +37,5 @@ class TypeAgencyHierarchyLongReference3(TypeAgencyHierarchyReference3):
             "type": "Attribute",
             "required": True,
             "max_length": 102,
-        }
+        },
     )

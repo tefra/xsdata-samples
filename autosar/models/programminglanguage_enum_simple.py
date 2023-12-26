@@ -9,6 +9,7 @@ class ProgramminglanguageEnumSimple(Enum):
     :cvar CPP: C++ language
     :cvar JAVA: Java language
     """
+
     C = "C"
     CPP = "CPP"
     JAVA = "JAVA"

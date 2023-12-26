@@ -8,6 +8,7 @@ class TypeRailTicketFulfillmentOption2(Enum):
     """
     The type of Rail Ticket Fulfillment Type.
     """
+
     AGENCY = "Agency"
     COURIER = "Courier"
     KIOSK = "Kiosk"

@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .fare_point_in_pattern_versioned_child_structure import FarePointInPatternVersionedChildStructure
+from .fare_point_in_pattern_versioned_child_structure import (
+    FarePointInPatternVersionedChildStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

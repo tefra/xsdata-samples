@@ -10,6 +10,7 @@ class PublisherPlace:
     If the city is not a major city, the appropriate country, state, or
     province should be added.
     """
+
     class Meta:
         name = "publisher_place"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class PublisherPlace:
         metadata={
             "min_length": 2,
             "max_length": 255,
-        }
+        },
     )

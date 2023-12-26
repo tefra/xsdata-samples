@@ -32,6 +32,7 @@ class UniversalRecordSearchResult:
     ticket_status
         If the universal record is ticketed or not or partially ticketed
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -41,28 +42,28 @@ class UniversalRecordSearchResult:
             "name": "ProductInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
-        }
+        },
     )
     earliest_travel_date: None | str = field(
         default=None,
         metadata={
             "name": "EarliestTravelDate",
             "type": "Attribute",
-        }
+        },
     )
     created_date: None | str = field(
         default=None,
         metadata={
             "name": "CreatedDate",
             "type": "Attribute",
-        }
+        },
     )
     saved_trip_locator_code: None | str = field(
         default=None,
@@ -71,28 +72,28 @@ class UniversalRecordSearchResult:
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     ticketed: None | TypeReservationTicketed = field(
         default=None,
         metadata={
             "name": "Ticketed",
             "type": "Attribute",
-        }
+        },
     )
     record_status: None | TypeRecordStatus = field(
         default=None,
         metadata={
             "name": "RecordStatus",
             "type": "Attribute",
-        }
+        },
     )
     ticket_status: None | UrticketStatus = field(
         default=None,
         metadata={
             "name": "TicketStatus",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -104,5 +105,5 @@ class UniversalRecordSearchResult:
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "max_occurs": 999,
-            }
+            },
         )

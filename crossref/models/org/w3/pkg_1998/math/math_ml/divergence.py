@@ -15,5 +15,5 @@ class Divergence:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

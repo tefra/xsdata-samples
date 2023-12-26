@@ -23,6 +23,7 @@ class LegDetail:
     flight_number
         Flight Number for the Search Leg Detail.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -32,7 +33,7 @@ class LegDetail:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin_airport: None | str = field(
         default=None,
@@ -42,7 +43,7 @@ class LegDetail:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination_airport: None | str = field(
         default=None,
@@ -52,7 +53,7 @@ class LegDetail:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -61,14 +62,14 @@ class LegDetail:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     travel_date: None | str = field(
         default=None,
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -76,5 +77,5 @@ class LegDetail:
             "name": "FlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )

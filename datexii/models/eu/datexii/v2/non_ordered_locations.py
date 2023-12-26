@@ -12,11 +12,12 @@ class NonOrderedLocations(GroupOfLocations):
     Multiple (i.e. more than one) physically separate locations which have no
     specific order.
     """
+
     non_ordered_locations_extension: Optional[ExtensionType] = field(
         default=None,
         metadata={
             "name": "nonOrderedLocationsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -15,14 +15,14 @@ class ScheduleEventDescription:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | TextualTypeEnum = field(
         default=None,
@@ -30,5 +30,5 @@ class ScheduleEventDescription:
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

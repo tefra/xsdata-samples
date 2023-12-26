@@ -15,5 +15,5 @@ class Max:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

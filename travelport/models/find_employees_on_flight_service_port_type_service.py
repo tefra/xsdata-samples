@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.find_employees_on_flight_service_port_type_service_input import FindEmployeesOnFlightServicePortTypeServiceInput
-from travelport.models.find_employees_on_flight_service_port_type_service_output import FindEmployeesOnFlightServicePortTypeServiceOutput
+from travelport.models.find_employees_on_flight_service_port_type_service_input import (
+    FindEmployeesOnFlightServicePortTypeServiceInput,
+)
+from travelport.models.find_employees_on_flight_service_port_type_service_output import (
+    FindEmployeesOnFlightServicePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

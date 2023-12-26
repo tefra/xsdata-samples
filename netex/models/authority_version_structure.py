@@ -3,7 +3,9 @@ from typing import Optional
 from .country_ref import CountryRef
 from .organisation_version_structure import OrganisationVersionStructure
 from .postal_address_version_structure import PostalAddressVersionStructure
-from .type_of_organisation_refs_rel_structure import TypeOfOrganisationRefsRelStructure
+from .type_of_organisation_refs_rel_structure import (
+    TypeOfOrganisationRefsRelStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -19,7 +21,7 @@ class AuthorityVersionStructure(OrganisationVersionStructure):
             "name": "CountryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     address: Optional[PostalAddressVersionStructure] = field(
         default=None,
@@ -27,7 +29,7 @@ class AuthorityVersionStructure(OrganisationVersionStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     authority_types: Optional[TypeOfOrganisationRefsRelStructure] = field(
         default=None,
@@ -35,5 +37,5 @@ class AuthorityVersionStructure(OrganisationVersionStructure):
             "name": "authorityTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

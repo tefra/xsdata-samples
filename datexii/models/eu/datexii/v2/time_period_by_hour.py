@@ -16,6 +16,7 @@ class TimePeriodByHour(TimePeriodOfDay):
     :ivar end_time_of_period: End of time period.
     :ivar time_period_by_hour_extension:
     """
+
     start_time_of_period: Optional[XmlTime] = field(
         default=None,
         metadata={
@@ -23,7 +24,7 @@ class TimePeriodByHour(TimePeriodOfDay):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     end_time_of_period: Optional[XmlTime] = field(
         default=None,
@@ -32,7 +33,7 @@ class TimePeriodByHour(TimePeriodOfDay):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     time_period_by_hour_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +41,5 @@ class TimePeriodByHour(TimePeriodOfDay):
             "name": "timePeriodByHourExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

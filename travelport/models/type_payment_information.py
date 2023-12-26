@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_voucher_information_1 import TypeVoucherInformation1
+from travelport.models.type_voucher_information_1 import (
+    TypeVoucherInformation1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -20,6 +22,7 @@ class TypePaymentInformation:
         Amount paid in advance for  vehicle reservation. Can contain other
         non Money information to the vehicle supplier.
     """
+
     class Meta:
         name = "typePaymentInformation"
 
@@ -29,21 +32,21 @@ class TypePaymentInformation:
             "name": "Voucher",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     billing_number: None | str = field(
         default=None,
         metadata={
             "name": "BillingNumber",
             "type": "Attribute",
-        }
+        },
     )
     billing_reference_number: None | str = field(
         default=None,
         metadata={
             "name": "BillingReferenceNumber",
             "type": "Attribute",
-        }
+        },
     )
     pre_payment: None | str = field(
         default=None,
@@ -51,5 +54,5 @@ class TypePaymentInformation:
             "name": "PrePayment",
             "type": "Attribute",
             "max_length": 90,
-        }
+        },
     )

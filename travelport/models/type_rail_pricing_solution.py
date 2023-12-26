@@ -58,6 +58,7 @@ class TypeRailPricingSolution:
     reference
         Offer Reference required for Booking(eg.TL).
     """
+
     class Meta:
         name = "typeRailPricingSolution"
 
@@ -68,7 +69,7 @@ class TypeRailPricingSolution:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rail_journey_ref: list[RailJourneyRef] = field(
         default_factory=list,
@@ -77,7 +78,7 @@ class TypeRailPricingSolution:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rail_pricing_info: list[RailPricingInfo] = field(
         default_factory=list,
@@ -86,7 +87,7 @@ class TypeRailPricingSolution:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -94,84 +95,84 @@ class TypeRailPricingSolution:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     offer_id: None | int = field(
         default=None,
         metadata={
             "name": "OfferId",
             "type": "Attribute",
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -181,7 +182,7 @@ class TypeRailPricingSolution:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -191,19 +192,19 @@ class TypeRailPricingSolution:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
             "type": "Attribute",
-        }
+        },
     )
     reference: None | str = field(
         default=None,
         metadata={
             "name": "Reference",
             "type": "Attribute",
-        }
+        },
     )

@@ -16,6 +16,7 @@ class FlightDetailsRsp(BaseRsp1):
         Provider: 1G,1V,1P.
     co2_emissions
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,7 +27,7 @@ class FlightDetailsRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     co2_emissions: list[Co2Emissions] = field(
         default_factory=list,
@@ -34,5 +35,5 @@ class FlightDetailsRsp(BaseRsp1):
             "name": "CO2Emissions",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )

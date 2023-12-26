@@ -13,5 +13,5 @@ class HireFacility:
         default=HireFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -17,7 +17,7 @@ class BookingEndPortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +28,14 @@ class BookingEndPortTypeServiceOutput:
                 "name": "BookingEndRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            }
+            },
         )
         fault: None | BookingEndPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +45,28 @@ class BookingEndPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | BookingEndPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +77,5 @@ class BookingEndPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

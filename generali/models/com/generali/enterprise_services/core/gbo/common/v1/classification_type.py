@@ -1,8 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sictype_enum import SictypeEnum
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sictype_enum import (
+    SictypeEnum,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -16,7 +22,7 @@ class ClassificationType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     type_value: Optional[SictypeEnum] = field(
         default=None,
@@ -25,7 +31,7 @@ class ClassificationType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     description: Optional[TextType] = field(
         default=None,
@@ -33,5 +39,5 @@ class ClassificationType:
             "name": "Description",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

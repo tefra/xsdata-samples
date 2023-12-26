@@ -11,6 +11,7 @@ class VehicleDriverNotificationEnumSimple(Enum):
     :cvar ROLL_BACK: Software package shall be rolled back.
     :cvar TRANSFER: Software shall be transferred to the vehicle.
     """
+
     ACTIVATE = "ACTIVATE"
     FINISH = "FINISH"
     PROCESS = "PROCESS"

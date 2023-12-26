@@ -17,5 +17,5 @@ class TypeOfProductCategoryRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfProductCategoryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

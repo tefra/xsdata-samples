@@ -18,7 +18,7 @@ class AccessVersionStructure(TransferVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to: Optional[AccessEndStructure] = field(
         default=None,
@@ -27,5 +27,5 @@ class AccessVersionStructure(TransferVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

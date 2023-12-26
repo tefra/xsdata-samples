@@ -13,6 +13,7 @@ class Updates:
     When this is the case, the DOIs of the documents that are being
     *updated* should be listed here.
     """
+
     class Meta:
         name = "updates"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -22,5 +23,5 @@ class Updates:
         metadata={
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )

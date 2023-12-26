@@ -14,5 +14,5 @@ class SafetyFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

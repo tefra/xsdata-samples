@@ -1,9 +1,13 @@
 from dataclasses import dataclass
-from .infrastructure_link_restriction_ref_structure import InfrastructureLinkRestrictionRefStructure
+from .infrastructure_link_restriction_ref_structure import (
+    InfrastructureLinkRestrictionRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class MeetingRestrictionRefStructure(InfrastructureLinkRestrictionRefStructure):
+class MeetingRestrictionRefStructure(
+    InfrastructureLinkRestrictionRefStructure
+):
     pass

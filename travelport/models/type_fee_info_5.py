@@ -39,6 +39,7 @@ class TypeFeeInfo5:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "typeFeeInfo"
 
@@ -49,28 +50,28 @@ class TypeFeeInfo5:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "max_occurs": 999,
-        }
+        },
     )
     base_amount: None | str = field(
         default=None,
         metadata={
             "name": "BaseAmount",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     sub_code: None | str = field(
         default=None,
         metadata={
             "name": "SubCode",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -78,7 +79,7 @@ class TypeFeeInfo5:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -86,7 +87,7 @@ class TypeFeeInfo5:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -94,28 +95,28 @@ class TypeFeeInfo5:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     fee_token: None | str = field(
         default=None,
         metadata={
             "name": "FeeToken",
             "type": "Attribute",
-        }
+        },
     )
     payment_ref: None | str = field(
         default=None,
         metadata={
             "name": "PaymentRef",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     passenger_type_code: None | str = field(
         default=None,
@@ -124,7 +125,7 @@ class TypeFeeInfo5:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -133,7 +134,7 @@ class TypeFeeInfo5:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -142,21 +143,21 @@ class TypeFeeInfo5:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -167,5 +168,5 @@ class TypeFeeInfo5:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

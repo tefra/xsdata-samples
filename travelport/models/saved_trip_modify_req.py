@@ -12,6 +12,7 @@ class SavedTripModifyReq(BaseReq1):
     Request to modify an existing SavedTrip using the LocatorCode of the SavedTrip
     as the SavedTrip identifier.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,5 +21,5 @@ class SavedTripModifyReq(BaseReq1):
         metadata={
             "name": "SavedTrip",
             "type": "Element",
-        }
+        },
     )

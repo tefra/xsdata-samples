@@ -10,6 +10,7 @@ class ScnPolicySet:
     """
     A group of related SCN policies.
     """
+
     class Meta:
         name = "scn_policy_set"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -21,11 +22,11 @@ class ScnPolicySet:
             "min_length": 1,
             "max_length": 2048,
             "pattern": r"([hH][tT][tT][pP]|[hH][tT][tT][pP][sS]|[fF][tT][pP])://.*",
-        }
+        },
     )
     start_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

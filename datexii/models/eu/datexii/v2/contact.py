@@ -21,13 +21,14 @@ class Contact:
     :ivar validity_of_contact:
     :ivar contact_extension:
     """
+
     contact_unknown: Optional[bool] = field(
         default=None,
         metadata={
             "name": "contactUnknown",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_not_defined: Optional[bool] = field(
         default=None,
@@ -35,7 +36,7 @@ class Contact:
             "name": "contactNotDefined",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     validity_of_contact: Optional[OverallPeriod] = field(
         default=None,
@@ -43,7 +44,7 @@ class Contact:
             "name": "validityOfContact",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_extension: Optional[ExtensionType] = field(
         default=None,
@@ -51,5 +52,5 @@ class Contact:
             "name": "contactExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -20,7 +20,7 @@ class AnyType:
         metadata={
             "type": "Attributes",
             "namespace": "##any",
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -28,7 +28,7 @@ class AnyType:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -44,7 +44,7 @@ class CrlidentifierType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlDateTime] = field(
         default=None,
@@ -53,7 +53,7 @@ class CrlidentifierType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     number: Optional[int] = field(
         default=None,
@@ -61,14 +61,14 @@ class CrlidentifierType:
             "name": "Number",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -81,7 +81,7 @@ class DocumentationReferencesType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -95,21 +95,21 @@ class EncapsulatedPkidataType:
         metadata={
             "required": True,
             "format": "base64",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
     encoding: Optional[str] = field(
         default=None,
         metadata={
             "name": "Encoding",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -121,14 +121,14 @@ class IncludeType:
             "name": "URI",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     referenced_data: Optional[bool] = field(
         default=None,
         metadata={
             "name": "referencedData",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -140,7 +140,7 @@ class IntegerListType:
             "name": "int",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -157,14 +157,14 @@ class QualifyingPropertiesReferenceType:
             "name": "URI",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -179,7 +179,7 @@ class ResponderIdtype:
             "name": "ByName",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     by_key: Optional[bytes] = field(
         default=None,
@@ -188,7 +188,7 @@ class ResponderIdtype:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "format": "base64",
-        }
+        },
     )
 
 
@@ -200,7 +200,7 @@ class SignatureProductionPlaceType:
             "name": "City",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     state_or_province: Optional[str] = field(
         default=None,
@@ -208,7 +208,7 @@ class SignatureProductionPlaceType:
             "name": "StateOrProvince",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     postal_code: Optional[str] = field(
         default=None,
@@ -216,7 +216,7 @@ class SignatureProductionPlaceType:
             "name": "PostalCode",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     country_name: Optional[str] = field(
         default=None,
@@ -224,7 +224,7 @@ class SignatureProductionPlaceType:
             "name": "CountryName",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -247,7 +247,7 @@ class CrlvaluesType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -259,7 +259,7 @@ class CertificateValuesType:
             "name": "EncapsulatedX509Certificate",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     other_certificate: Tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -267,14 +267,14 @@ class CertificateValuesType:
             "name": "OtherCertificate",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -287,7 +287,7 @@ class CertifiedRolesListType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -300,7 +300,7 @@ class ClaimedRolesListType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -312,7 +312,7 @@ class CommitmentTypeQualifiersListType:
             "name": "CommitmentTypeQualifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -325,7 +325,7 @@ class CounterSignatureType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
 
 
@@ -338,7 +338,7 @@ class DigestAlgAndValueType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     digest_value: Optional[bytes] = field(
         default=None,
@@ -348,7 +348,7 @@ class DigestAlgAndValueType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        }
+        },
     )
 
 
@@ -365,14 +365,14 @@ class IdentifierType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     qualifier: Optional[QualifierType] = field(
         default=None,
         metadata={
             "name": "Qualifier",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -391,7 +391,7 @@ class NoticeReferenceType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     notice_numbers: Optional[IntegerListType] = field(
         default=None,
@@ -400,7 +400,7 @@ class NoticeReferenceType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
 
 
@@ -416,7 +416,7 @@ class OcspidentifierType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     produced_at: Optional[XmlDateTime] = field(
         default=None,
@@ -425,14 +425,14 @@ class OcspidentifierType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -448,7 +448,7 @@ class OcspvaluesType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -461,7 +461,7 @@ class OtherCertStatusRefsType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -474,7 +474,7 @@ class OtherCertStatusValuesType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -493,7 +493,7 @@ class ReferenceInfoType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     digest_value: Optional[bytes] = field(
         default=None,
@@ -503,21 +503,21 @@ class ReferenceInfoType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
     uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -530,7 +530,7 @@ class SigPolicyQualifiersListType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -549,14 +549,14 @@ class UnsignedDataObjectPropertiesType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -578,7 +578,7 @@ class CrlrefType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     crlidentifier: Optional[CrlidentifierType] = field(
         default=None,
@@ -586,7 +586,7 @@ class CrlrefType:
             "name": "CRLIdentifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -602,7 +602,7 @@ class CertIdtype:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     issuer_serial: Optional[X509IssuerSerialType] = field(
         default=None,
@@ -611,14 +611,14 @@ class CertIdtype:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -646,7 +646,7 @@ class OcsprefType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     digest_alg_and_value: Optional[DigestAlgAndValueType] = field(
         default=None,
@@ -654,7 +654,7 @@ class OcsprefType:
             "name": "DigestAlgAndValue",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -667,7 +667,7 @@ class ObjectIdentifierType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     description: Optional[str] = field(
         default=None,
@@ -675,7 +675,7 @@ class ObjectIdentifierType:
             "name": "Description",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     documentation_references: Optional[DocumentationReferencesType] = field(
         default=None,
@@ -683,7 +683,7 @@ class ObjectIdentifierType:
             "name": "DocumentationReferences",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -701,7 +701,7 @@ class RevocationValuesType:
             "name": "CRLValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     ocspvalues: Optional[OcspvaluesType] = field(
         default=None,
@@ -709,7 +709,7 @@ class RevocationValuesType:
             "name": "OCSPValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     other_values: Optional[OtherCertStatusValuesType] = field(
         default=None,
@@ -717,14 +717,14 @@ class RevocationValuesType:
             "name": "OtherValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -739,7 +739,7 @@ class SpuserNoticeType:
             "name": "NoticeRef",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     explicit_text: Optional[str] = field(
         default=None,
@@ -747,7 +747,7 @@ class SpuserNoticeType:
             "name": "ExplicitText",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -759,7 +759,7 @@ class SignerRoleType:
             "name": "ClaimedRoles",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     certified_roles: Optional[CertifiedRolesListType] = field(
         default=None,
@@ -767,7 +767,7 @@ class SignerRoleType:
             "name": "CertifiedRoles",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -795,7 +795,7 @@ class CrlrefsType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -811,7 +811,7 @@ class CertIdlistType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -824,7 +824,7 @@ class CommitmentTypeIndicationType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     object_reference: Tuple[str, ...] = field(
         default_factory=tuple,
@@ -832,7 +832,7 @@ class CommitmentTypeIndicationType:
             "name": "ObjectReference",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     all_signed_data_objects: Optional[object] = field(
         default=None,
@@ -840,15 +840,17 @@ class CommitmentTypeIndicationType:
             "name": "AllSignedDataObjects",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
-    commitment_type_qualifiers: Optional[CommitmentTypeQualifiersListType] = field(
+    commitment_type_qualifiers: Optional[
+        CommitmentTypeQualifiersListType
+    ] = field(
         default=None,
         metadata={
             "name": "CommitmentTypeQualifiers",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -860,7 +862,7 @@ class DataObjectFormatType:
             "name": "Description",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     object_identifier: Optional[ObjectIdentifierType] = field(
         default=None,
@@ -868,7 +870,7 @@ class DataObjectFormatType:
             "name": "ObjectIdentifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     mime_type: Optional[str] = field(
         default=None,
@@ -876,7 +878,7 @@ class DataObjectFormatType:
             "name": "MimeType",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     encoding: Optional[str] = field(
         default=None,
@@ -884,7 +886,7 @@ class DataObjectFormatType:
             "name": "Encoding",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     object_reference: Optional[str] = field(
         default=None,
@@ -892,7 +894,7 @@ class DataObjectFormatType:
             "name": "ObjectReference",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -904,7 +906,7 @@ class GenericTimeStampType:
             "name": "Include",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     reference_info: Tuple[ReferenceInfo, ...] = field(
         default_factory=tuple,
@@ -912,7 +914,7 @@ class GenericTimeStampType:
             "name": "ReferenceInfo",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     canonicalization_method: Optional[CanonicalizationMethod] = field(
         default=None,
@@ -920,7 +922,7 @@ class GenericTimeStampType:
             "name": "CanonicalizationMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
+        },
     )
     encapsulated_time_stamp: Tuple[EncapsulatedPkidataType, ...] = field(
         default_factory=tuple,
@@ -928,7 +930,7 @@ class GenericTimeStampType:
             "name": "EncapsulatedTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     xmltime_stamp: Tuple[AnyType, ...] = field(
         default_factory=tuple,
@@ -936,14 +938,14 @@ class GenericTimeStampType:
             "name": "XMLTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -959,7 +961,7 @@ class OcsprefsType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -991,7 +993,7 @@ class SignaturePolicyIdType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     transforms: Optional[Transforms] = field(
         default=None,
@@ -999,7 +1001,7 @@ class SignaturePolicyIdType:
             "name": "Transforms",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
+        },
     )
     sig_policy_hash: Optional[DigestAlgAndValueType] = field(
         default=None,
@@ -1008,7 +1010,7 @@ class SignaturePolicyIdType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     sig_policy_qualifiers: Optional[SigPolicyQualifiersListType] = field(
         default=None,
@@ -1016,7 +1018,7 @@ class SignaturePolicyIdType:
             "name": "SigPolicyQualifiers",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -1041,14 +1043,14 @@ class CompleteCertificateRefsType:
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "required": True,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1060,7 +1062,7 @@ class CompleteRevocationRefsType:
             "name": "CRLRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     ocsprefs: Optional[OcsprefsType] = field(
         default=None,
@@ -1068,7 +1070,7 @@ class CompleteRevocationRefsType:
             "name": "OCSPRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     other_refs: Optional[OtherCertStatusRefsType] = field(
         default=None,
@@ -1076,14 +1078,14 @@ class CompleteRevocationRefsType:
             "name": "OtherRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1102,7 +1104,7 @@ class OtherTimeStampType(GenericTimeStampType):
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1114,7 +1116,7 @@ class SignaturePolicyIdentifierType:
             "name": "SignaturePolicyId",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     signature_policy_implied: Optional[object] = field(
         default=None,
@@ -1122,7 +1124,7 @@ class SignaturePolicyIdentifierType:
             "name": "SignaturePolicyImplied",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
 
 
@@ -1218,15 +1220,17 @@ class SignedDataObjectPropertiesType:
             "name": "DataObjectFormat",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
-    commitment_type_indication: Tuple[CommitmentTypeIndicationType, ...] = field(
+    commitment_type_indication: Tuple[
+        CommitmentTypeIndicationType, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "CommitmentTypeIndication",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     all_data_objects_time_stamp: Tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
@@ -1234,7 +1238,7 @@ class SignedDataObjectPropertiesType:
             "name": "AllDataObjectsTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     individual_data_objects_time_stamp: Tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
@@ -1242,14 +1246,14 @@ class SignedDataObjectPropertiesType:
             "name": "IndividualDataObjectsTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1261,7 +1265,7 @@ class SignedSignaturePropertiesType:
             "name": "SigningTime",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     signing_certificate: Optional[CertIdlistType] = field(
         default=None,
@@ -1269,15 +1273,17 @@ class SignedSignaturePropertiesType:
             "name": "SigningCertificate",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
-    signature_policy_identifier: Optional[SignaturePolicyIdentifierType] = field(
+    signature_policy_identifier: Optional[
+        SignaturePolicyIdentifierType
+    ] = field(
         default=None,
         metadata={
             "name": "SignaturePolicyIdentifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     signature_production_place: Optional[SignatureProductionPlaceType] = field(
         default=None,
@@ -1285,7 +1291,7 @@ class SignedSignaturePropertiesType:
             "name": "SignatureProductionPlace",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     signer_role: Optional[SignerRoleType] = field(
         default=None,
@@ -1293,14 +1299,14 @@ class SignedSignaturePropertiesType:
             "name": "SignerRole",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1312,7 +1318,7 @@ class UnsignedSignaturePropertiesType:
             "name": "CounterSignature",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     signature_time_stamp: Tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
@@ -1320,7 +1326,7 @@ class UnsignedSignaturePropertiesType:
             "name": "SignatureTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     complete_certificate_refs: Tuple[CompleteCertificateRefsType, ...] = field(
         default_factory=tuple,
@@ -1328,7 +1334,7 @@ class UnsignedSignaturePropertiesType:
             "name": "CompleteCertificateRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     complete_revocation_refs: Tuple[CompleteRevocationRefsType, ...] = field(
         default_factory=tuple,
@@ -1336,15 +1342,17 @@ class UnsignedSignaturePropertiesType:
             "name": "CompleteRevocationRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
-    attribute_certificate_refs: Tuple[CompleteCertificateRefsType, ...] = field(
+    attribute_certificate_refs: Tuple[
+        CompleteCertificateRefsType, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "AttributeCertificateRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     attribute_revocation_refs: Tuple[CompleteRevocationRefsType, ...] = field(
         default_factory=tuple,
@@ -1352,7 +1360,7 @@ class UnsignedSignaturePropertiesType:
             "name": "AttributeRevocationRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     sig_and_refs_time_stamp: Tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
@@ -1360,7 +1368,7 @@ class UnsignedSignaturePropertiesType:
             "name": "SigAndRefsTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     refs_only_time_stamp: Tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
@@ -1368,7 +1376,7 @@ class UnsignedSignaturePropertiesType:
             "name": "RefsOnlyTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     certificate_values: Tuple[CertificateValuesType, ...] = field(
         default_factory=tuple,
@@ -1376,7 +1384,7 @@ class UnsignedSignaturePropertiesType:
             "name": "CertificateValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     revocation_values: Tuple[RevocationValuesType, ...] = field(
         default_factory=tuple,
@@ -1384,7 +1392,7 @@ class UnsignedSignaturePropertiesType:
             "name": "RevocationValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     attr_authorities_cert_values: Tuple[CertificateValuesType, ...] = field(
         default_factory=tuple,
@@ -1392,7 +1400,7 @@ class UnsignedSignaturePropertiesType:
             "name": "AttrAuthoritiesCertValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     attribute_revocation_values: Tuple[RevocationValuesType, ...] = field(
         default_factory=tuple,
@@ -1400,7 +1408,7 @@ class UnsignedSignaturePropertiesType:
             "name": "AttributeRevocationValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     archive_time_stamp: Tuple[XadEstimeStampType, ...] = field(
         default_factory=tuple,
@@ -1408,21 +1416,21 @@ class UnsignedSignaturePropertiesType:
             "name": "ArchiveTimeStamp",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     other_element: Tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1441,28 +1449,32 @@ class SignedDataObjectProperties(SignedDataObjectPropertiesType):
 
 @dataclass(frozen=True)
 class SignedPropertiesType:
-    signed_signature_properties: Optional[SignedSignaturePropertiesType] = field(
+    signed_signature_properties: Optional[
+        SignedSignaturePropertiesType
+    ] = field(
         default=None,
         metadata={
             "name": "SignedSignatureProperties",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
-    signed_data_object_properties: Optional[SignedDataObjectPropertiesType] = field(
+    signed_data_object_properties: Optional[
+        SignedDataObjectPropertiesType
+    ] = field(
         default=None,
         metadata={
             "name": "SignedDataObjectProperties",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1474,28 +1486,32 @@ class SignedSignatureProperties(SignedSignaturePropertiesType):
 
 @dataclass(frozen=True)
 class UnsignedPropertiesType:
-    unsigned_signature_properties: Optional[UnsignedSignaturePropertiesType] = field(
+    unsigned_signature_properties: Optional[
+        UnsignedSignaturePropertiesType
+    ] = field(
         default=None,
         metadata={
             "name": "UnsignedSignatureProperties",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
-    unsigned_data_object_properties: Optional[UnsignedDataObjectPropertiesType] = field(
+    unsigned_data_object_properties: Optional[
+        UnsignedDataObjectPropertiesType
+    ] = field(
         default=None,
         metadata={
             "name": "UnsignedDataObjectProperties",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1513,7 +1529,7 @@ class QualifyingPropertiesType:
             "name": "SignedProperties",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     unsigned_properties: Optional[UnsignedPropertiesType] = field(
         default=None,
@@ -1521,7 +1537,7 @@ class QualifyingPropertiesType:
             "name": "UnsignedProperties",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     target: Optional[str] = field(
         default=None,
@@ -1529,14 +1545,14 @@ class QualifyingPropertiesType:
             "name": "Target",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 

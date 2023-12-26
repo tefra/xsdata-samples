@@ -10,6 +10,7 @@ class SearchPriority:
     """
     Override the search order for hotel availability request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -20,7 +21,7 @@ class SearchPriority:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 8,
-        }
+        },
     )
 
     @dataclass
@@ -34,6 +35,7 @@ class SearchPriority:
         type_value
             Search type
         """
+
         order: None | int = field(
             default=None,
             metadata={
@@ -42,7 +44,7 @@ class SearchPriority:
                 "required": True,
                 "min_inclusive": 1,
                 "max_inclusive": 8,
-            }
+            },
         )
         type_value: None | CriteriaType = field(
             default=None,
@@ -50,5 +52,5 @@ class SearchPriority:
                 "name": "Type",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

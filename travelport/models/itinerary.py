@@ -21,6 +21,7 @@ class Itinerary:
     separate_indicator
         Set to true if one itinerary to be printed per passenger.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,19 +30,19 @@ class Itinerary:
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     option: None | TypeItineraryOption = field(
         default=None,
         metadata={
             "name": "Option",
             "type": "Attribute",
-        }
+        },
     )
     separate_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "SeparateIndicator",
             "type": "Attribute",
-        }
+        },
     )

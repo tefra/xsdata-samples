@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from .crypto_service_certificate_subtypes_enum import (
+    CryptoServiceCertificateSubtypesEnum,
+)
 from .documentation_subtypes_enum import DocumentationSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -99,6 +101,7 @@ class VehiclePackage:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "VEHICLE-PACKAGE"
 
@@ -109,15 +112,17 @@ class VehiclePackage:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["VehiclePackage.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "VehiclePackage.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -125,7 +130,7 @@ class VehiclePackage:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -133,7 +138,7 @@ class VehiclePackage:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -141,7 +146,7 @@ class VehiclePackage:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -149,7 +154,7 @@ class VehiclePackage:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -157,7 +162,7 @@ class VehiclePackage:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["VehiclePackage.Annotations"] = field(
         default=None,
@@ -165,7 +170,7 @@ class VehiclePackage:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -173,23 +178,27 @@ class VehiclePackage:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    driver_notifications: Optional["VehiclePackage.DriverNotifications"] = field(
+    driver_notifications: Optional[
+        "VehiclePackage.DriverNotifications"
+    ] = field(
         default=None,
         metadata={
             "name": "DRIVER-NOTIFICATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    packager_signature_ref: Optional["VehiclePackage.PackagerSignatureRef"] = field(
+    packager_signature_ref: Optional[
+        "VehiclePackage.PackagerSignatureRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PACKAGER-SIGNATURE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     repository: Optional[UriString] = field(
         default=None,
@@ -197,15 +206,17 @@ class VehiclePackage:
             "name": "REPOSITORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    rollout_qualifications: Optional["VehiclePackage.RolloutQualifications"] = field(
+    rollout_qualifications: Optional[
+        "VehiclePackage.RolloutQualifications"
+    ] = field(
         default=None,
         metadata={
             "name": "ROLLOUT-QUALIFICATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ucms: Optional["VehiclePackage.Ucms"] = field(
         default=None,
@@ -213,30 +224,34 @@ class VehiclePackage:
             "name": "UCMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ucm_master_fallback_refs: Optional["VehiclePackage.UcmMasterFallbackRefs"] = field(
+    ucm_master_fallback_refs: Optional[
+        "VehiclePackage.UcmMasterFallbackRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "UCM-MASTER-FALLBACK-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    vehicle_description_ref: Optional["VehiclePackage.VehicleDescriptionRef"] = field(
+    vehicle_description_ref: Optional[
+        "VehiclePackage.VehicleDescriptionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "VEHICLE-DESCRIPTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -244,14 +259,14 @@ class VehiclePackage:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -262,7 +277,7 @@ class VehiclePackage:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -273,7 +288,7 @@ class VehiclePackage:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -284,7 +299,7 @@ class VehiclePackage:
                 "name": "VEHICLE-DRIVER-NOTIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -295,7 +310,7 @@ class VehiclePackage:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -306,7 +321,7 @@ class VehiclePackage:
                 "name": "VEHICLE-ROLLOUT-STEP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -317,18 +332,20 @@ class VehiclePackage:
                 "name": "UCM-DESCRIPTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class UcmMasterFallbackRefs:
-        ucm_master_fallback_ref: List["VehiclePackage.UcmMasterFallbackRefs.UcmMasterFallbackRef"] = field(
+        ucm_master_fallback_ref: List[
+            "VehiclePackage.UcmMasterFallbackRefs.UcmMasterFallbackRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "UCM-MASTER-FALLBACK-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -339,7 +356,7 @@ class VehiclePackage:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -350,5 +367,5 @@ class VehiclePackage:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

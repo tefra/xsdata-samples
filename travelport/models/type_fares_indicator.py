@@ -20,6 +20,7 @@ class TypeFaresIndicator(Enum):
     ALL_FARES
         Applicable for 1G/1V air shop only
     """
+
     PUBLIC_FARES_ONLY = "PublicFaresOnly"
     PRIVATE_FARES_ONLY = "PrivateFaresOnly"
     AGENCY_PRIVATE_FARES_ONLY = "AgencyPrivateFaresOnly"

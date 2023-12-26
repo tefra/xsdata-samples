@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.construction_work_type_enum import ConstructionWorkTypeEnum
+from datexii.models.eu.datexii.v2.construction_work_type_enum import (
+    ConstructionWorkTypeEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.roadworks import Roadworks
 
@@ -16,13 +18,14 @@ class ConstructionWorks(Roadworks):
         performed.
     :ivar construction_works_extension:
     """
+
     construction_work_type: Optional[ConstructionWorkTypeEnum] = field(
         default=None,
         metadata={
             "name": "constructionWorkType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     construction_works_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +33,5 @@ class ConstructionWorks(Roadworks):
             "name": "constructionWorksExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

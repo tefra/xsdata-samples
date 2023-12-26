@@ -98,6 +98,7 @@ class DiagnosticEcuInstanceProps:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-ECU-INSTANCE-PROPS"
 
@@ -108,15 +109,17 @@ class DiagnosticEcuInstanceProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticEcuInstanceProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticEcuInstanceProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +127,7 @@ class DiagnosticEcuInstanceProps:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +135,7 @@ class DiagnosticEcuInstanceProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +143,7 @@ class DiagnosticEcuInstanceProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +151,7 @@ class DiagnosticEcuInstanceProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,7 +159,7 @@ class DiagnosticEcuInstanceProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticEcuInstanceProps.Annotations"] = field(
         default=None,
@@ -164,7 +167,7 @@ class DiagnosticEcuInstanceProps:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -172,7 +175,7 @@ class DiagnosticEcuInstanceProps:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dtc_status_availability_mask: Optional[PositiveInteger] = field(
         default=None,
@@ -180,15 +183,17 @@ class DiagnosticEcuInstanceProps:
             "name": "DTC-STATUS-AVAILABILITY-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_instance_refs: Optional["DiagnosticEcuInstanceProps.EcuInstanceRefs"] = field(
+    ecu_instance_refs: Optional[
+        "DiagnosticEcuInstanceProps.EcuInstanceRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     obd_support: Optional[DiagnosticObdSupportEnum] = field(
         default=None,
@@ -196,7 +201,7 @@ class DiagnosticEcuInstanceProps:
             "name": "OBD-SUPPORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     send_resp_pend_on_trans_to_boot: Optional[Boolean] = field(
         default=None,
@@ -204,14 +209,14 @@ class DiagnosticEcuInstanceProps:
             "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -219,14 +224,14 @@ class DiagnosticEcuInstanceProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -237,7 +242,7 @@ class DiagnosticEcuInstanceProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -248,18 +253,20 @@ class DiagnosticEcuInstanceProps:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class EcuInstanceRefs:
-        ecu_instance_ref: List["DiagnosticEcuInstanceProps.EcuInstanceRefs.EcuInstanceRef"] = field(
+        ecu_instance_ref: List[
+            "DiagnosticEcuInstanceProps.EcuInstanceRefs.EcuInstanceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -270,5 +277,5 @@ class DiagnosticEcuInstanceProps:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

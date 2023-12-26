@@ -18,19 +18,19 @@ class TDataStoreReference(TFlowElement):
             "name": "dataState",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     item_subject_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "itemSubjectRef",
             "type": "Attribute",
-        }
+        },
     )
     data_store_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "dataStoreRef",
             "type": "Attribute",
-        }
+        },
     )

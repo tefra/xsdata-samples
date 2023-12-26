@@ -42,6 +42,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typeAddressHistory"
 
@@ -54,7 +55,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "max_occurs": 3,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     city: None | str = field(
         default=None,
@@ -62,7 +63,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "name": "City",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )
     state: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     other_state_province: None | str = field(
         default=None,
@@ -80,7 +81,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -88,7 +89,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "name": "Country",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     postal: None | str = field(
         default=None,
@@ -96,7 +97,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "name": "Postal",
             "type": "Attribute",
             "max_length": 12,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -105,21 +106,21 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     purpose: None | TypeContactPurpose1 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     provisioned: None | bool = field(
         default=None,
         metadata={
             "name": "Provisioned",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -128,7 +129,7 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     delivery_description: None | str = field(
         default=None,
@@ -137,12 +138,12 @@ class TypeAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

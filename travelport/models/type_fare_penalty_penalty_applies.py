@@ -8,6 +8,7 @@ class TypeFarePenaltyPenaltyApplies(Enum):
     """
     The values can be "Anytime", "Before Departure" or "After Departure".
     """
+
     ANYTIME = "Anytime"
     BEFORE_DEPARTURE = "Before Departure"
     AFTER_DEPARTURE = "After Departure"

@@ -2,13 +2,21 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from datexii.models.eu.datexii.v2.accepted_payment_cards import AcceptedPaymentCards
+from datexii.models.eu.datexii.v2.accepted_payment_cards import (
+    AcceptedPaymentCards,
+)
 from datexii.models.eu.datexii.v2.charge_band import ChargeBand
-from datexii.models.eu.datexii.v2.charge_band_by_reference import ChargeBandByReference
+from datexii.models.eu.datexii.v2.charge_band_by_reference import (
+    ChargeBandByReference,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.means_of_payment_enum import MeansOfPaymentEnum
+from datexii.models.eu.datexii.v2.means_of_payment_enum import (
+    MeansOfPaymentEnum,
+)
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.parking_payment_mode_enum import ParkingPaymentModeEnum
+from datexii.models.eu.datexii.v2.parking_payment_mode_enum import (
+    ParkingPaymentModeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -41,13 +49,14 @@ class TariffsAndPayment:
     :ivar accepted_payment_cards:
     :ivar tariffs_and_payment_extension:
     """
+
     last_updated: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastUpdated",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accepted_means_of_payment: List[MeansOfPaymentEnum] = field(
         default_factory=list,
@@ -55,7 +64,7 @@ class TariffsAndPayment:
             "name": "acceptedMeansOfPayment",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     payment_mode: List[ParkingPaymentModeEnum] = field(
         default_factory=list,
@@ -63,7 +72,7 @@ class TariffsAndPayment:
             "name": "paymentMode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     payment_additional_description: Optional[MultilingualString] = field(
         default=None,
@@ -71,7 +80,7 @@ class TariffsAndPayment:
             "name": "paymentAdditionalDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     free_of_charge: Optional[bool] = field(
         default=None,
@@ -79,7 +88,7 @@ class TariffsAndPayment:
             "name": "freeOfCharge",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     reservation_fee: Optional[Decimal] = field(
         default=None,
@@ -89,7 +98,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "total_digits": 8,
             "fraction_digits": 2,
-        }
+        },
     )
     url_link_address: Optional[str] = field(
         default=None,
@@ -97,7 +106,7 @@ class TariffsAndPayment:
             "name": "urlLinkAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_band: List[ChargeBand] = field(
         default_factory=list,
@@ -105,7 +114,7 @@ class TariffsAndPayment:
             "name": "chargeBand",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_band_by_reference: List[ChargeBandByReference] = field(
         default_factory=list,
@@ -113,7 +122,7 @@ class TariffsAndPayment:
             "name": "chargeBandByReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accepted_payment_cards: Optional[AcceptedPaymentCards] = field(
         default=None,
@@ -121,7 +130,7 @@ class TariffsAndPayment:
             "name": "acceptedPaymentCards",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     tariffs_and_payment_extension: Optional[ExtensionType] = field(
         default=None,
@@ -129,5 +138,5 @@ class TariffsAndPayment:
             "name": "tariffsAndPaymentExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

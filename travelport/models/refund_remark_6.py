@@ -14,6 +14,7 @@ class RefundRemark6:
     remark_data
         Actual remark data.
     """
+
     class Meta:
         name = "RefundRemark"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -24,5 +25,5 @@ class RefundRemark6:
             "name": "RemarkData",
             "type": "Element",
             "required": True,
-        }
+        },
     )

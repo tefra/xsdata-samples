@@ -30,7 +30,7 @@ class TransportProgressStatusRequestType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -38,7 +38,7 @@ class TransportProgressStatusRequestType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -46,7 +46,7 @@ class TransportProgressStatusRequestType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -54,7 +54,7 @@ class TransportProgressStatusRequestType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -62,7 +62,7 @@ class TransportProgressStatusRequestType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -71,7 +71,7 @@ class TransportProgressStatusRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -79,7 +79,7 @@ class TransportProgressStatusRequestType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -87,7 +87,7 @@ class TransportProgressStatusRequestType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -96,7 +96,7 @@ class TransportProgressStatusRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -105,7 +105,7 @@ class TransportProgressStatusRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -113,7 +113,7 @@ class TransportProgressStatusRequestType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -121,7 +121,7 @@ class TransportProgressStatusRequestType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     sender_party: Optional[SenderParty] = field(
         default=None,
@@ -129,7 +129,7 @@ class TransportProgressStatusRequestType:
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -137,7 +137,7 @@ class TransportProgressStatusRequestType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     transport_means: Optional[TransportMeans] = field(
         default=None,
@@ -146,7 +146,7 @@ class TransportProgressStatusRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     status_location: Tuple[StatusLocation, ...] = field(
         default_factory=tuple,
@@ -154,7 +154,7 @@ class TransportProgressStatusRequestType:
             "name": "StatusLocation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
 
 

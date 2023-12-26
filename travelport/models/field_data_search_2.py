@@ -25,6 +25,7 @@ class FieldDataSearch2:
         Used to limit the search to multiple fields of the same field group
         instance.
     """
+
     class Meta:
         name = "FieldDataSearch"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -34,7 +35,7 @@ class FieldDataSearch2:
         metadata={
             "name": "FieldID",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class FieldDataSearch2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -52,12 +53,12 @@ class FieldDataSearch2:
             "type": "Attribute",
             "required": True,
             "min_length": 1,
-        }
+        },
     )
     field_group_id: None | str = field(
         default=None,
         metadata={
             "name": "FieldGroupID",
             "type": "Attribute",
-        }
+        },
     )

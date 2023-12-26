@@ -19,6 +19,7 @@ class TypePolicyCodesList1:
         A code that indicates why the maximum fare or rate was determined to
         be ‘out of policy’.
     """
+
     class Meta:
         name = "typePolicyCodesList"
 
@@ -29,7 +30,7 @@ class TypePolicyCodesList1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 10,
-        }
+        },
     )
     min_policy_code: list[str] = field(
         default_factory=list,
@@ -38,7 +39,7 @@ class TypePolicyCodesList1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 10,
-        }
+        },
     )
     max_policy_code: list[str] = field(
         default_factory=list,
@@ -47,5 +48,5 @@ class TypePolicyCodesList1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 10,
-        }
+        },
     )

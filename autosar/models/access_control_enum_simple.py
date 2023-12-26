@@ -11,5 +11,6 @@ class AccessControlEnumSimple(Enum):
         the AUTOSAR Application Design model or the AUTOSAR Deployment
         model.
     """
+
     CUSTOM = "CUSTOM"
     MODELED = "MODELED"

@@ -10,6 +10,7 @@ class IPsecIpProtocolEnumSimple(Enum):
     :cvar TCP: TCP Protocol
     :cvar UDP: UDP Protocol
     """
+
     ANY = "ANY"
     ICMP = "ICMP"
     TCP = "TCP"

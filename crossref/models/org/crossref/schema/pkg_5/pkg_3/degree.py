@@ -8,6 +8,7 @@ class Degree:
     """
     The degree(s) awarded for a dissertation.
     """
+
     class Meta:
         name = "degree"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class Degree:
         metadata={
             "min_length": 2,
             "max_length": 255,
-        }
+        },
     )

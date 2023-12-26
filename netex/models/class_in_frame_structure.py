@@ -16,7 +16,7 @@ class ClassInFrameStructure:
             "name": "ClassRefType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_frame_ref: Optional[str] = field(
         default=None,
@@ -24,7 +24,7 @@ class ClassInFrameStructure:
             "name": "TypeOfFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mandatory: Optional[MandatoryEnumeration] = field(
         default=None,
@@ -32,28 +32,28 @@ class ClassInFrameStructure:
             "name": "Mandatory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     attributes: Optional["ClassInFrameStructure.Attributes"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     relationships: Optional["ClassInFrameStructure.Relationships"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name_of_class: Optional[str] = field(
         default=None,
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -65,7 +65,7 @@ class ClassInFrameStructure:
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "min_occurs": 1,
-            }
+            },
         )
 
     @dataclass
@@ -77,5 +77,5 @@ class ClassInFrameStructure:
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "min_occurs": 1,
-            }
+            },
         )

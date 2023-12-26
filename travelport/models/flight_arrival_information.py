@@ -19,6 +19,7 @@ class FlightArrivalInformation:
         this flight
     key
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -29,7 +30,7 @@ class FlightArrivalInformation:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -37,12 +38,12 @@ class FlightArrivalInformation:
             "name": "FlightNumber",
             "type": "Attribute",
             "max_length": 30,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

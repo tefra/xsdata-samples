@@ -12,6 +12,7 @@ class CustomerId3(TypeRemark3):
     It may be used to identify reservations which will/will not be
     available for access.
     """
+
     class Meta:
         name = "CustomerID"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -21,5 +22,5 @@ class CustomerId3(TypeRemark3):
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

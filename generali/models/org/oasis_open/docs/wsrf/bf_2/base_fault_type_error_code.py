@@ -14,7 +14,7 @@ class BaseFaultTypeErrorCode:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -22,5 +22,5 @@ class BaseFaultTypeErrorCode:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

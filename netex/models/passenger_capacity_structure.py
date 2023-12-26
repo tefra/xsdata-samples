@@ -14,7 +14,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     total_capacity: Optional[int] = field(
         default=None,
@@ -22,7 +22,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "TotalCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     seating_capacity: Optional[int] = field(
         default=None,
@@ -30,7 +30,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "SeatingCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     standing_capacity: Optional[int] = field(
         default=None,
@@ -38,7 +38,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "StandingCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     special_place_capacity: Optional[int] = field(
         default=None,
@@ -46,7 +46,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "SpecialPlaceCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     pushchair_capacity: Optional[int] = field(
         default=None,
@@ -54,7 +54,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "PushchairCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheelchair_place_capacity: Optional[int] = field(
         default=None,
@@ -62,5 +62,5 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "WheelchairPlaceCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

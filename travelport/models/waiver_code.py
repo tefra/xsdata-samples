@@ -16,6 +16,7 @@ class WaiverCode:
     endorsement
         Endorsement. Size can be up to 100 characters
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class WaiverCode:
             "name": "TourCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     ticket_designator: None | str = field(
         default=None,
@@ -34,7 +35,7 @@ class WaiverCode:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 20,
-        }
+        },
     )
     endorsement: None | str = field(
         default=None,
@@ -43,5 +44,5 @@ class WaiverCode:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 100,
-        }
+        },
     )

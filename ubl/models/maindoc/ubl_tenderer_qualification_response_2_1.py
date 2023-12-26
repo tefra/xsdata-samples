@@ -33,7 +33,7 @@ class TendererQualificationResponseType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -41,7 +41,7 @@ class TendererQualificationResponseType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -49,7 +49,7 @@ class TendererQualificationResponseType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -57,7 +57,7 @@ class TendererQualificationResponseType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -65,7 +65,7 @@ class TendererQualificationResponseType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -73,7 +73,7 @@ class TendererQualificationResponseType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -81,7 +81,7 @@ class TendererQualificationResponseType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -89,7 +89,7 @@ class TendererQualificationResponseType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     contract_folder_id: Optional[ContractFolderId] = field(
         default=None,
@@ -98,7 +98,7 @@ class TendererQualificationResponseType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     contract_name: Tuple[ContractName, ...] = field(
         default_factory=tuple,
@@ -106,7 +106,7 @@ class TendererQualificationResponseType:
             "name": "ContractName",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -115,7 +115,7 @@ class TendererQualificationResponseType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -123,7 +123,7 @@ class TendererQualificationResponseType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -131,7 +131,7 @@ class TendererQualificationResponseType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     sender_party: Optional[SenderParty] = field(
         default=None,
@@ -140,7 +140,7 @@ class TendererQualificationResponseType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -149,15 +149,17 @@ class TendererQualificationResponseType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
-    resolution_document_reference: Optional[ResolutionDocumentReference] = field(
+    resolution_document_reference: Optional[
+        ResolutionDocumentReference
+    ] = field(
         default=None,
         metadata={
             "name": "ResolutionDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     qualification_resolution: Tuple[QualificationResolution, ...] = field(
         default_factory=tuple,
@@ -166,7 +168,7 @@ class TendererQualificationResponseType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
     appeal_terms: Optional[AppealTerms] = field(
         default=None,
@@ -174,7 +176,7 @@ class TendererQualificationResponseType:
             "name": "AppealTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -182,7 +184,7 @@ class TendererQualificationResponseType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
 
 

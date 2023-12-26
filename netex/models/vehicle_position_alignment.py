@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .vehicle_position_alignment_version_structure import VehiclePositionAlignmentVersionStructure
+from .vehicle_position_alignment_version_structure import (
+    VehiclePositionAlignmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

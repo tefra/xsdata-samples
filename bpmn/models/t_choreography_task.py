@@ -19,5 +19,5 @@ class TChoreographyTask(TChoreographyActivity):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "min_occurs": 1,
             "max_occurs": 2,
-        }
+        },
     )

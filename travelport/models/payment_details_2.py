@@ -42,6 +42,7 @@ class PaymentDetails2(TypeKeyTaggedElement2):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "PaymentDetails"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -51,28 +52,28 @@ class PaymentDetails2(TypeKeyTaggedElement2):
         metadata={
             "name": "PaymentPhone",
             "type": "Element",
-        }
+        },
     )
     payment_address: None | PaymentAddress2 = field(
         default=None,
         metadata={
             "name": "PaymentAddress",
             "type": "Element",
-        }
+        },
     )
     start_date: None | TypeDateOptions2 = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Element",
-        }
+        },
     )
     expiration_date: None | TypeDateOptions2 = field(
         default=None,
         metadata={
             "name": "ExpirationDate",
             "type": "Element",
-        }
+        },
     )
     type_value: None | TypePaymentType2 = field(
         default=None,
@@ -80,7 +81,7 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     issued_to_name: None | str = field(
         default=None,
@@ -89,14 +90,14 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     extended_payment: bool = field(
         default=False,
         metadata={
             "name": "ExtendedPayment",
             "type": "Attribute",
-        }
+        },
     )
     payment_supplier: None | str = field(
         default=None,
@@ -105,7 +106,7 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )
     account_number: None | str = field(
         default=None,
@@ -115,7 +116,7 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -124,7 +125,7 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -133,12 +134,12 @@ class PaymentDetails2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

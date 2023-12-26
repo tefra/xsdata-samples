@@ -25,6 +25,7 @@ class RailFareNote:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -32,7 +33,7 @@ class RailFareNote:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class RailFareNote:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     note_name: None | str = field(
         default=None,
@@ -48,19 +49,19 @@ class RailFareNote:
             "name": "NoteName",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

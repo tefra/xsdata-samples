@@ -46,6 +46,7 @@ class GeneralRemark6:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "GeneralRemark"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -56,7 +57,7 @@ class GeneralRemark6:
             "name": "RemarkData",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,
@@ -64,14 +65,14 @@ class GeneralRemark6:
             "name": "BookingTravelerRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
@@ -79,7 +80,7 @@ class GeneralRemark6:
             "name": "Category",
             "type": "Attribute",
             "max_length": 20,
-        }
+        },
     )
     type_in_gds: None | str = field(
         default=None,
@@ -87,21 +88,21 @@ class GeneralRemark6:
             "name": "TypeInGds",
             "type": "Attribute",
             "max_length": 30,
-        }
+        },
     )
     supplier_type: None | TypeProduct6 = field(
         default=None,
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -110,7 +111,7 @@ class GeneralRemark6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -119,40 +120,40 @@ class GeneralRemark6:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     direction: None | TypeDirection6 = field(
         default=None,
         metadata={
             "name": "Direction",
             "type": "Attribute",
-        }
+        },
     )
     create_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-        }
+        },
     )
     use_provider_native_mode: bool = field(
         default=False,
         metadata={
             "name": "UseProviderNativeMode",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus7 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

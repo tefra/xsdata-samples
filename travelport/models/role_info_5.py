@@ -20,6 +20,7 @@ class RoleInfo5:
     description
         Description of role
     """
+
     class Meta:
         name = "RoleInfo"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -31,7 +32,7 @@ class RoleInfo5:
             "type": "Attribute",
             "required": True,
             "max_length": 19,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -40,14 +41,14 @@ class RoleInfo5:
             "type": "Attribute",
             "required": True,
             "max_length": 128,
-        }
+        },
     )
     source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -55,5 +56,5 @@ class RoleInfo5:
             "name": "Description",
             "type": "Attribute",
             "max_length": 1024,
-        }
+        },
     )

@@ -14,6 +14,7 @@ class HotelType:
         database.  If true, vendor results were returned. Supported
         providers:1G, 1V
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -22,5 +23,5 @@ class HotelType:
         metadata={
             "name": "SourceLink",
             "type": "Attribute",
-        }
+        },
     )

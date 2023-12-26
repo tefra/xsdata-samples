@@ -8,6 +8,7 @@ class TypeElement(Enum):
     """
     Defines the list of available data types for modifications.
     """
+
     PAYMENT = "Payment"
     CREDIT_CARD_AUTHORIZATION = "CreditCardAuthorization"
     DELIVERY_INFO = "DeliveryInfo"

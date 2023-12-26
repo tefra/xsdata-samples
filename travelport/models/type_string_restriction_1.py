@@ -19,6 +19,7 @@ class TypeStringRestriction1:
     max_length
         The maximum length permitted.
     """
+
     class Meta:
         name = "typeStringRestriction"
 
@@ -31,19 +32,19 @@ class TypeStringRestriction1:
             "min_length": 1,
             "max_length": 128,
             "white_space": "collapse",
-        }
+        },
     )
     min_length: None | int = field(
         default=None,
         metadata={
             "name": "MinLength",
             "type": "Attribute",
-        }
+        },
     )
     max_length: None | int = field(
         default=None,
         metadata={
             "name": "MaxLength",
             "type": "Attribute",
-        }
+        },
     )

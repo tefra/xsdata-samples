@@ -16,5 +16,5 @@ class PredefinedLocationVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -12,6 +12,7 @@ class PassiveCancelRsp(BaseRsp1):
 
     The UniversalRecord returned reflects the requested modifications.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,5 +21,5 @@ class PassiveCancelRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-        }
+        },
     )

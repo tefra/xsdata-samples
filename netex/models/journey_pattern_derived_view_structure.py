@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .derived_view_structure import DerivedViewStructure
 from .destination_display_ref import DestinationDisplayRef
@@ -25,7 +25,14 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "JourneyPattern_DerivedViewStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            ServiceJourneyPatternRef,
+            ServicePatternRef,
+            DeadRunJourneyPatternRef,
+            JourneyPatternRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -51,9 +58,9 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    route_ref_or_route_view: Optional[object] = field(
+    route_ref_or_route_view: Optional[Union[RouteRef, RouteView]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -69,7 +76,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
         default=None,
@@ -77,9 +84,11 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "name": "DirectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    direction_ref_or_direction_view: Optional[object] = field(
+    direction_ref_or_direction_view: Optional[
+        Union[DirectionRef, DirectionView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -95,9 +104,11 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    destination_display_ref_or_destination_display_view: Optional[object] = field(
+    destination_display_ref_or_destination_display_view: Optional[
+        Union[DestinationDisplayRef, DestinationDisplayView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -113,7 +124,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_journey_pattern_ref: Optional[TypeOfJourneyPatternRef] = field(
         default=None,
@@ -121,7 +132,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "name": "TypeOfJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operational_context_ref: Optional[OperationalContextRef] = field(
         default=None,
@@ -129,7 +140,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "name": "OperationalContextRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     timing_pattern_ref: Optional[TimingPatternRef] = field(
         default=None,
@@ -137,7 +148,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "name": "TimingPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -145,5 +156,5 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

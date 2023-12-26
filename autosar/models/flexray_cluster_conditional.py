@@ -138,6 +138,7 @@ class FlexrayClusterConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-CLUSTER-CONDITIONAL"
 
@@ -147,15 +148,17 @@ class FlexrayClusterConditional:
             "name": "BAUDRATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    physical_channels: Optional["FlexrayClusterConditional.PhysicalChannels"] = field(
+    physical_channels: Optional[
+        "FlexrayClusterConditional.PhysicalChannels"
+    ] = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_name: Optional[String] = field(
         default=None,
@@ -163,7 +166,7 @@ class FlexrayClusterConditional:
             "name": "PROTOCOL-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_version: Optional[String] = field(
         default=None,
@@ -171,7 +174,7 @@ class FlexrayClusterConditional:
             "name": "PROTOCOL-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     speed: Optional[Integer] = field(
         default=None,
@@ -179,7 +182,7 @@ class FlexrayClusterConditional:
             "name": "SPEED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     action_point_offset: Optional[Integer] = field(
         default=None,
@@ -187,7 +190,7 @@ class FlexrayClusterConditional:
             "name": "ACTION-POINT-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bit: Optional[TimeValue] = field(
         default=None,
@@ -195,7 +198,7 @@ class FlexrayClusterConditional:
             "name": "BIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cas_rx_low_max: Optional[Integer] = field(
         default=None,
@@ -203,7 +206,7 @@ class FlexrayClusterConditional:
             "name": "CAS-RX-LOW-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cold_start_attempts: Optional[Integer] = field(
         default=None,
@@ -211,7 +214,7 @@ class FlexrayClusterConditional:
             "name": "COLD-START-ATTEMPTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cycle: Optional[TimeValue] = field(
         default=None,
@@ -219,7 +222,7 @@ class FlexrayClusterConditional:
             "name": "CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cycle_count_max: Optional[Integer] = field(
         default=None,
@@ -227,7 +230,7 @@ class FlexrayClusterConditional:
             "name": "CYCLE-COUNT-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     detect_nit_error: Optional[Boolean] = field(
         default=None,
@@ -235,7 +238,7 @@ class FlexrayClusterConditional:
             "name": "DETECT-NIT-ERROR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dynamic_slot_idle_phase: Optional[Integer] = field(
         default=None,
@@ -243,7 +246,7 @@ class FlexrayClusterConditional:
             "name": "DYNAMIC-SLOT-IDLE-PHASE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ignore_after_tx: Optional[Integer] = field(
         default=None,
@@ -251,7 +254,7 @@ class FlexrayClusterConditional:
             "name": "IGNORE-AFTER-TX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     listen_noise: Optional[Integer] = field(
         default=None,
@@ -259,7 +262,7 @@ class FlexrayClusterConditional:
             "name": "LISTEN-NOISE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     macro_per_cycle: Optional[Integer] = field(
         default=None,
@@ -267,7 +270,7 @@ class FlexrayClusterConditional:
             "name": "MACRO-PER-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     macrotick_duration: Optional[TimeValue] = field(
         default=None,
@@ -275,7 +278,7 @@ class FlexrayClusterConditional:
             "name": "MACROTICK-DURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_without_clock_correction_fatal: Optional[Integer] = field(
         default=None,
@@ -283,7 +286,7 @@ class FlexrayClusterConditional:
             "name": "MAX-WITHOUT-CLOCK-CORRECTION-FATAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_without_clock_correction_passive: Optional[Integer] = field(
         default=None,
@@ -291,7 +294,7 @@ class FlexrayClusterConditional:
             "name": "MAX-WITHOUT-CLOCK-CORRECTION-PASSIVE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minislot_action_point_offset: Optional[Integer] = field(
         default=None,
@@ -299,7 +302,7 @@ class FlexrayClusterConditional:
             "name": "MINISLOT-ACTION-POINT-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minislot_duration: Optional[Integer] = field(
         default=None,
@@ -307,7 +310,7 @@ class FlexrayClusterConditional:
             "name": "MINISLOT-DURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     network_idle_time: Optional[Integer] = field(
         default=None,
@@ -315,7 +318,7 @@ class FlexrayClusterConditional:
             "name": "NETWORK-IDLE-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     network_management_vector_length: Optional[Integer] = field(
         default=None,
@@ -323,7 +326,7 @@ class FlexrayClusterConditional:
             "name": "NETWORK-MANAGEMENT-VECTOR-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     number_of_minislots: Optional[Integer] = field(
         default=None,
@@ -331,7 +334,7 @@ class FlexrayClusterConditional:
             "name": "NUMBER-OF-MINISLOTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     number_of_static_slots: Optional[Integer] = field(
         default=None,
@@ -339,7 +342,7 @@ class FlexrayClusterConditional:
             "name": "NUMBER-OF-STATIC-SLOTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     offset_correction_start: Optional[Integer] = field(
         default=None,
@@ -347,7 +350,7 @@ class FlexrayClusterConditional:
             "name": "OFFSET-CORRECTION-START",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     payload_length_static: Optional[Integer] = field(
         default=None,
@@ -355,7 +358,7 @@ class FlexrayClusterConditional:
             "name": "PAYLOAD-LENGTH-STATIC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     safety_margin: Optional[Integer] = field(
         default=None,
@@ -363,7 +366,7 @@ class FlexrayClusterConditional:
             "name": "SAFETY-MARGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sample_clock_period: Optional[TimeValue] = field(
         default=None,
@@ -371,7 +374,7 @@ class FlexrayClusterConditional:
             "name": "SAMPLE-CLOCK-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     static_slot_duration: Optional[Integer] = field(
         default=None,
@@ -379,7 +382,7 @@ class FlexrayClusterConditional:
             "name": "STATIC-SLOT-DURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol_window: Optional[Integer] = field(
         default=None,
@@ -387,7 +390,7 @@ class FlexrayClusterConditional:
             "name": "SYMBOL-WINDOW",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol_window_action_point_offset: Optional[Integer] = field(
         default=None,
@@ -395,7 +398,7 @@ class FlexrayClusterConditional:
             "name": "SYMBOL-WINDOW-ACTION-POINT-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_frame_id_count_max: Optional[Integer] = field(
         default=None,
@@ -403,7 +406,7 @@ class FlexrayClusterConditional:
             "name": "SYNC-FRAME-ID-COUNT-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tranceiver_standby_delay: Optional[Float] = field(
         default=None,
@@ -411,7 +414,7 @@ class FlexrayClusterConditional:
             "name": "TRANCEIVER-STANDBY-DELAY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmission_start_sequence_duration: Optional[Integer] = field(
         default=None,
@@ -419,7 +422,7 @@ class FlexrayClusterConditional:
             "name": "TRANSMISSION-START-SEQUENCE-DURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wakeup_rx_idle: Optional[Integer] = field(
         default=None,
@@ -427,7 +430,7 @@ class FlexrayClusterConditional:
             "name": "WAKEUP-RX-IDLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wakeup_rx_low: Optional[Integer] = field(
         default=None,
@@ -435,7 +438,7 @@ class FlexrayClusterConditional:
             "name": "WAKEUP-RX-LOW",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wakeup_rx_window: Optional[Integer] = field(
         default=None,
@@ -443,7 +446,7 @@ class FlexrayClusterConditional:
             "name": "WAKEUP-RX-WINDOW",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wakeup_tx_active: Optional[Integer] = field(
         default=None,
@@ -451,7 +454,7 @@ class FlexrayClusterConditional:
             "name": "WAKEUP-TX-ACTIVE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wakeup_tx_idle: Optional[Integer] = field(
         default=None,
@@ -459,7 +462,7 @@ class FlexrayClusterConditional:
             "name": "WAKEUP-TX-IDLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -467,14 +470,14 @@ class FlexrayClusterConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -482,7 +485,7 @@ class FlexrayClusterConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -493,7 +496,7 @@ class FlexrayClusterConditional:
                 "name": "CAN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ethernet_physical_channel: List[EthernetPhysicalChannel] = field(
             default_factory=list,
@@ -501,7 +504,7 @@ class FlexrayClusterConditional:
                 "name": "ETHERNET-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_physical_channel: List[FlexrayPhysicalChannel] = field(
             default_factory=list,
@@ -509,7 +512,7 @@ class FlexrayClusterConditional:
                 "name": "FLEXRAY-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_physical_channel: List[LinPhysicalChannel] = field(
             default_factory=list,
@@ -517,7 +520,7 @@ class FlexrayClusterConditional:
                 "name": "LIN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ttcan_physical_channel: List[TtcanPhysicalChannel] = field(
             default_factory=list,
@@ -525,13 +528,15 @@ class FlexrayClusterConditional:
                 "name": "TTCAN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_physical_channel: List[UserDefinedPhysicalChannel] = field(
+        user_defined_physical_channel: List[
+            UserDefinedPhysicalChannel
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

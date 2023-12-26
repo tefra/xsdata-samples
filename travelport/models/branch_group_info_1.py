@@ -39,6 +39,7 @@ class BranchGroupInfo1(TypeProfileInfo1):
         Identify if Universal Record synch is activated at Branch Group
         Level.
     """
+
     class Meta:
         name = "BranchGroupInfo"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -48,28 +49,28 @@ class BranchGroupInfo1(TypeProfileInfo1):
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     phone: list[Phone1] = field(
         default_factory=list,
         metadata={
             "name": "Phone",
             "type": "Element",
-        }
+        },
     )
     electronic_address: list[ElectronicAddress1] = field(
         default_factory=list,
         metadata={
             "name": "ElectronicAddress",
             "type": "Element",
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier1] = field(
         default_factory=list,
         metadata={
             "name": "ExternalIdentifier",
             "type": "Element",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -79,7 +80,7 @@ class BranchGroupInfo1(TypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     branch_group_code: None | str = field(
         default=None,
@@ -89,26 +90,26 @@ class BranchGroupInfo1(TypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     profile_sync_to: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncTo",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_from: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncFrom",
             "type": "Attribute",
-        }
+        },
     )
     ursync_to: bool = field(
         default=False,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

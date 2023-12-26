@@ -13,7 +13,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     producer_ref: Optional[str] = field(
         default=None,
@@ -21,7 +21,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "name": "ProducerRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     message_identifier: Optional[str] = field(
         default=None,
@@ -29,7 +29,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "name": "MessageIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -37,7 +37,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -45,5 +45,5 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

@@ -12,6 +12,7 @@ class TrustedPlatformExecutableLaunchBehaviorEnumSimple(Enum):
     :cvar STRICT_MODE: An Executable shall not launch if the
         corresponding authentication fails.
     """
+
     MONITOR_MODE = "MONITOR-MODE"
     NO_TRUSTED_PLATFORM_SUPPORT = "NO-TRUSTED-PLATFORM-SUPPORT"
     STRICT_MODE = "STRICT-MODE"

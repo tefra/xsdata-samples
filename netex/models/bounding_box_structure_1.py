@@ -17,7 +17,7 @@ class BoundingBoxStructure1:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     lower_right: Optional[LocationStructure1] = field(
         default=None,
@@ -26,5 +26,5 @@ class BoundingBoxStructure1:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )

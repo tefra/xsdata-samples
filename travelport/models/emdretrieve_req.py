@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_1 import BaseReq1
-from travelport.models.provider_reservation_detail_1 import ProviderReservationDetail1
+from travelport.models.provider_reservation_detail_1 import (
+    ProviderReservationDetail1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,6 +22,7 @@ class EmdretrieveReq(BaseReq1):
     detail_retrieve
         Provider: 1G/1V/1P-Information required for a detailed EMD retrieve
     """
+
     class Meta:
         name = "EMDRetrieveReq"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -29,14 +32,14 @@ class EmdretrieveReq(BaseReq1):
         metadata={
             "name": "ListRetrieve",
             "type": "Element",
-        }
+        },
     )
     detail_retrieve: None | EmdretrieveReq.DetailRetrieve = field(
         default=None,
         metadata={
             "name": "DetailRetrieve",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -48,6 +51,7 @@ class EmdretrieveReq(BaseReq1):
             Provider reservation details to be provided to fetch list of
             EMDs associated with it.
         """
+
         provider_reservation_detail: None | ProviderReservationDetail1 = field(
             default=None,
             metadata={
@@ -55,7 +59,7 @@ class EmdretrieveReq(BaseReq1):
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -74,13 +78,14 @@ class EmdretrieveReq(BaseReq1):
             that EMD is performed considering the same to be associated with
             the mentioned PNR.
         """
+
         provider_reservation_detail: None | ProviderReservationDetail1 = field(
             default=None,
             metadata={
                 "name": "ProviderReservationDetail",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-            }
+            },
         )
         emdnumber: None | str = field(
             default=None,
@@ -89,5 +94,5 @@ class EmdretrieveReq(BaseReq1):
                 "type": "Element",
                 "required": True,
                 "length": 13,
-            }
+            },
         )

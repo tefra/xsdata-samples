@@ -12,7 +12,9 @@ from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
 from .blueprint_policy_single import BlueprintPolicySingle
 from .category_string import CategoryString
 from .consistency_needs import ConsistencyNeeds
-from .constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
+from .constant_specification_mapping_set_subtypes_enum import (
+    ConstantSpecificationMappingSetSubtypesEnum,
+)
 from .data_type_mapping_set_subtypes_enum import DataTypeMappingSetSubtypesEnum
 from .delegation_sw_connector import DelegationSwConnector
 from .identifier import Identifier
@@ -184,6 +186,7 @@ class CompositionSwComponentType:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COMPOSITION-SW-COMPONENT-TYPE"
 
@@ -194,15 +197,17 @@ class CompositionSwComponentType:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CompositionSwComponentType.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CompositionSwComponentType.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -210,7 +215,7 @@ class CompositionSwComponentType:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -218,7 +223,7 @@ class CompositionSwComponentType:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -226,7 +231,7 @@ class CompositionSwComponentType:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -234,7 +239,7 @@ class CompositionSwComponentType:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -242,7 +247,7 @@ class CompositionSwComponentType:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CompositionSwComponentType.Annotations"] = field(
         default=None,
@@ -250,7 +255,7 @@ class CompositionSwComponentType:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -258,15 +263,17 @@ class CompositionSwComponentType:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["CompositionSwComponentType.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "CompositionSwComponentType.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -274,23 +281,27 @@ class CompositionSwComponentType:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_component_documentations: Optional["CompositionSwComponentType.SwComponentDocumentations"] = field(
+    sw_component_documentations: Optional[
+        "CompositionSwComponentType.SwComponentDocumentations"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    consistency_needss: Optional["CompositionSwComponentType.ConsistencyNeedss"] = field(
+    consistency_needss: Optional[
+        "CompositionSwComponentType.ConsistencyNeedss"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ports: Optional["CompositionSwComponentType.Ports"] = field(
         default=None,
@@ -298,7 +309,7 @@ class CompositionSwComponentType:
             "name": "PORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_groups: Optional["CompositionSwComponentType.PortGroups"] = field(
         default=None,
@@ -306,15 +317,17 @@ class CompositionSwComponentType:
             "name": "PORT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    unit_group_refs: Optional["CompositionSwComponentType.UnitGroupRefs"] = field(
+    unit_group_refs: Optional[
+        "CompositionSwComponentType.UnitGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     components: Optional["CompositionSwComponentType.Components"] = field(
         default=None,
@@ -322,7 +335,7 @@ class CompositionSwComponentType:
             "name": "COMPONENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     connectors: Optional["CompositionSwComponentType.Connectors"] = field(
         default=None,
@@ -330,38 +343,44 @@ class CompositionSwComponentType:
             "name": "CONNECTORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    constant_value_mapping_refs: Optional["CompositionSwComponentType.ConstantValueMappingRefs"] = field(
+    constant_value_mapping_refs: Optional[
+        "CompositionSwComponentType.ConstantValueMappingRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_type_mapping_refs: Optional["CompositionSwComponentType.DataTypeMappingRefs"] = field(
+    data_type_mapping_refs: Optional[
+        "CompositionSwComponentType.DataTypeMappingRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    instantiation_rte_event_propss: Optional["CompositionSwComponentType.InstantiationRteEventPropss"] = field(
+    instantiation_rte_event_propss: Optional[
+        "CompositionSwComponentType.InstantiationRteEventPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "INSTANTIATION-RTE-EVENT-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -369,14 +388,14 @@ class CompositionSwComponentType:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -387,7 +406,7 @@ class CompositionSwComponentType:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -398,7 +417,7 @@ class CompositionSwComponentType:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -409,15 +428,17 @@ class CompositionSwComponentType:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -425,7 +446,7 @@ class CompositionSwComponentType:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -436,7 +457,7 @@ class CompositionSwComponentType:
                 "name": "SW-COMPONENT-DOCUMENTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -447,7 +468,7 @@ class CompositionSwComponentType:
                 "name": "CONSISTENCY-NEEDS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -458,7 +479,7 @@ class CompositionSwComponentType:
                 "name": "P-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         pr_port_prototype: List[PrPortPrototype] = field(
             default_factory=list,
@@ -466,7 +487,7 @@ class CompositionSwComponentType:
                 "name": "PR-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         r_port_prototype: List[RPortPrototype] = field(
             default_factory=list,
@@ -474,7 +495,7 @@ class CompositionSwComponentType:
                 "name": "R-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -485,18 +506,20 @@ class CompositionSwComponentType:
                 "name": "PORT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class UnitGroupRefs:
-        unit_group_ref: List["CompositionSwComponentType.UnitGroupRefs.UnitGroupRef"] = field(
+        unit_group_ref: List[
+            "CompositionSwComponentType.UnitGroupRefs.UnitGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "UNIT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -507,7 +530,7 @@ class CompositionSwComponentType:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -518,7 +541,7 @@ class CompositionSwComponentType:
                 "name": "SW-COMPONENT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -529,7 +552,7 @@ class CompositionSwComponentType:
                 "name": "ASSEMBLY-SW-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         delegation_sw_connector: List[DelegationSwConnector] = field(
             default_factory=list,
@@ -537,7 +560,7 @@ class CompositionSwComponentType:
                 "name": "DELEGATION-SW-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         pass_through_sw_connector: List[PassThroughSwConnector] = field(
             default_factory=list,
@@ -545,40 +568,46 @@ class CompositionSwComponentType:
                 "name": "PASS-THROUGH-SW-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ConstantValueMappingRefs:
-        constant_value_mapping_ref: List["CompositionSwComponentType.ConstantValueMappingRefs.ConstantValueMappingRef"] = field(
+        constant_value_mapping_ref: List[
+            "CompositionSwComponentType.ConstantValueMappingRefs.ConstantValueMappingRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONSTANT-VALUE-MAPPING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = field(
+            dest: Optional[
+                ConstantSpecificationMappingSetSubtypesEnum
+            ] = field(
                 default=None,
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class DataTypeMappingRefs:
-        data_type_mapping_ref: List["CompositionSwComponentType.DataTypeMappingRefs.DataTypeMappingRef"] = field(
+        data_type_mapping_ref: List[
+            "CompositionSwComponentType.DataTypeMappingRefs.DataTypeMappingRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-TYPE-MAPPING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -589,16 +618,18 @@ class CompositionSwComponentType:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class InstantiationRteEventPropss:
-        instantiation_timing_event_props: List[InstantiationTimingEventProps] = field(
+        instantiation_timing_event_props: List[
+            InstantiationTimingEventProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INSTANTIATION-TIMING-EVENT-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

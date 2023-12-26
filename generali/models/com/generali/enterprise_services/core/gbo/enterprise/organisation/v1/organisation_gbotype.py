@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import AddressType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type import ExtendedRecordType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.organisation_gbotype_party_roles import OrganisationGbotypePartyRoles
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import (
+    AddressType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.extended_record_type import (
+    ExtendedRecordType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.organisation_gbotype_party_roles import (
+    OrganisationGbotypePartyRoles,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
@@ -40,6 +46,7 @@ class OrganisationGbotype:
     :ivar user_last_change_by:
     :ivar extended_record:
     """
+
     class Meta:
         name = "OrganisationGBOType"
 
@@ -51,7 +58,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "length": 9,
             "pattern": r"([0-9]{9})",
-        }
+        },
     )
     gunsnumber: Optional[str] = field(
         default=None,
@@ -61,7 +68,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "length": 10,
             "pattern": r"G([0-9]{9})",
-        }
+        },
     )
     full_name: Optional[str] = field(
         default=None,
@@ -69,7 +76,7 @@ class OrganisationGbotype:
             "name": "FullName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     primary_address: Optional[AddressType] = field(
         default=None,
@@ -78,7 +85,7 @@ class OrganisationGbotype:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        }
+        },
     )
     gen_global_ultimate_guns: Optional[str] = field(
         default=None,
@@ -88,7 +95,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "length": 10,
             "pattern": r"G([0-9]{9})",
-        }
+        },
     )
     ultimate_gunsname: Optional[str] = field(
         default=None,
@@ -96,7 +103,7 @@ class OrganisationGbotype:
             "name": "UltimateGUNSName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     ultimate_dunsnumber: Optional[str] = field(
         default=None,
@@ -106,7 +113,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "length": 9,
             "pattern": r"([0-9]{9})",
-        }
+        },
     )
     national_id: Optional[str] = field(
         default=None,
@@ -114,7 +121,7 @@ class OrganisationGbotype:
             "name": "NationalID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     national_idtype: Optional[str] = field(
         default=None,
@@ -122,7 +129,7 @@ class OrganisationGbotype:
             "name": "NationalIDType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     sic: Optional[str] = field(
         default=None,
@@ -130,7 +137,7 @@ class OrganisationGbotype:
             "name": "SIC",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     out_of_business: Optional[bool] = field(
         default=None,
@@ -138,7 +145,7 @@ class OrganisationGbotype:
             "name": "OutOfBusiness",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     party_roles: Optional[OrganisationGbotypePartyRoles] = field(
         default=None,
@@ -146,7 +153,7 @@ class OrganisationGbotype:
             "name": "PartyRoles",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     duplicate: Optional[bool] = field(
         default=None,
@@ -154,7 +161,7 @@ class OrganisationGbotype:
             "name": "Duplicate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     is_linked: Optional[bool] = field(
         default=None,
@@ -162,7 +169,7 @@ class OrganisationGbotype:
             "name": "IsLinked",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     active: Optional[bool] = field(
         default=None,
@@ -170,7 +177,7 @@ class OrganisationGbotype:
             "name": "Active",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     creation_date: Optional[XmlDateTime] = field(
         default=None,
@@ -178,7 +185,7 @@ class OrganisationGbotype:
             "name": "CreationDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     date_last_update: Optional[XmlDateTime] = field(
         default=None,
@@ -186,7 +193,7 @@ class OrganisationGbotype:
             "name": "DateLastUpdate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     user_last_change_by: Optional[str] = field(
         default=None,
@@ -194,7 +201,7 @@ class OrganisationGbotype:
             "name": "UserLastChangeBy",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )
     extended_record: Optional[ExtendedRecordType] = field(
         default=None,
@@ -202,5 +209,5 @@ class OrganisationGbotype:
             "name": "ExtendedRecord",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .can_tp_addressing_format_type_simple import CanTpAddressingFormatTypeSimple
+from .can_tp_addressing_format_type_simple import (
+    CanTpAddressingFormatTypeSimple,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -22,6 +24,7 @@ class CanTpAddressingFormatType:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-TP-ADDRESSING-FORMAT-TYPE"
 
@@ -29,14 +32,14 @@ class CanTpAddressingFormatType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -44,5 +47,5 @@ class CanTpAddressingFormatType:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

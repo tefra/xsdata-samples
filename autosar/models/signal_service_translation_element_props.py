@@ -8,9 +8,13 @@ from .annotation import (
 from .boolean import Boolean
 from .category_string import CategoryString
 from .data_filter import DataFilter
-from .data_prototype_in_port_interface_ref import DataPrototypeInPortInterfaceRef
+from .data_prototype_in_port_interface_ref import (
+    DataPrototypeInPortInterfaceRef,
+)
 from .identifier import Identifier
-from .implementation_data_type_element_in_port_interface_ref import ImplementationDataTypeElementInPortInterfaceRef
+from .implementation_data_type_element_in_port_interface_ref import (
+    ImplementationDataTypeElementInPortInterfaceRef,
+)
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .short_name_fragment import ShortNameFragment
@@ -83,6 +87,7 @@ class SignalServiceTranslationElementProps:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-ELEMENT-PROPS"
 
@@ -93,15 +98,17 @@ class SignalServiceTranslationElementProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SignalServiceTranslationElementProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SignalServiceTranslationElementProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -109,7 +116,7 @@ class SignalServiceTranslationElementProps:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -117,7 +124,7 @@ class SignalServiceTranslationElementProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -125,7 +132,7 @@ class SignalServiceTranslationElementProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -133,7 +140,7 @@ class SignalServiceTranslationElementProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -141,15 +148,17 @@ class SignalServiceTranslationElementProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["SignalServiceTranslationElementProps.Annotations"] = field(
+    annotations: Optional[
+        "SignalServiceTranslationElementProps.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     element: Optional["SignalServiceTranslationElementProps.Element"] = field(
         default=None,
@@ -157,7 +166,7 @@ class SignalServiceTranslationElementProps:
             "name": "ELEMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     filter: Optional[DataFilter] = field(
         default=None,
@@ -165,7 +174,7 @@ class SignalServiceTranslationElementProps:
             "name": "FILTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmission_trigger: Optional[Boolean] = field(
         default=None,
@@ -173,14 +182,14 @@ class SignalServiceTranslationElementProps:
             "name": "TRANSMISSION-TRIGGER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -188,14 +197,14 @@ class SignalServiceTranslationElementProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -206,7 +215,7 @@ class SignalServiceTranslationElementProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -217,24 +226,28 @@ class SignalServiceTranslationElementProps:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class Element:
-        data_prototype_in_port_interface_ref: Optional[DataPrototypeInPortInterfaceRef] = field(
+        data_prototype_in_port_interface_ref: Optional[
+            DataPrototypeInPortInterfaceRef
+        ] = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        implementation_data_type_element_in_port_interface_ref: Optional[ImplementationDataTypeElementInPortInterfaceRef] = field(
+        implementation_data_type_element_in_port_interface_ref: Optional[
+            ImplementationDataTypeElementInPortInterfaceRef
+        ] = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

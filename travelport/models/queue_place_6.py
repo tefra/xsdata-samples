@@ -18,6 +18,7 @@ class QueuePlace6:
     queue_selector
         Identifies the Queue Information to be selected for placing the UR
     """
+
     class Meta:
         name = "QueuePlace"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -29,7 +30,7 @@ class QueuePlace6:
             "type": "Element",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     queue_selector: list[QueueSelector6] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class QueuePlace6:
             "name": "QueueSelector",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

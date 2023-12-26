@@ -12,5 +12,5 @@ class Status:
         default=True,
         metadata={
             "required": True,
-        }
+        },
     )

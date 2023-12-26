@@ -11,6 +11,7 @@ class VehicleLocationRsp(BaseRsp1):
     """
     Returns a list of vendors and their locations for an airport or city code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -20,5 +21,5 @@ class VehicleLocationRsp(BaseRsp1):
             "name": "VehicleLocation",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

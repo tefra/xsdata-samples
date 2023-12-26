@@ -19,6 +19,7 @@ class VehiclePickupLocation:
         The location (city or airport code) at which the vehicle will be
         picked up.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -28,7 +29,7 @@ class VehiclePickupLocation:
             "name": "Vendor",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     vehicle_modifier: list[VehicleModifier] = field(
         default_factory=list,
@@ -36,7 +37,7 @@ class VehiclePickupLocation:
             "name": "VehicleModifier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     pick_up_location: None | str = field(
         default=None,
@@ -46,5 +47,5 @@ class VehiclePickupLocation:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

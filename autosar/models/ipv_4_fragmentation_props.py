@@ -33,6 +33,7 @@ class Ipv4FragmentationProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IPV-4-FRAGMENTATION-PROPS"
 
@@ -42,7 +43,7 @@ class Ipv4FragmentationProps:
             "name": "TCP-IP-IP-FRAGMENTATION-RX-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_num_fragments: Optional[PositiveInteger] = field(
         default=None,
@@ -50,7 +51,7 @@ class Ipv4FragmentationProps:
             "name": "TCP-IP-IP-NUM-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_num_reass_dgrams: Optional[PositiveInteger] = field(
         default=None,
@@ -58,7 +59,7 @@ class Ipv4FragmentationProps:
             "name": "TCP-IP-IP-NUM-REASS-DGRAMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_reass_timeout: Optional[TimeValue] = field(
         default=None,
@@ -66,14 +67,14 @@ class Ipv4FragmentationProps:
             "name": "TCP-IP-IP-REASS-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -81,5 +82,5 @@ class Ipv4FragmentationProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

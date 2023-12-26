@@ -15,6 +15,7 @@ class VehicleFlowValue(DataValue):
         vehicles per hour.
     :ivar vehicle_flow_value_extension:
     """
+
     vehicle_flow_rate: Optional[int] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class VehicleFlowValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vehicle_flow_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class VehicleFlowValue(DataValue):
             "name": "vehicleFlowValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

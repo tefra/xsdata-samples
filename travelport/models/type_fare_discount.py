@@ -8,6 +8,7 @@ class TypeFareDiscount(Enum):
     """
     Fare Discount Calculation Method.
     """
+
     BASE_RE_CALC_USTAXES = "BaseReCalcUSTaxes"
     BASE_NO_RE_CALC_USTAXES = "BaseNoReCalcUSTaxes"
     BASE_TAX = "BaseTax"

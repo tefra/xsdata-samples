@@ -16,6 +16,7 @@ class NameCriteria:
     last_name
         Search with Traveler Last Name
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -26,7 +27,7 @@ class NameCriteria:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )
     last_name: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class NameCriteria:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )

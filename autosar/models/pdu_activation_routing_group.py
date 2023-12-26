@@ -5,7 +5,9 @@ from .event_group_control_type_enum import EventGroupControlTypeEnum
 from .identifier import Identifier
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .so_con_i_pdu_identifier_subtypes_enum import SoConIPduIdentifierSubtypesEnum
+from .so_con_i_pdu_identifier_subtypes_enum import (
+    SoConIPduIdentifierSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -49,6 +51,7 @@ class PduActivationRoutingGroup:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PDU-ACTIVATION-ROUTING-GROUP"
 
@@ -59,15 +62,17 @@ class PduActivationRoutingGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PduActivationRoutingGroup.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PduActivationRoutingGroup.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_group_control_type: Optional[EventGroupControlTypeEnum] = field(
         default=None,
@@ -75,23 +80,27 @@ class PduActivationRoutingGroup:
             "name": "EVENT-GROUP-CONTROL-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_pdu_identifier_tcp_refs: Optional["PduActivationRoutingGroup.IPduIdentifierTcpRefs"] = field(
+    i_pdu_identifier_tcp_refs: Optional[
+        "PduActivationRoutingGroup.IPduIdentifierTcpRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIER-TCP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_pdu_identifier_udp_refs: Optional["PduActivationRoutingGroup.IPduIdentifierUdpRefs"] = field(
+    i_pdu_identifier_udp_refs: Optional[
+        "PduActivationRoutingGroup.IPduIdentifierUdpRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIER-UDP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -99,14 +108,14 @@ class PduActivationRoutingGroup:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -114,7 +123,7 @@ class PduActivationRoutingGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -125,18 +134,20 @@ class PduActivationRoutingGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class IPduIdentifierTcpRefs:
-        i_pdu_identifier_tcp_ref: List["PduActivationRoutingGroup.IPduIdentifierTcpRefs.IPduIdentifierTcpRef"] = field(
+        i_pdu_identifier_tcp_ref: List[
+            "PduActivationRoutingGroup.IPduIdentifierTcpRefs.IPduIdentifierTcpRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-IDENTIFIER-TCP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -147,18 +158,20 @@ class PduActivationRoutingGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class IPduIdentifierUdpRefs:
-        i_pdu_identifier_udp_ref: List["PduActivationRoutingGroup.IPduIdentifierUdpRefs.IPduIdentifierUdpRef"] = field(
+        i_pdu_identifier_udp_ref: List[
+            "PduActivationRoutingGroup.IPduIdentifierUdpRefs.IPduIdentifierUdpRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-IDENTIFIER-UDP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -169,5 +182,5 @@ class PduActivationRoutingGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

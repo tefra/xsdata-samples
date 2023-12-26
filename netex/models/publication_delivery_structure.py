@@ -17,7 +17,7 @@ class PublicationDeliveryStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     participant_ref: Optional[str] = field(
         default=None,
@@ -26,7 +26,7 @@ class PublicationDeliveryStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     publication_request: Optional[PublicationRequestStructure] = field(
         default=None,
@@ -34,7 +34,7 @@ class PublicationDeliveryStructure:
             "name": "PublicationRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     publication_refresh_interval: Optional[XmlDuration] = field(
         default=None,
@@ -42,7 +42,7 @@ class PublicationDeliveryStructure:
             "name": "PublicationRefreshInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -50,7 +50,7 @@ class PublicationDeliveryStructure:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     data_objects: Optional[DataObjectsRelStructure] = field(
         default=None,
@@ -58,11 +58,11 @@ class PublicationDeliveryStructure:
             "name": "dataObjects",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     version: str = field(
         default="1.0",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -10,5 +10,6 @@ class TaxInfo(TypeTaxInfo1):
     """
     The tax information for a.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .discounting_rule_versioned_structure import DiscountingRuleVersionedStructure
+from .discounting_rule_versioned_structure import (
+    DiscountingRuleVersionedStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -17,7 +19,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MinimumPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -25,7 +27,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MinimumPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_price_as_multiple: Optional[int] = field(
         default=None,
@@ -33,7 +35,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MinimumPriceAsMultiple",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_price: Optional[Decimal] = field(
         default=None,
@@ -41,7 +43,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MaximumPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -49,7 +51,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MaximumPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_price_as_multiple: Optional[int] = field(
         default=None,
@@ -57,7 +59,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MaximumPriceAsMultiple",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_limit_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -65,7 +67,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MinimumLimitPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_limit_price: Optional[Decimal] = field(
         default=None,
@@ -73,7 +75,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MinimumLimitPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_limit_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -81,7 +83,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MaximumLimitPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_limit_price: Optional[Decimal] = field(
         default=None,
@@ -89,5 +91,5 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "name": "MaximumLimitPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

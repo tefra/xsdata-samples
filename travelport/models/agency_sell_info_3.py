@@ -24,6 +24,7 @@ class AgencySellInfo3:
     city_code
         IATA code of "home" city or airport.
     """
+
     class Meta:
         name = "AgencySellInfo"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -34,7 +35,7 @@ class AgencySellInfo3:
             "name": "IataCode",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -42,7 +43,7 @@ class AgencySellInfo3:
             "name": "Country",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     currency_code: None | str = field(
         default=None,
@@ -50,7 +51,7 @@ class AgencySellInfo3:
             "name": "CurrencyCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class AgencySellInfo3:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -68,7 +69,7 @@ class AgencySellInfo3:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     city_code: None | str = field(
         default=None,
@@ -77,5 +78,5 @@ class AgencySellInfo3:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

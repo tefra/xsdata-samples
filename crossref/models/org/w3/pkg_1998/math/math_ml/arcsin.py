@@ -15,5 +15,5 @@ class Arcsin:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

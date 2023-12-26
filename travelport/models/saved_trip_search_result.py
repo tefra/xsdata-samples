@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.name_1 import Name1
-from travelport.models.type_saved_trip_product_info import TypeSavedTripProductInfo
+from travelport.models.type_saved_trip_product_info import (
+    TypeSavedTripProductInfo,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -22,6 +24,7 @@ class SavedTripSearchResult:
     locator_code
     universal_record_locator_code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -31,21 +34,21 @@ class SavedTripSearchResult:
             "name": "ProductInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     earliest_travel_date: None | str = field(
         default=None,
         metadata={
             "name": "EarliestTravelDate",
             "type": "Attribute",
-        }
+        },
     )
     created_date: None | str = field(
         default=None,
         metadata={
             "name": "CreatedDate",
             "type": "Attribute",
-        }
+        },
     )
     saved_trip_name: None | str = field(
         default=None,
@@ -53,7 +56,7 @@ class SavedTripSearchResult:
             "name": "SavedTripName",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -63,7 +66,7 @@ class SavedTripSearchResult:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -72,7 +75,7 @@ class SavedTripSearchResult:
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
 
     @dataclass
@@ -84,5 +87,5 @@ class SavedTripSearchResult:
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "max_occurs": 999,
-            }
+            },
         )

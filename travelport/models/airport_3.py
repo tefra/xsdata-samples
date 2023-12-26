@@ -10,6 +10,7 @@ class Airport3(Location3):
     """
     Airport identifier.
     """
+
     class Meta:
         name = "Airport"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -22,5 +23,5 @@ class Airport3(Location3):
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

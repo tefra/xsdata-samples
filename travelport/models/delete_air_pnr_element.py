@@ -10,6 +10,7 @@ class DeleteAirPnrElement:
     """
     Container for Air PNR elements to be deleted.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -19,7 +20,7 @@ class DeleteAirPnrElement:
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -27,5 +28,5 @@ class DeleteAirPnrElement:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.junction_classification_enum import JunctionClassificationEnum
+from datexii.models.eu.datexii.v2.junction_classification_enum import (
+    JunctionClassificationEnum,
+)
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.road import Road
 
@@ -24,13 +26,14 @@ class Junction:
         destination motorway(s) can be defined.
     :ivar junction_extension:
     """
+
     junction_classification: Optional[JunctionClassificationEnum] = field(
         default=None,
         metadata={
             "name": "junctionClassification",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     junction_name: Optional[MultilingualString] = field(
         default=None,
@@ -39,7 +42,7 @@ class Junction:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     junction_number: Optional[str] = field(
         default=None,
@@ -48,14 +51,14 @@ class Junction:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     motorway: Optional[Road] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     destination_motorway: List[Road] = field(
         default_factory=list,
@@ -63,7 +66,7 @@ class Junction:
             "name": "destinationMotorway",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     junction_extension: Optional[ExtensionType] = field(
         default=None,
@@ -71,5 +74,5 @@ class Junction:
             "name": "junctionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

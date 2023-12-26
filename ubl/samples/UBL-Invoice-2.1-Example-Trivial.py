@@ -18,7 +18,7 @@ from xsdata.models.datatype import XmlDate
 
 obj = Invoice(
     id=Id(
-        value="123"
+        value='123'
     ),
     issue_date=XmlDate(2011, 9, 22),
     invoice_period=[
@@ -32,7 +32,7 @@ obj = Invoice(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Custom Cotter Pins"
+                        value='Custom Cotter Pins'
                     )
                 ),
             ]
@@ -43,7 +43,7 @@ obj = Invoice(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="North American Veeblefetzer"
+                        value='North American Veeblefetzer'
                     )
                 ),
             ]
@@ -51,23 +51,23 @@ obj = Invoice(
     ),
     legal_monetary_total=LegalMonetaryTotal(
         payable_amount=PayableAmount(
-            value=Decimal("100.00"),
-            currency_id="CAD"
+            value=Decimal('100.00'),
+            currency_id='CAD'
         )
     ),
     invoice_line=[
         InvoiceLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             line_extension_amount=LineExtensionAmount(
-                value=Decimal("100.00"),
-                currency_id="CAD"
+                value=Decimal('100.00'),
+                currency_id='CAD'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="Cotter pin, MIL-SPEC"
+                        value='Cotter pin, MIL-SPEC'
                     ),
                 ]
             )

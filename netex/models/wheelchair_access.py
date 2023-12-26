@@ -13,5 +13,5 @@ class WheelchairAccess:
         default=LimitationStatusEnumeration.FALSE,
         metadata={
             "required": True,
-        }
+        },
     )

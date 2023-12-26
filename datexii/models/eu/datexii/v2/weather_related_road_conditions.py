@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.road_conditions import RoadConditions
-from datexii.models.eu.datexii.v2.road_surface_condition_measurements import RoadSurfaceConditionMeasurements
-from datexii.models.eu.datexii.v2.weather_related_road_condition_type_enum import WeatherRelatedRoadConditionTypeEnum
+from datexii.models.eu.datexii.v2.road_surface_condition_measurements import (
+    RoadSurfaceConditionMeasurements,
+)
+from datexii.models.eu.datexii.v2.weather_related_road_condition_type_enum import (
+    WeatherRelatedRoadConditionTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,22 +24,27 @@ class WeatherRelatedRoadConditions(RoadConditions):
     :ivar road_surface_condition_measurements:
     :ivar weather_related_road_conditions_extension:
     """
-    weather_related_road_condition_type: List[WeatherRelatedRoadConditionTypeEnum] = field(
+
+    weather_related_road_condition_type: List[
+        WeatherRelatedRoadConditionTypeEnum
+    ] = field(
         default_factory=list,
         metadata={
             "name": "weatherRelatedRoadConditionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
-    road_surface_condition_measurements: Optional[RoadSurfaceConditionMeasurements] = field(
+    road_surface_condition_measurements: Optional[
+        RoadSurfaceConditionMeasurements
+    ] = field(
         default=None,
         metadata={
             "name": "roadSurfaceConditionMeasurements",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     weather_related_road_conditions_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,5 +52,5 @@ class WeatherRelatedRoadConditions(RoadConditions):
             "name": "weatherRelatedRoadConditionsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

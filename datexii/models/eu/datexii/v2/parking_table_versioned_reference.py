@@ -16,5 +16,5 @@ class ParkingTableVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

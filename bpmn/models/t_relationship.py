@@ -18,7 +18,7 @@ class TRelationship(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "min_occurs": 1,
-        }
+        },
     )
     target: List[QName] = field(
         default_factory=list,
@@ -26,7 +26,7 @@ class TRelationship(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "min_occurs": 1,
-        }
+        },
     )
     type_value: Optional[str] = field(
         default=None,
@@ -34,11 +34,11 @@ class TRelationship(TBaseElement):
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     direction: Optional[TRelationshipDirection] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -129,22 +129,22 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         InfrastructureFrameRef(
-                            value="REQUEST",
-                            ref="mybus:ifwkf001"
+                            value='REQUEST',
+                            ref='mybus:ifwkf001'
                         ),
                         ServiceFrameRef(
-                            value="REQUEST",
-                            ref="mybus:ntwkf001"
+                            value='REQUEST',
+                            ref='mybus:ntwkf001'
                         ),
                     ]
                 ),
@@ -153,73 +153,73 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P7D"),
     description=MultilingualString(
-        value="Netex basic Versioning Example Step 05"
+        value='Netex basic Versioning Example Step 05'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="mybus:SVC_01@composite",
-                version="1",
+                id='mybus:SVC_01@composite',
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                         Codespace(
-                            id="gis",
-                            xmlns="gis",
-                            xmlns_url="http://www.gisdata.com/data",
-                            description="GIS   data"
+                            id='gis',
+                            xmlns='gis',
+                            xmlns_url='http://www.gisdata.com/data',
+                            description='GIS   data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         SiteFrame(
-                            id="mybus:SVC_01@site",
+                            id='mybus:SVC_01@site',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                             changed=XmlDateTime(2010, 5, 22, 10, 30, 51, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="024",
-                            derived_from_version_ref_attribute="0023",
+                            version='024',
+                            derived_from_version_ref_attribute='0023',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    ref="mybus:RS_10"
+                                    ref='mybus:RS_10'
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ResourceFrameRef(
-                                        version="1.0",
-                                        ref="mybus:SVC_01@resources"
+                                        version='1.0',
+                                        ref='mybus:SVC_01@resources'
                                     ),
                                 ]
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="mybus:SP001A",
+                                        id='mybus:SP001A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
                                             value="St George's Road (SW19)"
                                         ),
                                         short_name=MultilingualString(
-                                            value="Place A "
+                                            value='Place A '
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -228,15 +228,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="mybus:RAd_SP001A@01",
-                                            version="any",
+                                            id='mybus:RAd_SP001A@01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Alexandra Road"
+                                                value='Alexandra Road'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -244,28 +244,28 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP001A@1",
+                                                    id='mybus:Q_SP001A@1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="PlaceA"
+                                                        value='PlaceA'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop A is termiuis serves both directions"
+                                                            value='Stop A is termiuis serves both directions'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.INDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop A"
+                                                        value='Stop A'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
@@ -273,14 +273,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="mybus:SP002B",
+                                        id='mybus:SP002B',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
                                             value="St George's Road (SW19)"
                                         ),
                                         short_name=MultilingualString(
-                                            value="Place B"
+                                            value='Place B'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -289,68 +289,68 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="mybus:RAd_SP002B@01",
-                                            version="any",
+                                            id='mybus:RAd_SP002B@01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Alexandra Road"
+                                                value='Alexandra Road'
                                             )
                                         ),
                                         stop_place_type=StopTypeEnumeration.ONSTREET_BUS,
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP002B@1",
-                                                    version="any",
+                                                    id='mybus:Q_SP002B@1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Place B, Northbound"
+                                                        value='Place B, Northbound'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop Ba  is paired with Stop Bb  "
+                                                            value='Stop Ba  is paired with Stop Bb  '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop Ba"
+                                                        value='Stop Ba'
                                                     ),
-                                                    public_code="1-3456 ",
+                                                    public_code='1-3456 ',
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
                                                 Quay(
-                                                    id="mybus:Q_SP002B@2",
+                                                    id='mybus:Q_SP002B@2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Place B,  SOuthbound"
+                                                        value='Place B,  SOuthbound'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop Ba  is paired with Stop Bb  "
+                                                            value='Stop Ba  is paired with Stop Bb  '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop Bb"
+                                                        value='Stop Bb'
                                                     ),
-                                                    public_code="1-3457 ",
+                                                    public_code='1-3457 ',
                                                     compass_octant=CompassBearing8Enumeration.N,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
@@ -358,14 +358,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="mybus:SP003C",
+                                        id='mybus:SP003C',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Place C"
+                                            value='Place C'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Place C"
+                                            value='Place C'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -374,15 +374,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="mybus:RAd_SP002C@01",
-                                            version="any",
+                                            id='mybus:RAd_SP002C@01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Foo Road"
+                                                value='Foo Road'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -390,54 +390,54 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP002C@1",
+                                                    id='mybus:Q_SP002C@1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Place C"
+                                                        value='Place C'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="StopCa  is paired with Stop Cb  "
+                                                            value='StopCa  is paired with Stop Cb  '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop Ca"
+                                                        value='Stop Ca'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.NE,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
                                                 Quay(
-                                                    id="mybus:Q_SP002C@2",
+                                                    id='mybus:Q_SP002C@2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Place C"
+                                                        value='Place C'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop Cb  is paired with Stop Ca "
+                                                            value='Stop Cb  is paired with Stop Ca '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop Cb"
+                                                        value='Stop Cb'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.SE,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
@@ -445,14 +445,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="mybus:SP004D",
+                                        id='mybus:SP004D',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Place D"
+                                            value='Place D'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Place D"
+                                            value='Place D'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -461,15 +461,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="mybus:RAd_SP004D_01",
-                                            version="any",
+                                            id='mybus:RAd_SP004D_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Bar Road"
+                                                value='Bar Road'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -477,28 +477,28 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP004D_1",
+                                                    id='mybus:Q_SP004D_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="PlaceD"
+                                                        value='PlaceD'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop D is termiuis serves both directions"
+                                                            value='Stop D is termiuis serves both directions'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop D"
+                                                        value='Stop D'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.W,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
@@ -506,14 +506,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="mybus:SP005E",
+                                        id='mybus:SP005E',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Place E"
+                                            value='Place E'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Place E"
+                                            value='Place E'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -522,15 +522,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="mybus:RAd_SP005E_01",
-                                            version="any",
+                                            id='mybus:RAd_SP005E_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Bar Road"
+                                                value='Bar Road'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -538,28 +538,28 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP005E_1",
+                                                    id='mybus:Q_SP005E_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="PlaceE"
+                                                        value='PlaceE'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop Es termiuis serves both directions"
+                                                            value='Stop Es termiuis serves both directions'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop E"
+                                                        value='Stop E'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.W,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
@@ -570,126 +570,126 @@ obj = PublicationDelivery(
                             )
                         ),
                         InfrastructureFrame(
-                            id="mybus:SVC_01@infrastructure",
+                            id='mybus:SVC_01@infrastructure',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                             changed=XmlDateTime(2010, 5, 22, 10, 30, 51, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="1.0",
-                            derived_from_version_ref_attribute="004",
-                            responsibility_set_ref_attribute="mybus:RS_10",
+                            version='1.0',
+                            derived_from_version_ref_attribute='004',
+                            responsibility_set_ref_attribute='mybus:RS_10',
                             name=MultilingualString(
-                                value="My Infrastructure   Version 5 with three stops in it "
+                                value='My Infrastructure   Version 5 with three stops in it '
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ResourceFrameRef(
-                                        version="1.0",
-                                        ref="mybus:SVC_01@resources"
+                                        version='1.0',
+                                        ref='mybus:SVC_01@resources'
                                     ),
                                 ]
                             ),
                             junctions=InfrastructureJunctionsInFrameRelStructure(
                                 railway_junction_or_road_junction_or_wire_junction=[
                                     RoadJunction(
-                                        id="gis:rdJ001",
+                                        id='gis:rdJ001',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc 1"
+                                            value='Junc 1'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2071397147"),
-                                            latitude=Decimal("51.4217482061")
+                                            longitude=Decimal('-0.2071397147'),
+                                            latitude=Decimal('51.4217482061')
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:rdJ002",
+                                        id='gis:rdJ002',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc 2"
+                                            value='Junc 2'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2071397147"),
-                                            latitude=Decimal("51.4217482061")
+                                            longitude=Decimal('-0.2071397147'),
+                                            latitude=Decimal('51.4217482061')
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:rdJ003",
+                                        id='gis:rdJ003',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc 3"
+                                            value='Junc 3'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2171397147"),
-                                            latitude=Decimal("51.4217482061")
+                                            longitude=Decimal('-0.2171397147'),
+                                            latitude=Decimal('51.4217482061')
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:rdJ004",
+                                        id='gis:rdJ004',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc 4"
+                                            value='Junc 4'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2371397147"),
-                                            latitude=Decimal("51.4217482061")
+                                            longitude=Decimal('-0.2371397147'),
+                                            latitude=Decimal('51.4217482061')
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:rdJ005",
+                                        id='gis:rdJ005',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc"
+                                            value='Junc'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2471397147"),
-                                            latitude=Decimal("51.4317482061")
+                                            longitude=Decimal('-0.2471397147'),
+                                            latitude=Decimal('51.4317482061')
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:rdJ006",
+                                        id='gis:rdJ006',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc"
+                                            value='Junc'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2571397147"),
-                                            latitude=Decimal("51.4363482061")
+                                            longitude=Decimal('-0.2571397147'),
+                                            latitude=Decimal('51.4363482061')
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:rdJ021",
+                                        id='gis:rdJ021',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Vehicle of type VT001 Cannot pass  here"
+                                            value='Vehicle of type VT001 Cannot pass  here'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2071397147"),
-                                            latitude=Decimal("51.4217482061")
+                                            longitude=Decimal('-0.2071397147'),
+                                            latitude=Decimal('51.4217482061')
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:rdJ022",
+                                        id='gis:rdJ022',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Vehicle of type VT001 Cannot pass  here"
+                                            value='Vehicle of type VT001 Cannot pass  here'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-0.2071397147"),
-                                            latitude=Decimal("51.4317482061")
+                                            longitude=Decimal('-0.2071397147'),
+                                            latitude=Decimal('51.4317482061')
                                         )
                                     ),
                                 ]
@@ -697,105 +697,105 @@ obj = PublicationDelivery(
                             elements=InfrastructureElementsInFrameRelStructure(
                                 railway_element_or_road_element_or_wire_element=[
                                     RoadElement(
-                                        id="gis:rdJ001+rdJ003",
+                                        id='gis:rdJ001+rdJ003',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Link between Junc 1 -2"
+                                            value='Link between Junc 1 -2'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ001"
+                                            version='1.0',
+                                            ref='gis:rdJ001'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ003"
+                                            version='1.0',
+                                            ref='gis:rdJ003'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:rdJ003+rdJ004",
+                                        id='gis:rdJ003+rdJ004',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Link  3 -4"
+                                            value='Link  3 -4'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ003"
+                                            version='1.0',
+                                            ref='gis:rdJ003'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ004"
+                                            version='1.0',
+                                            ref='gis:rdJ004'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:rdJ004+rdJ005",
+                                        id='gis:rdJ004+rdJ005',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Link 4-5"
+                                            value='Link 4-5'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ004"
+                                            version='1.0',
+                                            ref='gis:rdJ004'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ005"
+                                            version='1.0',
+                                            ref='gis:rdJ005'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:rdJ005+rdJ006",
+                                        id='gis:rdJ005+rdJ006',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Road between Junc 2 -3"
+                                            value='Road between Junc 2 -3'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ005"
+                                            version='1.0',
+                                            ref='gis:rdJ005'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ006"
+                                            version='1.0',
+                                            ref='gis:rdJ006'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:rdJ021+rdJ022",
+                                        id='gis:rdJ021+rdJ022',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc 21-22"
+                                            value='Junc 21-22'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ021"
+                                            version='1.0',
+                                            ref='gis:rdJ021'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ022"
+                                            version='1.0',
+                                            ref='gis:rdJ022'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:rdJ022+rdJ021",
+                                        id='gis:rdJ022+rdJ021',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
-                                        responsibility_set_ref_attribute="gis:RS_31",
+                                        version='1.0',
+                                        responsibility_set_ref_attribute='gis:RS_31',
                                         name=MultilingualString(
-                                            value="Junc 22-21"
+                                            value='Junc 22-21'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ022"
+                                            version='1.0',
+                                            ref='gis:rdJ022'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ021"
+                                            version='1.0',
+                                            ref='gis:rdJ021'
                                         )
                                     ),
                                 ]
@@ -803,67 +803,67 @@ obj = PublicationDelivery(
                             restrictions=NetworkRestrictionsInFrameRelStructure(
                                 choice=[
                                     RestrictedManoeuvre(
-                                        id="hde:RM_01",
+                                        id='hde:RM_01',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
+                                        version='1.0',
                                         order=1,
                                         restricted=False,
                                         from_link_ref=LinkRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ001+rdJ003"
+                                            version='1.0',
+                                            ref='gis:rdJ001+rdJ003'
                                         ),
                                         to_link_ref=LinkRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ003+rdJ004"
+                                            version='1.0',
+                                            ref='gis:rdJ003+rdJ004'
                                         ),
                                         vehicle_type_ref=VehicleTypeRefStructure(
-                                            version="1.0",
-                                            ref="hde:VT001"
+                                            version='1.0',
+                                            ref='hde:VT001'
                                         )
                                     ),
                                     MeetingRestriction(
-                                        id="hde:RMT_02",
+                                        id='hde:RMT_02',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
+                                        version='1.0',
                                         order=1,
                                         from_link_ref=LinkRefStructure(
-                                            version="1.0",
-                                            ref="gis:rrdJ022+rdJ021"
+                                            version='1.0',
+                                            ref='gis:rrdJ022+rdJ021'
                                         ),
                                         to_link_ref=LinkRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ021+rdJ022"
+                                            version='1.0',
+                                            ref='gis:rdJ021+rdJ022'
                                         ),
                                         for_vehicle_type_ref=VehicleTypeRefStructure(
-                                            version="1.0",
-                                            ref="hde:VT001"
+                                            version='1.0',
+                                            ref='hde:VT001'
                                         ),
                                         against_vehicle_type_ref=VehicleTypeRefStructure(
-                                            version="1.0",
-                                            ref="hde:VT001"
+                                            version='1.0',
+                                            ref='hde:VT001'
                                         )
                                     ),
                                     OvertakingPossibility(
-                                        id="hde:ROP_03",
+                                        id='hde:ROP_03',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
+                                        version='1.0',
                                         order=1,
                                         restricted=False,
                                         overtaking_on_link_ref=LinkRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ021+rdJ022"
+                                            version='1.0',
+                                            ref='gis:rdJ021+rdJ022'
                                         ),
                                         overtaking_at_point_ref=PointRefStructure(
-                                            version="1.0",
-                                            ref="gis:rdJ021"
+                                            version='1.0',
+                                            ref='gis:rdJ021'
                                         ),
                                         overtaking_vehicle_type_ref=VehicleTypeRefStructure(
-                                            version="1.0",
-                                            ref="hde:VT001"
+                                            version='1.0',
+                                            ref='hde:VT001'
                                         ),
                                         overtaken_vehicle_type_ref=VehicleTypeRefStructure(
-                                            version="1.0",
-                                            ref="hde:VT001"
+                                            version='1.0',
+                                            ref='hde:VT001'
                                         )
                                     ),
                                 ]
@@ -871,93 +871,93 @@ obj = PublicationDelivery(
                             vehicle_types=VehicleTypesInFrameRelStructure(
                                 compound_train_or_train_or_vehicle_type=[
                                     VehicleType(
-                                        id="hde:VT001",
+                                        id='hde:VT001',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="1.0",
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Big red bus"
+                                            value='Big red bus'
                                         ),
                                         passenger_capacity=PassengerCapacityStructure(
                                             seating_capacity=50,
                                             standing_capacity=20,
                                             wheelchair_place_capacity=2
                                         ),
-                                        length=Decimal("20")
+                                        length=Decimal('20')
                                     ),
                                 ]
                             )
                         ),
                         ServiceFrame(
-                            id="mybus:SVC_01@routes",
-                            version="1.0",
+                            id='mybus:SVC_01@routes',
+                            version='1.0',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="3.0",
-                                    ref="hde:RS_22"
+                                    version='3.0',
+                                    ref='hde:RS_22'
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     InfrastructureFrameRef(
-                                        version="1.0",
-                                        ref="mybus:SVC_01@infrastructure"
+                                        version='1.0',
+                                        ref='mybus:SVC_01@infrastructure'
                                     ),
                                 ]
                             ),
                             route_points=RoutePointsInFrameRelStructure(
                                 route_point=[
                                     RoutePoint(
-                                        id="hde:RteP021",
-                                        version="any",
+                                        id='hde:RteP021',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point 21"
+                                            value='Point 21'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:RteP021",
-                                                    version="any",
+                                                    id='hde:RteP021',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="gis:rdJ002"
+                                                        version='any',
+                                                        ref='gis:rdJ002'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     RoutePoint(
-                                        id="hde:RteP022",
-                                        version="any",
+                                        id='hde:RteP022',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point 22"
+                                            value='Point 22'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:RteP022",
-                                                    version="any",
+                                                    id='hde:RteP022',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="gis:rdJ004"
+                                                        version='any',
+                                                        ref='gis:rdJ004'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     RoutePoint(
-                                        id="hde:RteP025",
-                                        version="any",
+                                        id='hde:RteP025',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point 25"
+                                            value='Point 25'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:RteP025",
-                                                    version="any",
+                                                    id='hde:RteP025',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="gis:rdJ005"
+                                                        version='any',
+                                                        ref='gis:rdJ005'
                                                     )
                                                 ),
                                             ]
@@ -968,185 +968,185 @@ obj = PublicationDelivery(
                             route_links=RouteLinksInFrameRelStructure(
                                 route_link=[
                                     RouteLink(
-                                        id="hde:hde:RL_001o@SSP0001A+RteP021",
-                                        version="any",
-                                        distance=Decimal("110"),
+                                        id='hde:hde:RL_001o@SSP0001A+RteP021',
+                                        version='any',
+                                        distance=Decimal('110'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0001A"
+                                            version='032',
+                                            ref='hde:SSP0001A'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP021"
+                                            version='any',
+                                            ref='hde:RteP021'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001o@RteP021+SSP0002B_a",
-                                        version="any",
-                                        distance=Decimal("120"),
+                                        id='hde:RL_001o@RteP021+SSP0002B_a',
+                                        version='any',
+                                        distance=Decimal('120'),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP021"
+                                            version='any',
+                                            ref='hde:RteP021'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0002B_a"
+                                            version='032',
+                                            ref='hde:SSP0002B_a'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001o@SSP0001B_a+RteP022",
-                                        version="any",
-                                        distance=Decimal("130"),
+                                        id='hde:RL_001o@SSP0001B_a+RteP022',
+                                        version='any',
+                                        distance=Decimal('130'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0002B_a"
+                                            version='032',
+                                            ref='hde:SSP0002B_a'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP022"
+                                            version='any',
+                                            ref='hde:RteP022'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001o@RteP022+RteP025",
-                                        version="any",
-                                        distance=Decimal("140"),
+                                        id='hde:RL_001o@RteP022+RteP025',
+                                        version='any',
+                                        distance=Decimal('140'),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP022"
+                                            version='any',
+                                            ref='hde:RteP022'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP025"
+                                            version='any',
+                                            ref='hde:RteP025'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001o@RteP025+SSP0003C_a",
-                                        version="any",
-                                        distance=Decimal("150"),
+                                        id='hde:RL_001o@RteP025+SSP0003C_a',
+                                        version='any',
+                                        distance=Decimal('150'),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP025"
+                                            version='any',
+                                            ref='hde:RteP025'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_a"
+                                            version='015',
+                                            ref='hde:SSP0003C_a'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001o@SSP0003C_a5+SSP0003D",
-                                        version="any",
-                                        distance=Decimal("160"),
+                                        id='hde:RL_001o@SSP0003C_a5+SSP0003D',
+                                        version='any',
+                                        distance=Decimal('160'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_a"
+                                            version='015',
+                                            ref='hde:SSP0003C_a'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0004D"
+                                            version='015',
+                                            ref='hde:SSP0004D'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001i_01",
-                                        version="any",
-                                        distance=Decimal("161"),
+                                        id='hde:RL_001i_01',
+                                        version='any',
+                                        distance=Decimal('161'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0004D"
+                                            version='015',
+                                            ref='hde:SSP0004D'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001i_02",
-                                        version="any",
-                                        distance=Decimal("151"),
+                                        id='hde:RL_001i_02',
+                                        version='any',
+                                        distance=Decimal('151'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP025"
+                                            version='any',
+                                            ref='hde:RteP025'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001i_03",
-                                        version="any",
-                                        distance=Decimal("141"),
+                                        id='hde:RL_001i_03',
+                                        version='any',
+                                        distance=Decimal('141'),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP025"
+                                            version='any',
+                                            ref='hde:RteP025'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP022"
+                                            version='any',
+                                            ref='hde:RteP022'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001i_04",
-                                        version="any",
-                                        distance=Decimal("131"),
+                                        id='hde:RL_001i_04',
+                                        version='any',
+                                        distance=Decimal('131'),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP022"
+                                            version='any',
+                                            ref='hde:RteP022'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0002B_b"
+                                            version='032',
+                                            ref='hde:SSP0002B_b'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001i_05",
-                                        version="any",
-                                        distance=Decimal("121"),
+                                        id='hde:RL_001i_05',
+                                        version='any',
+                                        distance=Decimal('121'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP021"
+                                            version='any',
+                                            ref='hde:RteP021'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_001i_06",
-                                        version="any",
-                                        distance=Decimal("111"),
+                                        id='hde:RL_001i_06',
+                                        version='any',
+                                        distance=Decimal('111'),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="hde:RteP021"
+                                            version='any',
+                                            ref='hde:RteP021'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0001A"
+                                            version='032',
+                                            ref='hde:SSP0001A'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_002o_06",
-                                        version="any",
-                                        distance=Decimal("170"),
+                                        id='hde:RL_002o_06',
+                                        version='any',
+                                        distance=Decimal('170'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_a"
+                                            version='015',
+                                            ref='hde:SSP0003C_a'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0005E"
+                                            version='015',
+                                            ref='hde:SSP0005E'
                                         )
                                     ),
                                     RouteLink(
-                                        id="hde:RL_002i_01",
-                                        version="any",
-                                        distance=Decimal("171"),
+                                        id='hde:RL_002i_01',
+                                        version='any',
+                                        distance=Decimal('171'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0005E"
+                                            version='015',
+                                            ref='hde:SSP0005E'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         )
                                     ),
                                 ]
@@ -1154,424 +1154,424 @@ obj = PublicationDelivery(
                             routes=RoutesInFrameRelStructure(
                                 flexible_route_or_route=[
                                     Route(
-                                        id="hde:RT001o",
+                                        id='hde:RT001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="any",
-                                        responsibility_set_ref_attribute="hde:RS_22",
+                                        version='any',
+                                        responsibility_set_ref_attribute='hde:RS_22',
                                         name=MultilingualString(
-                                            value="Route 66b outbound"
+                                            value='Route 66b outbound'
                                         ),
                                         flexible_line_ref_or_line_ref=LineRef(
-                                            version="any",
-                                            ref="mybus:0066"
+                                            version='any',
+                                            ref='mybus:0066'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
                                             point_on_route=[
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001o",
-                                                    version="any",
+                                                    id='mybus:RPIS_001o',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:hde:RL_001o@SSP0001A+RteP021"
+                                                        version='any',
+                                                        ref='hde:hde:RL_001o@SSP0001A+RteP021'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001o",
-                                                    version="any",
+                                                    id='mybus:RPIS_001o',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP021"
+                                                        version='any',
+                                                        ref='hde:RteP021'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP021+SSP0002B_a"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP021+SSP0002B_a'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001o",
-                                                    version="any",
+                                                    id='mybus:RPIS_001o',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@SSP0001B_a+RteP022"
+                                                        version='any',
+                                                        ref='hde:RL_001o@SSP0001B_a+RteP022'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001o",
-                                                    version="any",
+                                                    id='mybus:RPIS_001o',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP022"
+                                                        version='any',
+                                                        ref='hde:RteP022'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP022+RteP025"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP022+RteP025'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001o",
-                                                    version="any",
+                                                    id='mybus:RPIS_001o',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP025"
+                                                        version='any',
+                                                        ref='hde:RteP025'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP025+SSP0003C_a"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP025+SSP0003C_a'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001o",
-                                                    version="any",
+                                                    id='mybus:RPIS_001o',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@SSP0003C_a5+SSP0003D"
+                                                        version='any',
+                                                        ref='hde:RL_001o@SSP0003C_a5+SSP0003D'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001o",
-                                                    version="any",
+                                                    id='mybus:RPIS_001o',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     Route(
-                                        id="hde:RT001i",
+                                        id='hde:RT001i',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="any",
-                                        responsibility_set_ref_attribute="hde:RS_22",
+                                        version='any',
+                                        responsibility_set_ref_attribute='hde:RS_22',
                                         name=MultilingualString(
-                                            value="Route 66b inbound"
+                                            value='Route 66b inbound'
                                         ),
                                         flexible_line_ref_or_line_ref=LineRef(
-                                            version="any",
-                                            ref="mybus:0066"
+                                            version='any',
+                                            ref='mybus:0066'
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
                                             point_on_route=[
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001i",
-                                                    version="any",
+                                                    id='mybus:RPIS_001i',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_01"
+                                                        version='any',
+                                                        ref='hde:RL_001i_01'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001i",
-                                                    version="any",
+                                                    id='mybus:RPIS_001i',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_02"
+                                                        version='any',
+                                                        ref='hde:RL_001i_02'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001i",
-                                                    version="any",
+                                                    id='mybus:RPIS_001i',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP025"
+                                                        version='any',
+                                                        ref='hde:RteP025'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_03"
+                                                        version='any',
+                                                        ref='hde:RL_001i_03'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001i",
-                                                    version="any",
+                                                    id='mybus:RPIS_001i',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP022"
+                                                        version='any',
+                                                        ref='hde:RteP022'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_04"
+                                                        version='any',
+                                                        ref='hde:RL_001i_04'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001i",
-                                                    version="any",
+                                                    id='mybus:RPIS_001i',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_05"
+                                                        version='any',
+                                                        ref='hde:RL_001i_05'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001i",
-                                                    version="any",
+                                                    id='mybus:RPIS_001i',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP021"
+                                                        version='any',
+                                                        ref='hde:RteP021'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_06"
+                                                        version='any',
+                                                        ref='hde:RL_001i_06'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_001i",
-                                                    version="any",
+                                                    id='mybus:RPIS_001i',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     Route(
-                                        id="hde:RT002o",
+                                        id='hde:RT002o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="any",
-                                        responsibility_set_ref_attribute="hde:RS_22",
+                                        version='any',
+                                        responsibility_set_ref_attribute='hde:RS_22',
                                         name=MultilingualString(
-                                            value="Route 66b outbound"
+                                            value='Route 66b outbound'
                                         ),
                                         flexible_line_ref_or_line_ref=LineRef(
-                                            version="any",
-                                            ref="mybus:0066"
+                                            version='any',
+                                            ref='mybus:0066'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
                                             point_on_route=[
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002o",
-                                                    version="any",
+                                                    id='mybus:RPIS_002o',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:hde:RL_001o@SSP0001A+RteP021"
+                                                        version='any',
+                                                        ref='hde:hde:RL_001o@SSP0001A+RteP021'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002o",
-                                                    version="any",
+                                                    id='mybus:RPIS_002o',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP021"
+                                                        version='any',
+                                                        ref='hde:RteP021'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP021+SSP0002B_a"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP021+SSP0002B_a'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002o",
-                                                    version="any",
+                                                    id='mybus:RPIS_002o',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@SSP0001B_a+RteP022"
+                                                        version='any',
+                                                        ref='hde:RL_001o@SSP0001B_a+RteP022'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002o",
-                                                    version="any",
+                                                    id='mybus:RPIS_002o',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP022"
+                                                        version='any',
+                                                        ref='hde:RteP022'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP022+RteP025"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP022+RteP025'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002o",
-                                                    version="any",
+                                                    id='mybus:RPIS_002o',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP025"
+                                                        version='any',
+                                                        ref='hde:RteP025'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP025+SSP0003C_a"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP025+SSP0003C_a'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002o",
-                                                    version="any",
+                                                    id='mybus:RPIS_002o',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_002o_06"
+                                                        version='any',
+                                                        ref='hde:RL_002o_06'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002o",
-                                                    version="any",
+                                                    id='mybus:RPIS_002o',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     Route(
-                                        id="hde:RT002i",
+                                        id='hde:RT002i',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="any",
-                                        responsibility_set_ref_attribute="hde:RS_22",
+                                        version='any',
+                                        responsibility_set_ref_attribute='hde:RS_22',
                                         name=MultilingualString(
-                                            value="Route 66b inbound"
+                                            value='Route 66b inbound'
                                         ),
                                         flexible_line_ref_or_line_ref=LineRef(
-                                            version="any",
-                                            ref="mybus:0066"
+                                            version='any',
+                                            ref='mybus:0066'
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
                                             point_on_route=[
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002i_001",
-                                                    version="any",
+                                                    id='mybus:RPIS_002i_001',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_002i_01"
+                                                        version='any',
+                                                        ref='hde:RL_002i_01'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002i_002",
-                                                    version="any",
+                                                    id='mybus:RPIS_002i_002',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_02"
+                                                        version='any',
+                                                        ref='hde:RL_001i_02'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002i_003",
-                                                    version="any",
+                                                    id='mybus:RPIS_002i_003',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP025"
+                                                        version='any',
+                                                        ref='hde:RteP025'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_03"
+                                                        version='any',
+                                                        ref='hde:RL_001i_03'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002i_004",
-                                                    version="any",
+                                                    id='mybus:RPIS_002i_004',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP022"
+                                                        version='any',
+                                                        ref='hde:RteP022'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_04"
+                                                        version='any',
+                                                        ref='hde:RL_001i_04'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002i_005",
-                                                    version="any",
+                                                    id='mybus:RPIS_002i_005',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_05"
+                                                        version='any',
+                                                        ref='hde:RL_001i_05'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002i_006",
-                                                    version="any",
+                                                    id='mybus:RPIS_002i_006',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP021"
+                                                        version='any',
+                                                        ref='hde:RteP021'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:RL_001i_06"
+                                                        version='any',
+                                                        ref='hde:RL_001i_06'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:RPIS_002i_007",
-                                                    version="any",
+                                                    id='mybus:RPIS_002i_007',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
@@ -1582,320 +1582,320 @@ obj = PublicationDelivery(
                             common_sections=CommonSectionsInFrameRelStructure(
                                 common_section=[
                                     CommonSection(
-                                        id="hde:CSc001o_JP",
-                                        version="any",
+                                        id='hde:CSc001o_JP',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="A - B - C Common Section: Journey {atterb"
+                                            value='A - B - C Common Section: Journey {atterb'
                                         ),
                                         used_in=LinkSequenceRefsRelStructure(
                                             choice=[
                                                 DerivedElement(
-                                                    qname="{http://www.netex.org.uk/netex}LinkSequenceRef",
+                                                    qname='{http://www.netex.org.uk/netex}LinkSequenceRef',
                                                     value=JourneyPatternRefStructure(
-                                                        version="any",
-                                                        ref="hde:JP001o"
+                                                        version='any',
+                                                        ref='hde:JP001o'
                                                     ),
-                                                    type="{http://www.netex.org.uk/netex}JourneyPatternRefStructure"
+                                                    type='{http://www.netex.org.uk/netex}JourneyPatternRefStructure'
                                                 ),
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_line_section_or_point_on_section=[
                                                 PointOnSection(
-                                                    id="hde:CSc001o_JP",
-                                                    version="1",
+                                                    id='hde:CSc001o_JP',
+                                                    version='1',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     choice_2=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0001A-SSP0002B_a"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0001A-SSP0002B_a'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001o_JP",
-                                                    version="1",
+                                                    id='hde:CSc001o_JP',
+                                                    version='1',
                                                     order=2,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     choice_2=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0002B_a-SSP0003C_a"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0002B_a-SSP0003C_a'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001o_JP",
-                                                    version="1",
+                                                    id='hde:CSc001o_JP',
+                                                    version='1',
                                                     order=3,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     CommonSection(
-                                        id="hde:CSc001i_JP",
-                                        version="any",
-                                        responsibility_set_ref_attribute="hde:RS_22",
+                                        id='hde:CSc001i_JP',
+                                        version='any',
+                                        responsibility_set_ref_attribute='hde:RS_22',
                                         name=MultilingualString(
-                                            value="C - B - A Common Section: Journey {atterb"
+                                            value='C - B - A Common Section: Journey {atterb'
                                         ),
                                         used_in=LinkSequenceRefsRelStructure(
                                             choice=[
                                                 DerivedElement(
-                                                    qname="{http://www.netex.org.uk/netex}LinkSequenceRef",
+                                                    qname='{http://www.netex.org.uk/netex}LinkSequenceRef',
                                                     value=JourneyPatternRefStructure(
-                                                        version="any",
-                                                        ref="hde:JP001i"
+                                                        version='any',
+                                                        ref='hde:JP001i'
                                                     ),
-                                                    type="{http://www.netex.org.uk/netex}JourneyPatternRefStructure"
+                                                    type='{http://www.netex.org.uk/netex}JourneyPatternRefStructure'
                                                 ),
                                                 DerivedElement(
-                                                    qname="{http://www.netex.org.uk/netex}LinkSequenceRef",
+                                                    qname='{http://www.netex.org.uk/netex}LinkSequenceRef',
                                                     value=JourneyPatternRefStructure(
-                                                        ref="hde:JP002i"
+                                                        ref='hde:JP002i'
                                                     ),
-                                                    type="{http://www.netex.org.uk/netex}JourneyPatternRefStructure"
+                                                    type='{http://www.netex.org.uk/netex}JourneyPatternRefStructure'
                                                 ),
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_line_section_or_point_on_section=[
                                                 PointOnSection(
-                                                    id="hde:CSc001i_JP",
-                                                    version="1",
+                                                    id='hde:CSc001i_JP',
+                                                    version='1',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     choice_2=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0003C_b-SSP0002B_b"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0003C_b-SSP0002B_b'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001i_JP",
-                                                    version="1",
+                                                    id='hde:CSc001i_JP',
+                                                    version='1',
                                                     order=2,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     choice_2=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0002B_b-SSP0001A"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0002B_b-SSP0001A'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001i_JP",
-                                                    version="1",
+                                                    id='hde:CSc001i_JP',
+                                                    version='1',
                                                     order=3,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     CommonSection(
-                                        id="hde:CSc001o_Rt",
-                                        version="any",
-                                        responsibility_set_ref_attribute="hde:RS_22",
+                                        id='hde:CSc001o_Rt',
+                                        version='any',
+                                        responsibility_set_ref_attribute='hde:RS_22',
                                         name=MultilingualString(
-                                            value="A - B - C Common Section: Rt"
+                                            value='A - B - C Common Section: Rt'
                                         ),
                                         used_in=LinkSequenceRefsRelStructure(
                                             choice=[
                                                 RouteRef(
-                                                    version="any",
-                                                    ref="hde:RT001o"
+                                                    version='any',
+                                                    ref='hde:RT001o'
                                                 ),
                                                 RouteRef(
-                                                    version="any",
-                                                    ref="hde:RT002o"
+                                                    version='any',
+                                                    ref='hde:RT002o'
                                                 ),
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_line_section_or_point_on_section=[
                                                 PointOnSection(
-                                                    id="hde:CSc001o_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001o_Rt',
+                                                    version='1',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:hde:RL_001o@SSP0001A+RteP021"
+                                                        version='any',
+                                                        ref='hde:hde:RL_001o@SSP0001A+RteP021'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001o_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001o_Rt',
+                                                    version='1',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP021"
+                                                        version='any',
+                                                        ref='hde:RteP021'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP021+SSP0002B_a"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP021+SSP0002B_a'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001o_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001o_Rt',
+                                                    version='1',
                                                     order=3,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001o@SSP0001B_a+RteP022"
+                                                        version='any',
+                                                        ref='hde:RL_001o@SSP0001B_a+RteP022'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001o_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001o_Rt',
+                                                    version='1',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP022"
+                                                        version='any',
+                                                        ref='hde:RteP022'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP022+RteP025"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP022+RteP025'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001o_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001o_Rt',
+                                                    version='1',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP025"
+                                                        version='any',
+                                                        ref='hde:RteP025'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001o@RteP025+SSP0003C_a"
+                                                        version='any',
+                                                        ref='hde:RL_001o@RteP025+SSP0003C_a'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001o_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001o_Rt',
+                                                    version='1',
                                                     order=6,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     CommonSection(
-                                        id="hde:CSc001i_Rt",
-                                        version="any",
-                                        responsibility_set_ref_attribute="hde:RS_22",
+                                        id='hde:CSc001i_Rt',
+                                        version='any',
+                                        responsibility_set_ref_attribute='hde:RS_22',
                                         name=MultilingualString(
-                                            value="C - B - A Common Section: Rt"
+                                            value='C - B - A Common Section: Rt'
                                         ),
                                         used_in=LinkSequenceRefsRelStructure(
                                             choice=[
                                                 RouteRef(
-                                                    version="any",
-                                                    ref="hde:RT001i"
+                                                    version='any',
+                                                    ref='hde:RT001i'
                                                 ),
                                                 RouteRef(
-                                                    version="any",
-                                                    ref="hde:RT002i"
+                                                    version='any',
+                                                    ref='hde:RT002i'
                                                 ),
                                             ]
                                         ),
                                         points_on_section_or_members=PointsOnSectionRelStructure(
                                             point_on_line_section_or_point_on_section=[
                                                 PointOnSection(
-                                                    id="hde:CSc001i_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001i_Rt',
+                                                    version='1',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001i_02"
+                                                        version='any',
+                                                        ref='hde:RL_001i_02'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001i_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001i_Rt',
+                                                    version='1',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP025"
+                                                        version='any',
+                                                        ref='hde:RteP025'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001i_03"
+                                                        version='any',
+                                                        ref='hde:RL_001i_03'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001i_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001i_Rt',
+                                                    version='1',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP022"
+                                                        version='any',
+                                                        ref='hde:RteP022'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001i_04"
+                                                        version='any',
+                                                        ref='hde:RL_001i_04'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001i_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001i_Rt',
+                                                    version='1',
                                                     order=4,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001i_05"
+                                                        version='any',
+                                                        ref='hde:RL_001i_05'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001i_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001i_Rt',
+                                                    version='1',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="hde:RteP021"
+                                                        version='any',
+                                                        ref='hde:RteP021'
                                                     ),
                                                     choice_2=RouteLinkRef(
-                                                        version="any",
-                                                        ref="hde:RL_001i_06"
+                                                        version='any',
+                                                        ref='hde:RL_001i_06'
                                                     )
                                                 ),
                                                 PointOnSection(
-                                                    id="hde:CSc001i_Rt",
-                                                    version="1",
+                                                    id='hde:CSc001i_Rt',
+                                                    version='1',
                                                     order=6,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
@@ -1906,149 +1906,149 @@ obj = PublicationDelivery(
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:0066",
+                                        id='mybus:0066',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="any",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='any',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Line 66"
+                                            value='Line 66'
                                         ),
                                         authority_ref_or_operator_ref=OperatorRef(
-                                            version="any",
-                                            ref="mybus:Org_TL001"
+                                            version='any',
+                                            ref='mybus:Org_TL001'
                                         ),
                                         presentation=PresentationStructure(
-                                            colour_name="yellow"
+                                            colour_name='yellow'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         ServiceFrame(
-                            id="mybus:SVC_01@network",
-                            version="1.0",
-                            responsibility_set_ref_attribute="mybus:RS_10",
+                            id='mybus:SVC_01@network',
+                            version='1.0',
+                            responsibility_set_ref_attribute='mybus:RS_10',
                             name=MultilingualString(
-                                value="My Network  Version 5 with three stops in it "
+                                value='My Network  Version 5 with three stops in it '
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="2.0",
-                                    ref="mybus:RS_10"
+                                    version='2.0',
+                                    ref='mybus:RS_10'
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ServiceFrameRef(
-                                        version="1.0",
-                                        ref="mybus:SVC_01@routes"
+                                        version='1.0',
+                                        ref='mybus:SVC_01@routes'
                                     ),
                                 ]
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="hde:SSP0001A",
+                                        id='hde:SSP0001A',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="032",
+                                        version='032',
                                         name=MultilingualString(
-                                            value="Haltstelle A"
+                                            value='Haltstelle A'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         label=MultilingualString(
-                                            value="Towards C"
+                                            value='Towards C'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="hde:SSP0002B_a",
+                                        id='hde:SSP0002B_a',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="032",
+                                        version='032',
                                         name=MultilingualString(
-                                            value="Haltstelle Ba"
+                                            value='Haltstelle Ba'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         label=MultilingualString(
-                                            value="Towards C"
+                                            value='Towards C'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="hde:SSP0002B_b",
+                                        id='hde:SSP0002B_b',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="032",
+                                        version='032',
                                         name=MultilingualString(
-                                            value="Haltstelle Bb"
+                                            value='Haltstelle Bb'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         label=MultilingualString(
-                                            value="TowardsA"
+                                            value='TowardsA'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="hde:SSP0003C_a",
+                                        id='hde:SSP0003C_a',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="015",
+                                        version='015',
                                         name=MultilingualString(
-                                            value="Haltstelle Ca"
+                                            value='Haltstelle Ca'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         label=MultilingualString(
-                                            value="Towards D"
+                                            value='Towards D'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="hde:SSP0004D",
+                                        id='hde:SSP0004D',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="015",
+                                        version='015',
                                         name=MultilingualString(
-                                            value="Haltstelle D"
+                                            value='Haltstelle D'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="hde:SSP0003C_b",
+                                        id='hde:SSP0003C_b',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="015",
+                                        version='015',
                                         name=MultilingualString(
-                                            value="Haltstelle Cb"
+                                            value='Haltstelle Cb'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         label=MultilingualString(
-                                            value="Towards A"
+                                            value='Towards A'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="hde:SSP0005E",
+                                        id='hde:SSP0005E',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="015",
+                                        version='015',
                                         name=MultilingualString(
-                                            value="Haltstelle D"
+                                            value='Haltstelle D'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         )
                                     ),
                                 ]
@@ -2056,131 +2056,131 @@ obj = PublicationDelivery(
                             service_links=ServiceLinksInFrameRelStructure(
                                 service_link=[
                                     ServiceLink(
-                                        id="hde:SL_SSP0001A-SSP0002B_a",
+                                        id='hde:SL_SSP0001A-SSP0002B_a',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="A to B "
+                                            value='A to B '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0001A"
+                                            version='032',
+                                            ref='hde:SSP0001A'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0002B_a"
+                                            version='032',
+                                            ref='hde:SSP0002B_a'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="hde:SL_SSP0002B_a-SSP0003C_a",
+                                        id='hde:SL_SSP0002B_a-SSP0003C_a',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="B to C "
+                                            value='B to C '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0002B_a"
+                                            version='032',
+                                            ref='hde:SSP0002B_a'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_a"
+                                            version='015',
+                                            ref='hde:SSP0003C_a'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="hde:SL_SSP0003C_a-SSP0004D",
+                                        id='hde:SL_SSP0003C_a-SSP0004D',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="C to D"
+                                            value='C to D'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_a"
+                                            version='015',
+                                            ref='hde:SSP0003C_a'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0004D"
+                                            version='015',
+                                            ref='hde:SSP0004D'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="hde:SL_SSP0004D-SSP0003C_b",
+                                        id='hde:SL_SSP0004D-SSP0003C_b',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="D to C"
+                                            value='D to C'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0004D"
+                                            version='015',
+                                            ref='hde:SSP0004D'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="hde:SL_SSP0003C_b-SSP0002B_b",
+                                        id='hde:SL_SSP0003C_b-SSP0002B_b',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="C to B"
+                                            value='C to B'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0002B_b"
+                                            version='032',
+                                            ref='hde:SSP0002B_b'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="hde:SL_SSP0002B_b-SSP0001A",
+                                        id='hde:SL_SSP0002B_b-SSP0001A',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="B to A"
+                                            value='B to A'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0002B_b"
+                                            version='032',
+                                            ref='hde:SSP0002B_b'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="032",
-                                            ref="hde:SSP0001A"
+                                            version='032',
+                                            ref='hde:SSP0001A'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="hde:SL_SSP0003C_a-SSP0005E",
+                                        id='hde:SL_SSP0003C_a-SSP0005E',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="C to E"
+                                            value='C to E'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_a"
+                                            version='015',
+                                            ref='hde:SSP0003C_a'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0005E"
+                                            version='015',
+                                            ref='hde:SSP0005E'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="hde:SL_SSP0005E-SSP0003C_b",
+                                        id='hde:SL_SSP0005E-SSP0003C_b',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="E to C"
+                                            value='E to C'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0005E"
+                                            version='015',
+                                            ref='hde:SSP0005E'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         )
                                     ),
                                 ]
@@ -2188,59 +2188,59 @@ obj = PublicationDelivery(
                             service_patterns=ServicePatternsInFrameRelStructure(
                                 service_pattern_or_journey_pattern_view=[
                                     ServicePattern(
-                                        id="hde:SvP001o",
+                                        id='hde:SvP001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="003",
+                                        version='003',
                                         name=MultilingualString(
-                                            value="Aa - Ba - Ca - D"
+                                            value='Aa - Ba - Ca - D'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT001o"
+                                            version='any',
+                                            ref='hde:RT001o'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_001o_01",
-                                                    version="003",
+                                                    id='hde:SvPip_001o_01',
+                                                    version='003',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     for_alighting=False,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_001o_02",
-                                                    version="003",
+                                                    id='hde:SvPip_001o_02',
+                                                    version='003',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_hde:RL_001o@SSP0001B_a+RteP022",
-                                                    version="003",
+                                                    id='hde:SvPip_hde:RL_001o@SSP0001B_a+RteP022',
+                                                    version='003',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_hde:RL_001o@RteP022+RteP025",
-                                                    version="003",
+                                                    id='hde:SvPip_hde:RL_001o@RteP022+RteP025',
+                                                    version='003',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=False
@@ -2250,89 +2250,89 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_001o_01",
-                                                    version="any",
+                                                    id='hde:SvlLip_001o_01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0001A-SSP0002B_a"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0001A-SSP0002B_a'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_001o_02",
-                                                    version="any",
+                                                    id='hde:SvlLip_001o_02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0002B_a-SSP0003C_a"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0002B_a-SSP0003C_a'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_hde:RL_001o@SSP0001B_a+RteP022",
-                                                    version="any",
+                                                    id='hde:SvlLip_hde:RL_001o@SSP0001B_a+RteP022',
+                                                    version='any',
                                                     order=3,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0003C_a-SSP0004D"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0003C_a-SSP0004D'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServicePattern(
-                                        id="hde:SvP001i",
+                                        id='hde:SvP001i',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="003",
+                                        version='003',
                                         name=MultilingualString(
-                                            value="D - Cb - Bb - A"
+                                            value='D - Cb - Bb - A'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT001i"
+                                            version='any',
+                                            ref='hde:RT001i'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_001i_01",
-                                                    version="003",
+                                                    id='hde:SvPip_001i_01',
+                                                    version='003',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     ),
                                                     for_alighting=False,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_001i_02",
-                                                    version="003",
+                                                    id='hde:SvPip_001i_02',
+                                                    version='003',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_001i_03",
-                                                    version="003",
+                                                    id='hde:SvPip_001i_03',
+                                                    version='003',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_001i_04",
-                                                    version="003",
+                                                    id='hde:SvPip_001i_04',
+                                                    version='003',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=False
@@ -2342,89 +2342,89 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_001i_01",
-                                                    version="any",
+                                                    id='hde:SvlLip_001i_01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0004D-SSP0003C_b"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0004D-SSP0003C_b'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_001i_02",
-                                                    version="any",
+                                                    id='hde:SvlLip_001i_02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0003C_b-SSP0002B_b"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0003C_b-SSP0002B_b'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_001i_03",
-                                                    version="any",
+                                                    id='hde:SvlLip_001i_03',
+                                                    version='any',
                                                     order=3,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0002B_b-SSP0001A"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0002B_b-SSP0001A'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServicePattern(
-                                        id="hde:SvP002o",
+                                        id='hde:SvP002o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="003",
+                                        version='003',
                                         name=MultilingualString(
-                                            value="A - Ba - Ca - E"
+                                            value='A - Ba - Ca - E'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT002o"
+                                            version='any',
+                                            ref='hde:RT002o'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002o_01",
-                                                    version="003",
+                                                    id='hde:SvPip_002o_01',
+                                                    version='003',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     for_alighting=False,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002o_02",
-                                                    version="003",
+                                                    id='hde:SvPip_002o_02',
+                                                    version='003',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002o_03",
-                                                    version="003",
+                                                    id='hde:SvPip_002o_03',
+                                                    version='003',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002o_04",
-                                                    version="003",
+                                                    id='hde:SvPip_002o_04',
+                                                    version='003',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=False
@@ -2434,89 +2434,89 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_002o",
-                                                    version="any",
+                                                    id='hde:SvlLip_002o',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0001A-SSP0002B_a"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0001A-SSP0002B_a'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_002o",
-                                                    version="any",
+                                                    id='hde:SvlLip_002o',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0002B_a-SSP0003C_a"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0002B_a-SSP0003C_a'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_002o",
-                                                    version="any",
+                                                    id='hde:SvlLip_002o',
+                                                    version='any',
                                                     order=3,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0003C_a-SSP0005E"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0003C_a-SSP0005E'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServicePattern(
-                                        id="hde:SvP002i",
+                                        id='hde:SvP002i',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="003",
+                                        version='003',
                                         name=MultilingualString(
-                                            value="E - Cb - Bb - A"
+                                            value='E - Cb - Bb - A'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT002i"
+                                            version='any',
+                                            ref='hde:RT002i'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002i_01",
-                                                    version="003",
+                                                    id='hde:SvPip_002i_01',
+                                                    version='003',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     ),
                                                     for_alighting=False,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002i_02",
-                                                    version="003",
+                                                    id='hde:SvPip_002i_02',
+                                                    version='003',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002i_03",
-                                                    version="003",
+                                                    id='hde:SvPip_002i_03',
+                                                    version='003',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:SvPip_002i_04",
-                                                    version="003",
+                                                    id='hde:SvPip_002i_04',
+                                                    version='003',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=False
@@ -2526,30 +2526,30 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_002i_01",
-                                                    version="any",
+                                                    id='hde:SvlLip_002i_01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0005E-SSP0003C_b"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0005E-SSP0003C_b'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_002i_02",
-                                                    version="any",
+                                                    id='hde:SvlLip_002i_02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0003C_b-SSP0002B_b"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0003C_b-SSP0002B_b'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:SvlLip_002i_03",
-                                                    version="any",
+                                                    id='hde:SvlLip_002i_03',
+                                                    version='any',
                                                     order=3,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="001",
-                                                        ref="hde:SL_SSP0002B_b-SSP0001A"
+                                                        version='001',
+                                                        ref='hde:SL_SSP0002B_b-SSP0001A'
                                                     )
                                                 ),
                                             ]
@@ -2560,143 +2560,143 @@ obj = PublicationDelivery(
                             stop_assignments=StopAssignmentsInFrameRelStructure(
                                 choice=[
                                     PassengerStopAssignment(
-                                        id="hde:PSA_01",
-                                        version="any",
+                                        id='hde:PSA_01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment A"
+                                            value='Bus Assignment A'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="hde:SSP0001A"
+                                            version='032',
+                                            ref='hde:SSP0001A'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP001A"
+                                            version='any',
+                                            ref='mybus:SP001A'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP001A@1"
+                                            version='any',
+                                            ref='mybus:Q_SP001A@1'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:PSA_02",
-                                        version="any",
+                                        id='hde:PSA_02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment B"
+                                            value='Bus Assignment B'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="hde:SSP0002B_a"
+                                            version='032',
+                                            ref='hde:SSP0002B_a'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002B@1"
+                                            version='any',
+                                            ref='mybus:Q_SP002B@1'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:PSA_03",
-                                        version="any",
+                                        id='hde:PSA_03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment B"
+                                            value='Bus Assignment B'
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="hde:SSP0002B_b"
+                                            version='032',
+                                            ref='hde:SSP0002B_b'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002B@2"
+                                            version='any',
+                                            ref='mybus:Q_SP002B@2'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:PSA_04",
-                                        version="any",
+                                        id='hde:PSA_04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment B"
+                                            value='Bus Assignment B'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="015",
-                                            ref="hde:SSP0003C_a"
+                                            version='015',
+                                            ref='hde:SSP0003C_a'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP003C"
+                                            version='any',
+                                            ref='mybus:SP003C'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002C@1"
+                                            version='any',
+                                            ref='mybus:Q_SP002C@1'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:PSA_05",
-                                        version="any",
+                                        id='hde:PSA_05',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment B"
+                                            value='Bus Assignment B'
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="015",
-                                            ref="hde:SSP0003C_b"
+                                            version='015',
+                                            ref='hde:SSP0003C_b'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP003C"
+                                            version='any',
+                                            ref='mybus:SP003C'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002C@2"
+                                            version='any',
+                                            ref='mybus:Q_SP002C@2'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:PSA_06",
-                                        version="any",
+                                        id='hde:PSA_06',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment D"
+                                            value='Bus Assignment D'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="015",
-                                            ref="hde:SSP0004D"
+                                            version='015',
+                                            ref='hde:SSP0004D'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP004D"
+                                            version='any',
+                                            ref='mybus:SP004D'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP004D_1"
+                                            version='any',
+                                            ref='mybus:Q_SP004D_1'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:PSA_07",
-                                        version="any",
+                                        id='hde:PSA_07',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment E"
+                                            value='Bus Assignment E'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="015",
-                                            ref="hde:SSP0005E"
+                                            version='015',
+                                            ref='hde:SSP0005E'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP005E"
+                                            version='any',
+                                            ref='mybus:SP005E'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP005E_1"
+                                            version='any',
+                                            ref='mybus:Q_SP005E_1'
                                         )
                                     ),
                                 ]
@@ -2704,70 +2704,70 @@ obj = PublicationDelivery(
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
                                     TimingPoint(
-                                        id="hde:TPT0051",
-                                        version="015"
+                                        id='hde:TPT0051',
+                                        version='015'
                                     ),
                                 ]
                             ),
                             timing_patterns=TimingPatternsInFrameRelStructure(
                                 timing_pattern=[
                                     TimingPattern(
-                                        id="hde:TP001o",
-                                        version="any",
+                                        id='hde:TP001o',
+                                        version='any',
                                         route_ref=RouteRefStructure(
-                                            version="any",
-                                            ref="hde:RT001o"
+                                            version='any',
+                                            ref='hde:RT001o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                            version="any",
-                                            ref="hde:TDT0001"
+                                            version='any',
+                                            ref='hde:TDT0001'
                                         ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP001o_01",
-                                                    version="any",
+                                                    id='TPIJP_TP001o_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP001o_02",
-                                                    version="any",
+                                                    id='TPIJP_TP001o_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TPhde:RL_001o@SSP0001B_a+RteP022",
-                                                    version="any",
+                                                    id='TPIJP_TPhde:RL_001o@SSP0001B_a+RteP022',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TPhde:RL_001o@RteP022+RteP025",
-                                                    version="any",
+                                                    id='TPIJP_TPhde:RL_001o@RteP022+RteP025',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TPhde:RL_001o@RteP025+SSP0003C_a",
-                                                    version="any",
+                                                    id='TPIJP_TPhde:RL_001o@RteP025+SSP0003C_a',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     )
                                                 ),
                                             ]
@@ -2775,116 +2775,116 @@ obj = PublicationDelivery(
                                         links=TimingLinksRelStructure(
                                             timing_link=[
                                                 TimingLink(
-                                                    id="hde:TL_TP001o_01",
-                                                    version="any",
+                                                    id='hde:TL_TP001o_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="A to B"
+                                                        value='A to B'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP001o_02",
-                                                    version="any",
+                                                    id='hde:TL_TP001o_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="B to point 51"
+                                                        value='B to point 51'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TPhde:RL_001o@SSP0001B_a+RteP022",
-                                                    version="any",
+                                                    id='hde:TL_TPhde:RL_001o@SSP0001B_a+RteP022',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="point 51 to C"
+                                                        value='point 51 to C'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TPhde:RL_001o@RteP022+RteP025",
-                                                    version="any",
+                                                    id='hde:TL_TPhde:RL_001o@RteP022+RteP025',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="C to D"
+                                                        value='C to D'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPattern(
-                                        id="hde:TP001i",
-                                        version="any",
+                                        id='hde:TP001i',
+                                        version='any',
                                         route_ref=RouteRefStructure(
-                                            version="any",
-                                            ref="hde:RT001i"
+                                            version='any',
+                                            ref='hde:RT001i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                            version="any",
-                                            ref="hde:TDT0002"
+                                            version='any',
+                                            ref='hde:TDT0002'
                                         ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP001i_01",
-                                                    version="any",
+                                                    id='TPIJP_TP001i_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP001i_02",
-                                                    version="any",
+                                                    id='TPIJP_TP001i_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP001i_03",
-                                                    version="any",
+                                                    id='TPIJP_TP001i_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP001i_04",
-                                                    version="any",
+                                                    id='TPIJP_TP001i_04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
@@ -2892,110 +2892,110 @@ obj = PublicationDelivery(
                                         links=TimingLinksRelStructure(
                                             timing_link=[
                                                 TimingLink(
-                                                    id="hde:TL_TP001i_01",
-                                                    version="any",
+                                                    id='hde:TL_TP001i_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="D to C"
+                                                        value='D to C'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP001i_02",
-                                                    version="any",
+                                                    id='hde:TL_TP001i_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="C to B"
+                                                        value='C to B'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP001i_03",
-                                                    version="any",
+                                                    id='hde:TL_TP001i_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="B to A"
+                                                        value='B to A'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPattern(
-                                        id="hde:TP002o",
-                                        version="any",
+                                        id='hde:TP002o',
+                                        version='any',
                                         route_ref=RouteRefStructure(
-                                            version="any",
-                                            ref="hde:RT002o"
+                                            version='any',
+                                            ref='hde:RT002o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                            version="any",
-                                            ref="hde:TDT0001"
+                                            version='any',
+                                            ref='hde:TDT0001'
                                         ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002o_01",
-                                                    version="any",
+                                                    id='TPIJP_TP002o_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002o_02",
-                                                    version="any",
+                                                    id='TPIJP_TP002o_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002o_03",
-                                                    version="any",
+                                                    id='TPIJP_TP002o_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002o_04",
-                                                    version="any",
+                                                    id='TPIJP_TP002o_04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP02o_05",
-                                                    version="any",
+                                                    id='TPIJP_TP02o_05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     )
                                                 ),
                                             ]
@@ -3003,116 +3003,116 @@ obj = PublicationDelivery(
                                         links=TimingLinksRelStructure(
                                             timing_link=[
                                                 TimingLink(
-                                                    id="hde:TL_TP002o_01",
-                                                    version="any",
+                                                    id='hde:TL_TP002o_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="A to B"
+                                                        value='A to B'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP002o_02",
-                                                    version="any",
+                                                    id='hde:TL_TP002o_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="B to point 51"
+                                                        value='B to point 51'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP002o_03",
-                                                    version="any",
+                                                    id='hde:TL_TP002o_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="point 51 to C"
+                                                        value='point 51 to C'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP002o_04",
-                                                    version="any",
+                                                    id='hde:TL_TP002o_04',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="C to D"
+                                                        value='C to D'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPattern(
-                                        id="hde:TP002i",
-                                        version="any",
+                                        id='hde:TP002i',
+                                        version='any',
                                         route_ref=RouteRefStructure(
-                                            version="any",
-                                            ref="hde:RT002i"
+                                            version='any',
+                                            ref='hde:RT002i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                            version="any",
-                                            ref="hde:TDT0002"
+                                            version='any',
+                                            ref='hde:TDT0002'
                                         ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002i_01",
-                                                    version="any",
+                                                    id='TPIJP_TP002i_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002i_02",
-                                                    version="any",
+                                                    id='TPIJP_TP002i_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002i_03",
-                                                    version="any",
+                                                    id='TPIJP_TP002i_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="TPIJP_TP002i_04",
-                                                    version="any",
+                                                    id='TPIJP_TP002i_04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
@@ -3120,48 +3120,48 @@ obj = PublicationDelivery(
                                         links=TimingLinksRelStructure(
                                             timing_link=[
                                                 TimingLink(
-                                                    id="hde:TL_TP002i_01",
-                                                    version="any",
+                                                    id='hde:TL_TP002i_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Eto C"
+                                                        value='Eto C'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP002i_02",
-                                                    version="any",
+                                                    id='hde:TL_TP002i_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="C to B"
+                                                        value='C to B'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     )
                                                 ),
                                                 TimingLink(
-                                                    id="hde:TL_TP002i_03",
-                                                    version="any",
+                                                    id='hde:TL_TP002i_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="B to A"
+                                                        value='B to A'
                                                     ),
                                                     from_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     to_point_ref=TimingPointRefStructure(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     )
                                                 ),
                                             ]
@@ -3172,44 +3172,44 @@ obj = PublicationDelivery(
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     ServiceJourneyPattern(
-                                        id="hde:JP001o",
-                                        version="any",
+                                        id='hde:JP001o',
+                                        version='any',
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT001o"
+                                            version='any',
+                                            ref='hde:RT001o'
                                         ),
                                         timing_pattern_ref=TimingPatternRef(
-                                            version="any",
-                                            ref="hde:TP001o"
+                                            version='any',
+                                            ref='hde:TP001o'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001o_0001",
-                                                    version="any",
+                                                    id='hde:PIP_JP001o_0001',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     is_wait_point=True,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:PIP_JP001o_0001_TDT0001",
-                                                                version="any",
+                                                                id='hde:PIP_JP001o_0001_TDT0001',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT5M")
                                                             ),
                                                             JourneyPatternWaitTime(
-                                                                id="hde:PIP_JP001o_0001_TDT0002",
-                                                                version="any",
+                                                                id='hde:PIP_JP001o_0001_TDT0002',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0002"
+                                                                    version='any',
+                                                                    ref='hde:TDT0002'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -3217,51 +3217,51 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001o_0002",
-                                                    version="any",
+                                                    id='hde:PIP_JP001o_0002',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     is_wait_point=False
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:PIP_JP001o_0003",
-                                                    version="any",
+                                                    id='hde:PIP_JP001o_0003',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     ),
                                                     is_wait_point=False
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001o_0004_01",
-                                                    version="any",
+                                                    id='hde:PIP_JP001o_0004_01',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     is_wait_point=True,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:PIP_JP001o_0004-01",
-                                                                version="any",
+                                                                id='hde:PIP_JP001o_0004-01',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
                                                             JourneyPatternWaitTime(
-                                                                id="hde:PIP_JP001o_0004-02",
-                                                                version="any",
+                                                                id='hde:PIP_JP001o_0004-02',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0002"
+                                                                    version='any',
+                                                                    ref='hde:TDT0002'
                                                                 ),
                                                                 wait_time=XmlDuration("PT12M")
                                                             ),
@@ -3269,12 +3269,12 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001o_0004_02",
-                                                    version="any",
+                                                    id='hde:PIP_JP001o_0004_02',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     ),
                                                     is_wait_point=True
                                                 ),
@@ -3282,44 +3282,44 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:JP001i",
-                                        version="any",
+                                        id='hde:JP001i',
+                                        version='any',
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT001i"
+                                            version='any',
+                                            ref='hde:RT001i'
                                         ),
                                         timing_pattern_ref=TimingPatternRef(
-                                            version="any",
-                                            ref="hde:TP001i"
+                                            version='any',
+                                            ref='hde:TP001i'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001i_0001",
-                                                    version="any",
+                                                    id='hde:PIP_JP001i_0001',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     ),
                                                     is_wait_point=True,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP001i_01",
-                                                                version="any",
+                                                                id='hde:JP001i_01',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT5M")
                                                             ),
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP001i_02",
-                                                                version="any",
+                                                                id='hde:JP001i_02',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0002"
+                                                                    version='any',
+                                                                    ref='hde:TDT0002'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -3327,22 +3327,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001i_0002",
-                                                    version="any",
+                                                    id='hde:PIP_JP001i_0002',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     is_wait_point=False,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP001i_03",
-                                                                version="any",
+                                                                id='hde:JP001i_03',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -3350,22 +3350,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001i_0003",
-                                                    version="any",
+                                                    id='hde:PIP_JP001i_0003',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP001i_0004",
-                                                    version="any",
+                                                    id='hde:PIP_JP001i_0004',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     is_wait_point=True
                                                 ),
@@ -3373,44 +3373,44 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:JP002o",
-                                        version="any",
+                                        id='hde:JP002o',
+                                        version='any',
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT001o"
+                                            version='any',
+                                            ref='hde:RT001o'
                                         ),
                                         timing_pattern_ref=TimingPatternRef(
-                                            version="any",
-                                            ref="hde:TP002o"
+                                            version='any',
+                                            ref='hde:TP002o'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002o_0001",
-                                                    version="any",
+                                                    id='hde:PIP_JP002o_0001',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     is_wait_point=True,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP002o_01",
-                                                                version="any",
+                                                                id='hde:JP002o_01',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT5M")
                                                             ),
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP002o_02",
-                                                                version="any",
+                                                                id='hde:JP002o_02',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0002"
+                                                                    version='any',
+                                                                    ref='hde:TDT0002'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -3418,22 +3418,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002o_0002",
-                                                    version="any",
+                                                    id='hde:PIP_JP002o_0002',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_a"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_a'
                                                     ),
                                                     is_wait_point=False,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP002o_03",
-                                                                version="any",
+                                                                id='hde:JP002o_03',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -3441,32 +3441,32 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:PIP_JP002o_0003",
-                                                    version="any",
+                                                    id='hde:PIP_JP002o_0003',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="015",
-                                                        ref="hde:TPT0051"
+                                                        version='015',
+                                                        ref='hde:TPT0051'
                                                     ),
                                                     is_wait_point=False
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002o_0004",
-                                                    version="any",
+                                                    id='hde:PIP_JP002o_0004',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_a"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_a'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002o_0005",
-                                                    version="any",
+                                                    id='hde:PIP_JP002o_0005',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0005E"
+                                                        version='015',
+                                                        ref='hde:SSP0005E'
                                                     ),
                                                     is_wait_point=True
                                                 ),
@@ -3474,44 +3474,44 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:JP002i",
-                                        version="any",
+                                        id='hde:JP002i',
+                                        version='any',
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="hde:RT001i"
+                                            version='any',
+                                            ref='hde:RT001i'
                                         ),
                                         timing_pattern_ref=TimingPatternRef(
-                                            version="any",
-                                            ref="hde:TP002i"
+                                            version='any',
+                                            ref='hde:TP002i'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002i_0001",
-                                                    version="any",
+                                                    id='hde:PIP_JP002i_0001',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0004D"
+                                                        version='015',
+                                                        ref='hde:SSP0004D'
                                                     ),
                                                     is_wait_point=True,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP002i_01",
-                                                                version="any",
+                                                                id='hde:JP002i_01',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT5M")
                                                             ),
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP002i_02",
-                                                                version="any",
+                                                                id='hde:JP002i_02',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0002"
+                                                                    version='any',
+                                                                    ref='hde:TDT0002'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -3519,22 +3519,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002i_0002",
-                                                    version="any",
+                                                    id='hde:PIP_JP002i_0002',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="015",
-                                                        ref="hde:SSP0003C_b"
+                                                        version='015',
+                                                        ref='hde:SSP0003C_b'
                                                     ),
                                                     is_wait_point=False,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="hde:JP002i_03",
-                                                                version="any",
+                                                                id='hde:JP002i_03',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="hde:TDT0001"
+                                                                    version='any',
+                                                                    ref='hde:TDT0001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -3542,22 +3542,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002i_0003",
-                                                    version="any",
+                                                    id='hde:PIP_JP002i_0003',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0002B_b"
+                                                        version='032',
+                                                        ref='hde:SSP0002B_b'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:PIP_JP002i_0004",
-                                                    version="any",
+                                                    id='hde:PIP_JP002i_0004',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="032",
-                                                        ref="hde:SSP0001A"
+                                                        version='032',
+                                                        ref='hde:SSP0001A'
                                                     ),
                                                     is_wait_point=True
                                                 ),
@@ -3569,99 +3569,99 @@ obj = PublicationDelivery(
                             time_demand_types=TimeDemandTypesInFrameRelStructure(
                                 time_demand_type=[
                                     TimeDemandType(
-                                        id="hde:TDT0001",
-                                        version="any",
+                                        id='hde:TDT0001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Peak Time demand "
+                                            value='Peak Time demand '
                                         )
                                     ),
                                     TimeDemandType(
-                                        id="hde:TDT0002",
-                                        version="any",
+                                        id='hde:TDT0002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Time demand  off Peak"
+                                            value='Time demand  off Peak'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         ResourceFrame(
-                            id="mybus:SVC_01@resources",
+                            id='mybus:SVC_01@resources',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                             changed=XmlDateTime(2010, 5, 22, 10, 30, 51, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="1.0",
-                            derived_from_version_ref_attribute="004",
-                            responsibility_set_ref_attribute="mybus:RS_10",
+                            version='1.0',
+                            derived_from_version_ref_attribute='004',
+                            responsibility_set_ref_attribute='mybus:RS_10',
                             name=MultilingualString(
-                                value="Common resources "
+                                value='Common resources '
                             ),
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="mybus:RS_10",
+                                        id='mybus:RS_10',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="2.0",
+                                        version='2.0',
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="mybus:RS_10_01",
+                                                    id='mybus:RS_10_01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Org_TL001"
+                                                        version='any',
+                                                        ref='mybus:Org_TL001'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="hde:RS_22",
+                                        id='hde:RS_22',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="3.0",
+                                        version='3.0',
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="mybus:RS_22_02",
+                                                    id='mybus:RS_22_02',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="hde:Org_Hd001"
+                                                        version='any',
+                                                        ref='hde:Org_Hd001'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="gis:RS_31",
+                                        id='gis:RS_31',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="1.1",
+                                        version='1.1',
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="mybus:RS_22_31",
+                                                    id='mybus:RS_22_31',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        value="EXTERNAL",
-                                                        ref="gis:Org_Gis003"
+                                                        value='EXTERNAL',
+                                                        ref='gis:Org_Gis003'
                                                     )
                                                 ),
                                             ]
@@ -3672,33 +3672,33 @@ obj = PublicationDelivery(
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="mybus:Org_TL001",
-                                        version="any",
+                                        id='mybus:Org_TL001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Big red Bus Co"
+                                            value='Big red Bus Co'
                                         ),
                                         description=MultilingualString(
-                                            value="Responsible just  for STOP PLACEs"
+                                            value='Responsible just  for STOP PLACEs'
                                         )
                                     ),
                                     Authority(
-                                        id="hde:Org_Hd001",
-                                        version="any",
+                                        id='hde:Org_Hd001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Town Authority "
+                                            value='Town Authority '
                                         ),
                                         description=MultilingualString(
-                                            value="Responsible for network schedules"
+                                            value='Responsible for network schedules'
                                         )
                                     ),
                                     GeneralOrganisation(
-                                        id="gis:Org_G001",
-                                        version="any",
+                                        id='gis:Org_G001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Infrastucture  data Co "
+                                            value='Infrastucture  data Co '
                                         ),
                                         description=MultilingualString(
-                                            value="Responsible for Infrastructure elements"
+                                            value='Responsible for Infrastructure elements'
                                         )
                                     ),
                                 ]

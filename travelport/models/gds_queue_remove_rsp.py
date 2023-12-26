@@ -10,5 +10,6 @@ class GdsQueueRemoveRsp(BaseRsp1):
     """
     An empty response indicates success.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"

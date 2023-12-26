@@ -14,5 +14,5 @@ class TExtensionElements:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )

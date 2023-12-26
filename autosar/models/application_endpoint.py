@@ -20,10 +20,14 @@ from .provided_service_instance import ProvidedServiceInstance
 from .ref import Ref
 from .remoting_technology import RemotingTechnology
 from .rtp_tp import RtpTp
-from .serialization_technology_subtypes_enum import SerializationTechnologySubtypesEnum
+from .serialization_technology_subtypes_enum import (
+    SerializationTechnologySubtypesEnum,
+)
 from .short_name_fragment import ShortNameFragment
 from .tcp_tp import TcpTp
-from .tls_crypto_service_mapping_subtypes_enum import TlsCryptoServiceMappingSubtypesEnum
+from .tls_crypto_service_mapping_subtypes_enum import (
+    TlsCryptoServiceMappingSubtypesEnum,
+)
 from .udp_tp import UdpTp
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -108,6 +112,7 @@ class ApplicationEndpoint:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "APPLICATION-ENDPOINT"
 
@@ -118,15 +123,17 @@ class ApplicationEndpoint:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ApplicationEndpoint.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ApplicationEndpoint.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -134,7 +141,7 @@ class ApplicationEndpoint:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -142,7 +149,7 @@ class ApplicationEndpoint:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -150,7 +157,7 @@ class ApplicationEndpoint:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -158,7 +165,7 @@ class ApplicationEndpoint:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -166,7 +173,7 @@ class ApplicationEndpoint:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ApplicationEndpoint.Annotations"] = field(
         default=None,
@@ -174,15 +181,17 @@ class ApplicationEndpoint:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    consumed_service_instances: Optional["ApplicationEndpoint.ConsumedServiceInstances"] = field(
+    consumed_service_instances: Optional[
+        "ApplicationEndpoint.ConsumedServiceInstances"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSUMED-SERVICE-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     discovery_technology: Optional[DiscoveryTechnology] = field(
         default=None,
@@ -190,7 +199,7 @@ class ApplicationEndpoint:
             "name": "DISCOVERY-TECHNOLOGY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_of_connections: Optional[PositiveInteger] = field(
         default=None,
@@ -198,15 +207,17 @@ class ApplicationEndpoint:
             "name": "MAX-NUMBER-OF-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    network_endpoint_ref: Optional["ApplicationEndpoint.NetworkEndpointRef"] = field(
+    network_endpoint_ref: Optional[
+        "ApplicationEndpoint.NetworkEndpointRef"
+    ] = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     priority: Optional[PositiveInteger] = field(
         default=None,
@@ -214,15 +225,17 @@ class ApplicationEndpoint:
             "name": "PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    provided_service_instances: Optional["ApplicationEndpoint.ProvidedServiceInstances"] = field(
+    provided_service_instances: Optional[
+        "ApplicationEndpoint.ProvidedServiceInstances"
+    ] = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remoting_technology: Optional[RemotingTechnology] = field(
         default=None,
@@ -230,23 +243,27 @@ class ApplicationEndpoint:
             "name": "REMOTING-TECHNOLOGY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    serialization_technology_ref: Optional["ApplicationEndpoint.SerializationTechnologyRef"] = field(
+    serialization_technology_ref: Optional[
+        "ApplicationEndpoint.SerializationTechnologyRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SERIALIZATION-TECHNOLOGY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tls_crypto_mapping_ref: Optional["ApplicationEndpoint.TlsCryptoMappingRef"] = field(
+    tls_crypto_mapping_ref: Optional[
+        "ApplicationEndpoint.TlsCryptoMappingRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TLS-CRYPTO-MAPPING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_configuration: Optional["ApplicationEndpoint.TpConfiguration"] = field(
         default=None,
@@ -254,14 +271,14 @@ class ApplicationEndpoint:
             "name": "TP-CONFIGURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -269,14 +286,14 @@ class ApplicationEndpoint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -287,7 +304,7 @@ class ApplicationEndpoint:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -298,7 +315,7 @@ class ApplicationEndpoint:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -309,7 +326,7 @@ class ApplicationEndpoint:
                 "name": "CONSUMED-SERVICE-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -320,7 +337,7 @@ class ApplicationEndpoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -331,7 +348,7 @@ class ApplicationEndpoint:
                 "name": "PROVIDED-SERVICE-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -342,7 +359,7 @@ class ApplicationEndpoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -353,7 +370,7 @@ class ApplicationEndpoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -364,7 +381,7 @@ class ApplicationEndpoint:
                 "name": "GENERIC-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         http_tp: Optional[HttpTp] = field(
             default=None,
@@ -372,7 +389,7 @@ class ApplicationEndpoint:
                 "name": "HTTP-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ieee_1722_tp: Optional[Ieee1722Tp] = field(
             default=None,
@@ -380,7 +397,7 @@ class ApplicationEndpoint:
                 "name": "IEEE-1722-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rtp_tp: Optional[RtpTp] = field(
             default=None,
@@ -388,7 +405,7 @@ class ApplicationEndpoint:
                 "name": "RTP-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         tcp_tp: Optional[TcpTp] = field(
             default=None,
@@ -396,7 +413,7 @@ class ApplicationEndpoint:
                 "name": "TCP-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         udp_tp: Optional[UdpTp] = field(
             default=None,
@@ -404,5 +421,5 @@ class ApplicationEndpoint:
                 "name": "UDP-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

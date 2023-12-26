@@ -15,5 +15,5 @@ class UnionType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -13,6 +13,7 @@ class DiscoveryTechnologyEnumSimple(Enum):
         Sender/Receiver Messages.
     :cvar SSDP: Simple Service Discovery Protocol (SSDP)
     """
+
     BONJOUR = "BONJOUR"
     DLNA = "DLNA"
     SLP = "SLP"

@@ -21,6 +21,7 @@ class QueueSelector5:
         Date range number where the PNR should be queued. Possible values
         are 1,2,1-4 etc.
     """
+
     class Meta:
         name = "QueueSelector"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -30,19 +31,19 @@ class QueueSelector5:
         metadata={
             "name": "Queue",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     date_range: None | str = field(
         default=None,
         metadata={
             "name": "DateRange",
             "type": "Attribute",
-        }
+        },
     )

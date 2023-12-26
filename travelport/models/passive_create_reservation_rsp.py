@@ -17,5 +17,5 @@ class PassiveCreateReservationRsp(BaseRsp1):
             "name": "UniversalRecord",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -10,6 +10,7 @@ class WorkflowEnumType(Enum):
     These serve administrative purposes only. In the Frontent API you
     should only encounter 'PUBLISHED'.
     """
+
     FOR_PUBLICATION = "FOR PUBLICATION"
     FOR_REPUBLICATION = "FOR REPUBLICATION"
     PUBLISHED = "PUBLISHED"

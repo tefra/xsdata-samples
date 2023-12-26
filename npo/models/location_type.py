@@ -22,7 +22,7 @@ class LocationType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     av_attributes: None | AvAttributesType = field(
         default=None,
@@ -30,93 +30,93 @@ class LocationType:
             "name": "avAttributes",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     subtitles: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     offset: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     duration: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     type_value: None | LocationTypeEnum = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )
     platform: None | PlatformTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     urn: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
-        }
+        },
     )
     publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
-        }
+        },
     )
     publish_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
-        }
+        },
     )
     creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
-        }
+        },
     )
     last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
-        }
+        },
     )
     workflow: None | WorkflowEnumType = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

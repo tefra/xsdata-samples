@@ -15,5 +15,5 @@ class Inverse:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

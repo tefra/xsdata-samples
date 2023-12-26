@@ -8,6 +8,7 @@ class TypeRailSegmentInfo(Enum):
     """
     Extra for ExtraSegmentInfo and Vendor for VendorMessages.
     """
+
     EXTRA = "Extra"
     VENDOR = "Vendor"
     SERVICES = "Services"

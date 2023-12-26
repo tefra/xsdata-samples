@@ -15,6 +15,7 @@ class EcucAffectionEnumSimple(Enum):
     :cvar PC_AFFECTS_PB: A pre-compile time parameter affecting one or
         several post build time parameter(s).
     """
+
     LT_AFFECTS_PB = "LT-AFFECTS-PB"
     NO_AFFECT = "NO-AFFECT"
     PC_AFFECTS_LT = "PC-AFFECTS-LT"

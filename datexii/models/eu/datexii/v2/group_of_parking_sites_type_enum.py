@@ -16,6 +16,7 @@ class GroupOfParkingSitesTypeEnum(Enum):
         (e.g. number of spaces in total).
     :cvar INHABITANT_ZONE: This group is describing an inhabitant zone.
     """
+
     PARKING_AREA = "parkingArea"
     TRUCK_PARKING_PRIORITY_ZONE = "truckParkingPriorityZone"
     AGGREGATION_OF_INFORMATION = "aggregationOfInformation"

@@ -15,5 +15,5 @@ class Subset:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -25,6 +25,7 @@ class SearchAirLeg:
         support search by arrival time.
     air_leg_modifiers
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -35,7 +36,7 @@ class SearchAirLeg:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     search_destination: list[TypeSearchLocation1] = field(
         default_factory=list,
@@ -43,7 +44,7 @@ class SearchAirLeg:
             "name": "SearchDestination",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     search_dep_time: list[TypeFlexibleTimeSpec1] = field(
         default_factory=list,
@@ -51,7 +52,7 @@ class SearchAirLeg:
             "name": "SearchDepTime",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     search_arv_time: list[TypeTimeSpec1] = field(
         default_factory=list,
@@ -59,12 +60,12 @@ class SearchAirLeg:
             "name": "SearchArvTime",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_leg_modifiers: None | AirLegModifiers = field(
         default=None,
         metadata={
             "name": "AirLegModifiers",
             "type": "Element",
-        }
+        },
     )

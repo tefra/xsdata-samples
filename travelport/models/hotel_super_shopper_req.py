@@ -19,14 +19,14 @@ class HotelSuperShopperReq(BaseSearchReq1):
         metadata={
             "name": "HotelSearchLocation",
             "type": "Element",
-        }
+        },
     )
     hotel_search_modifiers: None | HotelSearchModifiers = field(
         default=None,
         metadata={
             "name": "HotelSearchModifiers",
             "type": "Element",
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -34,12 +34,12 @@ class HotelSuperShopperReq(BaseSearchReq1):
             "name": "HotelStay",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     quick_response: None | QuickResponse = field(
         default=None,
         metadata={
             "name": "QuickResponse",
             "type": "Element",
-        }
+        },
     )

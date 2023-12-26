@@ -30,6 +30,7 @@ class VehicleCharacteristicsExtended:
     :ivar vehicle_usage2: Usage types currently not supported in
         'VehicleUsageTypeEnum'.
     """
+
     emission_classification: List[str] = field(
         default_factory=list,
         metadata={
@@ -37,7 +38,7 @@ class VehicleCharacteristicsExtended:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     operation_free_of_emission: Optional[bool] = field(
         default=None,
@@ -45,7 +46,7 @@ class VehicleCharacteristicsExtended:
             "name": "operationFreeOfEmission",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     load_type2: Optional[LoadType2Enum] = field(
         default=None,
@@ -53,7 +54,7 @@ class VehicleCharacteristicsExtended:
             "name": "loadType2",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_type2: Optional[VehicleType2Enum] = field(
         default=None,
@@ -61,7 +62,7 @@ class VehicleCharacteristicsExtended:
             "name": "vehicleType2",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     fuel_type2: Optional[FuelType2Enum] = field(
         default=None,
@@ -69,7 +70,7 @@ class VehicleCharacteristicsExtended:
             "name": "fuelType2",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_usage2: Optional[VehicleUsage2Enum] = field(
         default=None,
@@ -77,5 +78,5 @@ class VehicleCharacteristicsExtended:
             "name": "vehicleUsage2",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

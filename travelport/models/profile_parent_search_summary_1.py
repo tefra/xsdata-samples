@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_entity_status_1 import TypeProfileEntityStatus1
+from travelport.models.type_profile_entity_status_1 import (
+    TypeProfileEntityStatus1,
+)
 from travelport.models.type_profile_type_3 import TypeProfileType3
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -30,6 +32,7 @@ class ProfileParentSearchSummary1:
     immediate_parent_ref
         System-defined, unique identifier for ImmediateParent Reference
     """
+
     class Meta:
         name = "ProfileParentSearchSummary"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -40,7 +43,7 @@ class ProfileParentSearchSummary1:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -48,7 +51,7 @@ class ProfileParentSearchSummary1:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provisioning_code: None | str = field(
         default=None,
@@ -57,7 +60,7 @@ class ProfileParentSearchSummary1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -67,7 +70,7 @@ class ProfileParentSearchSummary1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -76,7 +79,7 @@ class ProfileParentSearchSummary1:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     status: None | TypeProfileEntityStatus1 = field(
         default=None,
@@ -84,12 +87,12 @@ class ProfileParentSearchSummary1:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     immediate_parent_ref: None | str = field(
         default=None,
         metadata={
             "name": "ImmediateParentRef",
             "type": "Attribute",
-        }
+        },
     )

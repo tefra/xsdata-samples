@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_service_delivery_structure import AbstractServiceDeliveryStructure
+from .abstract_service_delivery_structure import (
+    AbstractServiceDeliveryStructure,
+)
 from .data_object_request import DataObjectRequest
 from .data_objects_rel_structure import DataObjectsRelStructure
 from .extensions_2 import Extensions2
@@ -16,7 +18,7 @@ class DataObjectDeliveryStructure(AbstractServiceDeliveryStructure):
             "name": "DataObjectRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     data_objects: Optional[DataObjectsRelStructure] = field(
         default=None,
@@ -24,7 +26,7 @@ class DataObjectDeliveryStructure(AbstractServiceDeliveryStructure):
             "name": "dataObjects",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     extensions: Optional[Extensions2] = field(
         default=None,
@@ -32,5 +34,5 @@ class DataObjectDeliveryStructure(AbstractServiceDeliveryStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

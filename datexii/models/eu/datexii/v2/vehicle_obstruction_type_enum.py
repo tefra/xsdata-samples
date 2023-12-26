@@ -70,6 +70,7 @@ class VehicleObstructionTypeEnum(Enum):
         that normally allowed which may cause traffic disruption.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ABANDONED_VEHICLE = "abandonedVehicle"
     ABNORMAL_LOAD = "abnormalLoad"
     BROKEN_DOWN_BUS = "brokenDownBus"

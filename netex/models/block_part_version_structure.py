@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_ref import BlockRef
 from .compound_block_ref import CompoundBlockRef
@@ -25,7 +25,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -33,9 +33,11 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    train_block_ref_or_block_ref: Optional[object] = field(
+    train_block_ref_or_block_ref: Optional[
+        Union[TrainBlockRef, BlockRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -51,9 +53,11 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -74,7 +78,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     compound_block_ref: Optional[CompoundBlockRef] = field(
         default=None,
@@ -82,9 +86,11 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "name": "CompoundBlockRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    journey_part_couple_ref_or_journey_parts: Optional[object] = field(
+    journey_part_couple_ref_or_journey_parts: Optional[
+        Union[JourneyPartCoupleRef, JourneyPartRefsRelStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -100,11 +106,11 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

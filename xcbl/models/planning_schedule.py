@@ -10,25 +10,29 @@ from xcbl.models.planning_schedule_response import (
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedPlanningDetail:
-    location_grouped_planning_detail: List[LocationGroupedPlanningDetail] = field(
+    location_grouped_planning_detail: List[
+        LocationGroupedPlanningDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "LocationGroupedPlanningDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedPlanningDetail:
-    material_grouped_planning_detail: List[MaterialGroupedPlanningDetail] = field(
+    material_grouped_planning_detail: List[
+        MaterialGroupedPlanningDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "MaterialGroupedPlanningDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -41,24 +45,28 @@ class PlanningSchedule:
             "required": True,
         }
     )
-    list_of_location_grouped_planning_detail: Optional[ListOfLocationGroupedPlanningDetail] = field(
+    list_of_location_grouped_planning_detail: Optional[
+        ListOfLocationGroupedPlanningDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfLocationGroupedPlanningDetail",
             "type": "Element",
-        }
+        },
     )
-    list_of_material_grouped_planning_detail: Optional[ListOfMaterialGroupedPlanningDetail] = field(
+    list_of_material_grouped_planning_detail: Optional[
+        ListOfMaterialGroupedPlanningDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfMaterialGroupedPlanningDetail",
             "type": "Element",
-        }
+        },
     )
     planning_schedule_summary: Optional[PlanningScheduleSummary] = field(
         default=None,
         metadata={
             "name": "PlanningScheduleSummary",
             "type": "Element",
-        }
+        },
     )

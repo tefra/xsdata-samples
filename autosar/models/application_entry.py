@@ -33,6 +33,7 @@ class ApplicationEntry:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "APPLICATION-ENTRY"
 
@@ -42,7 +43,7 @@ class ApplicationEntry:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     delay: Optional[TimeValue] = field(
         default=None,
@@ -50,7 +51,7 @@ class ApplicationEntry:
             "name": "DELAY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     position_in_table: Optional[Integer] = field(
         default=None,
@@ -58,22 +59,24 @@ class ApplicationEntry:
             "name": "POSITION-IN-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    frame_triggering_ref: Optional["ApplicationEntry.FrameTriggeringRef"] = field(
+    frame_triggering_ref: Optional[
+        "ApplicationEntry.FrameTriggeringRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -81,7 +84,7 @@ class ApplicationEntry:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -92,5 +95,5 @@ class ApplicationEntry:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -16,5 +16,5 @@ class MeasurementSiteRecordVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

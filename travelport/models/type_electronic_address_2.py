@@ -20,6 +20,7 @@ class TypeElectronicAddress2(TypeKeyElement2):
     format
         Type of address (HTML, PDF, Text, etc)
     """
+
     class Meta:
         name = "typeElectronicAddress"
 
@@ -31,7 +32,7 @@ class TypeElectronicAddress2(TypeKeyElement2):
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -41,12 +42,12 @@ class TypeElectronicAddress2(TypeKeyElement2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     format: None | TypeEmailFormat2 = field(
         default=None,
         metadata={
             "name": "Format",
             "type": "Attribute",
-        }
+        },
     )

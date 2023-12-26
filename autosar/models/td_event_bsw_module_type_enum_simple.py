@@ -10,5 +10,6 @@ class TdEventBswModuleTypeEnumSimple(Enum):
     :cvar BSW_M_ENTRY_CALLED: A point in time where the associated
         BswModuleEntry has been called.
     """
+
     BSW_M_ENTRY_CALL_RETURNED = "BSW-M-ENTRY-CALL-RETURNED"
     BSW_M_ENTRY_CALLED = "BSW-M-ENTRY-CALLED"

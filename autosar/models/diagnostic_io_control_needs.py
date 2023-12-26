@@ -9,7 +9,9 @@ from .boolean import Boolean
 from .category_string import CategoryString
 from .diag_requirement_id_string import DiagRequirementIdString
 from .diagnostic_audience_enum import DiagnosticAudienceEnum
-from .diagnostic_value_needs_subtypes_enum import DiagnosticValueNeedsSubtypesEnum
+from .diagnostic_value_needs_subtypes_enum import (
+    DiagnosticValueNeedsSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -106,6 +108,7 @@ class DiagnosticIoControlNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-IO-CONTROL-NEEDS"
 
@@ -116,15 +119,17 @@ class DiagnosticIoControlNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticIoControlNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticIoControlNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -132,7 +137,7 @@ class DiagnosticIoControlNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -140,7 +145,7 @@ class DiagnosticIoControlNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -148,7 +153,7 @@ class DiagnosticIoControlNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -156,7 +161,7 @@ class DiagnosticIoControlNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -164,7 +169,7 @@ class DiagnosticIoControlNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticIoControlNeeds.Annotations"] = field(
         default=None,
@@ -172,7 +177,7 @@ class DiagnosticIoControlNeeds:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     audiences: Optional["DiagnosticIoControlNeeds.Audiences"] = field(
         default=None,
@@ -180,7 +185,7 @@ class DiagnosticIoControlNeeds:
             "name": "AUDIENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diag_requirement: Optional[DiagRequirementIdString] = field(
         default=None,
@@ -188,7 +193,7 @@ class DiagnosticIoControlNeeds:
             "name": "DIAG-REQUIREMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_access_level: Optional[PositiveInteger] = field(
         default=None,
@@ -196,15 +201,17 @@ class DiagnosticIoControlNeeds:
             "name": "SECURITY-ACCESS-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    current_value_ref: Optional["DiagnosticIoControlNeeds.CurrentValueRef"] = field(
+    current_value_ref: Optional[
+        "DiagnosticIoControlNeeds.CurrentValueRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CURRENT-VALUE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     did_number: Optional[PositiveInteger] = field(
         default=None,
@@ -212,7 +219,7 @@ class DiagnosticIoControlNeeds:
             "name": "DID-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freeze_current_state_supported: Optional[Boolean] = field(
         default=None,
@@ -220,7 +227,7 @@ class DiagnosticIoControlNeeds:
             "name": "FREEZE-CURRENT-STATE-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     reset_to_default_supported: Optional[Boolean] = field(
         default=None,
@@ -228,7 +235,7 @@ class DiagnosticIoControlNeeds:
             "name": "RESET-TO-DEFAULT-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_term_adjustment_supported: Optional[Boolean] = field(
         default=None,
@@ -236,14 +243,14 @@ class DiagnosticIoControlNeeds:
             "name": "SHORT-TERM-ADJUSTMENT-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -251,14 +258,14 @@ class DiagnosticIoControlNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -269,7 +276,7 @@ class DiagnosticIoControlNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -280,7 +287,7 @@ class DiagnosticIoControlNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -291,13 +298,14 @@ class DiagnosticIoControlNeeds:
             documentation but also subsequent audience specific
             implementation.
         """
+
         audience: List[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -308,5 +316,5 @@ class DiagnosticIoControlNeeds:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

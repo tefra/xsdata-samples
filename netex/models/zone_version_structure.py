@@ -20,7 +20,7 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     centroid: Optional[SimplePointVersionStructure] = field(
         default=None,
@@ -28,7 +28,7 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
             "name": "Centroid",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     polygon: Optional[Polygon] = field(
         default=None,
@@ -36,14 +36,14 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
             "name": "Polygon",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-        }
+        },
     )
     projections: Optional[ProjectionsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parent_zone_ref: Optional[ZoneRefStructure] = field(
         default=None,
@@ -51,5 +51,5 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
             "name": "ParentZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

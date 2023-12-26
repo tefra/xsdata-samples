@@ -13,7 +13,9 @@ from .identifier import Identifier
 from .invert_condition import InvertCondition
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .multiplicity_restriction_with_severity import MultiplicityRestrictionWithSeverity
+from .multiplicity_restriction_with_severity import (
+    MultiplicityRestrictionWithSeverity,
+)
 from .primitive_attribute_condition import PrimitiveAttributeCondition
 from .primitive_attribute_tailoring import PrimitiveAttributeTailoring
 from .reference_condition import ReferenceCondition
@@ -21,8 +23,12 @@ from .sdg_tailoring import SdgTailoring
 from .short_name_fragment import ShortNameFragment
 from .string import String
 from .textual_condition import TextualCondition
-from .unresolved_reference_restriction_with_severity import UnresolvedReferenceRestrictionWithSeverity
-from .variation_restriction_with_severity import VariationRestrictionWithSeverity
+from .unresolved_reference_restriction_with_severity import (
+    UnresolvedReferenceRestrictionWithSeverity,
+)
+from .variation_restriction_with_severity import (
+    VariationRestrictionWithSeverity,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -103,6 +109,7 @@ class ConcreteClassTailoring:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONCRETE-CLASS-TAILORING"
 
@@ -113,15 +120,17 @@ class ConcreteClassTailoring:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ConcreteClassTailoring.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ConcreteClassTailoring.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -129,7 +138,7 @@ class ConcreteClassTailoring:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -137,7 +146,7 @@ class ConcreteClassTailoring:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -145,7 +154,7 @@ class ConcreteClassTailoring:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -153,7 +162,7 @@ class ConcreteClassTailoring:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -161,7 +170,7 @@ class ConcreteClassTailoring:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ConcreteClassTailoring.Annotations"] = field(
         default=None,
@@ -169,7 +178,7 @@ class ConcreteClassTailoring:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alternative_name: Optional[String] = field(
         default=None,
@@ -177,7 +186,7 @@ class ConcreteClassTailoring:
             "name": "ALTERNATIVE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     in_scope: Optional[Boolean] = field(
         default=None,
@@ -185,15 +194,17 @@ class ConcreteClassTailoring:
             "name": "IN-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = field(
+    multiplicity_restriction: Optional[
+        MultiplicityRestrictionWithSeverity
+    ] = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -201,7 +212,7 @@ class ConcreteClassTailoring:
             "name": "VARIATION-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     class_contents: Optional["ConcreteClassTailoring.ClassContents"] = field(
         default=None,
@@ -209,7 +220,7 @@ class ConcreteClassTailoring:
             "name": "CLASS-CONTENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     validation_root: Optional[Boolean] = field(
         default=None,
@@ -217,14 +228,14 @@ class ConcreteClassTailoring:
             "name": "VALIDATION-ROOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -232,14 +243,14 @@ class ConcreteClassTailoring:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -250,7 +261,7 @@ class ConcreteClassTailoring:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -261,7 +272,7 @@ class ConcreteClassTailoring:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -272,7 +283,7 @@ class ConcreteClassTailoring:
                 "name": "CLASS-CONTENT-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -346,6 +357,7 @@ class AggregationTailoring:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "AGGREGATION-TAILORING"
 
@@ -356,15 +368,17 @@ class AggregationTailoring:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["AggregationTailoring.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "AggregationTailoring.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -372,7 +386,7 @@ class AggregationTailoring:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -380,7 +394,7 @@ class AggregationTailoring:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -388,7 +402,7 @@ class AggregationTailoring:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -396,7 +410,7 @@ class AggregationTailoring:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -404,7 +418,7 @@ class AggregationTailoring:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["AggregationTailoring.Annotations"] = field(
         default=None,
@@ -412,7 +426,7 @@ class AggregationTailoring:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alternative_name: Optional[String] = field(
         default=None,
@@ -420,7 +434,7 @@ class AggregationTailoring:
             "name": "ALTERNATIVE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     in_scope: Optional[Boolean] = field(
         default=None,
@@ -428,15 +442,17 @@ class AggregationTailoring:
             "name": "IN-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = field(
+    multiplicity_restriction: Optional[
+        MultiplicityRestrictionWithSeverity
+    ] = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -444,7 +460,7 @@ class AggregationTailoring:
             "name": "VARIATION-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_tailorings: Optional["AggregationTailoring.TypeTailorings"] = field(
         default=None,
@@ -452,14 +468,14 @@ class AggregationTailoring:
             "name": "TYPE-TAILORINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -467,14 +483,14 @@ class AggregationTailoring:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -485,7 +501,7 @@ class AggregationTailoring:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -496,7 +512,7 @@ class AggregationTailoring:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -507,7 +523,7 @@ class AggregationTailoring:
                 "name": "ABSTRACT-CLASS-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         concrete_class_tailoring: List[ConcreteClassTailoring] = field(
             default_factory=list,
@@ -515,7 +531,7 @@ class AggregationTailoring:
                 "name": "CONCRETE-CLASS-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -591,6 +607,7 @@ class ReferenceTailoring:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REFERENCE-TAILORING"
 
@@ -601,15 +618,17 @@ class ReferenceTailoring:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ReferenceTailoring.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ReferenceTailoring.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -617,7 +636,7 @@ class ReferenceTailoring:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -625,7 +644,7 @@ class ReferenceTailoring:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -633,7 +652,7 @@ class ReferenceTailoring:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -641,7 +660,7 @@ class ReferenceTailoring:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -649,7 +668,7 @@ class ReferenceTailoring:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ReferenceTailoring.Annotations"] = field(
         default=None,
@@ -657,7 +676,7 @@ class ReferenceTailoring:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alternative_name: Optional[String] = field(
         default=None,
@@ -665,7 +684,7 @@ class ReferenceTailoring:
             "name": "ALTERNATIVE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     in_scope: Optional[Boolean] = field(
         default=None,
@@ -673,15 +692,17 @@ class ReferenceTailoring:
             "name": "IN-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = field(
+    multiplicity_restriction: Optional[
+        MultiplicityRestrictionWithSeverity
+    ] = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -689,7 +710,7 @@ class ReferenceTailoring:
             "name": "VARIATION-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_tailorings: Optional["ReferenceTailoring.TypeTailorings"] = field(
         default=None,
@@ -697,22 +718,24 @@ class ReferenceTailoring:
             "name": "TYPE-TAILORINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    unresolved_reference_restriction: Optional[UnresolvedReferenceRestrictionWithSeverity] = field(
+    unresolved_reference_restriction: Optional[
+        UnresolvedReferenceRestrictionWithSeverity
+    ] = field(
         default=None,
         metadata={
             "name": "UNRESOLVED-REFERENCE-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -720,14 +743,14 @@ class ReferenceTailoring:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -738,7 +761,7 @@ class ReferenceTailoring:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -749,7 +772,7 @@ class ReferenceTailoring:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -760,7 +783,7 @@ class ReferenceTailoring:
                 "name": "ABSTRACT-CLASS-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         concrete_class_tailoring: List[ConcreteClassTailoring] = field(
             default_factory=list,
@@ -768,7 +791,7 @@ class ReferenceTailoring:
                 "name": "CONCRETE-CLASS-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -840,6 +863,7 @@ class ClassContentConditional:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLASS-CONTENT-CONDITIONAL"
 
@@ -850,15 +874,17 @@ class ClassContentConditional:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ClassContentConditional.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ClassContentConditional.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -866,7 +892,7 @@ class ClassContentConditional:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -874,7 +900,7 @@ class ClassContentConditional:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -882,7 +908,7 @@ class ClassContentConditional:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -890,7 +916,7 @@ class ClassContentConditional:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -898,7 +924,7 @@ class ClassContentConditional:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ClassContentConditional.Annotations"] = field(
         default=None,
@@ -906,7 +932,7 @@ class ClassContentConditional:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     condition: Optional["ClassContentConditional.Condition"] = field(
         default=None,
@@ -914,23 +940,27 @@ class ClassContentConditional:
             "name": "CONDITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    attribute_tailorings: Optional["ClassContentConditional.AttributeTailorings"] = field(
+    attribute_tailorings: Optional[
+        "ClassContentConditional.AttributeTailorings"
+    ] = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-TAILORINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    constraint_tailorings: Optional["ClassContentConditional.ConstraintTailorings"] = field(
+    constraint_tailorings: Optional[
+        "ClassContentConditional.ConstraintTailorings"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSTRAINT-TAILORINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdg_tailorings: Optional["ClassContentConditional.SdgTailorings"] = field(
         default=None,
@@ -938,14 +968,14 @@ class ClassContentConditional:
             "name": "SDG-TAILORINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -953,14 +983,14 @@ class ClassContentConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -971,7 +1001,7 @@ class ClassContentConditional:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -982,7 +1012,7 @@ class ClassContentConditional:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -993,7 +1023,7 @@ class ClassContentConditional:
                 "name": "AGGREGATION-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         invert_condition: Optional[InvertCondition] = field(
             default=None,
@@ -1001,15 +1031,17 @@ class ClassContentConditional:
                 "name": "INVERT-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        primitive_attribute_condition: Optional[PrimitiveAttributeCondition] = field(
+        primitive_attribute_condition: Optional[
+            PrimitiveAttributeCondition
+        ] = field(
             default=None,
             metadata={
                 "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         reference_condition: Optional[ReferenceCondition] = field(
             default=None,
@@ -1017,7 +1049,7 @@ class ClassContentConditional:
                 "name": "REFERENCE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         textual_condition: Optional[TextualCondition] = field(
             default=None,
@@ -1025,7 +1057,7 @@ class ClassContentConditional:
                 "name": "TEXTUAL-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1036,15 +1068,17 @@ class ClassContentConditional:
                 "name": "AGGREGATION-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        primitive_attribute_tailoring: List[PrimitiveAttributeTailoring] = field(
+        primitive_attribute_tailoring: List[
+            PrimitiveAttributeTailoring
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PRIMITIVE-ATTRIBUTE-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         reference_tailoring: List[ReferenceTailoring] = field(
             default_factory=list,
@@ -1052,7 +1086,7 @@ class ClassContentConditional:
                 "name": "REFERENCE-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1063,7 +1097,7 @@ class ClassContentConditional:
                 "name": "CONSTRAINT-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1074,7 +1108,7 @@ class ClassContentConditional:
                 "name": "SDG-TAILORING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -1146,6 +1180,7 @@ class AbstractClassTailoring:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ABSTRACT-CLASS-TAILORING"
 
@@ -1156,15 +1191,17 @@ class AbstractClassTailoring:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["AbstractClassTailoring.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "AbstractClassTailoring.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -1172,7 +1209,7 @@ class AbstractClassTailoring:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -1180,7 +1217,7 @@ class AbstractClassTailoring:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -1188,7 +1225,7 @@ class AbstractClassTailoring:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -1196,7 +1233,7 @@ class AbstractClassTailoring:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -1204,7 +1241,7 @@ class AbstractClassTailoring:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["AbstractClassTailoring.Annotations"] = field(
         default=None,
@@ -1212,7 +1249,7 @@ class AbstractClassTailoring:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alternative_name: Optional[String] = field(
         default=None,
@@ -1220,15 +1257,17 @@ class AbstractClassTailoring:
             "name": "ALTERNATIVE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = field(
+    multiplicity_restriction: Optional[
+        MultiplicityRestrictionWithSeverity
+    ] = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
         default=None,
@@ -1236,7 +1275,7 @@ class AbstractClassTailoring:
             "name": "VARIATION-RESTRICTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     class_contents: Optional["AbstractClassTailoring.ClassContents"] = field(
         default=None,
@@ -1244,14 +1283,14 @@ class AbstractClassTailoring:
             "name": "CLASS-CONTENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -1259,14 +1298,14 @@ class AbstractClassTailoring:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1277,7 +1316,7 @@ class AbstractClassTailoring:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1288,7 +1327,7 @@ class AbstractClassTailoring:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1299,5 +1338,5 @@ class AbstractClassTailoring:
                 "name": "CLASS-CONTENT-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

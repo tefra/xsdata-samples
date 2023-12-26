@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .authority_ref import AuthorityRef
 from .general_organisation_ref import GeneralOrganisationRef
-from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .installed_equipment_version_structure import (
+    InstalledEquipmentVersionStructure,
+)
 from .management_agent_ref import ManagementAgentRef
 from .operator_ref import OperatorRef
 from .organisation_ref import OrganisationRef
@@ -26,9 +28,21 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailConsortiumRef,
+            AuthorityRef,
+            OperatorRef,
+            GeneralOrganisationRef,
+            ManagementAgentRef,
+            ServicedOrganisationRef,
+            TravelAgentRef,
+            OtherOrganisationRef,
+            OrganisationRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +93,7 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_retail_device_ref: Optional[TypeOfRetailDeviceRef] = field(
         default=None,
@@ -87,5 +101,5 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
             "name": "TypeOfRetailDeviceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

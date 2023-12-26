@@ -1,13 +1,17 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from .capping_rule_price_ref import CappingRulePriceRef
 from .cell_ref import CellRef
 from .controllable_element_price_ref import ControllableElementPriceRef
-from .customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
+from .customer_purchase_package_price_ref import (
+    CustomerPurchasePackagePriceRef,
+)
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
-from .fare_contract_entry_version_structure import FareContractEntryVersionStructure
+from .fare_contract_entry_version_structure import (
+    FareContractEntryVersionStructure,
+)
 from .fare_price_ref import FarePriceRef
 from .fare_product_price_ref import FareProductPriceRef
 from .fare_request_ref import FareRequestRef
@@ -18,7 +22,9 @@ from .geographical_unit_price_ref import GeographicalUnitPriceRef
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_price_ref import ParkingPriceRef
 from .payment_method_enumeration import PaymentMethodEnumeration
-from .price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
+from .price_rule_step_results_rel_structure import (
+    PriceRuleStepResultsRelStructure,
+)
 from .price_unit_ref import PriceUnitRef
 from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
 from .repeated_trip_fare_request_ref import RepeatedTripFareRequestRef
@@ -27,7 +33,9 @@ from .sales_transaction_ref import SalesTransactionRef
 from .schedule_request_ref import ScheduleRequestRef
 from .series_constraint_price_ref import SeriesConstraintPriceRef
 from .single_trip_fare_request_ref import SingleTripFareRequestRef
-from .specific_parameter_assignment_version_structure import SpecificParameterAssignmentsRelStructure
+from .specific_parameter_assignment_version_structure import (
+    SpecificParameterAssignmentsRelStructure,
+)
 from .stop_event_request_ref import StopEventRequestRef
 from .stop_finder_request_ref import StopFinderRequestRef
 from .time_interval_price_ref import TimeIntervalPriceRef
@@ -52,9 +60,19 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "SalesTransactionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RepeatedTripFareRequestRef,
+            SingleTripFareRequestRef,
+            FareRequestRef,
+            StopFinderRequestRef,
+            StopEventRequestRef,
+            ScheduleRequestRef,
+            TripPlanRequestRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -95,9 +113,31 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            CustomerPurchasePackagePriceRef,
+            ParkingPriceRef,
+            TimeIntervalPriceRef,
+            TimeUnitPriceRef,
+            QualityStructureFactorPriceRef,
+            ControllableElementPriceRef,
+            ValidableElementPriceRef,
+            GeographicalIntervalPriceRef,
+            GeographicalUnitPriceRef,
+            UsageParameterPriceRef,
+            SalesOfferPackagePriceRef,
+            DistanceMatrixElementPriceRef,
+            FareStructureElementPriceRef,
+            FulfilmentMethodPriceRef,
+            SeriesConstraintPriceRef,
+            CappingRulePriceRef,
+            FareProductPriceRef,
+            FarePriceRef,
+            CellRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -198,7 +238,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     amount: Optional[Decimal] = field(
         default=None,
@@ -206,7 +246,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "Amount",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     currency: Optional[str] = field(
         default=None,
@@ -217,7 +257,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "min_length": 3,
             "max_length": 3,
             "pattern": r"[A-Z][A-Z][A-Z]",
-        }
+        },
     )
     price_unit_ref: Optional[PriceUnitRef] = field(
         default=None,
@@ -225,7 +265,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "PriceUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     units: Optional[Decimal] = field(
         default=None,
@@ -233,7 +273,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "Units",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rule_step_results: Optional[PriceRuleStepResultsRelStructure] = field(
         default=None,
@@ -241,7 +281,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "ruleStepResults",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_method: Optional[PaymentMethodEnumeration] = field(
         default=None,
@@ -249,7 +289,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "PaymentMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_payment_method_ref: Optional[TypeOfPaymentMethodRef] = field(
         default=None,
@@ -257,7 +297,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "TypeOfPaymentMethodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_of_validity: Optional[XmlDateTime] = field(
         default=None,
@@ -265,7 +305,7 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "StartOfValidity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_of_validity: Optional[XmlDateTime] = field(
         default=None,
@@ -273,23 +313,27 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "EndOfValidity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    travel_specification_summary_view: Optional[TravelSpecificationSummaryView] = field(
+    travel_specification_summary_view: Optional[
+        TravelSpecificationSummaryView
+    ] = field(
         default=None,
         metadata={
             "name": "TravelSpecificationSummaryView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    specific_parameter_assignments: Optional[SpecificParameterAssignmentsRelStructure] = field(
+    specific_parameter_assignments: Optional[
+        SpecificParameterAssignmentsRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "specificParameterAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -297,5 +341,5 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

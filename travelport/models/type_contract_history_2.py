@@ -38,6 +38,7 @@ class TypeContractHistory2(TypeKeyElement2):
     priority_order
         Priority order associated with this Contract.
     """
+
     class Meta:
         name = "typeContractHistory"
 
@@ -47,14 +48,14 @@ class TypeContractHistory2(TypeKeyElement2):
             "name": "Supplier",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     supplier_type: None | TypeSupplierType2 = field(
         default=None,
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-        }
+        },
     )
     provider: None | str = field(
         default=None,
@@ -63,21 +64,21 @@ class TypeContractHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     expiration_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
-        }
+        },
     )
     discount_percentage: None | str = field(
         default=None,
@@ -85,14 +86,14 @@ class TypeContractHistory2(TypeKeyElement2):
             "name": "DiscountPercentage",
             "type": "Attribute",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     discount_value: None | str = field(
         default=None,
         metadata={
             "name": "DiscountValue",
             "type": "Attribute",
-        }
+        },
     )
     supplier_contract_number: None | str = field(
         default=None,
@@ -101,7 +102,7 @@ class TypeContractHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     promotional_designator_name: None | str = field(
         default=None,
@@ -110,7 +111,7 @@ class TypeContractHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -119,7 +120,7 @@ class TypeContractHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -128,5 +129,5 @@ class TypeContractHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

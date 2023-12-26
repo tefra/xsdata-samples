@@ -17,7 +17,7 @@ class UimetaDataRetrievePortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +28,16 @@ class UimetaDataRetrievePortTypeServiceOutput:
                 "name": "UIMetaDataRetrieveRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            }
+            },
         )
-        fault: None | UimetaDataRetrievePortTypeServiceOutput.Body.Fault = field(
-            default=None,
-            metadata={
-                "name": "Fault",
-                "type": "Element",
-            }
+        fault: None | UimetaDataRetrievePortTypeServiceOutput.Body.Fault = (
+            field(
+                default=None,
+                metadata={
+                    "name": "Fault",
+                    "type": "Element",
+                },
+            )
         )
 
         @dataclass
@@ -45,28 +47,28 @@ class UimetaDataRetrievePortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | UimetaDataRetrievePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +79,5 @@ class UimetaDataRetrievePortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

@@ -16,14 +16,14 @@ class TopicStructure:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     sources: Optional[DataSourcesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     codespace_ref: Optional[CodespaceRef] = field(
         default=None,
@@ -31,13 +31,15 @@ class TopicStructure:
             "name": "CodespaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    responsibility_role_assignment: Optional[ResponsibilityRoleAssignment] = field(
+    responsibility_role_assignment: Optional[
+        ResponsibilityRoleAssignment
+    ] = field(
         default=None,
         metadata={
             "name": "ResponsibilityRoleAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

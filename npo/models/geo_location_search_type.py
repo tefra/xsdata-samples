@@ -16,30 +16,30 @@ class GeoLocationSearchType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     role: None | GeoRoleType = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     gtaa_uri: None | str = field(
         default=None,
         metadata={
             "name": "gtaaUri",
             "type": "Attribute",
-        }
+        },
     )
     match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

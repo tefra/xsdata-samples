@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .ticketing_service_version_structure import TicketingServiceVersionStructure
+from .ticketing_service_version_structure import (
+    TicketingServiceVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -19,6 +19,7 @@ class TypeSearchAccountingReference2:
     value
         The number or alphanumeric code for an employer reference.
     """
+
     class Meta:
         name = "typeSearchAccountingReference"
 
@@ -30,7 +31,7 @@ class TypeSearchAccountingReference2:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -38,5 +39,5 @@ class TypeSearchAccountingReference2:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

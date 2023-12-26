@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.system_ping_port_type_service_input import SystemPingPortTypeServiceInput
-from travelport.models.system_ping_port_type_service_output import SystemPingPortTypeServiceOutput
+from travelport.models.system_ping_port_type_service_input import (
+    SystemPingPortTypeServiceInput,
+)
+from travelport.models.system_ping_port_type_service_output import (
+    SystemPingPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

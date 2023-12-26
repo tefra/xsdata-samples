@@ -25,6 +25,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
         AUTOSAR tools to manage the timestamp.
     :ivar content:
     """
+
     class Meta:
         name = "FM-CONDITION-BY-FEATURES-AND-SW-SYSTEMCONSTS"
 
@@ -33,7 +34,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -41,7 +42,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -52,21 +53,27 @@ class FmConditionByFeaturesAndSwSystemconsts:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type["FmConditionByFeaturesAndSwSystemconsts.SyscStringRef"],
+                    "type": Type[
+                        "FmConditionByFeaturesAndSwSystemconsts.SyscStringRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type["FmConditionByFeaturesAndSwSystemconsts.SyscRef"],
+                    "type": Type[
+                        "FmConditionByFeaturesAndSwSystemconsts.SyscRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "FEATURE-REF",
-                    "type": Type["FmConditionByFeaturesAndSwSystemconsts.FeatureRef"],
+                    "type": Type[
+                        "FmConditionByFeaturesAndSwSystemconsts.FeatureRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -77,7 +84,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -88,7 +95,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -99,5 +106,5 @@ class FmConditionByFeaturesAndSwSystemconsts:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

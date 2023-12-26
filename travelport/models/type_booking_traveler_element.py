@@ -8,6 +8,7 @@ class TypeBookingTravelerElement(Enum):
     """
     Defines the list of available data types for modifications.
     """
+
     BOOKING_TRAVELER = "BookingTraveler"
     PHONE_NUMBER = "PhoneNumber"
     EMAIL = "Email"

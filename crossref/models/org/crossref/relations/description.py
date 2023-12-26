@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.relations.description_language import DescriptionLanguage
+from crossref.models.org.crossref.relations.description_language import (
+    DescriptionLanguage,
+)
 from crossref.models.org.crossref.relations.xref_faces import (
     B,
     Em,
@@ -23,6 +25,7 @@ class Description:
     """
     A narrative description of the relationship target item.
     """
+
     class Meta:
         name = "description"
         namespace = "http://www.crossref.org/relations.xsd"
@@ -31,7 +34,7 @@ class Description:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -85,5 +88,5 @@ class Description:
                     "type": Font,
                 },
             ),
-        }
+        },
     )

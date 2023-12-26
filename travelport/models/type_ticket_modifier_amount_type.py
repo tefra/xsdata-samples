@@ -15,6 +15,7 @@ class TypeTicketModifierAmountType:
     amount
         Amount associated with a ticketing modifier
     """
+
     class Meta:
         name = "typeTicketModifierAmountType"
 
@@ -24,5 +25,5 @@ class TypeTicketModifierAmountType:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

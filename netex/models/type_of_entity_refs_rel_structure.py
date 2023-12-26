@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .all_distribution_channels_ref import AllDistributionChannelsRef
 from .customer_account_status_ref import CustomerAccountStatusRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -25,7 +25,9 @@ from .type_of_machine_readability_ref import TypeOfMachineReadabilityRef
 from .type_of_notice_ref import TypeOfNoticeRef
 from .type_of_organisation_part_ref import TypeOfOrganisationPartRef
 from .type_of_organisation_ref import TypeOfOrganisationRef
-from .type_of_passenger_information_equipment_ref import TypeOfPassengerInformationEquipmentRef
+from .type_of_passenger_information_equipment_ref import (
+    TypeOfPassengerInformationEquipmentRef,
+)
 from .type_of_place_ref import TypeOfPlaceRef
 from .type_of_point_ref import TypeOfPointRef
 from .type_of_pricing_rule_ref import TypeOfPricingRuleRef
@@ -50,7 +52,50 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfEntityRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            TypeOfRetailDeviceRef,
+            CustomerAccountStatusRef,
+            TypeOfCustomerAccountRef,
+            TypeOfFareContractEntryRef,
+            TypeOfFareContractRef,
+            TypeOfAccessRightAssignmentRef,
+            TypeOfSalesOfferPackageRef,
+            TypeOfFareStructureElementRef,
+            TypeOfTariffRef,
+            AllDistributionChannelsRef,
+            TypeOfMachineReadabilityRef,
+            TypeOfTravelDocumentRef,
+            TypeOfFareProductRef,
+            TypeOfFareStructureFactorRef,
+            TypeOfPricingRuleRef,
+            TypeOfFlexibleServiceRef,
+            TypeOfPassengerInformationEquipmentRef,
+            TypeOfServiceFeatureRef,
+            TypeOfCongestionRef,
+            TypeOfTimeDemandTypeRef,
+            TypeOfJourneyPatternRef,
+            TypeOfSecurityListRef,
+            TypeOfDeliveryVariantRef,
+            TypeOfNoticeRef,
+            TypeOfServiceRef,
+            TypeOfFacilityRef,
+            TypeOfEquipmentRef,
+            TypeOfProjectionRef,
+            TypeOfFeatureRef,
+            TypeOfLinkSequenceRef,
+            TypeOfOrganisationPartRef,
+            TypeOfOrganisationRef,
+            TypeOfPlaceRef,
+            TypeOfTransferRef,
+            TypeOfZoneRef,
+            TypeOfLinkRef,
+            TypeOfPointRef,
+            TypeOfLineRef,
+            TypeOfValidityRef,
+            TypeOfFrameRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -256,5 +301,5 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

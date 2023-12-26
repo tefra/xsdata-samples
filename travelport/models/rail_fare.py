@@ -77,6 +77,7 @@ class RailFare:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -86,7 +87,7 @@ class RailFare:
             "name": "RailFareNoteRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_fare_id: list[RailFareId] = field(
         default_factory=list,
@@ -94,7 +95,7 @@ class RailFare:
             "name": "RailFareID",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_fare_idref: list[RailFareIdref] = field(
         default_factory=list,
@@ -102,7 +103,7 @@ class RailFare:
             "name": "RailFareIDRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_validity: list[FareValidity] = field(
         default_factory=list,
@@ -110,7 +111,7 @@ class RailFare:
             "name": "FareValidity",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     host_token: None | HostToken1 = field(
         default=None,
@@ -118,7 +119,7 @@ class RailFare:
             "name": "HostToken",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     ful_fillment_type: list[str] = field(
         default_factory=list,
@@ -128,7 +129,7 @@ class RailFare:
             "max_occurs": 999,
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     rail_fare_component: list[RailFareComponent] = field(
         default_factory=list,
@@ -136,7 +137,7 @@ class RailFare:
             "name": "RailFareComponent",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -144,14 +145,14 @@ class RailFare:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     fare_basis: None | str = field(
         default=None,
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-        }
+        },
     )
     cabin_class: None | str = field(
         default=None,
@@ -161,7 +162,7 @@ class RailFare:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     passenger_type_code: None | str = field(
         default=None,
@@ -170,7 +171,7 @@ class RailFare:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -179,7 +180,7 @@ class RailFare:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -188,7 +189,7 @@ class RailFare:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     effective_date: None | str = field(
         default=None,
@@ -196,28 +197,28 @@ class RailFare:
             "name": "EffectiveDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     route_description: None | str = field(
         default=None,
         metadata={
             "name": "RouteDescription",
             "type": "Attribute",
-        }
+        },
     )
     ticket_type_code: None | str = field(
         default=None,
         metadata={
             "name": "TicketTypeCode",
             "type": "Attribute",
-        }
+        },
     )
     fare_reference: None | str = field(
         default=None,
@@ -226,42 +227,42 @@ class RailFare:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )
     cross_city_fare: bool = field(
         default=False,
         metadata={
             "name": "CrossCityFare",
             "type": "Attribute",
-        }
+        },
     )
     origin_station_name: None | str = field(
         default=None,
         metadata={
             "name": "OriginStationName",
             "type": "Attribute",
-        }
+        },
     )
     destination_station_name: None | str = field(
         default=None,
         metadata={
             "name": "DestinationStationName",
             "type": "Attribute",
-        }
+        },
     )
     reservation_required: None | bool = field(
         default=None,
         metadata={
             "name": "ReservationRequired",
             "type": "Attribute",
-        }
+        },
     )
     journey_direction: None | TypeJourneyDirection = field(
         default=None,
         metadata={
             "name": "JourneyDirection",
             "type": "Attribute",
-        }
+        },
     )
     rail_loc_origin: None | str = field(
         default=None,
@@ -271,7 +272,7 @@ class RailFare:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     rail_loc_destination: None | str = field(
         default=None,
@@ -281,19 +282,19 @@ class RailFare:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

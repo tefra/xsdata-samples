@@ -14,6 +14,7 @@ class MaximumMessageLengthTypeSimple(Enum):
         byte (SF-I, FF-I, CF). This is necessary to route TP on CAN when
         using Extended Addressing or Mixed Addressing on CAN.
     """
+
     I_4_G = "I-4-G"
     ISO = "ISO"
     ISO_6 = "ISO-6"

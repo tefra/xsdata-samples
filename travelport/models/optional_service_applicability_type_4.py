@@ -18,6 +18,7 @@ class OptionalServiceApplicabilityType4(Enum):
         PassengerOD stands for passenger origin destination.
     OTHER
     """
+
     ITINERARY = "Itinerary"
     PASSENGER = "Passenger"
     SEGMENT = "Segment"

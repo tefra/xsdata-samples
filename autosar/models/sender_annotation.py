@@ -7,7 +7,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .processing_kind_enum import ProcessingKindEnum
 from .ref import Ref
 from .string import String
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -50,6 +52,7 @@ class SenderAnnotation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SENDER-ANNOTATION"
 
@@ -59,7 +62,7 @@ class SenderAnnotation:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_origin: Optional[String] = field(
         default=None,
@@ -67,7 +70,7 @@ class SenderAnnotation:
             "name": "ANNOTATION-ORIGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_text: Optional[DocumentationBlock] = field(
         default=None,
@@ -75,7 +78,7 @@ class SenderAnnotation:
             "name": "ANNOTATION-TEXT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     computed: Optional[Boolean] = field(
         default=None,
@@ -83,7 +86,7 @@ class SenderAnnotation:
             "name": "COMPUTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_element_ref: Optional["SenderAnnotation.DataElementRef"] = field(
         default=None,
@@ -91,7 +94,7 @@ class SenderAnnotation:
             "name": "DATA-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     limit_kind: Optional[DataLimitKindEnum] = field(
         default=None,
@@ -99,7 +102,7 @@ class SenderAnnotation:
             "name": "LIMIT-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     processing_kind: Optional[ProcessingKindEnum] = field(
         default=None,
@@ -107,14 +110,14 @@ class SenderAnnotation:
             "name": "PROCESSING-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -122,7 +125,7 @@ class SenderAnnotation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -133,5 +136,5 @@ class SenderAnnotation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

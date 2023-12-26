@@ -16,14 +16,14 @@ class ProfileModifyFieldPortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | ProfileModifyFieldPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -34,5 +34,5 @@ class ProfileModifyFieldPortTypeServiceInput:
                 "name": "ProfileModifyFieldReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            }
+            },
         )

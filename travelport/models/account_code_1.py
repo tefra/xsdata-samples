@@ -21,6 +21,7 @@ class AccountCode1:
         FlightPass for AC Flight Pass or RFB for AC corporate Rewards for
         Business.
     """
+
     class Meta:
         name = "AccountCode"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -31,7 +32,7 @@ class AccountCode1:
             "name": "Code",
             "type": "Attribute",
             "max_length": 36,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class AccountCode1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -49,12 +50,12 @@ class AccountCode1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

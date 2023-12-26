@@ -16,14 +16,14 @@ class ProfileCreatePortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | ProfileCreatePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -34,5 +34,5 @@ class ProfileCreatePortTypeServiceInput:
                 "name": "ProfileCreateReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            }
+            },
         )

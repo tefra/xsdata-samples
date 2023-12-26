@@ -12,7 +12,7 @@ class Error:
             "type": "Element",
             "namespace": "",
             "required": True,
-        }
+        },
     )
     code: Optional[str] = field(
         default=None,
@@ -21,7 +21,7 @@ class Error:
             "type": "Element",
             "namespace": "",
             "required": True,
-        }
+        },
     )
     message: Optional[str] = field(
         default=None,
@@ -30,7 +30,7 @@ class Error:
             "type": "Element",
             "namespace": "",
             "nillable": True,
-        }
+        },
     )
     payload: Optional[str] = field(
         default=None,
@@ -39,5 +39,5 @@ class Error:
             "type": "Element",
             "namespace": "",
             "nillable": True,
-        }
+        },
     )

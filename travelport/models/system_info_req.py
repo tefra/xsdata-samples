@@ -10,5 +10,6 @@ class SystemInfoReq(BaseReq3):
     """
     Requests system information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"

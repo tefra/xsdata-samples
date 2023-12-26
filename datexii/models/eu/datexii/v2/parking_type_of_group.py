@@ -24,6 +24,7 @@ class ParkingTypeOfGroup(Enum):
         a complete description of the parking spaces.
     :cvar OTHER: Some other kind of group.
     """
+
     ADJACENT_SPACES = "adjacentSpaces"
     NON_ADJACENT_SPACES = "nonAdjacentSpaces"
     COMPLETE_FLOOR = "completeFloor"

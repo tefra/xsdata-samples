@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.error_info_1 import ErrorInfo1
-from travelport.models.profile_retrieve_parent_rsp import ProfileRetrieveParentRsp
+from travelport.models.profile_retrieve_parent_rsp import (
+    ProfileRetrieveParentRsp,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -17,7 +19,7 @@ class ProfileRetrieveParentPortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +30,16 @@ class ProfileRetrieveParentPortTypeServiceOutput:
                 "name": "ProfileRetrieveParentRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            }
+            },
         )
-        fault: None | ProfileRetrieveParentPortTypeServiceOutput.Body.Fault = field(
-            default=None,
-            metadata={
-                "name": "Fault",
-                "type": "Element",
-            }
+        fault: None | ProfileRetrieveParentPortTypeServiceOutput.Body.Fault = (
+            field(
+                default=None,
+                metadata={
+                    "name": "Fault",
+                    "type": "Element",
+                },
+            )
         )
 
         @dataclass
@@ -45,28 +49,28 @@ class ProfileRetrieveParentPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | ProfileRetrieveParentPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +81,5 @@ class ProfileRetrieveParentPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

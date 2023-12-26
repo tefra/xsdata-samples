@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.duration_value import DurationValue
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import FloatingPointMetreDistanceValue
+from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import (
+    FloatingPointMetreDistanceValue,
+)
 from datexii.models.eu.datexii.v2.traffic_data import TrafficData
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -27,13 +29,16 @@ class TrafficHeadway(TrafficData):
         a defined measurement period at the specified measurement site.
     :ivar traffic_headway_extension:
     """
-    average_distance_headway: Optional[FloatingPointMetreDistanceValue] = field(
+
+    average_distance_headway: Optional[
+        FloatingPointMetreDistanceValue
+    ] = field(
         default=None,
         metadata={
             "name": "averageDistanceHeadway",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     average_time_headway: Optional[DurationValue] = field(
         default=None,
@@ -41,7 +46,7 @@ class TrafficHeadway(TrafficData):
             "name": "averageTimeHeadway",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_headway_extension: Optional[ExtensionType] = field(
         default=None,
@@ -49,5 +54,5 @@ class TrafficHeadway(TrafficData):
             "name": "trafficHeadwayExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

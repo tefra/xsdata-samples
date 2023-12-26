@@ -15,6 +15,7 @@ class AgencyBaseInfo1:
     phone
         Agency Phone Number
     """
+
     class Meta:
         name = "AgencyBaseInfo"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -24,5 +25,5 @@ class AgencyBaseInfo1:
         metadata={
             "name": "Phone",
             "type": "Element",
-        }
+        },
     )

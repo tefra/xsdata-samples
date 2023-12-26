@@ -56,7 +56,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -64,7 +64,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -72,28 +72,28 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -101,7 +101,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XActMoodDefEvn] = field(
         default=None,
@@ -109,7 +109,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -124,7 +124,7 @@ class McaiMt900001Uv01Role:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -132,7 +132,7 @@ class McaiMt900001Uv01Role:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -140,30 +140,39 @@ class McaiMt900001Uv01Role:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue]] = field(
+    class_code: Optional[
+        Union[
+            RoleClassMutualRelationship,
+            RoleClassPassive,
+            str,
+            RoleClassOntological,
+            RoleClassPartitive,
+            RoleClassRootValue,
+        ]
+    ] = field(
         default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -178,7 +187,7 @@ class McaiMt900001Uv01SourceOf:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -186,7 +195,7 @@ class McaiMt900001Uv01SourceOf:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -194,23 +203,25 @@ class McaiMt900001Uv01SourceOf:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    detected_issue_management: Optional[McaiMt900001Uv01DetectedIssueManagement] = field(
+    detected_issue_management: Optional[
+        McaiMt900001Uv01DetectedIssueManagement
+    ] = field(
         default=None,
         metadata={
             "name": "detectedIssueManagement",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipMitigates] = field(
         default=None,
@@ -218,7 +229,7 @@ class McaiMt900001Uv01SourceOf:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -226,7 +237,7 @@ class McaiMt900001Uv01SourceOf:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -241,7 +252,7 @@ class McaiMt900001Uv01Subject:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -249,7 +260,7 @@ class McaiMt900001Uv01Subject:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -257,7 +268,7 @@ class McaiMt900001Uv01Subject:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     role: Optional[McaiMt900001Uv01Role] = field(
         default=None,
@@ -265,14 +276,14 @@ class McaiMt900001Uv01Subject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetSubject] = field(
         default=None,
@@ -280,7 +291,7 @@ class McaiMt900001Uv01Subject:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -295,7 +306,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -303,7 +314,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -311,14 +322,14 @@ class McaiMt900001Uv01ActOrderRequired:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -326,7 +337,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject: List[McaiMt900001Uv01Subject] = field(
         default_factory=list,
@@ -334,14 +345,14 @@ class McaiMt900001Uv01ActOrderRequired:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -349,7 +360,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -358,7 +369,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -373,7 +384,7 @@ class McaiMt900001Uv01Requires:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -381,7 +392,7 @@ class McaiMt900001Uv01Requires:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -389,7 +400,7 @@ class McaiMt900001Uv01Requires:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_order_required: Optional[McaiMt900001Uv01ActOrderRequired] = field(
         default=None,
@@ -398,16 +409,36 @@ class McaiMt900001Uv01Requires:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipConditional.TRIG,
         metadata={
@@ -415,7 +446,7 @@ class McaiMt900001Uv01Requires:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_conduction_ind: Optional[str] = field(
         default=None,
@@ -423,7 +454,7 @@ class McaiMt900001Uv01Requires:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -431,7 +462,7 @@ class McaiMt900001Uv01Requires:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -446,7 +477,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -454,7 +485,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -462,14 +493,14 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -477,21 +508,21 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mitigated_by: List[McaiMt900001Uv01SourceOf] = field(
         default_factory=list,
@@ -500,7 +531,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     trigger_for: List[McaiMt900001Uv01Requires] = field(
         default_factory=list,
@@ -509,14 +540,14 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -525,7 +556,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -534,5 +565,5 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

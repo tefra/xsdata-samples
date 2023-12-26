@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .boolean import Boolean
 from .mapping_direction_enum import MappingDirectionEnum
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .text_table_value_pair import TextTableValuePair
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -41,24 +43,29 @@ class TextTableMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TEXT-TABLE-MAPPING"
 
-    bitfield_text_table_mask_first: Optional[PositiveIntegerValueVariationPoint] = field(
+    bitfield_text_table_mask_first: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "BITFIELD-TEXT-TABLE-MASK-FIRST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    bitfield_text_table_mask_second: Optional[PositiveIntegerValueVariationPoint] = field(
+    bitfield_text_table_mask_second: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "BITFIELD-TEXT-TABLE-MASK-SECOND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     identical_mapping: Optional[Boolean] = field(
         default=None,
@@ -66,7 +73,7 @@ class TextTableMapping:
             "name": "IDENTICAL-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mapping_direction: Optional[MappingDirectionEnum] = field(
         default=None,
@@ -74,7 +81,7 @@ class TextTableMapping:
             "name": "MAPPING-DIRECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     value_pairs: Optional["TextTableMapping.ValuePairs"] = field(
         default=None,
@@ -82,14 +89,14 @@ class TextTableMapping:
             "name": "VALUE-PAIRS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -97,7 +104,7 @@ class TextTableMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -108,5 +115,5 @@ class TextTableMapping:
                 "name": "TEXT-TABLE-VALUE-PAIR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

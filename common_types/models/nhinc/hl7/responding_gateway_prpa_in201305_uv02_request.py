@@ -21,7 +21,7 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -29,7 +29,7 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -37,7 +37,7 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -53,7 +53,7 @@ class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -61,19 +61,23 @@ class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
 @dataclass
-class RespondingGatewayPrpaIn201305Uv02Request(RespondingGatewayPrpaIn201305Uv02RequestType):
+class RespondingGatewayPrpaIn201305Uv02Request(
+    RespondingGatewayPrpaIn201305Uv02RequestType
+):
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02Request"
         namespace = "urn:hl7-org:v3"
 
 
 @dataclass
-class RespondingGatewayPrpaIn201305Uv02SecuredRequest(RespondingGatewayPrpaIn201305Uv02SecuredRequestType):
+class RespondingGatewayPrpaIn201305Uv02SecuredRequest(
+    RespondingGatewayPrpaIn201305Uv02SecuredRequestType
+):
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02SecuredRequest"
         namespace = "urn:hl7-org:v3"

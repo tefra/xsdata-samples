@@ -15,5 +15,5 @@ class Notprsubset:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

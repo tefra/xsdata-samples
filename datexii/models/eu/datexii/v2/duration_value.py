@@ -14,13 +14,14 @@ class DurationValue(DataValue):
     :ivar duration: A period of time expressed in seconds.
     :ivar duration_value_extension:
     """
+
     duration: Optional[float] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     duration_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -28,5 +29,5 @@ class DurationValue(DataValue):
             "name": "durationValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

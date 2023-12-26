@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_data_element_type_2 import TypeProfileDataElementType2
+from travelport.models.type_profile_data_element_type_2 import (
+    TypeProfileDataElementType2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -17,6 +19,7 @@ class ProfileDataDelete2:
     key
         The identifier of the element that will be delete from this profile.
     """
+
     class Meta:
         name = "ProfileDataDelete"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -27,7 +30,7 @@ class ProfileDataDelete2:
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -35,5 +38,5 @@ class ProfileDataDelete2:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

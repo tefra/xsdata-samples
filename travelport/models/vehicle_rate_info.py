@@ -22,6 +22,7 @@ class VehicleRateInfo:
     promotional_code
         Promotional Code for the Vehicle Booking
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -30,7 +31,7 @@ class VehicleRateInfo:
         metadata={
             "name": "TourCode",
             "type": "Attribute",
-        }
+        },
     )
     discount_number: None | str = field(
         default=None,
@@ -38,12 +39,12 @@ class VehicleRateInfo:
             "name": "DiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     promotional_code: None | str = field(
         default=None,
         metadata={
             "name": "PromotionalCode",
             "type": "Attribute",
-        }
+        },
     )

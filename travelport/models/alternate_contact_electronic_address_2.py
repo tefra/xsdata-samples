@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_taggable_electronic_address_2 import TypeTaggableElectronicAddress2
+from travelport.models.type_taggable_electronic_address_2 import (
+    TypeTaggableElectronicAddress2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -15,6 +17,7 @@ class AlternateContactElectronicAddress2(TypeTaggableElectronicAddress2):
     alternate_contact_ref
         Key referencing to alternate contact.
     """
+
     class Meta:
         name = "AlternateContactElectronicAddress"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -25,5 +28,5 @@ class AlternateContactElectronicAddress2(TypeTaggableElectronicAddress2):
             "name": "AlternateContactRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

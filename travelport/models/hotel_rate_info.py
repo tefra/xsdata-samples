@@ -9,6 +9,7 @@ class HotelRateInfo:
     """
     This is a wrapper element for updating Rate Modifiers.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -17,5 +18,5 @@ class HotelRateInfo:
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
-        }
+        },
     )

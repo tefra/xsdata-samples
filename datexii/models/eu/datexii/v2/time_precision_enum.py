@@ -14,6 +14,7 @@ class TimePrecisionEnum(Enum):
     :cvar HALF_HOUR: Time given to the nearest half hour.
     :cvar HOUR: Time given to the nearest hour.
     """
+
     TENTHS_OF_SECOND = "tenthsOfSecond"
     SECOND = "second"
     MINUTE = "minute"

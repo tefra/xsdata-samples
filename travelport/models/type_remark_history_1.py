@@ -39,6 +39,7 @@ class TypeRemarkHistory1(TypeKeyElement1):
     priority_order
         Priority order associated with this remark.
     """
+
     class Meta:
         name = "typeRemarkHistory"
 
@@ -50,21 +51,21 @@ class TypeRemarkHistory1(TypeKeyElement1):
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     type_value: None | TypeRemarkType1 = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     accounting_remark_type: None | str = field(
         default=None,
         metadata={
             "name": "AccountingRemarkType",
             "type": "Attribute",
-        }
+        },
     )
     provider: None | str = field(
         default=None,
@@ -73,14 +74,14 @@ class TypeRemarkHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     general_remark_type: None | TypeGeneralRemarkType1 = field(
         default=None,
         metadata={
             "name": "GeneralRemarkType",
             "type": "Attribute",
-        }
+        },
     )
     category_type: None | str = field(
         default=None,
@@ -88,14 +89,14 @@ class TypeRemarkHistory1(TypeKeyElement1):
             "name": "CategoryType",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )
     supplier_type: None | TypeSupplierType1 = field(
         default=None,
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-        }
+        },
     )
     supplier: None | str = field(
         default=None,
@@ -103,7 +104,7 @@ class TypeRemarkHistory1(TypeKeyElement1):
             "name": "Supplier",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -112,5 +113,5 @@ class TypeRemarkHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

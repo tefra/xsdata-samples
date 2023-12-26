@@ -10,5 +10,6 @@ class SecOcJobSemanticEnumSimple(Enum):
     :cvar VERIFY: Asymmetric cryptographic algorithm to generate/verify
         a signature
     """
+
     AUTHENTICATE = "AUTHENTICATE"
     VERIFY = "VERIFY"

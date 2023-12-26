@@ -8,14 +8,18 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from .crypto_service_certificate_subtypes_enum import (
+    CryptoServiceCertificateSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .string import String
-from .tls_crypto_cipher_suite_subtypes_enum import TlsCryptoCipherSuiteSubtypesEnum
+from .tls_crypto_cipher_suite_subtypes_enum import (
+    TlsCryptoCipherSuiteSubtypesEnum,
+)
 from .tls_secure_com_props_subtypes_enum import TlsSecureComPropsSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -92,6 +96,7 @@ class TlsIamRemoteSubject:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TLS-IAM-REMOTE-SUBJECT"
 
@@ -102,15 +107,17 @@ class TlsIamRemoteSubject:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TlsIamRemoteSubject.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TlsIamRemoteSubject.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -118,7 +125,7 @@ class TlsIamRemoteSubject:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -126,7 +133,7 @@ class TlsIamRemoteSubject:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -134,7 +141,7 @@ class TlsIamRemoteSubject:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -142,7 +149,7 @@ class TlsIamRemoteSubject:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -150,7 +157,7 @@ class TlsIamRemoteSubject:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TlsIamRemoteSubject.Annotations"] = field(
         default=None,
@@ -158,7 +165,7 @@ class TlsIamRemoteSubject:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -166,23 +173,27 @@ class TlsIamRemoteSubject:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    accepted_crypto_cipher_suite_with_psk_refs: Optional["TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs"] = field(
+    accepted_crypto_cipher_suite_with_psk_refs: Optional[
+        "TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCEPTED-CRYPTO-CIPHER-SUITE-WITH-PSK-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    accepted_remote_certificate_refs: Optional["TlsIamRemoteSubject.AcceptedRemoteCertificateRefs"] = field(
+    accepted_remote_certificate_refs: Optional[
+        "TlsIamRemoteSubject.AcceptedRemoteCertificateRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCEPTED-REMOTE-CERTIFICATE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cert_common_name: Optional[String] = field(
         default=None,
@@ -190,7 +201,7 @@ class TlsIamRemoteSubject:
             "name": "CERT-COMMON-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     derived_certificate_accepted: Optional[Boolean] = field(
         default=None,
@@ -198,22 +209,24 @@ class TlsIamRemoteSubject:
             "name": "DERIVED-CERTIFICATE-ACCEPTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    iam_relevant_tls_secure_com_props_refs: Optional["TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs"] = field(
+    iam_relevant_tls_secure_com_props_refs: Optional[
+        "TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "IAM-RELEVANT-TLS-SECURE-COM-PROPS-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -221,14 +234,14 @@ class TlsIamRemoteSubject:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -239,7 +252,7 @@ class TlsIamRemoteSubject:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,18 +263,20 @@ class TlsIamRemoteSubject:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AcceptedCryptoCipherSuiteWithPskRefs:
-        accepted_crypto_cipher_suite_with_psk_ref: List["TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs.AcceptedCryptoCipherSuiteWithPskRef"] = field(
+        accepted_crypto_cipher_suite_with_psk_ref: List[
+            "TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs.AcceptedCryptoCipherSuiteWithPskRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ACCEPTED-CRYPTO-CIPHER-SUITE-WITH-PSK-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -272,18 +287,20 @@ class TlsIamRemoteSubject:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class AcceptedRemoteCertificateRefs:
-        accepted_remote_certificate_ref: List["TlsIamRemoteSubject.AcceptedRemoteCertificateRefs.AcceptedRemoteCertificateRef"] = field(
+        accepted_remote_certificate_ref: List[
+            "TlsIamRemoteSubject.AcceptedRemoteCertificateRefs.AcceptedRemoteCertificateRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ACCEPTED-REMOTE-CERTIFICATE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -294,18 +311,20 @@ class TlsIamRemoteSubject:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class IamRelevantTlsSecureComPropsRefs:
-        iam_relevant_tls_secure_com_props_ref: List["TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs.IamRelevantTlsSecureComPropsRef"] = field(
+        iam_relevant_tls_secure_com_props_ref: List[
+            "TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs.IamRelevantTlsSecureComPropsRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IAM-RELEVANT-TLS-SECURE-COM-PROPS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -316,5 +335,5 @@ class TlsIamRemoteSubject:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

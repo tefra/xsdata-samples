@@ -9,6 +9,7 @@ class Endorsement3:
     """
     Restrictions or instructions about the fare or ticket.
     """
+
     class Meta:
         name = "Endorsement"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -21,5 +22,5 @@ class Endorsement3:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )

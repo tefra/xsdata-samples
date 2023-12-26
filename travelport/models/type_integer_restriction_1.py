@@ -18,6 +18,7 @@ class TypeIntegerRestriction1:
     max_value
         The maximum value permitted.
     """
+
     class Meta:
         name = "typeIntegerRestriction"
 
@@ -28,7 +29,7 @@ class TypeIntegerRestriction1:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 999999999,
-        }
+        },
     )
     max_value: None | int = field(
         default=None,
@@ -37,5 +38,5 @@ class TypeIntegerRestriction1:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 999999999,
-        }
+        },
     )

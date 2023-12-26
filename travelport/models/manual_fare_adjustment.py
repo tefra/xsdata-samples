@@ -30,6 +30,7 @@ class ManualFareAdjustment:
     fare_type
         Providers: 1p
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -39,7 +40,7 @@ class ManualFareAdjustment:
             "name": "AppliedOn",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     adjustment_type: None | TypeAdjustmentType = field(
         default=None,
@@ -47,7 +48,7 @@ class ManualFareAdjustment:
             "name": "AdjustmentType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | Decimal = field(
         default=None,
@@ -55,14 +56,14 @@ class ManualFareAdjustment:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     passenger_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassengerRef",
             "type": "Attribute",
-        }
+        },
     )
     ticket_designator: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class ManualFareAdjustment:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 20,
-        }
+        },
     )
     fare_type: None | str = field(
         default=None,
@@ -80,5 +81,5 @@ class ManualFareAdjustment:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )

@@ -26,6 +26,7 @@ class PaymentAdvice2:
     original_fop
         Original form of payment Examples: CHECK 3500
     """
+
     class Meta:
         name = "PaymentAdvice"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -37,7 +38,7 @@ class PaymentAdvice2:
             "type": "Attribute",
             "required": True,
             "max_length": 3,
-        }
+        },
     )
     document_number: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class PaymentAdvice2:
             "type": "Attribute",
             "required": True,
             "max_length": 22,
-        }
+        },
     )
     issue_date: None | XmlDate = field(
         default=None,
@@ -54,7 +55,7 @@ class PaymentAdvice2:
             "name": "IssueDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     issue_city: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class PaymentAdvice2:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     original_fop: None | str = field(
         default=None,
@@ -72,5 +73,5 @@ class PaymentAdvice2:
             "name": "OriginalFOP",
             "type": "Attribute",
             "max_length": 19,
-        }
+        },
     )

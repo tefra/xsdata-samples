@@ -19,6 +19,7 @@ class Phone1(TypeTaggablePhone1):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "Phone"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -28,12 +29,12 @@ class Phone1(TypeTaggablePhone1):
         metadata={
             "name": "Provisioned",
             "type": "Attribute",
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

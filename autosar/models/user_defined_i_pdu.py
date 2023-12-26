@@ -101,6 +101,7 @@ class UserDefinedIPdu:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "USER-DEFINED-I-PDU"
 
@@ -111,15 +112,17 @@ class UserDefinedIPdu:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["UserDefinedIPdu.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "UserDefinedIPdu.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -127,7 +130,7 @@ class UserDefinedIPdu:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -135,7 +138,7 @@ class UserDefinedIPdu:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -143,7 +146,7 @@ class UserDefinedIPdu:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -151,7 +154,7 @@ class UserDefinedIPdu:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -159,7 +162,7 @@ class UserDefinedIPdu:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["UserDefinedIPdu.Annotations"] = field(
         default=None,
@@ -167,7 +170,7 @@ class UserDefinedIPdu:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -175,7 +178,7 @@ class UserDefinedIPdu:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     has_dynamic_length: Optional[Boolean] = field(
         default=None,
@@ -183,7 +186,7 @@ class UserDefinedIPdu:
             "name": "HAS-DYNAMIC-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     length: Optional[Integer] = field(
         default=None,
@@ -191,7 +194,7 @@ class UserDefinedIPdu:
             "name": "LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     meta_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -199,7 +202,7 @@ class UserDefinedIPdu:
             "name": "META-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     contained_i_pdu_props: Optional[ContainedIPduProps] = field(
         default=None,
@@ -207,7 +210,7 @@ class UserDefinedIPdu:
             "name": "CONTAINED-I-PDU-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cdd_type: Optional[String] = field(
         default=None,
@@ -215,14 +218,14 @@ class UserDefinedIPdu:
             "name": "CDD-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -230,14 +233,14 @@ class UserDefinedIPdu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -248,7 +251,7 @@ class UserDefinedIPdu:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -259,5 +262,5 @@ class UserDefinedIPdu:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

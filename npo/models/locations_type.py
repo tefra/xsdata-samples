@@ -15,5 +15,5 @@ class LocationsType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )

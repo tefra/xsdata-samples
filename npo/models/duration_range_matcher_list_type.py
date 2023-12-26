@@ -16,5 +16,5 @@ class DurationRangeMatcherListType(MatcherList):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

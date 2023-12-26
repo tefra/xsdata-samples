@@ -18,7 +18,7 @@ class AddressVersionStructure(PlaceVersionStructure):
             "name": "CountryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     country_name: Optional[MultilingualString] = field(
         default=None,
@@ -26,5 +26,5 @@ class AddressVersionStructure(PlaceVersionStructure):
             "name": "CountryName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

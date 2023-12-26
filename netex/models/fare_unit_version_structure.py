@@ -15,5 +15,5 @@ class FareUnitVersionStructure(PriceableObjectVersionStructure):
         metadata={
             "name": "nameOfClassOfUnit",
             "type": "Attribute",
-        }
+        },
     )

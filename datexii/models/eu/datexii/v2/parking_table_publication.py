@@ -12,13 +12,14 @@ class ParkingTablePublication:
     A publication defining one or more tables that have entries of parking sites or
     groups of them, located in an urban or interurban context.
     """
+
     header_information: Optional[HeaderInformation] = field(
         default=None,
         metadata={
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_table: List[ParkingTable] = field(
         default_factory=list,
@@ -27,5 +28,5 @@ class ParkingTablePublication:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )

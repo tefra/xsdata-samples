@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.openlr_functional_road_class_enum import OpenlrFunctionalRoadClassEnum
+from datexii.models.eu.datexii.v2.openlr_functional_road_class_enum import (
+    OpenlrFunctionalRoadClassEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -21,14 +23,17 @@ class OpenlrPathAttributes:
         the location reference path as described in the logical format.
     :ivar openlr_path_attributes_extension:
     """
-    openlr_lowest_frcto_next_lrpoint: Optional[OpenlrFunctionalRoadClassEnum] = field(
+
+    openlr_lowest_frcto_next_lrpoint: Optional[
+        OpenlrFunctionalRoadClassEnum
+    ] = field(
         default=None,
         metadata={
             "name": "openlrLowestFRCToNextLRPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_distance_to_next_lrpoint: Optional[int] = field(
         default=None,
@@ -37,7 +42,7 @@ class OpenlrPathAttributes:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_path_attributes_extension: Optional[ExtensionType] = field(
         default=None,
@@ -45,5 +50,5 @@ class OpenlrPathAttributes:
             "name": "openlrPathAttributesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

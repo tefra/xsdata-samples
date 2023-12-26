@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.elaborated_data_fault_enum import ElaboratedDataFaultEnum
+from datexii.models.eu.datexii.v2.elaborated_data_fault_enum import (
+    ElaboratedDataFaultEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.fault import Fault
 
@@ -16,6 +18,7 @@ class ElaboratedDataFault(Fault):
         reported for the specified elaborated data.
     :ivar elaborated_data_fault_extension:
     """
+
     elaborated_data_fault: Optional[ElaboratedDataFaultEnum] = field(
         default=None,
         metadata={
@@ -23,7 +26,7 @@ class ElaboratedDataFault(Fault):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     elaborated_data_fault_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +34,5 @@ class ElaboratedDataFault(Fault):
             "name": "elaboratedDataFaultExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

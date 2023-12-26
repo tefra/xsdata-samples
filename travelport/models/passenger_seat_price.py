@@ -9,6 +9,7 @@ class PassengerSeatPrice:
     """
     Only used when a passenger has a different price than the default.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,7 +19,7 @@ class PassengerSeatPrice:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -26,5 +27,5 @@ class PassengerSeatPrice:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

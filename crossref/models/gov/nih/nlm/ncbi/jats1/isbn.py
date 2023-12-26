@@ -9,6 +9,7 @@ class Isbn:
     """
     <div> <h3>Isbn</h3> </div>
     """
+
     class Meta:
         name = "isbn"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -18,41 +19,41 @@ class Isbn:
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
-        }
+        },
     )
     content_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     publication_format: Optional[str] = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -60,5 +61,5 @@ class Isbn:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

@@ -15,6 +15,7 @@ class TypeTicketModifierPercentType:
     percent
         Percent associated with a ticketing modifier
     """
+
     class Meta:
         name = "typeTicketModifierPercentType"
 
@@ -25,5 +26,5 @@ class TypeTicketModifierPercentType:
             "type": "Attribute",
             "required": True,
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )

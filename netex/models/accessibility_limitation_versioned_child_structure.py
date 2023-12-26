@@ -18,7 +18,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     step_free_access: Optional[LimitationStatusEnumeration] = field(
         default=None,
@@ -26,7 +26,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "name": "StepFreeAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     escalator_free_access: Optional[LimitationStatusEnumeration] = field(
         default=None,
@@ -34,7 +34,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "name": "EscalatorFreeAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lift_free_access: Optional[LimitationStatusEnumeration] = field(
         default=None,
@@ -42,7 +42,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "name": "LiftFreeAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     audible_signals_available: Optional[LimitationStatusEnumeration] = field(
         default=None,
@@ -50,7 +50,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "name": "AudibleSignalsAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     visual_signs_available: Optional[LimitationStatusEnumeration] = field(
         default=None,
@@ -58,5 +58,5 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "name": "VisualSignsAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

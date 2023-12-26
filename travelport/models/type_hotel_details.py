@@ -22,6 +22,7 @@ class TypeHotelDetails:
         for requested property
     media_item
     """
+
     class Meta:
         name = "typeHotelDetails"
 
@@ -32,7 +33,7 @@ class TypeHotelDetails:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     hotel_detail_item: list[HotelDetailItem] = field(
         default_factory=list,
@@ -41,7 +42,7 @@ class TypeHotelDetails:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
         default_factory=list,
@@ -50,7 +51,7 @@ class TypeHotelDetails:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     media_item: list[MediaItem1] = field(
         default_factory=list,
@@ -59,5 +60,5 @@ class TypeHotelDetails:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

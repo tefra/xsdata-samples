@@ -25,6 +25,7 @@ class Certificate2:
     not_valid_after
         The date that this certificate expires.
     """
+
     class Meta:
         name = "Certificate"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -35,40 +36,40 @@ class Certificate2:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     discount_amount: None | str = field(
         default=None,
         metadata={
             "name": "DiscountAmount",
             "type": "Attribute",
-        }
+        },
     )
     discount_percentage: None | int = field(
         default=None,
         metadata={
             "name": "DiscountPercentage",
             "type": "Attribute",
-        }
+        },
     )
     not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
-        }
+        },
     )
     not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
             "type": "Attribute",
-        }
+        },
     )

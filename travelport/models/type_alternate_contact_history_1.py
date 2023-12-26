@@ -35,6 +35,7 @@ class TypeAlternateContactHistory1(TypeKeyElement1):
     priority_order
         Priority order associated with this Contact.
     """
+
     class Meta:
         name = "typeAlternateContactHistory"
 
@@ -43,7 +44,7 @@ class TypeAlternateContactHistory1(TypeKeyElement1):
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
@@ -52,7 +53,7 @@ class TypeAlternateContactHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -61,7 +62,7 @@ class TypeAlternateContactHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     other_name: None | str = field(
         default=None,
@@ -70,7 +71,7 @@ class TypeAlternateContactHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     nickname: None | str = field(
         default=None,
@@ -79,7 +80,7 @@ class TypeAlternateContactHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -88,5 +89,5 @@ class TypeAlternateContactHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

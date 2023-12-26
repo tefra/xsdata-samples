@@ -29,6 +29,7 @@ class TypeLoyaltyProgramEnrollmentHistory2(TypeKeyElement2):
     priority_order
         Priority order associated with this LoyaltyProgramEnrollment.
     """
+
     class Meta:
         name = "typeLoyaltyProgramEnrollmentHistory"
 
@@ -37,7 +38,7 @@ class TypeLoyaltyProgramEnrollmentHistory2(TypeKeyElement2):
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-        }
+        },
     )
     supplier: None | str = field(
         default=None,
@@ -45,7 +46,7 @@ class TypeLoyaltyProgramEnrollmentHistory2(TypeKeyElement2):
             "name": "Supplier",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -54,7 +55,7 @@ class TypeLoyaltyProgramEnrollmentHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     program_name: None | str = field(
         default=None,
@@ -63,7 +64,7 @@ class TypeLoyaltyProgramEnrollmentHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -72,7 +73,7 @@ class TypeLoyaltyProgramEnrollmentHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -81,5 +82,5 @@ class TypeLoyaltyProgramEnrollmentHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

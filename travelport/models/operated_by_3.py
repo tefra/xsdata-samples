@@ -9,6 +9,7 @@ class OperatedBy3:
     """
     This is the carrier code to support Cross Accrual.
     """
+
     class Meta:
         name = "OperatedBy"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -19,5 +20,5 @@ class OperatedBy3:
             "required": True,
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )

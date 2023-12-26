@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .time_unit import TimeUnit
 from .time_unit_ref import TimeUnitRef
@@ -12,7 +12,7 @@ class TimeUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeUnits_RelStructure"
 
-    time_unit_ref_or_time_unit: List[object] = field(
+    time_unit_ref_or_time_unit: List[Union[TimeUnitRef, TimeUnit]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +28,5 @@ class TimeUnitsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

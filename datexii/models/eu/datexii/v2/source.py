@@ -28,13 +28,14 @@ class Source:
         it is deemed reliable.
     :ivar source_extension:
     """
+
     source_country: Optional[CountryEnum] = field(
         default=None,
         metadata={
             "name": "sourceCountry",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     source_identification: Optional[str] = field(
         default=None,
@@ -43,7 +44,7 @@ class Source:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     source_name: Optional[MultilingualString] = field(
         default=None,
@@ -51,7 +52,7 @@ class Source:
             "name": "sourceName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     source_type: Optional[SourceTypeEnum] = field(
         default=None,
@@ -59,14 +60,14 @@ class Source:
             "name": "sourceType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     reliable: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     source_extension: Optional[ExtensionType] = field(
         default=None,
@@ -74,5 +75,5 @@ class Source:
             "name": "sourceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

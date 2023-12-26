@@ -16,7 +16,7 @@ class VideoAttributesType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     video_coding: None | str = field(
         default=None,
@@ -24,7 +24,7 @@ class VideoAttributesType:
             "name": "videoCoding",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     aspect_ratio: None | AspectRatioEnum = field(
         default=None,
@@ -32,24 +32,24 @@ class VideoAttributesType:
             "name": "aspectRatio",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     height: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     heigth: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
             "doc": "This obviously is a typo.",
-        }
+        },
     )
     width: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

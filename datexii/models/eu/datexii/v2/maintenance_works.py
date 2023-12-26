@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.road_maintenance_type_enum import RoadMaintenanceTypeEnum
+from datexii.models.eu.datexii.v2.road_maintenance_type_enum import (
+    RoadMaintenanceTypeEnum,
+)
 from datexii.models.eu.datexii.v2.roadworks import Roadworks
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -16,6 +18,7 @@ class MaintenanceWorks(Roadworks):
         installation work at the specified location.
     :ivar maintenance_works_extension:
     """
+
     road_maintenance_type: List[RoadMaintenanceTypeEnum] = field(
         default_factory=list,
         metadata={
@@ -23,7 +26,7 @@ class MaintenanceWorks(Roadworks):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     maintenance_works_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +34,5 @@ class MaintenanceWorks(Roadworks):
             "name": "maintenanceWorksExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

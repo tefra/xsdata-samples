@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .autosar_data_prototype_subtypes_enum import (
+    AutosarDataPrototypeSubtypesEnum,
+)
 from .boolean_value_variation_point import BooleanValueVariationPoint
 from .composite_network_representation import CompositeNetworkRepresentation
 from .handle_out_of_range_enum import HandleOutOfRangeEnum
@@ -8,7 +10,9 @@ from .ref import Ref
 from .sender_intent_enum import SenderIntentEnum
 from .sw_pointer_target_props import SwDataDefProps
 from .time_value import TimeValue
-from .transmission_acknowledgement_request import TransmissionAcknowledgementRequest
+from .transmission_acknowledgement_request import (
+    TransmissionAcknowledgementRequest,
+)
 from .transmission_com_spec_props import TransmissionComSpecProps
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -56,16 +60,19 @@ class QueuedSenderComSpec:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "QUEUED-SENDER-COM-SPEC"
 
-    composite_network_representations: Optional["QueuedSenderComSpec.CompositeNetworkRepresentations"] = field(
+    composite_network_representations: Optional[
+        "QueuedSenderComSpec.CompositeNetworkRepresentations"
+    ] = field(
         default=None,
         metadata={
             "name": "COMPOSITE-NETWORK-REPRESENTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_element_ref: Optional["QueuedSenderComSpec.DataElementRef"] = field(
         default=None,
@@ -73,7 +80,7 @@ class QueuedSenderComSpec:
             "name": "DATA-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_update_period: Optional[TimeValue] = field(
         default=None,
@@ -81,7 +88,7 @@ class QueuedSenderComSpec:
             "name": "DATA-UPDATE-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     handle_out_of_range: Optional[HandleOutOfRangeEnum] = field(
         default=None,
@@ -89,7 +96,7 @@ class QueuedSenderComSpec:
             "name": "HANDLE-OUT-OF-RANGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     network_representation: Optional[SwDataDefProps] = field(
         default=None,
@@ -97,7 +104,7 @@ class QueuedSenderComSpec:
             "name": "NETWORK-REPRESENTATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sender_intent: Optional[SenderIntentEnum] = field(
         default=None,
@@ -105,15 +112,17 @@ class QueuedSenderComSpec:
             "name": "SENDER-INTENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transmission_acknowledge: Optional[TransmissionAcknowledgementRequest] = field(
+    transmission_acknowledge: Optional[
+        TransmissionAcknowledgementRequest
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-ACKNOWLEDGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmission_props: Optional[TransmissionComSpecProps] = field(
         default=None,
@@ -121,7 +130,7 @@ class QueuedSenderComSpec:
             "name": "TRANSMISSION-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     uses_end_to_end_protection: Optional[BooleanValueVariationPoint] = field(
         default=None,
@@ -129,14 +138,14 @@ class QueuedSenderComSpec:
             "name": "USES-END-TO-END-PROTECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -144,18 +153,20 @@ class QueuedSenderComSpec:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class CompositeNetworkRepresentations:
-        composite_network_representation: List[CompositeNetworkRepresentation] = field(
+        composite_network_representation: List[
+            CompositeNetworkRepresentation
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COMPOSITE-NETWORK-REPRESENTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -166,5 +177,5 @@ class QueuedSenderComSpec:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

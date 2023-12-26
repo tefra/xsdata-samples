@@ -11,6 +11,7 @@ class HotelUpsellRule:
     """
     Binds an HotelUpsellQualify and HotelUpsellOffer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,12 +20,12 @@ class HotelUpsellRule:
         metadata={
             "name": "HotelUpsellQualify",
             "type": "Element",
-        }
+        },
     )
     hotel_upsell_offer: None | HotelUpsellOffer = field(
         default=None,
         metadata={
             "name": "HotelUpsellOffer",
             "type": "Element",
-        }
+        },
     )

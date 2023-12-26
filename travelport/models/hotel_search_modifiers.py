@@ -74,6 +74,7 @@ class HotelSearchModifiers:
         If hotel amenities are desired set as 'true', else default 'false'
         for no amenity support.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -82,14 +83,14 @@ class HotelSearchModifiers:
         metadata={
             "name": "PermittedChains",
             "type": "Element",
-        }
+        },
     )
     prohibited_chains: None | HotelSearchModifiers.ProhibitedChains = field(
         default=None,
         metadata={
             "name": "ProhibitedChains",
             "type": "Element",
-        }
+        },
     )
     permitted_providers: None | PermittedProviders1 = field(
         default=None,
@@ -97,7 +98,7 @@ class HotelSearchModifiers:
             "name": "PermittedProviders",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard1] = field(
         default_factory=list,
@@ -106,14 +107,14 @@ class HotelSearchModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 4,
-        }
+        },
     )
     hotel_name: None | str = field(
         default=None,
         metadata={
             "name": "HotelName",
             "type": "Element",
-        }
+        },
     )
     corporate_discount_id: list[CorporateDiscountId1] = field(
         default_factory=list,
@@ -122,7 +123,7 @@ class HotelSearchModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rate_category: list[int] = field(
         default_factory=list,
@@ -130,7 +131,7 @@ class HotelSearchModifiers:
             "name": "RateCategory",
             "type": "Element",
             "max_occurs": 8,
-        }
+        },
     )
     hotel_rating: list[HotelRating] = field(
         default_factory=list,
@@ -138,14 +139,14 @@ class HotelSearchModifiers:
             "name": "HotelRating",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     search_priority: None | SearchPriority = field(
         default=None,
         metadata={
             "name": "SearchPriority",
             "type": "Element",
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -153,56 +154,58 @@ class HotelSearchModifiers:
             "name": "HotelBedding",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     amenities: None | HotelSearchModifiers.Amenities = field(
         default=None,
         metadata={
             "name": "Amenities",
             "type": "Element",
-        }
+        },
     )
     number_of_children: None | NumberOfChildren = field(
         default=None,
         metadata={
             "name": "NumberOfChildren",
             "type": "Element",
-        }
+        },
     )
-    hotel_transportation: None | HotelSearchModifiers.HotelTransportation = field(
-        default=None,
-        metadata={
-            "name": "HotelTransportation",
-            "type": "Element",
-        }
+    hotel_transportation: None | HotelSearchModifiers.HotelTransportation = (
+        field(
+            default=None,
+            metadata={
+                "name": "HotelTransportation",
+                "type": "Element",
+            },
+        )
     )
     booking_guest_information: None | BookingGuestInformation = field(
         default=None,
         metadata={
             "name": "BookingGuestInformation",
             "type": "Element",
-        }
+        },
     )
     number_of_adults: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfAdults",
             "type": "Attribute",
-        }
+        },
     )
     number_of_rooms: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfRooms",
             "type": "Attribute",
-        }
+        },
     )
     is_relaxed: None | bool = field(
         default=None,
         metadata={
             "name": "IsRelaxed",
             "type": "Attribute",
-        }
+        },
     )
     preferred_currency: None | str = field(
         default=None,
@@ -210,49 +213,49 @@ class HotelSearchModifiers:
             "name": "PreferredCurrency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     available_hotels_only: None | bool = field(
         default=None,
         metadata={
             "name": "AvailableHotelsOnly",
             "type": "Attribute",
-        }
+        },
     )
     max_wait: None | int = field(
         default=None,
         metadata={
             "name": "MaxWait",
             "type": "Attribute",
-        }
+        },
     )
     aggregate_results: bool = field(
         default=False,
         metadata={
             "name": "AggregateResults",
             "type": "Attribute",
-        }
+        },
     )
     return_property_description: bool = field(
         default=False,
         metadata={
             "name": "ReturnPropertyDescription",
             "type": "Attribute",
-        }
+        },
     )
     num_of_rate_plans: None | int = field(
         default=None,
         metadata={
             "name": "NumOfRatePlans",
             "type": "Attribute",
-        }
+        },
     )
     return_amenities: bool = field(
         default=False,
         metadata={
             "name": "ReturnAmenities",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -264,7 +267,7 @@ class HotelSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -276,7 +279,7 @@ class HotelSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -287,7 +290,7 @@ class HotelSearchModifiers:
                 "name": "Amenity",
                 "type": "Element",
                 "max_occurs": 8,
-            }
+            },
         )
 
     @dataclass
@@ -298,11 +301,12 @@ class HotelSearchModifiers:
         type_value
             Transportation type code
         """
+
         type_value: None | int = field(
             default=None,
             metadata={
                 "name": "Type",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

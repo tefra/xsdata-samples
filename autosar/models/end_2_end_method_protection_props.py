@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .e_2_e_profile_configuration_subtypes_enum import E2EProfileConfigurationSubtypesEnum
+from .e_2_e_profile_configuration_subtypes_enum import (
+    E2EProfileConfigurationSubtypesEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .service_method_deployment_subtypes_enum import ServiceMethodDeploymentSubtypesEnum
+from .service_method_deployment_subtypes_enum import (
+    ServiceMethodDeploymentSubtypesEnum,
+)
 from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -48,6 +52,7 @@ class End2EndMethodProtectionProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-2-END-METHOD-PROTECTION-PROPS"
 
@@ -57,7 +62,7 @@ class End2EndMethodProtectionProps:
             "name": "DATA-IDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -65,7 +70,7 @@ class End2EndMethodProtectionProps:
             "name": "DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_update_period: Optional[TimeValue] = field(
         default=None,
@@ -73,15 +78,17 @@ class End2EndMethodProtectionProps:
             "name": "DATA-UPDATE-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    e_2_e_profile_configuration_ref: Optional["End2EndMethodProtectionProps.E2EProfileConfigurationRef"] = field(
+    e_2_e_profile_configuration_ref: Optional[
+        "End2EndMethodProtectionProps.E2EProfileConfigurationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-CONFIGURATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -89,7 +96,7 @@ class End2EndMethodProtectionProps:
             "name": "MAX-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     method_ref: Optional["End2EndMethodProtectionProps.MethodRef"] = field(
         default=None,
@@ -97,7 +104,7 @@ class End2EndMethodProtectionProps:
             "name": "METHOD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -105,7 +112,7 @@ class End2EndMethodProtectionProps:
             "name": "MIN-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_id: Optional[PositiveInteger] = field(
         default=None,
@@ -113,14 +120,14 @@ class End2EndMethodProtectionProps:
             "name": "SOURCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -128,7 +135,7 @@ class End2EndMethodProtectionProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -143,13 +150,14 @@ class End2EndMethodProtectionProps:
             constraint that depends on the category of the
             EndToEndProtection.
         """
+
         data_id: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-ID",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -160,7 +168,7 @@ class End2EndMethodProtectionProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -171,5 +179,5 @@ class End2EndMethodProtectionProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -122,6 +122,7 @@ class ContainerIPdu:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONTAINER-I-PDU"
 
@@ -132,7 +133,7 @@ class ContainerIPdu:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["ContainerIPdu.ShortNameFragments"] = field(
         default=None,
@@ -140,7 +141,7 @@ class ContainerIPdu:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -148,7 +149,7 @@ class ContainerIPdu:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -156,7 +157,7 @@ class ContainerIPdu:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -164,7 +165,7 @@ class ContainerIPdu:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -172,7 +173,7 @@ class ContainerIPdu:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -180,7 +181,7 @@ class ContainerIPdu:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ContainerIPdu.Annotations"] = field(
         default=None,
@@ -188,7 +189,7 @@ class ContainerIPdu:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -196,7 +197,7 @@ class ContainerIPdu:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     has_dynamic_length: Optional[Boolean] = field(
         default=None,
@@ -204,7 +205,7 @@ class ContainerIPdu:
             "name": "HAS-DYNAMIC-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     length: Optional[Integer] = field(
         default=None,
@@ -212,7 +213,7 @@ class ContainerIPdu:
             "name": "LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     meta_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -220,7 +221,7 @@ class ContainerIPdu:
             "name": "META-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     contained_i_pdu_props: Optional[ContainedIPduProps] = field(
         default=None,
@@ -228,15 +229,17 @@ class ContainerIPdu:
             "name": "CONTAINED-I-PDU-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    contained_pdu_triggering_refs: Optional["ContainerIPdu.ContainedPduTriggeringRefs"] = field(
+    contained_pdu_triggering_refs: Optional[
+        "ContainerIPdu.ContainedPduTriggeringRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTAINED-PDU-TRIGGERING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     container_timeout: Optional[TimeValue] = field(
         default=None,
@@ -244,7 +247,7 @@ class ContainerIPdu:
             "name": "CONTAINER-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     container_trigger: Optional[ContainerIPduTriggerEnum] = field(
         default=None,
@@ -252,7 +255,7 @@ class ContainerIPdu:
             "name": "CONTAINER-TRIGGER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     header_type: Optional[ContainerIPduHeaderTypeEnum] = field(
         default=None,
@@ -260,7 +263,7 @@ class ContainerIPdu:
             "name": "HEADER-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_rx_container_queue_size: Optional[PositiveInteger] = field(
         default=None,
@@ -268,7 +271,7 @@ class ContainerIPdu:
             "name": "MINIMUM-RX-CONTAINER-QUEUE-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_tx_container_queue_size: Optional[PositiveInteger] = field(
         default=None,
@@ -276,7 +279,7 @@ class ContainerIPdu:
             "name": "MINIMUM-TX-CONTAINER-QUEUE-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rx_accept_contained_i_pdu: Optional[RxAcceptContainedIPduEnum] = field(
         default=None,
@@ -284,7 +287,7 @@ class ContainerIPdu:
             "name": "RX-ACCEPT-CONTAINED-I-PDU",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     threshold_size: Optional[PositiveInteger] = field(
         default=None,
@@ -292,7 +295,7 @@ class ContainerIPdu:
             "name": "THRESHOLD-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     unused_bit_pattern: Optional[PositiveInteger] = field(
         default=None,
@@ -300,14 +303,14 @@ class ContainerIPdu:
             "name": "UNUSED-BIT-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -315,14 +318,14 @@ class ContainerIPdu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -333,7 +336,7 @@ class ContainerIPdu:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -344,18 +347,20 @@ class ContainerIPdu:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ContainedPduTriggeringRefs:
-        contained_pdu_triggering_ref: List["ContainerIPdu.ContainedPduTriggeringRefs.ContainedPduTriggeringRef"] = field(
+        contained_pdu_triggering_ref: List[
+            "ContainerIPdu.ContainedPduTriggeringRefs.ContainedPduTriggeringRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONTAINED-PDU-TRIGGERING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -366,5 +371,5 @@ class ContainerIPdu:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

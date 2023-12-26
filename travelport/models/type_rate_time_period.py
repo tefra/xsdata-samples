@@ -8,6 +8,7 @@ class TypeRateTimePeriod(Enum):
     """
     The period for the rate code (daily, weekly, etc)
     """
+
     HOURLY = "Hourly"
     DAILY = "Daily"
     WEEKLY = "Weekly"

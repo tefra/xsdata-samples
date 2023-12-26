@@ -10,6 +10,7 @@ class RailJourneyList:
     """
     List of Rail Journeys.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -19,5 +20,5 @@ class RailJourneyList:
             "name": "RailJourney",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

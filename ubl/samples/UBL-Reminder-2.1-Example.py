@@ -53,84 +53,84 @@ from xsdata.models.datatype import XmlDate
 
 obj = Reminder(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="12"
+        value='12'
     ),
     issue_date=XmlDate(2010, 4, 14),
     accounting_supplier_party=AccountingSupplierParty(
         party=Party(
             endpoint_id=EndpointId(
-                value="1234567890123",
-                scheme_id="GLN",
-                scheme_agency_id="9"
+                value='1234567890123',
+                scheme_id='GLN',
+                scheme_agency_id='9'
             ),
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="Supp123",
-                        scheme_id="ZZZ"
+                        value='Supp123',
+                        scheme_id='ZZZ'
                     )
                 ),
             ],
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Salescompany ltd."
+                        value='Salescompany ltd.'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 id=Id(
-                    value="1231412341324",
-                    scheme_id="GLN",
-                    scheme_agency_id="9"
+                    value='1231412341324',
+                    scheme_id='GLN',
+                    scheme_agency_id='9'
                 ),
                 postbox=Postbox(
-                    value="5467"
+                    value='5467'
                 ),
                 street_name=StreetName(
-                    value="Main street"
+                    value='Main street'
                 ),
                 additional_street_name=AdditionalStreetName(
-                    value="Suite 123"
+                    value='Suite 123'
                 ),
                 building_number=BuildingNumber(
-                    value="1"
+                    value='1'
                 ),
                 department=Department(
-                    value="Revenue department"
+                    value='Revenue department'
                 ),
                 city_name=CityName(
-                    value="Big city"
+                    value='Big city'
                 ),
                 postal_zone=PostalZone(
-                    value="54321"
+                    value='54321'
                 ),
                 country_subentity_code=CountrySubentityCode(
-                    value="RegionA"
+                    value='RegionA'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="DK",
-                        list_id="ISO3166-1",
-                        list_agency_id="6"
+                        value='DK',
+                        list_id='ISO3166-1',
+                        list_agency_id='6'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     company_id=CompanyId(
-                        value="DK12345",
-                        scheme_id="DKVAT",
-                        scheme_agency_id="ZZZ"
+                        value='DK12345',
+                        scheme_id='DKVAT',
+                        scheme_agency_id='ZZZ'
                     ),
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="VAT",
-                            scheme_id="UN/ECE 5153",
-                            scheme_agency_id="6"
+                            value='VAT',
+                            scheme_id='UN/ECE 5153',
+                            scheme_agency_id='6'
                         )
                     )
                 ),
@@ -138,23 +138,23 @@ obj = Reminder(
             party_legal_entity=[
                 PartyLegalEntity(
                     registration_name=RegistrationName(
-                        value="The Sellercompany Incorporated"
+                        value='The Sellercompany Incorporated'
                     ),
                     company_id=CompanyId(
-                        value="5402697509",
-                        scheme_id="CVR",
-                        scheme_agency_id="ZZZ"
+                        value='5402697509',
+                        scheme_id='CVR',
+                        scheme_agency_id='ZZZ'
                     ),
                     registration_address=RegistrationAddress(
                         city_name=CityName(
-                            value="Big city"
+                            value='Big city'
                         ),
                         country_subentity=CountrySubentity(
-                            value="RegionA"
+                            value='RegionA'
                         ),
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="DK"
+                                value='DK'
                             )
                         )
                     )
@@ -162,28 +162,28 @@ obj = Reminder(
             ],
             contact=Contact(
                 telephone=Telephone(
-                    value="4621230"
+                    value='4621230'
                 ),
                 telefax=Telefax(
-                    value="4621231"
+                    value='4621231'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="antonio@salescompany.dk"
+                    value='antonio@salescompany.dk'
                 )
             ),
             person=[
                 Person(
                     first_name=FirstName(
-                        value="Antonio"
+                        value='Antonio'
                     ),
                     family_name=FamilyName(
-                        value="M"
+                        value='M'
                     ),
                     middle_name=MiddleName(
-                        value="Salemacher"
+                        value='Salemacher'
                     ),
                     job_title=JobTitle(
-                        value="Sales manager"
+                        value='Sales manager'
                     )
                 ),
             ]
@@ -192,75 +192,75 @@ obj = Reminder(
     accounting_customer_party=AccountingCustomerParty(
         party=Party(
             endpoint_id=EndpointId(
-                value="1234567987654",
-                scheme_id="GLN",
-                scheme_agency_id="9"
+                value='1234567987654',
+                scheme_id='GLN',
+                scheme_agency_id='9'
             ),
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="345KS5324",
-                        scheme_id="ZZZ"
+                        value='345KS5324',
+                        scheme_id='ZZZ'
                     )
                 ),
             ],
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Buyercompany ltd"
+                        value='Buyercompany ltd'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 id=Id(
-                    value="1238764941386",
-                    scheme_id="GLN",
-                    scheme_agency_id="9"
+                    value='1238764941386',
+                    scheme_id='GLN',
+                    scheme_agency_id='9'
                 ),
                 postbox=Postbox(
-                    value="123"
+                    value='123'
                 ),
                 street_name=StreetName(
-                    value="Anystreet"
+                    value='Anystreet'
                 ),
                 additional_street_name=AdditionalStreetName(
-                    value="Back door"
+                    value='Back door'
                 ),
                 building_number=BuildingNumber(
-                    value="8"
+                    value='8'
                 ),
                 department=Department(
-                    value="Accounting department"
+                    value='Accounting department'
                 ),
                 city_name=CityName(
-                    value="Anytown"
+                    value='Anytown'
                 ),
                 postal_zone=PostalZone(
-                    value="101"
+                    value='101'
                 ),
                 country_subentity=CountrySubentity(
-                    value="RegionB"
+                    value='RegionB'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="BE",
-                        list_id="ISO3166-1",
-                        list_agency_id="6"
+                        value='BE',
+                        list_id='ISO3166-1',
+                        list_agency_id='6'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     company_id=CompanyId(
-                        value="BE54321",
-                        scheme_id="BEVAT",
-                        scheme_agency_id="ZZZ"
+                        value='BE54321',
+                        scheme_id='BEVAT',
+                        scheme_agency_id='ZZZ'
                     ),
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="VAT",
-                            scheme_id="UN/ECE 5153",
-                            scheme_agency_id="6"
+                            value='VAT',
+                            scheme_id='UN/ECE 5153',
+                            scheme_agency_id='6'
                         )
                     )
                 ),
@@ -268,23 +268,23 @@ obj = Reminder(
             party_legal_entity=[
                 PartyLegalEntity(
                     registration_name=RegistrationName(
-                        value="The buyercompany inc."
+                        value='The buyercompany inc.'
                     ),
                     company_id=CompanyId(
-                        value="5645342123",
-                        scheme_id="ZZZ",
-                        scheme_agency_id="ZZZ"
+                        value='5645342123',
+                        scheme_id='ZZZ',
+                        scheme_agency_id='ZZZ'
                     ),
                     registration_address=RegistrationAddress(
                         city_name=CityName(
-                            value="Mainplace"
+                            value='Mainplace'
                         ),
                         country_subentity=CountrySubentity(
-                            value="RegionB"
+                            value='RegionB'
                         ),
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="BE"
+                                value='BE'
                             )
                         )
                     )
@@ -292,28 +292,28 @@ obj = Reminder(
             ],
             contact=Contact(
                 telephone=Telephone(
-                    value="5121230"
+                    value='5121230'
                 ),
                 telefax=Telefax(
-                    value="5121231"
+                    value='5121231'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="john@buyercompany.eu"
+                    value='john@buyercompany.eu'
                 )
             ),
             person=[
                 Person(
                     first_name=FirstName(
-                        value="John"
+                        value='John'
                     ),
                     family_name=FamilyName(
-                        value="X"
+                        value='X'
                     ),
                     middle_name=MiddleName(
-                        value="Doe"
+                        value='Doe'
                     ),
                     job_title=JobTitle(
-                        value="Purchasing manager"
+                        value='Purchasing manager'
                     )
                 ),
             ]
@@ -321,48 +321,48 @@ obj = Reminder(
     ),
     legal_monetary_total=LegalMonetaryTotal(
         line_extension_amount=LineExtensionAmount(
-            value=Decimal("1436.5"),
-            currency_id="EUR"
+            value=Decimal('1436.5'),
+            currency_id='EUR'
         ),
         tax_exclusive_amount=TaxExclusiveAmount(
-            value=Decimal("1436.5"),
-            currency_id="EUR"
+            value=Decimal('1436.5'),
+            currency_id='EUR'
         ),
         tax_inclusive_amount=TaxInclusiveAmount(
-            value=Decimal("1729"),
-            currency_id="EUR"
+            value=Decimal('1729'),
+            currency_id='EUR'
         ),
         allowance_total_amount=AllowanceTotalAmount(
-            value=Decimal("100"),
-            currency_id="EUR"
+            value=Decimal('100'),
+            currency_id='EUR'
         ),
         charge_total_amount=ChargeTotalAmount(
-            value=Decimal("100"),
-            currency_id="EUR"
+            value=Decimal('100'),
+            currency_id='EUR'
         ),
         prepaid_amount=PrepaidAmount(
-            value=Decimal("1000"),
-            currency_id="EUR"
+            value=Decimal('1000'),
+            currency_id='EUR'
         ),
         payable_rounding_amount=PayableRoundingAmount(
-            value=Decimal("0.30"),
-            currency_id="EUR"
+            value=Decimal('0.30'),
+            currency_id='EUR'
         ),
         payable_amount=PayableAmount(
-            value=Decimal("729"),
-            currency_id="EUR"
+            value=Decimal('729'),
+            currency_id='EUR'
         )
     ),
     reminder_line=[
         ReminderLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             billing_reference=[
                 BillingReference(
                     invoice_document_reference=InvoiceDocumentReference(
                         id=Id(
-                            value="TOSL108"
+                            value='TOSL108'
                         )
                     )
                 ),

@@ -17,6 +17,7 @@ class AirExchangeBundleTotal:
     penalty
         Only used within an AirExchangeQuoteRsp
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,7 +28,7 @@ class AirExchangeBundleTotal:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     penalty: list[Penalty1] = field(
         default_factory=list,
@@ -36,5 +37,5 @@ class AirExchangeBundleTotal:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

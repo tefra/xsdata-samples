@@ -11,6 +11,7 @@ class VehicleRetrieveRsp(BaseRsp1):
     """
     Response to a VehicleRetrieveReq.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -21,5 +22,5 @@ class VehicleRetrieveRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

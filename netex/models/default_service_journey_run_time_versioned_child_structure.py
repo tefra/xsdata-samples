@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
-from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from .journey_timing_versioned_child_structure import (
+    JourneyTimingVersionedChildStructure,
+)
 from .service_journey_ref import ServiceJourneyRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
 
@@ -9,7 +11,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class DefaultServiceJourneyRunTimeVersionedChildStructure(JourneyTimingVersionedChildStructure):
+class DefaultServiceJourneyRunTimeVersionedChildStructure(
+    JourneyTimingVersionedChildStructure
+):
     class Meta:
         name = "DefaultServiceJourneyRunTime_VersionedChildStructure"
 
@@ -20,9 +24,11 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(JourneyTimingVersioned
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
-    template_service_journey_ref_or_service_journey_ref: Optional[object] = field(
+    template_service_journey_ref_or_service_journey_ref: Optional[
+        Union[TemplateServiceJourneyRef, ServiceJourneyRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -38,5 +44,5 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(JourneyTimingVersioned
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

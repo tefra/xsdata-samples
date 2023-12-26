@@ -15,6 +15,7 @@ class ServiceFeeTaxInfo2:
         The tax category represents a valid IATA tax code.
     amount
     """
+
     class Meta:
         name = "ServiceFeeTaxInfo"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -25,7 +26,7 @@ class ServiceFeeTaxInfo2:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -33,5 +34,5 @@ class ServiceFeeTaxInfo2:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -13,11 +13,11 @@ class TParticipantMultiplicity(TBaseElement):
         default=0,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     maximum: int = field(
         default=1,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

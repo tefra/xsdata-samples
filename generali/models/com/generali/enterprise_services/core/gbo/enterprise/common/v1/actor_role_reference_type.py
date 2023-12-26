@@ -1,12 +1,24 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type import BaseReferenceComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.thing_actor_type import ThingActorType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.actor_role_reference_type_contact_points import ActorRoleReferenceTypeContactPoints
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.individual_actor_type import IndividualActorType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_actor_type import OrganisationActorType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type import (
+    BaseReferenceComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.thing_actor_type import (
+    ThingActorType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.actor_role_reference_type_contact_points import (
+    ActorRoleReferenceTypeContactPoints,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.individual_actor_type import (
+    IndividualActorType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.organisation_actor_type import (
+    OrganisationActorType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+)
 
 
 @dataclass
@@ -22,13 +34,14 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
     :ivar thing: The details of the thing actor.
     :ivar contact_points:
     """
+
     organisation: Optional[OrganisationActorType] = field(
         default=None,
         metadata={
             "name": "Organisation",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     individual: Optional[IndividualActorType] = field(
         default=None,
@@ -36,7 +49,7 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "name": "Individual",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     thing: Optional[ThingActorType] = field(
         default=None,
@@ -44,7 +57,7 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "name": "Thing",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     contact_points: Optional[ActorRoleReferenceTypeContactPoints] = field(
         default=None,
@@ -52,5 +65,5 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "name": "ContactPoints",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )

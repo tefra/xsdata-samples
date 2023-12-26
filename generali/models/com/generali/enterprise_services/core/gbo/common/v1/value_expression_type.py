@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_operator_code_type import QueryOperatorCodeType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_operator_code_type import (
+    QueryOperatorCodeType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -28,24 +32,25 @@ class ValueExpressionType:
         XPath notation as per the MBP to provide a unique
         reference.</description>
     """
+
     value: List[TextType] = field(
         default_factory=list,
         metadata={
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     operator_code: Optional[QueryOperatorCodeType] = field(
         default=None,
         metadata={
             "name": "operatorCode",
             "type": "Attribute",
-        }
+        },
     )
     path: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

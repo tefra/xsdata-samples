@@ -15,5 +15,5 @@ class Grad:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -8,7 +8,9 @@ from .annotation import (
 from .boolean import Boolean
 from .category_string import CategoryString
 from .data_id_mode_enum import DataIdModeEnum
-from .e_2_e_profile_compatibility_props_subtypes_enum import E2EProfileCompatibilityPropsSubtypesEnum
+from .e_2_e_profile_compatibility_props_subtypes_enum import (
+    E2EProfileCompatibilityPropsSubtypesEnum,
+)
 from .end_to_end_profile_behavior_enum import EndToEndProfileBehaviorEnum
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .nmtoken_string import NmtokenString
@@ -118,6 +120,7 @@ class EndToEndTransformationDescription:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-TO-END-TRANSFORMATION-DESCRIPTION"
 
@@ -127,7 +130,7 @@ class EndToEndTransformationDescription:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +138,7 @@ class EndToEndTransformationDescription:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -143,7 +146,7 @@ class EndToEndTransformationDescription:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -151,7 +154,7 @@ class EndToEndTransformationDescription:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -159,7 +162,7 @@ class EndToEndTransformationDescription:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     clear_from_valid_to_invalid: Optional[Boolean] = field(
         default=None,
@@ -167,7 +170,7 @@ class EndToEndTransformationDescription:
             "name": "CLEAR-FROM-VALID-TO-INVALID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -175,7 +178,7 @@ class EndToEndTransformationDescription:
             "name": "COUNTER-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -183,7 +186,7 @@ class EndToEndTransformationDescription:
             "name": "CRC-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_id_mode: Optional[DataIdModeEnum] = field(
         default=None,
@@ -191,7 +194,7 @@ class EndToEndTransformationDescription:
             "name": "DATA-ID-MODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_id_nibble_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -199,15 +202,17 @@ class EndToEndTransformationDescription:
             "name": "DATA-ID-NIBBLE-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    e_2_e_profile_compatibility_props_ref: Optional["EndToEndTransformationDescription.E2EProfileCompatibilityPropsRef"] = field(
+    e_2_e_profile_compatibility_props_ref: Optional[
+        "EndToEndTransformationDescription.E2EProfileCompatibilityPropsRef"
+    ] = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-COMPATIBILITY-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_delta_counter: Optional[PositiveInteger] = field(
         default=None,
@@ -215,7 +220,7 @@ class EndToEndTransformationDescription:
             "name": "MAX-DELTA-COUNTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_error_state_init: Optional[PositiveInteger] = field(
         default=None,
@@ -223,7 +228,7 @@ class EndToEndTransformationDescription:
             "name": "MAX-ERROR-STATE-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_error_state_invalid: Optional[PositiveInteger] = field(
         default=None,
@@ -231,7 +236,7 @@ class EndToEndTransformationDescription:
             "name": "MAX-ERROR-STATE-INVALID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_error_state_valid: Optional[PositiveInteger] = field(
         default=None,
@@ -239,7 +244,7 @@ class EndToEndTransformationDescription:
             "name": "MAX-ERROR-STATE-VALID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_no_new_or_repeated_data: Optional[PositiveInteger] = field(
         default=None,
@@ -247,7 +252,7 @@ class EndToEndTransformationDescription:
             "name": "MAX-NO-NEW-OR-REPEATED-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_ok_state_init: Optional[PositiveInteger] = field(
         default=None,
@@ -255,7 +260,7 @@ class EndToEndTransformationDescription:
             "name": "MIN-OK-STATE-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_ok_state_invalid: Optional[PositiveInteger] = field(
         default=None,
@@ -263,7 +268,7 @@ class EndToEndTransformationDescription:
             "name": "MIN-OK-STATE-INVALID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_ok_state_valid: Optional[PositiveInteger] = field(
         default=None,
@@ -271,7 +276,7 @@ class EndToEndTransformationDescription:
             "name": "MIN-OK-STATE-VALID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     offset: Optional[PositiveInteger] = field(
         default=None,
@@ -279,7 +284,7 @@ class EndToEndTransformationDescription:
             "name": "OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     profile_behavior: Optional[EndToEndProfileBehaviorEnum] = field(
         default=None,
@@ -287,7 +292,7 @@ class EndToEndTransformationDescription:
             "name": "PROFILE-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     profile_name: Optional[NmtokenString] = field(
         default=None,
@@ -295,7 +300,7 @@ class EndToEndTransformationDescription:
             "name": "PROFILE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_counter_init: Optional[PositiveInteger] = field(
         default=None,
@@ -303,7 +308,7 @@ class EndToEndTransformationDescription:
             "name": "SYNC-COUNTER-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_header_bits_to_shift: Optional[PositiveInteger] = field(
         default=None,
@@ -311,7 +316,7 @@ class EndToEndTransformationDescription:
             "name": "UPPER-HEADER-BITS-TO-SHIFT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     window_size: Optional[PositiveInteger] = field(
         default=None,
@@ -319,7 +324,7 @@ class EndToEndTransformationDescription:
             "name": "WINDOW-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     window_size_init: Optional[PositiveInteger] = field(
         default=None,
@@ -327,7 +332,7 @@ class EndToEndTransformationDescription:
             "name": "WINDOW-SIZE-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     window_size_invalid: Optional[PositiveInteger] = field(
         default=None,
@@ -335,7 +340,7 @@ class EndToEndTransformationDescription:
             "name": "WINDOW-SIZE-INVALID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     window_size_valid: Optional[PositiveInteger] = field(
         default=None,
@@ -343,14 +348,14 @@ class EndToEndTransformationDescription:
             "name": "WINDOW-SIZE-VALID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -358,7 +363,7 @@ class EndToEndTransformationDescription:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -369,5 +374,5 @@ class EndToEndTransformationDescription:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -27,6 +27,7 @@ class BusMirrorLinPidToCanIdMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BUS-MIRROR-LIN-PID-TO-CAN-ID-MAPPING"
 
@@ -36,22 +37,24 @@ class BusMirrorLinPidToCanIdMapping:
             "name": "REMAPPED-CAN-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    source_lin_pid_ref: Optional["BusMirrorLinPidToCanIdMapping.SourceLinPidRef"] = field(
+    source_lin_pid_ref: Optional[
+        "BusMirrorLinPidToCanIdMapping.SourceLinPidRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SOURCE-LIN-PID-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -59,7 +62,7 @@ class BusMirrorLinPidToCanIdMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -70,5 +73,5 @@ class BusMirrorLinPidToCanIdMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

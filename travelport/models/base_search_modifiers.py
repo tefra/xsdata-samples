@@ -33,27 +33,28 @@ class BaseSearchModifiers:
     exclude_hotel
         Exclude Hotel reservations from the results.
     """
+
     travel_date: None | TypeDateSpec = field(
         default=None,
         metadata={
             "name": "TravelDate",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/universal_v52_0",
-        }
+        },
     )
     include_all_names: bool = field(
         default=False,
         metadata={
             "name": "IncludeAllNames",
             "type": "Attribute",
-        }
+        },
     )
     include_agent_info: bool = field(
         default=False,
         metadata={
             "name": "IncludeAgentInfo",
             "type": "Attribute",
-        }
+        },
     )
     max_results: int = field(
         default=20,
@@ -62,7 +63,7 @@ class BaseSearchModifiers:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 200,
-        }
+        },
     )
     start_from_result: None | int = field(
         default=None,
@@ -70,26 +71,26 @@ class BaseSearchModifiers:
             "name": "StartFromResult",
             "type": "Attribute",
             "min_inclusive": 1,
-        }
+        },
     )
     exclude_air: bool = field(
         default=False,
         metadata={
             "name": "ExcludeAir",
             "type": "Attribute",
-        }
+        },
     )
     exclude_vehicle: bool = field(
         default=False,
         metadata={
             "name": "ExcludeVehicle",
             "type": "Attribute",
-        }
+        },
     )
     exclude_hotel: bool = field(
         default=False,
         metadata={
             "name": "ExcludeHotel",
             "type": "Attribute",
-        }
+        },
     )

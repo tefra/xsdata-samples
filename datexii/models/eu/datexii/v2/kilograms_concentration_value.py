@@ -17,6 +17,7 @@ class KilogramsConcentrationValue(DataValue):
         kilograms per cubic metre.
     :ivar kilograms_concentration_value_extension:
     """
+
     kilograms_concentration: Optional[float] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class KilogramsConcentrationValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     kilograms_concentration_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class KilogramsConcentrationValue(DataValue):
             "name": "kilogramsConcentrationValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

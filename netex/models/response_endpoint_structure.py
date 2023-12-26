@@ -13,7 +13,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     responder_ref: Optional[str] = field(
         default=None,
@@ -21,7 +21,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "name": "ResponderRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     request_message_ref: Optional[str] = field(
         default=None,
@@ -29,7 +29,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "name": "RequestMessageRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -37,7 +37,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -45,5 +45,5 @@ class ResponseEndpointStructure(ResponseStructure):
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

@@ -48,6 +48,7 @@ class ServiceProviderEnumSimple(Enum):
     :cvar WATCH_DOG_MANAGER: The service relates to the Watchdog Manager
         (WdgM).
     """
+
     ANY_STANDARDIZED = "ANY-STANDARDIZED"
     BASIC_SOFTWARE_MODE_MANAGER = "BASIC-SOFTWARE-MODE-MANAGER"
     COM_MANAGER = "COM-MANAGER"

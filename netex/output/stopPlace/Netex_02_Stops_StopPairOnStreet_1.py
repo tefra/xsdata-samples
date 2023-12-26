@@ -56,31 +56,31 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         description=MultilingualString(
-            value="Filter used to reest these contnets Get all STOP PLACEs, STOP ASSIGNMENTs and reponsib ilitySets  for Network TNET1 in topgraphic area    :TP_0032A.&#10;&#9;&#9;&#9;&#9;Also get details for &#10;&#9;&#9;&#9;&#9;"
+            value='Filter used to reest these contnets Get all STOP PLACEs, STOP ASSIGNMENTs and reponsib ilitySets  for Network TNET1 in topgraphic area    :TP_0032A.\n\t\t\t\tAlso get details for \n\t\t\t\t'
         ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         NetworkFilterByValueStructure(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     TopographicPlaceRef(
-                                        ref="detop:TP_0032A"
+                                        ref='detop:TP_0032A'
                                     ),
                                 ]
                             ),
                             places=NetworkFilterByValueStructure.Places(
                                 choice=[
                                     TopographicPlaceRef(
-                                        version="any",
-                                        ref="detop:TP_0032A"
+                                        version='any',
+                                        ref='detop:TP_0032A'
                                     ),
                                 ]
                             )
@@ -92,104 +92,104 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P3M"),
     description=MultilingualString(
-        value="Simple Stop pair On street example"
+        value='Simple Stop pair On street example'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="mybus:CF002",
+                id='mybus:CF002',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="jqx:CF002",
-                                version="any",
+                                id='jqx:CF002',
+                                version='any',
                                 from_date=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                 to_date=XmlDateTime(2011, 12, 17, 9, 30, 47, 0, 0)
                             ),
                         ]
                     ),
                 ],
-                version="1",
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="jqx",
-                            xmlns="jqx",
-                            xmlns_url="http://www.VKWzn.de/",
-                            description="Bus data  namesapce"
+                            id='jqx',
+                            xmlns='jqx',
+                            xmlns_url='http://www.VKWzn.de/',
+                            description='Bus data  namesapce'
                         ),
                         Codespace(
-                            id="detop",
-                            xmlns="detop",
-                            xmlns_url="http://www.pttopog.de",
-                            description="German locality data"
+                            id='detop',
+                            xmlns='detop',
+                            xmlns_url='http://www.pttopog.de',
+                            description='German locality data'
                         ),
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.busfahrt.de",
-                            description="German locality data"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.busfahrt.de',
+                            description='German locality data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="jqx"
+                        ref='jqx'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         SiteFrame(
-                            id="detop:SF00121",
-                            version="any",
+                            id='detop:SF00121',
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    value="EXTERNAL",
-                                    ref="detop:RS_24"
+                                    value='EXTERNAL',
+                                    ref='detop:RS_24'
                                 )
                             ),
                             topographic_places=TopographicPlacesInFrameRelStructure(
                                 topographic_place=[
                                     TopographicPlace(
-                                        id="detop:TP_0032A",
-                                        version="any",
+                                        id='detop:TP_0032A',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Keinstadt",
-                                            lang="de"
+                                            value='Keinstadt',
+                                            lang='de'
                                         ),
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                             name=MultilingualString(
-                                                value="Keinstadt auf dem Fluss",
-                                                lang="de"
+                                                value='Keinstadt auf dem Fluss',
+                                                lang='de'
                                             ),
                                             short_name=MultilingualString(
-                                                value="Keinstadt",
-                                                lang="de"
+                                                value='Keinstadt',
+                                                lang='de'
                                             ),
                                             qualify=TopographicPlaceDescriptorVersionedChildStructure.Qualify(
                                                 qualifier_name=MultilingualString(
-                                                    value="Mittleland",
-                                                    lang="de"
+                                                    value='Mittleland',
+                                                    lang='de'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
-                                                    version="any",
-                                                    ref="detop:TP_0100"
+                                                    version='any',
+                                                    ref='detop:TP_0100'
                                                 )
                                             )
                                         )
                                     ),
                                     TopographicPlace(
-                                        id="detop:TP_0100",
-                                        version="any",
+                                        id='detop:TP_0100',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Mittleland",
-                                            lang="de"
+                                            value='Mittleland',
+                                            lang='de'
                                         ),
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                             name=MultilingualString(
-                                                value="Mittleland",
-                                                lang="de"
+                                                value='Mittleland',
+                                                lang='de'
                                             )
                                         )
                                     ),
@@ -198,17 +198,17 @@ obj = PublicationDelivery(
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="mybus:SP_0751A",
+                                        id='mybus:SP_0751A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="01",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='01',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Stadtmuseum",
-                                            lang="de"
+                                            value='Stadtmuseum',
+                                            lang='de'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Museum ",
-                                            lang="de"
+                                            value='Museum ',
+                                            lang='de'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -217,13 +217,13 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="DEGrid"
+                                                    srs_name='DEGrid'
                                                 )
                                             )
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="mybus:SP_0751A",
-                                            version="any",
+                                            id='mybus:SP_0751A',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
@@ -234,8 +234,8 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
-                                                version="any",
-                                                ref="detop:TP_0032A"
+                                                version='any',
+                                                ref='detop:TP_0032A'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -243,47 +243,47 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP_0751A_1",
+                                                    id='mybus:Q_SP_0751A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Stadtmuseum Haltstelle A",
-                                                        lang="de"
+                                                        value='Stadtmuseum Haltstelle A',
+                                                        lang='de'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang .",
-                                                            lang="de"
+                                                            value='Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang .',
+                                                            lang='de'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     road_address=RoadAddress(
-                                                        id="mybus:Rad_SP001A_01",
-                                                        version="any",
+                                                        id='mybus:Rad_SP001A_01',
+                                                        version='any',
                                                         road_name=MultilingualString(
-                                                            value="Museumstrasse"
+                                                            value='Museumstrasse'
                                                         )
                                                     ),
                                                     cross_road=MultilingualString(
-                                                        value="Kohlstrasse",
-                                                        lang="de"
+                                                        value='Kohlstrasse',
+                                                        lang='de'
                                                     ),
                                                     landmark=MultilingualString(
-                                                        value="Stadtmuseum",
-                                                        lang="de"
+                                                        value='Stadtmuseum',
+                                                        lang='de'
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             PassengerInformationEquipment(
-                                                                id="mybus:Rad_SP001A_01",
-                                                                version="any",
+                                                                id='mybus:Rad_SP001A_01',
+                                                                version='any',
                                                                 accessibility_info_facility_list=[
                                                                     AccessibilityInfoFacilityEnumeration.AUDIO_FOR_HEARING_IMPAIRED,
                                                                     AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
@@ -294,55 +294,55 @@ obj = PublicationDelivery(
                                                     boarding_use=True,
                                                     alighting_use=True,
                                                     label=MultilingualString(
-                                                        value="A",
-                                                        lang="de"
+                                                        value='A',
+                                                        lang='de'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
                                                 Quay(
-                                                    id="mybus:Q_SP_0751A_2",
+                                                    id='mybus:Q_SP_0751A_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Stadtmuseum Haltstelle B",
-                                                        lang="de"
+                                                        value='Stadtmuseum Haltstelle B',
+                                                        lang='de'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang am anderen seit .",
-                                                            lang="de"
+                                                            value='Zum Ecke Museum Strasse und Kohlstrasse - 50 m nach Museum eingang am anderen seit .',
+                                                            lang='de'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397148"),
-                                                            latitude=Decimal("51.4217482063")
+                                                            longitude=Decimal('-0.2071397148'),
+                                                            latitude=Decimal('51.4217482063')
                                                         )
                                                     ),
                                                     road_address=RoadAddress(
-                                                        id="mybus:Rad_Q_SP_0751A_2",
-                                                        version="any",
+                                                        id='mybus:Rad_Q_SP_0751A_2',
+                                                        version='any',
                                                         road_name=MultilingualString(
-                                                            value="Museumstrasse"
+                                                            value='Museumstrasse'
                                                         )
                                                     ),
                                                     cross_road=MultilingualString(
-                                                        value="Kohlstrasse",
-                                                        lang="de"
+                                                        value='Kohlstrasse',
+                                                        lang='de'
                                                     ),
                                                     landmark=MultilingualString(
-                                                        value="Stadtmuseum",
-                                                        lang="de"
+                                                        value='Stadtmuseum',
+                                                        lang='de'
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             PassengerInformationEquipment(
-                                                                id="mybus:Q_SP_0751A_2",
-                                                                version="any",
+                                                                id='mybus:Q_SP_0751A_2',
+                                                                version='any',
                                                                 accessibility_info_facility_list=[
                                                                     AccessibilityInfoFacilityEnumeration.AUDIO_FOR_HEARING_IMPAIRED,
                                                                     AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
@@ -353,10 +353,10 @@ obj = PublicationDelivery(
                                                     boarding_use=True,
                                                     alighting_use=True,
                                                     label=MultilingualString(
-                                                        value="B",
-                                                        lang="de"
+                                                        value='B',
+                                                        lang='de'
                                                     ),
-                                                    public_code="1-3455 ",
+                                                    public_code='1-3455 ',
                                                     compass_octant=CompassBearing8Enumeration.N,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
@@ -367,26 +367,26 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="jqx:SV0021",
-                            version="any",
+                            id='jqx:SV0021',
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    value="EXTERNAL",
-                                    ref="jqx:RS_22"
+                                    value='EXTERNAL',
+                                    ref='jqx:RS_22'
                                 )
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="jqx:SSP0021A",
+                                        id='jqx:SSP0021A',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="032",
+                                        version='032',
                                         name=MultilingualString(
-                                            value="Stadtmuseum"
+                                            value='Stadtmuseum'
                                         ),
                                         label=MultilingualString(
-                                            value="Stadmuseum Zum Bahnhof"
+                                            value='Stadmuseum Zum Bahnhof'
                                         )
                                     ),
                                 ]
@@ -394,62 +394,62 @@ obj = PublicationDelivery(
                             stop_assignments=StopAssignmentsInFrameRelStructure(
                                 choice=[
                                     PassengerStopAssignment(
-                                        id="jqx:PSA_20012_A",
-                                        version="any",
+                                        id='jqx:PSA_20012_A',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Assigns Museum timetable ref to physical stop - regardless of quay ",
-                                            lang="en"
+                                            value='Assigns Museum timetable ref to physical stop - regardless of quay ',
+                                            lang='en'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="jqx:SSP0021A"
+                                            version='032',
+                                            ref='jqx:SSP0021A'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="01",
-                                            ref="mybus:SP_0751A"
+                                            version='01',
+                                            ref='mybus:SP_0751A'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="jqx:PSA_20012_A1",
-                                        version="any",
+                                        id='jqx:PSA_20012_A1',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Assigns Eastbound Museum timetable ref to physical stop",
-                                            lang="en"
+                                            value='Assigns Eastbound Museum timetable ref to physical stop',
+                                            lang='en'
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="jqx:SSP0021A"
+                                            version='032',
+                                            ref='jqx:SSP0021A'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="01",
-                                            ref="mybus:SP_0751A"
+                                            version='01',
+                                            ref='mybus:SP_0751A'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="01",
-                                            ref="mybus:Q_SP_0751A_1"
+                                            version='01',
+                                            ref='mybus:Q_SP_0751A_1'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="jqx:PSA_20012_A2",
-                                        version="any",
+                                        id='jqx:PSA_20012_A2',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Assigns Westbound Museum timetable ref to physical stop",
-                                            lang="en"
+                                            value='Assigns Westbound Museum timetable ref to physical stop',
+                                            lang='en'
                                         ),
                                         order=3,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="jqx:SSP0021A"
+                                            version='032',
+                                            ref='jqx:SSP0021A'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="01",
-                                            ref="mybus:SP_0751A"
+                                            version='01',
+                                            ref='mybus:SP_0751A'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="01",
-                                            ref="mybus:Q_SP_0751A_2"
+                                            version='01',
+                                            ref='mybus:Q_SP_0751A_2'
                                         )
                                     ),
                                 ]

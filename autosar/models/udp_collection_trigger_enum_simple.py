@@ -10,5 +10,6 @@ class UdpCollectionTriggerEnumSimple(Enum):
     :cvar NEVER: ServiceInterface element will be buffered and will not
         trigger the transmission of the data.
     """
+
     ALWAYS = "ALWAYS"
     NEVER = "NEVER"

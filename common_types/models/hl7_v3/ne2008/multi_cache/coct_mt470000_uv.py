@@ -33,7 +33,7 @@ class CoctMt470000UvPerformer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -41,7 +41,7 @@ class CoctMt470000UvPerformer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -49,7 +49,7 @@ class CoctMt470000UvPerformer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -57,14 +57,14 @@ class CoctMt470000UvPerformer:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -72,7 +72,7 @@ class CoctMt470000UvPerformer:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Cs] = field(
         default=None,
@@ -80,7 +80,7 @@ class CoctMt470000UvPerformer:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -88,7 +88,7 @@ class CoctMt470000UvPerformer:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -97,14 +97,14 @@ class CoctMt470000UvPerformer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationPhysicalPerformer] = field(
         default=None,
@@ -112,7 +112,7 @@ class CoctMt470000UvPerformer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -127,7 +127,7 @@ class CoctMt470000UvResponsibleParty:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -135,7 +135,7 @@ class CoctMt470000UvResponsibleParty:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -143,7 +143,7 @@ class CoctMt470000UvResponsibleParty:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -151,14 +151,14 @@ class CoctMt470000UvResponsibleParty:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -166,7 +166,7 @@ class CoctMt470000UvResponsibleParty:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Cs] = field(
         default=None,
@@ -174,7 +174,7 @@ class CoctMt470000UvResponsibleParty:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -182,7 +182,7 @@ class CoctMt470000UvResponsibleParty:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     responsible_party: Optional[CoctMt040200Uv01ResponsibleParty] = field(
         default=None,
@@ -191,14 +191,14 @@ class CoctMt470000UvResponsibleParty:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -207,7 +207,7 @@ class CoctMt470000UvResponsibleParty:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -222,7 +222,7 @@ class CoctMt470000UvConsent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -230,7 +230,7 @@ class CoctMt470000UvConsent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -238,21 +238,21 @@ class CoctMt470000UvConsent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
@@ -260,7 +260,7 @@ class CoctMt470000UvConsent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -268,7 +268,7 @@ class CoctMt470000UvConsent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -276,7 +276,7 @@ class CoctMt470000UvConsent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     responsible_party: List[CoctMt470000UvResponsibleParty] = field(
         default_factory=list,
@@ -286,7 +286,7 @@ class CoctMt470000UvConsent:
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
             "nillable": True,
-        }
+        },
     )
     performer: List[CoctMt470000UvPerformer] = field(
         default_factory=list,
@@ -295,14 +295,14 @@ class CoctMt470000UvConsent:
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -311,7 +311,7 @@ class CoctMt470000UvConsent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -320,7 +320,7 @@ class CoctMt470000UvConsent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -328,5 +328,5 @@ class CoctMt470000UvConsent:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )

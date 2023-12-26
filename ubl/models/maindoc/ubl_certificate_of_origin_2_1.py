@@ -24,7 +24,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
 )
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"
+)
 
 
 @dataclass(frozen=True)
@@ -35,7 +37,7 @@ class CertificateOfOriginType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -43,7 +45,7 @@ class CertificateOfOriginType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -51,7 +53,7 @@ class CertificateOfOriginType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -59,7 +61,7 @@ class CertificateOfOriginType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -67,7 +69,7 @@ class CertificateOfOriginType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -76,7 +78,7 @@ class CertificateOfOriginType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -84,7 +86,7 @@ class CertificateOfOriginType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -92,7 +94,7 @@ class CertificateOfOriginType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -100,7 +102,7 @@ class CertificateOfOriginType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     description: Tuple[Description, ...] = field(
         default_factory=tuple,
@@ -108,7 +110,7 @@ class CertificateOfOriginType:
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -116,7 +118,7 @@ class CertificateOfOriginType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     version_id: Optional[VersionId] = field(
         default=None,
@@ -124,7 +126,7 @@ class CertificateOfOriginType:
             "name": "VersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -132,7 +134,7 @@ class CertificateOfOriginType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     exporter_party: Optional[ExporterParty] = field(
         default=None,
@@ -140,7 +142,7 @@ class CertificateOfOriginType:
             "name": "ExporterParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     importer_party: Optional[ImporterParty] = field(
         default=None,
@@ -148,7 +150,7 @@ class CertificateOfOriginType:
             "name": "ImporterParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     endorser_party: Tuple[EndorserParty, ...] = field(
         default_factory=tuple,
@@ -156,16 +158,18 @@ class CertificateOfOriginType:
             "name": "EndorserParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    certificate_of_origin_application: Optional[CertificateOfOriginApplication] = field(
+    certificate_of_origin_application: Optional[
+        CertificateOfOriginApplication
+    ] = field(
         default=None,
         metadata={
             "name": "CertificateOfOriginApplication",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     issuer_endorsement: Optional[IssuerEndorsement] = field(
         default=None,
@@ -174,7 +178,7 @@ class CertificateOfOriginType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     embassy_endorsement: Optional[EmbassyEndorsement] = field(
         default=None,
@@ -182,7 +186,7 @@ class CertificateOfOriginType:
             "name": "EmbassyEndorsement",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     insurance_endorsement: Optional[InsuranceEndorsement] = field(
         default=None,
@@ -190,7 +194,7 @@ class CertificateOfOriginType:
             "name": "InsuranceEndorsement",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
 
 

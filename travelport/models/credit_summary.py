@@ -10,6 +10,7 @@ class CreditSummary:
     """
     Credit summary associated with the account.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,7 +20,7 @@ class CreditSummary:
             "name": "CurrencyCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     current_balance: None | Decimal = field(
         default=None,
@@ -27,7 +28,7 @@ class CreditSummary:
             "name": "CurrentBalance",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     initial_credit: None | Decimal = field(
         default=None,
@@ -35,5 +36,5 @@ class CreditSummary:
             "name": "InitialCredit",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

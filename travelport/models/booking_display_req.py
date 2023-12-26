@@ -15,6 +15,7 @@ class BookingDisplayReq(BookingBaseReq):
     provider_reservation_info
         Bring an existent PNR in session to work on it.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -23,7 +24,7 @@ class BookingDisplayReq(BookingBaseReq):
         metadata={
             "name": "ProviderReservationInfo",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -36,6 +37,7 @@ class BookingDisplayReq(BookingBaseReq):
         supplier_code
             Represents Carrier Code for ACH PNR Retrieve.
         """
+
         provider_code: None | str = field(
             default=None,
             metadata={
@@ -44,7 +46,7 @@ class BookingDisplayReq(BookingBaseReq):
                 "required": True,
                 "min_length": 2,
                 "max_length": 5,
-            }
+            },
         )
         provider_locator_code: None | str = field(
             default=None,
@@ -53,7 +55,7 @@ class BookingDisplayReq(BookingBaseReq):
                 "type": "Attribute",
                 "required": True,
                 "max_length": 15,
-            }
+            },
         )
         supplier_code: None | str = field(
             default=None,
@@ -62,5 +64,5 @@ class BookingDisplayReq(BookingBaseReq):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 5,
-            }
+            },
         )

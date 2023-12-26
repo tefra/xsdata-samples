@@ -16,13 +16,14 @@ class Activity(TrafficElement):
     :ivar mobility_of_activity: Mobility of the activity.
     :ivar activity_extension:
     """
+
     mobility_of_activity: Optional[Mobility] = field(
         default=None,
         metadata={
             "name": "mobilityOfActivity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     activity_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class Activity(TrafficElement):
             "name": "activityExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

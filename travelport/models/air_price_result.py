@@ -22,6 +22,7 @@ class AirPriceResult:
         The command identifier used when this is in response to an
         AirPricingCommand. Not used in any request processing.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -31,7 +32,7 @@ class AirPriceResult:
             "name": "AirPricingSolution",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     fare_rule: list[FareRule] = field(
         default_factory=list,
@@ -39,14 +40,14 @@ class AirPriceResult:
             "name": "FareRule",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_price_error: None | TypeResultMessage1 = field(
         default=None,
         metadata={
             "name": "AirPriceError",
             "type": "Element",
-        }
+        },
     )
     command_key: None | str = field(
         default=None,
@@ -54,5 +55,5 @@ class AirPriceResult:
             "name": "CommandKey",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )

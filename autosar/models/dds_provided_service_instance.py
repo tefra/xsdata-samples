@@ -17,8 +17,12 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .service_interface_deployment_subtypes_enum import ServiceInterfaceDeploymentSubtypesEnum
-from .service_interface_element_secure_com_config import ServiceInterfaceElementSecureComConfig
+from .service_interface_deployment_subtypes_enum import (
+    ServiceInterfaceDeploymentSubtypesEnum,
+)
+from .service_interface_element_secure_com_config import (
+    ServiceInterfaceElementSecureComConfig,
+)
 from .short_name_fragment import ShortNameFragment
 from .string import String
 
@@ -112,6 +116,7 @@ class DdsProvidedServiceInstance:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DDS-PROVIDED-SERVICE-INSTANCE"
 
@@ -122,15 +127,17 @@ class DdsProvidedServiceInstance:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DdsProvidedServiceInstance.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DdsProvidedServiceInstance.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -138,7 +145,7 @@ class DdsProvidedServiceInstance:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -146,7 +153,7 @@ class DdsProvidedServiceInstance:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -154,7 +161,7 @@ class DdsProvidedServiceInstance:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -162,7 +169,7 @@ class DdsProvidedServiceInstance:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -170,7 +177,7 @@ class DdsProvidedServiceInstance:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DdsProvidedServiceInstance.Annotations"] = field(
         default=None,
@@ -178,7 +185,7 @@ class DdsProvidedServiceInstance:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -186,39 +193,47 @@ class DdsProvidedServiceInstance:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    e_2_e_event_protection_propss: Optional["DdsProvidedServiceInstance.E2EEventProtectionPropss"] = field(
+    e_2_e_event_protection_propss: Optional[
+        "DdsProvidedServiceInstance.E2EEventProtectionPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "E-2-E-EVENT-PROTECTION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    e_2_e_method_protection_propss: Optional["DdsProvidedServiceInstance.E2EMethodProtectionPropss"] = field(
+    e_2_e_method_protection_propss: Optional[
+        "DdsProvidedServiceInstance.E2EMethodProtectionPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "E-2-E-METHOD-PROTECTION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    secure_com_configs: Optional["DdsProvidedServiceInstance.SecureComConfigs"] = field(
+    secure_com_configs: Optional[
+        "DdsProvidedServiceInstance.SecureComConfigs"
+    ] = field(
         default=None,
         metadata={
             "name": "SECURE-COM-CONFIGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_interface_deployment_ref: Optional["DdsProvidedServiceInstance.ServiceInterfaceDeploymentRef"] = field(
+    service_interface_deployment_ref: Optional[
+        "DdsProvidedServiceInstance.ServiceInterfaceDeploymentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-DEPLOYMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     qos_profile: Optional[String] = field(
         default=None,
@@ -226,7 +241,7 @@ class DdsProvidedServiceInstance:
             "name": "QOS-PROFILE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     domain_id: Optional[Integer] = field(
         default=None,
@@ -234,23 +249,27 @@ class DdsProvidedServiceInstance:
             "name": "DOMAIN-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_qos_propss: Optional["DdsProvidedServiceInstance.EventQosPropss"] = field(
+    event_qos_propss: Optional[
+        "DdsProvidedServiceInstance.EventQosPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-QOS-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    field_notifier_qos_propss: Optional["DdsProvidedServiceInstance.FieldNotifierQosPropss"] = field(
+    field_notifier_qos_propss: Optional[
+        "DdsProvidedServiceInstance.FieldNotifierQosPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "FIELD-NOTIFIER-QOS-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_instance_id: Optional[PositiveInteger] = field(
         default=None,
@@ -258,14 +277,14 @@ class DdsProvidedServiceInstance:
             "name": "SERVICE-INSTANCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -273,14 +292,14 @@ class DdsProvidedServiceInstance:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -291,7 +310,7 @@ class DdsProvidedServiceInstance:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -302,40 +321,46 @@ class DdsProvidedServiceInstance:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = field(
+        end_2_end_event_protection_props: List[
+            End2EndEventProtectionProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-2-END-EVENT-PROTECTION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class E2EMethodProtectionPropss:
-        end_2_end_method_protection_props: List[End2EndMethodProtectionProps] = field(
+        end_2_end_method_protection_props: List[
+            End2EndMethodProtectionProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-2-END-METHOD-PROTECTION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SecureComConfigs:
-        service_interface_element_secure_com_config: List[ServiceInterfaceElementSecureComConfig] = field(
+        service_interface_element_secure_com_config: List[
+            ServiceInterfaceElementSecureComConfig
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE-ELEMENT-SECURE-COM-CONFIG",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -346,7 +371,7 @@ class DdsProvidedServiceInstance:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -357,7 +382,7 @@ class DdsProvidedServiceInstance:
                 "name": "DDS-EVENT-QOS-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -368,5 +393,5 @@ class DdsProvidedServiceInstance:
                 "name": "DDS-FIELD-QOS-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

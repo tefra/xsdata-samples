@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .booking_access_enumeration import BookingAccessEnumeration
 from .booking_method_enumeration import BookingMethodEnumeration
@@ -36,7 +36,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "DepartureTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     departure_day_offset: Optional[int] = field(
         default=None,
@@ -44,7 +44,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "DepartureDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     frequency: Optional[FrequencyStructure] = field(
         default=None,
@@ -52,7 +52,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Frequency",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     journey_duration: Optional[XmlDuration] = field(
         default=None,
@@ -60,7 +60,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "JourneyDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     client: Optional[MultilingualString] = field(
         default=None,
@@ -68,7 +68,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Client",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_types: Optional[DayTypeRefsRelStructure] = field(
         default=None,
@@ -76,9 +76,16 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "dayTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            ServiceJourneyPatternRef,
+            ServicePatternRef,
+            DeadRunJourneyPatternRef,
+            JourneyPatternRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -104,9 +111,11 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -127,7 +136,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     origin: Optional[JourneyEndpointStructure] = field(
         default=None,
@@ -135,7 +144,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Origin",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     destination: Optional[JourneyEndpointStructure] = field(
         default=None,
@@ -143,7 +152,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Destination",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     print: Optional[bool] = field(
         default=None,
@@ -151,7 +160,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Print",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     dynamic: Optional[DynamicAdvertisementEnumeration] = field(
         default=None,
@@ -159,7 +168,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Dynamic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_flexible_service_ref: Optional[TypeOfFlexibleServiceRef] = field(
         default=None,
@@ -167,7 +176,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "TypeOfFlexibleServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_service_type: Optional[FlexibleServiceEnumeration] = field(
         default=None,
@@ -175,7 +184,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "FlexibleServiceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     cancellation_possible: Optional[bool] = field(
         default=None,
@@ -183,7 +192,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "CancellationPossible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     change_of_time_possible: Optional[bool] = field(
         default=None,
@@ -191,7 +200,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "ChangeOfTimePossible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_contact: Optional[ContactStructure] = field(
         default=None,
@@ -199,7 +208,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "BookingContact",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_methods: List[BookingMethodEnumeration] = field(
         default_factory=list,
@@ -208,7 +217,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     booking_access: Optional[BookingAccessEnumeration] = field(
         default=None,
@@ -216,7 +225,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "BookingAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     book_when: Optional[PurchaseWhenEnumeration] = field(
         default=None,
@@ -224,7 +233,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "BookWhen",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     buy_when: List[PurchaseMomentEnumeration] = field(
         default_factory=list,
@@ -233,7 +242,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     latest_booking_time: Optional[XmlTime] = field(
         default=None,
@@ -241,7 +250,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "LatestBookingTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_booking_period: Optional[XmlDuration] = field(
         default=None,
@@ -249,7 +258,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "MinimumBookingPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_url: Optional[str] = field(
         default=None,
@@ -257,7 +266,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "BookingUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_note: Optional[MultilingualString] = field(
         default=None,
@@ -265,5 +274,5 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "BookingNote",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -11,5 +11,6 @@ class VehicleUsage2Enum(Enum):
         city area.
     :cvar CAR_SHARING: Vehicles operated by a car-sharing company.
     """
+
     CITY_LOGISTICS = "cityLogistics"
     CAR_SHARING = "carSharing"

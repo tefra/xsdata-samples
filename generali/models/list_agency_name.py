@@ -13,5 +13,5 @@ class ListAgencyName:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )

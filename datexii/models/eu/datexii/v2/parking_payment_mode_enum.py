@@ -21,6 +21,7 @@ class ParkingPaymentModeEnum(Enum):
         to indicate, whether an entrance or exit has got this feature.
     :cvar OTHER: Other.
     """
+
     PAY_AND_DISPLAY = "payAndDisplay"
     PAY_MANUAL_AT_EXIT_BOOTH = "payManualAtExitBooth"
     PAY_PRIOR_TO_EXIT = "payPriorToExit"

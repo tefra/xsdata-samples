@@ -11,6 +11,7 @@ class PercentageRestriction2(TypeFloatRestriction2):
 
     Min and max values are inclusive.
     """
+
     class Meta:
         name = "PercentageRestriction"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

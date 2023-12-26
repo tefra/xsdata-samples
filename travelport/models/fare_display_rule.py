@@ -12,6 +12,7 @@ class FareDisplayRule:
     """
     Fare Display Rule Container.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,40 +21,40 @@ class FareDisplayRule:
         metadata={
             "name": "RuleAdvancedPurchase",
             "type": "Element",
-        }
+        },
     )
     rule_length_of_stay: None | RuleLengthOfStay = field(
         default=None,
         metadata={
             "name": "RuleLengthOfStay",
             "type": "Element",
-        }
+        },
     )
     rule_charges: None | RuleCharges = field(
         default=None,
         metadata={
             "name": "RuleCharges",
             "type": "Element",
-        }
+        },
     )
     rule_number: None | str = field(
         default=None,
         metadata={
             "name": "RuleNumber",
             "type": "Attribute",
-        }
+        },
     )
     source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
-        }
+        },
     )
     tariff_number: None | str = field(
         default=None,
         metadata={
             "name": "TariffNumber",
             "type": "Attribute",
-        }
+        },
     )

@@ -17,7 +17,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "name": "Restricted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     adjustment_units: Optional[StepLimitUnitEnumeration] = field(
         default=None,
@@ -25,7 +25,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "name": "AdjustmentUnits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_number_of_steps: Optional[int] = field(
         default=None,
@@ -33,7 +33,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumNumberOfSteps",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_steps: Optional[int] = field(
         default=None,
@@ -41,7 +41,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberOfSteps",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_trips: Optional[int] = field(
         default=None,
@@ -49,5 +49,5 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberOfTrips",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

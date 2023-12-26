@@ -23,7 +23,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "PointOnRouteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     instruction: Optional[MultilingualString] = field(
         default=None,
@@ -31,7 +31,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "Instruction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     path_heading: Optional[PathHeadingEnumeration] = field(
         default=None,
@@ -39,7 +39,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "PathHeading",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     heading: Optional[CompassBearing16Enumeration] = field(
         default=None,
@@ -47,7 +47,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "Heading",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     bearing: Optional[float] = field(
         default=None,
@@ -55,7 +55,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "Bearing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     distance: Optional[Decimal] = field(
         default=None,
@@ -63,7 +63,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transition: Optional[TransitionEnumeration] = field(
         default=None,
@@ -71,7 +71,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "Transition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     road_name: Optional[MultilingualString] = field(
         default=None,
@@ -79,7 +79,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "RoadName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     simple_feature_ref: Optional[SimpleFeatureRef] = field(
         default=None,
@@ -87,11 +87,11 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "SimpleFeatureRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

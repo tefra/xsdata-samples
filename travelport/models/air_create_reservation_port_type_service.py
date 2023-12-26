@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.air_create_reservation_port_type_service_input import AirCreateReservationPortTypeServiceInput
-from travelport.models.air_create_reservation_port_type_service_output import AirCreateReservationPortTypeServiceOutput
+from travelport.models.air_create_reservation_port_type_service_input import (
+    AirCreateReservationPortTypeServiceInput,
+)
+from travelport.models.air_create_reservation_port_type_service_output import (
+    AirCreateReservationPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

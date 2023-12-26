@@ -18,5 +18,5 @@ class TypeTckeyElement(TypeKeyElement1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
             "max_occurs": 99,
-        }
+        },
     )

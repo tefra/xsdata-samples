@@ -9,7 +9,9 @@ from .annotation import (
 from .category_string import CategoryString
 from .fm_feature_model_subtypes_enum import FmFeatureModelSubtypesEnum
 from .fm_feature_selection import FmFeatureSelection
-from .fm_feature_selection_set_subtypes_enum import FmFeatureSelectionSetSubtypesEnum
+from .fm_feature_selection_set_subtypes_enum import (
+    FmFeatureSelectionSetSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -89,6 +91,7 @@ class FmFeatureSelectionSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FM-FEATURE-SELECTION-SET"
 
@@ -99,15 +102,17 @@ class FmFeatureSelectionSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["FmFeatureSelectionSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "FmFeatureSelectionSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +120,7 @@ class FmFeatureSelectionSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +128,7 @@ class FmFeatureSelectionSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +136,7 @@ class FmFeatureSelectionSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +144,7 @@ class FmFeatureSelectionSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +152,7 @@ class FmFeatureSelectionSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["FmFeatureSelectionSet.Annotations"] = field(
         default=None,
@@ -155,7 +160,7 @@ class FmFeatureSelectionSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -163,15 +168,17 @@ class FmFeatureSelectionSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    feature_model_refs: Optional["FmFeatureSelectionSet.FeatureModelRefs"] = field(
+    feature_model_refs: Optional[
+        "FmFeatureSelectionSet.FeatureModelRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "FEATURE-MODEL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     include_refs: Optional["FmFeatureSelectionSet.IncludeRefs"] = field(
         default=None,
@@ -179,7 +186,7 @@ class FmFeatureSelectionSet:
             "name": "INCLUDE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     selections: Optional["FmFeatureSelectionSet.Selections"] = field(
         default=None,
@@ -187,14 +194,14 @@ class FmFeatureSelectionSet:
             "name": "SELECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -202,14 +209,14 @@ class FmFeatureSelectionSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -220,7 +227,7 @@ class FmFeatureSelectionSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -231,18 +238,20 @@ class FmFeatureSelectionSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FeatureModelRefs:
-        feature_model_ref: List["FmFeatureSelectionSet.FeatureModelRefs.FeatureModelRef"] = field(
+        feature_model_ref: List[
+            "FmFeatureSelectionSet.FeatureModelRefs.FeatureModelRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FEATURE-MODEL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -253,18 +262,20 @@ class FmFeatureSelectionSet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class IncludeRefs:
-        include_ref: List["FmFeatureSelectionSet.IncludeRefs.IncludeRef"] = field(
+        include_ref: List[
+            "FmFeatureSelectionSet.IncludeRefs.IncludeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INCLUDE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -275,7 +286,7 @@ class FmFeatureSelectionSet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -286,5 +297,5 @@ class FmFeatureSelectionSet:
                 "name": "FM-FEATURE-SELECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

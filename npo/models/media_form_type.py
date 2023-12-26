@@ -18,7 +18,7 @@ class MediaFormType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     sort_fields: None | MediaFormType.SortFields = field(
         default=None,
@@ -26,20 +26,20 @@ class MediaFormType:
             "name": "sortFields",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     facets: None | MediaFacetsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     highlight: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -49,7 +49,7 @@ class MediaFormType:
             metadata={
                 "type": "Element",
                 "namespace": "urn:vpro:api:2013",
-            }
+            },
         )
         title_sort: list[TitleSortOrderType] = field(
             default_factory=list,
@@ -57,5 +57,5 @@ class MediaFormType:
                 "name": "titleSort",
                 "type": "Element",
                 "namespace": "urn:vpro:api:2013",
-            }
+            },
         )

@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List
-from .route_instruction_version_structure import RouteInstructionVersionStructure
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .route_instruction_version_structure import (
+    RouteInstructionVersionStructure,
+)
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -18,5 +22,5 @@ class RouteInstructionsRelStructure(StrictContainmentAggregationStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

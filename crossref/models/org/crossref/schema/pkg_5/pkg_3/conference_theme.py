@@ -14,6 +14,7 @@ class ConferenceTheme:
     Technology conference theme was "Knowledge: Creation, Organization
     and Use" in 1999 and "Defining Information Architecture" in 2000.
     """
+
     class Meta:
         name = "conference_theme"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -23,5 +24,5 @@ class ConferenceTheme:
         metadata={
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

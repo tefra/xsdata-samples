@@ -18,6 +18,7 @@ class Program:
     or
     B) one or more funder_group assertions where each funder_group should contain one or more funder_name assertions and at least one award_number assertion.
     Multiple 'award_number's may be included in a single program or fundgroup. Deposits without an award_number will be accepted, but award_number should be provided whenever possible. Items with several award numbers associated with a single funding organization should be grouped together by enclosing the "funder_name", "funder_identifier", and award_number(s) within a "fundgroup" assertion."""
+
     class Meta:
         name = "program"
         namespace = "http://www.crossref.org/fundref.xsd"
@@ -26,12 +27,12 @@ class Program:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     name: str = field(
         init=False,
         default="fundref",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -5,5 +5,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
-class AbstractFunctionalServiceRequestStructure(AbstractServiceRequestStructure):
+class AbstractFunctionalServiceRequestStructure(
+    AbstractServiceRequestStructure
+):
     pass

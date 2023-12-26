@@ -27,6 +27,7 @@ class McoSearchModifiers:
     include_name
         Should the McoSearchResult include the name on the MCO
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -35,14 +36,14 @@ class McoSearchModifiers:
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     status: None | TypeMcostatus = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     max_results: int = field(
         default=20,
@@ -50,7 +51,7 @@ class McoSearchModifiers:
             "name": "MaxResults",
             "type": "Attribute",
             "min_inclusive": 1,
-        }
+        },
     )
     start_from_result: int = field(
         default=0,
@@ -58,12 +59,12 @@ class McoSearchModifiers:
             "name": "StartFromResult",
             "type": "Attribute",
             "min_inclusive": 0,
-        }
+        },
     )
     include_name: bool = field(
         default=False,
         metadata={
             "name": "IncludeName",
             "type": "Attribute",
-        }
+        },
     )

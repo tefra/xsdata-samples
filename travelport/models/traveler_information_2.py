@@ -19,6 +19,7 @@ class TravelerInformation2:
     booking_traveler_ref
         A reference to a passenger.
     """
+
     class Meta:
         name = "TravelerInformation"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -28,7 +29,7 @@ class TravelerInformation2:
         metadata={
             "name": "EmergencyContact",
             "type": "Element",
-        }
+        },
     )
     home_airport: None | str = field(
         default=None,
@@ -36,14 +37,14 @@ class TravelerInformation2:
             "name": "HomeAirport",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     visa_expiration_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "VisaExpirationDate",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class TravelerInformation2:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -65,24 +66,25 @@ class TravelerInformation2:
         relationship
             Relationship between Traveler and Emergency Contact Person
         """
+
         phone_number: None | PhoneNumber3 = field(
             default=None,
             metadata={
                 "name": "PhoneNumber",
                 "type": "Element",
-            }
+            },
         )
         name: None | object = field(
             default=None,
             metadata={
                 "name": "Name",
                 "type": "Attribute",
-            }
+            },
         )
         relationship: None | object = field(
             default=None,
             metadata={
                 "name": "Relationship",
                 "type": "Attribute",
-            }
+            },
         )

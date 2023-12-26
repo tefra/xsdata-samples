@@ -34,6 +34,7 @@ class EthTSynCrcFlags:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETH-T-SYN-CRC-FLAGS"
 
@@ -43,7 +44,7 @@ class EthTSynCrcFlags:
             "name": "CRC-CORRECTION-FIELD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_domain_number: Optional[Boolean] = field(
         default=None,
@@ -51,7 +52,7 @@ class EthTSynCrcFlags:
             "name": "CRC-DOMAIN-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_message_length: Optional[Boolean] = field(
         default=None,
@@ -59,7 +60,7 @@ class EthTSynCrcFlags:
             "name": "CRC-MESSAGE-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_precise_origin_timestamp: Optional[Boolean] = field(
         default=None,
@@ -67,7 +68,7 @@ class EthTSynCrcFlags:
             "name": "CRC-PRECISE-ORIGIN-TIMESTAMP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_sequence_id: Optional[Boolean] = field(
         default=None,
@@ -75,7 +76,7 @@ class EthTSynCrcFlags:
             "name": "CRC-SEQUENCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_source_port_identity: Optional[Boolean] = field(
         default=None,
@@ -83,14 +84,14 @@ class EthTSynCrcFlags:
             "name": "CRC-SOURCE-PORT-IDENTITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -98,5 +99,5 @@ class EthTSynCrcFlags:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

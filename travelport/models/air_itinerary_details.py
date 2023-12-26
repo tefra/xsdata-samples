@@ -18,6 +18,7 @@ class AirItineraryDetails:
     key
         Air itinerary details key
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class AirItineraryDetails:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 16,
-        }
+        },
     )
     passenger_details: list[PassengerDetails] = field(
         default_factory=list,
@@ -37,7 +38,7 @@ class AirItineraryDetails:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 15,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -45,5 +46,5 @@ class AirItineraryDetails:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -10,5 +10,6 @@ class TimeReq(BaseReq3):
     """
     Requests the time of the system.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"

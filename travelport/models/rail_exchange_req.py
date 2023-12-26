@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.base_create_with_form_of_payment_req_1 import BaseCreateWithFormOfPaymentReq1
+from travelport.models.base_create_with_form_of_payment_req_1 import (
+    BaseCreateWithFormOfPaymentReq1,
+)
 from travelport.models.host_token_list_1 import HostTokenList1
 from travelport.models.payment_1 import Payment1
 from travelport.models.rail_auto_seat_assignment import RailAutoSeatAssignment
@@ -37,6 +39,7 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
         eVoucher for future use.  This attribute is supported by Amtrak/2V
         and ignored for all others.”
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -45,7 +48,7 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
         metadata={
             "name": "RailExchangeSolution",
             "type": "Element",
-        }
+        },
     )
     payment: None | Payment1 = field(
         default=None,
@@ -53,14 +56,14 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
             "name": "Payment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
         metadata={
             "name": "RailFareNoteList",
             "type": "Element",
-        }
+        },
     )
     host_token_list: None | HostTokenList1 = field(
         default=None,
@@ -68,7 +71,7 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
             "name": "HostTokenList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     rail_auto_seat_assignment: list[RailAutoSeatAssignment] = field(
         default_factory=list,
@@ -76,7 +79,7 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
             "name": "RailAutoSeatAssignment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -86,7 +89,7 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     booking_action_type: None | str = field(
         default=None,
@@ -94,12 +97,12 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
             "name": "BookingActionType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     refund_option: None | str = field(
         default=None,
         metadata={
             "name": "RefundOption",
             "type": "Attribute",
-        }
+        },
     )

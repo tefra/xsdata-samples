@@ -33,6 +33,7 @@ class FlightInfo:
         zone information since it can be derived from the origin location.
     class_of_service
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -42,7 +43,7 @@ class FlightInfo:
             "name": "FlightInfoDetail",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     flight_info_error_message: list[TypeResultMessage1] = field(
         default_factory=list,
@@ -50,7 +51,7 @@ class FlightInfo:
             "name": "FlightInfoErrorMessage",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     criteria_key: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class FlightInfo:
             "name": "CriteriaKey",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -67,7 +68,7 @@ class FlightInfo:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -76,7 +77,7 @@ class FlightInfo:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -85,7 +86,7 @@ class FlightInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -94,7 +95,7 @@ class FlightInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_date: None | XmlDate = field(
         default=None,
@@ -102,7 +103,7 @@ class FlightInfo:
             "name": "DepartureDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -111,5 +112,5 @@ class FlightInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

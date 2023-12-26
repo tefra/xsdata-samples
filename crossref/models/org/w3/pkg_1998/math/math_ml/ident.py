@@ -15,5 +15,5 @@ class Ident:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

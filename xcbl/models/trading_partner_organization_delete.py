@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from xcbl.models.trading_partner_organization_information import TradingPartnerIdentifications
+from xcbl.models.trading_partner_organization_information import (
+    TradingPartnerIdentifications,
+)
 
 
 @dataclass(kw_only=True)
@@ -23,13 +25,15 @@ class TradingPartnerOrganizationDeletion:
 
 @dataclass(kw_only=True)
 class ListOfTradingPartnerOrganizationDeletion:
-    trading_partner_organization_deletion: List[TradingPartnerOrganizationDeletion] = field(
+    trading_partner_organization_deletion: List[
+        TradingPartnerOrganizationDeletion
+    ] = field(
         default_factory=list,
         metadata={
             "name": "TradingPartnerOrganizationDeletion",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 

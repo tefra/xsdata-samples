@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_commission_category_1 import TypeCommissionCategory1
+from travelport.models.type_commission_category_1 import (
+    TypeCommissionCategory1,
+)
 from travelport.models.type_key_element_1 import TypeKeyElement1
 from travelport.models.type_supplier_type_1 import TypeSupplierType1
 
@@ -29,6 +31,7 @@ class Commission4(TypeKeyElement1):
     priority_order
         Priority order associated with this Commission.
     """
+
     class Meta:
         name = "Commission"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -39,7 +42,7 @@ class Commission4(TypeKeyElement1):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     supplier_type: None | TypeSupplierType1 = field(
         default=None,
@@ -47,7 +50,7 @@ class Commission4(TypeKeyElement1):
             "name": "SupplierType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     supplier: None | str = field(
         default=None,
@@ -56,14 +59,14 @@ class Commission4(TypeKeyElement1):
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     percentage: None | str = field(
         default=None,
@@ -71,7 +74,7 @@ class Commission4(TypeKeyElement1):
             "name": "Percentage",
             "type": "Attribute",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -80,5 +83,5 @@ class Commission4(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

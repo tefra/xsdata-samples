@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
 from crossref.models.org.crossref.fundref.assertion_name import AssertionName
-from crossref.models.org.crossref.fundref.assertion_provider import AssertionProvider
+from crossref.models.org.crossref.fundref.assertion_provider import (
+    AssertionProvider,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/fundref.xsd"
 
@@ -13,6 +15,7 @@ class Assertion:
     funder_identifier: funding agency identifier, must be nested within the funder_name assertion
     funder_name: name of the funding agency (required)
     award_number: grant number or other fund identifier"""
+
     class Meta:
         name = "assertion"
         namespace = "http://www.crossref.org/fundref.xsd"
@@ -21,14 +24,14 @@ class Assertion:
         default=AssertionProvider.PUBLISHER,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     name: Optional[AssertionName] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -42,5 +45,5 @@ class Assertion:
                     "type": Type["Assertion"],
                 },
             ),
-        }
+        },
     )

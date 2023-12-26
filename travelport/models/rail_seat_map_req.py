@@ -11,6 +11,7 @@ class RailSeatMapReq(BaseReq1):
     """
     Request a rail seat map/coach map.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -20,5 +21,5 @@ class RailSeatMapReq(BaseReq1):
             "name": "RailInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -13,6 +13,7 @@ class DestinationPurposeCode:
     It is applicable for Canada and Bermuda agency only. This is used by
     Worldspan.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,7 +23,7 @@ class DestinationPurposeCode:
             "name": "Destination",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     purpose: None | TypePurposeCode = field(
         default=None,
@@ -30,5 +31,5 @@ class DestinationPurposeCode:
             "name": "Purpose",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

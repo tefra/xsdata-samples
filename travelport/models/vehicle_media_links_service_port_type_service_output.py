@@ -17,7 +17,7 @@ class VehicleMediaLinksServicePortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +28,14 @@ class VehicleMediaLinksServicePortTypeServiceOutput:
                 "name": "VehicleMediaLinksRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            }
+            },
         )
         fault: None | VehicleMediaLinksServicePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +45,28 @@ class VehicleMediaLinksServicePortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | VehicleMediaLinksServicePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +77,5 @@ class VehicleMediaLinksServicePortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

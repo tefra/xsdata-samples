@@ -14,6 +14,7 @@ class AnimalPresenceTypeEnum(Enum):
     :cvar LARGE_ANIMALS_ON_THE_ROAD: Traffic may be disrupted due to
         large animals on the roadway.
     """
+
     ANIMALS_ON_THE_ROAD = "animalsOnTheRoad"
     HERD_OF_ANIMALS_ON_THE_ROAD = "herdOfAnimalsOnTheRoad"
     LARGE_ANIMALS_ON_THE_ROAD = "largeAnimalsOnTheRoad"

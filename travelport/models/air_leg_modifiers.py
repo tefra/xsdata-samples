@@ -71,6 +71,7 @@ class AirLegModifiers:
         Maximum Journey Time for this leg (in hours) 0-99. Supported
         Providers 1G,1V.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -79,154 +80,158 @@ class AirLegModifiers:
         metadata={
             "name": "PermittedCabins",
             "type": "Element",
-        }
+        },
     )
     preferred_cabins: None | PreferredCabins = field(
         default=None,
         metadata={
             "name": "PreferredCabins",
             "type": "Element",
-        }
+        },
     )
     permitted_carriers: None | PermittedCarriers = field(
         default=None,
         metadata={
             "name": "PermittedCarriers",
             "type": "Element",
-        }
+        },
     )
     prohibited_carriers: None | ProhibitedCarriers = field(
         default=None,
         metadata={
             "name": "ProhibitedCarriers",
             "type": "Element",
-        }
+        },
     )
     preferred_carriers: None | PreferredCarriers = field(
         default=None,
         metadata={
             "name": "PreferredCarriers",
             "type": "Element",
-        }
+        },
     )
     permitted_connection_points: None | AirLegModifiers.PermittedConnectionPoints = field(
         default=None,
         metadata={
             "name": "PermittedConnectionPoints",
             "type": "Element",
-        }
+        },
     )
     prohibited_connection_points: None | AirLegModifiers.ProhibitedConnectionPoints = field(
         default=None,
         metadata={
             "name": "ProhibitedConnectionPoints",
             "type": "Element",
-        }
+        },
     )
     preferred_connection_points: None | AirLegModifiers.PreferredConnectionPoints = field(
         default=None,
         metadata={
             "name": "PreferredConnectionPoints",
             "type": "Element",
-        }
+        },
     )
-    permitted_booking_codes: None | AirLegModifiers.PermittedBookingCodes = field(
-        default=None,
-        metadata={
-            "name": "PermittedBookingCodes",
-            "type": "Element",
-        }
+    permitted_booking_codes: None | AirLegModifiers.PermittedBookingCodes = (
+        field(
+            default=None,
+            metadata={
+                "name": "PermittedBookingCodes",
+                "type": "Element",
+            },
+        )
     )
     preferred_booking_codes: None | PreferredBookingCodes = field(
         default=None,
         metadata={
             "name": "PreferredBookingCodes",
             "type": "Element",
-        }
+        },
     )
     preferred_alliances: None | AirLegModifiers.PreferredAlliances = field(
         default=None,
         metadata={
             "name": "PreferredAlliances",
             "type": "Element",
-        }
+        },
     )
-    prohibited_booking_codes: None | AirLegModifiers.ProhibitedBookingCodes = field(
-        default=None,
-        metadata={
-            "name": "ProhibitedBookingCodes",
-            "type": "Element",
-        }
+    prohibited_booking_codes: None | AirLegModifiers.ProhibitedBookingCodes = (
+        field(
+            default=None,
+            metadata={
+                "name": "ProhibitedBookingCodes",
+                "type": "Element",
+            },
+        )
     )
     disfavored_alliances: None | AirLegModifiers.DisfavoredAlliances = field(
         default=None,
         metadata={
             "name": "DisfavoredAlliances",
             "type": "Element",
-        }
+        },
     )
     flight_type: None | FlightType = field(
         default=None,
         metadata={
             "name": "FlightType",
             "type": "Element",
-        }
+        },
     )
     anchor_flight_data: None | TypeAnchorFlightData = field(
         default=None,
         metadata={
             "name": "AnchorFlightData",
             "type": "Element",
-        }
+        },
     )
     prohibit_overnight_layovers: bool = field(
         default=False,
         metadata={
             "name": "ProhibitOvernightLayovers",
             "type": "Attribute",
-        }
+        },
     )
     max_connection_time: None | int = field(
         default=None,
         metadata={
             "name": "MaxConnectionTime",
             "type": "Attribute",
-        }
+        },
     )
     return_first_available_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnFirstAvailableOnly",
             "type": "Attribute",
-        }
+        },
     )
     allow_direct_access: bool = field(
         default=False,
         metadata={
             "name": "AllowDirectAccess",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_multi_airport_connection: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitMultiAirportConnection",
             "type": "Attribute",
-        }
+        },
     )
     prefer_non_stop: bool = field(
         default=False,
         metadata={
             "name": "PreferNonStop",
             "type": "Attribute",
-        }
+        },
     )
     order_by: None | AirLegModifiersOrderBy = field(
         default=None,
         metadata={
             "name": "OrderBy",
             "type": "Attribute",
-        }
+        },
     )
     max_journey_time: None | int = field(
         default=None,
@@ -235,7 +240,7 @@ class AirLegModifiers:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 99,
-        }
+        },
     )
 
     @dataclass
@@ -248,7 +253,7 @@ class AirLegModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -261,7 +266,7 @@ class AirLegModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -274,7 +279,7 @@ class AirLegModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 99,
-            }
+            },
         )
 
     @dataclass
@@ -286,7 +291,7 @@ class AirLegModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -298,7 +303,7 @@ class AirLegModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -310,7 +315,7 @@ class AirLegModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -322,5 +327,5 @@ class AirLegModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

@@ -18,6 +18,7 @@ class VariableCategoryType:
         lenght
     value
     """
+
     category_details: list[ValueDetails] = field(
         default_factory=list,
         metadata={
@@ -25,7 +26,7 @@ class VariableCategoryType:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     variable_category_detail: list[CategoryDetailsType] = field(
         default_factory=list,
@@ -34,7 +35,7 @@ class VariableCategoryType:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -42,5 +43,5 @@ class VariableCategoryType:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

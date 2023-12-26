@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_link_relationship_1 import TypeProfileLinkRelationship1
+from travelport.models.type_profile_link_relationship_1 import (
+    TypeProfileLinkRelationship1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -31,6 +33,7 @@ class TypeProfileLinkHistory1:
     electronic_address
         The linked traveler's email.  Will be returned on profile response.
     """
+
     class Meta:
         name = "typeProfileLinkHistory"
 
@@ -39,14 +42,14 @@ class TypeProfileLinkHistory1:
         metadata={
             "name": "TravelerID",
             "type": "Attribute",
-        }
+        },
     )
     relationship: None | TypeProfileLinkRelationship1 = field(
         default=None,
         metadata={
             "name": "Relationship",
             "type": "Attribute",
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
@@ -55,7 +58,7 @@ class TypeProfileLinkHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     other_name: None | str = field(
         default=None,
@@ -64,7 +67,7 @@ class TypeProfileLinkHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -73,7 +76,7 @@ class TypeProfileLinkHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     nickname: None | str = field(
         default=None,
@@ -82,7 +85,7 @@ class TypeProfileLinkHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     electronic_address: None | str = field(
         default=None,
@@ -91,5 +94,5 @@ class TypeProfileLinkHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

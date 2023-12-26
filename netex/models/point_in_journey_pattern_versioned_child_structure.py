@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
@@ -10,7 +10,9 @@ from .flexible_point_properties import FlexiblePointProperties
 from .garage_point_ref import GaragePointRef
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_point_ref import ParkingPointRef
-from .point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
+from .point_in_link_sequence_versioned_child_structure import (
+    PointInLinkSequenceVersionedChildStructure,
+)
 from .point_ref import PointRef
 from .railway_point_ref import RailwayPointRef
 from .relief_point_ref import ReliefPointRef
@@ -26,11 +28,31 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedChildStructure):
+class PointInJourneyPatternVersionedChildStructure(
+    PointInLinkSequenceVersionedChildStructure
+):
     class Meta:
         name = "PointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
+            PointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -111,9 +133,11 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    destination_display_ref_or_destination_display_view: Optional[object] = field(
+    destination_display_ref_or_destination_display_view: Optional[
+        Union[DestinationDisplayRef, DestinationDisplayView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -129,14 +153,14 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     vias: Optional[ViasRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_point_properties: Optional[FlexiblePointProperties] = field(
         default=None,
@@ -144,7 +168,7 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
             "name": "FlexiblePointProperties",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     change_of_destination_display: Optional[bool] = field(
         default=None,
@@ -152,7 +176,7 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
             "name": "ChangeOfDestinationDisplay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     change_of_service_requirements: Optional[bool] = field(
         default=None,
@@ -160,7 +184,7 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
             "name": "ChangeOfServiceRequirements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -168,5 +192,5 @@ class PointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedC
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

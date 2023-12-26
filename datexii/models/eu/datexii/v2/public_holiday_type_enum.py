@@ -41,6 +41,7 @@ class PublicHolidayTypeEnum(Enum):
     :cvar OTHER: None of the elements in the list. Public holiday is
         specified by 'publicHolidayName' instead.
     """
+
     BETWEEN_CHRISTMAS_AND_NEW_YEAR = "betweenChristmasAndNewYear"
     BOXING_DAY = "boxingDay"
     BRIDGE_HOLIDAY = "bridgeHoliday"

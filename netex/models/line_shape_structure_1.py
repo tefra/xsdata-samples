@@ -17,5 +17,5 @@ class LineShapeStructure1:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "min_occurs": 2,
-        }
+        },
     )

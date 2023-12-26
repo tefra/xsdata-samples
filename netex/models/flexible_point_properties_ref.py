@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .flexible_point_properties_ref_structure import FlexiblePointPropertiesRefStructure
+from .flexible_point_properties_ref_structure import (
+    FlexiblePointPropertiesRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -14,6 +14,7 @@ class TypeFieldRef1:
     id
         Unique identifier of the field
     """
+
     class Meta:
         name = "typeFieldRef"
 
@@ -23,5 +24,5 @@ class TypeFieldRef1:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

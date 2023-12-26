@@ -20,6 +20,7 @@ class TypeVehicleSearchDistance:
     max_distance
         Maximum distance
     """
+
     class Meta:
         name = "typeVehicleSearchDistance"
 
@@ -28,7 +29,7 @@ class TypeVehicleSearchDistance:
         metadata={
             "name": "Units",
             "type": "Attribute",
-        }
+        },
     )
     direction: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class TypeVehicleSearchDistance:
             "name": "Direction",
             "type": "Attribute",
             "max_length": 2,
-        }
+        },
     )
     min_distance: None | int = field(
         default=None,
@@ -45,7 +46,7 @@ class TypeVehicleSearchDistance:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 999,
-        }
+        },
     )
     max_distance: None | int = field(
         default=None,
@@ -54,5 +55,5 @@ class TypeVehicleSearchDistance:
             "type": "Attribute",
             "required": True,
             "max_inclusive": 999,
-        }
+        },
     )

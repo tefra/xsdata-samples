@@ -20,6 +20,7 @@ class TpegLoc04HeightTypeEnum(Enum):
     :cvar UNKNOWN: Unknown height reference.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ABOVE = "above"
     ABOVE_SEA_LEVEL = "aboveSeaLevel"
     ABOVE_STREET_LEVEL = "aboveStreetLevel"

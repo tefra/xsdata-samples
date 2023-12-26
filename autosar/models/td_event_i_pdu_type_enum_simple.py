@@ -13,5 +13,6 @@ class TdEventIPduTypeEnumSimple(Enum):
         is routed through the PDUR and is pushed to the bus specific
         (FlexRay / CAN / LIN) Interface BSW module.
     """
+
     I_PDU_RECEIVED_BY_COM = "I-PDU-RECEIVED-BY-COM"
     I_PDU_SENT_TO_IF = "I-PDU-SENT-TO-IF"

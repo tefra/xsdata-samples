@@ -15,14 +15,14 @@ class TBaseElementWithMixedContent:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -42,5 +42,5 @@ class TBaseElementWithMixedContent:
                     "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
                 },
             ),
-        }
+        },
     )

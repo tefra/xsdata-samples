@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
 from .external_triggering_point_ident import ExternalTriggeringPointIdent
-from .p_trigger_in_atomic_swc_type_instance_ref import PTriggerInAtomicSwcTypeInstanceRef
+from .p_trigger_in_atomic_swc_type_instance_ref import (
+    PTriggerInAtomicSwcTypeInstanceRef,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -35,6 +37,7 @@ class ExternalTriggeringPoint:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "EXTERNAL-TRIGGERING-POINT"
 
@@ -44,7 +47,7 @@ class ExternalTriggeringPoint:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trigger_iref: Optional["ExternalTriggeringPoint.TriggerIref"] = field(
         default=None,
@@ -52,7 +55,7 @@ class ExternalTriggeringPoint:
             "name": "TRIGGER-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -60,14 +63,14 @@ class ExternalTriggeringPoint:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -75,16 +78,18 @@ class ExternalTriggeringPoint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class TriggerIref:
-        p_trigger_in_atomic_swc_type_instance_ref: Optional[PTriggerInAtomicSwcTypeInstanceRef] = field(
+        p_trigger_in_atomic_swc_type_instance_ref: Optional[
+            PTriggerInAtomicSwcTypeInstanceRef
+        ] = field(
             default=None,
             metadata={
                 "name": "P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

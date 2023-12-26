@@ -22,6 +22,7 @@ class BookingTravelerName3:
     suffix
         Name suffix.
     """
+
     class Meta:
         name = "BookingTravelerName"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -33,7 +34,7 @@ class BookingTravelerName3:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
     first: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class BookingTravelerName3:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     middle: None | str = field(
         default=None,
@@ -52,7 +53,7 @@ class BookingTravelerName3:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     last: None | str = field(
         default=None,
@@ -62,7 +63,7 @@ class BookingTravelerName3:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     suffix: None | str = field(
         default=None,
@@ -71,5 +72,5 @@ class BookingTravelerName3:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )

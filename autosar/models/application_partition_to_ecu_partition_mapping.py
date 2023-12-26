@@ -6,7 +6,9 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .application_partition_subtypes_enum import ApplicationPartitionSubtypesEnum
+from .application_partition_subtypes_enum import (
+    ApplicationPartitionSubtypesEnum,
+)
 from .category_string import CategoryString
 from .ecu_partition_subtypes_enum import EcuPartitionSubtypesEnum
 from .identifier import Identifier
@@ -86,6 +88,7 @@ class ApplicationPartitionToEcuPartitionMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "APPLICATION-PARTITION-TO-ECU-PARTITION-MAPPING"
 
@@ -96,15 +99,17 @@ class ApplicationPartitionToEcuPartitionMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ApplicationPartitionToEcuPartitionMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ApplicationPartitionToEcuPartitionMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -112,7 +117,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -120,7 +125,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -128,7 +133,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -136,7 +141,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -144,31 +149,37 @@ class ApplicationPartitionToEcuPartitionMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["ApplicationPartitionToEcuPartitionMapping.Annotations"] = field(
+    annotations: Optional[
+        "ApplicationPartitionToEcuPartitionMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    application_partition_refs: Optional["ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs"] = field(
+    application_partition_refs: Optional[
+        "ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLICATION-PARTITION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_partition_ref: Optional["ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef"] = field(
+    ecu_partition_ref: Optional[
+        "ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-PARTITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -176,14 +187,14 @@ class ApplicationPartitionToEcuPartitionMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -191,14 +202,14 @@ class ApplicationPartitionToEcuPartitionMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -209,7 +220,7 @@ class ApplicationPartitionToEcuPartitionMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -220,18 +231,20 @@ class ApplicationPartitionToEcuPartitionMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ApplicationPartitionRefs:
-        application_partition_ref: List["ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs.ApplicationPartitionRef"] = field(
+        application_partition_ref: List[
+            "ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs.ApplicationPartitionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-PARTITION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -242,7 +255,7 @@ class ApplicationPartitionToEcuPartitionMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -253,5 +266,5 @@ class ApplicationPartitionToEcuPartitionMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

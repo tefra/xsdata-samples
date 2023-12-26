@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .constant_specification_subtypes_enum import ConstantSpecificationSubtypesEnum
+from .constant_specification_subtypes_enum import (
+    ConstantSpecificationSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -33,31 +35,36 @@ class ConstantSpecificationMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONSTANT-SPECIFICATION-MAPPING"
 
-    appl_constant_ref: Optional["ConstantSpecificationMapping.ApplConstantRef"] = field(
+    appl_constant_ref: Optional[
+        "ConstantSpecificationMapping.ApplConstantRef"
+    ] = field(
         default=None,
         metadata={
             "name": "APPL-CONSTANT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    impl_constant_ref: Optional["ConstantSpecificationMapping.ImplConstantRef"] = field(
+    impl_constant_ref: Optional[
+        "ConstantSpecificationMapping.ImplConstantRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPL-CONSTANT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -65,7 +72,7 @@ class ConstantSpecificationMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -76,7 +83,7 @@ class ConstantSpecificationMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -87,5 +94,5 @@ class ConstantSpecificationMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

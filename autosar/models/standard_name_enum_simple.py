@@ -13,6 +13,7 @@ class StandardNameEnumSimple(Enum):
     :cvar TC: This values represents the Testing of the Classic
         Platform.
     """
+
     AP = "AP"
     CP = "CP"
     FO = "FO"

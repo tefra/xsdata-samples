@@ -9,6 +9,7 @@ class FareRuleCategory:
     """
     Rule Categories to filter on.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class FareRuleCategory:
             "required": True,
             "min_inclusive": 1,
             "max_inclusive": 50,
-        }
+        },
     )

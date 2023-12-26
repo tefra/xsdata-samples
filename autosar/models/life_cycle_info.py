@@ -46,6 +46,7 @@ class LifeCycleInfo:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIFE-CYCLE-INFO"
 
@@ -55,7 +56,7 @@ class LifeCycleInfo:
             "name": "LC-OBJECT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lc_state_ref: Optional["LifeCycleInfo.LcStateRef"] = field(
         default=None,
@@ -63,7 +64,7 @@ class LifeCycleInfo:
             "name": "LC-STATE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     period_begin: Optional[LifeCyclePeriod] = field(
         default=None,
@@ -71,7 +72,7 @@ class LifeCycleInfo:
             "name": "PERIOD-BEGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     period_end: Optional[LifeCyclePeriod] = field(
         default=None,
@@ -79,7 +80,7 @@ class LifeCycleInfo:
             "name": "PERIOD-END",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remark: Optional[DocumentationBlock] = field(
         default=None,
@@ -87,7 +88,7 @@ class LifeCycleInfo:
             "name": "REMARK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_instead_refs: Optional["LifeCycleInfo.UseInsteadRefs"] = field(
         default=None,
@@ -95,14 +96,14 @@ class LifeCycleInfo:
             "name": "USE-INSTEAD-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -110,7 +111,7 @@ class LifeCycleInfo:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -121,7 +122,7 @@ class LifeCycleInfo:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -132,18 +133,20 @@ class LifeCycleInfo:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class UseInsteadRefs:
-        use_instead_ref: List["LifeCycleInfo.UseInsteadRefs.UseInsteadRef"] = field(
+        use_instead_ref: List[
+            "LifeCycleInfo.UseInsteadRefs.UseInsteadRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USE-INSTEAD-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -154,5 +157,5 @@ class LifeCycleInfo:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

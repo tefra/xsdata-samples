@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_booking_transactions_allowed_1 import TypeBookingTransactionsAllowed1
+from travelport.models.type_booking_transactions_allowed_1 import (
+    TypeBookingTransactionsAllowed1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
@@ -17,6 +19,7 @@ class TypeTransactionsAllowed1(TypeBookingTransactionsAllowed1):
         Allow or prohibit pricing transaction for the given product type on
         this Provider/Supplier. Inheritable.
     """
+
     class Meta:
         name = "typeTransactionsAllowed"
 
@@ -25,12 +28,12 @@ class TypeTransactionsAllowed1(TypeBookingTransactionsAllowed1):
         metadata={
             "name": "ShoppingEnabled",
             "type": "Attribute",
-        }
+        },
     )
     pricing_enabled: None | bool = field(
         default=None,
         metadata={
             "name": "PricingEnabled",
             "type": "Attribute",
-        }
+        },
     )

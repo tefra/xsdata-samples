@@ -10,5 +10,6 @@ class DisplayPresentationEnumSimple(Enum):
     :cvar PRESENTATION_DISCRETE: The presentation of data shall be step-
         shaped between data points.
     """
+
     PRESENTATION_CONTINUOUS = "PRESENTATION-CONTINUOUS"
     PRESENTATION_DISCRETE = "PRESENTATION-DISCRETE"

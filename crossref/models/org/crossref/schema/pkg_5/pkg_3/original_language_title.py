@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.original_language_title_language import OriginalLanguageTitleLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.original_language_title_language import (
+    OriginalLanguageTitleLanguage,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
     B,
     Em,
@@ -25,6 +27,7 @@ class OriginalLanguageTitle:
     The title of an item in its original language if the registration is for a
     translation of a work.
     """
+
     class Meta:
         name = "original_language_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -33,7 +36,7 @@ class OriginalLanguageTitle:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -92,5 +95,5 @@ class OriginalLanguageTitle:
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
             ),
-        }
+        },
     )

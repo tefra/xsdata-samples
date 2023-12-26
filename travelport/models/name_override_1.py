@@ -18,6 +18,7 @@ class NameOverride1:
     age
         Age.
     """
+
     class Meta:
         name = "NameOverride"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -30,7 +31,7 @@ class NameOverride1:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     last: None | str = field(
         default=None,
@@ -40,12 +41,12 @@ class NameOverride1:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Attribute",
-        }
+        },
     )

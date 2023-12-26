@@ -17,7 +17,7 @@ class CarrierList:
             "min_occurs": 1,
             "max_occurs": 6,
             "length": 2,
-        }
+        },
     )
     include_carrier: None | bool = field(
         default=None,
@@ -25,5 +25,5 @@ class CarrierList:
             "name": "IncludeCarrier",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

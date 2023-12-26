@@ -2,9 +2,15 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
-from .root_sw_component_prototype_subtypes_enum import RootSwComponentPrototypeSubtypesEnum
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .root_sw_component_prototype_subtypes_enum import (
+    RootSwComponentPrototypeSubtypesEnum,
+)
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -27,47 +33,56 @@ class EventInExecutableInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "EVENT-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional["EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"] = field(
+    context_root_sw_component_prototype_ref: Optional[
+        "EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_sw_component_prototype_ref: List["EventInExecutableInstanceRef.ContextSwComponentPrototypeRef"] = field(
+    context_sw_component_prototype_ref: List[
+        "EventInExecutableInstanceRef.ContextSwComponentPrototypeRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-SW-COMPONENT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_r_port_prototype_ref: Optional["EventInExecutableInstanceRef.ContextRPortPrototypeRef"] = field(
+    context_r_port_prototype_ref: Optional[
+        "EventInExecutableInstanceRef.ContextRPortPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_event_ref: Optional["EventInExecutableInstanceRef.TargetEventRef"] = field(
+    target_event_ref: Optional[
+        "EventInExecutableInstanceRef.TargetEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -75,7 +90,7 @@ class EventInExecutableInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -86,7 +101,7 @@ class EventInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -97,7 +112,7 @@ class EventInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -108,7 +123,7 @@ class EventInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -119,5 +134,5 @@ class EventInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

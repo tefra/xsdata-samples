@@ -18,6 +18,7 @@ class BranchBaseInfo2:
     phone
         Branch Phone Number
     """
+
     class Meta:
         name = "BranchBaseInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -28,7 +29,7 @@ class BranchBaseInfo2:
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone: list[Phone2] = field(
         default_factory=list,
@@ -36,5 +37,5 @@ class BranchBaseInfo2:
             "name": "Phone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

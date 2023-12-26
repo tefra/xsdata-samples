@@ -97,6 +97,7 @@ class LinScheduleTable:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIN-SCHEDULE-TABLE"
 
@@ -107,15 +108,17 @@ class LinScheduleTable:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["LinScheduleTable.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "LinScheduleTable.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +126,7 @@ class LinScheduleTable:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +134,7 @@ class LinScheduleTable:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +142,7 @@ class LinScheduleTable:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +150,7 @@ class LinScheduleTable:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +158,7 @@ class LinScheduleTable:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["LinScheduleTable.Annotations"] = field(
         default=None,
@@ -163,7 +166,7 @@ class LinScheduleTable:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     resume_position: Optional[ResumePosition] = field(
         default=None,
@@ -171,7 +174,7 @@ class LinScheduleTable:
             "name": "RESUME-POSITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     run_mode: Optional[RunMode] = field(
         default=None,
@@ -179,7 +182,7 @@ class LinScheduleTable:
             "name": "RUN-MODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     table_entrys: Optional["LinScheduleTable.TableEntrys"] = field(
         default=None,
@@ -187,7 +190,7 @@ class LinScheduleTable:
             "name": "TABLE-ENTRYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -195,14 +198,14 @@ class LinScheduleTable:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -210,14 +213,14 @@ class LinScheduleTable:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -228,7 +231,7 @@ class LinScheduleTable:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,7 +242,7 @@ class LinScheduleTable:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,7 +253,7 @@ class LinScheduleTable:
                 "name": "APPLICATION-ENTRY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         assign_frame_id: List[AssignFrameId] = field(
             default_factory=list,
@@ -258,7 +261,7 @@ class LinScheduleTable:
                 "name": "ASSIGN-FRAME-ID",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         assign_frame_id_range: List[AssignFrameIdRange] = field(
             default_factory=list,
@@ -266,7 +269,7 @@ class LinScheduleTable:
                 "name": "ASSIGN-FRAME-ID-RANGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         assign_nad: List[AssignNad] = field(
             default_factory=list,
@@ -274,7 +277,7 @@ class LinScheduleTable:
                 "name": "ASSIGN-NAD",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         conditional_change_nad: List[ConditionalChangeNad] = field(
             default_factory=list,
@@ -282,7 +285,7 @@ class LinScheduleTable:
                 "name": "CONDITIONAL-CHANGE-NAD",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         data_dump_entry: List[DataDumpEntry] = field(
             default_factory=list,
@@ -290,7 +293,7 @@ class LinScheduleTable:
                 "name": "DATA-DUMP-ENTRY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         free_format: List[FreeFormat] = field(
             default_factory=list,
@@ -298,7 +301,7 @@ class LinScheduleTable:
                 "name": "FREE-FORMAT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         save_configuration_entry: List[SaveConfigurationEntry] = field(
             default_factory=list,
@@ -306,7 +309,7 @@ class LinScheduleTable:
                 "name": "SAVE-CONFIGURATION-ENTRY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         unassign_frame_id: List[UnassignFrameId] = field(
             default_factory=list,
@@ -314,5 +317,5 @@ class LinScheduleTable:
                 "name": "UNASSIGN-FRAME-ID",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

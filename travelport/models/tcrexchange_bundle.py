@@ -27,6 +27,7 @@ class TcrexchangeBundle:
     tcrnumber
         The identifying number for a Ticketless Air Reservation.
     """
+
     class Meta:
         name = "TCRExchangeBundle"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -38,7 +39,7 @@ class TcrexchangeBundle:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
@@ -47,7 +48,7 @@ class TcrexchangeBundle:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     fee_info: list[FeeInfo] = field(
         default_factory=list,
@@ -55,7 +56,7 @@ class TcrexchangeBundle:
             "name": "FeeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TaxInfo] = field(
         default_factory=list,
@@ -63,7 +64,7 @@ class TcrexchangeBundle:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     penalty: list[Penalty1] = field(
         default_factory=list,
@@ -72,7 +73,7 @@ class TcrexchangeBundle:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     tcrnumber: None | str = field(
         default=None,
@@ -80,5 +81,5 @@ class TcrexchangeBundle:
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

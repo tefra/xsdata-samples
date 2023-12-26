@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.rail_station_location_modifiers import RailStationLocationModifiers
+from travelport.models.rail_station_location_modifiers import (
+    RailStationLocationModifiers,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
@@ -22,15 +24,18 @@ class ReferenceDataSearchModifiers:
     provider_code
         Provider Specific restriction(e.g. 1G, 1P etc) .
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    rail_station_location_modifiers: None | RailStationLocationModifiers = field(
-        default=None,
-        metadata={
-            "name": "RailStationLocationModifiers",
-            "type": "Element",
-        }
+    rail_station_location_modifiers: None | RailStationLocationModifiers = (
+        field(
+            default=None,
+            metadata={
+                "name": "RailStationLocationModifiers",
+                "type": "Element",
+            },
+        )
     )
     max_results: int = field(
         default=20,
@@ -38,7 +43,7 @@ class ReferenceDataSearchModifiers:
             "name": "MaxResults",
             "type": "Attribute",
             "min_inclusive": 1,
-        }
+        },
     )
     start_from_result: int = field(
         default=0,
@@ -46,7 +51,7 @@ class ReferenceDataSearchModifiers:
             "name": "StartFromResult",
             "type": "Attribute",
             "min_inclusive": 0,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -55,5 +60,5 @@ class ReferenceDataSearchModifiers:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

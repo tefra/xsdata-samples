@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.vms_dynamic_characteristics_pictogram_display_area_index_vms_pictogram_display_characteristics import VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics
-from datexii.models.eu.datexii.v2.vms_text_display_characteristics import VmsTextDisplayCharacteristics
+from datexii.models.eu.datexii.v2.vms_dynamic_characteristics_pictogram_display_area_index_vms_pictogram_display_characteristics import (
+    VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics,
+)
+from datexii.models.eu.datexii.v2.vms_text_display_characteristics import (
+    VmsTextDisplayCharacteristics,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,29 +24,34 @@ class VmsDynamicCharacteristics:
     :ivar vms_pictogram_display_characteristics:
     :ivar vms_dynamic_characteristics_extension:
     """
+
     number_of_pictogram_display_areas: Optional[int] = field(
         default=None,
         metadata={
             "name": "numberOfPictogramDisplayAreas",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    vms_text_display_characteristics: Optional[VmsTextDisplayCharacteristics] = field(
+    vms_text_display_characteristics: Optional[
+        VmsTextDisplayCharacteristics
+    ] = field(
         default=None,
         metadata={
             "name": "vmsTextDisplayCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    vms_pictogram_display_characteristics: List[VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics] = field(
+    vms_pictogram_display_characteristics: List[
+        VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics
+    ] = field(
         default_factory=list,
         metadata={
             "name": "vmsPictogramDisplayCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_dynamic_characteristics_extension: Optional[ExtensionType] = field(
         default=None,
@@ -50,5 +59,5 @@ class VmsDynamicCharacteristics:
             "name": "vmsDynamicCharacteristicsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

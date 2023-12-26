@@ -17,5 +17,5 @@ class TypeTextBlock2:
             "namespace": "http://www.travelport.com/schema/terminal_v33_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

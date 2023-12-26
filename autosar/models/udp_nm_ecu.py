@@ -26,6 +26,7 @@ class UdpNmEcu:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "UDP-NM-ECU"
 
@@ -35,7 +36,7 @@ class UdpNmEcu:
             "name": "NM-REPEAT-MSG-INDICATION-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_synchronization_point_enabled: Optional[Boolean] = field(
         default=None,
@@ -43,14 +44,14 @@ class UdpNmEcu:
             "name": "NM-SYNCHRONIZATION-POINT-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,5 +59,5 @@ class UdpNmEcu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

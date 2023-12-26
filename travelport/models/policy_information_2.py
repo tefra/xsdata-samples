@@ -19,6 +19,7 @@ class PolicyInformation2:
     booking_traveler_ref
         Booking Traveler associated to this policy information.
     """
+
     class Meta:
         name = "PolicyInformation"
         namespace = "http://www.travelport.com/schema/universal_v52_0"
@@ -29,7 +30,7 @@ class PolicyInformation2:
             "name": "AirPolicy",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_policy: list[TypeSegmentPolicy] = field(
         default_factory=list,
@@ -37,7 +38,7 @@ class PolicyInformation2:
             "name": "RailPolicy",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_policy: list[TypeSegmentPolicy] = field(
         default_factory=list,
@@ -45,7 +46,7 @@ class PolicyInformation2:
             "name": "HotelPolicy",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_policy: list[TypeSegmentPolicy] = field(
         default_factory=list,
@@ -53,7 +54,7 @@ class PolicyInformation2:
             "name": "VehiclePolicy",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -61,5 +62,5 @@ class PolicyInformation2:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

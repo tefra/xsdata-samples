@@ -19,6 +19,7 @@ class AirAvailInfo:
     provider_code
     host_token_ref
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class AirAvailInfo:
             "name": "BookingCodeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_token_info: list[AirAvailInfo.FareTokenInfo] = field(
         default_factory=list,
@@ -36,7 +37,7 @@ class AirAvailInfo:
             "name": "FareTokenInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -45,14 +46,14 @@ class AirAvailInfo:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -63,7 +64,7 @@ class AirAvailInfo:
                 "name": "FareInfoRef",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         host_token_ref: None | str = field(
             default=None,
@@ -71,5 +72,5 @@ class AirAvailInfo:
                 "name": "HostTokenRef",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -38,6 +38,7 @@ class InternalConstrs:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "INTERNAL-CONSTRS"
 
@@ -47,7 +48,7 @@ class InternalConstrs:
             "name": "LOWER-LIMIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_limit: Optional[Limit] = field(
         default=None,
@@ -55,7 +56,7 @@ class InternalConstrs:
             "name": "UPPER-LIMIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     scale_constrs: Optional["InternalConstrs.ScaleConstrs"] = field(
         default=None,
@@ -63,7 +64,7 @@ class InternalConstrs:
             "name": "SCALE-CONSTRS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_gradient: Optional[NumericalValue] = field(
         default=None,
@@ -71,7 +72,7 @@ class InternalConstrs:
             "name": "MAX-GRADIENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_diff: Optional[NumericalValue] = field(
         default=None,
@@ -79,7 +80,7 @@ class InternalConstrs:
             "name": "MAX-DIFF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     monotony: Optional[MonotonyEnum] = field(
         default=None,
@@ -87,14 +88,14 @@ class InternalConstrs:
             "name": "MONOTONY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -102,7 +103,7 @@ class InternalConstrs:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -113,5 +114,5 @@ class InternalConstrs:
                 "name": "SCALE-CONSTR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

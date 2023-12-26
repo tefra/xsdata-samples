@@ -4,8 +4,12 @@ from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.duration_value import DurationValue
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.speed_value import SpeedValue
-from datexii.models.eu.datexii.v2.travel_time_trend_type_enum import TravelTimeTrendTypeEnum
-from datexii.models.eu.datexii.v2.travel_time_type_enum import TravelTimeTypeEnum
+from datexii.models.eu.datexii.v2.travel_time_trend_type_enum import (
+    TravelTimeTrendTypeEnum,
+)
+from datexii.models.eu.datexii.v2.travel_time_type_enum import (
+    TravelTimeTypeEnum,
+)
 from datexii.models.eu.datexii.v2.vehicle_type_enum import VehicleTypeEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -36,13 +40,14 @@ class TravelTimeData(BasicData):
         conditions, corresponding to the freeFlowTravelTime.
     :ivar travel_time_data_extension:
     """
+
     travel_time_trend_type: Optional[TravelTimeTrendTypeEnum] = field(
         default=None,
         metadata={
             "name": "travelTimeTrendType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     travel_time_type: Optional[TravelTimeTypeEnum] = field(
         default=None,
@@ -50,7 +55,7 @@ class TravelTimeData(BasicData):
             "name": "travelTimeType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_type: List[VehicleTypeEnum] = field(
         default_factory=list,
@@ -58,7 +63,7 @@ class TravelTimeData(BasicData):
             "name": "vehicleType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     travel_time: Optional[DurationValue] = field(
         default=None,
@@ -66,7 +71,7 @@ class TravelTimeData(BasicData):
             "name": "travelTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     free_flow_travel_time: Optional[DurationValue] = field(
         default=None,
@@ -74,7 +79,7 @@ class TravelTimeData(BasicData):
             "name": "freeFlowTravelTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     normally_expected_travel_time: Optional[DurationValue] = field(
         default=None,
@@ -82,7 +87,7 @@ class TravelTimeData(BasicData):
             "name": "normallyExpectedTravelTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     free_flow_speed: Optional[SpeedValue] = field(
         default=None,
@@ -90,7 +95,7 @@ class TravelTimeData(BasicData):
             "name": "freeFlowSpeed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     travel_time_data_extension: Optional[ExtensionType] = field(
         default=None,
@@ -98,5 +103,5 @@ class TravelTimeData(BasicData):
             "name": "travelTimeDataExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

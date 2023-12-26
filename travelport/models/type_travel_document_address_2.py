@@ -25,6 +25,7 @@ class TypeTravelDocumentAddress2:
     postal
         The postal code of which this address is located.
     """
+
     class Meta:
         name = "typeTravelDocumentAddress"
 
@@ -38,7 +39,7 @@ class TypeTravelDocumentAddress2:
             "max_occurs": 3,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     city: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class TypeTravelDocumentAddress2:
             "name": "City",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )
     state: None | str = field(
         default=None,
@@ -54,7 +55,7 @@ class TypeTravelDocumentAddress2:
             "name": "State",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     other_state_province: None | str = field(
         default=None,
@@ -63,7 +64,7 @@ class TypeTravelDocumentAddress2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class TypeTravelDocumentAddress2:
             "name": "Country",
             "type": "Attribute",
             "max_length": 2,
-        }
+        },
     )
     postal: None | str = field(
         default=None,
@@ -79,5 +80,5 @@ class TypeTravelDocumentAddress2:
             "name": "Postal",
             "type": "Attribute",
             "max_length": 12,
-        }
+        },
     )

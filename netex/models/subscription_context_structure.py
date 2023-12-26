@@ -13,5 +13,5 @@ class SubscriptionContextStructure:
             "name": "HeartbeatInterval",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

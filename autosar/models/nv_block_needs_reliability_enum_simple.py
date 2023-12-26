@@ -9,6 +9,7 @@ class NvBlockNeedsReliabilityEnumSimple(Enum):
     :cvar ERROR_DETECTION: Errors shall be detected
     :cvar NO_PROTECTION: Data need not to be handled with protection
     """
+
     ERROR_CORRECTION = "ERROR-CORRECTION"
     ERROR_DETECTION = "ERROR-DETECTION"
     NO_PROTECTION = "NO-PROTECTION"

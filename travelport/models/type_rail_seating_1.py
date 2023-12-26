@@ -8,6 +8,7 @@ class TypeRailSeating1(Enum):
     """
     The type of Rail Seating.
     """
+
     CAR_PARKING = "Car-Parking"
     MOTORRAIL = "Motorrail"
     SEAT_COUCHETTE = "Seat Couchette"

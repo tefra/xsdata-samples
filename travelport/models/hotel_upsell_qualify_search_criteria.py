@@ -20,6 +20,7 @@ class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
         The IATA location code for this entity.
     rate_plan_type
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -29,7 +30,7 @@ class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "name": "CorporateDiscountID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_chain_code: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     hotel_code: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "name": "HotelCode",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )
     hotel_location: None | str = field(
         default=None,
@@ -55,12 +56,12 @@ class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     rate_plan_type: None | str = field(
         default=None,
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
-        }
+        },
     )

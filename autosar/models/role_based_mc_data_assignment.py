@@ -4,7 +4,9 @@ from .annotation import VariationPoint
 from .identifier import Identifier
 from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
 from .ref import Ref
-from .rpt_execution_context_subtypes_enum import RptExecutionContextSubtypesEnum
+from .rpt_execution_context_subtypes_enum import (
+    RptExecutionContextSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -40,24 +42,29 @@ class RoleBasedMcDataAssignment:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ROLE-BASED-MC-DATA-ASSIGNMENT"
 
-    execution_context_refs: Optional["RoleBasedMcDataAssignment.ExecutionContextRefs"] = field(
+    execution_context_refs: Optional[
+        "RoleBasedMcDataAssignment.ExecutionContextRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mc_data_instance_refs: Optional["RoleBasedMcDataAssignment.McDataInstanceRefs"] = field(
+    mc_data_instance_refs: Optional[
+        "RoleBasedMcDataAssignment.McDataInstanceRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     role: Optional[Identifier] = field(
         default=None,
@@ -65,7 +72,7 @@ class RoleBasedMcDataAssignment:
             "name": "ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -73,14 +80,14 @@ class RoleBasedMcDataAssignment:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -88,18 +95,20 @@ class RoleBasedMcDataAssignment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class ExecutionContextRefs:
-        execution_context_ref: List["RoleBasedMcDataAssignment.ExecutionContextRefs.ExecutionContextRef"] = field(
+        execution_context_ref: List[
+            "RoleBasedMcDataAssignment.ExecutionContextRefs.ExecutionContextRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTION-CONTEXT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -110,18 +119,20 @@ class RoleBasedMcDataAssignment:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class McDataInstanceRefs:
-        mc_data_instance_ref: List["RoleBasedMcDataAssignment.McDataInstanceRefs.McDataInstanceRef"] = field(
+        mc_data_instance_ref: List[
+            "RoleBasedMcDataAssignment.McDataInstanceRefs.McDataInstanceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MC-DATA-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -132,5 +143,5 @@ class RoleBasedMcDataAssignment:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

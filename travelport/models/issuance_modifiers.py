@@ -29,6 +29,7 @@ class IssuanceModifiers:
     plating_carrier
         Plating carrier code for which this EMD is issued.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -38,7 +39,7 @@ class IssuanceModifiers:
             "name": "FormOfPaymentRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     form_of_payment: None | FormOfPayment1 = field(
         default=None,
@@ -46,14 +47,14 @@ class IssuanceModifiers:
             "name": "FormOfPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     customer_receipt_info: None | CustomerReceiptInfo = field(
         default=None,
         metadata={
             "name": "CustomerReceiptInfo",
             "type": "Element",
-        }
+        },
     )
     emdendorsement: None | str = field(
         default=None,
@@ -62,14 +63,14 @@ class IssuanceModifiers:
             "type": "Element",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     emdcommission: None | Emdcommission = field(
         default=None,
         metadata={
             "name": "EMDCommission",
             "type": "Element",
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -77,5 +78,5 @@ class IssuanceModifiers:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )

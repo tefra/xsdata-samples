@@ -8,6 +8,7 @@ class TypeAgencyProfileLevel6(Enum):
     """
     Profile levels in the Agency Hierarchy.
     """
+
     AGENCY = "Agency"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"

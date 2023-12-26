@@ -13,6 +13,7 @@ class StructuredFareRulesType:
     fare_rule_category_type
         For FareRulesType element
     """
+
     fare_rule_category_type: list[FareRuleCategoryTypes] = field(
         default_factory=list,
         metadata={
@@ -20,5 +21,5 @@ class StructuredFareRulesType:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )

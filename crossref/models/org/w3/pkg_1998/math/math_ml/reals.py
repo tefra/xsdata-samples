@@ -15,5 +15,5 @@ class Reals:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

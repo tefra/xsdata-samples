@@ -21,6 +21,7 @@ class BaseHotelDetailsRsp(BaseRsp1):
         Only returned if number of adults and checkin/checkout given on
         request
     """
+
     hotel_property: None | HotelProperty = field(
         default=None,
         metadata={
@@ -28,7 +29,7 @@ class BaseHotelDetailsRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     hotel_detail_item: list[HotelDetailItem] = field(
         default_factory=list,
@@ -37,7 +38,7 @@ class BaseHotelDetailsRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
         default_factory=list,
@@ -46,5 +47,5 @@ class BaseHotelDetailsRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

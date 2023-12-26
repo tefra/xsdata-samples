@@ -39,50 +39,61 @@ class SolutionGroup:
         Indicates that this is a primary SolutionGroup when using alternate
         pricing concepts
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    permitted_account_codes: None | SolutionGroup.PermittedAccountCodes = field(
-        default=None,
-        metadata={
-            "name": "PermittedAccountCodes",
-            "type": "Element",
-        }
+    permitted_account_codes: None | SolutionGroup.PermittedAccountCodes = (
+        field(
+            default=None,
+            metadata={
+                "name": "PermittedAccountCodes",
+                "type": "Element",
+            },
+        )
     )
-    preferred_account_codes: None | SolutionGroup.PreferredAccountCodes = field(
-        default=None,
-        metadata={
-            "name": "PreferredAccountCodes",
-            "type": "Element",
-        }
+    preferred_account_codes: None | SolutionGroup.PreferredAccountCodes = (
+        field(
+            default=None,
+            metadata={
+                "name": "PreferredAccountCodes",
+                "type": "Element",
+            },
+        )
     )
-    prohibited_account_codes: None | SolutionGroup.ProhibitedAccountCodes = field(
-        default=None,
-        metadata={
-            "name": "ProhibitedAccountCodes",
-            "type": "Element",
-        }
+    prohibited_account_codes: None | SolutionGroup.ProhibitedAccountCodes = (
+        field(
+            default=None,
+            metadata={
+                "name": "ProhibitedAccountCodes",
+                "type": "Element",
+            },
+        )
     )
-    permitted_point_of_sales: None | SolutionGroup.PermittedPointOfSales = field(
-        default=None,
-        metadata={
-            "name": "PermittedPointOfSales",
-            "type": "Element",
-        }
+    permitted_point_of_sales: None | SolutionGroup.PermittedPointOfSales = (
+        field(
+            default=None,
+            metadata={
+                "name": "PermittedPointOfSales",
+                "type": "Element",
+            },
+        )
     )
-    prohibited_point_of_sales: None | SolutionGroup.ProhibitedPointOfSales = field(
-        default=None,
-        metadata={
-            "name": "ProhibitedPointOfSales",
-            "type": "Element",
-        }
+    prohibited_point_of_sales: None | SolutionGroup.ProhibitedPointOfSales = (
+        field(
+            default=None,
+            metadata={
+                "name": "ProhibitedPointOfSales",
+                "type": "Element",
+            },
+        )
     )
     count: None | int = field(
         default=None,
         metadata={
             "name": "Count",
             "type": "Attribute",
-        }
+        },
     )
     trip_type: None | TypeTripType = field(
         default=None,
@@ -90,14 +101,14 @@ class SolutionGroup:
             "name": "TripType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     diversification: None | TypeDiversity = field(
         default=None,
         metadata={
             "name": "Diversification",
             "type": "Attribute",
-        }
+        },
     )
     tag: None | str = field(
         default=None,
@@ -105,14 +116,14 @@ class SolutionGroup:
             "name": "Tag",
             "type": "Attribute",
             "max_length": 20,
-        }
+        },
     )
     primary: bool = field(
         default=False,
         metadata={
             "name": "Primary",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -125,7 +136,7 @@ class SolutionGroup:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -138,7 +149,7 @@ class SolutionGroup:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -151,7 +162,7 @@ class SolutionGroup:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -164,7 +175,7 @@ class SolutionGroup:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -177,5 +188,5 @@ class SolutionGroup:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

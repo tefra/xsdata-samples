@@ -2,10 +2,16 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_basis_enum import InstalmentBasisEnum
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_date_enum import InstalmentDateEnum
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_basis_enum import (
+    InstalmentBasisEnum,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_date_enum import (
+    InstalmentDateEnum,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -19,7 +25,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "name": "StartDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     end_date: Optional[XmlDateTime] = field(
         default=None,
@@ -27,7 +33,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "name": "EndDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     number_of_instalment: Optional[Decimal] = field(
         default=None,
@@ -36,7 +42,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     instalment_basis: Optional[InstalmentBasisEnum] = field(
         default=None,
@@ -45,7 +51,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     instalment_date: Optional[InstalmentDateEnum] = field(
         default=None,
@@ -54,5 +60,5 @@ class InstalmentPlansTypeInstalmentPlan:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )

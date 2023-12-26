@@ -41,6 +41,7 @@ class TpegLoc03OtherPointDescriptorSubtypeEnum(Enum):
     :cvar TOWN_NAME: Name of a town.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ADMINISTRATIVE_AREA_NAME = "administrativeAreaName"
     ADMINISTRATIVE_REFERENCE_NAME = "administrativeReferenceName"
     AIRPORT_NAME = "airportName"

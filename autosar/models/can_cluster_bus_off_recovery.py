@@ -34,6 +34,7 @@ class CanClusterBusOffRecovery:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-CLUSTER-BUS-OFF-RECOVERY"
 
@@ -43,7 +44,7 @@ class CanClusterBusOffRecovery:
             "name": "BOR-COUNTER-L-1-TO-L-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bor_time_l_1: Optional[TimeValue] = field(
         default=None,
@@ -51,7 +52,7 @@ class CanClusterBusOffRecovery:
             "name": "BOR-TIME-L-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bor_time_l_2: Optional[TimeValue] = field(
         default=None,
@@ -59,7 +60,7 @@ class CanClusterBusOffRecovery:
             "name": "BOR-TIME-L-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bor_time_tx_ensured: Optional[TimeValue] = field(
         default=None,
@@ -67,7 +68,7 @@ class CanClusterBusOffRecovery:
             "name": "BOR-TIME-TX-ENSURED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     main_function_period: Optional[TimeValue] = field(
         default=None,
@@ -75,14 +76,14 @@ class CanClusterBusOffRecovery:
             "name": "MAIN-FUNCTION-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -90,5 +91,5 @@ class CanClusterBusOffRecovery:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

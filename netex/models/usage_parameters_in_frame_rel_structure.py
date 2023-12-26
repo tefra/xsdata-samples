@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cancelling import Cancelling
 from .charging_policy import ChargingPolicy
 from .commercial_profile import CommercialProfile
@@ -22,8 +22,12 @@ from .reselling import Reselling
 from .reserving import Reserving
 from .round_trip import RoundTrip
 from .routing import Routing
-from .sales_offer_package_entitlement_given import SalesOfferPackageEntitlementGiven
-from .sales_offer_package_entitlement_required import SalesOfferPackageEntitlementRequired
+from .sales_offer_package_entitlement_given import (
+    SalesOfferPackageEntitlementGiven,
+)
+from .sales_offer_package_entitlement_required import (
+    SalesOfferPackageEntitlementRequired,
+)
 from .step_limit import StepLimit
 from .subscribing import Subscribing
 from .suspending import Suspending
@@ -39,7 +43,39 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "usageParametersInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            SalesOfferPackageEntitlementRequired,
+            SalesOfferPackageEntitlementGiven,
+            MinimumStay,
+            Interchanging,
+            Suspending,
+            UsageValidityPeriod,
+            FrequencyOfUse,
+            StepLimit,
+            Routing,
+            RoundTrip,
+            LuggageAllowance,
+            EntitlementRequired,
+            EntitlementGiven,
+            EligibilityChangePolicy,
+            CompanionProfile,
+            GroupTicket,
+            CommercialProfile,
+            UserProfile,
+            Subscribing,
+            PenaltyPolicy,
+            ChargingPolicy,
+            Cancelling,
+            Reserving,
+            PurchaseWindow,
+            Transferability,
+            Replacing,
+            Refunding,
+            Exchanging,
+            Reselling,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -190,5 +226,5 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

@@ -37,6 +37,7 @@ class ScaleConstr:
         considered to be valid. If the attribute is missing then the
         default value is "VALID".
     """
+
     class Meta:
         name = "SCALE-CONSTR"
 
@@ -46,7 +47,7 @@ class ScaleConstr:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -54,7 +55,7 @@ class ScaleConstr:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lower_limit: Optional[Limit] = field(
         default=None,
@@ -62,7 +63,7 @@ class ScaleConstr:
             "name": "LOWER-LIMIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_limit: Optional[Limit] = field(
         default=None,
@@ -70,14 +71,14 @@ class ScaleConstr:
             "name": "UPPER-LIMIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -85,12 +86,12 @@ class ScaleConstr:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     validity: Optional[ScaleConstrValidityEnumSimple] = field(
         default=None,
         metadata={
             "name": "VALIDITY",
             "type": "Attribute",
-        }
+        },
     )

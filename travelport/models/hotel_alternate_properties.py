@@ -11,6 +11,7 @@ class HotelAlternateProperties:
     Alternate Properties returned by some Vendors if the requested property is not
     available.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -21,5 +22,5 @@ class HotelAlternateProperties:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

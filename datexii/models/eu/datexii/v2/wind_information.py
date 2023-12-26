@@ -12,13 +12,14 @@ class WindInformation(WeatherData):
     """
     Measurements of wind conditions.
     """
+
     wind: Optional[Wind] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     wind_information_extension: Optional[ExtensionType] = field(
         default=None,
@@ -26,5 +27,5 @@ class WindInformation(WeatherData):
             "name": "windInformationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

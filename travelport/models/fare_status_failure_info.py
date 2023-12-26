@@ -16,6 +16,7 @@ class FareStatusFailureInfo:
     reason
         The reason for the failure.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,12 +26,12 @@ class FareStatusFailureInfo:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     reason: None | str = field(
         default=None,
         metadata={
             "name": "Reason",
             "type": "Attribute",
-        }
+        },
     )

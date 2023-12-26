@@ -14,7 +14,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .timing_description_event_subtypes_enum import (
+    TimingDescriptionEventSubtypesEnum,
+)
 from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -99,6 +101,7 @@ class ConcretePatternEventTriggering:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONCRETE-PATTERN-EVENT-TRIGGERING"
 
@@ -109,15 +112,17 @@ class ConcretePatternEventTriggering:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ConcretePatternEventTriggering.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ConcretePatternEventTriggering.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -125,7 +130,7 @@ class ConcretePatternEventTriggering:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -133,7 +138,7 @@ class ConcretePatternEventTriggering:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -141,7 +146,7 @@ class ConcretePatternEventTriggering:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -149,7 +154,7 @@ class ConcretePatternEventTriggering:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -157,15 +162,17 @@ class ConcretePatternEventTriggering:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["ConcretePatternEventTriggering.Annotations"] = field(
+    annotations: Optional[
+        "ConcretePatternEventTriggering.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["ConcretePatternEventTriggering.TraceRefs"] = field(
         default=None,
@@ -173,15 +180,17 @@ class ConcretePatternEventTriggering:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    timing_condition_ref: Optional["ConcretePatternEventTriggering.TimingConditionRef"] = field(
+    timing_condition_ref: Optional[
+        "ConcretePatternEventTriggering.TimingConditionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -189,7 +198,7 @@ class ConcretePatternEventTriggering:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_ref: Optional["ConcretePatternEventTriggering.EventRef"] = field(
         default=None,
@@ -197,7 +206,7 @@ class ConcretePatternEventTriggering:
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern_jitter: Optional[MultidimensionalTime] = field(
         default=None,
@@ -205,7 +214,7 @@ class ConcretePatternEventTriggering:
             "name": "PATTERN-JITTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern_period: Optional[MultidimensionalTime] = field(
         default=None,
@@ -213,7 +222,7 @@ class ConcretePatternEventTriggering:
             "name": "PATTERN-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     offsets: Optional["ConcretePatternEventTriggering.Offsets"] = field(
         default=None,
@@ -221,7 +230,7 @@ class ConcretePatternEventTriggering:
             "name": "OFFSETS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern_length: Optional[MultidimensionalTime] = field(
         default=None,
@@ -229,14 +238,14 @@ class ConcretePatternEventTriggering:
             "name": "PATTERN-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -244,14 +253,14 @@ class ConcretePatternEventTriggering:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -262,7 +271,7 @@ class ConcretePatternEventTriggering:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -273,18 +282,20 @@ class ConcretePatternEventTriggering:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["ConcretePatternEventTriggering.TraceRefs.TraceRef"] = field(
+        trace_ref: List[
+            "ConcretePatternEventTriggering.TraceRefs.TraceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -295,7 +306,7 @@ class ConcretePatternEventTriggering:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -306,7 +317,7 @@ class ConcretePatternEventTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -317,7 +328,7 @@ class ConcretePatternEventTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -328,5 +339,5 @@ class ConcretePatternEventTriggering:
                 "name": "TIME-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -31,5 +31,5 @@ class Lstref:
                     "type": Klr,
                 },
             ),
-        }
+        },
     )

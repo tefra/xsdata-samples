@@ -3,15 +3,31 @@ from typing import List, Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
 from .byte_order_enum import ByteOrderEnum
-from .diagnostic_clear_dtc_limitation_enum import DiagnosticClearDtcLimitationEnum
+from .diagnostic_clear_dtc_limitation_enum import (
+    DiagnosticClearDtcLimitationEnum,
+)
 from .diagnostic_data_capture_enum import DiagnosticDataCaptureEnum
-from .diagnostic_debounce_algorithm_props import DiagnosticDebounceAlgorithmProps
-from .diagnostic_event_displacement_strategy_enum import DiagnosticEventDisplacementStrategyEnum
-from .diagnostic_memory_entry_storage_trigger_enum import DiagnosticMemoryEntryStorageTriggerEnum
-from .diagnostic_occurrence_counter_processing_enum import DiagnosticOccurrenceCounterProcessingEnum
-from .diagnostic_status_bit_handling_test_failed_since_last_clear_enum import DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum
-from .diagnostic_type_of_dtc_supported_enum import DiagnosticTypeOfDtcSupportedEnum
-from .diagnostic_type_of_freeze_frame_record_numeration_enum import DiagnosticTypeOfFreezeFrameRecordNumerationEnum
+from .diagnostic_debounce_algorithm_props import (
+    DiagnosticDebounceAlgorithmProps,
+)
+from .diagnostic_event_displacement_strategy_enum import (
+    DiagnosticEventDisplacementStrategyEnum,
+)
+from .diagnostic_memory_entry_storage_trigger_enum import (
+    DiagnosticMemoryEntryStorageTriggerEnum,
+)
+from .diagnostic_occurrence_counter_processing_enum import (
+    DiagnosticOccurrenceCounterProcessingEnum,
+)
+from .diagnostic_status_bit_handling_test_failed_since_last_clear_enum import (
+    DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum,
+)
+from .diagnostic_type_of_dtc_supported_enum import (
+    DiagnosticTypeOfDtcSupportedEnum,
+)
+from .diagnostic_type_of_freeze_frame_record_numeration_enum import (
+    DiagnosticTypeOfFreezeFrameRecordNumerationEnum,
+)
 from .positive_integer import PositiveInteger
 from .time_value import TimeValue
 
@@ -105,6 +121,7 @@ class DiagnosticCommonPropsConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-COMMON-PROPS-CONDITIONAL"
 
@@ -114,7 +131,7 @@ class DiagnosticCommonPropsConditional:
             "name": "AGING-REQUIRES-TESTED-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     clear_dtc_limitation: Optional[DiagnosticClearDtcLimitationEnum] = field(
         default=None,
@@ -122,15 +139,17 @@ class DiagnosticCommonPropsConditional:
             "name": "CLEAR-DTC-LIMITATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    debounce_algorithm_propss: Optional["DiagnosticCommonPropsConditional.DebounceAlgorithmPropss"] = field(
+    debounce_algorithm_propss: Optional[
+        "DiagnosticCommonPropsConditional.DebounceAlgorithmPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "DEBOUNCE-ALGORITHM-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_endianness: Optional[ByteOrderEnum] = field(
         default=None,
@@ -138,7 +157,7 @@ class DiagnosticCommonPropsConditional:
             "name": "DEFAULT-ENDIANNESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dtc_status_availability_mask: Optional[PositiveInteger] = field(
         default=None,
@@ -146,7 +165,7 @@ class DiagnosticCommonPropsConditional:
             "name": "DTC-STATUS-AVAILABILITY-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     environment_data_capture: Optional[DiagnosticDataCaptureEnum] = field(
         default=None,
@@ -154,15 +173,17 @@ class DiagnosticCommonPropsConditional:
             "name": "ENVIRONMENT-DATA-CAPTURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_displacement_strategy: Optional[DiagnosticEventDisplacementStrategyEnum] = field(
+    event_displacement_strategy: Optional[
+        DiagnosticEventDisplacementStrategyEnum
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-DISPLACEMENT-STRATEGY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_of_event_entries: Optional[PositiveInteger] = field(
         default=None,
@@ -170,31 +191,37 @@ class DiagnosticCommonPropsConditional:
             "name": "MAX-NUMBER-OF-EVENT-ENTRIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    max_number_of_request_correctly_received_response_pending: Optional[PositiveInteger] = field(
+    max_number_of_request_correctly_received_response_pending: Optional[
+        PositiveInteger
+    ] = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-REQUEST-CORRECTLY-RECEIVED-RESPONSE-PENDING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    memory_entry_storage_trigger: Optional[DiagnosticMemoryEntryStorageTriggerEnum] = field(
+    memory_entry_storage_trigger: Optional[
+        DiagnosticMemoryEntryStorageTriggerEnum
+    ] = field(
         default=None,
         metadata={
             "name": "MEMORY-ENTRY-STORAGE-TRIGGER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    occurrence_counter_processing: Optional[DiagnosticOccurrenceCounterProcessingEnum] = field(
+    occurrence_counter_processing: Optional[
+        DiagnosticOccurrenceCounterProcessingEnum
+    ] = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-COUNTER-PROCESSING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     reset_confirmed_bit_on_overflow: Optional[Boolean] = field(
         default=None,
@@ -202,7 +229,7 @@ class DiagnosticCommonPropsConditional:
             "name": "RESET-CONFIRMED-BIT-ON-OVERFLOW",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     response_on_all_request_sids: Optional[Boolean] = field(
         default=None,
@@ -210,7 +237,7 @@ class DiagnosticCommonPropsConditional:
             "name": "RESPONSE-ON-ALL-REQUEST-SIDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     response_on_second_declined_request: Optional[Boolean] = field(
         default=None,
@@ -218,7 +245,7 @@ class DiagnosticCommonPropsConditional:
             "name": "RESPONSE-ON-SECOND-DECLINED-REQUEST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_delay_time_on_boot: Optional[TimeValue] = field(
         default=None,
@@ -226,15 +253,17 @@ class DiagnosticCommonPropsConditional:
             "name": "SECURITY-DELAY-TIME-ON-BOOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    status_bit_handling_test_failed_since_last_clear: Optional[DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum] = field(
+    status_bit_handling_test_failed_since_last_clear: Optional[
+        DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum
+    ] = field(
         default=None,
         metadata={
             "name": "STATUS-BIT-HANDLING-TEST-FAILED-SINCE-LAST-CLEAR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     status_bit_storage_test_failed: Optional[Boolean] = field(
         default=None,
@@ -242,7 +271,7 @@ class DiagnosticCommonPropsConditional:
             "name": "STATUS-BIT-STORAGE-TEST-FAILED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_of_dtc_supported: Optional[DiagnosticTypeOfDtcSupportedEnum] = field(
         default=None,
@@ -250,15 +279,17 @@ class DiagnosticCommonPropsConditional:
             "name": "TYPE-OF-DTC-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    type_of_freeze_frame_record_numeration: Optional[DiagnosticTypeOfFreezeFrameRecordNumerationEnum] = field(
+    type_of_freeze_frame_record_numeration: Optional[
+        DiagnosticTypeOfFreezeFrameRecordNumerationEnum
+    ] = field(
         default=None,
         metadata={
             "name": "TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -266,14 +297,14 @@ class DiagnosticCommonPropsConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -281,16 +312,18 @@ class DiagnosticCommonPropsConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class DebounceAlgorithmPropss:
-        diagnostic_debounce_algorithm_props: List[DiagnosticDebounceAlgorithmProps] = field(
+        diagnostic_debounce_algorithm_props: List[
+            DiagnosticDebounceAlgorithmProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DEBOUNCE-ALGORITHM-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

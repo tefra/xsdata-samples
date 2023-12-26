@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .complex_feature_projection import ComplexFeatureProjection
 from .complex_feature_projection_ref import ComplexFeatureProjectionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -22,7 +22,22 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "projections_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            TopographicProjectionRef,
+            ComplexFeatureProjectionRef,
+            LinkSequenceProjectionRef,
+            ZoneProjectionRef,
+            LinkProjectionRef,
+            PointProjectionRef,
+            TopographicProjection,
+            ZoneProjection,
+            ComplexFeatureProjection,
+            LinkSequenceProjection,
+            LinkProjection,
+            PointProjection,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -88,5 +103,5 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

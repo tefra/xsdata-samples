@@ -10,6 +10,7 @@ class TypeDateOptions1:
 
     All are optional attributes, although at least one is required.
     """
+
     class Meta:
         name = "typeDateOptions"
 
@@ -20,7 +21,7 @@ class TypeDateOptions1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     month: None | str = field(
         default=None,
@@ -29,7 +30,7 @@ class TypeDateOptions1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     year: None | str = field(
         default=None,
@@ -38,5 +39,5 @@ class TypeDateOptions1:
             "type": "Attribute",
             "min_length": 4,
             "max_length": 4,
-        }
+        },
     )

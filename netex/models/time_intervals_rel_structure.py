@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .time_interval import TimeInterval
 from .time_interval_ref import TimeIntervalRef
@@ -12,7 +12,9 @@ class TimeIntervalsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeIntervals_RelStructure"
 
-    time_interval_ref_or_time_interval: List[object] = field(
+    time_interval_ref_or_time_interval: List[
+        Union[TimeIntervalRef, TimeInterval]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class TimeIntervalsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

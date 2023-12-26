@@ -20,5 +20,5 @@ class Em:
                     "type": Tld,
                 },
             ),
-        }
+        },
     )

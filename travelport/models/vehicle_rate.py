@@ -13,9 +13,13 @@ from travelport.models.type_rate_time_period import TypeRateTimePeriod
 from travelport.models.type_rate_variance import TypeRateVariance
 from travelport.models.type_trinary import TypeTrinary
 from travelport.models.type_vehicle_charge import TypeVehicleCharge
-from travelport.models.type_vehicle_rate_description import TypeVehicleRateDescription
+from travelport.models.type_vehicle_rate_description import (
+    TypeVehicleRateDescription,
+)
 from travelport.models.type_vehicle_rates import TypeVehicleRates
-from travelport.models.vehicle_rate_required_payment import VehicleRateRequiredPayment
+from travelport.models.vehicle_rate_required_payment import (
+    VehicleRateRequiredPayment,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -125,6 +129,7 @@ class VehicleRate:
         is fully qualified, 2 is partly qualified, and 3 is other rates. 1G,
         1V only.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -133,21 +138,21 @@ class VehicleRate:
         metadata={
             "name": "SupplierRate",
             "type": "Element",
-        }
+        },
     )
     rate_variance: None | TypeRateVariance = field(
         default=None,
         metadata={
             "name": "RateVariance",
             "type": "Element",
-        }
+        },
     )
     approximate_rate: None | TypeVehicleRates = field(
         default=None,
         metadata={
             "name": "ApproximateRate",
             "type": "Element",
-        }
+        },
     )
     vehicle_charge: list[TypeVehicleCharge] = field(
         default_factory=list,
@@ -155,7 +160,7 @@ class VehicleRate:
             "name": "VehicleCharge",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_rate_description: list[TypeVehicleRateDescription] = field(
         default_factory=list,
@@ -163,28 +168,28 @@ class VehicleRate:
             "name": "VehicleRateDescription",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     rate_host_indicator: None | TypeRateHostIndicator = field(
         default=None,
         metadata={
             "name": "RateHostIndicator",
             "type": "Element",
-        }
+        },
     )
     hourly_late_charge: None | TypeRateInfo = field(
         default=None,
         metadata={
             "name": "HourlyLateCharge",
             "type": "Element",
-        }
+        },
     )
     daily_late_charge: None | TypeRateInfo = field(
         default=None,
         metadata={
             "name": "DailyLateCharge",
             "type": "Element",
-        }
+        },
     )
     priced_equip: list[PricedEquip] = field(
         default_factory=list,
@@ -192,84 +197,84 @@ class VehicleRate:
             "name": "PricedEquip",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rate_inclusions: None | RateInclusions = field(
         default=None,
         metadata={
             "name": "RateInclusions",
             "type": "Element",
-        }
+        },
     )
     weekly_late_charge: None | TypeRateInfo = field(
         default=None,
         metadata={
             "name": "WeeklyLateCharge",
             "type": "Element",
-        }
+        },
     )
     print_text: None | str = field(
         default=None,
         metadata={
             "name": "PrintText",
             "type": "Element",
-        }
+        },
     )
     rate_period: None | TypeRateTimePeriod = field(
         default=None,
         metadata={
             "name": "RatePeriod",
             "type": "Attribute",
-        }
+        },
     )
     number_of_periods: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfPeriods",
             "type": "Attribute",
-        }
+        },
     )
     unlimited_mileage: None | bool = field(
         default=None,
         metadata={
             "name": "UnlimitedMileage",
             "type": "Attribute",
-        }
+        },
     )
     mileage_allowance: None | int = field(
         default=None,
         metadata={
             "name": "MileageAllowance",
             "type": "Attribute",
-        }
+        },
     )
     units: None | TypeDistance = field(
         default=None,
         metadata={
             "name": "Units",
             "type": "Attribute",
-        }
+        },
     )
     rate_source: None | str = field(
         default=None,
         metadata={
             "name": "RateSource",
             "type": "Attribute",
-        }
+        },
     )
     rate_availability: None | TypeRateAvailability = field(
         default=None,
         metadata={
             "name": "RateAvailability",
             "type": "Attribute",
-        }
+        },
     )
     required_charges: None | str = field(
         default=None,
         metadata={
             "name": "RequiredCharges",
             "type": "Attribute",
-        }
+        },
     )
     rate_code: None | str = field(
         default=None,
@@ -277,21 +282,21 @@ class VehicleRate:
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     requested_rate_code_applied: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "RequestedRateCodeApplied",
             "type": "Attribute",
-        }
+        },
     )
     rate_category: None | TypeRateCategory = field(
         default=None,
         metadata={
             "name": "RateCategory",
             "type": "Attribute",
-        }
+        },
     )
     discount_number: None | str = field(
         default=None,
@@ -299,14 +304,14 @@ class VehicleRate:
             "name": "DiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     discount_number_applied: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "DiscountNumberApplied",
             "type": "Attribute",
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -315,98 +320,98 @@ class VehicleRate:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     rate_guaranteed: bool = field(
         default=False,
         metadata={
             "name": "RateGuaranteed",
             "type": "Attribute",
-        }
+        },
     )
     rate_code_period: None | str = field(
         default=None,
         metadata={
             "name": "RateCodePeriod",
             "type": "Attribute",
-        }
+        },
     )
     promotional_code: None | str = field(
         default=None,
         metadata={
             "name": "PromotionalCode",
             "type": "Attribute",
-        }
+        },
     )
     promotional_code_applied: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "PromotionalCodeApplied",
             "type": "Attribute",
-        }
+        },
     )
     tour_code: None | str = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Attribute",
-        }
+        },
     )
     tour_code_applied: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "TourCodeApplied",
             "type": "Attribute",
-        }
+        },
     )
     rate_guarantee_type: None | TypeRateGuarantee = field(
         default=None,
         metadata={
             "name": "RateGuaranteeType",
             "type": "Attribute",
-        }
+        },
     )
     required_payment: None | VehicleRateRequiredPayment = field(
         default=None,
         metadata={
             "name": "RequiredPayment",
             "type": "Attribute",
-        }
+        },
     )
     drop_off_charges_included: None | bool = field(
         default=None,
         metadata={
             "name": "DropOffChargesIncluded",
             "type": "Attribute",
-        }
+        },
     )
     corporate_rate: None | bool = field(
         default=None,
         metadata={
             "name": "CorporateRate",
             "type": "Attribute",
-        }
+        },
     )
     advanced_booking: None | str = field(
         default=None,
         metadata={
             "name": "AdvancedBooking",
             "type": "Attribute",
-        }
+        },
     )
     rental_restriction: None | bool = field(
         default=None,
         metadata={
             "name": "RentalRestriction",
             "type": "Attribute",
-        }
+        },
     )
     flight_restriction: None | bool = field(
         default=None,
         metadata={
             "name": "FlightRestriction",
             "type": "Attribute",
-        }
+        },
     )
     card_number: None | str = field(
         default=None,
@@ -415,19 +420,19 @@ class VehicleRate:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 36,
-        }
+        },
     )
     card_number_applied: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "CardNumberApplied",
             "type": "Attribute",
-        }
+        },
     )
     rate_qualifier_ind: None | int = field(
         default=None,
         metadata={
             "name": "RateQualifierInd",
             "type": "Attribute",
-        }
+        },
     )

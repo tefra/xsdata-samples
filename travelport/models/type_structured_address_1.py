@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.provider_reservation_info_ref_1 import ProviderReservationInfoRef1
+from travelport.models.provider_reservation_info_ref_1 import (
+    ProviderReservationInfoRef1,
+)
 from travelport.models.type_element_status_1 import TypeElementStatus1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
@@ -40,6 +42,7 @@ class TypeStructuredAddress1:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "typeStructuredAddress"
 
@@ -50,7 +53,7 @@ class TypeStructuredAddress1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_length": 128,
-        }
+        },
     )
     street: list[str] = field(
         default_factory=list,
@@ -61,7 +64,7 @@ class TypeStructuredAddress1:
             "max_occurs": 5,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     city: None | str = field(
         default=None,
@@ -71,7 +74,7 @@ class TypeStructuredAddress1:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_length": 2,
             "max_length": 50,
-        }
+        },
     )
     state: None | str = field(
         default=None,
@@ -79,7 +82,7 @@ class TypeStructuredAddress1:
             "name": "State",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     postal_code: None | str = field(
         default=None,
@@ -89,7 +92,7 @@ class TypeStructuredAddress1:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -98,7 +101,7 @@ class TypeStructuredAddress1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "length": 2,
-        }
+        },
     )
     provider_reservation_info_ref: list[ProviderReservationInfoRef1] = field(
         default_factory=list,
@@ -107,26 +110,26 @@ class TypeStructuredAddress1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

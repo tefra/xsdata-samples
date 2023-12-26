@@ -17,7 +17,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
 from .process_design_subtypes_enum import ProcessDesignSubtypesEnum
 from .ref import Ref
-from .security_event_definition_subtypes_enum import SecurityEventDefinitionSubtypesEnum
+from .security_event_definition_subtypes_enum import (
+    SecurityEventDefinitionSubtypesEnum,
+)
 from .short_name_fragment import ShortNameFragment
 from .state_dependent_startup_config import StateDependentStartupConfig
 from .string import String
@@ -108,6 +110,7 @@ class Process:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PROCESS"
 
@@ -118,7 +121,7 @@ class Process:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["Process.ShortNameFragments"] = field(
         default=None,
@@ -126,7 +129,7 @@ class Process:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -134,7 +137,7 @@ class Process:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -142,7 +145,7 @@ class Process:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -150,7 +153,7 @@ class Process:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -158,7 +161,7 @@ class Process:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -166,7 +169,7 @@ class Process:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["Process.Annotations"] = field(
         default=None,
@@ -174,7 +177,7 @@ class Process:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -182,7 +185,7 @@ class Process:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     design_ref: Optional["Process.DesignRef"] = field(
         default=None,
@@ -190,15 +193,17 @@ class Process:
             "name": "DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    deterministic_client_ref: Optional["Process.DeterministicClientRef"] = field(
+    deterministic_client_ref: Optional[
+        "Process.DeterministicClientRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DETERMINISTIC-CLIENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     executable_ref: Optional["Process.ExecutableRef"] = field(
         default=None,
@@ -206,7 +211,7 @@ class Process:
             "name": "EXECUTABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     function_cluster_affiliation: Optional[String] = field(
         default=None,
@@ -214,7 +219,7 @@ class Process:
             "name": "FUNCTION-CLUSTER-AFFILIATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     number_of_restart_attempts: Optional[PositiveInteger] = field(
         default=None,
@@ -222,7 +227,7 @@ class Process:
             "name": "NUMBER-OF-RESTART-ATTEMPTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pre_mapping: Optional[Boolean] = field(
         default=None,
@@ -230,7 +235,7 @@ class Process:
             "name": "PRE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     process_state_machine: Optional[ModeDeclarationGroupPrototype] = field(
         default=None,
@@ -238,7 +243,7 @@ class Process:
             "name": "PROCESS-STATE-MACHINE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_event_refs: Optional["Process.SecurityEventRefs"] = field(
         default=None,
@@ -246,22 +251,24 @@ class Process:
             "name": "SECURITY-EVENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    state_dependent_startup_configs: Optional["Process.StateDependentStartupConfigs"] = field(
+    state_dependent_startup_configs: Optional[
+        "Process.StateDependentStartupConfigs"
+    ] = field(
         default=None,
         metadata={
             "name": "STATE-DEPENDENT-STARTUP-CONFIGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -269,14 +276,14 @@ class Process:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -287,7 +294,7 @@ class Process:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -298,7 +305,7 @@ class Process:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -309,7 +316,7 @@ class Process:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -320,7 +327,7 @@ class Process:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -331,18 +338,20 @@ class Process:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class SecurityEventRefs:
-        security_event_ref: List["Process.SecurityEventRefs.SecurityEventRef"] = field(
+        security_event_ref: List[
+            "Process.SecurityEventRefs.SecurityEventRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-EVENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -353,16 +362,18 @@ class Process:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class StateDependentStartupConfigs:
-        state_dependent_startup_config: List[StateDependentStartupConfig] = field(
+        state_dependent_startup_config: List[
+            StateDependentStartupConfig
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "STATE-DEPENDENT-STARTUP-CONFIG",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

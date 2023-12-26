@@ -25,6 +25,7 @@ class MsrQueryArg:
     :ivar si: This denotes the name of the query argument (semantic
         information)
     """
+
     class Meta:
         name = "MSR-QUERY-ARG"
 
@@ -32,14 +33,14 @@ class MsrQueryArg:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -47,12 +48,12 @@ class MsrQueryArg:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: Optional[str] = field(
         default=None,
         metadata={
             "name": "SI",
             "type": "Attribute",
-        }
+        },
     )

@@ -13,5 +13,5 @@ class InvalidDataReferencesErrorStructure(ErrorCodeStructure):
             "name": "InvalidRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

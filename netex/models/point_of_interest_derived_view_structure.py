@@ -19,7 +19,7 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
             "name": "PointOfInterestRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     place_types: Optional[TypeOfPlaceRefsRelStructure] = field(
         default=None,
@@ -35,7 +35,7 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
             "name": "placeTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -43,5 +43,5 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

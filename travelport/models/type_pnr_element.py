@@ -8,6 +8,7 @@ class TypePnrElement(Enum):
     """
     Defines the list of available data types for modifications.
     """
+
     FORM_OF_PAYMENT = "FormOfPayment"
     OSI = "OSI"
     ACCOUNTING_REMARK = "AccountingRemark"

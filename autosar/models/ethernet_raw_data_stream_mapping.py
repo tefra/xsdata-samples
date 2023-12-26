@@ -7,14 +7,20 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .ethernet_communication_connector_subtypes_enum import EthernetCommunicationConnectorSubtypesEnum
+from .ethernet_communication_connector_subtypes_enum import (
+    EthernetCommunicationConnectorSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
 from .process_subtypes_enum import ProcessSubtypesEnum
-from .r_port_prototype_in_executable_instance_ref import RPortPrototypeInExecutableInstanceRef
-from .raw_data_stream_deployment_subtypes_enum import RawDataStreamDeploymentSubtypesEnum
+from .r_port_prototype_in_executable_instance_ref import (
+    RPortPrototypeInExecutableInstanceRef,
+)
+from .raw_data_stream_deployment_subtypes_enum import (
+    RawDataStreamDeploymentSubtypesEnum,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .string import String
@@ -104,6 +110,7 @@ class EthernetRawDataStreamMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETHERNET-RAW-DATA-STREAM-MAPPING"
 
@@ -114,15 +121,17 @@ class EthernetRawDataStreamMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["EthernetRawDataStreamMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "EthernetRawDataStreamMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -130,7 +139,7 @@ class EthernetRawDataStreamMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -138,7 +147,7 @@ class EthernetRawDataStreamMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -146,7 +155,7 @@ class EthernetRawDataStreamMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -154,7 +163,7 @@ class EthernetRawDataStreamMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -162,7 +171,7 @@ class EthernetRawDataStreamMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EthernetRawDataStreamMapping.Annotations"] = field(
         default=None,
@@ -170,7 +179,7 @@ class EthernetRawDataStreamMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -178,23 +187,27 @@ class EthernetRawDataStreamMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    deployment_ref: Optional["EthernetRawDataStreamMapping.DeploymentRef"] = field(
+    deployment_ref: Optional[
+        "EthernetRawDataStreamMapping.DeploymentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DEPLOYMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_prototype_iref: Optional[RPortPrototypeInExecutableInstanceRef] = field(
+    port_prototype_iref: Optional[
+        RPortPrototypeInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     process_ref: Optional["EthernetRawDataStreamMapping.ProcessRef"] = field(
         default=None,
@@ -202,15 +215,17 @@ class EthernetRawDataStreamMapping:
             "name": "PROCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_connector_ref: Optional["EthernetRawDataStreamMapping.CommunicationConnectorRef"] = field(
+    communication_connector_ref: Optional[
+        "EthernetRawDataStreamMapping.CommunicationConnectorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     multicast_udp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -218,15 +233,17 @@ class EthernetRawDataStreamMapping:
             "name": "MULTICAST-UDP-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    socket_options: Optional["EthernetRawDataStreamMapping.SocketOptions"] = field(
+    socket_options: Optional[
+        "EthernetRawDataStreamMapping.SocketOptions"
+    ] = field(
         default=None,
         metadata={
             "name": "SOCKET-OPTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -234,7 +251,7 @@ class EthernetRawDataStreamMapping:
             "name": "TCP-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tls_secure_com_props: Optional[TlsSecureComProps] = field(
         default=None,
@@ -242,7 +259,7 @@ class EthernetRawDataStreamMapping:
             "name": "TLS-SECURE-COM-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     udp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -250,14 +267,14 @@ class EthernetRawDataStreamMapping:
             "name": "UDP-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -265,14 +282,14 @@ class EthernetRawDataStreamMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -283,7 +300,7 @@ class EthernetRawDataStreamMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -294,7 +311,7 @@ class EthernetRawDataStreamMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -305,7 +322,7 @@ class EthernetRawDataStreamMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -316,7 +333,7 @@ class EthernetRawDataStreamMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -327,7 +344,7 @@ class EthernetRawDataStreamMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -339,11 +356,12 @@ class EthernetRawDataStreamMapping:
             standardized meaning for the possible values of this
             attribute.
         """
+
         socket_option: List[String] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-OPTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

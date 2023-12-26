@@ -18,6 +18,7 @@ class MappingDirectionEnumSimple(Enum):
         firstDataPrototype / firstOperationArgument referring into the
         PortInterface of the RPortPrototype.
     """
+
     BIDIRECTIONAL = "BIDIRECTIONAL"
     FIRST_TO_SECOND = "FIRST-TO-SECOND"
     SECOND_TO_FIRST = "SECOND-TO-FIRST"

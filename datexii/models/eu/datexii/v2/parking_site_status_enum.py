@@ -18,6 +18,7 @@ class ParkingSiteStatusEnum(Enum):
     :cvar UNKNOWN: The status of the parking site is unknown.
     :cvar OTHER: Other.
     """
+
     SPACES_AVAILABLE = "spacesAvailable"
     ALMOST_FULL = "almostFull"
     FULL_AT_ENTRANCE = "fullAtEntrance"

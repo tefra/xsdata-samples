@@ -10,6 +10,7 @@ class RatesAndDates:
 
     May represent multiple rooms.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -19,7 +20,7 @@ class RatesAndDates:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     start: None | str = field(
         default=None,
@@ -28,7 +29,7 @@ class RatesAndDates:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     end: None | str = field(
         default=None,
@@ -37,7 +38,7 @@ class RatesAndDates:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     low: None | str = field(
         default=None,
@@ -45,7 +46,7 @@ class RatesAndDates:
             "name": "Low",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     high: None | str = field(
         default=None,
@@ -53,5 +54,5 @@ class RatesAndDates:
             "name": "High",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

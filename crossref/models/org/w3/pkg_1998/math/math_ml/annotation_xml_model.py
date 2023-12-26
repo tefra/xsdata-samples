@@ -14,5 +14,5 @@ class AnnotationXmlModel:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

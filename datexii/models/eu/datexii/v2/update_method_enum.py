@@ -17,6 +17,7 @@ class UpdateMethodEnum(Enum):
         their elements which are valid at the time of request be sent
         together, i.e. a snapshot in time of all valid situations.
     """
+
     ALL_ELEMENT_UPDATE = "allElementUpdate"
     SINGLE_ELEMENT_UPDATE = "singleElementUpdate"
     SNAPSHOT = "snapshot"

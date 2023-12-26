@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .queueing_equipment_version_structure import QueueingEquipmentVersionStructure
+from .queueing_equipment_version_structure import (
+    QueueingEquipmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

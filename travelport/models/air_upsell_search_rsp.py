@@ -10,5 +10,6 @@ class AirUpsellSearchRsp(BaseAirPriceRsp):
     """
     Response of Upsell Offers search for the given Itinerary.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

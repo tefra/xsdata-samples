@@ -16,6 +16,7 @@ class RestAreaActivityEnum(Enum):
     :cvar BARBECUE: Barbeque.
     :cvar OTHER: Other.
     """
+
     OPEN_FIRE = "openFire"
     OVERNIGHT_PARKING = "overnightParking"
     PICNIC = "picnic"

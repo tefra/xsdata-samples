@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .abstract_implementation_data_type_subtypes_enum import AbstractImplementationDataTypeSubtypesEnum
+from .abstract_implementation_data_type_subtypes_enum import (
+    AbstractImplementationDataTypeSubtypesEnum,
+)
 from .annotation import (
     AdminData,
     Annotation,
@@ -15,7 +17,9 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .persistency_collection_level_update_strategy_enum import PersistencyCollectionLevelUpdateStrategyEnum
+from .persistency_collection_level_update_strategy_enum import (
+    PersistencyCollectionLevelUpdateStrategyEnum,
+)
 from .persistency_data_element import PersistencyDataElement
 from .persistency_redundancy_crc import PersistencyRedundancyCrc
 from .persistency_redundancy_enum import PersistencyRedundancyEnum
@@ -135,6 +139,7 @@ class PersistencyKeyValueStorageInterface:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PERSISTENCY-KEY-VALUE-STORAGE-INTERFACE"
 
@@ -145,15 +150,17 @@ class PersistencyKeyValueStorageInterface:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PersistencyKeyValueStorageInterface.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PersistencyKeyValueStorageInterface.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -161,7 +168,7 @@ class PersistencyKeyValueStorageInterface:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -169,7 +176,7 @@ class PersistencyKeyValueStorageInterface:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -177,7 +184,7 @@ class PersistencyKeyValueStorageInterface:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -185,7 +192,7 @@ class PersistencyKeyValueStorageInterface:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -193,15 +200,17 @@ class PersistencyKeyValueStorageInterface:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["PersistencyKeyValueStorageInterface.Annotations"] = field(
+    annotations: Optional[
+        "PersistencyKeyValueStorageInterface.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -209,15 +218,17 @@ class PersistencyKeyValueStorageInterface:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["PersistencyKeyValueStorageInterface.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "PersistencyKeyValueStorageInterface.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -225,7 +236,7 @@ class PersistencyKeyValueStorageInterface:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_service: Optional[Boolean] = field(
         default=None,
@@ -233,15 +244,17 @@ class PersistencyKeyValueStorageInterface:
             "name": "IS-SERVICE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    namespaces: Optional["PersistencyKeyValueStorageInterface.Namespaces"] = field(
+    namespaces: Optional[
+        "PersistencyKeyValueStorageInterface.Namespaces"
+    ] = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_kind: Optional[ServiceProviderEnum] = field(
         default=None,
@@ -249,7 +262,7 @@ class PersistencyKeyValueStorageInterface:
             "name": "SERVICE-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_sustained_size: Optional[PositiveInteger] = field(
         default=None,
@@ -257,7 +270,7 @@ class PersistencyKeyValueStorageInterface:
             "name": "MINIMUM-SUSTAINED-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     redundancy: Optional[PersistencyRedundancyEnum] = field(
         default=None,
@@ -265,46 +278,54 @@ class PersistencyKeyValueStorageInterface:
             "name": "REDUNDANCY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    redundancy_handlings: Optional["PersistencyKeyValueStorageInterface.RedundancyHandlings"] = field(
+    redundancy_handlings: Optional[
+        "PersistencyKeyValueStorageInterface.RedundancyHandlings"
+    ] = field(
         default=None,
         metadata={
             "name": "REDUNDANCY-HANDLINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = field(
+    update_strategy: Optional[
+        PersistencyCollectionLevelUpdateStrategyEnum
+    ] = field(
         default=None,
         metadata={
             "name": "UPDATE-STRATEGY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_elements: Optional["PersistencyKeyValueStorageInterface.DataElements"] = field(
+    data_elements: Optional[
+        "PersistencyKeyValueStorageInterface.DataElements"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_type_for_serialization_refs: Optional["PersistencyKeyValueStorageInterface.DataTypeForSerializationRefs"] = field(
+    data_type_for_serialization_refs: Optional[
+        "PersistencyKeyValueStorageInterface.DataTypeForSerializationRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-FOR-SERIALIZATION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -312,14 +333,14 @@ class PersistencyKeyValueStorageInterface:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -330,7 +351,7 @@ class PersistencyKeyValueStorageInterface:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -341,7 +362,7 @@ class PersistencyKeyValueStorageInterface:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -352,15 +373,17 @@ class PersistencyKeyValueStorageInterface:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -368,7 +391,7 @@ class PersistencyKeyValueStorageInterface:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -379,7 +402,7 @@ class PersistencyKeyValueStorageInterface:
                 "name": "SYMBOL-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -390,7 +413,7 @@ class PersistencyKeyValueStorageInterface:
                 "name": "PERSISTENCY-REDUNDANCY-CRC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         persistency_redundancy_hash: List[PersistencyRedundancyHash] = field(
             default_factory=list,
@@ -398,15 +421,17 @@ class PersistencyKeyValueStorageInterface:
                 "name": "PERSISTENCY-REDUNDANCY-HASH",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        persistency_redundancy_m_out_of_n: List[PersistencyRedundancyMOutOfN] = field(
+        persistency_redundancy_m_out_of_n: List[
+            PersistencyRedundancyMOutOfN
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-M-OUT-OF-N",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -417,18 +442,20 @@ class PersistencyKeyValueStorageInterface:
                 "name": "PERSISTENCY-DATA-ELEMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DataTypeForSerializationRefs:
-        data_type_for_serialization_ref: List["PersistencyKeyValueStorageInterface.DataTypeForSerializationRefs.DataTypeForSerializationRef"] = field(
+        data_type_for_serialization_ref: List[
+            "PersistencyKeyValueStorageInterface.DataTypeForSerializationRefs.DataTypeForSerializationRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-TYPE-FOR-SERIALIZATION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -439,5 +466,5 @@ class PersistencyKeyValueStorageInterface:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

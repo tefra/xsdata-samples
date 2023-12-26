@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass
-from travelport.models.base_availability_search_rsp import BaseAvailabilitySearchRsp
+from travelport.models.base_availability_search_rsp import (
+    BaseAvailabilitySearchRsp,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 

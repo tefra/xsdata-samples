@@ -39,22 +39,25 @@ class AirFareRulesReq(BaseReq1):
     fare_rule_type
         Provider: 1G,1V,1P,ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    air_reservation_selector: None | AirFareRulesReq.AirReservationSelector = field(
-        default=None,
-        metadata={
-            "name": "AirReservationSelector",
-            "type": "Element",
-        }
+    air_reservation_selector: None | AirFareRulesReq.AirReservationSelector = (
+        field(
+            default=None,
+            metadata={
+                "name": "AirReservationSelector",
+                "type": "Element",
+            },
+        )
     )
     fare_rule_lookup: None | FareRuleLookup = field(
         default=None,
         metadata={
             "name": "FareRuleLookup",
             "type": "Element",
-        }
+        },
     )
     fare_rule_key: list[FareRuleKey] = field(
         default_factory=list,
@@ -62,36 +65,38 @@ class AirFareRulesReq(BaseReq1):
             "name": "FareRuleKey",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_fare_display_rule_key: None | AirFareDisplayRuleKey = field(
         default=None,
         metadata={
             "name": "AirFareDisplayRuleKey",
             "type": "Element",
-        }
+        },
     )
     air_fare_rules_modifier: None | AirFareRulesModifier = field(
         default=None,
         metadata={
             "name": "AirFareRulesModifier",
             "type": "Element",
-        }
+        },
     )
-    fare_rules_filter_category: list[AirFareRulesReq.FareRulesFilterCategory] = field(
+    fare_rules_filter_category: list[
+        AirFareRulesReq.FareRulesFilterCategory
+    ] = field(
         default_factory=list,
         metadata={
             "name": "FareRulesFilterCategory",
             "type": "Element",
             "max_occurs": 16,
-        }
+        },
     )
     fare_rule_type: TypeFareRuleType = field(
         default=TypeFareRuleType.LONG,
         metadata={
             "name": "FareRuleType",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -105,6 +110,7 @@ class AirFareRulesReq(BaseReq1):
         fare_info_ref
             Key reference for multiple fare rule
         """
+
         category_code: list[object] = field(
             default_factory=list,
             metadata={
@@ -112,14 +118,14 @@ class AirFareRulesReq(BaseReq1):
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 35,
-            }
+            },
         )
         fare_info_ref: None | str = field(
             default=None,
             metadata={
                 "name": "FareInfoRef",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -132,13 +138,14 @@ class AirFareRulesReq(BaseReq1):
             The Air Reservation locator code which is an unique identifier
             for the reservation
         """
+
         fare_info_ref: list[FareInfoRef] = field(
             default_factory=list,
             metadata={
                 "name": "FareInfoRef",
                 "type": "Element",
                 "max_occurs": 999,
-            }
+            },
         )
         air_reservation_locator_code: None | str = field(
             default=None,
@@ -148,5 +155,5 @@ class AirFareRulesReq(BaseReq1):
                 "required": True,
                 "min_length": 5,
                 "max_length": 8,
-            }
+            },
         )

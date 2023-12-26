@@ -26,6 +26,7 @@ class RailSpecificSeatAssignment:
     booking_traveler_ref
         The BookingTraveler for this seat assignment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -35,7 +36,7 @@ class RailSpecificSeatAssignment:
             "name": "CoachLabel",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     place_label: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class RailSpecificSeatAssignment:
             "name": "PlaceLabel",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     assignment: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class RailSpecificSeatAssignment:
             "name": "Assignment",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     rail_segment_ref: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class RailSpecificSeatAssignment:
             "name": "RailSegmentRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -67,5 +68,5 @@ class RailSpecificSeatAssignment:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

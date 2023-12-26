@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.error_info_1 import ErrorInfo1
-from travelport.models.profile_modify_bridge_branches_rsp import ProfileModifyBridgeBranchesRsp
+from travelport.models.profile_modify_bridge_branches_rsp import (
+    ProfileModifyBridgeBranchesRsp,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -17,7 +19,7 @@ class ProfileModifyBridgeBranchesPortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +30,14 @@ class ProfileModifyBridgeBranchesPortTypeServiceOutput:
                 "name": "ProfileModifyBridgeBranchesRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            }
+            },
         )
         fault: None | ProfileModifyBridgeBranchesPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +47,28 @@ class ProfileModifyBridgeBranchesPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | ProfileModifyBridgeBranchesPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +79,5 @@ class ProfileModifyBridgeBranchesPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

@@ -19,6 +19,7 @@ class TypeRemarkWithTravelerRef1:
         Contains the Provider Code of the provider for which this element is
         used
     """
+
     class Meta:
         name = "typeRemarkWithTravelerRef"
 
@@ -29,7 +30,7 @@ class TypeRemarkWithTravelerRef1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,
@@ -38,14 +39,14 @@ class TypeRemarkWithTravelerRef1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -54,5 +55,5 @@ class TypeRemarkWithTravelerRef1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

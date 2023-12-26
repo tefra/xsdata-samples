@@ -14,6 +14,7 @@ class OperatingModeEnum(Enum):
     :cvar OPERATING_MODE2: "Publisher Push Periodic" operating mode.
     :cvar OPERATING_MODE3: "Client Pull" operating mode.
     """
+
     OPERATING_MODE0 = "operatingMode0"
     OPERATING_MODE1 = "operatingMode1"
     OPERATING_MODE2 = "operatingMode2"

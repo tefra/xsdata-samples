@@ -10,6 +10,7 @@ class Route:
     """
     Information about this Route component.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,7 +21,7 @@ class Route:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -28,5 +29,5 @@ class Route:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.competing_interest_statement_language import CompetingInterestStatementLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.competing_interest_statement_language import (
+    CompetingInterestStatementLanguage,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
     B,
     Em,
@@ -25,6 +27,7 @@ class CompetingInterestStatement:
     Statement of competing interest supplied by a review author during the review
     process.
     """
+
     class Meta:
         name = "competing_interest_statement"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -33,7 +36,7 @@ class CompetingInterestStatement:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -92,5 +95,5 @@ class CompetingInterestStatement:
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
             ),
-        }
+        },
     )

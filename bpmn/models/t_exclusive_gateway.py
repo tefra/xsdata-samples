@@ -14,5 +14,5 @@ class TExclusiveGateway(TGateway):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

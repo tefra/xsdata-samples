@@ -5,7 +5,9 @@ from travelport.models.air_segment import AirSegment
 from travelport.models.fee_info import FeeInfo
 from travelport.models.host_token_1 import HostToken1
 from travelport.models.tax_info import TaxInfo
-from travelport.models.tcrrefund_bundle_refund_type import TcrrefundBundleRefundType
+from travelport.models.tcrrefund_bundle_refund_type import (
+    TcrrefundBundleRefundType,
+)
 from travelport.models.waiver_code import WaiverCode
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -32,6 +34,7 @@ class TcrrefundBundle:
         Specifies whether this bundle was auto or manually generated
     refund_access_code
     """
+
     class Meta:
         name = "TCRRefundBundle"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -42,14 +45,14 @@ class TcrrefundBundle:
             "name": "AirRefundInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
-        }
+        },
     )
     air_segment: list[AirSegment] = field(
         default_factory=list,
@@ -57,7 +60,7 @@ class TcrrefundBundle:
             "name": "AirSegment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fee_info: list[FeeInfo] = field(
         default_factory=list,
@@ -65,7 +68,7 @@ class TcrrefundBundle:
             "name": "FeeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TaxInfo] = field(
         default_factory=list,
@@ -73,7 +76,7 @@ class TcrrefundBundle:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -82,7 +85,7 @@ class TcrrefundBundle:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     tcrnumber: None | str = field(
         default=None,
@@ -90,7 +93,7 @@ class TcrrefundBundle:
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     refund_type: None | TcrrefundBundleRefundType = field(
         default=None,
@@ -98,7 +101,7 @@ class TcrrefundBundle:
             "name": "RefundType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     refund_access_code: None | str = field(
         default=None,
@@ -108,5 +111,5 @@ class TcrrefundBundle:
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

@@ -5,5 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ResidentialQualificationEligibilityRefStructure(CustomerEligibilityRefStructure):
+class ResidentialQualificationEligibilityRefStructure(
+    CustomerEligibilityRefStructure
+):
     pass

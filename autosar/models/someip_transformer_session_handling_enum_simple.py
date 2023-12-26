@@ -10,5 +10,6 @@ class SomeipTransformerSessionHandlingEnumSimple(Enum):
     :cvar SESSION_HANDLING_INACTIVE: The SOME/IP Transformer doesn't use
         session handling
     """
+
     SESSION_HANDLING_ACTIVE = "SESSION-HANDLING-ACTIVE"
     SESSION_HANDLING_INACTIVE = "SESSION-HANDLING-INACTIVE"

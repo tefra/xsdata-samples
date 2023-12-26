@@ -32,7 +32,7 @@ class PrpaMt900350Uv02Admitter:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -40,7 +40,7 @@ class PrpaMt900350Uv02Admitter:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -48,7 +48,7 @@ class PrpaMt900350Uv02Admitter:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -56,7 +56,7 @@ class PrpaMt900350Uv02Admitter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -65,14 +65,14 @@ class PrpaMt900350Uv02Admitter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -81,7 +81,7 @@ class PrpaMt900350Uv02Admitter:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -96,7 +96,7 @@ class PrpaMt900350Uv02Attender:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -104,7 +104,7 @@ class PrpaMt900350Uv02Attender:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -112,7 +112,7 @@ class PrpaMt900350Uv02Attender:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -120,7 +120,7 @@ class PrpaMt900350Uv02Attender:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -128,7 +128,7 @@ class PrpaMt900350Uv02Attender:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -136,7 +136,7 @@ class PrpaMt900350Uv02Attender:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -145,14 +145,14 @@ class PrpaMt900350Uv02Attender:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -161,7 +161,7 @@ class PrpaMt900350Uv02Attender:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -176,7 +176,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -184,7 +184,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -192,7 +192,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -200,7 +200,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -208,23 +208,25 @@ class PrpaMt900350Uv02ResponsibleParty:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    assigned_organization: Optional[CoctMt090200Uv01AssignedOrganization] = field(
+    assigned_organization: Optional[
+        CoctMt090200Uv01AssignedOrganization
+    ] = field(
         default=None,
         metadata={
             "name": "assignedOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -233,7 +235,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -248,7 +250,7 @@ class PrpaMt900350Uv02Subject:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -256,7 +258,7 @@ class PrpaMt900350Uv02Subject:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -264,7 +266,7 @@ class PrpaMt900350Uv02Subject:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     patient: Optional[CoctMt050002Uv04Patient] = field(
         default=None,
@@ -272,14 +274,14 @@ class PrpaMt900350Uv02Subject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetSubject] = field(
         default=None,
@@ -287,7 +289,7 @@ class PrpaMt900350Uv02Subject:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -302,7 +304,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -310,7 +312,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -318,7 +320,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -326,7 +328,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -334,7 +336,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -343,7 +345,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -352,7 +354,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     subject: Optional[PrpaMt900350Uv02Subject] = field(
         default=None,
@@ -360,7 +362,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     responsible_party: List[PrpaMt900350Uv02ResponsibleParty] = field(
         default_factory=list,
@@ -369,7 +371,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     admitter: Optional[PrpaMt900350Uv02Admitter] = field(
         default=None,
@@ -377,7 +379,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     attender: List[PrpaMt900350Uv02Attender] = field(
         default_factory=list,
@@ -385,14 +387,14 @@ class PrpaMt900350Uv02EncounterEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -401,7 +403,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -410,5 +412,5 @@ class PrpaMt900350Uv02EncounterEvent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

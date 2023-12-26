@@ -11,6 +11,7 @@ class EditionNumber:
     such as "edition". For example, you should submit "3", not "third
     edition" or "3rd edition". Roman numerals are acceptable.
     """
+
     class Meta:
         name = "edition_number"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -20,5 +21,5 @@ class EditionNumber:
         metadata={
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )

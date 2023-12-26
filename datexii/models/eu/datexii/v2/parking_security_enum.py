@@ -27,6 +27,7 @@ class ParkingSecurityEnum(Enum):
     :cvar OTHER: None of the values in this enumeration applies. Use
         'parkingAdditionalSecurity' instead.
     """
+
     SOCIAL_CONTROL = "socialControl"
     SECURITY_STAFF = "securityStaff"
     EXTERNAL_SECURITY = "externalSecurity"

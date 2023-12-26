@@ -20,6 +20,7 @@ class LinearReferencingDirectionEnum(Enum):
     :cvar UNKNOWN: Indicates that the direction of traffic flow affected
         by the situation or related to the traffic data is unknown.
     """
+
     BOTH = "both"
     OPPOSITE = "opposite"
     ALIGNED = "aligned"

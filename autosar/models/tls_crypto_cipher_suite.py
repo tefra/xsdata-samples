@@ -6,9 +6,13 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from .crypto_service_certificate_subtypes_enum import (
+    CryptoServiceCertificateSubtypesEnum,
+)
 from .crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
-from .crypto_service_primitive_subtypes_enum import CryptoServicePrimitiveSubtypesEnum
+from .crypto_service_primitive_subtypes_enum import (
+    CryptoServicePrimitiveSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -102,6 +106,7 @@ class TlsCryptoCipherSuite:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TLS-CRYPTO-CIPHER-SUITE"
 
@@ -112,15 +117,17 @@ class TlsCryptoCipherSuite:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TlsCryptoCipherSuite.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TlsCryptoCipherSuite.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -128,7 +135,7 @@ class TlsCryptoCipherSuite:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -136,7 +143,7 @@ class TlsCryptoCipherSuite:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -144,7 +151,7 @@ class TlsCryptoCipherSuite:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -152,7 +159,7 @@ class TlsCryptoCipherSuite:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -160,7 +167,7 @@ class TlsCryptoCipherSuite:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TlsCryptoCipherSuite.Annotations"] = field(
         default=None,
@@ -168,15 +175,17 @@ class TlsCryptoCipherSuite:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    authentication_ref: Optional["TlsCryptoCipherSuite.AuthenticationRef"] = field(
+    authentication_ref: Optional[
+        "TlsCryptoCipherSuite.AuthenticationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     certificate_ref: Optional["TlsCryptoCipherSuite.CertificateRef"] = field(
         default=None,
@@ -184,7 +193,7 @@ class TlsCryptoCipherSuite:
             "name": "CERTIFICATE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     encryption_ref: Optional["TlsCryptoCipherSuite.EncryptionRef"] = field(
         default=None,
@@ -192,23 +201,27 @@ class TlsCryptoCipherSuite:
             "name": "ENCRYPTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    key_exchange_refs: Optional["TlsCryptoCipherSuite.KeyExchangeRefs"] = field(
+    key_exchange_refs: Optional[
+        "TlsCryptoCipherSuite.KeyExchangeRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "KEY-EXCHANGE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    pre_shared_key_ref: Optional["TlsCryptoCipherSuite.PreSharedKeyRef"] = field(
+    pre_shared_key_ref: Optional[
+        "TlsCryptoCipherSuite.PreSharedKeyRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PRE-SHARED-KEY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     priority: Optional[PositiveInteger] = field(
         default=None,
@@ -216,7 +229,7 @@ class TlsCryptoCipherSuite:
             "name": "PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     psk_identity: Optional[TlsPskIdentity] = field(
         default=None,
@@ -224,7 +237,7 @@ class TlsCryptoCipherSuite:
             "name": "PSK-IDENTITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     version: Optional[TlsVersionEnum] = field(
         default=None,
@@ -232,14 +245,14 @@ class TlsCryptoCipherSuite:
             "name": "VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -247,14 +260,14 @@ class TlsCryptoCipherSuite:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -265,7 +278,7 @@ class TlsCryptoCipherSuite:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,7 +289,7 @@ class TlsCryptoCipherSuite:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -287,7 +300,7 @@ class TlsCryptoCipherSuite:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -298,7 +311,7 @@ class TlsCryptoCipherSuite:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -309,18 +322,20 @@ class TlsCryptoCipherSuite:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class KeyExchangeRefs:
-        key_exchange_ref: List["TlsCryptoCipherSuite.KeyExchangeRefs.KeyExchangeRef"] = field(
+        key_exchange_ref: List[
+            "TlsCryptoCipherSuite.KeyExchangeRefs.KeyExchangeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "KEY-EXCHANGE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -331,7 +346,7 @@ class TlsCryptoCipherSuite:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -342,5 +357,5 @@ class TlsCryptoCipherSuite:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

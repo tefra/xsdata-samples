@@ -16,7 +16,7 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "FreeRecharging",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     reservation_required: Optional[bool] = field(
         default=None,
@@ -24,7 +24,7 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "ReservationRequired",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     reservation_url: Optional[str] = field(
         default=None,
@@ -32,5 +32,5 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "ReservationUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

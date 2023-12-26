@@ -36,6 +36,7 @@ class HotelPreference2(TypeBasePreference2):
         Util: ReferenceDataRetrieveReq, TypeCode 'HotelMiscType', Util:
         ReferenceDataRetrieveReq, TypeCode VehicleMiscType.
     """
+
     class Meta:
         name = "HotelPreference"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -46,7 +47,7 @@ class HotelPreference2(TypeBasePreference2):
             "name": "BedTypeMiscTravel",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     bed_type_ref_category: None | str = field(
         default=None,
@@ -54,21 +55,21 @@ class HotelPreference2(TypeBasePreference2):
             "name": "BedTypeRefCategory",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )
     check_in_start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CheckInStartDate",
             "type": "Attribute",
-        }
+        },
     )
     check_in_end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CheckInEndDate",
             "type": "Attribute",
-        }
+        },
     )
     corporate_discount_number: None | str = field(
         default=None,
@@ -76,14 +77,14 @@ class HotelPreference2(TypeBasePreference2):
             "name": "CorporateDiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     max_room_rate_amount: None | str = field(
         default=None,
         metadata={
             "name": "MaxRoomRateAmount",
             "type": "Attribute",
-        }
+        },
     )
     multi_level_rate_code: None | str = field(
         default=None,
@@ -91,7 +92,7 @@ class HotelPreference2(TypeBasePreference2):
             "name": "MultiLevelRateCode",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     property_id: None | str = field(
         default=None,
@@ -99,7 +100,7 @@ class HotelPreference2(TypeBasePreference2):
             "name": "PropertyID",
             "type": "Attribute",
             "max_length": 20,
-        }
+        },
     )
     rate_code: None | str = field(
         default=None,
@@ -107,14 +108,14 @@ class HotelPreference2(TypeBasePreference2):
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     smoking_room: bool = field(
         default=False,
         metadata={
             "name": "SmokingRoom",
             "type": "Attribute",
-        }
+        },
     )
     special_request_misc_travel: None | str = field(
         default=None,
@@ -122,7 +123,7 @@ class HotelPreference2(TypeBasePreference2):
             "name": "SpecialRequestMiscTravel",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     special_request_ref_category: None | str = field(
         default=None,
@@ -130,5 +131,5 @@ class HotelPreference2(TypeBasePreference2):
             "name": "SpecialRequestRefCategory",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )

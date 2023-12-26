@@ -13,5 +13,5 @@ class GroupBookingFacility:
         default=GroupBookingEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

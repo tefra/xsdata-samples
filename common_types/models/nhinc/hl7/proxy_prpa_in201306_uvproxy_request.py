@@ -21,7 +21,7 @@ class ProxyPrpaIn201306UvproxyRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -29,7 +29,7 @@ class ProxyPrpaIn201306UvproxyRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
@@ -38,7 +38,7 @@ class ProxyPrpaIn201306UvproxyRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -54,7 +54,7 @@ class ProxyPrpaIn201306UvproxySecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_system: Optional[NhinTargetSystemType] = field(
         default=None,
@@ -63,7 +63,7 @@ class ProxyPrpaIn201306UvproxySecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -75,7 +75,9 @@ class ProxyPrpaIn201306UvproxyRequest(ProxyPrpaIn201306UvproxyRequestType):
 
 
 @dataclass
-class ProxyPrpaIn201306UvproxySecuredRequest(ProxyPrpaIn201306UvproxySecuredRequestType):
+class ProxyPrpaIn201306UvproxySecuredRequest(
+    ProxyPrpaIn201306UvproxySecuredRequestType
+):
     class Meta:
         name = "Proxy_PRPA_IN201306UVProxySecuredRequest"
         namespace = "urn:hl7-org:v3"

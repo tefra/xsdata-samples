@@ -19,7 +19,7 @@ class VehicleLocationDetailRsp(BaseRsp1):
             "name": "VendorInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     location_info: list[LocationInfo] = field(
         default_factory=list,
@@ -27,12 +27,12 @@ class VehicleLocationDetailRsp(BaseRsp1):
             "name": "LocationInfo",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     vehicle_policy: None | VehiclePolicy = field(
         default=None,
         metadata={
             "name": "VehiclePolicy",
             "type": "Element",
-        }
+        },
     )

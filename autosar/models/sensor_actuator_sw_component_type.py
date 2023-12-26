@@ -11,7 +11,9 @@ from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
 from .blueprint_policy_single import BlueprintPolicySingle
 from .category_string import CategoryString
 from .consistency_needs import ConsistencyNeeds
-from .hw_description_entity_subtypes_enum import HwDescriptionEntitySubtypesEnum
+from .hw_description_entity_subtypes_enum import (
+    HwDescriptionEntitySubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -134,6 +136,7 @@ class SensorActuatorSwComponentType:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SENSOR-ACTUATOR-SW-COMPONENT-TYPE"
 
@@ -144,15 +147,17 @@ class SensorActuatorSwComponentType:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SensorActuatorSwComponentType.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SensorActuatorSwComponentType.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -160,7 +165,7 @@ class SensorActuatorSwComponentType:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -168,7 +173,7 @@ class SensorActuatorSwComponentType:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -176,7 +181,7 @@ class SensorActuatorSwComponentType:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -184,7 +189,7 @@ class SensorActuatorSwComponentType:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -192,7 +197,7 @@ class SensorActuatorSwComponentType:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SensorActuatorSwComponentType.Annotations"] = field(
         default=None,
@@ -200,7 +205,7 @@ class SensorActuatorSwComponentType:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -208,15 +213,17 @@ class SensorActuatorSwComponentType:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["SensorActuatorSwComponentType.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "SensorActuatorSwComponentType.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -224,23 +231,27 @@ class SensorActuatorSwComponentType:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_component_documentations: Optional["SensorActuatorSwComponentType.SwComponentDocumentations"] = field(
+    sw_component_documentations: Optional[
+        "SensorActuatorSwComponentType.SwComponentDocumentations"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    consistency_needss: Optional["SensorActuatorSwComponentType.ConsistencyNeedss"] = field(
+    consistency_needss: Optional[
+        "SensorActuatorSwComponentType.ConsistencyNeedss"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ports: Optional["SensorActuatorSwComponentType.Ports"] = field(
         default=None,
@@ -248,7 +259,7 @@ class SensorActuatorSwComponentType:
             "name": "PORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_groups: Optional["SensorActuatorSwComponentType.PortGroups"] = field(
         default=None,
@@ -256,23 +267,27 @@ class SensorActuatorSwComponentType:
             "name": "PORT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    unit_group_refs: Optional["SensorActuatorSwComponentType.UnitGroupRefs"] = field(
+    unit_group_refs: Optional[
+        "SensorActuatorSwComponentType.UnitGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    internal_behaviors: Optional["SensorActuatorSwComponentType.InternalBehaviors"] = field(
+    internal_behaviors: Optional[
+        "SensorActuatorSwComponentType.InternalBehaviors"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol_props: Optional[SymbolProps] = field(
         default=None,
@@ -280,22 +295,24 @@ class SensorActuatorSwComponentType:
             "name": "SYMBOL-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sensor_actuator_ref: Optional["SensorActuatorSwComponentType.SensorActuatorRef"] = field(
+    sensor_actuator_ref: Optional[
+        "SensorActuatorSwComponentType.SensorActuatorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SENSOR-ACTUATOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -303,14 +320,14 @@ class SensorActuatorSwComponentType:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -321,7 +338,7 @@ class SensorActuatorSwComponentType:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -332,7 +349,7 @@ class SensorActuatorSwComponentType:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -343,15 +360,17 @@ class SensorActuatorSwComponentType:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -359,7 +378,7 @@ class SensorActuatorSwComponentType:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -370,7 +389,7 @@ class SensorActuatorSwComponentType:
                 "name": "SW-COMPONENT-DOCUMENTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -381,7 +400,7 @@ class SensorActuatorSwComponentType:
                 "name": "CONSISTENCY-NEEDS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -392,7 +411,7 @@ class SensorActuatorSwComponentType:
                 "name": "P-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         pr_port_prototype: List[PrPortPrototype] = field(
             default_factory=list,
@@ -400,7 +419,7 @@ class SensorActuatorSwComponentType:
                 "name": "PR-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         r_port_prototype: List[RPortPrototype] = field(
             default_factory=list,
@@ -408,7 +427,7 @@ class SensorActuatorSwComponentType:
                 "name": "R-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -419,18 +438,20 @@ class SensorActuatorSwComponentType:
                 "name": "PORT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class UnitGroupRefs:
-        unit_group_ref: List["SensorActuatorSwComponentType.UnitGroupRefs.UnitGroupRef"] = field(
+        unit_group_ref: List[
+            "SensorActuatorSwComponentType.UnitGroupRefs.UnitGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "UNIT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -441,7 +462,7 @@ class SensorActuatorSwComponentType:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -452,7 +473,7 @@ class SensorActuatorSwComponentType:
                 "name": "SWC-INTERNAL-BEHAVIOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -463,5 +484,5 @@ class SensorActuatorSwComponentType:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

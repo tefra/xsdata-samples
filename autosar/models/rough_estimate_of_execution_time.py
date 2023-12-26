@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .dependency_on_artifact_subtypes_enum import DependencyOnArtifactSubtypesEnum
+from .dependency_on_artifact_subtypes_enum import (
+    DependencyOnArtifactSubtypesEnum,
+)
 from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
 from .executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
 from .hardware_configuration import HardwareConfiguration
@@ -104,6 +106,7 @@ class RoughEstimateOfExecutionTime:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ROUGH-ESTIMATE-OF-EXECUTION-TIME"
 
@@ -114,15 +117,17 @@ class RoughEstimateOfExecutionTime:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RoughEstimateOfExecutionTime.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RoughEstimateOfExecutionTime.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -130,7 +135,7 @@ class RoughEstimateOfExecutionTime:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -138,7 +143,7 @@ class RoughEstimateOfExecutionTime:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -146,7 +151,7 @@ class RoughEstimateOfExecutionTime:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -154,7 +159,7 @@ class RoughEstimateOfExecutionTime:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -162,7 +167,7 @@ class RoughEstimateOfExecutionTime:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RoughEstimateOfExecutionTime.Annotations"] = field(
         default=None,
@@ -170,23 +175,27 @@ class RoughEstimateOfExecutionTime:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exclusive_area_ref: Optional["RoughEstimateOfExecutionTime.ExclusiveAreaRef"] = field(
+    exclusive_area_ref: Optional[
+        "RoughEstimateOfExecutionTime.ExclusiveAreaRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    executable_entity_ref: Optional["RoughEstimateOfExecutionTime.ExecutableEntityRef"] = field(
+    executable_entity_ref: Optional[
+        "RoughEstimateOfExecutionTime.ExecutableEntityRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-ENTITY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hardware_configuration: Optional[HardwareConfiguration] = field(
         default=None,
@@ -194,31 +203,37 @@ class RoughEstimateOfExecutionTime:
             "name": "HARDWARE-CONFIGURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    hw_element_ref: Optional["RoughEstimateOfExecutionTime.HwElementRef"] = field(
+    hw_element_ref: Optional[
+        "RoughEstimateOfExecutionTime.HwElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    included_library_refs: Optional["RoughEstimateOfExecutionTime.IncludedLibraryRefs"] = field(
+    included_library_refs: Optional[
+        "RoughEstimateOfExecutionTime.IncludedLibraryRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "INCLUDED-LIBRARY-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    memory_section_locations: Optional["RoughEstimateOfExecutionTime.MemorySectionLocations"] = field(
+    memory_section_locations: Optional[
+        "RoughEstimateOfExecutionTime.MemorySectionLocations"
+    ] = field(
         default=None,
         metadata={
             "name": "MEMORY-SECTION-LOCATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     software_context: Optional[SoftwareContext] = field(
         default=None,
@@ -226,7 +241,7 @@ class RoughEstimateOfExecutionTime:
             "name": "SOFTWARE-CONTEXT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -234,7 +249,7 @@ class RoughEstimateOfExecutionTime:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     additional_information: Optional[String] = field(
         default=None,
@@ -242,7 +257,7 @@ class RoughEstimateOfExecutionTime:
             "name": "ADDITIONAL-INFORMATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     estimated_execution_time: Optional[MultidimensionalTime] = field(
         default=None,
@@ -250,14 +265,14 @@ class RoughEstimateOfExecutionTime:
             "name": "ESTIMATED-EXECUTION-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -265,14 +280,14 @@ class RoughEstimateOfExecutionTime:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -283,7 +298,7 @@ class RoughEstimateOfExecutionTime:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -294,7 +309,7 @@ class RoughEstimateOfExecutionTime:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -305,7 +320,7 @@ class RoughEstimateOfExecutionTime:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -316,7 +331,7 @@ class RoughEstimateOfExecutionTime:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -327,18 +342,20 @@ class RoughEstimateOfExecutionTime:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class IncludedLibraryRefs:
-        included_library_ref: List["RoughEstimateOfExecutionTime.IncludedLibraryRefs.IncludedLibraryRef"] = field(
+        included_library_ref: List[
+            "RoughEstimateOfExecutionTime.IncludedLibraryRefs.IncludedLibraryRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INCLUDED-LIBRARY-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -349,7 +366,7 @@ class RoughEstimateOfExecutionTime:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -360,5 +377,5 @@ class RoughEstimateOfExecutionTime:
                 "name": "MEMORY-SECTION-LOCATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -1,12 +1,14 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .entrance_ref import EntranceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
 from .parking_entrance_ref import ParkingEntranceRef
 from .parking_passenger_entrance_ref import ParkingPassengerEntranceRef
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
-from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .point_of_interest_vehicle_entrance_ref import (
+    PointOfInterestVehicleEntranceRef,
+)
 from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
 from .vehicle_entrance_ref import VehicleEntranceRef
@@ -19,7 +21,19 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "entranceRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            StopPlaceVehicleEntranceRef,
+            StopPlaceEntranceRef,
+            ParkingEntranceForVehiclesRef,
+            ParkingPassengerEntranceRef,
+            ParkingEntranceRef,
+            PointOfInterestVehicleEntranceRef,
+            PointOfInterestEntranceRef,
+            VehicleEntranceRef,
+            EntranceRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -70,5 +84,5 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

@@ -32,6 +32,7 @@ class RestEndpointArgument:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REST-ENDPOINT-ARGUMENT"
 
@@ -41,7 +42,7 @@ class RestEndpointArgument:
             "name": "MANDATORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     parameter: Optional["RestEndpointArgument.Parameter"] = field(
         default=None,
@@ -49,14 +50,14 @@ class RestEndpointArgument:
             "name": "PARAMETER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -64,7 +65,7 @@ class RestEndpointArgument:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -75,7 +76,7 @@ class RestEndpointArgument:
                 "name": "REST-ARRAY-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_boolean_property_def: Optional[RestBooleanPropertyDef] = field(
             default=None,
@@ -83,7 +84,7 @@ class RestEndpointArgument:
                 "name": "REST-BOOLEAN-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_integer_property_def: Optional[RestIntegerPropertyDef] = field(
             default=None,
@@ -91,7 +92,7 @@ class RestEndpointArgument:
                 "name": "REST-INTEGER-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_number_property_def: Optional[RestNumberPropertyDef] = field(
             default=None,
@@ -99,7 +100,7 @@ class RestEndpointArgument:
                 "name": "REST-NUMBER-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_object_ref: Optional[RestObjectRef] = field(
             default=None,
@@ -107,7 +108,7 @@ class RestEndpointArgument:
                 "name": "REST-OBJECT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_string_property_def: Optional[RestStringPropertyDef] = field(
             default=None,
@@ -115,5 +116,5 @@ class RestEndpointArgument:
                 "name": "REST-STRING-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

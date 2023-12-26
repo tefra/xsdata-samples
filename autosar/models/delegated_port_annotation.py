@@ -33,6 +33,7 @@ class DelegatedPortAnnotation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DELEGATED-PORT-ANNOTATION"
 
@@ -42,7 +43,7 @@ class DelegatedPortAnnotation:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_origin: Optional[String] = field(
         default=None,
@@ -50,7 +51,7 @@ class DelegatedPortAnnotation:
             "name": "ANNOTATION-ORIGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_text: Optional[DocumentationBlock] = field(
         default=None,
@@ -58,7 +59,7 @@ class DelegatedPortAnnotation:
             "name": "ANNOTATION-TEXT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     signal_fan: Optional[SignalFanEnum] = field(
         default=None,
@@ -66,14 +67,14 @@ class DelegatedPortAnnotation:
             "name": "SIGNAL-FAN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -81,5 +82,5 @@ class DelegatedPortAnnotation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

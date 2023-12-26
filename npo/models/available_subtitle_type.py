@@ -13,12 +13,12 @@ class AvailableSubtitleType:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )

@@ -17,7 +17,7 @@ class HotelDetailsServicePortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +28,16 @@ class HotelDetailsServicePortTypeServiceOutput:
                 "name": "HotelDetailsRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            }
+            },
         )
-        fault: None | HotelDetailsServicePortTypeServiceOutput.Body.Fault = field(
-            default=None,
-            metadata={
-                "name": "Fault",
-                "type": "Element",
-            }
+        fault: None | HotelDetailsServicePortTypeServiceOutput.Body.Fault = (
+            field(
+                default=None,
+                metadata={
+                    "name": "Fault",
+                    "type": "Element",
+                },
+            )
         )
 
         @dataclass
@@ -45,28 +47,28 @@ class HotelDetailsServicePortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | HotelDetailsServicePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +79,5 @@ class HotelDetailsServicePortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

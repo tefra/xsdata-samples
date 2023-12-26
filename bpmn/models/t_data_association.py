@@ -18,7 +18,7 @@ class TDataAssociation(TBaseElement):
             "name": "sourceRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     target_ref: Optional[str] = field(
         default=None,
@@ -27,19 +27,19 @@ class TDataAssociation(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        }
+        },
     )
     transformation: Optional[TFormalExpression] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     assignment: List[Assignment] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )

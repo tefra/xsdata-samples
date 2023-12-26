@@ -15,5 +15,5 @@ class Arccsc:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

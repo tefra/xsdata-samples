@@ -19,7 +19,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
         default=None,
@@ -28,7 +28,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -36,7 +36,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -45,7 +45,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     error_msg: Optional[str] = field(
         default=None,
@@ -54,7 +54,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -67,7 +67,7 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
         default=None,
@@ -76,7 +76,7 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -85,7 +85,7 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     error_msg: Optional[str] = field(
         default=None,
@@ -94,17 +94,21 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
 @dataclass
-class AsyncAdapterPatientDiscoveryErrorRequest(AsyncAdapterPatientDiscoveryErrorRequestType):
+class AsyncAdapterPatientDiscoveryErrorRequest(
+    AsyncAdapterPatientDiscoveryErrorRequestType
+):
     class Meta:
         namespace = "urn:hl7-org:v3"
 
 
 @dataclass
-class AsyncAdapterPatientDiscoveryErrorSecuredRequest(AsyncAdapterPatientDiscoveryErrorSecuredRequestType):
+class AsyncAdapterPatientDiscoveryErrorSecuredRequest(
+    AsyncAdapterPatientDiscoveryErrorSecuredRequestType
+):
     class Meta:
         namespace = "urn:hl7-org:v3"

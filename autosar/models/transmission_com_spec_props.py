@@ -30,6 +30,7 @@ class TransmissionComSpecProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TRANSMISSION-COM-SPEC-PROPS"
 
@@ -39,7 +40,7 @@ class TransmissionComSpecProps:
             "name": "DATA-UPDATE-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_send_interval: Optional[TimeValue] = field(
         default=None,
@@ -47,7 +48,7 @@ class TransmissionComSpecProps:
             "name": "MINIMUM-SEND-INTERVAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmission_mode: Optional[TransmissionModeDefinitionEnum] = field(
         default=None,
@@ -55,14 +56,14 @@ class TransmissionComSpecProps:
             "name": "TRANSMISSION-MODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -70,5 +71,5 @@ class TransmissionComSpecProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

@@ -13,7 +13,7 @@ class TrainSizeStructure:
             "name": "NumberOfCars",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     train_size_type: Optional[TrainSizeEnumeration] = field(
         default=None,
@@ -21,5 +21,5 @@ class TrainSizeStructure:
             "name": "TrainSizeType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

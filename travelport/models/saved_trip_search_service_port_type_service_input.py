@@ -17,14 +17,14 @@ class SavedTripSearchServicePortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | SavedTripSearchServicePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +35,7 @@ class SavedTripSearchServicePortTypeServiceInput:
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +46,5 @@ class SavedTripSearchServicePortTypeServiceInput:
                 "name": "SavedTripSearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )

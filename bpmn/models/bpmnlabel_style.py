@@ -19,5 +19,5 @@ class BpmnlabelStyle(Style):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/DD/20100524/DC",
             "required": True,
-        }
+        },
     )

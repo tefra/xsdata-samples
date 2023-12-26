@@ -19,6 +19,7 @@ class ProfileDeleteTagReq2(BaseReq5):
         Indicator to override the delete when the tag is "in use" by
         profiles in the agency.
     """
+
     class Meta:
         name = "ProfileDeleteTagReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -29,12 +30,12 @@ class ProfileDeleteTagReq2(BaseReq5):
             "name": "TagRef",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     override: bool = field(
         default=False,
         metadata={
             "name": "Override",
             "type": "Attribute",
-        }
+        },
     )

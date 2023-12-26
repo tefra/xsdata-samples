@@ -16,6 +16,7 @@ class BrandModifiers:
     basic_details_only
         Used to request basic details of the brand.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,14 +25,14 @@ class BrandModifiers:
         metadata={
             "name": "FareFamilyDisplay",
             "type": "Element",
-        }
+        },
     )
     basic_details_only: None | BrandModifiers.BasicDetailsOnly = field(
         default=None,
         metadata={
             "name": "BasicDetailsOnly",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -48,13 +49,14 @@ class BrandModifiers:
             "LowestFareInBrand" returns the lowest fare within each branded
             fare in a fare family display.
         """
+
         modifier_type: None | str = field(
             default=None,
             metadata={
                 "name": "ModifierType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -65,5 +67,5 @@ class BrandModifiers:
                 "name": "ReturnBasicDetails",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

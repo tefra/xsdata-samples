@@ -27,6 +27,7 @@ class PassiveReservation(BaseReservation1):
     provider_reservation_info_ref
         Provider Reservation reference key.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/passive_v52_0"
 
@@ -37,7 +38,7 @@ class PassiveReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     third_party_information: list[ThirdPartyInformation1] = field(
         default_factory=list,
@@ -46,7 +47,7 @@ class PassiveReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -55,7 +56,7 @@ class PassiveReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     passive_segment: list[PassiveSegment] = field(
         default_factory=list,
@@ -64,7 +65,7 @@ class PassiveReservation(BaseReservation1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     passive_remark: list[PassiveRemark] = field(
         default_factory=list,
@@ -72,7 +73,7 @@ class PassiveReservation(BaseReservation1):
             "name": "PassiveRemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     associated_remark: list[AssociatedRemark4] = field(
         default_factory=list,
@@ -80,7 +81,7 @@ class PassiveReservation(BaseReservation1):
             "name": "AssociatedRemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
@@ -88,5 +89,5 @@ class PassiveReservation(BaseReservation1):
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

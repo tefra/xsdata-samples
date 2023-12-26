@@ -12,7 +12,7 @@ class RoadNumberRangeStructure:
             "name": "FromNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_number: Optional[int] = field(
         default=None,
@@ -20,5 +20,5 @@ class RoadNumberRangeStructure:
             "name": "ToNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

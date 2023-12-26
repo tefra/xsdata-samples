@@ -24,6 +24,7 @@ class HotelKeywordReq(BaseReq1):
         When true, a list of keyword names should be returned. If false then
         list of keyword details should be returned
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -34,7 +35,7 @@ class HotelKeywordReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 15,
-        }
+        },
     )
     permitted_providers: None | PermittedProviders1 = field(
         default=None,
@@ -42,7 +43,7 @@ class HotelKeywordReq(BaseReq1):
             "name": "PermittedProviders",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_chain: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class HotelKeywordReq(BaseReq1):
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     hotel_code: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class HotelKeywordReq(BaseReq1):
             "name": "HotelCode",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )
     checkin_date: None | str = field(
         default=None,
@@ -67,12 +68,12 @@ class HotelKeywordReq(BaseReq1):
             "name": "CheckinDate",
             "type": "Attribute",
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     return_keyword_list: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnKeywordList",
             "type": "Attribute",
-        }
+        },
     )

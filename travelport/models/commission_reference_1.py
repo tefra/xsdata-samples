@@ -24,6 +24,7 @@ class CommissionReference1(TypeKeyElement1):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "CommissionReference"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -35,7 +36,7 @@ class CommissionReference1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     agent_number: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class CommissionReference1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -53,12 +54,12 @@ class CommissionReference1(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

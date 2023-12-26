@@ -53,26 +53,26 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            value="REQUEST",
-                            ref="hde:TimetableFrameTIM_23_O"
+                            value='REQUEST',
+                            ref='hde:TimetableFrameTIM_23_O'
                         ),
                     ]
                 ),
@@ -81,136 +81,136 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple intyerchange rulkes"
+        value='Example  of simple intyerchange rulkes'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="hde:CAL_02",
-                version="2",
+                id='hde:CAL_02',
+                version='2',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="mybus:svf_12",
-                            version="1",
+                            id='mybus:svf_12',
+                            version='1',
                             name=MultilingualString(
-                                value="Stops for Winter timetable for route 24 "
+                                value='Stops for Winter timetable for route 24 '
                             ),
                             directions=DirectionsInFrameRelStructure(
                                 direction=[
                                     Direction(
-                                        id="mybus:DR_hbf",
-                                        version="any",
+                                        id='mybus:DR_hbf',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Station"
+                                            value='Main Station'
                                         ),
                                         short_name=MultilingualString(
-                                            value="HBFd"
+                                            value='HBFd'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Lake",
-                                        version="any",
+                                        id='mybus:DR_Lake',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lake"
+                                            value='Lake'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Forest",
-                                        version="any",
+                                        id='mybus:DR_Forest',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Forest"
+                                            value='Forest'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_MarketHall",
-                                        version="any",
+                                        id='mybus:DR_MarketHall',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Market Hall"
+                                            value='Market Hall'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Museum",
-                                        version="any",
+                                        id='mybus:DR_Museum',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Museum"
+                                            value='Museum'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Tower",
-                                        version="any",
+                                        id='mybus:DR_Tower',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Tower"
+                                            value='Tower'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_TownHall",
-                                        version="any",
+                                        id='mybus:DR_TownHall',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Town Hall"
+                                            value='Town Hall'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Outskirts",
-                                        version="any",
+                                        id='mybus:DR_Outskirts',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Outskirts"
+                                            value='Outskirts'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Opera",
-                                        version="any",
+                                        id='mybus:DR_Opera',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Opera"
+                                            value='Opera'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_IndustrieparkWest",
-                                        version="any",
+                                        id='mybus:DR_IndustrieparkWest',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Industriepark West"
+                                            value='Industriepark West'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_CarPArk",
-                                        version="any",
+                                        id='mybus:DR_CarPArk',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Car Park"
+                                            value='Car Park'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Stadium",
-                                        version="any",
+                                        id='mybus:DR_Stadium',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stadium"
+                                            value='Stadium'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Hospital",
-                                        version="any",
+                                        id='mybus:DR_Hospital',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hospital"
+                                            value='Hospital'
                                         )
                                     ),
                                 ]
@@ -218,94 +218,94 @@ obj = PublicationDelivery(
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:LN_1",
-                                        version="any",
+                                        id='mybus:LN_1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 1  Lake to Forest"
+                                            value='Line 1  Lake to Forest'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 1"
+                                            value='Line 1'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="1"
+                                        public_code='1'
                                     ),
                                     Line(
-                                        id="mybus:LN_2",
-                                        version="any",
+                                        id='mybus:LN_2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 2  Market hall to Museum"
+                                            value='Line 2  Market hall to Museum'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 2"
+                                            value='Line 2'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="2"
+                                        public_code='2'
                                     ),
                                     Line(
-                                        id="mybus:LN_3",
-                                        version="any",
+                                        id='mybus:LN_3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 3 Tower to Town Hall"
+                                            value='Line 3 Tower to Town Hall'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 3"
+                                            value='Line 3'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="3"
+                                        public_code='3'
                                     ),
                                     Line(
-                                        id="mybus:LN_4",
-                                        version="any",
+                                        id='mybus:LN_4',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 4  Outskirts to Opera"
+                                            value='Line 4  Outskirts to Opera'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 5"
+                                            value='Line 5'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="5"
+                                        public_code='5'
                                     ),
                                     Line(
-                                        id="mybus:LN_5",
-                                        version="any",
+                                        id='mybus:LN_5',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 5 IndustriePark West  to Carparkl"
+                                            value='Line 5 IndustriePark West  to Carparkl'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 5"
+                                            value='Line 5'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="5"
+                                        public_code='5'
                                     ),
                                     Line(
-                                        id="mybus:LN_6",
-                                        version="any",
+                                        id='mybus:LN_6',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 6 Stadium to Hospitall"
+                                            value='Line 6 Stadium to Hospitall'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 6"
+                                            value='Line 6'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="6"
+                                        public_code='6'
                                     ),
                                 ]
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_025",
-                                        version="any",
+                                        id='mybus:SSP_025',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Station"
+                                            value='Main Station'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Main Station"
+                                            value='Main Station'
                                         ),
                                         stop_type=StopTypeEnumeration.RAIL_STATION,
                                         vehicle_modes=[
@@ -315,18 +315,18 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Street"
+                                            value='Bravo Street'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -334,18 +334,18 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_003",
-                                        version="any",
+                                        id='mybus:SSP_003',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Crescent"
+                                            value='Charley Crescent'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -353,18 +353,18 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_011",
-                                        version="any",
+                                        id='mybus:SSP_011',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Park Lane"
+                                            value='Park Lane'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Park Lane"
+                                            value='Park Lane'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -372,18 +372,18 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_012",
-                                        version="any",
+                                        id='mybus:SSP_012',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hospital"
+                                            value='Hospital'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Hospital   "
+                                            value='Hospital   '
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -395,10 +395,10 @@ obj = PublicationDelivery(
                             connections=TransfersInFrameRelStructure(
                                 choice=[
                                     Connection(
-                                        id="mybus:CX_25",
-                                        version="any",
+                                        id='mybus:CX_25',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Connect at Main station"
+                                            value='Connect at Main station'
                                         ),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT5M")
@@ -407,15 +407,15 @@ obj = PublicationDelivery(
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_025"
+                                                version='any',
+                                                ref='mybus:SSP_025'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_025"
+                                                version='any',
+                                                ref='mybus:SSP_025'
                                             )
                                         )
                                     ),
@@ -423,15 +423,15 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="hde:TIM_23_O",
+                            id='hde:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="hde:Cnd001",
-                                            version="any",
+                                            id='hde:Cnd001',
+                                            version='any',
                                             description=MultilingualString(
-                                                value="Sept  to March"
+                                                value='Sept  to March'
                                             ),
                                             from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2011, 3, 31, 0, 0, 0, 0, 0)
@@ -439,25 +439,25 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            version="2",
+                            version='2',
                             name=MultilingualString(
-                                value="Winter timetable for route 23 outbound"
+                                value='Winter timetable for route 23 outbound'
                             ),
                             baseline_version_frame_ref=VersionRefStructure(
-                                name_of_ref_class="TimetableFrame",
-                                ref="hde:1"
+                                name_of_ref_class='TimetableFrame',
+                                ref='hde:1'
                             ),
                             interchange_rules=InterchangeRulesInFrameRelStructure(
                                 interchange_rule=[
                                     InterchangeRule(
-                                        id="hde:IR_25_all_f",
-                                        version="any",
+                                        id='hde:IR_25_all_f',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Station - All  inbound"
+                                            value='Main Station - All  inbound'
                                         ),
                                         connection_ref=ConnectionRefStructure(
-                                            version="any",
-                                            ref="mybus:CX_25"
+                                            version='any',
+                                            ref='mybus:CX_25'
                                         ),
                                         priority=5,
                                         planned=True,
@@ -470,26 +470,26 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT3M"),
                                         maximum_transfer_time=XmlDuration("PT8M"),
                                         control_centre_ref=ControlCentreRef(
-                                            version="101",
-                                            ref="hde:123"
+                                            version='101',
+                                            ref='hde:123'
                                         ),
                                         feeder_filter=InterchangeRuleParameterStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
-                                                "",
+                                                '',
                                             ],
                                             maximum_interchange_window=XmlDuration("PT5M")
                                         )
                                     ),
                                     InterchangeRule(
-                                        id="hde:IR_25_LN1_f",
-                                        version="any",
+                                        id='hde:IR_25_LN1_f',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Station - Line 1 inbound Special rule"
+                                            value='Main Station - Line 1 inbound Special rule'
                                         ),
                                         connection_ref=ConnectionRefStructure(
-                                            version="any",
-                                            ref="mybus:CX_25"
+                                            version='any',
+                                            ref='mybus:CX_25'
                                         ),
                                         priority=1,
                                         planned=True,
@@ -500,47 +500,47 @@ obj = PublicationDelivery(
                                         maximum_wait_time=XmlDuration("PT3M"),
                                         maximum_automatic_wait_time=XmlDuration("PT1M"),
                                         control_centre_ref=ControlCentreRef(
-                                            version="101",
-                                            ref="hde:123"
+                                            version='101',
+                                            ref='hde:123'
                                         ),
                                         feeder_filter=InterchangeRuleParameterStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
                                                 LineInDirectionRef(
                                                     flexible_line_ref_or_line_ref=LineRef(
-                                                        version="any",
-                                                        ref="mybus:LN_1"
+                                                        version='any',
+                                                        ref='mybus:LN_1'
                                                     ),
                                                     direction_ref=DirectionRef(
-                                                        version="any",
-                                                        ref="mybus:DR_hbf"
+                                                        version='any',
+                                                        ref='mybus:DR_hbf'
                                                     )
                                                 ),
                                             ],
                                             fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                version="any",
-                                                ref="mybus:SSP_025"
+                                                version='any',
+                                                ref='mybus:SSP_025'
                                             ),
                                             adjacent_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_003"
+                                                version='any',
+                                                ref='mybus:SSP_003'
                                             ),
                                             end_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_002"
+                                                version='any',
+                                                ref='mybus:SSP_002'
                                             ),
                                             maximum_interchange_window=XmlDuration("PT4M")
                                         )
                                     ),
                                     InterchangeRule(
-                                        id="hde:IR_25_all_d",
-                                        version="any",
+                                        id='hde:IR_25_all_d',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Station - All lines outboundv "
+                                            value='Main Station - All lines outboundv '
                                         ),
                                         connection_ref=ConnectionRefStructure(
-                                            version="any",
-                                            ref="mybus:CX_25"
+                                            version='any',
+                                            ref='mybus:CX_25'
                                         ),
                                         priority=5,
                                         planned=True,
@@ -554,26 +554,26 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT3M"),
                                         maximum_transfer_time=XmlDuration("PT8M"),
                                         control_centre_ref=ControlCentreRef(
-                                            version="101",
-                                            ref="hde:123"
+                                            version='101',
+                                            ref='hde:123'
                                         ),
                                         distributor_filter=InterchangeRuleParameterStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
-                                                "",
+                                                '',
                                             ],
                                             maximum_interchange_window=XmlDuration("PT5M")
                                         )
                                     ),
                                     InterchangeRule(
-                                        id="hde:IR_25_LN6_d",
-                                        version="any",
+                                        id='hde:IR_25_LN6_d',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Station - Line 6 outbound "
+                                            value='Main Station - Line 6 outbound '
                                         ),
                                         connection_ref=ConnectionRefStructure(
-                                            version="any",
-                                            ref="mybus:CX_25"
+                                            version='any',
+                                            ref='mybus:CX_25'
                                         ),
                                         priority=5,
                                         planned=True,
@@ -587,34 +587,34 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT3M"),
                                         maximum_transfer_time=XmlDuration("PT8M"),
                                         control_centre_ref=ControlCentreRef(
-                                            version="101",
-                                            ref="hde:123"
+                                            version='101',
+                                            ref='hde:123'
                                         ),
                                         distributor_filter=InterchangeRuleParameterStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
                                                 LineInDirectionRef(
                                                     flexible_line_ref_or_line_ref=LineRef(
-                                                        version="any",
-                                                        ref="mybus:LN_6"
+                                                        version='any',
+                                                        ref='mybus:LN_6'
                                                     ),
                                                     direction_ref=DirectionRef(
-                                                        version="any",
-                                                        ref="mybus:DR_Hospital"
+                                                        version='any',
+                                                        ref='mybus:DR_Hospital'
                                                     )
                                                 ),
                                             ],
                                             fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                version="any",
-                                                ref="mybus:SSP_025"
+                                                version='any',
+                                                ref='mybus:SSP_025'
                                             ),
                                             adjacent_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_011"
+                                                version='any',
+                                                ref='mybus:SSP_011'
                                             ),
                                             end_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_012"
+                                                version='any',
+                                                ref='mybus:SSP_012'
                                             ),
                                             maximum_interchange_window=XmlDuration("PT5M")
                                         )
@@ -623,22 +623,22 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="hde:RS_23_O",
-                            version="2",
+                            id='hde:RS_23_O',
+                            version='2',
                             name=MultilingualString(
-                                value="Resoucres"
+                                value='Resoucres'
                             ),
                             baseline_version_frame_ref=VersionRefStructure(
-                                name_of_ref_class="ResourceFrame",
-                                ref="hde:1"
+                                name_of_ref_class='ResourceFrame',
+                                ref='hde:1'
                             ),
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Authority(
-                                        id="hde:TFO",
-                                        version="101",
+                                        id='hde:TFO',
+                                        version='101',
                                         name=MultilingualString(
-                                            value="Mission Central"
+                                            value='Mission Central'
                                         )
                                     ),
                                 ]
@@ -646,14 +646,14 @@ obj = PublicationDelivery(
                             control_centres=ControlCentresInFrameRelStructure(
                                 control_centre=[
                                     ControlCentre(
-                                        id="hde:123",
-                                        version="101",
+                                        id='hde:123',
+                                        version='101',
                                         name=MultilingualString(
-                                            value="Mission Central"
+                                            value='Mission Central'
                                         ),
                                         choice=AuthorityRef(
-                                            version="101",
-                                            ref="hde:TFO"
+                                            version='101',
+                                            ref='hde:TFO'
                                         )
                                     ),
                                 ]

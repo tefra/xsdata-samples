@@ -11,6 +11,7 @@ class FilterDebouncingEnumSimple(Enum):
     :cvar WAIT_TIME_DATE: The signal is delivered by a GET operation
         after a certain amount of time
     """
+
     DEBOUNCE_DATA = "DEBOUNCE-DATA"
     RAW_DATA = "RAW-DATA"
     WAIT_TIME_DATE = "WAIT-TIME-DATE"

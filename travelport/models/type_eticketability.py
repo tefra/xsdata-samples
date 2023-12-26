@@ -8,6 +8,7 @@ class TypeEticketability(Enum):
     """
     Defines the ability to eticket an entity (Yes, No, Required, Ticketless)
     """
+
     YES = "Yes"
     NO = "No"
     REQUIRED = "Required"

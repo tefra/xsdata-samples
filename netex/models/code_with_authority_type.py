@@ -13,5 +13,5 @@ class CodeWithAuthorityType(CodeType):
             "name": "codeSpace",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

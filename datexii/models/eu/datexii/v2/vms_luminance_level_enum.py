@@ -24,6 +24,7 @@ class VmsLuminanceLevelEnum(Enum):
     :cvar FOGGY_NIGHT: Luminance is set at level defined for foggy night
         time conditions.
     """
+
     SWITCHED_OFF = "switchedOff"
     TESTING = "testing"
     NIGHT = "night"

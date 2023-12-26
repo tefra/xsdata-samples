@@ -14,5 +14,5 @@ class ParkingFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_entity_status_2 import TypeProfileEntityStatus2
+from travelport.models.type_profile_entity_status_2 import (
+    TypeProfileEntityStatus2,
+)
 from travelport.models.type_profile_type_7 import TypeProfileType7
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -33,6 +35,7 @@ class ProfileParentSearchSummary2:
     immediate_parent_ref
         System-defined, unique identifier for ImmediateParent Reference
     """
+
     class Meta:
         name = "ProfileParentSearchSummary"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -43,7 +46,7 @@ class ProfileParentSearchSummary2:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -51,7 +54,7 @@ class ProfileParentSearchSummary2:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provisioning_code: None | str = field(
         default=None,
@@ -60,7 +63,7 @@ class ProfileParentSearchSummary2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -70,7 +73,7 @@ class ProfileParentSearchSummary2:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -79,14 +82,14 @@ class ProfileParentSearchSummary2:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     hierarchy_level_id: None | str = field(
         default=None,
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-        }
+        },
     )
     status: None | TypeProfileEntityStatus2 = field(
         default=None,
@@ -94,12 +97,12 @@ class ProfileParentSearchSummary2:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     immediate_parent_ref: None | str = field(
         default=None,
         metadata={
             "name": "ImmediateParentRef",
             "type": "Attribute",
-        }
+        },
     )

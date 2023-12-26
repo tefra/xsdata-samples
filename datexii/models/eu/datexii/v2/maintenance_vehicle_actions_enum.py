@@ -18,7 +18,10 @@ class MaintenanceVehicleActionsEnum(Enum):
     :cvar STOPPING_TO_SERVICE_EQUIPMENTS: Maintenance vehicles are
         stopping to service equipments on or next to the roadway.
     """
-    MAINTENANCE_VEHICLES_MERGING_INTO_TRAFFIC_FLOW = "maintenanceVehiclesMergingIntoTrafficFlow"
+
+    MAINTENANCE_VEHICLES_MERGING_INTO_TRAFFIC_FLOW = (
+        "maintenanceVehiclesMergingIntoTrafficFlow"
+    )
     SALT_AND_GRIT_SPREADING = "saltAndGritSpreading"
     SLOW_MOVING = "slowMoving"
     SNOW_CLEARING = "snowClearing"

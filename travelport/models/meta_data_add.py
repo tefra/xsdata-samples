@@ -10,6 +10,7 @@ class MetaDataAdd:
     """
     Command to add profile data information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -20,5 +21,5 @@ class MetaDataAdd:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )

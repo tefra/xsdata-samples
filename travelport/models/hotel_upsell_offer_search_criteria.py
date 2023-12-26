@@ -10,6 +10,7 @@ class HotelUpsellOfferSearchCriteria:
     """
     Search criteria for HotelUpsellOffer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class HotelUpsellOfferSearchCriteria:
             "name": "CorporateDiscountID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     rate_plan_type: None | str = field(
         default=None,
@@ -27,5 +28,5 @@ class HotelUpsellOfferSearchCriteria:
             "name": "RatePlanType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

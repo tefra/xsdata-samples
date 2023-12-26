@@ -12,6 +12,7 @@ class Front:
     """
     <div> <h3>Front Matter</h3> </div>
     """
+
     class Meta:
         name = "front"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -22,7 +23,7 @@ class Front:
             "name": "journal-meta",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     article_meta: Optional[ArticleMeta] = field(
         default=None,
@@ -30,24 +31,24 @@ class Front:
             "name": "article-meta",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     notes: Optional[Notes] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )

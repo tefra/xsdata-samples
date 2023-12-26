@@ -8,6 +8,7 @@ __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 class TypeTicketModifierAccountingType:
     """Ticketing Modifier used to add accounting
     - discount information."""
+
     class Meta:
         name = "typeTicketModifierAccountingType"
 
@@ -18,5 +19,5 @@ class TypeTicketModifierAccountingType:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        }
+        },
     )

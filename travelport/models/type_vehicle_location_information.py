@@ -36,6 +36,7 @@ class TypeVehicleLocationInformation:
     location_number
         Pickup/Return Location Number.
     """
+
     class Meta:
         name = "typeVehicleLocationInformation"
 
@@ -45,7 +46,7 @@ class TypeVehicleLocationInformation:
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -54,7 +55,7 @@ class TypeVehicleLocationInformation:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 3,
-        }
+        },
     )
     operation_time: list[str] = field(
         default_factory=list,
@@ -63,21 +64,21 @@ class TypeVehicleLocationInformation:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 100,
-        }
+        },
     )
     location_name: None | str = field(
         default=None,
         metadata={
             "name": "LocationName",
             "type": "Attribute",
-        }
+        },
     )
     counter_location: None | str = field(
         default=None,
         metadata={
             "name": "CounterLocation",
             "type": "Attribute",
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -86,7 +87,7 @@ class TypeVehicleLocationInformation:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     location_code: None | str = field(
         default=None,
@@ -95,14 +96,14 @@ class TypeVehicleLocationInformation:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "LocationType",
             "type": "Attribute",
-        }
+        },
     )
     location_number: None | str = field(
         default=None,
@@ -111,5 +112,5 @@ class TypeVehicleLocationInformation:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 3,
-        }
+        },
     )

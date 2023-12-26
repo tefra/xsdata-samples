@@ -86,6 +86,7 @@ class ChapterContent:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CHAPTER-CONTENT"
 
@@ -95,7 +96,7 @@ class ChapterContent:
             "name": "MSR-QUERY-P-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msr_query_p_2: List[MsrQueryP2] = field(
         default_factory=list,
@@ -103,7 +104,7 @@ class ChapterContent:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p: List[MultiLanguageParagraph] = field(
         default_factory=list,
@@ -111,7 +112,7 @@ class ChapterContent:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: List[MultiLanguageVerbatim] = field(
         default_factory=list,
@@ -119,7 +120,7 @@ class ChapterContent:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     list_value: List[ListType] = field(
         default_factory=list,
@@ -127,7 +128,7 @@ class ChapterContent:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_list: List[DefList] = field(
         default_factory=list,
@@ -135,7 +136,7 @@ class ChapterContent:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_list: List[LabeledList] = field(
         default_factory=list,
@@ -143,7 +144,7 @@ class ChapterContent:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: List[MlFormula] = field(
         default_factory=list,
@@ -151,7 +152,7 @@ class ChapterContent:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     figure: List[MlFigure] = field(
         default_factory=list,
@@ -159,7 +160,7 @@ class ChapterContent:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     note: List[Note] = field(
         default_factory=list,
@@ -167,7 +168,7 @@ class ChapterContent:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace: List[TraceableText] = field(
         default_factory=list,
@@ -175,7 +176,7 @@ class ChapterContent:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     structured_req: List[StructuredReq] = field(
         default_factory=list,
@@ -183,7 +184,7 @@ class ChapterContent:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     table: List[Table] = field(
         default_factory=list,
@@ -191,7 +192,7 @@ class ChapterContent:
             "name": "TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     traceable_table: List[TraceableTable] = field(
         default_factory=list,
@@ -199,7 +200,7 @@ class ChapterContent:
             "name": "TRACEABLE-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     prms: List[Prms] = field(
         default_factory=list,
@@ -207,14 +208,14 @@ class ChapterContent:
             "name": "PRMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -222,5 +223,5 @@ class ChapterContent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

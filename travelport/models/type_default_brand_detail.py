@@ -21,6 +21,7 @@ class TypeDefaultBrandDetail:
     brand_id
         The unique identifier of the brand
     """
+
     class Meta:
         name = "typeDefaultBrandDetail"
 
@@ -31,7 +32,7 @@ class TypeDefaultBrandDetail:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 4,
-        }
+        },
     )
     image_location: list[ImageLocation] = field(
         default_factory=list,
@@ -40,7 +41,7 @@ class TypeDefaultBrandDetail:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 3,
-        }
+        },
     )
     applicable_segment: list[ApplicableSegment] = field(
         default_factory=list,
@@ -49,7 +50,7 @@ class TypeDefaultBrandDetail:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     brand_id: None | str = field(
         default=None,
@@ -58,5 +59,5 @@ class TypeDefaultBrandDetail:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 19,
-        }
+        },
     )

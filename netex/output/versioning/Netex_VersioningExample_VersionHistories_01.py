@@ -41,49 +41,49 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         NetworkFilterByValueStructure(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     ScheduledStopPointRef(
-                                        value="REQUEST",
-                                        ref="mybus:SSP0001A"
+                                        value='REQUEST',
+                                        ref='mybus:SSP0001A'
                                     ),
                                     ScheduledStopPointRef(
-                                        value="REQUEST",
-                                        ref="mybus:SSP0002B"
+                                        value='REQUEST',
+                                        ref='mybus:SSP0002B'
                                     ),
                                     ScheduledStopPointRef(
-                                        value="REQUEST",
-                                        ref="mybus:SSP0003C"
+                                        value='REQUEST',
+                                        ref='mybus:SSP0003C'
                                     ),
                                     ServiceLinkRef(
-                                        value="REQUEST",
-                                        ref="mybu:SL_AtoB01"
+                                        value='REQUEST',
+                                        ref='mybu:SL_AtoB01'
                                     ),
                                     ServiceLinkRef(
-                                        value="REQUEST",
-                                        ref="mybu:SL_BtoC01"
+                                        value='REQUEST',
+                                        ref='mybu:SL_BtoC01'
                                     ),
                                     ServiceLinkRef(
-                                        value="REQUEST",
-                                        ref="mybu:SL_BtoA01"
+                                        value='REQUEST',
+                                        ref='mybu:SL_BtoA01'
                                     ),
                                     ServicePatternRef(
-                                        value="REQUEST",
-                                        ref="mybus:SP_001"
+                                        value='REQUEST',
+                                        ref='mybus:SP_001'
                                     ),
                                     DayTypeRef(
-                                        value="REQUEST",
-                                        ref="mybus:DT001_MF"
+                                        value='REQUEST',
+                                        ref='mybus:DT001_MF'
                                     ),
                                 ]
                             )
@@ -95,104 +95,104 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1Y2M3DT10H30M0S"),
     description=MultilingualString(
-        value="Example of simple network, explicit request "
+        value='Example of simple network, explicit request '
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="mybus:CF1",
-                version="any",
+                id='mybus:CF1',
+                version='any',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="mybus:SF1",
-                            version="any",
+                            id='mybus:SF1',
+                            version='any',
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP0001A",
+                                        id='mybus:SSP0001A',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Haltstelle A"
+                                            value='Haltstelle A'
                                         ),
                                         description=MultilingualString(
-                                            value="Version one of stop A"
+                                            value='Version one of stop A'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP0001A",
+                                        id='mybus:SSP0001A',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 18, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="002",
-                                        derived_from_version_ref_attribute="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='002',
+                                        derived_from_version_ref_attribute='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Haltstelle A - Museum"
+                                            value='Haltstelle A - Museum'
                                         ),
                                         description=MultilingualString(
-                                            value="Version two of stop A. Name is Changed and code addded"
+                                            value='Version two of stop A. Name is Changed and code addded'
                                         ),
                                         private_code=PrivateCode(
-                                            value="mycodeA"
+                                            value='mycodeA'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP0002B",
+                                        id='mybus:SSP0002B',
                                         created=XmlDateTime(2010, 5, 18, 9, 30, 47, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Haltstelle B"
+                                            value='Haltstelle B'
                                         ),
                                         description=MultilingualString(
-                                            value="Version one of stop B"
+                                            value='Version one of stop B'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP0002B",
+                                        id='mybus:SSP0002B',
                                         created=XmlDateTime(2010, 5, 18, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 6, 18, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="002",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='002',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Haltstelle B"
+                                            value='Haltstelle B'
                                         ),
                                         description=MultilingualString(
-                                            value="Version two of stop B"
+                                            value='Version two of stop B'
                                         ),
                                         private_code=PrivateCode(
-                                            value="mycodeB"
+                                            value='mycodeB'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP0003C",
+                                        id='mybus:SSP0003C',
                                         created=XmlDateTime(2010, 5, 21, 10, 30, 51, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Haltstelle C"
+                                            value='Haltstelle C'
                                         ),
                                         description=MultilingualString(
-                                            value="Version one of stop C"
+                                            value='Version one of stop C'
                                         )
                                     ),
                                 ]
@@ -200,77 +200,77 @@ obj = PublicationDelivery(
                             service_links=ServiceLinksInFrameRelStructure(
                                 service_link=[
                                     ServiceLink(
-                                        id="mybu:SL_AtoB01",
+                                        id='mybu:SL_AtoB01',
                                         created=XmlDateTime(2010, 5, 19, 10, 30, 47, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Version one of Link from A to B"
+                                            value='Version one of Link from A to B'
                                         ),
-                                        distance=Decimal("1.01"),
+                                        distance=Decimal('1.01'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="mybus:SSP0001A"
+                                            version='001',
+                                            ref='mybus:SSP0001A'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="mybus:SSP0002B"
+                                            version='001',
+                                            ref='mybus:SSP0002B'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybu:SL_AtoB01",
+                                        id='mybu:SL_AtoB01',
                                         created=XmlDateTime(2010, 5, 19, 10, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 19, 10, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="002",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='002',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Version one of Link from A to B"
+                                            value='Version one of Link from A to B'
                                         ),
-                                        distance=Decimal("1.12"),
+                                        distance=Decimal('1.12'),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="002",
-                                            ref="mybus:SSP0001A"
+                                            version='002',
+                                            ref='mybus:SSP0001A'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="002",
-                                            ref="mybus:SSP0002B"
+                                            version='002',
+                                            ref='mybus:SSP0002B'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybu:SL_BtoC01",
+                                        id='mybu:SL_BtoC01',
                                         created=XmlDateTime(2010, 5, 21, 10, 30, 51, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Version one of Link from B to C"
+                                            value='Version one of Link from B to C'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="002",
-                                            ref="mybus:SSP0002B"
+                                            version='002',
+                                            ref='mybus:SSP0002B'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="mybus:SSP0003C"
+                                            version='001',
+                                            ref='mybus:SSP0003C'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybu:SL_BtoA01",
+                                        id='mybu:SL_BtoA01',
                                         created=XmlDateTime(2010, 5, 19, 10, 30, 51, 0, 0),
                                         changed=XmlDateTime(2010, 5, 21, 10, 30, 51, 0, 0),
                                         modification=ModificationEnumeration.DELETE,
-                                        version="002",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='002',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Version two - deleteing  Link from B to A"
+                                            value='Version two - deleteing  Link from B to A'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="002",
-                                            ref="mybus:SSP0002B"
+                                            version='002',
+                                            ref='mybus:SSP0002B'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="002",
-                                            ref="mybus:SSP0001A"
+                                            version='002',
+                                            ref='mybus:SSP0001A'
                                         )
                                     ),
                                 ]
@@ -278,81 +278,81 @@ obj = PublicationDelivery(
                             service_patterns=ServicePatternsInFrameRelStructure(
                                 service_pattern_or_journey_pattern_view=[
                                     ServicePattern(
-                                        id="mybus:SP_001",
+                                        id='mybus:SP_001',
                                         created=XmlDateTime(2010, 5, 21, 10, 30, 51, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="From A to C, version 1"
+                                            value='From A to C, version 1'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="mybus:P_001_01",
-                                                    version="001",
+                                                    id='mybus:P_001_01',
+                                                    version='001',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="002",
-                                                        ref="mybus:SSP0001A"
+                                                        version='002',
+                                                        ref='mybus:SSP0001A'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="mybus:P_001_02",
-                                                    version="001",
+                                                    id='mybus:P_001_02',
+                                                    version='001',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="002",
-                                                        ref="mybus:SSP0002B"
+                                                        version='002',
+                                                        ref='mybus:SSP0002B'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="mybus:P_001_03",
-                                                    version="001",
+                                                    id='mybus:P_001_03',
+                                                    version='001',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="mybus:SSP0003C"
+                                                        version='001',
+                                                        ref='mybus:SSP0003C'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServicePattern(
-                                        id="mybus:SP_001",
+                                        id='mybus:SP_001',
                                         created=XmlDateTime(2010, 5, 21, 10, 30, 51, 0, 0),
                                         changed=XmlDateTime(2010, 5, 22, 10, 30, 51, 0, 0),
-                                        version="002",
+                                        version='002',
                                         name=MultilingualString(
-                                            value="From A to D, version 2"
+                                            value='From A to D, version 2'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="mybus:P_001_01",
-                                                    version="002",
+                                                    id='mybus:P_001_01',
+                                                    version='002',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="mybus:SSP0001A"
+                                                        version='001',
+                                                        ref='mybus:SSP0001A'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="mybus:P_001_02",
-                                                    version="002",
+                                                    id='mybus:P_001_02',
+                                                    version='002',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="002",
-                                                        ref="mybus:SSP0002B"
+                                                        version='002',
+                                                        ref='mybus:SSP0002B'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=False
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="mybus:P_001_03",
-                                                    version="002",
+                                                    id='mybus:P_001_03',
+                                                    version='002',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="mybus:SSP0003C"
+                                                        version='001',
+                                                        ref='mybus:SSP0003C'
                                                     )
                                                 ),
                                             ]
@@ -362,17 +362,17 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="mybus:SCF1",
-                            version="any",
+                            id='mybus:SCF1',
+                            version='any',
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="mybus:DT001_MF",
+                                        id='mybus:DT001_MF',
                                         created=XmlDateTime(2010, 5, 18, 10, 30, 47, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Monday to Friday"
+                                            value='Monday to Friday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_optional_type_categories_category_code import BaseReferenceComponentOptionalTypeCategoriesCategoryCode
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_optional_type_categories_category_code import (
+    BaseReferenceComponentOptionalTypeCategoriesCategoryCode,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -15,15 +17,18 @@ class BaseReferenceComponentOptionalTypeCategories:
         classification scheme can be used to group instances of the
         object or component.</description>
     """
+
     class Meta:
         global_type = False
 
-    category_code: List[BaseReferenceComponentOptionalTypeCategoriesCategoryCode] = field(
+    category_code: List[
+        BaseReferenceComponentOptionalTypeCategoriesCategoryCode
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CategoryCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "min_occurs": 1,
-        }
+        },
     )

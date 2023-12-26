@@ -13,5 +13,5 @@ class LuggageCarriageFacility:
         default=LuggageCarriageEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+)
 
 
 @dataclass
@@ -16,6 +18,7 @@ class DataRefType:
     :ivar path_value_text: <description xmlns="">The value of the field
         referenced by the Path Name.</description>
     """
+
     path_name_text: Optional[str] = field(
         default=None,
         metadata={
@@ -23,7 +26,7 @@ class DataRefType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
             "required": True,
-        }
+        },
     )
     path_value_text: Optional[str] = field(
         default=None,
@@ -31,5 +34,5 @@ class DataRefType:
             "name": "PathValueText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )

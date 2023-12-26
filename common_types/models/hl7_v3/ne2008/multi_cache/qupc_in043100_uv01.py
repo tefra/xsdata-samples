@@ -46,7 +46,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -54,7 +54,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -62,7 +62,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     query_id: Optional[Ii] = field(
         default=None,
@@ -70,7 +70,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "queryId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -79,7 +79,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     modify_code: Optional[Cs] = field(
         default=None,
@@ -87,7 +87,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "modifyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     response_element_group_id: List[Ii] = field(
         default_factory=list,
@@ -95,7 +95,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "responseElementGroupId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     response_modality_code: Optional[Cs] = field(
         default=None,
@@ -103,7 +103,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "responseModalityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     response_priority_code: Optional[Cs] = field(
         default=None,
@@ -111,7 +111,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "responsePriorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     initial_quantity: Optional[Int] = field(
         default=None,
@@ -119,7 +119,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "initialQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     initial_quantity_code: Optional[Ce] = field(
         default=None,
@@ -127,7 +127,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "initialQuantityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     execution_and_delivery_time: Optional[TsExplicit] = field(
         default=None,
@@ -135,7 +135,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "name": "executionAndDeliveryTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     parameter_list: List[QupcMt040300Uv01ParameterList] = field(
         default_factory=list,
@@ -144,7 +144,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     sort_control: List[QuqiMt020001Uv01SortControl] = field(
         default_factory=list,
@@ -153,14 +153,14 @@ class QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -175,7 +175,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -183,7 +183,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -191,28 +191,28 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -220,7 +220,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: List[Ce] = field(
         default_factory=list,
@@ -228,7 +228,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     reason_code: List[Ce] = field(
         default_factory=list,
@@ -236,7 +236,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "reasonCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Ce] = field(
         default=None,
@@ -244,7 +244,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     overseer: List[QuqiMt020001Uv01Overseer] = field(
         default_factory=list,
@@ -252,7 +252,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author_or_performer: List[QuqiMt020001Uv01AuthorOrPerformer] = field(
         default_factory=list,
@@ -261,7 +261,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: List[QuqiMt020001Uv01DataEnterer] = field(
         default_factory=list,
@@ -270,7 +270,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     information_recipient: List[QuqiMt020001Uv01InformationRecipient] = field(
         default_factory=list,
@@ -279,7 +279,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason_of: List[QuqiMt020001Uv01Reason] = field(
         default_factory=list,
@@ -288,16 +288,18 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    query_by_parameter: Optional[QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter] = field(
+    query_by_parameter: Optional[
+        QupcIn043100Uv01QuqiMt020001Uv01QueryByParameter
+    ] = field(
         default=None,
         metadata={
             "name": "queryByParameter",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     class_code: Optional[ActClassControlAct] = field(
         default=None,
@@ -305,7 +307,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[XActMoodIntentEvent] = field(
         default=None,
@@ -313,7 +315,7 @@ class QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -328,7 +330,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -336,7 +338,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -344,7 +346,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -352,7 +354,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     creation_time: Optional[TsExplicit] = field(
         default=None,
@@ -361,7 +363,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     security_text: Optional[St] = field(
         default=None,
@@ -369,7 +371,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "securityText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     version_code: Optional[Cs] = field(
         default=None,
@@ -377,7 +379,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "versionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     interaction_id: Optional[Ii] = field(
         default=None,
@@ -386,7 +388,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     profile_id: List[Ii] = field(
         default_factory=list,
@@ -394,7 +396,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "profileId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     processing_code: Optional[Cs] = field(
         default=None,
@@ -403,7 +405,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     processing_mode_code: Optional[Cs] = field(
         default=None,
@@ -412,7 +414,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     accept_ack_code: Optional[Cs] = field(
         default=None,
@@ -421,7 +423,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -429,7 +431,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     attachment_text: List[EdExplicit] = field(
         default_factory=list,
@@ -437,7 +439,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "name": "attachmentText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     receiver: List[McciMt000100Uv01Receiver] = field(
         default_factory=list,
@@ -445,7 +447,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     respond_to: List[McciMt000100Uv01RespondTo] = field(
         default_factory=list,
@@ -454,7 +456,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     sender: Optional[McciMt000100Uv01Sender] = field(
         default=None,
@@ -462,7 +464,7 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     attention_line: List[McciMt000100Uv01AttentionLine] = field(
         default_factory=list,
@@ -471,16 +473,18 @@ class QupcIn043100Uv01McciMt000100Uv01Message:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    control_act_process: Optional[QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess] = field(
+    control_act_process: Optional[
+        QupcIn043100Uv01QuqiMt020001Uv01ControlActProcess
+    ] = field(
         default=None,
         metadata={
             "name": "controlActProcess",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -497,5 +501,5 @@ class QupcIn043100Uv01(QupcIn043100Uv01McciMt000100Uv01Message):
             "name": "ITSVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

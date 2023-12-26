@@ -13,6 +13,7 @@ class TypeBookingTransactionsAllowed3:
         Allow or prohibit booking transaction for the given product type on
         this Provider/Supplier. Inheritable.
     """
+
     class Meta:
         name = "typeBookingTransactionsAllowed"
 
@@ -21,5 +22,5 @@ class TypeBookingTransactionsAllowed3:
         metadata={
             "name": "BookingEnabled",
             "type": "Attribute",
-        }
+        },
     )

@@ -15,5 +15,5 @@ class FareUnit(FareUnitVersionStructure):
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbm.enterprise.agreement.v1.program_resp_app_data_type import ProgramRespAppDataType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmtype import BaseGbmtype
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype import ProgramGbotype
+from generali.models.com.generali.enterprise_services.core.gbm.enterprise.agreement.v1.program_resp_app_data_type import (
+    ProgramRespAppDataType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmtype import (
+    BaseGbmtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype import (
+    ProgramGbotype,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -18,6 +26,7 @@ class GetProgramGbmresponseType(BaseGbmtype):
     :ivar program_gbo: <description xmlns="">The business object to
         retrieve</description>
     """
+
     class Meta:
         name = "GetProgramGBMResponseType"
 
@@ -27,7 +36,7 @@ class GetProgramGbmresponseType(BaseGbmtype):
             "name": "AppData",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
-        }
+        },
     )
     program_gbo: Optional[ProgramGbotype] = field(
         default=None,
@@ -36,5 +45,5 @@ class GetProgramGbmresponseType(BaseGbmtype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )

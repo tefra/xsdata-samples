@@ -26,6 +26,7 @@ class SingleProfileMigrationReq2(BaseReq5):
     traveler_profile_title
         Traveler Profile Title which need to be migrated.
     """
+
     class Meta:
         name = "SingleProfileMigrationReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -38,7 +39,7 @@ class SingleProfileMigrationReq2(BaseReq5):
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     profile_type: None | TypeProfileType6 = field(
         default=None,
@@ -46,7 +47,7 @@ class SingleProfileMigrationReq2(BaseReq5):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     pcc: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class SingleProfileMigrationReq2(BaseReq5):
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     account_profile_title: None | str = field(
         default=None,
@@ -66,7 +67,7 @@ class SingleProfileMigrationReq2(BaseReq5):
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     traveler_profile_title: None | str = field(
         default=None,
@@ -75,5 +76,5 @@ class SingleProfileMigrationReq2(BaseReq5):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )

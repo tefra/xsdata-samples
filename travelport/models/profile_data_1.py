@@ -16,7 +16,9 @@ from travelport.models.field_data_1 import FieldData1
 from travelport.models.field_group_data_1 import FieldGroupData1
 from travelport.models.form_of_payment_2 import FormOfPayment2
 from travelport.models.hotel_preference_1 import HotelPreference1
-from travelport.models.loyalty_program_enrollment_1 import LoyaltyProgramEnrollment1
+from travelport.models.loyalty_program_enrollment_1 import (
+    LoyaltyProgramEnrollment1,
+)
 from travelport.models.other_preference_1 import OtherPreference1
 from travelport.models.policy_reference_1 import PolicyReference1
 from travelport.models.rail_preference_1 import RailPreference1
@@ -70,6 +72,7 @@ class ProfileData1:
         which defines the attributes of the group specific to the asociated
         template or its parent field group.
     """
+
     class Meta:
         name = "ProfileData"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -79,180 +82,180 @@ class ProfileData1:
         metadata={
             "name": "AgencyGroupInfo",
             "type": "Element",
-        }
+        },
     )
     agency_info: None | AgencyInfo2 = field(
         default=None,
         metadata={
             "name": "AgencyInfo",
             "type": "Element",
-        }
+        },
     )
     branch_group_info: None | BranchGroupInfo1 = field(
         default=None,
         metadata={
             "name": "BranchGroupInfo",
             "type": "Element",
-        }
+        },
     )
     branch_info: None | BranchInfo1 = field(
         default=None,
         metadata={
             "name": "BranchInfo",
             "type": "Element",
-        }
+        },
     )
     account_info: None | AccountInfo1 = field(
         default=None,
         metadata={
             "name": "AccountInfo",
             "type": "Element",
-        }
+        },
     )
     agent_info: None | AgentInfo1 = field(
         default=None,
         metadata={
             "name": "AgentInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_group_info: None | TravelerGroupInfo1 = field(
         default=None,
         metadata={
             "name": "TravelerGroupInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_info: None | TravelerInfo1 = field(
         default=None,
         metadata={
             "name": "TravelerInfo",
             "type": "Element",
-        }
+        },
     )
     travel_document: list[TravelDocument1] = field(
         default_factory=list,
         metadata={
             "name": "TravelDocument",
             "type": "Element",
-        }
+        },
     )
     accounting_reference: list[AccountingReference1] = field(
         default_factory=list,
         metadata={
             "name": "AccountingReference",
             "type": "Element",
-        }
+        },
     )
     policy_reference: list[PolicyReference1] = field(
         default_factory=list,
         metadata={
             "name": "PolicyReference",
             "type": "Element",
-        }
+        },
     )
     commission_reference: list[CommissionReference1] = field(
         default_factory=list,
         metadata={
             "name": "CommissionReference",
             "type": "Element",
-        }
+        },
     )
     commission: list[Commission4] = field(
         default_factory=list,
         metadata={
             "name": "Commission",
             "type": "Element",
-        }
+        },
     )
     form_of_payment: list[FormOfPayment2] = field(
         default_factory=list,
         metadata={
             "name": "FormOfPayment",
             "type": "Element",
-        }
+        },
     )
     air_preference: list[AirPreference1] = field(
         default_factory=list,
         metadata={
             "name": "AirPreference",
             "type": "Element",
-        }
+        },
     )
     hotel_preference: list[HotelPreference1] = field(
         default_factory=list,
         metadata={
             "name": "HotelPreference",
             "type": "Element",
-        }
+        },
     )
     rail_preference: list[RailPreference1] = field(
         default_factory=list,
         metadata={
             "name": "RailPreference",
             "type": "Element",
-        }
+        },
     )
     other_preference: list[OtherPreference1] = field(
         default_factory=list,
         metadata={
             "name": "OtherPreference",
             "type": "Element",
-        }
+        },
     )
     contract: list[Contract1] = field(
         default_factory=list,
         metadata={
             "name": "Contract",
             "type": "Element",
-        }
+        },
     )
     service_fee: list[ServiceFee1] = field(
         default_factory=list,
         metadata={
             "name": "ServiceFee",
             "type": "Element",
-        }
+        },
     )
     alternate_contact: list[AlternateContact1] = field(
         default_factory=list,
         metadata={
             "name": "AlternateContact",
             "type": "Element",
-        }
+        },
     )
     loyalty_program_enrollment: list[LoyaltyProgramEnrollment1] = field(
         default_factory=list,
         metadata={
             "name": "LoyaltyProgramEnrollment",
             "type": "Element",
-        }
+        },
     )
     remark: list[Remark2] = field(
         default_factory=list,
         metadata={
             "name": "Remark",
             "type": "Element",
-        }
+        },
     )
     vehicle_preference: list[VehiclePreference1] = field(
         default_factory=list,
         metadata={
             "name": "VehiclePreference",
             "type": "Element",
-        }
+        },
     )
     field_data: list[FieldData1] = field(
         default_factory=list,
         metadata={
             "name": "FieldData",
             "type": "Element",
-        }
+        },
     )
     field_group_data: list[FieldGroupData1] = field(
         default_factory=list,
         metadata={
             "name": "FieldGroupData",
             "type": "Element",
-        }
+        },
     )

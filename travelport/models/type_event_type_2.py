@@ -8,6 +8,7 @@ class TypeEventType2(Enum):
     """
     The various reservation events (book, cancel, void, etc)
     """
+
     CREATE = "Create"
     CANCEL = "Cancel"
     TICKET = "Ticket"

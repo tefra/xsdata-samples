@@ -3,7 +3,9 @@ from dataclasses import dataclass, field
 from travelport.models.profile_data_2 import ProfileData2
 from travelport.models.profile_link_2 import ProfileLink2
 from travelport.models.profile_parent_summary_2 import ProfileParentSummary2
-from travelport.models.type_profile_entity_status_with_delete_2 import TypeProfileEntityStatusWithDelete2
+from travelport.models.type_profile_entity_status_with_delete_2 import (
+    TypeProfileEntityStatusWithDelete2,
+)
 from travelport.models.type_profile_parent_with_data_2 import ProfileParent2
 from travelport.models.type_profile_type_7 import TypeProfileType7
 
@@ -51,6 +53,7 @@ class Profile2:
     template_version
         The current version number of the template.
     """
+
     class Meta:
         name = "Profile"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -60,7 +63,7 @@ class Profile2:
         metadata={
             "name": "ProfileData",
             "type": "Element",
-        }
+        },
     )
     profile_link: list[ProfileLink2] = field(
         default_factory=list,
@@ -68,14 +71,14 @@ class Profile2:
             "name": "ProfileLink",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     profile_parent: None | ProfileParent2 = field(
         default=None,
         metadata={
             "name": "ProfileParent",
             "type": "Element",
-        }
+        },
     )
     profile_parent_summary: list[ProfileParentSummary2] = field(
         default_factory=list,
@@ -83,7 +86,7 @@ class Profile2:
             "name": "ProfileParentSummary",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -91,7 +94,7 @@ class Profile2:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -99,7 +102,7 @@ class Profile2:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -107,7 +110,7 @@ class Profile2:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | TypeProfileEntityStatusWithDelete2 = field(
         default=None,
@@ -115,14 +118,14 @@ class Profile2:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     hierarchy_level_id: None | str = field(
         default=None,
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -131,14 +134,14 @@ class Profile2:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     template_id: None | int = field(
         default=None,
         metadata={
             "name": "TemplateID",
             "type": "Attribute",
-        }
+        },
     )
     template_version: None | int = field(
         default=None,
@@ -146,5 +149,5 @@ class Profile2:
             "name": "TemplateVersion",
             "type": "Attribute",
             "min_inclusive": 0,
-        }
+        },
     )

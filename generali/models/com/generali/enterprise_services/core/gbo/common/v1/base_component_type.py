@@ -14,10 +14,11 @@ class BaseComponentType:
         is used within a modification operation to indicate the action
         (add, update, delete) intended on a component.</description>
     """
+
     action_code: Optional[str] = field(
         default=None,
         metadata={
             "name": "actionCode",
             "type": "Attribute",
-        }
+        },
     )

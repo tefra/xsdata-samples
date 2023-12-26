@@ -18,6 +18,7 @@ class ProfileRetrieveHistoryRsp2(BaseRsp5):
         Indicates whether more results are available that match the search
         parameters.
     """
+
     class Meta:
         name = "ProfileRetrieveHistoryRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -28,7 +29,7 @@ class ProfileRetrieveHistoryRsp2(BaseRsp5):
             "name": "ProfileHistory",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     more_results: None | bool = field(
         default=None,
@@ -36,5 +37,5 @@ class ProfileRetrieveHistoryRsp2(BaseRsp5):
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

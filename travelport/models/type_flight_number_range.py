@@ -9,6 +9,7 @@ class TypeFlightNumberRange:
     """
     Specify a range of flight numbers.
     """
+
     class Meta:
         name = "typeFlightNumberRange"
 
@@ -19,7 +20,7 @@ class TypeFlightNumberRange:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )
     flight_number_range_end: None | str = field(
         default=None,
@@ -28,5 +29,5 @@ class TypeFlightNumberRange:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )

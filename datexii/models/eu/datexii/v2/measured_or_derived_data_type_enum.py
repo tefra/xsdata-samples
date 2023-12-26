@@ -37,6 +37,7 @@ class MeasuredOrDerivedDataTypeEnum(Enum):
         information.
     :cvar WIND_INFORMATION: Measured or derived wind information.
     """
+
     HUMIDITY_INFORMATION = "humidityInformation"
     INDIVIDUAL_VEHICLE_MEASUREMENTS = "individualVehicleMeasurements"
     POLLUTION_INFORMATION = "pollutionInformation"

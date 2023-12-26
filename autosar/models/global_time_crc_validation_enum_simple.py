@@ -12,6 +12,7 @@ class GlobalTimeCrcValidationEnumSimple(Enum):
         validated or the CRC is not present and no CRC check is done.
     :cvar CRC_VALIDATED: This CRC is supposed to be validated.
     """
+
     CRC_IGNORED = "CRC-IGNORED"
     CRC_NOT_VALIDATED = "CRC-NOT-VALIDATED"
     CRC_OPTIONAL = "CRC-OPTIONAL"

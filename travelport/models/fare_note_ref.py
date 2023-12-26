@@ -10,6 +10,7 @@ class FareNoteRef:
 
     Used to minimize xml results.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class FareNoteRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

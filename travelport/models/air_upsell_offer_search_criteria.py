@@ -10,6 +10,7 @@ class AirUpsellOfferSearchCriteria:
     """
     Search criteria for AirUpsellOffers.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class AirUpsellOfferSearchCriteria:
             "name": "AccountCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -29,5 +30,5 @@ class AirUpsellOfferSearchCriteria:
             "required": True,
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

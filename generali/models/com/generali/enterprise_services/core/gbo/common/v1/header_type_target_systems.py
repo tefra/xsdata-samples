@@ -15,5 +15,5 @@ class HeaderTypeTargetSystems:
             "name": "TargetSystem",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

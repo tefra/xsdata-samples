@@ -32,6 +32,7 @@ class ConditionByFormula:
         all referenced system constants shall have a value.
     :ivar content:
     """
+
     class Meta:
         name = "CONDITION-BY-FORMULA"
 
@@ -40,7 +41,7 @@ class ConditionByFormula:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -48,14 +49,14 @@ class ConditionByFormula:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     binding_time: Optional[BindingTimeEnumSimple] = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -75,7 +76,7 @@ class ConditionByFormula:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -86,7 +87,7 @@ class ConditionByFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -97,5 +98,5 @@ class ConditionByFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

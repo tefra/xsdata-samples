@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_simple_component_type import BaseSimpleComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition_reasons import StatusHistoryTypeStateTransitionReasons
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_simple_component_type import (
+    BaseSimpleComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type_state_transition_reasons import (
+    StatusHistoryTypeStateTransitionReasons,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -28,6 +36,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
         User [Account] who initiated the lifecycle state
         transition.</description>
     """
+
     class Meta:
         global_type = False
 
@@ -37,7 +46,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "name": "FromStatusCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     to_status_code: Optional[CodeType] = field(
         default=None,
@@ -45,7 +54,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "name": "ToStatusCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     effective_date_time: Optional[XmlDateTime] = field(
         default=None,
@@ -53,7 +62,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "name": "EffectiveDateTime",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     reasons: Optional[StatusHistoryTypeStateTransitionReasons] = field(
         default=None,
@@ -61,7 +70,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "name": "Reasons",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     changed_by_user_id: Optional[Idtype] = field(
         default=None,
@@ -69,5 +78,5 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "name": "ChangedByUserID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

@@ -5,15 +5,21 @@ from .annotation import (
     Annotation,
     DocumentationBlock,
 )
-from .application_data_type_subtypes_enum import ApplicationDataTypeSubtypesEnum
-from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
+from .application_data_type_subtypes_enum import (
+    ApplicationDataTypeSubtypesEnum,
+)
+from .application_primitive_data_type_subtypes_enum import (
+    ApplicationPrimitiveDataTypeSubtypesEnum,
+)
 from .array_size_handling_enum import ArraySizeHandlingEnum
 from .array_size_semantics_enum import ArraySizeSemanticsEnum
 from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .sw_pointer_target_props import SwDataDefProps
@@ -93,6 +99,7 @@ class ApplicationArrayElement:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "APPLICATION-ARRAY-ELEMENT"
 
@@ -103,15 +110,17 @@ class ApplicationArrayElement:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ApplicationArrayElement.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ApplicationArrayElement.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +128,7 @@ class ApplicationArrayElement:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +136,7 @@ class ApplicationArrayElement:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +144,7 @@ class ApplicationArrayElement:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +152,7 @@ class ApplicationArrayElement:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +160,7 @@ class ApplicationArrayElement:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ApplicationArrayElement.Annotations"] = field(
         default=None,
@@ -159,7 +168,7 @@ class ApplicationArrayElement:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_data_def_props: Optional[SwDataDefProps] = field(
         default=None,
@@ -167,7 +176,7 @@ class ApplicationArrayElement:
             "name": "SW-DATA-DEF-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_tref: Optional["ApplicationArrayElement.TypeTref"] = field(
         default=None,
@@ -175,7 +184,7 @@ class ApplicationArrayElement:
             "name": "TYPE-TREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     array_size_handling: Optional[ArraySizeHandlingEnum] = field(
         default=None,
@@ -183,7 +192,7 @@ class ApplicationArrayElement:
             "name": "ARRAY-SIZE-HANDLING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     array_size_semantics: Optional[ArraySizeSemanticsEnum] = field(
         default=None,
@@ -191,30 +200,34 @@ class ApplicationArrayElement:
             "name": "ARRAY-SIZE-SEMANTICS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    index_data_type_ref: Optional["ApplicationArrayElement.IndexDataTypeRef"] = field(
+    index_data_type_ref: Optional[
+        "ApplicationArrayElement.IndexDataTypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "INDEX-DATA-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    max_number_of_elements: Optional[PositiveIntegerValueVariationPoint] = field(
+    max_number_of_elements: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -222,14 +235,14 @@ class ApplicationArrayElement:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -240,7 +253,7 @@ class ApplicationArrayElement:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -251,7 +264,7 @@ class ApplicationArrayElement:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -262,7 +275,7 @@ class ApplicationArrayElement:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -273,5 +286,5 @@ class ApplicationArrayElement:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

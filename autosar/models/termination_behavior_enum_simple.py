@@ -10,5 +10,6 @@ class TerminationBehaviorEnumSimple(Enum):
     :cvar PROCESS_IS_SELF_TERMINATING: The Process is allowed to
         terminate without request from Execution Management.
     """
+
     PROCESS_IS_NOT_SELF_TERMINATING = "PROCESS-IS-NOT-SELF-TERMINATING"
     PROCESS_IS_SELF_TERMINATING = "PROCESS-IS-SELF-TERMINATING"

@@ -18,7 +18,7 @@ class MediaRelationFacetListType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     sub_search: None | MediaRelationSearchType = field(
         default=None,
@@ -26,12 +26,12 @@ class MediaRelationFacetListType(AbstractFacetType):
             "name": "subSearch",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     facet: list[MediaRelationFacetType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

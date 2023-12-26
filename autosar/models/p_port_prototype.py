@@ -11,7 +11,9 @@ from .client_server_annotation import ClientServerAnnotation
 from .delegated_port_annotation import DelegatedPortAnnotation
 from .field_sender_com_spec import FieldSenderComSpec
 from .identifier import Identifier
-from .io_hw_abstraction_server_annotation import IoHwAbstractionServerAnnotation
+from .io_hw_abstraction_server_annotation import (
+    IoHwAbstractionServerAnnotation,
+)
 from .mode_port_annotation import ModePortAnnotation
 from .mode_switch_sender_com_spec import ModeSwitchSenderComSpec
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -113,6 +115,7 @@ class PPortPrototype:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "P-PORT-PROTOTYPE"
 
@@ -123,15 +126,17 @@ class PPortPrototype:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PPortPrototype.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PPortPrototype.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -139,7 +144,7 @@ class PPortPrototype:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -147,7 +152,7 @@ class PPortPrototype:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -155,7 +160,7 @@ class PPortPrototype:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -163,7 +168,7 @@ class PPortPrototype:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -171,7 +176,7 @@ class PPortPrototype:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["PPortPrototype.Annotations"] = field(
         default=None,
@@ -179,15 +184,17 @@ class PPortPrototype:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    client_server_annotations: Optional["PPortPrototype.ClientServerAnnotations"] = field(
+    client_server_annotations: Optional[
+        "PPortPrototype.ClientServerAnnotations"
+    ] = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     delegated_port_annotation: Optional[DelegatedPortAnnotation] = field(
         default=None,
@@ -195,39 +202,47 @@ class PPortPrototype:
             "name": "DELEGATED-PORT-ANNOTATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    io_hw_abstraction_server_annotations: Optional["PPortPrototype.IoHwAbstractionServerAnnotations"] = field(
+    io_hw_abstraction_server_annotations: Optional[
+        "PPortPrototype.IoHwAbstractionServerAnnotations"
+    ] = field(
         default=None,
         metadata={
             "name": "IO-HW-ABSTRACTION-SERVER-ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mode_port_annotations: Optional["PPortPrototype.ModePortAnnotations"] = field(
+    mode_port_annotations: Optional[
+        "PPortPrototype.ModePortAnnotations"
+    ] = field(
         default=None,
         metadata={
             "name": "MODE-PORT-ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    nv_data_port_annotations: Optional["PPortPrototype.NvDataPortAnnotations"] = field(
+    nv_data_port_annotations: Optional[
+        "PPortPrototype.NvDataPortAnnotations"
+    ] = field(
         default=None,
         metadata={
             "name": "NV-DATA-PORT-ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    parameter_port_annotations: Optional["PPortPrototype.ParameterPortAnnotations"] = field(
+    parameter_port_annotations: Optional[
+        "PPortPrototype.ParameterPortAnnotations"
+    ] = field(
         default=None,
         metadata={
             "name": "PARAMETER-PORT-ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_prototype_props: Optional[RPortPrototypeProps] = field(
         default=None,
@@ -235,23 +250,27 @@ class PPortPrototype:
             "name": "PORT-PROTOTYPE-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sender_receiver_annotations: Optional["PPortPrototype.SenderReceiverAnnotations"] = field(
+    sender_receiver_annotations: Optional[
+        "PPortPrototype.SenderReceiverAnnotations"
+    ] = field(
         default=None,
         metadata={
             "name": "SENDER-RECEIVER-ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    trigger_port_annotations: Optional["PPortPrototype.TriggerPortAnnotations"] = field(
+    trigger_port_annotations: Optional[
+        "PPortPrototype.TriggerPortAnnotations"
+    ] = field(
         default=None,
         metadata={
             "name": "TRIGGER-PORT-ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -259,7 +278,7 @@ class PPortPrototype:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     provided_com_specs: Optional["PPortPrototype.ProvidedComSpecs"] = field(
         default=None,
@@ -267,22 +286,24 @@ class PPortPrototype:
             "name": "PROVIDED-COM-SPECS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    provided_interface_tref: Optional["PPortPrototype.ProvidedInterfaceTref"] = field(
+    provided_interface_tref: Optional[
+        "PPortPrototype.ProvidedInterfaceTref"
+    ] = field(
         default=None,
         metadata={
             "name": "PROVIDED-INTERFACE-TREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -290,14 +311,14 @@ class PPortPrototype:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -308,7 +329,7 @@ class PPortPrototype:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -319,7 +340,7 @@ class PPortPrototype:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -330,18 +351,20 @@ class PPortPrototype:
                 "name": "CLIENT-SERVER-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class IoHwAbstractionServerAnnotations:
-        io_hw_abstraction_server_annotation: List[IoHwAbstractionServerAnnotation] = field(
+        io_hw_abstraction_server_annotation: List[
+            IoHwAbstractionServerAnnotation
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IO-HW-ABSTRACTION-SERVER-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -352,7 +375,7 @@ class PPortPrototype:
                 "name": "MODE-PORT-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -363,7 +386,7 @@ class PPortPrototype:
                 "name": "NV-DATA-PORT-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -374,7 +397,7 @@ class PPortPrototype:
                 "name": "PARAMETER-PORT-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -385,7 +408,7 @@ class PPortPrototype:
                 "name": "RECEIVER-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         sender_annotation: List[SenderAnnotation] = field(
             default_factory=list,
@@ -393,7 +416,7 @@ class PPortPrototype:
                 "name": "SENDER-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -404,7 +427,7 @@ class PPortPrototype:
                 "name": "TRIGGER-PORT-ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -415,7 +438,7 @@ class PPortPrototype:
                 "name": "FIELD-SENDER-COM-SPEC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         mode_switch_sender_com_spec: List[ModeSwitchSenderComSpec] = field(
             default_factory=list,
@@ -423,7 +446,7 @@ class PPortPrototype:
                 "name": "MODE-SWITCH-SENDER-COM-SPEC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         nonqueued_sender_com_spec: List[NonqueuedSenderComSpec] = field(
             default_factory=list,
@@ -431,7 +454,7 @@ class PPortPrototype:
                 "name": "NONQUEUED-SENDER-COM-SPEC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         nv_provide_com_spec: List[NvProvideComSpec] = field(
             default_factory=list,
@@ -439,7 +462,7 @@ class PPortPrototype:
                 "name": "NV-PROVIDE-COM-SPEC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         parameter_provide_com_spec: List[ParameterProvideComSpec] = field(
             default_factory=list,
@@ -447,7 +470,7 @@ class PPortPrototype:
                 "name": "PARAMETER-PROVIDE-COM-SPEC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         queued_sender_com_spec: List[QueuedSenderComSpec] = field(
             default_factory=list,
@@ -455,7 +478,7 @@ class PPortPrototype:
                 "name": "QUEUED-SENDER-COM-SPEC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         server_com_spec: List[ServerComSpec] = field(
             default_factory=list,
@@ -463,7 +486,7 @@ class PPortPrototype:
                 "name": "SERVER-COM-SPEC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -474,5 +497,5 @@ class PPortPrototype:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

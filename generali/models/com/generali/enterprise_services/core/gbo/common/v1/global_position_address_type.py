@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -18,6 +20,7 @@ class GlobalPositionAddressType:
         for raw altitude data, and a gravitational equipotential surface
         (the geoid) that defines the nominal sea level.
     """
+
     latitude: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -25,7 +28,7 @@ class GlobalPositionAddressType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     longitude: Optional[Decimal] = field(
         default=None,
@@ -34,7 +37,7 @@ class GlobalPositionAddressType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     wgscode: Optional[Idtype] = field(
         default=None,
@@ -43,5 +46,5 @@ class GlobalPositionAddressType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )

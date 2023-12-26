@@ -16,12 +16,12 @@ class TGlobalScriptTask(TGlobalTask):
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     script_language: Optional[str] = field(
         default=None,
         metadata={
             "name": "scriptLanguage",
             "type": "Attribute",
-        }
+        },
     )

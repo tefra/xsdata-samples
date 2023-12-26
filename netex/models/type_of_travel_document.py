@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .type_of_travel_document_version_structure import TypeOfTravelDocumentVersionStructure
+from .type_of_travel_document_version_structure import (
+    TypeOfTravelDocumentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

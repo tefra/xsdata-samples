@@ -29,6 +29,7 @@ class SymbolString:
         in question is part of a blueprint. For more details refer to
         TPS_StandardizationTemplate.
     """
+
     class Meta:
         name = "SYMBOL-STRING"
 
@@ -36,14 +37,14 @@ class SymbolString:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -51,12 +52,12 @@ class SymbolString:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     name_pattern: Optional[str] = field(
         default=None,
         metadata={
             "name": "NAME-PATTERN",
             "type": "Attribute",
-        }
+        },
     )

@@ -13,6 +13,7 @@ class TrafficViewPublication(PayloadPublication):
     """
     A publication containing one or more traffic views.
     """
+
     header_information: Optional[HeaderInformation] = field(
         default=None,
         metadata={
@@ -20,7 +21,7 @@ class TrafficViewPublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     traffic_view: List[TrafficView] = field(
         default_factory=list,
@@ -29,7 +30,7 @@ class TrafficViewPublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     traffic_view_publication_extension: Optional[ExtensionType] = field(
         default=None,
@@ -37,5 +38,5 @@ class TrafficViewPublication(PayloadPublication):
             "name": "trafficViewPublicationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

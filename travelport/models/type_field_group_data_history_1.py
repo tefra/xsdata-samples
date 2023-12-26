@@ -24,6 +24,7 @@ class TypeFieldGroupDataHistory1(TypeKeyElement1):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typeFieldGroupDataHistory"
 
@@ -33,19 +34,19 @@ class TypeFieldGroupDataHistory1(TypeKeyElement1):
             "name": "FieldData",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     field_group_id: None | str = field(
         default=None,
         metadata={
             "name": "FieldGroupID",
             "type": "Attribute",
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

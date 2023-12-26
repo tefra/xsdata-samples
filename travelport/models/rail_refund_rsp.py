@@ -12,6 +12,7 @@ class RailRefundRsp(BaseRsp1):
     """
     Returns rail cancel information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -21,7 +22,7 @@ class RailRefundRsp(BaseRsp1):
             "name": "Payment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     mco: None | Mco1 = field(
         default=None,
@@ -29,5 +30,5 @@ class RailRefundRsp(BaseRsp1):
             "name": "MCO",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

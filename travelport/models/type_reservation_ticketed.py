@@ -8,6 +8,7 @@ class TypeReservationTicketed(Enum):
     """
     Information on whether the reservation is ticketed.
     """
+
     YES = "Yes"
     NO = "No"
     NOT_APPLICABLE = "Not Applicable"

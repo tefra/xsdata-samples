@@ -14,5 +14,5 @@ class ExtensionType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

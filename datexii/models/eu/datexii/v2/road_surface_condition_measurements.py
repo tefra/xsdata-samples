@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.application_rate_value import ApplicationRateValue
+from datexii.models.eu.datexii.v2.application_rate_value import (
+    ApplicationRateValue,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import FloatingPointMetreDistanceValue
-from datexii.models.eu.datexii.v2.kilograms_concentration_value import KilogramsConcentrationValue
+from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import (
+    FloatingPointMetreDistanceValue,
+)
+from datexii.models.eu.datexii.v2.kilograms_concentration_value import (
+    KilogramsConcentrationValue,
+)
 from datexii.models.eu.datexii.v2.temperature_value import TemperatureValue
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -28,13 +34,14 @@ class RoadSurfaceConditionMeasurements:
         on the road surface.
     :ivar road_surface_condition_measurements_extension:
     """
+
     road_surface_temperature: Optional[TemperatureValue] = field(
         default=None,
         metadata={
             "name": "roadSurfaceTemperature",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     protection_temperature: Optional[TemperatureValue] = field(
         default=None,
@@ -42,7 +49,7 @@ class RoadSurfaceConditionMeasurements:
             "name": "protectionTemperature",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     de_icing_application_rate: Optional[ApplicationRateValue] = field(
         default=None,
@@ -50,7 +57,7 @@ class RoadSurfaceConditionMeasurements:
             "name": "deIcingApplicationRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     de_icing_concentration: Optional[KilogramsConcentrationValue] = field(
         default=None,
@@ -58,7 +65,7 @@ class RoadSurfaceConditionMeasurements:
             "name": "deIcingConcentration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     depth_of_snow: Optional[FloatingPointMetreDistanceValue] = field(
         default=None,
@@ -66,7 +73,7 @@ class RoadSurfaceConditionMeasurements:
             "name": "depthOfSnow",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     water_film_thickness: Optional[FloatingPointMetreDistanceValue] = field(
         default=None,
@@ -74,13 +81,15 @@ class RoadSurfaceConditionMeasurements:
             "name": "waterFilmThickness",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    road_surface_condition_measurements_extension: Optional[ExtensionType] = field(
+    road_surface_condition_measurements_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "roadSurfaceConditionMeasurementsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

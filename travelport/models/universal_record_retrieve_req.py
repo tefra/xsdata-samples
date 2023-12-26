@@ -30,6 +30,7 @@ class UniversalRecordRetrieveReq(BaseReq1):
         response. Only supports credit card and debit card. Default value of
         ReturnUnmaskedData is false.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -40,21 +41,21 @@ class UniversalRecordRetrieveReq(BaseReq1):
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_reservation_info: None | UniversalRecordRetrieveReq.ProviderReservationInfo = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfo",
             "type": "Element",
-        }
+        },
     )
     view_only_ind: bool = field(
         default=False,
         metadata={
             "name": "ViewOnlyInd",
             "type": "Attribute",
-        }
+        },
     )
     traveler_last_name: None | str = field(
         default=None,
@@ -63,7 +64,7 @@ class UniversalRecordRetrieveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     traveler_first_name: None | str = field(
         default=None,
@@ -72,14 +73,14 @@ class UniversalRecordRetrieveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     return_unmasked_data: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnUnmaskedData",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -92,6 +93,7 @@ class UniversalRecordRetrieveReq(BaseReq1):
         supplier_code
             Represents Carrier Code for ACH PNR Retrieve.
         """
+
         provider_code: None | str = field(
             default=None,
             metadata={
@@ -100,7 +102,7 @@ class UniversalRecordRetrieveReq(BaseReq1):
                 "required": True,
                 "min_length": 2,
                 "max_length": 5,
-            }
+            },
         )
         provider_locator_code: None | str = field(
             default=None,
@@ -109,7 +111,7 @@ class UniversalRecordRetrieveReq(BaseReq1):
                 "type": "Attribute",
                 "required": True,
                 "max_length": 15,
-            }
+            },
         )
         supplier_code: None | str = field(
             default=None,
@@ -118,5 +120,5 @@ class UniversalRecordRetrieveReq(BaseReq1):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 5,
-            }
+            },
         )

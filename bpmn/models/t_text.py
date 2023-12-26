@@ -15,5 +15,5 @@ class TText:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

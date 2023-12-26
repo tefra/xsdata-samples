@@ -119,6 +119,7 @@ class RptContainer:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RPT-CONTAINER"
 
@@ -129,7 +130,7 @@ class RptContainer:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["RptContainer.ShortNameFragments"] = field(
         default=None,
@@ -137,7 +138,7 @@ class RptContainer:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -145,7 +146,7 @@ class RptContainer:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -153,7 +154,7 @@ class RptContainer:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -161,7 +162,7 @@ class RptContainer:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -169,7 +170,7 @@ class RptContainer:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -177,7 +178,7 @@ class RptContainer:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RptContainer.Annotations"] = field(
         default=None,
@@ -185,7 +186,7 @@ class RptContainer:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     by_pass_point_irefs: Optional["RptContainer.ByPassPointIrefs"] = field(
         default=None,
@@ -193,15 +194,17 @@ class RptContainer:
             "name": "BY-PASS-POINT-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    explicit_rpt_profile_selection_refs: Optional["RptContainer.ExplicitRptProfileSelectionRefs"] = field(
+    explicit_rpt_profile_selection_refs: Optional[
+        "RptContainer.ExplicitRptProfileSelectionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EXPLICIT-RPT-PROFILE-SELECTION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_containers: Optional["RptContainer.RptContainers"] = field(
         default=None,
@@ -209,15 +212,17 @@ class RptContainer:
             "name": "RPT-CONTAINERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    rpt_executable_entity_properties: Optional[RptExecutableEntityProperties] = field(
+    rpt_executable_entity_properties: Optional[
+        RptExecutableEntityProperties
+    ] = field(
         default=None,
         metadata={
             "name": "RPT-EXECUTABLE-ENTITY-PROPERTIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_hooks: Optional["RptContainer.RptHooks"] = field(
         default=None,
@@ -225,7 +230,7 @@ class RptContainer:
             "name": "RPT-HOOKS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_impl_policy: Optional[RptImplPolicy] = field(
         default=None,
@@ -233,7 +238,7 @@ class RptContainer:
             "name": "RPT-IMPL-POLICY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_sw_prototyping_access: Optional[RptSwPrototypingAccess] = field(
         default=None,
@@ -241,7 +246,7 @@ class RptContainer:
             "name": "RPT-SW-PROTOTYPING-ACCESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -249,14 +254,14 @@ class RptContainer:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -264,14 +269,14 @@ class RptContainer:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -282,7 +287,7 @@ class RptContainer:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -293,7 +298,7 @@ class RptContainer:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -304,18 +309,20 @@ class RptContainer:
                 "name": "BY-PASS-POINT-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ExplicitRptProfileSelectionRefs:
-        explicit_rpt_profile_selection_ref: List["RptContainer.ExplicitRptProfileSelectionRefs.ExplicitRptProfileSelectionRef"] = field(
+        explicit_rpt_profile_selection_ref: List[
+            "RptContainer.ExplicitRptProfileSelectionRefs.ExplicitRptProfileSelectionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXPLICIT-RPT-PROFILE-SELECTION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -326,7 +333,7 @@ class RptContainer:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -337,7 +344,7 @@ class RptContainer:
                 "name": "RPT-CONTAINER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -348,5 +355,5 @@ class RptContainer:
                 "name": "RPT-HOOK",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -7,7 +7,9 @@ from .annotation import (
 )
 from .category_string import CategoryString
 from .communication_direction_type import CommunicationDirectionType
-from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from .crypto_service_certificate_subtypes_enum import (
+    CryptoServiceCertificateSubtypesEnum,
+)
 from .crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
 from .i_psec_header_type_enum import IPsecHeaderTypeEnum
 from .i_psec_ip_protocol_enum import IPsecIpProtocolEnum
@@ -144,6 +146,7 @@ class IpSecRule:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IP-SEC-RULE"
 
@@ -154,7 +157,7 @@ class IpSecRule:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["IpSecRule.ShortNameFragments"] = field(
         default=None,
@@ -162,7 +165,7 @@ class IpSecRule:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -170,7 +173,7 @@ class IpSecRule:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -178,7 +181,7 @@ class IpSecRule:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -186,7 +189,7 @@ class IpSecRule:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -194,7 +197,7 @@ class IpSecRule:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -202,7 +205,7 @@ class IpSecRule:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["IpSecRule.Annotations"] = field(
         default=None,
@@ -210,7 +213,7 @@ class IpSecRule:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     direction: Optional[CommunicationDirectionType] = field(
         default=None,
@@ -218,7 +221,7 @@ class IpSecRule:
             "name": "DIRECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     header_type: Optional[IPsecHeaderTypeEnum] = field(
         default=None,
@@ -226,7 +229,7 @@ class IpSecRule:
             "name": "HEADER-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ike_authentication_method: Optional[IkeAuthenticationMethodEnum] = field(
         default=None,
@@ -234,7 +237,7 @@ class IpSecRule:
             "name": "IKE-AUTHENTICATION-METHOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ip_protocol: Optional[IPsecIpProtocolEnum] = field(
         default=None,
@@ -242,7 +245,7 @@ class IpSecRule:
             "name": "IP-PROTOCOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     local_certificate_refs: Optional["IpSecRule.LocalCertificateRefs"] = field(
         default=None,
@@ -250,7 +253,7 @@ class IpSecRule:
             "name": "LOCAL-CERTIFICATE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     local_id: Optional[String] = field(
         default=None,
@@ -258,7 +261,7 @@ class IpSecRule:
             "name": "LOCAL-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     local_port_range_end: Optional[PositiveInteger] = field(
         default=None,
@@ -266,7 +269,7 @@ class IpSecRule:
             "name": "LOCAL-PORT-RANGE-END",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     local_port_range_start: Optional[PositiveInteger] = field(
         default=None,
@@ -274,7 +277,7 @@ class IpSecRule:
             "name": "LOCAL-PORT-RANGE-START",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mode: Optional[IPsecModeEnum] = field(
         default=None,
@@ -282,7 +285,7 @@ class IpSecRule:
             "name": "MODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     policy: Optional[IPsecPolicyEnum] = field(
         default=None,
@@ -290,7 +293,7 @@ class IpSecRule:
             "name": "POLICY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pre_shared_key_ref: Optional["IpSecRule.PreSharedKeyRef"] = field(
         default=None,
@@ -298,7 +301,7 @@ class IpSecRule:
             "name": "PRE-SHARED-KEY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     priority: Optional[PositiveInteger] = field(
         default=None,
@@ -306,15 +309,17 @@ class IpSecRule:
             "name": "PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    remote_certificate_refs: Optional["IpSecRule.RemoteCertificateRefs"] = field(
+    remote_certificate_refs: Optional[
+        "IpSecRule.RemoteCertificateRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "REMOTE-CERTIFICATE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remote_id: Optional[String] = field(
         default=None,
@@ -322,7 +327,7 @@ class IpSecRule:
             "name": "REMOTE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remote_ip_address_refs: Optional["IpSecRule.RemoteIpAddressRefs"] = field(
         default=None,
@@ -330,7 +335,7 @@ class IpSecRule:
             "name": "REMOTE-IP-ADDRESS-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remote_port_range_end: Optional[PositiveInteger] = field(
         default=None,
@@ -338,7 +343,7 @@ class IpSecRule:
             "name": "REMOTE-PORT-RANGE-END",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remote_port_range_start: Optional[PositiveInteger] = field(
         default=None,
@@ -346,14 +351,14 @@ class IpSecRule:
             "name": "REMOTE-PORT-RANGE-START",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -361,14 +366,14 @@ class IpSecRule:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -379,7 +384,7 @@ class IpSecRule:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -390,18 +395,20 @@ class IpSecRule:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class LocalCertificateRefs:
-        local_certificate_ref: List["IpSecRule.LocalCertificateRefs.LocalCertificateRef"] = field(
+        local_certificate_ref: List[
+            "IpSecRule.LocalCertificateRefs.LocalCertificateRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "LOCAL-CERTIFICATE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -412,7 +419,7 @@ class IpSecRule:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -423,18 +430,20 @@ class IpSecRule:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RemoteCertificateRefs:
-        remote_certificate_ref: List["IpSecRule.RemoteCertificateRefs.RemoteCertificateRef"] = field(
+        remote_certificate_ref: List[
+            "IpSecRule.RemoteCertificateRefs.RemoteCertificateRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "REMOTE-CERTIFICATE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -445,18 +454,20 @@ class IpSecRule:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class RemoteIpAddressRefs:
-        remote_ip_address_ref: List["IpSecRule.RemoteIpAddressRefs.RemoteIpAddressRef"] = field(
+        remote_ip_address_ref: List[
+            "IpSecRule.RemoteIpAddressRefs.RemoteIpAddressRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "REMOTE-IP-ADDRESS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -467,5 +478,5 @@ class IpSecRule:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

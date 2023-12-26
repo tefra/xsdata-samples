@@ -28,6 +28,7 @@ class FlexrayNmEcu:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-NM-ECU"
 
@@ -37,7 +38,7 @@ class FlexrayNmEcu:
             "name": "NM-HW-VOTE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_main_function_across_fr_cycle: Optional[Boolean] = field(
         default=None,
@@ -45,7 +46,7 @@ class FlexrayNmEcu:
             "name": "NM-MAIN-FUNCTION-ACROSS-FR-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_repeat_message_bit_enable: Optional[Boolean] = field(
         default=None,
@@ -53,14 +54,14 @@ class FlexrayNmEcu:
             "name": "NM-REPEAT-MESSAGE-BIT-ENABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -68,5 +69,5 @@ class FlexrayNmEcu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

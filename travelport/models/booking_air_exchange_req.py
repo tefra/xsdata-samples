@@ -38,6 +38,7 @@ class BookingAirExchangeReq(BookingBaseReq):
         only one end transact is done and warnings are returned for follow
         up action. Supported Providers: 1G/1V
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -50,7 +51,7 @@ class BookingAirExchangeReq(BookingBaseReq):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     ticket_number: list[str] = field(
         default_factory=list,
@@ -61,7 +62,7 @@ class BookingAirExchangeReq(BookingBaseReq):
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -71,7 +72,7 @@ class BookingAirExchangeReq(BookingBaseReq):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
@@ -79,7 +80,7 @@ class BookingAirExchangeReq(BookingBaseReq):
             "name": "AirExchangeBundleTotal",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
@@ -88,7 +89,7 @@ class BookingAirExchangeReq(BookingBaseReq):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -97,7 +98,7 @@ class BookingAirExchangeReq(BookingBaseReq):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     add_svc: None | AddSvc = field(
         default=None,
@@ -105,12 +106,12 @@ class BookingAirExchangeReq(BookingBaseReq):
             "name": "AddSvc",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     override_warnings: None | bool = field(
         default=None,
         metadata={
             "name": "OverrideWarnings",
             "type": "Attribute",
-        }
+        },
     )

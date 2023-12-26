@@ -17,7 +17,7 @@ class VmsTextLineIndexVmsTextLine:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     line_index: Optional[int] = field(
         default=None,
@@ -25,5 +25,5 @@ class VmsTextLineIndexVmsTextLine:
             "name": "lineIndex",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

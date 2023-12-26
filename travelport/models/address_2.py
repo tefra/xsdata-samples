@@ -19,6 +19,7 @@ class Address2(TypeTaggableAddress2):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "Address"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -28,12 +29,12 @@ class Address2(TypeTaggableAddress2):
         metadata={
             "name": "Provisioned",
             "type": "Attribute",
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

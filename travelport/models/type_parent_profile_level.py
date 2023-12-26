@@ -10,6 +10,7 @@ class TypeParentProfileLevel(Enum):
     Valid values are ‘Agency’, ‘AgencyGroup’, ‘BranchGroup’, ‘Branch’,
     ‘Account’ and ‘Traveler Group’.
     """
+
     AGENCY_GROUP = "AgencyGroup"
     AGENCY = "Agency"
     BRANCH_GROUP = "BranchGroup"

@@ -27,13 +27,13 @@ class Rim:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     mrk: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -115,5 +115,5 @@ class Rim:
                     "type": str,
                 },
             ),
-        }
+        },
     )

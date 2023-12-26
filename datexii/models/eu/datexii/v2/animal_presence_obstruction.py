@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.animal_presence_type_enum import AnimalPresenceTypeEnum
+from datexii.models.eu.datexii.v2.animal_presence_type_enum import (
+    AnimalPresenceTypeEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.obstruction import Obstruction
 
@@ -18,12 +20,13 @@ class AnimalPresenceObstruction(Obstruction):
         on or near the roadway.
     :ivar animal_presence_obstruction_extension:
     """
+
     alive: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     animal_presence_type: Optional[AnimalPresenceTypeEnum] = field(
         default=None,
@@ -32,7 +35,7 @@ class AnimalPresenceObstruction(Obstruction):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     animal_presence_obstruction_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +43,5 @@ class AnimalPresenceObstruction(Obstruction):
             "name": "animalPresenceObstructionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

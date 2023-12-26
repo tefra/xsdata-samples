@@ -25,6 +25,7 @@ class Tax2:
         Indicates how often the tax is collected. Values can be Once or
         Daily
     """
+
     class Meta:
         name = "Tax"
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
@@ -34,14 +35,14 @@ class Tax2:
         metadata={
             "name": "Amount",
             "type": "Element",
-        }
+        },
     )
     percentage: None | float = field(
         default=None,
         metadata={
             "name": "Percentage",
             "type": "Element",
-        }
+        },
     )
     code: None | int = field(
         default=None,
@@ -49,33 +50,33 @@ class Tax2:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     effective_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
-        }
+        },
     )
     expiration_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
-        }
+        },
     )
     term: None | str = field(
         default=None,
         metadata={
             "name": "Term",
             "type": "Attribute",
-        }
+        },
     )
     collection_freq: None | str = field(
         default=None,
         metadata={
             "name": "CollectionFreq",
             "type": "Attribute",
-        }
+        },
     )

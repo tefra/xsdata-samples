@@ -1,11 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .autosar_data_prototype_subtypes_enum import (
+    AutosarDataPrototypeSubtypesEnum,
+)
+from .implementation_data_type_element_subtypes_enum import (
+    ImplementationDataTypeElementSubtypesEnum,
+)
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
 from .system_subtypes_enum import SystemSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -57,6 +63,7 @@ class ImplementationDataTypeElementInSystemRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-SYSTEM-REF"
 
@@ -66,62 +73,74 @@ class ImplementationDataTypeElementInSystemRef:
             "name": "TAG-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    base_ref: Optional["ImplementationDataTypeElementInSystemRef.BaseRef"] = field(
+    base_ref: Optional[
+        "ImplementationDataTypeElementInSystemRef.BaseRef"
+    ] = field(
         default=None,
         metadata={
             "name": "BASE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_swc_prototype_refs: Optional["ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs"] = field(
+    context_swc_prototype_refs: Optional[
+        "ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-SWC-PROTOTYPE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_port_prototype_ref: Optional["ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef"] = field(
+    context_port_prototype_ref: Optional[
+        "ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    root_data_prototype_ref: Optional["ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef"] = field(
+    root_data_prototype_ref: Optional[
+        "ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_implementation_data_element_refs: Optional["ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs"] = field(
+    context_implementation_data_element_refs: Optional[
+        "ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_implementation_data_type_element_ref: Optional["ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef"] = field(
+    target_implementation_data_type_element_ref: Optional[
+        "ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -129,7 +148,7 @@ class ImplementationDataTypeElementInSystemRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -140,18 +159,20 @@ class ImplementationDataTypeElementInSystemRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ContextSwcPrototypeRefs:
-        context_swc_prototype_ref: List["ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs.ContextSwcPrototypeRef"] = field(
+        context_swc_prototype_ref: List[
+            "ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs.ContextSwcPrototypeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONTEXT-SWC-PROTOTYPE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -162,7 +183,7 @@ class ImplementationDataTypeElementInSystemRef:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -173,7 +194,7 @@ class ImplementationDataTypeElementInSystemRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -184,18 +205,20 @@ class ImplementationDataTypeElementInSystemRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ContextImplementationDataElementRefs:
-        context_implementation_data_element_ref: List["ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"] = field(
+        context_implementation_data_element_ref: List[
+            "ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -206,7 +229,7 @@ class ImplementationDataTypeElementInSystemRef:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -217,5 +240,5 @@ class ImplementationDataTypeElementInSystemRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

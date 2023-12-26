@@ -10,6 +10,7 @@ class PublisherName:
     This name may differ from that of the organization registering or
     maintaining the metadata record.
     """
+
     class Meta:
         name = "publisher_name"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class PublisherName:
         metadata={
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

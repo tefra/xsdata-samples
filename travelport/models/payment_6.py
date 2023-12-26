@@ -38,6 +38,7 @@ class Payment6:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "Payment"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -47,7 +48,7 @@ class Payment6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | PaymentType6 = field(
         default=None,
@@ -55,7 +56,7 @@ class Payment6:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     form_of_payment_ref: None | str = field(
         default=None,
@@ -63,14 +64,14 @@ class Payment6:
             "name": "FormOfPaymentRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -78,7 +79,7 @@ class Payment6:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount_type: None | str = field(
         default=None,
@@ -87,33 +88,33 @@ class Payment6:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )
     approximate_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateAmount",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus7 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

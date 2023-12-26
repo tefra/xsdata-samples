@@ -47,5 +47,5 @@ class Ctl:
                     "type": str,
                 },
             ),
-        }
+        },
     )

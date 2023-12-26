@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.air_create_reservation_rsp import AirCreateReservationRsp
+from travelport.models.air_create_reservation_rsp import (
+    AirCreateReservationRsp,
+)
 from travelport.models.availability_error_info import AvailabilityErrorInfo
 from travelport.models.error_info_1 import ErrorInfo1
 
@@ -18,7 +20,7 @@ class AirCreateReservationPortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -29,14 +31,16 @@ class AirCreateReservationPortTypeServiceOutput:
                 "name": "AirCreateReservationRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )
-        fault: None | AirCreateReservationPortTypeServiceOutput.Body.Fault = field(
-            default=None,
-            metadata={
-                "name": "Fault",
-                "type": "Element",
-            }
+        fault: None | AirCreateReservationPortTypeServiceOutput.Body.Fault = (
+            field(
+                default=None,
+                metadata={
+                    "name": "Fault",
+                    "type": "Element",
+                },
+            )
         )
 
         @dataclass
@@ -46,28 +50,28 @@ class AirCreateReservationPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | AirCreateReservationPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -78,7 +82,7 @@ class AirCreateReservationPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )
                 availability_error_info: None | AvailabilityErrorInfo = field(
                     default=None,
@@ -86,5 +90,5 @@ class AirCreateReservationPortTypeServiceOutput:
                         "name": "AvailabilityErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/air_v52_0",
-                    }
+                    },
                 )

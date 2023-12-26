@@ -95,6 +95,7 @@ class SdgForeignReferenceWithVariation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SDG-FOREIGN-REFERENCE-WITH-VARIATION"
 
@@ -105,15 +106,17 @@ class SdgForeignReferenceWithVariation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SdgForeignReferenceWithVariation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SdgForeignReferenceWithVariation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -121,7 +124,7 @@ class SdgForeignReferenceWithVariation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -129,7 +132,7 @@ class SdgForeignReferenceWithVariation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -137,7 +140,7 @@ class SdgForeignReferenceWithVariation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -145,7 +148,7 @@ class SdgForeignReferenceWithVariation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -153,15 +156,17 @@ class SdgForeignReferenceWithVariation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["SdgForeignReferenceWithVariation.Annotations"] = field(
+    annotations: Optional[
+        "SdgForeignReferenceWithVariation.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lower_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -169,7 +174,7 @@ class SdgForeignReferenceWithVariation:
             "name": "LOWER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -177,7 +182,7 @@ class SdgForeignReferenceWithVariation:
             "name": "UPPER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity_infinite: Optional[Boolean] = field(
         default=None,
@@ -185,7 +190,7 @@ class SdgForeignReferenceWithVariation:
             "name": "UPPER-MULTIPLICITY-INFINITE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     gid: Optional[NmtokenString] = field(
         default=None,
@@ -193,7 +198,7 @@ class SdgForeignReferenceWithVariation:
             "name": "GID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dest_meta_class: Optional[MetaClassName] = field(
         default=None,
@@ -201,7 +206,7 @@ class SdgForeignReferenceWithVariation:
             "name": "DEST-META-CLASS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation: Optional[Boolean] = field(
         default=None,
@@ -209,22 +214,24 @@ class SdgForeignReferenceWithVariation:
             "name": "VARIATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    valid_binding_times: Optional["SdgForeignReferenceWithVariation.ValidBindingTimes"] = field(
+    valid_binding_times: Optional[
+        "SdgForeignReferenceWithVariation.ValidBindingTimes"
+    ] = field(
         default=None,
         metadata={
             "name": "VALID-BINDING-TIMES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -232,14 +239,14 @@ class SdgForeignReferenceWithVariation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -250,7 +257,7 @@ class SdgForeignReferenceWithVariation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -261,7 +268,7 @@ class SdgForeignReferenceWithVariation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -269,11 +276,12 @@ class SdgForeignReferenceWithVariation:
         """
         :ivar valid_binding_time: List of valid binding times.
         """
+
         valid_binding_time: List[FullBindingTimeEnum] = field(
             default_factory=list,
             metadata={
                 "name": "VALID-BINDING-TIME",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

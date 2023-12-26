@@ -9,6 +9,7 @@ class FormOfPaymentRef5:
     """
     A reference to a Form of Payment in the existing UR.
     """
+
     class Meta:
         name = "FormOfPaymentRef"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -19,5 +20,5 @@ class FormOfPaymentRef5:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

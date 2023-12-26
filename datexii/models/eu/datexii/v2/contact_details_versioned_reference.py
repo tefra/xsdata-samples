@@ -16,5 +16,5 @@ class ContactDetailsVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

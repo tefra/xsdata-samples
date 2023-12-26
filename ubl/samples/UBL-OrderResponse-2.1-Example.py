@@ -23,54 +23,54 @@ from xsdata.models.datatype import XmlTime
 
 obj = OrderResponse(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     customization_id=CustomizationId(
-        value="urn:www.cenbii.eu:transaction:biicoretrdmXYZ:ver1.0"
+        value='urn:www.cenbii.eu:transaction:biicoretrdmXYZ:ver1.0'
     ),
     profile_id=ProfileId(
-        value="urn:www.cenbii.eu:profile:BIIXYZ:ver1.0",
-        scheme_id="Profile",
-        scheme_agency_id="BII"
+        value='urn:www.cenbii.eu:profile:BIIXYZ:ver1.0',
+        scheme_id='Profile',
+        scheme_agency_id='BII'
     ),
     id=Id(
-        value="7"
+        value='7'
     ),
     issue_date=XmlDate(2010, 1, 21),
     issue_time=XmlTime(12, 30, 0, 0),
     note=[
         Note(
-            value="Information text for the whole order response"
+            value='Information text for the whole order response'
         ),
     ],
     document_currency_code=DocumentCurrencyCode(
-        value="SEK"
+        value='SEK'
     ),
     order_reference=[
         OrderReference(
             id=Id(
-                value="34"
+                value='34'
             )
         ),
     ],
     seller_supplier_party=SellerSupplierParty(
         party=Party(
             endpoint_id=EndpointId(
-                value="7302347231111",
-                scheme_id="GLN",
-                scheme_agency_id="9"
+                value='7302347231111',
+                scheme_id='GLN',
+                scheme_agency_id='9'
             ),
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="SellerPartyID123"
+                        value='SellerPartyID123'
                     )
                 ),
             ],
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Moderna Produkter AB"
+                        value='Moderna Produkter AB'
                     )
                 ),
             ]
@@ -79,28 +79,28 @@ obj = OrderResponse(
     buyer_customer_party=BuyerCustomerParty(
         party=Party(
             endpoint_id=EndpointId(
-                value="7300072311115",
-                scheme_id="GLN",
-                scheme_agency_id="9"
+                value='7300072311115',
+                scheme_id='GLN',
+                scheme_agency_id='9'
             ),
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="7300070011115",
-                        scheme_id="GLN",
-                        scheme_agency_id="9"
+                        value='7300070011115',
+                        scheme_id='GLN',
+                        scheme_agency_id='9'
                     )
                 ),
                 PartyIdentification(
                     id=Id(
-                        value="PartyID123"
+                        value='PartyID123'
                     )
                 ),
             ],
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Johnssons byggvaror"
+                        value='Johnssons byggvaror'
                     )
                 ),
             ]
@@ -110,12 +110,12 @@ obj = OrderResponse(
         OrderLine(
             line_item=LineItem(
                 id=Id(
-                    value="1"
+                    value='1'
                 ),
                 line_status_code=LineStatusCode(
-                    value="NoStatus",
-                    list_agency_id="UBL",
-                    list_name="Line Status"
+                    value='NoStatus',
+                    list_agency_id='UBL',
+                    list_name='Line Status'
                 ),
                 item=Item(
 
@@ -125,12 +125,12 @@ obj = OrderResponse(
         OrderLine(
             line_item=LineItem(
                 id=Id(
-                    value="2"
+                    value='2'
                 ),
                 line_status_code=LineStatusCode(
-                    value="Disputed",
-                    list_agency_id="UBL",
-                    list_name="Line Status"
+                    value='Disputed',
+                    list_agency_id='UBL',
+                    list_name='Line Status'
                 ),
                 item=Item(
 

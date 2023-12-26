@@ -32,6 +32,7 @@ class TypeElectronicAddressHistory1(TypeKeyTaggedElement1):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typeElectronicAddressHistory"
 
@@ -42,7 +43,7 @@ class TypeElectronicAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 1000,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -51,28 +52,28 @@ class TypeElectronicAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     format: TypeEmailFormat1 = field(
         default=TypeEmailFormat1.HTML,
         metadata={
             "name": "Format",
             "type": "Attribute",
-        }
+        },
     )
     purpose: None | TypeContactPurpose1 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     provisioned: None | bool = field(
         default=None,
         metadata={
             "name": "Provisioned",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -81,12 +82,12 @@ class TypeElectronicAddressHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

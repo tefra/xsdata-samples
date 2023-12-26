@@ -20,6 +20,7 @@ class Requisition6:
     type_value
         Type can be Cash or Credit for category as Government
     """
+
     class Meta:
         name = "Requisition"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -29,19 +30,19 @@ class Requisition6:
         metadata={
             "name": "Number",
             "type": "Attribute",
-        }
+        },
     )
     category: None | RequisitionCategory6 = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | RequisitionType6 = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

@@ -22,6 +22,7 @@ class PublicEventType2Enum(Enum):
         generation.
     :cvar OTHER: Some other kind of public event.
     """
+
     OPEN_AIR_CONCERT = "openAirConcert"
     SOUND_AND_LIGHT_SHOW = "soundAndLightShow"
     ART_EVENT = "artEvent"

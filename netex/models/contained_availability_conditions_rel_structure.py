@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ContainedAvailabilityConditionsRelStructure(ContainmentAggregationStructure):
+class ContainedAvailabilityConditionsRelStructure(
+    ContainmentAggregationStructure
+):
     class Meta:
         name = "containedAvailabilityConditions_RelStructure"
 
@@ -18,5 +20,5 @@ class ContainedAvailabilityConditionsRelStructure(ContainmentAggregationStructur
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

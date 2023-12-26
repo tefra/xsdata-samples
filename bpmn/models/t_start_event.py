@@ -14,5 +14,5 @@ class TStartEvent(TCatchEvent):
         metadata={
             "name": "isInterrupting",
             "type": "Attribute",
-        }
+        },
     )

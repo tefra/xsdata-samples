@@ -31,31 +31,36 @@ class RtePluginProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RTE-PLUGIN-PROPS"
 
-    associated_cross_sw_cluster_com_rte_plugin_ref: Optional["RtePluginProps.AssociatedCrossSwClusterComRtePluginRef"] = field(
+    associated_cross_sw_cluster_com_rte_plugin_ref: Optional[
+        "RtePluginProps.AssociatedCrossSwClusterComRtePluginRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-CROSS-SW-CLUSTER-COM-RTE-PLUGIN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    associated_rte_plugin_ref: Optional["RtePluginProps.AssociatedRtePluginRef"] = field(
+    associated_rte_plugin_ref: Optional[
+        "RtePluginProps.AssociatedRtePluginRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-RTE-PLUGIN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -63,7 +68,7 @@ class RtePluginProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -74,7 +79,7 @@ class RtePluginProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -85,5 +90,5 @@ class RtePluginProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

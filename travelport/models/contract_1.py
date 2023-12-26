@@ -39,6 +39,7 @@ class Contract1(TypeKeyTaggedElement1):
     priority_order
         Priority order associated with this Contract.
     """
+
     class Meta:
         name = "Contract"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -50,7 +51,7 @@ class Contract1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )
     supplier_type: None | TypeSupplierType1 = field(
         default=None,
@@ -58,7 +59,7 @@ class Contract1(TypeKeyTaggedElement1):
             "name": "SupplierType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider: None | str = field(
         default=None,
@@ -68,7 +69,7 @@ class Contract1(TypeKeyTaggedElement1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
@@ -76,14 +77,14 @@ class Contract1(TypeKeyTaggedElement1):
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     expiration_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
-        }
+        },
     )
     discount_percentage: None | str = field(
         default=None,
@@ -91,14 +92,14 @@ class Contract1(TypeKeyTaggedElement1):
             "name": "DiscountPercentage",
             "type": "Attribute",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     discount_value: None | str = field(
         default=None,
         metadata={
             "name": "DiscountValue",
             "type": "Attribute",
-        }
+        },
     )
     supplier_contract_number: None | str = field(
         default=None,
@@ -108,7 +109,7 @@ class Contract1(TypeKeyTaggedElement1):
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     promotional_designator_name: None | str = field(
         default=None,
@@ -117,7 +118,7 @@ class Contract1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -126,7 +127,7 @@ class Contract1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -135,5 +136,5 @@ class Contract1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

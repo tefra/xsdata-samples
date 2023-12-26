@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .ecuc_affection_enum import EcucAffectionEnum
-from .ecuc_common_attributes_subtypes_enum import EcucCommonAttributesSubtypesEnum
+from .ecuc_common_attributes_subtypes_enum import (
+    EcucCommonAttributesSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -31,16 +33,19 @@ class EcucConfigurationClassAffection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECUC-CONFIGURATION-CLASS-AFFECTION"
 
-    affected_refs: Optional["EcucConfigurationClassAffection.AffectedRefs"] = field(
+    affected_refs: Optional[
+        "EcucConfigurationClassAffection.AffectedRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "AFFECTED-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     affection_kind: Optional[EcucAffectionEnum] = field(
         default=None,
@@ -48,14 +53,14 @@ class EcucConfigurationClassAffection:
             "name": "AFFECTION-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -63,18 +68,20 @@ class EcucConfigurationClassAffection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class AffectedRefs:
-        affected_ref: List["EcucConfigurationClassAffection.AffectedRefs.AffectedRef"] = field(
+        affected_ref: List[
+            "EcucConfigurationClassAffection.AffectedRefs.AffectedRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "AFFECTED-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -85,5 +92,5 @@ class EcucConfigurationClassAffection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

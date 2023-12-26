@@ -16,7 +16,7 @@ class AirPrePayPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class AirPrePayPortTypeServiceInput:
                 "name": "AirPrePayReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            }
+            },
         )

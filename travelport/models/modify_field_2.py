@@ -1,9 +1,13 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.type_action_2 import TypeAction2
-from travelport.models.type_custom_field_data_format_2 import TypeCustomFieldDataFormat2
+from travelport.models.type_custom_field_data_format_2 import (
+    TypeCustomFieldDataFormat2,
+)
 from travelport.models.type_float_restriction_2 import TypeFloatRestriction2
-from travelport.models.type_integer_restriction_2 import TypeIntegerRestriction2
+from travelport.models.type_integer_restriction_2 import (
+    TypeIntegerRestriction2,
+)
 from travelport.models.type_masked_2 import TypeMasked2
 from travelport.models.type_string_restriction_2 import TypeStringRestriction2
 
@@ -78,58 +82,65 @@ class ModifyField2:
     force
         To specify whether this is a Force Update or Force Delete.
     """
+
     class Meta:
         name = "ModifyField"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
-    freeform_text_restriction: None | ModifyField2.FreeformTextRestriction = field(
-        default=None,
-        metadata={
-            "name": "FreeformTextRestriction",
-            "type": "Element",
-        }
+    freeform_text_restriction: None | ModifyField2.FreeformTextRestriction = (
+        field(
+            default=None,
+            metadata={
+                "name": "FreeformTextRestriction",
+                "type": "Element",
+            },
+        )
     )
-    whole_number_restriction: None | ModifyField2.WholeNumberRestriction = field(
-        default=None,
-        metadata={
-            "name": "WholeNumberRestriction",
-            "type": "Element",
-        }
+    whole_number_restriction: None | ModifyField2.WholeNumberRestriction = (
+        field(
+            default=None,
+            metadata={
+                "name": "WholeNumberRestriction",
+                "type": "Element",
+            },
+        )
     )
     decimal_restriction: None | ModifyField2.DecimalRestriction = field(
         default=None,
         metadata={
             "name": "DecimalRestriction",
             "type": "Element",
-        }
+        },
     )
     text_restriction: None | ModifyField2.TextRestriction = field(
         default=None,
         metadata={
             "name": "TextRestriction",
             "type": "Element",
-        }
+        },
     )
-    alpha_numeric_restriction: None | ModifyField2.AlphaNumericRestriction = field(
-        default=None,
-        metadata={
-            "name": "AlphaNumericRestriction",
-            "type": "Element",
-        }
+    alpha_numeric_restriction: None | ModifyField2.AlphaNumericRestriction = (
+        field(
+            default=None,
+            metadata={
+                "name": "AlphaNumericRestriction",
+                "type": "Element",
+            },
+        )
     )
     percentage_restriction: None | ModifyField2.PercentageRestriction = field(
         default=None,
         metadata={
             "name": "PercentageRestriction",
             "type": "Element",
-        }
+        },
     )
     id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -139,7 +150,7 @@ class ModifyField2:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -148,7 +159,7 @@ class ModifyField2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     type_value: None | TypeCustomFieldDataFormat2 = field(
         default=None,
@@ -156,21 +167,21 @@ class ModifyField2:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     encrypted: bool = field(
         default=False,
         metadata={
             "name": "Encrypted",
             "type": "Attribute",
-        }
+        },
     )
     masked: TypeMasked2 = field(
         default=TypeMasked2.NOT_MASKED,
         metadata={
             "name": "Masked",
             "type": "Attribute",
-        }
+        },
     )
     default_value: None | str = field(
         default=None,
@@ -179,42 +190,42 @@ class ModifyField2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     protected: bool = field(
         default=False,
         metadata={
             "name": "Protected",
             "type": "Attribute",
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     action: None | TypeAction2 = field(
         default=None,
@@ -222,14 +233,14 @@ class ModifyField2:
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     force: bool = field(
         default=False,
         metadata={
             "name": "Force",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -240,13 +251,14 @@ class ModifyField2:
         action
             Indicate the action to be executed (update or delete)
         """
+
         action: None | TypeAction2 = field(
             default=None,
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -257,13 +269,14 @@ class ModifyField2:
         action
             Indicate the action to be executed (update or delete)
         """
+
         action: None | TypeAction2 = field(
             default=None,
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -274,13 +287,14 @@ class ModifyField2:
         action
             Indicate the action to be executed (update or delete)
         """
+
         action: None | TypeAction2 = field(
             default=None,
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -291,13 +305,14 @@ class ModifyField2:
         action
             Indicate the action to be executed (add, update or delete)
         """
+
         action: None | TypeAction2 = field(
             default=None,
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -308,13 +323,14 @@ class ModifyField2:
         action
             Indicate the action to be executed (add, update or delete)
         """
+
         action: None | TypeAction2 = field(
             default=None,
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -325,11 +341,12 @@ class ModifyField2:
         action
             Indicate the action to be executed (add, update or delete)
         """
+
         action: None | TypeAction2 = field(
             default=None,
             metadata={
                 "name": "Action",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -16,6 +16,7 @@ class ExternalReferencing:
         external/other location referencing system.
     :ivar external_referencing_extension:
     """
+
     external_location_code: Optional[str] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class ExternalReferencing:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     external_referencing_system: Optional[str] = field(
         default=None,
@@ -34,7 +35,7 @@ class ExternalReferencing:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     external_referencing_extension: Optional[ExtensionType] = field(
         default=None,
@@ -42,5 +43,5 @@ class ExternalReferencing:
             "name": "externalReferencingExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

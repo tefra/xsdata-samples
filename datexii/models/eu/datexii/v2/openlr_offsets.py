@@ -17,13 +17,14 @@ class OpenlrOffsets:
         the location.
     :ivar openlr_offsets_extension:
     """
+
     openlr_positive_offset: Optional[int] = field(
         default=None,
         metadata={
             "name": "openlrPositiveOffset",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     openlr_negative_offset: Optional[int] = field(
         default=None,
@@ -31,7 +32,7 @@ class OpenlrOffsets:
             "name": "openlrNegativeOffset",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     openlr_offsets_extension: Optional[ExtensionType] = field(
         default=None,
@@ -39,5 +40,5 @@ class OpenlrOffsets:
             "name": "openlrOffsetsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -14,6 +14,7 @@ class RoadworksDurationEnum(Enum):
     :cvar SHORT_TERM: The roadworks are expected to last for a short
         term ( duration &lt; = 1 month)
     """
+
     LONG_TERM = "longTerm"
     MEDIUM_TERM = "mediumTerm"
     SHORT_TERM = "shortTerm"

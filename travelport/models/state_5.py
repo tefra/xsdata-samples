@@ -9,6 +9,7 @@ class State5:
     """
     Container to house the state code for an address.
     """
+
     class Meta:
         name = "State"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -17,5 +18,5 @@ class State5:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

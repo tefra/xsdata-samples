@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.parking_equipment_or_service_facility import ParkingEquipmentOrServiceFacility
-from datexii.models.eu.datexii.v2.service_facility_type_enum import ServiceFacilityTypeEnum
+from datexii.models.eu.datexii.v2.parking_equipment_or_service_facility import (
+    ParkingEquipmentOrServiceFacility,
+)
+from datexii.models.eu.datexii.v2.service_facility_type_enum import (
+    ServiceFacilityTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -26,6 +30,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
         specified here in metres.
     :ivar service_facility_extension:
     """
+
     service_facility_type: Optional[ServiceFacilityTypeEnum] = field(
         default=None,
         metadata={
@@ -33,7 +38,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     number_of_subitems: Optional[int] = field(
         default=None,
@@ -41,7 +46,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
             "name": "numberOfSubitems",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_from_parking_site: Optional[int] = field(
         default=None,
@@ -49,7 +54,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
             "name": "distanceFromParkingSite",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     service_facility_extension: Optional[ExtensionType] = field(
         default=None,
@@ -57,5 +62,5 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
             "name": "serviceFacilityExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

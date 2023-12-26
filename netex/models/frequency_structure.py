@@ -15,7 +15,7 @@ class FrequencyStructure:
             "name": "ScheduledHeadwayInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_headway_interval: Optional[XmlDuration] = field(
         default=None,
@@ -23,7 +23,7 @@ class FrequencyStructure:
             "name": "MinimumHeadwayInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_headway_interval: Optional[XmlDuration] = field(
         default=None,
@@ -31,7 +31,7 @@ class FrequencyStructure:
             "name": "MaximumHeadwayInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     headway_display: Optional[HeadwayUseEnumeration] = field(
         default=None,
@@ -39,7 +39,7 @@ class FrequencyStructure:
             "name": "HeadwayDisplay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     frequency_regulated: Optional[bool] = field(
         default=None,
@@ -47,7 +47,7 @@ class FrequencyStructure:
             "name": "FrequencyRegulated",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -55,5 +55,5 @@ class FrequencyStructure:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

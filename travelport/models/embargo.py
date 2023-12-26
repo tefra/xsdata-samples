@@ -32,6 +32,7 @@ class Embargo:
         The service sub code of the optional service on which the embargo
         applies.  Provider: 1G, 1V, 1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -40,7 +41,7 @@ class Embargo:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -48,14 +49,14 @@ class Embargo:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -63,21 +64,21 @@ class Embargo:
             "name": "Name",
             "type": "Attribute",
             "max_length": 30,
-        }
+        },
     )
     text: None | str = field(
         default=None,
         metadata={
             "name": "Text",
             "type": "Attribute",
-        }
+        },
     )
     secondary_type: None | str = field(
         default=None,
         metadata={
             "name": "SecondaryType",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -86,14 +87,14 @@ class Embargo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     url: None | str = field(
         default=None,
         metadata={
             "name": "Url",
             "type": "Attribute",
-        }
+        },
     )
     service_sub_code: None | str = field(
         default=None,
@@ -101,5 +102,5 @@ class Embargo:
             "name": "ServiceSubCode",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )

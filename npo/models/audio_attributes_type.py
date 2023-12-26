@@ -15,7 +15,7 @@ class AudioAttributesType:
             "name": "numberOfChannels",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     audio_coding: None | str = field(
         default=None,
@@ -23,12 +23,12 @@ class AudioAttributesType:
             "name": "audioCoding",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     language: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )

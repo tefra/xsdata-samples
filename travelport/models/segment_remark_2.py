@@ -10,6 +10,7 @@ class SegmentRemark2:
 
     (max 512 chars)
     """
+
     class Meta:
         name = "SegmentRemark"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -18,7 +19,7 @@ class SegmentRemark2:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -26,5 +27,5 @@ class SegmentRemark2:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

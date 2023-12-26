@@ -14,5 +14,5 @@ class MedicalFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

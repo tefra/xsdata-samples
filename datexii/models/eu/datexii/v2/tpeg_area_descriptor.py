@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_descriptor import TpegDescriptor
-from datexii.models.eu.datexii.v2.tpeg_loc03_area_descriptor_subtype_enum import TpegLoc03AreaDescriptorSubtypeEnum
+from datexii.models.eu.datexii.v2.tpeg_loc03_area_descriptor_subtype_enum import (
+    TpegLoc03AreaDescriptorSubtypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,14 +19,17 @@ class TpegAreaDescriptor(TpegDescriptor):
         TPEG Loc table 03).
     :ivar tpeg_area_descriptor_extension:
     """
-    tpeg_area_descriptor_type: Optional[TpegLoc03AreaDescriptorSubtypeEnum] = field(
+
+    tpeg_area_descriptor_type: Optional[
+        TpegLoc03AreaDescriptorSubtypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "tpegAreaDescriptorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     tpeg_area_descriptor_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +37,5 @@ class TpegAreaDescriptor(TpegDescriptor):
             "name": "tpegAreaDescriptorExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

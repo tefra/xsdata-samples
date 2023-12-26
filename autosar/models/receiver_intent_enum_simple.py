@@ -10,5 +10,6 @@ class ReceiverIntentEnumSimple(Enum):
     :cvar WONT_RECEIVE: The receiver won't receive the event or field
         notifier.
     """
+
     WILL_RECEIVE = "WILL-RECEIVE"
     WONT_RECEIVE = "WONT-RECEIVE"

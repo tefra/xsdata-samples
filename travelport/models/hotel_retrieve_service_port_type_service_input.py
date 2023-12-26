@@ -16,7 +16,7 @@ class HotelRetrieveServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class HotelRetrieveServicePortTypeServiceInput:
                 "name": "HotelRetrieveReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            }
+            },
         )

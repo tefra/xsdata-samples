@@ -24,6 +24,7 @@ class AirUpsellOffer:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -33,7 +34,7 @@ class AirUpsellOffer:
             "name": "AccountCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -43,33 +44,33 @@ class AirUpsellOffer:
             "required": True,
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

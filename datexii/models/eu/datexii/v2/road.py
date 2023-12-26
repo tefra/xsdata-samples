@@ -24,13 +24,14 @@ class Road:
         the calling component/object).
     :ivar road_extension:
     """
+
     name_of_road: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "nameOfRoad",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     road_identifier: Optional[MultilingualString] = field(
         default=None,
@@ -38,7 +39,7 @@ class Road:
             "name": "roadIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     type_of_road: Optional[RoadTypeEnum] = field(
         default=None,
@@ -46,7 +47,7 @@ class Road:
             "name": "typeOfRoad",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     road_destination: List[MultilingualString] = field(
         default_factory=list,
@@ -54,7 +55,7 @@ class Road:
             "name": "roadDestination",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     road_origination: List[MultilingualString] = field(
         default_factory=list,
@@ -62,7 +63,7 @@ class Road:
             "name": "roadOrigination",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_to_this_road: Optional[int] = field(
         default=None,
@@ -70,7 +71,7 @@ class Road:
             "name": "distanceToThisRoad",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     road_extension: Optional[ExtensionType] = field(
         default=None,
@@ -78,5 +79,5 @@ class Road:
             "name": "roadExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

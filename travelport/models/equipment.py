@@ -21,6 +21,7 @@ class Equipment:
         Status of the request returned by the supplier. Valid Values KK
         (Confirmed), UC (Unable to Confirm and NN (On request)
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -30,7 +31,7 @@ class Equipment:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -38,14 +39,14 @@ class Equipment:
             "name": "Description",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -54,5 +55,5 @@ class Equipment:
             "type": "Attribute",
             "length": 2,
             "white_space": "collapse",
-        }
+        },
     )

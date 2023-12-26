@@ -15,6 +15,7 @@ class EcucConfigurationClassEnumSimple(Enum):
         the fact that certain information is fixed even before the pre-
         compile stage.
     """
+
     LINK = "LINK"
     POST_BUILD = "POST-BUILD"
     PRE_COMPILE = "PRE-COMPILE"

@@ -11,5 +11,6 @@ class KeepWithPreviousEnumSimple(Enum):
         block with the previous one. This is the same as if the
         attribute itself is missing.
     """
+
     KEEP = "KEEP"
     NO_KEEP = "NO-KEEP"

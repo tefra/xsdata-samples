@@ -58,6 +58,7 @@ class LaneEnum(Enum):
     :cvar TURNING_LANE: In the turning lane.
     :cvar VERGE: On the verge.
     """
+
     ALL_LANES_COMPLETE_CARRIAGEWAY = "allLanesCompleteCarriageway"
     BUS_LANE = "busLane"
     BUS_STOP = "busStop"

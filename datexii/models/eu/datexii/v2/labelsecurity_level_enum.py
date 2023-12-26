@@ -17,6 +17,7 @@ class LABELSecurityLevelEnum(Enum):
         professional staff, site manned around the clock.
     :cvar UNKNOWN: Unknown.
     """
+
     NONE = "none"
     SECURITY_LEVEL1 = "securityLevel1"
     SECURITY_LEVEL2 = "securityLevel2"

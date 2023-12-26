@@ -12,6 +12,7 @@ class ContainerIPduHeaderTypeEnumSimple(Enum):
     :cvar SHORT_HEADER: Header size is 32 bit: * Header Id 24 bit * Dlc
         8 bit.
     """
+
     LONG_HEADER = "LONG-HEADER"
     NO_HEADER = "NO-HEADER"
     SHORT_HEADER = "SHORT-HEADER"

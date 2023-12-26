@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .execution_dependency import ExecutionDependency
-from .function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
+from .function_group_state_in_function_group_set_instance_ref import (
+    FunctionGroupStateInFunctionGroupSetInstanceRef,
+)
 from .ref import Ref
 from .resource_consumption import ResourceConsumption
 from .resource_group_subtypes_enum import ResourceGroupSubtypesEnum
@@ -39,24 +41,29 @@ class StateDependentStartupConfig:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "STATE-DEPENDENT-STARTUP-CONFIG"
 
-    execution_dependencys: Optional["StateDependentStartupConfig.ExecutionDependencys"] = field(
+    execution_dependencys: Optional[
+        "StateDependentStartupConfig.ExecutionDependencys"
+    ] = field(
         default=None,
         metadata={
             "name": "EXECUTION-DEPENDENCYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    function_group_state_irefs: Optional["StateDependentStartupConfig.FunctionGroupStateIrefs"] = field(
+    function_group_state_irefs: Optional[
+        "StateDependentStartupConfig.FunctionGroupStateIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "FUNCTION-GROUP-STATE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     resource_consumption: Optional[ResourceConsumption] = field(
         default=None,
@@ -64,30 +71,34 @@ class StateDependentStartupConfig:
             "name": "RESOURCE-CONSUMPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    resource_group_ref: Optional["StateDependentStartupConfig.ResourceGroupRef"] = field(
+    resource_group_ref: Optional[
+        "StateDependentStartupConfig.ResourceGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RESOURCE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    startup_config_ref: Optional["StateDependentStartupConfig.StartupConfigRef"] = field(
+    startup_config_ref: Optional[
+        "StateDependentStartupConfig.StartupConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "STARTUP-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -95,7 +106,7 @@ class StateDependentStartupConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -106,18 +117,20 @@ class StateDependentStartupConfig:
                 "name": "EXECUTION-DEPENDENCY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FunctionGroupStateIrefs:
-        function_group_state_iref: List[FunctionGroupStateInFunctionGroupSetInstanceRef] = field(
+        function_group_state_iref: List[
+            FunctionGroupStateInFunctionGroupSetInstanceRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FUNCTION-GROUP-STATE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -128,7 +141,7 @@ class StateDependentStartupConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -139,5 +152,5 @@ class StateDependentStartupConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

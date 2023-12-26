@@ -17,5 +17,5 @@ class FlexibleRouteVersionStructure(RouteVersionStructure):
             "name": "FlexibleRouteType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

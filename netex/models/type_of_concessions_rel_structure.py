@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_concession import TypeOfConcession
 from .type_of_concession_ref import TypeOfConcessionRef
@@ -12,7 +12,9 @@ class TypeOfConcessionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfConcessions_RelStructure"
 
-    type_of_concession_ref_or_type_of_concession: List[object] = field(
+    type_of_concession_ref_or_type_of_concession: List[
+        Union[TypeOfConcessionRef, TypeOfConcession]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class TypeOfConcessionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

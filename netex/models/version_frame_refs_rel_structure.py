@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .composite_frame_ref import CompositeFrameRef
 from .driver_schedule_frame_ref import DriverScheduleFrameRef
 from .fare_frame_ref import FareFrameRef
@@ -22,7 +22,22 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "versionFrameRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            SalesTransactionFrameRef,
+            FareFrameRef,
+            ServiceFrameRef,
+            DriverScheduleFrameRef,
+            VehicleScheduleFrameRef,
+            TimetableFrameRef,
+            SiteFrameRef,
+            InfrastructureFrameRef,
+            GeneralFrameRef,
+            ResourceFrameRef,
+            ServiceCalendarFrameRef,
+            CompositeFrameRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -88,5 +103,5 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

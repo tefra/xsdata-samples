@@ -17,7 +17,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "name": "TripType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     double_single_fare: Optional[bool] = field(
         default=None,
@@ -25,7 +25,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "name": "DoubleSingleFare",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_trip: Optional[bool] = field(
         default=None,
@@ -33,7 +33,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "name": "ShortTrip",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_required: Optional[bool] = field(
         default=None,
@@ -41,5 +41,5 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "name": "IsRequired",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -20,6 +20,7 @@ class TypeCommissionReferenceHistory2(TypeKeyElement2):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typeCommissionReferenceHistory"
 
@@ -30,7 +31,7 @@ class TypeCommissionReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     agent_number: None | str = field(
         default=None,
@@ -39,7 +40,7 @@ class TypeCommissionReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -48,12 +49,12 @@ class TypeCommissionReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

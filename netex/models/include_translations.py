@@ -13,5 +13,5 @@ class IncludeTranslations:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

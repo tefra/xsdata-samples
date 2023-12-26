@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .uic_product_characteristic_enumeration import UicProductCharacteristicEnumeration
+from .uic_product_characteristic_enumeration import (
+    UicProductCharacteristicEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -14,5 +16,5 @@ class UicProductCharacteristic:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

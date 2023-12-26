@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -21,7 +21,17 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "PassingTime_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            DatedVehicleJourneyRef,
+            DatedSpecialServiceRef,
+            SpecialServiceRef,
+            TemplateServiceJourneyRef,
+            ServiceJourneyRef,
+            DeadRunRef,
+            VehicleJourneyRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -62,7 +72,7 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     alight_and_reboard: Optional[bool] = field(
         default=None,
@@ -70,9 +80,16 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
             "name": "AlightAndReboard",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            FarePointInPatternRef,
+            StopPointInJourneyPatternRef,
+            TimingPointInJourneyPatternRef,
+            PointInJourneyPatternRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -98,5 +115,5 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

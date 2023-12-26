@@ -20,6 +20,7 @@ class MonthOfYearEnum(Enum):
     :cvar NOVEMBER: The month of November.
     :cvar DECEMBER: The month of December.
     """
+
     JANUARY = "january"
     FEBRUARY = "february"
     MARCH = "march"

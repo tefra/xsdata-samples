@@ -9,6 +9,7 @@ class Volume:
     The volume number of a published journal, or the number of a printed volume for
     a book or conference proceedings.
     """
+
     class Meta:
         name = "volume"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -18,5 +19,5 @@ class Volume:
         metadata={
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

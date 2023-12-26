@@ -13,6 +13,7 @@ class BookingTravelerRef2:
     """
     Reference Element for Booking Traveler and Loyalty cards.
     """
+
     class Meta:
         name = "BookingTravelerRef"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -23,14 +24,14 @@ class BookingTravelerRef2:
             "name": "LoyaltyCardRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     drivers_license_ref: None | DriversLicenseRef2 = field(
         default=None,
         metadata={
             "name": "DriversLicenseRef",
             "type": "Element",
-        }
+        },
     )
     discount_card_ref: list[DiscountCardRef2] = field(
         default_factory=list,
@@ -38,7 +39,7 @@ class BookingTravelerRef2:
             "name": "DiscountCardRef",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
     payment_ref: list[PaymentRef3] = field(
         default_factory=list,
@@ -46,12 +47,12 @@ class BookingTravelerRef2:
             "name": "PaymentRef",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .fare_product_version_structure import FareProductVersionStructure
-from .preassigned_fare_product_enumeration import PreassignedFareProductEnumeration
+from .preassigned_fare_product_enumeration import (
+    PreassignedFareProductEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -17,5 +19,5 @@ class PreassignedFareProductVersionStructure(FareProductVersionStructure):
             "name": "ProductType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

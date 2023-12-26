@@ -9,5 +9,6 @@ class SoftwareClusterDiagnosticAddressSemanticsEnumSimple(Enum):
         address.
     :cvar PHYSICAL_ADDRESS: This address represents a physical address.
     """
+
     FUNCTIONAL_ADDRESS = "FUNCTIONAL-ADDRESS"
     PHYSICAL_ADDRESS = "PHYSICAL-ADDRESS"

@@ -20,7 +20,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -28,7 +28,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: List[MultilingualString] = field(
         default_factory=list,
@@ -36,7 +36,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     purpose_of_grouping_ref: Optional[PurposeOfGroupingRef] = field(
         default=None,
@@ -44,7 +44,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "name": "PurposeOfGroupingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -52,7 +52,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     info_links: Optional[InfoLinksRelStructure] = field(
         default=None,
@@ -60,5 +60,5 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "name": "infoLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

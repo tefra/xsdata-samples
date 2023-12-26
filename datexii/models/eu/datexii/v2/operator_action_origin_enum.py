@@ -12,5 +12,6 @@ class OperatorActionOriginEnum(Enum):
     :cvar INTERNAL: Operator action originated within the authority
         which is taking the action.
     """
+
     EXTERNAL = "external"
     INTERNAL = "internal"

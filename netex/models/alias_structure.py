@@ -14,7 +14,7 @@ class AliasStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     identifier_type: Optional[str] = field(
         default=None,
@@ -22,5 +22,5 @@ class AliasStructure:
             "name": "IdentifierType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

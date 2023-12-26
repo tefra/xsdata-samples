@@ -17,6 +17,7 @@ class TrafficStatusValue(DataValue):
         the identified section of road in the specified direction.
     :ivar traffic_status_value_extension:
     """
+
     traffic_status_value: Optional[TrafficStatusEnum] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class TrafficStatusValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     traffic_status_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class TrafficStatusValue(DataValue):
             "name": "trafficStatusValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

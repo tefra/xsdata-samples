@@ -22,7 +22,7 @@ class LinkVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     distance: Optional[Decimal] = field(
         default=None,
@@ -30,14 +30,14 @@ class LinkVersionStructure(DataManagedObjectStructure):
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     types: Optional[LinkTypeRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     line_string: Optional[LineString] = field(
         default=None,
@@ -45,14 +45,14 @@ class LinkVersionStructure(DataManagedObjectStructure):
             "name": "LineString",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-        }
+        },
     )
     projections: Optional[ProjectionsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     passing_through: Optional[PointsOnLinkRelStructure] = field(
         default=None,
@@ -60,5 +60,5 @@ class LinkVersionStructure(DataManagedObjectStructure):
             "name": "passingThrough",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -12,6 +12,7 @@ class CollectionAddress(TypeStructuredAddress1):
     An address from which a rental car should be picked up at the end of a rental
     period and a phone number associated with the address.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -21,5 +22,5 @@ class CollectionAddress(TypeStructuredAddress1):
             "name": "PhoneNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

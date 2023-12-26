@@ -10,5 +10,6 @@ class RamBlockStatusControlEnumSimple(Enum):
     :cvar NV_RAM_MANAGER: The ramBlock status is controlled exclusively
         by the Nv Ram Manager.
     """
+
     API = "API"
     NV_RAM_MANAGER = "NV-RAM-MANAGER"

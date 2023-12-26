@@ -18,6 +18,7 @@ class ContractCode:
     provider_code
     supplier_code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,14 +30,14 @@ class ContractCode:
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     company_name: None | str = field(
         default=None,
         metadata={
             "name": "CompanyName",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -45,7 +46,7 @@ class ContractCode:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -54,5 +55,5 @@ class ContractCode:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )

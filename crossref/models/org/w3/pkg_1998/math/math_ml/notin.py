@@ -15,5 +15,5 @@ class Notin:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

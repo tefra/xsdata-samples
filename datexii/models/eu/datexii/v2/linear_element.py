@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.linear_element_nature_enum import LinearElementNatureEnum
+from datexii.models.eu.datexii.v2.linear_element_nature_enum import (
+    LinearElementNatureEnum,
+)
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -26,13 +28,14 @@ class LinearElement:
         linear element.
     :ivar linear_element_extension:
     """
+
     road_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "roadName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     road_number: Optional[str] = field(
         default=None,
@@ -41,7 +44,7 @@ class LinearElement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     linear_element_reference_model: Optional[str] = field(
         default=None,
@@ -50,7 +53,7 @@ class LinearElement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     linear_element_reference_model_version: Optional[str] = field(
         default=None,
@@ -59,7 +62,7 @@ class LinearElement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     linear_element_nature: Optional[LinearElementNatureEnum] = field(
         default=None,
@@ -67,7 +70,7 @@ class LinearElement:
             "name": "linearElementNature",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     linear_element_extension: Optional[ExtensionType] = field(
         default=None,
@@ -75,5 +78,5 @@ class LinearElement:
             "name": "linearElementExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

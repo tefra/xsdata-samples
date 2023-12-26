@@ -16,7 +16,7 @@ class GdsExitQueueServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class GdsExitQueueServicePortTypeServiceInput:
                 "name": "GdsExitQueueReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/gdsQueue_v52_0",
-            }
+            },
         )

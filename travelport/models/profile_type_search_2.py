@@ -18,6 +18,7 @@ class ProfileTypeSearch2:
     Specifies which type of profile to be searched on and includes modifiers for
     each type.
     """
+
     class Meta:
         name = "ProfileTypeSearch"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -27,54 +28,54 @@ class ProfileTypeSearch2:
         metadata={
             "name": "AgencyGroupCriteria",
             "type": "Element",
-        }
+        },
     )
     agency_criteria: None | AgencyCriteria2 = field(
         default=None,
         metadata={
             "name": "AgencyCriteria",
             "type": "Element",
-        }
+        },
     )
     branch_criteria: None | BranchCriteria2 = field(
         default=None,
         metadata={
             "name": "BranchCriteria",
             "type": "Element",
-        }
+        },
     )
     branch_group_criteria: None | BranchGroupCriteria2 = field(
         default=None,
         metadata={
             "name": "BranchGroupCriteria",
             "type": "Element",
-        }
+        },
     )
     agent_criteria: None | AgentCriteria2 = field(
         default=None,
         metadata={
             "name": "AgentCriteria",
             "type": "Element",
-        }
+        },
     )
     account_criteria: None | AccountCriteria2 = field(
         default=None,
         metadata={
             "name": "AccountCriteria",
             "type": "Element",
-        }
+        },
     )
     traveler_criteria: None | TravelerCriteria3 = field(
         default=None,
         metadata={
             "name": "TravelerCriteria",
             "type": "Element",
-        }
+        },
     )
     traveler_group_criteria: None | TravelerGroupCriteria2 = field(
         default=None,
         metadata={
             "name": "TravelerGroupCriteria",
             "type": "Element",
-        }
+        },
     )

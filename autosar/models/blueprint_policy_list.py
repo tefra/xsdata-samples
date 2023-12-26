@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import DocumentationBlock
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -36,6 +38,7 @@ class BlueprintPolicyList:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BLUEPRINT-POLICY-LIST"
 
@@ -45,7 +48,7 @@ class BlueprintPolicyList:
             "name": "ATTRIBUTE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_derivation_guide: Optional[DocumentationBlock] = field(
         default=None,
@@ -53,30 +56,34 @@ class BlueprintPolicyList:
             "name": "BLUEPRINT-DERIVATION-GUIDE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    max_number_of_elements: Optional[PositiveIntegerValueVariationPoint] = field(
+    max_number_of_elements: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    min_number_of_elements: Optional[PositiveIntegerValueVariationPoint] = field(
+    min_number_of_elements: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "MIN-NUMBER-OF-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -84,5 +91,5 @@ class BlueprintPolicyList:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

@@ -10,6 +10,7 @@ class AgencyInfo8:
     """
     Tracks the various agent/agency information.
     """
+
     class Meta:
         name = "AgencyInfo"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -21,5 +22,5 @@ class AgencyInfo8:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

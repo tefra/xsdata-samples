@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .fulfilment_method_version_structure import FulfilmentMethodVersionStructure
+from .fulfilment_method_version_structure import (
+    FulfilmentMethodVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

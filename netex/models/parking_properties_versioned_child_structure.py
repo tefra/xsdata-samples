@@ -23,7 +23,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parking_user_types: List[ParkingUserEnumeration] = field(
         default_factory=list,
@@ -32,7 +32,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     parking_vehicle_types: List[ParkingVehicleEnumeration] = field(
         default_factory=list,
@@ -41,7 +41,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     parking_stay_list: List[ParkingStayEnumeration] = field(
         default_factory=list,
@@ -50,7 +50,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     maximum_stay: Optional[XmlDuration] = field(
         default=None,
@@ -58,19 +58,19 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "MaximumStay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     areas: Optional[ParkingAreaRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     spaces: Optional[ParkingCapacitiesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

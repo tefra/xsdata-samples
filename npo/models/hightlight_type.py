@@ -15,11 +15,11 @@ class HightlightType:
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
             "nillable": True,
-        }
+        },
     )
     term: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -16,6 +16,7 @@ class TravelInfo4:
     travel_purpose
         Purpose of the trip
     """
+
     class Meta:
         name = "TravelInfo"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -26,7 +27,7 @@ class TravelInfo4:
             "name": "TripName",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     travel_purpose: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class TravelInfo4:
             "name": "TravelPurpose",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )

@@ -12,5 +12,6 @@ class PgwideEnumSimple(Enum):
         "side-head layouts" but also if the table is in a list or in a
         note.
     """
+
     NO_PGWIDE = "NO-PGWIDE"
     PGWIDE = "PGWIDE"

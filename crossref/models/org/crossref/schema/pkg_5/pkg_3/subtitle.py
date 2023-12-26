@@ -23,6 +23,7 @@ class Subtitle:
     """
     The sub-title portion of a title.
     """
+
     class Meta:
         name = "subtitle"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -84,5 +85,5 @@ class Subtitle:
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
             ),
-        }
+        },
     )

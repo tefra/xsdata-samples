@@ -37,6 +37,7 @@ class ExclusiveAreaNestingOrder:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "EXCLUSIVE-AREA-NESTING-ORDER"
 
@@ -47,23 +48,27 @@ class ExclusiveAreaNestingOrder:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ExclusiveAreaNestingOrder.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ExclusiveAreaNestingOrder.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exclusive_area_refs: Optional["ExclusiveAreaNestingOrder.ExclusiveAreaRefs"] = field(
+    exclusive_area_refs: Optional[
+        "ExclusiveAreaNestingOrder.ExclusiveAreaRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -71,14 +76,14 @@ class ExclusiveAreaNestingOrder:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -86,7 +91,7 @@ class ExclusiveAreaNestingOrder:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -97,18 +102,20 @@ class ExclusiveAreaNestingOrder:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ExclusiveAreaRefs:
-        exclusive_area_ref: List["ExclusiveAreaNestingOrder.ExclusiveAreaRefs.ExclusiveAreaRef"] = field(
+        exclusive_area_ref: List[
+            "ExclusiveAreaNestingOrder.ExclusiveAreaRefs.ExclusiveAreaRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXCLUSIVE-AREA-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -119,5 +126,5 @@ class ExclusiveAreaNestingOrder:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

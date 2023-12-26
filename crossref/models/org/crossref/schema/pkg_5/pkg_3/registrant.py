@@ -8,6 +8,7 @@ class Registrant:
     """
     The organization responsible for the information being registered.
     """
+
     class Meta:
         name = "registrant"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class Registrant:
         metadata={
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

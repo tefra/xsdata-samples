@@ -12,6 +12,7 @@ class ExecutionOrderConstraintTypeEnumSimple(Enum):
     :cvar REPETITIVE_EOC: Specifies that the Execution Order Constraint
         specifies a repetitive execution order constraint.
     """
+
     HIERARCHICAL_EOC = "HIERARCHICAL-EOC"
     ORDINARY_EOC = "ORDINARY-EOC"
     REPETITIVE_EOC = "REPETITIVE-EOC"

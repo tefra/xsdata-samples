@@ -24,96 +24,96 @@ from xsdata.models.datatype import XmlDateTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     description=MultilingualString(
-        value="Example of simpleGrouping  "
+        value='Example of simpleGrouping  '
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             ResourceFrame(
-                id="mybus:Example_Groups_of_Entities",
-                version="any",
+                id='mybus:Example_Groups_of_Entities',
+                version='any',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 types_of_value=TypesOfValueInFrameRelStructure(
                     choice=[
                         ValueSet(
-                            id="mybus:Purposes_of_Grouping",
-                            version="001",
+                            id='mybus:Purposes_of_Grouping',
+                            version='001',
                             name=MultilingualString(
 
                             ),
                             values=TypesOfValueStructure(
                                 choice=[
                                     PurposeOfGrouping(
-                                        id="mybus:My_Purpose",
-                                        version="any",
+                                        id='mybus:My_Purpose',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Group of Scheduled StopPoints and Links"
+                                            value='Group of Scheduled StopPoints and Links'
                                         ),
                                         classes=ClassRefsRelStructure(
                                             class_in_frame_ref_or_class_ref=[
                                                 ClassRef(
-                                                    name_of_class="ScheduledStopPoint"
+                                                    name_of_class='ScheduledStopPoint'
                                                 ),
                                                 ClassRef(
-                                                    name_of_class="ServiceLink"
+                                                    name_of_class='ServiceLink'
                                                 ),
                                             ]
                                         )
                                     ),
                                 ]
                             ),
-                            class_of_values="PurposeOfGrouping"
+                            class_of_values='PurposeOfGrouping'
                         ),
                     ]
                 ),
                 groups_of_entities=GroupOfEntitiesInFrameRelStructure(
                     choice=[
                         GeneralGroupOfEntities(
-                            id="mybus:GGE001",
+                            id='mybus:GGE001',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                            version="001",
+                            version='001',
                             name=MultilingualString(
-                                value="My Group"
+                                value='My Group'
                             ),
                             purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                version="any",
-                                ref="mybus:My_Purpose"
+                                version='any',
+                                ref='mybus:My_Purpose'
                             ),
                             members=ObjectRefsRelStructure(
                                 choice=[
                                     ScheduledStopPointRef(
-                                        ref="mybus:SSP0001A",
-                                        version_ref="EXTERNAL"
+                                        ref='mybus:SSP0001A',
+                                        version_ref='EXTERNAL'
                                     ),
                                     ScheduledStopPointRef(
-                                        ref="mybus:SSP0002B",
-                                        version_ref="EXTERNAL"
+                                        ref='mybus:SSP0002B',
+                                        version_ref='EXTERNAL'
                                     ),
                                     ScheduledStopPointRef(
-                                        ref="mybus:SSP0003CA",
-                                        version_ref="EXTERNAL"
+                                        ref='mybus:SSP0003CA',
+                                        version_ref='EXTERNAL'
                                     ),
                                     ServiceLinkRef(
-                                        ref="mybus:SL_AtoB01"
+                                        ref='mybus:SL_AtoB01'
                                     ),
                                 ]
                             )

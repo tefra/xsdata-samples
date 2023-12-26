@@ -18,6 +18,7 @@ class QueueInfo:
     title
         Title of a queue.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -27,7 +28,7 @@ class QueueInfo:
             "name": "CategoryInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     queue: None | str = field(
         default=None,
@@ -35,7 +36,7 @@ class QueueInfo:
             "name": "Queue",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -45,7 +46,7 @@ class QueueInfo:
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     total_pnrcount: None | int = field(
         default=None,
@@ -53,7 +54,7 @@ class QueueInfo:
             "name": "TotalPNRCount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     pnrcount: None | int = field(
         default=None,
@@ -61,12 +62,12 @@ class QueueInfo:
             "name": "PNRCount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     title: None | str = field(
         default=None,
         metadata={
             "name": "Title",
             "type": "Attribute",
-        }
+        },
     )

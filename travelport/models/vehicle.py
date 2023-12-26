@@ -81,6 +81,7 @@ class Vehicle:
         the fare or rate being returned have been determined to be
         ‘preferred’ based on the associated policy settings.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -89,14 +90,14 @@ class Vehicle:
         metadata={
             "name": "PolicyCodesList",
             "type": "Element",
-        }
+        },
     )
     vehicle_rate: None | VehicleRate = field(
         default=None,
         metadata={
             "name": "VehicleRate",
             "type": "Element",
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -106,7 +107,7 @@ class Vehicle:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     air_conditioning: None | bool = field(
         default=None,
@@ -114,7 +115,7 @@ class Vehicle:
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     transmission_type: None | TypeVehicleTransmission = field(
         default=None,
@@ -122,7 +123,7 @@ class Vehicle:
             "name": "TransmissionType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     vehicle_class: None | TypeVehicleClass = field(
         default=None,
@@ -130,7 +131,7 @@ class Vehicle:
             "name": "VehicleClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     category: None | TypeVehicleCategory = field(
         default=None,
@@ -138,28 +139,28 @@ class Vehicle:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     door_count: None | TypeDoorCount = field(
         default=None,
         metadata={
             "name": "DoorCount",
             "type": "Attribute",
-        }
+        },
     )
     location: None | str = field(
         default=None,
         metadata={
             "name": "Location",
             "type": "Attribute",
-        }
+        },
     )
     counter_location_code: None | str = field(
         default=None,
@@ -168,14 +169,14 @@ class Vehicle:
             "type": "Attribute",
             "min_length": 4,
             "max_length": 4,
-        }
+        },
     )
     vendor_location_key: None | str = field(
         default=None,
         metadata={
             "name": "VendorLocationKey",
             "type": "Attribute",
-        }
+        },
     )
     vendor_name: None | str = field(
         default=None,
@@ -184,21 +185,21 @@ class Vehicle:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
     alternate_vendor: None | str = field(
         default=None,
         metadata={
             "name": "AlternateVendor",
             "type": "Attribute",
-        }
+        },
     )
     fuel_type: None | TypeFuel = field(
         default=None,
         metadata={
             "name": "FuelType",
             "type": "Attribute",
-        }
+        },
     )
     acriss_vehicle_code: None | str = field(
         default=None,
@@ -206,28 +207,28 @@ class Vehicle:
             "name": "AcrissVehicleCode",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     return_at_pickup: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnAtPickup",
             "type": "Attribute",
-        }
+        },
     )
     in_policy: None | bool = field(
         default=None,
         metadata={
             "name": "InPolicy",
             "type": "Attribute",
-        }
+        },
     )
     policy_code: None | int = field(
         default=None,
@@ -236,12 +237,12 @@ class Vehicle:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 9999,
-        }
+        },
     )
     preferred_option: None | bool = field(
         default=None,
         metadata={
             "name": "PreferredOption",
             "type": "Attribute",
-        }
+        },
     )

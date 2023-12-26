@@ -13,5 +13,5 @@ class TelecabinSubmode:
         default=TelecabinSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

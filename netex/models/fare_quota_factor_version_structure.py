@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .quality_structure_factor_version_structure import QualityStructureFactorVersionStructure
+from .quality_structure_factor_version_structure import (
+    QualityStructureFactorVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -16,5 +18,5 @@ class FareQuotaFactorVersionStructure(QualityStructureFactorVersionStructure):
             "name": "NumberOfUnits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

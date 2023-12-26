@@ -12,6 +12,7 @@ class BookingHotelSegmentReq(BookingBaseReq):
     """
     Used for Hotel Segment Sell and modification.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -20,12 +21,12 @@ class BookingHotelSegmentReq(BookingBaseReq):
         metadata={
             "name": "AddHotelSegment",
             "type": "Element",
-        }
+        },
     )
     delete_hotel_segment: None | DeleteHotelSegment = field(
         default=None,
         metadata={
             "name": "DeleteHotelSegment",
             "type": "Element",
-        }
+        },
     )

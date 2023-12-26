@@ -10,6 +10,7 @@ class Amenities:
     """
     Amenity information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -19,5 +20,5 @@ class Amenities:
             "name": "Amenity",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

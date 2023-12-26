@@ -2,24 +2,48 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .accesses_in_frame_rel_structure import AccessesInFrameRelStructure
 from .addresses_in_frame_rel_structure import AddressesInFrameRelStructure
-from .check_constraint_delays_in_frame_rel_structure import CheckConstraintDelaysInFrameRelStructure
-from .check_constraint_in_frame_rel_structure import CheckConstraintInFrameRelStructure
-from .check_constraint_throughputs_in_frame_rel_structure import CheckConstraintThroughputsInFrameRelStructure
+from .check_constraint_delays_in_frame_rel_structure import (
+    CheckConstraintDelaysInFrameRelStructure,
+)
+from .check_constraint_in_frame_rel_structure import (
+    CheckConstraintInFrameRelStructure,
+)
+from .check_constraint_throughputs_in_frame_rel_structure import (
+    CheckConstraintThroughputsInFrameRelStructure,
+)
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .countries_in_frame_rel_structure import CountriesInFrameRelStructure
-from .flexible_stop_places_in_frame_rel_structure import FlexibleStopPlacesInFrameRelStructure
-from .groups_of_stop_places_in_frame_rel_structure import GroupsOfStopPlacesInFrameRelStructure
-from .navigation_paths_in_frame_rel_structure import NavigationPathsInFrameRelStructure
+from .flexible_stop_places_in_frame_rel_structure import (
+    FlexibleStopPlacesInFrameRelStructure,
+)
+from .groups_of_stop_places_in_frame_rel_structure import (
+    GroupsOfStopPlacesInFrameRelStructure,
+)
+from .navigation_paths_in_frame_rel_structure import (
+    NavigationPathsInFrameRelStructure,
+)
 from .parkings_in_frame_rel_structure import ParkingsInFrameRelStructure
-from .path_junctions_in_frame_rel_structure import PathJunctionsInFrameRelStructure
+from .path_junctions_in_frame_rel_structure import (
+    PathJunctionsInFrameRelStructure,
+)
 from .path_links_in_frame_rel_structure import PathLinksInFrameRelStructure
-from .point_of_interest_classification_hierarchies_in_frame_rel_structure import PointOfInterestClassificationHierarchiesInFrameRelStructure
-from .point_of_interest_classifications_in_frame_rel_structure import PointOfInterestClassificationsInFrameRelStructure
-from .points_of_interest_in_frame_rel_structure import PointsOfInterestInFrameRelStructure
-from .site_facility_sets_in_frame_rel_structure import SiteFacilitySetsInFrameRelStructure
+from .point_of_interest_classification_hierarchies_in_frame_rel_structure import (
+    PointOfInterestClassificationHierarchiesInFrameRelStructure,
+)
+from .point_of_interest_classifications_in_frame_rel_structure import (
+    PointOfInterestClassificationsInFrameRelStructure,
+)
+from .points_of_interest_in_frame_rel_structure import (
+    PointsOfInterestInFrameRelStructure,
+)
+from .site_facility_sets_in_frame_rel_structure import (
+    SiteFacilitySetsInFrameRelStructure,
+)
 from .stop_places_in_frame_rel_structure import StopPlacesInFrameRelStructure
 from .tariff_zones_in_frame_rel_structure import TariffZonesInFrameRelStructure
-from .topographic_places_in_frame_rel_structure import TopographicPlacesInFrameRelStructure
+from .topographic_places_in_frame_rel_structure import (
+    TopographicPlacesInFrameRelStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -34,7 +58,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     topographic_places: Optional[TopographicPlacesInFrameRelStructure] = field(
         default=None,
@@ -42,29 +66,31 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "topographicPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     addresses: Optional[AddressesInFrameRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accesses: Optional[AccessesInFrameRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    groups_of_stop_places: Optional[GroupsOfStopPlacesInFrameRelStructure] = field(
+    groups_of_stop_places: Optional[
+        GroupsOfStopPlacesInFrameRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "groupsOfStopPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_places: Optional[StopPlacesInFrameRelStructure] = field(
         default=None,
@@ -72,15 +98,17 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "stopPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    flexible_stop_places: Optional[FlexibleStopPlacesInFrameRelStructure] = field(
+    flexible_stop_places: Optional[
+        FlexibleStopPlacesInFrameRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "flexibleStopPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     points_of_interest: Optional[PointsOfInterestInFrameRelStructure] = field(
         default=None,
@@ -88,14 +116,14 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "pointsOfInterest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parkings: Optional[ParkingsInFrameRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     navigation_paths: Optional[NavigationPathsInFrameRelStructure] = field(
         default=None,
@@ -103,7 +131,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "navigationPaths",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     path_links: Optional[PathLinksInFrameRelStructure] = field(
         default=None,
@@ -111,7 +139,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "pathLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     path_junctions: Optional[PathJunctionsInFrameRelStructure] = field(
         default=None,
@@ -119,7 +147,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "pathJunctions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     check_constraints: Optional[CheckConstraintInFrameRelStructure] = field(
         default=None,
@@ -127,39 +155,47 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "checkConstraints",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    check_constraint_delays: Optional[CheckConstraintDelaysInFrameRelStructure] = field(
+    check_constraint_delays: Optional[
+        CheckConstraintDelaysInFrameRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "checkConstraintDelays",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    check_constraint_throughputs: Optional[CheckConstraintThroughputsInFrameRelStructure] = field(
+    check_constraint_throughputs: Optional[
+        CheckConstraintThroughputsInFrameRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "checkConstraintThroughputs",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    point_of_interest_classifications: Optional[PointOfInterestClassificationsInFrameRelStructure] = field(
+    point_of_interest_classifications: Optional[
+        PointOfInterestClassificationsInFrameRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "pointOfInterestClassifications",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    point_of_interest_classification_hierarchies: Optional[PointOfInterestClassificationHierarchiesInFrameRelStructure] = field(
+    point_of_interest_classification_hierarchies: Optional[
+        PointOfInterestClassificationHierarchiesInFrameRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "pointOfInterestClassificationHierarchies",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tariff_zones: Optional[TariffZonesInFrameRelStructure] = field(
         default=None,
@@ -167,7 +203,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "tariffZones",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     site_facility_sets: Optional[SiteFacilitySetsInFrameRelStructure] = field(
         default=None,
@@ -175,5 +211,5 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "name": "siteFacilitySets",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

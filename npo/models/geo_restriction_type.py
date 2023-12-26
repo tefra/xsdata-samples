@@ -16,30 +16,30 @@ class GeoRestrictionType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     region_id: None | GeoRestrictionEnum = field(
         default=None,
         metadata={
             "name": "regionId",
             "type": "Attribute",
-        }
+        },
     )
     start: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     platform: None | PlatformTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .ref import Ref
-from .root_sw_component_prototype_subtypes_enum import RootSwComponentPrototypeSubtypesEnum
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
-from .swc_service_dependency_subtypes_enum import SwcServiceDependencySubtypesEnum
+from .root_sw_component_prototype_subtypes_enum import (
+    RootSwComponentPrototypeSubtypesEnum,
+)
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
+from .swc_service_dependency_subtypes_enum import (
+    SwcServiceDependencySubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -25,39 +31,46 @@ class SwcServiceDependencyInExecutableInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_component_ref: Optional["SwcServiceDependencyInExecutableInstanceRef.ContextRootComponentRef"] = field(
+    context_root_component_ref: Optional[
+        "SwcServiceDependencyInExecutableInstanceRef.ContextRootComponentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-COMPONENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_component_ref: List["SwcServiceDependencyInExecutableInstanceRef.ContextComponentRef"] = field(
+    context_component_ref: List[
+        "SwcServiceDependencyInExecutableInstanceRef.ContextComponentRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-COMPONENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_swc_service_dependency_ref: Optional["SwcServiceDependencyInExecutableInstanceRef.TargetSwcServiceDependencyRef"] = field(
+    target_swc_service_dependency_ref: Optional[
+        "SwcServiceDependencyInExecutableInstanceRef.TargetSwcServiceDependencyRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-SWC-SERVICE-DEPENDENCY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -65,7 +78,7 @@ class SwcServiceDependencyInExecutableInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -76,7 +89,7 @@ class SwcServiceDependencyInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -87,7 +100,7 @@ class SwcServiceDependencyInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -98,5 +111,5 @@ class SwcServiceDependencyInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

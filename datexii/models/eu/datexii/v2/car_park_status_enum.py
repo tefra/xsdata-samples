@@ -40,6 +40,7 @@ class CarParkStatusEnum(Enum):
         other than those that normally apply, are in force in a
         specified area.
     """
+
     CAR_PARK_CLOSED = "carParkClosed"
     ALL_CAR_PARKS_FULL = "allCarParksFull"
     CAR_PARK_FACILITY_FAULTY = "carParkFacilityFaulty"

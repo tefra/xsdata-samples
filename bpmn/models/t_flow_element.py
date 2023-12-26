@@ -18,14 +18,14 @@ class TFlowElement(TBaseElement):
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     monitoring: Optional[Monitoring] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     category_value_ref: List[QName] = field(
         default_factory=list,
@@ -33,11 +33,11 @@ class TFlowElement(TBaseElement):
             "name": "categoryValueRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

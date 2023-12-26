@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+)
 
 
 @dataclass
@@ -50,13 +58,14 @@ class PostalAddressType:
     :ivar country_name_text: <description xmlns=""> <description>The
         full name of the country.</description> </description>
     """
+
     occupant_name_text: Optional[TextType] = field(
         default=None,
         metadata={
             "name": "OccupantNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     address_line1_text: Optional[TextType] = field(
         default=None,
@@ -64,7 +73,7 @@ class PostalAddressType:
             "name": "AddressLine1Text",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     address_line2_text: Optional[TextType] = field(
         default=None,
@@ -72,7 +81,7 @@ class PostalAddressType:
             "name": "AddressLine2Text",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     address_line3_text: Optional[TextType] = field(
         default=None,
@@ -80,7 +89,7 @@ class PostalAddressType:
             "name": "AddressLine3Text",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     portal_door_text: Optional[TextType] = field(
         default=None,
@@ -88,7 +97,7 @@ class PostalAddressType:
             "name": "PortalDoorText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     portal_text: Optional[TextType] = field(
         default=None,
@@ -96,7 +105,7 @@ class PostalAddressType:
             "name": "PortalText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     floor_number_text: Optional[TextType] = field(
         default=None,
@@ -104,7 +113,7 @@ class PostalAddressType:
             "name": "FloorNumberText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     floor_type: Optional[CodeType] = field(
         default=None,
@@ -112,7 +121,7 @@ class PostalAddressType:
             "name": "FloorType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     building_number_text: Optional[TextType] = field(
         default=None,
@@ -120,7 +129,7 @@ class PostalAddressType:
             "name": "BuildingNumberText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     building_name_text: Optional[TextType] = field(
         default=None,
@@ -128,7 +137,7 @@ class PostalAddressType:
             "name": "BuildingNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     street_name_text: Optional[TextType] = field(
         default=None,
@@ -136,7 +145,7 @@ class PostalAddressType:
             "name": "StreetNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     street_suffix_text: Optional[TextType] = field(
         default=None,
@@ -144,7 +153,7 @@ class PostalAddressType:
             "name": "StreetSuffixText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     street_type: Optional[CodeType] = field(
         default=None,
@@ -152,7 +161,7 @@ class PostalAddressType:
             "name": "StreetType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     post_code_id: Optional[Idtype] = field(
         default=None,
@@ -160,7 +169,7 @@ class PostalAddressType:
             "name": "PostCodeID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     county_text: Optional[TextType] = field(
         default=None,
@@ -168,7 +177,7 @@ class PostalAddressType:
             "name": "CountyText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     country_code_id: Optional[CodeType] = field(
         default=None,
@@ -176,7 +185,7 @@ class PostalAddressType:
             "name": "CountryCodeID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     country_name_text: Optional[TextType] = field(
         default=None,
@@ -184,5 +193,5 @@ class PostalAddressType:
             "name": "CountryNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )

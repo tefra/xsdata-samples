@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .common_section_ref import CommonSectionRef
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -7,7 +7,9 @@ from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dead_run_ref import DeadRunRef
 from .fare_section_ref import FareSectionRef
-from .general_group_of_entities_ref_structure import GeneralGroupOfEntitiesRefStructure
+from .general_group_of_entities_ref_structure import (
+    GeneralGroupOfEntitiesRefStructure,
+)
 from .general_section_ref import GeneralSectionRef
 from .journey_pattern_ref import JourneyPatternRef
 from .line_section_ref import LineSectionRef
@@ -37,7 +39,9 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NoticeAssignment_VersionStructure"
 
-    notice_ref_or_group_of_notices_ref_or_notice: Optional[object] = field(
+    notice_ref_or_group_of_notices_ref_or_notice: Optional[
+        Union[NoticeRef, GeneralGroupOfEntitiesRefStructure, Notice]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -58,7 +62,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     noticed_object_ref: Optional[VersionOfObjectRefStructure] = field(
         default=None,
@@ -66,9 +70,27 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "NoticedObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            DatedVehicleJourneyRef,
+            DatedSpecialServiceRef,
+            SpecialServiceRef,
+            TemplateServiceJourneyRef,
+            ServiceJourneyRef,
+            DeadRunRef,
+            VehicleJourneyRef,
+            NavigationPathRef,
+            ServiceJourneyPatternRef,
+            ServicePatternRef,
+            DeadRunJourneyPatternRef,
+            JourneyPatternRef,
+            TimingPatternRef,
+            RouteRef,
+            LinkSequenceRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -149,9 +171,18 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            ParentCommonSectionRef,
+            CommonSectionRef,
+            LineSectionRef,
+            FareSectionRef,
+            GeneralSectionRef,
+            SectionRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -187,7 +218,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     start_point_in_pattern_ref: Optional[PointInSequenceRefStructure] = field(
         default=None,
@@ -195,7 +226,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "StartPointInPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_point_in_pattern_ref: Optional[PointInSequenceRefStructure] = field(
         default=None,
@@ -203,7 +234,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "EndPointInPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mark: Optional[str] = field(
         default=None,
@@ -211,7 +242,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "Mark",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mark_url: Optional[str] = field(
         default=None,
@@ -219,7 +250,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "MarkUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     publicity_channel: Optional[PublicityChannelEnumeration] = field(
         default=None,
@@ -227,7 +258,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "PublicityChannel",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     advertised: Optional[bool] = field(
         default=None,
@@ -235,5 +266,5 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "Advertised",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -16,6 +16,7 @@ class RoadNode(Road):
     :ivar junction_name: Name of the junction.
     :ivar road_node_extension:
     """
+
     junction_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
@@ -23,7 +24,7 @@ class RoadNode(Road):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     road_node_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +32,5 @@ class RoadNode(Road):
             "name": "roadNodeExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

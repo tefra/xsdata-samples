@@ -20,6 +20,7 @@ class ParkingOccupancyEnum(Enum):
     :cvar FULL: Full.
     :cvar UNKNOWN: Unknown.
     """
+
     EXPECT_CAR_PARK_TO_BE_FULL = "expectCarParkToBeFull"
     PERCENTAGE10 = "percentage10"
     PERCENTAGE20 = "percentage20"

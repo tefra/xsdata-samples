@@ -17,6 +17,7 @@ class TdEventServiceInstanceMethodTypeEnumSimple(Enum):
         response of a method call of a service is sent through the
         service provider's service port.
     """
+
     ADAPTIVE_METHOD_CALL_RECEIVED = "ADAPTIVE-METHOD-CALL-RECEIVED"
     ADAPTIVE_METHOD_CALLED = "ADAPTIVE-METHOD-CALLED"
     ADAPTIVE_METHOD_RESPONSE_RECEIVED = "ADAPTIVE-METHOD-RESPONSE-RECEIVED"

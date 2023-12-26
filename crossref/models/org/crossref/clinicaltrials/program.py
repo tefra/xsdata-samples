@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from crossref.models.org.crossref.clinicaltrials.clinical_trial_number import ClinicalTrialNumber
+from crossref.models.org.crossref.clinicaltrials.clinical_trial_number import (
+    ClinicalTrialNumber,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/clinicaltrials.xsd"
 
@@ -15,6 +17,7 @@ class Program:
     must be the DOI of a recognized registry (see
     http://dx.doi.org/10.18810/registries)
     """
+
     class Meta:
         name = "program"
         namespace = "http://www.crossref.org/clinicaltrials.xsd"
@@ -24,5 +27,5 @@ class Program:
         metadata={
             "name": "clinical-trial-number",
             "type": "Element",
-        }
+        },
     )

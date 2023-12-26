@@ -18,7 +18,7 @@ class Purpose:
         metadata={
             "name": "PurposeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -97,7 +97,7 @@ class SourcingResultResponse:
         metadata={
             "name": "SourcingResultReference",
             "type": "Element",
-        }
+        },
     )
     sourcing_result_response_coded: str = field(
         metadata={
@@ -111,7 +111,7 @@ class SourcingResultResponse:
         metadata={
             "name": "SourcingResultResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -125,5 +125,5 @@ class SourcingResultResponse:
         metadata={
             "name": "GeneralNote",
             "type": "Element",
-        }
+        },
     )

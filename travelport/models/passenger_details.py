@@ -20,6 +20,7 @@ class PassengerDetails:
     age
         Passenger age
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class PassengerDetails:
             "name": "LoyaltyCardDetails",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -37,7 +38,7 @@ class PassengerDetails:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -47,12 +48,12 @@ class PassengerDetails:
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Attribute",
-        }
+        },
     )

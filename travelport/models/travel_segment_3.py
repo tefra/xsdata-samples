@@ -26,6 +26,7 @@ class TravelSegment3(Segment3):
         This does not include time zone information since it can be derived
         from the origin location.
     """
+
     class Meta:
         name = "TravelSegment"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -37,7 +38,7 @@ class TravelSegment3(Segment3):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -46,19 +47,19 @@ class TravelSegment3(Segment3):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )

@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
+from .communication_cluster_subtypes_enum import (
+    CommunicationClusterSubtypesEnum,
+)
 from .identifier import Identifier
 from .j_1939_tp_connection import J1939TpConnection
 from .j_1939_tp_node import J1939TpNode
@@ -93,6 +95,7 @@ class J1939TpConfig:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "J-1939-TP-CONFIG"
 
@@ -103,7 +106,7 @@ class J1939TpConfig:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["J1939TpConfig.ShortNameFragments"] = field(
         default=None,
@@ -111,7 +114,7 @@ class J1939TpConfig:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +122,7 @@ class J1939TpConfig:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +130,7 @@ class J1939TpConfig:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +138,7 @@ class J1939TpConfig:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +146,7 @@ class J1939TpConfig:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +154,7 @@ class J1939TpConfig:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["J1939TpConfig.Annotations"] = field(
         default=None,
@@ -159,7 +162,7 @@ class J1939TpConfig:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -167,15 +170,17 @@ class J1939TpConfig:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_cluster_ref: Optional["J1939TpConfig.CommunicationClusterRef"] = field(
+    communication_cluster_ref: Optional[
+        "J1939TpConfig.CommunicationClusterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_addresss: Optional["J1939TpConfig.TpAddresss"] = field(
         default=None,
@@ -183,7 +188,7 @@ class J1939TpConfig:
             "name": "TP-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_connections: Optional["J1939TpConfig.TpConnections"] = field(
         default=None,
@@ -191,7 +196,7 @@ class J1939TpConfig:
             "name": "TP-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_nodes: Optional["J1939TpConfig.TpNodes"] = field(
         default=None,
@@ -199,14 +204,14 @@ class J1939TpConfig:
             "name": "TP-NODES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -214,14 +219,14 @@ class J1939TpConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -232,7 +237,7 @@ class J1939TpConfig:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,7 +248,7 @@ class J1939TpConfig:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -254,7 +259,7 @@ class J1939TpConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -265,7 +270,7 @@ class J1939TpConfig:
                 "name": "TP-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,7 +281,7 @@ class J1939TpConfig:
                 "name": "J-1939-TP-CONNECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -287,5 +292,5 @@ class J1939TpConfig:
                 "name": "J-1939-TP-NODE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

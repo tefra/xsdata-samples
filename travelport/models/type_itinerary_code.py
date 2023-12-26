@@ -13,5 +13,6 @@ class TypeItineraryCode(Enum):
     DOMESTIC
         Indicates the itinerary is domestic
     """
+
     INTERNATIONAL = "International"
     DOMESTIC = "Domestic"

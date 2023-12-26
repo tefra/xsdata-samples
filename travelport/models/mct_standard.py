@@ -10,6 +10,7 @@ class MctStandard:
     """
     The standard MCT time for the given search criteria.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class MctStandard:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     time: None | int = field(
         default=None,
@@ -27,5 +28,5 @@ class MctStandard:
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

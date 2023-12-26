@@ -12,5 +12,5 @@ class ClassInFrameRefStructure(ClassRefStructure):
         metadata={
             "name": "classRefType",
             "type": "Attribute",
-        }
+        },
     )

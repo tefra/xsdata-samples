@@ -14,5 +14,5 @@ class MoneyFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

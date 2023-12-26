@@ -18,6 +18,7 @@ class RateModifiers:
     tour_code
         Tour number or code.  Providers: 1P, 1G, 1V.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -27,7 +28,7 @@ class RateModifiers:
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     discount_number: None | str = field(
         default=None,
@@ -35,7 +36,7 @@ class RateModifiers:
             "name": "DiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -44,26 +45,26 @@ class RateModifiers:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     promotional_code: None | str = field(
         default=None,
         metadata={
             "name": "PromotionalCode",
             "type": "Attribute",
-        }
+        },
     )
     vendor_location_ref: None | str = field(
         default=None,
         metadata={
             "name": "VendorLocationRef",
             "type": "Attribute",
-        }
+        },
     )
     tour_code: None | str = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Attribute",
-        }
+        },
     )

@@ -80,6 +80,7 @@ class EndToEndDescription:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-TO-END-DESCRIPTION"
 
@@ -89,7 +90,7 @@ class EndToEndDescription:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_ids: Optional["EndToEndDescription.DataIds"] = field(
         default=None,
@@ -97,7 +98,7 @@ class EndToEndDescription:
             "name": "DATA-IDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_id_mode: Optional[PositiveInteger] = field(
         default=None,
@@ -105,7 +106,7 @@ class EndToEndDescription:
             "name": "DATA-ID-MODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -113,7 +114,7 @@ class EndToEndDescription:
             "name": "DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_delta_counter_init: Optional[PositiveInteger] = field(
         default=None,
@@ -121,7 +122,7 @@ class EndToEndDescription:
             "name": "MAX-DELTA-COUNTER-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -129,7 +130,7 @@ class EndToEndDescription:
             "name": "CRC-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -137,7 +138,7 @@ class EndToEndDescription:
             "name": "COUNTER-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_no_new_or_repeated_data: Optional[PositiveInteger] = field(
         default=None,
@@ -145,7 +146,7 @@ class EndToEndDescription:
             "name": "MAX-NO-NEW-OR-REPEATED-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_counter_init: Optional[PositiveInteger] = field(
         default=None,
@@ -153,7 +154,7 @@ class EndToEndDescription:
             "name": "SYNC-COUNTER-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_id_nibble_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -161,14 +162,14 @@ class EndToEndDescription:
             "name": "DATA-ID-NIBBLE-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -176,7 +177,7 @@ class EndToEndDescription:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -189,11 +190,12 @@ class EndToEndDescription:
             this attribute are controlled by a semantic constraint that
             depends on the category of the EndToEndProtection.
         """
+
         data_id: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-ID",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

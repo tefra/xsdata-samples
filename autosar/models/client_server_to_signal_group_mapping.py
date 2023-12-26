@@ -1,13 +1,17 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
+from .abstract_service_instance_subtypes_enum import (
+    AbstractServiceInstanceSubtypesEnum,
+)
 from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
 from .application_error_mapping import ApplicationErrorMapping
 from .client_id_mapping import ClientIdMapping
-from .client_server_primitive_type_mapping import ClientServerPrimitiveTypeMapping
+from .client_server_primitive_type_mapping import (
+    ClientServerPrimitiveTypeMapping,
+)
 from .client_server_record_element_mapping import (
     ClientServerArrayTypeMapping,
     ClientServerRecordTypeMapping,
@@ -84,6 +88,7 @@ class ClientServerToSignalGroupMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-TO-SIGNAL-GROUP-MAPPING"
 
@@ -93,23 +98,27 @@ class ClientServerToSignalGroupMapping:
             "name": "COMMUNICATION-DIRECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_group_refs: Optional["ClientServerToSignalGroupMapping.EventGroupRefs"] = field(
+    event_group_refs: Optional[
+        "ClientServerToSignalGroupMapping.EventGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_handler_refs: Optional["ClientServerToSignalGroupMapping.EventHandlerRefs"] = field(
+    event_handler_refs: Optional[
+        "ClientServerToSignalGroupMapping.EventHandlerRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-HANDLER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -117,15 +126,17 @@ class ClientServerToSignalGroupMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_instance_refs: Optional["ClientServerToSignalGroupMapping.ServiceInstanceRefs"] = field(
+    service_instance_refs: Optional[
+        "ClientServerToSignalGroupMapping.ServiceInstanceRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -133,7 +144,7 @@ class ClientServerToSignalGroupMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     application_error: Optional[ApplicationErrorMapping] = field(
         default=None,
@@ -141,7 +152,7 @@ class ClientServerToSignalGroupMapping:
             "name": "APPLICATION-ERROR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     client_id: Optional[ClientIdMapping] = field(
         default=None,
@@ -149,15 +160,17 @@ class ClientServerToSignalGroupMapping:
             "name": "CLIENT-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    composite_type_mappings: Optional["ClientServerToSignalGroupMapping.CompositeTypeMappings"] = field(
+    composite_type_mappings: Optional[
+        "ClientServerToSignalGroupMapping.CompositeTypeMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "COMPOSITE-TYPE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     empty_signal: Optional[EmptySignalMapping] = field(
         default=None,
@@ -165,7 +178,7 @@ class ClientServerToSignalGroupMapping:
             "name": "EMPTY-SIGNAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mapped_operation_iref: Optional[OperationInSystemInstanceRef] = field(
         default=None,
@@ -173,31 +186,37 @@ class ClientServerToSignalGroupMapping:
             "name": "MAPPED-OPERATION-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    primitive_type_mappings: Optional["ClientServerToSignalGroupMapping.PrimitiveTypeMappings"] = field(
+    primitive_type_mappings: Optional[
+        "ClientServerToSignalGroupMapping.PrimitiveTypeMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "PRIMITIVE-TYPE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    request_group_ref: Optional["ClientServerToSignalGroupMapping.RequestGroupRef"] = field(
+    request_group_ref: Optional[
+        "ClientServerToSignalGroupMapping.RequestGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUEST-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    response_group_ref: Optional["ClientServerToSignalGroupMapping.ResponseGroupRef"] = field(
+    response_group_ref: Optional[
+        "ClientServerToSignalGroupMapping.ResponseGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RESPONSE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sequence_counter: Optional[SequenceCounterMapping] = field(
         default=None,
@@ -205,14 +224,14 @@ class ClientServerToSignalGroupMapping:
             "name": "SEQUENCE-COUNTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -220,18 +239,20 @@ class ClientServerToSignalGroupMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class EventGroupRefs:
-        event_group_ref: List["ClientServerToSignalGroupMapping.EventGroupRefs.EventGroupRef"] = field(
+        event_group_ref: List[
+            "ClientServerToSignalGroupMapping.EventGroupRefs.EventGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EVENT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -242,18 +263,20 @@ class ClientServerToSignalGroupMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class EventHandlerRefs:
-        event_handler_ref: List["ClientServerToSignalGroupMapping.EventHandlerRefs.EventHandlerRef"] = field(
+        event_handler_ref: List[
+            "ClientServerToSignalGroupMapping.EventHandlerRefs.EventHandlerRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EVENT-HANDLER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -264,18 +287,20 @@ class ClientServerToSignalGroupMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List["ClientServerToSignalGroupMapping.ServiceInstanceRefs.ServiceInstanceRef"] = field(
+        service_instance_ref: List[
+            "ClientServerToSignalGroupMapping.ServiceInstanceRefs.ServiceInstanceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -286,37 +311,43 @@ class ClientServerToSignalGroupMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class CompositeTypeMappings:
-        client_server_array_type_mapping: List[ClientServerArrayTypeMapping] = field(
+        client_server_array_type_mapping: List[
+            ClientServerArrayTypeMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-ARRAY-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        client_server_record_type_mapping: List[ClientServerRecordTypeMapping] = field(
+        client_server_record_type_mapping: List[
+            ClientServerRecordTypeMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-RECORD-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PrimitiveTypeMappings:
-        client_server_primitive_type_mapping: List[ClientServerPrimitiveTypeMapping] = field(
+        client_server_primitive_type_mapping: List[
+            ClientServerPrimitiveTypeMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-PRIMITIVE-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -327,7 +358,7 @@ class ClientServerToSignalGroupMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -338,5 +369,5 @@ class ClientServerToSignalGroupMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

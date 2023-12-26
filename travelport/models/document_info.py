@@ -12,6 +12,7 @@ class DocumentInfo:
     """
     Container for the document information summary line.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,7 +22,7 @@ class DocumentInfo:
             "name": "TicketInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     mcoinfo: list[Mcoinformation1] = field(
         default_factory=list,
@@ -29,7 +30,7 @@ class DocumentInfo:
             "name": "MCOInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tcrinfo: list[Tcrinfo] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class DocumentInfo:
             "name": "TCRInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

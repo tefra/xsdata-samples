@@ -29,6 +29,7 @@ class AirRefundQuoteReq(BaseReq1):
     ignore
         Provider: ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -41,7 +42,7 @@ class AirRefundQuoteReq(BaseReq1):
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     tcrnumber: list[str] = field(
         default_factory=list,
@@ -49,14 +50,14 @@ class AirRefundQuoteReq(BaseReq1):
             "name": "TCRNumber",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_refund_modifiers: None | AirRefundModifiers = field(
         default=None,
         metadata={
             "name": "AirRefundModifiers",
             "type": "Element",
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -65,22 +66,24 @@ class AirRefundQuoteReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
-    provider_reservation_info: list[AirRefundQuoteReq.ProviderReservationInfo] = field(
+    provider_reservation_info: list[
+        AirRefundQuoteReq.ProviderReservationInfo
+    ] = field(
         default_factory=list,
         metadata={
             "name": "ProviderReservationInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ignore: bool = field(
         default=False,
         metadata={
             "name": "Ignore",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -93,6 +96,7 @@ class AirRefundQuoteReq(BaseReq1):
         supplier_code
             Represents Carrier Code for ACH PNR Retrieve.
         """
+
         provider_code: None | str = field(
             default=None,
             metadata={
@@ -101,7 +105,7 @@ class AirRefundQuoteReq(BaseReq1):
                 "required": True,
                 "min_length": 2,
                 "max_length": 5,
-            }
+            },
         )
         provider_locator_code: None | str = field(
             default=None,
@@ -110,7 +114,7 @@ class AirRefundQuoteReq(BaseReq1):
                 "type": "Attribute",
                 "required": True,
                 "max_length": 15,
-            }
+            },
         )
         supplier_code: None | str = field(
             default=None,
@@ -119,5 +123,5 @@ class AirRefundQuoteReq(BaseReq1):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 5,
-            }
+            },
         )

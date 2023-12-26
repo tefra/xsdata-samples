@@ -15,5 +15,5 @@ class TypeOfEntityVersionStructure(TypeOfValueVersionStructure):
         metadata={
             "name": "nameOfClassifiedEntityClass",
             "type": "Attribute",
-        }
+        },
     )

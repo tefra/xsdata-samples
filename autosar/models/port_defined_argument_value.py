@@ -1,11 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .application_rule_based_value_specification import ApplicationRuleBasedValueSpecification
+from .application_rule_based_value_specification import (
+    ApplicationRuleBasedValueSpecification,
+)
 from .application_value_specification import ApplicationValueSpecification
 from .constant_reference import ConstantReference
-from .implementation_data_type_subtypes_enum import ImplementationDataTypeSubtypesEnum
+from .implementation_data_type_subtypes_enum import (
+    ImplementationDataTypeSubtypesEnum,
+)
 from .not_available_value_specification import NotAvailableValueSpecification
-from .numerical_rule_based_value_specification import NumericalRuleBasedValueSpecification
+from .numerical_rule_based_value_specification import (
+    NumericalRuleBasedValueSpecification,
+)
 from .numerical_value_specification import NumericalValueSpecification
 from .record_value_specification import (
     ApplicationAssocMapValueSpecification,
@@ -42,6 +48,7 @@ class PortDefinedArgumentValue:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PORT-DEFINED-ARGUMENT-VALUE"
 
@@ -51,22 +58,24 @@ class PortDefinedArgumentValue:
             "name": "VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    value_type_tref: Optional["PortDefinedArgumentValue.ValueTypeTref"] = field(
+    value_type_tref: Optional[
+        "PortDefinedArgumentValue.ValueTypeTref"
+    ] = field(
         default=None,
         metadata={
             "name": "VALUE-TYPE-TREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -74,34 +83,40 @@ class PortDefinedArgumentValue:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class Value:
-        application_assoc_map_value_specification: Optional[ApplicationAssocMapValueSpecification] = field(
+        application_assoc_map_value_specification: Optional[
+            ApplicationAssocMapValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        application_rule_based_value_specification: Optional[ApplicationRuleBasedValueSpecification] = field(
+        application_rule_based_value_specification: Optional[
+            ApplicationRuleBasedValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        application_value_specification: Optional[ApplicationValueSpecification] = field(
+        application_value_specification: Optional[
+            ApplicationValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         array_value_specification: Optional[ArrayValueSpecification] = field(
             default=None,
@@ -109,15 +124,17 @@ class PortDefinedArgumentValue:
                 "name": "ARRAY-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        composite_rule_based_value_specification: Optional[CompositeRuleBasedValueSpecification] = field(
+        composite_rule_based_value_specification: Optional[
+            CompositeRuleBasedValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         constant_reference: Optional[ConstantReference] = field(
             default=None,
@@ -125,31 +142,37 @@ class PortDefinedArgumentValue:
                 "name": "CONSTANT-REFERENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        not_available_value_specification: Optional[NotAvailableValueSpecification] = field(
+        not_available_value_specification: Optional[
+            NotAvailableValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        numerical_rule_based_value_specification: Optional[NumericalRuleBasedValueSpecification] = field(
+        numerical_rule_based_value_specification: Optional[
+            NumericalRuleBasedValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        numerical_value_specification: Optional[NumericalValueSpecification] = field(
+        numerical_value_specification: Optional[
+            NumericalValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         record_value_specification: Optional[RecordValueSpecification] = field(
             default=None,
@@ -157,15 +180,17 @@ class PortDefinedArgumentValue:
                 "name": "RECORD-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        reference_value_specification: Optional[ReferenceValueSpecification] = field(
+        reference_value_specification: Optional[
+            ReferenceValueSpecification
+        ] = field(
             default=None,
             metadata={
                 "name": "REFERENCE-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         text_value_specification: Optional[TextValueSpecification] = field(
             default=None,
@@ -173,7 +198,7 @@ class PortDefinedArgumentValue:
                 "name": "TEXT-VALUE-SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -184,5 +209,5 @@ class PortDefinedArgumentValue:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

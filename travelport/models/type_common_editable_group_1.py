@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_common_editable_field_1 import TypeCommonEditableField1
+from travelport.models.type_common_editable_field_1 import (
+    TypeCommonEditableField1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -16,6 +18,7 @@ class TypeCommonEditableGroup1(TypeCommonEditableField1):
         A flag the determines if the UI should show this field.  Default to
         false.
     """
+
     class Meta:
         name = "typeCommonEditableGroup"
 
@@ -24,5 +27,5 @@ class TypeCommonEditableGroup1(TypeCommonEditableField1):
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )

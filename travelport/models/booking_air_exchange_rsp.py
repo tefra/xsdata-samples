@@ -10,5 +10,6 @@ class BookingAirExchangeRsp(BookingBaseRsp):
     """
     Returns exchanged itinerary.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"

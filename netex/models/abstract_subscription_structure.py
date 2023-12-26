@@ -13,7 +13,7 @@ class AbstractSubscriptionStructure:
             "name": "SubscriberRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscription_identifier: Optional[str] = field(
         default=None,
@@ -22,7 +22,7 @@ class AbstractSubscriptionStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     initial_termination_time: Optional[XmlDateTime] = field(
         default=None,
@@ -31,5 +31,5 @@ class AbstractSubscriptionStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )

@@ -9,6 +9,7 @@ class HotelStay:
     """
     Arrival and Departure dates.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -19,7 +20,7 @@ class HotelStay:
             "type": "Element",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     checkout_date: None | str = field(
         default=None,
@@ -28,12 +29,12 @@ class HotelStay:
             "type": "Element",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

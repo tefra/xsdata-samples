@@ -10,5 +10,6 @@ class CsTransformerErrorReactionEnumSimple(Enum):
     :cvar AUTONOMOUS: RTE and Transformer coordinate an autonomous error
         reaction on their own.
     """
+
     APPLICATION_ONLY = "APPLICATION-ONLY"
     AUTONOMOUS = "AUTONOMOUS"

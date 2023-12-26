@@ -19,7 +19,7 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_offset: Optional[int] = field(
         default=None,
@@ -36,5 +36,5 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

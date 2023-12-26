@@ -3,8 +3,12 @@ from typing import List, Optional
 from .phm_checkpoint_subtypes_enum import PhmCheckpointSubtypesEnum
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
-from .root_sw_component_prototype_subtypes_enum import RootSwComponentPrototypeSubtypesEnum
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .root_sw_component_prototype_subtypes_enum import (
+    RootSwComponentPrototypeSubtypesEnum,
+)
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -27,47 +31,56 @@ class PhmCheckpointInExecutableInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PHM-CHECKPOINT-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional["PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"] = field(
+    context_root_sw_component_prototype_ref: Optional[
+        "PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_component_prototype_ref: List["PhmCheckpointInExecutableInstanceRef.ContextComponentPrototypeRef"] = field(
+    context_component_prototype_ref: List[
+        "PhmCheckpointInExecutableInstanceRef.ContextComponentPrototypeRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-COMPONENT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_r_port_prototype_ref: Optional["PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef"] = field(
+    context_r_port_prototype_ref: Optional[
+        "PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_phm_checkpoint_ref: Optional["PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef"] = field(
+    target_phm_checkpoint_ref: Optional[
+        "PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-PHM-CHECKPOINT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -75,7 +88,7 @@ class PhmCheckpointInExecutableInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -86,7 +99,7 @@ class PhmCheckpointInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -97,7 +110,7 @@ class PhmCheckpointInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -108,7 +121,7 @@ class PhmCheckpointInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -119,5 +132,5 @@ class PhmCheckpointInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

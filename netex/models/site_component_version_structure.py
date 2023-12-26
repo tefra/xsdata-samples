@@ -23,7 +23,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "name": "SiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     level_ref: Optional[LevelRef] = field(
         default=None,
@@ -31,7 +31,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "name": "LevelRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -39,7 +39,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     check_constraints: Optional[CheckConstraintsRelStructure] = field(
         default=None,
@@ -47,7 +47,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "name": "checkConstraints",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     equipment_places: Optional[EquipmentPlacesRelStructure] = field(
         default=None,
@@ -55,7 +55,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "name": "equipmentPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     place_equipments: Optional[PlaceEquipmentsRelStructure] = field(
         default=None,
@@ -63,7 +63,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "name": "placeEquipments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     local_services: Optional[LocalServicesRelStructure] = field(
         default=None,
@@ -71,5 +71,5 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "name": "localServices",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

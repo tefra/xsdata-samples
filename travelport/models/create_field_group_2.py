@@ -32,6 +32,7 @@ class CreateFieldGroup2:
         Maximum number of instances permitted. Leave blank to indicate
         unlimited (i.e., ..*).
     """
+
     class Meta:
         name = "CreateFieldGroup"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -42,7 +43,7 @@ class CreateFieldGroup2:
             "name": "CreateField",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -52,7 +53,7 @@ class CreateFieldGroup2:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -61,33 +62,33 @@ class CreateFieldGroup2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     protected: bool = field(
         default=False,
         metadata={
             "name": "Protected",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )

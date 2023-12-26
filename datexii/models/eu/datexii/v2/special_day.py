@@ -3,7 +3,9 @@ from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.public_holiday import PublicHoliday
-from datexii.models.eu.datexii.v2.special_day_type_enum import SpecialDayTypeEnum
+from datexii.models.eu.datexii.v2.special_day_type_enum import (
+    SpecialDayTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -26,6 +28,7 @@ class SpecialDay:
     :ivar public_holiday:
     :ivar special_day_extension:
     """
+
     intersect_with_applicable_days: Optional[bool] = field(
         default=None,
         metadata={
@@ -33,7 +36,7 @@ class SpecialDay:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     special_day_type: Optional[SpecialDayTypeEnum] = field(
         default=None,
@@ -42,7 +45,7 @@ class SpecialDay:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     special_day_name: Optional[MultilingualString] = field(
         default=None,
@@ -50,7 +53,7 @@ class SpecialDay:
             "name": "specialDayName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     public_holiday: List[PublicHoliday] = field(
         default_factory=list,
@@ -58,7 +61,7 @@ class SpecialDay:
             "name": "publicHoliday",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     special_day_extension: Optional[ExtensionType] = field(
         default=None,
@@ -66,5 +69,5 @@ class SpecialDay:
             "name": "specialDayExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

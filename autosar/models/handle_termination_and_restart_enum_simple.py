@@ -10,6 +10,7 @@ class HandleTerminationAndRestartEnumSimple(Enum):
         restarting.
     :cvar NO_SUPPORT: Stop and restart is not supported at all.
     """
+
     CAN_BE_TERMINATED = "CAN-BE-TERMINATED"
     CAN_BE_TERMINATED_AND_RESTARTED = "CAN-BE-TERMINATED-AND-RESTARTED"
     NO_SUPPORT = "NO-SUPPORT"

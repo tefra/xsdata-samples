@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.profile_retrieve_action_req import ProfileRetrieveActionReq
+from travelport.models.profile_retrieve_action_req import (
+    ProfileRetrieveActionReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class ProfileRetrieveActionPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class ProfileRetrieveActionPortTypeServiceInput:
                 "name": "ProfileRetrieveActionReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            }
+            },
         )

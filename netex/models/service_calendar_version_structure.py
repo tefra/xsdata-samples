@@ -25,7 +25,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -33,7 +33,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     from_date: Optional[XmlDate] = field(
         default=None,
@@ -41,7 +41,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "FromDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_date: Optional[XmlDate] = field(
         default=None,
@@ -49,7 +49,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "ToDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     earliest_time: Optional[XmlTime] = field(
         default=None,
@@ -57,7 +57,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "EarliestTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_length: Optional[XmlDuration] = field(
         default=None,
@@ -65,7 +65,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "DayLength",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_types: Optional[DayTypesRelStructure] = field(
         default=None,
@@ -73,14 +73,14 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "dayTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     timebands: Optional[TimebandsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operating_days: Optional[OperatingDaysRelStructure] = field(
         default=None,
@@ -88,7 +88,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "operatingDays",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operating_periods: Optional[OperatingPeriodsRelStructure] = field(
         default=None,
@@ -96,7 +96,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "operatingPeriods",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_type_assignments: Optional[DayTypeAssignmentsRelStructure] = field(
         default=None,
@@ -104,5 +104,5 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "dayTypeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

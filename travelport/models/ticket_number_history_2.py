@@ -9,6 +9,7 @@ class TicketNumberHistory2:
     """
     The identifying number for the actual ticket.
     """
+
     class Meta:
         name = "TicketNumberHistory"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -19,5 +20,5 @@ class TicketNumberHistory2:
             "required": True,
             "min_length": 0,
             "max_length": 13,
-        }
+        },
     )

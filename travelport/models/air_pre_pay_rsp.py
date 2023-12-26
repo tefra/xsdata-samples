@@ -23,6 +23,7 @@ class AirPrePayRsp(BaseRsp1):
     more_data_start_index
         Provider: ACH-Indicates start index of the next flight Passes
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -33,7 +34,7 @@ class AirPrePayRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     max_results: None | int = field(
         default=None,
@@ -42,19 +43,19 @@ class AirPrePayRsp(BaseRsp1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 200,
-        }
+        },
     )
     more_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "MoreIndicator",
             "type": "Attribute",
-        }
+        },
     )
     more_data_start_index: None | str = field(
         default=None,
         metadata={
             "name": "MoreDataStartIndex",
             "type": "Attribute",
-        }
+        },
     )

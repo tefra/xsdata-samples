@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 
-__NAMESPACE__ = "http://www.travelport.com/soa/common/security/SessionContext_v1"
+__NAMESPACE__ = (
+    "http://www.travelport.com/soa/common/security/SessionContext_v1"
+)
 
 
 @dataclass
@@ -17,15 +19,18 @@ class SessionContext:
     sess_prop
         A session property combination
     """
+
     class Meta:
-        namespace = "http://www.travelport.com/soa/common/security/SessionContext_v1"
+        namespace = (
+            "http://www.travelport.com/soa/common/security/SessionContext_v1"
+        )
 
     sess_tok: None | SessionContext.SessTok = field(
         default=None,
         metadata={
             "name": "SessTok",
             "type": "Element",
-        }
+        },
     )
     sess_prop: list[SessionContext.SessProp] = field(
         default_factory=list,
@@ -33,7 +38,7 @@ class SessionContext:
             "name": "SessProp",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
 
     @dataclass
@@ -44,12 +49,13 @@ class SessionContext:
         id
             ID of the Session Token
         """
+
         id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -62,17 +68,18 @@ class SessionContext:
         val
             Value of the Session Property
         """
+
         nm: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         val: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

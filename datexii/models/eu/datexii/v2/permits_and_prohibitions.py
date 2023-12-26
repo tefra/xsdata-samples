@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.regulation_enum import RegulationEnum
-from datexii.models.eu.datexii.v2.rest_area_activity_enum import RestAreaActivityEnum
+from datexii.models.eu.datexii.v2.rest_area_activity_enum import (
+    RestAreaActivityEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,13 +19,14 @@ class PermitsAndProhibitions:
     :ivar regulation: Regulation for the specified activity.
     :ivar permits_and_prohibitions_extension:
     """
+
     activity: Optional[RestAreaActivityEnum] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     regulation: Optional[RegulationEnum] = field(
         default=None,
@@ -31,7 +34,7 @@ class PermitsAndProhibitions:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     permits_and_prohibitions_extension: Optional[ExtensionType] = field(
         default=None,
@@ -39,5 +42,5 @@ class PermitsAndProhibitions:
             "name": "permitsAndProhibitionsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

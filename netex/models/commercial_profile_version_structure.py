@@ -19,7 +19,7 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
             "name": "TypeOfConcessionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     consumption_amount: Optional[Decimal] = field(
         default=None,
@@ -27,7 +27,7 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
             "name": "ConsumptionAmount",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     consumption_units: Optional[Decimal] = field(
         default=None,
@@ -35,7 +35,7 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
             "name": "ConsumptionUnits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     general_group_of_entities_ref: Optional[GeneralGroupOfEntitiesRef] = field(
         default=None,
@@ -43,5 +43,5 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
             "name": "GeneralGroupOfEntitiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -9,5 +9,5 @@ class AbstractMemberType:
         default=False,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

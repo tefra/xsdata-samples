@@ -48,6 +48,7 @@ class AgentInfo2(TypeProfileInfo2):
         branch are specified, the ID will be used.
     alternate_agent_id
     """
+
     class Meta:
         name = "AgentInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -58,7 +59,7 @@ class AgentInfo2(TypeProfileInfo2):
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone: list[Phone2] = field(
         default_factory=list,
@@ -66,7 +67,7 @@ class AgentInfo2(TypeProfileInfo2):
             "name": "Phone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     electronic_address: list[ElectronicAddress2] = field(
         default_factory=list,
@@ -74,7 +75,7 @@ class AgentInfo2(TypeProfileInfo2):
             "name": "ElectronicAddress",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier2] = field(
         default_factory=list,
@@ -82,7 +83,7 @@ class AgentInfo2(TypeProfileInfo2):
             "name": "ExternalIdentifier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     user_name: None | str = field(
         default=None,
@@ -92,7 +93,7 @@ class AgentInfo2(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     occupational_title: None | str = field(
         default=None,
@@ -101,7 +102,7 @@ class AgentInfo2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     title: None | str = field(
         default=None,
@@ -110,7 +111,7 @@ class AgentInfo2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     nickname: None | str = field(
         default=None,
@@ -119,7 +120,7 @@ class AgentInfo2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
@@ -129,7 +130,7 @@ class AgentInfo2(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     other_name: None | str = field(
         default=None,
@@ -138,7 +139,7 @@ class AgentInfo2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -148,7 +149,7 @@ class AgentInfo2(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     suffix: None | str = field(
         default=None,
@@ -157,14 +158,14 @@ class AgentInfo2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     default_branch_id: None | int = field(
         default=None,
         metadata={
             "name": "DefaultBranchID",
             "type": "Attribute",
-        }
+        },
     )
     default_branch_code: None | str = field(
         default=None,
@@ -173,7 +174,7 @@ class AgentInfo2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     alternate_agent_id: None | str = field(
         default=None,
@@ -181,5 +182,5 @@ class AgentInfo2(TypeProfileInfo2):
             "name": "AlternateAgentID",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )

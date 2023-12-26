@@ -8,6 +8,7 @@ class TypeAirFare2(Enum):
     """
     The type of Air Fare.
     """
+
     ADVANCE_PURCHASE_FARES = "Advance Purchase Fares"
     NON_REFUNDABLE_FARES = "Non-Refundable Fares"
     PENALTY_FARES = "Penalty Fares"

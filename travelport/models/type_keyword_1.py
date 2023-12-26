@@ -31,6 +31,7 @@ class TypeKeyword1:
         DECH can also be used. Only certain services support this attribute.
         Providers: ACH, RCH, 1G, 1V, 1P.
     """
+
     class Meta:
         name = "typeKeyword"
 
@@ -41,7 +42,7 @@ class TypeKeyword1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     text: list[str] = field(
         default_factory=list,
@@ -50,7 +51,7 @@ class TypeKeyword1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -59,26 +60,26 @@ class TypeKeyword1:
             "type": "Attribute",
             "required": True,
             "max_length": 12,
-        }
+        },
     )
     number: None | object = field(
         default=None,
         metadata={
             "name": "Number",
             "type": "Attribute",
-        }
+        },
     )
     description: None | object = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     language_code: None | str = field(
         default=None,
         metadata={
             "name": "LanguageCode",
             "type": "Attribute",
-        }
+        },
     )

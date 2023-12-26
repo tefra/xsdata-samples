@@ -62,216 +62,216 @@ from xsdata.models.datatype import XmlDate
 
 obj = Statement(
     ublversion_id=UblversionId(
-        value="2.0"
+        value='2.0'
     ),
     customization_id=CustomizationId(
-        value="urn:oasis:names:specification:ubl:xpath:Statement-2.0:sbs-1.0-draft"
+        value='urn:oasis:names:specification:ubl:xpath:Statement-2.0:sbs-1.0-draft'
     ),
     profile_id=ProfileId(
-        value="bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-statement-notification-draft"
+        value='bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-statement-notification-draft'
     ),
     id=Id(
-        value="JUL2005-07758990"
+        value='JUL2005-07758990'
     ),
     copy_indicator=False,
     uuid=Uuid(
-        value="normalizedString"
+        value='normalizedString'
     ),
     issue_date=XmlDate(2005, 8, 2),
     note=[
         Note(
-            value="please present invoice if this credit amount cannot be taken against a forthcoming payment"
+            value='please present invoice if this credit amount cannot be taken against a forthcoming payment'
         ),
     ],
     document_currency_code=DocumentCurrencyCode(
-        value="GBP"
+        value='GBP'
     ),
     total_debit_amount=TotalDebitAmount(
-        value=Decimal("0.00"),
-        currency_id="GBP"
+        value=Decimal('0.00'),
+        currency_id='GBP'
     ),
     total_credit_amount=TotalCreditAmount(
-        value=Decimal("107.50"),
-        currency_id="GBP"
+        value=Decimal('107.50'),
+        currency_id='GBP'
     ),
     total_balance_amount=TotalBalanceAmount(
-        value=Decimal("-107.50"),
-        currency_id="GBP"
+        value=Decimal('-107.50'),
+        currency_id='GBP'
     ),
     statement_period=StatementPeriod(
         start_date=XmlDate(2005, 7, 1),
         end_date=XmlDate(2005, 7, 31),
         description=[
             Description(
-                value="July"
+                value='July'
             ),
         ]
     ),
     accounting_supplier_party=AccountingSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="CO001"
+            value='CO001'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Consortial"
+                        value='Consortial'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Busy Street"
+                    value='Busy Street'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Farthing"
+                    value='Farthing'
                 ),
                 postal_zone=PostalZone(
-                    value="AA99 1BB"
+                    value='AA99 1BB'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Heremouthshire"
+                    value='Heremouthshire'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="The Roundabout"
+                            value='The Roundabout'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     registration_name=RegistrationName(
-                        value="Farthing Purchasing Consortium"
+                        value='Farthing Purchasing Consortium'
                     ),
                     company_id=CompanyId(
-                        value="175 269 2355"
+                        value='175 269 2355'
                     ),
                     exemption_reason=[
                         ExemptionReason(
-                            value="N/A"
+                            value='N/A'
                         ),
                     ],
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="VAT"
+                            value='VAT'
                         ),
                         tax_type_code=TaxTypeCode(
-                            value="VAT"
+                            value='VAT'
                         )
                     )
                 ),
             ],
             contact=Contact(
                 name=Name(
-                    value="Mrs Bouquet"
+                    value='Mrs Bouquet'
                 ),
                 telephone=Telephone(
-                    value="0158 1233714"
+                    value='0158 1233714'
                 ),
                 telefax=Telefax(
-                    value="0158 1233856"
+                    value='0158 1233856'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="bouquet@fpconsortial.co.uk"
+                    value='bouquet@fpconsortial.co.uk'
                 )
             )
         )
     ),
     accounting_customer_party=AccountingCustomerParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="XFB01"
+            value='XFB01'
         ),
         supplier_assigned_account_id=SupplierAssignedAccountId(
-            value="GT00978567"
+            value='GT00978567'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="IYT Corporation"
+                        value='IYT Corporation'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     registration_name=RegistrationName(
-                        value="Bridgtow District Council"
+                        value='Bridgtow District Council'
                     ),
                     company_id=CompanyId(
-                        value="12356478"
+                        value='12356478'
                     ),
                     exemption_reason=[
                         ExemptionReason(
-                            value="Local Authority"
+                            value='Local Authority'
                         ),
                     ],
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="UK VAT"
+                            value='UK VAT'
                         ),
                         tax_type_code=TaxTypeCode(
-                            value="VAT"
+                            value='VAT'
                         )
                     )
                 ),
             ],
             contact=Contact(
                 name=Name(
-                    value="Mr Fred Churchill"
+                    value='Mr Fred Churchill'
                 ),
                 telephone=Telephone(
-                    value="0127 2653214"
+                    value='0127 2653214'
                 ),
                 telefax=Telefax(
-                    value="0127 2653215"
+                    value='0127 2653215'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="fred@iytcorporation.gov.uk"
+                    value='fred@iytcorporation.gov.uk'
                 )
             )
         )
@@ -280,182 +280,182 @@ obj = Statement(
         party_name=[
             PartyName(
                 name=Name(
-                    value="Consortial"
+                    value='Consortial'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Busy Street"
+                value='Busy Street'
             ),
             building_name=BuildingName(
-                value="Thereabouts"
+                value='Thereabouts'
             ),
             building_number=BuildingNumber(
-                value="56A"
+                value='56A'
             ),
             city_name=CityName(
-                value="Farthing"
+                value='Farthing'
             ),
             postal_zone=PostalZone(
-                value="AA99 1BB"
+                value='AA99 1BB'
             ),
             country_subentity=CountrySubentity(
-                value="Heremouthshire"
+                value='Heremouthshire'
             ),
             address_line=[
                 AddressLine(
                     line=Line(
-                        value="The Roundabout"
+                        value='The Roundabout'
                     )
                 ),
             ],
             country=Country(
                 identification_code=IdentificationCode(
-                    value="GB"
+                    value='GB'
                 )
             )
         ),
         party_tax_scheme=[
             PartyTaxScheme(
                 registration_name=RegistrationName(
-                    value="Farthing Purchasing Consortium"
+                    value='Farthing Purchasing Consortium'
                 ),
                 company_id=CompanyId(
-                    value="175 269 2355"
+                    value='175 269 2355'
                 ),
                 exemption_reason=[
                     ExemptionReason(
-                        value="N/A"
+                        value='N/A'
                     ),
                 ],
                 tax_scheme=TaxScheme(
                     id=Id(
-                        value="VAT"
+                        value='VAT'
                     ),
                     tax_type_code=TaxTypeCode(
-                        value="VAT"
+                        value='VAT'
                     )
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="Mrs Bouquet"
+                value='Mrs Bouquet'
             ),
             telephone=Telephone(
-                value="0158 1233714"
+                value='0158 1233714'
             ),
             telefax=Telefax(
-                value="0158 1233856"
+                value='0158 1233856'
             ),
             electronic_mail=ElectronicMail(
-                value="bouquet@fpconsortial.co.uk"
+                value='bouquet@fpconsortial.co.uk'
             )
         )
     ),
     payment_means=[
         PaymentMeans(
             payment_means_code=PaymentMeansCode(
-                value="20"
+                value='20'
             ),
             payment_due_date=XmlDate(2005, 7, 21),
             payee_financial_account=PayeeFinancialAccount(
                 id=Id(
-                    value="12345678"
+                    value='12345678'
                 ),
                 name=Name(
-                    value="Farthing Purchasing Consortium"
+                    value='Farthing Purchasing Consortium'
                 ),
                 account_type_code=AccountTypeCode(
-                    value="Current"
+                    value='Current'
                 ),
                 currency_code=CurrencyCode(
-                    value="GBP"
+                    value='GBP'
                 ),
                 financial_institution_branch=FinancialInstitutionBranch(
                     id=Id(
-                        value="10-26-58"
+                        value='10-26-58'
                     ),
                     name=Name(
-                        value="Open Bank Ltd, Bridgstow Branch "
+                        value='Open Bank Ltd, Bridgstow Branch '
                     ),
                     financial_institution=FinancialInstitution(
                         id=Id(
-                            value="10-26-58"
+                            value='10-26-58'
                         ),
                         name=Name(
-                            value="Open Bank Ltd"
+                            value='Open Bank Ltd'
                         ),
                         address=Address(
                             street_name=StreetName(
-                                value="City Road"
+                                value='City Road'
                             ),
                             building_name=BuildingName(
-                                value="Banking House"
+                                value='Banking House'
                             ),
                             building_number=BuildingNumber(
-                                value="12"
+                                value='12'
                             ),
                             city_name=CityName(
-                                value="London"
+                                value='London'
                             ),
                             postal_zone=PostalZone(
-                                value="AQ1 6TH"
+                                value='AQ1 6TH'
                             ),
                             country_subentity=CountrySubentity(
-                                value="London&#10;"
+                                value='London\n'
                             ),
                             address_line=[
                                 AddressLine(
                                     line=Line(
-                                        value="5th Floor"
+                                        value='5th Floor'
                                     )
                                 ),
                             ],
                             country=Country(
                                 identification_code=IdentificationCode(
-                                    value="GB"
+                                    value='GB'
                                 )
                             )
                         )
                     ),
                     address=Address(
                         street_name=StreetName(
-                            value="Busy Street"
+                            value='Busy Street'
                         ),
                         building_name=BuildingName(
-                            value="The Mall"
+                            value='The Mall'
                         ),
                         building_number=BuildingNumber(
-                            value="152"
+                            value='152'
                         ),
                         city_name=CityName(
-                            value="Farthing"
+                            value='Farthing'
                         ),
                         postal_zone=PostalZone(
-                            value="AA99 1BB"
+                            value='AA99 1BB'
                         ),
                         country_subentity=CountrySubentity(
-                            value="Heremouthshire"
+                            value='Heremouthshire'
                         ),
                         address_line=[
                             AddressLine(
                                 line=Line(
-                                    value="West Wing"
+                                    value='West Wing'
                                 )
                             ),
                         ],
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="GB"
+                                value='GB'
                             )
                         )
                     )
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             )
@@ -465,7 +465,7 @@ obj = Statement(
         PaymentTerms(
             note=[
                 Note(
-                    value="Payment due immediately"
+                    value='Payment due immediately'
                 ),
             ]
         ),
@@ -473,102 +473,102 @@ obj = Statement(
     statement_line=[
         StatementLine(
             id=Id(
-                value="normalizedString"
+                value='normalizedString'
             ),
             note=[
                 Note(
-                    value="String"
+                    value='String'
                 ),
             ],
             balance_brought_forward_indicator=False,
             debit_line_amount=DebitLineAmount(
-                value=Decimal("0.00"),
-                currency_id="GBP"
+                value=Decimal('0.00'),
+                currency_id='GBP'
             ),
             credit_line_amount=CreditLineAmount(
-                value=Decimal("107.50"),
-                currency_id="GBP"
+                value=Decimal('107.50'),
+                currency_id='GBP'
             ),
             balance_amount=BalanceAmount(
-                value=Decimal("-107.50"),
-                currency_id="GBP"
+                value=Decimal('-107.50'),
+                currency_id='GBP'
             ),
             originator_customer_party=OriginatorCustomerParty(
                 party=Party(
                     party_name=[
                         PartyName(
                             name=Name(
-                                value="The Terminus"
+                                value='The Terminus'
                             )
                         ),
                     ],
                     postal_address=PostalAddress(
                         street_name=StreetName(
-                            value="Avon Way"
+                            value='Avon Way'
                         ),
                         building_name=BuildingName(
-                            value="Thereabouts"
+                            value='Thereabouts'
                         ),
                         building_number=BuildingNumber(
-                            value="56A"
+                            value='56A'
                         ),
                         city_name=CityName(
-                            value="Bridgtow"
+                            value='Bridgtow'
                         ),
                         postal_zone=PostalZone(
-                            value="ZZ99 1ZZ"
+                            value='ZZ99 1ZZ'
                         ),
                         country_subentity=CountrySubentity(
-                            value="Avon"
+                            value='Avon'
                         ),
                         address_line=[
                             AddressLine(
                                 line=Line(
-                                    value="3rd Floor, Room 5"
+                                    value='3rd Floor, Room 5'
                                 )
                             ),
                         ],
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="GB"
+                                value='GB'
                             )
                         )
                     ),
                     party_tax_scheme=[
                         PartyTaxScheme(
                             registration_name=RegistrationName(
-                                value="Bridgtow District Council"
+                                value='Bridgtow District Council'
                             ),
                             company_id=CompanyId(
-                                value="12356478"
+                                value='12356478'
                             ),
                             exemption_reason=[
                                 ExemptionReason(
-                                    value="Local Authority"
+                                    value='Local Authority'
                                 ),
                             ],
                             tax_scheme=TaxScheme(
                                 id=Id(
-                                    value="UK VAT"
+                                    value='UK VAT'
                                 ),
                                 tax_type_code=TaxTypeCode(
-                                    value="VAT"
+                                    value='VAT'
                                 )
                             )
                         ),
                     ],
                     contact=Contact(
                         name=Name(
-                            value="S Massiah"
+                            value='S Massiah'
                         ),
                         telephone=Telephone(
-                            value="0127 98876545"
+                            value='0127 98876545'
                         ),
                         telefax=Telefax(
-                            value="0127 98876546"
+                            value='0127 98876546'
                         ),
                         electronic_mail=ElectronicMail(
-                            value="smassiah@the-email.co.uk"
+                            value='smassiah@the-email.co.uk'
                         )
                     )
                 )
@@ -577,10 +577,10 @@ obj = Statement(
                 BillingReference(
                     credit_note_document_reference=CreditNoteDocumentReference(
                         id=Id(
-                            value="CN758494"
+                            value='CN758494'
                         ),
                         uuid=Uuid(
-                            value="349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4"
+                            value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
                         ),
                         issue_date=XmlDate(2005, 6, 25)
                     )

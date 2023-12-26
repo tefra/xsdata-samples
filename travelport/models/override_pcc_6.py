@@ -15,6 +15,7 @@ class OverridePcc6:
     pseudo_city_code
         The PCC in the host system.
     """
+
     class Meta:
         name = "OverridePCC"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -27,7 +28,7 @@ class OverridePcc6:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -37,5 +38,5 @@ class OverridePcc6:
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )

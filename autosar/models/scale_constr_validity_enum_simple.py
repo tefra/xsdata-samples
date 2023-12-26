@@ -17,6 +17,7 @@ class ScaleConstrValidityEnumSimple(Enum):
     :cvar VALID: Current value is within a valid range and can be
         presented to user as is.
     """
+
     NOT_AVAILABLE = "NOT-AVAILABLE"
     NOT_DEFINED = "NOT-DEFINED"
     NOT_VALID = "NOT-VALID"

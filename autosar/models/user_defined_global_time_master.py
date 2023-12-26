@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
+from .communication_connector_subtypes_enum import (
+    CommunicationConnectorSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -88,6 +90,7 @@ class UserDefinedGlobalTimeMaster:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "USER-DEFINED-GLOBAL-TIME-MASTER"
 
@@ -98,15 +101,17 @@ class UserDefinedGlobalTimeMaster:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["UserDefinedGlobalTimeMaster.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "UserDefinedGlobalTimeMaster.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +119,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +127,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +135,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +143,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,7 +151,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["UserDefinedGlobalTimeMaster.Annotations"] = field(
         default=None,
@@ -154,15 +159,17 @@ class UserDefinedGlobalTimeMaster:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_connector_ref: Optional["UserDefinedGlobalTimeMaster.CommunicationConnectorRef"] = field(
+    communication_connector_ref: Optional[
+        "UserDefinedGlobalTimeMaster.CommunicationConnectorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     immediate_resume_time: Optional[TimeValue] = field(
         default=None,
@@ -170,7 +177,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "IMMEDIATE-RESUME-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_system_wide_global_time_master: Optional[Boolean] = field(
         default=None,
@@ -178,7 +185,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "IS-SYSTEM-WIDE-GLOBAL-TIME-MASTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_period: Optional[TimeValue] = field(
         default=None,
@@ -186,7 +193,7 @@ class UserDefinedGlobalTimeMaster:
             "name": "SYNC-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -194,14 +201,14 @@ class UserDefinedGlobalTimeMaster:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -209,14 +216,14 @@ class UserDefinedGlobalTimeMaster:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -227,7 +234,7 @@ class UserDefinedGlobalTimeMaster:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -238,7 +245,7 @@ class UserDefinedGlobalTimeMaster:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -249,5 +256,5 @@ class UserDefinedGlobalTimeMaster:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

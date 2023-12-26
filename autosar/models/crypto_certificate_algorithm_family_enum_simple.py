@@ -10,5 +10,6 @@ class CryptoCertificateAlgorithmFamilyEnumSimple(Enum):
     :cvar RSA: The cryptographic operations in the certificate are
         executed using the RSA approach.
     """
+
     ECC = "ECC"
     RSA = "RSA"

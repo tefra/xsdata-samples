@@ -17,5 +17,5 @@ class TypeOfPointRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

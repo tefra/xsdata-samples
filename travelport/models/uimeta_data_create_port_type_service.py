@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.uimeta_data_create_port_type_service_input import UimetaDataCreatePortTypeServiceInput
-from travelport.models.uimeta_data_create_port_type_service_output import UimetaDataCreatePortTypeServiceOutput
+from travelport.models.uimeta_data_create_port_type_service_input import (
+    UimetaDataCreatePortTypeServiceInput,
+)
+from travelport.models.uimeta_data_create_port_type_service_output import (
+    UimetaDataCreatePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

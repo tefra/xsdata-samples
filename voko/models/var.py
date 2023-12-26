@@ -26,25 +26,25 @@ class Var:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     klr: List[Klr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     ekz: List[Ekz] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     rim: List[Rim] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
 
 
@@ -81,5 +81,5 @@ class Kap:
                     "type": Var,
                 },
             ),
-        }
+        },
     )

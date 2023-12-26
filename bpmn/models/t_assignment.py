@@ -18,7 +18,7 @@ class TAssignment(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        }
+        },
     )
     to: Optional[TExpression] = field(
         default=None,
@@ -26,5 +26,5 @@ class TAssignment(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        }
+        },
     )

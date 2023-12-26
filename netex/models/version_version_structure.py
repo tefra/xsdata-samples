@@ -22,7 +22,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "StartDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_date: Optional[XmlDateTime] = field(
         default=None,
@@ -30,7 +30,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "EndDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     status: Optional[VersionStatusEnumeration] = field(
         default=None,
@@ -38,7 +38,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -46,7 +46,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     version_type: Optional[VersionTypeEnumeration] = field(
         default=None,
@@ -54,7 +54,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "VersionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_version_ref: Optional[TypeOfVersionRef] = field(
         default=None,
@@ -62,7 +62,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfVersionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     derived_from_version_ref: Optional[VersionRefStructure] = field(
         default=None,
@@ -70,5 +70,5 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "DerivedFromVersionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

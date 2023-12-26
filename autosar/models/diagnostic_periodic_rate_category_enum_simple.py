@@ -12,6 +12,7 @@ class DiagnosticPeriodicRateCategoryEnumSimple(Enum):
     :cvar PERIODIC_RATE_SLOW: This value represents a slow periodic
         rate.
     """
+
     PERIODIC_RATE_FAST = "PERIODIC-RATE-FAST"
     PERIODIC_RATE_MEDIUM = "PERIODIC-RATE-MEDIUM"
     PERIODIC_RATE_SLOW = "PERIODIC-RATE-SLOW"

@@ -14,7 +14,7 @@ class LocaleStructure:
             "name": "TimeZoneOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     time_zone: Optional[str] = field(
         default=None,
@@ -22,7 +22,7 @@ class LocaleStructure:
             "name": "TimeZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     summer_time_zone_offset: Optional[Decimal] = field(
         default=None,
@@ -30,7 +30,7 @@ class LocaleStructure:
             "name": "SummerTimeZoneOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     summer_time_zone: Optional[str] = field(
         default=None,
@@ -38,7 +38,7 @@ class LocaleStructure:
             "name": "SummerTimeZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     default_language: Optional[str] = field(
         default=None,
@@ -46,14 +46,14 @@ class LocaleStructure:
             "name": "DefaultLanguage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     languages: Optional["LocaleStructure.Languages"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
     @dataclass
@@ -64,5 +64,5 @@ class LocaleStructure:
                 "name": "LanguageUsage",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-            }
+            },
         )

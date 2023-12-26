@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.party_local_id_type import PartyLocalIdType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.party_local_id_type import (
+    PartyLocalIdType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1"
 
@@ -16,5 +18,5 @@ class ExtendedRecordTypePartyLocalIds:
             "name": "PartyLocalId",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )

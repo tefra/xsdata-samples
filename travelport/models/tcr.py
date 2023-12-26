@@ -68,6 +68,7 @@ class Tcr:
     forfeit_amount
         Amount forfeited as a result of refund.
     """
+
     class Meta:
         name = "TCR"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -79,7 +80,7 @@ class Tcr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     payment: list[Payment1] = field(
         default_factory=list,
@@ -88,7 +89,7 @@ class Tcr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     booking_traveler: list[BookingTraveler1] = field(
         default_factory=list,
@@ -98,7 +99,7 @@ class Tcr:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     passenger_ticket_number: list[PassengerTicketNumber] = field(
         default_factory=list,
@@ -106,7 +107,7 @@ class Tcr:
             "name": "PassengerTicketNumber",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_info: list[AirPricingInfo] = field(
         default_factory=list,
@@ -114,7 +115,7 @@ class Tcr:
             "name": "AirPricingInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     agency_info: None | AgencyInfo1 = field(
         default=None,
@@ -122,7 +123,7 @@ class Tcr:
             "name": "AgencyInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_reservation_locator_code: None | str = field(
         default=None,
@@ -131,7 +132,7 @@ class Tcr:
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     supplier_locator: list[SupplierLocator1] = field(
         default_factory=list,
@@ -140,7 +141,7 @@ class Tcr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     refund_remark: list[RefundRemark1] = field(
         default_factory=list,
@@ -149,7 +150,7 @@ class Tcr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     tcrnumber: None | str = field(
         default=None,
@@ -157,7 +158,7 @@ class Tcr:
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | TypeTcrstatus = field(
         default=None,
@@ -165,7 +166,7 @@ class Tcr:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     modified_date: None | str = field(
         default=None,
@@ -173,14 +174,14 @@ class Tcr:
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     confirmed_date: None | str = field(
         default=None,
         metadata={
             "name": "ConfirmedDate",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
@@ -188,7 +189,7 @@ class Tcr:
             "name": "BasePrice",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
@@ -196,7 +197,7 @@ class Tcr:
             "name": "Taxes",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     fees: None | str = field(
         default=None,
@@ -204,7 +205,7 @@ class Tcr:
             "name": "Fees",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     refundable: None | bool = field(
         default=None,
@@ -212,7 +213,7 @@ class Tcr:
             "name": "Refundable",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     exchangeable: None | bool = field(
         default=None,
@@ -220,7 +221,7 @@ class Tcr:
             "name": "Exchangeable",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     voidable: None | bool = field(
         default=None,
@@ -228,7 +229,7 @@ class Tcr:
             "name": "Voidable",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     modifiable: None | bool = field(
         default=None,
@@ -236,7 +237,7 @@ class Tcr:
             "name": "Modifiable",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -246,7 +247,7 @@ class Tcr:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -255,7 +256,7 @@ class Tcr:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -264,7 +265,7 @@ class Tcr:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     refund_access_code: None | str = field(
         default=None,
@@ -274,26 +275,26 @@ class Tcr:
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )
     refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
-        }
+        },
     )
     refund_fee: None | str = field(
         default=None,
         metadata={
             "name": "RefundFee",
             "type": "Attribute",
-        }
+        },
     )
     forfeit_amount: None | str = field(
         default=None,
         metadata={
             "name": "ForfeitAmount",
             "type": "Attribute",
-        }
+        },
     )

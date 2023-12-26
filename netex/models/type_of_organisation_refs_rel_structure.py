@@ -17,5 +17,5 @@ class TypeOfOrganisationRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

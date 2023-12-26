@@ -17,6 +17,7 @@ class PriceRange:
     end_price
         Price range end value
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,19 +26,19 @@ class PriceRange:
         metadata={
             "name": "DefaultCurrency",
             "type": "Attribute",
-        }
+        },
     )
     start_price: None | str = field(
         default=None,
         metadata={
             "name": "StartPrice",
             "type": "Attribute",
-        }
+        },
     )
     end_price: None | str = field(
         default=None,
         metadata={
             "name": "EndPrice",
             "type": "Attribute",
-        }
+        },
     )

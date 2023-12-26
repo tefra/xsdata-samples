@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from .luggage_service_facility_enumeration import LuggageServiceFacilityEnumeration
+from .luggage_service_facility_enumeration import (
+    LuggageServiceFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -14,5 +16,5 @@ class LuggageServiceFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

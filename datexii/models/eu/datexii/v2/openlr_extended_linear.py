@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.openlr_line_location_reference import OpenlrLineLocationReference
+from datexii.models.eu.datexii.v2.openlr_line_location_reference import (
+    OpenlrLineLocationReference,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -15,6 +17,7 @@ class OpenlrExtendedLinear:
     :ivar opposite_direction: If both direction, this is tha reference
         in the opposite direction against firstDirection.
     """
+
     first_direction: Optional[OpenlrLineLocationReference] = field(
         default=None,
         metadata={
@@ -22,7 +25,7 @@ class OpenlrExtendedLinear:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     opposite_direction: Optional[OpenlrLineLocationReference] = field(
         default=None,
@@ -30,5 +33,5 @@ class OpenlrExtendedLinear:
             "name": "oppositeDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

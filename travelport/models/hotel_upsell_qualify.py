@@ -35,6 +35,7 @@ class HotelUpsellQualify:
     offer_ref
         Reference to the Offer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -44,7 +45,7 @@ class HotelUpsellQualify:
             "name": "CorporateDiscountID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_chain_code: None | str = field(
         default=None,
@@ -53,7 +54,7 @@ class HotelUpsellQualify:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     hotel_code: None | str = field(
         default=None,
@@ -61,7 +62,7 @@ class HotelUpsellQualify:
             "name": "HotelCode",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )
     hotel_location: None | str = field(
         default=None,
@@ -70,14 +71,14 @@ class HotelUpsellQualify:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     rate_plan_type: None | str = field(
         default=None,
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
-        }
+        },
     )
     effective_date: None | str = field(
         default=None,
@@ -86,7 +87,7 @@ class HotelUpsellQualify:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     expiration_date: None | str = field(
         default=None,
@@ -95,33 +96,33 @@ class HotelUpsellQualify:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     offer_ref: None | str = field(
         default=None,
         metadata={
             "name": "OfferRef",
             "type": "Attribute",
-        }
+        },
     )

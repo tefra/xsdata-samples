@@ -49,6 +49,7 @@ class ServiceFacilityTypeEnum(Enum):
     :cvar OTHER: Some other service facility. Use
         'otherEquipmentOrServiceFacility' to specify it.
     """
+
     HOTEL = "hotel"
     MOTEL = "motel"
     OVERNIGHT_ACCOMMODATION = "overnightAccommodation"

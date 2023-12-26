@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
-from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .autosar_data_prototype_subtypes_enum import (
+    AutosarDataPrototypeSubtypesEnum,
+)
+from .implementation_data_type_element_subtypes_enum import (
+    ImplementationDataTypeElementSubtypesEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 
@@ -47,6 +51,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF"
 
@@ -56,38 +61,44 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "name": "TAG-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    root_data_prototype_ref: Optional["ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef"] = field(
+    root_data_prototype_ref: Optional[
+        "ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_implementation_data_element_refs: Optional["ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs"] = field(
+    context_implementation_data_element_refs: Optional[
+        "ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_implementation_data_type_element_ref: Optional["ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef"] = field(
+    target_implementation_data_type_element_ref: Optional[
+        "ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -95,7 +106,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -106,18 +117,20 @@ class ImplementationDataTypeElementInPortInterfaceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ContextImplementationDataElementRefs:
-        context_implementation_data_element_ref: List["ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"] = field(
+        context_implementation_data_element_ref: List[
+            "ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -128,7 +141,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -139,5 +152,5 @@ class ImplementationDataTypeElementInPortInterfaceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

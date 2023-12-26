@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .holiday_type_enumeration import HolidayTypeEnumeration
@@ -22,7 +22,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "name": "ServiceCalendarRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -30,7 +30,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -38,9 +38,11 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    from_operating_day_ref_or_from_date: Optional[object] = field(
+    from_operating_day_ref_or_from_date: Optional[
+        Union[OperatingDayRefStructure, XmlDateTime]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -56,9 +58,11 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    to_operating_day_ref_or_to_date: Optional[object] = field(
+    to_operating_day_ref_or_to_date: Optional[
+        Union[OperatingDayRefStructure, XmlDateTime]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -74,7 +78,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     holiday_type: List[HolidayTypeEnumeration] = field(
         default_factory=list,
@@ -82,7 +86,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "name": "HolidayType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     season: List[SeasonEnumeration] = field(
         default_factory=list,
@@ -91,5 +95,5 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "max_occurs": 5,
-        }
+        },
     )

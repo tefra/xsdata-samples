@@ -14,6 +14,7 @@ class TypeGuestChildInformation:
     age
         Age of the Child.
     """
+
     class Meta:
         name = "typeGuestChildInformation"
 
@@ -22,5 +23,5 @@ class TypeGuestChildInformation:
         metadata={
             "name": "Age",
             "type": "Attribute",
-        }
+        },
     )

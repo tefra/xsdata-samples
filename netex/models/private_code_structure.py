@@ -10,12 +10,12 @@ class PrivateCodeStructure:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )

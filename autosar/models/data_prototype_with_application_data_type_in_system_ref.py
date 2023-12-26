@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .application_data_prototype_in_system_instance_ref import ApplicationDataPrototypeInSystemInstanceRef
+from .application_data_prototype_in_system_instance_ref import (
+    ApplicationDataPrototypeInSystemInstanceRef,
+)
 from .positive_integer import PositiveInteger
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -30,6 +32,7 @@ class DataPrototypeWithApplicationDataTypeInSystemRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DATA-PROTOTYPE-WITH-APPLICATION-DATA-TYPE-IN-SYSTEM-REF"
 
@@ -39,22 +42,24 @@ class DataPrototypeWithApplicationDataTypeInSystemRef:
             "name": "TAG-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_prototype_iref: Optional[ApplicationDataPrototypeInSystemInstanceRef] = field(
+    data_prototype_iref: Optional[
+        ApplicationDataPrototypeInSystemInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -62,5 +67,5 @@ class DataPrototypeWithApplicationDataTypeInSystemRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

@@ -15,5 +15,5 @@ class Lambda:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

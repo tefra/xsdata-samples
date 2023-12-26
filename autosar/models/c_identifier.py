@@ -28,6 +28,7 @@ class CIdentifier:
         in question is part of a blueprint. For more details refer to
         TPS_StandardizationTemplate.
     """
+
     class Meta:
         name = "C-IDENTIFIER"
 
@@ -36,14 +37,14 @@ class CIdentifier:
         metadata={
             "required": True,
             "pattern": r"[a-zA-Z_][a-zA-Z0-9_]*",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -51,19 +52,19 @@ class CIdentifier:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     blueprint_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
-        }
+        },
     )
     name_pattern: Optional[str] = field(
         default=None,
         metadata={
             "name": "NAME-PATTERN",
             "type": "Attribute",
-        }
+        },
     )

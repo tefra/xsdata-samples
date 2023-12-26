@@ -66,6 +66,7 @@ class RailSegment(Segment1):
     class_code
         A booking code or fare basis code or fare class.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -75,14 +76,14 @@ class RailSegment(Segment1):
             "name": "RailSegmentInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     operating_company: None | OperatingCompany = field(
         default=None,
         metadata={
             "name": "OperatingCompany",
             "type": "Element",
-        }
+        },
     )
     rail_avail_info: list[RailAvailInfo] = field(
         default_factory=list,
@@ -90,7 +91,7 @@ class RailSegment(Segment1):
             "name": "RailAvailInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ful_fillment_type: list[str] = field(
         default_factory=list,
@@ -100,7 +101,7 @@ class RailSegment(Segment1):
             "max_occurs": 999,
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     train_number: None | str = field(
         default=None,
@@ -109,7 +110,7 @@ class RailSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -118,7 +119,7 @@ class RailSegment(Segment1):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -127,7 +128,7 @@ class RailSegment(Segment1):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
@@ -135,28 +136,28 @@ class RailSegment(Segment1):
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )
     origin_station_name: None | str = field(
         default=None,
         metadata={
             "name": "OriginStationName",
             "type": "Attribute",
-        }
+        },
     )
     destination_station_name: None | str = field(
         default=None,
         metadata={
             "name": "DestinationStationName",
             "type": "Attribute",
-        }
+        },
     )
     rail_loc_origin: None | str = field(
         default=None,
@@ -166,7 +167,7 @@ class RailSegment(Segment1):
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     rail_loc_destination: None | str = field(
         default=None,
@@ -176,14 +177,14 @@ class RailSegment(Segment1):
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     train_type: None | str = field(
         default=None,
         metadata={
             "name": "TrainType",
             "type": "Attribute",
-        }
+        },
     )
     train_type_code: None | str = field(
         default=None,
@@ -192,49 +193,49 @@ class RailSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     transport_mode: None | TypeTransportMode = field(
         default=None,
         metadata={
             "name": "TransportMode",
             "type": "Attribute",
-        }
+        },
     )
     seat_assignable: None | bool = field(
         default=None,
         metadata={
             "name": "SeatAssignable",
             "type": "Attribute",
-        }
+        },
     )
     transport_code: None | str = field(
         default=None,
         metadata={
             "name": "TransportCode",
             "type": "Attribute",
-        }
+        },
     )
     reservation_required: None | bool = field(
         default=None,
         metadata={
             "name": "ReservationRequired",
             "type": "Attribute",
-        }
+        },
     )
     travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
-        }
+        },
     )
     host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
             "type": "Attribute",
-        }
+        },
     )
     cabin_class: None | str = field(
         default=None,
@@ -243,7 +244,7 @@ class RailSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     class_code: None | str = field(
         default=None,
@@ -252,5 +253,5 @@ class RailSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )

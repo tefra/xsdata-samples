@@ -20,7 +20,7 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -29,7 +29,7 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     vehicle_mode: Optional[AllModesEnumeration] = field(
         default=None,
@@ -37,7 +37,7 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "name": "VehicleMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operational_context_ref: Optional[OperationalContextRef] = field(
         default=None,
@@ -45,5 +45,5 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "name": "OperationalContextRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

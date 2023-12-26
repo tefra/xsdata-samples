@@ -1,9 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import BaseComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gboparts_type_notes import BaseGbopartsTypeNotes
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristics_type import CharacteristicsType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type import StatusHistoryType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import (
+    BaseComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gboparts_type_notes import (
+    BaseGbopartsTypeNotes,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristics_type import (
+    CharacteristicsType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.status_history_type import (
+    StatusHistoryType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -23,6 +31,7 @@ class BaseGbopartsType(BaseComponentType):
     :ivar status_history: <description xmlns="">The history of the
         lifecycle of the parent context.</description>
     """
+
     class Meta:
         name = "BaseGBOPartsType"
 
@@ -32,7 +41,7 @@ class BaseGbopartsType(BaseComponentType):
             "name": "Notes",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     characteristics: Optional[CharacteristicsType] = field(
         default=None,
@@ -40,7 +49,7 @@ class BaseGbopartsType(BaseComponentType):
             "name": "Characteristics",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     status_history: Optional[StatusHistoryType] = field(
         default=None,
@@ -48,5 +57,5 @@ class BaseGbopartsType(BaseComponentType):
             "name": "StatusHistory",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

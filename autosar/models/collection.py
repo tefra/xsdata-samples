@@ -104,6 +104,7 @@ class Collection:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COLLECTION"
 
@@ -114,7 +115,7 @@ class Collection:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["Collection.ShortNameFragments"] = field(
         default=None,
@@ -122,7 +123,7 @@ class Collection:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -130,7 +131,7 @@ class Collection:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -138,7 +139,7 @@ class Collection:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -146,7 +147,7 @@ class Collection:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -154,7 +155,7 @@ class Collection:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -162,7 +163,7 @@ class Collection:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["Collection.Annotations"] = field(
         default=None,
@@ -170,7 +171,7 @@ class Collection:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -178,7 +179,7 @@ class Collection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auto_collect: Optional[AutoCollectEnum] = field(
         default=None,
@@ -186,7 +187,7 @@ class Collection:
             "name": "AUTO-COLLECT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     element_role: Optional[Identifier] = field(
         default=None,
@@ -194,7 +195,7 @@ class Collection:
             "name": "ELEMENT-ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     element_refs: Optional["Collection.ElementRefs"] = field(
         default=None,
@@ -202,7 +203,7 @@ class Collection:
             "name": "ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_element_refs: Optional["Collection.SourceElementRefs"] = field(
         default=None,
@@ -210,15 +211,17 @@ class Collection:
             "name": "SOURCE-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    collected_instance_irefs: Optional["Collection.CollectedInstanceIrefs"] = field(
+    collected_instance_irefs: Optional[
+        "Collection.CollectedInstanceIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "COLLECTED-INSTANCE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_instance_irefs: Optional["Collection.SourceInstanceIrefs"] = field(
         default=None,
@@ -226,14 +229,14 @@ class Collection:
             "name": "SOURCE-INSTANCE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -241,14 +244,14 @@ class Collection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -259,7 +262,7 @@ class Collection:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -270,7 +273,7 @@ class Collection:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -281,7 +284,7 @@ class Collection:
                 "name": "ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -292,18 +295,20 @@ class Collection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class SourceElementRefs:
-        source_element_ref: List["Collection.SourceElementRefs.SourceElementRef"] = field(
+        source_element_ref: List[
+            "Collection.SourceElementRefs.SourceElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOURCE-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -314,7 +319,7 @@ class Collection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -325,7 +330,7 @@ class Collection:
                 "name": "COLLECTED-INSTANCE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -336,5 +341,5 @@ class Collection:
                 "name": "SOURCE-INSTANCE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

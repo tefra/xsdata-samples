@@ -12,7 +12,7 @@ class DataNameSpacesStructure:
             "name": "StopPointNameSpace",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     line_name_space: Optional[str] = field(
         default=None,
@@ -20,7 +20,7 @@ class DataNameSpacesStructure:
             "name": "LineNameSpace",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     product_category_name_space: Optional[str] = field(
         default=None,
@@ -28,7 +28,7 @@ class DataNameSpacesStructure:
             "name": "ProductCategoryNameSpace",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     service_feature_name_space: Optional[str] = field(
         default=None,
@@ -36,7 +36,7 @@ class DataNameSpacesStructure:
             "name": "ServiceFeatureNameSpace",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     vehicle_feature_name_space: Optional[str] = field(
         default=None,
@@ -44,5 +44,5 @@ class DataNameSpacesStructure:
             "name": "VehicleFeatureNameSpace",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

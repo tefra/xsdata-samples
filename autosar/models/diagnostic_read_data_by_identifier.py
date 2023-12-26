@@ -7,9 +7,15 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_abstract_data_identifier_subtypes_enum import DiagnosticAbstractDataIdentifierSubtypesEnum
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_read_data_by_identifier_class_subtypes_enum import DiagnosticReadDataByIdentifierClassSubtypesEnum
+from .diagnostic_abstract_data_identifier_subtypes_enum import (
+    DiagnosticAbstractDataIdentifierSubtypesEnum,
+)
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_read_data_by_identifier_class_subtypes_enum import (
+    DiagnosticReadDataByIdentifierClassSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -90,6 +96,7 @@ class DiagnosticReadDataByIdentifier:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-READ-DATA-BY-IDENTIFIER"
 
@@ -100,15 +107,17 @@ class DiagnosticReadDataByIdentifier:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticReadDataByIdentifier.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticReadDataByIdentifier.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +125,7 @@ class DiagnosticReadDataByIdentifier:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +133,7 @@ class DiagnosticReadDataByIdentifier:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +141,7 @@ class DiagnosticReadDataByIdentifier:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +149,7 @@ class DiagnosticReadDataByIdentifier:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,15 +157,17 @@ class DiagnosticReadDataByIdentifier:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticReadDataByIdentifier.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticReadDataByIdentifier.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -164,38 +175,44 @@ class DiagnosticReadDataByIdentifier:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticReadDataByIdentifier.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticReadDataByIdentifier.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_identifier_ref: Optional["DiagnosticReadDataByIdentifier.DataIdentifierRef"] = field(
+    data_identifier_ref: Optional[
+        "DiagnosticReadDataByIdentifier.DataIdentifierRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-IDENTIFIER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    read_class_ref: Optional["DiagnosticReadDataByIdentifier.ReadClassRef"] = field(
+    read_class_ref: Optional[
+        "DiagnosticReadDataByIdentifier.ReadClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "READ-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +220,14 @@ class DiagnosticReadDataByIdentifier:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +238,7 @@ class DiagnosticReadDataByIdentifier:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,7 +249,7 @@ class DiagnosticReadDataByIdentifier:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,7 +260,7 @@ class DiagnosticReadDataByIdentifier:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -254,16 +271,18 @@ class DiagnosticReadDataByIdentifier:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ReadClassRef(Ref):
-        dest: Optional[DiagnosticReadDataByIdentifierClassSubtypesEnum] = field(
+        dest: Optional[
+            DiagnosticReadDataByIdentifierClassSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

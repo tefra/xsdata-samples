@@ -8,6 +8,7 @@ class TypeRailDirection(Enum):
     """
     The direction of travel.
     """
+
     INBOUND = "Inbound"
     OUTBOUND = "Outbound"
     BOTH = "Both"

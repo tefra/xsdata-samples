@@ -7,8 +7,12 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_connection_ref_conditional import DiagnosticConnectionRefConditional
-from .diagnostic_service_instance_subtypes_enum import DiagnosticServiceInstanceSubtypesEnum
+from .diagnostic_connection_ref_conditional import (
+    DiagnosticConnectionRefConditional,
+)
+from .diagnostic_service_instance_subtypes_enum import (
+    DiagnosticServiceInstanceSubtypesEnum,
+)
 from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -93,6 +97,7 @@ class DiagnosticServiceTable:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-SERVICE-TABLE"
 
@@ -103,15 +108,17 @@ class DiagnosticServiceTable:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticServiceTable.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticServiceTable.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +126,7 @@ class DiagnosticServiceTable:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +134,7 @@ class DiagnosticServiceTable:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +142,7 @@ class DiagnosticServiceTable:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +150,7 @@ class DiagnosticServiceTable:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +158,7 @@ class DiagnosticServiceTable:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticServiceTable.Annotations"] = field(
         default=None,
@@ -159,7 +166,7 @@ class DiagnosticServiceTable:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -167,23 +174,27 @@ class DiagnosticServiceTable:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    diagnostic_connections: Optional["DiagnosticServiceTable.DiagnosticConnections"] = field(
+    diagnostic_connections: Optional[
+        "DiagnosticServiceTable.DiagnosticConnections"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_instance_ref: Optional["DiagnosticServiceTable.EcuInstanceRef"] = field(
+    ecu_instance_ref: Optional[
+        "DiagnosticServiceTable.EcuInstanceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_kind: Optional[NmtokenString] = field(
         default=None,
@@ -191,22 +202,24 @@ class DiagnosticServiceTable:
             "name": "PROTOCOL-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_instance_refs: Optional["DiagnosticServiceTable.ServiceInstanceRefs"] = field(
+    service_instance_refs: Optional[
+        "DiagnosticServiceTable.ServiceInstanceRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -214,14 +227,14 @@ class DiagnosticServiceTable:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -232,7 +245,7 @@ class DiagnosticServiceTable:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,18 +256,20 @@ class DiagnosticServiceTable:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DiagnosticConnections:
-        diagnostic_connection_ref_conditional: List[DiagnosticConnectionRefConditional] = field(
+        diagnostic_connection_ref_conditional: List[
+            DiagnosticConnectionRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-CONNECTION-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -265,18 +280,20 @@ class DiagnosticServiceTable:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List["DiagnosticServiceTable.ServiceInstanceRefs.ServiceInstanceRef"] = field(
+        service_instance_ref: List[
+            "DiagnosticServiceTable.ServiceInstanceRefs.ServiceInstanceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -287,5 +304,5 @@ class DiagnosticServiceTable:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

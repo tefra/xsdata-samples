@@ -10,6 +10,7 @@ class RailFareNoteRef:
 
     Used to minimize xml results.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -19,5 +20,5 @@ class RailFareNoteRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

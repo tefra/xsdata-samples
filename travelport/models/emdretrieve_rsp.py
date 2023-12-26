@@ -20,6 +20,7 @@ class EmdretrieveRsp(BaseRsp1):
     emdsummary_info
         Provider: 1G/1V/1P.
     """
+
     class Meta:
         name = "EMDRetrieveRsp"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -29,7 +30,7 @@ class EmdretrieveRsp(BaseRsp1):
         metadata={
             "name": "EMDInfo",
             "type": "Element",
-        }
+        },
     )
     emdsummary_info: list[EmdsummaryInfo] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class EmdretrieveRsp(BaseRsp1):
             "name": "EMDSummaryInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.area_extended import AreaExtended
-from datexii.models.eu.datexii.v2.openlr_extended_area import OpenlrExtendedArea
+from datexii.models.eu.datexii.v2.openlr_extended_area import (
+    OpenlrExtendedArea,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,7 +19,7 @@ class AreaExtensionType:
             "name": "openlrExtendedArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     area_extended: Optional[AreaExtended] = field(
         default=None,
@@ -25,12 +27,12 @@ class AreaExtensionType:
             "name": "areaExtended",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     other_element: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )

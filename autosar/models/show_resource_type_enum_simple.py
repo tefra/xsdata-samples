@@ -10,5 +10,6 @@ class ShowResourceTypeEnumSimple(Enum):
     :cvar SHOW_TYPE: The type of the target is rendered at the place of
         the reference.
     """
+
     NO_SHOW_TYPE = "NO-SHOW-TYPE"
     SHOW_TYPE = "SHOW-TYPE"

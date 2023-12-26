@@ -79,6 +79,7 @@ class TypeProfileDataCategory2(Enum):
     TRAVELER_IDENTITY_INFORMATION
         All data for all traveler identity information
     """
+
     GENERAL_INFORMATION = "General Information"
     ALL_DETAILS = "All Details"
     ALTERNATE_CONTACTS = "Alternate Contacts"

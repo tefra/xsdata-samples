@@ -7,10 +7,18 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_event_displacement_strategy_enum import DiagnosticEventDisplacementStrategyEnum
-from .diagnostic_memory_entry_storage_trigger_enum import DiagnosticMemoryEntryStorageTriggerEnum
-from .diagnostic_type_of_dtc_supported_enum import DiagnosticTypeOfDtcSupportedEnum
-from .diagnostic_type_of_freeze_frame_record_numeration_enum import DiagnosticTypeOfFreezeFrameRecordNumerationEnum
+from .diagnostic_event_displacement_strategy_enum import (
+    DiagnosticEventDisplacementStrategyEnum,
+)
+from .diagnostic_memory_entry_storage_trigger_enum import (
+    DiagnosticMemoryEntryStorageTriggerEnum,
+)
+from .diagnostic_type_of_dtc_supported_enum import (
+    DiagnosticTypeOfDtcSupportedEnum,
+)
+from .diagnostic_type_of_freeze_frame_record_numeration_enum import (
+    DiagnosticTypeOfFreezeFrameRecordNumerationEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -95,6 +103,7 @@ class DiagnosticMemoryDestinationPrimary:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-MEMORY-DESTINATION-PRIMARY"
 
@@ -105,15 +114,17 @@ class DiagnosticMemoryDestinationPrimary:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticMemoryDestinationPrimary.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticMemoryDestinationPrimary.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -121,7 +132,7 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -129,7 +140,7 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -137,7 +148,7 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -145,7 +156,7 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -153,15 +164,17 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticMemoryDestinationPrimary.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticMemoryDestinationPrimary.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -169,7 +182,7 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dtc_status_availability_mask: Optional[PositiveInteger] = field(
         default=None,
@@ -177,15 +190,17 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "DTC-STATUS-AVAILABILITY-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_displacement_strategy: Optional[DiagnosticEventDisplacementStrategyEnum] = field(
+    event_displacement_strategy: Optional[
+        DiagnosticEventDisplacementStrategyEnum
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-DISPLACEMENT-STRATEGY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_of_event_entries: Optional[PositiveInteger] = field(
         default=None,
@@ -193,23 +208,27 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "MAX-NUMBER-OF-EVENT-ENTRIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    memory_entry_storage_trigger: Optional[DiagnosticMemoryEntryStorageTriggerEnum] = field(
+    memory_entry_storage_trigger: Optional[
+        DiagnosticMemoryEntryStorageTriggerEnum
+    ] = field(
         default=None,
         metadata={
             "name": "MEMORY-ENTRY-STORAGE-TRIGGER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    type_of_freeze_frame_record_numeration: Optional[DiagnosticTypeOfFreezeFrameRecordNumerationEnum] = field(
+    type_of_freeze_frame_record_numeration: Optional[
+        DiagnosticTypeOfFreezeFrameRecordNumerationEnum
+    ] = field(
         default=None,
         metadata={
             "name": "TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_of_dtc_supported: Optional[DiagnosticTypeOfDtcSupportedEnum] = field(
         default=None,
@@ -217,14 +236,14 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "TYPE-OF-DTC-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -232,14 +251,14 @@ class DiagnosticMemoryDestinationPrimary:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -250,7 +269,7 @@ class DiagnosticMemoryDestinationPrimary:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -261,5 +280,5 @@ class DiagnosticMemoryDestinationPrimary:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

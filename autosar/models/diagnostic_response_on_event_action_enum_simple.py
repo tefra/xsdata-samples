@@ -10,6 +10,7 @@ class DiagnosticResponseOnEventActionEnumSimple(Enum):
     :cvar START: Starts the response on event service.
     :cvar STOP: Stops the response on event service.
     """
+
     CLEAR = "CLEAR"
     REPORT = "REPORT"
     START = "START"

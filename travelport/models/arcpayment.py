@@ -16,6 +16,7 @@ class Arcpayment:
     arcpassword
         Value of the ARC Direct Bill id password
     """
+
     class Meta:
         name = "ARCPayment"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -27,7 +28,7 @@ class Arcpayment:
             "type": "Attribute",
             "required": True,
             "max_length": 128,
-        }
+        },
     )
     arcpassword: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class Arcpayment:
             "name": "ARCPassword",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )

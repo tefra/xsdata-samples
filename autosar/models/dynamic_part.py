@@ -33,6 +33,7 @@ class DynamicPart:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DYNAMIC-PART"
 
@@ -42,15 +43,17 @@ class DynamicPart:
             "name": "SEGMENT-POSITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    dynamic_part_alternatives: Optional["DynamicPart.DynamicPartAlternatives"] = field(
+    dynamic_part_alternatives: Optional[
+        "DynamicPart.DynamicPartAlternatives"
+    ] = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PART-ALTERNATIVES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -58,14 +61,14 @@ class DynamicPart:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -73,7 +76,7 @@ class DynamicPart:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -84,7 +87,7 @@ class DynamicPart:
                 "name": "SEGMENT-POSITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -95,5 +98,5 @@ class DynamicPart:
                 "name": "DYNAMIC-PART-ALTERNATIVE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

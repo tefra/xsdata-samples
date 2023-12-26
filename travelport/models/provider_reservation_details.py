@@ -29,6 +29,7 @@ class ProviderReservationDetails:
     rail_segment
         Rail Segment data exists.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -37,54 +38,54 @@ class ProviderReservationDetails:
         metadata={
             "name": "ProviderReservationDetail",
             "type": "Attribute",
-        }
+        },
     )
     custom_check: None | bool = field(
         default=None,
         metadata={
             "name": "CustomCheck",
             "type": "Attribute",
-        }
+        },
     )
     provider_profile: None | bool = field(
         default=None,
         metadata={
             "name": "ProviderProfile",
             "type": "Attribute",
-        }
+        },
     )
     divide_details: None | bool = field(
         default=None,
         metadata={
             "name": "DivideDetails",
             "type": "Attribute",
-        }
+        },
     )
     enhanced_itin_modifiers: None | bool = field(
         default=None,
         metadata={
             "name": "EnhancedItinModifiers",
             "type": "Attribute",
-        }
+        },
     )
     integrated_content: None | bool = field(
         default=None,
         metadata={
             "name": "IntegratedContent",
             "type": "Attribute",
-        }
+        },
     )
     cruise: None | bool = field(
         default=None,
         metadata={
             "name": "Cruise",
             "type": "Attribute",
-        }
+        },
     )
     rail_segment: None | bool = field(
         default=None,
         metadata={
             "name": "RailSegment",
             "type": "Attribute",
-        }
+        },
     )

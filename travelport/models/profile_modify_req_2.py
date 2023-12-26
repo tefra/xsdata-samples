@@ -2,8 +2,12 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_5 import BaseReq5
 from travelport.models.profile_modify_cmd_2 import ProfileModifyCmd2
-from travelport.models.provisioning_code_profile_type_2 import ProvisioningCodeProfileType2
-from travelport.models.unique_profile_id_profile_type_2 import UniqueProfileIdProfileType2
+from travelport.models.provisioning_code_profile_type_2 import (
+    ProvisioningCodeProfileType2,
+)
+from travelport.models.unique_profile_id_profile_type_2 import (
+    UniqueProfileIdProfileType2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -37,6 +41,7 @@ class ProfileModifyReq2(BaseReq5):
         profile, without masking applied. (Any such data in parent profiles
         will still be masked.) Requires special authorization.
     """
+
     class Meta:
         name = "ProfileModifyReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -46,21 +51,21 @@ class ProfileModifyReq2(BaseReq5):
         metadata={
             "name": "ProfileID",
             "type": "Element",
-        }
+        },
     )
     provisioning_code: None | ProfileModifyReq2.ProvisioningCode = field(
         default=None,
         metadata={
             "name": "ProvisioningCode",
             "type": "Element",
-        }
+        },
     )
     unique_profile_id: None | ProfileModifyReq2.UniqueProfileId = field(
         default=None,
         metadata={
             "name": "UniqueProfileID",
             "type": "Element",
-        }
+        },
     )
     profile_modify_cmd: list[ProfileModifyCmd2] = field(
         default_factory=list,
@@ -69,7 +74,7 @@ class ProfileModifyReq2(BaseReq5):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -78,21 +83,21 @@ class ProfileModifyReq2(BaseReq5):
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     return_profile: bool = field(
         default=False,
         metadata={
             "name": "ReturnProfile",
             "type": "Attribute",
-        }
+        },
     )
     show_data_unmasked: bool = field(
         default=False,
         metadata={
             "name": "ShowDataUnmasked",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -105,13 +110,14 @@ class ProfileModifyReq2(BaseReq5):
             Specify the Profile Type (limited to only the ones where
             ProvisioningCode is relevant)
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | ProvisioningCodeProfileType2 = field(
             default=None,
@@ -119,7 +125,7 @@ class ProfileModifyReq2(BaseReq5):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -137,13 +143,14 @@ class ProfileModifyReq2(BaseReq5):
             determine 'AgencyCode' by Agent's WAB/target Branch or Agent's
             agency.
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 6,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | UniqueProfileIdProfileType2 = field(
             default=None,
@@ -151,7 +158,7 @@ class ProfileModifyReq2(BaseReq5):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         agency_code: None | str = field(
             default=None,
@@ -160,5 +167,5 @@ class ProfileModifyReq2(BaseReq5):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 25,
-            }
+            },
         )

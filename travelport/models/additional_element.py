@@ -17,6 +17,7 @@ class AdditionalElement:
     value
         Please provide corresponding value of the Name field
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -26,7 +27,7 @@ class AdditionalElement:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class AdditionalElement:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

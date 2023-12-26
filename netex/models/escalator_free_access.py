@@ -13,5 +13,5 @@ class EscalatorFreeAccess:
         default=LimitationStatusEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
+    AmountType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -14,7 +18,7 @@ class EngineeringMbType:
             "name": "MachineryManufacturer",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     machinery_model: Optional[str] = field(
         default=None,
@@ -22,7 +26,7 @@ class EngineeringMbType:
             "name": "MachineryModel",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     machinery_serial_number: Optional[str] = field(
         default=None,
@@ -30,7 +34,7 @@ class EngineeringMbType:
             "name": "MachinerySerialNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     insured_values_machinery: Optional[AmountType] = field(
         default=None,
@@ -38,7 +42,7 @@ class EngineeringMbType:
             "name": "InsuredValuesMachinery",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     rate_mbmachinery: Optional[Decimal] = field(
         default=None,
@@ -46,7 +50,7 @@ class EngineeringMbType:
             "name": "RateMBMachinery",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     mflmachinery: Optional[AmountType] = field(
         default=None,
@@ -54,7 +58,7 @@ class EngineeringMbType:
             "name": "MFLMachinery",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     rate_all_risks_machinery: Optional[Decimal] = field(
         default=None,
@@ -62,7 +66,7 @@ class EngineeringMbType:
             "name": "RateAllRisksMachinery",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     rate_mbbi: Optional[Decimal] = field(
         default=None,
@@ -70,7 +74,7 @@ class EngineeringMbType:
             "name": "RateMBBI",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     rate_all_risks_bi: Optional[Decimal] = field(
         default=None,
@@ -78,7 +82,7 @@ class EngineeringMbType:
             "name": "RateAllRisksBI",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     mflother: Optional[Decimal] = field(
         default=None,
@@ -86,5 +90,5 @@ class EngineeringMbType:
             "name": "MFLOther",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

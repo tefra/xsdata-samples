@@ -26,6 +26,7 @@ class FlightType:
     double_interline_con
     triple_interline_con
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -34,7 +35,7 @@ class FlightType:
         metadata={
             "name": "RequireSingleCarrier",
             "type": "Attribute",
-        }
+        },
     )
     max_connections: int = field(
         default=-1,
@@ -43,7 +44,7 @@ class FlightType:
             "type": "Attribute",
             "min_inclusive": -1,
             "max_inclusive": 3,
-        }
+        },
     )
     max_stops: int = field(
         default=-1,
@@ -52,61 +53,61 @@ class FlightType:
             "type": "Attribute",
             "min_inclusive": -1,
             "max_inclusive": 3,
-        }
+        },
     )
     non_stop_directs: None | bool = field(
         default=None,
         metadata={
             "name": "NonStopDirects",
             "type": "Attribute",
-        }
+        },
     )
     stop_directs: None | bool = field(
         default=None,
         metadata={
             "name": "StopDirects",
             "type": "Attribute",
-        }
+        },
     )
     single_online_con: None | bool = field(
         default=None,
         metadata={
             "name": "SingleOnlineCon",
             "type": "Attribute",
-        }
+        },
     )
     double_online_con: None | bool = field(
         default=None,
         metadata={
             "name": "DoubleOnlineCon",
             "type": "Attribute",
-        }
+        },
     )
     triple_online_con: None | bool = field(
         default=None,
         metadata={
             "name": "TripleOnlineCon",
             "type": "Attribute",
-        }
+        },
     )
     single_interline_con: None | bool = field(
         default=None,
         metadata={
             "name": "SingleInterlineCon",
             "type": "Attribute",
-        }
+        },
     )
     double_interline_con: None | bool = field(
         default=None,
         metadata={
             "name": "DoubleInterlineCon",
             "type": "Attribute",
-        }
+        },
     )
     triple_interline_con: None | bool = field(
         default=None,
         metadata={
             "name": "TripleInterlineCon",
             "type": "Attribute",
-        }
+        },
     )

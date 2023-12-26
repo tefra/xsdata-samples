@@ -16,5 +16,5 @@ class MeasurementSiteTableVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

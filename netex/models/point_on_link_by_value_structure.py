@@ -13,5 +13,5 @@ class PointOnLinkByValueStructure:
             "name": "DistanceFromStart",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

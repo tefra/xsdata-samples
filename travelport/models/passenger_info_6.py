@@ -18,6 +18,7 @@ class PassengerInfo6:
     passenger_type
         Passenger Type Code.
     """
+
     class Meta:
         name = "PassengerInfo"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -27,14 +28,14 @@ class PassengerInfo6:
         metadata={
             "name": "Name",
             "type": "Element",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     passenger_type: None | str = field(
         default=None,
@@ -43,5 +44,5 @@ class PassengerInfo6:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )

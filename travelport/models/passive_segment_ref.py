@@ -12,6 +12,7 @@ class PassiveSegmentRef:
     key
         The Key of Passive Segment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/passive_v52_0"
 
@@ -21,5 +22,5 @@ class PassiveSegmentRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

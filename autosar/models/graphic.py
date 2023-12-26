@@ -87,6 +87,7 @@ class Graphic:
         be added to the number in the string. Possible units are: cm,
         mm, px, pt. The default unit is px.
     """
+
     class Meta:
         name = "GRAPHIC"
 
@@ -96,7 +97,7 @@ class Graphic:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[NmtokenString] = field(
         default=None,
@@ -104,7 +105,7 @@ class Graphic:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     revision_labels: Optional["Graphic.RevisionLabels"] = field(
         default=None,
@@ -112,7 +113,7 @@ class Graphic:
             "name": "REVISION-LABELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     domain: Optional[NmtokenString] = field(
         default=None,
@@ -120,14 +121,14 @@ class Graphic:
             "name": "DOMAIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -135,112 +136,112 @@ class Graphic:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     edit_height: Optional[str] = field(
         default=None,
         metadata={
             "name": "EDIT-HEIGHT",
             "type": "Attribute",
-        }
+        },
     )
     edit_width: Optional[str] = field(
         default=None,
         metadata={
             "name": "EDIT-WIDTH",
             "type": "Attribute",
-        }
+        },
     )
     editfit: Optional[GraphicFitEnumSimple] = field(
         default=None,
         metadata={
             "name": "EDITFIT",
             "type": "Attribute",
-        }
+        },
     )
     editscale: Optional[str] = field(
         default=None,
         metadata={
             "name": "EDITSCALE",
             "type": "Attribute",
-        }
+        },
     )
     filename: Optional[str] = field(
         default=None,
         metadata={
             "name": "FILENAME",
             "type": "Attribute",
-        }
+        },
     )
     fit: Optional[GraphicFitEnumSimple] = field(
         default=None,
         metadata={
             "name": "FIT",
             "type": "Attribute",
-        }
+        },
     )
     generator: Optional[str] = field(
         default=None,
         metadata={
             "name": "GENERATOR",
             "type": "Attribute",
-        }
+        },
     )
     height: Optional[str] = field(
         default=None,
         metadata={
             "name": "HEIGHT",
             "type": "Attribute",
-        }
+        },
     )
     html_fit: Optional[GraphicFitEnumSimple] = field(
         default=None,
         metadata={
             "name": "HTML-FIT",
             "type": "Attribute",
-        }
+        },
     )
     html_height: Optional[str] = field(
         default=None,
         metadata={
             "name": "HTML-HEIGHT",
             "type": "Attribute",
-        }
+        },
     )
     html_scale: Optional[str] = field(
         default=None,
         metadata={
             "name": "HTML-SCALE",
             "type": "Attribute",
-        }
+        },
     )
     html_width: Optional[str] = field(
         default=None,
         metadata={
             "name": "HTML-WIDTH",
             "type": "Attribute",
-        }
+        },
     )
     notation: Optional[GraphicNotationEnumSimple] = field(
         default=None,
         metadata={
             "name": "NOTATION",
             "type": "Attribute",
-        }
+        },
     )
     scale: Optional[str] = field(
         default=None,
         metadata={
             "name": "SCALE",
             "type": "Attribute",
-        }
+        },
     )
     width: Optional[str] = field(
         default=None,
         metadata={
             "name": "WIDTH",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -249,11 +250,12 @@ class Graphic:
         :ivar revision_label: This is a revision label denoting a
             particular version of the engineering object.
         """
+
         revision_label: List[RevisionLabelString] = field(
             default_factory=list,
             metadata={
                 "name": "REVISION-LABEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

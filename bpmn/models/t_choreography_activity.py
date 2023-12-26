@@ -20,7 +20,7 @@ class TChoreographyActivity(TFlowNode):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "min_occurs": 2,
-        }
+        },
     )
     correlation_key: List[CorrelationKey] = field(
         default_factory=list,
@@ -28,7 +28,7 @@ class TChoreographyActivity(TFlowNode):
             "name": "correlationKey",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     initiating_participant_ref: Optional[QName] = field(
         default=None,
@@ -36,12 +36,12 @@ class TChoreographyActivity(TFlowNode):
             "name": "initiatingParticipantRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     loop_type: TChoreographyLoopType = field(
         default=TChoreographyLoopType.NONE,
         metadata={
             "name": "loopType",
             "type": "Attribute",
-        }
+        },
     )

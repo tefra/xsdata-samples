@@ -16,12 +16,12 @@ class TScriptTask(TTask):
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     script_format: Optional[str] = field(
         default=None,
         metadata={
             "name": "scriptFormat",
             "type": "Attribute",
-        }
+        },
     )

@@ -28,6 +28,7 @@ class VerbatimString:
         that element, white space should be preserved by applications.
         It is defined according to xml:space as declared by W3C.
     """
+
     class Meta:
         name = "VERBATIM-STRING"
 
@@ -36,14 +37,14 @@ class VerbatimString:
         metadata={
             "required": True,
             "white_space": "preserve",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -51,19 +52,19 @@ class VerbatimString:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     blueprint_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
-        }
+        },
     )
     space: SpaceValue = field(
         default=SpaceValue.PRESERVE,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )

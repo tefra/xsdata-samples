@@ -23,6 +23,7 @@ class RailAutoSeatAssignment:
         entered, this applies to the primary booking traveler and other
         passengers are adjacent.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -34,7 +35,7 @@ class RailAutoSeatAssignment:
             "required": True,
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     seat_value: None | str = field(
         default=None,
@@ -44,19 +45,19 @@ class RailAutoSeatAssignment:
             "required": True,
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     rail_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

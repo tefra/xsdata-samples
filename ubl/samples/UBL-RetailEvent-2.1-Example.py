@@ -64,37 +64,37 @@ from xsdata.models.datatype import XmlTime
 
 obj = RetailEvent(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     customization_id=CustomizationId(
-        value="UBL-TR"
+        value='UBL-TR'
     ),
     profile_id=ProfileId(
-        value="bpid:urn:oasis:names:draft:bpss:ubl-2-1-cpfr-retail-event"
+        value='bpid:urn:oasis:names:draft:bpss:ubl-2-1-cpfr-retail-event'
     ),
     id=Id(
-        value="RE758494"
+        value='RE758494'
     ),
     copy_indicator=False,
     uuid=Uuid(
-        value="349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4"
+        value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
     ),
     issue_date=XmlDate(2009, 12, 1),
     issue_time=XmlTime(12, 0, 1, 0),
     note=[
         Note(
-            value="sample"
+            value='sample'
         ),
     ],
     retail_event_name=RetailEventName(
-        value="ACME NEW BRANCH OPENNING"
+        value='ACME NEW BRANCH OPENNING'
     ),
     retail_event_status_code=RetailEventStatusCode(
-        value="PLANNED"
+        value='PLANNED'
     ),
     description=[
         Description(
-            value="ACME NEW BRANCH will be opened in Brusells on May 12, 2010"
+            value='ACME NEW BRANCH will be opened in Brusells on May 12, 2010'
         ),
     ],
     period=Period(
@@ -105,84 +105,84 @@ obj = RetailEvent(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="6903148000007"
+                    value='6903148000007'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="Consortial"
+                    value='Consortial'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Busy Street"
+                value='Busy Street'
             ),
             building_name=BuildingName(
-                value="Thereabouts"
+                value='Thereabouts'
             ),
             building_number=BuildingNumber(
-                value="56A"
+                value='56A'
             ),
             city_name=CityName(
-                value="Farthing"
+                value='Farthing'
             ),
             postal_zone=PostalZone(
-                value="AA99 1BB"
+                value='AA99 1BB'
             ),
             country_subentity=CountrySubentity(
-                value="Heremouthshire"
+                value='Heremouthshire'
             ),
             address_line=[
                 AddressLine(
                     line=Line(
-                        value="The Roundabout"
+                        value='The Roundabout'
                     )
                 ),
             ],
             country=Country(
                 identification_code=IdentificationCode(
-                    value="GB"
+                    value='GB'
                 )
             )
         ),
         party_tax_scheme=[
             PartyTaxScheme(
                 registration_name=RegistrationName(
-                    value="Farthing Purchasing Consortium"
+                    value='Farthing Purchasing Consortium'
                 ),
                 company_id=CompanyId(
-                    value="175 269 2355"
+                    value='175 269 2355'
                 ),
                 exemption_reason=[
                     ExemptionReason(
-                        value="N/A"
+                        value='N/A'
                     ),
                 ],
                 tax_scheme=TaxScheme(
                     id=Id(
-                        value="VAT"
+                        value='VAT'
                     ),
                     tax_type_code=TaxTypeCode(
-                        value="VAT"
+                        value='VAT'
                     )
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="Mrs Bouquet"
+                value='Mrs Bouquet'
             ),
             telephone=Telephone(
-                value="0158 1233714"
+                value='0158 1233714'
             ),
             telefax=Telefax(
-                value="0158 1233856"
+                value='0158 1233856'
             ),
             electronic_mail=ElectronicMail(
-                value="bouquet@fpconsortial.co.uk"
+                value='bouquet@fpconsortial.co.uk'
             )
         )
     ),
@@ -190,84 +190,84 @@ obj = RetailEvent(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="2203148000007"
+                    value='2203148000007'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="IYT Corporation"
+                    value='IYT Corporation'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Avon Way"
+                value='Avon Way'
             ),
             building_name=BuildingName(
-                value="Thereabouts"
+                value='Thereabouts'
             ),
             building_number=BuildingNumber(
-                value="56A"
+                value='56A'
             ),
             city_name=CityName(
-                value="Bridgtow"
+                value='Bridgtow'
             ),
             postal_zone=PostalZone(
-                value="ZZ99 1ZZ"
+                value='ZZ99 1ZZ'
             ),
             country_subentity=CountrySubentity(
-                value="Avon"
+                value='Avon'
             ),
             address_line=[
                 AddressLine(
                     line=Line(
-                        value="3rd Floor, Room 5"
+                        value='3rd Floor, Room 5'
                     )
                 ),
             ],
             country=Country(
                 identification_code=IdentificationCode(
-                    value="GB"
+                    value='GB'
                 )
             )
         ),
         party_tax_scheme=[
             PartyTaxScheme(
                 registration_name=RegistrationName(
-                    value="Bridgtow District Council"
+                    value='Bridgtow District Council'
                 ),
                 company_id=CompanyId(
-                    value="12356478"
+                    value='12356478'
                 ),
                 exemption_reason=[
                     ExemptionReason(
-                        value="Local Authority"
+                        value='Local Authority'
                     ),
                 ],
                 tax_scheme=TaxScheme(
                     id=Id(
-                        value="UK VAT"
+                        value='UK VAT'
                     ),
                     tax_type_code=TaxTypeCode(
-                        value="VAT"
+                        value='VAT'
                     )
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="Mr Fred Churchill"
+                value='Mr Fred Churchill'
             ),
             telephone=Telephone(
-                value="0127 2653214"
+                value='0127 2653214'
             ),
             telefax=Telefax(
-                value="0127 2653215"
+                value='0127 2653215'
             ),
             electronic_mail=ElectronicMail(
-                value="fred@iytcorporation.gov.uk"
+                value='fred@iytcorporation.gov.uk'
             )
         )
     ),
@@ -276,7 +276,7 @@ obj = RetailEvent(
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="0012345000359"
+                        value='0012345000359'
                     )
                 ),
             ]
@@ -287,7 +287,7 @@ obj = RetailEvent(
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="0012345000058"
+                        value='0012345000058'
                     )
                 ),
             ]
@@ -295,41 +295,41 @@ obj = RetailEvent(
     ),
     promotional_event=PromotionalEvent(
         promotional_event_type_code=PromotionalEventTypeCode(
-            value="STORE_OPENING"
+            value='STORE_OPENING'
         ),
         submission_date=XmlDate(2009, 12, 1),
         latest_proposal_acceptance_date=XmlDate(2010, 1, 6),
         promotional_specification=[
             PromotionalSpecification(
                 specification_id=SpecificationId(
-                    value="ACME_STROP_0023823"
+                    value='ACME_STROP_0023823'
                 ),
                 promotional_event_line_item=[
                     PromotionalEventLineItem(
                         amount=Amount(
-                            value=Decimal("100.0"),
-                            currency_id="GBP"
+                            value=Decimal('100.0'),
+                            currency_id='GBP'
                         ),
                         event_line_item=EventLineItem(
                             line_number_numeric=LineNumberNumeric(
-                                value=Decimal("1")
+                                value=Decimal('1')
                             ),
                             participating_locations_location=ParticipatingLocationsLocation(
                                 id=Id(
-                                    value="ACME_BR_BE_0023"
+                                    value='ACME_BR_BE_0023'
                                 )
                             ),
                             retail_planned_impact=[
                                 RetailPlannedImpact(
                                     amount=Amount(
-                                        value=Decimal("0.0"),
-                                        currency_id="GBP"
+                                        value=Decimal('0.0'),
+                                        currency_id='GBP'
                                     ),
                                     forecast_purpose_code=ForecastPurposeCode(
-                                        value="SALES_FORECAST"
+                                        value='SALES_FORECAST'
                                     ),
                                     forecast_type_code=ForecastTypeCode(
-                                        value="PROMOTIONAL"
+                                        value='PROMOTIONAL'
                                     ),
                                     period=Period(
                                         start_date=XmlDate(2010, 5, 12),
@@ -340,25 +340,25 @@ obj = RetailEvent(
                             supply_item=SupplyItem(
                                 description=[
                                     Description(
-                                        value="Acme knitwear scarf"
+                                        value='Acme knitwear scarf'
                                     ),
                                 ],
                                 name=Name(
-                                    value="scarf"
+                                    value='scarf'
                                 ),
                                 buyers_item_identification=BuyersItemIdentification(
                                     id=Id(
-                                        value="6578489"
+                                        value='6578489'
                                     )
                                 ),
                                 sellers_item_identification=SellersItemIdentification(
                                     id=Id(
-                                        value="17589683"
+                                        value='17589683'
                                     )
                                 ),
                                 standard_item_identification=StandardItemIdentification(
                                     id=Id(
-                                        value="00123450000584"
+                                        value='00123450000584'
                                     )
                                 )
                             )
@@ -369,7 +369,7 @@ obj = RetailEvent(
                     EventTactic(
                         event_tactic_enumeration=EventTacticEnumeration(
                             display_tactic_type_code=DisplayTacticTypeCode(
-                                value="DISPLAY_GENERAL"
+                                value='DISPLAY_GENERAL'
                             )
                         ),
                         period=Period(

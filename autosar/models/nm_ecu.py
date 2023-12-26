@@ -121,6 +121,7 @@ class NmEcu:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "NM-ECU"
 
@@ -131,7 +132,7 @@ class NmEcu:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["NmEcu.ShortNameFragments"] = field(
         default=None,
@@ -139,7 +140,7 @@ class NmEcu:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -147,7 +148,7 @@ class NmEcu:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -155,7 +156,7 @@ class NmEcu:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -163,7 +164,7 @@ class NmEcu:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -171,7 +172,7 @@ class NmEcu:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -179,7 +180,7 @@ class NmEcu:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["NmEcu.Annotations"] = field(
         default=None,
@@ -187,7 +188,7 @@ class NmEcu:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bus_dependent_nm_ecus: Optional["NmEcu.BusDependentNmEcus"] = field(
         default=None,
@@ -195,7 +196,7 @@ class NmEcu:
             "name": "BUS-DEPENDENT-NM-ECUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bus_specific_nm_ecu: Optional["NmEcu.BusSpecificNmEcu"] = field(
         default=None,
@@ -203,7 +204,7 @@ class NmEcu:
             "name": "BUS-SPECIFIC-NM-ECU",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_instance_ref: Optional["NmEcu.EcuInstanceRef"] = field(
         default=None,
@@ -211,7 +212,7 @@ class NmEcu:
             "name": "ECU-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_bus_synchronization_enabled: Optional[Boolean] = field(
         default=None,
@@ -219,7 +220,7 @@ class NmEcu:
             "name": "NM-BUS-SYNCHRONIZATION-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_com_control_enabled: Optional[Boolean] = field(
         default=None,
@@ -227,7 +228,7 @@ class NmEcu:
             "name": "NM-COM-CONTROL-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_coordinator: Optional[NmCoordinator] = field(
         default=None,
@@ -235,7 +236,7 @@ class NmEcu:
             "name": "NM-COORDINATOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_cycletime_main_function: Optional[TimeValue] = field(
         default=None,
@@ -243,7 +244,7 @@ class NmEcu:
             "name": "NM-CYCLETIME-MAIN-FUNCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_multiple_channels_enabled: Optional[Boolean] = field(
         default=None,
@@ -251,7 +252,7 @@ class NmEcu:
             "name": "NM-MULTIPLE-CHANNELS-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_node_detection_enabled: Optional[Boolean] = field(
         default=None,
@@ -259,7 +260,7 @@ class NmEcu:
             "name": "NM-NODE-DETECTION-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_node_id_enabled: Optional[Boolean] = field(
         default=None,
@@ -267,7 +268,7 @@ class NmEcu:
             "name": "NM-NODE-ID-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_passive_mode_enabled: Optional[Boolean] = field(
         default=None,
@@ -275,7 +276,7 @@ class NmEcu:
             "name": "NM-PASSIVE-MODE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_pdu_rx_indication_enabled: Optional[Boolean] = field(
         default=None,
@@ -283,7 +284,7 @@ class NmEcu:
             "name": "NM-PDU-RX-INDICATION-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_remote_sleep_ind_enabled: Optional[Boolean] = field(
         default=None,
@@ -291,7 +292,7 @@ class NmEcu:
             "name": "NM-REMOTE-SLEEP-IND-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_repeat_msg_ind_enabled: Optional[Boolean] = field(
         default=None,
@@ -299,7 +300,7 @@ class NmEcu:
             "name": "NM-REPEAT-MSG-IND-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_state_change_ind_enabled: Optional[Boolean] = field(
         default=None,
@@ -307,7 +308,7 @@ class NmEcu:
             "name": "NM-STATE-CHANGE-IND-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_user_data_enabled: Optional[Boolean] = field(
         default=None,
@@ -315,7 +316,7 @@ class NmEcu:
             "name": "NM-USER-DATA-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -323,14 +324,14 @@ class NmEcu:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -338,14 +339,14 @@ class NmEcu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -356,7 +357,7 @@ class NmEcu:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -367,7 +368,7 @@ class NmEcu:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -378,7 +379,7 @@ class NmEcu:
                 "name": "CAN-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_nm_ecu: List[FlexrayNmEcu] = field(
             default_factory=list,
@@ -386,7 +387,7 @@ class NmEcu:
                 "name": "FLEXRAY-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         j_1939_nm_ecu: List[J1939NmEcu] = field(
             default_factory=list,
@@ -394,7 +395,7 @@ class NmEcu:
                 "name": "J-1939-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         udp_nm_ecu: List[UdpNmEcu] = field(
             default_factory=list,
@@ -402,7 +403,7 @@ class NmEcu:
                 "name": "UDP-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -413,7 +414,7 @@ class NmEcu:
                 "name": "CAN-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_nm_ecu: Optional[FlexrayNmEcu] = field(
             default=None,
@@ -421,7 +422,7 @@ class NmEcu:
                 "name": "FLEXRAY-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         j_1939_nm_ecu: Optional[J1939NmEcu] = field(
             default=None,
@@ -429,7 +430,7 @@ class NmEcu:
                 "name": "J-1939-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         udp_nm_ecu: Optional[UdpNmEcu] = field(
             default=None,
@@ -437,7 +438,7 @@ class NmEcu:
                 "name": "UDP-NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -448,5 +449,5 @@ class NmEcu:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .geographical_interval import GeographicalInterval
 from .geographical_interval_ref import GeographicalIntervalRef
@@ -12,7 +12,9 @@ class GeographicalIntervalsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "geographicalIntervals_RelStructure"
 
-    geographical_interval_ref_or_geographical_interval: List[object] = field(
+    geographical_interval_ref_or_geographical_interval: List[
+        Union[GeographicalIntervalRef, GeographicalInterval]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class GeographicalIntervalsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

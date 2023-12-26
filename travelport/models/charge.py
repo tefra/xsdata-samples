@@ -19,6 +19,7 @@ class Charge:
     included_in_est_total_ind
         Special Equipment Amount is included in the Estimated Total Amount
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -28,7 +29,7 @@ class Charge:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     rate_period: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class Charge:
             "name": "RatePeriod",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     included_in_est_total_ind: None | bool = field(
         default=None,
@@ -44,5 +45,5 @@ class Charge:
             "name": "IncludedInEstTotalInd",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

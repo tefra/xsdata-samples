@@ -22,7 +22,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "AccountedObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     organisation_ref: Optional[OrganisationRefStructure] = field(
         default=None,
@@ -30,7 +30,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "OrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     supply_contract_ref: Optional[SupplyContractRef] = field(
         default=None,
@@ -38,7 +38,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "SupplyContractRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accounting_code: Optional[str] = field(
         default=None,
@@ -46,7 +46,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "AccountingCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accounting_type: Optional[JourneyAccountingEnumeration] = field(
         default=None,
@@ -54,7 +54,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "AccountingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     partial: List[bool] = field(
         default_factory=list,
@@ -62,7 +62,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "Partial",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     distance: Optional[Decimal] = field(
         default=None,
@@ -70,7 +70,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     duration: Optional[XmlDuration] = field(
         default=None,
@@ -78,5 +78,5 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "Duration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

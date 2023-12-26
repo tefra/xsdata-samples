@@ -16,5 +16,5 @@ class PaymentRef7:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

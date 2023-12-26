@@ -11,6 +11,7 @@ class MctCountReq(BaseReq1):
     """
     Determine how many MCT exceptions exist for the search criteria.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,5 +21,5 @@ class MctCountReq(BaseReq1):
             "name": "MctSearch",
             "type": "Element",
             "required": True,
-        }
+        },
     )

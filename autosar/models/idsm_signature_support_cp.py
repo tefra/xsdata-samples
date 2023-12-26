@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
-from .crypto_service_primitive_subtypes_enum import CryptoServicePrimitiveSubtypesEnum
+from .crypto_service_primitive_subtypes_enum import (
+    CryptoServicePrimitiveSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -31,31 +33,36 @@ class IdsmSignatureSupportCp:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IDSM-SIGNATURE-SUPPORT-CP"
 
-    authentication_ref: Optional["IdsmSignatureSupportCp.AuthenticationRef"] = field(
+    authentication_ref: Optional[
+        "IdsmSignatureSupportCp.AuthenticationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    crypto_service_key_ref: Optional["IdsmSignatureSupportCp.CryptoServiceKeyRef"] = field(
+    crypto_service_key_ref: Optional[
+        "IdsmSignatureSupportCp.CryptoServiceKeyRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-KEY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -63,7 +70,7 @@ class IdsmSignatureSupportCp:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -74,7 +81,7 @@ class IdsmSignatureSupportCp:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -85,5 +92,5 @@ class IdsmSignatureSupportCp:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

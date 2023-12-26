@@ -49,7 +49,7 @@ class QuoteSummary:
         metadata={
             "name": "TotalNumberOfLineItems",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -67,7 +67,7 @@ class QuoteType:
         metadata={
             "name": "QuoteTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -264,7 +264,7 @@ class TaxReference:
         metadata={
             "name": "TaxFunctionQualifierCodedOther",
             "type": "Element",
-        }
+        },
     )
     tax_category_coded: str = field(
         metadata={
@@ -278,21 +278,21 @@ class TaxReference:
         metadata={
             "name": "TaxCategoryCodedOther",
             "type": "Element",
-        }
+        },
     )
     reason_tax_exempt_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCoded",
             "type": "Element",
-        }
+        },
     )
     reason_tax_exempt_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCodedOther",
             "type": "Element",
-        }
+        },
     )
     tax_type_coded: str = field(
         metadata={
@@ -306,42 +306,42 @@ class TaxReference:
         metadata={
             "name": "TaxTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     tax_percent: Optional[str] = field(
         default=None,
         metadata={
             "name": "TaxPercent",
             "type": "Element",
-        }
+        },
     )
     tax_payment_method_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "TaxPaymentMethodCoded",
             "type": "Element",
-        }
+        },
     )
     tax_payment_method_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "TaxPaymentMethodCodedOther",
             "type": "Element",
-        }
+        },
     )
     taxable_amount: Optional[str] = field(
         default=None,
         metadata={
             "name": "TaxableAmount",
             "type": "Element",
-        }
+        },
     )
     taxable_amount_in_tax_accounting_currency: Optional[str] = field(
         default=None,
         metadata={
             "name": "TaxableAmountInTaxAccountingCurrency",
             "type": "Element",
-        }
+        },
     )
     tax_amount: str = field(
         metadata={
@@ -355,14 +355,14 @@ class TaxReference:
         metadata={
             "name": "TaxAmountInTaxAccountingCurrency",
             "type": "Element",
-        }
+        },
     )
     tax_location: Optional[TaxLocation] = field(
         default=None,
         metadata={
             "name": "TaxLocation",
             "type": "Element",
-        }
+        },
     )
     tax_treatment_coded: str = field(
         metadata={
@@ -376,7 +376,7 @@ class TaxReference:
         metadata={
             "name": "TaxTreatmentCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -394,7 +394,7 @@ class QuotationRequestReference:
         metadata={
             "name": "ReferenceReleaseNumber",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -412,133 +412,133 @@ class QuoteItemDetail:
         metadata={
             "name": "LineItemType",
             "type": "Element",
-        }
+        },
     )
     parent_item_number: Optional[ParentItemNumber] = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
-        }
+        },
     )
     item_identifiers: Optional[ItemIdentifiers] = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
-        }
+        },
     )
     list_of_dimension: Optional[ListOfDimension] = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-        }
+        },
     )
     total_quantity: Optional[TotalQuantity] = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
-        }
+        },
     )
     max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
-        }
+        },
     )
     list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
-        }
+        },
     )
     off_catalog_flag: Optional[str] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
-        }
+        },
     )
     catalog_reference: Optional[CatalogReference] = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
-        }
+        },
     )
     item_contract_references: Optional[ItemContractReferences] = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
-        }
+        },
     )
     list_of_item_references: Optional[ListOfItemReferences] = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
-        }
+        },
     )
     country_of_origin: Optional[CountryOfOrigin] = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
-        }
+        },
     )
     country_of_destination: Optional[CountryOfDestination] = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
-        }
+        },
     )
     final_recipient: Optional[FinalRecipient] = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
     conditions_of_sale: Optional[ConditionsOfSale] = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
-        }
+        },
     )
     hazardous_materials: Optional[HazardousMaterials] = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
-        }
+        },
     )
     quote_item_references: Optional[QuoteItemReferences] = field(
         default=None,
         metadata={
             "name": "QuoteItemReferences",
             "type": "Element",
-        }
+        },
     )
     quote_item_party: Optional[QuoteItemParty] = field(
         default=None,
         metadata={
             "name": "QuoteItemParty",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -574,28 +574,28 @@ class QuoteDetails:
         metadata={
             "name": "QuotePricingDetail",
             "type": "Element",
-        }
+        },
     )
     quote_delivery_detail: Optional[QuoteDeliveryDetail] = field(
         default=None,
         metadata={
             "name": "QuoteDeliveryDetail",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     quote_item_list_of_attachment: Optional[QuoteItemListOfAttachment] = field(
         default=None,
         metadata={
             "name": "QuoteItemListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -620,21 +620,21 @@ class QuoteHeader:
         metadata={
             "name": "QuotationRequestReference",
             "type": "Element",
-        }
+        },
     )
     quote_type: Optional[QuoteType] = field(
         default=None,
         metadata={
             "name": "QuoteType",
             "type": "Element",
-        }
+        },
     )
     purpose: Optional[Purpose] = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Element",
-        }
+        },
     )
     quote_party: QuoteParty = field(
         metadata={
@@ -648,70 +648,70 @@ class QuoteHeader:
         metadata={
             "name": "QuoteTransport",
             "type": "Element",
-        }
+        },
     )
     quote_currency: Optional[QuoteCurrency] = field(
         default=None,
         metadata={
             "name": "QuoteCurrency",
             "type": "Element",
-        }
+        },
     )
     quote_allowance_or_charge: Optional[QuoteAllowanceOrCharge] = field(
         default=None,
         metadata={
             "name": "QuoteAllowanceOrCharge",
             "type": "Element",
-        }
+        },
     )
     quote_terms_of_payment: Optional[QuoteTermsOfPayment] = field(
         default=None,
         metadata={
             "name": "QuoteTermsOfPayment",
             "type": "Element",
-        }
+        },
     )
     quote_terms_of_delivery: Optional[QuoteTermsOfDelivery] = field(
         default=None,
         metadata={
             "name": "QuoteTermsOfDelivery",
             "type": "Element",
-        }
+        },
     )
     quote_tax: List[QuoteTax] = field(
         default_factory=list,
         metadata={
             "name": "QuoteTax",
             "type": "Element",
-        }
+        },
     )
     quote_language: Optional[QuoteLanguage] = field(
         default=None,
         metadata={
             "name": "QuoteLanguage",
             "type": "Element",
-        }
+        },
     )
     general_notes: Optional[str] = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     quote_list_of_attachment: Optional[QuoteListOfAttachment] = field(
         default=None,
         metadata={
             "name": "QuoteListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -723,7 +723,7 @@ class ListOfQuoteDetails:
             "name": "QuoteDetails",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -741,19 +741,19 @@ class Quote:
         metadata={
             "name": "ListOfQuoteDetails",
             "type": "Element",
-        }
+        },
     )
     list_of_quote_package_detail: Optional[ListOfQuotePackageDetail] = field(
         default=None,
         metadata={
             "name": "ListOfQuotePackageDetail",
             "type": "Element",
-        }
+        },
     )
     quote_summary: Optional[QuoteSummary] = field(
         default=None,
         metadata={
             "name": "QuoteSummary",
             "type": "Element",
-        }
+        },
     )

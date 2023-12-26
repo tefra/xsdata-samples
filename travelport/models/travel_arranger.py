@@ -17,6 +17,7 @@ class TravelArranger:
     code
         IATA Code for Arranger
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,19 +25,19 @@ class TravelArranger:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     company_short_name: None | str = field(
         default=None,
         metadata={
             "name": "CompanyShortName",
             "type": "Attribute",
-        }
+        },
     )
     code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
             "type": "Attribute",
-        }
+        },
     )

@@ -15,32 +15,32 @@ class ResultType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     total: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     total_qualifier: None | TotalQualifier = field(
         default=None,
         metadata={
             "name": "totalQualifier",
             "type": "Attribute",
-        }
+        },
     )
     offset: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     max: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -50,5 +50,5 @@ class ResultType:
             metadata={
                 "type": "Element",
                 "namespace": "urn:vpro:api:2013",
-            }
+            },
         )

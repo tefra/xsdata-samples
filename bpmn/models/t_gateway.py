@@ -15,5 +15,5 @@ class TGateway(TFlowNode):
         metadata={
             "name": "gatewayDirection",
             "type": "Attribute",
-        }
+        },
     )

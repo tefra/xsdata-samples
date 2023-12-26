@@ -98,45 +98,45 @@ from xsdata.models.datatype import XmlTime
 
 obj = TransportExecutionPlan(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="TEP_1"
+        value='TEP_1'
     ),
     version_id=VersionId(
-        value="1"
+        value='1'
     ),
     issue_date=XmlDate(2011, 9, 13),
     issue_time=XmlTime(10, 0, 30, 0, 60),
     document_status_code=DocumentStatusCode(
-        value="Confirmed"
+        value='Confirmed'
     ),
     sender_party=SenderParty(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673827641",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673827641',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="NECOSS"
+                    value='NECOSS'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+49450557000"
+                value='+49450557000'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@necoss.de"
+                value='SomeName@necoss.de'
             )
         )
     ),
@@ -144,28 +144,28 @@ obj = TransportExecutionPlan(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673827000",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673827000',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="Consignor"
+                    value='Consignor'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+8687878763"
+                value='+8687878763'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@consignor.cn"
+                value='SomeName@consignor.cn'
             )
         )
     ),
@@ -173,28 +173,28 @@ obj = TransportExecutionPlan(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673827000",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673827000',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="Consignor"
+                    value='Consignor'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+8687878763"
+                value='+8687878763'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@consignor.cn"
+                value='SomeName@consignor.cn'
             )
         )
     ),
@@ -202,57 +202,57 @@ obj = TransportExecutionPlan(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673827641",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673827641',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="NECOSS"
+                    value='NECOSS'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+49450557000"
+                value='+49450557000'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@necoss.de"
+                value='SomeName@necoss.de'
             )
         )
     ),
     transport_service_description_document_reference=TransportServiceDescriptionDocumentReference(
         id=Id(
-            value="2"
+            value='2'
         )
     ),
     transport_contract=TransportContract(
         note=[
             Note(
-                value="Framework Agreement"
+                value='Framework Agreement'
             ),
         ],
         contract_document_reference=[
             ContractDocumentReference(
                 id=Id(
-                    value="TC101"
+                    value='TC101'
                 ),
                 issue_date=XmlDate(2010, 1, 1),
                 document_type_code=DocumentTypeCode(
-                    value="315"
+                    value='315'
                 ),
                 document_type=DocumentType(
-                    value="Contract"
+                    value='Contract'
                 ),
                 document_description=[
                     DocumentDescription(
-                        value="Framework Agreement between Consignor and NECOSS"
+                        value='Framework Agreement between Consignor and NECOSS'
                     ),
                 ]
             ),
@@ -266,11 +266,11 @@ obj = TransportExecutionPlan(
     ],
     main_transportation_service=MainTransportationService(
         transport_service_code=TransportServiceCode(
-            value="3"
+            value='3'
         ),
         transportation_service_description=[
             TransportationServiceDescription(
-                value="Transport from Hamburg to Nurnberg"
+                value='Transport from Hamburg to Nurnberg'
             ),
         ]
     ),
@@ -280,47 +280,47 @@ obj = TransportExecutionPlan(
     ),
     from_location=FromLocation(
         location_type_code=LocationTypeCode(
-            value="13"
+            value='13'
         ),
         address=Address(
             id=Id(
-                value="DEHAM",
-                scheme_name="UN/LOCODE",
-                scheme_agency_name="UN"
+                value='DEHAM',
+                scheme_name='UN/LOCODE',
+                scheme_agency_name='UN'
             ),
             street_name=StreetName(
-                value="Neuer Wandrahm 4"
+                value='Neuer Wandrahm 4'
             ),
             city_name=CityName(
-                value="Hamburg"
+                value='Hamburg'
             ),
             postal_zone=PostalZone(
-                value="29400"
+                value='29400'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="DE"
+                    value='DE'
                 )
             )
         )
     ),
     to_location=ToLocation(
         location_type_code=LocationTypeCode(
-            value="7"
+            value='7'
         ),
         address=Address(
             street_name=StreetName(
-                value="Grosse strasse 34"
+                value='Grosse strasse 34'
             ),
             city_name=CityName(
-                value="Nurnberg"
+                value='Nurnberg'
             ),
             postal_zone=PostalZone(
-                value="28400"
+                value='28400'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="DE"
+                    value='DE'
                 )
             )
         )
@@ -329,13 +329,13 @@ obj = TransportExecutionPlan(
         delivery_terms=[
             DeliveryTerms(
                 id=Id(
-                    value="EXW",
-                    scheme_agency_name="INCOTERMS"
+                    value='EXW',
+                    scheme_agency_name='INCOTERMS'
                 ),
                 delivery_location=DeliveryLocation(
                     address=Address(
                         city_name=CityName(
-                            value="Hamburg"
+                            value='Hamburg'
                         )
                     )
                 )
@@ -344,40 +344,40 @@ obj = TransportExecutionPlan(
         notification_requirement=[
             NotificationRequirement(
                 notification_type_code=NotificationTypeCode(
-                    value="TIME_SCHEDULE_DEVIATIONS"
+                    value='TIME_SCHEDULE_DEVIATIONS'
                 ),
                 notify_party=[
                     NotifyParty(
                         endpoint_id=EndpointId(
-                            value="www.consignee.de/statusnotifications/"
+                            value='www.consignee.de/statusnotifications/'
                         ),
                         party_name=[
                             PartyName(
                                 name=Name(
-                                    value="Consignee"
+                                    value='Consignee'
                                 )
                             ),
                         ],
                         contact=Contact(
                             electronic_mail=ElectronicMail(
-                                value="someName@consignee.de"
+                                value='someName@consignee.de'
                             )
                         )
                     ),
                     NotifyParty(
                         endpoint_id=EndpointId(
-                            value="www.consignor.cn/statusnotifications/"
+                            value='www.consignor.cn/statusnotifications/'
                         ),
                         party_name=[
                             PartyName(
                                 name=Name(
-                                    value="Consignor"
+                                    value='Consignor'
                                 )
                             ),
                         ],
                         contact=Contact(
                             electronic_mail=ElectronicMail(
-                                value="someName@consignor.cn"
+                                value='someName@consignor.cn'
                             )
                         )
                     ),
@@ -385,44 +385,44 @@ obj = TransportExecutionPlan(
             ),
             NotificationRequirement(
                 notification_type_code=NotificationTypeCode(
-                    value="ITEM_CONDITION_DEVIATIONS"
+                    value='ITEM_CONDITION_DEVIATIONS'
                 ),
                 post_event_notification_duration_measure=PostEventNotificationDurationMeasure(
-                    value=Decimal("10"),
-                    unit_code="MIN"
+                    value=Decimal('10'),
+                    unit_code='MIN'
                 ),
                 notify_party=[
                     NotifyParty(
                         endpoint_id=EndpointId(
-                            value="www.consignee.com/statusnotifications/"
+                            value='www.consignee.com/statusnotifications/'
                         ),
                         party_name=[
                             PartyName(
                                 name=Name(
-                                    value="Consignee"
+                                    value='Consignee'
                                 )
                             ),
                         ],
                         contact=Contact(
                             electronic_mail=ElectronicMail(
-                                value="someName@consignee.de"
+                                value='someName@consignee.de'
                             )
                         )
                     ),
                     NotifyParty(
                         endpoint_id=EndpointId(
-                            value="www.consignor.cn/statusnotifications/"
+                            value='www.consignor.cn/statusnotifications/'
                         ),
                         party_name=[
                             PartyName(
                                 name=Name(
-                                    value="Consignor"
+                                    value='Consignor'
                                 )
                             ),
                         ],
                         contact=Contact(
                             electronic_mail=ElectronicMail(
-                                value="someName@consignor.cn"
+                                value='someName@consignor.cn'
                             )
                         )
                     ),
@@ -433,37 +433,37 @@ obj = TransportExecutionPlan(
     consignment=[
         Consignment(
             id=Id(
-                value="CON_1"
+                value='CON_1'
             ),
             gross_weight_measure=GrossWeightMeasure(
-                value=Decimal("50000"),
-                unit_code="KGM"
+                value=Decimal('50000'),
+                unit_code='KGM'
             ),
             net_weight_measure=NetWeightMeasure(
-                value=Decimal("3000"),
-                unit_code="KGM"
+                value=Decimal('3000'),
+                unit_code='KGM'
             ),
             gross_volume_measure=GrossVolumeMeasure(
-                value=Decimal("78"),
-                unit_code="MTQ"
+                value=Decimal('78'),
+                unit_code='MTQ'
             ),
             loading_length_measure=LoadingLengthMeasure(
-                value=Decimal("12"),
-                unit_code="MTR"
+                value=Decimal('12'),
+                unit_code='MTR'
             ),
             hazardous_risk_indicator=False,
             total_transport_handling_unit_quantity=TotalTransportHandlingUnitQuantity(
-                value=Decimal("2")
+                value=Decimal('2')
             ),
             consolidated_shipment=[
                 ConsolidatedShipment(
                     id=Id(
-                        value="GSIN_1"
+                        value='GSIN_1'
                     )
                 ),
                 ConsolidatedShipment(
                     id=Id(
-                        value="GSIN_2"
+                        value='GSIN_2'
                     )
                 ),
             ],
@@ -471,22 +471,22 @@ obj = TransportExecutionPlan(
                 location=Location(
                     address=Address(
                         id=Id(
-                            value="DEHAM",
-                            scheme_name="UN/LOCODE",
-                            scheme_agency_name="UN"
+                            value='DEHAM',
+                            scheme_name='UN/LOCODE',
+                            scheme_agency_name='UN'
                         ),
                         street_name=StreetName(
-                            value="Neuer Wandrahm 4"
+                            value='Neuer Wandrahm 4'
                         ),
                         city_name=CityName(
-                            value="Hamburg"
+                            value='Hamburg'
                         ),
                         postal_zone=PostalZone(
-                            value="29400"
+                            value='29400'
                         ),
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="DE"
+                                value='DE'
                             )
                         )
                     )
@@ -504,17 +504,17 @@ obj = TransportExecutionPlan(
                 location=Location(
                     address=Address(
                         street_name=StreetName(
-                            value="Grosse strasse 34"
+                            value='Grosse strasse 34'
                         ),
                         city_name=CityName(
-                            value="Nurnberg"
+                            value='Nurnberg'
                         ),
                         postal_zone=PostalZone(
-                            value="28400"
+                            value='28400'
                         ),
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="DE"
+                                value='DE'
                             )
                         )
                     )
@@ -532,28 +532,28 @@ obj = TransportExecutionPlan(
                 party_identification=[
                     PartyIdentification(
                         id=Id(
-                            value="4058673827123",
-                            scheme_name="GLN",
-                            scheme_agency_name="GS1"
+                            value='4058673827123',
+                            scheme_name='GLN',
+                            scheme_agency_name='GS1'
                         )
                     ),
                 ],
                 party_name=[
                     PartyName(
                         name=Name(
-                            value="Consignee"
+                            value='Consignee'
                         )
                     ),
                 ],
                 contact=Contact(
                     name=Name(
-                        value="SomeName"
+                        value='SomeName'
                     ),
                     telephone=Telephone(
-                        value="+4987878763"
+                        value='+4987878763'
                     ),
                     electronic_mail=ElectronicMail(
-                        value="SomeName@consignee.de"
+                        value='SomeName@consignee.de'
                     )
                 )
             ),
@@ -561,46 +561,46 @@ obj = TransportExecutionPlan(
                 party_identification=[
                     PartyIdentification(
                         id=Id(
-                            value="4058673827000",
-                            scheme_name="GLN",
-                            scheme_agency_name="GS1"
+                            value='4058673827000',
+                            scheme_name='GLN',
+                            scheme_agency_name='GS1'
                         )
                     ),
                 ],
                 party_name=[
                     PartyName(
                         name=Name(
-                            value="Consignor"
+                            value='Consignor'
                         )
                     ),
                 ],
                 postal_address=PostalAddress(
                     id=Id(
-                        value="4058673827000",
-                        scheme_name="GLN",
-                        scheme_agency_name="GS1"
+                        value='4058673827000',
+                        scheme_name='GLN',
+                        scheme_agency_name='GS1'
                     )
                 ),
                 contact=Contact(
                     name=Name(
-                        value="SomeName"
+                        value='SomeName'
                     ),
                     telephone=Telephone(
-                        value="+8676576456"
+                        value='+8676576456'
                     ),
                     electronic_mail=ElectronicMail(
-                        value="SomeName@consignor.cn"
+                        value='SomeName@consignor.cn'
                     )
                 )
             ),
             original_departure_country=OriginalDepartureCountry(
                 identification_code=IdentificationCode(
-                    value="CN"
+                    value='CN'
                 )
             ),
             final_destination_country=FinalDestinationCountry(
                 identification_code=IdentificationCode(
-                    value="DE"
+                    value='DE'
                 )
             ),
             main_carriage_shipment_stage=[
@@ -609,22 +609,22 @@ obj = TransportExecutionPlan(
                         location=Location(
                             address=Address(
                                 id=Id(
-                                    value="DEHAM",
-                                    scheme_name="UN/LOCODE",
-                                    scheme_agency_name="UN"
+                                    value='DEHAM',
+                                    scheme_name='UN/LOCODE',
+                                    scheme_agency_name='UN'
                                 ),
                                 street_name=StreetName(
-                                    value="Neuer Wandrahm 4"
+                                    value='Neuer Wandrahm 4'
                                 ),
                                 city_name=CityName(
-                                    value="Hamburg"
+                                    value='Hamburg'
                                 ),
                                 postal_zone=PostalZone(
-                                    value="29400"
+                                    value='29400'
                                 ),
                                 country=Country(
                                     identification_code=IdentificationCode(
-                                        value="DE"
+                                        value='DE'
                                     )
                                 )
                             )
@@ -642,17 +642,17 @@ obj = TransportExecutionPlan(
                         location=Location(
                             address=Address(
                                 street_name=StreetName(
-                                    value="Grosse strasse 34"
+                                    value='Grosse strasse 34'
                                 ),
                                 city_name=CityName(
-                                    value="Nurnberg"
+                                    value='Nurnberg'
                                 ),
                                 postal_zone=PostalZone(
-                                    value="28400"
+                                    value='28400'
                                 ),
                                 country=Country(
                                     identification_code=IdentificationCode(
-                                        value="DE"
+                                        value='DE'
                                     )
                                 )
                             )
@@ -671,63 +671,63 @@ obj = TransportExecutionPlan(
             pre_carriage_shipment_stage=[
                 PreCarriageShipmentStage(
                     transport_mode_code=TransportModeCode(
-                        value="1"
+                        value='1'
                     ),
                     transport_means_type_code=TransportMeansTypeCode(
-                        value="83"
+                        value='83'
                     ),
                     carrier_party=[
                         CarrierParty(
                             party_name=[
                                 PartyName(
                                     name=Name(
-                                        value="MAERSK"
+                                        value='MAERSK'
                                     )
                                 ),
                             ],
                             contact=Contact(
                                 name=Name(
-                                    value="SomeName"
+                                    value='SomeName'
                                 ),
                                 telephone=Telephone(
-                                    value="+4598786765"
+                                    value='+4598786765'
                                 ),
                                 electronic_mail=ElectronicMail(
-                                    value="SomeName@maersk.dk"
+                                    value='SomeName@maersk.dk'
                                 )
                             )
                         ),
                     ],
                     transport_means=TransportMeans(
                         journey_id=JourneyId(
-                            value="M22"
+                            value='M22'
                         ),
                         registration_nationality_id=RegistrationNationalityId(
-                            value="DK"
+                            value='DK'
                         ),
                         registration_nationality=[
                             RegistrationNationality(
-                                value="Denmark"
+                                value='Denmark'
                             ),
                         ],
                         transport_means_type_code=TransportMeansTypeCode(
-                            value="83"
+                            value='83'
                         ),
                         maritime_transport=MaritimeTransport(
                             vessel_id=VesselId(
-                                value="SomeIMONr"
+                                value='SomeIMONr'
                             ),
                             vessel_name=VesselName(
-                                value="SomeVesselName"
+                                value='SomeVesselName'
                             )
                         )
                     ),
                     planned_departure_transport_event=PlannedDepartureTransportEvent(
                         location=Location(
                             id=Id(
-                                value="CNSHA",
-                                scheme_name="UN/LOCODE",
-                                scheme_agency_name="UN"
+                                value='CNSHA',
+                                scheme_name='UN/LOCODE',
+                                scheme_agency_name='UN'
                             )
                         ),
                         period=[
@@ -742,9 +742,9 @@ obj = TransportExecutionPlan(
                     planned_arrival_transport_event=PlannedArrivalTransportEvent(
                         location=Location(
                             id=Id(
-                                value="DEHAM",
-                                scheme_name="UN/LOCODE",
-                                scheme_agency_name="UN"
+                                value='DEHAM',
+                                scheme_name='UN/LOCODE',
+                                scheme_agency_name='UN'
                             )
                         ),
                         period=[
@@ -761,89 +761,89 @@ obj = TransportExecutionPlan(
             transport_handling_unit=[
                 TransportHandlingUnit(
                     id=Id(
-                        value="CON_THU_1"
+                        value='CON_THU_1'
                     ),
                     transport_handling_unit_type_code=TransportHandlingUnitTypeCode(
-                        value="4"
+                        value='4'
                     ),
                     hazardous_risk_indicator=False,
                     total_goods_item_quantity=TotalGoodsItemQuantity(
-                        value=Decimal("500")
+                        value=Decimal('500')
                     ),
                     total_package_quantity=TotalPackageQuantity(
-                        value=Decimal("10")
+                        value=Decimal('10')
                     ),
                     shipping_marks=[
                         ShippingMarks(
-                            value="General Cargo"
+                            value='General Cargo'
                         ),
                     ],
                     transport_equipment=[
                         TransportEquipment(
                             id=Id(
-                                value="CON_TE_1"
+                                value='CON_TE_1'
                             ),
                             transport_equipment_type_code=TransportEquipmentTypeCode(
-                                value="CN"
+                                value='CN'
                             ),
                             fullness_indication_code=FullnessIndicationCode(
-                                value="1"
+                                value='1'
                             ),
                             returnability_indicator=True,
                             refrigerated_indicator=False,
                             description=[
                                 Description(
-                                    value="SomeDescription"
+                                    value='SomeDescription'
                                 ),
                             ],
                             gross_weight_measure=GrossWeightMeasure(
-                                value=Decimal("25000"),
-                                unit_code="KGM"
+                                value=Decimal('25000'),
+                                unit_code='KGM'
                             ),
                             gross_volume_measure=GrossVolumeMeasure(
-                                value=Decimal("39"),
-                                unit_code="MTQ"
+                                value=Decimal('39'),
+                                unit_code='MTQ'
                             ),
                             power_indicator=False,
                             measurement_dimension=[
                                 MeasurementDimension(
                                     attribute_id=AttributeId(
-                                        value="Length"
+                                        value='Length'
                                     ),
                                     measure=Measure(
-                                        value=Decimal("6.1"),
-                                        unit_code="MTR"
+                                        value=Decimal('6.1'),
+                                        unit_code='MTR'
                                     )
                                 ),
                                 MeasurementDimension(
                                     attribute_id=AttributeId(
-                                        value="Height"
+                                        value='Height'
                                     ),
                                     measure=Measure(
-                                        value=Decimal("2.6"),
-                                        unit_code="MTR"
+                                        value=Decimal('2.6'),
+                                        unit_code='MTR'
                                     )
                                 ),
                                 MeasurementDimension(
                                     attribute_id=AttributeId(
-                                        value="Width"
+                                        value='Width'
                                     ),
                                     measure=Measure(
-                                        value=Decimal("2.44"),
-                                        unit_code="MTR"
+                                        value=Decimal('2.44'),
+                                        unit_code='MTR'
                                     )
                                 ),
                             ],
                             package=[
                                 Package(
                                     id=Id(
-                                        value="CON_P_1"
+                                        value='CON_P_1'
                                     ),
                                     quantity=Quantity(
-                                        value=Decimal("10")
+                                        value=Decimal('10')
                                     ),
                                     packaging_type_code=PackagingTypeCode(
-                                        value="PL"
+                                        value='PL'
                                     ),
                                     goods_item=[
                                         GoodsItem(
@@ -852,7 +852,7 @@ obj = TransportExecutionPlan(
                                                     commodity_classification=[
                                                         CommodityClassification(
                                                             cargo_type_code=CargoTypeCode(
-                                                                value="12"
+                                                                value='12'
                                                             )
                                                         ),
                                                     ]
@@ -867,89 +867,89 @@ obj = TransportExecutionPlan(
                 ),
                 TransportHandlingUnit(
                     id=Id(
-                        value="CON_THU_2"
+                        value='CON_THU_2'
                     ),
                     transport_handling_unit_type_code=TransportHandlingUnitTypeCode(
-                        value="4"
+                        value='4'
                     ),
                     hazardous_risk_indicator=False,
                     total_goods_item_quantity=TotalGoodsItemQuantity(
-                        value=Decimal("500")
+                        value=Decimal('500')
                     ),
                     total_package_quantity=TotalPackageQuantity(
-                        value=Decimal("10")
+                        value=Decimal('10')
                     ),
                     shipping_marks=[
                         ShippingMarks(
-                            value="General Cargo"
+                            value='General Cargo'
                         ),
                     ],
                     transport_equipment=[
                         TransportEquipment(
                             id=Id(
-                                value="CON_TE_2"
+                                value='CON_TE_2'
                             ),
                             transport_equipment_type_code=TransportEquipmentTypeCode(
-                                value="CN"
+                                value='CN'
                             ),
                             fullness_indication_code=FullnessIndicationCode(
-                                value="1"
+                                value='1'
                             ),
                             returnability_indicator=True,
                             refrigerated_indicator=False,
                             description=[
                                 Description(
-                                    value="SomeDescription"
+                                    value='SomeDescription'
                                 ),
                             ],
                             gross_weight_measure=GrossWeightMeasure(
-                                value=Decimal("25000"),
-                                unit_code="KGM"
+                                value=Decimal('25000'),
+                                unit_code='KGM'
                             ),
                             gross_volume_measure=GrossVolumeMeasure(
-                                value=Decimal("39"),
-                                unit_code="MTQ"
+                                value=Decimal('39'),
+                                unit_code='MTQ'
                             ),
                             power_indicator=False,
                             measurement_dimension=[
                                 MeasurementDimension(
                                     attribute_id=AttributeId(
-                                        value="Length"
+                                        value='Length'
                                     ),
                                     measure=Measure(
-                                        value=Decimal("6.1"),
-                                        unit_code="MTR"
+                                        value=Decimal('6.1'),
+                                        unit_code='MTR'
                                     )
                                 ),
                                 MeasurementDimension(
                                     attribute_id=AttributeId(
-                                        value="Height"
+                                        value='Height'
                                     ),
                                     measure=Measure(
-                                        value=Decimal("2.6"),
-                                        unit_code="MTR"
+                                        value=Decimal('2.6'),
+                                        unit_code='MTR'
                                     )
                                 ),
                                 MeasurementDimension(
                                     attribute_id=AttributeId(
-                                        value="Width"
+                                        value='Width'
                                     ),
                                     measure=Measure(
-                                        value=Decimal("2.44"),
-                                        unit_code="MTR"
+                                        value=Decimal('2.44'),
+                                        unit_code='MTR'
                                     )
                                 ),
                             ],
                             package=[
                                 Package(
                                     id=Id(
-                                        value="CON_P_2"
+                                        value='CON_P_2'
                                     ),
                                     quantity=Quantity(
-                                        value=Decimal("10")
+                                        value=Decimal('10')
                                     ),
                                     packaging_type_code=PackagingTypeCode(
-                                        value="PL"
+                                        value='PL'
                                     ),
                                     goods_item=[
                                         GoodsItem(
@@ -958,7 +958,7 @@ obj = TransportExecutionPlan(
                                                     commodity_classification=[
                                                         CommodityClassification(
                                                             cargo_type_code=CargoTypeCode(
-                                                                value="12"
+                                                                value='12'
                                                             )
                                                         ),
                                                     ]

@@ -1,14 +1,22 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
-from travelport.models.alpha_numeric_restriction_1 import AlphaNumericRestriction1
+from travelport.models.alpha_numeric_restriction_1 import (
+    AlphaNumericRestriction1,
+)
 from travelport.models.decimal_restriction_1 import DecimalRestriction1
-from travelport.models.freeform_text_restriction_1 import FreeformTextRestriction1
+from travelport.models.freeform_text_restriction_1 import (
+    FreeformTextRestriction1,
+)
 from travelport.models.percentage_restriction_1 import PercentageRestriction1
 from travelport.models.text_restriction_1 import TextRestriction1
-from travelport.models.type_custom_field_data_format_1 import TypeCustomFieldDataFormat1
+from travelport.models.type_custom_field_data_format_1 import (
+    TypeCustomFieldDataFormat1,
+)
 from travelport.models.type_masked_1 import TypeMasked1
-from travelport.models.whole_number_restriction_1 import WholeNumberRestriction1
+from travelport.models.whole_number_restriction_1 import (
+    WholeNumberRestriction1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -56,6 +64,7 @@ class TypeCustomField1:
         Maximum number of instances permitted. Leave blank to indicate
         unlimited (i.e., ..*).
     """
+
     class Meta:
         name = "typeCustomField"
 
@@ -65,7 +74,7 @@ class TypeCustomField1:
             "name": "FreeformTextRestriction",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     whole_number_restriction: None | WholeNumberRestriction1 = field(
         default=None,
@@ -73,7 +82,7 @@ class TypeCustomField1:
             "name": "WholeNumberRestriction",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     decimal_restriction: None | DecimalRestriction1 = field(
         default=None,
@@ -81,7 +90,7 @@ class TypeCustomField1:
             "name": "DecimalRestriction",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     text_restriction: None | TextRestriction1 = field(
         default=None,
@@ -89,7 +98,7 @@ class TypeCustomField1:
             "name": "TextRestriction",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     alpha_numeric_restriction: None | AlphaNumericRestriction1 = field(
         default=None,
@@ -97,7 +106,7 @@ class TypeCustomField1:
             "name": "AlphaNumericRestriction",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     percentage_restriction: None | PercentageRestriction1 = field(
         default=None,
@@ -105,7 +114,7 @@ class TypeCustomField1:
             "name": "PercentageRestriction",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -113,7 +122,7 @@ class TypeCustomField1:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -123,7 +132,7 @@ class TypeCustomField1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -132,7 +141,7 @@ class TypeCustomField1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     type_value: None | TypeCustomFieldDataFormat1 = field(
         default=None,
@@ -140,21 +149,21 @@ class TypeCustomField1:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     encrypted: bool = field(
         default=False,
         metadata={
             "name": "Encrypted",
             "type": "Attribute",
-        }
+        },
     )
     masked: TypeMasked1 = field(
         default=TypeMasked1.NOT_MASKED,
         metadata={
             "name": "Masked",
             "type": "Attribute",
-        }
+        },
     )
     default_value: None | str = field(
         default=None,
@@ -163,40 +172,40 @@ class TypeCustomField1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     protected: bool = field(
         default=False,
         metadata={
             "name": "Protected",
             "type": "Attribute",
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )

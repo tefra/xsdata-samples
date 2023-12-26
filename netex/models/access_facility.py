@@ -13,5 +13,5 @@ class AccessFacility:
         default=AccessFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

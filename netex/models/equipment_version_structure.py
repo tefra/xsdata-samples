@@ -21,7 +21,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -29,7 +29,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[PrivateCodeStructure] = field(
         default=None,
@@ -37,7 +37,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     image: Optional[str] = field(
         default=None,
@@ -45,7 +45,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "Image",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_equipment_ref: Optional[TypeOfEquipmentRef] = field(
         default=None,
@@ -53,7 +53,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -61,7 +61,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     note: Optional[MultilingualString] = field(
         default=None,
@@ -69,7 +69,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "Note",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     info_links: Optional[InfoLinksRelStructure] = field(
         default=None,
@@ -77,7 +77,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "infoLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     out_of_service: Optional[bool] = field(
         default=None,
@@ -85,5 +85,5 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "OutOfService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

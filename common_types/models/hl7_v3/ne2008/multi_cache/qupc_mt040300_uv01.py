@@ -27,7 +27,7 @@ class QupcMt040300Uv01CareProvisionCode:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -35,7 +35,7 @@ class QupcMt040300Uv01CareProvisionCode:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -43,7 +43,7 @@ class QupcMt040300Uv01CareProvisionCode:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[Cd] = field(
         default=None,
@@ -51,14 +51,14 @@ class QupcMt040300Uv01CareProvisionCode:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -73,7 +73,7 @@ class QupcMt040300Uv01CareProvisionReason:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -81,7 +81,7 @@ class QupcMt040300Uv01CareProvisionReason:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -89,7 +89,7 @@ class QupcMt040300Uv01CareProvisionReason:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[Cd] = field(
         default=None,
@@ -97,14 +97,14 @@ class QupcMt040300Uv01CareProvisionReason:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -119,7 +119,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -127,7 +127,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -135,7 +135,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[IvlTsExplicit] = field(
         default=None,
@@ -143,14 +143,14 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -165,7 +165,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -173,7 +173,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -181,7 +181,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[IvlTsExplicit] = field(
         default=None,
@@ -189,14 +189,14 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -211,7 +211,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -219,7 +219,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -227,7 +227,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[Bl] = field(
         default=None,
@@ -235,14 +235,14 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -257,7 +257,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -265,7 +265,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -273,7 +273,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[Int] = field(
         default=None,
@@ -281,14 +281,14 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -303,7 +303,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -311,7 +311,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -319,7 +319,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[Ce] = field(
         default=None,
@@ -327,14 +327,14 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -349,7 +349,7 @@ class QupcMt040300Uv01PatientBirthTime:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -357,7 +357,7 @@ class QupcMt040300Uv01PatientBirthTime:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -365,7 +365,7 @@ class QupcMt040300Uv01PatientBirthTime:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[TsExplicit] = field(
         default=None,
@@ -373,14 +373,14 @@ class QupcMt040300Uv01PatientBirthTime:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -395,7 +395,7 @@ class QupcMt040300Uv01PatientId:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -403,7 +403,7 @@ class QupcMt040300Uv01PatientId:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -411,7 +411,7 @@ class QupcMt040300Uv01PatientId:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[Ii] = field(
         default=None,
@@ -419,14 +419,14 @@ class QupcMt040300Uv01PatientId:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -441,7 +441,7 @@ class QupcMt040300Uv01PatientName:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -449,7 +449,7 @@ class QupcMt040300Uv01PatientName:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -457,7 +457,7 @@ class QupcMt040300Uv01PatientName:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[PnExplicit] = field(
         default=None,
@@ -465,14 +465,14 @@ class QupcMt040300Uv01PatientName:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -487,7 +487,7 @@ class QupcMt040300Uv01ParameterList:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -495,7 +495,7 @@ class QupcMt040300Uv01ParameterList:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -503,7 +503,7 @@ class QupcMt040300Uv01ParameterList:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     care_provision_code: Optional[QupcMt040300Uv01CareProvisionCode] = field(
         default=None,
@@ -512,7 +512,7 @@ class QupcMt040300Uv01ParameterList:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     care_provision_reason: List[QupcMt040300Uv01CareProvisionReason] = field(
         default_factory=list,
@@ -521,52 +521,62 @@ class QupcMt040300Uv01ParameterList:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    care_record_time_period: Optional[QupcMt040300Uv01CareRecordTimePeriod] = field(
+    care_record_time_period: Optional[
+        QupcMt040300Uv01CareRecordTimePeriod
+    ] = field(
         default=None,
         metadata={
             "name": "careRecordTimePeriod",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    clinical_statement_time_period: Optional[QupcMt040300Uv01ClinicalStatementTimePeriod] = field(
+    clinical_statement_time_period: Optional[
+        QupcMt040300Uv01ClinicalStatementTimePeriod
+    ] = field(
         default=None,
         metadata={
             "name": "clinicalStatementTimePeriod",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    include_care_plan_attachment: Optional[QupcMt040300Uv01IncludeCarePlanAttachment] = field(
+    include_care_plan_attachment: Optional[
+        QupcMt040300Uv01IncludeCarePlanAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "includeCarePlanAttachment",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    maximum_history_statements: Optional[QupcMt040300Uv01MaximumHistoryStatements] = field(
+    maximum_history_statements: Optional[
+        QupcMt040300Uv01MaximumHistoryStatements
+    ] = field(
         default=None,
         metadata={
             "name": "maximumHistoryStatements",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    patient_administrative_gender: Optional[QupcMt040300Uv01PatientAdministrativeGender] = field(
+    patient_administrative_gender: Optional[
+        QupcMt040300Uv01PatientAdministrativeGender
+    ] = field(
         default=None,
         metadata={
             "name": "patientAdministrativeGender",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     patient_birth_time: Optional[QupcMt040300Uv01PatientBirthTime] = field(
         default=None,
@@ -575,7 +585,7 @@ class QupcMt040300Uv01ParameterList:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     patient_id: Optional[QupcMt040300Uv01PatientId] = field(
         default=None,
@@ -584,7 +594,7 @@ class QupcMt040300Uv01ParameterList:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     patient_name: Optional[QupcMt040300Uv01PatientName] = field(
         default=None,
@@ -593,12 +603,12 @@ class QupcMt040300Uv01ParameterList:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )

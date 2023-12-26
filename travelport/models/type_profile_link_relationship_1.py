@@ -8,6 +8,7 @@ class TypeProfileLinkRelationship1(Enum):
     """
     Specify the one way relationship between two profiles.
     """
+
     COLLEAGUE = "Colleague"
     EMPLOYEE = "Employee"
     ADMIN_ASSISTANT = "Admin Assistant"

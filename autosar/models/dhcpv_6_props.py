@@ -39,6 +39,7 @@ class Dhcpv6Props:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DHCPV-6-PROPS"
 
@@ -48,7 +49,7 @@ class Dhcpv6Props:
             "name": "TCP-IP-DHCP-V-6-CNF-DELAY-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_dhcp_v_6_cnf_delay_min: Optional[TimeValue] = field(
         default=None,
@@ -56,7 +57,7 @@ class Dhcpv6Props:
             "name": "TCP-IP-DHCP-V-6-CNF-DELAY-MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_dhcp_v_6_inf_delay_max: Optional[TimeValue] = field(
         default=None,
@@ -64,7 +65,7 @@ class Dhcpv6Props:
             "name": "TCP-IP-DHCP-V-6-INF-DELAY-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_dhcp_v_6_inf_delay_min: Optional[TimeValue] = field(
         default=None,
@@ -72,7 +73,7 @@ class Dhcpv6Props:
             "name": "TCP-IP-DHCP-V-6-INF-DELAY-MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_dhcp_v_6_sol_delay_max: Optional[TimeValue] = field(
         default=None,
@@ -80,7 +81,7 @@ class Dhcpv6Props:
             "name": "TCP-IP-DHCP-V-6-SOL-DELAY-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_dhcp_v_6_sol_delay_min: Optional[TimeValue] = field(
         default=None,
@@ -88,14 +89,14 @@ class Dhcpv6Props:
             "name": "TCP-IP-DHCP-V-6-SOL-DELAY-MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -103,5 +104,5 @@ class Dhcpv6Props:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

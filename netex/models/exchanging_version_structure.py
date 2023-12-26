@@ -19,7 +19,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "name": "NumberOfExchangesAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_fare_class: Optional[FareClassEnumeration] = field(
         default=None,
@@ -27,7 +27,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "name": "ToFareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_class_of_use_ref: Optional[ClassOfUseRefStructure] = field(
         default=None,
@@ -35,7 +35,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "name": "ToClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     exchangable_to: Optional[ExchangableToEnumeration] = field(
         default=None,
@@ -43,5 +43,5 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "name": "ExchangableTo",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

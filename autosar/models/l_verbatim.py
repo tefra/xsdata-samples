@@ -36,6 +36,7 @@ class LVerbatim:
         It is defined according to xml:space as declared by W3C.
     :ivar content:
     """
+
     class Meta:
         name = "L-VERBATIM"
 
@@ -44,7 +45,7 @@ class LVerbatim:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -52,7 +53,7 @@ class LVerbatim:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     l: Optional[LEnumSimple] = field(
         default=None,
@@ -60,7 +61,7 @@ class LVerbatim:
             "name": "L",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     space: SpaceValue = field(
         default=SpaceValue.PRESERVE,
@@ -68,7 +69,7 @@ class LVerbatim:
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
             "required": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -98,5 +99,5 @@ class LVerbatim:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )

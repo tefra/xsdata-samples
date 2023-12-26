@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .data_filter import DataFilter
-from .i_signal_to_i_pdu_mapping_subtypes_enum import ISignalToIPduMappingSubtypesEnum
+from .i_signal_to_i_pdu_mapping_subtypes_enum import (
+    ISignalToIPduMappingSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -29,6 +31,7 @@ class TransmissionModeCondition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TRANSMISSION-MODE-CONDITION"
 
@@ -38,22 +41,24 @@ class TransmissionModeCondition:
             "name": "DATA-FILTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_signal_in_i_pdu_ref: Optional["TransmissionModeCondition.ISignalInIPduRef"] = field(
+    i_signal_in_i_pdu_ref: Optional[
+        "TransmissionModeCondition.ISignalInIPduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-IN-I-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -61,7 +66,7 @@ class TransmissionModeCondition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -72,5 +77,5 @@ class TransmissionModeCondition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

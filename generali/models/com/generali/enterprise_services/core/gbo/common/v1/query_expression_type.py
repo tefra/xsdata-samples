@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.logical_operator_code_type import LogicalOperatorCodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_expression_type import ValueExpressionType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.logical_operator_code_type import (
+    LogicalOperatorCodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_expression_type import (
+    ValueExpressionType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -24,25 +28,26 @@ class QueryExpressionType:
         whether the query expression should have a NOT applied to it,
         i.e. does NOT equal or is NOT less than.</description>
     """
+
     value_expression: List[ValueExpressionType] = field(
         default_factory=list,
         metadata={
             "name": "ValueExpression",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     logical_operator_code: Optional[LogicalOperatorCodeType] = field(
         default=None,
         metadata={
             "name": "logicalOperatorCode",
             "type": "Attribute",
-        }
+        },
     )
     negation_indicator: Optional[bool] = field(
         default=None,
         metadata={
             "name": "negationIndicator",
             "type": "Attribute",
-        }
+        },
     )

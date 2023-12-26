@@ -9,6 +9,7 @@ class EthernetSwitchVlanEgressTaggingEnumSimple(Enum):
     :cvar SENT_TAGGED: sent with its VLAN tag
     :cvar SENT_UNTAGGED: sent without a VLAN tag
     """
+
     NOT_SENT = "NOT-SENT"
     SENT_TAGGED = "SENT-TAGGED"
     SENT_UNTAGGED = "SENT-UNTAGGED"

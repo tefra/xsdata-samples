@@ -6,7 +6,9 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .ap_application_error_set_subtypes_enum import ApApplicationErrorSetSubtypesEnum
+from .ap_application_error_set_subtypes_enum import (
+    ApApplicationErrorSetSubtypesEnum,
+)
 from .ap_application_error_subtypes_enum import ApApplicationErrorSubtypesEnum
 from .application_error_subtypes_enum import ApplicationErrorSubtypesEnum
 from .argument_data_prototype import ArgumentDataPrototype
@@ -110,6 +112,7 @@ class ClientServerOperation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-OPERATION"
 
@@ -120,15 +123,17 @@ class ClientServerOperation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ClientServerOperation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ClientServerOperation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -136,7 +141,7 @@ class ClientServerOperation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -144,7 +149,7 @@ class ClientServerOperation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -152,7 +157,7 @@ class ClientServerOperation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -160,7 +165,7 @@ class ClientServerOperation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -168,7 +173,7 @@ class ClientServerOperation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ClientServerOperation.Annotations"] = field(
         default=None,
@@ -176,7 +181,7 @@ class ClientServerOperation:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     arguments: Optional["ClientServerOperation.Arguments"] = field(
         default=None,
@@ -184,7 +189,7 @@ class ClientServerOperation:
             "name": "ARGUMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diag_arg_integrity: Optional[Boolean] = field(
         default=None,
@@ -192,7 +197,7 @@ class ClientServerOperation:
             "name": "DIAG-ARG-INTEGRITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fire_and_forget: Optional[Boolean] = field(
         default=None,
@@ -200,31 +205,37 @@ class ClientServerOperation:
             "name": "FIRE-AND-FORGET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    possible_ap_error_refs: Optional["ClientServerOperation.PossibleApErrorRefs"] = field(
+    possible_ap_error_refs: Optional[
+        "ClientServerOperation.PossibleApErrorRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "POSSIBLE-AP-ERROR-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    possible_ap_error_set_refs: Optional["ClientServerOperation.PossibleApErrorSetRefs"] = field(
+    possible_ap_error_set_refs: Optional[
+        "ClientServerOperation.PossibleApErrorSetRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "POSSIBLE-AP-ERROR-SET-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    possible_error_refs: Optional["ClientServerOperation.PossibleErrorRefs"] = field(
+    possible_error_refs: Optional[
+        "ClientServerOperation.PossibleErrorRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "POSSIBLE-ERROR-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -232,14 +243,14 @@ class ClientServerOperation:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -247,14 +258,14 @@ class ClientServerOperation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -265,7 +276,7 @@ class ClientServerOperation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,7 +287,7 @@ class ClientServerOperation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -287,18 +298,20 @@ class ClientServerOperation:
                 "name": "ARGUMENT-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PossibleApErrorRefs:
-        possible_ap_error_ref: List["ClientServerOperation.PossibleApErrorRefs.PossibleApErrorRef"] = field(
+        possible_ap_error_ref: List[
+            "ClientServerOperation.PossibleApErrorRefs.PossibleApErrorRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "POSSIBLE-AP-ERROR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -309,18 +322,20 @@ class ClientServerOperation:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PossibleApErrorSetRefs:
-        possible_ap_error_set_ref: List["ClientServerOperation.PossibleApErrorSetRefs.PossibleApErrorSetRef"] = field(
+        possible_ap_error_set_ref: List[
+            "ClientServerOperation.PossibleApErrorSetRefs.PossibleApErrorSetRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "POSSIBLE-AP-ERROR-SET-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -331,18 +346,20 @@ class ClientServerOperation:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PossibleErrorRefs:
-        possible_error_ref: List["ClientServerOperation.PossibleErrorRefs.PossibleErrorRef"] = field(
+        possible_error_ref: List[
+            "ClientServerOperation.PossibleErrorRefs.PossibleErrorRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "POSSIBLE-ERROR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -353,5 +370,5 @@ class ClientServerOperation:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

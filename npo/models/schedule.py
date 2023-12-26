@@ -13,6 +13,7 @@ class Schedule(ScheduleType):
     is broadcast. A schedule is a container which contains the schedule
     events of different programs, for a certain period of time.
     """
+
     class Meta:
         name = "schedule"
         namespace = "urn:vpro:media:2009"

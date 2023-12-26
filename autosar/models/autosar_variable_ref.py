@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .ar_variable_in_implementation_data_instance_ref import ArVariableInImplementationDataInstanceRef
+from .ar_variable_in_implementation_data_instance_ref import (
+    ArVariableInImplementationDataInstanceRef,
+)
 from .ref import Ref
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
-from .variable_in_atomic_swc_type_instance_ref import VariableInAtomicSwcTypeInstanceRef
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
+from .variable_in_atomic_swc_type_instance_ref import (
+    VariableInAtomicSwcTypeInstanceRef,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -44,39 +50,46 @@ class AutosarVariableRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "AUTOSAR-VARIABLE-REF"
 
-    autosar_variable_in_impl_datatype: Optional[ArVariableInImplementationDataInstanceRef] = field(
+    autosar_variable_in_impl_datatype: Optional[
+        ArVariableInImplementationDataInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "AUTOSAR-VARIABLE-IN-IMPL-DATATYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    autosar_variable_iref: Optional[VariableInAtomicSwcTypeInstanceRef] = field(
+    autosar_variable_iref: Optional[
+        VariableInAtomicSwcTypeInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "AUTOSAR-VARIABLE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    local_variable_ref: Optional["AutosarVariableRef.LocalVariableRef"] = field(
+    local_variable_ref: Optional[
+        "AutosarVariableRef.LocalVariableRef"
+    ] = field(
         default=None,
         metadata={
             "name": "LOCAL-VARIABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -84,7 +97,7 @@ class AutosarVariableRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -95,5 +108,5 @@ class AutosarVariableRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

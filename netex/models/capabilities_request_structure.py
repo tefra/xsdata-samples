@@ -8,17 +8,19 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilitiesRequestStructure(RequestStructure):
-    data_object_capabilities_request: Optional[DataObjectCapabilitiesRequest] = field(
+    data_object_capabilities_request: Optional[
+        DataObjectCapabilitiesRequest
+    ] = field(
         default=None,
         metadata={
             "name": "DataObjectCapabilitiesRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     version: str = field(
         default="2.0",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

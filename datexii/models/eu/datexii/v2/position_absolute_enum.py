@@ -12,6 +12,7 @@ class PositionAbsoluteEnum(Enum):
     :cvar AT_TOP: At the top of the allotted space.
     :cvar AT_BOTTOM: At the bottom of the allotted space.
     """
+
     ON_LEFT = "onLeft"
     ON_RIGHT = "onRight"
     AT_TOP = "atTop"

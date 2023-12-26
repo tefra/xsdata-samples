@@ -19,6 +19,7 @@ class Document:
         Applicability level of the Document. Required, Supported,
         API_Supported or Unknown.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,19 +28,19 @@ class Document:
         metadata={
             "name": "Sequence",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     level: None | str = field(
         default=None,
         metadata={
             "name": "Level",
             "type": "Attribute",
-        }
+        },
     )

@@ -12,7 +12,9 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .r_port_in_composition_instance_ref import RPortInCompositionInstanceRef
 from .ref import Ref
-from .security_event_definition_subtypes_enum import SecurityEventDefinitionSubtypesEnum
+from .security_event_definition_subtypes_enum import (
+    SecurityEventDefinitionSubtypesEnum,
+)
 from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -84,6 +86,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SECURITY-EVENT-REPORT-TO-SECURITY-EVENT-DEFINITION-MAPPING"
 
@@ -94,15 +97,17 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SecurityEventReportToSecurityEventDefinitionMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SecurityEventReportToSecurityEventDefinitionMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -110,7 +115,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -118,7 +123,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -126,7 +131,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -134,7 +139,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -142,15 +147,17 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["SecurityEventReportToSecurityEventDefinitionMapping.Annotations"] = field(
+    annotations: Optional[
+        "SecurityEventReportToSecurityEventDefinitionMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -158,30 +165,34 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    reported_security_event_iref: Optional[RPortInCompositionInstanceRef] = field(
+    reported_security_event_iref: Optional[
+        RPortInCompositionInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "REPORTED-SECURITY-EVENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    security_event_definition_ref: Optional["SecurityEventReportToSecurityEventDefinitionMapping.SecurityEventDefinitionRef"] = field(
+    security_event_definition_ref: Optional[
+        "SecurityEventReportToSecurityEventDefinitionMapping.SecurityEventDefinitionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-DEFINITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -189,14 +200,14 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -207,7 +218,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -218,7 +229,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -229,5 +240,5 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

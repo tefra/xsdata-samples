@@ -16,7 +16,7 @@ class AirVoidDocumentPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class AirVoidDocumentPortTypeServiceInput:
                 "name": "AirVoidDocumentReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            }
+            },
         )

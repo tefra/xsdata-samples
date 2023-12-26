@@ -7,21 +7,33 @@ from .annotation import (
     VariationPoint,
 )
 from .bsw_asynchronous_server_call_point import BswAsynchronousServerCallPoint
-from .bsw_asynchronous_server_call_result_point import BswAsynchronousServerCallResultPoint
+from .bsw_asynchronous_server_call_result_point import (
+    BswAsynchronousServerCallResultPoint,
+)
 from .bsw_direct_call_point import BswDirectCallPoint
-from .bsw_internal_triggering_point_ref_conditional import BswInternalTriggeringPointRefConditional
+from .bsw_internal_triggering_point_ref_conditional import (
+    BswInternalTriggeringPointRefConditional,
+)
 from .bsw_interrupt_category import BswInterruptCategory
 from .bsw_module_entry_ref_conditional import BswModuleEntryRefConditional
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
-from .bsw_scheduler_name_prefix_subtypes_enum import BswSchedulerNamePrefixSubtypesEnum
+from .bsw_scheduler_name_prefix_subtypes_enum import (
+    BswSchedulerNamePrefixSubtypesEnum,
+)
 from .bsw_synchronous_server_call_point import BswSynchronousServerCallPoint
 from .bsw_variable_access import BswVariableAccess
 from .category_string import CategoryString
-from .exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
+from .exclusive_area_nesting_order_subtypes_enum import (
+    ExclusiveAreaNestingOrderSubtypesEnum,
+)
 from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
-from .executable_entity_activation_reason import ExecutableEntityActivationReason
+from .executable_entity_activation_reason import (
+    ExecutableEntityActivationReason,
+)
 from .identifier import Identifier
-from .mode_declaration_group_prototype_ref_conditional import ModeDeclarationGroupPrototypeRefConditional
+from .mode_declaration_group_prototype_ref_conditional import (
+    ModeDeclarationGroupPrototypeRefConditional,
+)
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .reentrancy_level_enum import ReentrancyLevelEnum
@@ -170,6 +182,7 @@ class BswInterruptEntity:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-INTERRUPT-ENTITY"
 
@@ -180,15 +193,17 @@ class BswInterruptEntity:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BswInterruptEntity.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BswInterruptEntity.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -196,7 +211,7 @@ class BswInterruptEntity:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -204,7 +219,7 @@ class BswInterruptEntity:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -212,7 +227,7 @@ class BswInterruptEntity:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -220,7 +235,7 @@ class BswInterruptEntity:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -228,7 +243,7 @@ class BswInterruptEntity:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["BswInterruptEntity.Annotations"] = field(
         default=None,
@@ -236,31 +251,37 @@ class BswInterruptEntity:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    activation_reasons: Optional["BswInterruptEntity.ActivationReasons"] = field(
+    activation_reasons: Optional[
+        "BswInterruptEntity.ActivationReasons"
+    ] = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    can_enter_exclusive_area_refs: Optional["BswInterruptEntity.CanEnterExclusiveAreaRefs"] = field(
+    can_enter_exclusive_area_refs: Optional[
+        "BswInterruptEntity.CanEnterExclusiveAreaRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exclusive_area_nesting_order_refs: Optional["BswInterruptEntity.ExclusiveAreaNestingOrderRefs"] = field(
+    exclusive_area_nesting_order_refs: Optional[
+        "BswInterruptEntity.ExclusiveAreaNestingOrderRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_start_interval: Optional[TimeValue] = field(
         default=None,
@@ -268,7 +289,7 @@ class BswInterruptEntity:
             "name": "MINIMUM-START-INTERVAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     reentrancy_level: Optional[ReentrancyLevelEnum] = field(
         default=None,
@@ -276,15 +297,17 @@ class BswInterruptEntity:
             "name": "REENTRANCY-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    runs_inside_exclusive_area_refs: Optional["BswInterruptEntity.RunsInsideExclusiveAreaRefs"] = field(
+    runs_inside_exclusive_area_refs: Optional[
+        "BswInterruptEntity.RunsInsideExclusiveAreaRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_addr_method_ref: Optional["BswInterruptEntity.SwAddrMethodRef"] = field(
         default=None,
@@ -292,15 +315,17 @@ class BswInterruptEntity:
             "name": "SW-ADDR-METHOD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    accessed_mode_groups: Optional["BswInterruptEntity.AccessedModeGroups"] = field(
+    accessed_mode_groups: Optional[
+        "BswInterruptEntity.AccessedModeGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESSED-MODE-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     activation_points: Optional["BswInterruptEntity.ActivationPoints"] = field(
         default=None,
@@ -308,7 +333,7 @@ class BswInterruptEntity:
             "name": "ACTIVATION-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     call_points: Optional["BswInterruptEntity.CallPoints"] = field(
         default=None,
@@ -316,7 +341,7 @@ class BswInterruptEntity:
             "name": "CALL-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     called_entrys: Optional["BswInterruptEntity.CalledEntrys"] = field(
         default=None,
@@ -324,15 +349,17 @@ class BswInterruptEntity:
             "name": "CALLED-ENTRYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_receive_points: Optional["BswInterruptEntity.DataReceivePoints"] = field(
+    data_receive_points: Optional[
+        "BswInterruptEntity.DataReceivePoints"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_send_points: Optional["BswInterruptEntity.DataSendPoints"] = field(
         default=None,
@@ -340,15 +367,17 @@ class BswInterruptEntity:
             "name": "DATA-SEND-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    implemented_entry_ref: Optional["BswInterruptEntity.ImplementedEntryRef"] = field(
+    implemented_entry_ref: Optional[
+        "BswInterruptEntity.ImplementedEntryRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPLEMENTED-ENTRY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     issued_triggers: Optional["BswInterruptEntity.IssuedTriggers"] = field(
         default=None,
@@ -356,23 +385,27 @@ class BswInterruptEntity:
             "name": "ISSUED-TRIGGERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    managed_mode_groups: Optional["BswInterruptEntity.ManagedModeGroups"] = field(
+    managed_mode_groups: Optional[
+        "BswInterruptEntity.ManagedModeGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "MANAGED-MODE-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    scheduler_name_prefix_ref: Optional["BswInterruptEntity.SchedulerNamePrefixRef"] = field(
+    scheduler_name_prefix_ref: Optional[
+        "BswInterruptEntity.SchedulerNamePrefixRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SCHEDULER-NAME-PREFIX-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -380,7 +413,7 @@ class BswInterruptEntity:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     interrupt_category: Optional[BswInterruptCategory] = field(
         default=None,
@@ -388,7 +421,7 @@ class BswInterruptEntity:
             "name": "INTERRUPT-CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     interrupt_source: Optional[String] = field(
         default=None,
@@ -396,14 +429,14 @@ class BswInterruptEntity:
             "name": "INTERRUPT-SOURCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -411,14 +444,14 @@ class BswInterruptEntity:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -429,7 +462,7 @@ class BswInterruptEntity:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -440,29 +473,33 @@ class BswInterruptEntity:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ActivationReasons:
-        executable_entity_activation_reason: List[ExecutableEntityActivationReason] = field(
+        executable_entity_activation_reason: List[
+            ExecutableEntityActivationReason
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTABLE-ENTITY-ACTIVATION-REASON",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CanEnterExclusiveAreaRefs:
-        can_enter_exclusive_area_ref: List["BswInterruptEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"] = field(
+        can_enter_exclusive_area_ref: List[
+            "BswInterruptEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-ENTER-EXCLUSIVE-AREA-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -473,18 +510,20 @@ class BswInterruptEntity:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ExclusiveAreaNestingOrderRefs:
-        exclusive_area_nesting_order_ref: List["BswInterruptEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"] = field(
+        exclusive_area_nesting_order_ref: List[
+            "BswInterruptEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXCLUSIVE-AREA-NESTING-ORDER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -495,18 +534,20 @@ class BswInterruptEntity:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class RunsInsideExclusiveAreaRefs:
-        runs_inside_exclusive_area_ref: List["BswInterruptEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"] = field(
+        runs_inside_exclusive_area_ref: List[
+            "BswInterruptEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -517,7 +558,7 @@ class BswInterruptEntity:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -528,48 +569,56 @@ class BswInterruptEntity:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class AccessedModeGroups:
-        mode_declaration_group_prototype_ref_conditional: List[ModeDeclarationGroupPrototypeRefConditional] = field(
+        mode_declaration_group_prototype_ref_conditional: List[
+            ModeDeclarationGroupPrototypeRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ActivationPoints:
-        bsw_internal_triggering_point_ref_conditional: List[BswInternalTriggeringPointRefConditional] = field(
+        bsw_internal_triggering_point_ref_conditional: List[
+            BswInternalTriggeringPointRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-INTERNAL-TRIGGERING-POINT-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CallPoints:
-        bsw_asynchronous_server_call_point: List[BswAsynchronousServerCallPoint] = field(
+        bsw_asynchronous_server_call_point: List[
+            BswAsynchronousServerCallPoint
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-ASYNCHRONOUS-SERVER-CALL-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        bsw_asynchronous_server_call_result_point: List[BswAsynchronousServerCallResultPoint] = field(
+        bsw_asynchronous_server_call_result_point: List[
+            BswAsynchronousServerCallResultPoint
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-ASYNCHRONOUS-SERVER-CALL-RESULT-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         bsw_direct_call_point: List[BswDirectCallPoint] = field(
             default_factory=list,
@@ -577,26 +626,30 @@ class BswInterruptEntity:
                 "name": "BSW-DIRECT-CALL-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        bsw_synchronous_server_call_point: List[BswSynchronousServerCallPoint] = field(
+        bsw_synchronous_server_call_point: List[
+            BswSynchronousServerCallPoint
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-SYNCHRONOUS-SERVER-CALL-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CalledEntrys:
-        bsw_module_entry_ref_conditional: List[BswModuleEntryRefConditional] = field(
+        bsw_module_entry_ref_conditional: List[
+            BswModuleEntryRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BSW-MODULE-ENTRY-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -607,7 +660,7 @@ class BswInterruptEntity:
                 "name": "BSW-VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -618,7 +671,7 @@ class BswInterruptEntity:
                 "name": "BSW-VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -629,7 +682,7 @@ class BswInterruptEntity:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -640,18 +693,20 @@ class BswInterruptEntity:
                 "name": "TRIGGER-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ManagedModeGroups:
-        mode_declaration_group_prototype_ref_conditional: List[ModeDeclarationGroupPrototypeRefConditional] = field(
+        mode_declaration_group_prototype_ref_conditional: List[
+            ModeDeclarationGroupPrototypeRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -662,5 +717,5 @@ class BswInterruptEntity:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

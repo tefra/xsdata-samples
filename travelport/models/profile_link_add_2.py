@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_link_relationship_2 import TypeProfileLinkRelationship2
+from travelport.models.type_profile_link_relationship_2 import (
+    TypeProfileLinkRelationship2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -17,6 +19,7 @@ class ProfileLinkAdd2:
     relationship
         The relationship of the link (e.g. Sibling, Spouse, etc.)
     """
+
     class Meta:
         name = "ProfileLinkAdd"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -27,7 +30,7 @@ class ProfileLinkAdd2:
             "name": "TravelerID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     relationship: None | TypeProfileLinkRelationship2 = field(
         default=None,
@@ -35,5 +38,5 @@ class ProfileLinkAdd2:
             "name": "Relationship",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

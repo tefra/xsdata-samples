@@ -16,5 +16,5 @@ class TSignalEventDefinition(TEventDefinition):
         metadata={
             "name": "signalRef",
             "type": "Attribute",
-        }
+        },
     )

@@ -88,70 +88,70 @@ class Company:
         metadata={
             "name": "ListOfIdentifier",
             "type": "Element",
-        }
+        },
     )
     mdfbusiness: Optional[str] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
             "type": "Element",
-        }
+        },
     )
     name_address: Optional[NameAddress] = field(
         default=None,
         metadata={
             "name": "NameAddress",
             "type": "Element",
-        }
+        },
     )
     order_contact: Optional[OrderContact] = field(
         default=None,
         metadata={
             "name": "OrderContact",
             "type": "Element",
-        }
+        },
     )
     receiving_contact: Optional[ReceivingContact] = field(
         default=None,
         metadata={
             "name": "ReceivingContact",
             "type": "Element",
-        }
+        },
     )
     shipping_contact: Optional[ShippingContact] = field(
         default=None,
         metadata={
             "name": "ShippingContact",
             "type": "Element",
-        }
+        },
     )
     other_contacts: Optional[OtherContacts] = field(
         default=None,
         metadata={
             "name": "OtherContacts",
             "type": "Element",
-        }
+        },
     )
     correspondence_language: Optional[CorrespondenceLanguage] = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
             "type": "Element",
-        }
+        },
     )
     industry_sector_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "IndustrySectorCoded",
             "type": "Element",
-        }
+        },
     )
     industry_sector_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "IndustrySectorCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -275,7 +275,7 @@ class PaymentRequestParty:
         metadata={
             "name": "PayerParty",
             "type": "Element",
-        }
+        },
     )
     payee_party: PayeeParty = field(
         metadata={
@@ -289,28 +289,28 @@ class PaymentRequestParty:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-        }
+        },
     )
     supplier_party: Optional[SupplierParty] = field(
         default=None,
         metadata={
             "name": "SupplierParty",
             "type": "Element",
-        }
+        },
     )
     bill_to_party: Optional[BillToParty] = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -364,28 +364,28 @@ class FinancialChargesAllocation:
         metadata={
             "name": "ChargeRegulationCodedOther",
             "type": "Element",
-        }
+        },
     )
     fee_amount: Optional[FeeAmount] = field(
         default=None,
         metadata={
             "name": "FeeAmount",
             "type": "Element",
-        }
+        },
     )
     charge_account: Optional[ChargeAccount] = field(
         default=None,
         metadata={
             "name": "ChargeAccount",
             "type": "Element",
-        }
+        },
     )
     charge_financial_institution: Optional[ChargeFinancialInstitution] = field(
         default=None,
         metadata={
             "name": "ChargeFinancialInstitution",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -408,7 +408,7 @@ class ListOfPaymentDocumentDetail:
             "name": "PaymentDocumentDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -454,14 +454,14 @@ class PaymentRequestHeader:
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
-        }
+        },
     )
     payment_request_attachment: Optional[PaymentRequestAttachment] = field(
         default=None,
         metadata={
             "name": "PaymentRequestAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -479,14 +479,14 @@ class LegalReportingInformation:
         metadata={
             "name": "LegalReportingSupplementalCode",
             "type": "Element",
-        }
+        },
     )
     legal_reporting_party: Optional[LegalReportingParty] = field(
         default=None,
         metadata={
             "name": "LegalReportingParty",
             "type": "Element",
-        }
+        },
     )
     legal_reporting_invoiced_amount: LegalReportingInvoicedAmount = field(
         metadata={
@@ -495,47 +495,53 @@ class LegalReportingInformation:
             "required": True,
         }
     )
-    legal_reporting_payment_amount: Optional[LegalReportingPaymentAmount] = field(
+    legal_reporting_payment_amount: Optional[
+        LegalReportingPaymentAmount
+    ] = field(
         default=None,
         metadata={
             "name": "LegalReportingPaymentAmount",
             "type": "Element",
-        }
+        },
     )
-    legal_reporting_supplying_country: Optional[LegalReportingSupplyingCountry] = field(
+    legal_reporting_supplying_country: Optional[
+        LegalReportingSupplyingCountry
+    ] = field(
         default=None,
         metadata={
             "name": "LegalReportingSupplyingCountry",
             "type": "Element",
-        }
+        },
     )
-    legal_reporting_payee_country: Optional[LegalReportingPayeeCountry] = field(
+    legal_reporting_payee_country: Optional[
+        LegalReportingPayeeCountry
+    ] = field(
         default=None,
         metadata={
             "name": "LegalReportingPayeeCountry",
             "type": "Element",
-        }
+        },
     )
     legal_reporting_import_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "LegalReportingImportDate",
             "type": "Element",
-        }
+        },
     )
     legal_reporting_payment_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "LegalReportingPaymentDate",
             "type": "Element",
-        }
+        },
     )
     legal_reporting_description: Optional[str] = field(
         default=None,
         metadata={
             "name": "LegalReportingDescription",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -553,28 +559,30 @@ class PaymentRequestDetail:
         metadata={
             "name": "PaymentSequenceNo",
             "type": "Element",
-        }
+        },
     )
     payment_dates: Optional[PaymentDates] = field(
         default=None,
         metadata={
             "name": "PaymentDates",
             "type": "Element",
-        }
+        },
     )
     financial_institution_detail: Optional[FinancialInstitutionDetail] = field(
         default=None,
         metadata={
             "name": "FinancialInstitutionDetail",
             "type": "Element",
-        }
+        },
     )
-    originating_financial_institution: Optional[OriginatingFinancialInstitution] = field(
+    originating_financial_institution: Optional[
+        OriginatingFinancialInstitution
+    ] = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
-        }
+        },
     )
     receiving_fispecific_id: List[ReceivingFispecificId] = field(
         default_factory=list,
@@ -582,28 +590,30 @@ class PaymentRequestDetail:
             "name": "ReceivingFISpecificID",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     originating_fispecific_id: Optional[OriginatingFispecificId] = field(
         default=None,
         metadata={
             "name": "OriginatingFISpecificID",
             "type": "Element",
-        }
+        },
     )
-    receiving_financial_institution: Optional[ReceivingFinancialInstitution] = field(
+    receiving_financial_institution: Optional[
+        ReceivingFinancialInstitution
+    ] = field(
         default=None,
         metadata={
             "name": "ReceivingFinancialInstitution",
             "type": "Element",
-        }
+        },
     )
     card_info: Optional[CardInfo] = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
-        }
+        },
     )
     settlement_amount: SettlementAmount = field(
         metadata={
@@ -631,49 +641,49 @@ class PaymentRequestDetail:
         metadata={
             "name": "LegalReportingInformation",
             "type": "Element",
-        }
+        },
     )
     payment_reason_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentReasonCoded",
             "type": "Element",
-        }
+        },
     )
     payment_reason_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentReasonCodedOther",
             "type": "Element",
-        }
+        },
     )
     payment_urgency_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentUrgencyCoded",
             "type": "Element",
-        }
+        },
     )
     payment_urgency_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentUrgencyCodedOther",
             "type": "Element",
-        }
+        },
     )
     international_payment_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "InternationalPaymentIndicator",
             "type": "Element",
-        }
+        },
     )
     intra_company_payment_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "IntraCompanyPaymentIndicator",
             "type": "Element",
-        }
+        },
     )
     payment_mean_coded: str = field(
         metadata={
@@ -687,91 +697,95 @@ class PaymentRequestDetail:
         metadata={
             "name": "PaymentMeanCodedOther",
             "type": "Element",
-        }
+        },
     )
     payment_mean_reference: Optional[PaymentMeanReference] = field(
         default=None,
         metadata={
             "name": "PaymentMeanReference",
             "type": "Element",
-        }
+        },
     )
     payment_system_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCoded",
             "type": "Element",
-        }
+        },
     )
     payment_system_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCodedOther",
             "type": "Element",
-        }
+        },
     )
     payment_reference: Optional[PaymentReference] = field(
         default=None,
         metadata={
             "name": "PaymentReference",
             "type": "Element",
-        }
+        },
     )
     accept_fxmarket_rate: Optional[str] = field(
         default=None,
         metadata={
             "name": "AcceptFXMarketRate",
             "type": "Element",
-        }
+        },
     )
-    list_of_rate_of_exchange_detail: Optional[ListOfRateOfExchangeDetail] = field(
+    list_of_rate_of_exchange_detail: Optional[
+        ListOfRateOfExchangeDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfRateOfExchangeDetail",
             "type": "Element",
-        }
+        },
     )
     payment_detail_attachment: Optional[PaymentDetailAttachment] = field(
         default=None,
         metadata={
             "name": "PaymentDetailAttachment",
             "type": "Element",
-        }
+        },
     )
     payment_instruction_notes: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentInstructionNotes",
             "type": "Element",
-        }
+        },
     )
     is_credit: Optional[str] = field(
         default=None,
         metadata={
             "name": "IsCredit",
             "type": "Element",
-        }
+        },
     )
     repetitive_code: Optional[str] = field(
         default=None,
         metadata={
             "name": "RepetitiveCode",
             "type": "Element",
-        }
+        },
     )
     financial_charges_allocation: Optional[FinancialChargesAllocation] = field(
         default=None,
         metadata={
             "name": "FinancialChargesAllocation",
             "type": "Element",
-        }
+        },
     )
-    list_of_payment_document_detail: Optional[ListOfPaymentDocumentDetail] = field(
+    list_of_payment_document_detail: Optional[
+        ListOfPaymentDocumentDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfPaymentDocumentDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -783,7 +797,7 @@ class ListOfPaymentRequestDetail:
             "name": "PaymentRequestDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 

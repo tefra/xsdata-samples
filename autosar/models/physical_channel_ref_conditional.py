@@ -26,16 +26,19 @@ class PhysicalChannelRefConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PHYSICAL-CHANNEL-REF-CONDITIONAL"
 
-    physical_channel_ref: Optional["PhysicalChannelRefConditional.PhysicalChannelRef"] = field(
+    physical_channel_ref: Optional[
+        "PhysicalChannelRefConditional.PhysicalChannelRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -43,14 +46,14 @@ class PhysicalChannelRefConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,7 +61,7 @@ class PhysicalChannelRefConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -69,5 +72,5 @@ class PhysicalChannelRefConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

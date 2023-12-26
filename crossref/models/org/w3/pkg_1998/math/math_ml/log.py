@@ -15,5 +15,5 @@ class Log:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

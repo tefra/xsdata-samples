@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.create_terminal_session_req import CreateTerminalSessionReq
+from travelport.models.create_terminal_session_req import (
+    CreateTerminalSessionReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class CreateTerminalSessionServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class CreateTerminalSessionServicePortTypeServiceInput:
                 "name": "CreateTerminalSessionReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/terminal_v33_0",
-            }
+            },
         )

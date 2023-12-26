@@ -10,6 +10,7 @@ class QueuePseudoCitySelector:
     """
     Need to specify the PseudoCityCode and Queue details.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -19,7 +20,7 @@ class QueuePseudoCitySelector:
             "name": "QueueSelector",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -28,5 +29,5 @@ class QueuePseudoCitySelector:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )

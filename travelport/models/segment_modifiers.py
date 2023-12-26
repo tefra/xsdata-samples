@@ -20,6 +20,7 @@ class SegmentModifiers:
     baggage_allowance
     ticket_designator
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,21 +30,21 @@ class SegmentModifiers:
             "name": "AirSegmentRef",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     ticket_validity: None | TicketValidity = field(
         default=None,
         metadata={
             "name": "TicketValidity",
             "type": "Element",
-        }
+        },
     )
     baggage_allowance: None | BaggageAllowance = field(
         default=None,
         metadata={
             "name": "BaggageAllowance",
             "type": "Element",
-        }
+        },
     )
     ticket_designator: None | str = field(
         default=None,
@@ -52,5 +53,5 @@ class SegmentModifiers:
             "type": "Element",
             "min_length": 0,
             "max_length": 20,
-        }
+        },
     )

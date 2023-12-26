@@ -15,5 +15,5 @@ class TypeGeneralReference5:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -9,7 +9,9 @@ from travelport.models.air_pricing_solution import AirPricingSolution
 from travelport.models.booking_traveler_1 import BookingTraveler1
 from travelport.models.collection_address import CollectionAddress
 from travelport.models.delivery_address import DeliveryAddress
-from travelport.models.flight_arrival_information import FlightArrivalInformation
+from travelport.models.flight_arrival_information import (
+    FlightArrivalInformation,
+)
 from travelport.models.general_remark_1 import GeneralRemark1
 from travelport.models.hotel_details_modifiers import HotelDetailsModifiers
 from travelport.models.hotel_property import HotelProperty
@@ -99,6 +101,7 @@ class SavedTrip:
     modified_by_agent
         The Agent Code that modified the SavedTrip.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -110,7 +113,7 @@ class SavedTrip:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     agency_contact_info: None | AgencyContactInfo1 = field(
         default=None,
@@ -118,7 +121,7 @@ class SavedTrip:
             "name": "AgencyContactInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     search_passenger: list[SearchPassenger1] = field(
         default_factory=list,
@@ -127,7 +130,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     point_of_sale: list[PointOfSale1] = field(
         default_factory=list,
@@ -136,7 +139,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     accounting_remark: list[AccountingRemark1] = field(
         default_factory=list,
@@ -145,7 +148,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     general_remark: list[GeneralRemark1] = field(
         default_factory=list,
@@ -154,7 +157,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     agency_info: None | AgencyInfo1 = field(
         default=None,
@@ -162,7 +165,7 @@ class SavedTrip:
             "name": "AgencyInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     reservation_name: None | ReservationName1 = field(
         default=None,
@@ -170,7 +173,7 @@ class SavedTrip:
             "name": "ReservationName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_pricing_modifiers: list[AirPricingModifiers] = field(
         default_factory=list,
@@ -179,7 +182,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -188,7 +191,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_trip_note: list[TypeSavedTripNote] = field(
         default_factory=list,
@@ -196,7 +199,7 @@ class SavedTrip:
             "name": "AirTripNote",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
     vehicle_search_modifiers: list[VehicleSearchModifiers] = field(
         default_factory=list,
@@ -205,7 +208,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_date_location: list[VehicleDateLocation] = field(
         default_factory=list,
@@ -214,7 +217,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     special_equipment: list[SpecialEquipment1] = field(
         default_factory=list,
@@ -223,7 +226,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_special_request: list[VehicleSpecialRequest] = field(
         default_factory=list,
@@ -232,7 +235,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     payment_information: list[PaymentInformation] = field(
         default_factory=list,
@@ -241,7 +244,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     delivery_address: list[DeliveryAddress] = field(
         default_factory=list,
@@ -250,7 +253,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     collection_address: list[CollectionAddress] = field(
         default_factory=list,
@@ -259,7 +262,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     flight_arrival_information: list[FlightArrivalInformation] = field(
         default_factory=list,
@@ -268,7 +271,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle: list[Vehicle] = field(
         default_factory=list,
@@ -277,7 +280,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_trip_note: list[TypeSavedTripNote] = field(
         default_factory=list,
@@ -285,7 +288,7 @@ class SavedTrip:
             "name": "VehicleTripNote",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
     vendor_location: list[VendorLocation1] = field(
         default_factory=list,
@@ -294,7 +297,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_property: list[HotelProperty] = field(
         default_factory=list,
@@ -303,7 +306,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_stay: list[HotelStay] = field(
         default_factory=list,
@@ -312,7 +315,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rules_modifiers: list[HotelRulesModifiers] = field(
         default_factory=list,
@@ -321,7 +324,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_details_modifiers: list[HotelDetailsModifiers] = field(
         default_factory=list,
@@ -330,7 +333,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
         default_factory=list,
@@ -339,7 +342,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     promotion_code: list[PromotionCode] = field(
         default_factory=list,
@@ -348,7 +351,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_trip_note: list[TypeSavedTripNote] = field(
         default_factory=list,
@@ -356,7 +359,7 @@ class SavedTrip:
             "name": "HotelTripNote",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
     rail_pricing_solution: list[RailPricingSolution] = field(
         default_factory=list,
@@ -365,7 +368,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rail_fare_note: list[RailFareNote] = field(
         default_factory=list,
@@ -374,7 +377,7 @@ class SavedTrip:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rail_trip_note: list[TypeSavedTripNote] = field(
         default_factory=list,
@@ -382,7 +385,7 @@ class SavedTrip:
             "name": "RailTripNote",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
     saved_trip_note: list[TypeSavedTripNote] = field(
         default_factory=list,
@@ -390,7 +393,7 @@ class SavedTrip:
             "name": "SavedTripNote",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     saved_trip_activity: list[SavedTripActivity] = field(
         default_factory=list,
@@ -398,7 +401,7 @@ class SavedTrip:
             "name": "SavedTripActivity",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     profile_association: list[ProfileAssociation] = field(
         default_factory=list,
@@ -406,14 +409,14 @@ class SavedTrip:
             "name": "ProfileAssociation",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     policy_information: None | PolicyInformation2 = field(
         default=None,
         metadata={
             "name": "PolicyInformation",
             "type": "Element",
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -422,7 +425,7 @@ class SavedTrip:
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -431,7 +434,7 @@ class SavedTrip:
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -441,28 +444,28 @@ class SavedTrip:
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     create_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-        }
+        },
     )
     modified_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
-        }
+        },
     )
     version: None | int = field(
         default=None,
         metadata={
             "name": "Version",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -470,19 +473,19 @@ class SavedTrip:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     created_by_agent: None | str = field(
         default=None,
         metadata={
             "name": "CreatedByAgent",
             "type": "Attribute",
-        }
+        },
     )
     modified_by_agent: None | str = field(
         default=None,
         metadata={
             "name": "ModifiedByAgent",
             "type": "Attribute",
-        }
+        },
     )

@@ -8,6 +8,7 @@ class CYear:
     """
     Year of publication in citation.
     """
+
     class Meta:
         name = "cYear"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -16,5 +17,5 @@ class CYear:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

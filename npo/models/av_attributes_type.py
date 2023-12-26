@@ -17,7 +17,7 @@ class AvAttributesType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     byte_size: None | int = field(
         default=None,
@@ -25,7 +25,7 @@ class AvAttributesType:
             "name": "byteSize",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     av_file_format: None | AvFileFormatEnum = field(
         default=None,
@@ -33,7 +33,7 @@ class AvAttributesType:
             "name": "avFileFormat",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     video_attributes: None | VideoAttributesType = field(
         default=None,
@@ -41,7 +41,7 @@ class AvAttributesType:
             "name": "videoAttributes",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     audio_attributes: None | AudioAttributesType = field(
         default=None,
@@ -49,5 +49,5 @@ class AvAttributesType:
             "name": "audioAttributes",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )

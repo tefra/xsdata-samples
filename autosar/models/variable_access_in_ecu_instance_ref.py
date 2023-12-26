@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .ref import Ref
-from .root_sw_composition_prototype_subtypes_enum import RootSwCompositionPrototypeSubtypesEnum
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .root_sw_composition_prototype_subtypes_enum import (
+    RootSwCompositionPrototypeSubtypesEnum,
+)
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
 from .variable_access_subtypes_enum import VariableAccessSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -25,39 +29,46 @@ class VariableAccessInEcuInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "VARIABLE-ACCESS-IN-ECU-INSTANCE-REF"
 
-    context_root_composition_ref: Optional["VariableAccessInEcuInstanceRef.ContextRootCompositionRef"] = field(
+    context_root_composition_ref: Optional[
+        "VariableAccessInEcuInstanceRef.ContextRootCompositionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-COMPOSITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_atomic_component_ref: Optional["VariableAccessInEcuInstanceRef.ContextAtomicComponentRef"] = field(
+    context_atomic_component_ref: Optional[
+        "VariableAccessInEcuInstanceRef.ContextAtomicComponentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-ATOMIC-COMPONENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_variable_access_ref: Optional["VariableAccessInEcuInstanceRef.TargetVariableAccessRef"] = field(
+    target_variable_access_ref: Optional[
+        "VariableAccessInEcuInstanceRef.TargetVariableAccessRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-VARIABLE-ACCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -65,7 +76,7 @@ class VariableAccessInEcuInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -76,7 +87,7 @@ class VariableAccessInEcuInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -87,7 +98,7 @@ class VariableAccessInEcuInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -98,5 +109,5 @@ class VariableAccessInEcuInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

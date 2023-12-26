@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .blacklist_ref import BlacklistRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .whitelist_ref import WhitelistRef
@@ -12,7 +12,9 @@ class SecuritylistRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "securitylistRefs_RelStructure"
 
-    whitelist_ref_or_blacklist_ref: List[object] = field(
+    whitelist_ref_or_blacklist_ref: List[
+        Union[WhitelistRef, BlacklistRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class SecuritylistRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

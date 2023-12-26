@@ -13,6 +13,7 @@ class DriverInfo:
         This is used to specify Primary Driver’s age in years. 1P only.
         Required.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -23,5 +24,5 @@ class DriverInfo:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 99,
-        }
+        },
     )

@@ -11,6 +11,7 @@ class TypeAirReservationWithFop(TypeBaseAirReservation):
     """
     Air Reservation With Form Of Payment.
     """
+
     class Meta:
         name = "typeAirReservationWithFOP"
 
@@ -21,5 +22,5 @@ class TypeAirReservationWithFop(TypeBaseAirReservation):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

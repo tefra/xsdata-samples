@@ -80,6 +80,7 @@ class TransformationPropsSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TRANSFORMATION-PROPS-SET"
 
@@ -90,15 +91,17 @@ class TransformationPropsSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TransformationPropsSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TransformationPropsSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -106,7 +109,7 @@ class TransformationPropsSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -114,7 +117,7 @@ class TransformationPropsSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -122,7 +125,7 @@ class TransformationPropsSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -130,7 +133,7 @@ class TransformationPropsSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -138,7 +141,7 @@ class TransformationPropsSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TransformationPropsSet.Annotations"] = field(
         default=None,
@@ -146,7 +149,7 @@ class TransformationPropsSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -154,22 +157,24 @@ class TransformationPropsSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformation_propss: Optional["TransformationPropsSet.TransformationPropss"] = field(
+    transformation_propss: Optional[
+        "TransformationPropsSet.TransformationPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -177,14 +182,14 @@ class TransformationPropsSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -195,7 +200,7 @@ class TransformationPropsSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -206,18 +211,20 @@ class TransformationPropsSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TransformationPropss:
-        ap_someip_transformation_props: List[ApSomeipTransformationProps] = field(
+        ap_someip_transformation_props: List[
+            ApSomeipTransformationProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "AP-SOMEIP-TRANSFORMATION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         someip_transformation_props: List[SomeipTransformationProps] = field(
             default_factory=list,
@@ -225,13 +232,15 @@ class TransformationPropsSet:
                 "name": "SOMEIP-TRANSFORMATION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_transformation_props: List[UserDefinedTransformationProps] = field(
+        user_defined_transformation_props: List[
+            UserDefinedTransformationProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-TRANSFORMATION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

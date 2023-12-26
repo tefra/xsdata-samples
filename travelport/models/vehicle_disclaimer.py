@@ -20,6 +20,7 @@ class VehicleDisclaimer:
     description
         A verbal description of this disclaimer
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -27,7 +28,7 @@ class VehicleDisclaimer:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: None | TypeVehicleDisclaimer = field(
         default=None,
@@ -35,19 +36,19 @@ class VehicleDisclaimer:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     sub_type: None | str = field(
         default=None,
         metadata={
             "name": "SubType",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

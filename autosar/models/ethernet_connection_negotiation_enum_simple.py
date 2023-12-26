@@ -9,6 +9,7 @@ class EthernetConnectionNegotiationEnumSimple(Enum):
     :cvar MASTER: Master
     :cvar SLAVE: Slave
     """
+
     AUTO = "AUTO"
     MASTER = "MASTER"
     SLAVE = "SLAVE"

@@ -43,6 +43,7 @@ class Ipv6FragmentationProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IPV-6-FRAGMENTATION-PROPS"
 
@@ -52,7 +53,7 @@ class Ipv6FragmentationProps:
             "name": "TCP-IP-IP-REASSEMBLY-BUFFER-COUNT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_reassembly_buffer_size: Optional[PositiveInteger] = field(
         default=None,
@@ -60,7 +61,7 @@ class Ipv6FragmentationProps:
             "name": "TCP-IP-IP-REASSEMBLY-BUFFER-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_reassembly_segment_count: Optional[PositiveInteger] = field(
         default=None,
@@ -68,7 +69,7 @@ class Ipv6FragmentationProps:
             "name": "TCP-IP-IP-REASSEMBLY-SEGMENT-COUNT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_reassembly_timeout: Optional[TimeValue] = field(
         default=None,
@@ -76,7 +77,7 @@ class Ipv6FragmentationProps:
             "name": "TCP-IP-IP-REASSEMBLY-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_tx_fragment_buffer_count: Optional[PositiveInteger] = field(
         default=None,
@@ -84,7 +85,7 @@ class Ipv6FragmentationProps:
             "name": "TCP-IP-IP-TX-FRAGMENT-BUFFER-COUNT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_ip_tx_fragment_buffer_size: Optional[PositiveInteger] = field(
         default=None,
@@ -92,14 +93,14 @@ class Ipv6FragmentationProps:
             "name": "TCP-IP-IP-TX-FRAGMENT-BUFFER-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -107,5 +108,5 @@ class Ipv6FragmentationProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

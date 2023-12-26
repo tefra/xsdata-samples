@@ -19,6 +19,7 @@ class ProfileRetrieveHierarchyReq(BaseReq5):
         Specify the AgencyCode Of the Agency in which the hierarchy was
         created.  Accounts and AgencyGroup do not have Provisioning IDs
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -27,7 +28,7 @@ class ProfileRetrieveHierarchyReq(BaseReq5):
         metadata={
             "name": "ProfileID",
             "type": "Element",
-        }
+        },
     )
     agency_code: None | str = field(
         default=None,
@@ -36,5 +37,5 @@ class ProfileRetrieveHierarchyReq(BaseReq5):
             "type": "Element",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )

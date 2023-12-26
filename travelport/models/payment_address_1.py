@@ -23,6 +23,7 @@ class PaymentAddress1:
     city
         The city of which this address is located.
     """
+
     class Meta:
         name = "PaymentAddress"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -35,7 +36,7 @@ class PaymentAddress1:
             "max_occurs": 3,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     postal: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class PaymentAddress1:
             "name": "Postal",
             "type": "Attribute",
             "max_length": 12,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class PaymentAddress1:
             "name": "Country",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     state: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class PaymentAddress1:
             "name": "State",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     other_state_province: None | str = field(
         default=None,
@@ -68,7 +69,7 @@ class PaymentAddress1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     city: None | str = field(
         default=None,
@@ -77,5 +78,5 @@ class PaymentAddress1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

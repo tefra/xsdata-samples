@@ -59,6 +59,7 @@ class FixedFieldGroup:
         Defines if field as editable or not.
     overriden
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -68,7 +69,7 @@ class FixedFieldGroup:
             "name": "FixedField",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fixed_field_group: list[FixedFieldGroup] = field(
         default_factory=list,
@@ -76,7 +77,7 @@ class FixedFieldGroup:
             "name": "FixedFieldGroup",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -84,7 +85,7 @@ class FixedFieldGroup:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -94,7 +95,7 @@ class FixedFieldGroup:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -103,7 +104,7 @@ class FixedFieldGroup:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     component: None | str = field(
         default=None,
@@ -111,7 +112,7 @@ class FixedFieldGroup:
             "name": "Component",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     correlation_element: None | str = field(
         default=None,
@@ -119,7 +120,7 @@ class FixedFieldGroup:
             "name": "CorrelationElement",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     correlation_value: None | str = field(
         default=None,
@@ -128,82 +129,82 @@ class FixedFieldGroup:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     hide: bool = field(
         default=False,
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     label: None | str = field(
         default=None,
         metadata={
             "name": "Label",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MinOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     inheritable_control_ind: bool = field(
         default=False,
         metadata={
             "name": "InheritableControlInd",
             "type": "Attribute",
-        }
+        },
     )
     read_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReadOnly",
             "type": "Attribute",
-        }
+        },
     )
     overriden: bool = field(
         default=False,
         metadata={
             "name": "Overriden",
             "type": "Attribute",
-        }
+        },
     )

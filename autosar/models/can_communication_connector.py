@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from .communication_controller_subtypes_enum import (
+    CommunicationControllerSubtypesEnum,
+)
 from .frame_port import FramePort
 from .i_pdu_port import IPduPort
 from .i_signal_port import ISignalPort
@@ -120,6 +122,7 @@ class CanCommunicationConnector:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-COMMUNICATION-CONNECTOR"
 
@@ -130,15 +133,17 @@ class CanCommunicationConnector:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CanCommunicationConnector.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CanCommunicationConnector.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -146,7 +151,7 @@ class CanCommunicationConnector:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -154,7 +159,7 @@ class CanCommunicationConnector:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -162,7 +167,7 @@ class CanCommunicationConnector:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -170,7 +175,7 @@ class CanCommunicationConnector:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -178,7 +183,7 @@ class CanCommunicationConnector:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CanCommunicationConnector.Annotations"] = field(
         default=None,
@@ -186,15 +191,17 @@ class CanCommunicationConnector:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    comm_controller_ref: Optional["CanCommunicationConnector.CommControllerRef"] = field(
+    comm_controller_ref: Optional[
+        "CanCommunicationConnector.CommControllerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     create_ecu_wakeup_source: Optional[Boolean] = field(
         default=None,
@@ -202,7 +209,7 @@ class CanCommunicationConnector:
             "name": "CREATE-ECU-WAKEUP-SOURCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dynamic_pnc_to_channel_mapping_enabled: Optional[Boolean] = field(
         default=None,
@@ -210,15 +217,17 @@ class CanCommunicationConnector:
             "name": "DYNAMIC-PNC-TO-CHANNEL-MAPPING-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_comm_port_instances: Optional["CanCommunicationConnector.EcuCommPortInstances"] = field(
+    ecu_comm_port_instances: Optional[
+        "CanCommunicationConnector.EcuCommPortInstances"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_gateway_type: Optional[PncGatewayTypeEnum] = field(
         default=None,
@@ -226,7 +235,7 @@ class CanCommunicationConnector:
             "name": "PNC-GATEWAY-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -234,7 +243,7 @@ class CanCommunicationConnector:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_wakeup_can_id: Optional[PositiveInteger] = field(
         default=None,
@@ -242,7 +251,7 @@ class CanCommunicationConnector:
             "name": "PNC-WAKEUP-CAN-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_wakeup_can_id_extended: Optional[Boolean] = field(
         default=None,
@@ -250,7 +259,7 @@ class CanCommunicationConnector:
             "name": "PNC-WAKEUP-CAN-ID-EXTENDED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_wakeup_can_id_mask: Optional[PositiveInteger] = field(
         default=None,
@@ -258,7 +267,7 @@ class CanCommunicationConnector:
             "name": "PNC-WAKEUP-CAN-ID-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_wakeup_data_mask: Optional[PositiveUnlimitedInteger] = field(
         default=None,
@@ -266,7 +275,7 @@ class CanCommunicationConnector:
             "name": "PNC-WAKEUP-DATA-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_wakeup_dlc: Optional[PositiveInteger] = field(
         default=None,
@@ -274,14 +283,14 @@ class CanCommunicationConnector:
             "name": "PNC-WAKEUP-DLC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -289,14 +298,14 @@ class CanCommunicationConnector:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -307,7 +316,7 @@ class CanCommunicationConnector:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -318,7 +327,7 @@ class CanCommunicationConnector:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -329,7 +338,7 @@ class CanCommunicationConnector:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -340,7 +349,7 @@ class CanCommunicationConnector:
                 "name": "FRAME-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         i_pdu_port: List[IPduPort] = field(
             default_factory=list,
@@ -348,7 +357,7 @@ class CanCommunicationConnector:
                 "name": "I-PDU-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         i_signal_port: List[ISignalPort] = field(
             default_factory=list,
@@ -356,5 +365,5 @@ class CanCommunicationConnector:
                 "name": "I-SIGNAL-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -17,14 +17,14 @@ class SeatMapPortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | SeatMapPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +35,7 @@ class SeatMapPortTypeServiceInput:
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +46,5 @@ class SeatMapPortTypeServiceInput:
                 "name": "SeatMapReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            }
+            },
         )

@@ -17,7 +17,7 @@ class PageSearchResultType(SearchResultType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     selected_facets: None | PageFacetsResultType = field(
         default=None,
@@ -25,7 +25,7 @@ class PageSearchResultType(SearchResultType):
             "name": "selectedFacets",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     media_facets: None | MediaFacetsResultType = field(
         default=None,
@@ -33,7 +33,7 @@ class PageSearchResultType(SearchResultType):
             "name": "mediaFacets",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     media_selected_facets: None | MediaFacetsResultType = field(
         default=None,
@@ -41,5 +41,5 @@ class PageSearchResultType(SearchResultType):
             "name": "mediaSelectedFacets",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

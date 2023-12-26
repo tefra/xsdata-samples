@@ -16,13 +16,14 @@ class InternationalIdentifier:
         specified country.
     :ivar international_identifier_extension:
     """
+
     country: Optional[CountryEnum] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     national_identifier: Optional[str] = field(
         default=None,
@@ -32,7 +33,7 @@ class InternationalIdentifier:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     international_identifier_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +41,5 @@ class InternationalIdentifier:
             "name": "internationalIdentifierExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

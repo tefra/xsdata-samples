@@ -14,12 +14,12 @@ class Url:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

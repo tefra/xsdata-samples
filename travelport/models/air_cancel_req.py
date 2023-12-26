@@ -3,7 +3,9 @@ from dataclasses import dataclass, field
 from travelport.models.air_segment import AirSegment
 from travelport.models.air_segment_ref import AirSegmentRef
 from travelport.models.base_req_1 import BaseReq1
-from travelport.models.continuity_check_override_1 import ContinuityCheckOverride1
+from travelport.models.continuity_check_override_1 import (
+    ContinuityCheckOverride1,
+)
 from travelport.models.file_finishing_info_1 import FileFinishingInfo1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
@@ -32,6 +34,7 @@ class AirCancelReq(BaseReq1):
     version
         Provider: 1G,1V,1P,ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -41,7 +44,7 @@ class AirCancelReq(BaseReq1):
             "name": "ContinuityCheckOverride",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_reservation_locator_code: None | str = field(
         default=None,
@@ -52,7 +55,7 @@ class AirCancelReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     air_segment: list[AirSegment] = field(
         default_factory=list,
@@ -61,7 +64,7 @@ class AirCancelReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_segment_ref: list[AirSegmentRef] = field(
         default_factory=list,
@@ -70,7 +73,7 @@ class AirCancelReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     file_finishing_info: None | FileFinishingInfo1 = field(
         default=None,
@@ -78,7 +81,7 @@ class AirCancelReq(BaseReq1):
             "name": "FileFinishingInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -86,5 +89,5 @@ class AirCancelReq(BaseReq1):
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

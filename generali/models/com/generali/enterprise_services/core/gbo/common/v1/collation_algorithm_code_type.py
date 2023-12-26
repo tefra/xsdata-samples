@@ -7,4 +7,5 @@ class CollationAlgorithmCodeType(Enum):
     """
     The collation (sort) algorithm to use in the sorting to the result set.
     """
+
     UTS_10 = "UTS#10"

@@ -20,6 +20,7 @@ class PrePayId:
         Type of pre pay unique identifier,presently only available value is
         FlightPass.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class PrePayId:
         metadata={
             "name": "CompanyName",
             "type": "Element",
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -38,12 +39,12 @@ class PrePayId:
             "required": True,
             "min_length": 1,
             "max_length": 36,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

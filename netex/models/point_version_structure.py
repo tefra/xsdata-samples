@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
-from .group_membership_refs_rel_structure import GroupMembershipRefsRelStructure
+from .group_membership_refs_rel_structure import (
+    GroupMembershipRefsRelStructure,
+)
 from .location_structure_2 import LocationStructure2
 from .multilingual_string import MultilingualString
 from .projections_rel_structure import ProjectionsRelStructure
@@ -21,7 +23,7 @@ class PointVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     location: Optional[LocationStructure2] = field(
         default=None,
@@ -29,7 +31,7 @@ class PointVersionStructure(DataManagedObjectStructure):
             "name": "Location",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     point_number: Optional[str] = field(
         default=None,
@@ -37,21 +39,21 @@ class PointVersionStructure(DataManagedObjectStructure):
             "name": "PointNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     types: Optional[TypeOfPointRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     projections: Optional[ProjectionsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     group_memberships: Optional[GroupMembershipRefsRelStructure] = field(
         default=None,
@@ -59,5 +61,5 @@ class PointVersionStructure(DataManagedObjectStructure):
             "name": "groupMemberships",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

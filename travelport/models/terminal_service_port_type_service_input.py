@@ -16,7 +16,7 @@ class TerminalServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class TerminalServicePortTypeServiceInput:
                 "name": "TerminalReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/terminal_v33_0",
-            }
+            },
         )

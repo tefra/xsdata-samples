@@ -11,6 +11,7 @@ class AddAirSegment:
     """
     Container for Air Segment to be added.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -22,7 +23,7 @@ class AddAirSegment:
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 8,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -31,5 +32,5 @@ class AddAirSegment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 8,
-        }
+        },
     )

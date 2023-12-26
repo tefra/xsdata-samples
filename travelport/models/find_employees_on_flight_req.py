@@ -17,6 +17,7 @@ class FindEmployeesOnFlightReq(BaseReq1):
     account_id
         Identifier of the account owner of the employees
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -27,7 +28,7 @@ class FindEmployeesOnFlightReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     account_id: None | int = field(
         default=None,
@@ -35,5 +36,5 @@ class FindEmployeesOnFlightReq(BaseReq1):
             "name": "AccountID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

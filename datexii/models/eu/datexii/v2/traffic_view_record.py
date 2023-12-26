@@ -23,6 +23,7 @@ class TrafficViewRecord:
     :ivar traffic_view_record_extension:
     :ivar id:
     """
+
     record_sequence_number: Optional[int] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class TrafficViewRecord:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     traffic_element: Optional[TrafficElement] = field(
         default=None,
@@ -38,7 +39,7 @@ class TrafficViewRecord:
             "name": "trafficElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     operator_action: Optional[OperatorAction] = field(
         default=None,
@@ -46,7 +47,7 @@ class TrafficViewRecord:
             "name": "operatorAction",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     elaborated_data: Optional[ElaboratedData] = field(
         default=None,
@@ -54,7 +55,7 @@ class TrafficViewRecord:
             "name": "elaboratedData",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     url_link: List[UrlLink] = field(
         default_factory=list,
@@ -62,7 +63,7 @@ class TrafficViewRecord:
             "name": "urlLink",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_view_record_extension: Optional[ExtensionType] = field(
         default=None,
@@ -70,12 +71,12 @@ class TrafficViewRecord:
             "name": "trafficViewRecordExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

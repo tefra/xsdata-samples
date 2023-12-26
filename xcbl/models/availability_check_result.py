@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.availability_to_promise_response import AvailabilityShipToParty
+from xcbl.models.availability_to_promise_response import (
+    AvailabilityShipToParty,
+)
 from xcbl.models.order_response import AvailabilityErrorInfo
 from xcbl.models.price_check_result import (
     ErrorInfo,
@@ -92,7 +94,7 @@ class AvailabilityCheckResultHeader:
         metadata={
             "name": "SupplierIDReferenceDate",
             "type": "Element",
-        }
+        },
     )
     buyer_party: BuyerParty = field(
         metadata={
@@ -106,7 +108,7 @@ class AvailabilityCheckResultHeader:
         metadata={
             "name": "BuyerIDReferenceDate",
             "type": "Element",
-        }
+        },
     )
     availability_ship_to_party: AvailabilityShipToParty = field(
         metadata={
@@ -115,26 +117,28 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    availability_check_result_language: Optional[AvailabilityCheckResultLanguage] = field(
+    availability_check_result_language: Optional[
+        AvailabilityCheckResultLanguage
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultLanguage",
             "type": "Element",
-        }
+        },
     )
     availability_check_result_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultNote",
             "type": "Element",
-        }
+        },
     )
     result_list_of_attachment: Optional[ResultListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ResultListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -159,28 +163,28 @@ class AvailabilityCheckResultItemDetail:
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
-        }
+        },
     )
     availability_error_info: Optional[AvailabilityErrorInfo] = field(
         default=None,
         metadata={
             "name": "AvailabilityErrorInfo",
             "type": "Element",
-        }
+        },
     )
     general_line_item_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
-        }
+        },
     )
     line_item_attachment: Optional[LineItemAttachment] = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -198,26 +202,28 @@ class AvailabilityCheckResultSummary:
         metadata={
             "name": "SummaryErrorInfo",
             "type": "Element",
-        }
+        },
     )
     total_number_of_line_item: Optional[str] = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfAvailabilityCheckResultItemDetail:
-    availability_check_result_item_detail: List[AvailabilityCheckResultItemDetail] = field(
+    availability_check_result_item_detail: List[
+        AvailabilityCheckResultItemDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AvailabilityCheckResultItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -241,17 +247,21 @@ class AvailabilityCheckResult:
             "required": True,
         }
     )
-    availability_check_result_detail: Optional[AvailabilityCheckResultDetail] = field(
+    availability_check_result_detail: Optional[
+        AvailabilityCheckResultDetail
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultDetail",
             "type": "Element",
-        }
+        },
     )
-    availability_check_result_summary: Optional[AvailabilityCheckResultSummary] = field(
+    availability_check_result_summary: Optional[
+        AvailabilityCheckResultSummary
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultSummary",
             "type": "Element",
-        }
+        },
     )

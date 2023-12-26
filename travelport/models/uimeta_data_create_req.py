@@ -25,6 +25,7 @@ class UimetaDataCreateReq(BaseReq2):
         This optional attribute is for any description if the user wants to
         pass.
     """
+
     class Meta:
         name = "UIMetaDataCreateReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -36,7 +37,7 @@ class UimetaDataCreateReq(BaseReq2):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -44,7 +45,7 @@ class UimetaDataCreateReq(BaseReq2):
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -53,5 +54,5 @@ class UimetaDataCreateReq(BaseReq2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

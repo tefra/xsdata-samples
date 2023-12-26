@@ -43,6 +43,7 @@ class VehicleUpsellOffer:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -52,7 +53,7 @@ class VehicleUpsellOffer:
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     transmission_type: None | TypeVehicleTransmission = field(
         default=None,
@@ -60,7 +61,7 @@ class VehicleUpsellOffer:
             "name": "TransmissionType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     vehicle_class: None | TypeVehicleClass = field(
         default=None,
@@ -68,7 +69,7 @@ class VehicleUpsellOffer:
             "name": "VehicleClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     category: None | TypeVehicleCategory = field(
         default=None,
@@ -76,14 +77,14 @@ class VehicleUpsellOffer:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     door_count: None | TypeDoorCount = field(
         default=None,
         metadata={
             "name": "DoorCount",
             "type": "Attribute",
-        }
+        },
     )
     rate_code: None | str = field(
         default=None,
@@ -91,14 +92,14 @@ class VehicleUpsellOffer:
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     rate_category: None | TypeRateCategory = field(
         default=None,
         metadata={
             "name": "RateCategory",
             "type": "Attribute",
-        }
+        },
     )
     discount_number: None | str = field(
         default=None,
@@ -106,33 +107,33 @@ class VehicleUpsellOffer:
             "name": "DiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     fuel_type: None | TypeFuel = field(
         default=None,
         metadata={
             "name": "FuelType",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

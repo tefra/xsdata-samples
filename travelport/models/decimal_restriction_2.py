@@ -11,6 +11,7 @@ class DecimalRestriction2(TypeFloatRestriction2):
 
     Min and max values are inclusive.
     """
+
     class Meta:
         name = "DecimalRestriction"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

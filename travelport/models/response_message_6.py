@@ -20,6 +20,7 @@ class ResponseMessage6:
     provider_code
     supplier_code
     """
+
     class Meta:
         name = "ResponseMessage"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -28,7 +29,7 @@ class ResponseMessage6:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     code: None | int = field(
         default=None,
@@ -36,14 +37,14 @@ class ResponseMessage6:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | ResponseMessageType6 = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -52,7 +53,7 @@ class ResponseMessage6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -61,5 +62,5 @@ class ResponseMessage6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

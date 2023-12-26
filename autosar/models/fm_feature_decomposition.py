@@ -38,6 +38,7 @@ class FmFeatureDecomposition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FM-FEATURE-DECOMPOSITION"
 
@@ -47,7 +48,7 @@ class FmFeatureDecomposition:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     feature_refs: Optional["FmFeatureDecomposition.FeatureRefs"] = field(
         default=None,
@@ -55,7 +56,7 @@ class FmFeatureDecomposition:
             "name": "FEATURE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max: Optional[PositiveInteger] = field(
         default=None,
@@ -63,7 +64,7 @@ class FmFeatureDecomposition:
             "name": "MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min: Optional[PositiveInteger] = field(
         default=None,
@@ -71,14 +72,14 @@ class FmFeatureDecomposition:
             "name": "MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -86,18 +87,20 @@ class FmFeatureDecomposition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class FeatureRefs:
-        feature_ref: List["FmFeatureDecomposition.FeatureRefs.FeatureRef"] = field(
+        feature_ref: List[
+            "FmFeatureDecomposition.FeatureRefs.FeatureRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FEATURE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -108,5 +111,5 @@ class FmFeatureDecomposition:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

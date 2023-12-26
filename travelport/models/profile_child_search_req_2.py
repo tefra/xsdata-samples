@@ -1,10 +1,18 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_5 import BaseReq5
-from travelport.models.profile_child_search_req_hierarchy_type_2 import ProfileChildSearchReqHierarchyType2
-from travelport.models.profile_search_modifiers_2 import ProfileSearchModifiers2
-from travelport.models.provisioning_code_profile_type_2 import ProvisioningCodeProfileType2
-from travelport.models.unique_profile_id_profile_type_2 import UniqueProfileIdProfileType2
+from travelport.models.profile_child_search_req_hierarchy_type_2 import (
+    ProfileChildSearchReqHierarchyType2,
+)
+from travelport.models.profile_search_modifiers_2 import (
+    ProfileSearchModifiers2,
+)
+from travelport.models.provisioning_code_profile_type_2 import (
+    ProvisioningCodeProfileType2,
+)
+from travelport.models.unique_profile_id_profile_type_2 import (
+    UniqueProfileIdProfileType2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -38,6 +46,7 @@ class ProfileChildSearchReq2(BaseReq5):
         doing a this search.  The default is false, no Travelers or Agents
         will be returned.
     """
+
     class Meta:
         name = "ProfileChildSearchReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -47,63 +56,63 @@ class ProfileChildSearchReq2(BaseReq5):
         metadata={
             "name": "ProfileID",
             "type": "Element",
-        }
+        },
     )
     provisioning_code: None | ProfileChildSearchReq2.ProvisioningCode = field(
         default=None,
         metadata={
             "name": "ProvisioningCode",
             "type": "Element",
-        }
+        },
     )
     unique_profile_id: None | ProfileChildSearchReq2.UniqueProfileId = field(
         default=None,
         metadata={
             "name": "UniqueProfileID",
             "type": "Element",
-        }
+        },
     )
     organization_name: None | str = field(
         default=None,
         metadata={
             "name": "OrganizationName",
             "type": "Element",
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
         metadata={
             "name": "GivenName",
             "type": "Element",
-        }
+        },
     )
     surname: None | str = field(
         default=None,
         metadata={
             "name": "Surname",
             "type": "Element",
-        }
+        },
     )
     profile_search_modifiers: None | ProfileSearchModifiers2 = field(
         default=None,
         metadata={
             "name": "ProfileSearchModifiers",
             "type": "Element",
-        }
+        },
     )
     hierarchy_type: None | ProfileChildSearchReqHierarchyType2 = field(
         default=None,
         metadata={
             "name": "HierarchyType",
             "type": "Attribute",
-        }
+        },
     )
     include_agents_and_travelers: bool = field(
         default=False,
         metadata={
             "name": "IncludeAgentsAndTravelers",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -116,13 +125,14 @@ class ProfileChildSearchReq2(BaseReq5):
             Specify the Profile Type (limited to only the ones where
             ProvisioningCode is relevant)
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | ProvisioningCodeProfileType2 = field(
             default=None,
@@ -130,7 +140,7 @@ class ProfileChildSearchReq2(BaseReq5):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -148,13 +158,14 @@ class ProfileChildSearchReq2(BaseReq5):
             determine 'AgencyCode' by Agent's WAB/target Branch or Agent's
             agency.
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 6,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | UniqueProfileIdProfileType2 = field(
             default=None,
@@ -162,7 +173,7 @@ class ProfileChildSearchReq2(BaseReq5):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         agency_code: None | str = field(
             default=None,
@@ -171,5 +182,5 @@ class ProfileChildSearchReq2(BaseReq5):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 25,
-            }
+            },
         )

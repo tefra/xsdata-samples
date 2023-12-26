@@ -21,6 +21,7 @@ class HandleOutOfRangeEnumSimple(Enum):
         applicable lower bound if the value is less than the lower
         bound.
     """
+
     DEFAULT = "DEFAULT"
     EXTERNAL_REPLACEMENT = "EXTERNAL-REPLACEMENT"
     IGNORE = "IGNORE"

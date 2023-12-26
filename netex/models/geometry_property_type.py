@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryPropertyType:
-    polygon_or_line_string_or_point: Optional[object] = field(
+    polygon_or_line_string_or_point: Optional[
+        Union[Polygon, LineString, Point1]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -31,7 +33,7 @@ class GeometryPropertyType:
                     "namespace": "http://www.opengis.net/gml/3.2",
                 },
             ),
-        }
+        },
     )
     nil_reason: Optional[Union[str, NilReasonEnumerationValue]] = field(
         default=None,
@@ -39,11 +41,11 @@ class GeometryPropertyType:
             "name": "nilReason",
             "type": "Attribute",
             "pattern": r"other:\w{2,}",
-        }
+        },
     )
     owns: bool = field(
         default=False,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

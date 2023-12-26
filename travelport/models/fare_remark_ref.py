@@ -15,5 +15,5 @@ class FareRemarkRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

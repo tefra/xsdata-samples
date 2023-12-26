@@ -12,7 +12,9 @@ from .crypto_certificate_subtypes_enum import CryptoCertificateSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .port_prototype_in_executable_instance_ref import PortPrototypeInExecutableInstanceRef
+from .port_prototype_in_executable_instance_ref import (
+    PortPrototypeInExecutableInstanceRef,
+)
 from .process_subtypes_enum import ProcessSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
@@ -91,6 +93,7 @@ class CryptoCertificateToPortPrototypeMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-CERTIFICATE-TO-PORT-PROTOTYPE-MAPPING"
 
@@ -101,15 +104,17 @@ class CryptoCertificateToPortPrototypeMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CryptoCertificateToPortPrototypeMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CryptoCertificateToPortPrototypeMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +122,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +130,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +138,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +146,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,15 +154,17 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["CryptoCertificateToPortPrototypeMapping.Annotations"] = field(
+    annotations: Optional[
+        "CryptoCertificateToPortPrototypeMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -165,31 +172,37 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    crypto_certificate_ref: Optional["CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef"] = field(
+    crypto_certificate_ref: Optional[
+        "CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_prototype_iref: Optional[PortPrototypeInExecutableInstanceRef] = field(
+    port_prototype_iref: Optional[
+        PortPrototypeInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    process_ref: Optional["CryptoCertificateToPortPrototypeMapping.ProcessRef"] = field(
+    process_ref: Optional[
+        "CryptoCertificateToPortPrototypeMapping.ProcessRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     write_access: Optional[Boolean] = field(
         default=None,
@@ -197,14 +210,14 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "WRITE-ACCESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -212,14 +225,14 @@ class CryptoCertificateToPortPrototypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -230,7 +243,7 @@ class CryptoCertificateToPortPrototypeMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,7 +254,7 @@ class CryptoCertificateToPortPrototypeMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -252,7 +265,7 @@ class CryptoCertificateToPortPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -263,5 +276,5 @@ class CryptoCertificateToPortPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

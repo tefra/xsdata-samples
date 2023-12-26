@@ -18,7 +18,7 @@ class PlaceLightingVersionStructure(AccessEquipmentVersionStructure):
             "name": "Lighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     always_lit: Optional[bool] = field(
         default=None,
@@ -26,7 +26,7 @@ class PlaceLightingVersionStructure(AccessEquipmentVersionStructure):
             "name": "AlwaysLit",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lighting_on_method: Optional[LightingOnMethodEnumeration] = field(
         default=None,
@@ -34,5 +34,5 @@ class PlaceLightingVersionStructure(AccessEquipmentVersionStructure):
             "name": "LightingOnMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -6,13 +6,21 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .bsw_distinguished_partition_subtypes_enum import BswDistinguishedPartitionSubtypesEnum
-from .bsw_module_client_server_entry_subtypes_enum import BswModuleClientServerEntrySubtypesEnum
+from .bsw_distinguished_partition_subtypes_enum import (
+    BswDistinguishedPartitionSubtypesEnum,
+)
+from .bsw_module_client_server_entry_subtypes_enum import (
+    BswModuleClientServerEntrySubtypesEnum,
+)
 from .bsw_module_entity_subtypes_enum import BswModuleEntitySubtypesEnum
 from .category_string import CategoryString
-from .executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
+from .executable_entity_activation_reason_subtypes_enum import (
+    ExecutableEntityActivationReasonSubtypesEnum,
+)
 from .identifier import Identifier
-from .mode_in_bsw_module_description_instance_ref import ModeInBswModuleDescriptionInstanceRef
+from .mode_in_bsw_module_description_instance_ref import (
+    ModeInBswModuleDescriptionInstanceRef,
+)
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
@@ -99,6 +107,7 @@ class BswOperationInvokedEvent:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-OPERATION-INVOKED-EVENT"
 
@@ -109,15 +118,17 @@ class BswOperationInvokedEvent:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BswOperationInvokedEvent.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BswOperationInvokedEvent.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -125,7 +136,7 @@ class BswOperationInvokedEvent:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -133,7 +144,7 @@ class BswOperationInvokedEvent:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -141,7 +152,7 @@ class BswOperationInvokedEvent:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -149,7 +160,7 @@ class BswOperationInvokedEvent:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -157,7 +168,7 @@ class BswOperationInvokedEvent:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["BswOperationInvokedEvent.Annotations"] = field(
         default=None,
@@ -165,39 +176,47 @@ class BswOperationInvokedEvent:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    activation_reason_representation_ref: Optional["BswOperationInvokedEvent.ActivationReasonRepresentationRef"] = field(
+    activation_reason_representation_ref: Optional[
+        "BswOperationInvokedEvent.ActivationReasonRepresentationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_limitation_refs: Optional["BswOperationInvokedEvent.ContextLimitationRefs"] = field(
+    context_limitation_refs: Optional[
+        "BswOperationInvokedEvent.ContextLimitationRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    disabled_in_mode_irefs: Optional["BswOperationInvokedEvent.DisabledInModeIrefs"] = field(
+    disabled_in_mode_irefs: Optional[
+        "BswOperationInvokedEvent.DisabledInModeIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DISABLED-IN-MODE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    starts_on_event_ref: Optional["BswOperationInvokedEvent.StartsOnEventRef"] = field(
+    starts_on_event_ref: Optional[
+        "BswOperationInvokedEvent.StartsOnEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "STARTS-ON-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -205,7 +224,7 @@ class BswOperationInvokedEvent:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     entry_ref: Optional["BswOperationInvokedEvent.EntryRef"] = field(
         default=None,
@@ -213,14 +232,14 @@ class BswOperationInvokedEvent:
             "name": "ENTRY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -228,14 +247,14 @@ class BswOperationInvokedEvent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -246,7 +265,7 @@ class BswOperationInvokedEvent:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -257,7 +276,7 @@ class BswOperationInvokedEvent:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -268,18 +287,20 @@ class BswOperationInvokedEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ContextLimitationRefs:
-        context_limitation_ref: List["BswOperationInvokedEvent.ContextLimitationRefs.ContextLimitationRef"] = field(
+        context_limitation_ref: List[
+            "BswOperationInvokedEvent.ContextLimitationRefs.ContextLimitationRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONTEXT-LIMITATION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -290,18 +311,20 @@ class BswOperationInvokedEvent:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class DisabledInModeIrefs:
-        disabled_in_mode_iref: List[ModeInBswModuleDescriptionInstanceRef] = field(
+        disabled_in_mode_iref: List[
+            ModeInBswModuleDescriptionInstanceRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DISABLED-IN-MODE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -312,7 +335,7 @@ class BswOperationInvokedEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -323,5 +346,5 @@ class BswOperationInvokedEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

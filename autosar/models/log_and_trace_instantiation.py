@@ -91,6 +91,7 @@ class LogAndTraceInstantiation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LOG-AND-TRACE-INSTANTIATION"
 
@@ -101,15 +102,17 @@ class LogAndTraceInstantiation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["LogAndTraceInstantiation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "LogAndTraceInstantiation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +120,7 @@ class LogAndTraceInstantiation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +128,7 @@ class LogAndTraceInstantiation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +136,7 @@ class LogAndTraceInstantiation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +144,7 @@ class LogAndTraceInstantiation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,7 +152,7 @@ class LogAndTraceInstantiation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["LogAndTraceInstantiation.Annotations"] = field(
         default=None,
@@ -157,7 +160,7 @@ class LogAndTraceInstantiation:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dlt_ecu_id: Optional[String] = field(
         default=None,
@@ -165,15 +168,17 @@ class LogAndTraceInstantiation:
             "name": "DLT-ECU-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    dlt_log_channels: Optional["LogAndTraceInstantiation.DltLogChannels"] = field(
+    dlt_log_channels: Optional[
+        "LogAndTraceInstantiation.DltLogChannels"
+    ] = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     queue_size: Optional[PositiveInteger] = field(
         default=None,
@@ -181,7 +186,7 @@ class LogAndTraceInstantiation:
             "name": "QUEUE-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     session_id_support: Optional[Boolean] = field(
         default=None,
@@ -189,22 +194,24 @@ class LogAndTraceInstantiation:
             "name": "SESSION-ID-SUPPORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    time_base_resource_ref: Optional["LogAndTraceInstantiation.TimeBaseResourceRef"] = field(
+    time_base_resource_ref: Optional[
+        "LogAndTraceInstantiation.TimeBaseResourceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TIME-BASE-RESOURCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -212,14 +219,14 @@ class LogAndTraceInstantiation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -230,7 +237,7 @@ class LogAndTraceInstantiation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,7 +248,7 @@ class LogAndTraceInstantiation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -252,7 +259,7 @@ class LogAndTraceInstantiation:
                 "name": "DLT-LOG-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -263,5 +270,5 @@ class LogAndTraceInstantiation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

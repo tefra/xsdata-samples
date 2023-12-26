@@ -10,5 +10,6 @@ class ReferenceDataUpdateRsp(BaseRsp1):
     """
     An empty response indicates success.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"

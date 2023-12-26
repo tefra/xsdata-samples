@@ -41,6 +41,7 @@ class FieldGroup1:
     is_used
         True if the custom field group has been added to a template.
     """
+
     class Meta:
         name = "FieldGroup"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -50,7 +51,7 @@ class FieldGroup1:
         metadata={
             "name": "Field",
             "type": "Element",
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class FieldGroup1:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -68,7 +69,7 @@ class FieldGroup1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -77,35 +78,35 @@ class FieldGroup1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     protected: bool = field(
         default=False,
         metadata={
             "name": "Protected",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -113,7 +114,7 @@ class FieldGroup1:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -121,7 +122,7 @@ class FieldGroup1:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_used: None | bool = field(
         default=None,
@@ -129,5 +130,5 @@ class FieldGroup1:
             "name": "IsUsed",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

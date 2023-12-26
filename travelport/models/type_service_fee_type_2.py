@@ -8,6 +8,7 @@ class TypeServiceFeeType2(Enum):
     """
     A code for categorizing service fees or charges.
     """
+
     CANCELLATION = "Cancellation"
     CHANGE = "Change"
     EXCHANGE = "Exchange"

@@ -9,6 +9,7 @@ class HotelDetailItem:
     """
     Textual information about the hotel.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -19,7 +20,7 @@ class HotelDetailItem:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -27,5 +28,5 @@ class HotelDetailItem:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

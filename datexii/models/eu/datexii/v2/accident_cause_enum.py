@@ -35,6 +35,7 @@ class AccidentCauseEnum(Enum):
     :cvar VEHICLE_FAILURE: Malfunction or failure of vehicle function.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AVOIDANCE_OF_OBSTACLES = "avoidanceOfObstacles"
     DRIVER_DISTRACTION = "driverDistraction"
     DRIVER_DRUG_ABUSE = "driverDrugAbuse"

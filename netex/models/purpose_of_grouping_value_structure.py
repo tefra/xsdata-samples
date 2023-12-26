@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .class_refs_rel_structure import ClassRefsRelStructure
 from .customer_account_status import CustomerAccountStatus
 from .type_of_access_right_assignment import TypeOfAccessRightAssignment
@@ -25,7 +25,9 @@ from .type_of_notice import TypeOfNotice
 from .type_of_operation import TypeOfOperation
 from .type_of_organisation import TypeOfOrganisation
 from .type_of_organisation_part import TypeOfOrganisationPart
-from .type_of_passenger_information_equipment import TypeOfPassengerInformationEquipment
+from .type_of_passenger_information_equipment import (
+    TypeOfPassengerInformationEquipment,
+)
 from .type_of_place import TypeOfPlace
 from .type_of_point import TypeOfPoint
 from .type_of_projection import TypeOfProjection
@@ -54,9 +56,50 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            TypeOfRetailDevice,
+            CustomerAccountStatus,
+            TypeOfCustomerAccount,
+            TypeOfFareContractEntry,
+            TypeOfFareContract,
+            TypeOfTravelDocument,
+            TypeOfSalesOfferPackage,
+            TypeOfFareProduct,
+            TypeOfFareStructureElement,
+            TypeOfTariff,
+            TypeOfAccessRightAssignment,
+            TypeOfFareStructureFactor,
+            TypeOfFlexibleService,
+            TypeOfTimeDemandType,
+            TypeOfPassengerInformationEquipment,
+            TypeOfCongestion,
+            TypeOfJourneyPattern,
+            TypeOfLine,
+            TypeOfActivation,
+            TypeOfDeliveryVariant,
+            TypeOfNotice,
+            TypeOfFacility,
+            TypeOfService,
+            TypeOfEquipment,
+            TypeOfFeature,
+            TypeOfLinkSequence,
+            TypeOfPlace,
+            TypeOfTransfer,
+            TypeOfOperation,
+            TypeOfOrganisationPart,
+            TypeOfOrganisation,
+            TypeOfZone,
+            TypeOfLink,
+            TypeOfPoint,
+            TypeOfProjection,
+            TypeOfFrame,
+            TypeOfResponsibilityRole,
+            TypeOfEntity,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -252,5 +295,5 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

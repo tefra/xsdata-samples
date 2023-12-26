@@ -7,13 +7,21 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
 from .diagnostic_data_change_trigger import DiagnosticDataChangeTrigger
 from .diagnostic_dtc_change_trigger import DiagnosticDtcChangeTrigger
 from .diagnostic_event_window import DiagnosticEventWindow
-from .diagnostic_response_on_event_action_enum import DiagnosticResponseOnEventActionEnum
-from .diagnostic_response_on_event_class_subtypes_enum import DiagnosticResponseOnEventClassSubtypesEnum
-from .diagnostic_store_event_support_enum import DiagnosticStoreEventSupportEnum
+from .diagnostic_response_on_event_action_enum import (
+    DiagnosticResponseOnEventActionEnum,
+)
+from .diagnostic_response_on_event_class_subtypes_enum import (
+    DiagnosticResponseOnEventClassSubtypesEnum,
+)
+from .diagnostic_store_event_support_enum import (
+    DiagnosticStoreEventSupportEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -100,6 +108,7 @@ class DiagnosticResponseOnEvent:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-RESPONSE-ON-EVENT"
 
@@ -110,15 +119,17 @@ class DiagnosticResponseOnEvent:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticResponseOnEvent.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticResponseOnEvent.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -126,7 +137,7 @@ class DiagnosticResponseOnEvent:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -134,7 +145,7 @@ class DiagnosticResponseOnEvent:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -142,7 +153,7 @@ class DiagnosticResponseOnEvent:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -150,7 +161,7 @@ class DiagnosticResponseOnEvent:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -158,7 +169,7 @@ class DiagnosticResponseOnEvent:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticResponseOnEvent.Annotations"] = field(
         default=None,
@@ -166,7 +177,7 @@ class DiagnosticResponseOnEvent:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -174,15 +185,17 @@ class DiagnosticResponseOnEvent:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticResponseOnEvent.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticResponseOnEvent.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     events: Optional["DiagnosticResponseOnEvent.Events"] = field(
         default=None,
@@ -190,7 +203,7 @@ class DiagnosticResponseOnEvent:
             "name": "EVENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_windows: Optional["DiagnosticResponseOnEvent.EventWindows"] = field(
         default=None,
@@ -198,23 +211,27 @@ class DiagnosticResponseOnEvent:
             "name": "EVENT-WINDOWS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    response_on_event_action: Optional[DiagnosticResponseOnEventActionEnum] = field(
+    response_on_event_action: Optional[
+        DiagnosticResponseOnEventActionEnum
+    ] = field(
         default=None,
         metadata={
             "name": "RESPONSE-ON-EVENT-ACTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    response_on_event_class_ref: Optional["DiagnosticResponseOnEvent.ResponseOnEventClassRef"] = field(
+    response_on_event_class_ref: Optional[
+        "DiagnosticResponseOnEvent.ResponseOnEventClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RESPONSE-ON-EVENT-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     store_event_support: Optional[DiagnosticStoreEventSupportEnum] = field(
         default=None,
@@ -222,14 +239,14 @@ class DiagnosticResponseOnEvent:
             "name": "STORE-EVENT-SUPPORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -237,14 +254,14 @@ class DiagnosticResponseOnEvent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -255,7 +272,7 @@ class DiagnosticResponseOnEvent:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -266,7 +283,7 @@ class DiagnosticResponseOnEvent:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -277,26 +294,30 @@ class DiagnosticResponseOnEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class Events:
-        diagnostic_data_change_trigger: List[DiagnosticDataChangeTrigger] = field(
+        diagnostic_data_change_trigger: List[
+            DiagnosticDataChangeTrigger
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DATA-CHANGE-TRIGGER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        diagnostic_dtc_change_trigger: List[DiagnosticDtcChangeTrigger] = field(
+        diagnostic_dtc_change_trigger: List[
+            DiagnosticDtcChangeTrigger
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DTC-CHANGE-TRIGGER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -307,7 +328,7 @@ class DiagnosticResponseOnEvent:
                 "name": "DIAGNOSTIC-EVENT-WINDOW",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -318,5 +339,5 @@ class DiagnosticResponseOnEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

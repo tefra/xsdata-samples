@@ -25,6 +25,7 @@ class SupplierLocator5:
         The Date and Time which the reservation is received from the Vendor
         as a SupplierLocator creation Date.
     """
+
     class Meta:
         name = "SupplierLocator"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -35,7 +36,7 @@ class SupplierLocator5:
             "name": "SegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class SupplierLocator5:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     supplier_locator_code: None | str = field(
         default=None,
@@ -52,19 +53,19 @@ class SupplierLocator5:
             "name": "SupplierLocatorCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     create_date_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CreateDateTime",
             "type": "Attribute",
-        }
+        },
     )

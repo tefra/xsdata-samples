@@ -12,6 +12,7 @@ class CouplingElementEnumSimple(Enum):
     :cvar SWITCH: A device that filters and forwards frames between
         different LAN segments.
     """
+
     HUB = "HUB"
     ROUTER = "ROUTER"
     SWITCH = "SWITCH"

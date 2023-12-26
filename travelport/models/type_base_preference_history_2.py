@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
-from travelport.models.type_geo_political_area_type_2 import TypeGeoPoliticalAreaType2
+from travelport.models.type_geo_political_area_type_2 import (
+    TypeGeoPoliticalAreaType2,
+)
 from travelport.models.type_key_element_2 import TypeKeyElement2
 from travelport.models.type_preference_purpose_2 import TypePreferencePurpose2
 
@@ -43,6 +45,7 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
     supplier
     trip_approval
     """
+
     class Meta:
         name = "typeBasePreferenceHistory"
 
@@ -51,14 +54,14 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
         metadata={
             "name": "BookingStartDate",
             "type": "Attribute",
-        }
+        },
     )
     booking_end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BookingEndDate",
             "type": "Attribute",
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -66,14 +69,16 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
             "name": "Currency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
-    departure_geo_political_area_type: None | TypeGeoPoliticalAreaType2 = field(
-        default=None,
-        metadata={
-            "name": "DepartureGeoPoliticalAreaType",
-            "type": "Attribute",
-        }
+    departure_geo_political_area_type: None | TypeGeoPoliticalAreaType2 = (
+        field(
+            default=None,
+            metadata={
+                "name": "DepartureGeoPoliticalAreaType",
+                "type": "Attribute",
+            },
+        )
     )
     departure_geo_political_area_code: None | str = field(
         default=None,
@@ -81,14 +86,14 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
             "name": "DepartureGeoPoliticalAreaCode",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     emphasis: None | bool = field(
         default=None,
         metadata={
             "name": "Emphasis",
             "type": "Attribute",
-        }
+        },
     )
     general_preference: None | str = field(
         default=None,
@@ -97,21 +102,21 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     inclusive: None | bool = field(
         default=None,
         metadata={
             "name": "Inclusive",
             "type": "Attribute",
-        }
+        },
     )
     loyalty_program_enrollment_ref: None | str = field(
         default=None,
         metadata={
             "name": "LoyaltyProgramEnrollmentRef",
             "type": "Attribute",
-        }
+        },
     )
     other_loyalty_program_number: None | str = field(
         default=None,
@@ -119,14 +124,14 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
             "name": "OtherLoyaltyProgramNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     payment_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "PaymentDetailsRef",
             "type": "Attribute",
-        }
+        },
     )
     preference_payment_method: None | str = field(
         default=None,
@@ -134,14 +139,14 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
             "name": "PreferencePaymentMethod",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     purpose: None | TypePreferencePurpose2 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -150,7 +155,7 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     supplier: None | str = field(
         default=None,
@@ -158,12 +163,12 @@ class TypeBasePreferenceHistory2(TypeKeyElement2):
             "name": "Supplier",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     trip_approval: None | bool = field(
         default=None,
         metadata={
             "name": "TripApproval",
             "type": "Attribute",
-        }
+        },
     )

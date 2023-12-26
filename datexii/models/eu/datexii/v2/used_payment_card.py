@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.payment_card_brands_enum import PaymentCardBrandsEnum
-from datexii.models.eu.datexii.v2.payment_card_types_enum import PaymentCardTypesEnum
+from datexii.models.eu.datexii.v2.payment_card_brands_enum import (
+    PaymentCardBrandsEnum,
+)
+from datexii.models.eu.datexii.v2.payment_card_types_enum import (
+    PaymentCardTypesEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -23,6 +27,7 @@ class UsedPaymentCard:
         'other'.
     :ivar used_payment_card_extension:
     """
+
     payment_card: Optional[PaymentCardTypesEnum] = field(
         default=None,
         metadata={
@@ -30,7 +35,7 @@ class UsedPaymentCard:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     other_payment_card: Optional[str] = field(
         default=None,
@@ -39,7 +44,7 @@ class UsedPaymentCard:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     payment_card_brand: Optional[PaymentCardBrandsEnum] = field(
         default=None,
@@ -47,7 +52,7 @@ class UsedPaymentCard:
             "name": "paymentCardBrand",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     other_payment_card_brand: Optional[str] = field(
         default=None,
@@ -56,7 +61,7 @@ class UsedPaymentCard:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     used_payment_card_extension: Optional[ExtensionType] = field(
         default=None,
@@ -64,5 +69,5 @@ class UsedPaymentCard:
             "name": "usedPaymentCardExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

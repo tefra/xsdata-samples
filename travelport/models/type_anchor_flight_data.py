@@ -19,6 +19,7 @@ class TypeAnchorFlightData:
     connection_indicator
         Indicates that the Anchor flight has any connecting flight or not
     """
+
     class Meta:
         name = "typeAnchorFlightData"
 
@@ -29,7 +30,7 @@ class TypeAnchorFlightData:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -38,12 +39,12 @@ class TypeAnchorFlightData:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )
     connection_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "ConnectionIndicator",
             "type": "Attribute",
-        }
+        },
     )

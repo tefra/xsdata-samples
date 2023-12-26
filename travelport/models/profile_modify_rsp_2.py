@@ -11,6 +11,7 @@ class ProfileModifyRsp2(BaseRsp5):
     """
     Response with the newly modified profile.
     """
+
     class Meta:
         name = "ProfileModifyRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -20,5 +21,5 @@ class ProfileModifyRsp2(BaseRsp5):
         metadata={
             "name": "Profile",
             "type": "Element",
-        }
+        },
     )

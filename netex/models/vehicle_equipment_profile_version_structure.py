@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_equipment_ref import AccessEquipmentRef
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
@@ -29,7 +29,9 @@ from .meeting_point_service_ref import MeetingPointServiceRef
 from .money_service_ref import MoneyServiceRef
 from .multilingual_string import MultilingualString
 from .passenger_equipment_ref import PassengerEquipmentRef
-from .passenger_information_equipment_ref import PassengerInformationEquipmentRef
+from .passenger_information_equipment_ref import (
+    PassengerInformationEquipmentRef,
+)
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .place_lighting_equipment_ref import PlaceLightingEquipmentRef
 from .place_sign_ref import PlaceSignRef
@@ -71,9 +73,65 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailDeviceRef,
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+            VehicleChargingEquipmentRef,
+            CycleStorageEquipmentRef,
+            TicketValidatorEquipmentRef,
+            TicketingEquipmentRef,
+            TrolleyStandEquipmentRef,
+            SeatingEquipmentRef,
+            ShelterEquipmentRef,
+            LuggageLockerEquipmentRef,
+            WaitingRoomEquipmentRef,
+            WaitingEquipmentRef,
+            SiteEquipmentRef,
+            HeadingSignRef,
+            GeneralSignRef,
+            PlaceSignRef,
+            SignEquipmentRef,
+            PlaceLightingEquipmentRef,
+            RoughSurfaceRef,
+            StaircaseEquipmentRef,
+            QueueingEquipmentRef,
+            TravelatorEquipmentRef,
+            EscalatorEquipmentRef,
+            LiftEquipmentRef,
+            CrossingEquipmentRef,
+            RampEquipmentRef,
+            EntranceEquipmentRef,
+            AccessEquipmentRef,
+            ActivatedEquipmentRef,
+            PassengerInformationEquipmentRef,
+            RubbishDisposalEquipmentRef,
+            HelpPointEquipmentRef,
+            PassengerSafetyEquipmentRef,
+            SanitaryEquipmentRef,
+            WheelchairVehicleRef,
+            AccessVehicleEquipmentRef,
+            VehicleEquipmentRef,
+            PassengerEquipmentRef,
+            EquipmentRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -344,7 +402,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     units: Optional[int] = field(
         default=None,
@@ -352,7 +410,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "name": "Units",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     manufacturer: Optional[MultilingualString] = field(
         default=None,
@@ -360,13 +418,15 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "name": "Manufacturer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    purpose_of_equipment_profile_ref: Optional[PurposeOfEquipmentProfileRef] = field(
+    purpose_of_equipment_profile_ref: Optional[
+        PurposeOfEquipmentProfileRef
+    ] = field(
         default=None,
         metadata={
             "name": "PurposeOfEquipmentProfileRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

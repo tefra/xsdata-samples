@@ -12,6 +12,7 @@ class OpenlrSideOfRoadEnum(Enum):
     :cvar LEFT: left
     :cvar BOTH: both
     """
+
     ON_ROAD_OR_UNKNOWN = "onRoadOrUnknown"
     RIGHT = "right"
     LEFT = "left"

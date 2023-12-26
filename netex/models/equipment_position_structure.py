@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from .access_equipment_ref import AccessEquipmentRef
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
@@ -31,7 +31,9 @@ from .meeting_point_service_ref import MeetingPointServiceRef
 from .money_service_ref import MoneyServiceRef
 from .multilingual_string import MultilingualString
 from .passenger_equipment_ref import PassengerEquipmentRef
-from .passenger_information_equipment_ref import PassengerInformationEquipmentRef
+from .passenger_information_equipment_ref import (
+    PassengerInformationEquipmentRef,
+)
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .place_lighting_equipment_ref import PlaceLightingEquipmentRef
 from .place_sign_ref import PlaceSignRef
@@ -64,7 +66,63 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class EquipmentPositionStructure(DataManagedObjectStructure):
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailDeviceRef,
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+            VehicleChargingEquipmentRef,
+            CycleStorageEquipmentRef,
+            TicketValidatorEquipmentRef,
+            TicketingEquipmentRef,
+            TrolleyStandEquipmentRef,
+            SeatingEquipmentRef,
+            ShelterEquipmentRef,
+            LuggageLockerEquipmentRef,
+            WaitingRoomEquipmentRef,
+            WaitingEquipmentRef,
+            SiteEquipmentRef,
+            HeadingSignRef,
+            GeneralSignRef,
+            PlaceSignRef,
+            SignEquipmentRef,
+            PlaceLightingEquipmentRef,
+            RoughSurfaceRef,
+            StaircaseEquipmentRef,
+            QueueingEquipmentRef,
+            TravelatorEquipmentRef,
+            EscalatorEquipmentRef,
+            LiftEquipmentRef,
+            CrossingEquipmentRef,
+            RampEquipmentRef,
+            EntranceEquipmentRef,
+            AccessEquipmentRef,
+            ActivatedEquipmentRef,
+            PassengerInformationEquipmentRef,
+            RubbishDisposalEquipmentRef,
+            HelpPointEquipmentRef,
+            PassengerSafetyEquipmentRef,
+            SanitaryEquipmentRef,
+            WheelchairVehicleRef,
+            AccessVehicleEquipmentRef,
+            VehicleEquipmentRef,
+            PassengerEquipmentRef,
+            EquipmentRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -335,7 +393,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -343,7 +401,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     location: Optional[LocationStructure2] = field(
         default=None,
@@ -351,7 +409,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "Location",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     reference_point_ref: Optional[PointRefStructure] = field(
         default=None,
@@ -359,7 +417,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "ReferencePointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     xoffset: Optional[Decimal] = field(
         default=None,
@@ -367,7 +425,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "XOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     yoffset: Optional[Decimal] = field(
         default=None,
@@ -375,5 +433,5 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "name": "YOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

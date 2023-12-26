@@ -16,7 +16,7 @@ class VehicleRetrieveServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class VehicleRetrieveServicePortTypeServiceInput:
                 "name": "VehicleRetrieveReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            }
+            },
         )

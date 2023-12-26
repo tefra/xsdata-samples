@@ -10,5 +10,6 @@ class ModeErrorReactionPolicyEnumSimple(Enum):
     :cvar LAST_MODE: This represents the ability to keep the last mode
         in case of a mode error.
     """
+
     DEFAULT_MODE = "DEFAULT-MODE"
     LAST_MODE = "LAST-MODE"

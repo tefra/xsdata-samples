@@ -26,6 +26,7 @@ class HotelDetailsReq(BaseHotelDetailsReq):
         would be used to link to a ‘Policy Group’ in a policy engine
         external to UAPI.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -35,7 +36,7 @@ class HotelDetailsReq(BaseHotelDetailsReq):
             "name": "HostToken",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     next_result_reference: None | NextResultReference1 = field(
         default=None,
@@ -43,21 +44,21 @@ class HotelDetailsReq(BaseHotelDetailsReq):
             "name": "NextResultReference",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     return_media_links: bool = field(
         default=False,
         metadata={
             "name": "ReturnMediaLinks",
             "type": "Attribute",
-        }
+        },
     )
     return_guest_reviews: bool = field(
         default=False,
         metadata={
             "name": "ReturnGuestReviews",
             "type": "Attribute",
-        }
+        },
     )
     policy_reference: None | str = field(
         default=None,
@@ -66,5 +67,5 @@ class HotelDetailsReq(BaseHotelDetailsReq):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )

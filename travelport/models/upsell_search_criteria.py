@@ -11,6 +11,7 @@ class UpsellSearchCriteria:
     """
     Search Element for Effective and Expiration dates.
     """
+
     effective_date: None | EffectiveDate = field(
         default=None,
         metadata={
@@ -18,7 +19,7 @@ class UpsellSearchCriteria:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/util_v52_0",
             "required": True,
-        }
+        },
     )
     expiration_date: None | ExpirationDate = field(
         default=None,
@@ -27,5 +28,5 @@ class UpsellSearchCriteria:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/util_v52_0",
             "required": True,
-        }
+        },
     )

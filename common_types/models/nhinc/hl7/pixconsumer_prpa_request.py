@@ -22,7 +22,7 @@ class PixconsumerPrpaIn201301UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -30,7 +30,7 @@ class PixconsumerPrpaIn201301UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -38,7 +38,7 @@ class PixconsumerPrpaIn201301UvrequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -54,7 +54,7 @@ class PixconsumerPrpaIn201301UvsecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -62,7 +62,7 @@ class PixconsumerPrpaIn201301UvsecuredRequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -78,7 +78,7 @@ class PixconsumerPrpaIn201302UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -86,7 +86,7 @@ class PixconsumerPrpaIn201302UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -94,7 +94,7 @@ class PixconsumerPrpaIn201302UvrequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -110,7 +110,7 @@ class PixconsumerPrpaIn201302UvsecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -118,7 +118,7 @@ class PixconsumerPrpaIn201302UvsecuredRequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -130,7 +130,9 @@ class PixconsumerPrpaIn201301Uvrequest(PixconsumerPrpaIn201301UvrequestType):
 
 
 @dataclass
-class PixconsumerPrpaIn201301UvsecuredRequest(PixconsumerPrpaIn201301UvsecuredRequestType):
+class PixconsumerPrpaIn201301UvsecuredRequest(
+    PixconsumerPrpaIn201301UvsecuredRequestType
+):
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVSecuredRequest"
         namespace = "urn:hl7-org:v3"
@@ -144,7 +146,9 @@ class PixconsumerPrpaIn201302Uvrequest(PixconsumerPrpaIn201302UvrequestType):
 
 
 @dataclass
-class PixconsumerPrpaIn201302UvsecuredRequest(PixconsumerPrpaIn201302UvsecuredRequestType):
+class PixconsumerPrpaIn201302UvsecuredRequest(
+    PixconsumerPrpaIn201302UvsecuredRequestType
+):
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVSecuredRequest"
         namespace = "urn:hl7-org:v3"

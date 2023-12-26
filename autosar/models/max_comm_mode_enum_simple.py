@@ -10,6 +10,7 @@ class MaxCommModeEnumSimple(Enum):
     :cvar SILENT: Silent communication is requested: Only listening but
         not "talking".
     """
+
     FULL = "FULL"
     NONE = "NONE"
     SILENT = "SILENT"

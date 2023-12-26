@@ -8,6 +8,7 @@ class TypeRailGenderCompartment2(Enum):
     """
     The type of Rail Gender Compartment.
     """
+
     FEMALE = "Female"
     MALE = "Male"
     UNSPECIFIED = "Unspecified"

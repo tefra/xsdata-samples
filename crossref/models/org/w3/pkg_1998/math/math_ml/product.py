@@ -15,5 +15,5 @@ class Product:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

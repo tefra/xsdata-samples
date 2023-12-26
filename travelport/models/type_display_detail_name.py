@@ -78,6 +78,7 @@ class TypeDisplayDetailName(Enum):
     TEXT
         Additional   information
     """
+
     OWNING_AGENCY_PCC = "OwningAgencyPCC"
     CREATING_AGENT_SIGN_ON = "CreatingAgentSignOn"
     CREATING_AGENT_DUTY = "CreatingAgentDuty"

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_properties_property import HeaderTypePropertiesProperty
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_properties_property import (
+    HeaderTypePropertiesProperty,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -16,5 +18,5 @@ class HeaderTypeProperties:
             "name": "Property",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

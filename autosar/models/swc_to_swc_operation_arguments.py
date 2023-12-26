@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .operation_in_system_instance_ref import OperationInSystemInstanceRef
-from .swc_to_swc_operation_arguments_direction_enum import SwcToSwcOperationArgumentsDirectionEnum
+from .swc_to_swc_operation_arguments_direction_enum import (
+    SwcToSwcOperationArgumentsDirectionEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -35,6 +37,7 @@ class SwcToSwcOperationArguments:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SWC-TO-SWC-OPERATION-ARGUMENTS"
 
@@ -44,22 +47,24 @@ class SwcToSwcOperationArguments:
             "name": "DIRECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    operation_irefs: Optional["SwcToSwcOperationArguments.OperationIrefs"] = field(
+    operation_irefs: Optional[
+        "SwcToSwcOperationArguments.OperationIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "OPERATION-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -67,7 +72,7 @@ class SwcToSwcOperationArguments:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -79,5 +84,5 @@ class SwcToSwcOperationArguments:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 2,
-            }
+            },
         )

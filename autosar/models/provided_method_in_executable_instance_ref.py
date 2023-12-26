@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .client_server_operation_subtypes_enum import (
+    ClientServerOperationSubtypesEnum,
+)
 from .p_port_prototype_subtypes_enum import PPortPrototypeSubtypesEnum
 from .ref import Ref
-from .root_sw_component_prototype_subtypes_enum import RootSwComponentPrototypeSubtypesEnum
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .root_sw_component_prototype_subtypes_enum import (
+    RootSwComponentPrototypeSubtypesEnum,
+)
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -27,47 +33,56 @@ class ProvidedMethodInExecutableInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PROVIDED-METHOD-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional["ProvidedMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"] = field(
+    context_root_sw_component_prototype_ref: Optional[
+        "ProvidedMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_component_prototype_ref: List["ProvidedMethodInExecutableInstanceRef.ContextComponentPrototypeRef"] = field(
+    context_component_prototype_ref: List[
+        "ProvidedMethodInExecutableInstanceRef.ContextComponentPrototypeRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-COMPONENT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_p_port_prototype_ref: Optional["ProvidedMethodInExecutableInstanceRef.ContextPPortPrototypeRef"] = field(
+    context_p_port_prototype_ref: Optional[
+        "ProvidedMethodInExecutableInstanceRef.ContextPPortPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-P-PORT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_method_ref: Optional["ProvidedMethodInExecutableInstanceRef.TargetMethodRef"] = field(
+    target_method_ref: Optional[
+        "ProvidedMethodInExecutableInstanceRef.TargetMethodRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-METHOD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -75,7 +90,7 @@ class ProvidedMethodInExecutableInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -86,7 +101,7 @@ class ProvidedMethodInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -97,7 +112,7 @@ class ProvidedMethodInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -108,7 +123,7 @@ class ProvidedMethodInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -119,5 +134,5 @@ class ProvidedMethodInExecutableInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

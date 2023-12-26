@@ -3,7 +3,9 @@ from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.linear_traffic_view import LinearTrafficView
-from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versioned_reference import PredefinedNonOrderedLocationGroupVersionedReference
+from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versioned_reference import (
+    PredefinedNonOrderedLocationGroupVersionedReference,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -25,6 +27,7 @@ class TrafficView:
     :ivar traffic_view_extension:
     :ivar id:
     """
+
     traffic_view_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -32,16 +35,18 @@ class TrafficView:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    predefined_non_ordered_location_group_reference: Optional[PredefinedNonOrderedLocationGroupVersionedReference] = field(
+    predefined_non_ordered_location_group_reference: Optional[
+        PredefinedNonOrderedLocationGroupVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     linear_traffic_view: List[LinearTrafficView] = field(
         default_factory=list,
@@ -50,7 +55,7 @@ class TrafficView:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     traffic_view_extension: Optional[ExtensionType] = field(
         default=None,
@@ -58,12 +63,12 @@ class TrafficView:
             "name": "trafficViewExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

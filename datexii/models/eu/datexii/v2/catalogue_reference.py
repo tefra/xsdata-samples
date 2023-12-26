@@ -14,6 +14,7 @@ class CatalogueReference:
         catalogue in a data exchange context.
     :ivar catalogue_reference_extension:
     """
+
     key_catalogue_reference: Optional[str] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class CatalogueReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     catalogue_reference_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class CatalogueReference:
             "name": "catalogueReferenceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

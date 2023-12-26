@@ -26,6 +26,7 @@ class BookingAirExchangeQuoteRsp(BookingBaseRsp):
         the AirExchangeQuoteRsp in the AirExchangeReq. Providers
         ACH/1G/1V/1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -38,7 +39,7 @@ class BookingAirExchangeQuoteRsp(BookingBaseRsp):
             "max_occurs": 99,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -48,7 +49,7 @@ class BookingAirExchangeQuoteRsp(BookingBaseRsp):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
@@ -56,7 +57,7 @@ class BookingAirExchangeQuoteRsp(BookingBaseRsp):
             "name": "AirExchangeBundleTotal",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
@@ -65,7 +66,7 @@ class BookingAirExchangeQuoteRsp(BookingBaseRsp):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -74,5 +75,5 @@ class BookingAirExchangeQuoteRsp(BookingBaseRsp):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )

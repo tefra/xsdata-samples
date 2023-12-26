@@ -18,6 +18,7 @@ class SeverityEnum(Enum):
         none.
     :cvar UNKNOWN: Perceived by supplier as being of an unknown level.
     """
+
     HIGHEST = "highest"
     HIGH = "high"
     MEDIUM = "medium"

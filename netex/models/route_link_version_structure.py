@@ -19,7 +19,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_point_ref: Optional[RoutePointRefStructure] = field(
         default=None,
@@ -28,7 +28,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     operational_context_ref: Optional[OperationalContextRef] = field(
         default=None,
@@ -36,5 +36,5 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "name": "OperationalContextRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -31,6 +31,7 @@ class HostReservation:
     eticket
         An flag to indicate if ticket has been issued for the PNR.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -41,7 +42,7 @@ class HostReservation:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     carrier_locator_code: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class HostReservation:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -61,7 +62,7 @@ class HostReservation:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -70,7 +71,7 @@ class HostReservation:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     universal_locator_code: None | str = field(
         default=None,
@@ -79,12 +80,12 @@ class HostReservation:
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     eticket: bool = field(
         default=False,
         metadata={
             "name": "ETicket",
             "type": "Attribute",
-        }
+        },
     )

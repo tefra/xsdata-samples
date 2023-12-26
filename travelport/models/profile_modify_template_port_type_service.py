@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.profile_modify_template_port_type_service_input import ProfileModifyTemplatePortTypeServiceInput
-from travelport.models.profile_modify_template_port_type_service_output import ProfileModifyTemplatePortTypeServiceOutput
+from travelport.models.profile_modify_template_port_type_service_input import (
+    ProfileModifyTemplatePortTypeServiceInput,
+)
+from travelport.models.profile_modify_template_port_type_service_output import (
+    ProfileModifyTemplatePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

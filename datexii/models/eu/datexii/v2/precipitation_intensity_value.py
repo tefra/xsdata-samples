@@ -15,6 +15,7 @@ class PrecipitationIntensityValue(DataValue):
         intensity expressed in units of millimetres per hour.
     :ivar precipitation_intensity_value_extension:
     """
+
     millimetres_per_hour_intensity: Optional[float] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class PrecipitationIntensityValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     precipitation_intensity_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class PrecipitationIntensityValue(DataValue):
             "name": "precipitationIntensityValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

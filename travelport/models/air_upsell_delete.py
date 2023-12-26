@@ -14,12 +14,12 @@ class AirUpsellDelete:
         metadata={
             "name": "QualifyRef",
             "type": "Attribute",
-        }
+        },
     )
     offer_ref: None | str = field(
         default=None,
         metadata={
             "name": "OfferRef",
             "type": "Attribute",
-        }
+        },
     )

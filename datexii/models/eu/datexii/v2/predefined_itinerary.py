@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.predefined_itinerary_index_predefined_location import PredefinedItineraryIndexPredefinedLocation
-from datexii.models.eu.datexii.v2.predefined_location_container import PredefinedLocationContainer
+from datexii.models.eu.datexii.v2.predefined_itinerary_index_predefined_location import (
+    PredefinedItineraryIndexPredefinedLocation,
+)
+from datexii.models.eu.datexii.v2.predefined_location_container import (
+    PredefinedLocationContainer,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,21 +24,24 @@ class PredefinedItinerary(PredefinedLocationContainer):
     :ivar id:
     :ivar version:
     """
+
     predefined_itinerary_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "predefinedItineraryName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    predefined_location: List[PredefinedItineraryIndexPredefinedLocation] = field(
+    predefined_location: List[
+        PredefinedItineraryIndexPredefinedLocation
+    ] = field(
         default_factory=list,
         metadata={
             "name": "predefinedLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     predefined_itinerary_extension: Optional[ExtensionType] = field(
         default=None,
@@ -42,19 +49,19 @@ class PredefinedItinerary(PredefinedLocationContainer):
             "name": "predefinedItineraryExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

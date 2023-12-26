@@ -23,6 +23,7 @@ class Co2Emissions:
     source
         The source responsible for the values
     """
+
     class Meta:
         name = "CO2Emissions"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -33,14 +34,14 @@ class Co2Emissions:
             "name": "CO2Emission",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     total_value: None | float = field(
         default=None,
         metadata={
             "name": "TotalValue",
             "type": "Attribute",
-        }
+        },
     )
     unit: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class Co2Emissions:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     category: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class Co2Emissions:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     source: None | str = field(
         default=None,
@@ -67,5 +68,5 @@ class Co2Emissions:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )

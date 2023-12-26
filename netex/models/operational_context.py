@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .operational_context_version_structure import OperationalContextVersionStructure
+from .operational_context_version_structure import (
+    OperationalContextVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

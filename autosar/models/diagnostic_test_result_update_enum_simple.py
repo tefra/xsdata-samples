@@ -10,5 +10,6 @@ class DiagnosticTestResultUpdateEnumSimple(Enum):
     :cvar STEADY: The Dem accepts reported DTRs only when the configured
         debouncing mechanism is stable at the FAIL or PASS limit.
     """
+
     ALWAYS = "ALWAYS"
     STEADY = "STEADY"

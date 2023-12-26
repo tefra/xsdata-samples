@@ -17,7 +17,7 @@ class VmsMessageIndexVmsMessage:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     message_index: Optional[int] = field(
         default=None,
@@ -25,5 +25,5 @@ class VmsMessageIndexVmsMessage:
             "name": "messageIndex",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

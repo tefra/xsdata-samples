@@ -13,5 +13,5 @@ class ReversePropertyName:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

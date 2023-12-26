@@ -10,5 +10,6 @@ class OrientEnumSimple(Enum):
     :cvar PORT: This indicates that the table is rendered in portrait,
         which is the regular text flow.
     """
+
     LAND = "LAND"
     PORT = "PORT"

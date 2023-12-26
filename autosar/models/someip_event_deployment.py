@@ -15,7 +15,9 @@ from .serialization_technology_enum import SerializationTechnologyEnum
 from .short_name_fragment import ShortNameFragment
 from .time_value import TimeValue
 from .transport_layer_protocol_enum import TransportLayerProtocolEnum
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -98,6 +100,7 @@ class SomeipEventDeployment:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-EVENT-DEPLOYMENT"
 
@@ -108,15 +111,17 @@ class SomeipEventDeployment:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SomeipEventDeployment.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SomeipEventDeployment.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +129,7 @@ class SomeipEventDeployment:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +137,7 @@ class SomeipEventDeployment:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +145,7 @@ class SomeipEventDeployment:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +153,7 @@ class SomeipEventDeployment:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,7 +161,7 @@ class SomeipEventDeployment:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SomeipEventDeployment.Annotations"] = field(
         default=None,
@@ -164,7 +169,7 @@ class SomeipEventDeployment:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_ref: Optional["SomeipEventDeployment.EventRef"] = field(
         default=None,
@@ -172,7 +177,7 @@ class SomeipEventDeployment:
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_id: Optional[PositiveInteger] = field(
         default=None,
@@ -180,7 +185,7 @@ class SomeipEventDeployment:
             "name": "EVENT-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_segment_length: Optional[PositiveInteger] = field(
         default=None,
@@ -188,7 +193,7 @@ class SomeipEventDeployment:
             "name": "MAXIMUM-SEGMENT-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     separation_time: Optional[TimeValue] = field(
         default=None,
@@ -196,7 +201,7 @@ class SomeipEventDeployment:
             "name": "SEPARATION-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     serializer: Optional[SerializationTechnologyEnum] = field(
         default=None,
@@ -204,7 +209,7 @@ class SomeipEventDeployment:
             "name": "SERIALIZER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transport_protocol: Optional[TransportLayerProtocolEnum] = field(
         default=None,
@@ -212,14 +217,14 @@ class SomeipEventDeployment:
             "name": "TRANSPORT-PROTOCOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -227,14 +232,14 @@ class SomeipEventDeployment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -245,7 +250,7 @@ class SomeipEventDeployment:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -256,7 +261,7 @@ class SomeipEventDeployment:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -267,5 +272,5 @@ class SomeipEventDeployment:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

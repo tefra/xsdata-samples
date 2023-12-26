@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_link import ActivationLink
 from .activation_link_ref import ActivationLinkRef
 from .line_link_ref import LineLinkRef
-from .link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
+from .link_in_link_sequence_versioned_child_structure import (
+    LinkInLinkSequenceVersionedChildStructure,
+)
 from .path_link import PathLink
 from .path_link_ref import PathLinkRef
 from .railway_element import RailwayElement
@@ -24,11 +26,34 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStructure):
+class LinkOnSectionVersionedChildStructure(
+    LinkInLinkSequenceVersionedChildStructure
+):
     class Meta:
         name = "LinkOnSection_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            ServiceLinkRef,
+            LineLinkRef,
+            PathLinkRef,
+            TimingLinkRef,
+            RouteLinkRef,
+            WireLinkRef,
+            RoadLinkRef,
+            RailwayLinkRef,
+            ActivationLinkRef,
+            ServiceLink,
+            SitePathLink,
+            PathLink,
+            RouteLink,
+            TimingLink,
+            WireElement,
+            RoadElement,
+            RailwayElement,
+            ActivationLink,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -124,7 +149,7 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     reverse: Optional[bool] = field(
         default=None,
@@ -132,5 +157,5 @@ class LinkOnSectionVersionedChildStructure(LinkInLinkSequenceVersionedChildStruc
             "name": "Reverse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

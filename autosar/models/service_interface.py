@@ -12,7 +12,7 @@ from .blueprint_policy_single import BlueprintPolicySingle
 from .boolean import Boolean
 from .category_string import CategoryString
 from .client_server_operation import ClientServerOperation
-from .field_mod import Field
+from .field_mod import FieldType
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -123,6 +123,7 @@ class ServiceInterface:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SERVICE-INTERFACE"
 
@@ -133,15 +134,17 @@ class ServiceInterface:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ServiceInterface.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ServiceInterface.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -149,7 +152,7 @@ class ServiceInterface:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -157,7 +160,7 @@ class ServiceInterface:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -165,7 +168,7 @@ class ServiceInterface:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -173,7 +176,7 @@ class ServiceInterface:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -181,7 +184,7 @@ class ServiceInterface:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ServiceInterface.Annotations"] = field(
         default=None,
@@ -189,7 +192,7 @@ class ServiceInterface:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -197,7 +200,7 @@ class ServiceInterface:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_policys: Optional["ServiceInterface.BlueprintPolicys"] = field(
         default=None,
@@ -205,7 +208,7 @@ class ServiceInterface:
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -213,7 +216,7 @@ class ServiceInterface:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_service: Optional[Boolean] = field(
         default=None,
@@ -221,7 +224,7 @@ class ServiceInterface:
             "name": "IS-SERVICE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     namespaces: Optional["ServiceInterface.Namespaces"] = field(
         default=None,
@@ -229,7 +232,7 @@ class ServiceInterface:
             "name": "NAMESPACES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_kind: Optional[ServiceProviderEnum] = field(
         default=None,
@@ -237,7 +240,7 @@ class ServiceInterface:
             "name": "SERVICE-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     major_version: Optional[PositiveInteger] = field(
         default=None,
@@ -245,7 +248,7 @@ class ServiceInterface:
             "name": "MAJOR-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minor_version: Optional[PositiveInteger] = field(
         default=None,
@@ -253,7 +256,7 @@ class ServiceInterface:
             "name": "MINOR-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     events: Optional["ServiceInterface.Events"] = field(
         default=None,
@@ -261,7 +264,7 @@ class ServiceInterface:
             "name": "EVENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fields: Optional["ServiceInterface.Fields"] = field(
         default=None,
@@ -269,7 +272,7 @@ class ServiceInterface:
             "name": "FIELDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     methods: Optional["ServiceInterface.Methods"] = field(
         default=None,
@@ -277,14 +280,14 @@ class ServiceInterface:
             "name": "METHODS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -292,14 +295,14 @@ class ServiceInterface:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -310,7 +313,7 @@ class ServiceInterface:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -321,7 +324,7 @@ class ServiceInterface:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -332,15 +335,17 @@ class ServiceInterface:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -348,7 +353,7 @@ class ServiceInterface:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -359,7 +364,7 @@ class ServiceInterface:
                 "name": "SYMBOL-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -370,18 +375,18 @@ class ServiceInterface:
                 "name": "VARIABLE-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class Fields:
-        field_value: List[Field] = field(
+        field_value: List[FieldType] = field(
             default_factory=list,
             metadata={
                 "name": "FIELD",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -392,5 +397,5 @@ class ServiceInterface:
                 "name": "CLIENT-SERVER-OPERATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

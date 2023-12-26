@@ -18,7 +18,7 @@ class PersonType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     family_name: None | str = field(
         default=None,
@@ -27,26 +27,26 @@ class PersonType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     role: None | RoleType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     gtaa_uri: None | str = field(
         default=None,
         metadata={
             "name": "gtaaUri",
             "type": "Attribute",
-        }
+        },
     )
     gtaa_status: None | GtaaStatusType = field(
         default=None,
         metadata={
             "name": "gtaaStatus",
             "type": "Attribute",
-        }
+        },
     )

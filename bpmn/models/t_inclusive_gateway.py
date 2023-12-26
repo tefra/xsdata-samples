@@ -14,5 +14,5 @@ class TInclusiveGateway(TGateway):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -16,5 +16,5 @@ class SituationRecordVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

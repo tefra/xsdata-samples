@@ -14,6 +14,7 @@ class Penalty2:
     penalty_type
         This is the PPC (Price Processing Code)code.
     """
+
     class Meta:
         name = "Penalty"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -23,12 +24,12 @@ class Penalty2:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     penalty_type: None | str = field(
         default=None,
         metadata={
             "name": "PenaltyType",
             "type": "Attribute",
-        }
+        },
     )

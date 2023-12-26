@@ -23,6 +23,7 @@ class Variance:
     reason
         Reason for Variance
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -32,26 +33,26 @@ class Variance:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     time: None | str = field(
         default=None,
         metadata={
             "name": "Time",
             "type": "Attribute",
-        }
+        },
     )
     indicator: None | TypeVarianceIndicator = field(
         default=None,
         metadata={
             "name": "Indicator",
             "type": "Attribute",
-        }
+        },
     )
     reason: None | str = field(
         default=None,
         metadata={
             "name": "Reason",
             "type": "Attribute",
-        }
+        },
     )

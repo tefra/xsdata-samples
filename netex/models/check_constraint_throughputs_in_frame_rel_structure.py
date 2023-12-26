@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CheckConstraintThroughputsInFrameRelStructure(ContainmentAggregationStructure):
+class CheckConstraintThroughputsInFrameRelStructure(
+    ContainmentAggregationStructure
+):
     class Meta:
         name = "checkConstraintThroughputsInFrame_RelStructure"
 
@@ -18,5 +20,5 @@ class CheckConstraintThroughputsInFrameRelStructure(ContainmentAggregationStruct
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

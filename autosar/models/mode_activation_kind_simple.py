@@ -10,6 +10,7 @@ class ModeActivationKindSimple(Enum):
     :cvar ON_TRANSITION: On transition of the 1st referred mode to the
         2nd referred mode.
     """
+
     ON_ENTRY = "ON-ENTRY"
     ON_EXIT = "ON-EXIT"
     ON_TRANSITION = "ON-TRANSITION"

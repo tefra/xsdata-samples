@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.delays import Delays
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.traffic_constriction_type_enum import TrafficConstrictionTypeEnum
+from datexii.models.eu.datexii.v2.traffic_constriction_type_enum import (
+    TrafficConstrictionTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -37,13 +39,14 @@ class Impact:
     :ivar delays:
     :ivar impact_extension:
     """
+
     capacity_remaining: Optional[float] = field(
         default=None,
         metadata={
             "name": "capacityRemaining",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     number_of_lanes_restricted: Optional[int] = field(
         default=None,
@@ -51,7 +54,7 @@ class Impact:
             "name": "numberOfLanesRestricted",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     number_of_operational_lanes: Optional[int] = field(
         default=None,
@@ -59,7 +62,7 @@ class Impact:
             "name": "numberOfOperationalLanes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     original_number_of_lanes: Optional[int] = field(
         default=None,
@@ -67,7 +70,7 @@ class Impact:
             "name": "originalNumberOfLanes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     residual_road_width: Optional[float] = field(
         default=None,
@@ -75,7 +78,7 @@ class Impact:
             "name": "residualRoadWidth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_constriction_type: Optional[TrafficConstrictionTypeEnum] = field(
         default=None,
@@ -83,14 +86,14 @@ class Impact:
             "name": "trafficConstrictionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     delays: Optional[Delays] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     impact_extension: Optional[ExtensionType] = field(
         default=None,
@@ -98,5 +101,5 @@ class Impact:
             "name": "impactExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

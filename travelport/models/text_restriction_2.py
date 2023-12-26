@@ -11,6 +11,7 @@ class TextRestriction2(TypeStringRestriction2):
 
     Min and max lengths are inclusive.
     """
+
     class Meta:
         name = "TextRestriction"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

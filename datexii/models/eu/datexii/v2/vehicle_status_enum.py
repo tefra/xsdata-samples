@@ -18,6 +18,7 @@ class VehicleStatusEnum(Enum):
         assistance to be moved.
     :cvar ON_FIRE: Vehicle is on fire.
     """
+
     ABANDONED = "abandoned"
     BROKEN_DOWN = "brokenDown"
     BURNT_OUT = "burntOut"

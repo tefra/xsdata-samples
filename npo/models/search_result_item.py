@@ -15,18 +15,18 @@ class SearchResultItem:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     highlight: list[HightlightType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     score: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

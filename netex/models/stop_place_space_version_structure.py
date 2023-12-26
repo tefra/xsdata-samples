@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .multilingual_string import MultilingualString
 from .site_entrances_rel_structure import SiteEntrancesRelStructure
-from .stop_place_component_version_structure import StopPlaceComponentVersionStructure
+from .stop_place_component_version_structure import (
+    StopPlaceComponentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -18,7 +20,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "name": "BoardingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alighting_use: Optional[bool] = field(
         default=None,
@@ -26,7 +28,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "name": "AlightingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -34,12 +36,12 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entrances: Optional[SiteEntrancesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

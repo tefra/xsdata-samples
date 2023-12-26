@@ -90,6 +90,7 @@ class RestEndpointDelete:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REST-ENDPOINT-DELETE"
 
@@ -100,15 +101,17 @@ class RestEndpointDelete:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RestEndpointDelete.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RestEndpointDelete.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +119,7 @@ class RestEndpointDelete:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +127,7 @@ class RestEndpointDelete:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +135,7 @@ class RestEndpointDelete:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +143,7 @@ class RestEndpointDelete:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +151,7 @@ class RestEndpointDelete:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RestEndpointDelete.Annotations"] = field(
         default=None,
@@ -156,7 +159,7 @@ class RestEndpointDelete:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_policys: Optional["RestEndpointDelete.BlueprintPolicys"] = field(
         default=None,
@@ -164,7 +167,7 @@ class RestEndpointDelete:
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -172,7 +175,7 @@ class RestEndpointDelete:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     arguments: Optional["RestEndpointDelete.Arguments"] = field(
         default=None,
@@ -180,14 +183,14 @@ class RestEndpointDelete:
             "name": "ARGUMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -195,14 +198,14 @@ class RestEndpointDelete:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -213,7 +216,7 @@ class RestEndpointDelete:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -224,7 +227,7 @@ class RestEndpointDelete:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -235,15 +238,17 @@ class RestEndpointDelete:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -251,7 +256,7 @@ class RestEndpointDelete:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -262,5 +267,5 @@ class RestEndpointDelete:
                 "name": "REST-ENDPOINT-ARGUMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -115,6 +115,7 @@ class ResourceConsumption:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RESOURCE-CONSUMPTION"
 
@@ -125,15 +126,17 @@ class ResourceConsumption:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ResourceConsumption.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ResourceConsumption.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -141,7 +144,7 @@ class ResourceConsumption:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -149,7 +152,7 @@ class ResourceConsumption:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -157,7 +160,7 @@ class ResourceConsumption:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -165,7 +168,7 @@ class ResourceConsumption:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -173,7 +176,7 @@ class ResourceConsumption:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ResourceConsumption.Annotations"] = field(
         default=None,
@@ -181,7 +184,7 @@ class ResourceConsumption:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     access_count_sets: Optional["ResourceConsumption.AccessCountSets"] = field(
         default=None,
@@ -189,7 +192,7 @@ class ResourceConsumption:
             "name": "ACCESS-COUNT-SETS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     execution_times: Optional["ResourceConsumption.ExecutionTimes"] = field(
         default=None,
@@ -197,7 +200,7 @@ class ResourceConsumption:
             "name": "EXECUTION-TIMES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     heap_usages: Optional["ResourceConsumption.HeapUsages"] = field(
         default=None,
@@ -205,7 +208,7 @@ class ResourceConsumption:
             "name": "HEAP-USAGES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     memory_sections: Optional["ResourceConsumption.MemorySections"] = field(
         default=None,
@@ -213,15 +216,17 @@ class ResourceConsumption:
             "name": "MEMORY-SECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    section_name_prefixs: Optional["ResourceConsumption.SectionNamePrefixs"] = field(
+    section_name_prefixs: Optional[
+        "ResourceConsumption.SectionNamePrefixs"
+    ] = field(
         default=None,
         metadata={
             "name": "SECTION-NAME-PREFIXS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     stack_usages: Optional["ResourceConsumption.StackUsages"] = field(
         default=None,
@@ -229,22 +234,24 @@ class ResourceConsumption:
             "name": "STACK-USAGES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    system_memory_usages: Optional["ResourceConsumption.SystemMemoryUsages"] = field(
+    system_memory_usages: Optional[
+        "ResourceConsumption.SystemMemoryUsages"
+    ] = field(
         default=None,
         metadata={
             "name": "SYSTEM-MEMORY-USAGES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -252,14 +259,14 @@ class ResourceConsumption:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -270,7 +277,7 @@ class ResourceConsumption:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -281,7 +288,7 @@ class ResourceConsumption:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -292,7 +299,7 @@ class ResourceConsumption:
                 "name": "ACCESS-COUNT-SET",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -303,7 +310,7 @@ class ResourceConsumption:
                 "name": "ANALYZED-EXECUTION-TIME",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         measured_execution_time: List[MeasuredExecutionTime] = field(
             default_factory=list,
@@ -311,15 +318,17 @@ class ResourceConsumption:
                 "name": "MEASURED-EXECUTION-TIME",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        rough_estimate_of_execution_time: List[RoughEstimateOfExecutionTime] = field(
+        rough_estimate_of_execution_time: List[
+            RoughEstimateOfExecutionTime
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ROUGH-ESTIMATE-OF-EXECUTION-TIME",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         simulated_execution_time: List[SimulatedExecutionTime] = field(
             default_factory=list,
@@ -327,7 +336,7 @@ class ResourceConsumption:
                 "name": "SIMULATED-EXECUTION-TIME",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -338,7 +347,7 @@ class ResourceConsumption:
                 "name": "MEASURED-HEAP-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rough_estimate_heap_usage: List[RoughEstimateHeapUsage] = field(
             default_factory=list,
@@ -346,7 +355,7 @@ class ResourceConsumption:
                 "name": "ROUGH-ESTIMATE-HEAP-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         worst_case_heap_usage: List[WorstCaseHeapUsage] = field(
             default_factory=list,
@@ -354,7 +363,7 @@ class ResourceConsumption:
                 "name": "WORST-CASE-HEAP-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -365,7 +374,7 @@ class ResourceConsumption:
                 "name": "MEMORY-SECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -376,7 +385,7 @@ class ResourceConsumption:
                 "name": "SECTION-NAME-PREFIX",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -387,7 +396,7 @@ class ResourceConsumption:
                 "name": "MEASURED-STACK-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rough_estimate_stack_usage: List[RoughEstimateStackUsage] = field(
             default_factory=list,
@@ -395,7 +404,7 @@ class ResourceConsumption:
                 "name": "ROUGH-ESTIMATE-STACK-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         worst_case_stack_usage: List[WorstCaseStackUsage] = field(
             default_factory=list,
@@ -403,7 +412,7 @@ class ResourceConsumption:
                 "name": "WORST-CASE-STACK-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -414,5 +423,5 @@ class ResourceConsumption:
                 "name": "SYSTEM-MEMORY-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

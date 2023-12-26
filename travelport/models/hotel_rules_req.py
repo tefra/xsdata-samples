@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.hotel_property import HotelProperty
-from travelport.models.hotel_rules_lookup_rules_detail_reqd import HotelRulesLookupRulesDetailReqd
+from travelport.models.hotel_rules_lookup_rules_detail_reqd import (
+    HotelRulesLookupRulesDetailReqd,
+)
 from travelport.models.hotel_rules_modifiers import HotelRulesModifiers
 from travelport.models.hotel_stay import HotelStay
 
@@ -23,6 +25,7 @@ class HotelRulesReq(BaseReq1):
     hotel_rules_lookup
         Details to request Hotel rate rules post shopping request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -33,14 +36,14 @@ class HotelRulesReq(BaseReq1):
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     hotel_rules_lookup: None | HotelRulesReq.HotelRulesLookup = field(
         default=None,
         metadata={
             "name": "HotelRulesLookup",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -60,13 +63,14 @@ class HotelRulesReq(BaseReq1):
             Request details for Rules, Details, or All.  Default is All.
             Applicable for 1p.
         """
+
         hotel_property: None | HotelProperty = field(
             default=None,
             metadata={
                 "name": "HotelProperty",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         hotel_stay: None | HotelStay = field(
             default=None,
@@ -74,14 +78,14 @@ class HotelRulesReq(BaseReq1):
                 "name": "HotelStay",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         hotel_rules_modifiers: None | HotelRulesModifiers = field(
             default=None,
             metadata={
                 "name": "HotelRulesModifiers",
                 "type": "Element",
-            }
+            },
         )
         rate_plan_type: None | str = field(
             default=None,
@@ -89,7 +93,7 @@ class HotelRulesReq(BaseReq1):
                 "name": "RatePlanType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         base: None | str = field(
             default=None,
@@ -97,12 +101,12 @@ class HotelRulesReq(BaseReq1):
                 "name": "Base",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         rules_detail_reqd: None | HotelRulesLookupRulesDetailReqd = field(
             default=None,
             metadata={
                 "name": "RulesDetailReqd",
                 "type": "Attribute",
-            }
+            },
         )

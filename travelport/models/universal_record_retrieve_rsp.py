@@ -18,6 +18,7 @@ class UniversalRecordRetrieveRsp(BaseRsp1):
         Returns true if the underlying reservation has changed since it was
         last accessed
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -27,12 +28,12 @@ class UniversalRecordRetrieveRsp(BaseRsp1):
             "name": "UniversalRecord",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     updated: bool = field(
         default=False,
         metadata={
             "name": "Updated",
             "type": "Attribute",
-        }
+        },
     )

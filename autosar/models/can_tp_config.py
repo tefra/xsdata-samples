@@ -12,7 +12,9 @@ from .can_tp_connection import CanTpConnection
 from .can_tp_ecu import CanTpEcu
 from .can_tp_node import CanTpNode
 from .category_string import CategoryString
-from .communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
+from .communication_cluster_subtypes_enum import (
+    CommunicationClusterSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -101,6 +103,7 @@ class CanTpConfig:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-TP-CONFIG"
 
@@ -111,7 +114,7 @@ class CanTpConfig:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["CanTpConfig.ShortNameFragments"] = field(
         default=None,
@@ -119,7 +122,7 @@ class CanTpConfig:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -127,7 +130,7 @@ class CanTpConfig:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -135,7 +138,7 @@ class CanTpConfig:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -143,7 +146,7 @@ class CanTpConfig:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -151,7 +154,7 @@ class CanTpConfig:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -159,7 +162,7 @@ class CanTpConfig:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CanTpConfig.Annotations"] = field(
         default=None,
@@ -167,7 +170,7 @@ class CanTpConfig:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -175,15 +178,17 @@ class CanTpConfig:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_cluster_ref: Optional["CanTpConfig.CommunicationClusterRef"] = field(
+    communication_cluster_ref: Optional[
+        "CanTpConfig.CommunicationClusterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_addresss: Optional["CanTpConfig.TpAddresss"] = field(
         default=None,
@@ -191,7 +196,7 @@ class CanTpConfig:
             "name": "TP-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_channels: Optional["CanTpConfig.TpChannels"] = field(
         default=None,
@@ -199,7 +204,7 @@ class CanTpConfig:
             "name": "TP-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_connections: Optional["CanTpConfig.TpConnections"] = field(
         default=None,
@@ -207,7 +212,7 @@ class CanTpConfig:
             "name": "TP-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_ecus: Optional["CanTpConfig.TpEcus"] = field(
         default=None,
@@ -215,7 +220,7 @@ class CanTpConfig:
             "name": "TP-ECUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_nodes: Optional["CanTpConfig.TpNodes"] = field(
         default=None,
@@ -223,14 +228,14 @@ class CanTpConfig:
             "name": "TP-NODES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -238,14 +243,14 @@ class CanTpConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -256,7 +261,7 @@ class CanTpConfig:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -267,7 +272,7 @@ class CanTpConfig:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -278,7 +283,7 @@ class CanTpConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -289,7 +294,7 @@ class CanTpConfig:
                 "name": "CAN-TP-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -300,7 +305,7 @@ class CanTpConfig:
                 "name": "CAN-TP-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -311,7 +316,7 @@ class CanTpConfig:
                 "name": "CAN-TP-CONNECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -322,7 +327,7 @@ class CanTpConfig:
                 "name": "CAN-TP-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -333,5 +338,5 @@ class CanTpConfig:
                 "name": "CAN-TP-NODE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

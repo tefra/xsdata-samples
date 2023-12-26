@@ -25,7 +25,7 @@ class AddressType:
         metadata={
             "name": "AddressTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -43,7 +43,7 @@ class Currency:
         metadata={
             "name": "CurrencyCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -61,7 +61,7 @@ class TradingPartnerOrganizationPurpose:
         metadata={
             "name": "TradingPartnerOrganizationPurposeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -79,7 +79,7 @@ class TradingPartnerOrganizationVisibility:
         metadata={
             "name": "TradingPartnerOrganizationVisibilityCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -97,7 +97,7 @@ class TradingPartnerType:
         metadata={
             "name": "TradingPartnerTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -120,7 +120,7 @@ class ListOfTradingPartnerType:
             "name": "TradingPartnerType",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -193,14 +193,14 @@ class BankDetail:
         metadata={
             "name": "BankKey",
             "type": "Element",
-        }
+        },
     )
     swiftcode: Optional[str] = field(
         default=None,
         metadata={
             "name": "SWIFTCode",
             "type": "Element",
-        }
+        },
     )
     bank_account_number: str = field(
         metadata={
@@ -214,28 +214,28 @@ class BankDetail:
         metadata={
             "name": "InternationalBankAccountNumber",
             "type": "Element",
-        }
+        },
     )
     trading_partner_account_holder: Optional[str] = field(
         default=None,
         metadata={
             "name": "TradingPartnerAccountHolder",
             "type": "Element",
-        }
+        },
     )
     bank_account_control_key: Optional[str] = field(
         default=None,
         metadata={
             "name": "BankAccountControlKey",
             "type": "Element",
-        }
+        },
     )
     bank_reference: Optional[str] = field(
         default=None,
         metadata={
             "name": "BankReference",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -246,7 +246,7 @@ class OrganizationAddress:
         metadata={
             "name": "AddressType",
             "type": "Element",
-        }
+        },
     )
     external_address_id: str = field(
         metadata={
@@ -260,42 +260,42 @@ class OrganizationAddress:
         metadata={
             "name": "POBox",
             "type": "Element",
-        }
+        },
     )
     street: Optional[str] = field(
         default=None,
         metadata={
             "name": "Street",
             "type": "Element",
-        }
+        },
     )
     house_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "HouseNumber",
             "type": "Element",
-        }
+        },
     )
     street_supplement1: Optional[str] = field(
         default=None,
         metadata={
             "name": "StreetSupplement1",
             "type": "Element",
-        }
+        },
     )
     street_supplement2: Optional[str] = field(
         default=None,
         metadata={
             "name": "StreetSupplement2",
             "type": "Element",
-        }
+        },
     )
     postal_code: Optional[str] = field(
         default=None,
         metadata={
             "name": "PostalCode",
             "type": "Element",
-        }
+        },
     )
     city: str = field(
         metadata={
@@ -309,21 +309,21 @@ class OrganizationAddress:
         metadata={
             "name": "County",
             "type": "Element",
-        }
+        },
     )
     region: Optional[Region] = field(
         default=None,
         metadata={
             "name": "Region",
             "type": "Element",
-        }
+        },
     )
     district: Optional[str] = field(
         default=None,
         metadata={
             "name": "District",
             "type": "Element",
-        }
+        },
     )
     country: Country = field(
         metadata={
@@ -337,7 +337,7 @@ class OrganizationAddress:
         metadata={
             "name": "TradingPartnerTimezone",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -348,7 +348,7 @@ class TradingPartnerOrganizationHeader:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-        }
+        },
     )
     list_of_trading_partner_type: ListOfTradingPartnerType = field(
         metadata={
@@ -381,13 +381,13 @@ class TradingPartnerOrganizationHeader:
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     name3: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     organization_language: OrganizationLanguage = field(
         metadata={
@@ -410,19 +410,21 @@ class TradingPartnerOrganizationHeader:
             "required": True,
         }
     )
-    parent_trading_partner_identifications: Optional[ParentTradingPartnerIdentifications] = field(
+    parent_trading_partner_identifications: Optional[
+        ParentTradingPartnerIdentifications
+    ] = field(
         default=None,
         metadata={
             "name": "ParentTradingPartnerIdentifications",
             "type": "Element",
-        }
+        },
     )
     general_notes: Optional[str] = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -445,7 +447,7 @@ class ListOfOrganizationAddress:
             "name": "OrganizationAddress",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -474,18 +476,20 @@ class OrganizationAddresses:
         metadata={
             "name": "ListOfOrganizationAddress",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class TradingPartnerOrganization:
-    trading_partner_organization_header: TradingPartnerOrganizationHeader = field(
-        metadata={
-            "name": "TradingPartnerOrganizationHeader",
-            "type": "Element",
-            "required": True,
-        }
+    trading_partner_organization_header: TradingPartnerOrganizationHeader = (
+        field(
+            metadata={
+                "name": "TradingPartnerOrganizationHeader",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
     organization_addresses: OrganizationAddresses = field(
         metadata={
@@ -499,7 +503,7 @@ class TradingPartnerOrganization:
         metadata={
             "name": "ListOfBankDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -511,23 +515,27 @@ class ListOfTradingPartnerOrganization:
             "name": "TradingPartnerOrganization",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class TradingPartnerOrganizationInformation:
-    trading_partner_organization_purpose: TradingPartnerOrganizationPurpose = field(
-        metadata={
-            "name": "TradingPartnerOrganizationPurpose",
-            "type": "Element",
-            "required": True,
-        }
+    trading_partner_organization_purpose: TradingPartnerOrganizationPurpose = (
+        field(
+            metadata={
+                "name": "TradingPartnerOrganizationPurpose",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
-    list_of_trading_partner_organization: ListOfTradingPartnerOrganization = field(
-        metadata={
-            "name": "ListOfTradingPartnerOrganization",
-            "type": "Element",
-            "required": True,
-        }
+    list_of_trading_partner_organization: ListOfTradingPartnerOrganization = (
+        field(
+            metadata={
+                "name": "ListOfTradingPartnerOrganization",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )

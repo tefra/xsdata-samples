@@ -21,6 +21,7 @@ class TypeKeyword5:
     description
         A brief description of the keyword
     """
+
     class Meta:
         name = "typeKeyword"
 
@@ -31,7 +32,7 @@ class TypeKeyword5:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "max_occurs": 99,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -40,19 +41,19 @@ class TypeKeyword5:
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )
     number: None | object = field(
         default=None,
         metadata={
             "name": "Number",
             "type": "Attribute",
-        }
+        },
     )
     description: None | object = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

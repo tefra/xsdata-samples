@@ -3,7 +3,9 @@ from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.obstruction import Obstruction
 from datexii.models.eu.datexii.v2.vehicle import Vehicle
-from datexii.models.eu.datexii.v2.vehicle_obstruction_type_enum import VehicleObstructionTypeEnum
+from datexii.models.eu.datexii.v2.vehicle_obstruction_type_enum import (
+    VehicleObstructionTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -18,6 +20,7 @@ class VehicleObstruction(Obstruction):
     :ivar obstructing_vehicle: The obstructing vehicle.
     :ivar vehicle_obstruction_extension:
     """
+
     vehicle_obstruction_type: Optional[VehicleObstructionTypeEnum] = field(
         default=None,
         metadata={
@@ -25,7 +28,7 @@ class VehicleObstruction(Obstruction):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     obstructing_vehicle: List[Vehicle] = field(
         default_factory=list,
@@ -33,7 +36,7 @@ class VehicleObstruction(Obstruction):
             "name": "obstructingVehicle",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_obstruction_extension: Optional[ExtensionType] = field(
         default=None,
@@ -41,5 +44,5 @@ class VehicleObstruction(Obstruction):
             "name": "vehicleObstructionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

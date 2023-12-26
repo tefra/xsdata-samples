@@ -4,12 +4,16 @@ from .ref import Ref
 from .referrable_subtypes_enum import ReferrableSubtypesEnum
 from .resolution_policy_enum_simple import ResolutionPolicyEnumSimple
 from .show_content_enum_simple import ShowContentEnumSimple
-from .show_resource_alias_name_enum_simple import ShowResourceAliasNameEnumSimple
+from .show_resource_alias_name_enum_simple import (
+    ShowResourceAliasNameEnumSimple,
+)
 from .show_resource_category_enum_simple import ShowResourceCategoryEnumSimple
 from .show_resource_long_name_enum_simple import ShowResourceLongNameEnumSimple
 from .show_resource_number_enum_simple import ShowResourceNumberEnumSimple
 from .show_resource_page_enum_simple import ShowResourcePageEnumSimple
-from .show_resource_short_name_enum_simple import ShowResourceShortNameEnumSimple
+from .show_resource_short_name_enum_simple import (
+    ShowResourceShortNameEnumSimple,
+)
 from .show_resource_type_enum_simple import ShowResourceTypeEnumSimple
 from .show_see_enum_simple import ShowSeeEnumSimple
 from .single_language_long_name import SingleLanguageLongName
@@ -69,6 +73,7 @@ class Xref:
         the reference. Default is "NO-SHOW-SEE". Note that this is there
         for compatibility reasons only.
     """
+
     class Meta:
         name = "XREF"
 
@@ -78,7 +83,7 @@ class Xref:
             "name": "LABEL-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     referrable_ref: Optional["Xref.ReferrableRef"] = field(
         default=None,
@@ -86,14 +91,14 @@ class Xref:
             "name": "REFERRABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -101,77 +106,81 @@ class Xref:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     resolution_policy: Optional[ResolutionPolicyEnumSimple] = field(
         default=None,
         metadata={
             "name": "RESOLUTION-POLICY",
             "type": "Attribute",
-        }
+        },
     )
     show_content: Optional[ShowContentEnumSimple] = field(
         default=None,
         metadata={
             "name": "SHOW-CONTENT",
             "type": "Attribute",
-        }
+        },
     )
-    show_resource_alias_name: Optional[ShowResourceAliasNameEnumSimple] = field(
+    show_resource_alias_name: Optional[
+        ShowResourceAliasNameEnumSimple
+    ] = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-ALIAS-NAME",
             "type": "Attribute",
-        }
+        },
     )
     show_resource_category: Optional[ShowResourceCategoryEnumSimple] = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-CATEGORY",
             "type": "Attribute",
-        }
+        },
     )
     show_resource_long_name: Optional[ShowResourceLongNameEnumSimple] = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
     show_resource_number: Optional[ShowResourceNumberEnumSimple] = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-NUMBER",
             "type": "Attribute",
-        }
+        },
     )
     show_resource_page: Optional[ShowResourcePageEnumSimple] = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-PAGE",
             "type": "Attribute",
-        }
+        },
     )
-    show_resource_short_name: Optional[ShowResourceShortNameEnumSimple] = field(
+    show_resource_short_name: Optional[
+        ShowResourceShortNameEnumSimple
+    ] = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-SHORT-NAME",
             "type": "Attribute",
-        }
+        },
     )
     show_resource_type: Optional[ShowResourceTypeEnumSimple] = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-TYPE",
             "type": "Attribute",
-        }
+        },
     )
     show_see: Optional[ShowSeeEnumSimple] = field(
         default=None,
         metadata={
             "name": "SHOW-SEE",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -182,5 +191,5 @@ class Xref:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

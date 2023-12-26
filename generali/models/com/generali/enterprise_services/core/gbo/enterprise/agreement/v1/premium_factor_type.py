@@ -1,11 +1,19 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import BaseComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
+    AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import (
+    BaseComponentType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -17,7 +25,7 @@ class PremiumFactorType(BaseComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     description: Optional[TextType] = field(
         default=None,
@@ -26,7 +34,7 @@ class PremiumFactorType(BaseComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     percentage: Optional[Decimal] = field(
         default=None,
@@ -35,5 +43,5 @@ class PremiumFactorType(BaseComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )

@@ -29,7 +29,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
 )
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2"
+)
 
 
 @dataclass(frozen=True)
@@ -40,7 +42,7 @@ class CataloguePricingUpdateType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -48,7 +50,7 @@ class CataloguePricingUpdateType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -56,7 +58,7 @@ class CataloguePricingUpdateType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -64,7 +66,7 @@ class CataloguePricingUpdateType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -72,7 +74,7 @@ class CataloguePricingUpdateType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -81,7 +83,7 @@ class CataloguePricingUpdateType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -89,7 +91,7 @@ class CataloguePricingUpdateType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     name: Optional[Name] = field(
         default=None,
@@ -97,7 +99,7 @@ class CataloguePricingUpdateType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -106,7 +108,7 @@ class CataloguePricingUpdateType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -114,7 +116,7 @@ class CataloguePricingUpdateType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     revision_date: Optional[XmlDate] = field(
         default=None,
@@ -122,7 +124,7 @@ class CataloguePricingUpdateType:
             "name": "RevisionDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     revision_time: Optional[XmlTime] = field(
         default=None,
@@ -130,7 +132,7 @@ class CataloguePricingUpdateType:
             "name": "RevisionTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -138,7 +140,7 @@ class CataloguePricingUpdateType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     description: Tuple[Description, ...] = field(
         default_factory=tuple,
@@ -146,7 +148,7 @@ class CataloguePricingUpdateType:
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     version_id: Optional[VersionId] = field(
         default=None,
@@ -154,7 +156,7 @@ class CataloguePricingUpdateType:
             "name": "VersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     line_count_numeric: Optional[LineCountNumeric] = field(
         default=None,
@@ -162,7 +164,7 @@ class CataloguePricingUpdateType:
             "name": "LineCountNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     validity_period: Tuple[ValidityPeriod, ...] = field(
         default_factory=tuple,
@@ -170,7 +172,7 @@ class CataloguePricingUpdateType:
             "name": "ValidityPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     related_catalogue_reference: Optional[RelatedCatalogueReference] = field(
         default=None,
@@ -179,7 +181,7 @@ class CataloguePricingUpdateType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     referenced_contract: Tuple[ReferencedContract, ...] = field(
         default_factory=tuple,
@@ -187,7 +189,7 @@ class CataloguePricingUpdateType:
             "name": "ReferencedContract",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -195,7 +197,7 @@ class CataloguePricingUpdateType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     provider_party: Optional[ProviderParty] = field(
         default=None,
@@ -204,7 +206,7 @@ class CataloguePricingUpdateType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -213,7 +215,7 @@ class CataloguePricingUpdateType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     seller_supplier_party: Optional[SellerSupplierParty] = field(
         default=None,
@@ -221,7 +223,7 @@ class CataloguePricingUpdateType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     contractor_customer_party: Optional[ContractorCustomerParty] = field(
         default=None,
@@ -229,7 +231,7 @@ class CataloguePricingUpdateType:
             "name": "ContractorCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     trading_terms: Optional[TradingTerms] = field(
         default=None,
@@ -237,7 +239,7 @@ class CataloguePricingUpdateType:
             "name": "TradingTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     default_language: Optional[DefaultLanguage] = field(
         default=None,
@@ -245,16 +247,18 @@ class CataloguePricingUpdateType:
             "name": "DefaultLanguage",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    catalogue_pricing_update_line: Tuple[CataloguePricingUpdateLine, ...] = field(
+    catalogue_pricing_update_line: Tuple[
+        CataloguePricingUpdateLine, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "CataloguePricingUpdateLine",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 

@@ -17,6 +17,7 @@ class GroupOfParkingSitesStatusEnum(Enum):
     :cvar UNKNOWN: The status of the group of parking sites is unknown.
     :cvar OTHER: Other.
     """
+
     ALL_PARKINGS_FULL = "allParkingsFull"
     MULTI_STOREY_PARKINGS_FULL = "multiStoreyParkingsFull"
     NO_MORE_PARKING_SPACES_AVAILABLE = "noMoreParkingSpacesAvailable"

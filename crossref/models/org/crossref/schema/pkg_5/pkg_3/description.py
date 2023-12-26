@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.description_language import DescriptionLanguage
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.description_language import (
+    DescriptionLanguage,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.xref_faces import (
     B,
     Em,
@@ -24,6 +26,7 @@ class Description:
     """
     A narrative description of a file (e.g. a figure caption or video description).
     """
+
     class Meta:
         name = "description"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -32,7 +35,7 @@ class Description:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -91,5 +94,5 @@ class Description:
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
             ),
-        }
+        },
     )

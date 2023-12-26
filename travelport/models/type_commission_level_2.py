@@ -8,6 +8,7 @@ class TypeCommissionLevel2(Enum):
     """
     ATA/IATA Standard commission level.
     """
+
     RECALLED = "Recalled"
     FARE = "Fare"
     PENALTY = "Penalty"

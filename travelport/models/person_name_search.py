@@ -14,6 +14,7 @@ class PersonNameSearch:
     last
         Person Last Name to be searched for Flight Pass content.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,5 +26,5 @@ class PersonNameSearch:
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )

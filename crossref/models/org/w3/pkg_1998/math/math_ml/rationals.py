@@ -15,5 +15,5 @@ class Rationals:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

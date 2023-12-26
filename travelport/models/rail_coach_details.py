@@ -17,6 +17,7 @@ class RailCoachDetails:
         Indicates if seats are available in this rail coach which can be
         mapped.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,19 +26,19 @@ class RailCoachDetails:
         metadata={
             "name": "RailCoachNumber",
             "type": "Attribute",
-        }
+        },
     )
     available_rail_seats: None | str = field(
         default=None,
         metadata={
             "name": "AvailableRailSeats",
             "type": "Attribute",
-        }
+        },
     )
     rail_seat_map_availability: None | bool = field(
         default=None,
         metadata={
             "name": "RailSeatMapAvailability",
             "type": "Attribute",
-        }
+        },
     )

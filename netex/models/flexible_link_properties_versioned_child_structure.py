@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_link_ref import ActivationLinkRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .flexible_link_type_enumeration import FlexibleLinkTypeEnumeration
@@ -20,7 +20,19 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexibleLinkProperties_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            ServiceLinkRef,
+            LineLinkRef,
+            PathLinkRef,
+            TimingLinkRef,
+            RouteLinkRef,
+            WireLinkRef,
+            RoadLinkRef,
+            RailwayLinkRef,
+            ActivationLinkRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -71,7 +83,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     may_be_skipped: Optional[bool] = field(
         default=None,
@@ -79,7 +91,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "MayBeSkipped",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     on_main_route: Optional[bool] = field(
         default=None,
@@ -87,7 +99,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "OnMainRoute",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     unscheduled_path: Optional[bool] = field(
         default=None,
@@ -95,7 +107,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "UnscheduledPath",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_link_type: Optional[FlexibleLinkTypeEnumeration] = field(
         default=None,
@@ -103,5 +115,5 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "FlexibleLinkType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

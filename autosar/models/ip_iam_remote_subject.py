@@ -79,6 +79,7 @@ class IpIamRemoteSubject:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IP-IAM-REMOTE-SUBJECT"
 
@@ -89,15 +90,17 @@ class IpIamRemoteSubject:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["IpIamRemoteSubject.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "IpIamRemoteSubject.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -105,7 +108,7 @@ class IpIamRemoteSubject:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -113,7 +116,7 @@ class IpIamRemoteSubject:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -121,7 +124,7 @@ class IpIamRemoteSubject:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -129,7 +132,7 @@ class IpIamRemoteSubject:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -137,7 +140,7 @@ class IpIamRemoteSubject:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["IpIamRemoteSubject.Annotations"] = field(
         default=None,
@@ -145,7 +148,7 @@ class IpIamRemoteSubject:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -153,22 +156,24 @@ class IpIamRemoteSubject:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    authentic_connection_propss: Optional["IpIamRemoteSubject.AuthenticConnectionPropss"] = field(
+    authentic_connection_propss: Optional[
+        "IpIamRemoteSubject.AuthenticConnectionPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "AUTHENTIC-CONNECTION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -176,14 +181,14 @@ class IpIamRemoteSubject:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -194,7 +199,7 @@ class IpIamRemoteSubject:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -205,16 +210,18 @@ class IpIamRemoteSubject:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AuthenticConnectionPropss:
-        ip_iam_authentic_connection_props: List[IpIamAuthenticConnectionProps] = field(
+        ip_iam_authentic_connection_props: List[
+            IpIamAuthenticConnectionProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IP-IAM-AUTHENTIC-CONNECTION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

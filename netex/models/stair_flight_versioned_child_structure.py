@@ -19,7 +19,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "Depth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_steps: Optional[int] = field(
         default=None,
@@ -27,7 +27,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "NumberOfSteps",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     step_height: Optional[Decimal] = field(
         default=None,
@@ -35,7 +35,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "StepHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     step_colour_contrast: Optional[bool] = field(
         default=None,
@@ -43,7 +43,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "StepColourContrast",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     handrail_type: Optional[HandrailEnumeration] = field(
         default=None,
@@ -51,7 +51,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "HandrailType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     handrail_height: Optional[Decimal] = field(
         default=None,
@@ -59,7 +59,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "HandrailHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lower_handrail_height: Optional[Decimal] = field(
         default=None,
@@ -67,7 +67,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "LowerHandrailHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     top_end: Optional[StairEndStructure] = field(
         default=None,
@@ -75,7 +75,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "TopEnd",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     bottom_end: Optional[StairEndStructure] = field(
         default=None,
@@ -83,7 +83,7 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "BottomEnd",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     continuous_handrail: Optional[bool] = field(
         default=None,
@@ -91,5 +91,5 @@ class StairFlightVersionedChildStructure(VersionedChildStructure):
             "name": "ContinuousHandrail",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -22,19 +22,29 @@ from npo.models.date_range_matcher_type import DateRangeMatcherType
 from npo.models.date_range_preset_type_enum import DateRangePresetTypeEnum
 from npo.models.descendant_ref_type import DescendantRefType
 from npo.models.description_type import DescriptionType
-from npo.models.duration_facet_result_item_type import DurationFacetResultItemType
-from npo.models.duration_range_facet_item_type import DurationRangeFacetItemType
+from npo.models.duration_facet_result_item_type import (
+    DurationFacetResultItemType,
+)
+from npo.models.duration_range_facet_item_type import (
+    DurationRangeFacetItemType,
+)
 from npo.models.duration_range_facets_type import DurationRangeFacetsType
-from npo.models.duration_range_matcher_list_type import DurationRangeMatcherListType
+from npo.models.duration_range_matcher_list_type import (
+    DurationRangeMatcherListType,
+)
 from npo.models.duration_range_matcher_type import DurationRangeMatcherType
 from npo.models.embed_type import EmbedType
 from npo.models.extended_matcher_type import ExtendedMatcherType
 from npo.models.extended_media_facet_type import ExtendedMediaFacetType
 from npo.models.extended_page_facet_type import ExtendedPageFacetType
-from npo.models.extended_text_matcher_list_type import ExtendedTextMatcherListType
+from npo.models.extended_text_matcher_list_type import (
+    ExtendedTextMatcherListType,
+)
 from npo.models.facet_order_type_enum import FacetOrderTypeEnum
 from npo.models.facet_result_item import FacetResultItem
-from npo.models.generic_media_search_result_type import GenericMediaSearchResultType
+from npo.models.generic_media_search_result_type import (
+    GenericMediaSearchResultType,
+)
 from npo.models.genre import Genre
 from npo.models.genre_type_1 import GenreType1
 from npo.models.genre_type_2 import GenreType2
@@ -73,46 +83,68 @@ from npo.models.media_facets_result_type import MediaFacetsResultType
 from npo.models.media_facets_type import MediaFacetsType
 from npo.models.media_form import MediaForm
 from npo.models.media_form_type import MediaFormType
-from npo.models.media_genre_facet_result_item_type import MediaGenreFacetResultItemType
-from npo.models.media_geo_location_facet_result_item_type import MediaGeoLocationFacetResultItemType
+from npo.models.media_genre_facet_result_item_type import (
+    MediaGenreFacetResultItemType,
+)
+from npo.models.media_geo_location_facet_result_item_type import (
+    MediaGeoLocationFacetResultItemType,
+)
 from npo.models.media_information import MediaInformation
-from npo.models.media_relation_facet_list_type import MediaRelationFacetListType
+from npo.models.media_relation_facet_list_type import (
+    MediaRelationFacetListType,
+)
 from npo.models.media_relation_facet_type import MediaRelationFacetType
-from npo.models.media_relation_search_list_type import MediaRelationSearchListType
+from npo.models.media_relation_search_list_type import (
+    MediaRelationSearchListType,
+)
 from npo.models.media_relation_search_type import MediaRelationSearchType
 from npo.models.media_search_result import MediaSearchResult
 from npo.models.media_search_result_type import MediaSearchResultType
 from npo.models.media_search_results import MediaSearchResults
 from npo.models.media_search_type import MediaSearchType
-from npo.models.media_searchable_term_facet_type import MediaSearchableTermFacetType
+from npo.models.media_searchable_term_facet_type import (
+    MediaSearchableTermFacetType,
+)
 from npo.models.media_sort_type import MediaSortType
 from npo.models.media_sort_type_enum import MediaSortTypeEnum
 from npo.models.media_table_type import MediaTableType
 from npo.models.media_title_facet_list_type import MediaTitleFacetListType
 from npo.models.media_title_facet_type import MediaTitleFacetType
 from npo.models.media_type_enum import MediaTypeEnum
-from npo.models.member_ref_facet_result_item_type import MemberRefFacetResultItemType
+from npo.models.member_ref_facet_result_item_type import (
+    MemberRefFacetResultItemType,
+)
 from npo.models.member_ref_facet_type import MemberRefFacetType
 from npo.models.member_ref_search_type import MemberRefSearchType
 from npo.models.member_ref_type import MemberRefType
 from npo.models.name_type import NameType
-from npo.models.named_term_facet_result_item_type import NamedTermFacetResultItemType
+from npo.models.named_term_facet_result_item_type import (
+    NamedTermFacetResultItemType,
+)
 from npo.models.order_type_enum import OrderTypeEnum
 from npo.models.organization_type import OrganizationType
 from npo.models.owner_type_enum import OwnerTypeEnum
 from npo.models.page import Page
-from npo.models.page_association_search_list_type import PageAssociationSearchListType
+from npo.models.page_association_search_list_type import (
+    PageAssociationSearchListType,
+)
 from npo.models.page_facet_type import PageFacetType
 from npo.models.page_facets_result_type import PageFacetsResultType
-from npo.models.page_genre_facet_result_item_type import PageGenreFacetResultItemType
+from npo.models.page_genre_facet_result_item_type import (
+    PageGenreFacetResultItemType,
+)
 from npo.models.page_relation_facet_list_type import PageRelationFacetListType
 from npo.models.page_relation_facet_type import PageRelationFacetType
-from npo.models.page_relation_search_list_type import PageRelationSearchListType
+from npo.models.page_relation_search_list_type import (
+    PageRelationSearchListType,
+)
 from npo.models.page_relation_search_type import PageRelationSearchType
 from npo.models.page_search_result import PageSearchResult
 from npo.models.page_search_result_type import PageSearchResultType
 from npo.models.page_search_results import PageSearchResults
-from npo.models.page_searchable_term_facet_type import PageSearchableTermFacetType
+from npo.models.page_searchable_term_facet_type import (
+    PageSearchableTermFacetType,
+)
 from npo.models.page_sort_list_type import PageSortListType
 from npo.models.page_sort_type import PageSortType
 from npo.models.page_sort_type_enum import PageSortTypeEnum

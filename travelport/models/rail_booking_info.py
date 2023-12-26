@@ -18,6 +18,7 @@ class RailBookingInfo:
     optional_service
         Indicate the OfferFareItem elements  will be Optional or not.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -27,7 +28,7 @@ class RailBookingInfo:
             "name": "RailFareRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     rail_journey_ref: None | str = field(
         default=None,
@@ -35,12 +36,12 @@ class RailBookingInfo:
             "name": "RailJourneyRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     optional_service: bool = field(
         default=False,
         metadata={
             "name": "OptionalService",
             "type": "Attribute",
-        }
+        },
     )

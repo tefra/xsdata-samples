@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .cancelling_ref import CancellingRef
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -8,9 +8,13 @@ from .charging_policy_ref import ChargingPolicyRef
 from .commercial_profile_ref import CommercialProfileRef
 from .companion_profile_ref import CompanionProfileRef
 from .controllable_element_ref import ControllableElementRef
-from .customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
+from .customer_purchase_package_element_ref import (
+    CustomerPurchasePackageElementRef,
+)
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
-from .distance_matrix_element_inverse_ref import DistanceMatrixElementInverseRef
+from .distance_matrix_element_inverse_ref import (
+    DistanceMatrixElementInverseRef,
+)
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .eligibility_change_policy_ref import EligibilityChangePolicyRef
 from .entitlement_given_ref import EntitlementGivenRef
@@ -45,8 +49,12 @@ from .round_trip_ref import RoundTripRef
 from .routing_ref import RoutingRef
 from .sale_discount_right_ref import SaleDiscountRightRef
 from .sales_offer_package_element_ref import SalesOfferPackageElementRef
-from .sales_offer_package_entitlement_given_ref import SalesOfferPackageEntitlementGivenRef
-from .sales_offer_package_entitlement_required_ref import SalesOfferPackageEntitlementRequiredRef
+from .sales_offer_package_entitlement_given_ref import (
+    SalesOfferPackageEntitlementGivenRef,
+)
+from .sales_offer_package_entitlement_required_ref import (
+    SalesOfferPackageEntitlementRequiredRef,
+)
 from .sales_offer_package_ref import SalesOfferPackageRef
 from .series_constraint_ref import SeriesConstraintRef
 from .service_access_right_ref import ServiceAccessRightRef
@@ -71,7 +79,71 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "priceableObjectRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            CustomerPurchasePackageElementRef,
+            CustomerPurchasePackageRef,
+            ControllableElementRef,
+            ValidableElementRef,
+            SalesOfferPackageEntitlementGivenRef,
+            SalesOfferPackageEntitlementRequiredRef,
+            MinimumStayRef,
+            InterchangingRef,
+            FrequencyOfUseRef,
+            SuspendingRef,
+            UsageValidityPeriodRef,
+            StepLimitRef,
+            RoutingRef,
+            RoundTripRef,
+            LuggageAllowanceRef,
+            EntitlementGivenRef,
+            EntitlementRequiredRef,
+            EligibilityChangePolicyRef,
+            GroupTicketRef,
+            CommercialProfileRef,
+            CompanionProfileRef,
+            UserProfileRef,
+            ProfileParameterRef,
+            SubscribingRef,
+            PenaltyPolicyRef,
+            ChargingPolicyRef,
+            TransferabilityRef,
+            ReplacingRef,
+            RefundingRef,
+            ExchangingRef,
+            ResellingRef,
+            CancellingRef,
+            ReservingRef,
+            PurchaseWindowRef,
+            SalesOfferPackageElementRef,
+            SalesOfferPackageRef,
+            DistanceMatrixElementInverseRef,
+            DistanceMatrixElementRef,
+            FareStructureElementRef,
+            FulfilmentMethodRef,
+            SeriesConstraintRef,
+            CappingRuleRef,
+            EntitlementProductRef,
+            SupplementProductRef,
+            PreassignedFareProductRef,
+            AmountOfPriceUnitProductRef,
+            UsageDiscountRightRef,
+            ThirdPartyProductRef,
+            CappedDiscountRightRef,
+            SaleDiscountRightRef,
+            FareProductRef,
+            ServiceAccessRightRef,
+            TimeIntervalRef,
+            GeographicalIntervalRef,
+            ParkingChargeBandRef,
+            TimeStructureFactorRef,
+            FareQuotaFactorRef,
+            FareDemandFactorRef,
+            QualityStructureFactorRef,
+            GeographicalStructureFactorRef,
+            PriceableObjectRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -382,5 +454,5 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

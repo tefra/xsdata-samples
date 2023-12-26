@@ -9,7 +9,9 @@ from .annotation import (
 from .boolean import Boolean
 from .can_nm_range_config import CanNmRangeConfig
 from .category_string import CategoryString
-from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from .communication_controller_subtypes_enum import (
+    CommunicationControllerSubtypesEnum,
+)
 from .identifier import Identifier
 from .integer import Integer
 from .machine_design_subtypes_enum import MachineDesignSubtypesEnum
@@ -126,6 +128,7 @@ class CanNmNode:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-NM-NODE"
 
@@ -136,7 +139,7 @@ class CanNmNode:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["CanNmNode.ShortNameFragments"] = field(
         default=None,
@@ -144,7 +147,7 @@ class CanNmNode:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -152,7 +155,7 @@ class CanNmNode:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -160,7 +163,7 @@ class CanNmNode:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -168,7 +171,7 @@ class CanNmNode:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -176,7 +179,7 @@ class CanNmNode:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -184,7 +187,7 @@ class CanNmNode:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CanNmNode.Annotations"] = field(
         default=None,
@@ -192,7 +195,7 @@ class CanNmNode:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     controller_ref: Optional["CanNmNode.ControllerRef"] = field(
         default=None,
@@ -200,7 +203,7 @@ class CanNmNode:
             "name": "CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     machine_ref: Optional["CanNmNode.MachineRef"] = field(
         default=None,
@@ -208,7 +211,7 @@ class CanNmNode:
             "name": "MACHINE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_coord_cluster: Optional[PositiveInteger] = field(
         default=None,
@@ -216,7 +219,7 @@ class CanNmNode:
             "name": "NM-COORD-CLUSTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_coordinator_role: Optional[NmCoordinatorRoleEnum] = field(
         default=None,
@@ -224,7 +227,7 @@ class CanNmNode:
             "name": "NM-COORDINATOR-ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_if_ecu_ref: Optional["CanNmNode.NmIfEcuRef"] = field(
         default=None,
@@ -232,7 +235,7 @@ class CanNmNode:
             "name": "NM-IF-ECU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_node_id: Optional[Integer] = field(
         default=None,
@@ -240,7 +243,7 @@ class CanNmNode:
             "name": "NM-NODE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_passive_mode_enabled: Optional[Boolean] = field(
         default=None,
@@ -248,7 +251,7 @@ class CanNmNode:
             "name": "NM-PASSIVE-MODE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rx_nm_pdu_refs: Optional["CanNmNode.RxNmPduRefs"] = field(
         default=None,
@@ -256,7 +259,7 @@ class CanNmNode:
             "name": "RX-NM-PDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tx_nm_pdu_refs: Optional["CanNmNode.TxNmPduRefs"] = field(
         default=None,
@@ -264,7 +267,7 @@ class CanNmNode:
             "name": "TX-NM-PDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -272,7 +275,7 @@ class CanNmNode:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     all_nm_messages_keep_awake: Optional[Boolean] = field(
         default=None,
@@ -280,7 +283,7 @@ class CanNmNode:
             "name": "ALL-NM-MESSAGES-KEEP-AWAKE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_car_wake_up_filter_enabled: Optional[Boolean] = field(
         default=None,
@@ -288,7 +291,7 @@ class CanNmNode:
             "name": "NM-CAR-WAKE-UP-FILTER-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_car_wake_up_rx_enabled: Optional[Boolean] = field(
         default=None,
@@ -296,7 +299,7 @@ class CanNmNode:
             "name": "NM-CAR-WAKE-UP-RX-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_msg_cycle_offset: Optional[TimeValue] = field(
         default=None,
@@ -304,7 +307,7 @@ class CanNmNode:
             "name": "NM-MSG-CYCLE-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_msg_reduced_time: Optional[TimeValue] = field(
         default=None,
@@ -312,7 +315,7 @@ class CanNmNode:
             "name": "NM-MSG-REDUCED-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_range_config: Optional[CanNmRangeConfig] = field(
         default=None,
@@ -320,14 +323,14 @@ class CanNmNode:
             "name": "NM-RANGE-CONFIG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -335,14 +338,14 @@ class CanNmNode:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -353,7 +356,7 @@ class CanNmNode:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -364,7 +367,7 @@ class CanNmNode:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -375,7 +378,7 @@ class CanNmNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -386,7 +389,7 @@ class CanNmNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -397,7 +400,7 @@ class CanNmNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -408,7 +411,7 @@ class CanNmNode:
                 "name": "RX-NM-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -419,7 +422,7 @@ class CanNmNode:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -430,7 +433,7 @@ class CanNmNode:
                 "name": "TX-NM-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -441,5 +444,5 @@ class CanNmNode:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

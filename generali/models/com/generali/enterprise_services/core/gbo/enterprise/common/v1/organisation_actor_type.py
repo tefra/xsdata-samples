@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import BaseComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import (
+    BaseComponentType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+)
 
 
 @dataclass
@@ -23,6 +31,7 @@ class OrganisationActorType(BaseComponentType):
         D&amp;B.
     :ivar national_id:
     """
+
     legal_name: Optional[TextType] = field(
         default=None,
         metadata={
@@ -30,7 +39,7 @@ class OrganisationActorType(BaseComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        }
+        },
     )
     gunsnumber: Optional[str] = field(
         default=None,
@@ -41,7 +50,7 @@ class OrganisationActorType(BaseComponentType):
             "required": True,
             "length": 10,
             "pattern": r"G([0-9]{9})",
-        }
+        },
     )
     dunsnumber: Optional[str] = field(
         default=None,
@@ -52,7 +61,7 @@ class OrganisationActorType(BaseComponentType):
             "required": True,
             "length": 9,
             "pattern": r"([0-9]{9})",
-        }
+        },
     )
     national_id: Optional[Idtype] = field(
         default=None,
@@ -61,5 +70,5 @@ class OrganisationActorType(BaseComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "required": True,
-        }
+        },
     )

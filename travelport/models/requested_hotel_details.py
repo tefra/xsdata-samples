@@ -14,6 +14,7 @@ class RequestedHotelDetails(TypeHotelDetails):
     hotel_type
         Supported Providers:1G/1V/1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -22,5 +23,5 @@ class RequestedHotelDetails(TypeHotelDetails):
         metadata={
             "name": "HotelType",
             "type": "Element",
-        }
+        },
     )

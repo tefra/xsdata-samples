@@ -10,5 +10,5 @@ class DisplayAssignmentRefStructure(AssignmentRefStructure):
         default=1,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

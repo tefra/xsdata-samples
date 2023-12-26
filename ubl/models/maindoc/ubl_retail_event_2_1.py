@@ -40,7 +40,7 @@ class RetailEventType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -48,7 +48,7 @@ class RetailEventType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -56,7 +56,7 @@ class RetailEventType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -64,7 +64,7 @@ class RetailEventType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -72,7 +72,7 @@ class RetailEventType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -81,7 +81,7 @@ class RetailEventType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -89,7 +89,7 @@ class RetailEventType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -97,7 +97,7 @@ class RetailEventType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -105,7 +105,7 @@ class RetailEventType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -113,7 +113,7 @@ class RetailEventType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -121,7 +121,7 @@ class RetailEventType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     retail_event_name: Optional[RetailEventName] = field(
         default=None,
@@ -129,7 +129,7 @@ class RetailEventType:
             "name": "RetailEventName",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     retail_event_status_code: Optional[RetailEventStatusCode] = field(
         default=None,
@@ -138,7 +138,7 @@ class RetailEventType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     seller_event_id: Optional[SellerEventId] = field(
         default=None,
@@ -146,7 +146,7 @@ class RetailEventType:
             "name": "SellerEventID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     buyer_event_id: Optional[BuyerEventId] = field(
         default=None,
@@ -154,7 +154,7 @@ class RetailEventType:
             "name": "BuyerEventID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     description: Tuple[Description, ...] = field(
         default_factory=tuple,
@@ -162,7 +162,7 @@ class RetailEventType:
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     period: Optional[Period] = field(
         default=None,
@@ -171,7 +171,7 @@ class RetailEventType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     original_document_reference: Tuple[OriginalDocumentReference, ...] = field(
         default_factory=tuple,
@@ -179,7 +179,7 @@ class RetailEventType:
             "name": "OriginalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -187,7 +187,7 @@ class RetailEventType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     sender_party: Optional[SenderParty] = field(
         default=None,
@@ -196,7 +196,7 @@ class RetailEventType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -205,7 +205,7 @@ class RetailEventType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     buyer_customer_party: Optional[BuyerCustomerParty] = field(
         default=None,
@@ -213,7 +213,7 @@ class RetailEventType:
             "name": "BuyerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     seller_supplier_party: Optional[SellerSupplierParty] = field(
         default=None,
@@ -221,7 +221,7 @@ class RetailEventType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     event_comment: Tuple[EventComment, ...] = field(
         default_factory=tuple,
@@ -229,7 +229,7 @@ class RetailEventType:
             "name": "EventComment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     promotional_event: Optional[PromotionalEvent] = field(
         default=None,
@@ -237,7 +237,7 @@ class RetailEventType:
             "name": "PromotionalEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     miscellaneous_event: Optional[MiscellaneousEvent] = field(
         default=None,
@@ -245,11 +245,13 @@ class RetailEventType:
             "name": "MiscellaneousEvent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
 
 
 @dataclass(frozen=True)
 class RetailEvent(RetailEventType):
     class Meta:
-        namespace = "urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2"
+        namespace = (
+            "urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2"
+        )

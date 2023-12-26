@@ -3,10 +3,16 @@ from dataclasses import dataclass, field
 from travelport.models.base_req_5 import BaseReq5
 from travelport.models.profile_data_2 import ProfileData2
 from travelport.models.profile_link_2 import ProfileLink2
-from travelport.models.provisioning_code_profile_type_2 import ProvisioningCodeProfileType2
-from travelport.models.type_profile_entity_status_2 import TypeProfileEntityStatus2
+from travelport.models.provisioning_code_profile_type_2 import (
+    ProvisioningCodeProfileType2,
+)
+from travelport.models.type_profile_entity_status_2 import (
+    TypeProfileEntityStatus2,
+)
 from travelport.models.type_profile_type_7 import TypeProfileType7
-from travelport.models.unique_profile_id_profile_type_2 import UniqueProfileIdProfileType2
+from travelport.models.unique_profile_id_profile_type_2 import (
+    UniqueProfileIdProfileType2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -48,6 +54,7 @@ class ProfileCreateReq2(BaseReq5):
         profile, without masking applied. (Any such data in parent profiles
         will still be masked.) Requires special authorization.
     """
+
     class Meta:
         name = "ProfileCreateReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -57,7 +64,7 @@ class ProfileCreateReq2(BaseReq5):
         metadata={
             "name": "ProfileParent",
             "type": "Element",
-        }
+        },
     )
     profile_data: None | ProfileData2 = field(
         default=None,
@@ -65,7 +72,7 @@ class ProfileCreateReq2(BaseReq5):
             "name": "ProfileData",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     profile_link: list[ProfileLink2] = field(
         default_factory=list,
@@ -73,7 +80,7 @@ class ProfileCreateReq2(BaseReq5):
             "name": "ProfileLink",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -81,21 +88,21 @@ class ProfileCreateReq2(BaseReq5):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: TypeProfileEntityStatus2 = field(
         default=TypeProfileEntityStatus2.ACTIVE,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     template_id: None | int = field(
         default=None,
         metadata={
             "name": "TemplateID",
             "type": "Attribute",
-        }
+        },
     )
     template_version: None | int = field(
         default=None,
@@ -103,28 +110,28 @@ class ProfileCreateReq2(BaseReq5):
             "name": "TemplateVersion",
             "type": "Attribute",
             "min_inclusive": 0,
-        }
+        },
     )
     hierarchy_level_id: None | str = field(
         default=None,
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-        }
+        },
     )
     return_profile: bool = field(
         default=False,
         metadata={
             "name": "ReturnProfile",
             "type": "Attribute",
-        }
+        },
     )
     show_data_unmasked: bool = field(
         default=False,
         metadata={
             "name": "ShowDataUnmasked",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -142,26 +149,27 @@ class ProfileCreateReq2(BaseReq5):
             place of Profile ID. Cannot be used with ProfileParentAdd,
             ProfileParentDelete or ProfileChildSearch.
         """
+
         profile_id: None | int = field(
             default=None,
             metadata={
                 "name": "ProfileID",
                 "type": "Element",
-            }
+            },
         )
         provisioning_code: None | ProfileCreateReq2.ProfileParent.ProvisioningCode = field(
             default=None,
             metadata={
                 "name": "ProvisioningCode",
                 "type": "Element",
-            }
+            },
         )
         unique_profile_id: None | ProfileCreateReq2.ProfileParent.UniqueProfileId = field(
             default=None,
             metadata={
                 "name": "UniqueProfileID",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -174,13 +182,14 @@ class ProfileCreateReq2(BaseReq5):
                 Specify the Profile Type (limited to only the ones where
                 ProvisioningCode is relevant)
             """
+
             value: str = field(
                 default="",
                 metadata={
                     "required": True,
                     "min_length": 1,
                     "max_length": 128,
-                }
+                },
             )
             profile_type: None | ProvisioningCodeProfileType2 = field(
                 default=None,
@@ -188,7 +197,7 @@ class ProfileCreateReq2(BaseReq5):
                     "name": "ProfileType",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
         @dataclass
@@ -206,13 +215,14 @@ class ProfileCreateReq2(BaseReq5):
                 system will determine 'AgencyCode' by Agent's WAB/target
                 Branch or Agent's agency.
             """
+
             value: str = field(
                 default="",
                 metadata={
                     "required": True,
                     "min_length": 6,
                     "max_length": 128,
-                }
+                },
             )
             profile_type: None | UniqueProfileIdProfileType2 = field(
                 default=None,
@@ -220,7 +230,7 @@ class ProfileCreateReq2(BaseReq5):
                     "name": "ProfileType",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
             agency_code: None | str = field(
                 default=None,
@@ -229,5 +239,5 @@ class ProfileCreateReq2(BaseReq5):
                     "type": "Attribute",
                     "min_length": 1,
                     "max_length": 25,
-                }
+                },
             )

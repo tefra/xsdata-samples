@@ -1,10 +1,12 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDate
 from .capping_rule_price_ref import CappingRulePriceRef
 from .controllable_element_price_ref import ControllableElementPriceRef
-from .customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
+from .customer_purchase_package_price_ref import (
+    CustomerPurchasePackagePriceRef,
+)
 from .discounting_rule import DiscountingRule
 from .discounting_rule_ref import DiscountingRuleRef
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
@@ -19,7 +21,9 @@ from .limiting_rule_in_context import LimitingRuleInContext
 from .limiting_rule_ref import LimitingRuleRef
 from .multilingual_string import MultilingualString
 from .parking_price_ref import ParkingPriceRef
-from .price_rule_step_results_rel_structure import PriceRuleStepResultsRelStructure
+from .price_rule_step_results_rel_structure import (
+    PriceRuleStepResultsRelStructure,
+)
 from .price_unit_ref import PriceUnitRef
 from .pricing_rule import PricingRule
 from .pricing_rule_ref import PricingRuleRef
@@ -45,7 +49,7 @@ class CellPriceStructure:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -53,7 +57,7 @@ class CellPriceStructure:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -61,7 +65,7 @@ class CellPriceStructure:
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_date: Optional[XmlDate] = field(
         default=None,
@@ -69,7 +73,7 @@ class CellPriceStructure:
             "name": "StartDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_date: Optional[XmlDate] = field(
         default=None,
@@ -77,7 +81,7 @@ class CellPriceStructure:
             "name": "EndDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     amount: Optional[Decimal] = field(
         default=None,
@@ -85,7 +89,7 @@ class CellPriceStructure:
             "name": "Amount",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     currency: Optional[str] = field(
         default=None,
@@ -96,7 +100,7 @@ class CellPriceStructure:
             "min_length": 3,
             "max_length": 3,
             "pattern": r"[A-Z][A-Z][A-Z]",
-        }
+        },
     )
     price_unit_ref: Optional[PriceUnitRef] = field(
         default=None,
@@ -104,7 +108,7 @@ class CellPriceStructure:
             "name": "PriceUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     units: Optional[Decimal] = field(
         default=None,
@@ -112,7 +116,7 @@ class CellPriceStructure:
             "name": "Units",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rule_step_results: Optional[PriceRuleStepResultsRelStructure] = field(
         default=None,
@@ -120,7 +124,7 @@ class CellPriceStructure:
             "name": "ruleStepResults",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_allowed: Optional[bool] = field(
         default=None,
@@ -128,7 +132,7 @@ class CellPriceStructure:
             "name": "IsAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     pricing_service_ref: Optional[PricingServiceRef] = field(
         default=None,
@@ -136,9 +140,30 @@ class CellPriceStructure:
             "name": "PricingServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            CustomerPurchasePackagePriceRef,
+            ParkingPriceRef,
+            TimeIntervalPriceRef,
+            TimeUnitPriceRef,
+            QualityStructureFactorPriceRef,
+            ControllableElementPriceRef,
+            ValidableElementPriceRef,
+            GeographicalIntervalPriceRef,
+            GeographicalUnitPriceRef,
+            UsageParameterPriceRef,
+            SalesOfferPackagePriceRef,
+            DistanceMatrixElementPriceRef,
+            FareStructureElementPriceRef,
+            FulfilmentMethodPriceRef,
+            SeriesConstraintPriceRef,
+            CappingRulePriceRef,
+            FareProductPriceRef,
+            FarePriceRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -234,9 +259,19 @@ class CellPriceStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            LimitingRuleRef,
+            DiscountingRuleRef,
+            PricingRuleRef,
+            LimitingRuleInContext,
+            LimitingRule,
+            DiscountingRule,
+            PricingRule,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -277,7 +312,7 @@ class CellPriceStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     can_be_cumulative: Optional[bool] = field(
         default=None,
@@ -285,7 +320,7 @@ class CellPriceStructure:
             "name": "CanBeCumulative",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rounding_ref: Optional[RoundingRef] = field(
         default=None,
@@ -293,7 +328,7 @@ class CellPriceStructure:
             "name": "RoundingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     ranking: Optional[int] = field(
         default=None,
@@ -301,7 +336,7 @@ class CellPriceStructure:
             "name": "Ranking",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_price: Optional[Decimal] = field(
         default=None,
@@ -309,7 +344,7 @@ class CellPriceStructure:
             "name": "MinimumPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -317,7 +352,7 @@ class CellPriceStructure:
             "name": "MinimumPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_price_as_multiple: Optional[int] = field(
         default=None,
@@ -325,7 +360,7 @@ class CellPriceStructure:
             "name": "MinimumPriceAsMultiple",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_price: Optional[Decimal] = field(
         default=None,
@@ -333,7 +368,7 @@ class CellPriceStructure:
             "name": "MaximumPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -341,7 +376,7 @@ class CellPriceStructure:
             "name": "MaximumPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_price_as_multiple: Optional[int] = field(
         default=None,
@@ -349,7 +384,7 @@ class CellPriceStructure:
             "name": "MaximumPriceAsMultiple",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_limit_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -357,7 +392,7 @@ class CellPriceStructure:
             "name": "MinimumLimitPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_limit_price: Optional[Decimal] = field(
         default=None,
@@ -365,7 +400,7 @@ class CellPriceStructure:
             "name": "MinimumLimitPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_limit_price_as_percentage: Optional[Decimal] = field(
         default=None,
@@ -373,7 +408,7 @@ class CellPriceStructure:
             "name": "MaximumLimitPriceAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_limit_price: Optional[Decimal] = field(
         default=None,
@@ -381,5 +416,5 @@ class CellPriceStructure:
             "name": "MaximumLimitPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

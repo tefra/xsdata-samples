@@ -23,6 +23,7 @@ class CategoryInfo:
     total_count
         The PNR count of a all categories.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -32,14 +33,14 @@ class CategoryInfo:
             "name": "DateRangeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     title: None | str = field(
         default=None,
         metadata={
             "name": "Title",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
@@ -47,7 +48,7 @@ class CategoryInfo:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     count: None | int = field(
         default=None,
@@ -55,7 +56,7 @@ class CategoryInfo:
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     total_count: None | int = field(
         default=None,
@@ -63,5 +64,5 @@ class CategoryInfo:
             "name": "TotalCount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

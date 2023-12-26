@@ -13,5 +13,5 @@ class AudibleSignalsAvailable:
         default=LimitationStatusEnumeration.FALSE,
         metadata={
             "required": True,
-        }
+        },
     )

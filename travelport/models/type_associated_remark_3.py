@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.type_element_status_4 import TypeElementStatus4
-from travelport.models.type_remark_with_traveler_ref_3 import TypeRemarkWithTravelerRef3
+from travelport.models.type_remark_with_traveler_ref_3 import (
+    TypeRemarkWithTravelerRef3,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
@@ -23,6 +25,7 @@ class TypeAssociatedRemark3(TypeRemarkWithTravelerRef3):
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "typeAssociatedRemark"
 
@@ -31,19 +34,19 @@ class TypeAssociatedRemark3(TypeRemarkWithTravelerRef3):
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus4 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

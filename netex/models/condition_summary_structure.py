@@ -16,7 +16,7 @@ class ConditionSummaryStructure:
             "name": "FareStructureType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tariff_basis: Optional[TariffBasisEnumeration] = field(
         default=None,
@@ -24,7 +24,7 @@ class ConditionSummaryStructure:
             "name": "TariffBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_notices: Optional[bool] = field(
         default=None,
@@ -32,7 +32,7 @@ class ConditionSummaryStructure:
             "name": "HasNotices",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     provides_card: Optional[bool] = field(
         default=None,
@@ -40,7 +40,7 @@ class ConditionSummaryStructure:
             "name": "ProvidesCard",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     goes_on_card: Optional[bool] = field(
         default=None,
@@ -48,7 +48,7 @@ class ConditionSummaryStructure:
             "name": "GoesOnCard",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_personal: Optional[bool] = field(
         default=None,
@@ -56,7 +56,7 @@ class ConditionSummaryStructure:
             "name": "IsPersonal",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     requires_photo: Optional[bool] = field(
         default=None,
@@ -64,7 +64,7 @@ class ConditionSummaryStructure:
             "name": "RequiresPhoto",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     must_carry: Optional[bool] = field(
         default=None,
@@ -72,7 +72,7 @@ class ConditionSummaryStructure:
             "name": "MustCarry",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     requires_account: Optional[bool] = field(
         default=None,
@@ -80,7 +80,7 @@ class ConditionSummaryStructure:
             "name": "RequiresAccount",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_supplement: Optional[bool] = field(
         default=None,
@@ -88,7 +88,7 @@ class ConditionSummaryStructure:
             "name": "IsSupplement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     requires_entitlement: Optional[bool] = field(
         default=None,
@@ -96,7 +96,7 @@ class ConditionSummaryStructure:
             "name": "RequiresEntitlement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gives_entitlement: Optional[bool] = field(
         default=None,
@@ -104,15 +104,17 @@ class ConditionSummaryStructure:
             "name": "GivesEntitlement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    has_operator_restrictions: Optional[OperatorRestrictionsEnumeration] = field(
+    has_operator_restrictions: Optional[
+        OperatorRestrictionsEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "HasOperatorRestrictions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_travel_time_restrictions: Optional[bool] = field(
         default=None,
@@ -120,7 +122,7 @@ class ConditionSummaryStructure:
             "name": "HasTravelTimeRestrictions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_route_restrictions: Optional[bool] = field(
         default=None,
@@ -128,7 +130,7 @@ class ConditionSummaryStructure:
             "name": "HasRouteRestrictions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     train_restrictions: Optional[TrainRestrictionsEnumeration] = field(
         default=None,
@@ -136,7 +138,7 @@ class ConditionSummaryStructure:
             "name": "TrainRestrictions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_zone_restrictions: Optional[bool] = field(
         default=None,
@@ -144,7 +146,7 @@ class ConditionSummaryStructure:
             "name": "HasZoneRestrictions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     can_break_journey: Optional[bool] = field(
         default=None,
@@ -152,7 +154,7 @@ class ConditionSummaryStructure:
             "name": "CanBreakJourney",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     return_trips_only: Optional[bool] = field(
         default=None,
@@ -160,7 +162,7 @@ class ConditionSummaryStructure:
             "name": "ReturnTripsOnly",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     night_train: Optional[bool] = field(
         default=None,
@@ -168,7 +170,7 @@ class ConditionSummaryStructure:
             "name": "NightTrain",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     can_change_class: Optional[bool] = field(
         default=None,
@@ -176,7 +178,7 @@ class ConditionSummaryStructure:
             "name": "CanChangeClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_refundable: Optional[bool] = field(
         default=None,
@@ -184,7 +186,7 @@ class ConditionSummaryStructure:
             "name": "IsRefundable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_exchangable: Optional[bool] = field(
         default=None,
@@ -192,7 +194,7 @@ class ConditionSummaryStructure:
             "name": "IsExchangable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_exchange_fee: Optional[bool] = field(
         default=None,
@@ -200,7 +202,7 @@ class ConditionSummaryStructure:
             "name": "HasExchangeFee",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_discounted_fares: Optional[bool] = field(
         default=None,
@@ -208,7 +210,7 @@ class ConditionSummaryStructure:
             "name": "HasDiscountedFares",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     allow_additional_discounts: Optional[bool] = field(
         default=None,
@@ -216,7 +218,7 @@ class ConditionSummaryStructure:
             "name": "AllowAdditionalDiscounts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     allow_companion_discounts: Optional[bool] = field(
         default=None,
@@ -224,7 +226,7 @@ class ConditionSummaryStructure:
             "name": "AllowCompanionDiscounts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_minimum_price: Optional[bool] = field(
         default=None,
@@ -232,7 +234,7 @@ class ConditionSummaryStructure:
             "name": "HasMinimumPrice",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     requires_positive_balance: Optional[bool] = field(
         default=None,
@@ -240,7 +242,7 @@ class ConditionSummaryStructure:
             "name": "RequiresPositiveBalance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_purchase_conditions: Optional[bool] = field(
         default=None,
@@ -248,7 +250,7 @@ class ConditionSummaryStructure:
             "name": "HasPurchaseConditions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_dynamic_pricing: Optional[bool] = field(
         default=None,
@@ -256,7 +258,7 @@ class ConditionSummaryStructure:
             "name": "HasDynamicPricing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     requires_reservation: Optional[bool] = field(
         default=None,
@@ -264,7 +266,7 @@ class ConditionSummaryStructure:
             "name": "RequiresReservation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_reservation_fee: Optional[bool] = field(
         default=None,
@@ -272,7 +274,7 @@ class ConditionSummaryStructure:
             "name": "HasReservationFee",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_quota: Optional[bool] = field(
         default=None,
@@ -280,5 +282,5 @@ class ConditionSummaryStructure:
             "name": "HasQuota",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

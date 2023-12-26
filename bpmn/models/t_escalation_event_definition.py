@@ -16,5 +16,5 @@ class TEscalationEventDefinition(TEventDefinition):
         metadata={
             "name": "escalationRef",
             "type": "Attribute",
-        }
+        },
     )

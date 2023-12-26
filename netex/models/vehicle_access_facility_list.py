@@ -16,5 +16,5 @@ class VehicleAccessFacilityList:
         ],
         metadata={
             "tokens": True,
-        }
+        },
     )

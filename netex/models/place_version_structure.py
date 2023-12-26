@@ -17,5 +17,5 @@ class PlaceVersionStructure(ZoneVersionStructure):
             "name": "placeTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

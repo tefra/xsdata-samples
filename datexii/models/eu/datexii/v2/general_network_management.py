@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.general_network_management_type_enum import GeneralNetworkManagementTypeEnum
+from datexii.models.eu.datexii.v2.general_network_management_type_enum import (
+    GeneralNetworkManagementTypeEnum,
+)
 from datexii.models.eu.datexii.v2.network_management import NetworkManagement
-from datexii.models.eu.datexii.v2.person_category_enum import PersonCategoryEnum
+from datexii.models.eu.datexii.v2.person_category_enum import (
+    PersonCategoryEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -22,14 +26,17 @@ class GeneralNetworkManagement(NetworkManagement):
         set to "trafficBeingManuallyDirected").
     :ivar general_network_management_extension:
     """
-    general_network_management_type: Optional[GeneralNetworkManagementTypeEnum] = field(
+
+    general_network_management_type: Optional[
+        GeneralNetworkManagementTypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "generalNetworkManagementType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     traffic_manually_directed_by: Optional[PersonCategoryEnum] = field(
         default=None,
@@ -37,7 +44,7 @@ class GeneralNetworkManagement(NetworkManagement):
             "name": "trafficManuallyDirectedBy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     general_network_management_extension: Optional[ExtensionType] = field(
         default=None,
@@ -45,5 +52,5 @@ class GeneralNetworkManagement(NetworkManagement):
             "name": "generalNetworkManagementExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

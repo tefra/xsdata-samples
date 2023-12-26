@@ -19,6 +19,7 @@ class FilterExitManagement:
         range.
     :ivar filter_exit_management_extension:
     """
+
     filter_end: Optional[bool] = field(
         default=None,
         metadata={
@@ -26,7 +27,7 @@ class FilterExitManagement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     filter_out_of_range: Optional[bool] = field(
         default=None,
@@ -35,7 +36,7 @@ class FilterExitManagement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     filter_exit_management_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,5 +44,5 @@ class FilterExitManagement:
             "name": "filterExitManagementExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeVarianceType(Enum):
     """
     Type code for Variance.
     """
+
     ACTUAL = "Actual"
     ESTIMATED = "Estimated"
     CANCELED = "Canceled"

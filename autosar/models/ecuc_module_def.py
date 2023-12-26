@@ -25,7 +25,9 @@ from .ecuc_validation_condition import EcucValidationCondition
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .string import String
@@ -143,6 +145,7 @@ class EcucModuleDef:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECUC-MODULE-DEF"
 
@@ -153,7 +156,7 @@ class EcucModuleDef:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["EcucModuleDef.ShortNameFragments"] = field(
         default=None,
@@ -161,7 +164,7 @@ class EcucModuleDef:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -169,7 +172,7 @@ class EcucModuleDef:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -177,7 +180,7 @@ class EcucModuleDef:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -185,7 +188,7 @@ class EcucModuleDef:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -193,7 +196,7 @@ class EcucModuleDef:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -201,7 +204,7 @@ class EcucModuleDef:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EcucModuleDef.Annotations"] = field(
         default=None,
@@ -209,7 +212,7 @@ class EcucModuleDef:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -217,7 +220,7 @@ class EcucModuleDef:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_policys: Optional["EcucModuleDef.BlueprintPolicys"] = field(
         default=None,
@@ -225,7 +228,7 @@ class EcucModuleDef:
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -233,23 +236,27 @@ class EcucModuleDef:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    related_trace_item_ref: Optional["EcucModuleDef.RelatedTraceItemRef"] = field(
+    related_trace_item_ref: Optional[
+        "EcucModuleDef.RelatedTraceItemRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecuc_validation_conds: Optional["EcucModuleDef.EcucValidationConds"] = field(
+    ecuc_validation_conds: Optional[
+        "EcucModuleDef.EcucValidationConds"
+    ] = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecuc_cond: Optional[EcucConditionSpecification] = field(
         default=None,
@@ -257,7 +264,7 @@ class EcucModuleDef:
             "name": "ECUC-COND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lower_multiplicity: Optional[PositiveIntegerValueVariationPoint] = field(
         default=None,
@@ -265,7 +272,7 @@ class EcucModuleDef:
             "name": "LOWER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity: Optional[PositiveIntegerValueVariationPoint] = field(
         default=None,
@@ -273,7 +280,7 @@ class EcucModuleDef:
             "name": "UPPER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity_infinite: Optional[BooleanValueVariationPoint] = field(
         default=None,
@@ -281,7 +288,7 @@ class EcucModuleDef:
             "name": "UPPER-MULTIPLICITY-INFINITE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     scope: Optional[EcucScopeEnum] = field(
         default=None,
@@ -289,7 +296,7 @@ class EcucModuleDef:
             "name": "SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     api_service_prefix: Optional[CIdentifier] = field(
         default=None,
@@ -297,7 +304,7 @@ class EcucModuleDef:
             "name": "API-SERVICE-PREFIX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     post_build_variant_support: Optional[Boolean] = field(
         default=None,
@@ -305,23 +312,27 @@ class EcucModuleDef:
             "name": "POST-BUILD-VARIANT-SUPPORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    refined_module_def_ref: Optional["EcucModuleDef.RefinedModuleDefRef"] = field(
+    refined_module_def_ref: Optional[
+        "EcucModuleDef.RefinedModuleDefRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REFINED-MODULE-DEF-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    supported_config_variants: Optional["EcucModuleDef.SupportedConfigVariants"] = field(
+    supported_config_variants: Optional[
+        "EcucModuleDef.SupportedConfigVariants"
+    ] = field(
         default=None,
         metadata={
             "name": "SUPPORTED-CONFIG-VARIANTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     containers: Optional["EcucModuleDef.Containers"] = field(
         default=None,
@@ -329,14 +340,14 @@ class EcucModuleDef:
             "name": "CONTAINERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -344,14 +355,14 @@ class EcucModuleDef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -362,7 +373,7 @@ class EcucModuleDef:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -373,7 +384,7 @@ class EcucModuleDef:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -384,15 +395,17 @@ class EcucModuleDef:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -400,7 +413,7 @@ class EcucModuleDef:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -411,7 +424,7 @@ class EcucModuleDef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -422,7 +435,7 @@ class EcucModuleDef:
                 "name": "ECUC-VALIDATION-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -433,7 +446,7 @@ class EcucModuleDef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -447,13 +460,14 @@ class EcucModuleDef:
             VENDOR_SPECIFIC_MODULE_DEFINITION then this attribute is
             mandatory.
         """
+
         supported_config_variant: List[EcucConfigurationVariantEnum] = field(
             default_factory=list,
             metadata={
                 "name": "SUPPORTED-CONFIG-VARIANT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -464,7 +478,7 @@ class EcucModuleDef:
                 "name": "ECUC-CHOICE-CONTAINER-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ecuc_param_conf_container_def: List[EcucParamConfContainerDef] = field(
             default_factory=list,
@@ -472,5 +486,5 @@ class EcucModuleDef:
                 "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

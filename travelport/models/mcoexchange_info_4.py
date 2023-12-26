@@ -24,6 +24,7 @@ class McoexchangeInfo4:
     iatacode
         IATA code of the issuing agency.
     """
+
     class Meta:
         name = "MCOExchangeInfo"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -33,7 +34,7 @@ class McoexchangeInfo4:
         metadata={
             "name": "FormOfPayment",
             "type": "Element",
-        }
+        },
     )
     exchanged_coupon: list[ExchangedCoupon4] = field(
         default_factory=list,
@@ -41,7 +42,7 @@ class McoexchangeInfo4:
             "name": "ExchangedCoupon",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     original_ticket_number: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class McoexchangeInfo4:
             "name": "OriginalTicketNumber",
             "type": "Attribute",
             "length": 13,
-        }
+        },
     )
     original_city_code: None | str = field(
         default=None,
@@ -57,7 +58,7 @@ class McoexchangeInfo4:
             "name": "OriginalCityCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     original_ticket_date: None | str = field(
         default=None,
@@ -65,7 +66,7 @@ class McoexchangeInfo4:
             "name": "OriginalTicketDate",
             "type": "Attribute",
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     iatacode: None | str = field(
         default=None,
@@ -73,5 +74,5 @@ class McoexchangeInfo4:
             "name": "IATACode",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )

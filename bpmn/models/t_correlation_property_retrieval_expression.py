@@ -19,7 +19,7 @@ class TCorrelationPropertyRetrievalExpression(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        }
+        },
     )
     message_ref: Optional[QName] = field(
         default=None,
@@ -27,5 +27,5 @@ class TCorrelationPropertyRetrievalExpression(TBaseElement):
             "name": "messageRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -17,7 +17,7 @@ class DeltaStructure:
             "name": "SimpleObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     from_version_ref: Optional[SimpleObjectRefStructure] = field(
         default=None,
@@ -25,7 +25,7 @@ class DeltaStructure:
             "name": "FromVersionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_version_ref: Optional[SimpleObjectRefStructure] = field(
         default=None,
@@ -34,7 +34,7 @@ class DeltaStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     modification: Optional[ModificationEnumeration] = field(
         default=None,
@@ -42,7 +42,7 @@ class DeltaStructure:
             "name": "Modification",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     delta_values: Optional[DeltaValuesRelStructure] = field(
         default=None,
@@ -50,17 +50,17 @@ class DeltaStructure:
             "name": "deltaValues",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     created: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

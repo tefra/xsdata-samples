@@ -21,6 +21,7 @@ class OccupancyDetectionTypeEnum(Enum):
     :cvar OTHER: Other.
     :cvar UNKNOWN: Unknown.
     """
+
     NONE = "none"
     BALANCING = "balancing"
     SINGLE_SPACE_DETECTION = "singleSpaceDetection"

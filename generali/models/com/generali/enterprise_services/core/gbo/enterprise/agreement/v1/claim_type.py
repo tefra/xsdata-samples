@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import AddressType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
+    AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.address_type import (
+    AddressType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -16,7 +22,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     policy_number: Optional[str] = field(
         default=None,
@@ -25,7 +31,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     status: Optional[str] = field(
         default=None,
@@ -34,7 +40,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     source: Optional[str] = field(
         default=None,
@@ -43,7 +49,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     contact: Optional[str] = field(
         default=None,
@@ -52,7 +58,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     interest: Optional[str] = field(
         default=None,
@@ -60,7 +66,7 @@ class ClaimType:
             "name": "Interest",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     date_open: Optional[XmlDateTime] = field(
         default=None,
@@ -69,7 +75,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     date_last_transaction: Optional[XmlDateTime] = field(
         default=None,
@@ -78,7 +84,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     date_of_loss: Optional[XmlDateTime] = field(
         default=None,
@@ -86,7 +92,7 @@ class ClaimType:
             "name": "DateOfLoss",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     date_reported: Optional[XmlDateTime] = field(
         default=None,
@@ -94,7 +100,7 @@ class ClaimType:
             "name": "DateReported",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     date_last_updated: Optional[XmlDateTime] = field(
         default=None,
@@ -103,7 +109,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     last_update_by: Optional[str] = field(
         default=None,
@@ -112,7 +118,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     adjuster: Optional[str] = field(
         default=None,
@@ -120,7 +126,7 @@ class ClaimType:
             "name": "Adjuster",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     comments: Optional[str] = field(
         default=None,
@@ -128,7 +134,7 @@ class ClaimType:
             "name": "Comments",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     cause_of_loss: Optional[str] = field(
         default=None,
@@ -136,7 +142,7 @@ class ClaimType:
             "name": "CauseOfLoss",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     loss_description: Optional[str] = field(
         default=None,
@@ -144,7 +150,7 @@ class ClaimType:
             "name": "LossDescription",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     location_key: Optional[str] = field(
         default=None,
@@ -152,7 +158,7 @@ class ClaimType:
             "name": "LocationKey",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     address: Optional[AddressType] = field(
         default=None,
@@ -160,7 +166,7 @@ class ClaimType:
             "name": "Address",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     currency: Optional[str] = field(
         default=None,
@@ -169,7 +175,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     deductibles: Optional[AmountType] = field(
         default=None,
@@ -178,7 +184,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     paid_claim: Optional[AmountType] = field(
         default=None,
@@ -187,7 +193,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     paid_vendor_fee: Optional[AmountType] = field(
         default=None,
@@ -196,7 +202,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     recovery_reserve: Optional[AmountType] = field(
         default=None,
@@ -204,7 +210,7 @@ class ClaimType:
             "name": "RecoveryReserve",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     claim_reserve: Optional[AmountType] = field(
         default=None,
@@ -213,7 +219,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     vendor_fee_reserve: Optional[AmountType] = field(
         default=None,
@@ -222,7 +228,7 @@ class ClaimType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     total_incurred: Optional[AmountType] = field(
         default=None,
@@ -230,7 +236,7 @@ class ClaimType:
             "name": "TotalIncurred",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     producing_office_contact: Optional[str] = field(
         default=None,
@@ -238,7 +244,7 @@ class ClaimType:
             "name": "ProducingOfficeContact",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     fronting_office_contact: Optional[str] = field(
         default=None,
@@ -246,5 +252,5 @@ class ClaimType:
             "name": "FrontingOfficeContact",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

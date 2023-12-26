@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.cause import Cause
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.situation_record_versioned_reference import SituationRecordVersionedReference
+from datexii.models.eu.datexii.v2.situation_record_versioned_reference import (
+    SituationRecordVersionedReference,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -19,13 +21,14 @@ class ManagedCause(Cause):
         of the event defined here.
     :ivar managed_cause_extension:
     """
+
     managed_cause: Optional[SituationRecordVersionedReference] = field(
         default=None,
         metadata={
             "name": "managedCause",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     managed_cause_extension: Optional[ExtensionType] = field(
         default=None,
@@ -33,5 +36,5 @@ class ManagedCause(Cause):
             "name": "managedCauseExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

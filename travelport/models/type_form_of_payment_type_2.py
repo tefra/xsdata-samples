@@ -9,10 +9,14 @@ from travelport.models.direct_payment_5 import DirectPayment5
 from travelport.models.misc_form_of_payment_5 import MiscFormOfPayment5
 from travelport.models.payment_advice_5 import PaymentAdvice5
 from travelport.models.requisition_5 import Requisition5
-from travelport.models.type_guarantee_information_5 import TypeGuaranteeInformation5
+from travelport.models.type_guarantee_information_5 import (
+    TypeGuaranteeInformation5,
+)
 from travelport.models.type_key_tagged_element_2 import TypeKeyTaggedElement2
 from travelport.models.type_payment_card_5 import TypePaymentCard5
-from travelport.models.type_voucher_information_5 import TypeVoucherInformation5
+from travelport.models.type_voucher_information_5 import (
+    TypeVoucherInformation5,
+)
 from travelport.models.united_nations_5 import UnitedNations5
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -48,6 +52,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typeFormOfPaymentType"
 
@@ -57,7 +62,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "CreditCard",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )
     debit_card: None | TypePaymentCard5 = field(
         default=None,
@@ -65,7 +70,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "DebitCard",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )
     certificate: None | Certificate5 = field(
         default=None,
@@ -73,7 +78,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "Certificate",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
@@ -83,7 +88,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     check: None | Check5 = field(
         default=None,
@@ -91,7 +96,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "Check",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     requisition: None | Requisition5 = field(
         default=None,
@@ -99,7 +104,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "Requisition",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     misc_form_of_payment: None | MiscFormOfPayment5 = field(
         default=None,
@@ -107,7 +112,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "MiscFormOfPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     agency_payment: None | AgencyPayment5 = field(
         default=None,
@@ -115,7 +120,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "AgencyPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     united_nations: None | UnitedNations5 = field(
         default=None,
@@ -123,7 +128,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "UnitedNations",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     direct_payment: None | DirectPayment5 = field(
         default=None,
@@ -131,7 +136,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "DirectPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     agent_voucher: None | AgentVoucher5 = field(
         default=None,
@@ -139,7 +144,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "AgentVoucher",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     payment_advice: None | PaymentAdvice5 = field(
         default=None,
@@ -147,7 +152,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "PaymentAdvice",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     guarantee: None | TypeGuaranteeInformation5 = field(
         default=None,
@@ -155,7 +160,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )
     voucher: None | TypeVoucherInformation5 = field(
         default=None,
@@ -163,7 +168,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "Voucher",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )
     cash: None | str = field(
         default=None,
@@ -171,14 +176,14 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "name": "Cash",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )
     type_value: None | object = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -187,7 +192,7 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -196,12 +201,12 @@ class TypeFormOfPaymentType2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

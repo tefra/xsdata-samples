@@ -32,6 +32,7 @@ class RailAvailabilitySearchReq(BaseReq1):
         “Fares”.  If not sent, “Fares” will be mapped if the request is for
         a specific rail segments, otherwise “Availability” will be mapped.”
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -42,7 +43,7 @@ class RailAvailabilitySearchReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
     search_passenger: list[SearchPassenger1] = field(
         default_factory=list,
@@ -52,21 +53,21 @@ class RailAvailabilitySearchReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 18,
-        }
+        },
     )
     rail_search_modifiers: None | RailSearchModifiers = field(
         default=None,
         metadata={
             "name": "RailSearchModifiers",
             "type": "Element",
-        }
+        },
     )
     rail_pricing_modifiers: None | RailPricingModifiers = field(
         default=None,
         metadata={
             "name": "RailPricingModifiers",
             "type": "Element",
-        }
+        },
     )
     host_token_list: None | HostTokenList1 = field(
         default=None,
@@ -74,12 +75,12 @@ class RailAvailabilitySearchReq(BaseReq1):
             "name": "HostTokenList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     response_type: None | TypeResponseType = field(
         default=None,
         metadata={
             "name": "ResponseType",
             "type": "Attribute",
-        }
+        },
     )

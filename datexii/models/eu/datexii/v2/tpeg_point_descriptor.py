@@ -11,11 +11,12 @@ class TpegPointDescriptor(TpegDescriptor):
     """
     A descriptor for describing a point location.
     """
+
     tpeg_point_descriptor_extension: Optional[ExtensionType] = field(
         default=None,
         metadata={
             "name": "tpegPointDescriptorExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

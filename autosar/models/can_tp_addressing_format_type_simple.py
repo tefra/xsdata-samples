@@ -11,6 +11,7 @@ class CanTpAddressingFormatTypeSimple(Enum):
     :cvar NORMALFIXED: To use normal fixed addressing format
     :cvar STANDARD: To use normal addressing format.
     """
+
     EXTENDED = "EXTENDED"
     MIXED = "MIXED"
     MIXED_29_BIT = "MIXED-29-BIT"

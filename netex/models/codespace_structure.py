@@ -14,7 +14,7 @@ class CodespaceStructure(EntityStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     xmlns_url: Optional[str] = field(
         default=None,
@@ -22,7 +22,7 @@ class CodespaceStructure(EntityStructure):
             "name": "XmlnsUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[str] = field(
         default=None,
@@ -30,12 +30,12 @@ class CodespaceStructure(EntityStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     data_source_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "dataSourceRef",
             "type": "Attribute",
-        }
+        },
     )

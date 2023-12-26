@@ -10,5 +10,6 @@ class DefaultBrandDetail(TypeDefaultBrandDetail):
     """
     Applicable air segment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

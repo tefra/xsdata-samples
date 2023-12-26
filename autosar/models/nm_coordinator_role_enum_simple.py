@@ -11,5 +11,6 @@ class NmCoordinatorRoleEnumSimple(Enum):
         functionality at this channel - used at NmCoordinatorSync use
         case.
     """
+
     ACTIVE = "ACTIVE"
     PASSIVE = "PASSIVE"

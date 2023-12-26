@@ -17,5 +17,5 @@ class MediaSearchableTermFacetType(MediaFacetType):
             "name": "subSearch",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

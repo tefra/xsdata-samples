@@ -12,11 +12,11 @@ class ErrorCodeStructure:
             "name": "ErrorText",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     number: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

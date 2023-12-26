@@ -21,7 +21,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "name": "TrainComponentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -29,7 +29,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -37,7 +37,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     train_element_ref: Optional[TrainElementRef] = field(
         default=None,
@@ -45,7 +45,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "name": "TrainElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_classes: List[FareClassEnumeration] = field(
         default_factory=list,
@@ -54,7 +54,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     train_element_type: Optional[TrainElementTypeEnumeration] = field(
         default=None,
@@ -62,11 +62,11 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "name": "TrainElementType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

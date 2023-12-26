@@ -10,6 +10,7 @@ class ArchiveLocations:
     """
     Container element for archive information.
     """
+
     class Meta:
         name = "archive_locations"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -18,5 +19,5 @@ class ArchiveLocations:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )

@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
-from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_declaration_group_prototype_subtypes_enum import (
+    ModeDeclarationGroupPrototypeSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -36,6 +38,7 @@ class BswModeReceiverPolicy:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-MODE-RECEIVER-POLICY"
 
@@ -45,15 +48,17 @@ class BswModeReceiverPolicy:
             "name": "ENHANCED-MODE-API",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    required_mode_group_ref: Optional["BswModeReceiverPolicy.RequiredModeGroupRef"] = field(
+    required_mode_group_ref: Optional[
+        "BswModeReceiverPolicy.RequiredModeGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUIRED-MODE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     supports_asynchronous_mode_switch: Optional[Boolean] = field(
         default=None,
@@ -61,7 +66,7 @@ class BswModeReceiverPolicy:
             "name": "SUPPORTS-ASYNCHRONOUS-MODE-SWITCH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -69,14 +74,14 @@ class BswModeReceiverPolicy:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -84,7 +89,7 @@ class BswModeReceiverPolicy:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -95,5 +100,5 @@ class BswModeReceiverPolicy:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

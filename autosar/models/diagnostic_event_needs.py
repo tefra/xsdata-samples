@@ -8,12 +8,16 @@ from .annotation import (
 from .boolean import Boolean
 from .category_string import CategoryString
 from .diag_event_debounce_counter_based import DiagEventDebounceCounterBased
-from .diag_event_debounce_monitor_internal import DiagEventDebounceMonitorInternal
+from .diag_event_debounce_monitor_internal import (
+    DiagEventDebounceMonitorInternal,
+)
 from .diag_event_debounce_time_based import DiagEventDebounceTimeBased
 from .diag_requirement_id_string import DiagRequirementIdString
 from .diagnostic_audience_enum import DiagnosticAudienceEnum
 from .dtc_kind_enum import DtcKindEnum
-from .function_inhibition_needs_subtypes_enum import FunctionInhibitionNeedsSubtypesEnum
+from .function_inhibition_needs_subtypes_enum import (
+    FunctionInhibitionNeedsSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -146,6 +150,7 @@ class DiagnosticEventNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-EVENT-NEEDS"
 
@@ -156,15 +161,17 @@ class DiagnosticEventNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticEventNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticEventNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -172,7 +179,7 @@ class DiagnosticEventNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -180,7 +187,7 @@ class DiagnosticEventNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -188,7 +195,7 @@ class DiagnosticEventNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -196,7 +203,7 @@ class DiagnosticEventNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -204,7 +211,7 @@ class DiagnosticEventNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticEventNeeds.Annotations"] = field(
         default=None,
@@ -212,7 +219,7 @@ class DiagnosticEventNeeds:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     audiences: Optional["DiagnosticEventNeeds.Audiences"] = field(
         default=None,
@@ -220,7 +227,7 @@ class DiagnosticEventNeeds:
             "name": "AUDIENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diag_requirement: Optional[DiagRequirementIdString] = field(
         default=None,
@@ -228,7 +235,7 @@ class DiagnosticEventNeeds:
             "name": "DIAG-REQUIREMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_access_level: Optional[PositiveInteger] = field(
         default=None,
@@ -236,7 +243,7 @@ class DiagnosticEventNeeds:
             "name": "SECURITY-ACCESS-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     consider_pto_status: Optional[Boolean] = field(
         default=None,
@@ -244,23 +251,27 @@ class DiagnosticEventNeeds:
             "name": "CONSIDER-PTO-STATUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    deferring_fid_refs: Optional["DiagnosticEventNeeds.DeferringFidRefs"] = field(
+    deferring_fid_refs: Optional[
+        "DiagnosticEventNeeds.DeferringFidRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DEFERRING-FID-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    diag_event_debounce_algorithm: Optional["DiagnosticEventNeeds.DiagEventDebounceAlgorithm"] = field(
+    diag_event_debounce_algorithm: Optional[
+        "DiagnosticEventNeeds.DiagEventDebounceAlgorithm"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAG-EVENT-DEBOUNCE-ALGORITHM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dtc_kind: Optional[DtcKindEnum] = field(
         default=None,
@@ -268,7 +279,7 @@ class DiagnosticEventNeeds:
             "name": "DTC-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dtc_number: Optional[PositiveInteger] = field(
         default=None,
@@ -276,23 +287,27 @@ class DiagnosticEventNeeds:
             "name": "DTC-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    inhibiting_fid_ref: Optional["DiagnosticEventNeeds.InhibitingFidRef"] = field(
+    inhibiting_fid_ref: Optional[
+        "DiagnosticEventNeeds.InhibitingFidRef"
+    ] = field(
         default=None,
         metadata={
             "name": "INHIBITING-FID-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    inhibiting_secondary_fid_refs: Optional["DiagnosticEventNeeds.InhibitingSecondaryFidRefs"] = field(
+    inhibiting_secondary_fid_refs: Optional[
+        "DiagnosticEventNeeds.InhibitingSecondaryFidRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "INHIBITING-SECONDARY-FID-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     obd_dtc_number: Optional[PositiveInteger] = field(
         default=None,
@@ -300,7 +315,7 @@ class DiagnosticEventNeeds:
             "name": "OBD-DTC-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     prestored_freezeframe_stored_in_nvm: Optional[Boolean] = field(
         default=None,
@@ -308,7 +323,7 @@ class DiagnosticEventNeeds:
             "name": "PRESTORED-FREEZEFRAME-STORED-IN-NVM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     report_behavior: Optional[ReportBehaviorEnum] = field(
         default=None,
@@ -316,7 +331,7 @@ class DiagnosticEventNeeds:
             "name": "REPORT-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     uds_dtc_number: Optional[PositiveInteger] = field(
         default=None,
@@ -324,7 +339,7 @@ class DiagnosticEventNeeds:
             "name": "UDS-DTC-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     uses_monitor_data: Optional[Boolean] = field(
         default=None,
@@ -332,14 +347,14 @@ class DiagnosticEventNeeds:
             "name": "USES-MONITOR-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -347,14 +362,14 @@ class DiagnosticEventNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -365,7 +380,7 @@ class DiagnosticEventNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -376,7 +391,7 @@ class DiagnosticEventNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -387,24 +402,27 @@ class DiagnosticEventNeeds:
             documentation but also subsequent audience specific
             implementation.
         """
+
         audience: List[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DeferringFidRefs:
-        deferring_fid_ref: List["DiagnosticEventNeeds.DeferringFidRefs.DeferringFidRef"] = field(
+        deferring_fid_ref: List[
+            "DiagnosticEventNeeds.DeferringFidRefs.DeferringFidRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DEFERRING-FID-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -415,34 +433,40 @@ class DiagnosticEventNeeds:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class DiagEventDebounceAlgorithm:
-        diag_event_debounce_counter_based: Optional[DiagEventDebounceCounterBased] = field(
+        diag_event_debounce_counter_based: Optional[
+            DiagEventDebounceCounterBased
+        ] = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-COUNTER-BASED",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        diag_event_debounce_monitor_internal: Optional[DiagEventDebounceMonitorInternal] = field(
+        diag_event_debounce_monitor_internal: Optional[
+            DiagEventDebounceMonitorInternal
+        ] = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-MONITOR-INTERNAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        diag_event_debounce_time_based: Optional[DiagEventDebounceTimeBased] = field(
+        diag_event_debounce_time_based: Optional[
+            DiagEventDebounceTimeBased
+        ] = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-TIME-BASED",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -453,18 +477,20 @@ class DiagnosticEventNeeds:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class InhibitingSecondaryFidRefs:
-        inhibiting_secondary_fid_ref: List["DiagnosticEventNeeds.InhibitingSecondaryFidRefs.InhibitingSecondaryFidRef"] = field(
+        inhibiting_secondary_fid_ref: List[
+            "DiagnosticEventNeeds.InhibitingSecondaryFidRefs.InhibitingSecondaryFidRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INHIBITING-SECONDARY-FID-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -475,5 +501,5 @@ class DiagnosticEventNeeds:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

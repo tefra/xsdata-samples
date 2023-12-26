@@ -15,6 +15,7 @@ class AgencyBaseInfo2:
     phone
         Agency Phone Number
     """
+
     class Meta:
         name = "AgencyBaseInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -25,5 +26,5 @@ class AgencyBaseInfo2:
             "name": "Phone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

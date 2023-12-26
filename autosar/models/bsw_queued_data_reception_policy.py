@@ -4,7 +4,9 @@ from .annotation import VariationPoint
 from .boolean import Boolean
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -32,6 +34,7 @@ class BswQueuedDataReceptionPolicy:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-QUEUED-DATA-RECEPTION-POLICY"
 
@@ -41,15 +44,17 @@ class BswQueuedDataReceptionPolicy:
             "name": "ENABLE-TAKE-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    received_data_ref: Optional["BswQueuedDataReceptionPolicy.ReceivedDataRef"] = field(
+    received_data_ref: Optional[
+        "BswQueuedDataReceptionPolicy.ReceivedDataRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RECEIVED-DATA-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -57,7 +62,7 @@ class BswQueuedDataReceptionPolicy:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     queue_length: Optional[PositiveInteger] = field(
         default=None,
@@ -65,14 +70,14 @@ class BswQueuedDataReceptionPolicy:
             "name": "QUEUE-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -80,7 +85,7 @@ class BswQueuedDataReceptionPolicy:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -91,5 +96,5 @@ class BswQueuedDataReceptionPolicy:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

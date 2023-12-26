@@ -24,6 +24,7 @@ class DirectionCompassEnum(Enum):
     :cvar WEST_NORTH_WEST: West north west.
     :cvar WEST_SOUTH_WEST: West south west.
     """
+
     EAST = "east"
     EAST_NORTH_EAST = "eastNorthEast"
     EAST_SOUTH_EAST = "eastSouthEast"

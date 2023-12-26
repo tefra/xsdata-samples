@@ -22,6 +22,7 @@ class Option:
         of the first segment and the arrival time of the last segments for
         that particular entire set of connection.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -31,7 +32,7 @@ class Option:
             "name": "BookingInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     connection: list[Connection] = field(
         default_factory=list,
@@ -39,7 +40,7 @@ class Option:
             "name": "Connection",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -47,12 +48,12 @@ class Option:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     travel_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
-        }
+        },
     )

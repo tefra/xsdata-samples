@@ -9,5 +9,6 @@ class TypePaymentType2(Enum):
 
     (Credit Card, Cash, etc)
     """
+
     CREDIT_CARD = "Credit Card"
     DEBIT_CARD = "Debit Card"

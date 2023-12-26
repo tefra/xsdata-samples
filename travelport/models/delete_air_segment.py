@@ -10,6 +10,7 @@ class DeleteAirSegment:
     """
     Container for Air Segment to be deleted.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,5 +22,5 @@ class DeleteAirSegment:
             "namespace": "",
             "min_occurs": 1,
             "max_occurs": 8,
-        }
+        },
     )

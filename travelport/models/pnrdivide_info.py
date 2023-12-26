@@ -18,7 +18,7 @@ class PnrdivideInfo:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -28,7 +28,7 @@ class PnrdivideInfo:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -37,5 +37,5 @@ class PnrdivideInfo:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )

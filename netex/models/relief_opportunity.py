@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .relief_opportunity_version_structure import ReliefOpportunityVersionStructure
+from .relief_opportunity_version_structure import (
+    ReliefOpportunityVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

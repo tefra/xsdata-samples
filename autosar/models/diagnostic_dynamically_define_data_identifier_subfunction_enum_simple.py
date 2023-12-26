@@ -13,6 +13,9 @@ class DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple(Enum):
     :cvar DEFINE_BY_MEMORY_ADDRESS: The definition of dynamic data
         identifier shall be done via a reference to a memory address.
     """
-    CLEAR_DYNAMICALLY_DEFINE_DATA_IDENTIFIER = "CLEAR-DYNAMICALLY-DEFINE-DATA-IDENTIFIER"
+
+    CLEAR_DYNAMICALLY_DEFINE_DATA_IDENTIFIER = (
+        "CLEAR-DYNAMICALLY-DEFINE-DATA-IDENTIFIER"
+    )
     DEFINE_BY_IDENTIFIER = "DEFINE-BY-IDENTIFIER"
     DEFINE_BY_MEMORY_ADDRESS = "DEFINE-BY-MEMORY-ADDRESS"

@@ -20,6 +20,7 @@ class VmsFaultEnum(Enum):
     :cvar UNKNOWN: Unknown VMS fault.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     COMMUNICATIONS_FAILURE = "communicationsFailure"
     INCORRECT_MESSAGE_DISPLAYED = "incorrectMessageDisplayed"
     INCORRECT_PICTOGRAM_DISPLAYED = "incorrectPictogramDisplayed"

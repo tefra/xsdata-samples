@@ -9,6 +9,7 @@ class DtcFormatTypeEnumSimple(Enum):
     :cvar OBD: Defines the OBD DTC format.
     :cvar UDS: Defines the UDS DTC format.
     """
+
     J_1939 = "J-1939"
     OBD = "OBD"
     UDS = "UDS"

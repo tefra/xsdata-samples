@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .controllable_element_price_ref_structure import ControllableElementPriceRefStructure
+from .controllable_element_price_ref_structure import (
+    ControllableElementPriceRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

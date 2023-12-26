@@ -101,6 +101,7 @@ class Etr:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "ETR"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -112,7 +113,7 @@ class Etr:
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     agency_info: None | AgencyInfo1 = field(
         default=None,
@@ -120,7 +121,7 @@ class Etr:
             "name": "AgencyInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     booking_traveler: None | BookingTraveler1 = field(
         default=None,
@@ -129,7 +130,7 @@ class Etr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -138,7 +139,7 @@ class Etr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     payment: list[Payment1] = field(
         default_factory=list,
@@ -147,7 +148,7 @@ class Etr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     credit_card_auth: list[CreditCardAuth1] = field(
         default_factory=list,
@@ -156,7 +157,7 @@ class Etr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     supplier_locator: list[SupplierLocator1] = field(
         default_factory=list,
@@ -165,7 +166,7 @@ class Etr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     fare_calc: None | str = field(
         default=None,
@@ -173,7 +174,7 @@ class Etr:
             "name": "FareCalc",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     ticket: list[Ticket] = field(
         default_factory=list,
@@ -182,7 +183,7 @@ class Etr:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     commission: list[Commission1] = field(
         default_factory=list,
@@ -191,21 +192,21 @@ class Etr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_info: None | AirPricingInfo = field(
         default=None,
         metadata={
             "name": "AirPricingInfo",
             "type": "Element",
-        }
+        },
     )
     audit_data: None | AuditData = field(
         default=None,
         metadata={
             "name": "AuditData",
             "type": "Element",
-        }
+        },
     )
     restriction: list[Restriction1] = field(
         default_factory=list,
@@ -214,112 +215,112 @@ class Etr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
-        }
+        },
     )
     baggage_allowances: None | BaggageAllowances = field(
         default=None,
         metadata={
             "name": "BaggageAllowances",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )
     refundable: None | bool = field(
         default=None,
         metadata={
             "name": "Refundable",
             "type": "Attribute",
-        }
+        },
     )
     exchangeable: None | bool = field(
         default=None,
         metadata={
             "name": "Exchangeable",
             "type": "Attribute",
-        }
+        },
     )
     tour_code: None | str = field(
         default=None,
@@ -327,7 +328,7 @@ class Etr:
             "name": "TourCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     issued_date: None | str = field(
         default=None,
@@ -335,14 +336,14 @@ class Etr:
             "name": "IssuedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     bulk_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -351,7 +352,7 @@ class Etr:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -359,7 +360,7 @@ class Etr:
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     iatanumber: None | str = field(
         default=None,
@@ -367,7 +368,7 @@ class Etr:
             "name": "IATANumber",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -376,7 +377,7 @@ class Etr:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     country_code: None | str = field(
         default=None,
@@ -384,7 +385,7 @@ class Etr:
             "name": "CountryCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -392,19 +393,19 @@ class Etr:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

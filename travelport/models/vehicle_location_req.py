@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.type_pickup_date_location import TypePickupDateLocation
-from travelport.models.type_vehicle_search_distance import TypeVehicleSearchDistance
+from travelport.models.type_vehicle_search_distance import (
+    TypeVehicleSearchDistance,
+)
 from travelport.models.vendor import Vendor
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
@@ -27,6 +29,7 @@ class VehicleLocationReq(BaseReq1):
         would be used to link to a ‘Policy Group’ in a policy engine
         external to UAPI.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -36,7 +39,7 @@ class VehicleLocationReq(BaseReq1):
             "name": "Vendor",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     pickup_date_location: None | TypePickupDateLocation = field(
         default=None,
@@ -44,7 +47,7 @@ class VehicleLocationReq(BaseReq1):
             "name": "PickupDateLocation",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     reference_point: None | str = field(
         default=None,
@@ -53,14 +56,14 @@ class VehicleLocationReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_length": 30,
-        }
+        },
     )
     search_distance: None | TypeVehicleSearchDistance = field(
         default=None,
         metadata={
             "name": "SearchDistance",
             "type": "Element",
-        }
+        },
     )
     policy_reference: None | str = field(
         default=None,
@@ -69,5 +72,5 @@ class VehicleLocationReq(BaseReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )

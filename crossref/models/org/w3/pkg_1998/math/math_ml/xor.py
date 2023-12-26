@@ -15,5 +15,5 @@ class Xor:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

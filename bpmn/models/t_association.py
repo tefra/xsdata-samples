@@ -18,7 +18,7 @@ class TAssociation(TArtifact):
             "name": "sourceRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     target_ref: Optional[QName] = field(
         default=None,
@@ -26,12 +26,12 @@ class TAssociation(TArtifact):
             "name": "targetRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     association_direction: TAssociationDirection = field(
         default=TAssociationDirection.NONE,
         metadata={
             "name": "associationDirection",
             "type": "Attribute",
-        }
+        },
     )

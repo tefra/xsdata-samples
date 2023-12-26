@@ -14,6 +14,7 @@ class VmsPublication(PayloadPublication):
     A publication containing the current status and settings of one or more VMS
     units, each unit controlling one or more individual variable message signs.
     """
+
     header_information: Optional[HeaderInformation] = field(
         default=None,
         metadata={
@@ -21,7 +22,7 @@ class VmsPublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms_unit: List[VmsUnit] = field(
         default_factory=list,
@@ -30,7 +31,7 @@ class VmsPublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     vms_publication_extension: Optional[ExtensionType] = field(
         default=None,
@@ -38,5 +39,5 @@ class VmsPublication(PayloadPublication):
             "name": "vmsPublicationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

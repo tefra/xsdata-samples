@@ -17,5 +17,5 @@ class AirExchangeEligibilityRsp(BaseRsp1):
             "name": "ExchangeEligibilityInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )

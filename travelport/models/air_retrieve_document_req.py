@@ -40,6 +40,7 @@ class AirRetrieveDocumentReq(BaseReq1):
         Contains the Locator Code of the Provider Reservation that houses
         this reservation.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -50,7 +51,7 @@ class AirRetrieveDocumentReq(BaseReq1):
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     ticket_number: list[str] = field(
         default_factory=list,
@@ -61,7 +62,7 @@ class AirRetrieveDocumentReq(BaseReq1):
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     tcrnumber: list[str] = field(
         default_factory=list,
@@ -69,28 +70,28 @@ class AirRetrieveDocumentReq(BaseReq1):
             "name": "TCRNumber",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     return_restrictions: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnRestrictions",
             "type": "Attribute",
-        }
+        },
     )
     return_pricing: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnPricing",
             "type": "Attribute",
-        }
+        },
     )
     retrieve_mco: None | bool = field(
         default=None,
         metadata={
             "name": "RetrieveMCO",
             "type": "Attribute",
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -99,7 +100,7 @@ class AirRetrieveDocumentReq(BaseReq1):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -108,7 +109,7 @@ class AirRetrieveDocumentReq(BaseReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -116,5 +117,5 @@ class AirRetrieveDocumentReq(BaseReq1):
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )

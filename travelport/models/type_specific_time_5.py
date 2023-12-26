@@ -11,6 +11,7 @@ class TypeSpecificTime5:
     System will automatically convert to a range according to agency
     configuration.
     """
+
     class Meta:
         name = "typeSpecificTime"
 
@@ -20,5 +21,5 @@ class TypeSpecificTime5:
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

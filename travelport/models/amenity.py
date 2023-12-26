@@ -14,6 +14,7 @@ class Amenity:
         Amenity type code. “HA” (Hotel Property Amenity) or “RA” (Room
         Amenity). Defaults to “HA” if no value is sent.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -25,7 +26,7 @@ class Amenity:
             "required": True,
             "min_inclusive": 1,
             "max_inclusive": 999,
-        }
+        },
     )
     amenity_type: None | str = field(
         default=None,
@@ -33,5 +34,5 @@ class Amenity:
             "name": "AmenityType",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )

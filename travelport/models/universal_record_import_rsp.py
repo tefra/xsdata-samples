@@ -11,6 +11,7 @@ class UniversalRecordImportRsp(BaseRsp1):
     """
     Return the new Universal Record that was created from an external reservation.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,5 +21,5 @@ class UniversalRecordImportRsp(BaseRsp1):
             "name": "UniversalRecord",
             "type": "Element",
             "required": True,
-        }
+        },
     )

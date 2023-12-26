@@ -18,13 +18,14 @@ class TrafficSpeed(TrafficData):
     :ivar speed_percentile:
     :ivar traffic_speed_extension:
     """
+
     average_vehicle_speed: Optional[SpeedValue] = field(
         default=None,
         metadata={
             "name": "averageVehicleSpeed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     speed_percentile: Optional[SpeedPercentile] = field(
         default=None,
@@ -32,7 +33,7 @@ class TrafficSpeed(TrafficData):
             "name": "speedPercentile",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_speed_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +41,5 @@ class TrafficSpeed(TrafficData):
             "name": "trafficSpeedExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

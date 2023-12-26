@@ -23,6 +23,7 @@ class ContentProviderRetrieveReq(BaseReq1):
         default is "Provisioned". An error may be returned if 'All' is
         requested and the user security level is not allowed this access
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -33,7 +34,7 @@ class ContentProviderRetrieveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -42,12 +43,12 @@ class ContentProviderRetrieveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     show_providers: TypeShowProvidersType = field(
         default=TypeShowProvidersType.PROVISIONED,
         metadata={
             "name": "ShowProviders",
             "type": "Attribute",
-        }
+        },
     )

@@ -11,6 +11,7 @@ class DisplayDetail:
 
     details
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,7 +21,7 @@ class DisplayDetail:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -28,5 +29,5 @@ class DisplayDetail:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

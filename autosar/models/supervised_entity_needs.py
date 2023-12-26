@@ -12,7 +12,9 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
 from .short_name_fragment import ShortNameFragment
-from .supervised_entity_checkpoint_needs_ref_conditional import SupervisedEntityCheckpointNeedsRefConditional
+from .supervised_entity_checkpoint_needs_ref_conditional import (
+    SupervisedEntityCheckpointNeedsRefConditional,
+)
 from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -98,6 +100,7 @@ class SupervisedEntityNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SUPERVISED-ENTITY-NEEDS"
 
@@ -108,15 +111,17 @@ class SupervisedEntityNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SupervisedEntityNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SupervisedEntityNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +129,7 @@ class SupervisedEntityNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +137,7 @@ class SupervisedEntityNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +145,7 @@ class SupervisedEntityNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +153,7 @@ class SupervisedEntityNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,7 +161,7 @@ class SupervisedEntityNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SupervisedEntityNeeds.Annotations"] = field(
         default=None,
@@ -164,7 +169,7 @@ class SupervisedEntityNeeds:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     activate_at_start: Optional[Boolean] = field(
         default=None,
@@ -172,7 +177,7 @@ class SupervisedEntityNeeds:
             "name": "ACTIVATE-AT-START",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     checkpointss: Optional["SupervisedEntityNeeds.Checkpointss"] = field(
         default=None,
@@ -180,7 +185,7 @@ class SupervisedEntityNeeds:
             "name": "CHECKPOINTSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     enable_deactivation: Optional[Boolean] = field(
         default=None,
@@ -188,7 +193,7 @@ class SupervisedEntityNeeds:
             "name": "ENABLE-DEACTIVATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     expected_alive_cycle: Optional[TimeValue] = field(
         default=None,
@@ -196,7 +201,7 @@ class SupervisedEntityNeeds:
             "name": "EXPECTED-ALIVE-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_alive_cycle: Optional[TimeValue] = field(
         default=None,
@@ -204,7 +209,7 @@ class SupervisedEntityNeeds:
             "name": "MAX-ALIVE-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_alive_cycle: Optional[TimeValue] = field(
         default=None,
@@ -212,7 +217,7 @@ class SupervisedEntityNeeds:
             "name": "MIN-ALIVE-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tolerated_failed_cycles: Optional[PositiveInteger] = field(
         default=None,
@@ -220,14 +225,14 @@ class SupervisedEntityNeeds:
             "name": "TOLERATED-FAILED-CYCLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -235,14 +240,14 @@ class SupervisedEntityNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -253,7 +258,7 @@ class SupervisedEntityNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -264,16 +269,18 @@ class SupervisedEntityNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class Checkpointss:
-        supervised_entity_checkpoint_needs_ref_conditional: List[SupervisedEntityCheckpointNeedsRefConditional] = field(
+        supervised_entity_checkpoint_needs_ref_conditional: List[
+            SupervisedEntityCheckpointNeedsRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SUPERVISED-ENTITY-CHECKPOINT-NEEDS-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

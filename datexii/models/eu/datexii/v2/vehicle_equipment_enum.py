@@ -17,6 +17,7 @@ class VehicleEquipmentEnum(Enum):
     :cvar WITHOUT_SNOW_TYRES_OR_CHAINS_ON_BOARD: Vehicle which is not
         carrying on board snow tyres or chains.
     """
+
     NOT_USING_SNOW_CHAINS = "notUsingSnowChains"
     NOT_USING_SNOW_CHAINS_OR_TYRES = "notUsingSnowChainsOrTyres"
     SNOW_CHAINS_IN_USE = "snowChainsInUse"

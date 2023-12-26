@@ -23,6 +23,7 @@ class VmsTextLine:
         HTML string showing text formatting tags.
     :ivar vms_text_line_extension:
     """
+
     vms_text_line: Optional[str] = field(
         default=None,
         metadata={
@@ -31,7 +32,7 @@ class VmsTextLine:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     vms_text_line_language: Optional[str] = field(
         default=None,
@@ -39,7 +40,7 @@ class VmsTextLine:
             "name": "vmsTextLineLanguage",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_text_line_colour: Optional[ColourEnum] = field(
         default=None,
@@ -47,7 +48,7 @@ class VmsTextLine:
             "name": "vmsTextLineColour",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_text_line_flashing: Optional[bool] = field(
         default=None,
@@ -55,7 +56,7 @@ class VmsTextLine:
             "name": "vmsTextLineFlashing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_text_line_html: Optional[str] = field(
         default=None,
@@ -64,7 +65,7 @@ class VmsTextLine:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     vms_text_line_extension: Optional[ExtensionType] = field(
         default=None,
@@ -72,5 +73,5 @@ class VmsTextLine:
             "name": "vmsTextLineExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

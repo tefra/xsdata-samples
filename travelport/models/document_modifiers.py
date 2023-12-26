@@ -14,6 +14,7 @@ class DocumentModifiers:
     generate_accounting_interface
         Generate interface message along with ticket
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,12 +23,12 @@ class DocumentModifiers:
         metadata={
             "name": "GenerateItineraryInvoice",
             "type": "Attribute",
-        }
+        },
     )
     generate_accounting_interface: bool = field(
         default=False,
         metadata={
             "name": "GenerateAccountingInterface",
             "type": "Attribute",
-        }
+        },
     )

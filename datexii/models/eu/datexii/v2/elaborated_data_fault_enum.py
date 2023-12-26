@@ -18,6 +18,7 @@ class ElaboratedDataFaultEnum(Enum):
         exists in the process which is generating elaborated data.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     INTERMITTENT_DATA_VALUES = "intermittentDataValues"
     NO_DATA_VALUES_AVAILABLE = "noDataValuesAvailable"
     SPURIOUS_UNRELIABLE_DATA_VALUES = "spuriousUnreliableDataValues"

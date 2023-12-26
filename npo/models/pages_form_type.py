@@ -18,7 +18,7 @@ class PagesFormType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     sort_fields: None | PageSortListType = field(
         default=None,
@@ -26,14 +26,14 @@ class PagesFormType:
             "name": "sortFields",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     facets: None | PagesFacetsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     media_form: None | MediaForm = field(
         default=None,
@@ -41,11 +41,11 @@ class PagesFormType:
             "name": "mediaForm",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     highlight: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

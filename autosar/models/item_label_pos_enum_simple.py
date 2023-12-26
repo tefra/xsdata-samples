@@ -11,6 +11,7 @@ class ItemLabelPosEnumSimple(Enum):
     :cvar NO_NEWLINE: The label is rendered in one line with the item
         even if it is longer than the indentation.
     """
+
     NEWLINE = "NEWLINE"
     NEWLINE_IF_NECESSARY = "NEWLINE-IF-NECESSARY"
     NO_NEWLINE = "NO-NEWLINE"

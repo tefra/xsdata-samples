@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.degrees import Degrees
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.prefix import Prefix
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.string_name_language import StringNameLanguage
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.string_name_name_style import StringNameNameStyle
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.string_name_language import (
+    StringNameLanguage,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.string_name_name_style import (
+    StringNameNameStyle,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -19,27 +23,27 @@ class StringName:
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     name_style: StringNameNameStyle = field(
         default=StringNameNameStyle.WESTERN,
         metadata={
             "name": "name-style",
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[object] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[StringNameLanguage] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -79,5 +83,5 @@ class StringName:
                     "max_length": 10,
                 },
             ),
-        }
+        },
     )

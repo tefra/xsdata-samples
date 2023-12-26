@@ -12,5 +12,6 @@ class ExecutionTimeTypeEnumSimple(Enum):
         to execute the ExecutableEntity without any interruption and
         without any external calls.
     """
+
     GROSS = "GROSS"
     NET = "NET"

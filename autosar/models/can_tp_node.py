@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
 from .category_string import CategoryString
-from .communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
+from .communication_connector_subtypes_enum import (
+    CommunicationConnectorSubtypesEnum,
+)
 from .identifier import Identifier
 from .integer import Integer
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -105,6 +107,7 @@ class CanTpNode:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-TP-NODE"
 
@@ -115,7 +118,7 @@ class CanTpNode:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["CanTpNode.ShortNameFragments"] = field(
         default=None,
@@ -123,7 +126,7 @@ class CanTpNode:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -131,7 +134,7 @@ class CanTpNode:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -139,7 +142,7 @@ class CanTpNode:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -147,7 +150,7 @@ class CanTpNode:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -155,7 +158,7 @@ class CanTpNode:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -163,7 +166,7 @@ class CanTpNode:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CanTpNode.Annotations"] = field(
         default=None,
@@ -171,7 +174,7 @@ class CanTpNode:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     connector_ref: Optional["CanTpNode.ConnectorRef"] = field(
         default=None,
@@ -179,7 +182,7 @@ class CanTpNode:
             "name": "CONNECTOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_fc_wait: Optional[Integer] = field(
         default=None,
@@ -187,7 +190,7 @@ class CanTpNode:
             "name": "MAX-FC-WAIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     st_min: Optional[TimeValue] = field(
         default=None,
@@ -195,7 +198,7 @@ class CanTpNode:
             "name": "ST-MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_ar: Optional[TimeValue] = field(
         default=None,
@@ -203,7 +206,7 @@ class CanTpNode:
             "name": "TIMEOUT-AR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_as: Optional[TimeValue] = field(
         default=None,
@@ -211,7 +214,7 @@ class CanTpNode:
             "name": "TIMEOUT-AS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_address_ref: Optional["CanTpNode.TpAddressRef"] = field(
         default=None,
@@ -219,7 +222,7 @@ class CanTpNode:
             "name": "TP-ADDRESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -227,14 +230,14 @@ class CanTpNode:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -242,14 +245,14 @@ class CanTpNode:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -260,7 +263,7 @@ class CanTpNode:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -271,7 +274,7 @@ class CanTpNode:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -282,7 +285,7 @@ class CanTpNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -293,5 +296,5 @@ class CanTpNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

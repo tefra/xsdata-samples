@@ -106,6 +106,7 @@ class BusMirrorChannelMappingCan:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BUS-MIRROR-CHANNEL-MAPPING-CAN"
 
@@ -116,15 +117,17 @@ class BusMirrorChannelMappingCan:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BusMirrorChannelMappingCan.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BusMirrorChannelMappingCan.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -132,7 +135,7 @@ class BusMirrorChannelMappingCan:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -140,7 +143,7 @@ class BusMirrorChannelMappingCan:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -148,7 +151,7 @@ class BusMirrorChannelMappingCan:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -156,7 +159,7 @@ class BusMirrorChannelMappingCan:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -164,7 +167,7 @@ class BusMirrorChannelMappingCan:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["BusMirrorChannelMappingCan.Annotations"] = field(
         default=None,
@@ -172,7 +175,7 @@ class BusMirrorChannelMappingCan:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -180,7 +183,7 @@ class BusMirrorChannelMappingCan:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_channel: Optional[BusMirrorChannel] = field(
         default=None,
@@ -188,7 +191,7 @@ class BusMirrorChannelMappingCan:
             "name": "SOURCE-CHANNEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     target_channel: Optional[BusMirrorChannel] = field(
         default=None,
@@ -196,39 +199,47 @@ class BusMirrorChannelMappingCan:
             "name": "TARGET-CHANNEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_pdu_triggerings: Optional["BusMirrorChannelMappingCan.TargetPduTriggerings"] = field(
+    target_pdu_triggerings: Optional[
+        "BusMirrorChannelMappingCan.TargetPduTriggerings"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-PDU-TRIGGERINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    can_id_range_mappings: Optional["BusMirrorChannelMappingCan.CanIdRangeMappings"] = field(
+    can_id_range_mappings: Optional[
+        "BusMirrorChannelMappingCan.CanIdRangeMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-ID-RANGE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    can_id_to_can_id_mappings: Optional["BusMirrorChannelMappingCan.CanIdToCanIdMappings"] = field(
+    can_id_to_can_id_mappings: Optional[
+        "BusMirrorChannelMappingCan.CanIdToCanIdMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-ID-TO-CAN-ID-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    lin_pid_to_can_id_mappings: Optional["BusMirrorChannelMappingCan.LinPidToCanIdMappings"] = field(
+    lin_pid_to_can_id_mappings: Optional[
+        "BusMirrorChannelMappingCan.LinPidToCanIdMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "LIN-PID-TO-CAN-ID-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mirror_source_lin_to_can_range_base_id: Optional[PositiveInteger] = field(
         default=None,
@@ -236,7 +247,7 @@ class BusMirrorChannelMappingCan:
             "name": "MIRROR-SOURCE-LIN-TO-CAN-RANGE-BASE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mirror_status_can_id: Optional[PositiveInteger] = field(
         default=None,
@@ -244,14 +255,14 @@ class BusMirrorChannelMappingCan:
             "name": "MIRROR-STATUS-CAN-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -259,14 +270,14 @@ class BusMirrorChannelMappingCan:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -277,7 +288,7 @@ class BusMirrorChannelMappingCan:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -288,49 +299,57 @@ class BusMirrorChannelMappingCan:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TargetPduTriggerings:
-        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = field(
+        pdu_triggering_ref_conditional: List[
+            PduTriggeringRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-TRIGGERING-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CanIdRangeMappings:
-        bus_mirror_can_id_range_mapping: List[BusMirrorCanIdRangeMapping] = field(
+        bus_mirror_can_id_range_mapping: List[
+            BusMirrorCanIdRangeMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BUS-MIRROR-CAN-ID-RANGE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CanIdToCanIdMappings:
-        bus_mirror_can_id_to_can_id_mapping: List[BusMirrorCanIdToCanIdMapping] = field(
+        bus_mirror_can_id_to_can_id_mapping: List[
+            BusMirrorCanIdToCanIdMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BUS-MIRROR-CAN-ID-TO-CAN-ID-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class LinPidToCanIdMappings:
-        bus_mirror_lin_pid_to_can_id_mapping: List[BusMirrorLinPidToCanIdMapping] = field(
+        bus_mirror_lin_pid_to_can_id_mapping: List[
+            BusMirrorLinPidToCanIdMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BUS-MIRROR-LIN-PID-TO-CAN-ID-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

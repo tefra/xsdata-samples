@@ -25,7 +25,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
 )
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2"
+)
 
 
 @dataclass(frozen=True)
@@ -36,7 +38,7 @@ class ForecastRevisionType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -44,7 +46,7 @@ class ForecastRevisionType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -52,7 +54,7 @@ class ForecastRevisionType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -60,7 +62,7 @@ class ForecastRevisionType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -68,7 +70,7 @@ class ForecastRevisionType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -77,7 +79,7 @@ class ForecastRevisionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -85,7 +87,7 @@ class ForecastRevisionType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -93,7 +95,7 @@ class ForecastRevisionType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -102,7 +104,7 @@ class ForecastRevisionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -110,7 +112,7 @@ class ForecastRevisionType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -118,7 +120,7 @@ class ForecastRevisionType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     sequence_number_id: Optional[SequenceNumberId] = field(
         default=None,
@@ -127,7 +129,7 @@ class ForecastRevisionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     revision_status_code: Optional[RevisionStatusCode] = field(
         default=None,
@@ -135,7 +137,7 @@ class ForecastRevisionType:
             "name": "RevisionStatusCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     purpose_code: Optional[PurposeCode] = field(
         default=None,
@@ -143,7 +145,7 @@ class ForecastRevisionType:
             "name": "PurposeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     forecast_period: Optional[ForecastPeriod] = field(
         default=None,
@@ -152,7 +154,7 @@ class ForecastRevisionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     original_document_reference: Tuple[OriginalDocumentReference, ...] = field(
         default_factory=tuple,
@@ -160,7 +162,7 @@ class ForecastRevisionType:
             "name": "OriginalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -168,7 +170,7 @@ class ForecastRevisionType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     sender_party: Optional[SenderParty] = field(
         default=None,
@@ -177,7 +179,7 @@ class ForecastRevisionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -186,7 +188,7 @@ class ForecastRevisionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     buyer_customer_party: Optional[BuyerCustomerParty] = field(
         default=None,
@@ -194,7 +196,7 @@ class ForecastRevisionType:
             "name": "BuyerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     seller_supplier_party: Optional[SellerSupplierParty] = field(
         default=None,
@@ -202,7 +204,7 @@ class ForecastRevisionType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     forecast_revision_line: Tuple[ForecastRevisionLine, ...] = field(
         default_factory=tuple,
@@ -211,11 +213,13 @@ class ForecastRevisionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(frozen=True)
 class ForecastRevision(ForecastRevisionType):
     class Meta:
-        namespace = "urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2"
+        namespace = (
+            "urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2"
+        )

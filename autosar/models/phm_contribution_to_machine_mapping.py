@@ -11,7 +11,9 @@ from .identifier import Identifier
 from .machine_subtypes_enum import MachineSubtypesEnum
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .platform_health_management_contribution_subtypes_enum import PlatformHealthManagementContributionSubtypesEnum
+from .platform_health_management_contribution_subtypes_enum import (
+    PlatformHealthManagementContributionSubtypesEnum,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 
@@ -84,6 +86,7 @@ class PhmContributionToMachineMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PHM-CONTRIBUTION-TO-MACHINE-MAPPING"
 
@@ -94,15 +97,17 @@ class PhmContributionToMachineMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PhmContributionToMachineMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PhmContributionToMachineMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -110,7 +115,7 @@ class PhmContributionToMachineMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -118,7 +123,7 @@ class PhmContributionToMachineMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -126,7 +131,7 @@ class PhmContributionToMachineMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -134,7 +139,7 @@ class PhmContributionToMachineMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -142,15 +147,17 @@ class PhmContributionToMachineMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["PhmContributionToMachineMapping.Annotations"] = field(
+    annotations: Optional[
+        "PhmContributionToMachineMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -158,30 +165,34 @@ class PhmContributionToMachineMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    machine_ref: Optional["PhmContributionToMachineMapping.MachineRef"] = field(
+    machine_ref: Optional[
+        "PhmContributionToMachineMapping.MachineRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MACHINE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    phm_contribution_refs: Optional["PhmContributionToMachineMapping.PhmContributionRefs"] = field(
+    phm_contribution_refs: Optional[
+        "PhmContributionToMachineMapping.PhmContributionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "PHM-CONTRIBUTION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -189,14 +200,14 @@ class PhmContributionToMachineMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -207,7 +218,7 @@ class PhmContributionToMachineMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -218,7 +229,7 @@ class PhmContributionToMachineMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -229,27 +240,31 @@ class PhmContributionToMachineMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class PhmContributionRefs:
-        phm_contribution_ref: List["PhmContributionToMachineMapping.PhmContributionRefs.PhmContributionRef"] = field(
+        phm_contribution_ref: List[
+            "PhmContributionToMachineMapping.PhmContributionRefs.PhmContributionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PHM-CONTRIBUTION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
         class PhmContributionRef(Ref):
-            dest: Optional[PlatformHealthManagementContributionSubtypesEnum] = field(
+            dest: Optional[
+                PlatformHealthManagementContributionSubtypesEnum
+            ] = field(
                 default=None,
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

@@ -14,5 +14,5 @@ class SanitaryFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

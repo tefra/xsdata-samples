@@ -9,6 +9,7 @@ class TypeOtherPreference2(Enum):
 
     (ie. Cruise, Taxi, etc)
     """
+
     CRUISE = "Cruise"
     FERRY = "Ferry"
     LIMO = "Limo"

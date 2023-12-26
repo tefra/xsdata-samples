@@ -66,10 +66,13 @@ class GeneralInstructionToRoadUsersTypeEnum(Enum):
     :cvar WAIT_FOR_ESCORT_VEHICLE: Wait for escort vehicle.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ALLOW_EMERGENCY_VEHICLES_TO_PASS = "allowEmergencyVehiclesToPass"
     APPROACH_WITH_CARE = "approachWithCare"
     AVOID_THE_AREA = "avoidTheArea"
-    CLOSE_ALL_WINDOWS_TURN_OFF_HEATER_AND_VENTS = "closeAllWindowsTurnOffHeaterAndVents"
+    CLOSE_ALL_WINDOWS_TURN_OFF_HEATER_AND_VENTS = (
+        "closeAllWindowsTurnOffHeaterAndVents"
+    )
     CROSS_JUNCTION_WITH_CARE = "crossJunctionWithCare"
     DO_NOT_ALLOW_UNNECESSARY_GAPS = "doNotAllowUnnecessaryGaps"
     DO_NOT_LEAVE_YOUR_VEHICLE = "doNotLeaveYourVehicle"
@@ -82,7 +85,9 @@ class GeneralInstructionToRoadUsersTypeEnum(Enum):
     INCREASE_NORMAL_FOLLOWING_DISTANCE = "increaseNormalFollowingDistance"
     IN_EMERGENCY_WAIT_FOR_PATROL_SERVICE = "inEmergencyWaitForPatrolService"
     KEEP_YOUR_DISTANCE = "keepYourDistance"
-    LEAVE_YOUR_VEHICLE_PROCEED_TO_NEXT_SAFE_PLACE = "leaveYourVehicleProceedToNextSafePlace"
+    LEAVE_YOUR_VEHICLE_PROCEED_TO_NEXT_SAFE_PLACE = (
+        "leaveYourVehicleProceedToNextSafePlace"
+    )
     NO_NAKED_FLAMES = "noNakedFlames"
     NO_OVERTAKING = "noOvertaking"
     NO_SMOKING = "noSmoking"
@@ -97,7 +102,9 @@ class GeneralInstructionToRoadUsersTypeEnum(Enum):
     STOP_AT_NEXT_SAFE_PLACE = "stopAtNextSafePlace"
     STOP_AT_NEXT_SERVICE_AREA = "stopAtNextServiceArea"
     SWITCH_OFF_ENGINE = "switchOffEngine"
-    SWITCH_OFF_MOBILE_PHONES_AND_TWO_WAY_RADIOS = "switchOffMobilePhonesAndTwoWayRadios"
+    SWITCH_OFF_MOBILE_PHONES_AND_TWO_WAY_RADIOS = (
+        "switchOffMobilePhonesAndTwoWayRadios"
+    )
     TEST_YOUR_BRAKES = "testYourBrakes"
     USE_BUS_SERVICE = "useBusService"
     USE_FOG_LIGHTS = "useFogLights"

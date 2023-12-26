@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .waiting_equipment_version_structure import WaitingEquipmentVersionStructure
+from .waiting_equipment_version_structure import (
+    WaitingEquipmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -17,7 +19,7 @@ class SeatingEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "name": "Armrest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     seat_height: Optional[Decimal] = field(
         default=None,
@@ -25,5 +27,5 @@ class SeatingEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "name": "SeatHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

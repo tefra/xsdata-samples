@@ -9,6 +9,7 @@ class UnitedNations7:
     """
     United Nations Form of Payments.
     """
+
     class Meta:
         name = "UnitedNations"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -19,5 +20,5 @@ class UnitedNations7:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

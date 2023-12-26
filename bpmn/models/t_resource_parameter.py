@@ -15,19 +15,19 @@ class TResourceParameter(TBaseElement):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     type_value: Optional[QName] = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )
     is_required: Optional[bool] = field(
         default=None,
         metadata={
             "name": "isRequired",
             "type": "Attribute",
-        }
+        },
     )

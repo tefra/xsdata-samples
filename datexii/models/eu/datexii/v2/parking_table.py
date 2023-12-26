@@ -24,13 +24,14 @@ class ParkingTable:
     :ivar id:
     :ivar version:
     """
+
     parking_table_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "parkingTableName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_table_version_time: Optional[XmlDateTime] = field(
         default=None,
@@ -39,7 +40,7 @@ class ParkingTable:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_record: List[ParkingRecord] = field(
         default_factory=list,
@@ -48,7 +49,7 @@ class ParkingTable:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     parking_table_extension: Optional[ExtensionType] = field(
         default=None,
@@ -56,19 +57,19 @@ class ParkingTable:
             "name": "parkingTableExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

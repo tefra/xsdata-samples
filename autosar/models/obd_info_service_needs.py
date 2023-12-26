@@ -91,6 +91,7 @@ class ObdInfoServiceNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "OBD-INFO-SERVICE-NEEDS"
 
@@ -101,15 +102,17 @@ class ObdInfoServiceNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ObdInfoServiceNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ObdInfoServiceNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +120,7 @@ class ObdInfoServiceNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +128,7 @@ class ObdInfoServiceNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +136,7 @@ class ObdInfoServiceNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +144,7 @@ class ObdInfoServiceNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,7 +152,7 @@ class ObdInfoServiceNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ObdInfoServiceNeeds.Annotations"] = field(
         default=None,
@@ -157,7 +160,7 @@ class ObdInfoServiceNeeds:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     audiences: Optional["ObdInfoServiceNeeds.Audiences"] = field(
         default=None,
@@ -165,7 +168,7 @@ class ObdInfoServiceNeeds:
             "name": "AUDIENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diag_requirement: Optional[DiagRequirementIdString] = field(
         default=None,
@@ -173,7 +176,7 @@ class ObdInfoServiceNeeds:
             "name": "DIAG-REQUIREMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_access_level: Optional[PositiveInteger] = field(
         default=None,
@@ -181,7 +184,7 @@ class ObdInfoServiceNeeds:
             "name": "SECURITY-ACCESS-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -189,7 +192,7 @@ class ObdInfoServiceNeeds:
             "name": "DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     info_type: Optional[PositiveInteger] = field(
         default=None,
@@ -197,14 +200,14 @@ class ObdInfoServiceNeeds:
             "name": "INFO-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -212,14 +215,14 @@ class ObdInfoServiceNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -230,7 +233,7 @@ class ObdInfoServiceNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,7 +244,7 @@ class ObdInfoServiceNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -252,11 +255,12 @@ class ObdInfoServiceNeeds:
             documentation but also subsequent audience specific
             implementation.
         """
+
         audience: List[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

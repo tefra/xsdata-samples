@@ -19,7 +19,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "name": "OperatorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -35,7 +35,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     legal_name: Optional[MultilingualString] = field(
         default=None,
@@ -43,7 +43,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "name": "LegalName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     trading_name: Optional[MultilingualString] = field(
         default=None,
@@ -51,7 +51,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "name": "TradingName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alternative_names: Optional[AlternativeNamesRelStructure] = field(
         default=None,
@@ -59,5 +59,5 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "name": "alternativeNames",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -10,6 +10,7 @@ class VehicleUpsellDelete:
     Delete command for deleting VehicleUpsellQualify,VehicleUpsellOffer using there
     persisted keys.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -18,12 +19,12 @@ class VehicleUpsellDelete:
         metadata={
             "name": "QualifyRef",
             "type": "Attribute",
-        }
+        },
     )
     offer_ref: None | str = field(
         default=None,
         metadata={
             "name": "OfferRef",
             "type": "Attribute",
-        }
+        },
     )

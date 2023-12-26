@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from .audio_trigger_method_enumeration import AudioTriggerMethodEnumeration
-from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .installed_equipment_version_structure import (
+    InstalledEquipmentVersionStructure,
+)
 from .multilingual_string import MultilingualString
 from .print_presentation_structure import PrintPresentationStructure
 
@@ -20,7 +22,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "Height",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     width: Optional[Decimal] = field(
         default=None,
@@ -28,7 +30,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "Width",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     height_from_floor: Optional[Decimal] = field(
         default=None,
@@ -36,7 +38,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "HeightFromFloor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     placement: Optional[MultilingualString] = field(
         default=None,
@@ -44,7 +46,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "Placement",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     brand_graphic: Optional[str] = field(
         default=None,
@@ -52,7 +54,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "BrandGraphic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     sign_graphic: Optional[str] = field(
         default=None,
@@ -60,7 +62,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "SignGraphic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     machine_readable: Optional[bool] = field(
         default=None,
@@ -68,7 +70,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "MachineReadable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     as_braille: Optional[bool] = field(
         default=None,
@@ -76,7 +78,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "AsBraille",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     audio_trigger_method: Optional[AudioTriggerMethodEnumeration] = field(
         default=None,
@@ -84,7 +86,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "AudioTriggerMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     printed_presentation: Optional[PrintPresentationStructure] = field(
         default=None,
@@ -92,7 +94,7 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "PrintedPresentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     contrast: Optional[Decimal] = field(
         default=None,
@@ -100,5 +102,5 @@ class SignEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "Contrast",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

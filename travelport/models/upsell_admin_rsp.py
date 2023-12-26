@@ -13,6 +13,7 @@ class UpsellAdminRsp(BaseRsp1):
     """
     Response to add/delete/update of offer/qualify.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -22,7 +23,7 @@ class UpsellAdminRsp(BaseRsp1):
             "name": "AirUpsellRule",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_upsell_rule: list[VehicleUpsellRule] = field(
         default_factory=list,
@@ -30,7 +31,7 @@ class UpsellAdminRsp(BaseRsp1):
             "name": "VehicleUpsellRule",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_upsell_rule: list[HotelUpsellRule] = field(
         default_factory=list,
@@ -38,5 +39,5 @@ class UpsellAdminRsp(BaseRsp1):
             "name": "HotelUpsellRule",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

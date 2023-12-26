@@ -24,6 +24,7 @@ class ProfileSearchFieldRsp1(BaseRsp2):
         Indicates whether more results are available that match the search
         parameters.
     """
+
     class Meta:
         name = "ProfileSearchFieldRsp"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -33,14 +34,14 @@ class ProfileSearchFieldRsp1(BaseRsp2):
         metadata={
             "name": "Field",
             "type": "Element",
-        }
+        },
     )
     field_group: list[FieldGroup1] = field(
         default_factory=list,
         metadata={
             "name": "FieldGroup",
             "type": "Element",
-        }
+        },
     )
     more_results: None | bool = field(
         default=None,
@@ -48,5 +49,5 @@ class ProfileSearchFieldRsp1(BaseRsp2):
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

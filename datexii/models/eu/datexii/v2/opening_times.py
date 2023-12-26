@@ -29,13 +29,14 @@ class OpeningTimes:
     :ivar validity:
     :ivar opening_times_extension:
     """
+
     last_updated: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "lastUpdated",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     open_all_year: Optional[bool] = field(
         default=None,
@@ -43,14 +44,14 @@ class OpeningTimes:
             "name": "openAllYear",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     available24hours: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     url_link_address: Optional[str] = field(
         default=None,
@@ -58,7 +59,7 @@ class OpeningTimes:
             "name": "urlLinkAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     opening_times_unknown: Optional[bool] = field(
         default=None,
@@ -66,7 +67,7 @@ class OpeningTimes:
             "name": "openingTimesUnknown",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     opening_times_not_specified: Optional[bool] = field(
         default=None,
@@ -74,14 +75,14 @@ class OpeningTimes:
             "name": "openingTimesNotSpecified",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     validity: Optional[Validity] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     opening_times_extension: Optional[ExtensionType] = field(
         default=None,
@@ -89,5 +90,5 @@ class OpeningTimes:
             "name": "openingTimesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

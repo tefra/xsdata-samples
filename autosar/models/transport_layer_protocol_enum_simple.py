@@ -8,5 +8,6 @@ class TransportLayerProtocolEnumSimple(Enum):
     :cvar TCP: Transmission control protocol
     :cvar UDP: User datagram protocol
     """
+
     TCP = "TCP"
     UDP = "UDP"

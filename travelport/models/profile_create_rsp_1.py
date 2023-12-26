@@ -11,6 +11,7 @@ class ProfileCreateRsp1(BaseRsp2):
     """
     Response with the newly created profile.
     """
+
     class Meta:
         name = "ProfileCreateRsp"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -21,5 +22,5 @@ class ProfileCreateRsp1(BaseRsp2):
             "name": "Profile",
             "type": "Element",
             "required": True,
-        }
+        },
     )

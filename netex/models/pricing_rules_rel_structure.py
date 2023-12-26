@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .discounting_rule import DiscountingRule
 from .frame_containment_structure import FrameContainmentStructure
 from .limiting_rule import LimitingRule
@@ -14,7 +14,11 @@ class PricingRulesRelStructure(FrameContainmentStructure):
     class Meta:
         name = "pricingRules_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            LimitingRuleInContext, LimitingRule, DiscountingRule, PricingRule
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -40,5 +44,5 @@ class PricingRulesRelStructure(FrameContainmentStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

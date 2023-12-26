@@ -10,6 +10,7 @@ class TypeProfileRef5:
     """
     ProfileEntityID and ProfileLevel together identity a profile entity.
     """
+
     class Meta:
         name = "typeProfileRef"
 
@@ -19,7 +20,7 @@ class TypeProfileRef5:
             "name": "ProfileEntityID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_level: None | TypeProfileLevel5 = field(
         default=None,
@@ -27,5 +28,5 @@ class TypeProfileRef5:
             "name": "ProfileLevel",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

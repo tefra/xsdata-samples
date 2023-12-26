@@ -10,5 +10,6 @@ class UniversalRecordSearchModifiers(BaseSearchModifiers):
     """
     Controls and switches for the Universal Record Search request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"

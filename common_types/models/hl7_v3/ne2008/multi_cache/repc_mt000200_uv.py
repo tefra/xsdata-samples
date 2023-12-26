@@ -103,7 +103,7 @@ class RepcMt000200UvAuthor:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -111,7 +111,7 @@ class RepcMt000200UvAuthor:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -119,7 +119,7 @@ class RepcMt000200UvAuthor:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -127,7 +127,7 @@ class RepcMt000200UvAuthor:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
@@ -135,7 +135,7 @@ class RepcMt000200UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -144,7 +144,7 @@ class RepcMt000200UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -153,7 +153,7 @@ class RepcMt000200UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -161,7 +161,7 @@ class RepcMt000200UvAuthor:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_entity: Optional[CoctMt090000Uv01AssignedEntity] = field(
         default=None,
@@ -170,7 +170,7 @@ class RepcMt000200UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     patient: Optional[CoctMt050000Uv01Patient] = field(
         default=None,
@@ -178,14 +178,14 @@ class RepcMt000200UvAuthor:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -194,14 +194,14 @@ class RepcMt000200UvAuthor:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -216,7 +216,7 @@ class RepcMt000200UvAuthor6:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -224,7 +224,7 @@ class RepcMt000200UvAuthor6:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -232,7 +232,7 @@ class RepcMt000200UvAuthor6:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -240,7 +240,7 @@ class RepcMt000200UvAuthor6:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
@@ -248,7 +248,7 @@ class RepcMt000200UvAuthor6:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -257,7 +257,7 @@ class RepcMt000200UvAuthor6:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -266,7 +266,7 @@ class RepcMt000200UvAuthor6:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -274,7 +274,7 @@ class RepcMt000200UvAuthor6:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_party: Optional[CoctMt090400UvAssignedParty] = field(
         default=None,
@@ -283,14 +283,14 @@ class RepcMt000200UvAuthor6:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -299,14 +299,14 @@ class RepcMt000200UvAuthor6:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -321,7 +321,7 @@ class RepcMt000200UvComponent2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -329,7 +329,7 @@ class RepcMt000200UvComponent2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -337,7 +337,7 @@ class RepcMt000200UvComponent2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -345,7 +345,7 @@ class RepcMt000200UvComponent2:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     guideline: Optional["RepcMt000200UvGuideline"] = field(
         default=None,
@@ -353,14 +353,14 @@ class RepcMt000200UvComponent2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -368,14 +368,14 @@ class RepcMt000200UvComponent2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -383,7 +383,7 @@ class RepcMt000200UvComponent2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -398,7 +398,7 @@ class RepcMt000200UvComponent7:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -406,7 +406,7 @@ class RepcMt000200UvComponent7:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -414,7 +414,7 @@ class RepcMt000200UvComponent7:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -422,7 +422,7 @@ class RepcMt000200UvComponent7:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     care_plan: Optional["RepcMt000200UvCarePlan"] = field(
         default=None,
@@ -431,14 +431,14 @@ class RepcMt000200UvComponent7:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -446,14 +446,14 @@ class RepcMt000200UvComponent7:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: Optional[str] = field(
         default=None,
@@ -462,7 +462,7 @@ class RepcMt000200UvComponent7:
             "type": "Attribute",
             "required": True,
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -477,7 +477,7 @@ class RepcMt000200UvCriterionGroup:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -485,7 +485,7 @@ class RepcMt000200UvCriterionGroup:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -493,14 +493,14 @@ class RepcMt000200UvCriterionGroup:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -508,7 +508,7 @@ class RepcMt000200UvCriterionGroup:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -517,7 +517,7 @@ class RepcMt000200UvCriterionGroup:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -532,7 +532,7 @@ class RepcMt000200UvDataEnterer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -540,7 +540,7 @@ class RepcMt000200UvDataEnterer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -548,14 +548,14 @@ class RepcMt000200UvDataEnterer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -563,7 +563,7 @@ class RepcMt000200UvDataEnterer:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -571,7 +571,7 @@ class RepcMt000200UvDataEnterer:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -579,7 +579,7 @@ class RepcMt000200UvDataEnterer:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -588,14 +588,14 @@ class RepcMt000200UvDataEnterer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -604,14 +604,14 @@ class RepcMt000200UvDataEnterer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -626,7 +626,7 @@ class RepcMt000200UvInFulfillmentOf:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -634,7 +634,7 @@ class RepcMt000200UvInFulfillmentOf:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -642,7 +642,7 @@ class RepcMt000200UvInFulfillmentOf:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_reference1: Optional[RepcMt000100Uv01ActReference] = field(
         default=None,
@@ -651,7 +651,7 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     act: Optional[RepcMt000100Uv01Act] = field(
         default=None,
@@ -659,7 +659,7 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter: Optional[RepcMt000100Uv01Encounter] = field(
         default=None,
@@ -667,7 +667,7 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     observation: Optional[RepcMt000100Uv01Observation] = field(
         default=None,
@@ -675,7 +675,7 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     organizer: Optional[RepcMt000100Uv01Organizer] = field(
         default=None,
@@ -683,7 +683,7 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure: Optional[RepcMt000100Uv01Procedure] = field(
         default=None,
@@ -691,16 +691,18 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration: Optional[RepcMt000100Uv01SubstanceAdministration] = field(
+    substance_administration: Optional[
+        RepcMt000100Uv01SubstanceAdministration
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     supply: Optional[RepcMt000100Uv01Supply] = field(
         default=None,
@@ -708,14 +710,14 @@ class RepcMt000200UvInFulfillmentOf:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipFulfills] = field(
         default=None,
@@ -723,14 +725,14 @@ class RepcMt000200UvInFulfillmentOf:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -738,7 +740,7 @@ class RepcMt000200UvInFulfillmentOf:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -753,7 +755,7 @@ class RepcMt000200UvMaterialKind2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -761,7 +763,7 @@ class RepcMt000200UvMaterialKind2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -769,28 +771,28 @@ class RepcMt000200UvMaterialKind2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[St] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassMaterial] = field(
         default=None,
@@ -798,7 +800,7 @@ class RepcMt000200UvMaterialKind2:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: Optional[EntityDeterminerDetermined] = field(
         default=None,
@@ -806,7 +808,7 @@ class RepcMt000200UvMaterialKind2:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -821,7 +823,7 @@ class RepcMt000200UvObservationGoal:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -829,7 +831,7 @@ class RepcMt000200UvObservationGoal:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -837,7 +839,7 @@ class RepcMt000200UvObservationGoal:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -845,7 +847,7 @@ class RepcMt000200UvObservationGoal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -854,7 +856,7 @@ class RepcMt000200UvObservationGoal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
@@ -862,14 +864,14 @@ class RepcMt000200UvObservationGoal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -877,7 +879,7 @@ class RepcMt000200UvObservationGoal:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -886,7 +888,7 @@ class RepcMt000200UvObservationGoal:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -901,7 +903,7 @@ class RepcMt000200UvParticipant:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -909,7 +911,7 @@ class RepcMt000200UvParticipant:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -917,7 +919,7 @@ class RepcMt000200UvParticipant:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -925,7 +927,7 @@ class RepcMt000200UvParticipant:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -933,7 +935,7 @@ class RepcMt000200UvParticipant:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_party: Optional[CoctMt090400UvAssignedParty] = field(
         default=None,
@@ -942,14 +944,14 @@ class RepcMt000200UvParticipant:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationParticipation] = field(
         default=None,
@@ -957,14 +959,14 @@ class RepcMt000200UvParticipant:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -979,7 +981,7 @@ class RepcMt000200UvPerformer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -987,7 +989,7 @@ class RepcMt000200UvPerformer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -995,7 +997,7 @@ class RepcMt000200UvPerformer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     function_code: Optional[Cd] = field(
         default=None,
@@ -1003,14 +1005,14 @@ class RepcMt000200UvPerformer:
             "name": "functionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -1018,7 +1020,7 @@ class RepcMt000200UvPerformer:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_party: Optional[CoctMt090400UvAssignedParty] = field(
         default=None,
@@ -1027,14 +1029,14 @@ class RepcMt000200UvPerformer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationPhysicalPerformer] = field(
         default=None,
@@ -1042,14 +1044,14 @@ class RepcMt000200UvPerformer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1064,7 +1066,7 @@ class RepcMt000200UvPerformer2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1072,7 +1074,7 @@ class RepcMt000200UvPerformer2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1080,14 +1082,14 @@ class RepcMt000200UvPerformer2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -1096,14 +1098,14 @@ class RepcMt000200UvPerformer2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationPhysicalPerformer] = field(
         default=None,
@@ -1111,14 +1113,14 @@ class RepcMt000200UvPerformer2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1133,7 +1135,7 @@ class RepcMt000200UvPrecondition2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1141,7 +1143,7 @@ class RepcMt000200UvPrecondition2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1149,7 +1151,7 @@ class RepcMt000200UvPrecondition2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -1157,7 +1159,7 @@ class RepcMt000200UvPrecondition2:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -1165,7 +1167,7 @@ class RepcMt000200UvPrecondition2:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     criterion: Optional["RepcMt000200UvCriterion"] = field(
         default=None,
@@ -1173,16 +1175,36 @@ class RepcMt000200UvPrecondition2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipConditional.PRCN,
         metadata={
@@ -1190,14 +1212,14 @@ class RepcMt000200UvPrecondition2:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -1205,7 +1227,7 @@ class RepcMt000200UvPrecondition2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1220,7 +1242,7 @@ class RepcMt000200UvReason2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1228,7 +1250,7 @@ class RepcMt000200UvReason2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1236,7 +1258,7 @@ class RepcMt000200UvReason2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     concern: Optional[RepcMt000300Uv01Concern] = field(
         default=None,
@@ -1244,14 +1266,14 @@ class RepcMt000200UvReason2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipReason] = field(
         default=None,
@@ -1259,14 +1281,14 @@ class RepcMt000200UvReason2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -1274,7 +1296,7 @@ class RepcMt000200UvReason2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1289,7 +1311,7 @@ class RepcMt000200UvVerifier:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1297,7 +1319,7 @@ class RepcMt000200UvVerifier:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1305,7 +1327,7 @@ class RepcMt000200UvVerifier:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -1313,14 +1335,14 @@ class RepcMt000200UvVerifier:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -1328,7 +1350,7 @@ class RepcMt000200UvVerifier:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -1336,7 +1358,7 @@ class RepcMt000200UvVerifier:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -1344,7 +1366,7 @@ class RepcMt000200UvVerifier:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -1353,14 +1375,14 @@ class RepcMt000200UvVerifier:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationVerifier] = field(
         default=None,
@@ -1368,14 +1390,14 @@ class RepcMt000200UvVerifier:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.OP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1390,7 +1412,7 @@ class RepcMt000200UvAnnotation:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1398,7 +1420,7 @@ class RepcMt000200UvAnnotation:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1406,7 +1428,7 @@ class RepcMt000200UvAnnotation:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[St] = field(
         default=None,
@@ -1414,7 +1436,7 @@ class RepcMt000200UvAnnotation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -1423,7 +1445,7 @@ class RepcMt000200UvAnnotation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     author: List[RepcMt000200UvAuthor6] = field(
         default_factory=list,
@@ -1431,14 +1453,14 @@ class RepcMt000200UvAnnotation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -1446,7 +1468,7 @@ class RepcMt000200UvAnnotation:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -1455,7 +1477,7 @@ class RepcMt000200UvAnnotation:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1470,7 +1492,7 @@ class RepcMt000200UvCriterion:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1478,7 +1500,7 @@ class RepcMt000200UvCriterion:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1486,21 +1508,21 @@ class RepcMt000200UvCriterion:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
@@ -1508,7 +1530,7 @@ class RepcMt000200UvCriterion:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     interpretation_code: Optional[Ce] = field(
         default=None,
@@ -1517,7 +1539,7 @@ class RepcMt000200UvCriterion:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     precondition: List[RepcMt000200UvPrecondition2] = field(
         default_factory=list,
@@ -1525,14 +1547,14 @@ class RepcMt000200UvCriterion:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -1540,7 +1562,7 @@ class RepcMt000200UvCriterion:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -1549,7 +1571,7 @@ class RepcMt000200UvCriterion:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: str = field(
         default="false",
@@ -1557,7 +1579,7 @@ class RepcMt000200UvCriterion:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1572,7 +1594,7 @@ class RepcMt000200UvFinalGoal:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1580,7 +1602,7 @@ class RepcMt000200UvFinalGoal:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1588,7 +1610,7 @@ class RepcMt000200UvFinalGoal:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     observation_goal: Optional[RepcMt000200UvObservationGoal] = field(
         default=None,
@@ -1597,16 +1619,36 @@ class RepcMt000200UvFinalGoal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipOutcome.OBJF,
         metadata={
@@ -1614,14 +1656,14 @@ class RepcMt000200UvFinalGoal:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -1629,7 +1671,7 @@ class RepcMt000200UvFinalGoal:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1644,7 +1686,7 @@ class RepcMt000200UvGoal:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1652,7 +1694,7 @@ class RepcMt000200UvGoal:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1660,7 +1702,7 @@ class RepcMt000200UvGoal:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     observation_goal: Optional[RepcMt000200UvObservationGoal] = field(
         default=None,
@@ -1669,16 +1711,36 @@ class RepcMt000200UvGoal:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipOutcome.GOAL,
         metadata={
@@ -1686,14 +1748,14 @@ class RepcMt000200UvGoal:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -1701,7 +1763,7 @@ class RepcMt000200UvGoal:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1716,7 +1778,7 @@ class RepcMt000200UvMaterialPart:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1724,7 +1786,7 @@ class RepcMt000200UvMaterialPart:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1732,7 +1794,7 @@ class RepcMt000200UvMaterialPart:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     part_material_kind: Optional[RepcMt000200UvMaterialKind2] = field(
         default=None,
@@ -1741,14 +1803,14 @@ class RepcMt000200UvMaterialPart:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassPartitive] = field(
         default=None,
@@ -1756,7 +1818,7 @@ class RepcMt000200UvMaterialPart:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1771,7 +1833,7 @@ class RepcMt000200UvPatientInstructions:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1779,7 +1841,7 @@ class RepcMt000200UvPatientInstructions:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1787,28 +1849,28 @@ class RepcMt000200UvPatientInstructions:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[Ts] = field(
         default=None,
@@ -1816,7 +1878,7 @@ class RepcMt000200UvPatientInstructions:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer] = field(
         default_factory=list,
@@ -1824,14 +1886,14 @@ class RepcMt000200UvPatientInstructions:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassProcedure] = field(
         default=None,
@@ -1839,7 +1901,7 @@ class RepcMt000200UvPatientInstructions:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -1848,7 +1910,7 @@ class RepcMt000200UvPatientInstructions:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1863,7 +1925,7 @@ class RepcMt000200UvPlannedReview:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1871,7 +1933,7 @@ class RepcMt000200UvPlannedReview:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1879,7 +1941,7 @@ class RepcMt000200UvPlannedReview:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -1887,7 +1949,7 @@ class RepcMt000200UvPlannedReview:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer] = field(
         default_factory=list,
@@ -1895,14 +1957,14 @@ class RepcMt000200UvPlannedReview:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -1911,7 +1973,7 @@ class RepcMt000200UvPlannedReview:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
@@ -1919,7 +1981,7 @@ class RepcMt000200UvPlannedReview:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1934,7 +1996,7 @@ class RepcMt000200UvComponent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1942,7 +2004,7 @@ class RepcMt000200UvComponent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1950,7 +2012,7 @@ class RepcMt000200UvComponent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     patient_instructions: Optional[RepcMt000200UvPatientInstructions] = field(
         default=None,
@@ -1959,14 +2021,14 @@ class RepcMt000200UvComponent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -1974,14 +2036,14 @@ class RepcMt000200UvComponent:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -1989,7 +2051,7 @@ class RepcMt000200UvComponent:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2004,7 +2066,7 @@ class RepcMt000200UvConditions:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2012,7 +2074,7 @@ class RepcMt000200UvConditions:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2020,7 +2082,7 @@ class RepcMt000200UvConditions:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     conjunction_code: Optional[Cs] = field(
         default=None,
@@ -2028,7 +2090,7 @@ class RepcMt000200UvConditions:
             "name": "conjunctionCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     seperatable_ind: Optional[Bl] = field(
         default=None,
@@ -2036,7 +2098,7 @@ class RepcMt000200UvConditions:
             "name": "seperatableInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     criterion: Optional[RepcMt000200UvCriterion] = field(
         default=None,
@@ -2044,7 +2106,7 @@ class RepcMt000200UvConditions:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     criterion_group: Optional[RepcMt000200UvCriterionGroup] = field(
         default=None,
@@ -2053,14 +2115,14 @@ class RepcMt000200UvConditions:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipConditional] = field(
         default=None,
@@ -2068,14 +2130,14 @@ class RepcMt000200UvConditions:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -2083,7 +2145,7 @@ class RepcMt000200UvConditions:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2098,7 +2160,7 @@ class RepcMt000200UvMaterialKind:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2106,7 +2168,7 @@ class RepcMt000200UvMaterialKind:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2114,21 +2176,21 @@ class RepcMt000200UvMaterialKind:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[St] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     material_part: List[RepcMt000200UvMaterialPart] = field(
         default_factory=list,
@@ -2137,14 +2199,14 @@ class RepcMt000200UvMaterialKind:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassMaterial] = field(
         default=None,
@@ -2152,7 +2214,7 @@ class RepcMt000200UvMaterialKind:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: Optional[EntityDeterminerDetermined] = field(
         default=None,
@@ -2160,7 +2222,7 @@ class RepcMt000200UvMaterialKind:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -2175,7 +2237,7 @@ class RepcMt000200UvSubject:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2183,7 +2245,7 @@ class RepcMt000200UvSubject:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2191,7 +2253,7 @@ class RepcMt000200UvSubject:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     planned_review: Optional[RepcMt000200UvPlannedReview] = field(
         default=None,
@@ -2200,16 +2262,36 @@ class RepcMt000200UvSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -2217,14 +2299,14 @@ class RepcMt000200UvSubject:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -2232,7 +2314,7 @@ class RepcMt000200UvSubject:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2247,7 +2329,7 @@ class RepcMt000200UvSubject2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2255,7 +2337,7 @@ class RepcMt000200UvSubject2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2263,7 +2345,7 @@ class RepcMt000200UvSubject2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     annotation: Optional[RepcMt000200UvAnnotation] = field(
         default=None,
@@ -2271,16 +2353,36 @@ class RepcMt000200UvSubject2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -2288,14 +2390,14 @@ class RepcMt000200UvSubject2:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -2303,7 +2405,7 @@ class RepcMt000200UvSubject2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2318,7 +2420,7 @@ class RepcMt000200UvActDefinition:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2326,7 +2428,7 @@ class RepcMt000200UvActDefinition:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2334,7 +2436,7 @@ class RepcMt000200UvActDefinition:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -2342,7 +2444,7 @@ class RepcMt000200UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -2350,14 +2452,14 @@ class RepcMt000200UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -2365,7 +2467,7 @@ class RepcMt000200UvActDefinition:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -2373,7 +2475,7 @@ class RepcMt000200UvActDefinition:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -2381,7 +2483,7 @@ class RepcMt000200UvActDefinition:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -2389,7 +2491,7 @@ class RepcMt000200UvActDefinition:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -2397,7 +2499,7 @@ class RepcMt000200UvActDefinition:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -2405,7 +2507,7 @@ class RepcMt000200UvActDefinition:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Cs] = field(
         default=None,
@@ -2413,7 +2515,7 @@ class RepcMt000200UvActDefinition:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -2421,7 +2523,7 @@ class RepcMt000200UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -2429,7 +2531,7 @@ class RepcMt000200UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -2437,7 +2539,7 @@ class RepcMt000200UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -2446,7 +2548,7 @@ class RepcMt000200UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -2455,14 +2557,14 @@ class RepcMt000200UvActDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -2470,7 +2572,7 @@ class RepcMt000200UvActDefinition:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -2479,7 +2581,7 @@ class RepcMt000200UvActDefinition:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -2487,7 +2589,7 @@ class RepcMt000200UvActDefinition:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -2502,7 +2604,7 @@ class RepcMt000200UvAdministerableMaterial:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2510,7 +2612,7 @@ class RepcMt000200UvAdministerableMaterial:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2518,7 +2620,7 @@ class RepcMt000200UvAdministerableMaterial:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administerable_material_kind: Optional[RepcMt000200UvMaterialKind] = field(
         default=None,
@@ -2527,16 +2629,32 @@ class RepcMt000200UvAdministerableMaterial:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassPassive.ADMM,
         metadata={
@@ -2544,7 +2662,7 @@ class RepcMt000200UvAdministerableMaterial:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -2559,7 +2677,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2567,7 +2685,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2575,7 +2693,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -2583,21 +2701,21 @@ class RepcMt000200UvEncounterDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -2605,7 +2723,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -2613,7 +2731,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -2621,7 +2739,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -2629,7 +2747,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -2637,7 +2755,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -2645,7 +2763,7 @@ class RepcMt000200UvEncounterDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -2653,7 +2771,7 @@ class RepcMt000200UvEncounterDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -2661,7 +2779,7 @@ class RepcMt000200UvEncounterDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -2670,7 +2788,7 @@ class RepcMt000200UvEncounterDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -2679,14 +2797,14 @@ class RepcMt000200UvEncounterDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -2695,7 +2813,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -2704,7 +2822,7 @@ class RepcMt000200UvEncounterDefinition:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -2719,7 +2837,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2727,7 +2845,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2735,7 +2853,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -2743,7 +2861,7 @@ class RepcMt000200UvObservationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -2751,7 +2869,7 @@ class RepcMt000200UvObservationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     derivation_expr: Optional[St] = field(
         default=None,
@@ -2759,14 +2877,14 @@ class RepcMt000200UvObservationDefinition:
             "name": "derivationExpr",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -2774,7 +2892,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -2782,7 +2900,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -2790,7 +2908,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -2798,7 +2916,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -2806,7 +2924,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     repeat_number: Optional[IvlInt] = field(
         default=None,
@@ -2814,7 +2932,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -2822,7 +2940,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Cs] = field(
         default=None,
@@ -2830,14 +2948,14 @@ class RepcMt000200UvObservationDefinition:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     method_code: List[Ce] = field(
         default_factory=list,
@@ -2845,7 +2963,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "methodCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     target_site_code: List[Cd] = field(
         default_factory=list,
@@ -2853,7 +2971,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "targetSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -2861,7 +2979,7 @@ class RepcMt000200UvObservationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -2869,7 +2987,7 @@ class RepcMt000200UvObservationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -2877,7 +2995,7 @@ class RepcMt000200UvObservationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -2886,7 +3004,7 @@ class RepcMt000200UvObservationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -2895,14 +3013,14 @@ class RepcMt000200UvObservationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -2910,7 +3028,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -2919,7 +3037,7 @@ class RepcMt000200UvObservationDefinition:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -2934,7 +3052,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2942,7 +3060,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2950,7 +3068,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -2958,21 +3076,21 @@ class RepcMt000200UvProcedureDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -2980,7 +3098,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -2988,7 +3106,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -2996,7 +3114,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -3004,7 +3122,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -3012,7 +3130,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -3020,7 +3138,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Cs] = field(
         default=None,
@@ -3028,7 +3146,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     method_code: List[Ce] = field(
         default_factory=list,
@@ -3036,7 +3154,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "methodCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     approach_site_code: List[Cd] = field(
         default_factory=list,
@@ -3044,7 +3162,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "approachSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     target_site_code: List[Cd] = field(
         default_factory=list,
@@ -3052,7 +3170,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "targetSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -3060,7 +3178,7 @@ class RepcMt000200UvProcedureDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -3068,7 +3186,7 @@ class RepcMt000200UvProcedureDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -3076,7 +3194,7 @@ class RepcMt000200UvProcedureDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -3085,7 +3203,7 @@ class RepcMt000200UvProcedureDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -3094,14 +3212,14 @@ class RepcMt000200UvProcedureDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassProcedure] = field(
         default=None,
@@ -3109,7 +3227,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -3118,7 +3236,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -3126,7 +3244,7 @@ class RepcMt000200UvProcedureDefinition:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -3141,7 +3259,7 @@ class RepcMt000200UvSupplyEvent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3149,7 +3267,7 @@ class RepcMt000200UvSupplyEvent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3157,14 +3275,14 @@ class RepcMt000200UvSupplyEvent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     derivation_expr: Optional[St] = field(
         default=None,
@@ -3172,7 +3290,7 @@ class RepcMt000200UvSupplyEvent:
             "name": "derivationExpr",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -3180,7 +3298,7 @@ class RepcMt000200UvSupplyEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -3188,7 +3306,7 @@ class RepcMt000200UvSupplyEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -3196,7 +3314,7 @@ class RepcMt000200UvSupplyEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -3205,7 +3323,7 @@ class RepcMt000200UvSupplyEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -3214,14 +3332,14 @@ class RepcMt000200UvSupplyEvent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassSupply] = field(
         default=None,
@@ -3229,7 +3347,7 @@ class RepcMt000200UvSupplyEvent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -3238,7 +3356,7 @@ class RepcMt000200UvSupplyEvent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -3246,7 +3364,7 @@ class RepcMt000200UvSupplyEvent:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -3261,7 +3379,7 @@ class RepcMt000200UvConsumable:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3269,7 +3387,7 @@ class RepcMt000200UvConsumable:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3277,29 +3395,31 @@ class RepcMt000200UvConsumable:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    administerable_material: Optional[RepcMt000200UvAdministerableMaterial] = field(
+    administerable_material: Optional[
+        RepcMt000200UvAdministerableMaterial
+    ] = field(
         default=None,
         metadata={
             "name": "administerableMaterial",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     medication: Optional[CoctMt230100UvMedication] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -3308,14 +3428,14 @@ class RepcMt000200UvConsumable:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3330,7 +3450,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3338,7 +3458,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3346,7 +3466,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -3354,21 +3474,21 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -3376,7 +3496,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -3384,7 +3504,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -3392,7 +3512,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -3400,7 +3520,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -3408,7 +3528,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     repeat_number: Optional[IvlInt] = field(
         default=None,
@@ -3416,7 +3536,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     route_code: Optional[Ce] = field(
         default=None,
@@ -3424,7 +3544,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "routeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     approach_site_code: List[Cd] = field(
         default_factory=list,
@@ -3432,7 +3552,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "approachSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     dose_quantity: Optional[IvlPq] = field(
         default=None,
@@ -3440,7 +3560,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "doseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     rate_quantity: Optional[IvlPq] = field(
         default=None,
@@ -3448,7 +3568,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "rateQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     max_dose_quantity: Optional[RtoPqPq] = field(
         default=None,
@@ -3456,7 +3576,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "maxDoseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administration_unit_code: Optional[Ce] = field(
         default=None,
@@ -3464,7 +3584,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "administrationUnitCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     consumable: Optional[RepcMt000200UvConsumable] = field(
         default=None,
@@ -3472,7 +3592,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -3480,7 +3600,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -3488,7 +3608,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -3496,7 +3616,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -3505,7 +3625,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -3514,14 +3634,14 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -3530,7 +3650,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -3539,7 +3659,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -3547,7 +3667,7 @@ class RepcMt000200UvSubstanceAdministrationDefinition:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -3562,7 +3682,7 @@ class RepcMt000200UvComponent13:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3570,7 +3690,7 @@ class RepcMt000200UvComponent13:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3578,7 +3698,7 @@ class RepcMt000200UvComponent13:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -3586,7 +3706,7 @@ class RepcMt000200UvComponent13:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_definition: Optional[RepcMt000200UvActDefinition] = field(
         default=None,
@@ -3595,7 +3715,7 @@ class RepcMt000200UvComponent13:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter_definition: Optional[RepcMt000200UvEncounterDefinition] = field(
         default=None,
@@ -3604,16 +3724,18 @@ class RepcMt000200UvComponent13:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    observation_definition: Optional[RepcMt000200UvObservationDefinition] = field(
+    observation_definition: Optional[
+        RepcMt000200UvObservationDefinition
+    ] = field(
         default=None,
         metadata={
             "name": "observationDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure_definition: Optional[RepcMt000200UvProcedureDefinition] = field(
         default=None,
@@ -3622,16 +3744,18 @@ class RepcMt000200UvComponent13:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration_definition: Optional[RepcMt000200UvSubstanceAdministrationDefinition] = field(
+    substance_administration_definition: Optional[
+        RepcMt000200UvSubstanceAdministrationDefinition
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministrationDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     supply_event: Optional[RepcMt000200UvSupplyEvent] = field(
         default=None,
@@ -3640,14 +3764,14 @@ class RepcMt000200UvComponent13:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -3655,14 +3779,14 @@ class RepcMt000200UvComponent13:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -3670,7 +3794,7 @@ class RepcMt000200UvComponent13:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -3685,7 +3809,7 @@ class RepcMt000200UvInFulfillmentOf2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3693,7 +3817,7 @@ class RepcMt000200UvInFulfillmentOf2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3701,7 +3825,7 @@ class RepcMt000200UvInFulfillmentOf2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_definition: Optional[RepcMt000200UvActDefinition] = field(
         default=None,
@@ -3710,7 +3834,7 @@ class RepcMt000200UvInFulfillmentOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter_definition: Optional[RepcMt000200UvEncounterDefinition] = field(
         default=None,
@@ -3719,16 +3843,18 @@ class RepcMt000200UvInFulfillmentOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    observation_definition: Optional[RepcMt000200UvObservationDefinition] = field(
+    observation_definition: Optional[
+        RepcMt000200UvObservationDefinition
+    ] = field(
         default=None,
         metadata={
             "name": "observationDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure_definition: Optional[RepcMt000200UvProcedureDefinition] = field(
         default=None,
@@ -3737,16 +3863,18 @@ class RepcMt000200UvInFulfillmentOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration_definition: Optional[RepcMt000200UvSubstanceAdministrationDefinition] = field(
+    substance_administration_definition: Optional[
+        RepcMt000200UvSubstanceAdministrationDefinition
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministrationDefinition",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     supply_event: Optional[RepcMt000200UvSupplyEvent] = field(
         default=None,
@@ -3755,14 +3883,14 @@ class RepcMt000200UvInFulfillmentOf2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipFulfills] = field(
         default=None,
@@ -3770,14 +3898,14 @@ class RepcMt000200UvInFulfillmentOf2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.ON,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -3785,7 +3913,7 @@ class RepcMt000200UvInFulfillmentOf2:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -3800,7 +3928,7 @@ class RepcMt000200UvGuideline:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3808,7 +3936,7 @@ class RepcMt000200UvGuideline:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3816,35 +3944,35 @@ class RepcMt000200UvGuideline:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     title: Optional[St] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -3852,7 +3980,7 @@ class RepcMt000200UvGuideline:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -3860,7 +3988,7 @@ class RepcMt000200UvGuideline:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     author: List[RepcMt000200UvAuthor6] = field(
         default_factory=list,
@@ -3869,7 +3997,7 @@ class RepcMt000200UvGuideline:
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
             "nillable": True,
-        }
+        },
     )
     final_goal: List[RepcMt000200UvFinalGoal] = field(
         default_factory=list,
@@ -3878,7 +4006,7 @@ class RepcMt000200UvGuideline:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -3886,7 +4014,7 @@ class RepcMt000200UvGuideline:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component1: List[RepcMt000200UvComponent] = field(
         default_factory=list,
@@ -3894,7 +4022,7 @@ class RepcMt000200UvGuideline:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component2: List[RepcMt000200UvComponent13] = field(
         default_factory=list,
@@ -3902,7 +4030,7 @@ class RepcMt000200UvGuideline:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component3: List[RepcMt000200UvComponent2] = field(
         default_factory=list,
@@ -3910,7 +4038,7 @@ class RepcMt000200UvGuideline:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -3919,7 +4047,7 @@ class RepcMt000200UvGuideline:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -3928,14 +4056,14 @@ class RepcMt000200UvGuideline:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassCareProvision] = field(
         default=None,
@@ -3943,7 +4071,7 @@ class RepcMt000200UvGuideline:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -3952,7 +4080,7 @@ class RepcMt000200UvGuideline:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -3967,7 +4095,7 @@ class RepcMt000200UvObservationIntent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -3975,7 +4103,7 @@ class RepcMt000200UvObservationIntent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -3983,7 +4111,7 @@ class RepcMt000200UvObservationIntent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -3991,7 +4119,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -3999,7 +4127,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     derivation_expr: Optional[St] = field(
         default=None,
@@ -4007,14 +4135,14 @@ class RepcMt000200UvObservationIntent:
             "name": "derivationExpr",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -4022,7 +4150,7 @@ class RepcMt000200UvObservationIntent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -4030,7 +4158,7 @@ class RepcMt000200UvObservationIntent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -4038,7 +4166,7 @@ class RepcMt000200UvObservationIntent:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -4046,7 +4174,7 @@ class RepcMt000200UvObservationIntent:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -4054,7 +4182,7 @@ class RepcMt000200UvObservationIntent:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     repeat_number: Optional[IvlInt] = field(
         default=None,
@@ -4062,7 +4190,7 @@ class RepcMt000200UvObservationIntent:
             "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -4070,7 +4198,7 @@ class RepcMt000200UvObservationIntent:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Cs] = field(
         default=None,
@@ -4078,14 +4206,14 @@ class RepcMt000200UvObservationIntent:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     method_code: List[Ce] = field(
         default_factory=list,
@@ -4093,7 +4221,7 @@ class RepcMt000200UvObservationIntent:
             "name": "methodCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     target_site_code: List[Cd] = field(
         default_factory=list,
@@ -4101,7 +4229,7 @@ class RepcMt000200UvObservationIntent:
             "name": "targetSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer2] = field(
         default_factory=list,
@@ -4109,7 +4237,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -4117,7 +4245,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
         default=None,
@@ -4126,7 +4254,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -4134,7 +4262,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -4142,7 +4270,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component: List["RepcMt000200UvComponent4"] = field(
         default_factory=list,
@@ -4150,7 +4278,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
@@ -4158,7 +4286,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -4167,7 +4295,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -4176,7 +4304,7 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component_of: List["RepcMt000200UvComponent3"] = field(
         default_factory=list,
@@ -4185,14 +4313,14 @@ class RepcMt000200UvObservationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -4200,7 +4328,7 @@ class RepcMt000200UvObservationIntent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
@@ -4208,7 +4336,7 @@ class RepcMt000200UvObservationIntent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -4223,7 +4351,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4231,7 +4359,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4239,7 +4367,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -4247,21 +4375,21 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -4269,7 +4397,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -4277,7 +4405,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -4285,7 +4413,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -4293,7 +4421,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -4301,7 +4429,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -4309,7 +4437,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Cs] = field(
         default=None,
@@ -4317,7 +4445,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     method_code: List[Ce] = field(
         default_factory=list,
@@ -4325,7 +4453,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "methodCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     approach_site_code: List[Cd] = field(
         default_factory=list,
@@ -4333,7 +4461,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "approachSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     target_site_code: List[Cd] = field(
         default_factory=list,
@@ -4341,7 +4469,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "targetSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer2] = field(
         default_factory=list,
@@ -4349,7 +4477,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -4357,7 +4485,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
         default=None,
@@ -4366,7 +4494,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -4374,7 +4502,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -4382,7 +4510,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component: List["RepcMt000200UvComponent4"] = field(
         default_factory=list,
@@ -4390,7 +4518,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
@@ -4398,7 +4526,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -4407,7 +4535,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -4416,7 +4544,7 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component_of: List["RepcMt000200UvComponent3"] = field(
         default_factory=list,
@@ -4425,14 +4553,14 @@ class RepcMt000200UvProcedureIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassProcedure] = field(
         default=None,
@@ -4440,7 +4568,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
@@ -4448,7 +4576,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -4456,7 +4584,7 @@ class RepcMt000200UvProcedureIntent:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -4471,7 +4599,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4479,7 +4607,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4487,7 +4615,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -4495,21 +4623,21 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -4517,7 +4645,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -4525,7 +4653,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -4533,7 +4661,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -4541,7 +4669,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -4549,7 +4677,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     repeat_number: Optional[IvlInt] = field(
         default=None,
@@ -4557,7 +4685,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "repeatNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     route_code: Optional[Ce] = field(
         default=None,
@@ -4565,7 +4693,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "routeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     approach_site_code: List[Cd] = field(
         default_factory=list,
@@ -4573,7 +4701,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "approachSiteCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     dose_quantity: Optional[IvlPq] = field(
         default=None,
@@ -4581,7 +4709,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "doseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     rate_quantity: Optional[IvlPq] = field(
         default=None,
@@ -4589,7 +4717,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "rateQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     max_dose_quantity: Optional[RtoPqPq] = field(
         default=None,
@@ -4597,7 +4725,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "maxDoseQuantity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administration_unit_code: Optional[Ce] = field(
         default=None,
@@ -4605,7 +4733,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "administrationUnitCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     consumable: Optional[RepcMt000200UvConsumable] = field(
         default=None,
@@ -4613,7 +4741,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer2] = field(
         default_factory=list,
@@ -4621,7 +4749,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -4629,7 +4757,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
         default=None,
@@ -4638,7 +4766,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -4646,7 +4774,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -4654,7 +4782,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component: List["RepcMt000200UvComponent4"] = field(
         default_factory=list,
@@ -4662,7 +4790,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
@@ -4670,7 +4798,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -4679,7 +4807,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -4688,7 +4816,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component_of: List["RepcMt000200UvComponent3"] = field(
         default_factory=list,
@@ -4697,14 +4825,14 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -4713,7 +4841,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
@@ -4721,7 +4849,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -4729,7 +4857,7 @@ class RepcMt000200UvSubstanceAdministrationIntent:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -4744,7 +4872,7 @@ class RepcMt000200UvComponent3:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4752,7 +4880,7 @@ class RepcMt000200UvComponent3:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4760,7 +4888,7 @@ class RepcMt000200UvComponent3:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -4768,7 +4896,7 @@ class RepcMt000200UvComponent3:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_intent: Optional["RepcMt000200UvActIntent"] = field(
         default=None,
@@ -4777,7 +4905,7 @@ class RepcMt000200UvComponent3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter_intent: Optional["RepcMt000200UvEncounterIntent"] = field(
         default=None,
@@ -4786,7 +4914,7 @@ class RepcMt000200UvComponent3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     observation_intent: Optional[RepcMt000200UvObservationIntent] = field(
         default=None,
@@ -4795,7 +4923,7 @@ class RepcMt000200UvComponent3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure_intent: Optional[RepcMt000200UvProcedureIntent] = field(
         default=None,
@@ -4804,23 +4932,25 @@ class RepcMt000200UvComponent3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration_intent: Optional[RepcMt000200UvSubstanceAdministrationIntent] = field(
+    substance_administration_intent: Optional[
+        RepcMt000200UvSubstanceAdministrationIntent
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministrationIntent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -4828,14 +4958,14 @@ class RepcMt000200UvComponent3:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -4843,7 +4973,7 @@ class RepcMt000200UvComponent3:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -4851,7 +4981,7 @@ class RepcMt000200UvComponent3:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -4866,7 +4996,7 @@ class RepcMt000200UvDefinition1:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4874,7 +5004,7 @@ class RepcMt000200UvDefinition1:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4882,7 +5012,7 @@ class RepcMt000200UvDefinition1:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     guideline: Optional[RepcMt000200UvGuideline] = field(
         default=None,
@@ -4890,16 +5020,36 @@ class RepcMt000200UvDefinition1:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    type_code: Union[ActRelationshipConditional, ActRelationshipHasComponent, ActRelationshipOutcome, ActRelationshipCostTracking, ActRelationshipPosting, str, ActRelationshipHasSupport, ActRelationshipTemporallyPertains, ActRelationshipPertainsValue, ActRelationshipSequel, XActRelationshipDocument, XActRelationshipEntry, XActRelationshipEntryRelationship, XActRelationshipExternalReference, XActRelationshipPatientTransport, XActRelationshipPertinentInfo, XActRelationshipRelatedAuthorizations, XActReplaceOrRevise, XSuccReplPrev] = field(
+    type_code: Union[
+        ActRelationshipConditional,
+        ActRelationshipHasComponent,
+        ActRelationshipOutcome,
+        ActRelationshipCostTracking,
+        ActRelationshipPosting,
+        str,
+        ActRelationshipHasSupport,
+        ActRelationshipTemporallyPertains,
+        ActRelationshipPertainsValue,
+        ActRelationshipSequel,
+        XActRelationshipDocument,
+        XActRelationshipEntry,
+        XActRelationshipEntryRelationship,
+        XActRelationshipExternalReference,
+        XActRelationshipPatientTransport,
+        XActRelationshipPertinentInfo,
+        XActRelationshipRelatedAuthorizations,
+        XActReplaceOrRevise,
+        XSuccReplPrev,
+    ] = field(
         init=False,
         default=ActRelationshipSequel.INST,
         metadata={
@@ -4907,14 +5057,14 @@ class RepcMt000200UvDefinition1:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="false",
@@ -4922,7 +5072,7 @@ class RepcMt000200UvDefinition1:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -4937,7 +5087,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -4945,7 +5095,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -4953,7 +5103,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -4961,21 +5111,21 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -4983,7 +5133,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -4991,7 +5141,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -4999,7 +5149,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -5007,7 +5157,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -5015,7 +5165,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer2] = field(
         default_factory=list,
@@ -5023,7 +5173,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -5031,7 +5181,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
         default=None,
@@ -5040,7 +5190,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -5048,7 +5198,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -5056,7 +5206,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component: List["RepcMt000200UvComponent4"] = field(
         default_factory=list,
@@ -5064,7 +5214,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
@@ -5072,7 +5222,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -5081,7 +5231,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -5090,7 +5240,7 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component_of: List[RepcMt000200UvComponent3] = field(
         default_factory=list,
@@ -5099,14 +5249,14 @@ class RepcMt000200UvEncounterIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: ActClass = field(
         init=False,
@@ -5115,7 +5265,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
@@ -5123,7 +5273,7 @@ class RepcMt000200UvEncounterIntent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -5138,7 +5288,7 @@ class RepcMt000200UvComponent4:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5146,7 +5296,7 @@ class RepcMt000200UvComponent4:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5154,7 +5304,7 @@ class RepcMt000200UvComponent4:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -5162,7 +5312,7 @@ class RepcMt000200UvComponent4:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_intent: Optional["RepcMt000200UvActIntent"] = field(
         default=None,
@@ -5171,7 +5321,7 @@ class RepcMt000200UvComponent4:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter_intent: Optional[RepcMt000200UvEncounterIntent] = field(
         default=None,
@@ -5180,7 +5330,7 @@ class RepcMt000200UvComponent4:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     observation_intent: Optional[RepcMt000200UvObservationIntent] = field(
         default=None,
@@ -5189,7 +5339,7 @@ class RepcMt000200UvComponent4:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure_intent: Optional[RepcMt000200UvProcedureIntent] = field(
         default=None,
@@ -5198,23 +5348,25 @@ class RepcMt000200UvComponent4:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration_intent: Optional[RepcMt000200UvSubstanceAdministrationIntent] = field(
+    substance_administration_intent: Optional[
+        RepcMt000200UvSubstanceAdministrationIntent
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministrationIntent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -5222,14 +5374,14 @@ class RepcMt000200UvComponent4:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AN,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: str = field(
         default="true",
@@ -5237,7 +5389,7 @@ class RepcMt000200UvComponent4:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -5245,7 +5397,7 @@ class RepcMt000200UvComponent4:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -5260,7 +5412,7 @@ class RepcMt000200UvActIntent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5268,7 +5420,7 @@ class RepcMt000200UvActIntent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5276,7 +5428,7 @@ class RepcMt000200UvActIntent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -5284,7 +5436,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -5292,14 +5444,14 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -5307,7 +5459,7 @@ class RepcMt000200UvActIntent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -5315,7 +5467,7 @@ class RepcMt000200UvActIntent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     availability_time: Optional[TsExplicit] = field(
         default=None,
@@ -5323,7 +5475,7 @@ class RepcMt000200UvActIntent:
             "name": "availabilityTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     priority_code: Optional[Ce] = field(
         default=None,
@@ -5331,7 +5483,7 @@ class RepcMt000200UvActIntent:
             "name": "priorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -5339,7 +5491,7 @@ class RepcMt000200UvActIntent:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     uncertainty_code: Optional[Ce] = field(
         default=None,
@@ -5347,7 +5499,7 @@ class RepcMt000200UvActIntent:
             "name": "uncertaintyCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Cs] = field(
         default=None,
@@ -5355,7 +5507,7 @@ class RepcMt000200UvActIntent:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer2] = field(
         default_factory=list,
@@ -5363,7 +5515,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     goal: List[RepcMt000200UvGoal] = field(
         default_factory=list,
@@ -5371,7 +5523,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     in_fulfillment_of: Optional[RepcMt000200UvInFulfillmentOf2] = field(
         default=None,
@@ -5380,7 +5532,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -5388,7 +5540,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     conditions: List[RepcMt000200UvConditions] = field(
         default_factory=list,
@@ -5396,7 +5548,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component: List[RepcMt000200UvComponent4] = field(
         default_factory=list,
@@ -5404,7 +5556,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     fulfillment: List[RepcMt000200UvInFulfillmentOf] = field(
         default_factory=list,
@@ -5412,7 +5564,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -5421,7 +5573,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -5430,7 +5582,7 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component_of: List[RepcMt000200UvComponent3] = field(
         default_factory=list,
@@ -5439,14 +5591,14 @@ class RepcMt000200UvActIntent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassRoot] = field(
         default=None,
@@ -5454,7 +5606,7 @@ class RepcMt000200UvActIntent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
@@ -5462,7 +5614,7 @@ class RepcMt000200UvActIntent:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -5470,7 +5622,7 @@ class RepcMt000200UvActIntent:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -5485,7 +5637,7 @@ class RepcMt000200UvComponent10:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5493,7 +5645,7 @@ class RepcMt000200UvComponent10:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5501,7 +5653,7 @@ class RepcMt000200UvComponent10:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -5509,7 +5661,7 @@ class RepcMt000200UvComponent10:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     act_intent: Optional[RepcMt000200UvActIntent] = field(
         default=None,
@@ -5518,7 +5670,7 @@ class RepcMt000200UvComponent10:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     encounter_intent: Optional[RepcMt000200UvEncounterIntent] = field(
         default=None,
@@ -5527,7 +5679,7 @@ class RepcMt000200UvComponent10:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     observation_intent: Optional[RepcMt000200UvObservationIntent] = field(
         default=None,
@@ -5536,7 +5688,7 @@ class RepcMt000200UvComponent10:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     procedure_intent: Optional[RepcMt000200UvProcedureIntent] = field(
         default=None,
@@ -5545,23 +5697,25 @@ class RepcMt000200UvComponent10:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    substance_administration_intent: Optional[RepcMt000200UvSubstanceAdministrationIntent] = field(
+    substance_administration_intent: Optional[
+        RepcMt000200UvSubstanceAdministrationIntent
+    ] = field(
         default=None,
         metadata={
             "name": "substanceAdministrationIntent",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipHasComponent] = field(
         default=None,
@@ -5569,14 +5723,14 @@ class RepcMt000200UvComponent10:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: Optional[ContextControl] = field(
         default=None,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
     context_conduction_ind: Optional[str] = field(
         default=None,
@@ -5585,7 +5739,7 @@ class RepcMt000200UvComponent10:
             "type": "Attribute",
             "required": True,
             "pattern": r"true|false",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -5593,7 +5747,7 @@ class RepcMt000200UvComponent10:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -5608,7 +5762,7 @@ class RepcMt000200UvCarePlan:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -5616,7 +5770,7 @@ class RepcMt000200UvCarePlan:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -5624,35 +5778,35 @@ class RepcMt000200UvCarePlan:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     title: Optional[St] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -5660,7 +5814,7 @@ class RepcMt000200UvCarePlan:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -5668,7 +5822,7 @@ class RepcMt000200UvCarePlan:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     performer: List[RepcMt000200UvPerformer] = field(
         default_factory=list,
@@ -5676,7 +5830,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     author: List[RepcMt000200UvAuthor] = field(
         default_factory=list,
@@ -5684,7 +5838,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     data_enterer: List[RepcMt000200UvDataEnterer] = field(
         default_factory=list,
@@ -5693,7 +5847,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     verifier: List[RepcMt000200UvVerifier] = field(
         default_factory=list,
@@ -5701,7 +5855,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     participant: Optional[RepcMt000200UvParticipant] = field(
         default=None,
@@ -5709,7 +5863,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     final_goal: List[RepcMt000200UvFinalGoal] = field(
         default_factory=list,
@@ -5718,7 +5872,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     definition: List[RepcMt000200UvDefinition1] = field(
         default_factory=list,
@@ -5726,7 +5880,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     reason: List[RepcMt000200UvReason2] = field(
         default_factory=list,
@@ -5734,7 +5888,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component1: List[RepcMt000200UvComponent] = field(
         default_factory=list,
@@ -5742,7 +5896,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component2: List[RepcMt000200UvComponent10] = field(
         default_factory=list,
@@ -5750,7 +5904,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     component3: List[RepcMt000200UvComponent7] = field(
         default_factory=list,
@@ -5758,7 +5912,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[RepcMt000200UvSubject2] = field(
         default_factory=list,
@@ -5767,7 +5921,7 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[RepcMt000200UvSubject] = field(
         default_factory=list,
@@ -5776,14 +5930,14 @@ class RepcMt000200UvCarePlan:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassCareProvision] = field(
         default=None,
@@ -5791,7 +5945,7 @@ class RepcMt000200UvCarePlan:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: Optional[ActMoodIntent] = field(
         default=None,
@@ -5799,5 +5953,5 @@ class RepcMt000200UvCarePlan:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

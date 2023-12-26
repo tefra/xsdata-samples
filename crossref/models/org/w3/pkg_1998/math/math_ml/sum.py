@@ -15,5 +15,5 @@ class Sum:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

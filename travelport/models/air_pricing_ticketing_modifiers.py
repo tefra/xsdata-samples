@@ -11,6 +11,7 @@ class AirPricingTicketingModifiers:
     """AirPricing TicketingModifier information
     - used to associate Ticketing Modifiers with one or more
     AirPricingInfos/ProviderReservationInfo"""
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,7 +21,7 @@ class AirPricingTicketingModifiers:
             "name": "AirPricingInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ticketing_modifiers: None | TicketingModifiers = field(
         default=None,
@@ -28,5 +29,5 @@ class AirPricingTicketingModifiers:
             "name": "TicketingModifiers",
             "type": "Element",
             "required": True,
-        }
+        },
     )

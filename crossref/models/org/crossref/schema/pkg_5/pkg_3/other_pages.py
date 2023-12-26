@@ -10,6 +10,7 @@ class OtherPages:
 
     Any additional page information should be captured in other_pages.
     """
+
     class Meta:
         name = "other_pages"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class OtherPages:
         metadata={
             "min_length": 1,
             "max_length": 100,
-        }
+        },
     )

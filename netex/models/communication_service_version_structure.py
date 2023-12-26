@@ -19,5 +19,5 @@ class CommunicationServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
             "tokens": True,
-        }
+        },
     )

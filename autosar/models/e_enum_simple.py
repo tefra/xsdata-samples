@@ -12,6 +12,7 @@ class EEnumSimple(Enum):
     :cvar PLAIN: The emphasis has no specific rendering. It is used if
         e.g. semantic information is applied to the emphasis text.
     """
+
     BOLD = "BOLD"
     BOLDITALIC = "BOLDITALIC"
     ITALIC = "ITALIC"

@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_commission_category_1 import TypeCommissionCategory1
+from travelport.models.type_commission_category_1 import (
+    TypeCommissionCategory1,
+)
 from travelport.models.type_key_element_1 import TypeKeyElement1
 from travelport.models.type_supplier_type_1 import TypeSupplierType1
 
@@ -29,6 +31,7 @@ class TypeCommissionHistory1(TypeKeyElement1):
     priority_order
         Priority order associated with this Commission.
     """
+
     class Meta:
         name = "typeCommissionHistory"
 
@@ -37,14 +40,14 @@ class TypeCommissionHistory1(TypeKeyElement1):
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     supplier_type: None | TypeSupplierType1 = field(
         default=None,
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-        }
+        },
     )
     supplier: None | str = field(
         default=None,
@@ -52,14 +55,14 @@ class TypeCommissionHistory1(TypeKeyElement1):
             "name": "Supplier",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     percentage: None | str = field(
         default=None,
@@ -67,7 +70,7 @@ class TypeCommissionHistory1(TypeKeyElement1):
             "name": "Percentage",
             "type": "Attribute",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -76,5 +79,5 @@ class TypeCommissionHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

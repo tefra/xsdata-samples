@@ -15,6 +15,7 @@ class AlternateContactPhone2(TypeTaggablePhone2):
     alternate_contact_ref
         Key referencing to alternate contact.
     """
+
     class Meta:
         name = "AlternateContactPhone"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -25,5 +26,5 @@ class AlternateContactPhone2(TypeTaggablePhone2):
             "name": "AlternateContactRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

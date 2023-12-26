@@ -11,6 +11,7 @@ class Day:
     The should must be expressed with a leading zero if it is less than
     10 (e.g. submit "05", not "5").
     """
+
     class Meta:
         name = "day"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -22,5 +23,5 @@ class Day:
             "min_inclusive": 1,
             "max_inclusive": 31,
             "total_digits": 2,
-        }
+        },
     )

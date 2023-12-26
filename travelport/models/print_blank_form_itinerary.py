@@ -16,6 +16,7 @@ class PrintBlankFormItinerary:
     include_header
         If it is true then document will be printed including it's header.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class PrintBlankFormItinerary:
             "name": "IncludeDescription",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     include_header: None | bool = field(
         default=None,
@@ -33,5 +34,5 @@ class PrintBlankFormItinerary:
             "name": "IncludeHeader",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -39,6 +39,7 @@ class SwAxisGeneric:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-AXIS-GENERIC"
 
@@ -48,7 +49,7 @@ class SwAxisGeneric:
             "name": "SW-AXIS-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_number_of_axis_points: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -56,22 +57,24 @@ class SwAxisGeneric:
             "name": "SW-NUMBER-OF-AXIS-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_generic_axis_params: Optional["SwAxisGeneric.SwGenericAxisParams"] = field(
+    sw_generic_axis_params: Optional[
+        "SwAxisGeneric.SwGenericAxisParams"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -79,7 +82,7 @@ class SwAxisGeneric:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -90,7 +93,7 @@ class SwAxisGeneric:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -101,5 +104,5 @@ class SwAxisGeneric:
                 "name": "SW-GENERIC-AXIS-PARAM",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

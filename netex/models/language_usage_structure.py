@@ -14,7 +14,7 @@ class LanguageUsageStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     language_use: List[LanguageUseEnumeration] = field(
         default_factory=list,
@@ -24,5 +24,5 @@ class LanguageUsageStructure:
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
             "tokens": True,
-        }
+        },
     )

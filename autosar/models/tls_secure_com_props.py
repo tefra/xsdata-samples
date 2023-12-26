@@ -6,7 +6,9 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .crypto_service_primitive_subtypes_enum import CryptoServicePrimitiveSubtypesEnum
+from .crypto_service_primitive_subtypes_enum import (
+    CryptoServicePrimitiveSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -82,6 +84,7 @@ class TlsSecureComProps:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TLS-SECURE-COM-PROPS"
 
@@ -92,15 +95,17 @@ class TlsSecureComProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TlsSecureComProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TlsSecureComProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -108,7 +113,7 @@ class TlsSecureComProps:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -116,7 +121,7 @@ class TlsSecureComProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -124,7 +129,7 @@ class TlsSecureComProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -132,7 +137,7 @@ class TlsSecureComProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -140,7 +145,7 @@ class TlsSecureComProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TlsSecureComProps.Annotations"] = field(
         default=None,
@@ -148,7 +153,7 @@ class TlsSecureComProps:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     key_exchange_refs: Optional["TlsSecureComProps.KeyExchangeRefs"] = field(
         default=None,
@@ -156,7 +161,7 @@ class TlsSecureComProps:
             "name": "KEY-EXCHANGE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tls_cipher_suites: Optional["TlsSecureComProps.TlsCipherSuites"] = field(
         default=None,
@@ -164,14 +169,14 @@ class TlsSecureComProps:
             "name": "TLS-CIPHER-SUITES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -179,14 +184,14 @@ class TlsSecureComProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -197,7 +202,7 @@ class TlsSecureComProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -208,18 +213,20 @@ class TlsSecureComProps:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class KeyExchangeRefs:
-        key_exchange_ref: List["TlsSecureComProps.KeyExchangeRefs.KeyExchangeRef"] = field(
+        key_exchange_ref: List[
+            "TlsSecureComProps.KeyExchangeRefs.KeyExchangeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "KEY-EXCHANGE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -230,7 +237,7 @@ class TlsSecureComProps:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -241,5 +248,5 @@ class TlsSecureComProps:
                 "name": "TLS-CRYPTO-CIPHER-SUITE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

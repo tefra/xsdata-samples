@@ -15,5 +15,5 @@ class Mean:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

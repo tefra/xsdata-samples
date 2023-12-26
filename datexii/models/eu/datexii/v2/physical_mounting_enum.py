@@ -21,6 +21,7 @@ class PhysicalMountingEnum(Enum):
         a tunnel.
     :cvar VEHICLE_MOUNTED: Equipment mounted on a vehicle.
     """
+
     CENTRAL_RESERVATION_MOUNTED = "centralReservationMounted"
     GANTRY_MOUNTED = "gantryMounted"
     OVERHEAD_BRIDGE_MOUNTED = "overheadBridgeMounted"

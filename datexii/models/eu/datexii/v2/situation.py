@@ -5,7 +5,9 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
 from datexii.models.eu.datexii.v2.severity_enum import SeverityEnum
 from datexii.models.eu.datexii.v2.situation_record import SituationRecord
-from datexii.models.eu.datexii.v2.situation_versioned_reference import SituationVersionedReference
+from datexii.models.eu.datexii.v2.situation_versioned_reference import (
+    SituationVersionedReference,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -35,13 +37,14 @@ class Situation:
     :ivar id:
     :ivar version:
     """
+
     overall_severity: Optional[SeverityEnum] = field(
         default=None,
         metadata={
             "name": "overallSeverity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     related_situation: List[SituationVersionedReference] = field(
         default_factory=list,
@@ -49,7 +52,7 @@ class Situation:
             "name": "relatedSituation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     situation_version_time: Optional[XmlDateTime] = field(
         default=None,
@@ -57,7 +60,7 @@ class Situation:
             "name": "situationVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     header_information: Optional[HeaderInformation] = field(
         default=None,
@@ -66,7 +69,7 @@ class Situation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     situation_record: List[SituationRecord] = field(
         default_factory=list,
@@ -75,7 +78,7 @@ class Situation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     situation_extension: Optional[ExtensionType] = field(
         default=None,
@@ -83,19 +86,19 @@ class Situation:
             "name": "situationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

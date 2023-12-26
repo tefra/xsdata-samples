@@ -8,6 +8,7 @@ class TypeDisplayCategory(Enum):
     """
     Type of booking.
     """
+
     WITH_ITINERARY_PRICING = "With Itinerary Pricing"
     STORE = "Store"
     SPECIAL_SERVICE = "SpecialService"

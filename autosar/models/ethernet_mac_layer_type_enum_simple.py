@@ -11,6 +11,7 @@ class EthernetMacLayerTypeEnumSimple(Enum):
         (e.g. GMII, RGMII, SGMII, RvGMII, USGMII)
     :cvar XXG_MII: Mac layer interface (data) bandwith class 10Gbit/s
     """
+
     X_MII = "X-MII"
     XG_MII = "XG-MII"
     XXG_MII = "XXG-MII"

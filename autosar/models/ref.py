@@ -34,6 +34,7 @@ class Ref:
         specific elements in an array. This is in particular required if
         arrays are used to implement particular data objects.
     """
+
     class Meta:
         name = "REF"
 
@@ -42,14 +43,14 @@ class Ref:
         metadata={
             "required": True,
             "pattern": r"/?[a-zA-Z][a-zA-Z0-9_]{0,127}(/[a-zA-Z][a-zA-Z0-9_]{0,127})*",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -57,7 +58,7 @@ class Ref:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
@@ -66,14 +67,14 @@ class Ref:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
-        }
+        },
     )
     blueprint_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
-        }
+        },
     )
     index: Optional[str] = field(
         default=None,
@@ -81,5 +82,5 @@ class Ref:
             "name": "INDEX",
             "type": "Attribute",
             "pattern": r"0|[\+]?[1-9][0-9]*|0[xX][0-9a-fA-F]+|0[bB][0-1]+|0[0-7]+",
-        }
+        },
     )

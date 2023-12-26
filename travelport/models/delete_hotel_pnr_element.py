@@ -10,6 +10,7 @@ class DeleteHotelPnrElement:
     """
     Container for Hotel PNR elements to be deleted.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,7 +22,7 @@ class DeleteHotelPnrElement:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     element: None | TypeHotelPnrElement = field(
         default=None,
@@ -29,7 +30,7 @@ class DeleteHotelPnrElement:
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -37,5 +38,5 @@ class DeleteHotelPnrElement:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

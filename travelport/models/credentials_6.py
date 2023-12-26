@@ -15,6 +15,7 @@ class Credentials6:
         The UserID associated with the entity using this request withing
         this BranchCode.
     """
+
     class Meta:
         name = "Credentials"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -26,5 +27,5 @@ class Credentials6:
             "type": "Attribute",
             "required": True,
             "max_length": 36,
-        }
+        },
     )

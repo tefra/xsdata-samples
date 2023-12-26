@@ -43,6 +43,7 @@ class AuditData:
     approximate_fees
         The Converted fee amount in Default Currency.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -52,82 +53,82 @@ class AuditData:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )

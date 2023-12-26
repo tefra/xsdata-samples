@@ -22,6 +22,7 @@ class TypeProfileParentHistory1:
     provisioning_code
         The Provisioning Code for this profile.
     """
+
     class Meta:
         name = "typeProfileParentHistory"
 
@@ -30,21 +31,21 @@ class TypeProfileParentHistory1:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-        }
+        },
     )
     profile_name: None | str = field(
         default=None,
         metadata={
             "name": "ProfileName",
             "type": "Attribute",
-        }
+        },
     )
     provisioning_code: None | str = field(
         default=None,
@@ -53,5 +54,5 @@ class TypeProfileParentHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )

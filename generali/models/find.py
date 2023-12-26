@@ -12,5 +12,5 @@ class Find:
         metadata={
             "type": "Element",
             "required": True,
-        }
+        },
     )

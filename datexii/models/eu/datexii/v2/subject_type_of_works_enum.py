@@ -34,6 +34,7 @@ class SubjectTypeOfWorksEnum(Enum):
     :cvar WATER_MAIN: Water main under or along the highway.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     BRIDGE = "bridge"
     BURIED_CABLES = "buriedCables"
     BURIED_SERVICES = "buriedServices"

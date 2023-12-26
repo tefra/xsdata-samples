@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
-from datexii.models.eu.datexii.v2.predefined_location_versioned_reference import PredefinedLocationVersionedReference
+from datexii.models.eu.datexii.v2.predefined_location_versioned_reference import (
+    PredefinedLocationVersionedReference,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -16,14 +18,17 @@ class LocationByReference(Location):
         predefined location.
     :ivar location_by_reference_extension:
     """
-    predefined_location_reference: Optional[PredefinedLocationVersionedReference] = field(
+
+    predefined_location_reference: Optional[
+        PredefinedLocationVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "predefinedLocationReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     location_by_reference_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +36,5 @@ class LocationByReference(Location):
             "name": "locationByReferenceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

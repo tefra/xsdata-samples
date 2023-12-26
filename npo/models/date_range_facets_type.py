@@ -17,19 +17,19 @@ class DateRangeFacetsType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     preset: list[DateRangePresetTypeEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     range: list[DateRangeFacetItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

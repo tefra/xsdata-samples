@@ -14,5 +14,6 @@ class TdEventVariableDataPrototypeTypeEnumSimple(Enum):
         out by the sending SWC, so that it is available in the related
         communication buffer (of the RTE) for transmission.
     """
+
     VARIABLE_DATA_PROTOTYPE_RECEIVED = "VARIABLE-DATA-PROTOTYPE-RECEIVED"
     VARIABLE_DATA_PROTOTYPE_SENT = "VARIABLE-DATA-PROTOTYPE-SENT"

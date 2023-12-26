@@ -25,6 +25,7 @@ class RuleAdvancedPurchase:
         If true, specifies that advance purchase information will be present
         in fare rules.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -33,33 +34,33 @@ class RuleAdvancedPurchase:
         metadata={
             "name": "ReservationLatestPeriod",
             "type": "Attribute",
-        }
+        },
     )
     reservation_latest_unit: None | TypeStayUnit = field(
         default=None,
         metadata={
             "name": "ReservationLatestUnit",
             "type": "Attribute",
-        }
+        },
     )
     ticketing_earliest_date: None | str = field(
         default=None,
         metadata={
             "name": "TicketingEarliestDate",
             "type": "Attribute",
-        }
+        },
     )
     ticketing_latest_date: None | str = field(
         default=None,
         metadata={
             "name": "TicketingLatestDate",
             "type": "Attribute",
-        }
+        },
     )
     more_rules_present: None | bool = field(
         default=None,
         metadata={
             "name": "MoreRulesPresent",
             "type": "Attribute",
-        }
+        },
     )

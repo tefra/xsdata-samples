@@ -19,6 +19,7 @@ class HotelRating:
     rating_provider
         Rating providers, ie AAA, NTM
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -28,14 +29,14 @@ class HotelRating:
             "name": "Rating",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rating_range: None | RatingRange = field(
         default=None,
         metadata={
             "name": "RatingRange",
             "type": "Element",
-        }
+        },
     )
     rating_provider: None | str = field(
         default=None,
@@ -43,5 +44,5 @@ class HotelRating:
             "name": "RatingProvider",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

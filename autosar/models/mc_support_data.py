@@ -4,7 +4,9 @@ from .mc_data_instance import McDataInstance
 from .mc_sw_emulation_method_support import McSwEmulationMethodSupport
 from .ref import Ref
 from .rpt_support_data import RptSupportData
-from .sw_systemconstant_value_set_subtypes_enum import SwSystemconstantValueSetSubtypesEnum
+from .sw_systemconstant_value_set_subtypes_enum import (
+    SwSystemconstantValueSetSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -51,6 +53,7 @@ class McSupportData:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MC-SUPPORT-DATA"
 
@@ -60,31 +63,37 @@ class McSupportData:
             "name": "EMULATION-SUPPORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mc_parameter_instances: Optional["McSupportData.McParameterInstances"] = field(
+    mc_parameter_instances: Optional[
+        "McSupportData.McParameterInstances"
+    ] = field(
         default=None,
         metadata={
             "name": "MC-PARAMETER-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mc_variable_instances: Optional["McSupportData.McVariableInstances"] = field(
+    mc_variable_instances: Optional[
+        "McSupportData.McVariableInstances"
+    ] = field(
         default=None,
         metadata={
             "name": "MC-VARIABLE-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    measurable_system_constant_values_refs: Optional["McSupportData.MeasurableSystemConstantValuesRefs"] = field(
+    measurable_system_constant_values_refs: Optional[
+        "McSupportData.MeasurableSystemConstantValuesRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "MEASURABLE-SYSTEM-CONSTANT-VALUES-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_support_data: Optional[RptSupportData] = field(
         default=None,
@@ -92,14 +101,14 @@ class McSupportData:
             "name": "RPT-SUPPORT-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -107,18 +116,20 @@ class McSupportData:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class EmulationSupports:
-        mc_sw_emulation_method_support: List[McSwEmulationMethodSupport] = field(
+        mc_sw_emulation_method_support: List[
+            McSwEmulationMethodSupport
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MC-SW-EMULATION-METHOD-SUPPORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -129,7 +140,7 @@ class McSupportData:
                 "name": "MC-DATA-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -140,18 +151,20 @@ class McSupportData:
                 "name": "MC-DATA-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class MeasurableSystemConstantValuesRefs:
-        measurable_system_constant_values_ref: List["McSupportData.MeasurableSystemConstantValuesRefs.MeasurableSystemConstantValuesRef"] = field(
+        measurable_system_constant_values_ref: List[
+            "McSupportData.MeasurableSystemConstantValuesRefs.MeasurableSystemConstantValuesRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MEASURABLE-SYSTEM-CONSTANT-VALUES-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -162,5 +175,5 @@ class McSupportData:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

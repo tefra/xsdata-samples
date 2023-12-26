@@ -54,6 +54,7 @@ class VehicleTypeEnum(Enum):
         numbered registration plate.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AGRICULTURAL_VEHICLE = "agriculturalVehicle"
     ANY_VEHICLE = "anyVehicle"
     ARTICULATED_VEHICLE = "articulatedVehicle"
@@ -82,6 +83,8 @@ class VehicleTypeEnum(Enum):
     VEHICLE_WITHOUT_CATALYTIC_CONVERTER = "vehicleWithoutCatalyticConverter"
     VEHICLE_WITH_CARAVAN = "vehicleWithCaravan"
     VEHICLE_WITH_TRAILER = "vehicleWithTrailer"
-    WITH_EVEN_NUMBERED_REGISTRATION_PLATES = "withEvenNumberedRegistrationPlates"
+    WITH_EVEN_NUMBERED_REGISTRATION_PLATES = (
+        "withEvenNumberedRegistrationPlates"
+    )
     WITH_ODD_NUMBERED_REGISTRATION_PLATES = "withOddNumberedRegistrationPlates"
     OTHER = "other"

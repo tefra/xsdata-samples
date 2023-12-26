@@ -13,6 +13,7 @@ class BookingAirSegmentReq(BookingBaseReq):
     """
     Used for Air Segment Sell and modification.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,19 +22,19 @@ class BookingAirSegmentReq(BookingBaseReq):
         metadata={
             "name": "AddAirSegment",
             "type": "Element",
-        }
+        },
     )
     update_air_segment: None | UpdateAirSegment = field(
         default=None,
         metadata={
             "name": "UpdateAirSegment",
             "type": "Element",
-        }
+        },
     )
     delete_air_segment: None | DeleteAirSegment = field(
         default=None,
         metadata={
             "name": "DeleteAirSegment",
             "type": "Element",
-        }
+        },
     )

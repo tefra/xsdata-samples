@@ -1,13 +1,17 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .actual_vehicle_equipment_version_structure import ActualVehicleEquipmentVersionStructure
+from .actual_vehicle_equipment_version_structure import (
+    ActualVehicleEquipmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStructure):
+class WheelchairVehicleEquipmentVersionStructure(
+    ActualVehicleEquipmentVersionStructure
+):
     class Meta:
         name = "WheelchairVehicleEquipment_VersionStructure"
 
@@ -17,7 +21,7 @@ class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionSt
             "name": "HasWheelChairSpaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_wheelchair_areas: Optional[int] = field(
         default=None,
@@ -25,7 +29,7 @@ class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionSt
             "name": "NumberOfWheelchairAreas",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     width_of_access_area: Optional[Decimal] = field(
         default=None,
@@ -33,7 +37,7 @@ class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionSt
             "name": "WidthOfAccessArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     length_of_access_area: Optional[Decimal] = field(
         default=None,
@@ -41,7 +45,7 @@ class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionSt
             "name": "LengthOfAccessArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     height_of_access_area: Optional[Decimal] = field(
         default=None,
@@ -49,7 +53,7 @@ class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionSt
             "name": "HeightOfAccessArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheelchair_turning_circle: Optional[Decimal] = field(
         default=None,
@@ -57,7 +61,7 @@ class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionSt
             "name": "WheelchairTurningCircle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     companion_seat: Optional[bool] = field(
         default=None,
@@ -65,5 +69,5 @@ class WheelchairVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionSt
             "name": "CompanionSeat",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

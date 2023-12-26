@@ -28,6 +28,7 @@ class SeatAssignment6:
     rail_coach_number
         Coach number for which rail seatmap/coachmap is returned.
     """
+
     class Meta:
         name = "SeatAssignment"
 
@@ -36,7 +37,7 @@ class SeatAssignment6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class SeatAssignment6:
             "required": True,
             "length": 2,
             "white_space": "collapse",
-        }
+        },
     )
     seat: None | str = field(
         default=None,
@@ -54,7 +55,7 @@ class SeatAssignment6:
             "name": "Seat",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     seat_type_code: None | str = field(
         default=None,
@@ -63,40 +64,40 @@ class SeatAssignment6:
             "type": "Attribute",
             "length": 4,
             "white_space": "collapse",
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     flight_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "FlightDetailsRef",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus7 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     rail_coach_number: None | str = field(
         default=None,
         metadata={
             "name": "RailCoachNumber",
             "type": "Attribute",
-        }
+        },
     )

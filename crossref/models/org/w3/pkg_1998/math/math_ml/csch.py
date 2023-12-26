@@ -15,5 +15,5 @@ class Csch:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

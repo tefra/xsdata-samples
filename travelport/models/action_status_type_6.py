@@ -17,6 +17,7 @@ class ActionStatusType6(Enum):
         Equivalent to TAX in Worldspan
     TRH
     """
+
     TAW = "TAW"
     TTL = "TTL"
     TLCXL = "TLCXL"

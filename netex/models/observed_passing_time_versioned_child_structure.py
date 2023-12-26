@@ -1,18 +1,22 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
-from .dated_passing_time_versioned_child_structure import DatedPassingTimeVersionedChildStructure
+from .dated_passing_time_versioned_child_structure import (
+    DatedPassingTimeVersionedChildStructure,
+)
 from .headway_interval_structure import HeadwayIntervalStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ObservedPassingTimeVersionedChildStructure(DatedPassingTimeVersionedChildStructure):
+class ObservedPassingTimeVersionedChildStructure(
+    DatedPassingTimeVersionedChildStructure
+):
     class Meta:
         name = "ObservedPassingTime_VersionedChildStructure"
 
-    choice_2: List[object] = field(
+    choice_2: List[Union[XmlTime, int, XmlDuration]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -54,7 +58,7 @@ class ObservedPassingTimeVersionedChildStructure(DatedPassingTimeVersionedChildS
                 },
             ),
             "max_occurs": 5,
-        }
+        },
     )
     actual_headway: Optional[HeadwayIntervalStructure] = field(
         default=None,
@@ -62,5 +66,5 @@ class ObservedPassingTimeVersionedChildStructure(DatedPassingTimeVersionedChildS
             "name": "ActualHeadway",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

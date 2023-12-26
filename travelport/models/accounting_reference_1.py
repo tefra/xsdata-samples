@@ -36,6 +36,7 @@ class AccountingReference1(TypeKeyElement1):
         Denotes whether the Accounting Reference is Active or Not. Default
         is true
     """
+
     class Meta:
         name = "AccountingReference"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -45,7 +46,7 @@ class AccountingReference1(TypeKeyElement1):
         metadata={
             "name": "PaymentDetailsRef",
             "type": "Element",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -55,7 +56,7 @@ class AccountingReference1(TypeKeyElement1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -65,14 +66,14 @@ class AccountingReference1(TypeKeyElement1):
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     account_id: None | int = field(
         default=None,
         metadata={
             "name": "AccountID",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -81,19 +82,19 @@ class AccountingReference1(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )
     active: bool = field(
         default=True,
         metadata={
             "name": "Active",
             "type": "Attribute",
-        }
+        },
     )

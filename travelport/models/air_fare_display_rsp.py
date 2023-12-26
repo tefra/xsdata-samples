@@ -16,6 +16,7 @@ class AirFareDisplayRsp(BaseRsp1):
     fare_display
         Provider: 1G,1V,1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,5 +26,5 @@ class AirFareDisplayRsp(BaseRsp1):
             "name": "FareDisplay",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

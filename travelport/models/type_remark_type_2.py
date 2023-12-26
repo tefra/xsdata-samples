@@ -10,6 +10,7 @@ class TypeRemarkType2(Enum):
     This may include General Remarks, Itinerary Remarks, Accounting
     Remark, Name Remark, etc.
     """
+
     GENERAL = "General"
     ITINERARY = "Itinerary"
     ACCOUNTING = "Accounting"

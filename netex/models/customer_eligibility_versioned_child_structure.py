@@ -18,7 +18,7 @@ class CustomerEligibilityVersionedChildStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     customer_ref: Optional[CustomerRef] = field(
         default=None,
@@ -26,5 +26,5 @@ class CustomerEligibilityVersionedChildStructure(VersionedChildStructure):
             "name": "CustomerRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

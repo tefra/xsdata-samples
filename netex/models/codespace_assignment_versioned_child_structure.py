@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDate
 from .administrative_zone_ref import AdministrativeZoneRef
 from .alternative_texts_rel_structure import VersionedChildStructure
@@ -16,7 +16,9 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
 
-    codespace_ref_or_codespace: Optional[object] = field(
+    codespace_ref_or_codespace: Optional[
+        Union[CodespaceRef, Codespace]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -32,7 +34,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     administrative_zone_ref: Optional[AdministrativeZoneRef] = field(
         default=None,
@@ -40,7 +42,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "name": "AdministrativeZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_date: Optional[XmlDate] = field(
         default=None,
@@ -48,7 +50,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "name": "StartDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_date: Optional[XmlDate] = field(
         default=None,
@@ -56,7 +58,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "name": "EndDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name_of_class: Optional[str] = field(
         default=None,
@@ -64,7 +66,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "name": "NameOfClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     code_prefix: List[str] = field(
         default_factory=list,
@@ -72,9 +74,9 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "name": "CodePrefix",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    start_value_or_end_value: List[object] = field(
+    start_value_or_end_value: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -91,7 +93,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
                 },
             ),
             "max_occurs": 2,
-        }
+        },
     )
     maximum_length: Optional[int] = field(
         default=None,
@@ -99,7 +101,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "name": "MaximumLength",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -107,13 +109,15 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    type_of_codespace_assignment_ref: Optional[TypeOfCodespaceAssignmentRef] = field(
+    type_of_codespace_assignment_ref: Optional[
+        TypeOfCodespaceAssignmentRef
+    ] = field(
         default=None,
         metadata={
             "name": "TypeOfCodespaceAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

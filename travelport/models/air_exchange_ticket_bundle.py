@@ -21,7 +21,7 @@ class AirExchangeTicketBundle:
             "required": True,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -30,7 +30,7 @@ class AirExchangeTicketBundle:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 2,
-        }
+        },
     )
     form_of_payment_ref: None | FormOfPaymentRef1 = field(
         default=None,
@@ -38,12 +38,12 @@ class AirExchangeTicketBundle:
             "name": "FormOfPaymentRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
-        }
+        },
     )

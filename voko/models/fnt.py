@@ -38,5 +38,5 @@ class Fnt:
                     "type": Url,
                 },
             ),
-        }
+        },
     )

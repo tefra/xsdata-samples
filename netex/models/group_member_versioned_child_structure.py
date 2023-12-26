@@ -1,13 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_group_member_versioned_child_structure import AbstractGroupMemberVersionedChildStructure
+from .abstract_group_member_versioned_child_structure import (
+    AbstractGroupMemberVersionedChildStructure,
+)
 from .version_of_object_ref_structure import VersionOfObjectRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupMemberVersionedChildStructure(AbstractGroupMemberVersionedChildStructure):
+class GroupMemberVersionedChildStructure(
+    AbstractGroupMemberVersionedChildStructure
+):
     class Meta:
         name = "GroupMember_VersionedChildStructure"
 
@@ -17,7 +21,7 @@ class GroupMemberVersionedChildStructure(AbstractGroupMemberVersionedChildStruct
             "name": "GroupRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     member_object_ref: Optional[VersionOfObjectRefStructure] = field(
         default=None,
@@ -26,5 +30,5 @@ class GroupMemberVersionedChildStructure(AbstractGroupMemberVersionedChildStruct
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

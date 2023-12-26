@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
-from travelport.models.type_geo_political_area_type_1 import TypeGeoPoliticalAreaType1
+from travelport.models.type_geo_political_area_type_1 import (
+    TypeGeoPoliticalAreaType1,
+)
 from travelport.models.type_key_tagged_element_1 import TypeKeyTaggedElement1
 from travelport.models.type_other_preference_1 import TypeOtherPreference1
 from travelport.models.type_preference_purpose_1 import TypePreferencePurpose1
@@ -51,6 +53,7 @@ class OtherPreference1(TypeKeyTaggedElement1):
         ReferencedataRetrieveReq, Type Code Currency
     general_preference
     """
+
     class Meta:
         name = "OtherPreference"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -60,7 +63,7 @@ class OtherPreference1(TypeKeyTaggedElement1):
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -69,28 +72,28 @@ class OtherPreference1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     trip_approval: bool = field(
         default=False,
         metadata={
             "name": "TripApproval",
             "type": "Attribute",
-        }
+        },
     )
     inclusive: bool = field(
         default=True,
         metadata={
             "name": "Inclusive",
             "type": "Attribute",
-        }
+        },
     )
     other_supplier_type: None | TypeOtherPreference1 = field(
         default=None,
         metadata={
             "name": "OtherSupplierType",
             "type": "Attribute",
-        }
+        },
     )
     supplier_name: None | str = field(
         default=None,
@@ -99,42 +102,42 @@ class OtherPreference1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     booking_start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BookingStartDate",
             "type": "Attribute",
-        }
+        },
     )
     booking_end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BookingEndDate",
             "type": "Attribute",
-        }
+        },
     )
     usage_start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "UsageStartDate",
             "type": "Attribute",
-        }
+        },
     )
     usage_end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "UsageEndDate",
             "type": "Attribute",
-        }
+        },
     )
     geo_political_area_type: None | TypeGeoPoliticalAreaType1 = field(
         default=None,
         metadata={
             "name": "GeoPoliticalAreaType",
             "type": "Attribute",
-        }
+        },
     )
     geo_political_area_code: None | str = field(
         default=None,
@@ -142,7 +145,7 @@ class OtherPreference1(TypeKeyTaggedElement1):
             "name": "GeoPoliticalAreaCode",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     preference_payment_method: None | str = field(
         default=None,
@@ -150,21 +153,21 @@ class OtherPreference1(TypeKeyTaggedElement1):
             "name": "PreferencePaymentMethod",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     payment_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "PaymentDetailsRef",
             "type": "Attribute",
-        }
+        },
     )
     max_cost_amount: None | str = field(
         default=None,
         metadata={
             "name": "MaxCostAmount",
             "type": "Attribute",
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -172,7 +175,7 @@ class OtherPreference1(TypeKeyTaggedElement1):
             "name": "Currency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     general_preference: None | str = field(
         default=None,
@@ -181,5 +184,5 @@ class OtherPreference1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

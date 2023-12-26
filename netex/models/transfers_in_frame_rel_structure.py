@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access import Access
 from .connection import Connection
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,9 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transfersInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[Connection, DefaultConnection, SiteConnection, Access]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -40,5 +42,5 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

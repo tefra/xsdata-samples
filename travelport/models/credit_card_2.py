@@ -18,6 +18,7 @@ class CreditCard2(TypeCreditCardType2):
     active
         Denotes whether the Credit Card is Active or Not.Default is true
     """
+
     class Meta:
         name = "CreditCard"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -27,12 +28,12 @@ class CreditCard2(TypeCreditCardType2):
         metadata={
             "name": "ExtractIndicator",
             "type": "Attribute",
-        }
+        },
     )
     active: bool = field(
         default=True,
         metadata={
             "name": "Active",
             "type": "Attribute",
-        }
+        },
     )

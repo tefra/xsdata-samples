@@ -41,6 +41,7 @@ class TimeValueValueVariationPoint:
         points.
     :ivar content:
     """
+
     class Meta:
         name = "TIME-VALUE-VALUE-VARIATION-POINT"
 
@@ -49,7 +50,7 @@ class TimeValueValueVariationPoint:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -57,28 +58,28 @@ class TimeValueValueVariationPoint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     binding_time: Optional[BindingTimeEnumSimple] = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
             "type": "Attribute",
-        }
+        },
     )
     blueprint_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
-        }
+        },
     )
     sd: Optional[str] = field(
         default=None,
         metadata={
             "name": "SD",
             "type": "Attribute",
-        }
+        },
     )
     short_label: Optional[str] = field(
         default=None,
@@ -87,7 +88,7 @@ class TimeValueValueVariationPoint:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -107,7 +108,7 @@ class TimeValueValueVariationPoint:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -118,7 +119,7 @@ class TimeValueValueVariationPoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -129,5 +130,5 @@ class TimeValueValueVariationPoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

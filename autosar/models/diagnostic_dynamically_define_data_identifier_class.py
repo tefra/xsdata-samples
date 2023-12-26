@@ -8,10 +8,18 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_access_permission_validity_enum import DiagnosticAccessPermissionValidityEnum
-from .diagnostic_dynamically_define_data_identifier_subfunction_enum import DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum
-from .diagnostic_handle_dddi_configuration_enum import DiagnosticHandleDddiConfigurationEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_access_permission_validity_enum import (
+    DiagnosticAccessPermissionValidityEnum,
+)
+from .diagnostic_dynamically_define_data_identifier_subfunction_enum import (
+    DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum,
+)
+from .diagnostic_handle_dddi_configuration_enum import (
+    DiagnosticHandleDddiConfigurationEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -98,6 +106,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-DYNAMICALLY-DEFINE-DATA-IDENTIFIER-CLASS"
 
@@ -108,15 +117,17 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticDynamicallyDefineDataIdentifierClass.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticDynamicallyDefineDataIdentifierClass.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +135,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +143,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +151,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +159,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,15 +167,17 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticDynamicallyDefineDataIdentifierClass.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticDynamicallyDefineDataIdentifierClass.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -172,23 +185,27 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticDynamicallyDefineDataIdentifierClass.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticDynamicallyDefineDataIdentifierClass.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_validity: Optional[DiagnosticAccessPermissionValidityEnum] = field(
+    access_permission_validity: Optional[
+        DiagnosticAccessPermissionValidityEnum
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     check_per_source_id: Optional[Boolean] = field(
         default=None,
@@ -196,30 +213,34 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "CHECK-PER-SOURCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    configuration_handling: Optional[DiagnosticHandleDddiConfigurationEnum] = field(
+    configuration_handling: Optional[
+        DiagnosticHandleDddiConfigurationEnum
+    ] = field(
         default=None,
         metadata={
             "name": "CONFIGURATION-HANDLING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    subfunctions: Optional["DiagnosticDynamicallyDefineDataIdentifierClass.Subfunctions"] = field(
+    subfunctions: Optional[
+        "DiagnosticDynamicallyDefineDataIdentifierClass.Subfunctions"
+    ] = field(
         default=None,
         metadata={
             "name": "SUBFUNCTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -227,14 +248,14 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -245,7 +266,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -256,7 +277,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -267,7 +288,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -278,11 +299,14 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             DiagnosticDynamicallyDefineDataIdentifier that reference the
             DiagnosticDynamicallyDefineDataIdentifierClass.
         """
-        subfunction: List[DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum] = field(
+
+        subfunction: List[
+            DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SUBFUNCTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

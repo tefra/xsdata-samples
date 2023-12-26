@@ -9,6 +9,7 @@ class FieldAccessEnumSimple(Enum):
     :cvar GETTER_SETTER: Access to getter and setter of the field
     :cvar SETTER: Access to the setter of the Field.
     """
+
     GETTER = "GETTER"
     GETTER_SETTER = "GETTER-SETTER"
     SETTER = "SETTER"

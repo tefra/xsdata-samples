@@ -14,7 +14,7 @@ class DefaultConnectionEndStructure:
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operator_view: Optional[OperatorView] = field(
         default=None,
@@ -22,5 +22,5 @@ class DefaultConnectionEndStructure:
             "name": "OperatorView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

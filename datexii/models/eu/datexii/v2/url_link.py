@@ -23,6 +23,7 @@ class UrlLink:
         available on the Internet from the URL link.
     :ivar url_link_extension:
     """
+
     url_link_address: Optional[str] = field(
         default=None,
         metadata={
@@ -30,7 +31,7 @@ class UrlLink:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     url_link_description: Optional[MultilingualString] = field(
         default=None,
@@ -38,7 +39,7 @@ class UrlLink:
             "name": "urlLinkDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     url_link_type: Optional[UrlLinkTypeEnum] = field(
         default=None,
@@ -46,7 +47,7 @@ class UrlLink:
             "name": "urlLinkType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     url_link_extension: Optional[ExtensionType] = field(
         default=None,
@@ -54,5 +55,5 @@ class UrlLink:
             "name": "urlLinkExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

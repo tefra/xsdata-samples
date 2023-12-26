@@ -15,6 +15,7 @@ class RoadworksScaleEnum(Enum):
     :cvar MINOR: The roadworks are likely to cause minor traffic
         disruption.
     """
+
     MAJOR = "major"
     MEDIUM = "medium"
     MINOR = "minor"

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .boolean import Boolean
-from .platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+from .platform_module_ethernet_endpoint_configuration_subtypes_enum import (
+    PlatformModuleEthernetEndpointConfigurationSubtypesEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 from .time_value import TimeValue
@@ -66,6 +68,7 @@ class DoIpNetworkConfiguration:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DO-IP-NETWORK-CONFIGURATION"
 
@@ -75,7 +78,7 @@ class DoIpNetworkConfiguration:
             "name": "EID-USE-MAC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_activation_line_dependent: Optional[Boolean] = field(
         default=None,
@@ -83,7 +86,7 @@ class DoIpNetworkConfiguration:
             "name": "IS-ACTIVATION-LINE-DEPENDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_initial_vehicle_announcement_time: Optional[TimeValue] = field(
         default=None,
@@ -91,7 +94,7 @@ class DoIpNetworkConfiguration:
             "name": "MAX-INITIAL-VEHICLE-ANNOUNCEMENT-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_tester_connections: Optional[PositiveInteger] = field(
         default=None,
@@ -99,15 +102,17 @@ class DoIpNetworkConfiguration:
             "name": "MAX-TESTER-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    network_configuration_ref: Optional["DoIpNetworkConfiguration.NetworkConfigurationRef"] = field(
+    network_configuration_ref: Optional[
+        "DoIpNetworkConfiguration.NetworkConfigurationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "NETWORK-CONFIGURATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     network_interface_id: Optional[PositiveInteger] = field(
         default=None,
@@ -115,7 +120,7 @@ class DoIpNetworkConfiguration:
             "name": "NETWORK-INTERFACE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_alive_check_response_timeout: Optional[TimeValue] = field(
         default=None,
@@ -123,7 +128,7 @@ class DoIpNetworkConfiguration:
             "name": "TCP-ALIVE-CHECK-RESPONSE-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_general_inactivity_time: Optional[TimeValue] = field(
         default=None,
@@ -131,7 +136,7 @@ class DoIpNetworkConfiguration:
             "name": "TCP-GENERAL-INACTIVITY-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_initial_inactivity_time: Optional[TimeValue] = field(
         default=None,
@@ -139,7 +144,7 @@ class DoIpNetworkConfiguration:
             "name": "TCP-INITIAL-INACTIVITY-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vehicle_announcement_count: Optional[PositiveInteger] = field(
         default=None,
@@ -147,7 +152,7 @@ class DoIpNetworkConfiguration:
             "name": "VEHICLE-ANNOUNCEMENT-COUNT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vehicle_announcement_interval: Optional[TimeValue] = field(
         default=None,
@@ -155,7 +160,7 @@ class DoIpNetworkConfiguration:
             "name": "VEHICLE-ANNOUNCEMENT-INTERVAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vehicle_identification_sync_status: Optional[Boolean] = field(
         default=None,
@@ -163,14 +168,14 @@ class DoIpNetworkConfiguration:
             "name": "VEHICLE-IDENTIFICATION-SYNC-STATUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -178,16 +183,18 @@ class DoIpNetworkConfiguration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class NetworkConfigurationRef(Ref):
-        dest: Optional[PlatformModuleEthernetEndpointConfigurationSubtypesEnum] = field(
+        dest: Optional[
+            PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

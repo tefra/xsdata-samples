@@ -19,7 +19,7 @@ class TypeOfValidityValueStructure(TypeOfValueVersionStructure):
             "name": "Periodicity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     nature: Optional[FrameNatureEnumeration] = field(
         default=None,
@@ -27,12 +27,12 @@ class TypeOfValidityValueStructure(TypeOfValueVersionStructure):
             "name": "Nature",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     classes: Optional[ClassRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

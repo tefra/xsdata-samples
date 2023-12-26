@@ -14,6 +14,7 @@ class PaymentCardTypesEnum(Enum):
     :cvar STORED_VALUE_CARD: Stored value card / prepaid card.
     :cvar OTHER: Some other type of card.
     """
+
     CREDIT_CARD = "creditCard"
     DEBIT_CARD = "debitCard"
     CHARGE_CARD = "chargeCard"

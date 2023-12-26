@@ -14,5 +14,5 @@ class HotelSpecialRequest:
         metadata={
             "required": True,
             "max_length": 250,
-        }
+        },
     )

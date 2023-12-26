@@ -27,6 +27,7 @@ class AccessibilityEnum(Enum):
         accessibility.
     :cvar OTHER: Other.
     """
+
     BARRIER_FREE_ACCESSIBLE = "barrierFreeAccessible"
     HANDICAPPED_ACCESSIBLE = "handicappedAccessible"
     WHEEL_CHAIR_ACCESSIBLE = "wheelChairAccessible"

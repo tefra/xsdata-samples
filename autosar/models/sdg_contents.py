@@ -41,6 +41,7 @@ class SdgContents:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SDG-CONTENTS"
 
@@ -50,7 +51,7 @@ class SdgContents:
             "name": "SDX-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdxf: List[ReferrableRefConditional] = field(
         default_factory=list,
@@ -58,7 +59,7 @@ class SdgContents:
             "name": "SDXF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sd: List[Sd] = field(
         default_factory=list,
@@ -66,7 +67,7 @@ class SdgContents:
             "name": "SD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdg: List[Sdg] = field(
         default_factory=list,
@@ -74,7 +75,7 @@ class SdgContents:
             "name": "SDG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdf: List[Sdf] = field(
         default_factory=list,
@@ -82,14 +83,14 @@ class SdgContents:
             "name": "SDF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -97,7 +98,7 @@ class SdgContents:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -108,5 +109,5 @@ class SdgContents:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

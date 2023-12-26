@@ -14,6 +14,7 @@ class TypeActionRef:
     id
         Action Unique ID.
     """
+
     class Meta:
         name = "typeActionRef"
 
@@ -23,5 +24,5 @@ class TypeActionRef:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

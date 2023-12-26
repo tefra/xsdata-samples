@@ -15,6 +15,7 @@ class TypeFormOfPaymentPnrreference5:
         It means that the form of payment is applied at ProviderReservation
         level.
     """
+
     class Meta:
         name = "typeFormOfPaymentPNRReference"
 
@@ -23,12 +24,12 @@ class TypeFormOfPaymentPnrreference5:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_level: bool = field(
         default=True,
         metadata={
             "name": "ProviderReservationLevel",
             "type": "Attribute",
-        }
+        },
     )

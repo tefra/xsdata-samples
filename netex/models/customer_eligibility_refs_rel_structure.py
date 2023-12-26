@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
 from .customer_eligibility_ref import CustomerEligibilityRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
-from .residential_qualification_eligibility_ref import ResidentialQualificationEligibilityRef
+from .residential_qualification_eligibility_ref import (
+    ResidentialQualificationEligibilityRef,
+)
 from .user_profile_eligibility_ref import UserProfileEligibilityRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -14,7 +16,14 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerEligibilityRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            ResidentialQualificationEligibilityRef,
+            CommercialProfileEligibilityRef,
+            UserProfileEligibilityRef,
+            CustomerEligibilityRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -40,5 +49,5 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

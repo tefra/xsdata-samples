@@ -19,6 +19,7 @@ class FareValidity:
     not_valid_after
         Fare not valid after this date.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -28,19 +29,19 @@ class FareValidity:
             "name": "RailJourneyRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
-        }
+        },
     )
     not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
             "type": "Attribute",
-        }
+        },
     )

@@ -7,9 +7,13 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .flat_instance_descriptor_subtypes_enum import FlatInstanceDescriptorSubtypesEnum
+from .flat_instance_descriptor_subtypes_enum import (
+    FlatInstanceDescriptorSubtypesEnum,
+)
 from .identifier import Identifier
-from .implementation_element_in_parameter_instance_ref import ImplementationElementInParameterInstanceRef
+from .implementation_element_in_parameter_instance_ref import (
+    ImplementationElementInParameterInstanceRef,
+)
 from .mc_data_access_details import McDataAccessDetails
 from .mcd_identifier import McdIdentifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -153,6 +157,7 @@ class McDataInstance:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MC-DATA-INSTANCE"
 
@@ -163,15 +168,17 @@ class McDataInstance:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["McDataInstance.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "McDataInstance.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -179,7 +186,7 @@ class McDataInstance:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -187,7 +194,7 @@ class McDataInstance:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -195,7 +202,7 @@ class McDataInstance:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -203,7 +210,7 @@ class McDataInstance:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -211,7 +218,7 @@ class McDataInstance:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["McDataInstance.Annotations"] = field(
         default=None,
@@ -219,7 +226,7 @@ class McDataInstance:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     array_size: Optional[PositiveInteger] = field(
         default=None,
@@ -227,7 +234,7 @@ class McDataInstance:
             "name": "ARRAY-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     display_identifier: Optional[McdIdentifier] = field(
         default=None,
@@ -235,7 +242,7 @@ class McDataInstance:
             "name": "DISPLAY-IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     flat_map_entry_ref: Optional["McDataInstance.FlatMapEntryRef"] = field(
         default=None,
@@ -243,15 +250,17 @@ class McDataInstance:
             "name": "FLAT-MAP-ENTRY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    instance_in_memory: Optional[ImplementationElementInParameterInstanceRef] = field(
+    instance_in_memory: Optional[
+        ImplementationElementInParameterInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "INSTANCE-IN-MEMORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mc_data_access_details: Optional[McDataAccessDetails] = field(
         default=None,
@@ -259,7 +268,7 @@ class McDataInstance:
             "name": "MC-DATA-ACCESS-DETAILS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mc_data_assignments: Optional["McDataInstance.McDataAssignments"] = field(
         default=None,
@@ -267,7 +276,7 @@ class McDataInstance:
             "name": "MC-DATA-ASSIGNMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     resulting_properties: Optional[SwDataDefProps] = field(
         default=None,
@@ -275,15 +284,17 @@ class McDataInstance:
             "name": "RESULTING-PROPERTIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    resulting_rpt_sw_prototyping_access: Optional[RptSwPrototypingAccess] = field(
+    resulting_rpt_sw_prototyping_access: Optional[
+        RptSwPrototypingAccess
+    ] = field(
         default=None,
         metadata={
             "name": "RESULTING-RPT-SW-PROTOTYPING-ACCESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     role: Optional[Identifier] = field(
         default=None,
@@ -291,7 +302,7 @@ class McDataInstance:
             "name": "ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_impl_policy: Optional[RptImplPolicy] = field(
         default=None,
@@ -299,7 +310,7 @@ class McDataInstance:
             "name": "RPT-IMPL-POLICY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sub_elements: Optional["McDataInstance.SubElements"] = field(
         default=None,
@@ -307,7 +318,7 @@ class McDataInstance:
             "name": "SUB-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol: Optional[SymbolString] = field(
         default=None,
@@ -315,7 +326,7 @@ class McDataInstance:
             "name": "SYMBOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -323,14 +334,14 @@ class McDataInstance:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -338,14 +349,14 @@ class McDataInstance:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -356,7 +367,7 @@ class McDataInstance:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -367,7 +378,7 @@ class McDataInstance:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -378,7 +389,7 @@ class McDataInstance:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -389,7 +400,7 @@ class McDataInstance:
                 "name": "ROLE-BASED-MC-DATA-ASSIGNMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -400,5 +411,5 @@ class McDataInstance:
                 "name": "MC-DATA-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

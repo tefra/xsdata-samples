@@ -15,14 +15,14 @@ class SpecificTimeTable:
         metadata={
             "name": "FlightOrigin",
             "type": "Element",
-        }
+        },
     )
     flight_destination: None | SpecificTimeTable.FlightDestination = field(
         default=None,
         metadata={
             "name": "FlightDestination",
             "type": "Element",
-        }
+        },
     )
     start_date: None | str = field(
         default=None,
@@ -30,7 +30,7 @@ class SpecificTimeTable:
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -39,7 +39,7 @@ class SpecificTimeTable:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -48,7 +48,7 @@ class SpecificTimeTable:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )
 
     @dataclass
@@ -60,7 +60,7 @@ class SpecificTimeTable:
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -72,5 +72,5 @@ class SpecificTimeTable:
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "required": True,
-            }
+            },
         )

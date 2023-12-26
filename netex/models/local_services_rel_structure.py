@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service import AssistanceService
@@ -39,7 +39,39 @@ class LocalServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "localServices_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+            AssistanceBookingService,
+            CateringService,
+            RetailService,
+            MoneyService,
+            HireService,
+            CommunicationService,
+            MeetingPointService,
+            LostPropertyService,
+            LeftLuggageService,
+            ComplaintsService,
+            CustomerService,
+            LuggageService,
+            AssistanceService,
+            TicketingService,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -190,5 +222,5 @@ class LocalServicesRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

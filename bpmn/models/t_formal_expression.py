@@ -15,12 +15,12 @@ class TFormalExpression(TExpression):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     evaluates_to_type_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "evaluatesToTypeRef",
             "type": "Attribute",
-        }
+        },
     )

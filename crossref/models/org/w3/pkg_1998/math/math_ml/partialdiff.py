@@ -15,5 +15,5 @@ class Partialdiff:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -17,6 +17,7 @@ class CustomerReceiptInfo:
     email_ref
         Reference to the email address used for receipt of EMD.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,7 +27,7 @@ class CustomerReceiptInfo:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     email_ref: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class CustomerReceiptInfo:
             "name": "EmailRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

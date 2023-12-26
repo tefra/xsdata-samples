@@ -12,6 +12,7 @@ class VehiclePolicy:
 
     Usually relative to a specific location.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -21,7 +22,7 @@ class VehiclePolicy:
             "name": "VehicleDisclaimer",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_detail: list[VehicleDetail] = field(
         default_factory=list,
@@ -29,5 +30,5 @@ class VehiclePolicy:
             "name": "VehicleDetail",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

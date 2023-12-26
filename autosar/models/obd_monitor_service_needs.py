@@ -5,12 +5,18 @@ from .annotation import (
     Annotation,
     DocumentationBlock,
 )
-from .application_data_type_subtypes_enum import ApplicationDataTypeSubtypesEnum
+from .application_data_type_subtypes_enum import (
+    ApplicationDataTypeSubtypesEnum,
+)
 from .category_string import CategoryString
 from .diag_requirement_id_string import DiagRequirementIdString
 from .diagnostic_audience_enum import DiagnosticAudienceEnum
-from .diagnostic_event_needs_subtypes_enum import DiagnosticEventNeedsSubtypesEnum
-from .diagnostic_monitor_update_kind_enum import DiagnosticMonitorUpdateKindEnum
+from .diagnostic_event_needs_subtypes_enum import (
+    DiagnosticEventNeedsSubtypesEnum,
+)
+from .diagnostic_monitor_update_kind_enum import (
+    DiagnosticMonitorUpdateKindEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -103,6 +109,7 @@ class ObdMonitorServiceNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "OBD-MONITOR-SERVICE-NEEDS"
 
@@ -113,15 +120,17 @@ class ObdMonitorServiceNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ObdMonitorServiceNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ObdMonitorServiceNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -129,7 +138,7 @@ class ObdMonitorServiceNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -137,7 +146,7 @@ class ObdMonitorServiceNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -145,7 +154,7 @@ class ObdMonitorServiceNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -153,7 +162,7 @@ class ObdMonitorServiceNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -161,7 +170,7 @@ class ObdMonitorServiceNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ObdMonitorServiceNeeds.Annotations"] = field(
         default=None,
@@ -169,7 +178,7 @@ class ObdMonitorServiceNeeds:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     audiences: Optional["ObdMonitorServiceNeeds.Audiences"] = field(
         default=None,
@@ -177,7 +186,7 @@ class ObdMonitorServiceNeeds:
             "name": "AUDIENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diag_requirement: Optional[DiagRequirementIdString] = field(
         default=None,
@@ -185,7 +194,7 @@ class ObdMonitorServiceNeeds:
             "name": "DIAG-REQUIREMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_access_level: Optional[PositiveInteger] = field(
         default=None,
@@ -193,15 +202,17 @@ class ObdMonitorServiceNeeds:
             "name": "SECURITY-ACCESS-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    application_data_type_ref: Optional["ObdMonitorServiceNeeds.ApplicationDataTypeRef"] = field(
+    application_data_type_ref: Optional[
+        "ObdMonitorServiceNeeds.ApplicationDataTypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLICATION-DATA-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_needs_ref: Optional["ObdMonitorServiceNeeds.EventNeedsRef"] = field(
         default=None,
@@ -209,7 +220,7 @@ class ObdMonitorServiceNeeds:
             "name": "EVENT-NEEDS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     on_board_monitor_id: Optional[PositiveInteger] = field(
         default=None,
@@ -217,7 +228,7 @@ class ObdMonitorServiceNeeds:
             "name": "ON-BOARD-MONITOR-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     test_id: Optional[PositiveInteger] = field(
         default=None,
@@ -225,7 +236,7 @@ class ObdMonitorServiceNeeds:
             "name": "TEST-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     unit_and_scaling_id: Optional[PositiveInteger] = field(
         default=None,
@@ -233,7 +244,7 @@ class ObdMonitorServiceNeeds:
             "name": "UNIT-AND-SCALING-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     update_kind: Optional[DiagnosticMonitorUpdateKindEnum] = field(
         default=None,
@@ -241,14 +252,14 @@ class ObdMonitorServiceNeeds:
             "name": "UPDATE-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -256,14 +267,14 @@ class ObdMonitorServiceNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -274,7 +285,7 @@ class ObdMonitorServiceNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -285,7 +296,7 @@ class ObdMonitorServiceNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -296,13 +307,14 @@ class ObdMonitorServiceNeeds:
             documentation but also subsequent audience specific
             implementation.
         """
+
         audience: List[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -313,7 +325,7 @@ class ObdMonitorServiceNeeds:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -324,5 +336,5 @@ class ObdMonitorServiceNeeds:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

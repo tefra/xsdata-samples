@@ -19,7 +19,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Depth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_steps: Optional[int] = field(
         default=None,
@@ -27,7 +27,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "NumberOfSteps",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     step_height: Optional[Decimal] = field(
         default=None,
@@ -35,7 +35,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "StepHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     step_colour_contrast: Optional[bool] = field(
         default=None,
@@ -43,7 +43,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "StepColourContrast",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     handrail_type: Optional[HandrailEnumeration] = field(
         default=None,
@@ -51,7 +51,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "HandrailType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     handrail_height: Optional[Decimal] = field(
         default=None,
@@ -59,7 +59,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "HandrailHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lower_handrail_height: Optional[Decimal] = field(
         default=None,
@@ -67,7 +67,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "LowerHandrailHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     top_end: Optional[StairEndStructure] = field(
         default=None,
@@ -75,7 +75,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "TopEnd",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     bottom_end: Optional[StairEndStructure] = field(
         default=None,
@@ -83,5 +83,5 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "BottomEnd",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

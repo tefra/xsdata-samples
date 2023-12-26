@@ -8,6 +8,7 @@ class TypePurchaseWindow(Enum):
     """
     The purchase windows available for merchandising service.
     """
+
     BOOKING_ONLY = "BookingOnly"
     TICKETING_ONLY = "TicketingOnly"
     CHECK_IN_ONLY = "CheckInOnly"

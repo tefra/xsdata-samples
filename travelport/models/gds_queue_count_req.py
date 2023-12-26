@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_1 import BaseReq1
-from travelport.models.queue_pseudo_city_selector import QueuePseudoCitySelector
+from travelport.models.queue_pseudo_city_selector import (
+    QueuePseudoCitySelector,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -19,6 +21,7 @@ class GdsQueueCountReq(BaseReq1):
     provider_code
         The IATA assigned airline/GDS code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -28,7 +31,7 @@ class GdsQueueCountReq(BaseReq1):
             "name": "QueuePseudoCitySelector",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -38,5 +41,5 @@ class GdsQueueCountReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

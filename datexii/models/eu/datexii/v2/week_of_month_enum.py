@@ -14,6 +14,7 @@ class WeekOfMonthEnum(Enum):
     :cvar FIFTH_WEEK_OF_MONTH: Fifth week of the month (at most only 3
         days and non in February when not a leap year).
     """
+
     FIRST_WEEK_OF_MONTH = "firstWeekOfMonth"
     SECOND_WEEK_OF_MONTH = "secondWeekOfMonth"
     THIRD_WEEK_OF_MONTH = "thirdWeekOfMonth"

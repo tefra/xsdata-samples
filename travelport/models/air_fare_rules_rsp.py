@@ -16,6 +16,7 @@ class AirFareRulesRsp(BaseRsp1):
     fare_rule
         Provider: 1G,1V,1P,ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,5 +26,5 @@ class AirFareRulesRsp(BaseRsp1):
             "name": "FareRule",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

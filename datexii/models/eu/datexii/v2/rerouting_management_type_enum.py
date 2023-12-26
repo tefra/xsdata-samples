@@ -29,6 +29,7 @@ class ReroutingManagementTypeEnum(Enum):
         specified intersection or junction to commence the alternative
         route.
     """
+
     DO_NOT_FOLLOW_DIVERSION_SIGNS = "doNotFollowDiversionSigns"
     DO_NOT_USE_ENTRY = "doNotUseEntry"
     DO_NOT_USE_EXIT = "doNotUseExit"

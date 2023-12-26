@@ -14,6 +14,7 @@ class BookingPnrElementReq(BookingBaseReq):
     Adds, Modifies PNR elemnts like OSI, FOP, review booking, remarks, and action
     status.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -22,19 +23,19 @@ class BookingPnrElementReq(BookingBaseReq):
         metadata={
             "name": "AddPnrElement",
             "type": "Element",
-        }
+        },
     )
     update_pnr_element: None | UpdatePnrElement = field(
         default=None,
         metadata={
             "name": "UpdatePnrElement",
             "type": "Element",
-        }
+        },
     )
     delete_pnr_element: None | DeletePnrElement = field(
         default=None,
         metadata={
             "name": "DeletePnrElement",
             "type": "Element",
-        }
+        },
     )

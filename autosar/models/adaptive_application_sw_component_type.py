@@ -127,6 +127,7 @@ class AdaptiveApplicationSwComponentType:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE"
 
@@ -137,15 +138,17 @@ class AdaptiveApplicationSwComponentType:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["AdaptiveApplicationSwComponentType.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "AdaptiveApplicationSwComponentType.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -153,7 +156,7 @@ class AdaptiveApplicationSwComponentType:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -161,7 +164,7 @@ class AdaptiveApplicationSwComponentType:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -169,7 +172,7 @@ class AdaptiveApplicationSwComponentType:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -177,7 +180,7 @@ class AdaptiveApplicationSwComponentType:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -185,15 +188,17 @@ class AdaptiveApplicationSwComponentType:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["AdaptiveApplicationSwComponentType.Annotations"] = field(
+    annotations: Optional[
+        "AdaptiveApplicationSwComponentType.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -201,15 +206,17 @@ class AdaptiveApplicationSwComponentType:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["AdaptiveApplicationSwComponentType.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "AdaptiveApplicationSwComponentType.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -217,23 +224,27 @@ class AdaptiveApplicationSwComponentType:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_component_documentations: Optional["AdaptiveApplicationSwComponentType.SwComponentDocumentations"] = field(
+    sw_component_documentations: Optional[
+        "AdaptiveApplicationSwComponentType.SwComponentDocumentations"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    consistency_needss: Optional["AdaptiveApplicationSwComponentType.ConsistencyNeedss"] = field(
+    consistency_needss: Optional[
+        "AdaptiveApplicationSwComponentType.ConsistencyNeedss"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ports: Optional["AdaptiveApplicationSwComponentType.Ports"] = field(
         default=None,
@@ -241,38 +252,44 @@ class AdaptiveApplicationSwComponentType:
             "name": "PORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_groups: Optional["AdaptiveApplicationSwComponentType.PortGroups"] = field(
+    port_groups: Optional[
+        "AdaptiveApplicationSwComponentType.PortGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    unit_group_refs: Optional["AdaptiveApplicationSwComponentType.UnitGroupRefs"] = field(
+    unit_group_refs: Optional[
+        "AdaptiveApplicationSwComponentType.UnitGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    internal_behaviors: Optional["AdaptiveApplicationSwComponentType.InternalBehaviors"] = field(
+    internal_behaviors: Optional[
+        "AdaptiveApplicationSwComponentType.InternalBehaviors"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -280,14 +297,14 @@ class AdaptiveApplicationSwComponentType:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -298,7 +315,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -309,7 +326,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -320,15 +337,17 @@ class AdaptiveApplicationSwComponentType:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -336,7 +355,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -347,7 +366,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "SW-COMPONENT-DOCUMENTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -358,7 +377,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "CONSISTENCY-NEEDS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -369,7 +388,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "P-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         pr_port_prototype: List[PrPortPrototype] = field(
             default_factory=list,
@@ -377,7 +396,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "PR-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         r_port_prototype: List[RPortPrototype] = field(
             default_factory=list,
@@ -385,7 +404,7 @@ class AdaptiveApplicationSwComponentType:
                 "name": "R-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -396,18 +415,20 @@ class AdaptiveApplicationSwComponentType:
                 "name": "PORT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class UnitGroupRefs:
-        unit_group_ref: List["AdaptiveApplicationSwComponentType.UnitGroupRefs.UnitGroupRef"] = field(
+        unit_group_ref: List[
+            "AdaptiveApplicationSwComponentType.UnitGroupRefs.UnitGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "UNIT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -418,16 +439,18 @@ class AdaptiveApplicationSwComponentType:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class InternalBehaviors:
-        adaptive_swc_internal_behavior: List[AdaptiveSwcInternalBehavior] = field(
+        adaptive_swc_internal_behavior: List[
+            AdaptiveSwcInternalBehavior
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ADAPTIVE-SWC-INTERNAL-BEHAVIOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

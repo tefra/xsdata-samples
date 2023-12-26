@@ -12,6 +12,7 @@ class Pcc:
     """
     Specify pseudo City.
     """
+
     class Meta:
         name = "PCC"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -22,7 +23,7 @@ class Pcc:
             "name": "OverridePCC",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     point_of_sale: list[PointOfSale1] = field(
         default_factory=list,
@@ -31,12 +32,12 @@ class Pcc:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 5,
-        }
+        },
     )
     ticket_agency: None | TicketAgency = field(
         default=None,
         metadata={
             "name": "TicketAgency",
             "type": "Element",
-        }
+        },
     )

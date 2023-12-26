@@ -15,6 +15,7 @@ class TitleEltType:
         is provided here for convenience.
     :ivar content:
     """
+
     class Meta:
         name = "titleEltType"
 
@@ -26,14 +27,14 @@ class TitleEltType:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -41,5 +42,5 @@ class TitleEltType:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

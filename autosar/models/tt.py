@@ -31,6 +31,7 @@ class Tt:
         term. Values are such as "VARIABLE" "CALPRM". It is no longer an
         enum in order to support process specific extensions.
     """
+
     class Meta:
         name = "TT"
 
@@ -38,14 +39,14 @@ class Tt:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -53,19 +54,19 @@ class Tt:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     tex_render: Optional[str] = field(
         default=None,
         metadata={
             "name": "TEX-RENDER",
             "type": "Attribute",
-        }
+        },
     )
     type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "TYPE",
             "type": "Attribute",
-        }
+        },
     )

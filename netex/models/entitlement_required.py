@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .entitlement_required_version_structure import EntitlementRequiredVersionStructure
+from .entitlement_required_version_structure import (
+    EntitlementRequiredVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

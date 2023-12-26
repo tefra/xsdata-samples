@@ -11,6 +11,7 @@ class AlphaNumericRestriction1(TypeStringRestriction1):
 
     Min and max lengths are inclusive.
     """
+
     class Meta:
         name = "AlphaNumericRestriction"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"

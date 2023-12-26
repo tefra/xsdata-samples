@@ -58,6 +58,7 @@ class ServiceFeeInfo2:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "ServiceFeeInfo"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -67,7 +68,7 @@ class ServiceFeeInfo2:
         metadata={
             "name": "FormOfPayment",
             "type": "Element",
-        }
+        },
     )
     service_fee_tax_info: list[ServiceFeeTaxInfo2] = field(
         default_factory=list,
@@ -75,21 +76,21 @@ class ServiceFeeInfo2:
             "name": "ServiceFeeTaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     credit_card_auth: None | CreditCardAuth2 = field(
         default=None,
         metadata={
             "name": "CreditCardAuth",
             "type": "Element",
-        }
+        },
     )
     payment: None | Payment2 = field(
         default=None,
         metadata={
             "name": "Payment",
             "type": "Element",
-        }
+        },
     )
     status: None | TypeStatus2 = field(
         default=None,
@@ -97,35 +98,35 @@ class ServiceFeeInfo2:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     confirmation: None | str = field(
         default=None,
         metadata={
             "name": "Confirmation",
             "type": "Attribute",
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -133,28 +134,28 @@ class ServiceFeeInfo2:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     total_amount: None | str = field(
         default=None,
         metadata={
             "name": "TotalAmount",
             "type": "Attribute",
-        }
+        },
     )
     base_amount: None | str = field(
         default=None,
@@ -162,26 +163,26 @@ class ServiceFeeInfo2:
             "name": "BaseAmount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus3 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

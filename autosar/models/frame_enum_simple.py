@@ -12,6 +12,7 @@ class FrameEnumSimple(Enum):
     :cvar TOP: Border at the top of the table
     :cvar TOPBOT: Borders at the top and bottom of  the table
     """
+
     ALL = "ALL"
     BOTTOM = "BOTTOM"
     NONE = "NONE"

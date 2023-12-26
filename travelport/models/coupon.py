@@ -77,6 +77,7 @@ class Coupon:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -86,21 +87,21 @@ class Coupon:
             "name": "TicketDesignator",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     coupon_number: None | int = field(
         default=None,
         metadata={
             "name": "CouponNumber",
             "type": "Attribute",
-        }
+        },
     )
     operating_carrier: None | str = field(
         default=None,
@@ -108,7 +109,7 @@ class Coupon:
             "name": "OperatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     operating_flight_number: None | str = field(
         default=None,
@@ -116,7 +117,7 @@ class Coupon:
             "name": "OperatingFlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     marketing_carrier: None | str = field(
         default=None,
@@ -124,7 +125,7 @@ class Coupon:
             "name": "MarketingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     marketing_flight_number: None | str = field(
         default=None,
@@ -132,7 +133,7 @@ class Coupon:
             "name": "MarketingFlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -142,7 +143,7 @@ class Coupon:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -152,21 +153,21 @@ class Coupon:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )
     stopover_code: None | bool = field(
         default=None,
@@ -174,7 +175,7 @@ class Coupon:
             "name": "StopoverCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     booking_class: None | str = field(
         default=None,
@@ -183,7 +184,7 @@ class Coupon:
             "type": "Attribute",
             "required": True,
             "max_length": 2,
-        }
+        },
     )
     fare_basis: None | str = field(
         default=None,
@@ -191,21 +192,21 @@ class Coupon:
             "name": "FareBasis",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
-        }
+        },
     )
     not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -214,33 +215,33 @@ class Coupon:
             "type": "Attribute",
             "required": True,
             "max_length": 1,
-        }
+        },
     )
     segment_group: None | int = field(
         default=None,
         metadata={
             "name": "SegmentGroup",
             "type": "Attribute",
-        }
+        },
     )
     marriage_group: None | int = field(
         default=None,
         metadata={
             "name": "MarriageGroup",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

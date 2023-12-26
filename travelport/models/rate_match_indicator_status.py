@@ -21,6 +21,7 @@ class RateMatchIndicatorStatus(Enum):
         applicable value. The substituted available is provided in against
         Value
     """
+
     AVAILABLE = "Available"
     NOT_AVAILABLE = "NotAvailable"
     SUBSTITUTE_OFFERED = "SubstituteOffered"

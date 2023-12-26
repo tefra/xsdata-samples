@@ -23,6 +23,7 @@ class Referent:
     :ivar point_coordinates:
     :ivar referent_extension:
     """
+
     referent_identifier: Optional[str] = field(
         default=None,
         metadata={
@@ -31,7 +32,7 @@ class Referent:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     referent_name: Optional[str] = field(
         default=None,
@@ -40,7 +41,7 @@ class Referent:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     referent_type: Optional[ReferentTypeEnum] = field(
         default=None,
@@ -49,7 +50,7 @@ class Referent:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     referent_description: Optional[MultilingualString] = field(
         default=None,
@@ -57,7 +58,7 @@ class Referent:
             "name": "referentDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     point_coordinates: Optional[PointCoordinates] = field(
         default=None,
@@ -65,7 +66,7 @@ class Referent:
             "name": "pointCoordinates",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     referent_extension: Optional[ExtensionType] = field(
         default=None,
@@ -73,5 +74,5 @@ class Referent:
             "name": "referentExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

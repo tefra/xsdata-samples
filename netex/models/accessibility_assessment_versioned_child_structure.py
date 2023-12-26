@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .accessibility_limitations_rel_structure import AccessibilityLimitationsRelStructure
+from .accessibility_limitations_rel_structure import (
+    AccessibilityLimitationsRelStructure,
+)
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .limitation_status_enumeration import LimitationStatusEnumeration
 from .multilingual_string import MultilingualString
@@ -21,21 +23,21 @@ class AccessibilityAssessmentVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     limitations: Optional[AccessibilityLimitationsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     suitabilities: Optional[SuitabilitiesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     comment: Optional[MultilingualString] = field(
         default=None,
@@ -43,5 +45,5 @@ class AccessibilityAssessmentVersionedChildStructure(VersionedChildStructure):
             "name": "Comment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

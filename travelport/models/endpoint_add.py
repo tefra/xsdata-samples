@@ -16,6 +16,7 @@ class EndpointAdd(TypeEditableEndpoint):
         Purpose Code is an additional piece of data that augments the link
         from endpoint to template field
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -25,5 +26,5 @@ class EndpointAdd(TypeEditableEndpoint):
             "name": "PurposeTypeCode",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )

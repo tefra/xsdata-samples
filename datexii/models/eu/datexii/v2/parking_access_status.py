@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.opening_status_enum import OpeningStatusEnum
-from datexii.models.eu.datexii.v2.parking_access_reference import ParkingAccessReference
+from datexii.models.eu.datexii.v2.parking_access_reference import (
+    ParkingAccessReference,
+)
 from datexii.models.eu.datexii.v2.parking_fault_enum import ParkingFaultEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -19,6 +21,7 @@ class ParkingAccessStatus:
     :ivar access_fault: A fault indicator for this special access.
     :ivar parking_access_status_extension:
     """
+
     access_reference: Optional[ParkingAccessReference] = field(
         default=None,
         metadata={
@@ -26,7 +29,7 @@ class ParkingAccessStatus:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     access_opening_status: Optional[OpeningStatusEnum] = field(
         default=None,
@@ -34,7 +37,7 @@ class ParkingAccessStatus:
             "name": "accessOpeningStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     access_fault: List[ParkingFaultEnum] = field(
         default_factory=list,
@@ -42,7 +45,7 @@ class ParkingAccessStatus:
             "name": "accessFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_access_status_extension: Optional[ExtensionType] = field(
         default=None,
@@ -50,5 +53,5 @@ class ParkingAccessStatus:
             "name": "parkingAccessStatusExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

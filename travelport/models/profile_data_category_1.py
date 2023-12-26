@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_data_category_1 import TypeProfileDataCategory1
+from travelport.models.type_profile_data_category_1 import (
+    TypeProfileDataCategory1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -10,6 +12,7 @@ class ProfileDataCategory1:
     """
     The category of data that controls what data will be returned in the response.
     """
+
     class Meta:
         name = "ProfileDataCategory"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -18,5 +21,5 @@ class ProfileDataCategory1:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

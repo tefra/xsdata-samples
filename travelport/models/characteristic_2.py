@@ -10,6 +10,7 @@ class Characteristic2:
     """
     Defines coach characteristics such as accommodation class, smoking choice, etc.
     """
+
     class Meta:
         name = "Characteristic"
         namespace = "http://www.travelport.com/schema/rail_v52_0"
@@ -19,12 +20,12 @@ class Characteristic2:
         metadata={
             "name": "Smoking",
             "type": "Attribute",
-        }
+        },
     )
     class_value: None | TypeCoachClassType = field(
         default=None,
         metadata={
             "name": "Class",
             "type": "Attribute",
-        }
+        },
     )

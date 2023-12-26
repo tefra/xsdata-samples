@@ -16,6 +16,7 @@ class LanguageOption:
     country
         2 Letter ISO Country code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,7 +27,7 @@ class LanguageOption:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class LanguageOption:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )

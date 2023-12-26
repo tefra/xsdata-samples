@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.universal_record_search_req import UniversalRecordSearchReq
+from travelport.models.universal_record_search_req import (
+    UniversalRecordSearchReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class UniversalRecordSearchServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class UniversalRecordSearchServicePortTypeServiceInput:
                 "name": "UniversalRecordSearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )

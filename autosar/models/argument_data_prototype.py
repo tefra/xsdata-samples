@@ -97,6 +97,7 @@ class ArgumentDataPrototype:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ARGUMENT-DATA-PROTOTYPE"
 
@@ -107,15 +108,17 @@ class ArgumentDataPrototype:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ArgumentDataPrototype.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ArgumentDataPrototype.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +126,7 @@ class ArgumentDataPrototype:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +134,7 @@ class ArgumentDataPrototype:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +142,7 @@ class ArgumentDataPrototype:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +150,7 @@ class ArgumentDataPrototype:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +158,7 @@ class ArgumentDataPrototype:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ArgumentDataPrototype.Annotations"] = field(
         default=None,
@@ -163,7 +166,7 @@ class ArgumentDataPrototype:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_data_def_props: Optional[SwDataDefProps] = field(
         default=None,
@@ -171,7 +174,7 @@ class ArgumentDataPrototype:
             "name": "SW-DATA-DEF-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_tref: Optional["ArgumentDataPrototype.TypeTref"] = field(
         default=None,
@@ -179,7 +182,7 @@ class ArgumentDataPrototype:
             "name": "TYPE-TREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     direction: Optional[ArgumentDirectionEnum] = field(
         default=None,
@@ -187,15 +190,17 @@ class ArgumentDataPrototype:
             "name": "DIRECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    server_argument_impl_policy: Optional[ServerArgumentImplPolicyEnum] = field(
+    server_argument_impl_policy: Optional[
+        ServerArgumentImplPolicyEnum
+    ] = field(
         default=None,
         metadata={
             "name": "SERVER-ARGUMENT-IMPL-POLICY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_blueprints: Optional["ArgumentDataPrototype.TypeBlueprints"] = field(
         default=None,
@@ -203,7 +208,7 @@ class ArgumentDataPrototype:
             "name": "TYPE-BLUEPRINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -211,14 +216,14 @@ class ArgumentDataPrototype:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -226,14 +231,14 @@ class ArgumentDataPrototype:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -244,7 +249,7 @@ class ArgumentDataPrototype:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -255,7 +260,7 @@ class ArgumentDataPrototype:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -266,16 +271,18 @@ class ArgumentDataPrototype:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class TypeBlueprints:
-        autosar_data_type_ref_conditional: List[AutosarDataTypeRefConditional] = field(
+        autosar_data_type_ref_conditional: List[
+            AutosarDataTypeRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-DATA-TYPE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

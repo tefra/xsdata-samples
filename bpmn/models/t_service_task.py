@@ -16,12 +16,12 @@ class TServiceTask(TTask):
         default=TImplementationValue.WEB_SERVICE,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     operation_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "operationRef",
             "type": "Attribute",
-        }
+        },
     )

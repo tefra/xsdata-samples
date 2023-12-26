@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -14,7 +16,7 @@ class CrestaZoneType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     cresta_zone_name: Optional[Idtype] = field(
         default=None,
@@ -22,7 +24,7 @@ class CrestaZoneType:
             "name": "CrestaZoneName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     cresta_sub_zone_identifier: Optional[Idtype] = field(
         default=None,
@@ -30,7 +32,7 @@ class CrestaZoneType:
             "name": "CrestaSubZoneIdentifier",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     cresta_sub_zone_name: Optional[Idtype] = field(
         default=None,
@@ -38,5 +40,5 @@ class CrestaZoneType:
             "name": "CrestaSubZoneName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

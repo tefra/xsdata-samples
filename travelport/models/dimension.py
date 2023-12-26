@@ -15,6 +15,7 @@ class Dimension(TypeUnitOfMeasure):
     type_value
         Type denotes Length,Height,Width of a baggage.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -23,5 +24,5 @@ class Dimension(TypeUnitOfMeasure):
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )

@@ -15,5 +15,5 @@ class Emptyset:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

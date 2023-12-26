@@ -16,7 +16,7 @@ class RoutePointVersionStructure(PointVersionStructure):
             "name": "ViaFlag",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     border_crossing: Optional[bool] = field(
         default=None,
@@ -24,5 +24,5 @@ class RoutePointVersionStructure(PointVersionStructure):
             "name": "BorderCrossing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

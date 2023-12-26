@@ -39,16 +39,19 @@ class RoleBasedPortAssignment:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ROLE-BASED-PORT-ASSIGNMENT"
 
-    port_prototype_ref: Optional["RoleBasedPortAssignment.PortPrototypeRef"] = field(
+    port_prototype_ref: Optional[
+        "RoleBasedPortAssignment.PortPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     role: Optional[Identifier] = field(
         default=None,
@@ -56,7 +59,7 @@ class RoleBasedPortAssignment:
             "name": "ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -64,14 +67,14 @@ class RoleBasedPortAssignment:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -79,7 +82,7 @@ class RoleBasedPortAssignment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -90,5 +93,5 @@ class RoleBasedPortAssignment:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

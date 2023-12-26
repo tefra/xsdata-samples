@@ -15,25 +15,25 @@ class PredictionType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     state: None | PredictionStateEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
-        }
+        },
     )
     publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
-        }
+        },
     )

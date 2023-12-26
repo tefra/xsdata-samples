@@ -13,5 +13,5 @@ class MobilityFacility:
         default=MobilityFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

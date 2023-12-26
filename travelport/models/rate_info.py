@@ -45,6 +45,7 @@ class RateInfo:
         has been determined to be ‘in policy’ based on the associated policy
         settings.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -53,70 +54,70 @@ class RateInfo:
         metadata={
             "name": "PolicyCodesList",
             "type": "Element",
-        }
+        },
     )
     minimum_amount: None | str = field(
         default=None,
         metadata={
             "name": "MinimumAmount",
             "type": "Attribute",
-        }
+        },
     )
     approximate_minimum_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateMinimumAmount",
             "type": "Attribute",
-        }
+        },
     )
     min_amount_rate_changed: None | bool = field(
         default=None,
         metadata={
             "name": "MinAmountRateChanged",
             "type": "Attribute",
-        }
+        },
     )
     maximum_amount: None | str = field(
         default=None,
         metadata={
             "name": "MaximumAmount",
             "type": "Attribute",
-        }
+        },
     )
     approximate_maximum_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateMaximumAmount",
             "type": "Attribute",
-        }
+        },
     )
     max_amount_rate_changed: None | bool = field(
         default=None,
         metadata={
             "name": "MaxAmountRateChanged",
             "type": "Attribute",
-        }
+        },
     )
     minimum_stay_amount: None | str = field(
         default=None,
         metadata={
             "name": "MinimumStayAmount",
             "type": "Attribute",
-        }
+        },
     )
     approximate_minimum_stay_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateMinimumStayAmount",
             "type": "Attribute",
-        }
+        },
     )
     commission: None | str = field(
         default=None,
         metadata={
             "name": "Commission",
             "type": "Attribute",
-        }
+        },
     )
     rate_supplier: None | str = field(
         default=None,
@@ -124,26 +125,26 @@ class RateInfo:
             "name": "RateSupplier",
             "type": "Attribute",
             "max_length": 64,
-        }
+        },
     )
     rate_supplier_logo: None | str = field(
         default=None,
         metadata={
             "name": "RateSupplierLogo",
             "type": "Attribute",
-        }
+        },
     )
     min_in_policy: None | bool = field(
         default=None,
         metadata={
             "name": "MinInPolicy",
             "type": "Attribute",
-        }
+        },
     )
     max_in_policy: None | bool = field(
         default=None,
         metadata={
             "name": "MaxInPolicy",
             "type": "Attribute",
-        }
+        },
     )

@@ -20,15 +20,17 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "name": "ParentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    delivery_variant_media_type: Optional[DeliveryVariantTypeEnumeration] = field(
+    delivery_variant_media_type: Optional[
+        DeliveryVariantTypeEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "DeliveryVariantMediaType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_delivery_variant_ref: Optional[TypeOfDeliveryVariantRef] = field(
         default=None,
@@ -36,7 +38,7 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfDeliveryVariantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     variant_text: Optional[MultilingualString] = field(
         default=None,
@@ -44,11 +46,11 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "name": "VariantText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

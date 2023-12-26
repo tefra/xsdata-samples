@@ -13,7 +13,7 @@ class HeadwayIntervalStructure:
             "name": "ScheduledHeadwayInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_headway_interval: Optional[XmlDuration] = field(
         default=None,
@@ -21,7 +21,7 @@ class HeadwayIntervalStructure:
             "name": "MinimumHeadwayInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_headway_interval: Optional[XmlDuration] = field(
         default=None,
@@ -29,5 +29,5 @@ class HeadwayIntervalStructure:
             "name": "MaximumHeadwayInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

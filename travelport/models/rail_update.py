@@ -17,7 +17,7 @@ class RailUpdate:
             "name": "BookingAction",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     reservation_locator_code: None | str = field(
         default=None,
@@ -27,7 +27,7 @@ class RailUpdate:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
 
     @dataclass
@@ -43,13 +43,14 @@ class RailUpdate:
             and issue ticket, default if FOP is included) Ticket (used to
             ticket an existing booking)
         """
+
         form_of_payment: None | FormOfPayment1 = field(
             default=None,
             metadata={
                 "name": "FormOfPayment",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-            }
+            },
         )
         payment: None | Payment1 = field(
             default=None,
@@ -57,7 +58,7 @@ class RailUpdate:
                 "name": "Payment",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-            }
+            },
         )
         type_value: None | str = field(
             default=None,
@@ -65,5 +66,5 @@ class RailUpdate:
                 "name": "Type",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -17,6 +17,7 @@ class FareStatus:
     code
         The status of the fare.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class FareStatus:
         metadata={
             "name": "FareStatusFailureInfo",
             "type": "Element",
-        }
+        },
     )
     code: None | TypeFareStatusCode = field(
         default=None,
@@ -33,5 +34,5 @@ class FareStatus:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -57,29 +57,29 @@ from xsdata.models.datatype import XmlTime
 
 obj = Quotation(
     ublversion_id=UblversionId(
-        value="2.0"
+        value='2.0'
     ),
     customization_id=CustomizationId(
-        value="OIOUBL-2.1"
+        value='OIOUBL-2.1'
     ),
     profile_id=ProfileId(
-        value="Procurement-QuoSim-1.0",
-        scheme_id="urn:oioubl:id:profileid-1.2",
-        scheme_agency_id="320"
+        value='Procurement-QuoSim-1.0',
+        scheme_id='urn:oioubl:id:profileid-1.2',
+        scheme_agency_id='320'
     ),
     id=Id(
-        value="QIY7655"
+        value='QIY7655'
     ),
     copy_indicator=False,
     uuid=Uuid(
-        value="4D07786B-DA6D-439F-82D1-6FFFC7F4E3B1"
+        value='4D07786B-DA6D-439F-82D1-6FFFC7F4E3B1'
     ),
     issue_date=XmlDate(2008, 5, 1),
     issue_time=XmlTime(11, 32, 26, 0, 0),
     note=[
         Note(
-            value="Bestilling af computere",
-            language_id="da-dk"
+            value='Bestilling af computere',
+            language_id='da-dk'
         ),
     ],
     validity_period=ValidityPeriod(
@@ -88,75 +88,75 @@ obj = Quotation(
     ),
     request_for_quotation_document_reference=RequestForQuotationDocumentReference(
         id=Id(
-            value="G867B"
+            value='G867B'
         ),
         uuid=Uuid(
-            value="93T5G3G5-HYA3-7267-BVG3-GS46SW44WG53"
+            value='93T5G3G5-HYA3-7267-BVG3-GS46SW44WG53'
         ),
         issue_date=XmlDate(2008, 4, 19)
     ),
     seller_supplier_party=SellerSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="LEV00123"
+            value='LEV00123'
         ),
         party=Party(
             endpoint_id=EndpointId(
-                value="DK18296799",
-                scheme_id="DK:CVR"
+                value='DK18296799',
+                scheme_id='DK:CVR'
             ),
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="DK18296799",
-                        scheme_id="DK:CVR"
+                        value='DK18296799',
+                        scheme_id='DK:CVR'
                     )
                 ),
             ],
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Delcomputer A/S"
+                        value='Delcomputer A/S'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 address_format_code=AddressFormatCode(
-                    value="StructuredDK",
-                    list_id="urn:oioubl:codelist:addressformatcode-1.1",
-                    list_agency_id="320"
+                    value='StructuredDK',
+                    list_id='urn:oioubl:codelist:addressformatcode-1.1',
+                    list_agency_id='320'
                 ),
                 street_name=StreetName(
-                    value="Arne Jacobsens Allé"
+                    value='Arne Jacobsens Allé'
                 ),
                 building_number=BuildingNumber(
-                    value="15"
+                    value='15'
                 ),
                 city_name=CityName(
-                    value="København S"
+                    value='København S'
                 ),
                 postal_zone=PostalZone(
-                    value="2300"
+                    value='2300'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="DK"
+                        value='DK'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     company_id=CompanyId(
-                        value="DK18296799",
-                        scheme_id="DK:SE"
+                        value='DK18296799',
+                        scheme_id='DK:SE'
                     ),
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="63",
-                            scheme_id="urn:oioubl:id:taxschemeid-1.1",
-                            scheme_agency_id="320"
+                            value='63',
+                            scheme_id='urn:oioubl:id:taxschemeid-1.1',
+                            scheme_agency_id='320'
                         ),
                         name=Name(
-                            value="Moms"
+                            value='Moms'
                         )
                     )
                 ),
@@ -164,11 +164,11 @@ obj = Quotation(
             party_legal_entity=[
                 PartyLegalEntity(
                     registration_name=RegistrationName(
-                        value="Delcomputer A/S"
+                        value='Delcomputer A/S'
                     ),
                     company_id=CompanyId(
-                        value="18296799",
-                        scheme_id="DK:CVR"
+                        value='18296799',
+                        scheme_id='DK:CVR'
                     )
                 ),
             ]
@@ -177,64 +177,64 @@ obj = Quotation(
     originator_customer_party=OriginatorCustomerParty(
         party=Party(
             endpoint_id=EndpointId(
-                value="5798000416604",
-                scheme_id="GLN",
-                scheme_agency_id="9"
+                value='5798000416604',
+                scheme_id='GLN',
+                scheme_agency_id='9'
             ),
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="5798000416604",
-                        scheme_id="GLN",
-                        scheme_agency_id="9"
+                        value='5798000416604',
+                        scheme_id='GLN',
+                        scheme_agency_id='9'
                     )
                 ),
             ],
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Gentofte Kommune"
+                        value='Gentofte Kommune'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 address_format_code=AddressFormatCode(
-                    value="StructuredDK",
-                    list_id="urn:oioubl:codelist:addressformatcode-1.1",
-                    list_agency_id="320"
+                    value='StructuredDK',
+                    list_id='urn:oioubl:codelist:addressformatcode-1.1',
+                    list_agency_id='320'
                 ),
                 street_name=StreetName(
-                    value="Bernstorffsvej"
+                    value='Bernstorffsvej'
                 ),
                 building_number=BuildingNumber(
-                    value="161"
+                    value='161'
                 ),
                 city_name=CityName(
-                    value="Charlottenlund"
+                    value='Charlottenlund'
                 ),
                 postal_zone=PostalZone(
-                    value="2920"
+                    value='2920'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="DK"
+                        value='DK'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     company_id=CompanyId(
-                        value="DK12345678",
-                        scheme_id="DK:SE"
+                        value='DK12345678',
+                        scheme_id='DK:SE'
                     ),
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="63",
-                            scheme_id="urn:oioubl:id:taxschemeid-1.1",
-                            scheme_agency_id="320"
+                            value='63',
+                            scheme_id='urn:oioubl:id:taxschemeid-1.1',
+                            scheme_agency_id='320'
                         ),
                         name=Name(
-                            value="Moms"
+                            value='Moms'
                         )
                     )
                 ),
@@ -242,20 +242,20 @@ obj = Quotation(
             party_legal_entity=[
                 PartyLegalEntity(
                     registration_name=RegistrationName(
-                        value="Gentofte Kommune"
+                        value='Gentofte Kommune'
                     ),
                     company_id=CompanyId(
-                        value="DK12345678",
-                        scheme_id="DK:CVR"
+                        value='DK12345678',
+                        scheme_id='DK:CVR'
                     )
                 ),
             ],
             contact=Contact(
                 id=Id(
-                    value="12345678"
+                    value='12345678'
                 ),
                 name=Name(
-                    value="Sille Schyberg"
+                    value='Sille Schyberg'
                 )
             )
         )
@@ -264,37 +264,37 @@ obj = Quotation(
         Delivery(
             delivery_address=DeliveryAddress(
                 address_format_code=AddressFormatCode(
-                    value="StructuredDK",
-                    list_id="urn:oioubl:codelist:addressformatcode-1.1",
-                    list_agency_id="320"
+                    value='StructuredDK',
+                    list_id='urn:oioubl:codelist:addressformatcode-1.1',
+                    list_agency_id='320'
                 ),
                 street_name=StreetName(
-                    value="Bernstorffsvej"
+                    value='Bernstorffsvej'
                 ),
                 building_number=BuildingNumber(
-                    value="161"
+                    value='161'
                 ),
                 city_name=CityName(
-                    value="Charlottenlund"
+                    value='Charlottenlund'
                 ),
                 postal_zone=PostalZone(
-                    value="2920"
+                    value='2920'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="IT-afdelingen"
+                            value='IT-afdelingen'
                         )
                     ),
                     AddressLine(
                         line=Line(
-                            value="1. sal"
+                            value='1. sal'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="DK"
+                        value='DK'
                     )
                 )
             ),
@@ -309,213 +309,213 @@ obj = Quotation(
     delivery_terms=DeliveryTerms(
         special_terms=[
             SpecialTerms(
-                value="1% reduktion i kontraktsummen pr. dags forsinkelse jf. SKI kontrakt"
+                value='1% reduktion i kontraktsummen pr. dags forsinkelse jf. SKI kontrakt'
             ),
         ]
     ),
     quoted_monetary_total=QuotedMonetaryTotal(
         line_extension_amount=LineExtensionAmount(
-            value=Decimal("197750.00"),
-            currency_id="DKK"
+            value=Decimal('197750.00'),
+            currency_id='DKK'
         ),
         tax_exclusive_amount=TaxExclusiveAmount(
-            value=Decimal("49437.50"),
-            currency_id="DKK"
+            value=Decimal('49437.50'),
+            currency_id='DKK'
         ),
         tax_inclusive_amount=TaxInclusiveAmount(
-            value=Decimal("247187.50"),
-            currency_id="DKK"
+            value=Decimal('247187.50'),
+            currency_id='DKK'
         ),
         payable_amount=PayableAmount(
-            value=Decimal("247187.50"),
-            currency_id="DKK"
+            value=Decimal('247187.50'),
+            currency_id='DKK'
         )
     ),
     quotation_line=[
         QuotationLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             note=[
                 Note(
-                    value="Computer"
+                    value='Computer'
                 ),
             ],
             line_item=LineItem(
                 id=Id(
-                    value="DELL1052665"
+                    value='DELL1052665'
                 ),
                 quantity=Quantity(
-                    value=Decimal("35"),
-                    unit_code="EA"
+                    value=Decimal('35'),
+                    unit_code='EA'
                 ),
                 line_extension_amount=LineExtensionAmount(
-                    value=Decimal("150500.00"),
-                    currency_id="DKK"
+                    value=Decimal('150500.00'),
+                    currency_id='DKK'
                 ),
                 total_tax_amount=TotalTaxAmount(
-                    value=Decimal("37625.00"),
-                    currency_id="DKK"
+                    value=Decimal('37625.00'),
+                    currency_id='DKK'
                 ),
                 price=Price(
                     price_amount=PriceAmount(
-                        value=Decimal("4300.00"),
-                        currency_id="DKK"
+                        value=Decimal('4300.00'),
+                        currency_id='DKK'
                     ),
                     base_quantity=BaseQuantity(
-                        value=Decimal("1"),
-                        unit_code="EA"
+                        value=Decimal('1'),
+                        unit_code='EA'
                     )
                 ),
                 item=Item(
                     description=[
                         Description(
-                            value="Stationær computer"
+                            value='Stationær computer'
                         ),
                     ],
                     name=Name(
-                        value="Dell PrecisionTM  T3400"
+                        value='Dell PrecisionTM  T3400'
                     )
                 )
             )
         ),
         QuotationLine(
             id=Id(
-                value="2"
+                value='2'
             ),
             note=[
                 Note(
-                    value="Skærm"
+                    value='Skærm'
                 ),
             ],
             line_item=LineItem(
                 id=Id(
-                    value="DELL2363463"
+                    value='DELL2363463'
                 ),
                 quantity=Quantity(
-                    value=Decimal("35"),
-                    unit_code="EA"
+                    value=Decimal('35'),
+                    unit_code='EA'
                 ),
                 line_extension_amount=LineExtensionAmount(
-                    value=Decimal("43750.00"),
-                    currency_id="DKK"
+                    value=Decimal('43750.00'),
+                    currency_id='DKK'
                 ),
                 total_tax_amount=TotalTaxAmount(
-                    value=Decimal("10937.50"),
-                    currency_id="DKK"
+                    value=Decimal('10937.50'),
+                    currency_id='DKK'
                 ),
                 price=Price(
                     price_amount=PriceAmount(
-                        value=Decimal("1250.00"),
-                        currency_id="DKK"
+                        value=Decimal('1250.00'),
+                        currency_id='DKK'
                     ),
                     base_quantity=BaseQuantity(
-                        value=Decimal("1"),
-                        unit_code="EA"
+                        value=Decimal('1'),
+                        unit_code='EA'
                     )
                 ),
                 item=Item(
                     description=[
                         Description(
-                            value="Fladskærm"
+                            value='Fladskærm'
                         ),
                     ],
                     name=Name(
-                        value="FP/BL 1908WFP"
+                        value='FP/BL 1908WFP'
                     )
                 )
             )
         ),
         QuotationLine(
             id=Id(
-                value="3"
+                value='3'
             ),
             note=[
                 Note(
-                    value="Mus"
+                    value='Mus'
                 ),
             ],
             line_item=LineItem(
                 id=Id(
-                    value="DELL2367452"
+                    value='DELL2367452'
                 ),
                 quantity=Quantity(
-                    value=Decimal("35"),
-                    unit_code="EA"
+                    value=Decimal('35'),
+                    unit_code='EA'
                 ),
                 line_extension_amount=LineExtensionAmount(
-                    value=Decimal("1750.00"),
-                    currency_id="DKK"
+                    value=Decimal('1750.00'),
+                    currency_id='DKK'
                 ),
                 total_tax_amount=TotalTaxAmount(
-                    value=Decimal("437.50"),
-                    currency_id="DKK"
+                    value=Decimal('437.50'),
+                    currency_id='DKK'
                 ),
                 price=Price(
                     price_amount=PriceAmount(
-                        value=Decimal("50.00"),
-                        currency_id="DKK"
+                        value=Decimal('50.00'),
+                        currency_id='DKK'
                     ),
                     base_quantity=BaseQuantity(
-                        value=Decimal("1"),
-                        unit_code="EA"
+                        value=Decimal('1'),
+                        unit_code='EA'
                     )
                 ),
                 item=Item(
                     description=[
                         Description(
-                            value="Mus"
+                            value='Mus'
                         ),
                     ],
                     name=Name(
-                        value="Dell Quietkey USB-tastatur, sort - Dansk (QWERTY)"
+                        value='Dell Quietkey USB-tastatur, sort - Dansk (QWERTY)'
                     )
                 )
             )
         ),
         QuotationLine(
             id=Id(
-                value="4"
+                value='4'
             ),
             note=[
                 Note(
-                    value="Tastatur"
+                    value='Tastatur'
                 ),
             ],
             line_item=LineItem(
                 id=Id(
-                    value="DELL8436783"
+                    value='DELL8436783'
                 ),
                 quantity=Quantity(
-                    value=Decimal("35"),
-                    unit_code="EA"
+                    value=Decimal('35'),
+                    unit_code='EA'
                 ),
                 line_extension_amount=LineExtensionAmount(
-                    value=Decimal("1750.00"),
-                    currency_id="DKK"
+                    value=Decimal('1750.00'),
+                    currency_id='DKK'
                 ),
                 total_tax_amount=TotalTaxAmount(
-                    value=Decimal("437.50"),
-                    currency_id="DKK"
+                    value=Decimal('437.50'),
+                    currency_id='DKK'
                 ),
                 price=Price(
                     price_amount=PriceAmount(
-                        value=Decimal("50.00"),
-                        currency_id="DKK"
+                        value=Decimal('50.00'),
+                        currency_id='DKK'
                     ),
                     base_quantity=BaseQuantity(
-                        value=Decimal("1"),
-                        unit_code="EA"
+                        value=Decimal('1'),
+                        unit_code='EA'
                     )
                 ),
                 item=Item(
                     description=[
                         Description(
-                            value="Tastatur"
+                            value='Tastatur'
                         ),
                     ],
                     name=Name(
-                        value="Dell Quietkey USB-tastatur, sort - Dansk (QWERTY)"
+                        value='Dell Quietkey USB-tastatur, sort - Dansk (QWERTY)'
                     )
                 )
             )

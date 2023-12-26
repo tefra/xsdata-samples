@@ -14,5 +14,5 @@ class RequestTimestamp:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

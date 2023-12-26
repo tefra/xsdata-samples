@@ -17,7 +17,7 @@ class SystemInfoRsp(BaseRsp3):
             "name": "SystemInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     system_time: None | str = field(
         default=None,
@@ -25,5 +25,5 @@ class SystemInfoRsp(BaseRsp3):
             "name": "SystemTime",
             "type": "Element",
             "required": True,
-        }
+        },
     )

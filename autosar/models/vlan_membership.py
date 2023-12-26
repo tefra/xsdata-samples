@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .dhcp_server_configuration import DhcpServerConfiguration
-from .ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
-from .ethernet_switch_vlan_egress_tagging_enum import EthernetSwitchVlanEgressTaggingEnum
+from .ethernet_physical_channel_subtypes_enum import (
+    EthernetPhysicalChannelSubtypesEnum,
+)
+from .ethernet_switch_vlan_egress_tagging_enum import (
+    EthernetSwitchVlanEgressTaggingEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 
@@ -43,6 +47,7 @@ class VlanMembership:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "VLAN-MEMBERSHIP"
 
@@ -52,7 +57,7 @@ class VlanMembership:
             "name": "DEFAULT-PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dhcp_address_assignment: Optional[DhcpServerConfiguration] = field(
         default=None,
@@ -60,7 +65,7 @@ class VlanMembership:
             "name": "DHCP-ADDRESS-ASSIGNMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     send_activity: Optional[EthernetSwitchVlanEgressTaggingEnum] = field(
         default=None,
@@ -68,7 +73,7 @@ class VlanMembership:
             "name": "SEND-ACTIVITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vlan_ref: Optional["VlanMembership.VlanRef"] = field(
         default=None,
@@ -76,14 +81,14 @@ class VlanMembership:
             "name": "VLAN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -91,7 +96,7 @@ class VlanMembership:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -102,5 +107,5 @@ class VlanMembership:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

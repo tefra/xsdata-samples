@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from .ticketing_service_facility_enumeration import (
+    TicketingServiceFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -14,5 +16,5 @@ class TicketingServiceFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -16,12 +16,12 @@ class AirUpsellRule:
         metadata={
             "name": "AirUpsellQualify",
             "type": "Element",
-        }
+        },
     )
     air_upsell_offer: None | AirUpsellOffer = field(
         default=None,
         metadata={
             "name": "AirUpsellOffer",
             "type": "Element",
-        }
+        },
     )

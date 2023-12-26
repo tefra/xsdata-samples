@@ -6,7 +6,9 @@ from travelport.models.base_req_4 import BaseReq4
 from travelport.models.booking_traveler_3 import BookingTraveler3
 from travelport.models.commission_remark_3 import CommissionRemark3
 from travelport.models.consolidator_remark_3 import ConsolidatorRemark3
-from travelport.models.continuity_check_override_3 import ContinuityCheckOverride3
+from travelport.models.continuity_check_override_3 import (
+    ContinuityCheckOverride3,
+)
 from travelport.models.customer_id_3 import CustomerId3
 from travelport.models.email_notification_3 import EmailNotification3
 from travelport.models.file_finishing_info_3 import FileFinishingInfo3
@@ -71,6 +73,7 @@ class BaseCreateReservationReq3(BaseReq4):
         Optional client centric customer identifier
     version
     """
+
     class Meta:
         name = "BaseCreateReservationReq"
 
@@ -81,7 +84,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     booking_traveler: list[BookingTraveler3] = field(
         default_factory=list,
@@ -90,7 +93,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     osi: list[Osi3] = field(
         default_factory=list,
@@ -99,7 +102,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     accounting_remark: list[AccountingRemark3] = field(
         default_factory=list,
@@ -108,7 +111,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     general_remark: list[GeneralRemark3] = field(
         default_factory=list,
@@ -117,7 +120,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     xmlremark: list[Xmlremark3] = field(
         default_factory=list,
@@ -126,7 +129,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     unassociated_remark: list[UnassociatedRemark3] = field(
         default_factory=list,
@@ -135,7 +138,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     postscript: None | Postscript3 = field(
         default=None,
@@ -143,7 +146,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "Postscript",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     passive_info: None | PassiveInfo3 = field(
         default=None,
@@ -151,7 +154,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "PassiveInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     continuity_check_override: None | ContinuityCheckOverride3 = field(
         default=None,
@@ -159,7 +162,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "ContinuityCheckOverride",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     agency_contact_info: None | AgencyContactInfo3 = field(
         default=None,
@@ -167,7 +170,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "AgencyContactInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     customer_id: None | CustomerId3 = field(
         default=None,
@@ -175,7 +178,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "CustomerID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     file_finishing_info: None | FileFinishingInfo3 = field(
         default=None,
@@ -183,7 +186,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "FileFinishingInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     commission_remark: None | CommissionRemark3 = field(
         default=None,
@@ -191,7 +194,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "CommissionRemark",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     consolidator_remark: None | ConsolidatorRemark3 = field(
         default=None,
@@ -199,7 +202,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "ConsolidatorRemark",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     invoice_remark: list[InvoiceRemark3] = field(
         default_factory=list,
@@ -208,7 +211,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     ssr: list[Ssr3] = field(
         default_factory=list,
@@ -217,7 +220,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     email_notification: None | EmailNotification3 = field(
         default=None,
@@ -225,7 +228,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "EmailNotification",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     queue_place: None | QueuePlace3 = field(
         default=None,
@@ -233,7 +236,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "QueuePlace",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-        }
+        },
     )
     rule_name: None | str = field(
         default=None,
@@ -241,7 +244,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "name": "RuleName",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -250,7 +253,7 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -259,26 +262,26 @@ class BaseCreateReservationReq3(BaseReq4):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-        }
+        },
     )
     customer_number: None | str = field(
         default=None,
         metadata={
             "name": "CustomerNumber",
             "type": "Attribute",
-        }
+        },
     )
     version: None | int = field(
         default=None,
         metadata={
             "name": "Version",
             "type": "Attribute",
-        }
+        },
     )

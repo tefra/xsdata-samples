@@ -1,18 +1,24 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .train_component_label_assignment import TrainComponentLabelAssignment
-from .train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
+from .train_component_label_assignment_ref import (
+    TrainComponentLabelAssignmentRef,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TrainComponentLabelAssignmentsRelStructure(ContainmentAggregationStructure):
+class TrainComponentLabelAssignmentsRelStructure(
+    ContainmentAggregationStructure
+):
     class Meta:
         name = "trainComponentLabelAssignments_RelStructure"
 
-    train_component_label_assignment_ref_or_train_component_label_assignment: List[object] = field(
+    train_component_label_assignment_ref_or_train_component_label_assignment: List[
+        Union[TrainComponentLabelAssignmentRef, TrainComponentLabelAssignment]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +34,5 @@ class TrainComponentLabelAssignmentsRelStructure(ContainmentAggregationStructure
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

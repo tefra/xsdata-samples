@@ -11,6 +11,7 @@ class VehicleUpsellUpdate:
     """
     Update command for updating VehicleUpsellQualify,VehicleUpsellOffer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,12 +20,12 @@ class VehicleUpsellUpdate:
         metadata={
             "name": "VehicleUpsellQualify",
             "type": "Element",
-        }
+        },
     )
     vehicle_upsell_offer: None | VehicleUpsellOffer = field(
         default=None,
         metadata={
             "name": "VehicleUpsellOffer",
             "type": "Element",
-        }
+        },
     )

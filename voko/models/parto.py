@@ -13,17 +13,17 @@ class Parto:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     sekcio: Optional[Sekcio] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     art: Optional[Art] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )

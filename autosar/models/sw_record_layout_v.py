@@ -9,7 +9,9 @@ from .nmtoken_string import NmtokenString
 from .nmtokens_string import NmtokensString
 from .ref import Ref
 from .sw_base_type_subtypes_enum import SwBaseTypeSubtypesEnum
-from .sw_generic_axis_param_type_subtypes_enum import SwGenericAxisParamTypeSubtypesEnum
+from .sw_generic_axis_param_type_subtypes_enum import (
+    SwGenericAxisParamTypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -85,6 +87,7 @@ class SwRecordLayoutV:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-RECORD-LAYOUT-V"
 
@@ -94,7 +97,7 @@ class SwRecordLayoutV:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[AsamRecordLayoutSemantics] = field(
         default=None,
@@ -102,7 +105,7 @@ class SwRecordLayoutV:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -110,7 +113,7 @@ class SwRecordLayoutV:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     base_type_ref: Optional["SwRecordLayoutV.BaseTypeRef"] = field(
         default=None,
@@ -118,7 +121,7 @@ class SwRecordLayoutV:
             "name": "BASE-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_v_axis: Optional[AxisIndexType] = field(
         default=None,
@@ -126,7 +129,7 @@ class SwRecordLayoutV:
             "name": "SW-RECORD-LAYOUT-V-AXIS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_v_prop: Optional[NmtokenString] = field(
         default=None,
@@ -134,7 +137,7 @@ class SwRecordLayoutV:
             "name": "SW-RECORD-LAYOUT-V-PROP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_v_index: Optional[NmtokensString] = field(
         default=None,
@@ -142,15 +145,17 @@ class SwRecordLayoutV:
             "name": "SW-RECORD-LAYOUT-V-INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_generic_axis_param_type_ref: Optional["SwRecordLayoutV.SwGenericAxisParamTypeRef"] = field(
+    sw_generic_axis_param_type_ref: Optional[
+        "SwRecordLayoutV.SwGenericAxisParamTypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAM-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_v_fix_value: Optional[Integer] = field(
         default=None,
@@ -158,14 +163,14 @@ class SwRecordLayoutV:
             "name": "SW-RECORD-LAYOUT-V-FIX-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -173,7 +178,7 @@ class SwRecordLayoutV:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -184,7 +189,7 @@ class SwRecordLayoutV:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -195,5 +200,5 @@ class SwRecordLayoutV:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -12,6 +12,7 @@ class AirExchangeMultiQuoteOption:
     """
     The shared object list of AirExchangeMultiQuoteOptions.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,14 +22,14 @@ class AirExchangeMultiQuoteOption:
             "name": "AirSegmentData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
         metadata={
             "name": "AirExchangeBundleTotal",
             "type": "Element",
-        }
+        },
     )
     air_exchange_bundle_list: list[AirExchangeBundleList] = field(
         default_factory=list,
@@ -36,5 +37,5 @@ class AirExchangeMultiQuoteOption:
             "name": "AirExchangeBundleList",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

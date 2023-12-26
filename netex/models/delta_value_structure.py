@@ -13,7 +13,7 @@ class DeltaValueStructure:
             "name": "DeltaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     modification: Optional[ModificationEnumeration] = field(
         default=None,
@@ -21,7 +21,7 @@ class DeltaValueStructure:
             "name": "Modification",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     value_name: Optional[str] = field(
         default=None,
@@ -29,7 +29,7 @@ class DeltaValueStructure:
             "name": "ValueName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     old_value: Optional[object] = field(
         default=None,
@@ -37,7 +37,7 @@ class DeltaValueStructure:
             "name": "OldValue",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     new_value: Optional[object] = field(
         default=None,
@@ -45,11 +45,11 @@ class DeltaValueStructure:
             "name": "NewValue",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -18,6 +18,7 @@ class Tcrinfo:
     provider_reservation_info_ref
         Provider reservation reference key.
     """
+
     class Meta:
         name = "TCRInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -28,14 +29,14 @@ class Tcrinfo:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "Date",
             "type": "Attribute",
-        }
+        },
     )
     tcrnumber: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class Tcrinfo:
             "name": "TCRNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
@@ -51,5 +52,5 @@ class Tcrinfo:
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .group_of_entities_version_structure import (
+    GroupOfEntitiesVersionStructure,
+)
 from .log_entries_rel_structure import LogEntriesRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -17,12 +19,12 @@ class LogVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "logEntries",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name_of_log_entry_class: Optional[str] = field(
         default=None,
         metadata={
             "name": "nameOfLogEntryClass",
             "type": "Attribute",
-        }
+        },
     )

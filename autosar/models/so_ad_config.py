@@ -36,6 +36,7 @@ class SoAdConfig:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SO-AD-CONFIG"
 
@@ -45,7 +46,7 @@ class SoAdConfig:
             "name": "CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     connection_bundles: Optional["SoAdConfig.ConnectionBundles"] = field(
         default=None,
@@ -53,7 +54,7 @@ class SoAdConfig:
             "name": "CONNECTION-BUNDLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     logic_addresss: Optional["SoAdConfig.LogicAddresss"] = field(
         default=None,
@@ -61,7 +62,7 @@ class SoAdConfig:
             "name": "LOGIC-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     socket_addresss: Optional["SoAdConfig.SocketAddresss"] = field(
         default=None,
@@ -69,14 +70,14 @@ class SoAdConfig:
             "name": "SOCKET-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -84,7 +85,7 @@ class SoAdConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -95,7 +96,7 @@ class SoAdConfig:
                 "name": "SOCKET-CONNECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -106,7 +107,7 @@ class SoAdConfig:
                 "name": "SOCKET-CONNECTION-BUNDLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -117,7 +118,7 @@ class SoAdConfig:
                 "name": "LOGIC-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -128,5 +129,5 @@ class SoAdConfig:
                 "name": "SOCKET-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

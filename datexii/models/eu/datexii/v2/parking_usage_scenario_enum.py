@@ -49,6 +49,7 @@ class ParkingUsageScenarioEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Some other usage scenario.
     """
+
     TRUCK_PARKING = "truckParking"
     PARK_AND_RIDE = "parkAndRide"
     PARK_AND_CYCLE = "parkAndCycle"

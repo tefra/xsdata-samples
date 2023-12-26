@@ -16,6 +16,7 @@ class PassengerTicketNumber:
     booking_traveler_ref
         Reference to a passenger associated with a ticket.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,12 +27,12 @@ class PassengerTicketNumber:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

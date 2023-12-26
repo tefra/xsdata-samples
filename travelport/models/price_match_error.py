@@ -30,6 +30,7 @@ class PriceMatchError:
     total_diff
         Estimated Total Amount difference.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
@@ -39,7 +40,7 @@ class PriceMatchError:
             "name": "ErrorMessage",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class PriceMatchError:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     hotel_chain: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class PriceMatchError:
             "name": "HotelChain",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     hotel_code: None | str = field(
         default=None,
@@ -64,47 +65,47 @@ class PriceMatchError:
             "name": "HotelCode",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )
     req_base: None | Decimal = field(
         default=None,
         metadata={
             "name": "ReqBase",
             "type": "Attribute",
-        }
+        },
     )
     rsp_base: None | Decimal = field(
         default=None,
         metadata={
             "name": "RspBase",
             "type": "Attribute",
-        }
+        },
     )
     base_diff: None | Decimal = field(
         default=None,
         metadata={
             "name": "BaseDiff",
             "type": "Attribute",
-        }
+        },
     )
     req_total: None | Decimal = field(
         default=None,
         metadata={
             "name": "ReqTotal",
             "type": "Attribute",
-        }
+        },
     )
     rsp_total: None | Decimal = field(
         default=None,
         metadata={
             "name": "RspTotal",
             "type": "Attribute",
-        }
+        },
     )
     total_diff: None | Decimal = field(
         default=None,
         metadata={
             "name": "TotalDiff",
             "type": "Attribute",
-        }
+        },
     )

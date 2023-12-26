@@ -17,7 +17,7 @@ class TMessageFlowAssociation(TBaseElement):
             "name": "innerMessageFlowRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     outer_message_flow_ref: Optional[QName] = field(
         default=None,
@@ -25,5 +25,5 @@ class TMessageFlowAssociation(TBaseElement):
             "name": "outerMessageFlowRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeRailCoachCompartment1(Enum):
     """
     The type of Rail Caoch Compartment.
     """
+
     SEAT_COUCHETTE = "Seat/Couchette"
     QUIET = "Quiet"
     OFFICE = "Office"

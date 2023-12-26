@@ -17,5 +17,5 @@ class MctCountRsp(BaseRsp1):
             "name": "MctCount",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

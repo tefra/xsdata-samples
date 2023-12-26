@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .fare_scheduled_stop_point_version_structure import FareScheduledStopPointVersionStructure
+from .fare_scheduled_stop_point_version_structure import (
+    FareScheduledStopPointVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

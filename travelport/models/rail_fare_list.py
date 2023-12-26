@@ -10,6 +10,7 @@ class RailFareList:
     """
     The shared object list of FareInfos.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -20,5 +21,5 @@ class RailFareList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

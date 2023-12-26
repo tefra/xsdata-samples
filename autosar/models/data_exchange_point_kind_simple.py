@@ -13,6 +13,7 @@ class DataExchangePointKindSimple(Enum):
     :cvar PRODUCER: the data exchange point description represents the
         output of a producing tool.
     """
+
     AGREED = "AGREED"
     CONSUMER = "CONSUMER"
     PRODUCER = "PRODUCER"

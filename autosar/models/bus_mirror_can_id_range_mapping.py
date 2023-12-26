@@ -26,6 +26,7 @@ class BusMirrorCanIdRangeMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BUS-MIRROR-CAN-ID-RANGE-MAPPING"
 
@@ -35,7 +36,7 @@ class BusMirrorCanIdRangeMapping:
             "name": "DESTINATION-BASE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_can_id_code: Optional[PositiveInteger] = field(
         default=None,
@@ -43,7 +44,7 @@ class BusMirrorCanIdRangeMapping:
             "name": "SOURCE-CAN-ID-CODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_can_id_mask: Optional[PositiveInteger] = field(
         default=None,
@@ -51,14 +52,14 @@ class BusMirrorCanIdRangeMapping:
             "name": "SOURCE-CAN-ID-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -66,5 +67,5 @@ class BusMirrorCanIdRangeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

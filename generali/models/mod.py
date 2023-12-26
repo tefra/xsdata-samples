@@ -13,5 +13,5 @@ class TypeType:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )

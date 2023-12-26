@@ -72,7 +72,7 @@ class XrefFaces:
                     "namespace": "http://www.crossref.org/relations.xsd",
                 },
             ),
-        }
+        },
     )
 
 

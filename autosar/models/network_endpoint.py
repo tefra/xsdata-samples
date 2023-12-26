@@ -89,6 +89,7 @@ class NetworkEndpoint:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "NETWORK-ENDPOINT"
 
@@ -99,15 +100,17 @@ class NetworkEndpoint:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["NetworkEndpoint.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "NetworkEndpoint.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +118,7 @@ class NetworkEndpoint:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +126,7 @@ class NetworkEndpoint:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +134,7 @@ class NetworkEndpoint:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +142,7 @@ class NetworkEndpoint:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +150,7 @@ class NetworkEndpoint:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["NetworkEndpoint.Annotations"] = field(
         default=None,
@@ -155,7 +158,7 @@ class NetworkEndpoint:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fully_qualified_domain_name: Optional[String] = field(
         default=None,
@@ -163,7 +166,7 @@ class NetworkEndpoint:
             "name": "FULLY-QUALIFIED-DOMAIN-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     infrastructure_services: Optional[InfrastructureServices] = field(
         default=None,
@@ -171,7 +174,7 @@ class NetworkEndpoint:
             "name": "INFRASTRUCTURE-SERVICES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ip_sec_config: Optional[IpSecConfig] = field(
         default=None,
@@ -179,15 +182,17 @@ class NetworkEndpoint:
             "name": "IP-SEC-CONFIG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    network_endpoint_addresses: Optional["NetworkEndpoint.NetworkEndpointAddresses"] = field(
+    network_endpoint_addresses: Optional[
+        "NetworkEndpoint.NetworkEndpointAddresses"
+    ] = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINT-ADDRESSES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     priority: Optional[PositiveInteger] = field(
         default=None,
@@ -195,14 +200,14 @@ class NetworkEndpoint:
             "name": "PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -210,14 +215,14 @@ class NetworkEndpoint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -228,7 +233,7 @@ class NetworkEndpoint:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,7 +244,7 @@ class NetworkEndpoint:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,7 +255,7 @@ class NetworkEndpoint:
                 "name": "IPV-4-CONFIGURATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ipv_6_configuration: List[Ipv6Configuration] = field(
             default_factory=list,
@@ -258,7 +263,7 @@ class NetworkEndpoint:
                 "name": "IPV-6-CONFIGURATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         mac_multicast_configuration: List[MacMulticastConfiguration] = field(
             default_factory=list,
@@ -266,5 +271,5 @@ class NetworkEndpoint:
                 "name": "MAC-MULTICAST-CONFIGURATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -12,7 +12,7 @@ class MeasureOrNilReasonListType:
         metadata={
             "pattern": r"other:\w{2,}",
             "tokens": True,
-        }
+        },
     )
     uom: Optional[str] = field(
         default=None,
@@ -20,5 +20,5 @@ class MeasureOrNilReasonListType:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^: \n\r\t]+",
-        }
+        },
     )

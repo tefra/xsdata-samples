@@ -38,6 +38,7 @@ class Autosar:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "AUTOSAR"
         namespace = "http://autosar.org/schema/r4.0"
@@ -47,35 +48,35 @@ class Autosar:
         metadata={
             "name": "FILE-INFO-COMMENT",
             "type": "Element",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
             "type": "Element",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
             "type": "Element",
-        }
+        },
     )
     ar_packages: Optional["Autosar.ArPackages"] = field(
         default=None,
         metadata={
             "name": "AR-PACKAGES",
             "type": "Element",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -83,7 +84,7 @@ class Autosar:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -93,5 +94,5 @@ class Autosar:
             metadata={
                 "name": "AR-PACKAGE",
                 "type": "Element",
-            }
+            },
         )

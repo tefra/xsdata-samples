@@ -165,6 +165,7 @@ class MultiplexedIPdu:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MULTIPLEXED-I-PDU"
 
@@ -175,15 +176,17 @@ class MultiplexedIPdu:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["MultiplexedIPdu.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "MultiplexedIPdu.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -191,7 +194,7 @@ class MultiplexedIPdu:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -199,7 +202,7 @@ class MultiplexedIPdu:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -207,7 +210,7 @@ class MultiplexedIPdu:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -215,7 +218,7 @@ class MultiplexedIPdu:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -223,7 +226,7 @@ class MultiplexedIPdu:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["MultiplexedIPdu.Annotations"] = field(
         default=None,
@@ -231,7 +234,7 @@ class MultiplexedIPdu:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -239,7 +242,7 @@ class MultiplexedIPdu:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     has_dynamic_length: Optional[Boolean] = field(
         default=None,
@@ -247,7 +250,7 @@ class MultiplexedIPdu:
             "name": "HAS-DYNAMIC-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     length: Optional[Integer] = field(
         default=None,
@@ -255,7 +258,7 @@ class MultiplexedIPdu:
             "name": "LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     meta_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -263,7 +266,7 @@ class MultiplexedIPdu:
             "name": "META-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     contained_i_pdu_props: Optional[ContainedIPduProps] = field(
         default=None,
@@ -271,7 +274,7 @@ class MultiplexedIPdu:
             "name": "CONTAINED-I-PDU-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dynamic_parts: Optional["MultiplexedIPdu.DynamicParts"] = field(
         default=None,
@@ -279,7 +282,7 @@ class MultiplexedIPdu:
             "name": "DYNAMIC-PARTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     selector_field_byte_order: Optional[ByteOrderEnum] = field(
         default=None,
@@ -287,7 +290,7 @@ class MultiplexedIPdu:
             "name": "SELECTOR-FIELD-BYTE-ORDER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     selector_field_length: Optional[Integer] = field(
         default=None,
@@ -295,7 +298,7 @@ class MultiplexedIPdu:
             "name": "SELECTOR-FIELD-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     selector_field_start_position: Optional[Integer] = field(
         default=None,
@@ -303,7 +306,7 @@ class MultiplexedIPdu:
             "name": "SELECTOR-FIELD-START-POSITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     static_parts: Optional["MultiplexedIPdu.StaticParts"] = field(
         default=None,
@@ -311,7 +314,7 @@ class MultiplexedIPdu:
             "name": "STATIC-PARTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trigger_mode: Optional[TriggerMode] = field(
         default=None,
@@ -319,7 +322,7 @@ class MultiplexedIPdu:
             "name": "TRIGGER-MODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     unused_bit_pattern: Optional[Integer] = field(
         default=None,
@@ -327,14 +330,14 @@ class MultiplexedIPdu:
             "name": "UNUSED-BIT-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -342,14 +345,14 @@ class MultiplexedIPdu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -360,7 +363,7 @@ class MultiplexedIPdu:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -371,7 +374,7 @@ class MultiplexedIPdu:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -382,7 +385,7 @@ class MultiplexedIPdu:
                 "name": "DYNAMIC-PART",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -393,5 +396,5 @@ class MultiplexedIPdu:
                 "name": "STATIC-PART",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

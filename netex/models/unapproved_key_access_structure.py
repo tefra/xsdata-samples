@@ -13,5 +13,5 @@ class UnapprovedKeyAccessStructure(ErrorCodeStructure):
             "name": "Key",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

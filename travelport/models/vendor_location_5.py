@@ -11,6 +11,7 @@ class VendorLocation5(TypeVendorLocation5):
     Location definition specific to a Vendor in a specific provider (e.g. 1G)
     system.
     """
+
     class Meta:
         name = "VendorLocation"
         namespace = "http://www.travelport.com/schema/common_v34_0"

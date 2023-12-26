@@ -14,6 +14,11 @@ class RoadOperatorServiceDisruptionTypeEnum(Enum):
     :cvar NO_TRAFFIC_OFFICER_PATROL_SERVICE: No traffic officer patrol
         service is operating.
     """
-    EMERGENCY_TELEPHONE_NUMBER_OUT_OF_SERVICE = "emergencyTelephoneNumberOutOfService"
-    INFORMATION_SERVICE_TELEPHONE_NUMBER_OUT_OF_SERVICE = "informationServiceTelephoneNumberOutOfService"
+
+    EMERGENCY_TELEPHONE_NUMBER_OUT_OF_SERVICE = (
+        "emergencyTelephoneNumberOutOfService"
+    )
+    INFORMATION_SERVICE_TELEPHONE_NUMBER_OUT_OF_SERVICE = (
+        "informationServiceTelephoneNumberOutOfService"
+    )
     NO_TRAFFIC_OFFICER_PATROL_SERVICE = "noTrafficOfficerPatrolService"

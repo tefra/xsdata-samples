@@ -11,6 +11,7 @@ class Domain:
     It is used to identify when a referring URL is coming from a
     Crossmark domain.
     """
+
     class Meta:
         name = "domain"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -22,5 +23,5 @@ class Domain:
             "min_length": 4,
             "max_length": 1024,
             "pattern": r"[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*\.[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*",
-        }
+        },
     )

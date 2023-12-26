@@ -29,6 +29,7 @@ class HotelMediaLinksReq(BaseReq1):
     gallery
         Request the Image Gallery link. Default is true
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -38,7 +39,7 @@ class HotelMediaLinksReq(BaseReq1):
             "name": "PermittedProviders",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_property: list[HotelProperty] = field(
         default_factory=list,
@@ -47,33 +48,33 @@ class HotelMediaLinksReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 20,
-        }
+        },
     )
     secure_links: bool = field(
         default=True,
         metadata={
             "name": "SecureLinks",
             "type": "Attribute",
-        }
+        },
     )
     size_code: TypeRequestedImageSize = field(
         default=TypeRequestedImageSize.A,
         metadata={
             "name": "SizeCode",
             "type": "Attribute",
-        }
+        },
     )
     rich_media: bool = field(
         default=True,
         metadata={
             "name": "RichMedia",
             "type": "Attribute",
-        }
+        },
     )
     gallery: bool = field(
         default=True,
         metadata={
             "name": "Gallery",
             "type": "Attribute",
-        }
+        },
     )

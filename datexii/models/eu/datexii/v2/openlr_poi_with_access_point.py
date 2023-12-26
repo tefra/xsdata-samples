@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.openlr_base_point_location import OpenlrBasePointLocation
+from datexii.models.eu.datexii.v2.openlr_base_point_location import (
+    OpenlrBasePointLocation,
+)
 from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -17,6 +19,7 @@ class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
         interest
     :ivar openlr_poi_with_access_point_extension:
     """
+
     openlr_coordinate: Optional[PointCoordinates] = field(
         default=None,
         metadata={
@@ -24,7 +27,7 @@ class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_poi_with_access_point_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +35,5 @@ class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
             "name": "openlrPoiWithAccessPointExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

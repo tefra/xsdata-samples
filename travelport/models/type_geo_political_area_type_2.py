@@ -8,6 +8,7 @@ class TypeGeoPoliticalAreaType2(Enum):
     """
     The type of the geographical location.
     """
+
     WORLD = "World"
     GLOBAL_AREA = "Global Area"
     CONTINENT_GROUP = "Continent Group"

@@ -22,7 +22,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     service_facility_set_ref: Optional[ServiceFacilitySetRef] = field(
         default=None,
@@ -30,7 +30,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "name": "ServiceFacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_class: Optional[FareClassEnumeration] = field(
         default=None,
@@ -38,7 +38,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -46,7 +46,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_permission: Optional[BoardingPermissionEnumeration] = field(
         default=None,
@@ -54,7 +54,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "name": "BoardingPermission",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     period: Optional[XmlDuration] = field(
         default=None,
@@ -62,5 +62,5 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "name": "Period",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

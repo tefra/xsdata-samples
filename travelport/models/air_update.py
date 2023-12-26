@@ -3,9 +3,13 @@ from dataclasses import dataclass, field
 from travelport.models.accounting_remark_1 import AccountingRemark1
 from travelport.models.air_pricing_adjustment import AirPricingAdjustment
 from travelport.models.air_pricing_payment import AirPricingPayment
-from travelport.models.air_pricing_ticketing_modifiers import AirPricingTicketingModifiers
+from travelport.models.air_pricing_ticketing_modifiers import (
+    AirPricingTicketingModifiers,
+)
 from travelport.models.air_segment import AirSegment
-from travelport.models.air_segment_special_update import AirSegmentSpecialUpdate
+from travelport.models.air_segment_special_update import (
+    AirSegmentSpecialUpdate,
+)
 from travelport.models.associated_remark_1 import AssociatedRemark1
 from travelport.models.auto_seat_assignment import AutoSeatAssignment
 from travelport.models.credit_card_auth_1 import CreditCardAuth1
@@ -52,6 +56,7 @@ class AirUpdate:
         Restrict Update if it modifies a Waitlisted AirSegment. Provider:
         1G,1V,1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -62,7 +67,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_segment: list[AirSegment] = field(
         default_factory=list,
@@ -71,7 +76,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     credit_card_auth: list[CreditCardAuth1] = field(
         default_factory=list,
@@ -80,7 +85,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_adjustment: list[AirPricingAdjustment] = field(
         default_factory=list,
@@ -89,16 +94,18 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
-    air_pricing_ticketing_modifiers: list[AirPricingTicketingModifiers] = field(
+    air_pricing_ticketing_modifiers: list[
+        AirPricingTicketingModifiers
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingTicketingModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     delivery_info: None | DeliveryInfo1 = field(
         default=None,
@@ -106,14 +113,14 @@ class AirUpdate:
             "name": "DeliveryInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_segment_special_update: None | AirSegmentSpecialUpdate = field(
         default=None,
         metadata={
             "name": "AirSegmentSpecialUpdate",
             "type": "Element",
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard1] = field(
         default_factory=list,
@@ -122,7 +129,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     ssr: list[Ssr1] = field(
         default_factory=list,
@@ -131,7 +138,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     general_remark: list[GeneralRemark1] = field(
         default_factory=list,
@@ -140,7 +147,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     auto_seat_assignment: None | AutoSeatAssignment = field(
         default=None,
@@ -148,7 +155,7 @@ class AirUpdate:
             "name": "AutoSeatAssignment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     specific_seat_assignment: list[SpecificSeatAssignment] = field(
         default_factory=list,
@@ -157,7 +164,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_payment: None | AirPricingPayment = field(
         default=None,
@@ -165,7 +172,7 @@ class AirUpdate:
             "name": "AirPricingPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     associated_remark: list[AssociatedRemark1] = field(
         default_factory=list,
@@ -174,7 +181,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     pocket_itinerary_remark: list[PocketItineraryRemark] = field(
         default_factory=list,
@@ -183,7 +190,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     optional_services_info: None | OptionalServicesInfo = field(
         default=None,
@@ -191,7 +198,7 @@ class AirUpdate:
             "name": "OptionalServicesInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     third_party_information: list[ThirdPartyInformation1] = field(
         default_factory=list,
@@ -200,7 +207,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     travel_compliance_data: list[TravelComplianceData1] = field(
         default_factory=list,
@@ -209,7 +216,7 @@ class AirUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     reservation_locator_code: None | str = field(
         default=None,
@@ -219,19 +226,19 @@ class AirUpdate:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     restrict_waitlist: bool = field(
         default=False,
         metadata={
             "name": "RestrictWaitlist",
             "type": "Attribute",
-        }
+        },
     )

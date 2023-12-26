@@ -18,6 +18,7 @@ class TypeEditableEndpoint(TypeEndpointRef):
     custom_field_ref
         A reference to a custom field
     """
+
     class Meta:
         name = "typeEditableEndpoint"
 
@@ -27,7 +28,7 @@ class TypeEditableEndpoint(TypeEndpointRef):
             "name": "FixedFieldRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )
     custom_field_ref: None | TypeFieldRef2 = field(
         default=None,
@@ -35,5 +36,5 @@ class TypeEditableEndpoint(TypeEndpointRef):
             "name": "CustomFieldRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-        }
+        },
     )

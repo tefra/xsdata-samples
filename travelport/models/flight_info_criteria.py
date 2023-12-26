@@ -28,6 +28,7 @@ class FlightInfoCriteria:
         zone information since it can be derived from the origin location.
     class_of_service
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -37,7 +38,7 @@ class FlightInfoCriteria:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class FlightInfoCriteria:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -55,7 +56,7 @@ class FlightInfoCriteria:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class FlightInfoCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -73,7 +74,7 @@ class FlightInfoCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_date: None | XmlDate = field(
         default=None,
@@ -81,7 +82,7 @@ class FlightInfoCriteria:
             "name": "DepartureDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -90,5 +91,5 @@ class FlightInfoCriteria:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

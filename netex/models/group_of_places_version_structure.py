@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .country_ref import CountryRef
-from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .group_of_entities_version_structure import (
+    GroupOfEntitiesVersionStructure,
+)
 from .place_ref_structure import PlaceRefStructure
 from .place_refs_rel_structure import PlaceRefsRelStructure
 
@@ -18,7 +20,7 @@ class GroupOfPlacesVersionStructure(GroupOfEntitiesVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     country_ref: Optional[CountryRef] = field(
         default=None,
@@ -26,7 +28,7 @@ class GroupOfPlacesVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "CountryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     main_place_ref: Optional[PlaceRefStructure] = field(
         default=None,
@@ -34,5 +36,5 @@ class GroupOfPlacesVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "MainPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

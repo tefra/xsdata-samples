@@ -9,6 +9,7 @@ class SeatAttribute5:
     """
     Identifies the seat attribute of the service.
     """
+
     class Meta:
         name = "SeatAttribute"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -21,5 +22,5 @@ class SeatAttribute5:
             "required": True,
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

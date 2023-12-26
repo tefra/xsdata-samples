@@ -19,6 +19,7 @@ class HotelUpsellDetailsReq(BaseReq1):
         Only returned if number of adults and   checkin/checkout given on
         request
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -28,12 +29,12 @@ class HotelUpsellDetailsReq(BaseReq1):
             "name": "HotelProperty",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     hotel_rate_detail: None | HotelRateDetail = field(
         default=None,
         metadata={
             "name": "HotelRateDetail",
             "type": "Element",
-        }
+        },
     )

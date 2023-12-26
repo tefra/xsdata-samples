@@ -16,7 +16,7 @@ class UtilCurrencyConversionPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class UtilCurrencyConversionPortTypeServiceInput:
                 "name": "CurrencyConversionReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            }
+            },
         )

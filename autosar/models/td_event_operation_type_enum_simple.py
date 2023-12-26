@@ -16,6 +16,7 @@ class TdEventOperationTypeEnumSimple(Enum):
     :cvar OPERATION_CALLED: A point in time where the referenced
         operation is called by the client SWC.
     """
+
     OPERATION_CALL_RECEIVED = "OPERATION-CALL-RECEIVED"
     OPERATION_CALL_RESPONSE_RECEIVED = "OPERATION-CALL-RESPONSE-RECEIVED"
     OPERATION_CALL_RESPONSE_SENT = "OPERATION-CALL-RESPONSE-SENT"

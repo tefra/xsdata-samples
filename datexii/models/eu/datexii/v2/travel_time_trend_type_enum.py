@@ -11,6 +11,7 @@ class TravelTimeTrendTypeEnum(Enum):
     :cvar INCREASING: Travel times are increasing.
     :cvar STABLE: Travel times are stable.
     """
+
     DECREASING = "decreasing"
     INCREASING = "increasing"
     STABLE = "stable"

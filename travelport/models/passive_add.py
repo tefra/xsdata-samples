@@ -34,6 +34,7 @@ class PassiveAdd:
         can used for other elements which are associated with
         BookngTraveler.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -44,7 +45,7 @@ class PassiveAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/passive_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     passive_remark: list[PassiveRemark] = field(
         default_factory=list,
@@ -53,7 +54,7 @@ class PassiveAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/passive_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     associated_remark: list[AssociatedRemark4] = field(
         default_factory=list,
@@ -62,7 +63,7 @@ class PassiveAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/passive_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     supplier_locator: list[SupplierLocator1] = field(
         default_factory=list,
@@ -71,7 +72,7 @@ class PassiveAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     third_party_information: list[ThirdPartyInformation1] = field(
         default_factory=list,
@@ -80,7 +81,7 @@ class PassiveAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     travel_compliance_data: list[TravelComplianceData1] = field(
         default_factory=list,
@@ -89,7 +90,7 @@ class PassiveAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     reservation_locator_code: None | str = field(
         default=None,
@@ -99,12 +100,12 @@ class PassiveAdd:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

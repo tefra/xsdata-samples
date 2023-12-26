@@ -30,6 +30,7 @@ class CycleRepetitionTypeSimple(Enum):
     :cvar CYCLE_REPETITION_8: Attribute cycleRepetition value="8" valid
         only for FlexRay Protocol 2.1 Rev A
     """
+
     CYCLE_REPETITION_1 = "CYCLE-REPETITION-1"
     CYCLE_REPETITION_10 = "CYCLE-REPETITION-10"
     CYCLE_REPETITION_16 = "CYCLE-REPETITION-16"

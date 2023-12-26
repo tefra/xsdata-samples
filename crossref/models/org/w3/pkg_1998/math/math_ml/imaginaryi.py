@@ -15,5 +15,5 @@ class Imaginaryi:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

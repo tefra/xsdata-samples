@@ -12,6 +12,7 @@ class RoadTypeEnum(Enum):
     :cvar MAIN_ROAD: Main road.
     :cvar OTHER: Other.
     """
+
     MOTORWAY = "motorway"
     TRUNK_ROAD = "trunkRoad"
     MAIN_ROAD = "mainRoad"

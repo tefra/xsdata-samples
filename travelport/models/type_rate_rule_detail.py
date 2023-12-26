@@ -10,6 +10,7 @@ class TypeRateRuleDetail(Enum):
 
     'Complete' returns the complete hotel and room rate information-supported for 1p,1g/1v, 'RatePlansOnly' returns hotel rate information only - supported for 1p.
     """
+
     NONE = "None"
     COMPLETE = "Complete"
     RATE_PLANS_ONLY = "RatePlansOnly"

@@ -16,14 +16,14 @@ class ProfileRetrievePortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | ProfileRetrievePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -34,5 +34,5 @@ class ProfileRetrievePortTypeServiceInput:
                 "name": "ProfileRetrieveReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            }
+            },
         )

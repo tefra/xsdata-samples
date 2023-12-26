@@ -69,6 +69,7 @@ class DisturbanceActivityTypeEnum(Enum):
         an unspecified nature, which could disrupt traffic.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AIR_RAID = "airRaid"
     ALTERCATION_OF_VEHICLE_OCCUPANTS = "altercationOfVehicleOccupants"
     ASSAULT = "assault"

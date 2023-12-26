@@ -10,6 +10,7 @@ class RailFareNoteList:
     """
     The shared object list of Notes.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -19,5 +20,5 @@ class RailFareNoteList:
             "name": "RailFareNote",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

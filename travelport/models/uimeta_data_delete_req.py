@@ -17,6 +17,7 @@ class UimetaDataDeleteReq(BaseReq2):
         (say, Agency or Account name) for which the change in settings will
         be done.
     """
+
     class Meta:
         name = "UIMetaDataDeleteReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -27,5 +28,5 @@ class UimetaDataDeleteReq(BaseReq2):
             "name": "ProfileID",
             "type": "Element",
             "required": True,
-        }
+        },
     )

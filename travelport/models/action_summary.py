@@ -25,6 +25,7 @@ class ActionSummary:
     profile_action_code
         Profile Action Code description.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -34,7 +35,7 @@ class ActionSummary:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class ActionSummary:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -53,7 +54,7 @@ class ActionSummary:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     consuming_system: None | str = field(
         default=None,
@@ -61,7 +62,7 @@ class ActionSummary:
             "name": "ConsumingSystem",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     target_service: None | str = field(
         default=None,
@@ -69,7 +70,7 @@ class ActionSummary:
             "name": "TargetService",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_action_code: None | str = field(
         default=None,
@@ -77,5 +78,5 @@ class ActionSummary:
             "name": "ProfileActionCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -10,6 +10,7 @@ class ConnectionPoint4(TypeLocation4):
     """
     A connection point can be eith an IATA airport or cir city code.
     """
+
     class Meta:
         name = "ConnectionPoint"
         namespace = "http://www.travelport.com/schema/common_v37_0"

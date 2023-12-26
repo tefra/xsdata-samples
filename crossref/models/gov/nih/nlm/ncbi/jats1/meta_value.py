@@ -31,10 +31,14 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
     Xref,
 )
 from crossref.models.gov.nih.nlm.ncbi.jats1.email import Email
-from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import IndexTermRangeEnd
+from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import (
+    IndexTermRangeEnd,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.inline_graphic import InlineGraphic
 from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_end import MilestoneEnd
-from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import MilestoneStart
+from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import (
+    MilestoneStart,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.private_char import PrivateChar
 from crossref.models.gov.nih.nlm.ncbi.jats1.tex_math import TexMath
 from crossref.models.gov.nih.nlm.ncbi.jats1.uri import Uri
@@ -48,6 +52,7 @@ class MetaValue:
     """
     <div> <h3>Metadata Data Value For Custom Metadata</h3> </div>
     """
+
     class Meta:
         name = "meta-value"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -56,14 +61,14 @@ class MetaValue:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -222,5 +227,5 @@ class MetaValue:
                     "type": Sup,
                 },
             ),
-        }
+        },
     )

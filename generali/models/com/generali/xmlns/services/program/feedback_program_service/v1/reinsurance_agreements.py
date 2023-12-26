@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = (
+    "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+)
 
 
 @dataclass
@@ -15,5 +17,5 @@ class ReinsuranceAgreements:
             "name": "ReinsuranceAgreementID",
             "type": "Element",
             "required": True,
-        }
+        },
     )

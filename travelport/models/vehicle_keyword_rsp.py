@@ -18,6 +18,7 @@ class VehicleKeywordRsp(BaseRsp1):
     keyword
         A word that a vendor uses to describe corporate policy/information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -27,7 +28,7 @@ class VehicleKeywordRsp(BaseRsp1):
             "name": "Text",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     keyword: list[Keyword1] = field(
         default_factory=list,
@@ -36,5 +37,5 @@ class VehicleKeywordRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )

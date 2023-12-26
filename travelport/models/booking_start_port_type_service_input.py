@@ -16,7 +16,7 @@ class BookingStartPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class BookingStartPortTypeServiceInput:
                 "name": "BookingStartReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            }
+            },
         )

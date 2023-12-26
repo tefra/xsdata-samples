@@ -28,31 +28,36 @@ class MemorySectionLocation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MEMORY-SECTION-LOCATION"
 
-    provided_memory_ref: Optional["MemorySectionLocation.ProvidedMemoryRef"] = field(
+    provided_memory_ref: Optional[
+        "MemorySectionLocation.ProvidedMemoryRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROVIDED-MEMORY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    software_memory_section_ref: Optional["MemorySectionLocation.SoftwareMemorySectionRef"] = field(
+    software_memory_section_ref: Optional[
+        "MemorySectionLocation.SoftwareMemorySectionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SOFTWARE-MEMORY-SECTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -60,7 +65,7 @@ class MemorySectionLocation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -71,7 +76,7 @@ class MemorySectionLocation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -82,5 +87,5 @@ class MemorySectionLocation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

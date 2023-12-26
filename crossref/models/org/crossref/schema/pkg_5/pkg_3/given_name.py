@@ -8,6 +8,7 @@ class GivenName:
     """
     A contributor's given name.
     """
+
     class Meta:
         name = "given_name"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class GivenName:
             "max_length": 60,
             "white_space": "collapse",
             "pattern": r"[^\d\?]*[^\?\s]+[^\d]*",
-        }
+        },
     )

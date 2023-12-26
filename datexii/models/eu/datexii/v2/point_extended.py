@@ -15,17 +15,18 @@ class PointExtended:
     :ivar description: Textual description for a point location
     :ivar junction:
     """
+
     description: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     junction: Optional[Junction] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

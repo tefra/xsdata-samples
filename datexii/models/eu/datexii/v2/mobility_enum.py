@@ -13,6 +13,7 @@ class MobilityEnum(Enum):
     :cvar UNKNOWN: The mobility of the described element of a situation
         is unknown.
     """
+
     MOBILE = "mobile"
     STATIONARY = "stationary"
     UNKNOWN = "unknown"

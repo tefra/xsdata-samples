@@ -14,6 +14,7 @@ class ByteOrderEnumSimple(Enum):
         configured to Opaque. See AUTOSAR COM Specification for more
         details.
     """
+
     MOST_SIGNIFICANT_BYTE_FIRST = "MOST-SIGNIFICANT-BYTE-FIRST"
     MOST_SIGNIFICANT_BYTE_LAST = "MOST-SIGNIFICANT-BYTE-LAST"
     OPAQUE = "OPAQUE"

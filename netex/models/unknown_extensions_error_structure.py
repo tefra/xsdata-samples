@@ -13,5 +13,5 @@ class UnknownExtensionsErrorStructure(ErrorCodeStructure):
             "name": "ExtensionName",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

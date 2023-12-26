@@ -90,15 +90,22 @@ class AccidentTypeEnum(Enum):
         travel.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ACCIDENT = "accident"
     ACCIDENT_INVOLVING_BICYCLES = "accidentInvolvingBicycles"
     ACCIDENT_INVOLVING_BUSES = "accidentInvolvingBuses"
-    ACCIDENT_INVOLVING_HAZARDOUS_MATERIALS = "accidentInvolvingHazardousMaterials"
+    ACCIDENT_INVOLVING_HAZARDOUS_MATERIALS = (
+        "accidentInvolvingHazardousMaterials"
+    )
     ACCIDENT_INVOLVING_HEAVY_LORRIES = "accidentInvolvingHeavyLorries"
-    ACCIDENT_INVOLVING_MASS_TRANSIT_VEHICLE = "accidentInvolvingMassTransitVehicle"
+    ACCIDENT_INVOLVING_MASS_TRANSIT_VEHICLE = (
+        "accidentInvolvingMassTransitVehicle"
+    )
     ACCIDENT_INVOLVING_MOPEDS = "accidentInvolvingMopeds"
     ACCIDENT_INVOLVING_MOTORCYCLES = "accidentInvolvingMotorcycles"
-    ACCIDENT_INVOLVING_RADIOACTIVE_MATERIAL = "accidentInvolvingRadioactiveMaterial"
+    ACCIDENT_INVOLVING_RADIOACTIVE_MATERIAL = (
+        "accidentInvolvingRadioactiveMaterial"
+    )
     ACCIDENT_INVOLVING_TRAIN = "accidentInvolvingTrain"
     CHEMICAL_SPILLAGE_ACCIDENT = "chemicalSpillageAccident"
     COLLISION = "collision"

@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupsOfDistributionChannelsInFrameRelStructure(FrameContainmentStructure):
+class GroupsOfDistributionChannelsInFrameRelStructure(
+    FrameContainmentStructure
+):
     class Meta:
         name = "groupsOfDistributionChannelsInFrame_RelStructure"
 
@@ -18,5 +20,5 @@ class GroupsOfDistributionChannelsInFrameRelStructure(FrameContainmentStructure)
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

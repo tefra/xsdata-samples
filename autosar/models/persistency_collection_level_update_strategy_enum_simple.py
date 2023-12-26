@@ -10,5 +10,6 @@ class PersistencyCollectionLevelUpdateStrategyEnumSimple(Enum):
     :cvar KEEP_EXISTING: The update strategy is to keep the existing
         values on the level of the respective collection.
     """
+
     DELETE = "DELETE"
     KEEP_EXISTING = "KEEP-EXISTING"

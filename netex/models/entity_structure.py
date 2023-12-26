@@ -11,11 +11,11 @@ class EntityStructure:
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

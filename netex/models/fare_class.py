@@ -13,5 +13,5 @@ class FareClass:
         default=FareClassEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

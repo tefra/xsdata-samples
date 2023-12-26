@@ -17,7 +17,7 @@ class DiscountingRuleVersionedStructure(PricingRuleVersionedStructure):
             "name": "DiscountAsPercentage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     discount_as_value: Optional[Decimal] = field(
         default=None,
@@ -25,7 +25,7 @@ class DiscountingRuleVersionedStructure(PricingRuleVersionedStructure):
             "name": "DiscountAsValue",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     can_be_cumulative: Optional[bool] = field(
         default=None,
@@ -33,5 +33,5 @@ class DiscountingRuleVersionedStructure(PricingRuleVersionedStructure):
             "name": "CanBeCumulative",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

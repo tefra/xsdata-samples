@@ -15,5 +15,5 @@ class Gcd:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -2,13 +2,17 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from .passenger_capacity import PassengerCapacity
-from .vehicle_requirement_version_structure import VehicleRequirementVersionStructure
+from .vehicle_requirement_version_structure import (
+    VehicleRequirementVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PassengerCarryingRequirementVersionStructure(VehicleRequirementVersionStructure):
+class PassengerCarryingRequirementVersionStructure(
+    VehicleRequirementVersionStructure
+):
     class Meta:
         name = "PassengerCarryingRequirement_VersionStructure"
 
@@ -18,7 +22,7 @@ class PassengerCarryingRequirementVersionStructure(VehicleRequirementVersionStru
             "name": "PassengerCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     low_floor: Optional[bool] = field(
         default=None,
@@ -26,7 +30,7 @@ class PassengerCarryingRequirementVersionStructure(VehicleRequirementVersionStru
             "name": "LowFloor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_lift_or_ramp: Optional[bool] = field(
         default=None,
@@ -34,7 +38,7 @@ class PassengerCarryingRequirementVersionStructure(VehicleRequirementVersionStru
             "name": "HasLiftOrRamp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_hoist: Optional[bool] = field(
         default=None,
@@ -42,7 +46,7 @@ class PassengerCarryingRequirementVersionStructure(VehicleRequirementVersionStru
             "name": "HasHoist",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_height: Optional[Decimal] = field(
         default=None,
@@ -50,7 +54,7 @@ class PassengerCarryingRequirementVersionStructure(VehicleRequirementVersionStru
             "name": "BoardingHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gap_to_platform: Optional[Decimal] = field(
         default=None,
@@ -58,5 +62,5 @@ class PassengerCarryingRequirementVersionStructure(VehicleRequirementVersionStru
             "name": "GapToPlatform",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

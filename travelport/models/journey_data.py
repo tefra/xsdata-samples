@@ -10,6 +10,7 @@ class JourneyData:
     """
     Performs journey aware air availability.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class JourneyData:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )

@@ -6,7 +6,9 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .bsw_module_description_subtypes_enum import BswModuleDescriptionSubtypesEnum
+from .bsw_module_description_subtypes_enum import (
+    BswModuleDescriptionSubtypesEnum,
+)
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
 from .category_string import CategoryString
 from .identifier import Identifier
@@ -87,6 +89,7 @@ class TdEventBswModule:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TD-EVENT-BSW-MODULE"
 
@@ -97,15 +100,17 @@ class TdEventBswModule:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TdEventBswModule.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TdEventBswModule.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -113,7 +118,7 @@ class TdEventBswModule:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -121,7 +126,7 @@ class TdEventBswModule:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -129,7 +134,7 @@ class TdEventBswModule:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -137,7 +142,7 @@ class TdEventBswModule:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -145,7 +150,7 @@ class TdEventBswModule:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TdEventBswModule.Annotations"] = field(
         default=None,
@@ -153,7 +158,7 @@ class TdEventBswModule:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -161,7 +166,7 @@ class TdEventBswModule:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
         default=None,
@@ -169,23 +174,27 @@ class TdEventBswModule:
             "name": "OCCURRENCE-EXPRESSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    bsw_module_description_ref: Optional["TdEventBswModule.BswModuleDescriptionRef"] = field(
+    bsw_module_description_ref: Optional[
+        "TdEventBswModule.BswModuleDescriptionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-DESCRIPTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    bsw_module_entry_ref: Optional["TdEventBswModule.BswModuleEntryRef"] = field(
+    bsw_module_entry_ref: Optional[
+        "TdEventBswModule.BswModuleEntryRef"
+    ] = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-ENTRY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     td_event_bsw_module_type: Optional[TdEventBswModuleTypeEnum] = field(
         default=None,
@@ -193,14 +202,14 @@ class TdEventBswModule:
             "name": "TD-EVENT-BSW-MODULE-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -208,14 +217,14 @@ class TdEventBswModule:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -226,7 +235,7 @@ class TdEventBswModule:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -237,7 +246,7 @@ class TdEventBswModule:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -248,7 +257,7 @@ class TdEventBswModule:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -259,5 +268,5 @@ class TdEventBswModule:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

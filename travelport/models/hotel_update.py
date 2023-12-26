@@ -46,6 +46,7 @@ class HotelUpdate:
         can used for other elements which are associated with
         BookngTraveler.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -56,7 +57,7 @@ class HotelUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     guarantee: None | Guarantee1 = field(
         default=None,
@@ -64,7 +65,7 @@ class HotelUpdate:
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     guest_information: None | GuestInformation = field(
         default=None,
@@ -72,7 +73,7 @@ class HotelUpdate:
             "name": "GuestInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     associated_remark: list[AssociatedRemark3] = field(
         default_factory=list,
@@ -81,7 +82,7 @@ class HotelUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     booking_source: None | BookingSource1 = field(
         default=None,
@@ -89,7 +90,7 @@ class HotelUpdate:
             "name": "BookingSource",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_special_request: None | str = field(
         default=None,
@@ -98,7 +99,7 @@ class HotelUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_length": 250,
-        }
+        },
     )
     hotel_rate_info: None | HotelRateInfo = field(
         default=None,
@@ -106,7 +107,7 @@ class HotelUpdate:
             "name": "HotelRateInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -114,7 +115,7 @@ class HotelUpdate:
             "name": "HotelStay",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     hotel_commission: None | str = field(
         default=None,
@@ -122,7 +123,7 @@ class HotelUpdate:
             "name": "HotelCommission",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     corporate_discount_id: None | CorporateDiscountId1 = field(
         default=None,
@@ -130,7 +131,7 @@ class HotelUpdate:
             "name": "CorporateDiscountID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     reservation_name: None | ReservationName1 = field(
         default=None,
@@ -138,7 +139,7 @@ class HotelUpdate:
             "name": "ReservationName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     third_party_information: None | ThirdPartyInformation1 = field(
         default=None,
@@ -146,7 +147,7 @@ class HotelUpdate:
             "name": "ThirdPartyInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     travel_compliance_data: list[TravelComplianceData1] = field(
         default_factory=list,
@@ -155,7 +156,7 @@ class HotelUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -164,7 +165,7 @@ class HotelUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     booking_confirmation: None | str = field(
         default=None,
@@ -173,7 +174,7 @@ class HotelUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_length": 32,
-        }
+        },
     )
     reservation_locator_code: None | str = field(
         default=None,
@@ -183,12 +184,12 @@ class HotelUpdate:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

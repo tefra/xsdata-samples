@@ -18,7 +18,7 @@ class AirUpsellCriteria:
             "name": "AirUpsellAdd",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_upsell_update: list[AirUpsellUpdate] = field(
         default_factory=list,
@@ -26,7 +26,7 @@ class AirUpsellCriteria:
             "name": "AirUpsellUpdate",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_upsell_delete: list[AirUpsellDelete] = field(
         default_factory=list,
@@ -34,5 +34,5 @@ class AirUpsellCriteria:
             "name": "AirUpsellDelete",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

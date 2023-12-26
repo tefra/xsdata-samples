@@ -16,6 +16,7 @@ class TypeSearchLoyaltyProgram2:
         The code of the supplier that provides the loyalty program (e.g. UA,
         HZ, etc.)
     """
+
     class Meta:
         name = "typeSearchLoyaltyProgram"
 
@@ -25,7 +26,7 @@ class TypeSearchLoyaltyProgram2:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class TypeSearchLoyaltyProgram2:
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )

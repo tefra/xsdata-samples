@@ -16,7 +16,7 @@ class Auxdata2:
             "name": "Entry",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
     @dataclass
@@ -27,7 +27,7 @@ class Auxdata2:
                 "name": "Reason",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         description: None | str = field(
             default=None,
@@ -35,5 +35,5 @@ class Auxdata2:
                 "name": "Description",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )

@@ -16,5 +16,5 @@ class TGlobalChoreographyTask(TChoreography):
         metadata={
             "name": "initiatingParticipantRef",
             "type": "Attribute",
-        }
+        },
     )

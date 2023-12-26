@@ -7,11 +7,15 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
+from .executable_entity_activation_reason_subtypes_enum import (
+    ExecutableEntityActivationReasonSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .p_mode_group_in_atomic_swc_instance_ref import PModeGroupInAtomicSwcInstanceRef
+from .p_mode_group_in_atomic_swc_instance_ref import (
+    PModeGroupInAtomicSwcInstanceRef,
+)
 from .r_mode_in_atomic_swc_instance_ref import RModeInAtomicSwcInstanceRef
 from .ref import Ref
 from .runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
@@ -93,6 +97,7 @@ class SwcModeManagerErrorEvent:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SWC-MODE-MANAGER-ERROR-EVENT"
 
@@ -103,15 +108,17 @@ class SwcModeManagerErrorEvent:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SwcModeManagerErrorEvent.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SwcModeManagerErrorEvent.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +126,7 @@ class SwcModeManagerErrorEvent:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +134,7 @@ class SwcModeManagerErrorEvent:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +142,7 @@ class SwcModeManagerErrorEvent:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +150,7 @@ class SwcModeManagerErrorEvent:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +158,7 @@ class SwcModeManagerErrorEvent:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SwcModeManagerErrorEvent.Annotations"] = field(
         default=None,
@@ -159,31 +166,37 @@ class SwcModeManagerErrorEvent:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    activation_reason_representation_ref: Optional["SwcModeManagerErrorEvent.ActivationReasonRepresentationRef"] = field(
+    activation_reason_representation_ref: Optional[
+        "SwcModeManagerErrorEvent.ActivationReasonRepresentationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    disabled_mode_irefs: Optional["SwcModeManagerErrorEvent.DisabledModeIrefs"] = field(
+    disabled_mode_irefs: Optional[
+        "SwcModeManagerErrorEvent.DisabledModeIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    start_on_event_ref: Optional["SwcModeManagerErrorEvent.StartOnEventRef"] = field(
+    start_on_event_ref: Optional[
+        "SwcModeManagerErrorEvent.StartOnEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -191,7 +204,7 @@ class SwcModeManagerErrorEvent:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mode_group_iref: Optional[PModeGroupInAtomicSwcInstanceRef] = field(
         default=None,
@@ -199,14 +212,14 @@ class SwcModeManagerErrorEvent:
             "name": "MODE-GROUP-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -214,14 +227,14 @@ class SwcModeManagerErrorEvent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -232,7 +245,7 @@ class SwcModeManagerErrorEvent:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,7 +256,7 @@ class SwcModeManagerErrorEvent:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -254,7 +267,7 @@ class SwcModeManagerErrorEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -265,7 +278,7 @@ class SwcModeManagerErrorEvent:
                 "name": "DISABLED-MODE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,5 +289,5 @@ class SwcModeManagerErrorEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

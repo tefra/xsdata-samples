@@ -6,10 +6,14 @@ from .annotation import (
     DocumentationBlock,
 )
 from .binary_manifest_item import BinaryManifestItem
-from .binary_manifest_resource_definition_subtypes_enum import BinaryManifestResourceDefinitionSubtypesEnum
+from .binary_manifest_resource_definition_subtypes_enum import (
+    BinaryManifestResourceDefinitionSubtypesEnum,
+)
 from .boolean import Boolean
 from .category_string import CategoryString
-from .cp_software_cluster_resource_subtypes_enum import CpSoftwareClusterResourceSubtypesEnum
+from .cp_software_cluster_resource_subtypes_enum import (
+    CpSoftwareClusterResourceSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -102,6 +106,7 @@ class BinaryManifestProvideResource:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BINARY-MANIFEST-PROVIDE-RESOURCE"
 
@@ -112,15 +117,17 @@ class BinaryManifestProvideResource:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BinaryManifestProvideResource.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BinaryManifestProvideResource.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -128,7 +135,7 @@ class BinaryManifestProvideResource:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -136,7 +143,7 @@ class BinaryManifestProvideResource:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -144,7 +151,7 @@ class BinaryManifestProvideResource:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -152,7 +159,7 @@ class BinaryManifestProvideResource:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -160,7 +167,7 @@ class BinaryManifestProvideResource:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["BinaryManifestProvideResource.Annotations"] = field(
         default=None,
@@ -168,7 +175,7 @@ class BinaryManifestProvideResource:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     global_resource_id: Optional[PositiveInteger] = field(
         default=None,
@@ -176,7 +183,7 @@ class BinaryManifestProvideResource:
             "name": "GLOBAL-RESOURCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     items: Optional["BinaryManifestProvideResource.Items"] = field(
         default=None,
@@ -184,15 +191,17 @@ class BinaryManifestProvideResource:
             "name": "ITEMS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    resource_definition_ref: Optional["BinaryManifestProvideResource.ResourceDefinitionRef"] = field(
+    resource_definition_ref: Optional[
+        "BinaryManifestProvideResource.ResourceDefinitionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RESOURCE-DEFINITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     resource_guard_value: Optional[String] = field(
         default=None,
@@ -200,15 +209,17 @@ class BinaryManifestProvideResource:
             "name": "RESOURCE-GUARD-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    resource_ref: Optional["BinaryManifestProvideResource.ResourceRef"] = field(
+    resource_ref: Optional[
+        "BinaryManifestProvideResource.ResourceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RESOURCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     number_of_notifier_sets: Optional[PositiveInteger] = field(
         default=None,
@@ -216,7 +227,7 @@ class BinaryManifestProvideResource:
             "name": "NUMBER-OF-NOTIFIER-SETS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     supports_multiple_notifier_sets: Optional[Boolean] = field(
         default=None,
@@ -224,14 +235,14 @@ class BinaryManifestProvideResource:
             "name": "SUPPORTS-MULTIPLE-NOTIFIER-SETS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -239,14 +250,14 @@ class BinaryManifestProvideResource:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -257,7 +268,7 @@ class BinaryManifestProvideResource:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -268,7 +279,7 @@ class BinaryManifestProvideResource:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -279,7 +290,7 @@ class BinaryManifestProvideResource:
                 "name": "BINARY-MANIFEST-ITEM",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -290,7 +301,7 @@ class BinaryManifestProvideResource:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -301,5 +312,5 @@ class BinaryManifestProvideResource:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

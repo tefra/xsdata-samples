@@ -51,6 +51,7 @@ class PlacesEnum(Enum):
     :cvar OVER_THE_CREST_OF_HILLS: Over the crest of hills.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AROUND_BENDS_IN_THE_ROAD = "aroundBendsInTheRoad"
     AT_CUSTOMS_POSTS = "atCustomsPosts"
     AT_HIGH_ALTITUDES = "atHighAltitudes"

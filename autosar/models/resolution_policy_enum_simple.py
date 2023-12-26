@@ -10,5 +10,6 @@ class ResolutionPolicyEnumSimple(Enum):
     :cvar SLOPPY: The content of the xref element is linked by a sloppy
         reference.
     """
+
     NO_SLOPPY = "NO-SLOPPY"
     SLOPPY = "SLOPPY"

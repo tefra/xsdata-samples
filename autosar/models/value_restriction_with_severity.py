@@ -36,6 +36,7 @@ class ValueRestrictionWithSeverity:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "VALUE-RESTRICTION-WITH-SEVERITY"
 
@@ -45,7 +46,7 @@ class ValueRestrictionWithSeverity:
             "name": "SEVERITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max: Optional[LimitValue] = field(
         default=None,
@@ -53,7 +54,7 @@ class ValueRestrictionWithSeverity:
             "name": "MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_length: Optional[PositiveInteger] = field(
         default=None,
@@ -61,7 +62,7 @@ class ValueRestrictionWithSeverity:
             "name": "MAX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min: Optional[LimitValue] = field(
         default=None,
@@ -69,7 +70,7 @@ class ValueRestrictionWithSeverity:
             "name": "MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_length: Optional[PositiveInteger] = field(
         default=None,
@@ -77,7 +78,7 @@ class ValueRestrictionWithSeverity:
             "name": "MIN-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern: Optional[RegularExpression] = field(
         default=None,
@@ -85,14 +86,14 @@ class ValueRestrictionWithSeverity:
             "name": "PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -100,5 +101,5 @@ class ValueRestrictionWithSeverity:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

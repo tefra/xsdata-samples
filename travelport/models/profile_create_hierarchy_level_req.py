@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_5 import BaseReq5
-from travelport.models.type_create_hierarchy_level import TypeCreateHierarchyLevel
+from travelport.models.type_create_hierarchy_level import (
+    TypeCreateHierarchyLevel,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -26,6 +28,7 @@ class ProfileCreateHierarchyLevelReq(BaseReq5):
     description
         A brief description of this hierarchy level.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -34,7 +37,7 @@ class ProfileCreateHierarchyLevelReq(BaseReq5):
         metadata={
             "name": "ParentHierarchyLevelID",
             "type": "Attribute",
-        }
+        },
     )
     profile_type: None | TypeCreateHierarchyLevel = field(
         default=None,
@@ -42,7 +45,7 @@ class ProfileCreateHierarchyLevelReq(BaseReq5):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -52,7 +55,7 @@ class ProfileCreateHierarchyLevelReq(BaseReq5):
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -61,5 +64,5 @@ class ProfileCreateHierarchyLevelReq(BaseReq5):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

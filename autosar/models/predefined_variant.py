@@ -10,11 +10,15 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .post_build_variant_criterion_value_set_subtypes_enum import PostBuildVariantCriterionValueSetSubtypesEnum
+from .post_build_variant_criterion_value_set_subtypes_enum import (
+    PostBuildVariantCriterionValueSetSubtypesEnum,
+)
 from .predefined_variant_subtypes_enum import PredefinedVariantSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .sw_systemconstant_value_set_subtypes_enum import SwSystemconstantValueSetSubtypesEnum
+from .sw_systemconstant_value_set_subtypes_enum import (
+    SwSystemconstantValueSetSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -93,6 +97,7 @@ class PredefinedVariant:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PREDEFINED-VARIANT"
 
@@ -103,15 +108,17 @@ class PredefinedVariant:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PredefinedVariant.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PredefinedVariant.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +126,7 @@ class PredefinedVariant:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +134,7 @@ class PredefinedVariant:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +142,7 @@ class PredefinedVariant:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +150,7 @@ class PredefinedVariant:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +158,7 @@ class PredefinedVariant:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["PredefinedVariant.Annotations"] = field(
         default=None,
@@ -159,7 +166,7 @@ class PredefinedVariant:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -167,38 +174,44 @@ class PredefinedVariant:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    included_variant_refs: Optional["PredefinedVariant.IncludedVariantRefs"] = field(
+    included_variant_refs: Optional[
+        "PredefinedVariant.IncludedVariantRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "INCLUDED-VARIANT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    post_build_variant_criterion_value_set_refs: Optional["PredefinedVariant.PostBuildVariantCriterionValueSetRefs"] = field(
+    post_build_variant_criterion_value_set_refs: Optional[
+        "PredefinedVariant.PostBuildVariantCriterionValueSetRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CRITERION-VALUE-SET-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_systemconstant_value_set_refs: Optional["PredefinedVariant.SwSystemconstantValueSetRefs"] = field(
+    sw_systemconstant_value_set_refs: Optional[
+        "PredefinedVariant.SwSystemconstantValueSetRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-SYSTEMCONSTANT-VALUE-SET-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -206,14 +219,14 @@ class PredefinedVariant:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -224,7 +237,7 @@ class PredefinedVariant:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -235,18 +248,20 @@ class PredefinedVariant:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class IncludedVariantRefs:
-        included_variant_ref: List["PredefinedVariant.IncludedVariantRefs.IncludedVariantRef"] = field(
+        included_variant_ref: List[
+            "PredefinedVariant.IncludedVariantRefs.IncludedVariantRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INCLUDED-VARIANT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -257,40 +272,46 @@ class PredefinedVariant:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PostBuildVariantCriterionValueSetRefs:
-        post_build_variant_criterion_value_set_ref: List["PredefinedVariant.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef"] = field(
+        post_build_variant_criterion_value_set_ref: List[
+            "PredefinedVariant.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "POST-BUILD-VARIANT-CRITERION-VALUE-SET-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: Optional[PostBuildVariantCriterionValueSetSubtypesEnum] = field(
+            dest: Optional[
+                PostBuildVariantCriterionValueSetSubtypesEnum
+            ] = field(
                 default=None,
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class SwSystemconstantValueSetRefs:
-        sw_systemconstant_value_set_ref: List["PredefinedVariant.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef"] = field(
+        sw_systemconstant_value_set_ref: List[
+            "PredefinedVariant.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SW-SYSTEMCONSTANT-VALUE-SET-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -301,5 +322,5 @@ class PredefinedVariant:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

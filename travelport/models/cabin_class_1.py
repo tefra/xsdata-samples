@@ -10,6 +10,7 @@ class CabinClass1:
     Requests cabin class (First, Business and Economy, etc.) as supported by the
     provider or supplier.
     """
+
     class Meta:
         name = "CabinClass"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -20,5 +21,5 @@ class CabinClass1:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

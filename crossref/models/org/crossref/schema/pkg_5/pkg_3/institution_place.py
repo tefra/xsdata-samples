@@ -13,6 +13,7 @@ class InstitutionPlace:
     the city is not a major city, the appropriate country and/or state
     or province should be added.
     """
+
     class Meta:
         name = "institution_place"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -22,5 +23,5 @@ class InstitutionPlace:
         metadata={
             "min_length": 2,
             "max_length": 255,
-        }
+        },
     )

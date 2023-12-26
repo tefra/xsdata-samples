@@ -15,13 +15,14 @@ class Area(Location):
     information to provide additional geospatial discrimination (e.g. for snow in
     an area but only above a certain altitude).
     """
+
     alert_carea: Optional[AlertCArea] = field(
         default=None,
         metadata={
             "name": "alertCArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     tpeg_area_location: Optional[TpegAreaLocation] = field(
         default=None,
@@ -29,7 +30,7 @@ class Area(Location):
             "name": "tpegAreaLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     area_extension: Optional[AreaExtensionType] = field(
         default=None,
@@ -37,5 +38,5 @@ class Area(Location):
             "name": "areaExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

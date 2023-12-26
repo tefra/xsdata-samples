@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .composition_sw_component_type_ref_conditional import CompositionSwComponentTypeRefConditional
+from .composition_sw_component_type_ref_conditional import (
+    CompositionSwComponentTypeRefConditional,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -93,6 +95,7 @@ class CpSoftwareCluster:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CP-SOFTWARE-CLUSTER"
 
@@ -103,15 +106,17 @@ class CpSoftwareCluster:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CpSoftwareCluster.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CpSoftwareCluster.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +124,7 @@ class CpSoftwareCluster:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +132,7 @@ class CpSoftwareCluster:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +140,7 @@ class CpSoftwareCluster:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +148,7 @@ class CpSoftwareCluster:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +156,7 @@ class CpSoftwareCluster:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CpSoftwareCluster.Annotations"] = field(
         default=None,
@@ -159,7 +164,7 @@ class CpSoftwareCluster:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -167,15 +172,17 @@ class CpSoftwareCluster:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_component_assignments: Optional["CpSoftwareCluster.SwComponentAssignments"] = field(
+    sw_component_assignments: Optional[
+        "CpSoftwareCluster.SwComponentAssignments"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-ASSIGNMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_compositions: Optional["CpSoftwareCluster.SwCompositions"] = field(
         default=None,
@@ -183,14 +190,14 @@ class CpSoftwareCluster:
             "name": "SW-COMPOSITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -198,14 +205,14 @@ class CpSoftwareCluster:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -216,7 +223,7 @@ class CpSoftwareCluster:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -227,27 +234,31 @@ class CpSoftwareCluster:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SwComponentAssignments:
-        sw_component_prototype_assignment: List[SwComponentPrototypeAssignment] = field(
+        sw_component_prototype_assignment: List[
+            SwComponentPrototypeAssignment
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SW-COMPONENT-PROTOTYPE-ASSIGNMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SwCompositions:
-        composition_sw_component_type_ref_conditional: List[CompositionSwComponentTypeRefConditional] = field(
+        composition_sw_component_type_ref_conditional: List[
+            CompositionSwComponentTypeRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COMPOSITION-SW-COMPONENT-TYPE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

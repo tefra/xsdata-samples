@@ -16,6 +16,7 @@ class OpenlrFormOfWayEnum(Enum):
     :cvar TRAFFIC_SQUARE: traffic square
     :cvar OTHER: other
     """
+
     UNDEFINED = "undefined"
     MOTORWAY = "motorway"
     MULTIPLE_CARRIAGEWAY = "multipleCarriageway"

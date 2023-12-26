@@ -30,6 +30,7 @@ class BxitCd(Cd):
     :ivar qty: The quantity in which the bag item occurs in its
         containing bag.
     """
+
     class Meta:
         name = "BXIT_CD"
 
@@ -37,7 +38,7 @@ class BxitCd(Cd):
         default=1,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -62,6 +63,7 @@ class GlistPq(AnyType):
         the next sequence item value. For example, to generate the
         sequence (1; 1; 1; 2; 2; 2; 3; 3; 3; ...)  the denominator is 3.
     """
+
     class Meta:
         name = "GLIST_PQ"
 
@@ -71,7 +73,7 @@ class GlistPq(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     increment: Optional[Pq] = field(
         default=None,
@@ -79,19 +81,19 @@ class GlistPq(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     period: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     denominator: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -116,6 +118,7 @@ class GlistTs(AnyType):
         the next sequence item value. For example, to generate the
         sequence (1; 1; 1; 2; 2; 2; 3; 3; 3; ...)  the denominator is 3.
     """
+
     class Meta:
         name = "GLIST_TS"
 
@@ -125,7 +128,7 @@ class GlistTs(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     increment: Optional[Pq] = field(
         default=None,
@@ -133,19 +136,19 @@ class GlistTs(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     period: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     denominator: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -157,6 +160,7 @@ class HxitCe(Ce):
         can be open or closed, as well as infinite or undefined on
         either side.
     """
+
     class Meta:
         name = "HXIT_CE"
 
@@ -166,7 +170,7 @@ class HxitCe(Ce):
             "name": "validTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -178,6 +182,7 @@ class HxitPq(Pq):
         can be open or closed, as well as infinite or undefined on
         either side.
     """
+
     class Meta:
         name = "HXIT_PQ"
 
@@ -187,7 +192,7 @@ class HxitPq(Pq):
             "name": "validTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -198,6 +203,7 @@ class IvxbInt(Int):
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_INT"
 
@@ -206,7 +212,7 @@ class IvxbInt(Int):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -217,6 +223,7 @@ class IvxbMo(Mo):
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_MO"
 
@@ -225,7 +232,7 @@ class IvxbMo(Mo):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -236,6 +243,7 @@ class IvxbPq(Pq):
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_PQ"
 
@@ -244,7 +252,7 @@ class IvxbPq(Pq):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -255,6 +263,7 @@ class IvxbReal(Real):
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_REAL"
 
@@ -263,7 +272,7 @@ class IvxbReal(Real):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -292,6 +301,7 @@ class PivlTs(SxcmTs):
         up to the party executing the schedule (e.g., to distinguish
         "every 8 hours" from "3 times a day".)
     """
+
     class Meta:
         name = "PIVL_TS"
 
@@ -300,21 +310,23 @@ class PivlTs(SxcmTs):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     period: Optional[Pq] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    alignment: Optional[Union[CalendarCycleOneLetter, str, CalendarCycleTwoLetterValue]] = field(
+    alignment: Optional[
+        Union[CalendarCycleOneLetter, str, CalendarCycleTwoLetterValue]
+    ] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     institution_specified: str = field(
         default="false",
@@ -322,7 +334,7 @@ class PivlTs(SxcmTs):
             "name": "institutionSpecified",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -342,6 +354,7 @@ class PpdPq(Pq):
         the probability distribution type is unknown. In that case, the
         standard deviation has the meaning of an informal guess.
     """
+
     class Meta:
         name = "PPD_PQ"
 
@@ -351,14 +364,14 @@ class PpdPq(Pq):
             "name": "standardDeviation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     distribution_type: Optional[ProbabilityDistributionType] = field(
         default=None,
         metadata={
             "name": "distributionType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -378,6 +391,7 @@ class PpdTs(Ts):
         the probability distribution type is unknown. In that case, the
         standard deviation has the meaning of an informal guess.
     """
+
     class Meta:
         name = "PPD_TS"
 
@@ -387,14 +401,14 @@ class PpdTs(Ts):
             "name": "standardDeviation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     distribution_type: Optional[ProbabilityDistributionType] = field(
         default=None,
         metadata={
             "name": "distributionType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -407,6 +421,7 @@ class RtoMoPq(Qty):
         ratio. The default is the integer number 1 (one). The
         denominator must not be zero.
     """
+
     class Meta:
         name = "RTO_MO_PQ"
 
@@ -416,7 +431,7 @@ class RtoMoPq(Qty):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     denominator: Optional[Pq] = field(
         default=None,
@@ -424,7 +439,7 @@ class RtoMoPq(Qty):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -437,6 +452,7 @@ class RtoPqPq(Qty):
         ratio. The default is the integer number 1 (one). The
         denominator must not be zero.
     """
+
     class Meta:
         name = "RTO_PQ_PQ"
 
@@ -446,7 +462,7 @@ class RtoPqPq(Qty):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     denominator: Optional[Pq] = field(
         default=None,
@@ -454,7 +470,7 @@ class RtoPqPq(Qty):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -469,6 +485,7 @@ class SlistPq(AnyType):
     :ivar digits: A sequence of raw digits for the sample values. This
         is typically the raw output of an A/D converter.
     """
+
     class Meta:
         name = "SLIST_PQ"
 
@@ -478,7 +495,7 @@ class SlistPq(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     scale: Optional[Pq] = field(
         default=None,
@@ -486,7 +503,7 @@ class SlistPq(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     digits: List[int] = field(
         default_factory=list,
@@ -495,7 +512,7 @@ class SlistPq(AnyType):
             "namespace": "urn:hl7-org:v3",
             "required": True,
             "tokens": True,
-        }
+        },
     )
 
 
@@ -510,6 +527,7 @@ class SlistTs(AnyType):
     :ivar digits: A sequence of raw digits for the sample values. This
         is typically the raw output of an A/D converter.
     """
+
     class Meta:
         name = "SLIST_TS"
 
@@ -519,7 +537,7 @@ class SlistTs(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     scale: Optional[Pq] = field(
         default=None,
@@ -527,7 +545,7 @@ class SlistTs(AnyType):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     digits: List[int] = field(
         default_factory=list,
@@ -536,7 +554,7 @@ class SlistTs(AnyType):
             "namespace": "urn:hl7-org:v3",
             "required": True,
             "tokens": True,
-        }
+        },
     )
 
 
@@ -549,6 +567,7 @@ class SxcmCd(Cd):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_CD"
 
@@ -556,7 +575,7 @@ class SxcmCd(Cd):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -569,6 +588,7 @@ class SxcmInt(Int):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_INT"
 
@@ -576,7 +596,7 @@ class SxcmInt(Int):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -589,6 +609,7 @@ class SxcmMo(Mo):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_MO"
 
@@ -596,7 +617,7 @@ class SxcmMo(Mo):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -609,6 +630,7 @@ class SxcmPq(Pq):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_PQ"
 
@@ -616,7 +638,7 @@ class SxcmPq(Pq):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -629,6 +651,7 @@ class SxcmReal(Real):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_REAL"
 
@@ -636,7 +659,7 @@ class SxcmReal(Real):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -651,7 +674,7 @@ class SxprTs(SxcmTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 2,
-        }
+        },
     )
 
 
@@ -661,6 +684,7 @@ class UvpTs(Ts):
     :ivar probability: The probability assigned to the value, a decimal
         number between 0 (very uncertain) and 1 (certain).
     """
+
     class Meta:
         name = "UVP_TS"
 
@@ -670,7 +694,7 @@ class UvpTs(Ts):
             "type": "Attribute",
             "min_inclusive": 0.0,
             "max_inclusive": 1.0,
-        }
+        },
     )
 
 
@@ -689,6 +713,7 @@ class IvlInt(SxcmInt):
         semantic property is for conversions of intervals from and to
         point values.
     """
+
     class Meta:
         name = "IVL_INT"
 
@@ -697,7 +722,7 @@ class IvlInt(SxcmInt):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[Int] = field(
         default_factory=list,
@@ -705,7 +730,7 @@ class IvlInt(SxcmInt):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbInt] = field(
         default_factory=list,
@@ -713,14 +738,14 @@ class IvlInt(SxcmInt):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[Int] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -739,6 +764,7 @@ class IvlMo(SxcmMo):
         semantic property is for conversions of intervals from and to
         point values.
     """
+
     class Meta:
         name = "IVL_MO"
 
@@ -747,7 +773,7 @@ class IvlMo(SxcmMo):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[Mo] = field(
         default_factory=list,
@@ -755,7 +781,7 @@ class IvlMo(SxcmMo):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbMo] = field(
         default_factory=list,
@@ -763,14 +789,14 @@ class IvlMo(SxcmMo):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[Mo] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -789,6 +815,7 @@ class IvlPq(SxcmPq):
         semantic property is for conversions of intervals from and to
         point values.
     """
+
     class Meta:
         name = "IVL_PQ"
 
@@ -797,7 +824,7 @@ class IvlPq(SxcmPq):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[Pq] = field(
         default_factory=list,
@@ -805,7 +832,7 @@ class IvlPq(SxcmPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbPq] = field(
         default_factory=list,
@@ -813,14 +840,14 @@ class IvlPq(SxcmPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[Pq] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -839,6 +866,7 @@ class IvlReal(SxcmReal):
         semantic property is for conversions of intervals from and to
         point values.
     """
+
     class Meta:
         name = "IVL_REAL"
 
@@ -847,7 +875,7 @@ class IvlReal(SxcmReal):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[Real] = field(
         default_factory=list,
@@ -855,7 +883,7 @@ class IvlReal(SxcmReal):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbReal] = field(
         default_factory=list,
@@ -863,14 +891,14 @@ class IvlReal(SxcmReal):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[Real] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -881,6 +909,7 @@ class IvxbPpdPq(PpdPq):
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_PPD_PQ"
 
@@ -889,7 +918,7 @@ class IvxbPpdPq(PpdPq):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -900,6 +929,7 @@ class IvxbPpdTs(PpdTs):
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_PPD_TS"
 
@@ -908,7 +938,7 @@ class IvxbPpdTs(PpdTs):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -921,6 +951,7 @@ class SxcmPpdPq(PpdPq):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_PPD_PQ"
 
@@ -928,7 +959,7 @@ class SxcmPpdPq(PpdPq):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -941,6 +972,7 @@ class SxcmPpdTs(PpdTs):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_PPD_TS"
 
@@ -948,7 +980,7 @@ class SxcmPpdTs(PpdTs):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -958,6 +990,7 @@ class BxitIvlPq(IvlPq):
     :ivar qty: The quantity in which the bag item occurs in its
         containing bag.
     """
+
     class Meta:
         name = "BXIT_IVL_PQ"
 
@@ -965,7 +998,7 @@ class BxitIvlPq(IvlPq):
         default=1,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -988,6 +1021,7 @@ class EivlTs(SxcmTs):
         and end of the event-related periodic interval measured from the
         time each such event actually occurred.
     """
+
     class Meta:
         name = "EIVL_TS"
 
@@ -996,14 +1030,14 @@ class EivlTs(SxcmTs):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     offset: Optional[IvlPq] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -1022,6 +1056,7 @@ class IvlPpdPq(SxcmPpdPq):
         semantic property is for conversions of intervals from and to
         point values.
     """
+
     class Meta:
         name = "IVL_PPD_PQ"
 
@@ -1030,7 +1065,7 @@ class IvlPpdPq(SxcmPpdPq):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[PpdPq] = field(
         default_factory=list,
@@ -1038,7 +1073,7 @@ class IvlPpdPq(SxcmPpdPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbPpdPq] = field(
         default_factory=list,
@@ -1046,14 +1081,14 @@ class IvlPpdPq(SxcmPpdPq):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[PpdPq] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -1072,6 +1107,7 @@ class IvlPpdTs(SxcmPpdTs):
         semantic property is for conversions of intervals from and to
         point values.
     """
+
     class Meta:
         name = "IVL_PPD_TS"
 
@@ -1080,7 +1116,7 @@ class IvlPpdTs(SxcmPpdTs):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[PpdPq] = field(
         default_factory=list,
@@ -1088,7 +1124,7 @@ class IvlPpdTs(SxcmPpdTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbPpdTs] = field(
         default_factory=list,
@@ -1096,14 +1132,14 @@ class IvlPpdTs(SxcmPpdTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[PpdTs] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -1126,6 +1162,7 @@ class EivlPpdTs(SxcmPpdTs):
         and end of the event-related periodic interval measured from the
         time each such event actually occurred.
     """
+
     class Meta:
         name = "EIVL_PPD_TS"
 
@@ -1134,14 +1171,14 @@ class EivlPpdTs(SxcmPpdTs):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     offset: Optional[IvlPpdPq] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -1170,6 +1207,7 @@ class PivlPpdTs(SxcmPpdTs):
         up to the party executing the schedule (e.g., to distinguish
         "every 8 hours" from "3 times a day".)
     """
+
     class Meta:
         name = "PIVL_PPD_TS"
 
@@ -1178,21 +1216,23 @@ class PivlPpdTs(SxcmPpdTs):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     period: Optional[PpdPq] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    alignment: Optional[Union[CalendarCycleOneLetter, str, CalendarCycleTwoLetterValue]] = field(
+    alignment: Optional[
+        Union[CalendarCycleOneLetter, str, CalendarCycleTwoLetterValue]
+    ] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     institution_specified: str = field(
         default="false",
@@ -1200,5 +1240,5 @@ class PivlPpdTs(SxcmPpdTs):
             "name": "institutionSpecified",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )

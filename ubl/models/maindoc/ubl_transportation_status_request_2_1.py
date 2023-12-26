@@ -39,7 +39,7 @@ class TransportationStatusRequestType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -47,7 +47,7 @@ class TransportationStatusRequestType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -55,7 +55,7 @@ class TransportationStatusRequestType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -63,7 +63,7 @@ class TransportationStatusRequestType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -71,7 +71,7 @@ class TransportationStatusRequestType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -80,7 +80,7 @@ class TransportationStatusRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     carrier_assigned_id: Optional[CarrierAssignedId] = field(
         default=None,
@@ -88,7 +88,7 @@ class TransportationStatusRequestType:
             "name": "CarrierAssignedID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -96,7 +96,7 @@ class TransportationStatusRequestType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -104,7 +104,7 @@ class TransportationStatusRequestType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -112,7 +112,7 @@ class TransportationStatusRequestType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     name: Optional[Name] = field(
         default=None,
@@ -120,7 +120,7 @@ class TransportationStatusRequestType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     description: Tuple[Description, ...] = field(
         default_factory=tuple,
@@ -128,7 +128,7 @@ class TransportationStatusRequestType:
             "name": "Description",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -136,7 +136,7 @@ class TransportationStatusRequestType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     shipping_order_id: Optional[ShippingOrderId] = field(
         default=None,
@@ -144,7 +144,7 @@ class TransportationStatusRequestType:
             "name": "ShippingOrderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     other_instruction: Optional[OtherInstruction] = field(
         default=None,
@@ -152,15 +152,17 @@ class TransportationStatusRequestType:
             "name": "OtherInstruction",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
-    transportation_status_type_code: Optional[TransportationStatusTypeCode] = field(
+    transportation_status_type_code: Optional[
+        TransportationStatusTypeCode
+    ] = field(
         default=None,
         metadata={
             "name": "TransportationStatusTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     sender_party: Optional[SenderParty] = field(
         default=None,
@@ -168,7 +170,7 @@ class TransportationStatusRequestType:
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -176,15 +178,17 @@ class TransportationStatusRequestType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    transport_execution_plan_document_reference: Optional[TransportExecutionPlanDocumentReference] = field(
+    transport_execution_plan_document_reference: Optional[
+        TransportExecutionPlanDocumentReference
+    ] = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     consignment: Tuple[Consignment, ...] = field(
         default_factory=tuple,
@@ -192,7 +196,7 @@ class TransportationStatusRequestType:
             "name": "Consignment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     document_reference: Tuple[DocumentReference, ...] = field(
         default_factory=tuple,
@@ -200,7 +204,7 @@ class TransportationStatusRequestType:
             "name": "DocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -208,7 +212,7 @@ class TransportationStatusRequestType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     requested_status_location: Tuple[RequestedStatusLocation, ...] = field(
         default_factory=tuple,
@@ -216,7 +220,7 @@ class TransportationStatusRequestType:
             "name": "RequestedStatusLocation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     requested_status_period: Tuple[RequestedStatusPeriod, ...] = field(
         default_factory=tuple,
@@ -224,7 +228,7 @@ class TransportationStatusRequestType:
             "name": "RequestedStatusPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
 
 

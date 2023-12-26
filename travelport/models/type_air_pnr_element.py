@@ -8,6 +8,7 @@ class TypeAirPnrElement(Enum):
     """
     Defines the list of available data types for modifications.
     """
+
     PAYMENT = "Payment"
     ASSOCIATED_REMARK = "AssociatedRemark"
     TICKETING_MODIFIERS = "TicketingModifiers"

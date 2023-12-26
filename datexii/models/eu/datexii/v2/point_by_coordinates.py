@@ -18,12 +18,13 @@ class PointByCoordinates:
     :ivar point_coordinates:
     :ivar point_by_coordinates_extension:
     """
+
     bearing: Optional[int] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     point_coordinates: Optional[PointCoordinates] = field(
         default=None,
@@ -32,7 +33,7 @@ class PointByCoordinates:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     point_by_coordinates_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +41,5 @@ class PointByCoordinates:
             "name": "pointByCoordinatesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

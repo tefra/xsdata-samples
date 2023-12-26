@@ -40,6 +40,7 @@ class RoadMaintenanceTypeEnum(Enum):
         work adjacent to the roadway.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     CLEARANCE_WORK = "clearanceWork"
     CONTROLLED_AVALANCHE = "controlledAvalanche"
     INSTALLATION_WORK = "installationWork"

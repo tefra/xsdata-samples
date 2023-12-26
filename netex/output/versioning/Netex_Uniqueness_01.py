@@ -181,81 +181,81 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_refresh_interval=XmlDuration("P7D"),
     description=MultilingualString(
-        value="Netex basic Uniquness check "
+        value='Netex basic Uniquness check '
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="mybus:ntwkf001",
-                version="001",
+                id='mybus:ntwkf001',
+                version='001',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="bar",
-                            xmlns="bar",
-                            xmlns_url="Test"
+                            id='bar',
+                            xmlns='bar',
+                            xmlns_url='Test'
                         ),
                     ]
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ResourceFrame(
-                            id="bar:foo",
-                            version="001",
+                            id='bar:foo',
+                            version='001',
                             versions=VersionsRelStructure(
                                 version_ref_or_version=[
                                     Version(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                     Authority(
-                                        id="bar:foo2",
-                                        version="001"
+                                        id='bar:foo2',
+                                        version='001'
                                     ),
                                     ServicedOrganisation(
-                                        id="bar:foo3",
-                                        version="001"
+                                        id='bar:foo3',
+                                        version='001'
                                     ),
                                     TravelAgent(
-                                        id="bar:foo4",
-                                        version="001"
+                                        id='bar:foo4',
+                                        version='001'
                                     ),
                                     ManagementAgent(
-                                        id="bar:foo5",
-                                        version="001"
+                                        id='bar:foo5',
+                                        version='001'
                                     ),
                                     OtherOrganisation(
-                                        id="bar:foo5",
+                                        id='bar:foo5',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     ValidityCondition(
-                                                        id="bar:foo",
-                                                        version="001"
+                                                        id='bar:foo',
+                                                        version='001'
                                                     ),
                                                     ValidityTrigger(
-                                                        id="bar:foo1",
-                                                        version="001"
+                                                        id='bar:foo1',
+                                                        version='001'
                                                     ),
                                                     AvailabilityCondition(
-                                                        id="bar:foo3",
-                                                        version="001",
+                                                        id='bar:foo3',
+                                                        version='001',
                                                         timebands=TimebandsRelStructure(
                                                             timeband_ref_or_timeband=[
                                                                 TimebandVersionedChildStructure(
-                                                                    id="bar:foo",
-                                                                    version="001",
+                                                                    id='bar:foo',
+                                                                    version='001',
                                                                     start_time=XmlTime(0, 0, 0, 0)
                                                                 ),
                                                             ]
@@ -263,20 +263,20 @@ obj = PublicationDelivery(
                                                         operating_days=OperatingDaysRelStructure(
                                                             operating_day_ref_or_operating_day=[
                                                                 OperatingDay(
-                                                                    id="bar:foo",
-                                                                    version="001",
+                                                                    id='bar:foo',
+                                                                    version='001',
                                                                     calendar_date=XmlDate(2001, 1, 1)
                                                                 ),
                                                             ]
                                                         )
                                                     ),
                                                     ValidDuring(
-                                                        id="bar:foo",
-                                                        version="001"
+                                                        id='bar:foo',
+                                                        version='001'
                                                     ),
                                                     ValidBetween(
-                                                        id="bar:foo",
-                                                        version="001"
+                                                        id='bar:foo',
+                                                        version='001'
                                                     ),
                                                 ]
                                             ),
@@ -284,23 +284,23 @@ obj = PublicationDelivery(
                                         alternative_texts=AlternativeTextsRelStructure(
                                             alternative_text=[
                                                 AlternativeText(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     text=MultilingualString(
-                                                        value="Fum"
+                                                        value='Fum'
                                                     ),
-                                                    attribute_name="Name",
+                                                    attribute_name='Name',
                                                     order=1
                                                 ),
                                             ]
                                         ),
-                                        version="001",
+                                        version='001',
                                         key_list=KeyList(
                                             key_value=[
                                                 KeyValueStructure(
-                                                    key="bar",
-                                                    value="foo",
-                                                    type_of_key="bar:foo"
+                                                    key='bar',
+                                                    value='foo',
+                                                    type_of_key='bar:foo'
                                                 ),
                                             ]
                                         ),
@@ -310,10 +310,10 @@ obj = PublicationDelivery(
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     name=MultilingualString(
-                                                        value="Foo"
+                                                        value='Foo'
                                                     ),
                                                     order=1
                                                 ),
@@ -322,41 +322,41 @@ obj = PublicationDelivery(
                                         parts=OrganisationPartsRelStructure(
                                             choice=[
                                                 OrganisationPart(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     administrative_zones=AdministrativeZonesRelStructure(
                                                         administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone=[
                                                             AdministrativeZone(
-                                                                id="bar:foo",
-                                                                version="001"
+                                                                id='bar:foo',
+                                                                version='001'
                                                             ),
                                                         ]
                                                     )
                                                 ),
                                                 ControlCentre(
-                                                    id="bar:foo",
-                                                    version="001"
+                                                    id='bar:foo',
+                                                    version='001'
                                                 ),
                                                 Department(
-                                                    id="bar:foo",
-                                                    version="001"
+                                                    id='bar:foo',
+                                                    version='001'
                                                 ),
                                                 OperatingDepartment(
-                                                    id="bar:foo1",
-                                                    version="001"
+                                                    id='bar:foo1',
+                                                    version='001'
                                                 ),
                                             ]
                                         ),
                                         own_responsibility_sets=ResponsibilitySetsRelStructure(
                                             responsibility_set_ref_or_responsibility_set=[
                                                 ResponsibilitySet(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     roles=ResponsibilityRoleAssignmentsRelStructure(
                                                         responsibility_role_assignment=[
                                                             ResponsibilityRoleAssignment(
-                                                                id="bar:foo",
-                                                                version="001"
+                                                                id='bar:foo',
+                                                                version='001'
                                                             ),
                                                         ]
                                                     )
@@ -369,13 +369,13 @@ obj = PublicationDelivery(
                             groups_of_operators=GroupsOfOperatorsInFrameRelStructure(
                                 group_of_operators=[
                                     GroupOfOperators(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         members=TransportOrganisationRefsRelStructure(
                                             authority_ref_or_operator_ref=[
                                                 OperatorRef(
-                                                    version="001",
-                                                    ref="bar:foo"
+                                                    version='001',
+                                                    ref='bar:foo'
                                                 ),
                                             ]
                                         )
@@ -385,50 +385,50 @@ obj = PublicationDelivery(
                             operational_contexts=OperationalContextsInFrameRelStructure(
                                 operational_context=[
                                     OperationalContext(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             vehicle_types=VehicleTypesInFrameRelStructure(
                                 compound_train_or_train_or_vehicle_type=[
                                     Train(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         satisfies_facility_requirements=FacilityRequirementsRelStructure(
                                             facility_requirement_ref_or_facility_requirement=[
                                                 FacilityRequirement(
-                                                    id="bar:foo",
-                                                    version="001"
+                                                    id='bar:foo',
+                                                    version='001'
                                                 ),
                                             ]
                                         ),
                                         components=TrainComponentsRelStructure(
                                             train_component_ref_or_train_component=[
                                                 TrainComponent(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bar:foo",
-                                                        version="001",
+                                                        id='bar:foo',
+                                                        version='001',
                                                         capacities=PassengerCapacitiesRelStructure(
                                                             passenger_capacity_ref_or_passenger_capacity=[
                                                                 PassengerCapacity(
-                                                                    id="bar:foo",
-                                                                    version="001"
+                                                                    id='bar:foo',
+                                                                    version='001'
                                                                 ),
                                                             ]
                                                         ),
                                                         facilities=ServiceFacilitySetsRelStructure(
                                                             service_facility_set_ref_or_service_facility_set=[
                                                                 ServiceFacilitySet(
-                                                                    id="bar:foo",
-                                                                    version="001",
+                                                                    id='bar:foo',
+                                                                    version='001',
                                                                     other_facilities=TypesOfEquipmentRelStructure(
                                                                         type_of_equipment_ref_or_type_of_equipment=[
                                                                             TypeOfEquipment(
-                                                                                id="bar:foo",
-                                                                                version="001"
+                                                                                id='bar:foo',
+                                                                                version='001'
                                                                             ),
                                                                         ]
                                                                     )
@@ -442,37 +442,37 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     CompoundTrain(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             vehicle_models=VehicleModelsInFrameRelStructure(
                                 vehicle_model=[
                                     VehicleModel(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             vehicle_equipment_profiles=VehicleEquipmenProfilesInFrameRelStructure(
                                 vehicle_equipment_profile=[
                                     VehicleEquipmentProfile(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             schematic_maps=SchematicMapsInFrameRelStructure(
                                 schematic_map=[
                                     SchematicMap(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         members=SchematicMapMembersRelStructure(
                                             schematic_map_member=[
                                                 SchematicMapMemberVersionedChildStructure(
-                                                    id="bar:foo",
-                                                    version="001"
+                                                    id='bar:foo',
+                                                    version='001'
                                                 ),
                                             ]
                                         )
@@ -482,44 +482,44 @@ obj = PublicationDelivery(
                             groups_of_entities=GroupOfEntitiesInFrameRelStructure(
                                 choice=[
                                     Zone(
-                                        id="bar:foo6",
-                                        version="001"
+                                        id='bar:foo6',
+                                        version='001'
                                     ),
                                     Entrance(
-                                        id="bar:foo6",
-                                        version="001"
+                                        id='bar:foo6',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             zones=ZonesInFrameRelStructure(
                                 choice=[
                                     GeneralZone(
-                                        id="bar:foo3",
-                                        version="001",
+                                        id='bar:foo3',
+                                        version='001',
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 WirePointRef(
-                                                    version="001",
-                                                    ref="bar:foo"
+                                                    version='001',
+                                                    ref='bar:foo'
                                                 ),
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="001",
-                                                        ref="bar:foo"
+                                                        version='001',
+                                                        ref='bar:foo'
                                                     )
                                                 ),
                                                 ZoneProjection(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     projected_zone_ref=ZoneRefStructure(
-                                                        version="001",
-                                                        ref="bar:foo"
+                                                        version='001',
+                                                        ref='bar:foo'
                                                     )
                                                 ),
                                             ]
@@ -530,47 +530,47 @@ obj = PublicationDelivery(
                             blacklists=BlacklistsInFrameRelStructure(
                                 blacklist=[
                                     Blacklist(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             whitelists=WhitelistsInFrameRelStructure(
                                 whitelist=[
                                     Whitelist(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             )
                         ),
                         InfrastructureFrame(
-                            id="bar:foo",
-                            version="001",
+                            id='bar:foo',
+                            version='001',
                             name=MultilingualString(
-                                value="My Network  (V1) "
+                                value='My Network  (V1) '
                             ),
                             junctions=InfrastructureJunctionsInFrameRelStructure(
                                 railway_junction_or_road_junction_or_wire_junction=[
                                     WireJunction(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="POINT"
+                                            value='POINT'
                                         )
                                     ),
                                     RailwayJunction(
-                                        id="bar:foo1",
-                                        version="001",
+                                        id='bar:foo1',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="POINT"
+                                            value='POINT'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="bar:foo2",
-                                        version="001",
+                                        id='bar:foo2',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="POINT"
+                                            value='POINT'
                                         )
                                     ),
                                 ]
@@ -578,48 +578,48 @@ obj = PublicationDelivery(
                             elements=InfrastructureElementsInFrameRelStructure(
                                 railway_element_or_road_element_or_wire_element=[
                                     WireElement(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="LINK"
+                                            value='LINK'
                                         ),
                                         from_point_ref=WirePointRefStructure(
-                                            version="001",
-                                            ref="bar:foo"
+                                            version='001',
+                                            ref='bar:foo'
                                         ),
                                         to_point_ref=WirePointRefStructure(
-                                            version="001",
-                                            ref="bar:foo"
+                                            version='001',
+                                            ref='bar:foo'
                                         )
                                     ),
                                     RailwayElement(
-                                        id="bar:foo1",
-                                        version="001",
+                                        id='bar:foo1',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="LINK"
+                                            value='LINK'
                                         ),
                                         from_point_ref=RailwayPointRefStructure(
-                                            version="001",
-                                            ref="bar:foo1"
+                                            version='001',
+                                            ref='bar:foo1'
                                         ),
                                         to_point_ref=RailwayPointRefStructure(
-                                            version="001",
-                                            ref="bar:foo1"
+                                            version='001',
+                                            ref='bar:foo1'
                                         )
                                     ),
                                     RoadElement(
-                                        id="bar:foo2",
-                                        version="001",
+                                        id='bar:foo2',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="LINK"
+                                            value='LINK'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="001",
-                                            ref="bar:foo2"
+                                            version='001',
+                                            ref='bar:foo2'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="001",
-                                            ref="bar:foo2"
+                                            version='001',
+                                            ref='bar:foo2'
                                         )
                                     ),
                                 ]
@@ -627,27 +627,27 @@ obj = PublicationDelivery(
                             activation_points=ActivationPointsInFrameRelStructure(
                                 beacon_point_or_activation_point=[
                                     ActivationPoint(
-                                        id="bar:foo3",
-                                        version="001"
+                                        id='bar:foo3',
+                                        version='001'
                                     ),
                                     BeaconPoint(
-                                        id="bar:foo4",
-                                        version="001"
+                                        id='bar:foo4',
+                                        version='001'
                                     ),
                                 ]
                             )
                         ),
                         SiteFrame(
-                            id="bar:foo",
-                            version="001",
+                            id='bar:foo',
+                            version='001',
                             topographic_places=TopographicPlacesInFrameRelStructure(
                                 topographic_place=[
                                     TopographicPlace(
-                                        id="bar:foo1",
-                                        version="001",
+                                        id='bar:foo1',
+                                        version='001',
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                             name=MultilingualString(
-                                                value="ZONE"
+                                                value='ZONE'
                                             )
                                         )
                                     ),
@@ -656,39 +656,39 @@ obj = PublicationDelivery(
                             groups_of_stop_places=GroupsOfStopPlacesInFrameRelStructure(
                                 group_of_stop_places=[
                                     GroupOfStopPlaces(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="bar:foo2",
-                                        version="001",
+                                        id='bar:foo2',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="ZONE"
+                                            value='ZONE'
                                         ),
                                         equipment_places=EquipmentPlacesRelStructure(
                                             equipment_place_ref_or_equipment_place=[
                                                 EquipmentPlace(
-                                                    id="bar:foo2-x",
-                                                    version="001",
+                                                    id='bar:foo2-x',
+                                                    version='001',
                                                     name=MultilingualString(
-                                                        value="ZONE"
+                                                        value='ZONE'
                                                     ),
                                                     place_equipments=EquipmentsRelStructure(
                                                         choice=[
                                                             HeadingSign(
-                                                                id="bar:foo2",
-                                                                version="001",
+                                                                id='bar:foo2',
+                                                                version='001',
                                                                 place_name=MultilingualString(
-                                                                    value="SIGN"
+                                                                    value='SIGN'
                                                                 )
                                                             ),
                                                             PlaceLighting(
-                                                                id="bar:foo2",
-                                                                version="001"
+                                                                id='bar:foo2',
+                                                                version='001'
                                                             ),
                                                         ]
                                                     )
@@ -698,20 +698,20 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="bar:foo2-a",
-                                                    version="001",
+                                                    id='bar:foo2-a',
+                                                    version='001',
                                                     name=MultilingualString(
-                                                        value="ZONE"
+                                                        value='ZONE'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     StopPlace(
-                                        id="bar:foo2-bis",
-                                        version="001",
+                                        id='bar:foo2-bis',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="ZONE"
+                                            value='ZONE'
                                         )
                                     ),
                                 ]
@@ -719,10 +719,10 @@ obj = PublicationDelivery(
                             flexible_stop_places=FlexibleStopPlacesInFrameRelStructure(
                                 flexible_stop_place=[
                                     FlexibleStopPlace(
-                                        id="bar:foo3",
-                                        version="001",
+                                        id='bar:foo3',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="ZONE"
+                                            value='ZONE'
                                         )
                                     ),
                                 ]
@@ -730,10 +730,10 @@ obj = PublicationDelivery(
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="bar:foo4",
-                                        version="001",
+                                        id='bar:foo4',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="ZONE"
+                                            value='ZONE'
                                         )
                                     ),
                                 ]
@@ -741,33 +741,33 @@ obj = PublicationDelivery(
                             parkings=ParkingsInFrameRelStructure(
                                 parking=[
                                     Parking(
-                                        id="bar:foo5",
-                                        version="001",
+                                        id='bar:foo5',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="ZONE"
+                                            value='ZONE'
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 ParkingPassengerEntrance(
-                                                    id="bar:foo5-a",
-                                                    version="001"
+                                                    id='bar:foo5-a',
+                                                    version='001'
                                                 ),
                                                 ParkingPassengerEntrance(
-                                                    id="bar:foo5-b",
-                                                    version="001"
+                                                    id='bar:foo5-b',
+                                                    version='001'
                                                 ),
                                             ]
                                         ),
                                         parking_properties=ParkingPropertiesRelStructure(
                                             parking_properties=[
                                                 ParkingProperties(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     spaces=ParkingCapacitiesRelStructure(
                                                         parking_capacity_ref_or_parking_capacity=[
                                                             ParkingCapacity(
-                                                                id="bar:foo",
-                                                                version="001"
+                                                                id='bar:foo',
+                                                                version='001'
                                                             ),
                                                         ]
                                                     )
@@ -777,18 +777,18 @@ obj = PublicationDelivery(
                                         parking_areas=ParkingAreasRelStructure(
                                             parking_area_ref_or_parking_area=[
                                                 ParkingArea(
-                                                    id="bar:foo7",
-                                                    version="001",
+                                                    id='bar:foo7',
+                                                    version='001',
                                                     name=MultilingualString(
-                                                        value="ZONE"
+                                                        value='ZONE'
                                                     ),
                                                     bays=ParkingBaysRelStructure(
                                                         parking_bay_ref_or_parking_bay=[
                                                             ParkingBay(
-                                                                id="bar:foo8",
-                                                                version="001",
+                                                                id='bar:foo8',
+                                                                version='001',
                                                                 name=MultilingualString(
-                                                                    value="ZONE"
+                                                                    value='ZONE'
                                                                 )
                                                             ),
                                                         ]
@@ -799,12 +799,12 @@ obj = PublicationDelivery(
                                         vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                             parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                                 ParkingEntranceForVehicles(
-                                                    id="bar:foo",
-                                                    version="001"
+                                                    id='bar:foo',
+                                                    version='001'
                                                 ),
                                                 ParkingEntranceForVehicles(
-                                                    id="bar:foo1",
-                                                    version="001"
+                                                    id='bar:foo1',
+                                                    version='001'
                                                 ),
                                             ]
                                         )
@@ -814,25 +814,25 @@ obj = PublicationDelivery(
                             point_of_interest_classifications=PointOfInterestClassificationsInFrameRelStructure(
                                 point_of_interest_classification=[
                                     PointOfInterestClassification(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 fare_zone_or_tariff_zone=[
                                     TariffZone(
-                                        id="bar:foo9",
-                                        version="001",
+                                        id='bar:foo9',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="ZONE"
+                                            value='ZONE'
                                         )
                                     ),
                                     FareZone(
-                                        id="bar:foo10",
-                                        version="001",
+                                        id='bar:foo10',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="ZONE"
+                                            value='ZONE'
                                         )
                                     ),
                                 ]
@@ -840,35 +840,35 @@ obj = PublicationDelivery(
                             site_facility_sets=SiteFacilitySetsInFrameRelStructure(
                                 site_facility_set=[
                                     SiteFacilitySet(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         description=MultilingualString(
-                                            value="FACILITY SET"
+                                            value='FACILITY SET'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         ServiceFrame(
-                            id="bar:foo",
-                            version="001",
+                            id='bar:foo',
+                            version='001',
                             name=MultilingualString(
-                                value="FRAME "
+                                value='FRAME '
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="LINE"
+                                            value='LINE'
                                         )
                                     ),
                                     FlexibleLine(
-                                        id="bar:foo1",
-                                        version="001",
+                                        id='bar:foo1',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="LINE"
+                                            value='LINE'
                                         )
                                     ),
                                 ]
@@ -876,18 +876,18 @@ obj = PublicationDelivery(
                             groups_of_lines=GroupsOfLinesInFrameRelStructure(
                                 group_of_lines=[
                                     GroupOfLines(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="bar:foo5",
-                                        version="001",
+                                        id='bar:foo5',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="POINT"
+                                            value='POINT'
                                         )
                                     ),
                                 ]
@@ -895,18 +895,18 @@ obj = PublicationDelivery(
                             service_links=ServiceLinksInFrameRelStructure(
                                 service_link=[
                                     ServiceLink(
-                                        id="bar:foo3",
-                                        version="001",
+                                        id='bar:foo3',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="LINK"
+                                            value='LINK'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="bar:foo5"
+                                            version='001',
+                                            ref='bar:foo5'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="bar:foo5"
+                                            version='001',
+                                            ref='bar:foo5'
                                         )
                                     ),
                                 ]
@@ -914,74 +914,74 @@ obj = PublicationDelivery(
                             service_patterns=ServicePatternsInFrameRelStructure(
                                 service_pattern_or_journey_pattern_view=[
                                     ServicePattern(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY PATTERN"
+                                            value='JOURNEY PATTERN'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="bar:foo5"
+                                                        version='001',
+                                                        ref='bar:foo5'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bar:foo",
-                                                    version="001",
+                                                    id='bar:foo',
+                                                    version='001',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="bar:foo5"
+                                                        version='001',
+                                                        ref='bar:foo5'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServicePattern(
-                                        id="bar:foo-bis",
-                                        version="001"
+                                        id='bar:foo-bis',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             stop_areas=StopAreasInFrameRelStructure(
                                 stop_area=[
                                     StopArea(
-                                        id="bar:foo",
-                                        version="001"
+                                        id='bar:foo',
+                                        version='001'
                                     ),
                                 ]
                             ),
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     JourneyPattern(
-                                        id="bar:foo2",
-                                        version="001",
+                                        id='bar:foo2',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY PATTERN"
+                                            value='JOURNEY PATTERN'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="bar:foo2",
-                                                    version="001",
+                                                    id='bar:foo2',
+                                                    version='001',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="bar:foo5"
+                                                        version='001',
+                                                        ref='bar:foo5'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="bar:foo2",
-                                                    version="001",
+                                                    id='bar:foo2',
+                                                    version='001',
                                                     order=2,
                                                     choice_1=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="bar:foo5"
+                                                        version='001',
+                                                        ref='bar:foo5'
                                                     )
                                                 ),
                                             ]
@@ -991,53 +991,53 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="bar:foo",
-                            version="001",
+                            id='bar:foo',
+                            version='001',
                             name=MultilingualString(
-                                value="FRAME "
+                                value='FRAME '
                             ),
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
                                     VehicleJourney(
-                                        id="bar:foo",
-                                        version="001",
+                                        id='bar:foo',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY"
+                                            value='JOURNEY'
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="bar:foo1",
-                                        version="001",
+                                        id='bar:foo1',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY"
+                                            value='JOURNEY'
                                         )
                                     ),
                                     TemplateServiceJourney(
-                                        id="bar:foo2",
-                                        version="001",
+                                        id='bar:foo2',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY"
+                                            value='JOURNEY'
                                         )
                                     ),
                                     SpecialService(
-                                        id="bar:foo3",
-                                        version="001",
+                                        id='bar:foo3',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY"
+                                            value='JOURNEY'
                                         )
                                     ),
                                     DatedServiceJourney(
-                                        id="bar:foo4",
-                                        version="001",
+                                        id='bar:foo4',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY"
+                                            value='JOURNEY'
                                         )
                                     ),
                                     DeadRun(
-                                        id="bar:foo5",
-                                        version="001",
+                                        id='bar:foo5',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="JOURNEY"
+                                            value='JOURNEY'
                                         )
                                     ),
                                 ]
@@ -1045,10 +1045,10 @@ obj = PublicationDelivery(
                             service_facility_sets=ServiceFacilitySetsInFrameRelStructure(
                                 service_facility_set=[
                                     ServiceFacilitySet(
-                                        id="bar:foo2",
-                                        version="001",
+                                        id='bar:foo2',
+                                        version='001',
                                         description=MultilingualString(
-                                            value="FACILITY SET"
+                                            value='FACILITY SET'
                                         )
                                     ),
                                 ]

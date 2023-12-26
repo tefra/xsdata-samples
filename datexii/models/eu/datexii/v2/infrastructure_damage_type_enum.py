@@ -38,6 +38,7 @@ class InfrastructureDamageTypeEnum(Enum):
         typically with a reduced weight limit restriction imposed.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     BURST_PIPE = "burstPipe"
     BURST_WATER_MAIN = "burstWaterMain"
     COLLAPSED_SEWER = "collapsedSewer"

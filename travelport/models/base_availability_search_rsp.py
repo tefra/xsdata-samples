@@ -18,13 +18,14 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp1):
     """
     Availability Search response.
     """
+
     flight_details_list: None | FlightDetailsList = field(
         default=None,
         metadata={
             "name": "FlightDetailsList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_segment_list: None | AirSegmentList = field(
         default=None,
@@ -32,7 +33,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp1):
             "name": "AirSegmentList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     fare_info_list: None | FareInfoList = field(
         default=None,
@@ -40,7 +41,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp1):
             "name": "FareInfoList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     fare_remark_list: None | FareRemarkList = field(
         default=None,
@@ -48,7 +49,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp1):
             "name": "FareRemarkList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_itinerary_solution: list[AirItinerarySolution] = field(
         default_factory=list,
@@ -57,7 +58,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     host_token_list: None | HostTokenList2 = field(
         default=None,
@@ -65,7 +66,7 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp1):
             "name": "HostTokenList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     apisrequirements_list: None | ApisrequirementsList = field(
         default=None,
@@ -73,12 +74,12 @@ class BaseAvailabilitySearchRsp(BaseSearchRsp1):
             "name": "APISRequirementsList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     distance_units: None | TypeDistance = field(
         default=None,
         metadata={
             "name": "DistanceUnits",
             "type": "Attribute",
-        }
+        },
     )

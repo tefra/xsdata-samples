@@ -20,6 +20,7 @@ class ProviderInfo2(TypeKeyElement2):
     iatacode
         Branch IATA Code.
     """
+
     class Meta:
         name = "ProviderInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -32,7 +33,7 @@ class ProviderInfo2(TypeKeyElement2):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -42,7 +43,7 @@ class ProviderInfo2(TypeKeyElement2):
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     iatacode: None | str = field(
         default=None,
@@ -50,5 +51,5 @@ class ProviderInfo2(TypeKeyElement2):
             "name": "IATACode",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )

@@ -88,6 +88,7 @@ class PublicEventTypeEnum(Enum):
         skiing, ski jumping, skating) that could disrupt traffic.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AGRICULTURAL_SHOW = "agriculturalShow"
     AIR_SHOW = "airShow"
     ATHLETICS_MEETING = "athleticsMeeting"

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.concentration_of_vehicles_value import ConcentrationOfVehiclesValue
+from datexii.models.eu.datexii.v2.concentration_of_vehicles_value import (
+    ConcentrationOfVehiclesValue,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.percentage_value import PercentageValue
 from datexii.models.eu.datexii.v2.traffic_data import TrafficData
@@ -20,19 +22,20 @@ class TrafficConcentration(TrafficData):
         measurement site is occupied by vehicles.
     :ivar traffic_concentration_extension:
     """
+
     concentration: Optional[ConcentrationOfVehiclesValue] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     occupancy: Optional[PercentageValue] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_concentration_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +43,5 @@ class TrafficConcentration(TrafficData):
             "name": "trafficConcentrationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

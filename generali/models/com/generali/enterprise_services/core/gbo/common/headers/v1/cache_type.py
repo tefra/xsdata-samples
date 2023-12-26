@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.base_header_type import BaseHeaderType
-from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.cache_options import CacheOptions
+from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.base_header_type import (
+    BaseHeaderType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.cache_options import (
+    CacheOptions,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+)
 
 
 @dataclass
@@ -20,6 +26,7 @@ class CacheType(BaseHeaderType):
     :ivar max_age_quantity:
     :ivar last_modified_date_time:
     """
+
     use_cache: Optional[CacheOptions] = field(
         default=None,
         metadata={
@@ -27,7 +34,7 @@ class CacheType(BaseHeaderType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        }
+        },
     )
     max_age_quantity: Optional[int] = field(
         default=None,
@@ -35,7 +42,7 @@ class CacheType(BaseHeaderType):
             "name": "MaxAgeQuantity",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
-        }
+        },
     )
     last_modified_date_time: Optional[XmlDateTime] = field(
         default=None,
@@ -43,5 +50,5 @@ class CacheType(BaseHeaderType):
             "name": "LastModifiedDateTime",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
-        }
+        },
     )

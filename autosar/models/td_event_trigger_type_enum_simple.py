@@ -11,5 +11,6 @@ class TdEventTriggerTypeEnumSimple(Enum):
     :cvar TRIGGER_RELEASED: A point in time where the referenced trigger
         has been successfully released by the emitting SW-C.
     """
+
     TRIGGER_ACTIVATED = "TRIGGER-ACTIVATED"
     TRIGGER_RELEASED = "TRIGGER-RELEASED"

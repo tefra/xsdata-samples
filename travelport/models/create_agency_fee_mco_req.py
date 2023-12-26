@@ -34,6 +34,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
         ticket that caused the fee, a residual from an exchange, or an
         airline service fee.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -44,7 +45,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     form_of_payment: None | FormOfPayment1 = field(
         default=None,
@@ -52,7 +53,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "name": "FormOfPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     form_of_payment_ref: None | FormOfPaymentRef1 = field(
         default=None,
@@ -60,7 +61,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "name": "FormOfPaymentRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     general_remark: list[GeneralRemark1] = field(
         default_factory=list,
@@ -69,7 +70,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     accounting_remark: list[AccountingRemark1] = field(
         default_factory=list,
@@ -78,7 +79,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -86,7 +87,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     location_code: None | str = field(
         default=None,
@@ -94,7 +95,7 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "name": "LocationCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -102,12 +103,12 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "name": "LocatorCode",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
-        }
+        },
     )

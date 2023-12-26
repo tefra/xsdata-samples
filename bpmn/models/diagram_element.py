@@ -13,20 +13,20 @@ class DiagramElement:
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
     @dataclass
@@ -36,5 +36,5 @@ class DiagramElement:
             metadata={
                 "type": "Wildcard",
                 "namespace": "##other",
-            }
+            },
         )

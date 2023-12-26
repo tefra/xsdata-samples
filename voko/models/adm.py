@@ -19,5 +19,5 @@ class Adm:
                     "type": str,
                 },
             ),
-        }
+        },
     )

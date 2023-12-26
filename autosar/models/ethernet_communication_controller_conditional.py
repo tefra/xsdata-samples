@@ -60,6 +60,7 @@ class EthernetCommunicationControllerConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETHERNET-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
@@ -69,15 +70,17 @@ class EthernetCommunicationControllerConditional:
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    coupling_ports: Optional["EthernetCommunicationControllerConditional.CouplingPorts"] = field(
+    coupling_ports: Optional[
+        "EthernetCommunicationControllerConditional.CouplingPorts"
+    ] = field(
         default=None,
         metadata={
             "name": "COUPLING-PORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mac_layer_type: Optional[EthernetMacLayerTypeEnum] = field(
         default=None,
@@ -85,7 +88,7 @@ class EthernetCommunicationControllerConditional:
             "name": "MAC-LAYER-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mac_unicast_address: Optional[MacAddressString] = field(
         default=None,
@@ -93,7 +96,7 @@ class EthernetCommunicationControllerConditional:
             "name": "MAC-UNICAST-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_receive_buffer_length: Optional[Integer] = field(
         default=None,
@@ -101,7 +104,7 @@ class EthernetCommunicationControllerConditional:
             "name": "MAXIMUM-RECEIVE-BUFFER-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_transmission_unit: Optional[PositiveInteger] = field(
         default=None,
@@ -109,7 +112,7 @@ class EthernetCommunicationControllerConditional:
             "name": "MAXIMUM-TRANSMISSION-UNIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_transmit_buffer_length: Optional[Integer] = field(
         default=None,
@@ -117,7 +120,7 @@ class EthernetCommunicationControllerConditional:
             "name": "MAXIMUM-TRANSMIT-BUFFER-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     slave_act_as_passive_communication_slave: Optional[Boolean] = field(
         default=None,
@@ -125,7 +128,7 @@ class EthernetCommunicationControllerConditional:
             "name": "SLAVE-ACT-AS-PASSIVE-COMMUNICATION-SLAVE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     slave_qualified_unexpected_link_down_time: Optional[TimeValue] = field(
         default=None,
@@ -133,7 +136,7 @@ class EthernetCommunicationControllerConditional:
             "name": "SLAVE-QUALIFIED-UNEXPECTED-LINK-DOWN-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -141,14 +144,14 @@ class EthernetCommunicationControllerConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -156,7 +159,7 @@ class EthernetCommunicationControllerConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -167,5 +170,5 @@ class EthernetCommunicationControllerConditional:
                 "name": "COUPLING-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

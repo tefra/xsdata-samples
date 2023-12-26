@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .connecting_journey_view import ConnectingJourneyView
@@ -11,7 +11,9 @@ from .flexible_line_ref import FlexibleLineRef
 from .line_derived_view_structure import LineDerivedViewStructure
 from .line_ref import LineRef
 from .multilingual_string import MultilingualString
-from .point_in_journey_pattern_ref_structure import PointInJourneyPatternRefStructure
+from .point_in_journey_pattern_ref_structure import (
+    PointInJourneyPatternRefStructure,
+)
 from .reason_for_meeting_enumeration import ReasonForMeetingEnumeration
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
 from .service_journey_ref import ServiceJourneyRef
@@ -34,7 +36,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     at_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -42,7 +44,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "AtStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     from_journey_ref: Optional[VehicleJourneyRefStructure] = field(
         default=None,
@@ -51,7 +53,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_journey_ref: Optional[VehicleJourneyRefStructure] = field(
         default=None,
@@ -60,23 +62,27 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
-    from_point_in_journey_pattern_ref: Optional[PointInJourneyPatternRefStructure] = field(
+    from_point_in_journey_pattern_ref: Optional[
+        PointInJourneyPatternRefStructure
+    ] = field(
         default=None,
         metadata={
             "name": "FromPointInJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    to_point_in_journey_pattern_ref: Optional[PointInJourneyPatternRefStructure] = field(
+    to_point_in_journey_pattern_ref: Optional[
+        PointInJourneyPatternRefStructure
+    ] = field(
         default=None,
         metadata={
             "name": "ToPointInJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -84,7 +90,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     earliest_time: Optional[XmlTime] = field(
         default=None,
@@ -92,7 +98,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "EarliestTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     earliest_time_day_offset: Optional[int] = field(
         default=None,
@@ -100,7 +106,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "EarliestTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     latest_time: Optional[XmlTime] = field(
         default=None,
@@ -108,7 +114,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "LatestTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     latest_time_day_offset: Optional[int] = field(
         default=None,
@@ -116,7 +122,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "LatestTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     reason: Optional[ReasonForMeetingEnumeration] = field(
         default=None,
@@ -124,7 +130,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "Reason",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     connection_ref: Optional[ConnectionRefStructure] = field(
         default=None,
@@ -132,7 +138,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "ConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     connecting_stop_point_ref: List[ScheduledStopPointRefStructure] = field(
         default_factory=list,
@@ -140,7 +146,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "ConnectingStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     connecting_stop_point_name: List[MultilingualString] = field(
         default_factory=list,
@@ -148,9 +154,20 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "ConnectingStopPointName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            DatedVehicleJourneyRef,
+            DatedSpecialServiceRef,
+            SpecialServiceRef,
+            TemplateServiceJourneyRef,
+            ServiceJourneyRef,
+            DeadRunRef,
+            VehicleJourneyRef,
+            ConnectingJourneyView,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -196,9 +213,11 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    flexible_line_ref_or_line_ref_or_connecting_line_view: Optional[object] = field(
+    flexible_line_ref_or_line_ref_or_connecting_line_view: Optional[
+        Union[FlexibleLineRef, LineRef, LineDerivedViewStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -219,5 +238,5 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

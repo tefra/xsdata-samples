@@ -30,6 +30,7 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
     priority_order
         Priority order associated with this LoyaltyProgramEnrollment.
     """
+
     class Meta:
         name = "LoyaltyProgramEnrollment"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -40,7 +41,7 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
             "name": "SupplierType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     supplier: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     program_name: None | str = field(
         default=None,
@@ -68,7 +69,7 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -77,7 +78,7 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -86,5 +87,5 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

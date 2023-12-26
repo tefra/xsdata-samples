@@ -9,6 +9,7 @@ class TravelerType5:
     """
     The 3-char IATA traveler type code.
     """
+
     class Meta:
         name = "TravelerType"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -21,5 +22,5 @@ class TravelerType5:
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )

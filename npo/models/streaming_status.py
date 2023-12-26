@@ -16,12 +16,12 @@ class StreamingStatus:
         metadata={
             "name": "withDrm",
             "type": "Attribute",
-        }
+        },
     )
     without_drm: None | StreamingStatusValue = field(
         default=None,
         metadata={
             "name": "withoutDrm",
             "type": "Attribute",
-        }
+        },
     )

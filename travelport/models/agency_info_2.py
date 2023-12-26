@@ -53,6 +53,7 @@ class AgencyInfo2(TypeProfileInfo1):
     ursync_to
         Identify if Universal Record synch is activated at Agency Level.
     """
+
     class Meta:
         name = "AgencyInfo"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -62,35 +63,35 @@ class AgencyInfo2(TypeProfileInfo1):
         metadata={
             "name": "Advisory",
             "type": "Element",
-        }
+        },
     )
     address: list[Address1] = field(
         default_factory=list,
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     phone: list[Phone1] = field(
         default_factory=list,
         metadata={
             "name": "Phone",
             "type": "Element",
-        }
+        },
     )
     electronic_address: list[ElectronicAddress1] = field(
         default_factory=list,
         metadata={
             "name": "ElectronicAddress",
             "type": "Element",
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier1] = field(
         default_factory=list,
         metadata={
             "name": "ExternalIdentifier",
             "type": "Element",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -100,7 +101,7 @@ class AgencyInfo2(TypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     iata_number: None | str = field(
         default=None,
@@ -109,7 +110,7 @@ class AgencyInfo2(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     agency_code: None | str = field(
         default=None,
@@ -119,40 +120,40 @@ class AgencyInfo2(TypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     uses_template: bool = field(
         default=False,
         metadata={
             "name": "UsesTemplate",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_to: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncTo",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_from: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncFrom",
             "type": "Attribute",
-        }
+        },
     )
     ursync_data: AgencyInfoUrsyncData1 = field(
         default=AgencyInfoUrsyncData1.MASKED,
         metadata={
             "name": "URSyncData",
             "type": "Attribute",
-        }
+        },
     )
     ursync_to: bool = field(
         default=False,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

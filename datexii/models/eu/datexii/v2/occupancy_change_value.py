@@ -17,6 +17,7 @@ class OccupancyChangeValue(DataValue):
         integer.
     :ivar occupancy_change_value_extension:
     """
+
     occupancy_change: Optional[int] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class OccupancyChangeValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     occupancy_change_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class OccupancyChangeValue(DataValue):
             "name": "occupancyChangeValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

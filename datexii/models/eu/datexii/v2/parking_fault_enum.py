@@ -28,6 +28,7 @@ class ParkingFaultEnum(Enum):
     :cvar UNKNOWN: Unknown parking facility fault.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     COMMUNICATIONS_FAILURE = "communicationsFailure"
     BARRIER_MALFUNCTION = "barrierMalfunction"
     ENTRANCE_EXIT_OBSTRUCTED = "entranceExitObstructed"

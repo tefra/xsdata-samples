@@ -14,6 +14,7 @@ class PrecipitationTypeEnum(Enum):
     :cvar SLEET: Wet snow mixed with rain.
     :cvar SNOW: Snow.
     """
+
     DRIZZLE = "drizzle"
     FREEZING_RAIN = "freezingRain"
     HAIL = "hail"

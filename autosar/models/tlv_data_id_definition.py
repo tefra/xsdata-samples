@@ -1,9 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
-from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
-from .cpp_implementation_data_type_element_subtypes_enum import CppImplementationDataTypeElementSubtypesEnum
-from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .application_record_element_subtypes_enum import (
+    ApplicationRecordElementSubtypesEnum,
+)
+from .argument_data_prototype_subtypes_enum import (
+    ArgumentDataPrototypeSubtypesEnum,
+)
+from .cpp_implementation_data_type_element_subtypes_enum import (
+    CppImplementationDataTypeElementSubtypesEnum,
+)
+from .implementation_data_type_element_subtypes_enum import (
+    ImplementationDataTypeElementSubtypesEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 
@@ -38,6 +46,7 @@ class TlvDataIdDefinition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TLV-DATA-ID-DEFINITION"
 
@@ -47,7 +56,7 @@ class TlvDataIdDefinition:
             "name": "ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tlv_argument_ref: Optional["TlvDataIdDefinition.TlvArgumentRef"] = field(
         default=None,
@@ -55,38 +64,44 @@ class TlvDataIdDefinition:
             "name": "TLV-ARGUMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tlv_implementation_data_type_element_ref: Optional["TlvDataIdDefinition.TlvImplementationDataTypeElementRef"] = field(
+    tlv_implementation_data_type_element_ref: Optional[
+        "TlvDataIdDefinition.TlvImplementationDataTypeElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TLV-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tlv_record_element_ref: Optional["TlvDataIdDefinition.TlvRecordElementRef"] = field(
+    tlv_record_element_ref: Optional[
+        "TlvDataIdDefinition.TlvRecordElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TLV-RECORD-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tlv_sub_element_ref: Optional["TlvDataIdDefinition.TlvSubElementRef"] = field(
+    tlv_sub_element_ref: Optional[
+        "TlvDataIdDefinition.TlvSubElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TLV-SUB-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -94,7 +109,7 @@ class TlvDataIdDefinition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -105,7 +120,7 @@ class TlvDataIdDefinition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -116,7 +131,7 @@ class TlvDataIdDefinition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -127,7 +142,7 @@ class TlvDataIdDefinition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -138,5 +153,5 @@ class TlvDataIdDefinition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+)
 
 
 @dataclass
@@ -34,23 +36,24 @@ class TextType:
         <ns1:PrimitiveType
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
+
     value: str = field(
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     language_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "languageID",
             "type": "Attribute",
-        }
+        },
     )
     language_locale_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "languageLocaleID",
             "type": "Attribute",
-        }
+        },
     )

@@ -10,6 +10,7 @@ class Size:
     """
     <div> <h3>Size</h3> </div>
     """
+
     class Meta:
         name = "size"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -18,35 +19,35 @@ class Size:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     units: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -54,5 +55,5 @@ class Size:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

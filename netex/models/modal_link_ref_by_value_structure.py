@@ -14,5 +14,5 @@ class ModalLinkRefByValueStructure(LinkRefByValueStructure):
             "name": "VehicleMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

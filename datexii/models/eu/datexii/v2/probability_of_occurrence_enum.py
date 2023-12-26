@@ -15,6 +15,7 @@ class ProbabilityOfOccurrenceEnum(Enum):
     :cvar RISK_OF: The source has a moderate level of confidence of the
         occurrence of the situation record version content.
     """
+
     CERTAIN = "certain"
     PROBABLE = "probable"
     RISK_OF = "riskOf"

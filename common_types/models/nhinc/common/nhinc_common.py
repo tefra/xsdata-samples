@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from ...www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import EndpointReferenceType
+from ...www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import (
+    EndpointReferenceType,
+)
 
 __NAMESPACE__ = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
@@ -12,7 +14,7 @@ class AcknowledgementType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -25,7 +27,7 @@ class AssigningAuthorityType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -41,7 +43,7 @@ class ConnectcustomHttpHeadersType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     header_value: Optional[str] = field(
         default=None,
@@ -50,7 +52,7 @@ class ConnectcustomHttpHeadersType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -62,7 +64,7 @@ class CeType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     code_system: Optional[str] = field(
         default=None,
@@ -70,7 +72,7 @@ class CeType:
             "name": "codeSystem",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     code_system_name: Optional[str] = field(
         default=None,
@@ -78,7 +80,7 @@ class CeType:
             "name": "codeSystemName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     code_system_version: Optional[str] = field(
         default=None,
@@ -87,7 +89,7 @@ class CeType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     display_name: Optional[str] = field(
         default=None,
@@ -96,7 +98,7 @@ class CeType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     original_text: Optional[str] = field(
         default=None,
@@ -105,14 +107,14 @@ class CeType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     translation: List["CeType"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -128,7 +130,7 @@ class CreateEprrequestType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     namespace_uri: Optional[str] = field(
         default=None,
@@ -137,7 +139,7 @@ class CreateEprrequestType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     namespace_prefix: Optional[str] = field(
         default=None,
@@ -146,7 +148,7 @@ class CreateEprrequestType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     service_name: Optional[str] = field(
         default=None,
@@ -155,7 +157,7 @@ class CreateEprrequestType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     port_name: Optional[str] = field(
         default=None,
@@ -164,7 +166,7 @@ class CreateEprrequestType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -175,7 +177,7 @@ class HomeCommunityType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     home_community_id: Optional[str] = field(
         default=None,
@@ -184,14 +186,14 @@ class HomeCommunityType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -204,7 +206,7 @@ class QualifiedSubjectIdentifierType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     assigning_authority_identifier: Optional[str] = field(
         default=None,
@@ -213,7 +215,7 @@ class QualifiedSubjectIdentifierType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -225,7 +227,7 @@ class ResponseType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     message: Optional[str] = field(
         default=None,
@@ -233,7 +235,7 @@ class ResponseType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -246,7 +248,7 @@ class SamlAuthnStatementType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     session_index: Optional[str] = field(
         default=None,
@@ -254,7 +256,7 @@ class SamlAuthnStatementType:
             "name": "sessionIndex",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     auth_context_class_ref: Optional[str] = field(
         default=None,
@@ -263,7 +265,7 @@ class SamlAuthnStatementType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     subject_locality_address: Optional[str] = field(
         default=None,
@@ -271,7 +273,7 @@ class SamlAuthnStatementType:
             "name": "subjectLocalityAddress",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     subject_locality_dnsname: Optional[str] = field(
         default=None,
@@ -279,7 +281,7 @@ class SamlAuthnStatementType:
             "name": "subjectLocalityDNSName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -291,7 +293,7 @@ class SamlAuthzDecisionStatementEvidenceConditionsType:
             "name": "notBefore",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     not_on_or_after: Optional[str] = field(
         default=None,
@@ -299,7 +301,7 @@ class SamlAuthzDecisionStatementEvidenceConditionsType:
             "name": "notOnOrAfter",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -312,7 +314,7 @@ class SamlConditionsType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     not_on_or_after: Optional[str] = field(
         default=None,
@@ -321,7 +323,7 @@ class SamlConditionsType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -332,7 +334,7 @@ class SamlIssuerType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     issuer_format: Optional[str] = field(
         default=None,
@@ -340,7 +342,7 @@ class SamlIssuerType:
             "name": "issuerFormat",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -353,7 +355,7 @@ class SamlSignatureKeyInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "format": "base64",
-        }
+        },
     )
     rsa_key_value_exponent: Optional[bytes] = field(
         default=None,
@@ -362,7 +364,7 @@ class SamlSignatureKeyInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "format": "base64",
-        }
+        },
     )
 
 
@@ -374,7 +376,7 @@ class TokenRetrieveInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -386,7 +388,7 @@ class UrlInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
@@ -394,7 +396,7 @@ class UrlInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -405,7 +407,7 @@ class UrlSetType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -424,7 +426,7 @@ class AddressType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     city: Optional[str] = field(
         default=None,
@@ -432,7 +434,7 @@ class AddressType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     country: Optional[str] = field(
         default=None,
@@ -440,7 +442,7 @@ class AddressType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     state: Optional[str] = field(
         default=None,
@@ -448,7 +450,7 @@ class AddressType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     street_address: Optional[str] = field(
         default=None,
@@ -457,7 +459,7 @@ class AddressType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     zip_code: Optional[str] = field(
         default=None,
@@ -466,7 +468,7 @@ class AddressType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -478,7 +480,7 @@ class AssigningAuthoritiesType:
             "name": "assigningAuthority",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -523,7 +525,7 @@ class HomeCommunitiesType:
             "name": "homeCommunity",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -542,7 +544,7 @@ class NhinTargetCommunityType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     list_value: Optional[str] = field(
         default=None,
@@ -550,14 +552,14 @@ class NhinTargetCommunityType:
             "name": "list",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     region: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -568,7 +570,7 @@ class NhinTargetSystemType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     home_community: Optional[HomeCommunityType] = field(
         default=None,
@@ -576,14 +578,14 @@ class NhinTargetSystemType:
             "name": "homeCommunity",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     url: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     exchange_name: Optional[str] = field(
         default=None,
@@ -591,7 +593,7 @@ class NhinTargetSystemType:
             "name": "exchangeName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     use_spec_version: Optional[str] = field(
         default=None,
@@ -599,7 +601,7 @@ class NhinTargetSystemType:
             "name": "useSpecVersion",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -612,7 +614,7 @@ class PersonNameType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     given_name: Optional[str] = field(
         default=None,
@@ -621,7 +623,7 @@ class PersonNameType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     name_type: Optional[CeType] = field(
         default=None,
@@ -630,7 +632,7 @@ class PersonNameType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     second_name_or_initials: Optional[str] = field(
         default=None,
@@ -639,7 +641,7 @@ class PersonNameType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     full_name: Optional[str] = field(
         default=None,
@@ -648,7 +650,7 @@ class PersonNameType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     prefix: Optional[str] = field(
         default=None,
@@ -656,7 +658,7 @@ class PersonNameType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     suffix: Optional[str] = field(
         default=None,
@@ -664,7 +666,7 @@ class PersonNameType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -677,7 +679,7 @@ class PhoneType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     country_code: Optional[str] = field(
         default=None,
@@ -686,7 +688,7 @@ class PhoneType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     extension: Optional[str] = field(
         default=None,
@@ -694,7 +696,7 @@ class PhoneType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     local_number: Optional[str] = field(
         default=None,
@@ -703,7 +705,7 @@ class PhoneType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     phone_number_type: Optional[CeType] = field(
         default=None,
@@ -712,7 +714,7 @@ class PhoneType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -730,7 +732,7 @@ class QualifiedSubjectIdentifiersType:
             "name": "QualifiedSubjectIdentifier",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -753,7 +755,7 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     issue_instant: Optional[str] = field(
         default=None,
@@ -761,21 +763,21 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "name": "issueInstant",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     issuer: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     issuer_format: Optional[str] = field(
         default=None,
@@ -783,21 +785,23 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "name": "issuerFormat",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     subject: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
-    conditions: Optional[SamlAuthzDecisionStatementEvidenceConditionsType] = field(
+    conditions: Optional[
+        SamlAuthzDecisionStatementEvidenceConditionsType
+    ] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     access_consent_policy: List[str] = field(
         default_factory=list,
@@ -805,7 +809,7 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "name": "accessConsentPolicy",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     instance_access_consent_policy: List[str] = field(
         default_factory=list,
@@ -813,12 +817,14 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "name": "instanceAccessConsentPolicy",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
 @dataclass
-class SamlAuthzDecisionStatementEvidenceConditions(SamlAuthzDecisionStatementEvidenceConditionsType):
+class SamlAuthzDecisionStatementEvidenceConditions(
+    SamlAuthzDecisionStatementEvidenceConditionsType
+):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
@@ -849,7 +855,7 @@ class SamlSignatureType:
             "name": "keyInfo",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     signature_value: Optional[bytes] = field(
         default=None,
@@ -858,7 +864,7 @@ class SamlSignatureType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "format": "base64",
-        }
+        },
     )
 
 
@@ -870,7 +876,7 @@ class SamlSubjectConfirmationType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     subject_condition: Optional[SamlConditionsType] = field(
         default=None,
@@ -878,14 +884,14 @@ class SamlSubjectConfirmationType:
             "name": "subjectCondition",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     recipient: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     in_response_to: Optional[str] = field(
         default=None,
@@ -893,14 +899,14 @@ class SamlSubjectConfirmationType:
             "name": "inResponseTo",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     address: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -936,7 +942,7 @@ class AddressesType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -955,7 +961,7 @@ class NhinTargetCommunitiesType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "min_occurs": 1,
-        }
+        },
     )
     use_spec_version: Optional[str] = field(
         default=None,
@@ -963,7 +969,7 @@ class NhinTargetCommunitiesType:
             "name": "useSpecVersion",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     exchange_name: Optional[str] = field(
         default=None,
@@ -971,7 +977,7 @@ class NhinTargetCommunitiesType:
             "name": "exchangeName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -1006,19 +1012,23 @@ class QualifiedSubjectIdentifiers(QualifiedSubjectIdentifiersType):
 
 
 @dataclass
-class SamlAuthzDecisionStatementEvidenceAssertion(SamlAuthzDecisionStatementEvidenceAssertionType):
+class SamlAuthzDecisionStatementEvidenceAssertion(
+    SamlAuthzDecisionStatementEvidenceAssertionType
+):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceType:
-    assertion: Optional[SamlAuthzDecisionStatementEvidenceAssertionType] = field(
+    assertion: Optional[
+        SamlAuthzDecisionStatementEvidenceAssertionType
+    ] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -1037,7 +1047,7 @@ class UserType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     user_name: Optional[str] = field(
         default=None,
@@ -1046,7 +1056,7 @@ class UserType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     org: Optional[HomeCommunityType] = field(
         default=None,
@@ -1054,7 +1064,7 @@ class UserType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     role_coded: Optional[CeType] = field(
         default=None,
@@ -1063,7 +1073,7 @@ class UserType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -1089,7 +1099,7 @@ class ConfigAssertionType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     config_instance: Optional[str] = field(
         default=None,
@@ -1098,7 +1108,7 @@ class ConfigAssertionType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     auth_method: Optional[str] = field(
         default=None,
@@ -1107,7 +1117,7 @@ class ConfigAssertionType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 
@@ -1118,7 +1128,9 @@ class NhinTargetCommunities(NhinTargetCommunitiesType):
 
 
 @dataclass
-class SamlAuthzDecisionStatementEvidence(SamlAuthzDecisionStatementEvidenceType):
+class SamlAuthzDecisionStatementEvidence(
+    SamlAuthzDecisionStatementEvidenceType
+):
     class Meta:
         namespace = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
@@ -1130,28 +1142,28 @@ class SamlAuthzDecisionStatementType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     resource: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     action: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     evidence: Optional[SamlAuthzDecisionStatementEvidenceType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -1168,7 +1180,7 @@ class AssertionType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     date_of_birth: Optional[str] = field(
         default=None,
@@ -1176,7 +1188,7 @@ class AssertionType:
             "name": "dateOfBirth",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     explanation_non_claimant_signature: Optional[str] = field(
         default=None,
@@ -1184,7 +1196,7 @@ class AssertionType:
             "name": "explanationNonClaimantSignature",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     have_second_witness_signature: Optional[bool] = field(
         default=None,
@@ -1192,7 +1204,7 @@ class AssertionType:
             "name": "haveSecondWitnessSignature",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     have_signature: Optional[bool] = field(
         default=None,
@@ -1200,7 +1212,7 @@ class AssertionType:
             "name": "haveSignature",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     have_witness_signature: Optional[bool] = field(
         default=None,
@@ -1208,7 +1220,7 @@ class AssertionType:
             "name": "haveWitnessSignature",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     home_community: Optional[HomeCommunityType] = field(
         default=None,
@@ -1217,7 +1229,7 @@ class AssertionType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     national_provider_id: Optional[str] = field(
         default=None,
@@ -1225,7 +1237,7 @@ class AssertionType:
             "name": "nationalProviderId",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     person_name: Optional[PersonNameType] = field(
         default=None,
@@ -1233,7 +1245,7 @@ class AssertionType:
             "name": "personName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     phone_number: Optional[PhoneType] = field(
         default=None,
@@ -1241,7 +1253,7 @@ class AssertionType:
             "name": "phoneNumber",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     second_witness_address: Optional[AddressType] = field(
         default=None,
@@ -1249,7 +1261,7 @@ class AssertionType:
             "name": "secondWitnessAddress",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     second_witness_name: Optional[PersonNameType] = field(
         default=None,
@@ -1257,7 +1269,7 @@ class AssertionType:
             "name": "secondWitnessName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     second_witness_phone: Optional[PhoneType] = field(
         default=None,
@@ -1265,7 +1277,7 @@ class AssertionType:
             "name": "secondWitnessPhone",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     ssn: Optional[str] = field(
         default=None,
@@ -1273,7 +1285,7 @@ class AssertionType:
             "name": "SSN",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     unique_patient_id: List[str] = field(
         default_factory=list,
@@ -1281,7 +1293,7 @@ class AssertionType:
             "name": "uniquePatientId",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     witness_address: Optional[AddressType] = field(
         default=None,
@@ -1289,7 +1301,7 @@ class AssertionType:
             "name": "witnessAddress",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     witness_name: Optional[PersonNameType] = field(
         default=None,
@@ -1297,7 +1309,7 @@ class AssertionType:
             "name": "witnessName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     witness_phone: Optional[PhoneType] = field(
         default=None,
@@ -1305,7 +1317,7 @@ class AssertionType:
             "name": "witnessPhone",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     user_info: Optional[UserType] = field(
         default=None,
@@ -1314,7 +1326,7 @@ class AssertionType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     authorized: Optional[bool] = field(
         default=None,
@@ -1322,7 +1334,7 @@ class AssertionType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     purpose_of_disclosure_coded: Optional[CeType] = field(
         default=None,
@@ -1331,7 +1343,7 @@ class AssertionType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     acp_attribute: Optional[str] = field(
         default=None,
@@ -1339,7 +1351,7 @@ class AssertionType:
             "name": "acpAttribute",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     instance_acp_attribute: Optional[str] = field(
         default=None,
@@ -1347,7 +1359,7 @@ class AssertionType:
             "name": "instanceAcpAttribute",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     saml_conditions: Optional[SamlConditionsType] = field(
         default=None,
@@ -1355,7 +1367,7 @@ class AssertionType:
             "name": "samlConditions",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     saml_authn_statement: Optional[SamlAuthnStatementType] = field(
         default=None,
@@ -1363,15 +1375,17 @@ class AssertionType:
             "name": "samlAuthnStatement",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
-    saml_authz_decision_statement: Optional[SamlAuthzDecisionStatementType] = field(
+    saml_authz_decision_statement: Optional[
+        SamlAuthzDecisionStatementType
+    ] = field(
         default=None,
         metadata={
             "name": "samlAuthzDecisionStatement",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     saml_signature: Optional[SamlSignatureType] = field(
         default=None,
@@ -1379,7 +1393,7 @@ class AssertionType:
             "name": "samlSignature",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     saml_issuer: Optional[SamlIssuerType] = field(
         default=None,
@@ -1387,7 +1401,7 @@ class AssertionType:
             "name": "samlIssuer",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     saml_subject_confirmations: List[SamlSubjectConfirmationType] = field(
         default_factory=list,
@@ -1395,7 +1409,7 @@ class AssertionType:
             "name": "samlSubjectConfirmations",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     message_id: Optional[str] = field(
         default=None,
@@ -1403,7 +1417,7 @@ class AssertionType:
             "name": "messageId",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     relates_to_list: List[str] = field(
         default_factory=list,
@@ -1411,7 +1425,7 @@ class AssertionType:
             "name": "relatesToList",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     implements_spec_version: Optional[str] = field(
         default=None,
@@ -1419,7 +1433,7 @@ class AssertionType:
             "name": "implementsSpecVersion",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     transaction_timeout: Optional[int] = field(
         default=None,
@@ -1427,7 +1441,7 @@ class AssertionType:
             "name": "transactionTimeout",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     keep_alive: Optional[str] = field(
         default=None,
@@ -1435,7 +1449,7 @@ class AssertionType:
             "name": "keepAlive",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     connectcustom_http_headers: List[ConnectcustomHttpHeadersType] = field(
         default_factory=list,
@@ -1443,7 +1457,7 @@ class AssertionType:
             "name": "CONNECTCustomHttpHeaders",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     signature_algorithm: Optional[str] = field(
         default=None,
@@ -1451,7 +1465,7 @@ class AssertionType:
             "name": "signatureAlgorithm",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
     digest_algorithm: Optional[str] = field(
         default=None,
@@ -1459,7 +1473,7 @@ class AssertionType:
             "name": "digestAlgorithm",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-        }
+        },
     )
 
 
@@ -1489,7 +1503,7 @@ class TokenCreationInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     action_name: Optional[str] = field(
         default=None,
@@ -1498,7 +1512,7 @@ class TokenCreationInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
     resource_name: Optional[str] = field(
         default=None,
@@ -1507,7 +1521,7 @@ class TokenCreationInfoType:
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
             "required": True,
-        }
+        },
     )
 
 

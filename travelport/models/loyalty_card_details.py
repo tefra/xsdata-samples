@@ -15,6 +15,7 @@ class LoyaltyCardDetails:
         Carrier Code
     priority_code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class LoyaltyCardDetails:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     priority_code: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class LoyaltyCardDetails:
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z0-9]{1,1}",
-        }
+        },
     )

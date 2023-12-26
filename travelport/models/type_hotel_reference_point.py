@@ -15,6 +15,7 @@ class TypeHotelReferencePoint:
     state
         State or Province Code.
     """
+
     class Meta:
         name = "typeHotelReferencePoint"
 
@@ -23,7 +24,7 @@ class TypeHotelReferencePoint:
         metadata={
             "required": True,
             "max_length": 30,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -31,7 +32,7 @@ class TypeHotelReferencePoint:
             "name": "Country",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     state: None | str = field(
         default=None,
@@ -39,5 +40,5 @@ class TypeHotelReferencePoint:
             "name": "State",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )

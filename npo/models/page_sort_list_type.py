@@ -16,5 +16,5 @@ class PageSortListType:
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
             "nillable": True,
-        }
+        },
     )

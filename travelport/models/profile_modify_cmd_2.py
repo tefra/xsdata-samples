@@ -38,6 +38,7 @@ class ProfileModifyCmd2:
     tag_add
     tag_delete
     """
+
     class Meta:
         name = "ProfileModifyCmd"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -47,68 +48,68 @@ class ProfileModifyCmd2:
         metadata={
             "name": "ProfileStatusUpdate",
             "type": "Element",
-        }
+        },
     )
     profile_link_add: None | ProfileLinkAdd2 = field(
         default=None,
         metadata={
             "name": "ProfileLinkAdd",
             "type": "Element",
-        }
+        },
     )
     profile_link_delete: None | ProfileLinkDelete2 = field(
         default=None,
         metadata={
             "name": "ProfileLinkDelete",
             "type": "Element",
-        }
+        },
     )
     profile_parent_add: None | ProfileParentAdd2 = field(
         default=None,
         metadata={
             "name": "ProfileParentAdd",
             "type": "Element",
-        }
+        },
     )
     profile_parent_delete: None | ProfileParentDelete2 = field(
         default=None,
         metadata={
             "name": "ProfileParentDelete",
             "type": "Element",
-        }
+        },
     )
     profile_data_add: None | ProfileDataAdd2 = field(
         default=None,
         metadata={
             "name": "ProfileDataAdd",
             "type": "Element",
-        }
+        },
     )
     profile_data_update: None | ProfileDataUpdate2 = field(
         default=None,
         metadata={
             "name": "ProfileDataUpdate",
             "type": "Element",
-        }
+        },
     )
     profile_data_delete: None | ProfileDataDelete2 = field(
         default=None,
         metadata={
             "name": "ProfileDataDelete",
             "type": "Element",
-        }
+        },
     )
     tag_add: None | TagAdd2 = field(
         default=None,
         metadata={
             "name": "TagAdd",
             "type": "Element",
-        }
+        },
     )
     tag_delete: None | TagDelete2 = field(
         default=None,
         metadata={
             "name": "TagDelete",
             "type": "Element",
-        }
+        },
     )

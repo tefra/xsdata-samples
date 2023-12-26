@@ -118,6 +118,7 @@ class FareInfo:
         Currency code and value for the approximate tax amount for this fare
         component.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -127,7 +128,7 @@ class FareInfo:
             "name": "FareTicketDesignator",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ticketing_code: list[TicketingCode] = field(
         default_factory=list,
@@ -135,7 +136,7 @@ class FareInfo:
             "name": "TicketingCode",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_surcharge: list[FareSurcharge] = field(
         default_factory=list,
@@ -143,7 +144,7 @@ class FareInfo:
             "name": "FareSurcharge",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     account_code: list[AccountCode1] = field(
         default_factory=list,
@@ -152,7 +153,7 @@ class FareInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     contract_code: list[ContractCode] = field(
         default_factory=list,
@@ -160,7 +161,7 @@ class FareInfo:
             "name": "ContractCode",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     endorsement: list[Endorsement1] = field(
         default_factory=list,
@@ -169,28 +170,28 @@ class FareInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     baggage_allowance: None | BaggageAllowance = field(
         default=None,
         metadata={
             "name": "BaggageAllowance",
             "type": "Element",
-        }
+        },
     )
     fare_rule_key: None | FareRuleKey = field(
         default=None,
         metadata={
             "name": "FareRuleKey",
             "type": "Element",
-        }
+        },
     )
     fare_rule_failure_info: None | FareRuleFailureInfo = field(
         default=None,
         metadata={
             "name": "FareRuleFailureInfo",
             "type": "Element",
-        }
+        },
     )
     fare_remark_ref: list[FareRemarkRef] = field(
         default_factory=list,
@@ -198,14 +199,14 @@ class FareInfo:
             "name": "FareRemarkRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     brand: None | Brand = field(
         default=None,
         metadata={
             "name": "Brand",
             "type": "Element",
-        }
+        },
     )
     commission: None | Commission1 = field(
         default=None,
@@ -213,35 +214,35 @@ class FareInfo:
             "name": "Commission",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     fare_attributes: None | str = field(
         default=None,
         metadata={
             "name": "FareAttributes",
             "type": "Element",
-        }
+        },
     )
     change_penalty: None | TypeFarePenalty = field(
         default=None,
         metadata={
             "name": "ChangePenalty",
             "type": "Element",
-        }
+        },
     )
     cancel_penalty: None | TypeFarePenalty = field(
         default=None,
         metadata={
             "name": "CancelPenalty",
             "type": "Element",
-        }
+        },
     )
     fare_rules_filter: None | FareRulesFilter = field(
         default=None,
         metadata={
             "name": "FareRulesFilter",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -249,7 +250,7 @@ class FareInfo:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     fare_basis: None | str = field(
         default=None,
@@ -257,7 +258,7 @@ class FareInfo:
             "name": "FareBasis",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     passenger_type_code: None | str = field(
         default=None,
@@ -267,7 +268,7 @@ class FareInfo:
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -277,7 +278,7 @@ class FareInfo:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -287,7 +288,7 @@ class FareInfo:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     effective_date: None | str = field(
         default=None,
@@ -295,42 +296,42 @@ class FareInfo:
             "name": "EffectiveDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     travel_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
-        }
+        },
     )
     departure_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     private_fare: None | TypePrivateFare = field(
         default=None,
         metadata={
             "name": "PrivateFare",
             "type": "Attribute",
-        }
+        },
     )
     negotiated_fare: None | bool = field(
         default=None,
         metadata={
             "name": "NegotiatedFare",
             "type": "Attribute",
-        }
+        },
     )
     tour_code: None | str = field(
         default=None,
@@ -338,28 +339,28 @@ class FareInfo:
             "name": "TourCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     waiver_code: None | str = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Attribute",
-        }
+        },
     )
     not_valid_before: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidBefore",
             "type": "Attribute",
-        }
+        },
     )
     not_valid_after: None | XmlDate = field(
         default=None,
         metadata={
             "name": "NotValidAfter",
             "type": "Attribute",
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -368,7 +369,7 @@ class FareInfo:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     fare_family: None | str = field(
         default=None,
@@ -377,14 +378,14 @@ class FareInfo:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 32,
-        }
+        },
     )
     promotional_fare: None | bool = field(
         default=None,
         metadata={
             "name": "PromotionalFare",
             "type": "Attribute",
-        }
+        },
     )
     car_code: None | str = field(
         default=None,
@@ -392,7 +393,7 @@ class FareInfo:
             "name": "CarCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     value_code: None | str = field(
         default=None,
@@ -400,42 +401,42 @@ class FareInfo:
             "name": "ValueCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     bulk_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
-        }
+        },
     )
     inclusive_tour: None | bool = field(
         default=None,
         metadata={
             "name": "InclusiveTour",
             "type": "Attribute",
-        }
+        },
     )
     value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
             "type": "Attribute",
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -444,12 +445,12 @@ class FareInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     tax_amount: None | str = field(
         default=None,
         metadata={
             "name": "TaxAmount",
             "type": "Attribute",
-        }
+        },
     )

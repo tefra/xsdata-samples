@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.air_pricing_modifiers import AirPricingModifiers
-from travelport.models.air_segment_pricing_modifiers import AirSegmentPricingModifiers
+from travelport.models.air_segment_pricing_modifiers import (
+    AirSegmentPricingModifiers,
+)
 from travelport.models.air_segment_ref import AirSegmentRef
 from travelport.models.booking_traveler_ref_1 import BookingTravelerRef1
 from travelport.models.type_element_status_1 import TypeElementStatus1
@@ -35,6 +37,7 @@ class AutoPricingInfo:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -44,7 +47,7 @@ class AutoPricingInfo:
             "name": "AirSegmentRef",
             "type": "Element",
             "max_occurs": 100,
-        }
+        },
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -53,14 +56,14 @@ class AutoPricingInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 100,
-        }
+        },
     )
     air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
         metadata={
             "name": "AirPricingModifiers",
             "type": "Element",
-        }
+        },
     )
     air_segment_pricing_modifiers: list[AirSegmentPricingModifiers] = field(
         default_factory=list,
@@ -68,7 +71,7 @@ class AutoPricingInfo:
             "name": "AirSegmentPricingModifiers",
             "type": "Element",
             "max_occurs": 100,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -76,7 +79,7 @@ class AutoPricingInfo:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     pricing_type: None | str = field(
         default=None,
@@ -84,7 +87,7 @@ class AutoPricingInfo:
             "name": "PricingType",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -92,19 +95,19 @@ class AutoPricingInfo:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

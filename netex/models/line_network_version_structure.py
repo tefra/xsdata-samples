@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .flexible_line_ref import FlexibleLineRef
 from .group_of_lines_ref import GroupOfLinesRef
@@ -22,7 +22,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -30,9 +30,11 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    network_ref_or_group_of_lines_ref: Optional[object] = field(
+    network_ref_or_group_of_lines_ref: Optional[
+        Union[NetworkRef, GroupOfLinesRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -48,9 +50,11 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[
+        Union[FlexibleLineRef, LineRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -66,12 +70,12 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     sections: Optional[LineSectionsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

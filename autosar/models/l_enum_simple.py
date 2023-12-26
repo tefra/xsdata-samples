@@ -143,6 +143,7 @@ class LEnumSimple(Enum):
     :cvar ZH: Chinese
     :cvar ZU: Zulu
     """
+
     AA = "AA"
     AB = "AB"
     AF = "AF"

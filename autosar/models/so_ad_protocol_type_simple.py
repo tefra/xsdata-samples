@@ -11,5 +11,6 @@ class SoAdProtocolTypeSimple(Enum):
         to send and receive datagrams over an IP network. It's used
         primarily for broadcasting messages over a network.
     """
+
     TCP = "TCP"
     UDP = "UDP"

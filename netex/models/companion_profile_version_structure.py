@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .companion_profile_ref import CompanionProfileRef
-from .companion_relationship_enumeration import CompanionRelationshipEnumeration
+from .companion_relationship_enumeration import (
+    CompanionRelationshipEnumeration,
+)
 from .discount_basis_enumeration import DiscountBasisEnumeration
 from .usage_parameter_ref_structure import UsageParameterRefStructure
 from .usage_parameter_version_structure import UsageParameterVersionStructure
@@ -21,9 +23,11 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "name": "ParentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    companion_profile_ref_or_user_profile_ref: Optional[object] = field(
+    companion_profile_ref_or_user_profile_ref: Optional[
+        Union[CompanionProfileRef, UserProfileRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -39,15 +43,17 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    companion_relationship_type: Optional[CompanionRelationshipEnumeration] = field(
+    companion_relationship_type: Optional[
+        CompanionRelationshipEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "CompanionRelationshipType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_number_of_persons: Optional[int] = field(
         default=None,
@@ -55,7 +61,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumNumberOfPersons",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_persons: Optional[int] = field(
         default=None,
@@ -63,7 +69,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberOfPersons",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     discount_basis: Optional[DiscountBasisEnumeration] = field(
         default=None,
@@ -71,5 +77,5 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "name": "DiscountBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

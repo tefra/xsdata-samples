@@ -18,6 +18,7 @@ class IncludeAddlBookingCodeInfo:
     secondary_carrier
         The secondary carrier code is required when type is secondary .
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,7 +28,7 @@ class IncludeAddlBookingCodeInfo:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     secondary_carrier: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class IncludeAddlBookingCodeInfo:
             "name": "SecondaryCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )

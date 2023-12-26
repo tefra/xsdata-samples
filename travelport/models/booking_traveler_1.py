@@ -75,6 +75,7 @@ class BookingTraveler1:
     name_number
         Host Name Number
     """
+
     class Meta:
         name = "BookingTraveler"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -85,7 +86,7 @@ class BookingTraveler1:
             "name": "BookingTravelerName",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     delivery_info: list[DeliveryInfo1] = field(
         default_factory=list,
@@ -93,7 +94,7 @@ class BookingTraveler1:
             "name": "DeliveryInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -101,7 +102,7 @@ class BookingTraveler1:
             "name": "PhoneNumber",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     email: list[Email1] = field(
         default_factory=list,
@@ -109,7 +110,7 @@ class BookingTraveler1:
             "name": "Email",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard1] = field(
         default_factory=list,
@@ -117,7 +118,7 @@ class BookingTraveler1:
             "name": "LoyaltyCard",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     discount_card: list[DiscountCard1] = field(
         default_factory=list,
@@ -125,7 +126,7 @@ class BookingTraveler1:
             "name": "DiscountCard",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
     ssr: list[Ssr1] = field(
         default_factory=list,
@@ -133,7 +134,7 @@ class BookingTraveler1:
             "name": "SSR",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     name_remark: list[NameRemark1] = field(
         default_factory=list,
@@ -141,7 +142,7 @@ class BookingTraveler1:
             "name": "NameRemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_seat_assignment: list[AirSeatAssignment1] = field(
         default_factory=list,
@@ -149,7 +150,7 @@ class BookingTraveler1:
             "name": "AirSeatAssignment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_seat_assignment: list[RailSeatAssignment1] = field(
         default_factory=list,
@@ -157,14 +158,14 @@ class BookingTraveler1:
             "name": "RailSeatAssignment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     emergency_info: None | str = field(
         default=None,
         metadata={
             "name": "EmergencyInfo",
             "type": "Element",
-        }
+        },
     )
     address: list[TypeStructuredAddress1] = field(
         default_factory=list,
@@ -172,7 +173,7 @@ class BookingTraveler1:
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     drivers_license: list[DriversLicense1] = field(
         default_factory=list,
@@ -180,7 +181,7 @@ class BookingTraveler1:
             "name": "DriversLicense",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     applied_profile: list[AppliedProfile1] = field(
         default_factory=list,
@@ -188,7 +189,7 @@ class BookingTraveler1:
             "name": "AppliedProfile",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     customized_name_data: list[CustomizedNameData1] = field(
         default_factory=list,
@@ -196,7 +197,7 @@ class BookingTraveler1:
             "name": "CustomizedNameData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     travel_compliance_data: list[TravelComplianceData1] = field(
         default_factory=list,
@@ -204,21 +205,21 @@ class BookingTraveler1:
             "name": "TravelComplianceData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     travel_info: None | TravelInfo1 = field(
         default=None,
         metadata={
             "name": "TravelInfo",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     traveler_type: None | str = field(
         default=None,
@@ -227,28 +228,28 @@ class BookingTraveler1:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Attribute",
-        }
+        },
     )
     vip: bool = field(
         default=False,
         metadata={
             "name": "VIP",
             "type": "Attribute",
-        }
+        },
     )
     dob: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DOB",
             "type": "Attribute",
-        }
+        },
     )
     gender: None | str = field(
         default=None,
@@ -257,7 +258,7 @@ class BookingTraveler1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     nationality: None | str = field(
         default=None,
@@ -265,26 +266,26 @@ class BookingTraveler1:
             "name": "Nationality",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     name_number: None | str = field(
         default=None,
         metadata={
             "name": "NameNumber",
             "type": "Attribute",
-        }
+        },
     )

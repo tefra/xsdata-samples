@@ -122,23 +122,23 @@ obj = Invoice(
         ublextension=[
             Ublextension(
                 extension_uri=ExtensionUri(
-                    value="dummy1"
+                    value='dummy1'
                 ),
                 extension_content=ExtensionContent(
                     other_element=AnyElement(
-                        qname="{urn:X-dummy1}AnExtension",
-                        text="&#10;       "
+                        qname='{urn:X-dummy1}AnExtension',
+                        text='\n       '
                     )
                 )
             ),
             Ublextension(
                 extension_uri=ExtensionUri(
-                    value="dummy2"
+                    value='dummy2'
                 ),
                 extension_content=ExtensionContent(
                     other_element=AnyElement(
-                        qname="{urn:X-dummy2}AnotherExtension",
-                        text="&#10;       "
+                        qname='{urn:X-dummy2}AnotherExtension',
+                        text='\n       '
                     )
                 )
             ),
@@ -150,11 +150,11 @@ obj = Invoice(
                                 signature=Signature(
                                     signed_info=SignedInfo(
                                         canonicalization_method=CanonicalizationMethod(
-                                            algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+                                            algorithm='http://www.w3.org/TR/2001/REC-xml-c14n-20010315',
                                             content=[]
                                         ),
                                         signature_method=SignatureMethod(
-                                            algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1",
+                                            algorithm='http://www.w3.org/2000/09/xmldsig#rsa-sha1',
                                             content=[]
                                         ),
                                         reference=[
@@ -162,59 +162,59 @@ obj = Invoice(
                                                 transforms=Transforms(
                                                     transform=[
                                                         Transform(
-                                                            algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116",
+                                                            algorithm='http://www.w3.org/TR/1999/REC-xpath-19991116',
                                                             content=[
                                                                 AnyElement(
-                                                                    qname="{http://www.w3.org/2000/09/xmldsig#}XPath",
-                                                                    text="&#10;            count(ancestor-or-self::sig:UBLDocumentSignatures |&#10;                  here()/ancestor::sig:UBLDocumentSignatures[1]) &gt;&#10;            count(ancestor-or-self::sig:UBLDocumentSignatures)&#10;          "
+                                                                    qname='{http://www.w3.org/2000/09/xmldsig#}XPath',
+                                                                    text='\n            count(ancestor-or-self::sig:UBLDocumentSignatures |\n                  here()/ancestor::sig:UBLDocumentSignatures[1]) >\n            count(ancestor-or-self::sig:UBLDocumentSignatures)\n          '
                                                                 ),
                                                             ]
                                                         ),
                                                     ]
                                                 ),
                                                 digest_method=DigestMethod(
-                                                    algorithm="http://www.w3.org/2000/09/xmldsig#sha1",
+                                                    algorithm='http://www.w3.org/2000/09/xmldsig#sha1',
                                                     content=[]
                                                 ),
-                                                digest_value=b"w\xb3\x98\x90\xf1\xf1\xfaO\x90\x83\xebA_d_w6\x81\xb9\x8b",
-                                                uri=""
+                                                digest_value=b'w\xb3\x98\x90\xf1\xf1\xfaO\x90\x83\xebA_d_w6\x81\xb9\x8b',
+                                                uri=''
                                             ),
                                             Reference(
                                                 digest_method=DigestMethod(
-                                                    algorithm="http://www.w3.org/2000/09/xmldsig#sha1",
+                                                    algorithm='http://www.w3.org/2000/09/xmldsig#sha1',
                                                     content=[]
                                                 ),
-                                                digest_value=b"\xad\xc5\xa5R\x81f\xbff\xdeK?!\xe4\x12\xa9\xc4\x1b\xff!d",
-                                                uri="#xades-test-s"
+                                                digest_value=b'\xad\xc5\xa5R\x81f\xbff\xdeK?!\xe4\x12\xa9\xc4\x1b\xff!d',
+                                                uri='#xades-test-s'
                                             ),
                                         ]
                                     ),
                                     signature_value=SignatureValue(
-                                        value=b"\x9dA\xa3\r("\x02,\xc2\x13\x89\xfcV\xc2a3P\xe5\x8dW\xfe\x96d*)\xc5\xe2\xb9i\x0c\xdb\x15\x1aDZ"\x8b\x85T\x8aK\xbb\x070\xb8#\xcc65\xb0\xe3\x86\xeb\x1e\xc6\xfcH\xcc\xdeHe\xff.c\x88\x17\x9f\x83\xab6\xe5\xaca\x94\xffS\xbd\xea\x8fD\xfc7}\xa3\xb0z^\xc9qL\xb2\xe5*\xe6H\x06\x9b\x83*+\x84\x1c#\xcf\xd5\x9d&*|c\x85\xff\x00\x89\x8bA\x833\xfb\x1cp\xb6\xc1\xee\xd2\xa0_\xc6",
-                                        id="addedSigVal"
+                                        value='nUGjDSgnAizCE4n8VsJhM1DljVf+lmQqKcXiuWkM2xUaRFoni4VUiku7BzC4I8w2\nNbDjhusexvxIzN5IZf8uY4gXn4OrNuWsYZT/U73qj0T8N32jsHpeyXFMsuUq5kgG\nm4MqK4QcI8/VnSYqfGOF/wCJi0GDM/sccLbB7tKgX8Y=',
+                                        id='addedSigVal'
                                     ),
                                     key_info=KeyInfo(
                                         content=[
                                             KeyValue(
                                                 content=[
                                                     RsakeyValue(
-                                                        modulus=b"\xb9q&\x83L\x93d\xddX\x7f\xb2.\xc07\x1f\xf8\xc8G\x8c\x82\xdc>\xd1WUm\xc5DZr\xe7)\x96\x0c9\xa89\xd7O&\xb1\xb7K\xac\xc7p&\xee\x91\xda\x89G\xe7\xc8\x1e\x1aFj\xe3"}6\xc2\xe2OE\xd1C`O@\xd2\xcf\x1a\x0e\x91S\x05\xc2\xff\xe9DB\xb6\xf2[\xe7\r\x90\xf5\xaci\xd2\xf4b\xads#\x8cU\xb1\x9e\xe4\x14\xa5\xe3\xd8\x81#\x9ca\xa5KfE\x8cUG\xf4@\xc5%&\n\xb7\xd9\x16\x83",
-                                                        exponent=b"\x01\x00\x01"
+                                                        modulus='\nuXEmg0yTZN1Yf7IuwDcf+MhHjILcPtFXVW3FRFpy5ymWDDmoOddPJrG3S6zHcCbu\nkdqJR+fIHhpGauMifTbC4k9F0UNgT0DSzxoOkVMFwv/pREK28lvnDZD1rGnS9GKt\ncyOMVbGe5BSl49iBI5xhpUtmRYxVR/RAxSUmCrfZFoM=\n',
+                                                        exponent='\nAQAB\n'
                                                     ),
                                                 ]
                                             ),
                                             X509Data(
                                                 x509_issuer_serial=[
                                                     X509IssuerSerialType(
-                                                        x509_issuer_name="CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US",
+                                                        x509_issuer_name='CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US',
                                                         x509_serial_number=17517295961972146475
                                                     ),
                                                 ],
                                                 x509_subject_name=[
-                                                    "CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US",
+                                                    'CN=UBL TC,OU=UBL Technical Committee,O=OASIS,L=Burlington,ST=Massachusetts,C=US',
                                                 ],
                                                 x509_certificate=[
-                                                    b"0\x82\x02q0\x82\x01\xda\x02\t\x00\xf3\x19\xef\xdd\xe6\xbc\x01+0\r\x06\t*\x86H\x86\xf7\r\x01\x01\x05\x05\x000}1\x0b0\t\x06\x03U\x04\x06\x13\x02US1\x160\x14\x06\x03U\x04\x08\x0c\rMassachusetts1\x130\x11\x06\x03U\x04\x07\x0c\nBurlington1\x0e0\x0c\x06\x03U\x04\n\x0c\x05OASIS1 0\x1e\x06\x03U\x04\x0b\x0c\x17UBL Technical Committee1\x0f0\r\x06\x03U\x04\x03\x0c\x06UBL TC0\x1e\x17\r130215185946Z\x17\r130317185946Z0}1\x0b0\t\x06\x03U\x04\x06\x13\x02US1\x160\x14\x06\x03U\x04\x08\x0c\rMassachusetts1\x130\x11\x06\x03U\x04\x07\x0c\nBurlington1\x0e0\x0c\x06\x03U\x04\n\x0c\x05OASIS1 0\x1e\x06\x03U\x04\x0b\x0c\x17UBL Technical Committee1\x0f0\r\x06\x03U\x04\x03\x0c\x06UBL TC0\x81\x9f0\r\x06\t*\x86H\x86\xf7\r\x01\x01\x01\x05\x00\x03\x81\x8d\x000\x81\x89\x02\x81\x81\x00\xb9q&\x83L\x93d\xddX\x7f\xb2.\xc07\x1f\xf8\xc8G\x8c\x82\xdc>\xd1WUm\xc5DZr\xe7)\x96\x0c9\xa89\xd7O&\xb1\xb7K\xac\xc7p&\xee\x91\xda\x89G\xe7\xc8\x1e\x1aFj\xe3"}6\xc2\xe2OE\xd1C`O@\xd2\xcf\x1a\x0e\x91S\x05\xc2\xff\xe9DB\xb6\xf2[\xe7\r\x90\xf5\xaci\xd2\xf4b\xads#\x8cU\xb1\x9e\xe4\x14\xa5\xe3\xd8\x81#\x9ca\xa5KfE\x8cUG\xf4@\xc5%&\n\xb7\xd9\x16\x83\x02\x03\x01\x00\x010\r\x06\t*\x86H\x86\xf7\r\x01\x01\x05\x05\x00\x03\x81\x81\x00V\xda\x9ePRPk\xae)\xa8&\t\x03\x17\xe5\x08gN(PW\xda\x9f\x0b\n\x8d\xcaz\xeag@/T\xbc\xb7N\xc6\xe4\xbc|\x08\xf3\xa3\x8d\x05@n\xbc\xef\xfe\xcd\x19\xc6w\xd3+\x15\x8f/\xec\xdd|\xaa\xc41K\x96~\xb4\xd6\xf28\xefH\xbd\xe8h\xa9\xdd\xc0E\xf1a\xc1\xe6U\"\xbd\xa4\xfdt\xd1\x18\x140AGm\xa0\x94I\xd8\xf5 <\xcb\xc1\x1bl\xef\x82\xcb\xc8H@L\xd4.\x85N\x92\xbf\xda%\xf7\x87\xe7\x0e",
+                                                    'MIICcTCCAdoCCQDzGe/d5rwBKzANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJV\nUzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UEBwwKQnVybGluZ3RvbjEO\nMAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNobmljYWwgQ29tbWl0dGVl\nMQ8wDQYDVQQDDAZVQkwgVEMwHhcNMTMwMjE1MTg1OTQ2WhcNMTMwMzE3MTg1OTQ2\nWjB9MQswCQYDVQQGEwJVUzEWMBQGA1UECAwNTWFzc2FjaHVzZXR0czETMBEGA1UE\nBwwKQnVybGluZ3RvbjEOMAwGA1UECgwFT0FTSVMxIDAeBgNVBAsMF1VCTCBUZWNo\nbmljYWwgQ29tbWl0dGVlMQ8wDQYDVQQDDAZVQkwgVEMwgZ8wDQYJKoZIhvcNAQEB\nBQADgY0AMIGJAoGBALlxJoNMk2TdWH+yLsA3H/jIR4yC3D7RV1VtxURacucplgw5\nqDnXTyaxt0usx3Am7pHaiUfnyB4aRmrjIn02wuJPRdFDYE9A0s8aDpFTBcL/6URC\ntvJb5w2Q9axp0vRirXMjjFWxnuQUpePYgSOcYaVLZkWMVUf0QMUlJgq32RaDAgMB\nAAEwDQYJKoZIhvcNAQEFBQADgYEAVtqeUFJQa64pqCYJAxflCGdOKFBX2p8LCo3K\neupnQC9UvLdOxuS8fAjzo40FQG687/7NGcZ30ysVjy/s3XyqxDFLln601vI470i9\n6Gip3cBF8WHB5lUnvaT9dNEYFDBBR22glEnY9SA8y8EbbO+Cy8hIQEzULoVOkr/a\nJfeH5w4=',
                                                 ]
                                             ),
                                         ]
@@ -227,7 +227,7 @@ obj = Invoice(
                                                         signed_signature_properties=SignedSignaturePropertiesType(
                                                             signing_time=XmlDateTime(2010, 11, 26, 18, 0, 0, 0, 0)
                                                         ),
-                                                        id="xades-test-s"
+                                                        id='xades-test-s'
                                                     ),
                                                     unsigned_properties=UnsignedPropertiesType(
                                                         unsigned_signature_properties=UnsignedSignaturePropertiesType(
@@ -236,21 +236,21 @@ obj = Invoice(
                                                                     xmltime_stamp=[
                                                                         AnyType(
                                                                             content=[
-                                                                                "2010-11-26T18:00:00Z",
+                                                                                '2010-11-26T18:00:00Z',
                                                                             ]
                                                                         ),
                                                                     ]
                                                                 ),
                                                             ]
                                                         ),
-                                                        id="xades-test-u"
+                                                        id='xades-test-u'
                                                     ),
-                                                    target="#addedSig"
+                                                    target='#addedSig'
                                                 ),
                                             ]
                                         ),
                                     ],
-                                    id="addedSig"
+                                    id='addedSig'
                                 )
                             ),
                         ]
@@ -260,56 +260,56 @@ obj = Invoice(
         ]
     ),
     ublversion_id=UblversionId(
-        value="2.0"
+        value='2.0'
     ),
     customization_id=CustomizationId(
-        value="urn:oasis:names:specification:ubl:xpath:Invoice-2.0:sbs-1.0-draft"
+        value='urn:oasis:names:specification:ubl:xpath:Invoice-2.0:sbs-1.0-draft'
     ),
     profile_id=ProfileId(
-        value="bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-invoice-notification-draft"
+        value='bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-invoice-notification-draft'
     ),
     id=Id(
-        value="A00095678"
+        value='A00095678'
     ),
     copy_indicator=False,
     uuid=Uuid(
-        value="849FBBCE-E081-40B4-906C-94C5FF9D1AC3"
+        value='849FBBCE-E081-40B4-906C-94C5FF9D1AC3'
     ),
     issue_date=XmlDate(2005, 6, 21),
     invoice_type_code=InvoiceTypeCode(
-        value="SalesInvoice"
+        value='SalesInvoice'
     ),
     note=[
         Note(
-            value="sample"
+            value='sample'
         ),
     ],
     tax_point_date=XmlDate(2005, 6, 21),
     order_reference=OrderReference(
         id=Id(
-            value="AEG012345"
+            value='AEG012345'
         ),
         sales_order_id=SalesOrderId(
-            value="CON0095678"
+            value='CON0095678'
         ),
         uuid=Uuid(
-            value="6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1"
+            value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
         ),
         issue_date=XmlDate(2005, 6, 20)
     ),
     signature=[
         Signature(
             id=Id(
-                value="urn:oasis:names:specification:ubl:signature:Invoice"
+                value='urn:oasis:names:specification:ubl:signature:Invoice'
             ),
             signature_method=SignatureMethod(
-                value="urn:oasis:names:specification:ubl:dsig:enveloped"
+                value='urn:oasis:names:specification:ubl:dsig:enveloped'
             ),
             signatory_party=SignatoryParty(
                 party_identification=[
                     PartyIdentification(
                         id=Id(
-                            value="MyParty"
+                            value='MyParty'
                         )
                     ),
                 ]
@@ -318,169 +318,169 @@ obj = Invoice(
     ],
     accounting_supplier_party=AccountingSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="CO001"
+            value='CO001'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Consortial"
+                        value='Consortial'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Busy Street"
+                    value='Busy Street'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Farthing"
+                    value='Farthing'
                 ),
                 postal_zone=PostalZone(
-                    value="AA99 1BB"
+                    value='AA99 1BB'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Heremouthshire"
+                    value='Heremouthshire'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="The Roundabout"
+                            value='The Roundabout'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     registration_name=RegistrationName(
-                        value="Farthing Purchasing Consortium"
+                        value='Farthing Purchasing Consortium'
                     ),
                     company_id=CompanyId(
-                        value="175 269 2355"
+                        value='175 269 2355'
                     ),
                     exemption_reason=[
                         ExemptionReason(
-                            value="N/A"
+                            value='N/A'
                         ),
                     ],
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="VAT"
+                            value='VAT'
                         ),
                         tax_type_code=TaxTypeCode(
-                            value="VAT"
+                            value='VAT'
                         )
                     )
                 ),
             ],
             contact=Contact(
                 name=Name(
-                    value="Mrs Bouquet"
+                    value='Mrs Bouquet'
                 ),
                 telephone=Telephone(
-                    value="0158 1233714"
+                    value='0158 1233714'
                 ),
                 telefax=Telefax(
-                    value="0158 1233856"
+                    value='0158 1233856'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="bouquet@fpconsortial.co.uk"
+                    value='bouquet@fpconsortial.co.uk'
                 )
             )
         )
     ),
     accounting_customer_party=AccountingCustomerParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="XFB01"
+            value='XFB01'
         ),
         supplier_assigned_account_id=SupplierAssignedAccountId(
-            value="GT00978567"
+            value='GT00978567'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="IYT Corporation"
+                        value='IYT Corporation'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     registration_name=RegistrationName(
-                        value="Bridgtow District Council"
+                        value='Bridgtow District Council'
                     ),
                     company_id=CompanyId(
-                        value="12356478"
+                        value='12356478'
                     ),
                     exemption_reason=[
                         ExemptionReason(
-                            value="Local Authority"
+                            value='Local Authority'
                         ),
                     ],
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="UK VAT"
+                            value='UK VAT'
                         ),
                         tax_type_code=TaxTypeCode(
-                            value="VAT"
+                            value='VAT'
                         )
                     )
                 ),
             ],
             contact=Contact(
                 name=Name(
-                    value="Mr Fred Churchill"
+                    value='Mr Fred Churchill'
                 ),
                 telephone=Telephone(
-                    value="0127 2653214"
+                    value='0127 2653214'
                 ),
                 telefax=Telefax(
-                    value="0127 2653215"
+                    value='0127 2653215'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="fred@iytcorporation.gov.uk"
+                    value='fred@iytcorporation.gov.uk'
                 )
             )
         )
@@ -491,33 +491,33 @@ obj = Invoice(
             actual_delivery_time=XmlTime(11, 30, 0, 0, 0),
             delivery_address=DeliveryAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             )
@@ -526,105 +526,105 @@ obj = Invoice(
     payment_means=[
         PaymentMeans(
             payment_means_code=PaymentMeansCode(
-                value="20"
+                value='20'
             ),
             payment_due_date=XmlDate(2005, 7, 21),
             payee_financial_account=PayeeFinancialAccount(
                 id=Id(
-                    value="12345678"
+                    value='12345678'
                 ),
                 name=Name(
-                    value="Farthing Purchasing Consortium"
+                    value='Farthing Purchasing Consortium'
                 ),
                 account_type_code=AccountTypeCode(
-                    value="Current"
+                    value='Current'
                 ),
                 currency_code=CurrencyCode(
-                    value="GBP"
+                    value='GBP'
                 ),
                 financial_institution_branch=FinancialInstitutionBranch(
                     id=Id(
-                        value="10-26-58"
+                        value='10-26-58'
                     ),
                     name=Name(
-                        value="Open Bank Ltd, Bridgstow Branch "
+                        value='Open Bank Ltd, Bridgstow Branch '
                     ),
                     financial_institution=FinancialInstitution(
                         id=Id(
-                            value="10-26-58"
+                            value='10-26-58'
                         ),
                         name=Name(
-                            value="Open Bank Ltd"
+                            value='Open Bank Ltd'
                         ),
                         address=Address(
                             street_name=StreetName(
-                                value="City Road"
+                                value='City Road'
                             ),
                             building_name=BuildingName(
-                                value="Banking House"
+                                value='Banking House'
                             ),
                             building_number=BuildingNumber(
-                                value="12"
+                                value='12'
                             ),
                             city_name=CityName(
-                                value="London"
+                                value='London'
                             ),
                             postal_zone=PostalZone(
-                                value="AQ1 6TH"
+                                value='AQ1 6TH'
                             ),
                             country_subentity=CountrySubentity(
-                                value="London&#10;"
+                                value='London\n'
                             ),
                             address_line=[
                                 AddressLine(
                                     line=Line(
-                                        value="5th Floor"
+                                        value='5th Floor'
                                     )
                                 ),
                             ],
                             country=Country(
                                 identification_code=IdentificationCode(
-                                    value="GB"
+                                    value='GB'
                                 )
                             )
                         )
                     ),
                     address=Address(
                         street_name=StreetName(
-                            value="Busy Street"
+                            value='Busy Street'
                         ),
                         building_name=BuildingName(
-                            value="The Mall"
+                            value='The Mall'
                         ),
                         building_number=BuildingNumber(
-                            value="152"
+                            value='152'
                         ),
                         city_name=CityName(
-                            value="Farthing"
+                            value='Farthing'
                         ),
                         postal_zone=PostalZone(
-                            value="AA99 1BB"
+                            value='AA99 1BB'
                         ),
                         country_subentity=CountrySubentity(
-                            value="Heremouthshire"
+                            value='Heremouthshire'
                         ),
                         address_line=[
                             AddressLine(
                                 line=Line(
-                                    value="West Wing"
+                                    value='West Wing'
                                 )
                             ),
                         ],
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="GB"
+                                value='GB'
                             )
                         )
                     )
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             )
@@ -634,7 +634,7 @@ obj = Invoice(
         PaymentTerms(
             note=[
                 Note(
-                    value="Payable within 1 calendar month from the invoice date"
+                    value='Payable within 1 calendar month from the invoice date'
                 ),
             ]
         ),
@@ -643,44 +643,44 @@ obj = Invoice(
         AllowanceCharge(
             charge_indicator=False,
             allowance_charge_reason_code=AllowanceChargeReasonCode(
-                value="17"
+                value='17'
             ),
             multiplier_factor_numeric=MultiplierFactorNumeric(
-                value=Decimal("0.10")
+                value=Decimal('0.10')
             ),
             amount=Amount(
-                value=Decimal("10.00"),
-                currency_id="GBP"
+                value=Decimal('10.00'),
+                currency_id='GBP'
             )
         ),
     ],
     tax_total=[
         TaxTotal(
             tax_amount=TaxAmount(
-                value=Decimal("17.50"),
-                currency_id="GBP"
+                value=Decimal('17.50'),
+                currency_id='GBP'
             ),
             tax_evidence_indicator=True,
             tax_subtotal=[
                 TaxSubtotal(
                     taxable_amount=TaxableAmount(
-                        value=Decimal("100.00"),
-                        currency_id="GBP"
+                        value=Decimal('100.00'),
+                        currency_id='GBP'
                     ),
                     tax_amount=TaxAmount(
-                        value=Decimal("17.50"),
-                        currency_id="GBP"
+                        value=Decimal('17.50'),
+                        currency_id='GBP'
                     ),
                     tax_category=TaxCategory(
                         id=Id(
-                            value="A"
+                            value='A'
                         ),
                         tax_scheme=TaxScheme(
                             id=Id(
-                                value="UK VAT"
+                                value='UK VAT'
                             ),
                             tax_type_code=TaxTypeCode(
-                                value="VAT"
+                                value='VAT'
                             )
                         )
                     )
@@ -690,55 +690,55 @@ obj = Invoice(
     ],
     legal_monetary_total=LegalMonetaryTotal(
         line_extension_amount=LineExtensionAmount(
-            value=Decimal("100.00"),
-            currency_id="GBP"
+            value=Decimal('100.00'),
+            currency_id='GBP'
         ),
         tax_exclusive_amount=TaxExclusiveAmount(
-            value=Decimal("90.00"),
-            currency_id="GBP"
+            value=Decimal('90.00'),
+            currency_id='GBP'
         ),
         allowance_total_amount=AllowanceTotalAmount(
-            value=Decimal("10.00"),
-            currency_id="GBP"
+            value=Decimal('10.00'),
+            currency_id='GBP'
         ),
         payable_amount=PayableAmount(
-            value=Decimal("107.50"),
-            currency_id="GBP"
+            value=Decimal('107.50'),
+            currency_id='GBP'
         )
     ),
     invoice_line=[
         InvoiceLine(
             id=Id(
-                value="A"
+                value='A'
             ),
             invoiced_quantity=InvoicedQuantity(
-                value=Decimal("100"),
-                unit_code="KGM"
+                value=Decimal('100'),
+                unit_code='KGM'
             ),
             line_extension_amount=LineExtensionAmount(
-                value=Decimal("100.00"),
-                currency_id="GBP"
+                value=Decimal('100.00'),
+                currency_id='GBP'
             ),
             order_line_reference=[
                 OrderLineReference(
                     line_id=LineId(
-                        value="1"
+                        value='1'
                     ),
                     sales_order_line_id=SalesOrderLineId(
-                        value="A"
+                        value='A'
                     ),
                     line_status_code=LineStatusCode(
-                        value="NoStatus"
+                        value='NoStatus'
                     ),
                     order_reference=OrderReference(
                         id=Id(
-                            value="AEG012345"
+                            value='AEG012345'
                         ),
                         sales_order_id=SalesOrderId(
-                            value="CON0095678"
+                            value='CON0095678'
                         ),
                         uuid=Uuid(
-                            value="6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1"
+                            value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
                         ),
                         issue_date=XmlDate(2005, 6, 20)
                     )
@@ -747,33 +747,33 @@ obj = Invoice(
             tax_total=[
                 TaxTotal(
                     tax_amount=TaxAmount(
-                        value=Decimal("17.50"),
-                        currency_id="GBP"
+                        value=Decimal('17.50'),
+                        currency_id='GBP'
                     ),
                     tax_evidence_indicator=True,
                     tax_subtotal=[
                         TaxSubtotal(
                             taxable_amount=TaxableAmount(
-                                value=Decimal("100.00"),
-                                currency_id="GBP"
+                                value=Decimal('100.00'),
+                                currency_id='GBP'
                             ),
                             tax_amount=TaxAmount(
-                                value=Decimal("17.50"),
-                                currency_id="GBP"
+                                value=Decimal('17.50'),
+                                currency_id='GBP'
                             ),
                             tax_category=TaxCategory(
                                 id=Id(
-                                    value="A"
+                                    value='A'
                                 ),
                                 percent=Percent(
-                                    value=Decimal("17.5")
+                                    value=Decimal('17.5')
                                 ),
                                 tax_scheme=TaxScheme(
                                     id=Id(
-                                        value="UK VAT"
+                                        value='UK VAT'
                                     ),
                                     tax_type_code=TaxTypeCode(
-                                        value="VAT"
+                                        value='VAT'
                                     )
                                 )
                             )
@@ -784,27 +784,27 @@ obj = Invoice(
             item=Item(
                 description=[
                     Description(
-                        value="Acme beeswax"
+                        value='Acme beeswax'
                     ),
                 ],
                 name=Name(
-                    value="beeswax"
+                    value='beeswax'
                 ),
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="6578489"
+                        value='6578489'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="17589683"
+                        value='17589683'
                     )
                 ),
                 item_instance=[
                     ItemInstance(
                         lot_identification=LotIdentification(
                             lot_number_id=LotNumberId(
-                                value="546378239"
+                                value='546378239'
                             ),
                             expiry_date=XmlDate(2010, 1, 1)
                         )
@@ -813,12 +813,12 @@ obj = Invoice(
             ),
             price=Price(
                 price_amount=PriceAmount(
-                    value=Decimal("1.00"),
-                    currency_id="GBP"
+                    value=Decimal('1.00'),
+                    currency_id='GBP'
                 ),
                 base_quantity=BaseQuantity(
-                    value=Decimal("1"),
-                    unit_code="KGM"
+                    value=Decimal('1'),
+                    unit_code='KGM'
                 )
             )
         ),

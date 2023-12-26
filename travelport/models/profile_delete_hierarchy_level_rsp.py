@@ -11,6 +11,7 @@ class ProfileDeleteHierarchyLevelRsp(BaseRsp5):
     """
     Response with the updated hierarchy structure.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -20,5 +21,5 @@ class ProfileDeleteHierarchyLevelRsp(BaseRsp5):
             "name": "HierarchyLevel",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

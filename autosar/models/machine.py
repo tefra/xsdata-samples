@@ -27,7 +27,9 @@ from .short_name_fragment import ShortNameFragment
 from .tag_with_optional_value import TagWithOptionalValue
 from .time_sync_module_instantiation import TimeSyncModuleInstantiation
 from .tls_deployment import TlsDeployment
-from .trusted_platform_executable_launch_behavior_enum import TrustedPlatformExecutableLaunchBehaviorEnum
+from .trusted_platform_executable_launch_behavior_enum import (
+    TrustedPlatformExecutableLaunchBehaviorEnum,
+)
 from .ucm_module_instantiation import UcmModuleInstantiation
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -111,6 +113,7 @@ class Machine:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MACHINE"
 
@@ -121,7 +124,7 @@ class Machine:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["Machine.ShortNameFragments"] = field(
         default=None,
@@ -129,7 +132,7 @@ class Machine:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -137,7 +140,7 @@ class Machine:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -145,7 +148,7 @@ class Machine:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -153,7 +156,7 @@ class Machine:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -161,7 +164,7 @@ class Machine:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -169,7 +172,7 @@ class Machine:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["Machine.Annotations"] = field(
         default=None,
@@ -177,7 +180,7 @@ class Machine:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -185,7 +188,7 @@ class Machine:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_application_timeout: Optional[EnterExitTimeout] = field(
         default=None,
@@ -193,7 +196,7 @@ class Machine:
             "name": "DEFAULT-APPLICATION-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     environment_variables: Optional["Machine.EnvironmentVariables"] = field(
         default=None,
@@ -201,7 +204,7 @@ class Machine:
             "name": "ENVIRONMENT-VARIABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     machine_design_ref: Optional["Machine.MachineDesignRef"] = field(
         default=None,
@@ -209,7 +212,7 @@ class Machine:
             "name": "MACHINE-DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     module_instantiations: Optional["Machine.ModuleInstantiations"] = field(
         default=None,
@@ -217,7 +220,7 @@ class Machine:
             "name": "MODULE-INSTANTIATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     processors: Optional["Machine.Processors"] = field(
         default=None,
@@ -225,30 +228,34 @@ class Machine:
             "name": "PROCESSORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    secure_communication_deployments: Optional["Machine.SecureCommunicationDeployments"] = field(
+    secure_communication_deployments: Optional[
+        "Machine.SecureCommunicationDeployments"
+    ] = field(
         default=None,
         metadata={
             "name": "SECURE-COMMUNICATION-DEPLOYMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    trusted_platform_executable_launch_behavior: Optional[TrustedPlatformExecutableLaunchBehaviorEnum] = field(
+    trusted_platform_executable_launch_behavior: Optional[
+        TrustedPlatformExecutableLaunchBehaviorEnum
+    ] = field(
         default=None,
         metadata={
             "name": "TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -256,14 +263,14 @@ class Machine:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -274,7 +281,7 @@ class Machine:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -285,7 +292,7 @@ class Machine:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -296,7 +303,7 @@ class Machine:
                 "name": "TAG-WITH-OPTIONAL-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -307,7 +314,7 @@ class Machine:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -318,7 +325,7 @@ class Machine:
                 "name": "CRYPTO-MODULE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         do_ip_instantiation: List[DoIpInstantiation] = field(
             default_factory=list,
@@ -326,7 +333,7 @@ class Machine:
                 "name": "DO-IP-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         generic_module_instantiation: List[GenericModuleInstantiation] = field(
             default_factory=list,
@@ -334,7 +341,7 @@ class Machine:
                 "name": "GENERIC-MODULE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         iam_module_instantiation: List[IamModuleInstantiation] = field(
             default_factory=list,
@@ -342,7 +349,7 @@ class Machine:
                 "name": "IAM-MODULE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         idsm_module_instantiation: List[IdsmModuleInstantiation] = field(
             default_factory=list,
@@ -350,7 +357,7 @@ class Machine:
                 "name": "IDSM-MODULE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         log_and_trace_instantiation: List[LogAndTraceInstantiation] = field(
             default_factory=list,
@@ -358,7 +365,7 @@ class Machine:
                 "name": "LOG-AND-TRACE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         nm_instantiation: List[NmInstantiation] = field(
             default_factory=list,
@@ -366,7 +373,7 @@ class Machine:
                 "name": "NM-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         os_module_instantiation: List[OsModuleInstantiation] = field(
             default_factory=list,
@@ -374,15 +381,17 @@ class Machine:
                 "name": "OS-MODULE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        time_sync_module_instantiation: List[TimeSyncModuleInstantiation] = field(
+        time_sync_module_instantiation: List[
+            TimeSyncModuleInstantiation
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TIME-SYNC-MODULE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ucm_module_instantiation: List[UcmModuleInstantiation] = field(
             default_factory=list,
@@ -390,7 +399,7 @@ class Machine:
                 "name": "UCM-MODULE-INSTANTIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -401,7 +410,7 @@ class Machine:
                 "name": "PROCESSOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -412,7 +421,7 @@ class Machine:
                 "name": "SEC-OC-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         tls_deployment: List[TlsDeployment] = field(
             default_factory=list,
@@ -420,5 +429,5 @@ class Machine:
                 "name": "TLS-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

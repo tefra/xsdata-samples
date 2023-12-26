@@ -14,6 +14,7 @@ class HandleInvalidEnumSimple(Enum):
     :cvar REPLACE: Replace a received invalidValue. The replacement
         value is specified by the initValue.
     """
+
     DONT_INVALIDATE = "DONT-INVALIDATE"
     EXTERNAL_REPLACEMENT = "EXTERNAL-REPLACEMENT"
     KEEP = "KEEP"

@@ -35,6 +35,7 @@ class OptionJourneyDetails:
         The flight number under which the marketing carrier is marketing
         carrier is marketing this flight
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -45,14 +46,14 @@ class OptionJourneyDetails:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     pick_up_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "PickUpTime",
             "type": "Attribute",
-        }
+        },
     )
     pick_up_description: None | str = field(
         default=None,
@@ -61,7 +62,7 @@ class OptionJourneyDetails:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )
     pick_up_carrier: None | str = field(
         default=None,
@@ -69,7 +70,7 @@ class OptionJourneyDetails:
             "name": "PickUpCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     pick_up_flight_number: None | str = field(
         default=None,
@@ -77,7 +78,7 @@ class OptionJourneyDetails:
             "name": "PickUpFlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     return_location: None | str = field(
         default=None,
@@ -86,14 +87,14 @@ class OptionJourneyDetails:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     return_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "ReturnTime",
             "type": "Attribute",
-        }
+        },
     )
     return_description: None | str = field(
         default=None,
@@ -102,7 +103,7 @@ class OptionJourneyDetails:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )
     return_carrier: None | str = field(
         default=None,
@@ -110,7 +111,7 @@ class OptionJourneyDetails:
             "name": "ReturnCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     return_flight_number: None | str = field(
         default=None,
@@ -118,5 +119,5 @@ class OptionJourneyDetails:
             "name": "ReturnFlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )

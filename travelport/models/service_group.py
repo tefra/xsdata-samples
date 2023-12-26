@@ -18,6 +18,7 @@ class ServiceGroup:
         The Service Group Code of the Ancillary Service.  Providers: 1G, 1V,
         1P, ACH
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,7 +28,7 @@ class ServiceGroup:
             "name": "ServiceSubGroup",
             "type": "Element",
             "max_occurs": 15,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class ServiceGroup:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

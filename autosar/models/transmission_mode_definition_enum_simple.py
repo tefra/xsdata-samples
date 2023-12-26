@@ -15,6 +15,7 @@ class TransmissionModeDefinitionEnumSimple(Enum):
         arbitrary manner (minimumSendInterval to be respected, if
         defined).
     """
+
     CYCLIC = "CYCLIC"
     CYCLIC_AND_ON_CHANGE = "CYCLIC-AND-ON-CHANGE"
     TRIGGERED = "TRIGGERED"

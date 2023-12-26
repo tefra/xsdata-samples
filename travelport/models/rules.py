@@ -12,6 +12,7 @@ class Rules:
     rules_text
         Rules text
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class Rules:
         metadata={
             "name": "RulesText",
             "type": "Element",
-        }
+        },
     )

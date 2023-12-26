@@ -10,5 +10,6 @@ class SwcToEcuMappingConstraintTypeSimple(Enum):
     :cvar EXCLUSIVE: Exclusive mapping means that the SW-C cannot be
         mapped to the ECUs it is excluded from.
     """
+
     DEDICATED = "DEDICATED"
     EXCLUSIVE = "EXCLUSIVE"

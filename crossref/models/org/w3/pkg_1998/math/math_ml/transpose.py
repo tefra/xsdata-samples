@@ -15,5 +15,5 @@ class Transpose:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

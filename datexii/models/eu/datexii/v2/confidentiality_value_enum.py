@@ -21,9 +21,16 @@ class ConfidentialityValueEnum(Enum):
         Restricted for use only by authorities, traffic operators,
         publishers (service providers) and variable message signs.
     """
+
     INTERNAL_USE = "internalUse"
     NO_RESTRICTION = "noRestriction"
     RESTRICTED_TO_AUTHORITIES = "restrictedToAuthorities"
-    RESTRICTED_TO_AUTHORITIES_AND_TRAFFIC_OPERATORS = "restrictedToAuthoritiesAndTrafficOperators"
-    RESTRICTED_TO_AUTHORITIES_TRAFFIC_OPERATORS_AND_PUBLISHERS = "restrictedToAuthoritiesTrafficOperatorsAndPublishers"
-    RESTRICTED_TO_AUTHORITIES_TRAFFIC_OPERATORS_AND_VMS = "restrictedToAuthoritiesTrafficOperatorsAndVms"
+    RESTRICTED_TO_AUTHORITIES_AND_TRAFFIC_OPERATORS = (
+        "restrictedToAuthoritiesAndTrafficOperators"
+    )
+    RESTRICTED_TO_AUTHORITIES_TRAFFIC_OPERATORS_AND_PUBLISHERS = (
+        "restrictedToAuthoritiesTrafficOperatorsAndPublishers"
+    )
+    RESTRICTED_TO_AUTHORITIES_TRAFFIC_OPERATORS_AND_VMS = (
+        "restrictedToAuthoritiesTrafficOperatorsAndVms"
+    )

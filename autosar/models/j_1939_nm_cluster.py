@@ -9,7 +9,9 @@ from .annotation import (
 from .boolean import Boolean
 from .can_nm_node import CanNmNode
 from .category_string import CategoryString
-from .communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
+from .communication_cluster_subtypes_enum import (
+    CommunicationClusterSubtypesEnum,
+)
 from .flexray_nm_node import FlexrayNmNode
 from .identifier import Identifier
 from .j_1939_nm_node import J1939NmNode
@@ -112,6 +114,7 @@ class J1939NmCluster:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "J-1939-NM-CLUSTER"
 
@@ -122,15 +125,17 @@ class J1939NmCluster:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["J1939NmCluster.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "J1939NmCluster.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -138,7 +143,7 @@ class J1939NmCluster:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -146,7 +151,7 @@ class J1939NmCluster:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -154,7 +159,7 @@ class J1939NmCluster:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -162,7 +167,7 @@ class J1939NmCluster:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -170,7 +175,7 @@ class J1939NmCluster:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["J1939NmCluster.Annotations"] = field(
         default=None,
@@ -178,15 +183,17 @@ class J1939NmCluster:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_cluster_ref: Optional["J1939NmCluster.CommunicationClusterRef"] = field(
+    communication_cluster_ref: Optional[
+        "J1939NmCluster.CommunicationClusterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_channel_id: Optional[PositiveInteger] = field(
         default=None,
@@ -194,7 +201,7 @@ class J1939NmCluster:
             "name": "NM-CHANNEL-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_channel_sleep_master: Optional[Boolean] = field(
         default=None,
@@ -202,7 +209,7 @@ class J1939NmCluster:
             "name": "NM-CHANNEL-SLEEP-MASTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_nodes: Optional["J1939NmCluster.NmNodes"] = field(
         default=None,
@@ -210,7 +217,7 @@ class J1939NmCluster:
             "name": "NM-NODES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_node_detection_enabled: Optional[Boolean] = field(
         default=None,
@@ -218,7 +225,7 @@ class J1939NmCluster:
             "name": "NM-NODE-DETECTION-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_node_id_enabled: Optional[Boolean] = field(
         default=None,
@@ -226,7 +233,7 @@ class J1939NmCluster:
             "name": "NM-NODE-ID-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_pnc_participation: Optional[Boolean] = field(
         default=None,
@@ -234,7 +241,7 @@ class J1939NmCluster:
             "name": "NM-PNC-PARTICIPATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_repeat_msg_ind_enabled: Optional[Boolean] = field(
         default=None,
@@ -242,7 +249,7 @@ class J1939NmCluster:
             "name": "NM-REPEAT-MSG-IND-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_synchronizing_network: Optional[Boolean] = field(
         default=None,
@@ -250,7 +257,7 @@ class J1939NmCluster:
             "name": "NM-SYNCHRONIZING-NETWORK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -258,7 +265,7 @@ class J1939NmCluster:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     address_claim_enabled: Optional[Boolean] = field(
         default=None,
@@ -266,14 +273,14 @@ class J1939NmCluster:
             "name": "ADDRESS-CLAIM-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -281,14 +288,14 @@ class J1939NmCluster:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -299,7 +306,7 @@ class J1939NmCluster:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -310,7 +317,7 @@ class J1939NmCluster:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -321,7 +328,7 @@ class J1939NmCluster:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -332,7 +339,7 @@ class J1939NmCluster:
                 "name": "CAN-NM-NODE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_nm_node: List[FlexrayNmNode] = field(
             default_factory=list,
@@ -340,7 +347,7 @@ class J1939NmCluster:
                 "name": "FLEXRAY-NM-NODE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         j_1939_nm_node: List[J1939NmNode] = field(
             default_factory=list,
@@ -348,7 +355,7 @@ class J1939NmCluster:
                 "name": "J-1939-NM-NODE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         udp_nm_node: List[UdpNmNode] = field(
             default_factory=list,
@@ -356,5 +363,5 @@ class J1939NmCluster:
                 "name": "UDP-NM-NODE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

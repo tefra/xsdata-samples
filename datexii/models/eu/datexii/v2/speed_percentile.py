@@ -20,6 +20,7 @@ class SpeedPercentile:
         percentage of vehicles in the measurement set are travelling at.
     :ivar speed_percentile_extension:
     """
+
     vehicle_percentage: Optional[PercentageValue] = field(
         default=None,
         metadata={
@@ -27,7 +28,7 @@ class SpeedPercentile:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     speed_percentile: Optional[SpeedValue] = field(
         default=None,
@@ -36,7 +37,7 @@ class SpeedPercentile:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     speed_percentile_extension: Optional[ExtensionType] = field(
         default=None,
@@ -44,5 +45,5 @@ class SpeedPercentile:
             "name": "speedPercentileExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

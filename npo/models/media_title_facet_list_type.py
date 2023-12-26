@@ -18,12 +18,12 @@ class MediaTitleFacetListType(MediaFacetType):
             "name": "subSearch",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     title: list[MediaTitleFacetType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

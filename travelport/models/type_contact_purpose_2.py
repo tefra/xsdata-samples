@@ -9,6 +9,7 @@ class TypeContactPurpose2(Enum):
 
     Examples include business, persona., etc.
     """
+
     ALL = "All"
     BUSINESS = "Business"
     PERSONAL = "Personal"

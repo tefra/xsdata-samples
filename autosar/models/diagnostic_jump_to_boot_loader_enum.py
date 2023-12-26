@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .diagnostic_jump_to_boot_loader_enum_simple import DiagnosticJumpToBootLoaderEnumSimple
+from .diagnostic_jump_to_boot_loader_enum_simple import (
+    DiagnosticJumpToBootLoaderEnumSimple,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -22,6 +24,7 @@ class DiagnosticJumpToBootLoaderEnum:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-JUMP-TO-BOOT-LOADER-ENUM"
 
@@ -29,14 +32,14 @@ class DiagnosticJumpToBootLoaderEnum:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -44,5 +47,5 @@ class DiagnosticJumpToBootLoaderEnum:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

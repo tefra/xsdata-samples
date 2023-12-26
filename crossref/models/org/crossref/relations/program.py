@@ -10,6 +10,7 @@ class Program:
     """
     Wrapper element for relationship metadata.
     """
+
     class Meta:
         name = "program"
         namespace = "http://www.crossref.org/relations.xsd"
@@ -18,12 +19,12 @@ class Program:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     name: str = field(
         init=False,
         default="relations",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

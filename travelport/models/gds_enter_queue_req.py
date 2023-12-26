@@ -21,6 +21,7 @@ class GdsEnterQueueReq(BaseReq1):
         If providerLocatorCode is not specified then the first PNR on the
         Queue will be retrieved.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -31,7 +32,7 @@ class GdsEnterQueueReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class GdsEnterQueueReq(BaseReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -50,7 +51,7 @@ class GdsEnterQueueReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -59,5 +60,5 @@ class GdsEnterQueueReq(BaseReq1):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )

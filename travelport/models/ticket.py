@@ -33,6 +33,7 @@ class Ticket:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -43,7 +44,7 @@ class Ticket:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 4,
-        }
+        },
     )
     ticket_endorsement: list[TicketEndorsement] = field(
         default_factory=list,
@@ -51,7 +52,7 @@ class Ticket:
             "name": "TicketEndorsement",
             "type": "Element",
             "max_occurs": 6,
-        }
+        },
     )
     tour_code: list[TourCode] = field(
         default_factory=list,
@@ -59,7 +60,7 @@ class Ticket:
             "name": "TourCode",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     exchanged_ticket_info: list[ExchangedTicketInfo] = field(
         default_factory=list,
@@ -67,14 +68,14 @@ class Ticket:
             "name": "ExchangedTicketInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
@@ -83,26 +84,26 @@ class Ticket:
             "type": "Attribute",
             "required": True,
             "length": 13,
-        }
+        },
     )
     ticket_status: None | TypeTicketStatus = field(
         default=None,
         metadata={
             "name": "TicketStatus",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

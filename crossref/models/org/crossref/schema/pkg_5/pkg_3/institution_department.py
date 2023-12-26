@@ -8,6 +8,7 @@ class InstitutionDepartment:
     """
     The department within an institution.
     """
+
     class Meta:
         name = "institution_department"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class InstitutionDepartment:
         metadata={
             "min_length": 2,
             "max_length": 255,
-        }
+        },
     )

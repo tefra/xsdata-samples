@@ -26,7 +26,7 @@ class Mll:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -48,7 +48,7 @@ class Mll:
                     "type": Type["Ind"],
                 },
             ),
-        }
+        },
     )
 
 
@@ -61,19 +61,19 @@ class Ref:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     val: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     lst: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     cel: str = field(
         metadata={
@@ -101,7 +101,7 @@ class Ref:
                     "type": Sncref,
                 },
             ),
-        }
+        },
     )
 
 
@@ -130,7 +130,7 @@ class Ind:
                     "type": Mll,
                 },
             ),
-        }
+        },
     )
 
 
@@ -144,7 +144,7 @@ class Refgrp:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -158,7 +158,7 @@ class Refgrp:
                     "type": Ref,
                 },
             ),
-        }
+        },
     )
 
 
@@ -171,13 +171,13 @@ class Trd:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     fnt: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -207,7 +207,7 @@ class Trd:
                     "type": str,
                 },
             ),
-        }
+        },
     )
 
 
@@ -234,7 +234,7 @@ class Trdgrp:
                     "type": Trd,
                 },
             ),
-        }
+        },
     )
 
 
@@ -247,7 +247,7 @@ class Ekz:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -337,7 +337,7 @@ class Ekz:
                     "type": str,
                 },
             ),
-        }
+        },
     )
 
 
@@ -350,7 +350,7 @@ class Klr:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -432,5 +432,5 @@ class Klr:
                     "type": str,
                 },
             ),
-        }
+        },
     )

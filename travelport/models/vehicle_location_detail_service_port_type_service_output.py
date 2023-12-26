@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.error_info_1 import ErrorInfo1
-from travelport.models.vehicle_location_detail_rsp import VehicleLocationDetailRsp
+from travelport.models.vehicle_location_detail_rsp import (
+    VehicleLocationDetailRsp,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -12,12 +14,14 @@ class VehicleLocationDetailServicePortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | VehicleLocationDetailServicePortTypeServiceOutput.Body = field(
-        default=None,
-        metadata={
-            "name": "Body",
-            "type": "Element",
-        }
+    body: None | VehicleLocationDetailServicePortTypeServiceOutput.Body = (
+        field(
+            default=None,
+            metadata={
+                "name": "Body",
+                "type": "Element",
+            },
+        )
     )
 
     @dataclass
@@ -28,14 +32,14 @@ class VehicleLocationDetailServicePortTypeServiceOutput:
                 "name": "VehicleLocationDetailRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            }
+            },
         )
         fault: None | VehicleLocationDetailServicePortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +49,28 @@ class VehicleLocationDetailServicePortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | VehicleLocationDetailServicePortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +81,5 @@ class VehicleLocationDetailServicePortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

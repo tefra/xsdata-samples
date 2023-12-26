@@ -12,6 +12,7 @@ class TypeSavedTripNote:
     text
         Custom free Text related to SavedTrip.
     """
+
     class Meta:
         name = "typeSavedTripNote"
 
@@ -22,5 +23,5 @@ class TypeSavedTripNote:
             "type": "Attribute",
             "required": True,
             "max_length": 333,
-        }
+        },
     )

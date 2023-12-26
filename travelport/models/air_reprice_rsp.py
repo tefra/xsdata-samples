@@ -18,7 +18,7 @@ class AirRepriceRsp(BaseRsp1):
             "name": "AirPricingSolution",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     fare_rule: list[FareRule] = field(
         default_factory=list,
@@ -26,5 +26,5 @@ class AirRepriceRsp(BaseRsp1):
             "name": "FareRule",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

@@ -35,6 +35,7 @@ class EquipmentOrSystemTypeEnum(Enum):
     :cvar VARIABLE_MESSAGE_SIGNS: Variable message signs.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ANPR_CAMERAS = "anprCameras"
     AUTOMATED_TOLL_SYSTEM = "automatedTollSystem"
     CCTV_CAMERAS = "cctvCameras"

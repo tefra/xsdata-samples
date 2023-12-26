@@ -18,7 +18,7 @@ class TimingPointVersionStructure(PointVersionStructure):
             "name": "TimingPointStatus",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     allowed_for_wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -26,5 +26,5 @@ class TimingPointVersionStructure(PointVersionStructure):
             "name": "AllowedForWaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

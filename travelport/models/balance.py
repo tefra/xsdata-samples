@@ -21,6 +21,7 @@ class Balance:
     check_due_amount
         Balance due via personal check
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -29,26 +30,26 @@ class Balance:
         metadata={
             "name": "DueDate",
             "type": "Attribute",
-        }
+        },
     )
     received_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ReceivedDate",
             "type": "Attribute",
-        }
+        },
     )
     credit_card_due_amount: None | str = field(
         default=None,
         metadata={
             "name": "CreditCardDueAmount",
             "type": "Attribute",
-        }
+        },
     )
     check_due_amount: None | str = field(
         default=None,
         metadata={
             "name": "CheckDueAmount",
             "type": "Attribute",
-        }
+        },
     )

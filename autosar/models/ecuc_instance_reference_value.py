@@ -5,7 +5,9 @@ from .annotation import (
     VariationPoint,
 )
 from .any_instance_ref import AnyInstanceRef
-from .ecuc_abstract_reference_def_subtypes_enum import EcucAbstractReferenceDefSubtypesEnum
+from .ecuc_abstract_reference_def_subtypes_enum import (
+    EcucAbstractReferenceDefSubtypesEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 
@@ -41,6 +43,7 @@ class EcucInstanceReferenceValue:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECUC-INSTANCE-REFERENCE-VALUE"
 
@@ -50,15 +53,17 @@ class EcucInstanceReferenceValue:
             "name": "INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    definition_ref: Optional["EcucInstanceReferenceValue.DefinitionRef"] = field(
+    definition_ref: Optional[
+        "EcucInstanceReferenceValue.DefinitionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EcucInstanceReferenceValue.Annotations"] = field(
         default=None,
@@ -66,7 +71,7 @@ class EcucInstanceReferenceValue:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -74,7 +79,7 @@ class EcucInstanceReferenceValue:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     value_iref: Optional[AnyInstanceRef] = field(
         default=None,
@@ -82,14 +87,14 @@ class EcucInstanceReferenceValue:
             "name": "VALUE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -97,7 +102,7 @@ class EcucInstanceReferenceValue:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -108,7 +113,7 @@ class EcucInstanceReferenceValue:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -119,5 +124,5 @@ class EcucInstanceReferenceValue:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

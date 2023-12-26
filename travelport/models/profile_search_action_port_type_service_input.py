@@ -16,7 +16,7 @@ class ProfileSearchActionPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class ProfileSearchActionPortTypeServiceInput:
                 "name": "ProfileSearchActionReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            }
+            },
         )

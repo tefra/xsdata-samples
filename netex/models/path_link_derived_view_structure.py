@@ -16,7 +16,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "name": "HideLink",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     hide_destination: Optional[bool] = field(
         default=None,
@@ -24,7 +24,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "name": "HideDestination",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     show_entrance_separately: Optional[bool] = field(
         default=None,
@@ -32,7 +32,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "name": "ShowEntranceSeparately",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     show_exit_separately: Optional[bool] = field(
         default=None,
@@ -40,7 +40,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "name": "ShowExitSeparately",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     show_heading_separately: Optional[bool] = field(
         default=None,
@@ -48,5 +48,5 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "name": "ShowHeadingSeparately",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

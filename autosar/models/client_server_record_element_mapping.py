@@ -1,8 +1,14 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
-from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
-from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .application_record_element_subtypes_enum import (
+    ApplicationRecordElementSubtypesEnum,
+)
+from .argument_data_prototype_subtypes_enum import (
+    ArgumentDataPrototypeSubtypesEnum,
+)
+from .implementation_data_type_element_subtypes_enum import (
+    ImplementationDataTypeElementSubtypesEnum,
+)
 from .indexed_array_element import IndexedArrayElement
 from .ref import Ref
 from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
@@ -53,47 +59,56 @@ class ClientServerRecordElementMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-RECORD-ELEMENT-MAPPING"
 
-    application_record_element_ref: Optional["ClientServerRecordElementMapping.ApplicationRecordElementRef"] = field(
+    application_record_element_ref: Optional[
+        "ClientServerRecordElementMapping.ApplicationRecordElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLICATION-RECORD-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    complex_type_mapping: Optional["ClientServerRecordElementMapping.ComplexTypeMapping"] = field(
+    complex_type_mapping: Optional[
+        "ClientServerRecordElementMapping.ComplexTypeMapping"
+    ] = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    implementation_record_element_ref: Optional["ClientServerRecordElementMapping.ImplementationRecordElementRef"] = field(
+    implementation_record_element_ref: Optional[
+        "ClientServerRecordElementMapping.ImplementationRecordElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-RECORD-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    system_signal_ref: Optional["ClientServerRecordElementMapping.SystemSignalRef"] = field(
+    system_signal_ref: Optional[
+        "ClientServerRecordElementMapping.SystemSignalRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -101,7 +116,7 @@ class ClientServerRecordElementMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -112,26 +127,30 @@ class ClientServerRecordElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ComplexTypeMapping:
-        client_server_array_type_mapping: Optional["ClientServerArrayTypeMapping"] = field(
+        client_server_array_type_mapping: Optional[
+            "ClientServerArrayTypeMapping"
+        ] = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-ARRAY-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        client_server_record_type_mapping: Optional["ClientServerRecordTypeMapping"] = field(
+        client_server_record_type_mapping: Optional[
+            "ClientServerRecordTypeMapping"
+        ] = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-RECORD-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -142,7 +161,7 @@ class ClientServerRecordElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -153,7 +172,7 @@ class ClientServerRecordElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
 
@@ -180,31 +199,36 @@ class ClientServerRecordTypeMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-RECORD-TYPE-MAPPING"
 
-    argument_ref: Optional["ClientServerRecordTypeMapping.ArgumentRef"] = field(
+    argument_ref: Optional[
+        "ClientServerRecordTypeMapping.ArgumentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ARGUMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    record_element_mappings: Optional["ClientServerRecordTypeMapping.RecordElementMappings"] = field(
+    record_element_mappings: Optional[
+        "ClientServerRecordTypeMapping.RecordElementMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "RECORD-ELEMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -212,7 +236,7 @@ class ClientServerRecordTypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -223,18 +247,20 @@ class ClientServerRecordTypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RecordElementMappings:
-        client_server_record_element_mapping: List[ClientServerRecordElementMapping] = field(
+        client_server_record_element_mapping: List[
+            ClientServerRecordElementMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-RECORD-ELEMENT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -273,16 +299,19 @@ class ClientServerArrayElementMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-ARRAY-ELEMENT-MAPPING"
 
-    complex_type_mapping: Optional["ClientServerArrayElementMapping.ComplexTypeMapping"] = field(
+    complex_type_mapping: Optional[
+        "ClientServerArrayElementMapping.ComplexTypeMapping"
+    ] = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     indexed_array_element: Optional[IndexedArrayElement] = field(
         default=None,
@@ -290,22 +319,24 @@ class ClientServerArrayElementMapping:
             "name": "INDEXED-ARRAY-ELEMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    system_signal_ref: Optional["ClientServerArrayElementMapping.SystemSignalRef"] = field(
+    system_signal_ref: Optional[
+        "ClientServerArrayElementMapping.SystemSignalRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -313,26 +344,30 @@ class ClientServerArrayElementMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class ComplexTypeMapping:
-        client_server_array_type_mapping: Optional["ClientServerArrayTypeMapping"] = field(
+        client_server_array_type_mapping: Optional[
+            "ClientServerArrayTypeMapping"
+        ] = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-ARRAY-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        client_server_record_type_mapping: Optional[ClientServerRecordTypeMapping] = field(
+        client_server_record_type_mapping: Optional[
+            ClientServerRecordTypeMapping
+        ] = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-RECORD-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -343,7 +378,7 @@ class ClientServerArrayElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
 
@@ -370,6 +405,7 @@ class ClientServerArrayTypeMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-ARRAY-TYPE-MAPPING"
 
@@ -379,22 +415,24 @@ class ClientServerArrayTypeMapping:
             "name": "ARGUMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    array_element_mappings: Optional["ClientServerArrayTypeMapping.ArrayElementMappings"] = field(
+    array_element_mappings: Optional[
+        "ClientServerArrayTypeMapping.ArrayElementMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "ARRAY-ELEMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -402,7 +440,7 @@ class ClientServerArrayTypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -413,16 +451,18 @@ class ClientServerArrayTypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ArrayElementMappings:
-        client_server_array_element_mapping: List[ClientServerArrayElementMapping] = field(
+        client_server_array_element_mapping: List[
+            ClientServerArrayElementMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-ARRAY-ELEMENT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

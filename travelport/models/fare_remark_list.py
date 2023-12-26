@@ -10,6 +10,7 @@ class FareRemarkList:
     """
     The shared object list of FareInfos.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class FareRemarkList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

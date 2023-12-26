@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.itinerary import Itinerary
-from datexii.models.eu.datexii.v2.location_contained_in_itinerary import LocationContainedInItinerary
+from datexii.models.eu.datexii.v2.location_contained_in_itinerary import (
+    LocationContainedInItinerary,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -19,13 +21,16 @@ class ItineraryByIndexedLocations(Itinerary):
         itinerary).
     :ivar itinerary_by_indexed_locations_extension:
     """
-    location_contained_in_itinerary: List[LocationContainedInItinerary] = field(
+
+    location_contained_in_itinerary: List[
+        LocationContainedInItinerary
+    ] = field(
         default_factory=list,
         metadata={
             "name": "locationContainedInItinerary",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     itinerary_by_indexed_locations_extension: Optional[ExtensionType] = field(
         default=None,
@@ -33,5 +38,5 @@ class ItineraryByIndexedLocations(Itinerary):
             "name": "itineraryByIndexedLocationsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

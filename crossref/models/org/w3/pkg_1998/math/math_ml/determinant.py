@@ -15,5 +15,5 @@ class Determinant:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

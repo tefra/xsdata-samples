@@ -14,5 +14,5 @@ class ExtensionsStructure2:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

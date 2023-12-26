@@ -11,6 +11,7 @@ class Row:
     """
     Identifies the row of in a seat map.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,7 +21,7 @@ class Row:
             "name": "Facility",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     characteristic: list[Characteristic3] = field(
         default_factory=list,
@@ -28,7 +29,7 @@ class Row:
             "name": "Characteristic",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     number: None | int = field(
         default=None,
@@ -36,12 +37,12 @@ class Row:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     search_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "SearchTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

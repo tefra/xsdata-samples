@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.profile_create_hierarchy_level_port_type_service_input import ProfileCreateHierarchyLevelPortTypeServiceInput
-from travelport.models.profile_create_hierarchy_level_port_type_service_output import ProfileCreateHierarchyLevelPortTypeServiceOutput
+from travelport.models.profile_create_hierarchy_level_port_type_service_input import (
+    ProfileCreateHierarchyLevelPortTypeServiceInput,
+)
+from travelport.models.profile_create_hierarchy_level_port_type_service_output import (
+    ProfileCreateHierarchyLevelPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

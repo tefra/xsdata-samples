@@ -5,8 +5,12 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.group_of_locations import GroupOfLocations
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.parking_route import ParkingRoute
-from datexii.models.eu.datexii.v2.parking_route_direction_enum import ParkingRouteDirectionEnum
-from datexii.models.eu.datexii.v2.parking_route_type_enum import ParkingRouteTypeEnum
+from datexii.models.eu.datexii.v2.parking_route_direction_enum import (
+    ParkingRouteDirectionEnum,
+)
+from datexii.models.eu.datexii.v2.parking_route_type_enum import (
+    ParkingRouteTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -37,13 +41,14 @@ class ParkingRouteDetails(ParkingRoute):
     :ivar id:
     :ivar version:
     """
+
     parking_route_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "parkingRouteName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_route_type: Optional[ParkingRouteTypeEnum] = field(
         default=None,
@@ -51,7 +56,7 @@ class ParkingRouteDetails(ParkingRoute):
             "name": "parkingRouteType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dynamic_route_management: Optional[bool] = field(
         default=None,
@@ -59,7 +64,7 @@ class ParkingRouteDetails(ParkingRoute):
             "name": "dynamicRouteManagement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_route_icon_index: Optional[str] = field(
         default=None,
@@ -68,7 +73,7 @@ class ParkingRouteDetails(ParkingRoute):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     parking_route_direction: Optional[DirectionEnum] = field(
         default=None,
@@ -76,7 +81,7 @@ class ParkingRouteDetails(ParkingRoute):
             "name": "parkingRouteDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_route_direction2: Optional[ParkingRouteDirectionEnum] = field(
         default=None,
@@ -84,7 +89,7 @@ class ParkingRouteDetails(ParkingRoute):
             "name": "parkingRouteDirection2",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_locations: Optional[GroupOfLocations] = field(
         default=None,
@@ -92,7 +97,7 @@ class ParkingRouteDetails(ParkingRoute):
             "name": "groupOfLocations",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_route_details_extension: Optional[ExtensionType] = field(
         default=None,
@@ -100,19 +105,19 @@ class ParkingRouteDetails(ParkingRoute):
             "name": "parkingRouteDetailsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

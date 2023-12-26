@@ -3,11 +3,19 @@ from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.physical_mounting_enum import PhysicalMountingEnum
+from datexii.models.eu.datexii.v2.physical_mounting_enum import (
+    PhysicalMountingEnum,
+)
 from datexii.models.eu.datexii.v2.url_link import UrlLink
-from datexii.models.eu.datexii.v2.vms_managed_logical_location import VmsManagedLogicalLocation
-from datexii.models.eu.datexii.v2.vms_record_pictogram_display_area_index_vms_pictogram_display_characteristics import VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics
-from datexii.models.eu.datexii.v2.vms_text_display_characteristics import VmsTextDisplayCharacteristics
+from datexii.models.eu.datexii.v2.vms_managed_logical_location import (
+    VmsManagedLogicalLocation,
+)
+from datexii.models.eu.datexii.v2.vms_record_pictogram_display_area_index_vms_pictogram_display_characteristics import (
+    VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics,
+)
+from datexii.models.eu.datexii.v2.vms_text_display_characteristics import (
+    VmsTextDisplayCharacteristics,
+)
 from datexii.models.eu.datexii.v2.vms_type_enum import VmsTypeEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -56,13 +64,14 @@ class VmsRecord:
         the "painted" static background on the VMS can be obtained.
     :ivar vms_record_extension:
     """
+
     vms_description: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "vmsDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_owner: Optional[MultilingualString] = field(
         default=None,
@@ -70,7 +79,7 @@ class VmsRecord:
             "name": "vmsOwner",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_physical_mounting: Optional[PhysicalMountingEnum] = field(
         default=None,
@@ -78,7 +87,7 @@ class VmsRecord:
             "name": "vmsPhysicalMounting",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_type: Optional[VmsTypeEnum] = field(
         default=None,
@@ -86,7 +95,7 @@ class VmsRecord:
             "name": "vmsType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_type_code: Optional[str] = field(
         default=None,
@@ -95,7 +104,7 @@ class VmsRecord:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     number_of_pictogram_display_areas: Optional[int] = field(
         default=None,
@@ -103,7 +112,7 @@ class VmsRecord:
             "name": "numberOfPictogramDisplayAreas",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dynamically_configurable_display_areas: Optional[bool] = field(
         default=None,
@@ -111,7 +120,7 @@ class VmsRecord:
             "name": "dynamicallyConfigurableDisplayAreas",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_display_height: Optional[float] = field(
         default=None,
@@ -119,7 +128,7 @@ class VmsRecord:
             "name": "vmsDisplayHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_display_width: Optional[float] = field(
         default=None,
@@ -127,7 +136,7 @@ class VmsRecord:
             "name": "vmsDisplayWidth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_height_above_roadway: Optional[float] = field(
         default=None,
@@ -135,23 +144,27 @@ class VmsRecord:
             "name": "vmsHeightAboveRoadway",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    vms_text_display_characteristics: Optional[VmsTextDisplayCharacteristics] = field(
+    vms_text_display_characteristics: Optional[
+        VmsTextDisplayCharacteristics
+    ] = field(
         default=None,
         metadata={
             "name": "vmsTextDisplayCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    vms_pictogram_display_characteristics: List[VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics] = field(
+    vms_pictogram_display_characteristics: List[
+        VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics
+    ] = field(
         default_factory=list,
         metadata={
             "name": "vmsPictogramDisplayCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_location: Optional[Location] = field(
         default=None,
@@ -159,7 +172,7 @@ class VmsRecord:
             "name": "vmsLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_managed_logical_location: Optional[VmsManagedLogicalLocation] = field(
         default=None,
@@ -167,7 +180,7 @@ class VmsRecord:
             "name": "vmsManagedLogicalLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     background_image_url: Optional[UrlLink] = field(
         default=None,
@@ -175,7 +188,7 @@ class VmsRecord:
             "name": "backgroundImageUrl",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_record_extension: Optional[ExtensionType] = field(
         default=None,
@@ -183,5 +196,5 @@ class VmsRecord:
             "name": "vmsRecordExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

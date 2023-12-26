@@ -18,19 +18,19 @@ class TDataObjectReference(TFlowElement):
             "name": "dataState",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     item_subject_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "itemSubjectRef",
             "type": "Attribute",
-        }
+        },
     )
     data_object_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "dataObjectRef",
             "type": "Attribute",
-        }
+        },
     )

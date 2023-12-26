@@ -12,6 +12,7 @@ class SignalServiceTranslationControlEnumSimple(Enum):
     :cvar TRANSLATION_START: Defines the start of service control at
         translation start.
     """
+
     PARTIAL_NETWORK = "PARTIAL-NETWORK"
     SERVICE_DISCOVERY = "SERVICE-DISCOVERY"
     TRANSLATION_START = "TRANSLATION-START"

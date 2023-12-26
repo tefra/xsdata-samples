@@ -85,6 +85,7 @@ class CanTpConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-TP-CONNECTION"
 
@@ -94,7 +95,7 @@ class CanTpConnection:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     addressing_format: Optional[CanTpAddressingFormatType] = field(
         default=None,
@@ -102,7 +103,7 @@ class CanTpConnection:
             "name": "ADDRESSING-FORMAT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_tp_channel_ref: Optional["CanTpConnection.CanTpChannelRef"] = field(
         default=None,
@@ -110,7 +111,7 @@ class CanTpConnection:
             "name": "CAN-TP-CHANNEL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cancellation: Optional[Boolean] = field(
         default=None,
@@ -118,7 +119,7 @@ class CanTpConnection:
             "name": "CANCELLATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_pdu_ref: Optional["CanTpConnection.DataPduRef"] = field(
         default=None,
@@ -126,15 +127,17 @@ class CanTpConnection:
             "name": "DATA-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    flow_control_pdu_ref: Optional["CanTpConnection.FlowControlPduRef"] = field(
+    flow_control_pdu_ref: Optional[
+        "CanTpConnection.FlowControlPduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FLOW-CONTROL-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_block_size: Optional[Integer] = field(
         default=None,
@@ -142,7 +145,7 @@ class CanTpConnection:
             "name": "MAX-BLOCK-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     multicast_ref: Optional["CanTpConnection.MulticastRef"] = field(
         default=None,
@@ -150,7 +153,7 @@ class CanTpConnection:
             "name": "MULTICAST-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     padding_activation: Optional[Boolean] = field(
         default=None,
@@ -158,7 +161,7 @@ class CanTpConnection:
             "name": "PADDING-ACTIVATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     receiver_refs: Optional["CanTpConnection.ReceiverRefs"] = field(
         default=None,
@@ -166,7 +169,7 @@ class CanTpConnection:
             "name": "RECEIVER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ta_type: Optional[NetworkTargetAddressType] = field(
         default=None,
@@ -174,7 +177,7 @@ class CanTpConnection:
             "name": "TA-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_br: Optional[TimeValue] = field(
         default=None,
@@ -182,7 +185,7 @@ class CanTpConnection:
             "name": "TIMEOUT-BR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_bs: Optional[TimeValue] = field(
         default=None,
@@ -190,7 +193,7 @@ class CanTpConnection:
             "name": "TIMEOUT-BS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_cr: Optional[TimeValue] = field(
         default=None,
@@ -198,7 +201,7 @@ class CanTpConnection:
             "name": "TIMEOUT-CR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_cs: Optional[TimeValue] = field(
         default=None,
@@ -206,7 +209,7 @@ class CanTpConnection:
             "name": "TIMEOUT-CS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_sdu_ref: Optional["CanTpConnection.TpSduRef"] = field(
         default=None,
@@ -214,7 +217,7 @@ class CanTpConnection:
             "name": "TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmit_cancellation: Optional[Boolean] = field(
         default=None,
@@ -222,7 +225,7 @@ class CanTpConnection:
             "name": "TRANSMIT-CANCELLATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmitter_ref: Optional["CanTpConnection.TransmitterRef"] = field(
         default=None,
@@ -230,7 +233,7 @@ class CanTpConnection:
             "name": "TRANSMITTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -238,14 +241,14 @@ class CanTpConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -253,7 +256,7 @@ class CanTpConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -264,7 +267,7 @@ class CanTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -275,7 +278,7 @@ class CanTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -286,7 +289,7 @@ class CanTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -297,7 +300,7 @@ class CanTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -308,7 +311,7 @@ class CanTpConnection:
                 "name": "RECEIVER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -319,7 +322,7 @@ class CanTpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -330,7 +333,7 @@ class CanTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -341,5 +344,5 @@ class CanTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

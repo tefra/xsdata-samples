@@ -15,6 +15,7 @@ class Target:
         the client.
     :ivar target_extension:
     """
+
     address: Optional[str] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class Target:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     protocol: Optional[str] = field(
         default=None,
@@ -31,7 +32,7 @@ class Target:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     target_extension: Optional[ExtensionType] = field(
         default=None,
@@ -39,5 +40,5 @@ class Target:
             "name": "targetExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

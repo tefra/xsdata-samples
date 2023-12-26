@@ -15,6 +15,7 @@ class TypeAgencyGroupInfoHistory1(TypeProfileInfo1):
     name
         Name of Agency Group
     """
+
     class Meta:
         name = "typeAgencyGroupInfoHistory"
 
@@ -25,5 +26,5 @@ class TypeAgencyGroupInfoHistory1(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

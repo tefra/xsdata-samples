@@ -18,6 +18,7 @@ class PersonName:
     prefix
         Person Name prefix.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class PersonName:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     last: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class PersonName:
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     prefix: None | str = field(
         default=None,
@@ -47,5 +48,5 @@ class PersonName:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )

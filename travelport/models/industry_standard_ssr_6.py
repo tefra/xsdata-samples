@@ -15,6 +15,7 @@ class IndustryStandardSsr6:
         This code indicates which Standard of SSR's they support. Sucha as
         the 'AIRIMP' standard identified by 'IATA.org'
     """
+
     class Meta:
         name = "IndustryStandardSSR"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -24,5 +25,5 @@ class IndustryStandardSsr6:
         metadata={
             "name": "Code",
             "type": "Attribute",
-        }
+        },
     )

@@ -13,6 +13,7 @@ class UrbanParkingSiteTypeEnum(Enum):
         parking.
     :cvar OTHER: The parking is associated with some other location.
     """
+
     ON_STREET_PARKING = "onStreetParking"
     OFF_STREET_PARKING = "offStreetParking"
     OTHER = "other"

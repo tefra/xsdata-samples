@@ -23,6 +23,7 @@ class AccessCategoryEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     VEHICLE_ENTRANCE_AND_EXIT = "vehicleEntranceAndExit"
     VEHICLE_ENTRANCE = "vehicleEntrance"
     VEHICLE_EXIT = "vehicleExit"

@@ -11,6 +11,7 @@ class ProfileRetrieveRsp2(BaseRsp5):
     """
     Response with the profile.
     """
+
     class Meta:
         name = "ProfileRetrieveRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -21,5 +22,5 @@ class ProfileRetrieveRsp2(BaseRsp5):
             "name": "Profile",
             "type": "Element",
             "required": True,
-        }
+        },
     )

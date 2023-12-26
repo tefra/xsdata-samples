@@ -10,5 +10,6 @@ class SendIndicationEnumSimple(Enum):
     :cvar NONE: This value represents the requirement that send
         operations of the Software Cluster are not indicated.
     """
+
     ANY_SEND_OPERATION = "ANY-SEND-OPERATION"
     NONE = "NONE"

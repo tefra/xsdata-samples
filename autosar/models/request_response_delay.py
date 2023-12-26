@@ -25,6 +25,7 @@ class RequestResponseDelay:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REQUEST-RESPONSE-DELAY"
 
@@ -34,7 +35,7 @@ class RequestResponseDelay:
             "name": "MAX-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_value: Optional[TimeValue] = field(
         default=None,
@@ -42,14 +43,14 @@ class RequestResponseDelay:
             "name": "MIN-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -57,5 +58,5 @@ class RequestResponseDelay:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

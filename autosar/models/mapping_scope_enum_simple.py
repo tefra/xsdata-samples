@@ -12,6 +12,7 @@ class MappingScopeEnumSimple(Enum):
     :cvar MAPPING_SCOPE_PARTITION: The mapping constraint applies to
         different Partitions.
     """
+
     MAPPING_SCOPE_CORE = "MAPPING-SCOPE-CORE"
     MAPPING_SCOPE_ECU = "MAPPING-SCOPE-ECU"
     MAPPING_SCOPE_PARTITION = "MAPPING-SCOPE-PARTITION"

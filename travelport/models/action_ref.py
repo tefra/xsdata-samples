@@ -12,6 +12,7 @@ class ActionRef(TypeActionReference):
 
     Refers to Actions retrieved in ProfileRetrieveAction service
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -22,5 +23,5 @@ class ActionRef(TypeActionReference):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

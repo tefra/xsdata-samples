@@ -10,5 +10,6 @@ class OperatingFlightSpec(TypeFlightSpec):
     """
     Marketing Flight number or Flight Range.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"

@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.profile_modify_hierarchy_level_req import ProfileModifyHierarchyLevelReq
+from travelport.models.profile_modify_hierarchy_level_req import (
+    ProfileModifyHierarchyLevelReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class ProfileModifyHierarchyLevelPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class ProfileModifyHierarchyLevelPortTypeServiceInput:
                 "name": "ProfileModifyHierarchyLevelReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            }
+            },
         )

@@ -22,6 +22,7 @@ class TypeVoucherInformation2:
     account_name
         Associated account name for the voucher
     """
+
     class Meta:
         name = "typeVoucherInformation"
 
@@ -31,26 +32,26 @@ class TypeVoucherInformation2:
             "name": "VoucherType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     confirmation_number: None | str = field(
         default=None,
         metadata={
             "name": "ConfirmationNumber",
             "type": "Attribute",
-        }
+        },
     )
     account_name: None | str = field(
         default=None,
         metadata={
             "name": "AccountName",
             "type": "Attribute",
-        }
+        },
     )

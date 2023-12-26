@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .staircase_equipment_version_structure import StaircaseEquipmentVersionStructure
+from .staircase_equipment_version_structure import (
+    StaircaseEquipmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

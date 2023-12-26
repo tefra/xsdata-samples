@@ -18,7 +18,7 @@ class AirDelete:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     element: None | TypeElement = field(
         default=None,
@@ -26,19 +26,19 @@ class AirDelete:
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

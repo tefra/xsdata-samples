@@ -14,5 +14,5 @@ class EmergencyService:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

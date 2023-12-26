@@ -10,6 +10,7 @@ class TypeDateRange1:
     """
     Specify a range of dates.
     """
+
     class Meta:
         name = "typeDateRange"
 
@@ -19,7 +20,7 @@ class TypeDateRange1:
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     end_date: None | XmlDate = field(
         default=None,
@@ -27,5 +28,5 @@ class TypeDateRange1:
             "name": "EndDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

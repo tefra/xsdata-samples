@@ -11,5 +11,5 @@ class Tezrad:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

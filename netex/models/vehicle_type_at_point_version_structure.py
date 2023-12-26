@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .network_restriction_version_structure import NetworkRestrictionVersionStructure
+from .network_restriction_version_structure import (
+    NetworkRestrictionVersionStructure,
+)
 from .vehicle_type_ref_structure import VehicleTypeRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -18,7 +20,7 @@ class VehicleTypeAtPointVersionStructure(NetworkRestrictionVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     capacity: Optional[int] = field(
         default=None,
@@ -26,5 +28,5 @@ class VehicleTypeAtPointVersionStructure(NetworkRestrictionVersionStructure):
             "name": "Capacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

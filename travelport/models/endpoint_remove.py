@@ -10,5 +10,6 @@ class EndpointRemove(TypeEditableEndpoint):
     """
     Removes an endpoint from an action in a particular field or field group.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

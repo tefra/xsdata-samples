@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .can_controller_fd_configuration import CanControllerFdConfiguration
-from .can_controller_fd_configuration_requirements import CanControllerFdConfigurationRequirements
+from .can_controller_fd_configuration_requirements import (
+    CanControllerFdConfigurationRequirements,
+)
 from .float_mod import Float
 from .integer import Integer
 
@@ -55,24 +57,29 @@ class CanControllerConfigurationRequirements:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS"
 
-    can_controller_fd_attributes: Optional[CanControllerFdConfiguration] = field(
+    can_controller_fd_attributes: Optional[
+        CanControllerFdConfiguration
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-ATTRIBUTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    can_controller_fd_requirements: Optional[CanControllerFdConfigurationRequirements] = field(
+    can_controller_fd_requirements: Optional[
+        CanControllerFdConfigurationRequirements
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-REQUIREMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_of_time_quanta_per_bit: Optional[Integer] = field(
         default=None,
@@ -80,7 +87,7 @@ class CanControllerConfigurationRequirements:
             "name": "MAX-NUMBER-OF-TIME-QUANTA-PER-BIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_sample_point: Optional[Float] = field(
         default=None,
@@ -88,7 +95,7 @@ class CanControllerConfigurationRequirements:
             "name": "MAX-SAMPLE-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_sync_jump_width: Optional[Float] = field(
         default=None,
@@ -96,7 +103,7 @@ class CanControllerConfigurationRequirements:
             "name": "MAX-SYNC-JUMP-WIDTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_number_of_time_quanta_per_bit: Optional[Integer] = field(
         default=None,
@@ -104,7 +111,7 @@ class CanControllerConfigurationRequirements:
             "name": "MIN-NUMBER-OF-TIME-QUANTA-PER-BIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_sample_point: Optional[Float] = field(
         default=None,
@@ -112,7 +119,7 @@ class CanControllerConfigurationRequirements:
             "name": "MIN-SAMPLE-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_sync_jump_width: Optional[Float] = field(
         default=None,
@@ -120,14 +127,14 @@ class CanControllerConfigurationRequirements:
             "name": "MIN-SYNC-JUMP-WIDTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -135,5 +142,5 @@ class CanControllerConfigurationRequirements:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

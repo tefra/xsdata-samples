@@ -52,6 +52,7 @@ class VehicleDetail:
     preferred_option
         Preferred Option marker for Location
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -61,35 +62,35 @@ class VehicleDetail:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-        }
+        },
     )
     passenger_count: None | str = field(
         default=None,
         metadata={
             "name": "PassengerCount",
             "type": "Attribute",
-        }
+        },
     )
     number_of_doors: None | str = field(
         default=None,
         metadata={
             "name": "NumberOfDoors",
             "type": "Attribute",
-        }
+        },
     )
     bag_count: None | str = field(
         default=None,
         metadata={
             "name": "BagCount",
             "type": "Attribute",
-        }
+        },
     )
     class_value: None | TypeVehicleClass = field(
         default=None,
@@ -97,7 +98,7 @@ class VehicleDetail:
             "name": "Class",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     category: None | TypeVehicleCategory = field(
         default=None,
@@ -105,7 +106,7 @@ class VehicleDetail:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     air_conditioning: None | bool = field(
         default=None,
@@ -113,7 +114,7 @@ class VehicleDetail:
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     transmission: None | TypeVehicleTransmission = field(
         default=None,
@@ -121,7 +122,7 @@ class VehicleDetail:
             "name": "Transmission",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     make_model: None | str = field(
         default=None,
@@ -129,14 +130,14 @@ class VehicleDetail:
             "name": "MakeModel",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     fuel_type: None | TypeFuel = field(
         default=None,
         metadata={
             "name": "FuelType",
             "type": "Attribute",
-        }
+        },
     )
     acriss_vehicle_code: None | str = field(
         default=None,
@@ -144,12 +145,12 @@ class VehicleDetail:
             "name": "AcrissVehicleCode",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )
     preferred_option: None | bool = field(
         default=None,
         metadata={
             "name": "PreferredOption",
             "type": "Attribute",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class Tax1:
         The tax category represents a valid IATA tax code.
     amount
     """
+
     class Meta:
         name = "Tax"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -24,7 +25,7 @@ class Tax1:
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -32,5 +33,5 @@ class Tax1:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

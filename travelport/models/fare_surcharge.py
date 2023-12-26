@@ -27,6 +27,7 @@ class FareSurcharge:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -35,7 +36,7 @@ class FareSurcharge:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class FareSurcharge:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -51,33 +52,33 @@ class FareSurcharge:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     coupon_ref: None | str = field(
         default=None,
         metadata={
             "name": "CouponRef",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

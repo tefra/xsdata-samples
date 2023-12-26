@@ -9,6 +9,7 @@ class IPsecHeaderTypeEnumSimple(Enum):
     :cvar ESP: Encapsulating Security Payloads (ESP)
     :cvar NONE: No header
     """
+
     AH = "AH"
     ESP = "ESP"
     NONE = "NONE"

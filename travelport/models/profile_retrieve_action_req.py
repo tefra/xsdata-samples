@@ -16,6 +16,7 @@ class ProfileRetrieveActionReq(BaseReq5):
     action_info
         Action to retrieve.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -26,5 +27,5 @@ class ProfileRetrieveActionReq(BaseReq5):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

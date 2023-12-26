@@ -9,5 +9,6 @@ class CustomerSearch:
     """
     Detailed customer information for searching pre pay profiles.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

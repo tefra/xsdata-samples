@@ -10,5 +10,6 @@ class HotelSearchAvailabilityReq(BaseHotelSearchReq):
     """
     Request to search for hotel availability.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"

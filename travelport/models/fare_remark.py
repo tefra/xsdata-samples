@@ -16,7 +16,7 @@ class FareRemark:
             "name": "Text",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     url: list[Url] = field(
         default_factory=list,
@@ -24,19 +24,19 @@ class FareRemark:
             "name": "URL",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )

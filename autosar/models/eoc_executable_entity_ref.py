@@ -7,8 +7,12 @@ from .annotation import (
 )
 from .bsw_implementation_subtypes_enum import BswImplementationSubtypesEnum
 from .category_string import CategoryString
-from .component_in_composition_instance_ref import ComponentInCompositionInstanceRef
-from .eoc_executable_entity_ref_abstract_subtypes_enum import EocExecutableEntityRefAbstractSubtypesEnum
+from .component_in_composition_instance_ref import (
+    ComponentInCompositionInstanceRef,
+)
+from .eoc_executable_entity_ref_abstract_subtypes_enum import (
+    EocExecutableEntityRefAbstractSubtypesEnum,
+)
 from .executable_entity_subtypes_enum import ExecutableEntitySubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -91,6 +95,7 @@ class EocExecutableEntityRef:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "EOC-EXECUTABLE-ENTITY-REF"
 
@@ -101,15 +106,17 @@ class EocExecutableEntityRef:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["EocExecutableEntityRef.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "EocExecutableEntityRef.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +124,7 @@ class EocExecutableEntityRef:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +132,7 @@ class EocExecutableEntityRef:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +140,7 @@ class EocExecutableEntityRef:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +148,7 @@ class EocExecutableEntityRef:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,7 +156,7 @@ class EocExecutableEntityRef:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EocExecutableEntityRef.Annotations"] = field(
         default=None,
@@ -157,23 +164,27 @@ class EocExecutableEntityRef:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    direct_successor_refs: Optional["EocExecutableEntityRef.DirectSuccessorRefs"] = field(
+    direct_successor_refs: Optional[
+        "EocExecutableEntityRef.DirectSuccessorRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DIRECT-SUCCESSOR-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    bsw_module_instance_ref: Optional["EocExecutableEntityRef.BswModuleInstanceRef"] = field(
+    bsw_module_instance_ref: Optional[
+        "EocExecutableEntityRef.BswModuleInstanceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     component_iref: Optional[ComponentInCompositionInstanceRef] = field(
         default=None,
@@ -181,7 +192,7 @@ class EocExecutableEntityRef:
             "name": "COMPONENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     executable_ref: Optional["EocExecutableEntityRef.ExecutableRef"] = field(
         default=None,
@@ -189,7 +200,7 @@ class EocExecutableEntityRef:
             "name": "EXECUTABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     successor_refs: Optional["EocExecutableEntityRef.SuccessorRefs"] = field(
         default=None,
@@ -197,14 +208,14 @@ class EocExecutableEntityRef:
             "name": "SUCCESSOR-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -212,14 +223,14 @@ class EocExecutableEntityRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -230,7 +241,7 @@ class EocExecutableEntityRef:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,18 +252,20 @@ class EocExecutableEntityRef:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DirectSuccessorRefs:
-        direct_successor_ref: List["EocExecutableEntityRef.DirectSuccessorRefs.DirectSuccessorRef"] = field(
+        direct_successor_ref: List[
+            "EocExecutableEntityRef.DirectSuccessorRefs.DirectSuccessorRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIRECT-SUCCESSOR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -263,7 +276,7 @@ class EocExecutableEntityRef:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -274,7 +287,7 @@ class EocExecutableEntityRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -285,18 +298,20 @@ class EocExecutableEntityRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class SuccessorRefs:
-        successor_ref: List["EocExecutableEntityRef.SuccessorRefs.SuccessorRef"] = field(
+        successor_ref: List[
+            "EocExecutableEntityRef.SuccessorRefs.SuccessorRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SUCCESSOR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -307,5 +322,5 @@ class EocExecutableEntityRef:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

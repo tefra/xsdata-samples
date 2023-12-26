@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_feature_enumeration import AccessFeatureEnumeration
 from .access_mode_enumeration import AccessModeEnumeration
 from .accessibility_assessment import AccessibilityAssessment
@@ -38,7 +38,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to: Optional[PathLinkEndStructure] = field(
         default=None,
@@ -47,7 +47,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -55,9 +55,11 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    accessibility_assessment_ref_or_accessibility_assessment: Optional[object] = field(
+    accessibility_assessment_ref_or_accessibility_assessment: Optional[
+        Union[AccessibilityAssessmentRef, AccessibilityAssessment]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,7 +75,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     access_modes: List[AccessModeEnumeration] = field(
         default_factory=list,
@@ -82,7 +84,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     public_use: Optional[PublicUseEnumeration] = field(
         default=None,
@@ -90,7 +92,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "PublicUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     covered: Optional[CoveredEnumeration] = field(
         default=None,
@@ -98,7 +100,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Covered",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gated: Optional[GatedEnumeration] = field(
         default=None,
@@ -106,7 +108,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Gated",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lighting: Optional[LightingEnumeration] = field(
         default=None,
@@ -114,7 +116,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Lighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     all_areas_wheelchair_accessible: Optional[bool] = field(
         default=None,
@@ -122,7 +124,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "AllAreasWheelchairAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     person_capacity: Optional[int] = field(
         default=None,
@@ -130,14 +132,14 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "PersonCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     facilities: Optional[SiteFacilitySetsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     towards: Optional[MultilingualString] = field(
         default=None,
@@ -145,7 +147,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Towards",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     back: Optional[MultilingualString] = field(
         default=None,
@@ -153,7 +155,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Back",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_steps: Optional[int] = field(
         default=None,
@@ -161,7 +163,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "NumberOfSteps",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_height: Optional[Decimal] = field(
         default=None,
@@ -169,7 +171,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "MinimumHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_width: Optional[Decimal] = field(
         default=None,
@@ -177,7 +179,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "MinimumWidth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     allowed_use: Optional[PathDirectionEnumeration] = field(
         default=None,
@@ -185,7 +187,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "AllowedUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transition: Optional[TransitionEnumeration] = field(
         default=None,
@@ -193,7 +195,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Transition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gradient: Optional[int] = field(
         default=None,
@@ -201,7 +203,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "Gradient",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gradient_type: Optional[GradientEnumeration] = field(
         default=None,
@@ -209,7 +211,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "GradientType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tilt_angle: Optional[int] = field(
         default=None,
@@ -217,7 +219,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "TiltAngle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tilt_type: Optional[TiltTypeEnumeration] = field(
         default=None,
@@ -225,7 +227,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "TiltType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     access_feature_type: Optional[AccessFeatureEnumeration] = field(
         default=None,
@@ -233,7 +235,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "AccessFeatureType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     passage_type: Optional[PassageTypeEnumeration] = field(
         default=None,
@@ -241,7 +243,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "PassageType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flooring_type: Optional[FlooringTypeEnumeration] = field(
         default=None,
@@ -249,7 +251,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "FlooringType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     right_side_border: Optional[BorderTypeEnumeration] = field(
         default=None,
@@ -257,7 +259,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "RightSideBorder",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     left_side_border: Optional[BorderTypeEnumeration] = field(
         default=None,
@@ -265,7 +267,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "LeftSideBorder",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tactile_warning_strip: Optional[TactileWarningStripEnumeration] = field(
         default=None,
@@ -273,7 +275,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "TactileWarningStrip",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tactile_guiding_strip: Optional[bool] = field(
         default=None,
@@ -281,7 +283,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "TactileGuidingStrip",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_flow_per_minute: Optional[int] = field(
         default=None,
@@ -289,7 +291,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "MaximumFlowPerMinute",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transfer_duration: Optional[TransferDurationStructure] = field(
         default=None,
@@ -297,5 +299,5 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "TransferDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

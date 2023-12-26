@@ -20,6 +20,7 @@ class TypeTextElement:
         DECH can also be used. Only certain services support this attribute.
         Providers: ACH, RCH, 1G, 1V, 1P.
     """
+
     class Meta:
         name = "typeTextElement"
 
@@ -27,7 +28,7 @@ class TypeTextElement:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -35,12 +36,12 @@ class TypeTextElement:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     language_code: None | str = field(
         default=None,
         metadata={
             "name": "LanguageCode",
             "type": "Attribute",
-        }
+        },
     )

@@ -14,5 +14,5 @@ class MoneyFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

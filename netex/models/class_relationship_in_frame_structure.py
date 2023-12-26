@@ -18,7 +18,7 @@ class ClassRelationshipInFrameStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     mandatory: Optional[MandatoryEnumeration] = field(
         default=None,
@@ -26,7 +26,7 @@ class ClassRelationshipInFrameStructure:
             "name": "Mandatory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     containment: Optional[ContainmentEnumeration] = field(
         default=None,
@@ -34,7 +34,7 @@ class ClassRelationshipInFrameStructure:
             "name": "Containment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     modification_set: Optional[ModificationSetEnumeration] = field(
         default=None,
@@ -42,11 +42,11 @@ class ClassRelationshipInFrameStructure:
             "name": "ModificationSet",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[QName] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

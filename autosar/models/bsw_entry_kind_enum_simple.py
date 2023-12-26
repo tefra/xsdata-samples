@@ -11,5 +11,6 @@ class BswEntryKindEnumSimple(Enum):
     :cvar CONCRETE: This BswModuleEntry specifies a concrete C-function
         with its signature.
     """
+
     ABSTRACT = "ABSTRACT"
     CONCRETE = "CONCRETE"

@@ -16,7 +16,9 @@ from travelport.models.field_data_2 import FieldData2
 from travelport.models.field_group_data_2 import FieldGroupData2
 from travelport.models.form_of_payment_6 import FormOfPayment6
 from travelport.models.hotel_preference_2 import HotelPreference2
-from travelport.models.loyalty_program_enrollment_2 import LoyaltyProgramEnrollment2
+from travelport.models.loyalty_program_enrollment_2 import (
+    LoyaltyProgramEnrollment2,
+)
 from travelport.models.other_preference_2 import OtherPreference2
 from travelport.models.policy_reference_2 import PolicyReference2
 from travelport.models.rail_preference_2 import RailPreference2
@@ -70,6 +72,7 @@ class ProfileData2:
         which defines the attributes of the group specific to the asociated
         template or its parent field group.
     """
+
     class Meta:
         name = "ProfileData"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -79,56 +82,56 @@ class ProfileData2:
         metadata={
             "name": "AgencyGroupInfo",
             "type": "Element",
-        }
+        },
     )
     agency_info: None | AgencyInfo6 = field(
         default=None,
         metadata={
             "name": "AgencyInfo",
             "type": "Element",
-        }
+        },
     )
     branch_group_info: None | BranchGroupInfo2 = field(
         default=None,
         metadata={
             "name": "BranchGroupInfo",
             "type": "Element",
-        }
+        },
     )
     branch_info: None | BranchInfo2 = field(
         default=None,
         metadata={
             "name": "BranchInfo",
             "type": "Element",
-        }
+        },
     )
     account_info: None | AccountInfo2 = field(
         default=None,
         metadata={
             "name": "AccountInfo",
             "type": "Element",
-        }
+        },
     )
     agent_info: None | AgentInfo2 = field(
         default=None,
         metadata={
             "name": "AgentInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_group_info: None | TravelerGroupInfo2 = field(
         default=None,
         metadata={
             "name": "TravelerGroupInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_info: None | TravelerInfo2 = field(
         default=None,
         metadata={
             "name": "TravelerInfo",
             "type": "Element",
-        }
+        },
     )
     travel_document: list[TravelDocument2] = field(
         default_factory=list,
@@ -136,7 +139,7 @@ class ProfileData2:
             "name": "TravelDocument",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     accounting_reference: list[AccountingReference2] = field(
         default_factory=list,
@@ -144,7 +147,7 @@ class ProfileData2:
             "name": "AccountingReference",
             "type": "Element",
             "max_occurs": 20000,
-        }
+        },
     )
     policy_reference: list[PolicyReference2] = field(
         default_factory=list,
@@ -152,7 +155,7 @@ class ProfileData2:
             "name": "PolicyReference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     commission_reference: list[CommissionReference2] = field(
         default_factory=list,
@@ -160,7 +163,7 @@ class ProfileData2:
             "name": "CommissionReference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     commission: list[Commission8] = field(
         default_factory=list,
@@ -168,7 +171,7 @@ class ProfileData2:
             "name": "Commission",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     form_of_payment: list[FormOfPayment6] = field(
         default_factory=list,
@@ -176,7 +179,7 @@ class ProfileData2:
             "name": "FormOfPayment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_preference: list[AirPreference2] = field(
         default_factory=list,
@@ -184,7 +187,7 @@ class ProfileData2:
             "name": "AirPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_preference: list[HotelPreference2] = field(
         default_factory=list,
@@ -192,7 +195,7 @@ class ProfileData2:
             "name": "HotelPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_preference: list[RailPreference2] = field(
         default_factory=list,
@@ -200,7 +203,7 @@ class ProfileData2:
             "name": "RailPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     other_preference: list[OtherPreference2] = field(
         default_factory=list,
@@ -208,7 +211,7 @@ class ProfileData2:
             "name": "OtherPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     contract: list[Contract2] = field(
         default_factory=list,
@@ -216,7 +219,7 @@ class ProfileData2:
             "name": "Contract",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     service_fee: list[ServiceFee2] = field(
         default_factory=list,
@@ -224,7 +227,7 @@ class ProfileData2:
             "name": "ServiceFee",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     alternate_contact: list[AlternateContact2] = field(
         default_factory=list,
@@ -232,7 +235,7 @@ class ProfileData2:
             "name": "AlternateContact",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     loyalty_program_enrollment: list[LoyaltyProgramEnrollment2] = field(
         default_factory=list,
@@ -240,7 +243,7 @@ class ProfileData2:
             "name": "LoyaltyProgramEnrollment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     remark: list[Remark6] = field(
         default_factory=list,
@@ -248,7 +251,7 @@ class ProfileData2:
             "name": "Remark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_preference: list[VehiclePreference2] = field(
         default_factory=list,
@@ -256,7 +259,7 @@ class ProfileData2:
             "name": "VehiclePreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_data: list[FieldData2] = field(
         default_factory=list,
@@ -264,7 +267,7 @@ class ProfileData2:
             "name": "FieldData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_group_data: list[FieldGroupData2] = field(
         default_factory=list,
@@ -272,5 +275,5 @@ class ProfileData2:
             "name": "FieldGroupData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

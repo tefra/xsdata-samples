@@ -13,5 +13,6 @@ class ParkingSpacePhysicsEnum(Enum):
     :cvar OPEN_AIR: There is no roof and not another storey on top of
         the parking space, which could prevent from rain, for example.
     """
+
     DRIVE_THROUGH = "driveThrough"
     OPEN_AIR = "openAir"

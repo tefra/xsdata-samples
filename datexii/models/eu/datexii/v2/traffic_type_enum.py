@@ -30,6 +30,7 @@ class TrafficTypeEnum(Enum):
     :cvar VISITOR_TRAFFIC: Traffic heading towards local visitor
         attraction.
     """
+
     ACCESS_ONLY_TRAFFIC = "accessOnlyTraffic"
     DESTINED_FOR_AIRPORT = "destinedForAirport"
     DESTINED_FOR_AIRPORT_ARRIVALS = "destinedForAirportArrivals"

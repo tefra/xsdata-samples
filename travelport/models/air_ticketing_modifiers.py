@@ -54,6 +54,7 @@ class AirTicketingModifiers:
         override the existing SFQ and issue the ticket. Only valid for
         AirTicketingReq, not valid  for AirExchangeTicketingReq.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -62,7 +63,7 @@ class AirTicketingModifiers:
         metadata={
             "name": "DocumentModifiers",
             "type": "Element",
-        }
+        },
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
@@ -70,14 +71,14 @@ class AirTicketingModifiers:
             "name": "AirPricingInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
-        }
+        },
     )
     ticket_endorsement: list[TicketEndorsement] = field(
         default_factory=list,
@@ -85,7 +86,7 @@ class AirTicketingModifiers:
             "name": "TicketEndorsement",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     commission: None | Commission1 = field(
         default=None,
@@ -93,7 +94,7 @@ class AirTicketingModifiers:
             "name": "Commission",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -102,7 +103,7 @@ class AirTicketingModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     credit_card_auth: list[CreditCardAuth1] = field(
         default_factory=list,
@@ -111,7 +112,7 @@ class AirTicketingModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     payment: list[Payment1] = field(
         default_factory=list,
@@ -120,7 +121,7 @@ class AirTicketingModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -128,26 +129,26 @@ class AirTicketingModifiers:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     ticketed_fare_override: bool = field(
         default=False,
         metadata={
             "name": "TicketedFareOverride",
             "type": "Attribute",
-        }
+        },
     )
     suppress_tax_and_fee: bool = field(
         default=False,
         metadata={
             "name": "SuppressTaxAndFee",
             "type": "Attribute",
-        }
+        },
     )
     no_comparison_sfq: bool = field(
         default=False,
         metadata={
             "name": "NoComparisonSFQ",
             "type": "Attribute",
-        }
+        },
     )

@@ -45,6 +45,7 @@ class NmCoordinator:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "NM-COORDINATOR"
 
@@ -54,7 +55,7 @@ class NmCoordinator:
             "name": "INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_active_coordinator: Optional[Boolean] = field(
         default=None,
@@ -62,7 +63,7 @@ class NmCoordinator:
             "name": "NM-ACTIVE-COORDINATOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_coord_sync_support: Optional[Boolean] = field(
         default=None,
@@ -70,7 +71,7 @@ class NmCoordinator:
             "name": "NM-COORD-SYNC-SUPPORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_global_coordinator_time: Optional[TimeValue] = field(
         default=None,
@@ -78,7 +79,7 @@ class NmCoordinator:
             "name": "NM-GLOBAL-COORDINATOR-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_node_refs: Optional["NmCoordinator.NmNodeRefs"] = field(
         default=None,
@@ -86,7 +87,7 @@ class NmCoordinator:
             "name": "NM-NODE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_shutdown_delay_timer: Optional[TimeValue] = field(
         default=None,
@@ -94,14 +95,14 @@ class NmCoordinator:
             "name": "NM-SHUTDOWN-DELAY-TIMER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -109,7 +110,7 @@ class NmCoordinator:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -120,7 +121,7 @@ class NmCoordinator:
                 "name": "NM-NODE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -131,5 +132,5 @@ class NmCoordinator:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

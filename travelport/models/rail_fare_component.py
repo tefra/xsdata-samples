@@ -24,6 +24,7 @@ class RailFareComponent:
         Supplier passenger type code
     quantity
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -33,7 +34,7 @@ class RailFareComponent:
             "name": "Discount",
             "type": "Element",
             "max_occurs": 5,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -41,21 +42,21 @@ class RailFareComponent:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Attribute",
-        }
+        },
     )
     passenger_type_code: None | str = field(
         default=None,
@@ -64,21 +65,21 @@ class RailFareComponent:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     supplier_passenger_type: None | str = field(
         default=None,
         metadata={
             "name": "SupplierPassengerType",
             "type": "Attribute",
-        }
+        },
     )
     quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -91,12 +92,12 @@ class RailFareComponent:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 9,
-            }
+            },
         )
         key: None | str = field(
             default=None,
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-            }
+            },
         )

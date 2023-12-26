@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_rental_period_rental_unit import TypeRentalPeriodRentalUnit
+from travelport.models.type_rental_period_rental_unit import (
+    TypeRentalPeriodRentalUnit,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -19,6 +21,7 @@ class TypeRentalPeriod:
     requirement_passed
         If true, the rental period requirements have been met.
     """
+
     class Meta:
         name = "typeRentalPeriod"
 
@@ -28,7 +31,7 @@ class TypeRentalPeriod:
             "name": "RentalUnit",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     length: None | int = field(
         default=None,
@@ -36,12 +39,12 @@ class TypeRentalPeriod:
             "name": "Length",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     requirement_passed: None | bool = field(
         default=None,
         metadata={
             "name": "RequirementPassed",
             "type": "Attribute",
-        }
+        },
     )

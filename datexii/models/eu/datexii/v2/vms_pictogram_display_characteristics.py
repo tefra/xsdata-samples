@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.position_absolute_enum import PositionAbsoluteEnum
-from datexii.models.eu.datexii.v2.position_relative_enum import PositionRelativeEnum
-from datexii.models.eu.datexii.v2.vms_supplementary_panel_characteristics import VmsSupplementaryPanelCharacteristics
+from datexii.models.eu.datexii.v2.position_absolute_enum import (
+    PositionAbsoluteEnum,
+)
+from datexii.models.eu.datexii.v2.position_relative_enum import (
+    PositionRelativeEnum,
+)
+from datexii.models.eu.datexii.v2.vms_supplementary_panel_characteristics import (
+    VmsSupplementaryPanelCharacteristics,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -54,13 +60,14 @@ class VmsPictogramDisplayCharacteristics:
     :ivar vms_supplementary_panel_characteristics:
     :ivar vms_pictogram_display_characteristics_extension:
     """
+
     pictogram_lanterns_present: Optional[bool] = field(
         default=None,
         metadata={
             "name": "pictogramLanternsPresent",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_sequencing_capable: Optional[bool] = field(
         default=None,
@@ -68,7 +75,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramSequencingCapable",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_pixels_across: Optional[int] = field(
         default=None,
@@ -76,7 +83,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramPixelsAcross",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_pixels_down: Optional[int] = field(
         default=None,
@@ -84,7 +91,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramPixelsDown",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_display_height: Optional[float] = field(
         default=None,
@@ -92,7 +99,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramDisplayHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_display_width: Optional[float] = field(
         default=None,
@@ -100,7 +107,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramDisplayWidth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_code_list_identifier: Optional[str] = field(
         default=None,
@@ -109,7 +116,7 @@ class VmsPictogramDisplayCharacteristics:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     max_pictogram_luminance_level: Optional[int] = field(
         default=None,
@@ -117,7 +124,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "maxPictogramLuminanceLevel",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_number_of_colours: Optional[int] = field(
         default=None,
@@ -125,7 +132,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramNumberOfColours",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     max_number_of_sequential_pictograms: Optional[int] = field(
         default=None,
@@ -133,7 +140,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "maxNumberOfSequentialPictograms",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_position_absolute: Optional[PositionAbsoluteEnum] = field(
         default=None,
@@ -141,7 +148,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramPositionAbsolute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_position_x: Optional[float] = field(
         default=None,
@@ -149,7 +156,7 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramPositionX",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_position_y: Optional[float] = field(
         default=None,
@@ -157,29 +164,35 @@ class VmsPictogramDisplayCharacteristics:
             "name": "pictogramPositionY",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    pictogram_position_relative_to_text: Optional[PositionRelativeEnum] = field(
+    pictogram_position_relative_to_text: Optional[
+        PositionRelativeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "pictogramPositionRelativeToText",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    vms_supplementary_panel_characteristics: Optional[VmsSupplementaryPanelCharacteristics] = field(
+    vms_supplementary_panel_characteristics: Optional[
+        VmsSupplementaryPanelCharacteristics
+    ] = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryPanelCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    vms_pictogram_display_characteristics_extension: Optional[ExtensionType] = field(
+    vms_pictogram_display_characteristics_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "vmsPictogramDisplayCharacteristicsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

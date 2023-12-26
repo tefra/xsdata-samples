@@ -21,6 +21,7 @@ class RelativeTrafficFlowEnum(Enum):
         lighter than normally expected at the specified location at this
         date/time.
     """
+
     TRAFFIC_VERY_MUCH_HEAVIER_THAN_NORMAL = "trafficVeryMuchHeavierThanNormal"
     TRAFFIC_HEAVIER_THAN_NORMAL = "trafficHeavierThanNormal"
     TRAFFIC_FLOW_NORMAL = "trafficFlowNormal"

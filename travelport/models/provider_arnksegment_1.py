@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_non_air_reservation_ref_1 import TypeNonAirReservationRef1
+from travelport.models.type_non_air_reservation_ref_1 import (
+    TypeNonAirReservationRef1,
+)
 from travelport.models.type_segment_ref_1 import TypeSegmentRef1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
@@ -22,6 +24,7 @@ class ProviderArnksegment1:
         To identify the appropriate travel sequence for Air/Car/Hotel/Rail
         segments/reservations in the provider reservation.
     """
+
     class Meta:
         name = "ProviderARNKSegment"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -31,28 +34,28 @@ class ProviderArnksegment1:
         metadata={
             "name": "PreviousSegment",
             "type": "Element",
-        }
+        },
     )
     next_segment: None | ProviderArnksegment1.NextSegment = field(
         default=None,
         metadata={
             "name": "NextSegment",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_segment_order: None | int = field(
         default=None,
@@ -60,7 +63,7 @@ class ProviderArnksegment1:
             "name": "ProviderSegmentOrder",
             "type": "Attribute",
             "max_inclusive": 999,
-        }
+        },
     )
 
     @dataclass
@@ -77,33 +80,34 @@ class ProviderArnksegment1:
         passive_segment_ref
             Reference to PassiveSegment from a Passive Reservation.
         """
+
         air_segment_ref: None | TypeSegmentRef1 = field(
             default=None,
             metadata={
                 "name": "AirSegmentRef",
                 "type": "Element",
-            }
+            },
         )
         hotel_reservation_ref: None | TypeNonAirReservationRef1 = field(
             default=None,
             metadata={
                 "name": "HotelReservationRef",
                 "type": "Element",
-            }
+            },
         )
         vehicle_reservation_ref: None | TypeNonAirReservationRef1 = field(
             default=None,
             metadata={
                 "name": "VehicleReservationRef",
                 "type": "Element",
-            }
+            },
         )
         passive_segment_ref: None | TypeSegmentRef1 = field(
             default=None,
             metadata={
                 "name": "PassiveSegmentRef",
                 "type": "Element",
-            }
+            },
         )
 
     @dataclass
@@ -120,31 +124,32 @@ class ProviderArnksegment1:
         passive_segment_ref
             Reference to PassiveSegment from a Passive Reservation.
         """
+
         air_segment_ref: None | TypeSegmentRef1 = field(
             default=None,
             metadata={
                 "name": "AirSegmentRef",
                 "type": "Element",
-            }
+            },
         )
         hotel_reservation_ref: None | TypeNonAirReservationRef1 = field(
             default=None,
             metadata={
                 "name": "HotelReservationRef",
                 "type": "Element",
-            }
+            },
         )
         vehicle_reservation_ref: None | TypeNonAirReservationRef1 = field(
             default=None,
             metadata={
                 "name": "VehicleReservationRef",
                 "type": "Element",
-            }
+            },
         )
         passive_segment_ref: None | TypeSegmentRef1 = field(
             default=None,
             metadata={
                 "name": "PassiveSegmentRef",
                 "type": "Element",
-            }
+            },
         )

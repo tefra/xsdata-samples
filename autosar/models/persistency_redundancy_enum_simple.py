@@ -17,6 +17,7 @@ class PersistencyRedundancyEnumSimple(Enum):
         of the redundancy used on the persistent storage is not further
         qualified and subject to integrator decisions.
     """
+
     NONE = "NONE"
     REDUNDANT = "REDUNDANT"
     REDUNDANT_PER_ELEMENT = "REDUNDANT-PER-ELEMENT"

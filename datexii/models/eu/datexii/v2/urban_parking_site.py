@@ -3,7 +3,9 @@ from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.parking_site import ParkingSite
-from datexii.models.eu.datexii.v2.urban_parking_site_type_enum import UrbanParkingSiteTypeEnum
+from datexii.models.eu.datexii.v2.urban_parking_site_type_enum import (
+    UrbanParkingSiteTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -19,6 +21,7 @@ class UrbanParkingSite(ParkingSite):
         'True', if there is a parking zone with unknown name.
     :ivar urban_parking_site_extension:
     """
+
     urban_parking_site_type: Optional[UrbanParkingSiteTypeEnum] = field(
         default=None,
         metadata={
@@ -26,7 +29,7 @@ class UrbanParkingSite(ParkingSite):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_zone: Optional[MultilingualString] = field(
         default=None,
@@ -34,7 +37,7 @@ class UrbanParkingSite(ParkingSite):
             "name": "parkingZone",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     urban_parking_site_extension: Optional[ExtensionType] = field(
         default=None,
@@ -42,5 +45,5 @@ class UrbanParkingSite(ParkingSite):
             "name": "urbanParkingSiteExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

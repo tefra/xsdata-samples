@@ -16,6 +16,7 @@ class VariableAccessScopeEnumSimple(Enum):
         shall cross the boundaries of partitions within one ECU but it
         shall not cross the boundaries of the ECU itself.
     """
+
     COMMUNICATION_INTER_ECU = "COMMUNICATION-INTER-ECU"
     COMMUNICATION_INTRA_PARTITION = "COMMUNICATION-INTRA-PARTITION"
     INTER_PARTITION_INTRA_ECU = "INTER-PARTITION-INTRA-ECU"

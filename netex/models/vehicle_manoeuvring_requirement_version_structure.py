@@ -1,13 +1,17 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from .vehicle_requirement_version_structure import VehicleRequirementVersionStructure
+from .vehicle_requirement_version_structure import (
+    VehicleRequirementVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class VehicleManoeuvringRequirementVersionStructure(VehicleRequirementVersionStructure):
+class VehicleManoeuvringRequirementVersionStructure(
+    VehicleRequirementVersionStructure
+):
     class Meta:
         name = "VehicleManoeuvringRequirement_VersionStructure"
 
@@ -17,7 +21,7 @@ class VehicleManoeuvringRequirementVersionStructure(VehicleRequirementVersionStr
             "name": "Reversible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_turning_circle: Optional[Decimal] = field(
         default=None,
@@ -25,7 +29,7 @@ class VehicleManoeuvringRequirementVersionStructure(VehicleRequirementVersionStr
             "name": "MinimumTurningCircle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_overtaking_width: Optional[Decimal] = field(
         default=None,
@@ -33,7 +37,7 @@ class VehicleManoeuvringRequirementVersionStructure(VehicleRequirementVersionStr
             "name": "MinimumOvertakingWidth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_length: Optional[Decimal] = field(
         default=None,
@@ -41,5 +45,5 @@ class VehicleManoeuvringRequirementVersionStructure(VehicleRequirementVersionStr
             "name": "MinimumLength",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

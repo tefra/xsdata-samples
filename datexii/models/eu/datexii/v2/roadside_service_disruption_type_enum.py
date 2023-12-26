@@ -51,6 +51,7 @@ class RoadsideServiceDisruptionTypeEnum(Enum):
     :cvar WATER_SHORTAGE: There is a shortage of water at the specified
         location.
     """
+
     BAR_CLOSED = "barClosed"
     DIESEL_SHORTAGE = "dieselShortage"
     FUEL_SHORTAGE = "fuelShortage"
@@ -64,11 +65,15 @@ class RoadsideServiceDisruptionTypeEnum(Enum):
     PETROL_SHORTAGE = "petrolShortage"
     REST_AREA_BUSY = "restAreaBusy"
     REST_AREA_CLOSED = "restAreaClosed"
-    REST_AREA_OVERCROWDED_DRIVE_TO_ANOTHER_REST_AREA = "restAreaOvercrowdedDriveToAnotherRestArea"
+    REST_AREA_OVERCROWDED_DRIVE_TO_ANOTHER_REST_AREA = (
+        "restAreaOvercrowdedDriveToAnotherRestArea"
+    )
     SERVICE_AREA_BUSY = "serviceAreaBusy"
     SERVICE_AREA_CLOSED = "serviceAreaClosed"
     SERVICE_AREA_FUEL_STATION_CLOSED = "serviceAreaFuelStationClosed"
-    SERVICE_AREA_OVERCROWDED_DRIVE_TO_ANOTHER_SERVICE_AREA = "serviceAreaOvercrowdedDriveToAnotherServiceArea"
+    SERVICE_AREA_OVERCROWDED_DRIVE_TO_ANOTHER_SERVICE_AREA = (
+        "serviceAreaOvercrowdedDriveToAnotherServiceArea"
+    )
     SERVICE_AREA_RESTAURANT_CLOSED = "serviceAreaRestaurantClosed"
     SOME_COMMERCIAL_SERVICES_CLOSED = "someCommercialServicesClosed"
     WATER_SHORTAGE = "waterShortage"

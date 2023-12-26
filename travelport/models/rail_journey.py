@@ -104,6 +104,7 @@ class RailJourney:
         "Type of exchange. Add - Add new Journey. Update - Modify existing
         Journey. Delete - Remove existing Journey"
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -113,7 +114,7 @@ class RailJourney:
             "name": "RailSegment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_segment_ref: list[RailSegmentRef] = field(
         default_factory=list,
@@ -121,7 +122,7 @@ class RailJourney:
             "name": "RailSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     journey_remark: list[JourneyRemark] = field(
         default_factory=list,
@@ -129,7 +130,7 @@ class RailJourney:
             "name": "JourneyRemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -138,7 +139,7 @@ class RailJourney:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -146,7 +147,7 @@ class RailJourney:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -155,7 +156,7 @@ class RailJourney:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -164,7 +165,7 @@ class RailJourney:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
@@ -172,28 +173,28 @@ class RailJourney:
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )
     origin_station_name: None | str = field(
         default=None,
         metadata={
             "name": "OriginStationName",
             "type": "Attribute",
-        }
+        },
     )
     destination_station_name: None | str = field(
         default=None,
         metadata={
             "name": "DestinationStationName",
             "type": "Attribute",
-        }
+        },
     )
     rail_loc_origin: None | str = field(
         default=None,
@@ -203,7 +204,7 @@ class RailJourney:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     rail_loc_destination: None | str = field(
         default=None,
@@ -213,7 +214,7 @@ class RailJourney:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     route_description: None | str = field(
         default=None,
@@ -221,91 +222,91 @@ class RailJourney:
             "name": "RouteDescription",
             "type": "Attribute",
             "max_length": 255,
-        }
+        },
     )
     journey_direction: None | TypeJourneyDirection = field(
         default=None,
         metadata={
             "name": "JourneyDirection",
             "type": "Attribute",
-        }
+        },
     )
     journey_duration: None | int = field(
         default=None,
         metadata={
             "name": "JourneyDuration",
             "type": "Attribute",
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -314,7 +315,7 @@ class RailJourney:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -323,35 +324,35 @@ class RailJourney:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
-        }
+        },
     )
     route_reference: None | str = field(
         default=None,
@@ -360,26 +361,26 @@ class RailJourney:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     operation: None | str = field(
         default=None,
         metadata={
             "name": "Operation",
             "type": "Attribute",
-        }
+        },
     )

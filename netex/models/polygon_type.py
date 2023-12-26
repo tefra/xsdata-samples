@@ -14,12 +14,12 @@ class PolygonType(AbstractSurfaceType):
         metadata={
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-        }
+        },
     )
     interior: List[Interior] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-        }
+        },
     )

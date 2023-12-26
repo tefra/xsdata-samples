@@ -16,6 +16,7 @@ class Ipv4AddressSourceEnumSimple(Enum):
         of a client.
     :cvar FIXED: The IP Address shall be declared manually.
     """
+
     AUTO_IP = "AUTO-IP"
     AUTO_IP_DOIP = "AUTO-IP--DOIP"
     AUTO_IPDHCPV_4 = "AUTO-IPDHCPV-4"

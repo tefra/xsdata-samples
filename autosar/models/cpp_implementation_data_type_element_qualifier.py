@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .boolean import Boolean
-from .cpp_implementation_data_type_subtypes_enum import CppImplementationDataTypeSubtypesEnum
+from .cpp_implementation_data_type_subtypes_enum import (
+    CppImplementationDataTypeSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -29,6 +31,7 @@ class CppImplementationDataTypeElementQualifier:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT-QUALIFIER"
 
@@ -38,22 +41,24 @@ class CppImplementationDataTypeElementQualifier:
             "name": "INPLACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    type_reference_ref: Optional["CppImplementationDataTypeElementQualifier.TypeReferenceRef"] = field(
+    type_reference_ref: Optional[
+        "CppImplementationDataTypeElementQualifier.TypeReferenceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TYPE-REFERENCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -61,7 +66,7 @@ class CppImplementationDataTypeElementQualifier:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -72,5 +77,5 @@ class CppImplementationDataTypeElementQualifier:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

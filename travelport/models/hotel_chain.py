@@ -9,6 +9,7 @@ class HotelChain:
     """
     The hotel chain code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -19,5 +20,5 @@ class HotelChain:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )

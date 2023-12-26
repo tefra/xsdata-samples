@@ -27,6 +27,7 @@ class ParkingLayoutEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     MULTI_STOREY = "multiStorey"
     SINGLE_LEVEL = "singleLevel"
     UNDERGROUND = "underground"

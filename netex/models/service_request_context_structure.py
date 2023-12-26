@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .data_name_spaces_structure import DataNameSpacesStructure
 from .delivery_method_enumeration import DeliveryMethodEnumeration
@@ -17,7 +17,7 @@ class ServiceRequestContextStructure:
             "name": "CheckStatusAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscribe_address: Optional[str] = field(
         default=None,
@@ -25,7 +25,7 @@ class ServiceRequestContextStructure:
             "name": "SubscribeAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     manage_subscription_address: Optional[str] = field(
         default=None,
@@ -33,7 +33,7 @@ class ServiceRequestContextStructure:
             "name": "ManageSubscriptionAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     get_data_address: Optional[str] = field(
         default=None,
@@ -41,7 +41,7 @@ class ServiceRequestContextStructure:
             "name": "GetDataAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     status_response_address: Optional[str] = field(
         default=None,
@@ -49,7 +49,7 @@ class ServiceRequestContextStructure:
             "name": "StatusResponseAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscriber_address: Optional[str] = field(
         default=None,
@@ -57,7 +57,7 @@ class ServiceRequestContextStructure:
             "name": "SubscriberAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     notify_address: Optional[str] = field(
         default=None,
@@ -65,7 +65,7 @@ class ServiceRequestContextStructure:
             "name": "NotifyAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     consumer_address: Optional[str] = field(
         default=None,
@@ -73,7 +73,7 @@ class ServiceRequestContextStructure:
             "name": "ConsumerAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     data_name_spaces: Optional[DataNameSpacesStructure] = field(
         default=None,
@@ -81,7 +81,7 @@ class ServiceRequestContextStructure:
             "name": "DataNameSpaces",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
@@ -89,9 +89,11 @@ class ServiceRequestContextStructure:
             "name": "Language",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
-    wgs_decimal_degrees_or_gml_coordinate_format: Optional[object] = field(
+    wgs_decimal_degrees_or_gml_coordinate_format: Optional[
+        Union[EmptyType1, str]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +109,7 @@ class ServiceRequestContextStructure:
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-        }
+        },
     )
     distance_units: Optional[str] = field(
         default=None,
@@ -115,7 +117,7 @@ class ServiceRequestContextStructure:
             "name": "DistanceUnits",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     velocity_units: Optional[str] = field(
         default=None,
@@ -123,7 +125,7 @@ class ServiceRequestContextStructure:
             "name": "VelocityUnits",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     data_horizon: Optional[XmlDuration] = field(
         default=None,
@@ -131,7 +133,7 @@ class ServiceRequestContextStructure:
             "name": "DataHorizon",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     request_timeout: Optional[XmlDuration] = field(
         default=None,
@@ -139,7 +141,7 @@ class ServiceRequestContextStructure:
             "name": "RequestTimeout",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delivery_method: Optional[DeliveryMethodEnumeration] = field(
         default=None,
@@ -147,7 +149,7 @@ class ServiceRequestContextStructure:
             "name": "DeliveryMethod",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     multipart_despatch: Optional[bool] = field(
         default=None,
@@ -155,7 +157,7 @@ class ServiceRequestContextStructure:
             "name": "MultipartDespatch",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     confirm_delivery: Optional[bool] = field(
         default=None,
@@ -163,7 +165,7 @@ class ServiceRequestContextStructure:
             "name": "ConfirmDelivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     maximimum_number_of_subscriptions: Optional[int] = field(
         default=None,
@@ -171,7 +173,7 @@ class ServiceRequestContextStructure:
             "name": "MaximimumNumberOfSubscriptions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     allowed_predictors: Optional[PredictorsEnumeration] = field(
         default=None,
@@ -179,7 +181,7 @@ class ServiceRequestContextStructure:
             "name": "AllowedPredictors",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     prediction_function: Optional[str] = field(
         default=None,
@@ -187,5 +189,5 @@ class ServiceRequestContextStructure:
             "name": "PredictionFunction",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

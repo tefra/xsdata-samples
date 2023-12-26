@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .response_structure import ResponseStructure
-from .service_delivery_error_condition_structure import ServiceDeliveryErrorConditionStructure
+from .service_delivery_error_condition_structure import (
+    ServiceDeliveryErrorConditionStructure,
+)
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
@@ -14,7 +16,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "name": "RequestMessageRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -22,7 +24,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -30,7 +32,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     status: Optional[bool] = field(
         default=None,
@@ -38,7 +40,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     error_condition: Optional[ServiceDeliveryErrorConditionStructure] = field(
         default=None,
@@ -46,5 +48,5 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

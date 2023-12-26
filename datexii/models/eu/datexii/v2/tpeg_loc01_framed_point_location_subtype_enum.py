@@ -11,4 +11,5 @@ class TpegLoc01FramedPointLocationSubtypeEnum(Enum):
     :cvar FRAMED_POINT: A point on the road network framed by two other
         points on the same road.
     """
+
     FRAMED_POINT = "framedPoint"

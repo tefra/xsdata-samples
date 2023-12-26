@@ -19,6 +19,7 @@ class ProfileSearchModifiers2:
         The starting search index of the results returned. Used to browse
         beyond the initial search results.
     """
+
     class Meta:
         name = "ProfileSearchModifiers"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -30,7 +31,7 @@ class ProfileSearchModifiers2:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 200,
-        }
+        },
     )
     start_from_result: int = field(
         default=1,
@@ -38,5 +39,5 @@ class ProfileSearchModifiers2:
             "name": "StartFromResult",
             "type": "Attribute",
             "min_inclusive": 1,
-        }
+        },
     )

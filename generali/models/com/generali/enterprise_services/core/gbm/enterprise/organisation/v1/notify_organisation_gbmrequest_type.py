@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmheader_type import BaseGbmheaderType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.organisation_gbotype import OrganisationGbotype
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmheader_type import (
+    BaseGbmheaderType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v1.organisation_gbotype import (
+    OrganisationGbotype,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1"
 
@@ -15,6 +19,7 @@ class NotifyOrganisationGbmrequestType(BaseGbmheaderType):
     :ivar organisation_gbo: <description xmlns="">The business object to
         notify on</description>
     """
+
     class Meta:
         name = "NotifyOrganisationGBMRequestType"
 
@@ -25,5 +30,5 @@ class NotifyOrganisationGbmrequestType(BaseGbmheaderType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v1",
             "required": True,
-        }
+        },
     )

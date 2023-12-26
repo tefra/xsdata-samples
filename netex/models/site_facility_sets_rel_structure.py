@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .site_facility_set import SiteFacilitySet
 from .site_facility_set_ref import SiteFacilitySetRef
@@ -12,7 +12,9 @@ class SiteFacilitySetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "siteFacilitySets_RelStructure"
 
-    site_facility_set_ref_or_site_facility_set: List[object] = field(
+    site_facility_set_ref_or_site_facility_set: List[
+        Union[SiteFacilitySetRef, SiteFacilitySet]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class SiteFacilitySetsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

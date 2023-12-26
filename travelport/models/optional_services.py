@@ -26,15 +26,18 @@ class OptionalServices:
     optional_service_rules
         Holds the rules for selecting the optional service in the itinerary
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    optional_services_total: None | OptionalServices.OptionalServicesTotal = field(
-        default=None,
-        metadata={
-            "name": "OptionalServicesTotal",
-            "type": "Element",
-        }
+    optional_services_total: None | OptionalServices.OptionalServicesTotal = (
+        field(
+            default=None,
+            metadata={
+                "name": "OptionalServicesTotal",
+                "type": "Element",
+            },
+        )
     )
     optional_service: list[OptionalService1] = field(
         default_factory=list,
@@ -43,7 +46,7 @@ class OptionalServices:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     grouped_option_info: list[GroupedOptionInfo] = field(
         default_factory=list,
@@ -51,7 +54,7 @@ class OptionalServices:
             "name": "GroupedOptionInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     optional_service_rules: list[ServiceRuleType1] = field(
         default_factory=list,
@@ -59,7 +62,7 @@ class OptionalServices:
             "name": "OptionalServiceRules",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
 
     @dataclass
@@ -99,13 +102,14 @@ class OptionalServices:
         approximate_fees
             The Converted fee amount in Default Currency.
         """
+
         tax_info: list[TaxInfo] = field(
             default_factory=list,
             metadata={
                 "name": "TaxInfo",
                 "type": "Element",
                 "max_occurs": 999,
-            }
+            },
         )
         fee_info: list[FeeInfo] = field(
             default_factory=list,
@@ -113,75 +117,75 @@ class OptionalServices:
                 "name": "FeeInfo",
                 "type": "Element",
                 "max_occurs": 999,
-            }
+            },
         )
         total_price: None | str = field(
             default=None,
             metadata={
                 "name": "TotalPrice",
                 "type": "Attribute",
-            }
+            },
         )
         base_price: None | str = field(
             default=None,
             metadata={
                 "name": "BasePrice",
                 "type": "Attribute",
-            }
+            },
         )
         approximate_total_price: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateTotalPrice",
                 "type": "Attribute",
-            }
+            },
         )
         approximate_base_price: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateBasePrice",
                 "type": "Attribute",
-            }
+            },
         )
         equivalent_base_price: None | str = field(
             default=None,
             metadata={
                 "name": "EquivalentBasePrice",
                 "type": "Attribute",
-            }
+            },
         )
         taxes: None | str = field(
             default=None,
             metadata={
                 "name": "Taxes",
                 "type": "Attribute",
-            }
+            },
         )
         fees: None | str = field(
             default=None,
             metadata={
                 "name": "Fees",
                 "type": "Attribute",
-            }
+            },
         )
         services: None | str = field(
             default=None,
             metadata={
                 "name": "Services",
                 "type": "Attribute",
-            }
+            },
         )
         approximate_taxes: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateTaxes",
                 "type": "Attribute",
-            }
+            },
         )
         approximate_fees: None | str = field(
             default=None,
             metadata={
                 "name": "ApproximateFees",
                 "type": "Attribute",
-            }
+            },
         )

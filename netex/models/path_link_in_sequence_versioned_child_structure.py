@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .link_in_link_sequence_versioned_child_structure import LinkInLinkSequenceVersionedChildStructure
+from .link_in_link_sequence_versioned_child_structure import (
+    LinkInLinkSequenceVersionedChildStructure,
+)
 from .multilingual_string import MultilingualString
 from .path_heading_enumeration import PathHeadingEnumeration
 from .path_link_ref import PathLinkRef
@@ -11,7 +13,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChildStructure):
+class PathLinkInSequenceVersionedChildStructure(
+    LinkInLinkSequenceVersionedChildStructure
+):
     class Meta:
         name = "PathLinkInSequence_VersionedChildStructure"
 
@@ -22,7 +26,7 @@ class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChild
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     reverse: Optional[bool] = field(
         default=None,
@@ -30,7 +34,7 @@ class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChild
             "name": "Reverse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     heading: Optional[PathHeadingEnumeration] = field(
         default=None,
@@ -38,7 +42,7 @@ class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChild
             "name": "Heading",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transition: Optional[TransitionEnumeration] = field(
         default=None,
@@ -46,7 +50,7 @@ class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChild
             "name": "Transition",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     instruction: Optional[MultilingualString] = field(
         default=None,
@@ -54,7 +58,7 @@ class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChild
             "name": "Instruction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -62,14 +66,14 @@ class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChild
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     views: Optional["PathLinkInSequenceVersionedChildStructure.Views"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
     @dataclass
@@ -81,5 +85,5 @@ class PathLinkInSequenceVersionedChildStructure(LinkInLinkSequenceVersionedChild
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "required": True,
-            }
+            },
         )

@@ -11,5 +11,5 @@ class EntityInVersionInFrameRefStructure(VersionOfObjectRefStructure):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

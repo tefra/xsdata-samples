@@ -14,6 +14,7 @@ class ProfileModifyFieldReq2(BaseReq5):
     Note that some modifications are not permitted once a field or field
     group is in use (i.e., is associated to a template).
     """
+
     class Meta:
         name = "ProfileModifyFieldReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -24,7 +25,7 @@ class ProfileModifyFieldReq2(BaseReq5):
             "name": "ModifyField",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     modify_field_group: list[ModifyFieldGroup2] = field(
         default_factory=list,
@@ -32,5 +33,5 @@ class ProfileModifyFieldReq2(BaseReq5):
             "name": "ModifyFieldGroup",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

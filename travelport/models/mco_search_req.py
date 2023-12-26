@@ -27,6 +27,7 @@ class McoSearchReq(BaseReq1):
     mco_create_date
     mco_search_modifiers
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -36,7 +37,7 @@ class McoSearchReq(BaseReq1):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     carrier: list[Carrier1] = field(
         default_factory=list,
@@ -45,7 +46,7 @@ class McoSearchReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 10,
-        }
+        },
     )
     airport: list[Airport1] = field(
         default_factory=list,
@@ -54,7 +55,7 @@ class McoSearchReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 10,
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
@@ -64,19 +65,19 @@ class McoSearchReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     mco_create_date: None | McoCreateDate = field(
         default=None,
         metadata={
             "name": "McoCreateDate",
             "type": "Element",
-        }
+        },
     )
     mco_search_modifiers: None | McoSearchModifiers = field(
         default=None,
         metadata={
             "name": "McoSearchModifiers",
             "type": "Element",
-        }
+        },
     )

@@ -21,6 +21,7 @@ class ParkingSpaceAccessibilityEnum(Enum):
         (painted on the ground).
     :cvar OTHER: Other.
     """
+
     EXTRA_SPACE_LEFT_SIDE = "extraSpaceLeftSide"
     EXTRA_SPACE_RIGHT_SIDE = "extraSpaceRightSide"
     NEARBY_PEDESTRIAN_EXIT = "nearbyPedestrianExit"

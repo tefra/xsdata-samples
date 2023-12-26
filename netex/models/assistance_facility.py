@@ -14,5 +14,5 @@ class AssistanceFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

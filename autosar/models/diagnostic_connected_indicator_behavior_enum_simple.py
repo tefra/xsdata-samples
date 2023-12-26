@@ -16,6 +16,7 @@ class DiagnosticConnectedIndicatorBehaviorEnumSimple(Enum):
     :cvar SLOW_FLASHING_MODE: Flash Indicator Lamp should be set to
         "Slow Flash".
     """
+
     BLINK_MODE = "BLINK-MODE"
     BLINK_OR_CONTINUOUS_ON_MODE = "BLINK-OR-CONTINUOUS-ON-MODE"
     CONTINUOUS_ON_MODE = "CONTINUOUS-ON-MODE"

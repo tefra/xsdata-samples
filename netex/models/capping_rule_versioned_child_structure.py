@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import List, Optional
+from typing import List, Optional, Union
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_period_enumeration import CappingPeriodEnumeration
 from .capping_rule_prices_rel_structure import CappingRulePricesRelStructure
@@ -28,7 +28,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "name": "MaximumDistance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     capping_period: Optional[CappingPeriodEnumeration] = field(
         default=None,
@@ -36,7 +36,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "name": "CappingPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     capped_discount_right_ref: List[CappedDiscountRightRef] = field(
         default_factory=list,
@@ -44,9 +44,11 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "name": "CappedDiscountRightRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    supplement_product_ref_or_preassigned_fare_product_ref: List[object] = field(
+    supplement_product_ref_or_preassigned_fare_product_ref: List[
+        Union[SupplementProductRef, PreassignedFareProductRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -62,7 +64,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     validable_element_ref: Optional[ValidableElementRef] = field(
         default=None,
@@ -70,9 +72,15 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "name": "ValidableElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[
+        Union[
+            GenericParameterAssignmentsRelStructure,
+            GenericParameterAssignment,
+            GenericParameterAssignmentInContext,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -93,12 +101,12 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     prices: Optional[CappingRulePricesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -20,6 +20,7 @@ class VehicleRulesReq(BaseSearchReq1):
     vehicle_rules_lookup
         Details to request Vehicle rate rules post shopping request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -30,14 +31,14 @@ class VehicleRulesReq(BaseSearchReq1):
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     vehicle_rules_lookup: None | VehicleRulesReq.VehicleRulesLookup = field(
         default=None,
         metadata={
             "name": "VehicleRulesLookup",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -48,7 +49,7 @@ class VehicleRulesReq(BaseSearchReq1):
                 "name": "VehicleDateLocation",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         vehicle_search_modifiers: None | VehicleSearchModifiers = field(
             default=None,
@@ -56,5 +57,5 @@ class VehicleRulesReq(BaseSearchReq1):
                 "name": "VehicleSearchModifiers",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )

@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.occupancy_change_value import OccupancyChangeValue
-from datexii.models.eu.datexii.v2.vehicle_characteristics import VehicleCharacteristics
+from datexii.models.eu.datexii.v2.occupancy_change_value import (
+    OccupancyChangeValue,
+)
+from datexii.models.eu.datexii.v2.vehicle_characteristics import (
+    VehicleCharacteristics,
+)
 from datexii.models.eu.datexii.v2.vehicle_count_value import VehicleCountValue
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -37,13 +41,14 @@ class VehicleCountWithinInterval:
     :ivar counted_vehicles:
     :ivar vehicle_count_within_interval_extension:
     """
+
     measurement_or_calcualtion_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "measurementOrCalcualtionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     measurement_interval: Optional[float] = field(
         default=None,
@@ -52,7 +57,7 @@ class VehicleCountWithinInterval:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     number_of_incoming_vehicles: Optional[VehicleCountValue] = field(
         default=None,
@@ -60,7 +65,7 @@ class VehicleCountWithinInterval:
             "name": "numberOfIncomingVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     number_of_outgoing_vehicles: Optional[VehicleCountValue] = field(
         default=None,
@@ -68,7 +73,7 @@ class VehicleCountWithinInterval:
             "name": "numberOfOutgoingVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     change_of_occupied_spaces: Optional[OccupancyChangeValue] = field(
         default=None,
@@ -76,7 +81,7 @@ class VehicleCountWithinInterval:
             "name": "changeOfOccupiedSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     counted_vehicles: Optional[VehicleCharacteristics] = field(
         default=None,
@@ -84,7 +89,7 @@ class VehicleCountWithinInterval:
             "name": "countedVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_count_within_interval_extension: Optional[ExtensionType] = field(
         default=None,
@@ -92,5 +97,5 @@ class VehicleCountWithinInterval:
             "name": "vehicleCountWithinIntervalExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

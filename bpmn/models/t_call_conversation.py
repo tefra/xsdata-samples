@@ -18,12 +18,12 @@ class TCallConversation(TConversationNode):
             "name": "participantAssociation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     called_collaboration_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "calledCollaborationRef",
             "type": "Attribute",
-        }
+        },
     )

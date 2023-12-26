@@ -39,7 +39,7 @@ class CallForTendersType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -47,7 +47,7 @@ class CallForTendersType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -55,7 +55,7 @@ class CallForTendersType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -63,7 +63,7 @@ class CallForTendersType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -71,7 +71,7 @@ class CallForTendersType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -79,7 +79,7 @@ class CallForTendersType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -87,7 +87,7 @@ class CallForTendersType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -95,7 +95,7 @@ class CallForTendersType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     contract_folder_id: Optional[ContractFolderId] = field(
         default=None,
@@ -104,7 +104,7 @@ class CallForTendersType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     approval_date: Optional[XmlDate] = field(
         default=None,
@@ -112,7 +112,7 @@ class CallForTendersType:
             "name": "ApprovalDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -121,7 +121,7 @@ class CallForTendersType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -129,7 +129,7 @@ class CallForTendersType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -137,7 +137,7 @@ class CallForTendersType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     version_id: Optional[VersionId] = field(
         default=None,
@@ -145,7 +145,7 @@ class CallForTendersType:
             "name": "VersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     previous_version_id: Optional[PreviousVersionId] = field(
         default=None,
@@ -153,7 +153,7 @@ class CallForTendersType:
             "name": "PreviousVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     legal_document_reference: Optional[LegalDocumentReference] = field(
         default=None,
@@ -161,7 +161,7 @@ class CallForTendersType:
             "name": "LegalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     technical_document_reference: Optional[TechnicalDocumentReference] = field(
         default=None,
@@ -169,15 +169,17 @@ class CallForTendersType:
             "name": "TechnicalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+    additional_document_reference: Tuple[
+        AdditionalDocumentReference, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -185,7 +187,7 @@ class CallForTendersType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     contracting_party: Optional[ContractingParty] = field(
         default=None,
@@ -194,7 +196,7 @@ class CallForTendersType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     originator_customer_party: Tuple[OriginatorCustomerParty, ...] = field(
         default_factory=tuple,
@@ -202,7 +204,7 @@ class CallForTendersType:
             "name": "OriginatorCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -210,7 +212,7 @@ class CallForTendersType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tendering_terms: Optional[TenderingTerms] = field(
         default=None,
@@ -218,7 +220,7 @@ class CallForTendersType:
             "name": "TenderingTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tendering_process: Optional[TenderingProcess] = field(
         default=None,
@@ -226,7 +228,7 @@ class CallForTendersType:
             "name": "TenderingProcess",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     procurement_project: Optional[ProcurementProject] = field(
         default=None,
@@ -235,7 +237,7 @@ class CallForTendersType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     procurement_project_lot: Tuple[ProcurementProjectLot, ...] = field(
         default_factory=tuple,
@@ -243,11 +245,13 @@ class CallForTendersType:
             "name": "ProcurementProjectLot",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
 
 
 @dataclass(frozen=True)
 class CallForTenders(CallForTendersType):
     class Meta:
-        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2"
+        namespace = (
+            "urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2"
+        )

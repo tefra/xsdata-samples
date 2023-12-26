@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TopographicPlaceDescriptorVersionedChildStructure(VersionedChildStructure):
+class TopographicPlaceDescriptorVersionedChildStructure(
+    VersionedChildStructure
+):
     class Meta:
         name = "TopographicPlaceDescriptor_VersionedChildStructure"
 
@@ -19,7 +21,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(VersionedChildStructure)
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -27,15 +29,17 @@ class TopographicPlaceDescriptorVersionedChildStructure(VersionedChildStructure)
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    qualify: Optional["TopographicPlaceDescriptorVersionedChildStructure.Qualify"] = field(
+    qualify: Optional[
+        "TopographicPlaceDescriptorVersionedChildStructure.Qualify"
+    ] = field(
         default=None,
         metadata={
             "name": "Qualify",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
     @dataclass
@@ -47,7 +51,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(VersionedChildStructure)
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "required": True,
-            }
+            },
         )
         topographic_place_ref: Optional[TopographicPlaceRef] = field(
             default=None,
@@ -55,5 +59,5 @@ class TopographicPlaceDescriptorVersionedChildStructure(VersionedChildStructure)
                 "name": "TopographicPlaceRef",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-            }
+            },
         )

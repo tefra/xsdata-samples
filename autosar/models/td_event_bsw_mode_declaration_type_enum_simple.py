@@ -14,6 +14,7 @@ class TdEventBswModeDeclarationTypeEnumSimple(Enum):
         switch to the associated ModeDeclarationGroupPrototype has been
         initiated by the BswM.
     """
+
     MODE_DECLARATION_REQUESTED = "MODE-DECLARATION-REQUESTED"
     MODE_DECLARATION_SWITCH_COMPLETED = "MODE-DECLARATION-SWITCH-COMPLETED"
     MODE_DECLARATION_SWITCH_INITIATED = "MODE-DECLARATION-SWITCH-INITIATED"

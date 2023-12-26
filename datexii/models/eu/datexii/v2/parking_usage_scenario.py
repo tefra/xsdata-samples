@@ -2,10 +2,18 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
-from datexii.models.eu.datexii.v2.parking_usage_scenario_enum import ParkingUsageScenarioEnum
-from datexii.models.eu.datexii.v2.public_event_type2_enum import PublicEventType2Enum
-from datexii.models.eu.datexii.v2.public_event_type_enum import PublicEventTypeEnum
-from datexii.models.eu.datexii.v2.truck_parking_dynamic_management_enum import TruckParkingDynamicManagementEnum
+from datexii.models.eu.datexii.v2.parking_usage_scenario_enum import (
+    ParkingUsageScenarioEnum,
+)
+from datexii.models.eu.datexii.v2.public_event_type2_enum import (
+    PublicEventType2Enum,
+)
+from datexii.models.eu.datexii.v2.public_event_type_enum import (
+    PublicEventTypeEnum,
+)
+from datexii.models.eu.datexii.v2.truck_parking_dynamic_management_enum import (
+    TruckParkingDynamicManagementEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -32,6 +40,7 @@ class ParkingUsageScenario:
     :ivar scenario_availability:
     :ivar parking_usage_scenario_extension:
     """
+
     parking_usage_scenario: Optional[ParkingUsageScenarioEnum] = field(
         default=None,
         metadata={
@@ -39,15 +48,17 @@ class ParkingUsageScenario:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    truck_parking_dynamic_management: List[TruckParkingDynamicManagementEnum] = field(
+    truck_parking_dynamic_management: List[
+        TruckParkingDynamicManagementEnum
+    ] = field(
         default_factory=list,
         metadata={
             "name": "truckParkingDynamicManagement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     event_parking_type: Optional[PublicEventTypeEnum] = field(
         default=None,
@@ -55,7 +66,7 @@ class ParkingUsageScenario:
             "name": "eventParkingType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     event_parking_type2: Optional[PublicEventType2Enum] = field(
         default=None,
@@ -63,7 +74,7 @@ class ParkingUsageScenario:
             "name": "eventParkingType2",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     scenario_availability: Optional[OverallPeriod] = field(
         default=None,
@@ -71,7 +82,7 @@ class ParkingUsageScenario:
             "name": "scenarioAvailability",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_usage_scenario_extension: Optional[ExtensionType] = field(
         default=None,
@@ -79,5 +90,5 @@ class ParkingUsageScenario:
             "name": "parkingUsageScenarioExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

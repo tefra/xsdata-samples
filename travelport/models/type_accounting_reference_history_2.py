@@ -32,6 +32,7 @@ class TypeAccountingReferenceHistory2(TypeKeyElement2):
     active
         Denotes whether the Accounting Reference is Active or Not.
     """
+
     class Meta:
         name = "typeAccountingReferenceHistory"
 
@@ -42,14 +43,14 @@ class TypeAccountingReferenceHistory2(TypeKeyElement2):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -58,14 +59,14 @@ class TypeAccountingReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     account_id: None | int = field(
         default=None,
         metadata={
             "name": "AccountID",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -74,19 +75,19 @@ class TypeAccountingReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )
     active: None | bool = field(
         default=None,
         metadata={
             "name": "Active",
             "type": "Attribute",
-        }
+        },
     )

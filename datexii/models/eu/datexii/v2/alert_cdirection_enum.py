@@ -21,6 +21,7 @@ class AlertCDirectionEnum(Enum):
         location table.
     :cvar UNKNOWN: Unknown direction.
     """
+
     BOTH = "both"
     NEGATIVE = "negative"
     POSITIVE = "positive"

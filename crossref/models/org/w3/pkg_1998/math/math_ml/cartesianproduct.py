@@ -15,5 +15,5 @@ class Cartesianproduct:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

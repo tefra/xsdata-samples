@@ -6,13 +6,17 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .e_2_e_profile_configuration_subtypes_enum import E2EProfileConfigurationSubtypesEnum
+from .e_2_e_profile_configuration_subtypes_enum import (
+    E2EProfileConfigurationSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .service_event_deployment_subtypes_enum import ServiceEventDeploymentSubtypesEnum
+from .service_event_deployment_subtypes_enum import (
+    ServiceEventDeploymentSubtypesEnum,
+)
 from .short_name_fragment import ShortNameFragment
 from .time_value import TimeValue
 
@@ -92,6 +96,7 @@ class End2EndEventProtectionProps:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-2-END-EVENT-PROTECTION-PROPS"
 
@@ -102,15 +107,17 @@ class End2EndEventProtectionProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["End2EndEventProtectionProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "End2EndEventProtectionProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -118,7 +125,7 @@ class End2EndEventProtectionProps:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -126,7 +133,7 @@ class End2EndEventProtectionProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -134,7 +141,7 @@ class End2EndEventProtectionProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -142,7 +149,7 @@ class End2EndEventProtectionProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -150,7 +157,7 @@ class End2EndEventProtectionProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["End2EndEventProtectionProps.Annotations"] = field(
         default=None,
@@ -158,7 +165,7 @@ class End2EndEventProtectionProps:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_ids: Optional["End2EndEventProtectionProps.DataIds"] = field(
         default=None,
@@ -166,7 +173,7 @@ class End2EndEventProtectionProps:
             "name": "DATA-IDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -174,7 +181,7 @@ class End2EndEventProtectionProps:
             "name": "DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_update_period: Optional[TimeValue] = field(
         default=None,
@@ -182,15 +189,17 @@ class End2EndEventProtectionProps:
             "name": "DATA-UPDATE-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    e_2_e_profile_configuration_ref: Optional["End2EndEventProtectionProps.E2EProfileConfigurationRef"] = field(
+    e_2_e_profile_configuration_ref: Optional[
+        "End2EndEventProtectionProps.E2EProfileConfigurationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-CONFIGURATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_ref: Optional["End2EndEventProtectionProps.EventRef"] = field(
         default=None,
@@ -198,7 +207,7 @@ class End2EndEventProtectionProps:
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -206,7 +215,7 @@ class End2EndEventProtectionProps:
             "name": "MAX-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -214,14 +223,14 @@ class End2EndEventProtectionProps:
             "name": "MIN-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -229,14 +238,14 @@ class End2EndEventProtectionProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -247,7 +256,7 @@ class End2EndEventProtectionProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -258,7 +267,7 @@ class End2EndEventProtectionProps:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -273,13 +282,14 @@ class End2EndEventProtectionProps:
             constraint that depends on the category of the
             EndToEndProtection.
         """
+
         data_id: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-ID",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -290,7 +300,7 @@ class End2EndEventProtectionProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -301,5 +311,5 @@ class End2EndEventProtectionProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

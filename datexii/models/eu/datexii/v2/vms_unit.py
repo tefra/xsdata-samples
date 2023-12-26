@@ -3,9 +3,15 @@ from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.vms_setting import VmsSetting
 from datexii.models.eu.datexii.v2.vms_unit_fault import VmsUnitFault
-from datexii.models.eu.datexii.v2.vms_unit_record_versioned_reference import VmsUnitRecordVersionedReference
-from datexii.models.eu.datexii.v2.vms_unit_table_versioned_reference import VmsUnitTableVersionedReference
-from datexii.models.eu.datexii.v2.vms_unit_vms_index_vms import VmsUnitVmsIndexVms
+from datexii.models.eu.datexii.v2.vms_unit_record_versioned_reference import (
+    VmsUnitRecordVersionedReference,
+)
+from datexii.models.eu.datexii.v2.vms_unit_table_versioned_reference import (
+    VmsUnitTableVersionedReference,
+)
+from datexii.models.eu.datexii.v2.vms_unit_vms_index_vms import (
+    VmsUnitVmsIndexVms,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -25,6 +31,7 @@ class VmsUnit(VmsSetting):
     :ivar vms_unit_fault:
     :ivar vms_unit_extension:
     """
+
     vms_unit_table_reference: Optional[VmsUnitTableVersionedReference] = field(
         default=None,
         metadata={
@@ -32,7 +39,7 @@ class VmsUnit(VmsSetting):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms_unit_reference: Optional[VmsUnitRecordVersionedReference] = field(
         default=None,
@@ -41,14 +48,14 @@ class VmsUnit(VmsSetting):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms: List[VmsUnitVmsIndexVms] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_unit_fault: List[VmsUnitFault] = field(
         default_factory=list,
@@ -56,7 +63,7 @@ class VmsUnit(VmsSetting):
             "name": "vmsUnitFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_unit_extension: Optional[ExtensionType] = field(
         default=None,
@@ -64,5 +71,5 @@ class VmsUnit(VmsSetting):
             "name": "vmsUnitExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

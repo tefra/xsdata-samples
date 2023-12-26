@@ -16,18 +16,18 @@ class TExtension:
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     definition: Optional[QName] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     must_understand: bool = field(
         default=False,
         metadata={
             "name": "mustUnderstand",
             "type": "Attribute",
-        }
+        },
     )

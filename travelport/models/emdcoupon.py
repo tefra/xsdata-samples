@@ -58,6 +58,7 @@ class Emdcoupon:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "EMDCoupon"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -68,7 +69,7 @@ class Emdcoupon:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -76,21 +77,21 @@ class Emdcoupon:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     svc_description: None | str = field(
         default=None,
         metadata={
             "name": "SvcDescription",
             "type": "Attribute",
-        }
+        },
     )
     consumed_at_issuance_ind: None | bool = field(
         default=None,
         metadata={
             "name": "ConsumedAtIssuanceInd",
             "type": "Attribute",
-        }
+        },
     )
     rfic: None | str = field(
         default=None,
@@ -99,14 +100,14 @@ class Emdcoupon:
             "type": "Attribute",
             "required": True,
             "length": 1,
-        }
+        },
     )
     rfisc: None | str = field(
         default=None,
         metadata={
             "name": "RFISC",
             "type": "Attribute",
-        }
+        },
     )
     rfidescription: None | str = field(
         default=None,
@@ -115,7 +116,7 @@ class Emdcoupon:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 86,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -124,7 +125,7 @@ class Emdcoupon:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -133,7 +134,7 @@ class Emdcoupon:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -141,7 +142,7 @@ class Emdcoupon:
             "name": "FlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     present_to: None | str = field(
         default=None,
@@ -150,7 +151,7 @@ class Emdcoupon:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 71,
-        }
+        },
     )
     present_at: None | str = field(
         default=None,
@@ -159,14 +160,14 @@ class Emdcoupon:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 71,
-        }
+        },
     )
     non_refundable_ind: None | bool = field(
         default=None,
         metadata={
             "name": "NonRefundableInd",
             "type": "Attribute",
-        }
+        },
     )
     marketing_carrier: None | str = field(
         default=None,
@@ -174,26 +175,26 @@ class Emdcoupon:
             "name": "MarketingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

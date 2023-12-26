@@ -14,13 +14,14 @@ class PercentageValue(DataValue):
     :ivar percentage: A value expressed as a percentage.
     :ivar percentage_value_extension:
     """
+
     percentage: Optional[float] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     percentage_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -28,5 +29,5 @@ class PercentageValue(DataValue):
             "name": "percentageValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

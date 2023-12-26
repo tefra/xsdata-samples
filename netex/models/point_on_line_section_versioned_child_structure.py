@@ -1,14 +1,20 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .line_section_point_type_enumeration import LineSectionPointTypeEnumeration
-from .point_on_section_versioned_child_structure import PointOnSectionVersionedChildStructure
+from .line_section_point_type_enumeration import (
+    LineSectionPointTypeEnumeration,
+)
+from .point_on_section_versioned_child_structure import (
+    PointOnSectionVersionedChildStructure,
+)
 from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PointOnLineSectionVersionedChildStructure(PointOnSectionVersionedChildStructure):
+class PointOnLineSectionVersionedChildStructure(
+    PointOnSectionVersionedChildStructure
+):
     class Meta:
         name = "PointOnLineSection_VersionedChildStructure"
 
@@ -18,7 +24,7 @@ class PointOnLineSectionVersionedChildStructure(PointOnSectionVersionedChildStru
             "name": "LineSectionPointType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     show_as_accessible: Optional[bool] = field(
         default=None,
@@ -26,7 +32,7 @@ class PointOnLineSectionVersionedChildStructure(PointOnSectionVersionedChildStru
             "name": "ShowAsAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     connecting_vehicle_modes: List[VehicleModeEnumeration] = field(
         default_factory=list,
@@ -35,5 +41,5 @@ class PointOnLineSectionVersionedChildStructure(PointOnSectionVersionedChildStru
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

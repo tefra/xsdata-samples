@@ -17,7 +17,7 @@ class GroupOfParkingSpacesParkingSpaceIndexParkingSpace:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_space_index: Optional[int] = field(
         default=None,
@@ -25,5 +25,5 @@ class GroupOfParkingSpacesParkingSpaceIndexParkingSpace:
             "name": "parkingSpaceIndex",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

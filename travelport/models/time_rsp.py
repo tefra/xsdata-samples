@@ -10,6 +10,7 @@ class TimeRsp(BaseRsp3):
     """
     Returns the time of the system.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
@@ -18,5 +19,5 @@ class TimeRsp(BaseRsp3):
         metadata={
             "name": "SystemTime",
             "type": "Element",
-        }
+        },
     )

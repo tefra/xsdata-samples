@@ -90,6 +90,7 @@ class ConstraintTailoring:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONSTRAINT-TAILORING"
 
@@ -100,15 +101,17 @@ class ConstraintTailoring:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ConstraintTailoring.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ConstraintTailoring.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +119,7 @@ class ConstraintTailoring:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +127,7 @@ class ConstraintTailoring:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +135,7 @@ class ConstraintTailoring:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +143,7 @@ class ConstraintTailoring:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +151,7 @@ class ConstraintTailoring:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ConstraintTailoring.Annotations"] = field(
         default=None,
@@ -156,7 +159,7 @@ class ConstraintTailoring:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alternative_name: Optional[String] = field(
         default=None,
@@ -164,7 +167,7 @@ class ConstraintTailoring:
             "name": "ALTERNATIVE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     in_scope: Optional[Boolean] = field(
         default=None,
@@ -172,7 +175,7 @@ class ConstraintTailoring:
             "name": "IN-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     severity: Optional[SeverityEnum] = field(
         default=None,
@@ -180,7 +183,7 @@ class ConstraintTailoring:
             "name": "SEVERITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     constraint_ref: Optional["ConstraintTailoring.ConstraintRef"] = field(
         default=None,
@@ -188,14 +191,14 @@ class ConstraintTailoring:
             "name": "CONSTRAINT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +206,14 @@ class ConstraintTailoring:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +224,7 @@ class ConstraintTailoring:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,7 +235,7 @@ class ConstraintTailoring:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,5 +246,5 @@ class ConstraintTailoring:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

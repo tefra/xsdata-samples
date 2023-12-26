@@ -15,5 +15,5 @@ class TScript:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

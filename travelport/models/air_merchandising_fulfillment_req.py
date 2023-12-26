@@ -8,7 +8,9 @@ from travelport.models.credit_card_1 import CreditCard1
 from travelport.models.general_remark_1 import GeneralRemark1
 from travelport.models.host_reservation import HostReservation
 from travelport.models.host_token_1 import HostToken1
-from travelport.models.merchandising_pricing_modifiers import MerchandisingPricingModifiers
+from travelport.models.merchandising_pricing_modifiers import (
+    MerchandisingPricingModifiers,
+)
 from travelport.models.optional_services import OptionalServices
 from travelport.models.specific_seat_assignment import SpecificSeatAssignment
 
@@ -46,6 +48,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
     merchandising_pricing_modifiers
         Used to provide additional pricing modifiers. Provider:ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -56,7 +59,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     host_reservation: list[HostReservation] = field(
         default_factory=list,
@@ -66,7 +69,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     agency_sell_info: None | AgencySellInfo1 = field(
         default=None,
@@ -74,7 +77,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "name": "AgencySellInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_solution: None | AirSolution = field(
         default=None,
@@ -83,7 +86,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        }
+        },
     )
     credit_card: None | CreditCard1 = field(
         default=None,
@@ -91,7 +94,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "name": "CreditCard",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     agency_payment: None | AgencyPayment1 = field(
         default=None,
@@ -99,7 +102,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "name": "AgencyPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
@@ -107,7 +110,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "name": "OptionalServices",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     specific_seat_assignment: list[SpecificSeatAssignment] = field(
         default_factory=list,
@@ -116,7 +119,7 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     general_remark: list[GeneralRemark1] = field(
         default_factory=list,
@@ -125,20 +128,22 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     confirmation_email: None | str = field(
         default=None,
         metadata={
             "name": "ConfirmationEmail",
             "type": "Element",
-        }
+        },
     )
-    merchandising_pricing_modifiers: None | MerchandisingPricingModifiers = field(
-        default=None,
-        metadata={
-            "name": "MerchandisingPricingModifiers",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+    merchandising_pricing_modifiers: None | MerchandisingPricingModifiers = (
+        field(
+            default=None,
+            metadata={
+                "name": "MerchandisingPricingModifiers",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v52_0",
+            },
+        )
     )

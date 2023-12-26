@@ -15,6 +15,7 @@ class InformationStatusEnum(Enum):
     :cvar TEST: The information is part of a test for checking the
         exchange of this type of information.
     """
+
     REAL = "real"
     SECURITY_EXERCISE = "securityExercise"
     TECHNICAL_EXERCISE = "technicalExercise"

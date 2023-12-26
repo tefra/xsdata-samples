@@ -3,7 +3,9 @@ from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.predefined_location_container import PredefinedLocationContainer
+from datexii.models.eu.datexii.v2.predefined_location_container import (
+    PredefinedLocationContainer,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -21,13 +23,14 @@ class PredefinedLocation(PredefinedLocationContainer):
     :ivar id:
     :ivar version:
     """
+
     predefined_location_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "predefinedLocationName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     location: Optional[Location] = field(
         default=None,
@@ -35,7 +38,7 @@ class PredefinedLocation(PredefinedLocationContainer):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     predefined_location_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,19 +46,19 @@ class PredefinedLocation(PredefinedLocationContainer):
             "name": "predefinedLocationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

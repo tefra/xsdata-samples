@@ -11,5 +11,6 @@ class Text(TypeTextElement):
     Type of Text, Eg-'Upsell','Marketing Agent','Marketing
     Consumer','Strapline','Rule'.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

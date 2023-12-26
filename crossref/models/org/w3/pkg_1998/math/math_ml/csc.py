@@ -15,5 +15,5 @@ class Csc:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

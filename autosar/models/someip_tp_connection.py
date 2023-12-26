@@ -34,6 +34,7 @@ class SomeipTpConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-TP-CONNECTION"
 
@@ -43,7 +44,7 @@ class SomeipTpConnection:
             "name": "SEPARATION-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_channel_ref: Optional["SomeipTpConnection.TpChannelRef"] = field(
         default=None,
@@ -51,7 +52,7 @@ class SomeipTpConnection:
             "name": "TP-CHANNEL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_sdu_ref: Optional["SomeipTpConnection.TpSduRef"] = field(
         default=None,
@@ -59,7 +60,7 @@ class SomeipTpConnection:
             "name": "TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transport_pdu_ref: Optional["SomeipTpConnection.TransportPduRef"] = field(
         default=None,
@@ -67,14 +68,14 @@ class SomeipTpConnection:
             "name": "TRANSPORT-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -82,7 +83,7 @@ class SomeipTpConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -93,7 +94,7 @@ class SomeipTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -104,7 +105,7 @@ class SomeipTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -115,5 +116,5 @@ class SomeipTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

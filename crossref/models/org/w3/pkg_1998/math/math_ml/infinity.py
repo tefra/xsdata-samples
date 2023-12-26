@@ -15,5 +15,5 @@ class Infinity:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

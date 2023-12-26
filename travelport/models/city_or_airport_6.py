@@ -19,6 +19,7 @@ class CityOrAirport6(Location6):
         Indicates that the search should prefer city results over airport
         results.
     """
+
     class Meta:
         name = "CityOrAirport"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -31,12 +32,12 @@ class CityOrAirport6(Location6):
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     prefer_city: bool = field(
         default=False,
         metadata={
             "name": "PreferCity",
             "type": "Attribute",
-        }
+        },
     )

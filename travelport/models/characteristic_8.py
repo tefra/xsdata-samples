@@ -22,6 +22,7 @@ class Characteristic8:
     seat_value_description
         Description of the seat value.
     """
+
     class Meta:
         name = "Characteristic"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -33,7 +34,7 @@ class Characteristic8:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     seat_description: None | str = field(
         default=None,
@@ -42,7 +43,7 @@ class Characteristic8:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     seat_value: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class Characteristic8:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     seat_value_description: None | str = field(
         default=None,
@@ -60,5 +61,5 @@ class Characteristic8:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )

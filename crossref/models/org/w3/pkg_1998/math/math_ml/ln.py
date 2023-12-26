@@ -15,5 +15,5 @@ class Ln:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -13,6 +13,7 @@ class UpsellAdminReq(BaseReq1):
     """
     Request to add/delete/update qualify/offer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,19 +22,19 @@ class UpsellAdminReq(BaseReq1):
         metadata={
             "name": "AirUpsellCriteria",
             "type": "Element",
-        }
+        },
     )
     vehicle_upsell_criteria: None | VehicleUpsellCriteria = field(
         default=None,
         metadata={
             "name": "VehicleUpsellCriteria",
             "type": "Element",
-        }
+        },
     )
     hotel_upsell_criteria: None | HotelUpsellCriteria = field(
         default=None,
         metadata={
             "name": "HotelUpsellCriteria",
             "type": "Element",
-        }
+        },
     )

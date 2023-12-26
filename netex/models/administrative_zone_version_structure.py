@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .administrative_zone_ref import AdministrativeZoneRef
-from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .authority_ref import AuthorityRef
-from .codespace_assignments_rel_structure import CodespaceAssignmentsRelStructure
+from .codespace_assignments_rel_structure import (
+    CodespaceAssignmentsRelStructure,
+)
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .general_organisation_ref import GeneralOrganisationRef
 from .management_agent_ref import ManagementAgentRef
@@ -31,9 +35,21 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailConsortiumRef,
+            AuthorityRef,
+            OperatorRef,
+            GeneralOrganisationRef,
+            ManagementAgentRef,
+            ServicedOrganisationRef,
+            TravelAgentRef,
+            OtherOrganisationRef,
+            OrganisationRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -84,14 +100,14 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     responsibilities: Optional[ResponsibilitySetsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     codespace_assignments: Optional[CodespaceAssignmentsRelStructure] = field(
         default=None,
@@ -99,14 +115,14 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "name": "codespaceAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     subzones: Optional["AdministrativeZonesRelStructure"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -117,7 +133,9 @@ class AdministrativeZone(AdministrativeZoneVersionStructure):
 
 
 @dataclass
-class TransportAdministrativeZoneVersionStructure(AdministrativeZoneVersionStructure):
+class TransportAdministrativeZoneVersionStructure(
+    AdministrativeZoneVersionStructure
+):
     class Meta:
         name = "TransportAdministrativeZone_VersionStructure"
 
@@ -128,7 +146,7 @@ class TransportAdministrativeZoneVersionStructure(AdministrativeZoneVersionStruc
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
 
 
@@ -143,7 +161,13 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[object] = field(
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: List[
+        Union[
+            AdministrativeZoneRef,
+            TransportAdministrativeZone,
+            AdministrativeZone,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -164,5 +188,5 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

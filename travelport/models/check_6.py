@@ -20,6 +20,7 @@ class Check6:
     check_number
         The sequential check number of the check.
     """
+
     class Meta:
         name = "Check"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -30,26 +31,26 @@ class Check6:
             "name": "MICRNumber",
             "type": "Attribute",
             "max_length": 29,
-        }
+        },
     )
     routing_number: None | str = field(
         default=None,
         metadata={
             "name": "RoutingNumber",
             "type": "Attribute",
-        }
+        },
     )
     account_number: None | str = field(
         default=None,
         metadata={
             "name": "AccountNumber",
             "type": "Attribute",
-        }
+        },
     )
     check_number: None | str = field(
         default=None,
         metadata={
             "name": "CheckNumber",
             "type": "Attribute",
-        }
+        },
     )

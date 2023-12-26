@@ -8,6 +8,7 @@ class TypeAction1(Enum):
     """
     Specify whether the change is to add, update, or delete the field.
     """
+
     ADD = "Add"
     UPDATE = "Update"
     DELETE = "Delete"

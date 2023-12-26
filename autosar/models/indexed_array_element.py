@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .application_array_element_subtypes_enum import ApplicationArrayElementSubtypesEnum
-from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .application_array_element_subtypes_enum import (
+    ApplicationArrayElementSubtypesEnum,
+)
+from .implementation_data_type_element_subtypes_enum import (
+    ImplementationDataTypeElementSubtypesEnum,
+)
 from .integer import Integer
 from .ref import Ref
 
@@ -32,24 +36,29 @@ class IndexedArrayElement:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "INDEXED-ARRAY-ELEMENT"
 
-    application_array_element_ref: Optional["IndexedArrayElement.ApplicationArrayElementRef"] = field(
+    application_array_element_ref: Optional[
+        "IndexedArrayElement.ApplicationArrayElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLICATION-ARRAY-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    implementation_array_element_ref: Optional["IndexedArrayElement.ImplementationArrayElementRef"] = field(
+    implementation_array_element_ref: Optional[
+        "IndexedArrayElement.ImplementationArrayElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-ARRAY-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     index: Optional[Integer] = field(
         default=None,
@@ -57,14 +66,14 @@ class IndexedArrayElement:
             "name": "INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -72,7 +81,7 @@ class IndexedArrayElement:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -83,7 +92,7 @@ class IndexedArrayElement:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -94,5 +103,5 @@ class IndexedArrayElement:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

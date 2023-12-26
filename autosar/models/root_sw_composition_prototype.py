@@ -6,9 +6,13 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .calibration_parameter_value_set_subtypes_enum import CalibrationParameterValueSetSubtypesEnum
+from .calibration_parameter_value_set_subtypes_enum import (
+    CalibrationParameterValueSetSubtypesEnum,
+)
 from .category_string import CategoryString
-from .composition_sw_component_type_subtypes_enum import CompositionSwComponentTypeSubtypesEnum
+from .composition_sw_component_type_subtypes_enum import (
+    CompositionSwComponentTypeSubtypesEnum,
+)
 from .flat_map_subtypes_enum import FlatMapSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -97,6 +101,7 @@ class RootSwCompositionPrototype:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ROOT-SW-COMPOSITION-PROTOTYPE"
 
@@ -107,15 +112,17 @@ class RootSwCompositionPrototype:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RootSwCompositionPrototype.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RootSwCompositionPrototype.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +130,7 @@ class RootSwCompositionPrototype:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +138,7 @@ class RootSwCompositionPrototype:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +146,7 @@ class RootSwCompositionPrototype:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +154,7 @@ class RootSwCompositionPrototype:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +162,7 @@ class RootSwCompositionPrototype:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RootSwCompositionPrototype.Annotations"] = field(
         default=None,
@@ -163,15 +170,17 @@ class RootSwCompositionPrototype:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    calibration_parameter_value_set_refs: Optional["RootSwCompositionPrototype.CalibrationParameterValueSetRefs"] = field(
+    calibration_parameter_value_set_refs: Optional[
+        "RootSwCompositionPrototype.CalibrationParameterValueSetRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CALIBRATION-PARAMETER-VALUE-SET-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     flat_map_ref: Optional["RootSwCompositionPrototype.FlatMapRef"] = field(
         default=None,
@@ -179,15 +188,17 @@ class RootSwCompositionPrototype:
             "name": "FLAT-MAP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    software_composition_tref: Optional["RootSwCompositionPrototype.SoftwareCompositionTref"] = field(
+    software_composition_tref: Optional[
+        "RootSwCompositionPrototype.SoftwareCompositionTref"
+    ] = field(
         default=None,
         metadata={
             "name": "SOFTWARE-COMPOSITION-TREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -195,14 +206,14 @@ class RootSwCompositionPrototype:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -210,14 +221,14 @@ class RootSwCompositionPrototype:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -228,7 +239,7 @@ class RootSwCompositionPrototype:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,18 +250,20 @@ class RootSwCompositionPrototype:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CalibrationParameterValueSetRefs:
-        calibration_parameter_value_set_ref: List["RootSwCompositionPrototype.CalibrationParameterValueSetRefs.CalibrationParameterValueSetRef"] = field(
+        calibration_parameter_value_set_ref: List[
+            "RootSwCompositionPrototype.CalibrationParameterValueSetRefs.CalibrationParameterValueSetRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CALIBRATION-PARAMETER-VALUE-SET-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -261,7 +274,7 @@ class RootSwCompositionPrototype:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -272,7 +285,7 @@ class RootSwCompositionPrototype:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -283,5 +296,5 @@ class RootSwCompositionPrototype:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

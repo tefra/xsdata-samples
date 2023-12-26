@@ -9,9 +9,13 @@ from .annotation import (
 from .category_string import CategoryString
 from .diagnostic_event_ref_conditional import DiagnosticEventRefConditional
 from .diagnostic_event_subtypes_enum import DiagnosticEventSubtypesEnum
-from .diagnostic_measurement_identifier_subtypes_enum import DiagnosticMeasurementIdentifierSubtypesEnum
+from .diagnostic_measurement_identifier_subtypes_enum import (
+    DiagnosticMeasurementIdentifierSubtypesEnum,
+)
 from .diagnostic_test_identifier import DiagnosticTestIdentifier
-from .diagnostic_test_result_update_enum_value_variation_point import DiagnosticTestResultUpdateEnumValueVariationPoint
+from .diagnostic_test_result_update_enum_value_variation_point import (
+    DiagnosticTestResultUpdateEnumValueVariationPoint,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -93,6 +97,7 @@ class DiagnosticTestResult:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-TEST-RESULT"
 
@@ -103,15 +108,17 @@ class DiagnosticTestResult:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticTestResult.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticTestResult.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +126,7 @@ class DiagnosticTestResult:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +134,7 @@ class DiagnosticTestResult:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +142,7 @@ class DiagnosticTestResult:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +150,7 @@ class DiagnosticTestResult:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +158,7 @@ class DiagnosticTestResult:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticTestResult.Annotations"] = field(
         default=None,
@@ -159,7 +166,7 @@ class DiagnosticTestResult:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -167,15 +174,17 @@ class DiagnosticTestResult:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    diagnostic_events: Optional["DiagnosticTestResult.DiagnosticEvents"] = field(
+    diagnostic_events: Optional[
+        "DiagnosticTestResult.DiagnosticEvents"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_ref: Optional["DiagnosticTestResult.EventRef"] = field(
         default=None,
@@ -183,15 +192,17 @@ class DiagnosticTestResult:
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    monitored_identifier_ref: Optional["DiagnosticTestResult.MonitoredIdentifierRef"] = field(
+    monitored_identifier_ref: Optional[
+        "DiagnosticTestResult.MonitoredIdentifierRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MONITORED-IDENTIFIER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     test_identifier: Optional[DiagnosticTestIdentifier] = field(
         default=None,
@@ -199,22 +210,24 @@ class DiagnosticTestResult:
             "name": "TEST-IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    update_kind: Optional[DiagnosticTestResultUpdateEnumValueVariationPoint] = field(
+    update_kind: Optional[
+        DiagnosticTestResultUpdateEnumValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "UPDATE-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -222,14 +235,14 @@ class DiagnosticTestResult:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -240,7 +253,7 @@ class DiagnosticTestResult:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -251,18 +264,20 @@ class DiagnosticTestResult:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DiagnosticEvents:
-        diagnostic_event_ref_conditional: List[DiagnosticEventRefConditional] = field(
+        diagnostic_event_ref_conditional: List[
+            DiagnosticEventRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-EVENT-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -273,7 +288,7 @@ class DiagnosticTestResult:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -284,5 +299,5 @@ class DiagnosticTestResult:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

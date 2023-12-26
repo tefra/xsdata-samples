@@ -20,6 +20,7 @@ class SpeedManagementTypeEnum(Enum):
         operation.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ACTIVE_SPEED_CONTROL_IN_OPERATION = "activeSpeedControlInOperation"
     DO_NOT_SLOWDOWN_UNNECESSARILY = "doNotSlowdownUnnecessarily"
     OBSERVE_SPEED_LIMIT = "observeSpeedLimit"

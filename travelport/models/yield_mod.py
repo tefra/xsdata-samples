@@ -18,6 +18,7 @@ class Yield:
     booking_traveler_ref
         Reference to a booking traveler for which Yield is applied.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,12 +27,12 @@ class Yield:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

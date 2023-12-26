@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Tuple
-from ubl.models.common.ubl_signature_aggregate_components_2_1 import SignatureInformation
+from ubl.models.common.ubl_signature_aggregate_components_2_1 import (
+    SignatureInformation,
+)
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
+)
 
 
 @dataclass(frozen=True)
@@ -17,7 +21,7 @@ class UbldocumentSignaturesType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 

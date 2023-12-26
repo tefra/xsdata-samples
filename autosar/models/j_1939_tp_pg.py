@@ -48,6 +48,7 @@ class J1939TpPg:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "J-1939-TP-PG"
 
@@ -57,7 +58,7 @@ class J1939TpPg:
             "name": "DIRECT-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pgn: Optional[Integer] = field(
         default=None,
@@ -65,7 +66,7 @@ class J1939TpPg:
             "name": "PGN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     requestable: Optional[Boolean] = field(
         default=None,
@@ -73,7 +74,7 @@ class J1939TpPg:
             "name": "REQUESTABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdu_refs: Optional["J1939TpPg.SduRefs"] = field(
         default=None,
@@ -81,7 +82,7 @@ class J1939TpPg:
             "name": "SDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_sdu_ref: Optional["J1939TpPg.TpSduRef"] = field(
         default=None,
@@ -89,14 +90,14 @@ class J1939TpPg:
             "name": "TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -104,7 +105,7 @@ class J1939TpPg:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -115,7 +116,7 @@ class J1939TpPg:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -126,7 +127,7 @@ class J1939TpPg:
                 "name": "SDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -137,7 +138,7 @@ class J1939TpPg:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -148,5 +149,5 @@ class J1939TpPg:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

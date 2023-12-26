@@ -20,6 +20,7 @@ class UpdateHotelPnrElement:
     """
     Container for Hotel PNR elements to be updated.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -29,7 +30,7 @@ class UpdateHotelPnrElement:
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     guest_information: None | GuestInformation = field(
         default=None,
@@ -37,7 +38,7 @@ class UpdateHotelPnrElement:
             "name": "GuestInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     associated_remark: list[AssociatedRemark3] = field(
         default_factory=list,
@@ -46,7 +47,7 @@ class UpdateHotelPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     booking_source: None | BookingSource1 = field(
         default=None,
@@ -54,7 +55,7 @@ class UpdateHotelPnrElement:
             "name": "BookingSource",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_special_request: None | str = field(
         default=None,
@@ -63,7 +64,7 @@ class UpdateHotelPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_length": 250,
-        }
+        },
     )
     hotel_rate_info: None | HotelRateInfo = field(
         default=None,
@@ -71,7 +72,7 @@ class UpdateHotelPnrElement:
             "name": "HotelRateInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -79,7 +80,7 @@ class UpdateHotelPnrElement:
             "name": "HotelStay",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     hotel_commission: None | str = field(
         default=None,
@@ -87,7 +88,7 @@ class UpdateHotelPnrElement:
             "name": "HotelCommission",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     corporate_discount_id: None | CorporateDiscountId1 = field(
         default=None,
@@ -95,7 +96,7 @@ class UpdateHotelPnrElement:
             "name": "CorporateDiscountID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     reservation_name: None | ReservationName1 = field(
         default=None,
@@ -103,7 +104,7 @@ class UpdateHotelPnrElement:
             "name": "ReservationName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     travel_compliance_data: list[TravelComplianceData1] = field(
         default_factory=list,
@@ -112,7 +113,7 @@ class UpdateHotelPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -121,7 +122,7 @@ class UpdateHotelPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard1] = field(
         default_factory=list,
@@ -130,7 +131,7 @@ class UpdateHotelPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     reservation_locator_code: None | str = field(
         default=None,
@@ -140,12 +141,12 @@ class UpdateHotelPnrElement:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

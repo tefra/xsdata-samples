@@ -16,14 +16,14 @@ class ChangeOrderSummary:
         metadata={
             "name": "OriginalOrderSummary",
             "type": "Element",
-        }
+        },
     )
     revised_order_summary: Optional[RevisedOrderSummary] = field(
         default=None,
         metadata={
             "name": "RevisedOrderSummary",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -35,7 +35,7 @@ class ListOfChangeOrderItemDetail:
             "name": "ChangeOrderItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -47,25 +47,29 @@ class ListOfChangeOrderPackageDetail:
             "name": "ChangeOrderPackageDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ChangeOrderDetail:
-    list_of_change_order_item_detail: Optional[ListOfChangeOrderItemDetail] = field(
+    list_of_change_order_item_detail: Optional[
+        ListOfChangeOrderItemDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfChangeOrderItemDetail",
             "type": "Element",
-        }
+        },
     )
-    list_of_change_order_package_detail: Optional[ListOfChangeOrderPackageDetail] = field(
+    list_of_change_order_package_detail: Optional[
+        ListOfChangeOrderPackageDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfChangeOrderPackageDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -83,12 +87,12 @@ class ChangeOrder:
         metadata={
             "name": "ChangeOrderDetail",
             "type": "Element",
-        }
+        },
     )
     change_order_summary: Optional[ChangeOrderSummary] = field(
         default=None,
         metadata={
             "name": "ChangeOrderSummary",
             "type": "Element",
-        }
+        },
     )

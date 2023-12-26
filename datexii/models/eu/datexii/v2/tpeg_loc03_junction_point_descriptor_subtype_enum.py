@@ -10,4 +10,5 @@ class TpegLoc03JunctionPointDescriptorSubtypeEnum(Enum):
     :cvar JUNCTION_NAME: Name of a road network junction where two or
         more roads join.
     """
+
     JUNCTION_NAME = "junctionName"

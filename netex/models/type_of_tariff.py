@@ -15,5 +15,5 @@ class TypeOfTariff(TypeOfTariffValueStructure):
         metadata={
             "name": "nameOfClassifiedEntityClass",
             "type": "Attribute",
-        }
+        },
     )

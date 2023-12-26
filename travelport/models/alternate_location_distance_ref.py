@@ -9,6 +9,7 @@ class AlternateLocationDistanceRef:
     """
     Reference to a AlternateLocationDistance.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class AlternateLocationDistanceRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

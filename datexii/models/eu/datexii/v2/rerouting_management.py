@@ -4,7 +4,9 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.itinerary import Itinerary
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.network_management import NetworkManagement
-from datexii.models.eu.datexii.v2.rerouting_management_type_enum import ReroutingManagementTypeEnum
+from datexii.models.eu.datexii.v2.rerouting_management_type_enum import (
+    ReroutingManagementTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -31,6 +33,7 @@ class ReroutingManagement(NetworkManagement):
         which may be specific to one or more defined destinations.
     :ivar rerouting_management_extension:
     """
+
     rerouting_management_type: List[ReroutingManagementTypeEnum] = field(
         default_factory=list,
         metadata={
@@ -38,7 +41,7 @@ class ReroutingManagement(NetworkManagement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     rerouting_itinerary_description: Optional[MultilingualString] = field(
         default=None,
@@ -46,7 +49,7 @@ class ReroutingManagement(NetworkManagement):
             "name": "reroutingItineraryDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     signed_rerouting: Optional[bool] = field(
         default=None,
@@ -54,7 +57,7 @@ class ReroutingManagement(NetworkManagement):
             "name": "signedRerouting",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     entry: Optional[str] = field(
         default=None,
@@ -62,7 +65,7 @@ class ReroutingManagement(NetworkManagement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     exit: Optional[str] = field(
         default=None,
@@ -70,7 +73,7 @@ class ReroutingManagement(NetworkManagement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     road_or_junction_number: Optional[str] = field(
         default=None,
@@ -79,7 +82,7 @@ class ReroutingManagement(NetworkManagement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     alternative_route: List[Itinerary] = field(
         default_factory=list,
@@ -87,7 +90,7 @@ class ReroutingManagement(NetworkManagement):
             "name": "alternativeRoute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     rerouting_management_extension: Optional[ExtensionType] = field(
         default=None,
@@ -95,5 +98,5 @@ class ReroutingManagement(NetworkManagement):
             "name": "reroutingManagementExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

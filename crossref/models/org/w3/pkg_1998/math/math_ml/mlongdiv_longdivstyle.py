@@ -9,7 +9,7 @@ class MlongdivLongdivstyle(Enum):
     MEDIUMSTACKEDRIGHTRIGHT = "mediumstackedrightright"
     SHORTSTACKEDRIGHTRIGHT = "shortstackedrightright"
     RIGHTTOP = "righttop"
-    LEFT_RIGHT = "left/\right"
+    LEFT_RIGHT = "left/\\right"
     LEFT_RIGHT_1 = "left)(right"
     RIGHT_RIGHT = ":right=right"
     STACKEDLEFTLEFT = "stackedleftleft"

@@ -13,6 +13,7 @@ class TimeSyncTechnologyEnumSimple(Enum):
     :cvar PTP_IEEE_1588_2008: Precision Time Protocol (PTP) IEEE
         1588-2008
     """
+
     AVB_IEEE_802_1_AS = "AVB--IEEE-802--1-AS"
     NTP_RFC_958 = "NTP--RFC-958"
     PTP_IEEE_1588_2002 = "PTP--IEEE-1588--2002"

@@ -10,6 +10,7 @@ class UpdateTraveler:
     """
     Container for Travelers or its contents to be updated.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,5 +22,5 @@ class UpdateTraveler:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 18,
-        }
+        },
     )

@@ -14,7 +14,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "name": "SubscriberRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscription_filter_ref: List[str] = field(
         default_factory=list,
@@ -22,7 +22,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "name": "SubscriptionFilterRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscription_ref: List[str] = field(
         default_factory=list,
@@ -31,7 +31,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "min_occurs": 1,
-        }
+        },
     )
     description: Optional[str] = field(
         default=None,
@@ -39,7 +39,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     extensions: Optional[Extensions1] = field(
         default=None,
@@ -47,5 +47,5 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

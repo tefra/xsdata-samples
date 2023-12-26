@@ -9,6 +9,7 @@ class ConferenceName:
     The official name of the conference, excluding numbers commonly provided in
     conference.
     """
+
     class Meta:
         name = "conference_name"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -18,5 +19,5 @@ class ConferenceName:
         metadata={
             "min_length": 3,
             "max_length": 512,
-        }
+        },
     )

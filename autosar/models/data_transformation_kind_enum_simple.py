@@ -14,6 +14,7 @@ class DataTransformationKindEnumSimple(Enum):
     :cvar SYMMETRIC: The DataTransformation shall be applied at both the
         sending and the receiving end of the communication.
     """
+
     ASYMMETRIC_FROM_BYTE_ARRAY = "ASYMMETRIC-FROM-BYTE-ARRAY"
     ASYMMETRIC_TO_BYTE_ARRAY = "ASYMMETRIC-TO-BYTE-ARRAY"
     SYMMETRIC = "SYMMETRIC"

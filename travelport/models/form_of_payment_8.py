@@ -12,7 +12,9 @@ from travelport.models.misc_form_of_payment_7 import MiscFormOfPayment7
 from travelport.models.payment_advice_7 import PaymentAdvice7
 from travelport.models.requisition_7 import Requisition7
 from travelport.models.type_element_status_7 import TypeElementStatus7
-from travelport.models.type_form_of_payment_pnrreference_6 import TypeFormOfPaymentPnrreference6
+from travelport.models.type_form_of_payment_pnrreference_6 import (
+    TypeFormOfPaymentPnrreference6,
+)
 from travelport.models.type_fulfillment_idtype_6 import TypeFulfillmentIdtype6
 from travelport.models.type_general_reference_6 import TypeGeneralReference6
 from travelport.models.united_nations_7 import UnitedNations7
@@ -89,6 +91,7 @@ class FormOfPayment8:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "FormOfPayment"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -98,28 +101,28 @@ class FormOfPayment8:
         metadata={
             "name": "CreditCard",
             "type": "Element",
-        }
+        },
     )
     debit_card: None | DebitCard6 = field(
         default=None,
         metadata={
             "name": "DebitCard",
             "type": "Element",
-        }
+        },
     )
     enett_van: None | EnettVan6 = field(
         default=None,
         metadata={
             "name": "EnettVan",
             "type": "Element",
-        }
+        },
     )
     certificate: None | Certificate7 = field(
         default=None,
         metadata={
             "name": "Certificate",
             "type": "Element",
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
@@ -128,71 +131,73 @@ class FormOfPayment8:
             "type": "Element",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     check: None | Check7 = field(
         default=None,
         metadata={
             "name": "Check",
             "type": "Element",
-        }
+        },
     )
     requisition: None | Requisition7 = field(
         default=None,
         metadata={
             "name": "Requisition",
             "type": "Element",
-        }
+        },
     )
     misc_form_of_payment: None | MiscFormOfPayment7 = field(
         default=None,
         metadata={
             "name": "MiscFormOfPayment",
             "type": "Element",
-        }
+        },
     )
     agency_payment: None | AgencyPayment7 = field(
         default=None,
         metadata={
             "name": "AgencyPayment",
             "type": "Element",
-        }
+        },
     )
     united_nations: None | UnitedNations7 = field(
         default=None,
         metadata={
             "name": "UnitedNations",
             "type": "Element",
-        }
+        },
     )
     direct_payment: None | DirectPayment7 = field(
         default=None,
         metadata={
             "name": "DirectPayment",
             "type": "Element",
-        }
+        },
     )
     agent_voucher: None | AgentVoucher7 = field(
         default=None,
         metadata={
             "name": "AgentVoucher",
             "type": "Element",
-        }
+        },
     )
     payment_advice: None | PaymentAdvice7 = field(
         default=None,
         metadata={
             "name": "PaymentAdvice",
             "type": "Element",
-        }
+        },
     )
-    provider_reservation_info_ref: list[TypeFormOfPaymentPnrreference6] = field(
+    provider_reservation_info_ref: list[
+        TypeFormOfPaymentPnrreference6
+    ] = field(
         default_factory=list,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     segment_ref: list[TypeGeneralReference6] = field(
         default_factory=list,
@@ -200,14 +205,14 @@ class FormOfPayment8:
             "name": "SegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -216,56 +221,56 @@ class FormOfPayment8:
             "type": "Attribute",
             "required": True,
             "max_length": 25,
-        }
+        },
     )
     fulfillment_type: None | str = field(
         default=None,
         metadata={
             "name": "FulfillmentType",
             "type": "Attribute",
-        }
+        },
     )
     fulfillment_location: None | str = field(
         default=None,
         metadata={
             "name": "FulfillmentLocation",
             "type": "Attribute",
-        }
+        },
     )
     fulfillment_idtype: None | TypeFulfillmentIdtype6 = field(
         default=None,
         metadata={
             "name": "FulfillmentIDType",
             "type": "Attribute",
-        }
+        },
     )
     fulfillment_idnumber: None | str = field(
         default=None,
         metadata={
             "name": "FulfillmentIDNumber",
             "type": "Attribute",
-        }
+        },
     )
     is_agent_type: bool = field(
         default=False,
         metadata={
             "name": "IsAgentType",
             "type": "Attribute",
-        }
+        },
     )
     agent_text: None | str = field(
         default=None,
         metadata={
             "name": "AgentText",
             "type": "Attribute",
-        }
+        },
     )
     reuse_fop: None | str = field(
         default=None,
         metadata={
             "name": "ReuseFOP",
             "type": "Attribute",
-        }
+        },
     )
     external_reference: None | str = field(
         default=None,
@@ -273,40 +278,40 @@ class FormOfPayment8:
             "name": "ExternalReference",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )
     reusable: bool = field(
         default=False,
         metadata={
             "name": "Reusable",
             "type": "Attribute",
-        }
+        },
     )
     profile_id: None | str = field(
         default=None,
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-        }
+        },
     )
     profile_key: None | str = field(
         default=None,
         metadata={
             "name": "ProfileKey",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus7 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

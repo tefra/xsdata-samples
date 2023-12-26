@@ -29,6 +29,7 @@ class IndentSample:
     :ivar item_label_pos: The position of the label in case the label is
         too long. The default is  "NO-NEWLINE"
     """
+
     class Meta:
         name = "INDENT-SAMPLE"
 
@@ -38,14 +39,14 @@ class IndentSample:
             "name": "L-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -53,12 +54,12 @@ class IndentSample:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     item_label_pos: Optional[ItemLabelPosEnumSimple] = field(
         default=None,
         metadata={
             "name": "ITEM-LABEL-POS",
             "type": "Attribute",
-        }
+        },
     )

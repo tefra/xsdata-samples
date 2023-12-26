@@ -11,6 +11,7 @@ class DiagnosticStoreEventSupportEnumSimple(Enum):
         powered down.
     :cvar STORE_EVENT: The event is persisted over a power down cycle.
     """
+
     ALL = "ALL"
     NO_STORE_EVENT = "NO-STORE-EVENT"
     STORE_EVENT = "STORE-EVENT"

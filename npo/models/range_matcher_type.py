@@ -15,11 +15,11 @@ class RangeMatcherType:
         metadata={
             "name": "inclusiveEnd",
             "type": "Attribute",
-        }
+        },
     )
     match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

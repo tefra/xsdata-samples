@@ -29,6 +29,7 @@ class ProviderReservationSearchResult:
     provider_locator_code
     external_search_index
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -39,7 +40,7 @@ class ProviderReservationSearchResult:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     product_info: list[TypeProductInfo] = field(
         default_factory=list,
@@ -47,7 +48,7 @@ class ProviderReservationSearchResult:
             "name": "ProductInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     agency_info: None | AgencyInfo1 = field(
         default=None,
@@ -55,28 +56,28 @@ class ProviderReservationSearchResult:
             "name": "AgencyInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
-        }
+        },
     )
     created_date: None | str = field(
         default=None,
         metadata={
             "name": "CreatedDate",
             "type": "Attribute",
-        }
+        },
     )
     earliest_travel_date: None | str = field(
         default=None,
         metadata={
             "name": "EarliestTravelDate",
             "type": "Attribute",
-        }
+        },
     )
     ticketed: None | TypeReservationTicketed = field(
         default=None,
@@ -84,7 +85,7 @@ class ProviderReservationSearchResult:
             "name": "Ticketed",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -92,19 +93,19 @@ class ProviderReservationSearchResult:
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-        }
+        },
     )
     external_search_index: None | str = field(
         default=None,
         metadata={
             "name": "ExternalSearchIndex",
             "type": "Attribute",
-        }
+        },
     )

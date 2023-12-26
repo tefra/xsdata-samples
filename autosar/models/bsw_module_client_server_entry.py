@@ -49,6 +49,7 @@ class BswModuleClientServerEntry:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-MODULE-CLIENT-SERVER-ENTRY"
 
@@ -59,23 +60,27 @@ class BswModuleClientServerEntry:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BswModuleClientServerEntry.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BswModuleClientServerEntry.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    encapsulated_entry_ref: Optional["BswModuleClientServerEntry.EncapsulatedEntryRef"] = field(
+    encapsulated_entry_ref: Optional[
+        "BswModuleClientServerEntry.EncapsulatedEntryRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ENCAPSULATED-ENTRY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_reentrant: Optional[Boolean] = field(
         default=None,
@@ -83,7 +88,7 @@ class BswModuleClientServerEntry:
             "name": "IS-REENTRANT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_synchronous: Optional[Boolean] = field(
         default=None,
@@ -91,7 +96,7 @@ class BswModuleClientServerEntry:
             "name": "IS-SYNCHRONOUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -99,14 +104,14 @@ class BswModuleClientServerEntry:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -114,7 +119,7 @@ class BswModuleClientServerEntry:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -125,7 +130,7 @@ class BswModuleClientServerEntry:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -136,5 +141,5 @@ class BswModuleClientServerEntry:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -8,6 +8,7 @@ class TypeFilterControlAndWorkspace2(Enum):
     """
     Allow the filtering of Workspace and Control or specify no filtering at all.
     """
+
     WORKSPACE_ONLY = "WorkspaceOnly"
     CONTROL_ONLY = "ControlOnly"
     ALL = "All"

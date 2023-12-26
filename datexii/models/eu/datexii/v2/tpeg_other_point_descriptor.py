@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.tpeg_loc03_other_point_descriptor_subtype_enum import TpegLoc03OtherPointDescriptorSubtypeEnum
-from datexii.models.eu.datexii.v2.tpeg_point_descriptor import TpegPointDescriptor
+from datexii.models.eu.datexii.v2.tpeg_loc03_other_point_descriptor_subtype_enum import (
+    TpegLoc03OtherPointDescriptorSubtypeEnum,
+)
+from datexii.models.eu.datexii.v2.tpeg_point_descriptor import (
+    TpegPointDescriptor,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,14 +21,17 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
         the TPEG Loc table 03).
     :ivar tpeg_other_point_descriptor_extension:
     """
-    tpeg_other_point_descriptor_type: Optional[TpegLoc03OtherPointDescriptorSubtypeEnum] = field(
+
+    tpeg_other_point_descriptor_type: Optional[
+        TpegLoc03OtherPointDescriptorSubtypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "tpegOtherPointDescriptorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     tpeg_other_point_descriptor_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +39,5 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
             "name": "tpegOtherPointDescriptorExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

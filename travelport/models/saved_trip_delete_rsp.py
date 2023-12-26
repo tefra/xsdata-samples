@@ -10,5 +10,6 @@ class SavedTripDeleteRsp(BaseRsp1):
     """
     Response to delete saved Trip.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"

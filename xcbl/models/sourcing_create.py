@@ -45,7 +45,7 @@ class AggregationType:
         metadata={
             "name": "AggregationTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -57,13 +57,13 @@ class AttributeName:
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
             "required": True,
-        }
+        },
     )
     value: str = field(
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
 
 
@@ -82,7 +82,7 @@ class Bundle:
             "name": "LineItemNumber",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -122,70 +122,70 @@ class VisibilityOfBuyer:
         metadata={
             "name": "BuyerContactName",
             "type": "Element",
-        }
+        },
     )
     contact_phone_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ContactPhoneNumber",
             "type": "Element",
-        }
+        },
     )
     contact_mobile: Optional[str] = field(
         default=None,
         metadata={
             "name": "ContactMobile",
             "type": "Element",
-        }
+        },
     )
     contact_fax_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ContactFaxNumber",
             "type": "Element",
-        }
+        },
     )
     contact_email: Optional[str] = field(
         default=None,
         metadata={
             "name": "ContactEmail",
             "type": "Element",
-        }
+        },
     )
     alternative_buyer_contact_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "AlternativeBuyerContactName",
             "type": "Element",
-        }
+        },
     )
     alternative_contact_phone_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "AlternativeContactPhoneNumber",
             "type": "Element",
-        }
+        },
     )
     alternative_contact_mobile: Optional[str] = field(
         default=None,
         metadata={
             "name": "AlternativeContactMobile",
             "type": "Element",
-        }
+        },
     )
     alternative_contact_fax_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "AlternativeContactFaxNumber",
             "type": "Element",
-        }
+        },
     )
     alternative_contact_email: Optional[str] = field(
         default=None,
         metadata={
             "name": "AlternativeContactEmail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -196,35 +196,35 @@ class VisibilityRules:
         metadata={
             "name": "VisibilityIndicator",
             "type": "Element",
-        }
+        },
     )
     visibility_of_comments: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfComments",
             "type": "Element",
-        }
+        },
     )
     visibility_of_amounts: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfAmounts",
             "type": "Element",
-        }
+        },
     )
     visibility_of_quantities: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfQuantities",
             "type": "Element",
-        }
+        },
     )
     visibility_of_participants: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfParticipants",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -246,14 +246,14 @@ class FormulaAttribute:
         metadata={
             "name": "AttributeName",
             "type": "Element",
-        }
+        },
     )
     value: Optional[str] = field(
         default=None,
         metadata={
             "name": "Value",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -290,7 +290,7 @@ class ListOfBundle:
             "name": "Bundle",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -302,7 +302,7 @@ class ListOfDropDownMenuValue:
             "name": "DropDownMenuValue",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -314,7 +314,7 @@ class ListOfParty:
             "name": "Party",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -326,7 +326,7 @@ class ListOfSourcingItemComponent:
             "name": "SourcingItemComponent",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -344,14 +344,14 @@ class Project:
         metadata={
             "name": "RevisionNumber",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -428,42 +428,42 @@ class SourcingVisibilityRules:
         metadata={
             "name": "VisibilityIndicator",
             "type": "Element",
-        }
+        },
     )
     visibility_of_comments: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfComments",
             "type": "Element",
-        }
+        },
     )
     visibility_of_amounts: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfAmounts",
             "type": "Element",
-        }
+        },
     )
     visibility_of_quantities: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfQuantities",
             "type": "Element",
-        }
+        },
     )
     visibility_of_participants: Optional[str] = field(
         default=None,
         metadata={
             "name": "VisibilityOfParticipants",
             "type": "Element",
-        }
+        },
     )
     visibility_of_buyer: Optional[VisibilityOfBuyer] = field(
         default=None,
         metadata={
             "name": "VisibilityOfBuyer",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -493,7 +493,7 @@ class ListOfKeyVal:
             "name": "KeyVal",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -522,7 +522,7 @@ class SourcingAttribute:
         metadata={
             "name": "SourcingAttributeDescription",
             "type": "Element",
-        }
+        },
     )
     sourcing_attribute_data_type_coded: str = field(
         metadata={
@@ -536,21 +536,21 @@ class SourcingAttribute:
         metadata={
             "name": "SourcingAttributeDataTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_drop_down_menu_value: Optional[ListOfDropDownMenuValue] = field(
         default=None,
         metadata={
             "name": "ListOfDropDownMenuValue",
             "type": "Element",
-        }
+        },
     )
     sourcing_attribute_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "SourcingAttributeType",
             "type": "Element",
-        }
+        },
     )
     required_to_respond: str = field(
         metadata={
@@ -564,21 +564,21 @@ class SourcingAttribute:
         metadata={
             "name": "SupplierView",
             "type": "Element",
-        }
+        },
     )
     weighting: Optional[str] = field(
         default=None,
         metadata={
             "name": "Weighting",
             "type": "Element",
-        }
+        },
     )
     preferred_uom: Optional[str] = field(
         default=None,
         metadata={
             "name": "PreferredUOM",
             "type": "Element",
-        }
+        },
     )
     attribute_characteristic: str = field(
         metadata={
@@ -592,7 +592,7 @@ class SourcingAttribute:
         metadata={
             "name": "SourcingAttributeFieldSize",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -610,14 +610,14 @@ class SourcingRulesProfile:
         metadata={
             "name": "QuoteWinRuleCodedOther",
             "type": "Element",
-        }
+        },
     )
     sourcing_visibility_rules: Optional[SourcingVisibilityRules] = field(
         default=None,
         metadata={
             "name": "SourcingVisibilityRules",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -635,7 +635,7 @@ class ValidQuoteCurrency:
         metadata={
             "name": "RateOfExchangeDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -660,14 +660,14 @@ class Formula:
         metadata={
             "name": "AdditionalAttribute",
             "type": "Element",
-        }
+        },
     )
     aggregation_type: Optional[AggregationType] = field(
         default=None,
         metadata={
             "name": "AggregationType",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -679,7 +679,7 @@ class ListOfValidQuoteCurrency:
             "name": "ValidQuoteCurrency",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -697,56 +697,56 @@ class SourcingPartners:
         metadata={
             "name": "ListOfIdentifier",
             "type": "Element",
-        }
+        },
     )
     mdfbusiness: Optional[str] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
             "type": "Element",
-        }
+        },
     )
     name_address: Optional[NameAddress] = field(
         default=None,
         metadata={
             "name": "NameAddress",
             "type": "Element",
-        }
+        },
     )
     order_contact: Optional[OrderContact] = field(
         default=None,
         metadata={
             "name": "OrderContact",
             "type": "Element",
-        }
+        },
     )
     receiving_contact: Optional[ReceivingContact] = field(
         default=None,
         metadata={
             "name": "ReceivingContact",
             "type": "Element",
-        }
+        },
     )
     shipping_contact: Optional[ShippingContact] = field(
         default=None,
         metadata={
             "name": "ShippingContact",
             "type": "Element",
-        }
+        },
     )
     other_contacts: Optional[OtherContacts] = field(
         default=None,
         metadata={
             "name": "OtherContacts",
             "type": "Element",
-        }
+        },
     )
     correspondence_language: Optional[CorrespondenceLanguage] = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
             "type": "Element",
-        }
+        },
     )
     group_indicator: str = field(
         metadata={
@@ -760,7 +760,7 @@ class SourcingPartners:
         metadata={
             "name": "ListOfKeyVal",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -771,35 +771,35 @@ class SourcingSpecifications:
         metadata={
             "name": "SourcingCreateName",
             "type": "Element",
-        }
+        },
     )
     sourcing_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "SourcingType",
             "type": "Element",
-        }
+        },
     )
     sourcing_status: Optional[str] = field(
         default=None,
         metadata={
             "name": "SourcingStatus",
             "type": "Element",
-        }
+        },
     )
     partial_quote_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "PartialQuoteIndicator",
             "type": "Element",
-        }
+        },
     )
     all_or_nothing: Optional[str] = field(
         default=None,
         metadata={
             "name": "AllOrNothing",
             "type": "Element",
-        }
+        },
     )
     sourcing_attribute: List[SourcingAttribute] = field(
         default_factory=list,
@@ -807,7 +807,7 @@ class SourcingSpecifications:
             "name": "SourcingAttribute",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -819,7 +819,7 @@ class ListOfSourcingPartners:
             "name": "SourcingPartners",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -837,7 +837,7 @@ class SourcingCurrency:
         metadata={
             "name": "ListOfValidQuoteCurrency",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -862,77 +862,77 @@ class SourcingItem:
         metadata={
             "name": "SourcingItemDescription",
             "type": "Element",
-        }
+        },
     )
     item_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ItemNumber",
             "type": "Element",
-        }
+        },
     )
     parent_item_identifier: Optional[str] = field(
         default=None,
         metadata={
             "name": "ParentItemIdentifier",
             "type": "Element",
-        }
+        },
     )
     bundle_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "BundleName",
             "type": "Element",
-        }
+        },
     )
     sourcing_attribute: List[SourcingAttribute] = field(
         default_factory=list,
         metadata={
             "name": "SourcingAttribute",
             "type": "Element",
-        }
+        },
     )
     formula: List[Formula] = field(
         default_factory=list,
         metadata={
             "name": "Formula",
             "type": "Element",
-        }
+        },
     )
     sourcing_quantity: Optional[SourcingQuantity] = field(
         default=None,
         metadata={
             "name": "SourcingQuantity",
             "type": "Element",
-        }
+        },
     )
     delivery_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
-        }
+        },
     )
     unit_price: Optional[UnitPrice] = field(
         default=None,
         metadata={
             "name": "UnitPrice",
             "type": "Element",
-        }
+        },
     )
     partial_quote_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "PartialQuoteIndicator",
             "type": "Element",
-        }
+        },
     )
     part_numbers: Optional[PartNumbers] = field(
         default=None,
         metadata={
             "name": "PartNumbers",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -950,14 +950,14 @@ class SourcingCreateDetail:
         metadata={
             "name": "SourcingDeliveryDetail",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
     component_sourcing_indicator: str = field(
         metadata={
@@ -966,12 +966,14 @@ class SourcingCreateDetail:
             "required": True,
         }
     )
-    list_of_sourcing_item_component: Optional[ListOfSourcingItemComponent] = field(
+    list_of_sourcing_item_component: Optional[
+        ListOfSourcingItemComponent
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfSourcingItemComponent",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -989,21 +991,21 @@ class SourcingParticipants:
         metadata={
             "name": "CommunityID",
             "type": "Element",
-        }
+        },
     )
     list_to_inform: Optional[ListToInform] = field(
         default=None,
         metadata={
             "name": "ListToInform",
             "type": "Element",
-        }
+        },
     )
     list_of_sourcing_partners: Optional[ListOfSourcingPartners] = field(
         default=None,
         metadata={
             "name": "ListOfSourcingPartners",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1015,7 +1017,7 @@ class ListOfSourcingCreateDetail:
             "name": "SourcingCreateDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1047,14 +1049,14 @@ class SourcingCreateHeader:
         metadata={
             "name": "Project",
             "type": "Element",
-        }
+        },
     )
     requisition_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "RequisitionNumber",
             "type": "Element",
-        }
+        },
     )
     sourcing_validity_dates: SourcingValidityDates = field(
         metadata={
@@ -1068,28 +1070,28 @@ class SourcingCreateHeader:
         metadata={
             "name": "DecisionDate",
             "type": "Element",
-        }
+        },
     )
     sourcing_rules_profile: Optional[SourcingRulesProfile] = field(
         default=None,
         metadata={
             "name": "SourcingRulesProfile",
             "type": "Element",
-        }
+        },
     )
     sourcing_currency: Optional[SourcingCurrency] = field(
         default=None,
         metadata={
             "name": "SourcingCurrency",
             "type": "Element",
-        }
+        },
     )
     list_of_bundle: Optional[ListOfBundle] = field(
         default=None,
         metadata={
             "name": "ListOfBundle",
             "type": "Element",
-        }
+        },
     )
     sourcing_participants: SourcingParticipants = field(
         metadata={
@@ -1103,7 +1105,7 @@ class SourcingCreateHeader:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -1117,21 +1119,23 @@ class SourcingCreateHeader:
         metadata={
             "name": "SourcingCreateGeneralNotes",
             "type": "Element",
-        }
+        },
     )
-    sourcing_create_list_of_attachment: Optional[SourcingCreateListOfAttachment] = field(
+    sourcing_create_list_of_attachment: Optional[
+        SourcingCreateListOfAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "SourcingCreateListOfAttachment",
             "type": "Element",
-        }
+        },
     )
     sourcing_specifications: Optional[SourcingSpecifications] = field(
         default=None,
         metadata={
             "name": "SourcingSpecifications",
             "type": "Element",
-        }
+        },
     )
 
 

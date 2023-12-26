@@ -61,6 +61,7 @@ class HotelProperty:
         the message, integer 1 - 999. Supported provider: HotelSuperShopper
         message only.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -69,7 +70,7 @@ class HotelProperty:
         metadata={
             "name": "PropertyAddress",
             "type": "Element",
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -78,7 +79,7 @@ class HotelProperty:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     coordinate_location: None | CoordinateLocation1 = field(
         default=None,
@@ -86,7 +87,7 @@ class HotelProperty:
             "name": "CoordinateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     distance: None | Distance1 = field(
         default=None,
@@ -94,7 +95,7 @@ class HotelProperty:
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_rating: list[HotelRating] = field(
         default_factory=list,
@@ -102,21 +103,21 @@ class HotelProperty:
             "name": "HotelRating",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     amenities: None | Amenities = field(
         default=None,
         metadata={
             "name": "Amenities",
             "type": "Element",
-        }
+        },
     )
     marketing_message: None | MarketingMessage = field(
         default=None,
         metadata={
             "name": "MarketingMessage",
             "type": "Element",
-        }
+        },
     )
     hotel_chain: None | str = field(
         default=None,
@@ -125,7 +126,7 @@ class HotelProperty:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     hotel_code: None | str = field(
         default=None,
@@ -134,7 +135,7 @@ class HotelProperty:
             "type": "Attribute",
             "required": True,
             "max_length": 32,
-        }
+        },
     )
     hotel_location: None | str = field(
         default=None,
@@ -143,35 +144,35 @@ class HotelProperty:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 6,
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )
     vendor_location_key: None | str = field(
         default=None,
         metadata={
             "name": "VendorLocationKey",
             "type": "Attribute",
-        }
+        },
     )
     hotel_transportation: None | int = field(
         default=None,
         metadata={
             "name": "HotelTransportation",
             "type": "Attribute",
-        }
+        },
     )
     reserve_requirement: None | TypeReserveRequirement = field(
         default=None,
         metadata={
             "name": "ReserveRequirement",
             "type": "Attribute",
-        }
+        },
     )
     participation_level: None | str = field(
         default=None,
@@ -179,35 +180,35 @@ class HotelProperty:
             "name": "ParticipationLevel",
             "type": "Attribute",
             "length": 1,
-        }
+        },
     )
     availability: None | TypeHotelAvailability = field(
         default=None,
         metadata={
             "name": "Availability",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     preferred_option: None | bool = field(
         default=None,
         metadata={
             "name": "PreferredOption",
             "type": "Attribute",
-        }
+        },
     )
     more_rates: None | bool = field(
         default=None,
         metadata={
             "name": "MoreRates",
             "type": "Attribute",
-        }
+        },
     )
     more_rates_token: None | str = field(
         default=None,
@@ -216,19 +217,19 @@ class HotelProperty:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )
     net_trans_commission_ind: None | TypeNetTransCommission = field(
         default=None,
         metadata={
             "name": "NetTransCommissionInd",
             "type": "Attribute",
-        }
+        },
     )
     num_of_rate_plans: None | int = field(
         default=None,
         metadata={
             "name": "NumOfRatePlans",
             "type": "Attribute",
-        }
+        },
     )

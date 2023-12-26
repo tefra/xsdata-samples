@@ -17,6 +17,7 @@ class HotelLocation:
         IATA city/airport code
     location_type
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -27,12 +28,12 @@ class HotelLocation:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     location_type: TypeHotelLocation = field(
         default=TypeHotelLocation.AIRPORT,
         metadata={
             "name": "LocationType",
             "type": "Attribute",
-        }
+        },
     )

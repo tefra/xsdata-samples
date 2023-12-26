@@ -26,7 +26,7 @@ class PageType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     alternative_url: list[str] = field(
         default_factory=list,
@@ -34,7 +34,7 @@ class PageType:
             "name": "alternativeUrl",
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     broadcaster: list[BroadcasterType] = field(
         default_factory=list,
@@ -42,14 +42,14 @@ class PageType:
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
             "min_occurs": 1,
-        }
+        },
     )
     portal: None | PortalType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     title: None | str = field(
         default=None,
@@ -57,7 +57,7 @@ class PageType:
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
             "required": True,
-        }
+        },
     )
     sub_title: None | str = field(
         default=None,
@@ -65,63 +65,63 @@ class PageType:
             "name": "subTitle",
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     keyword: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     genre: list[Genre] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     summary: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     paragraphs: None | PageType.Paragraphs = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     tag: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     referral: list[ReferralType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     link: list[LinkType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     embed: list[EmbedType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     stat_ref: list[str] = field(
         default_factory=list,
@@ -129,28 +129,28 @@ class PageType:
             "name": "statRef",
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     images: None | PageType.Images = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     relation: list[RelationType2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     url: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | PageTypeEnum = field(
         default=None,
@@ -158,62 +158,62 @@ class PageType:
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
-        }
+        },
     )
     last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
-        }
+        },
     )
     last_published: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastPublished",
             "type": "Attribute",
-        }
+        },
     )
     publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
-        }
+        },
     )
     publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
-        }
+        },
     )
     ref_count: None | int = field(
         default=None,
         metadata={
             "name": "refCount",
             "type": "Attribute",
-        }
+        },
     )
     sort_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "sortDate",
             "type": "Attribute",
-        }
+        },
     )
     workflow: None | PageWorkflow = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -223,7 +223,7 @@ class PageType:
             metadata={
                 "type": "Element",
                 "namespace": "urn:vpro:pages:2013",
-            }
+            },
         )
 
     @dataclass
@@ -233,5 +233,5 @@ class PageType:
             metadata={
                 "type": "Element",
                 "namespace": "urn:vpro:pages:2013",
-            }
+            },
         )

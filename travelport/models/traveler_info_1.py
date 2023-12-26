@@ -6,8 +6,12 @@ from travelport.models.electronic_address_1 import ElectronicAddress1
 from travelport.models.external_identifier_1 import ExternalIdentifier1
 from travelport.models.phone_1 import Phone1
 from travelport.models.proprietary_data_1 import ProprietaryData1
-from travelport.models.traveler_identity_information_1 import TravelerIdentityInformation1
-from travelport.models.type_account_type_profile_info_1 import TypeAccountTypeProfileInfo1
+from travelport.models.traveler_identity_information_1 import (
+    TravelerIdentityInformation1,
+)
+from travelport.models.type_account_type_profile_info_1 import (
+    TypeAccountTypeProfileInfo1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -71,6 +75,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
     given_name
     surname
     """
+
     class Meta:
         name = "TravelerInfo"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -80,35 +85,35 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     phone: list[Phone1] = field(
         default_factory=list,
         metadata={
             "name": "Phone",
             "type": "Element",
-        }
+        },
     )
     electronic_address: list[ElectronicAddress1] = field(
         default_factory=list,
         metadata={
             "name": "ElectronicAddress",
             "type": "Element",
-        }
+        },
     )
     traveler_identity_information: None | TravelerIdentityInformation1 = field(
         default=None,
         metadata={
             "name": "TravelerIdentityInformation",
             "type": "Element",
-        }
+        },
     )
     proprietary_data: list[ProprietaryData1] = field(
         default_factory=list,
         metadata={
             "name": "ProprietaryData",
             "type": "Element",
-        }
+        },
     )
     passenger_type_code: list[str] = field(
         default_factory=list,
@@ -117,14 +122,14 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Element",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier1] = field(
         default_factory=list,
         metadata={
             "name": "ExternalIdentifier",
             "type": "Element",
-        }
+        },
     )
     unique_profile_id: None | str = field(
         default=None,
@@ -133,7 +138,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 6,
             "max_length": 128,
-        }
+        },
     )
     title: None | str = field(
         default=None,
@@ -142,7 +147,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     nickname: None | str = field(
         default=None,
@@ -151,7 +156,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     other_name: None | str = field(
         default=None,
@@ -160,7 +165,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     suffix: None | str = field(
         default=None,
@@ -169,14 +174,14 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     birth_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BirthDate",
             "type": "Attribute",
-        }
+        },
     )
     gender: None | str = field(
         default=None,
@@ -185,14 +190,14 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     vip_status: bool = field(
         default=False,
         metadata={
             "name": "VipStatus",
             "type": "Attribute",
-        }
+        },
     )
     job_title: None | str = field(
         default=None,
@@ -201,7 +206,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     disability: None | str = field(
         default=None,
@@ -210,7 +215,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     home_city_or_airport: None | str = field(
         default=None,
@@ -218,7 +223,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "name": "HomeCityOrAirport",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     local_language: None | str = field(
         default=None,
@@ -227,7 +232,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     local_language_given_name: None | str = field(
         default=None,
@@ -236,7 +241,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     local_language_surname: None | str = field(
         default=None,
@@ -245,7 +250,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     local_language_username: None | str = field(
         default=None,
@@ -254,7 +259,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
@@ -264,7 +269,7 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -274,5 +279,5 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

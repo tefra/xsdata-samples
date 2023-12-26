@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type import BaseReferenceComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_reference_component_type import (
+    BaseReferenceComponentType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+)
 
 
 @dataclass
@@ -15,7 +21,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "Note",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     document_location: Optional[str] = field(
         default=None,
@@ -23,7 +29,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "DocumentLocation",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     file_type: Optional[str] = field(
         default=None,
@@ -31,7 +37,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "FileType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     author: Optional[TextType] = field(
         default=None,
@@ -39,7 +45,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "Author",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     doc_type: Optional[TextType] = field(
         default=None,
@@ -47,7 +53,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "DocType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     local_policy_ref: Optional[TextType] = field(
         default=None,
@@ -55,7 +61,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "LocalPolicyRef",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     issue_date: Optional[XmlDateTime] = field(
         default=None,
@@ -63,7 +69,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "IssueDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     producing_office_ref: Optional[TextType] = field(
         default=None,
@@ -71,7 +77,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "ProducingOfficeRef",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     additional_information: Optional[TextType] = field(
         default=None,
@@ -79,7 +85,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "AdditionalInformation",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     cdmsdocument_location: Optional[str] = field(
         default=None,
@@ -87,7 +93,7 @@ class DocumentType(BaseReferenceComponentType):
             "name": "CDMSDocumentLocation",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     reinsurance_policy_ref: Optional[TextType] = field(
         default=None,
@@ -95,5 +101,5 @@ class DocumentType(BaseReferenceComponentType):
             "name": "ReinsurancePolicyRef",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )

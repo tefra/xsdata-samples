@@ -16,6 +16,7 @@ class FloatingPointMetreDistanceValue(DataValue):
         in metres in a floating point format.
     :ivar floating_point_metre_distance_value_extension:
     """
+
     floating_point_metre_distance: Optional[float] = field(
         default=None,
         metadata={
@@ -23,13 +24,15 @@ class FloatingPointMetreDistanceValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    floating_point_metre_distance_value_extension: Optional[ExtensionType] = field(
+    floating_point_metre_distance_value_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "floatingPointMetreDistanceValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

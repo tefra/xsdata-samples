@@ -9,6 +9,7 @@ class MarketingMessage:
     """
     Marketing information provided by the supplier.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -18,5 +19,5 @@ class MarketingMessage:
             "name": "Text",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )

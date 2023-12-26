@@ -17,12 +17,12 @@ class VendorInfo:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )

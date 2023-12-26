@@ -21,6 +21,7 @@ class AirMerchandisingDetailsRsp(BaseRsp1):
         Lists classes of service by segment sent in the request which are
         not associated to a brand.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class AirMerchandisingDetailsRsp(BaseRsp1):
         metadata={
             "name": "OptionalServices",
             "type": "Element",
-        }
+        },
     )
     brand: list[Brand] = field(
         default_factory=list,
@@ -37,14 +38,14 @@ class AirMerchandisingDetailsRsp(BaseRsp1):
             "name": "Brand",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     unassociated_booking_code_list: None | AirMerchandisingDetailsRsp.UnassociatedBookingCodeList = field(
         default=None,
         metadata={
             "name": "UnassociatedBookingCodeList",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -55,5 +56,5 @@ class AirMerchandisingDetailsRsp(BaseRsp1):
                 "name": "ApplicableSegment",
                 "type": "Element",
                 "max_occurs": 99,
-            }
+            },
         )

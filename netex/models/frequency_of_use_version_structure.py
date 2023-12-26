@@ -20,7 +20,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "name": "FrequencyOfUseType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimal_frequency: Optional[int] = field(
         default=None,
@@ -28,7 +28,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "name": "MinimalFrequency",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximal_frequency: Optional[int] = field(
         default=None,
@@ -36,7 +36,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "name": "MaximalFrequency",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     frequency_interval: Optional[XmlDuration] = field(
         default=None,
@@ -44,7 +44,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "name": "FrequencyInterval",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     time_interval_ref: Optional[TimeIntervalRef] = field(
         default=None,
@@ -52,7 +52,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "name": "TimeIntervalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     discount_basis: Optional[DiscountBasisEnumeration] = field(
         default=None,
@@ -60,5 +60,5 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "name": "DiscountBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

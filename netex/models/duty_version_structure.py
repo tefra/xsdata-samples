@@ -20,7 +20,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     finishing_duration: Optional[XmlDuration] = field(
         default=None,
@@ -28,7 +28,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "name": "FinishingDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     preparation_duration: Optional[XmlDuration] = field(
         default=None,
@@ -36,7 +36,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "name": "PreparationDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     timetable_frame_ref: Optional[TimetableFrameRef] = field(
         default=None,
@@ -44,7 +44,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "name": "TimetableFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     duty_parts: Optional[DutyPartsRelStructure] = field(
         default=None,
@@ -52,5 +52,5 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "name": "dutyParts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

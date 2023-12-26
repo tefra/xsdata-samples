@@ -14,6 +14,7 @@ class Publication:
     A title must be supplied, as well as an ISSN, ISBN, or title-level
     DOI
     """
+
     class Meta:
         name = "publication"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -26,21 +27,21 @@ class Publication:
             "max_occurs": 10,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     issn: List[Issn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     isbn: List[Isbn] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     doi: Optional[str] = field(
         default=None,
@@ -49,5 +50,5 @@ class Publication:
             "min_length": 6,
             "max_length": 2048,
             "pattern": r"10\.[0-9]{4,9}/.{1,200}",
-        }
+        },
     )

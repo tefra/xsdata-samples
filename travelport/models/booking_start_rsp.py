@@ -12,5 +12,6 @@ class BookingStartRsp(BookingBaseRsp):
     User must use the session key in the subsequent transactions to use
     the created session.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"

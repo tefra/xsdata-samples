@@ -9,5 +9,6 @@ class DiagnosticSignificanceEnumSimple(Enum):
     :cvar OCCURENCE: Issue, which indicates additional information
         concerning insufficient system behavior.
     """
+
     FAULT = "FAULT"
     OCCURENCE = "OCCURENCE"

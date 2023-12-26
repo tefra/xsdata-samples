@@ -31,7 +31,7 @@ class PaymentStatusRequestSummary:
         metadata={
             "name": "TotalNumberPaymentRequests",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -229,28 +229,28 @@ class PaymentDates:
         metadata={
             "name": "PaymentDueDate",
             "type": "Element",
-        }
+        },
     )
     requested_payment_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "RequestedPaymentDate",
             "type": "Element",
-        }
+        },
     )
     pay_before_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "PayBeforeDate",
             "type": "Element",
-        }
+        },
     )
     list_of_payment_dates: Optional[ListOfPaymentDates] = field(
         default=None,
         metadata={
             "name": "ListOfPaymentDates",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -268,21 +268,21 @@ class PaymentException:
         metadata={
             "name": "PaymentExceptionCodedOther",
             "type": "Element",
-        }
+        },
     )
     payment_exception_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentExceptionNote",
             "type": "Element",
-        }
+        },
     )
     offending_payment_element: Optional[OffendingPaymentElement] = field(
         default=None,
         metadata={
             "name": "OffendingPaymentElement",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -314,7 +314,7 @@ class PaymentStatusResponseHeader:
         metadata={
             "name": "SendingParty",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -328,7 +328,7 @@ class PaymentStatusResponseHeader:
         metadata={
             "name": "GeneralNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -351,7 +351,7 @@ class ListOfPaymentException:
             "name": "PaymentException",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -387,119 +387,123 @@ class PaymentStatusResponseDetail:
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
-        }
+        },
     )
     payment_dates: Optional[PaymentDates] = field(
         default=None,
         metadata={
             "name": "PaymentDates",
             "type": "Element",
-        }
+        },
     )
     settlement_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "SettlementDate",
             "type": "Element",
-        }
+        },
     )
     fxvalue_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXValueDate",
             "type": "Element",
-        }
+        },
     )
     settlement_amount: Optional[SettlementAmount] = field(
         default=None,
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
-        }
+        },
     )
     debit_amount: Optional[DebitAmount] = field(
         default=None,
         metadata={
             "name": "DebitAmount",
             "type": "Element",
-        }
+        },
     )
     credit_amount: Optional[CreditAmount] = field(
         default=None,
         metadata={
             "name": "CreditAmount",
             "type": "Element",
-        }
+        },
     )
-    originating_financial_institution: Optional[OriginatingFinancialInstitution] = field(
+    originating_financial_institution: Optional[
+        OriginatingFinancialInstitution
+    ] = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
-        }
+        },
     )
-    receiving_financial_institution: Optional[ReceivingFinancialInstitution] = field(
+    receiving_financial_institution: Optional[
+        ReceivingFinancialInstitution
+    ] = field(
         default=None,
         metadata={
             "name": "ReceivingFinancialInstitution",
             "type": "Element",
-        }
+        },
     )
     card_info: Optional[CardInfo] = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
-        }
+        },
     )
     payment_party: Optional[PaymentParty] = field(
         default=None,
         metadata={
             "name": "PaymentParty",
             "type": "Element",
-        }
+        },
     )
     participant_user_id: Optional[ParticipantUserId] = field(
         default=None,
         metadata={
             "name": "ParticipantUserID",
             "type": "Element",
-        }
+        },
     )
     rate_of_exchange_detail: Optional[RateOfExchangeDetail] = field(
         default=None,
         metadata={
             "name": "RateOfExchangeDetail",
             "type": "Element",
-        }
+        },
     )
     payment_system_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCoded",
             "type": "Element",
-        }
+        },
     )
     payment_system_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentSystemCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_payment_references: Optional[ListOfPaymentReferences] = field(
         default=None,
         metadata={
             "name": "ListOfPaymentReferences",
             "type": "Element",
-        }
+        },
     )
     list_of_other_payment_info: Optional[ListOfOtherPaymentInfo] = field(
         default=None,
         metadata={
             "name": "ListOfOtherPaymentInfo",
             "type": "Element",
-        }
+        },
     )
     list_of_payment_response: ListOfPaymentResponse = field(
         metadata={
@@ -518,7 +522,7 @@ class ListOfPaymentStatusResponseDetail:
             "name": "PaymentStatusResponseDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 

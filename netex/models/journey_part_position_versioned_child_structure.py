@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .journey_part_ref_structure import JourneyPartRefStructure
@@ -19,9 +19,11 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "name": "ParentJourneyPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: List[object] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref: List[
+        Union[FareScheduledStopPointRef, ScheduledStopPointRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -37,7 +39,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     position_in_train: Optional[int] = field(
         default=None,
@@ -46,11 +48,11 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

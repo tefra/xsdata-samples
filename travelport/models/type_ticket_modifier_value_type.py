@@ -15,6 +15,7 @@ class TypeTicketModifierValueType:
     net_fare_value
         Treat the value as net fare discount information
     """
+
     class Meta:
         name = "typeTicketModifierValueType"
 
@@ -25,12 +26,12 @@ class TypeTicketModifierValueType:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        }
+        },
     )
     net_fare_value: None | bool = field(
         default=None,
         metadata={
             "name": "NetFareValue",
             "type": "Attribute",
-        }
+        },
     )

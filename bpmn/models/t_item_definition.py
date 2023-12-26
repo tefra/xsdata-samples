@@ -17,19 +17,19 @@ class TItemDefinition(TRootElement):
         metadata={
             "name": "structureRef",
             "type": "Attribute",
-        }
+        },
     )
     is_collection: bool = field(
         default=False,
         metadata={
             "name": "isCollection",
             "type": "Attribute",
-        }
+        },
     )
     item_kind: TItemKind = field(
         default=TItemKind.INFORMATION,
         metadata={
             "name": "itemKind",
             "type": "Attribute",
-        }
+        },
     )

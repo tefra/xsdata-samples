@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.driving_condition_type_enum import DrivingConditionTypeEnum
+from datexii.models.eu.datexii.v2.driving_condition_type_enum import (
+    DrivingConditionTypeEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.traffic_element import TrafficElement
 
@@ -16,13 +18,14 @@ class Conditions(TrafficElement):
         at the specified location.
     :ivar conditions_extension:
     """
+
     driving_condition_type: Optional[DrivingConditionTypeEnum] = field(
         default=None,
         metadata={
             "name": "drivingConditionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     conditions_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +33,5 @@ class Conditions(TrafficElement):
             "name": "conditionsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

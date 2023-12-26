@@ -18,7 +18,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "CrossingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     zebra_crossing: Optional[bool] = field(
         default=None,
@@ -26,7 +26,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "ZebraCrossing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     pedestrian_lights: Optional[bool] = field(
         default=None,
@@ -34,7 +34,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "PedestrianLights",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     acoustic_device_sensors: Optional[bool] = field(
         default=None,
@@ -42,7 +42,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AcousticDeviceSensors",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     acoustic_crossing_aids: Optional[bool] = field(
         default=None,
@@ -50,7 +50,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AcousticCrossingAids",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tactile_guidance_strips: Optional[bool] = field(
         default=None,
@@ -58,7 +58,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "TactileGuidanceStrips",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tactile_warning_strip: Optional[TactileWarningStripEnumeration] = field(
         default=None,
@@ -66,7 +66,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "TactileWarningStrip",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     visual_guidance_bands: Optional[bool] = field(
         default=None,
@@ -74,7 +74,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "VisualGuidanceBands",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     dropped_kerb: Optional[bool] = field(
         default=None,
@@ -82,7 +82,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "DroppedKerb",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     suitable_for_cycles: Optional[bool] = field(
         default=None,
@@ -90,5 +90,5 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "SuitableForCycles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

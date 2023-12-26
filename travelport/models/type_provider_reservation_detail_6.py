@@ -11,6 +11,7 @@ class TypeProviderReservationDetail6:
 
     To be used as a request element type while accessing a specific PNR
     """
+
     class Meta:
         name = "typeProviderReservationDetail"
 
@@ -22,7 +23,7 @@ class TypeProviderReservationDetail6:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -31,5 +32,5 @@ class TypeProviderReservationDetail6:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )

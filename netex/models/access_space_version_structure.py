@@ -19,7 +19,7 @@ class AccessSpaceVersionStructure(StopPlaceSpaceVersionStructure):
             "name": "AccessSpaceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     passage_type: Optional[PassageTypeEnumeration] = field(
         default=None,
@@ -27,7 +27,7 @@ class AccessSpaceVersionStructure(StopPlaceSpaceVersionStructure):
             "name": "PassageType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parent_access_space_ref: Optional[AccessSpaceRefStructure] = field(
         default=None,
@@ -35,5 +35,5 @@ class AccessSpaceVersionStructure(StopPlaceSpaceVersionStructure):
             "name": "ParentAccessSpaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

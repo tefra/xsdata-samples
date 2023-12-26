@@ -26,27 +26,28 @@ class AffectedCarriagewayAndLanes:
         metres affected by the associated traffic element.
     :ivar affected_carriageway_and_lanes_extension:
     """
+
     carriageway: Optional[CarriagewayEnum] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     lane: List[LaneEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     footpath: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     length_affected: Optional[float] = field(
         default=None,
@@ -54,7 +55,7 @@ class AffectedCarriagewayAndLanes:
             "name": "lengthAffected",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     affected_carriageway_and_lanes_extension: Optional[ExtensionType] = field(
         default=None,
@@ -62,5 +63,5 @@ class AffectedCarriagewayAndLanes:
             "name": "affectedCarriagewayAndLanesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

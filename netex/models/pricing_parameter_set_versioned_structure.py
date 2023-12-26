@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
-from .month_validity_offsets_rel_structure import MonthValidityOffsetsRelStructure
+from .month_validity_offsets_rel_structure import (
+    MonthValidityOffsetsRelStructure,
+)
 from .multilingual_string import MultilingualString
 from .price_unit_ref import PriceUnitRef
 from .price_units_rel_structure import PriceUnitsRelStructure
@@ -26,7 +28,7 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     price_unit_ref: Optional[PriceUnitRef] = field(
         default=None,
@@ -34,7 +36,7 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "PriceUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     price_units: Optional[PriceUnitsRelStructure] = field(
         default=None,
@@ -42,7 +44,7 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "priceUnits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     pricing_rules: Optional[PricingRulesRelStructure] = field(
         default=None,
@@ -50,7 +52,7 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "pricingRules",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     allow_cumulative_discounts: Optional[bool] = field(
         default=None,
@@ -58,7 +60,7 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "AllowCumulativeDiscounts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rounding_ref: Optional[RoundingRef] = field(
         default=None,
@@ -66,16 +68,18 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "RoundingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     roundings: Optional[RoundingsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[
+        Union[FareDayTypeRef, DayTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -91,7 +95,7 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     month_validity_offsets: Optional[MonthValidityOffsetsRelStructure] = field(
         default=None,
@@ -99,7 +103,7 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "monthValidityOffsets",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     pricing_services: Optional[PricingServicesRelStructure] = field(
         default=None,
@@ -107,5 +111,5 @@ class PricingParameterSetVersionedStructure(DataManagedObjectStructure):
             "name": "pricingServices",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

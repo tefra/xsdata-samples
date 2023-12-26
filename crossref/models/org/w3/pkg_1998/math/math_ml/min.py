@@ -15,5 +15,5 @@ class Min:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

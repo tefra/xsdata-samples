@@ -24,6 +24,7 @@ class FlightCriteria:
     destination
         AirSegment destination
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -31,7 +32,7 @@ class FlightCriteria:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class FlightCriteria:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class FlightCriteria:
             "name": "FlightNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     departure_date: None | XmlDate = field(
         default=None,
@@ -56,7 +57,7 @@ class FlightCriteria:
             "name": "DepartureDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -66,7 +67,7 @@ class FlightCriteria:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -76,5 +77,5 @@ class FlightCriteria:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

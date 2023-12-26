@@ -6,14 +6,18 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .client_server_operation_subtypes_enum import (
+    ClientServerOperationSubtypesEnum,
+)
 from .field_subtypes_enum import FieldSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -86,6 +90,7 @@ class FieldMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FIELD-MAPPING"
 
@@ -96,7 +101,7 @@ class FieldMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["FieldMapping.ShortNameFragments"] = field(
         default=None,
@@ -104,7 +109,7 @@ class FieldMapping:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -112,7 +117,7 @@ class FieldMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -120,7 +125,7 @@ class FieldMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -128,7 +133,7 @@ class FieldMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -136,7 +141,7 @@ class FieldMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -144,7 +149,7 @@ class FieldMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["FieldMapping.Annotations"] = field(
         default=None,
@@ -152,7 +157,7 @@ class FieldMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     field_ref: Optional["FieldMapping.FieldRef"] = field(
         default=None,
@@ -160,7 +165,7 @@ class FieldMapping:
             "name": "FIELD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     getter_operation_ref: Optional["FieldMapping.GetterOperationRef"] = field(
         default=None,
@@ -168,15 +173,17 @@ class FieldMapping:
             "name": "GETTER-OPERATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    notifier_data_element_ref: Optional["FieldMapping.NotifierDataElementRef"] = field(
+    notifier_data_element_ref: Optional[
+        "FieldMapping.NotifierDataElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "NOTIFIER-DATA-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     setter_operation_ref: Optional["FieldMapping.SetterOperationRef"] = field(
         default=None,
@@ -184,14 +191,14 @@ class FieldMapping:
             "name": "SETTER-OPERATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -199,14 +206,14 @@ class FieldMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -217,7 +224,7 @@ class FieldMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -228,7 +235,7 @@ class FieldMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,7 +246,7 @@ class FieldMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -250,7 +257,7 @@ class FieldMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -261,7 +268,7 @@ class FieldMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -272,5 +279,5 @@ class FieldMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

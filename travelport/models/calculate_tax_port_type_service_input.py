@@ -16,7 +16,7 @@ class CalculateTaxPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class CalculateTaxPortTypeServiceInput:
                 "name": "CalculateTaxReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            }
+            },
         )

@@ -16,6 +16,7 @@ class AutoCollectEnumSimple(Enum):
         directly in the collection are part of the collection. No other
         objects are considered further.
     """
+
     REF_ALL = "REF-ALL"
     REF_NON_STANDARD = "REF-NON-STANDARD"
     REF_NONE = "REF-NONE"

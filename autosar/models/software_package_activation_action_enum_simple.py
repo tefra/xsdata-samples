@@ -11,6 +11,7 @@ class SoftwarePackageActivationActionEnumSimple(Enum):
     :cvar WAIT_FOR_REBOOT: The installation has no immediate
         consequences in terms of other software on the target.
     """
+
     REBOOT = "REBOOT"
     RESTART_APPLICATION = "RESTART-APPLICATION"
     WAIT_FOR_REBOOT = "WAIT-FOR-REBOOT"

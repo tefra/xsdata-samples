@@ -10,6 +10,7 @@ class RouteList:
     """
     Identifies the routes and sub-routes that were requested.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class RouteList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

@@ -9,6 +9,7 @@ class NvBlockNeedsWritingPriorityEnumSimple(Enum):
     :cvar LOW: Writing priority is low.
     :cvar MEDIUM: Writing priority is medium.
     """
+
     HIGH = "HIGH"
     LOW = "LOW"
     MEDIUM = "MEDIUM"

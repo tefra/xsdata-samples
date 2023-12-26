@@ -13,6 +13,7 @@ class CryptoObjectTypeEnumSimple(Enum):
     :cvar SYMMETRIC_KEY: cryp::SymmetricKey object
     :cvar UNDEFINED: Object type unknown
     """
+
     PRIVATE_KEY = "PRIVATE-KEY"
     PUBLIC_KEY = "PUBLIC-KEY"
     SECRET_SEED = "SECRET-SEED"

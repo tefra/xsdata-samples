@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
-from .accommodation_facility_enumeration import AccommodationFacilityEnumeration
+from .accommodation_facility_enumeration import (
+    AccommodationFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -13,5 +15,5 @@ class AccommodationFacility:
         default=AccommodationFacilityEnumeration.SEATING,
         metadata={
             "required": True,
-        }
+        },
     )

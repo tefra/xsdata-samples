@@ -20,6 +20,7 @@ class RailSegmentInfo:
     type_value
         Either Extra for ExtraSegmentInfo or Vendor for VendorMessages.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -27,14 +28,14 @@ class RailSegmentInfo:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | TypeRailSegmentInfo = field(
         default=None,
@@ -42,5 +43,5 @@ class RailSegmentInfo:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

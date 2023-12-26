@@ -15,7 +15,7 @@ class TypeFailureInfo:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     message: None | str = field(
         default=None,
@@ -23,5 +23,5 @@ class TypeFailureInfo:
             "name": "Message",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

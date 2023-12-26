@@ -34,6 +34,7 @@ class ProfileTemplate:
         Presence of owner profile id indicates by which profile this
         template is been owned
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -43,7 +44,7 @@ class ProfileTemplate:
             "name": "FixedFieldGroup",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     custom_field: list[CustomField] = field(
         default_factory=list,
@@ -51,7 +52,7 @@ class ProfileTemplate:
             "name": "CustomField",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     custom_field_group: list[CustomFieldGroup] = field(
         default_factory=list,
@@ -59,7 +60,7 @@ class ProfileTemplate:
             "name": "CustomFieldGroup",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     override_definition: list[OverrideDefinition] = field(
         default_factory=list,
@@ -67,7 +68,7 @@ class ProfileTemplate:
             "name": "OverrideDefinition",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     id: None | int = field(
         default=None,
@@ -75,7 +76,7 @@ class ProfileTemplate:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -85,7 +86,7 @@ class ProfileTemplate:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -94,7 +95,7 @@ class ProfileTemplate:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 225,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -103,19 +104,19 @@ class ProfileTemplate:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     base_template_id: None | int = field(
         default=None,
         metadata={
             "name": "BaseTemplateID",
             "type": "Attribute",
-        }
+        },
     )
     owner_profile_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerProfileID",
             "type": "Attribute",
-        }
+        },
     )

@@ -16,13 +16,14 @@ class TpegDescriptor:
         location.
     :ivar tpeg_descriptor_extension:
     """
+
     descriptor: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     tpeg_descriptor_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class TpegDescriptor:
             "name": "tpegDescriptorExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

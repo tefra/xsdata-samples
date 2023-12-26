@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.errors import Errors
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies import LocalPolicies
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.errors import (
+    Errors,
+)
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies import (
+    LocalPolicies,
+)
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = (
+    "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+)
 
 
 @dataclass
@@ -17,7 +23,7 @@ class Policy:
             "name": "PolicyID",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     status: Optional[str] = field(
         default=None,
@@ -25,7 +31,7 @@ class Policy:
             "name": "Status",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     local_policies: Optional[LocalPolicies] = field(
         default=None,
@@ -33,7 +39,7 @@ class Policy:
             "name": "LocalPolicies",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     errors: Optional[Errors] = field(
         default=None,
@@ -41,5 +47,5 @@ class Policy:
             "name": "Errors",
             "type": "Element",
             "required": True,
-        }
+        },
     )

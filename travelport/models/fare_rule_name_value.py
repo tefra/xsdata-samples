@@ -9,6 +9,7 @@ class FareRuleNameValue:
     """
     Fare Rule Name Value Pair, used in Short Rules.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,7 +19,7 @@ class FareRuleNameValue:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -26,5 +27,5 @@ class FareRuleNameValue:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

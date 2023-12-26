@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.gds_queue_agent_list_service_port_type_service_input import GdsQueueAgentListServicePortTypeServiceInput
-from travelport.models.gds_queue_agent_list_service_port_type_service_output import GdsQueueAgentListServicePortTypeServiceOutput
+from travelport.models.gds_queue_agent_list_service_port_type_service_input import (
+    GdsQueueAgentListServicePortTypeServiceInput,
+)
+from travelport.models.gds_queue_agent_list_service_port_type_service_output import (
+    GdsQueueAgentListServicePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

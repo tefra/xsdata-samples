@@ -15,12 +15,12 @@ class FacetResultItem:
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
             "required": True,
-        }
+        },
     )
     selected: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

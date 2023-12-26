@@ -125,6 +125,7 @@ class AclObjectSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ACL-OBJECT-SET"
 
@@ -135,7 +136,7 @@ class AclObjectSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["AclObjectSet.ShortNameFragments"] = field(
         default=None,
@@ -143,7 +144,7 @@ class AclObjectSet:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -151,7 +152,7 @@ class AclObjectSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -159,7 +160,7 @@ class AclObjectSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -167,7 +168,7 @@ class AclObjectSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -175,7 +176,7 @@ class AclObjectSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -183,7 +184,7 @@ class AclObjectSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["AclObjectSet.Annotations"] = field(
         default=None,
@@ -191,7 +192,7 @@ class AclObjectSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -199,7 +200,7 @@ class AclObjectSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_policys: Optional["AclObjectSet.BlueprintPolicys"] = field(
         default=None,
@@ -207,7 +208,7 @@ class AclObjectSet:
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -215,7 +216,7 @@ class AclObjectSet:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     acl_object_classs: Optional["AclObjectSet.AclObjectClasss"] = field(
         default=None,
@@ -223,7 +224,7 @@ class AclObjectSet:
             "name": "ACL-OBJECT-CLASSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     acl_scope: Optional[AclScopeEnum] = field(
         default=None,
@@ -231,7 +232,7 @@ class AclObjectSet:
             "name": "ACL-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     collection_ref: Optional["AclObjectSet.CollectionRef"] = field(
         default=None,
@@ -239,15 +240,17 @@ class AclObjectSet:
             "name": "COLLECTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    derived_from_blueprint_refs: Optional["AclObjectSet.DerivedFromBlueprintRefs"] = field(
+    derived_from_blueprint_refs: Optional[
+        "AclObjectSet.DerivedFromBlueprintRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DERIVED-FROM-BLUEPRINT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     engineering_objects: Optional["AclObjectSet.EngineeringObjects"] = field(
         default=None,
@@ -255,23 +258,27 @@ class AclObjectSet:
             "name": "ENGINEERING-OBJECTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    object_definition_refs: Optional["AclObjectSet.ObjectDefinitionRefs"] = field(
+    object_definition_refs: Optional[
+        "AclObjectSet.ObjectDefinitionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "OBJECT-DEFINITION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    object_defintion_refs: Optional["AclObjectSet.ObjectDefintionRefs"] = field(
+    object_defintion_refs: Optional[
+        "AclObjectSet.ObjectDefintionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "OBJECT-DEFINTION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     object_refs: Optional["AclObjectSet.ObjectRefs"] = field(
         default=None,
@@ -279,14 +286,14 @@ class AclObjectSet:
             "name": "OBJECT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -294,14 +301,14 @@ class AclObjectSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -312,7 +319,7 @@ class AclObjectSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -323,7 +330,7 @@ class AclObjectSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -334,15 +341,17 @@ class AclObjectSet:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -350,7 +359,7 @@ class AclObjectSet:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -359,13 +368,14 @@ class AclObjectSet:
         :ivar acl_object_class: This specifies that the considered
             objects as instances of the denoted meta class.
         """
+
         acl_object_class: List[ReferrableSubtypesEnum] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-OBJECT-CLASS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -376,18 +386,20 @@ class AclObjectSet:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class DerivedFromBlueprintRefs:
-        derived_from_blueprint_ref: List["AclObjectSet.DerivedFromBlueprintRefs.DerivedFromBlueprintRef"] = field(
+        derived_from_blueprint_ref: List[
+            "AclObjectSet.DerivedFromBlueprintRefs.DerivedFromBlueprintRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DERIVED-FROM-BLUEPRINT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -398,7 +410,7 @@ class AclObjectSet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -409,18 +421,20 @@ class AclObjectSet:
                 "name": "AUTOSAR-ENGINEERING-OBJECT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ObjectDefinitionRefs:
-        object_definition_ref: List["AclObjectSet.ObjectDefinitionRefs.ObjectDefinitionRef"] = field(
+        object_definition_ref: List[
+            "AclObjectSet.ObjectDefinitionRefs.ObjectDefinitionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "OBJECT-DEFINITION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -431,18 +445,20 @@ class AclObjectSet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ObjectDefintionRefs:
-        object_defintion_ref: List["AclObjectSet.ObjectDefintionRefs.ObjectDefintionRef"] = field(
+        object_defintion_ref: List[
+            "AclObjectSet.ObjectDefintionRefs.ObjectDefintionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "OBJECT-DEFINTION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -453,7 +469,7 @@ class AclObjectSet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -464,7 +480,7 @@ class AclObjectSet:
                 "name": "OBJECT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -475,5 +491,5 @@ class AclObjectSet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

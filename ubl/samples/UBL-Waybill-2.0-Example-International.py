@@ -138,84 +138,84 @@ from xsdata.models.datatype import XmlTime
 
 obj = Waybill(
     ublversion_id=UblversionId(
-        value="2.0"
+        value='2.0'
     ),
     customization_id=CustomizationId(
-        value="urn:oasis:names:specification:ubl:xpath:Waybill-2.0:samples-2.0-draft"
+        value='urn:oasis:names:specification:ubl:xpath:Waybill-2.0:samples-2.0-draft'
     ),
     profile_id=ProfileId(
-        value="bpid:urn:oasis:names:draft:bpss:ubl-2-sample-international-scenario"
+        value='bpid:urn:oasis:names:draft:bpss:ubl-2-sample-international-scenario'
     ),
     id=Id(
-        value="KHN23-44044-1"
+        value='KHN23-44044-1'
     ),
     carrier_assigned_id=CarrierAssignedId(
-        value="123456789987654321"
+        value='123456789987654321'
     ),
     uuid=Uuid(
-        value="74638995-D67E-002F-436-8G17366352B1"
+        value='74638995-D67E-002F-436-8G17366352B1'
     ),
     issue_date=XmlDate(2005, 6, 25),
     issue_time=XmlTime(9, 0, 0, 0, 0),
     name=Name(
-        value="Air Waybill"
+        value='Air Waybill'
     ),
     shipping_order_id=ShippingOrderId(
-        value="KHN23-44044"
+        value='KHN23-44044'
     ),
     ad_valorem_indicator=False,
     declared_carriage_value_amount=DeclaredCarriageValueAmount(
-        value=Decimal("1500.00"),
-        currency_id="USD"
+        value=Decimal('1500.00'),
+        currency_id='USD'
     ),
     consignor_party=ConsignorParty(
         party_name=[
             PartyName(
                 name=Name(
-                    value="Consortial"
+                    value='Consortial'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Boston Road"
+                value='Boston Road'
             ),
             building_name=BuildingName(
-                value="Suite M-102"
+                value='Suite M-102'
             ),
             building_number=BuildingNumber(
-                value="630"
+                value='630'
             ),
             city_name=CityName(
-                value="Billerica"
+                value='Billerica'
             ),
             postal_zone=PostalZone(
-                value="01821"
+                value='01821'
             ),
             country_subentity=CountrySubentity(
-                value="Massachusetts"
+                value='Massachusetts'
             ),
             country_subentity_code=CountrySubentityCode(
-                value="MA"
+                value='MA'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="US"
+                    value='US'
                 )
             )
         ),
         contact=Contact(
             name=Name(
-                value="Mrs Bouquet"
+                value='Mrs Bouquet'
             ),
             telephone=Telephone(
-                value=" +1 158 1233714"
+                value=' +1 158 1233714'
             ),
             telefax=Telefax(
-                value="+ 1 158 1233856"
+                value='+ 1 158 1233856'
             ),
             electronic_mail=ElectronicMail(
-                value="bouquet@fpconsortial.com"
+                value='bouquet@fpconsortial.com'
             )
         )
     ),
@@ -223,19 +223,19 @@ obj = Waybill(
         party_name=[
             PartyName(
                 name=Name(
-                    value="United Airfreight"
+                    value='United Airfreight'
                 )
             ),
         ],
         contact=Contact(
             id=Id(
-                value="Freight Bookings"
+                value='Freight Bookings'
             ),
             telephone=Telephone(
-                value="+1 3362 4788"
+                value='+1 3362 4788'
             ),
             electronic_mail=ElectronicMail(
-                value="bookings@unitedfreight.com"
+                value='bookings@unitedfreight.com'
             )
         )
     ),
@@ -243,85 +243,85 @@ obj = Waybill(
         party_name=[
             PartyName(
                 name=Name(
-                    value="One-Stop Forwarders"
+                    value='One-Stop Forwarders'
                 )
             ),
         ],
         postal_address=PostalAddress(
             postbox=Postbox(
-                value="99043"
+                value='99043'
             ),
             city_name=CityName(
-                value="Boston"
+                value='Boston'
             ),
             postal_zone=PostalZone(
-                value="02210"
+                value='02210'
             ),
             country_subentity_code=CountrySubentityCode(
-                value="MA"
+                value='MA'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="US"
+                    value='US'
                 )
             )
         ),
         contact=Contact(
             name=Name(
-                value="Con Solidador"
+                value='Con Solidador'
             ),
             telephone=Telephone(
-                value=" +1 343 1453654"
+                value=' +1 343 1453654'
             ),
             telefax=Telefax(
-                value="+1 343 1453655"
+                value='+1 343 1453655'
             ),
             electronic_mail=ElectronicMail(
-                value="ctanner@onestopfreight.com"
+                value='ctanner@onestopfreight.com'
             )
         )
     ),
     shipment=Shipment(
         id=Id(
-            value="CONS-0001"
+            value='CONS-0001'
         ),
         gross_weight_measure=GrossWeightMeasure(
-            value=Decimal("130"),
-            unit_code="KGM"
+            value=Decimal('130'),
+            unit_code='KGM'
         ),
         net_weight_measure=NetWeightMeasure(
-            value=Decimal("110"),
-            unit_code="KGM"
+            value=Decimal('110'),
+            unit_code='KGM'
         ),
         net_net_weight_measure=NetNetWeightMeasure(
-            value=Decimal("100"),
-            unit_code="KGM"
+            value=Decimal('100'),
+            unit_code='KGM'
         ),
         gross_volume_measure=GrossVolumeMeasure(
-            value=Decimal("2"),
-            unit_code="MTQ"
+            value=Decimal('2'),
+            unit_code='MTQ'
         ),
         net_volume_measure=NetVolumeMeasure(
-            value=Decimal("2.235"),
-            unit_code="MTQ"
+            value=Decimal('2.235'),
+            unit_code='MTQ'
         ),
         total_goods_item_quantity=TotalGoodsItemQuantity(
-            value=Decimal("1")
+            value=Decimal('1')
         ),
         total_transport_handling_unit_quantity=TotalTransportHandlingUnitQuantity(
-            value=Decimal("10")
+            value=Decimal('10')
         ),
         insurance_value_amount=InsuranceValueAmount(
-            value=Decimal("1000.00"),
-            currency_id="USD"
+            value=Decimal('1000.00'),
+            currency_id='USD'
         ),
         declared_customs_value_amount=DeclaredCustomsValueAmount(
-            value=Decimal("524.80"),
-            currency_id="GBP"
+            value=Decimal('524.80'),
+            currency_id='GBP'
         ),
         free_on_board_value_amount=FreeOnBoardValueAmount(
-            value=Decimal("1200.00"),
-            currency_id="USD"
+            value=Decimal('1200.00'),
+            currency_id='USD'
         ),
         special_instructions=[
             SpecialInstructions(
@@ -331,71 +331,71 @@ obj = Waybill(
         consignment=[
             Consignment(
                 id=Id(
-                    value="2005US12345678998765432112345678",
-                    scheme_name="Unique Consignment Reference",
-                    scheme_agency_name="WCO"
+                    value='2005US12345678998765432112345678',
+                    scheme_name='Unique Consignment Reference',
+                    scheme_agency_name='WCO'
                 ),
                 tariff_description=[
                     TariffDescription(
-                        value="Beeswax, other insect waxes and spermacetti"
+                        value='Beeswax, other insect waxes and spermacetti'
                     ),
                 ],
                 tariff_code=TariffCode(
-                    value="15219000"
+                    value='15219000'
                 ),
                 hazardous_risk_indicator=False,
                 consignee_party=ConsigneeParty(
                     party_name=[
                         PartyName(
                             name=Name(
-                                value="IYT Corporation"
+                                value='IYT Corporation'
                             )
                         ),
                     ],
                     postal_address=PostalAddress(
                         street_name=StreetName(
-                            value="Avon Way"
+                            value='Avon Way'
                         ),
                         building_name=BuildingName(
-                            value="Thereabouts"
+                            value='Thereabouts'
                         ),
                         building_number=BuildingNumber(
-                            value="56A"
+                            value='56A'
                         ),
                         city_name=CityName(
-                            value="Bridgtow"
+                            value='Bridgtow'
                         ),
                         postal_zone=PostalZone(
-                            value="ZZ99 1ZZ"
+                            value='ZZ99 1ZZ'
                         ),
                         country_subentity=CountrySubentity(
-                            value="Avon"
+                            value='Avon'
                         ),
                         address_line=[
                             AddressLine(
                                 line=Line(
-                                    value="3rd Floor, Room 5"
+                                    value='3rd Floor, Room 5'
                                 )
                             ),
                         ],
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="GB"
+                                value='GB'
                             )
                         )
                     ),
                     contact=Contact(
                         name=Name(
-                            value="Mr Fred Churchill"
+                            value='Mr Fred Churchill'
                         ),
                         telephone=Telephone(
-                            value="+44 127 2653214"
+                            value='+44 127 2653214'
                         ),
                         telefax=Telefax(
-                            value="+44 127 2653215"
+                            value='+44 127 2653215'
                         ),
                         electronic_mail=ElectronicMail(
-                            value="fred@iytcorporation.gov.uk"
+                            value='fred@iytcorporation.gov.uk'
                         )
                     )
                 ),
@@ -403,54 +403,54 @@ obj = Waybill(
                     party_name=[
                         PartyName(
                             name=Name(
-                                value="IYT Corporation"
+                                value='IYT Corporation'
                             )
                         ),
                     ],
                     postal_address=PostalAddress(
                         street_name=StreetName(
-                            value="Avon Way"
+                            value='Avon Way'
                         ),
                         building_name=BuildingName(
-                            value="Thereabouts"
+                            value='Thereabouts'
                         ),
                         building_number=BuildingNumber(
-                            value="56A"
+                            value='56A'
                         ),
                         city_name=CityName(
-                            value="Bridgtow"
+                            value='Bridgtow'
                         ),
                         postal_zone=PostalZone(
-                            value="ZZ99 1ZZ"
+                            value='ZZ99 1ZZ'
                         ),
                         country_subentity=CountrySubentity(
-                            value="Avon"
+                            value='Avon'
                         ),
                         address_line=[
                             AddressLine(
                                 line=Line(
-                                    value="3rd Floor, Room 5"
+                                    value='3rd Floor, Room 5'
                                 )
                             ),
                         ],
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="GB"
+                                value='GB'
                             )
                         )
                     ),
                     contact=Contact(
                         name=Name(
-                            value="Mr Fred Churchill"
+                            value='Mr Fred Churchill'
                         ),
                         telephone=Telephone(
-                            value="+44 127 2653214"
+                            value='+44 127 2653214'
                         ),
                         telefax=Telefax(
-                            value="+44 127 2653215"
+                            value='+44 127 2653215'
                         ),
                         electronic_mail=ElectronicMail(
-                            value="fred@iytcorporation.gov.uk"
+                            value='fred@iytcorporation.gov.uk'
                         )
                     )
                 ),
@@ -458,74 +458,74 @@ obj = Waybill(
                     party_name=[
                         PartyName(
                             name=Name(
-                                value="The Terminus"
+                                value='The Terminus'
                             )
                         ),
                     ],
                     postal_address=PostalAddress(
                         street_name=StreetName(
-                            value="Avon Way"
+                            value='Avon Way'
                         ),
                         building_name=BuildingName(
-                            value="Thereabouts"
+                            value='Thereabouts'
                         ),
                         building_number=BuildingNumber(
-                            value="56A"
+                            value='56A'
                         ),
                         city_name=CityName(
-                            value="Bridgtow"
+                            value='Bridgtow'
                         ),
                         postal_zone=PostalZone(
-                            value="ZZ99 1ZZ"
+                            value='ZZ99 1ZZ'
                         ),
                         country_subentity=CountrySubentity(
-                            value="Avon"
+                            value='Avon'
                         ),
                         address_line=[
                             AddressLine(
                                 line=Line(
-                                    value="3rd Floor, Room 5"
+                                    value='3rd Floor, Room 5'
                                 )
                             ),
                         ],
                         country=Country(
                             identification_code=IdentificationCode(
-                                value="GB"
+                                value='GB'
                             )
                         )
                     ),
                     contact=Contact(
                         name=Name(
-                            value="S Massiah"
+                            value='S Massiah'
                         ),
                         telephone=Telephone(
-                            value="+ 44 127 98876545"
+                            value='+ 44 127 98876545'
                         ),
                         telefax=Telefax(
-                            value="+ 44 127 98876546"
+                            value='+ 44 127 98876546'
                         ),
                         electronic_mail=ElectronicMail(
-                            value="smassiah@the-email.co.uk"
+                            value='smassiah@the-email.co.uk'
                         )
                     )
                 ),
                 original_departure_country=OriginalDepartureCountry(
                     identification_code=IdentificationCode(
-                        value="US"
+                        value='US'
                     )
                 ),
                 final_destination_country=FinalDestinationCountry(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 ),
                 transport_contract=TransportContract(
                     id=Id(
-                        value="CONS-001"
+                        value='CONS-001'
                     ),
                     issue_date=XmlDate(2005, 6, 24),
                     contract_type=ContractType(
-                        value="Forwarding Instructions"
+                        value='Forwarding Instructions'
                     ),
                     validity_period=ValidityPeriod(
                         start_date=XmlDate(2005, 6, 25),
@@ -536,38 +536,38 @@ obj = Waybill(
                     contract_document_reference=[
                         ContractDocumentReference(
                             id=Id(
-                                value="normalizedString"
+                                value='normalizedString'
                             ),
                             copy_indicator=False,
                             uuid=Uuid(
-                                value="normalizedString"
+                                value='normalizedString'
                             ),
                             issue_date=XmlDate(1967, 8, 13),
                             document_type_code=DocumentTypeCode(
-                                value="normalizedString"
+                                value='normalizedString'
                             ),
                             document_type=DocumentType(
-                                value="String"
+                                value='String'
                             ),
                             xpath=[
                                 Xpath(
-                                    value="String"
+                                    value='String'
                                 ),
                                 Xpath(
-                                    value="String"
+                                    value='String'
                                 ),
                             ],
                             attachment=Attachment(
                                 embedded_document_binary_object=EmbeddedDocumentBinaryObject(
-                                    value=b"R0lGODlhcgGSALMAAAQCAEMmCZtuMFQxDS8b",
-                                    mime_code="application/CSTAdata+xml"
+                                    value=b'R0lGODlhcgGSALMAAAQCAEMmCZtuMFQxDS8b',
+                                    mime_code='application/CSTAdata+xml'
                                 ),
                                 external_reference=ExternalReference(
                                     uri=Uri(
-                                        value="normalizedString"
+                                        value='normalizedString'
                                     ),
                                     document_hash=DocumentHash(
-                                        value="String"
+                                        value='String'
                                     ),
                                     expiry_date=XmlDate(1967, 8, 13),
                                     expiry_time=XmlTime(14, 20, 0, 0, 0)
@@ -576,38 +576,38 @@ obj = Waybill(
                         ),
                         ContractDocumentReference(
                             id=Id(
-                                value="normalizedString"
+                                value='normalizedString'
                             ),
                             copy_indicator=False,
                             uuid=Uuid(
-                                value="normalizedString"
+                                value='normalizedString'
                             ),
                             issue_date=XmlDate(1967, 8, 13),
                             document_type_code=DocumentTypeCode(
-                                value="normalizedString"
+                                value='normalizedString'
                             ),
                             document_type=DocumentType(
-                                value="String"
+                                value='String'
                             ),
                             xpath=[
                                 Xpath(
-                                    value="String"
+                                    value='String'
                                 ),
                                 Xpath(
-                                    value="String"
+                                    value='String'
                                 ),
                             ],
                             attachment=Attachment(
                                 embedded_document_binary_object=EmbeddedDocumentBinaryObject(
-                                    value=b"R0lGODlhcgGSALMAAAQCAEMmCZtuMFQxDS8b",
-                                    mime_code="application/CSTAdata+xml"
+                                    value=b'R0lGODlhcgGSALMAAAQCAEMmCZtuMFQxDS8b',
+                                    mime_code='application/CSTAdata+xml'
                                 ),
                                 external_reference=ExternalReference(
                                     uri=Uri(
-                                        value="normalizedString"
+                                        value='normalizedString'
                                     ),
                                     document_hash=DocumentHash(
-                                        value="String"
+                                        value='String'
                                     ),
                                     expiry_date=XmlDate(1967, 8, 13),
                                     expiry_time=XmlTime(14, 20, 0, 0, 0)
@@ -618,27 +618,27 @@ obj = Waybill(
                 ),
                 original_despatch_transportation_service=OriginalDespatchTransportationService(
                     transport_service_code=TransportServiceCode(
-                        value="Door to Pier"
+                        value='Door to Pier'
                     )
                 ),
                 final_delivery_transportation_service=FinalDeliveryTransportationService(
                     transport_service_code=TransportServiceCode(
-                        value="Pier to Pier"
+                        value='Pier to Pier'
                     )
                 ),
                 delivery_terms=DeliveryTerms(
                     id=Id(
-                        value="FOB Destination"
+                        value='FOB Destination'
                     ),
                     delivery_location=DeliveryLocation(
                         id=Id(
-                            value="GBBRS",
-                            scheme_id="UN/LOCODE",
-                            scheme_agency_id="6"
+                            value='GBBRS',
+                            scheme_id='UN/LOCODE',
+                            scheme_agency_id='6'
                         ),
                         description=[
                             Description(
-                                value="Bristol"
+                                value='Bristol'
                             ),
                         ]
                     )
@@ -646,7 +646,7 @@ obj = Waybill(
                 payment_terms=PaymentTerms(
                     payment_means_id=[
                         PaymentMeansId(
-                            value="Bankers Cheque"
+                            value='Bankers Cheque'
                         ),
                     ]
                 ),
@@ -655,40 +655,40 @@ obj = Waybill(
                         charge_indicator=True,
                         allowance_charge_reason=[
                             AllowanceChargeReason(
-                                value="Freight charges"
+                                value='Freight charges'
                             ),
                         ],
                         sequence_numeric=SequenceNumeric(
-                            value=Decimal("1")
+                            value=Decimal('1')
                         ),
                         amount=Amount(
-                            value=Decimal("254.00"),
-                            currency_id="USD"
+                            value=Decimal('254.00'),
+                            currency_id='USD'
                         )
                     ),
                     FreightAllowanceCharge(
                         charge_indicator=False,
                         allowance_charge_reason_code=AllowanceChargeReasonCode(
-                            value="79"
+                            value='79'
                         ),
                         allowance_charge_reason=[
                             AllowanceChargeReason(
-                                value="Sundry discount"
+                                value='Sundry discount'
                             ),
                         ],
                         multiplier_factor_numeric=MultiplierFactorNumeric(
-                            value=Decimal("0.05")
+                            value=Decimal('0.05')
                         ),
                         sequence_numeric=SequenceNumeric(
-                            value=Decimal("2")
+                            value=Decimal('2')
                         ),
                         amount=Amount(
-                            value=Decimal("12.70"),
-                            currency_id="USD"
+                            value=Decimal('12.70'),
+                            currency_id='USD'
                         ),
                         base_amount=BaseAmount(
-                            value=Decimal("254.00"),
-                            currency_id="USD"
+                            value=Decimal('254.00'),
+                            currency_id='USD'
                         )
                     ),
                 ]
@@ -697,95 +697,95 @@ obj = Waybill(
         goods_item=[
             GoodsItem(
                 id=Id(
-                    value="1"
+                    value='1'
                 ),
                 sequence_number_id=SequenceNumberId(
-                    value="1"
+                    value='1'
                 ),
                 description=[
                     Description(
-                        value="Acme beeswax"
+                        value='Acme beeswax'
                     ),
                 ],
                 hazardous_risk_indicator=False,
                 declared_customs_value_amount=DeclaredCustomsValueAmount(
-                    value=Decimal("524.80"),
-                    currency_id="GBP"
+                    value=Decimal('524.80'),
+                    currency_id='GBP'
                 ),
                 declared_statistics_value_amount=DeclaredStatisticsValueAmount(
-                    value=Decimal("1000.00"),
-                    currency_id="USD"
+                    value=Decimal('1000.00'),
+                    currency_id='USD'
                 ),
                 free_on_board_value_amount=FreeOnBoardValueAmount(
-                    value=Decimal("1241.30"),
-                    currency_id="USD"
+                    value=Decimal('1241.30'),
+                    currency_id='USD'
                 ),
                 insurance_value_amount=InsuranceValueAmount(
-                    value=Decimal("1241.30"),
-                    currency_id="USD"
+                    value=Decimal('1241.30'),
+                    currency_id='USD'
                 ),
                 value_amount=ValueAmount(
-                    value=Decimal("1000.00"),
-                    currency_id="USD"
+                    value=Decimal('1000.00'),
+                    currency_id='USD'
                 ),
                 gross_weight_measure=GrossWeightMeasure(
-                    value=Decimal("130"),
-                    unit_code="KGM"
+                    value=Decimal('130'),
+                    unit_code='KGM'
                 ),
                 net_weight_measure=NetWeightMeasure(
-                    value=Decimal("110"),
-                    unit_code="KGM"
+                    value=Decimal('110'),
+                    unit_code='KGM'
                 ),
                 net_net_weight_measure=NetNetWeightMeasure(
-                    value=Decimal("100"),
-                    unit_code="KGM"
+                    value=Decimal('100'),
+                    unit_code='KGM'
                 ),
                 gross_volume_measure=GrossVolumeMeasure(
-                    value=Decimal("2"),
-                    unit_code="MTQ"
+                    value=Decimal('2'),
+                    unit_code='MTQ'
                 ),
                 net_volume_measure=NetVolumeMeasure(
-                    value=Decimal("2.235"),
-                    unit_code="MTQ"
+                    value=Decimal('2.235'),
+                    unit_code='MTQ'
                 ),
                 quantity=Quantity(
-                    value=Decimal("10")
+                    value=Decimal('10')
                 ),
                 required_customs_id=RequiredCustomsId(
-                    value="ECN12344566"
+                    value='ECN12344566'
                 ),
                 customs_status_code=CustomsStatusCode(
-                    value="Cleared"
+                    value='Cleared'
                 ),
                 customs_tariff_quantity=CustomsTariffQuantity(
-                    value=Decimal("1000")
+                    value=Decimal('1000')
                 ),
                 item=[
                     Item(
                         description=[
                             Description(
-                                value="Beeswax"
+                                value='Beeswax'
                             ),
                         ],
                         name=Name(
-                            value="Acme Beeswax"
+                            value='Acme Beeswax'
                         ),
                         buyers_item_identification=BuyersItemIdentification(
                             id=Id(
-                                value="6578489"
+                                value='6578489'
                             )
                         ),
                         sellers_item_identification=SellersItemIdentification(
                             id=Id(
-                                value="17589683"
+                                value='17589683'
                             )
                         ),
                         origin_country=OriginCountry(
                             identification_code=IdentificationCode(
-                                value="MX"
+                                value='MX'
                             ),
                             name=Name(
-                                value="Mexico"
+                                value='Mexico'
                             )
                         )
                     ),
@@ -795,15 +795,15 @@ obj = Waybill(
         shipment_stage=[
             ShipmentStage(
                 id=Id(
-                    value="1"
+                    value='1'
                 ),
                 transport_mode_code=TransportModeCode(
-                    value="3",
-                    list_id="UN/ECE rec 16",
-                    list_agency_id="6"
+                    value='3',
+                    list_id='UN/ECE rec 16',
+                    list_agency_id='6'
                 ),
                 transport_means_type_code=TransportMeansTypeCode(
-                    value="Truck"
+                    value='Truck'
                 ),
                 pre_carriage_indicator=True,
                 on_carriage_indicator=False,
@@ -818,13 +818,13 @@ obj = Waybill(
                         party_name=[
                             PartyName(
                                 name=Name(
-                                    value="Keep On Trucking"
+                                    value='Keep On Trucking'
                                 )
                             ),
                         ],
                         contact=Contact(
                             telephone=Telephone(
-                                value="+1 36222 33847"
+                                value='+1 36222 33847'
                             )
                         )
                     ),
@@ -832,22 +832,22 @@ obj = Waybill(
                 transport_means=TransportMeans(
                     road_transport=RoadTransport(
                         license_plate_id=LicensePlateId(
-                            value="2652 WE"
+                            value='2652 WE'
                         )
                     )
                 )
             ),
             ShipmentStage(
                 id=Id(
-                    value="2"
+                    value='2'
                 ),
                 transport_mode_code=TransportModeCode(
-                    value="4",
-                    list_id="UN/ECE rec 16",
-                    list_agency_id="6"
+                    value='4',
+                    list_id='UN/ECE rec 16',
+                    list_agency_id='6'
                 ),
                 transport_means_type_code=TransportMeansTypeCode(
-                    value="Plane"
+                    value='Plane'
                 ),
                 pre_carriage_indicator=False,
                 on_carriage_indicator=False,
@@ -860,66 +860,66 @@ obj = Waybill(
                         party_name=[
                             PartyName(
                                 name=Name(
-                                    value="United Airfreight"
+                                    value='United Airfreight'
                                 )
                             ),
                         ],
                         contact=Contact(
                             id=Id(
-                                value="Freight Bookings"
+                                value='Freight Bookings'
                             ),
                             telephone=Telephone(
-                                value="+1 3362 4788"
+                                value='+1 3362 4788'
                             ),
                             electronic_mail=ElectronicMail(
-                                value="bookings@unitedfreight.com"
+                                value='bookings@unitedfreight.com'
                             )
                         )
                     ),
                 ],
                 transport_means=TransportMeans(
                     journey_id=JourneyId(
-                        value="UA 1234"
+                        value='UA 1234'
                     ),
                     air_transport=AirTransport(
                         aircraft_id=AircraftId(
-                            value="A-127763-747"
+                            value='A-127763-747'
                         )
                     )
                 ),
                 loading_port_location=LoadingPortLocation(
                     id=Id(
-                        value="USBOS",
-                        scheme_id="UN/LOCODE",
-                        scheme_agency_id="6"
+                        value='USBOS',
+                        scheme_id='UN/LOCODE',
+                        scheme_agency_id='6'
                     ),
                     description=[
                         Description(
-                            value="Boston Airport"
+                            value='Boston Airport'
                         ),
                     ]
                 ),
                 unloading_port_location=UnloadingPortLocation(
                     id=Id(
-                        value="GBBRS",
-                        scheme_id="UN/LOCODE",
-                        scheme_agency_id="6"
+                        value='GBBRS',
+                        scheme_id='UN/LOCODE',
+                        scheme_agency_id='6'
                     ),
                     description=[
                         Description(
-                            value="Bristol Airport"
+                            value='Bristol Airport'
                         ),
                     ]
                 ),
                 transship_port_location=TransshipPortLocation(
                     id=Id(
-                        value="GBLHR",
-                        scheme_id="UN/LOCODE",
-                        scheme_agency_id="6"
+                        value='GBLHR',
+                        scheme_id='UN/LOCODE',
+                        scheme_agency_id='6'
                     ),
                     description=[
                         Description(
-                            value="Heathrow Apt/London"
+                            value='Heathrow Apt/London'
                         ),
                     ]
                 )
@@ -927,42 +927,42 @@ obj = Waybill(
         ],
         delivery=Delivery(
             quantity=Quantity(
-                value=Decimal("1")
+                value=Decimal('1')
             ),
             latest_delivery_date=XmlDate(2005, 6, 30),
             latest_delivery_time=XmlTime(18, 0, 0, 0, 0),
             tracking_id=TrackingId(
-                value="NKH7712289-03339-000128"
+                value='NKH7712289-03339-000128'
             ),
             delivery_address=DeliveryAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
@@ -980,22 +980,22 @@ obj = Waybill(
                 party_name=[
                     PartyName(
                         name=Name(
-                            value="The Terminus"
+                            value='The Terminus'
                         )
                     ),
                 ],
                 contact=Contact(
                     name=Name(
-                        value="S Massiah"
+                        value='S Massiah'
                     ),
                     telephone=Telephone(
-                        value="+ 44 127 98876545"
+                        value='+ 44 127 98876545'
                     ),
                     telefax=Telefax(
-                        value="+ 44 127 98876546"
+                        value='+ 44 127 98876546'
                     ),
                     electronic_mail=ElectronicMail(
-                        value="smassiah@the-email.co.uk"
+                        value='smassiah@the-email.co.uk'
                     )
                 )
             ),
@@ -1004,29 +1004,29 @@ obj = Waybill(
                 actual_despatch_time=XmlTime(11, 35, 0, 0, 0),
                 despatch_address=DespatchAddress(
                     street_name=StreetName(
-                        value="Boston Road"
+                        value='Boston Road'
                     ),
                     building_name=BuildingName(
-                        value="Suite M-102"
+                        value='Suite M-102'
                     ),
                     building_number=BuildingNumber(
-                        value="630"
+                        value='630'
                     ),
                     city_name=CityName(
-                        value="Billerica"
+                        value='Billerica'
                     ),
                     postal_zone=PostalZone(
-                        value="01821"
+                        value='01821'
                     ),
                     country_subentity=CountrySubentity(
-                        value="Massachusetts"
+                        value='Massachusetts'
                     ),
                     country_subentity_code=CountrySubentityCode(
-                        value="MA"
+                        value='MA'
                     ),
                     country=Country(
                         identification_code=IdentificationCode(
-                            value="US"
+                            value='US'
                         )
                     )
                 ),
@@ -1034,23 +1034,23 @@ obj = Waybill(
                     party_name=[
                         PartyName(
                             name=Name(
-                                value="Consortial"
+                                value='Consortial'
                             )
                         ),
                     ]
                 ),
                 contact=Contact(
                     name=Name(
-                        value="Mrs Bouquet"
+                        value='Mrs Bouquet'
                     ),
                     telephone=Telephone(
-                        value=" +1 158 1233714"
+                        value=' +1 158 1233714'
                     ),
                     telefax=Telefax(
-                        value="+ 1 158 1233856"
+                        value='+ 1 158 1233856'
                     ),
                     electronic_mail=ElectronicMail(
-                        value="bouquet@fpconsortial.com"
+                        value='bouquet@fpconsortial.com'
                     )
                 )
             )
@@ -1058,29 +1058,29 @@ obj = Waybill(
         transport_handling_unit=[
             TransportHandlingUnit(
                 id=Id(
-                    value="1"
+                    value='1'
                 ),
                 transport_handling_unit_type_code=TransportHandlingUnitTypeCode(
-                    value="PA",
-                    list_id="TRED 8053",
-                    list_agency_name="United Nations Economic Commission for Europe"
+                    value='PA',
+                    list_id='TRED 8053',
+                    list_agency_name='United Nations Economic Commission for Europe'
                 ),
                 hazardous_risk_indicator=False,
                 total_goods_item_quantity=TotalGoodsItemQuantity(
-                    value=Decimal("10")
+                    value=Decimal('10')
                 ),
                 total_package_quantity=TotalPackageQuantity(
-                    value=Decimal("10")
+                    value=Decimal('10')
                 ),
                 actual_package=[
                     ActualPackage(
                         quantity=Quantity(
-                            value=Decimal("10")
+                            value=Decimal('10')
                         ),
                         packaging_type_code=PackagingTypeCode(
-                            value="TB",
-                            list_id="UN/ECE rec 21",
-                            list_agency_id="6"
+                            value='TB',
+                            list_id='UN/ECE rec 21',
+                            list_agency_id='6'
                         )
                     ),
                 ]
@@ -1088,59 +1088,59 @@ obj = Waybill(
         ],
         origin_address=OriginAddress(
             street_name=StreetName(
-                value="Boston Road"
+                value='Boston Road'
             ),
             building_name=BuildingName(
-                value="Suite M-102"
+                value='Suite M-102'
             ),
             building_number=BuildingNumber(
-                value="630"
+                value='630'
             ),
             city_name=CityName(
-                value="Billerica"
+                value='Billerica'
             ),
             postal_zone=PostalZone(
-                value="01821"
+                value='01821'
             ),
             country_subentity=CountrySubentity(
-                value="Massachusetts"
+                value='Massachusetts'
             ),
             country_subentity_code=CountrySubentityCode(
-                value="MA"
+                value='MA'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="US"
+                    value='US'
                 )
             )
         ),
         first_arrival_port_location=FirstArrivalPortLocation(
             id=Id(
-                value="GBBRS",
-                scheme_id="UN/LOCODE",
-                scheme_agency_id="6"
+                value='GBBRS',
+                scheme_id='UN/LOCODE',
+                scheme_agency_id='6'
             ),
             description=[
                 Description(
-                    value="Bristol"
+                    value='Bristol'
                 ),
             ]
         ),
         last_exit_port_location=LastExitPortLocation(
             id=Id(
-                value="USBOS",
-                scheme_id="UN/LOCODE",
-                scheme_agency_id="6"
+                value='USBOS',
+                scheme_id='UN/LOCODE',
+                scheme_agency_id='6'
             ),
             description=[
                 Description(
-                    value="Boston"
+                    value='Boston'
                 ),
             ]
         ),
         export_country=ExportCountry(
             identification_code=IdentificationCode(
-                value="US"
+                value='US'
             )
         ),
         freight_allowance_charge=[
@@ -1148,40 +1148,40 @@ obj = Waybill(
                 charge_indicator=True,
                 allowance_charge_reason=[
                     AllowanceChargeReason(
-                        value="Freight charges"
+                        value='Freight charges'
                     ),
                 ],
                 sequence_numeric=SequenceNumeric(
-                    value=Decimal("1")
+                    value=Decimal('1')
                 ),
                 amount=Amount(
-                    value=Decimal("254.00"),
-                    currency_id="USD"
+                    value=Decimal('254.00'),
+                    currency_id='USD'
                 )
             ),
             FreightAllowanceCharge(
                 charge_indicator=False,
                 allowance_charge_reason_code=AllowanceChargeReasonCode(
-                    value="79"
+                    value='79'
                 ),
                 allowance_charge_reason=[
                     AllowanceChargeReason(
-                        value="Sundry discount"
+                        value='Sundry discount'
                     ),
                 ],
                 multiplier_factor_numeric=MultiplierFactorNumeric(
-                    value=Decimal("0.05")
+                    value=Decimal('0.05')
                 ),
                 sequence_numeric=SequenceNumeric(
-                    value=Decimal("2")
+                    value=Decimal('2')
                 ),
                 amount=Amount(
-                    value=Decimal("12.70"),
-                    currency_id="USD"
+                    value=Decimal('12.70'),
+                    currency_id='USD'
                 ),
                 base_amount=BaseAmount(
-                    value=Decimal("254.00"),
-                    currency_id="USD"
+                    value=Decimal('254.00'),
+                    currency_id='USD'
                 )
             ),
         ]
@@ -1189,48 +1189,48 @@ obj = Waybill(
     document_reference=[
         DocumentReference(
             id=Id(
-                value="AEG012345"
+                value='AEG012345'
             ),
             uuid=Uuid(
-                value="6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1"
+                value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
             ),
             issue_date=XmlDate(2005, 6, 20),
             document_type=DocumentType(
-                value="Order"
+                value='Order'
             )
         ),
         DocumentReference(
             id=Id(
-                value="KHN23-44044"
+                value='KHN23-44044'
             ),
             uuid=Uuid(
-                value="6E09886B-DC6E-439F-82D1-7C83746352B1"
+                value='6E09886B-DC6E-439F-82D1-7C83746352B1'
             ),
             issue_date=XmlDate(2005, 6, 24),
             document_type=DocumentType(
-                value="Forwarding Instructions"
+                value='Forwarding Instructions'
             )
         ),
     ],
     exchange_rate=[
         ExchangeRate(
             source_currency_code=SourceCurrencyCode(
-                value="USD"
+                value='USD'
             ),
             source_currency_base_rate=SourceCurrencyBaseRate(
-                value=Decimal("1.00")
+                value=Decimal('1.00')
             ),
             target_currency_code=TargetCurrencyCode(
-                value="GBP"
+                value='GBP'
             ),
             target_currency_base_rate=TargetCurrencyBaseRate(
-                value=Decimal("1.00")
+                value=Decimal('1.00')
             ),
             calculation_rate=CalculationRate(
-                value=Decimal("1.8947")
+                value=Decimal('1.8947')
             ),
             mathematic_operator_code=MathematicOperatorCode(
-                value="Multiply"
+                value='Multiply'
             ),
             date=XmlDate(1967, 8, 13)
         ),
@@ -1238,122 +1238,122 @@ obj = Waybill(
     document_distribution=[
         DocumentDistribution(
             print_qualifier=PrintQualifier(
-                value="Copies allowed"
+                value='Copies allowed'
             ),
             maximum_copies_numeric=MaximumCopiesNumeric(
-                value=Decimal("5")
+                value=Decimal('5')
             ),
             party=Party(
                 party_name=[
                     PartyName(
                         name=Name(
-                            value="Consortial"
+                            value='Consortial'
                         )
                     ),
                 ],
                 postal_address=PostalAddress(
                     street_name=StreetName(
-                        value="Boston Road"
+                        value='Boston Road'
                     ),
                     building_name=BuildingName(
-                        value="Suite M-102"
+                        value='Suite M-102'
                     ),
                     building_number=BuildingNumber(
-                        value="630"
+                        value='630'
                     ),
                     city_name=CityName(
-                        value="Billerica"
+                        value='Billerica'
                     ),
                     postal_zone=PostalZone(
-                        value="01821"
+                        value='01821'
                     ),
                     country_subentity=CountrySubentity(
-                        value="Massachusetts"
+                        value='Massachusetts'
                     ),
                     country_subentity_code=CountrySubentityCode(
-                        value="MA"
+                        value='MA'
                     ),
                     country=Country(
                         identification_code=IdentificationCode(
-                            value="US"
+                            value='US'
                         )
                     )
                 ),
                 contact=Contact(
                     name=Name(
-                        value="Mrs Bouquet"
+                        value='Mrs Bouquet'
                     ),
                     telephone=Telephone(
-                        value=" +1 158 1233714"
+                        value=' +1 158 1233714'
                     ),
                     telefax=Telefax(
-                        value="+ 1 158 1233856"
+                        value='+ 1 158 1233856'
                     ),
                     electronic_mail=ElectronicMail(
-                        value="bouquet@fpconsortial.com"
+                        value='bouquet@fpconsortial.com'
                     )
                 )
             )
         ),
         DocumentDistribution(
             print_qualifier=PrintQualifier(
-                value="Copies allowed"
+                value='Copies allowed'
             ),
             maximum_copies_numeric=MaximumCopiesNumeric(
-                value=Decimal("4")
+                value=Decimal('4')
             ),
             party=Party(
                 party_name=[
                     PartyName(
                         name=Name(
-                            value="IYT Corporation"
+                            value='IYT Corporation'
                         )
                     ),
                 ],
                 postal_address=PostalAddress(
                     street_name=StreetName(
-                        value="Avon Way"
+                        value='Avon Way'
                     ),
                     building_name=BuildingName(
-                        value="Thereabouts"
+                        value='Thereabouts'
                     ),
                     building_number=BuildingNumber(
-                        value="56A"
+                        value='56A'
                     ),
                     city_name=CityName(
-                        value="Bridgtow"
+                        value='Bridgtow'
                     ),
                     postal_zone=PostalZone(
-                        value="ZZ99 1ZZ"
+                        value='ZZ99 1ZZ'
                     ),
                     country_subentity=CountrySubentity(
-                        value="Avon"
+                        value='Avon'
                     ),
                     address_line=[
                         AddressLine(
                             line=Line(
-                                value="3rd Floor, Room 5"
+                                value='3rd Floor, Room 5'
                             )
                         ),
                     ],
                     country=Country(
                         identification_code=IdentificationCode(
-                            value="GB"
+                            value='GB'
                         )
                     )
                 ),
                 contact=Contact(
                     name=Name(
-                        value="Mr Fred Churchill"
+                        value='Mr Fred Churchill'
                     ),
                     telephone=Telephone(
-                        value="+44 127 2653214"
+                        value='+44 127 2653214'
                     ),
                     telefax=Telefax(
-                        value="+44 127 2653215"
+                        value='+44 127 2653215'
                     ),
                     electronic_mail=ElectronicMail(
-                        value="fred@iytcorporation.gov.uk"
+                        value='fred@iytcorporation.gov.uk'
                     )
                 )
             )

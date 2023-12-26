@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from datexii.models.eu.datexii.v2.access_category_enum import AccessCategoryEnum
-from datexii.models.eu.datexii.v2.access_equipment_enum import AccessEquipmentEnum
+from datexii.models.eu.datexii.v2.access_category_enum import (
+    AccessCategoryEnum,
+)
+from datexii.models.eu.datexii.v2.access_equipment_enum import (
+    AccessEquipmentEnum,
+)
 from datexii.models.eu.datexii.v2.accessibility_enum import AccessibilityEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
@@ -45,6 +49,7 @@ class ParkingAccess:
     :ivar parking_access_extension:
     :ivar id:
     """
+
     access_category: List[AccessCategoryEnum] = field(
         default_factory=list,
         metadata={
@@ -52,7 +57,7 @@ class ParkingAccess:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     access_name: Optional[MultilingualString] = field(
         default=None,
@@ -60,7 +65,7 @@ class ParkingAccess:
             "name": "accessName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     access_equipment: List[AccessEquipmentEnum] = field(
         default_factory=list,
@@ -68,14 +73,14 @@ class ParkingAccess:
             "name": "accessEquipment",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accessibility: List[AccessibilityEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     photo_url: Optional[str] = field(
         default=None,
@@ -83,7 +88,7 @@ class ParkingAccess:
             "name": "photoUrl",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     access_only_assigned_for: Optional[ParkingAssignment] = field(
         default=None,
@@ -91,7 +96,7 @@ class ParkingAccess:
             "name": "accessOnlyAssignedFor",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     access_assigned_among_others: Optional[ParkingAssignment] = field(
         default=None,
@@ -99,7 +104,7 @@ class ParkingAccess:
             "name": "accessAssignedAmongOthers",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     access_prohibited_for: Optional[ParkingAssignment] = field(
         default=None,
@@ -107,7 +112,7 @@ class ParkingAccess:
             "name": "accessProhibitedFor",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     primary_road: List[Road] = field(
         default_factory=list,
@@ -115,14 +120,14 @@ class ParkingAccess:
             "name": "primaryRoad",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     location: Optional[Location] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     opening_times: Optional[OpeningTimes] = field(
         default=None,
@@ -130,7 +135,7 @@ class ParkingAccess:
             "name": "openingTimes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_access_extension: Optional[ExtensionType] = field(
         default=None,
@@ -138,12 +143,12 @@ class ParkingAccess:
             "name": "parkingAccessExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

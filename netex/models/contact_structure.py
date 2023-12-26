@@ -13,7 +13,7 @@ class ContactStructure:
             "name": "ContactPerson",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     email: Optional[str] = field(
         default=None,
@@ -21,7 +21,7 @@ class ContactStructure:
             "name": "Email",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     phone: Optional[str] = field(
         default=None,
@@ -29,7 +29,7 @@ class ContactStructure:
             "name": "Phone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fax: Optional[str] = field(
         default=None,
@@ -37,7 +37,7 @@ class ContactStructure:
             "name": "Fax",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     url: Optional[str] = field(
         default=None,
@@ -45,7 +45,7 @@ class ContactStructure:
             "name": "Url",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     further_details: Optional[MultilingualString] = field(
         default=None,
@@ -53,5 +53,5 @@ class ContactStructure:
             "name": "FurtherDetails",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

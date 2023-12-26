@@ -20,6 +20,7 @@ class DocumentOptions:
     generate_itin_numbers
         True when itinerary numbers are system generated.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -30,7 +31,7 @@ class DocumentOptions:
             "type": "Element",
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     override_option: list[str] = field(
         default_factory=list,
@@ -39,19 +40,19 @@ class DocumentOptions:
             "type": "Element",
             "max_occurs": 999,
             "max_length": 50,
-        }
+        },
     )
     suppress_itinerary_remarks: None | bool = field(
         default=None,
         metadata={
             "name": "SuppressItineraryRemarks",
             "type": "Attribute",
-        }
+        },
     )
     generate_itin_numbers: None | bool = field(
         default=None,
         metadata={
             "name": "GenerateItinNumbers",
             "type": "Attribute",
-        }
+        },
     )

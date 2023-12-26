@@ -110,6 +110,7 @@ class AirPricingModifiers:
     ticketing_city
         City Code identifying where the ticket will be issued.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -118,42 +119,42 @@ class AirPricingModifiers:
         metadata={
             "name": "ProhibitedRuleCategories",
             "type": "Element",
-        }
+        },
     )
     account_codes: None | AirPricingModifiers.AccountCodes = field(
         default=None,
         metadata={
             "name": "AccountCodes",
             "type": "Element",
-        }
+        },
     )
     permitted_cabins: None | PermittedCabins = field(
         default=None,
         metadata={
             "name": "PermittedCabins",
             "type": "Element",
-        }
+        },
     )
     contract_codes: None | AirPricingModifiers.ContractCodes = field(
         default=None,
         metadata={
             "name": "ContractCodes",
             "type": "Element",
-        }
+        },
     )
     exempt_taxes: None | ExemptTaxes = field(
         default=None,
         metadata={
             "name": "ExemptTaxes",
             "type": "Element",
-        }
+        },
     )
     penalty_fare_information: None | PenaltyFareInformation = field(
         default=None,
         metadata={
             "name": "PenaltyFareInformation",
             "type": "Element",
-        }
+        },
     )
     discount_card: list[DiscountCard1] = field(
         default_factory=list,
@@ -162,14 +163,14 @@ class AirPricingModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 9,
-        }
+        },
     )
     promo_codes: None | AirPricingModifiers.PromoCodes = field(
         default=None,
         metadata={
             "name": "PromoCodes",
             "type": "Element",
-        }
+        },
     )
     manual_fare_adjustment: list[ManualFareAdjustment] = field(
         default_factory=list,
@@ -177,7 +178,7 @@ class AirPricingModifiers:
             "name": "ManualFareAdjustment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,
@@ -185,14 +186,14 @@ class AirPricingModifiers:
             "name": "PointOfSale",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     brand_modifiers: None | BrandModifiers = field(
         default=None,
         metadata={
             "name": "BrandModifiers",
             "type": "Element",
-        }
+        },
     )
     multi_gdssearch_indicator: list[MultiGdssearchIndicator] = field(
         default_factory=list,
@@ -200,7 +201,7 @@ class AirPricingModifiers:
             "name": "MultiGDSSearchIndicator",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     preferred_cabins: list[PreferredCabins] = field(
         default_factory=list,
@@ -208,21 +209,21 @@ class AirPricingModifiers:
             "name": "PreferredCabins",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     prohibit_min_stay_fares: bool = field(
         default=False,
         metadata={
             "name": "ProhibitMinStayFares",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_max_stay_fares: bool = field(
         default=False,
         metadata={
             "name": "ProhibitMaxStayFares",
             "type": "Attribute",
-        }
+        },
     )
     currency_type: None | str = field(
         default=None,
@@ -230,35 +231,35 @@ class AirPricingModifiers:
             "name": "CurrencyType",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     prohibit_advance_purchase_fares: bool = field(
         default=False,
         metadata={
             "name": "ProhibitAdvancePurchaseFares",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_non_refundable_fares: bool = field(
         default=False,
         metadata={
             "name": "ProhibitNonRefundableFares",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_restricted_fares: bool = field(
         default=False,
         metadata={
             "name": "ProhibitRestrictedFares",
             "type": "Attribute",
-        }
+        },
     )
     fares_indicator: None | TypeFaresIndicator = field(
         default=None,
         metadata={
             "name": "FaresIndicator",
             "type": "Attribute",
-        }
+        },
     )
     filed_currency: None | str = field(
         default=None,
@@ -266,7 +267,7 @@ class AirPricingModifiers:
             "name": "FiledCurrency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -274,7 +275,7 @@ class AirPricingModifiers:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     override_carrier: None | str = field(
         default=None,
@@ -282,70 +283,70 @@ class AirPricingModifiers:
             "name": "OverrideCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
-        }
+        },
     )
     account_code_fares_only: None | bool = field(
         default=None,
         metadata={
             "name": "AccountCodeFaresOnly",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_non_exchangeable_fares: bool = field(
         default=False,
         metadata={
             "name": "ProhibitNonExchangeableFares",
             "type": "Attribute",
-        }
+        },
     )
     force_segment_select: bool = field(
         default=False,
         metadata={
             "name": "ForceSegmentSelect",
             "type": "Attribute",
-        }
+        },
     )
     inventory_request_type: None | TypeInventoryRequest = field(
         default=None,
         metadata={
             "name": "InventoryRequestType",
             "type": "Attribute",
-        }
+        },
     )
     one_way_shop: bool = field(
         default=False,
         metadata={
             "name": "OneWayShop",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_unbundled_fare_types: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitUnbundledFareTypes",
             "type": "Attribute",
-        }
+        },
     )
     return_services: bool = field(
         default=False,
         metadata={
             "name": "ReturnServices",
             "type": "Attribute",
-        }
+        },
     )
     channel_id: None | str = field(
         default=None,
@@ -354,28 +355,28 @@ class AirPricingModifiers:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 4,
-        }
+        },
     )
     return_fare_attributes: bool = field(
         default=False,
         metadata={
             "name": "ReturnFareAttributes",
             "type": "Attribute",
-        }
+        },
     )
     sell_check: bool = field(
         default=False,
         metadata={
             "name": "SellCheck",
             "type": "Attribute",
-        }
+        },
     )
     return_failed_segments: bool = field(
         default=False,
         metadata={
             "name": "ReturnFailedSegments",
             "type": "Attribute",
-        }
+        },
     )
     sell_city: None | str = field(
         default=None,
@@ -383,7 +384,7 @@ class AirPricingModifiers:
             "name": "SellCity",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     ticketing_city: None | str = field(
         default=None,
@@ -391,7 +392,7 @@ class AirPricingModifiers:
             "name": "TicketingCity",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
 
     @dataclass
@@ -403,7 +404,7 @@ class AirPricingModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -414,6 +415,7 @@ class AirPricingModifiers:
         account_code
             Used to get negotiated pricing. Provider:ACH.
         """
+
         account_code: list[AccountCode1] = field(
             default_factory=list,
             metadata={
@@ -422,7 +424,7 @@ class AirPricingModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -434,7 +436,7 @@ class AirPricingModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -446,5 +448,5 @@ class AirPricingModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

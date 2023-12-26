@@ -11,6 +11,7 @@ class BaseCoreSearchReq6(BaseCoreReq6):
     """
     Base Request for Air Search.
     """
+
     class Meta:
         name = "BaseCoreSearchReq"
 
@@ -21,5 +22,5 @@ class BaseCoreSearchReq6(BaseCoreReq6):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "max_occurs": 999,
-        }
+        },
     )

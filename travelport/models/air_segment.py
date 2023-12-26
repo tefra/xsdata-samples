@@ -10,5 +10,6 @@ class AirSegment(TypeBaseAirSegment):
     """
     An Air marketable travel segment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

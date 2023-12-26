@@ -8,6 +8,7 @@ class TypeVehicleCategory(Enum):
     """
     The category of vehicle.
     """
+
     CAR = "Car"
     VAN = "Van"
     SUV = "SUV"

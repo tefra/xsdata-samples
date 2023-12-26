@@ -28,6 +28,7 @@ class AirRefundReq(BaseReq1):
         Provider: ACH-Form of Payment for any Additional Collection charges
         for the Refund.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -37,7 +38,7 @@ class AirRefundReq(BaseReq1):
             "name": "AirRefundBundle",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tcrrefund_bundle: list[TcrrefundBundle] = field(
         default_factory=list,
@@ -45,14 +46,14 @@ class AirRefundReq(BaseReq1):
             "name": "TCRRefundBundle",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_refund_modifiers: None | AirRefundModifiers = field(
         default=None,
         metadata={
             "name": "AirRefundModifiers",
             "type": "Element",
-        }
+        },
     )
     commission: list[Commission1] = field(
         default_factory=list,
@@ -61,7 +62,7 @@ class AirRefundReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 9,
-        }
+        },
     )
     form_of_payment: None | FormOfPayment1 = field(
         default=None,
@@ -69,5 +70,5 @@ class AirRefundReq(BaseReq1):
             "name": "FormOfPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

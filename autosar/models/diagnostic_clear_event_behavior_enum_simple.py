@@ -9,5 +9,6 @@ class DiagnosticClearEventBehaviorEnumSimple(Enum):
     :cvar ONLY_THIS_CYCLE_AND_READINESS: The OperationCycle and
         readiness bits of the event status byte are reset.
     """
+
     NO_STATUS_BYTE_CHANGE = "NO-STATUS-BYTE-CHANGE"
     ONLY_THIS_CYCLE_AND_READINESS = "ONLY-THIS-CYCLE-AND-READINESS"

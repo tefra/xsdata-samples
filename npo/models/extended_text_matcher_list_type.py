@@ -16,5 +16,5 @@ class ExtendedTextMatcherListType(MatcherList):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

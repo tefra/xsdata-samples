@@ -8,6 +8,7 @@ class StdSupersedes:
     """
     Designator for standard being replaced by the standard being deposited.
     """
+
     class Meta:
         name = "std_supersedes"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -18,5 +19,5 @@ class StdSupersedes:
             "required": True,
             "min_length": 2,
             "max_length": 150,
-        }
+        },
     )

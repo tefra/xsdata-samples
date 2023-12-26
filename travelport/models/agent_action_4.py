@@ -32,6 +32,7 @@ class AgentAction4:
     agent_override
         AgentSine value that was used during PNR creation or End Transact.
     """
+
     class Meta:
         name = "AgentAction"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -42,7 +43,7 @@ class AgentAction4:
             "name": "ActionType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     agent_code: None | str = field(
         default=None,
@@ -50,7 +51,7 @@ class AgentAction4:
             "name": "AgentCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     branch_code: None | str = field(
         default=None,
@@ -60,7 +61,7 @@ class AgentAction4:
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     agency_code: None | str = field(
         default=None,
@@ -68,14 +69,14 @@ class AgentAction4:
             "name": "AgencyCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     agent_sine: None | str = field(
         default=None,
         metadata={
             "name": "AgentSine",
             "type": "Attribute",
-        }
+        },
     )
     event_time: None | XmlDateTime = field(
         default=None,
@@ -83,7 +84,7 @@ class AgentAction4:
             "name": "EventTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     agent_override: None | str = field(
         default=None,
@@ -92,5 +93,5 @@ class AgentAction4:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

@@ -20,7 +20,7 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
 @dataclass
-class Field:
+class FieldType:
     """This meta-class represents the ability to define a piece of data that can be
     accessed with read and/or write semantics.
 
@@ -91,6 +91,7 @@ class Field:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FIELD"
 
@@ -101,15 +102,15 @@ class Field:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["Field.ShortNameFragments"] = field(
+    short_name_fragments: Optional["FieldType.ShortNameFragments"] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +118,7 @@ class Field:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +126,7 @@ class Field:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +134,7 @@ class Field:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +142,7 @@ class Field:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,15 +150,15 @@ class Field:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["Field.Annotations"] = field(
+    annotations: Optional["FieldType.Annotations"] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_data_def_props: Optional[SwDataDefProps] = field(
         default=None,
@@ -165,15 +166,15 @@ class Field:
             "name": "SW-DATA-DEF-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    type_tref: Optional["Field.TypeTref"] = field(
+    type_tref: Optional["FieldType.TypeTref"] = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     has_getter: Optional[Boolean] = field(
         default=None,
@@ -181,7 +182,7 @@ class Field:
             "name": "HAS-GETTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     has_notifier: Optional[Boolean] = field(
         default=None,
@@ -189,7 +190,7 @@ class Field:
             "name": "HAS-NOTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     has_setter: Optional[Boolean] = field(
         default=None,
@@ -197,7 +198,7 @@ class Field:
             "name": "HAS-SETTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -205,14 +206,14 @@ class Field:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -220,14 +221,14 @@ class Field:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -238,7 +239,7 @@ class Field:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -249,7 +250,7 @@ class Field:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -260,5 +261,5 @@ class Field:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

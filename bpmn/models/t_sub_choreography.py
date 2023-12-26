@@ -53,21 +53,21 @@ class TSubChoreography(TChoreographyActivity):
             "name": "userTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     transaction: List["Transaction"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     task: List[Task] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     sub_process: List["SubProcess"] = field(
         default_factory=list,
@@ -75,7 +75,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "subProcess",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     sub_choreography: List["SubChoreography"] = field(
         default_factory=list,
@@ -83,7 +83,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "subChoreography",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     start_event: List[StartEvent] = field(
         default_factory=list,
@@ -91,7 +91,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "startEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     service_task: List[ServiceTask] = field(
         default_factory=list,
@@ -99,7 +99,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "serviceTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     sequence_flow: List[SequenceFlow] = field(
         default_factory=list,
@@ -107,7 +107,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "sequenceFlow",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     send_task: List[SendTask] = field(
         default_factory=list,
@@ -115,7 +115,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "sendTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     script_task: List[ScriptTask] = field(
         default_factory=list,
@@ -123,7 +123,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "scriptTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     receive_task: List[ReceiveTask] = field(
         default_factory=list,
@@ -131,7 +131,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "receiveTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     parallel_gateway: List[ParallelGateway] = field(
         default_factory=list,
@@ -139,7 +139,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "parallelGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     manual_task: List[ManualTask] = field(
         default_factory=list,
@@ -147,7 +147,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "manualTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     intermediate_throw_event: List[IntermediateThrowEvent] = field(
         default_factory=list,
@@ -155,7 +155,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "intermediateThrowEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     intermediate_catch_event: List[IntermediateCatchEvent] = field(
         default_factory=list,
@@ -163,7 +163,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "intermediateCatchEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     inclusive_gateway: List[InclusiveGateway] = field(
         default_factory=list,
@@ -171,7 +171,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "inclusiveGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     implicit_throw_event: List[ImplicitThrowEvent] = field(
         default_factory=list,
@@ -179,7 +179,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "implicitThrowEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     exclusive_gateway: List[ExclusiveGateway] = field(
         default_factory=list,
@@ -187,7 +187,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "exclusiveGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     event_based_gateway: List[EventBasedGateway] = field(
         default_factory=list,
@@ -195,14 +195,14 @@ class TSubChoreography(TChoreographyActivity):
             "name": "eventBasedGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     event: List[Event] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     end_event: List[EndEvent] = field(
         default_factory=list,
@@ -210,7 +210,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "endEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_store_reference: List[DataStoreReference] = field(
         default_factory=list,
@@ -218,7 +218,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "dataStoreReference",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_object_reference: List[DataObjectReference] = field(
         default_factory=list,
@@ -226,7 +226,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "dataObjectReference",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_object: List[DataObject] = field(
         default_factory=list,
@@ -234,7 +234,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "dataObject",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     complex_gateway: List[ComplexGateway] = field(
         default_factory=list,
@@ -242,7 +242,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "complexGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     choreography_task: List[ChoreographyTask] = field(
         default_factory=list,
@@ -250,7 +250,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "choreographyTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     call_choreography: List[CallChoreography] = field(
         default_factory=list,
@@ -258,7 +258,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "callChoreography",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     call_activity: List[CallActivity] = field(
         default_factory=list,
@@ -266,7 +266,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "callActivity",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     business_rule_task: List[BusinessRuleTask] = field(
         default_factory=list,
@@ -274,7 +274,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "businessRuleTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     boundary_event: List[BoundaryEvent] = field(
         default_factory=list,
@@ -282,7 +282,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "boundaryEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     ad_hoc_sub_process: List["AdHocSubProcess"] = field(
         default_factory=list,
@@ -290,7 +290,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "adHocSubProcess",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     flow_element: List[FlowElement] = field(
         default_factory=list,
@@ -298,7 +298,7 @@ class TSubChoreography(TChoreographyActivity):
             "name": "flowElement",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     text_annotation: List[TextAnnotation] = field(
         default_factory=list,
@@ -306,28 +306,28 @@ class TSubChoreography(TChoreographyActivity):
             "name": "textAnnotation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     group: List[Group] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     association: List[Association] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     artifact: List[Artifact] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
 
 
@@ -349,7 +349,7 @@ class TSubProcess(TActivity):
             "name": "laneSet",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     user_task: List[UserTask] = field(
         default_factory=list,
@@ -357,21 +357,21 @@ class TSubProcess(TActivity):
             "name": "userTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     transaction: List["Transaction"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     task: List[Task] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     sub_process: List["SubProcess"] = field(
         default_factory=list,
@@ -379,7 +379,7 @@ class TSubProcess(TActivity):
             "name": "subProcess",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     sub_choreography: List[SubChoreography] = field(
         default_factory=list,
@@ -387,7 +387,7 @@ class TSubProcess(TActivity):
             "name": "subChoreography",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     start_event: List[StartEvent] = field(
         default_factory=list,
@@ -395,7 +395,7 @@ class TSubProcess(TActivity):
             "name": "startEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     service_task: List[ServiceTask] = field(
         default_factory=list,
@@ -403,7 +403,7 @@ class TSubProcess(TActivity):
             "name": "serviceTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     sequence_flow: List[SequenceFlow] = field(
         default_factory=list,
@@ -411,7 +411,7 @@ class TSubProcess(TActivity):
             "name": "sequenceFlow",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     send_task: List[SendTask] = field(
         default_factory=list,
@@ -419,7 +419,7 @@ class TSubProcess(TActivity):
             "name": "sendTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     script_task: List[ScriptTask] = field(
         default_factory=list,
@@ -427,7 +427,7 @@ class TSubProcess(TActivity):
             "name": "scriptTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     receive_task: List[ReceiveTask] = field(
         default_factory=list,
@@ -435,7 +435,7 @@ class TSubProcess(TActivity):
             "name": "receiveTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     parallel_gateway: List[ParallelGateway] = field(
         default_factory=list,
@@ -443,7 +443,7 @@ class TSubProcess(TActivity):
             "name": "parallelGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     manual_task: List[ManualTask] = field(
         default_factory=list,
@@ -451,7 +451,7 @@ class TSubProcess(TActivity):
             "name": "manualTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     intermediate_throw_event: List[IntermediateThrowEvent] = field(
         default_factory=list,
@@ -459,7 +459,7 @@ class TSubProcess(TActivity):
             "name": "intermediateThrowEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     intermediate_catch_event: List[IntermediateCatchEvent] = field(
         default_factory=list,
@@ -467,7 +467,7 @@ class TSubProcess(TActivity):
             "name": "intermediateCatchEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     inclusive_gateway: List[InclusiveGateway] = field(
         default_factory=list,
@@ -475,7 +475,7 @@ class TSubProcess(TActivity):
             "name": "inclusiveGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     implicit_throw_event: List[ImplicitThrowEvent] = field(
         default_factory=list,
@@ -483,7 +483,7 @@ class TSubProcess(TActivity):
             "name": "implicitThrowEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     exclusive_gateway: List[ExclusiveGateway] = field(
         default_factory=list,
@@ -491,7 +491,7 @@ class TSubProcess(TActivity):
             "name": "exclusiveGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     event_based_gateway: List[EventBasedGateway] = field(
         default_factory=list,
@@ -499,14 +499,14 @@ class TSubProcess(TActivity):
             "name": "eventBasedGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     event: List[Event] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     end_event: List[EndEvent] = field(
         default_factory=list,
@@ -514,7 +514,7 @@ class TSubProcess(TActivity):
             "name": "endEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_store_reference: List[DataStoreReference] = field(
         default_factory=list,
@@ -522,7 +522,7 @@ class TSubProcess(TActivity):
             "name": "dataStoreReference",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_object_reference: List[DataObjectReference] = field(
         default_factory=list,
@@ -530,7 +530,7 @@ class TSubProcess(TActivity):
             "name": "dataObjectReference",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_object: List[DataObject] = field(
         default_factory=list,
@@ -538,7 +538,7 @@ class TSubProcess(TActivity):
             "name": "dataObject",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     complex_gateway: List[ComplexGateway] = field(
         default_factory=list,
@@ -546,7 +546,7 @@ class TSubProcess(TActivity):
             "name": "complexGateway",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     choreography_task: List[ChoreographyTask] = field(
         default_factory=list,
@@ -554,7 +554,7 @@ class TSubProcess(TActivity):
             "name": "choreographyTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     call_choreography: List[CallChoreography] = field(
         default_factory=list,
@@ -562,7 +562,7 @@ class TSubProcess(TActivity):
             "name": "callChoreography",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     call_activity: List[CallActivity] = field(
         default_factory=list,
@@ -570,7 +570,7 @@ class TSubProcess(TActivity):
             "name": "callActivity",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     business_rule_task: List[BusinessRuleTask] = field(
         default_factory=list,
@@ -578,7 +578,7 @@ class TSubProcess(TActivity):
             "name": "businessRuleTask",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     boundary_event: List[BoundaryEvent] = field(
         default_factory=list,
@@ -586,7 +586,7 @@ class TSubProcess(TActivity):
             "name": "boundaryEvent",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     ad_hoc_sub_process: List["AdHocSubProcess"] = field(
         default_factory=list,
@@ -594,7 +594,7 @@ class TSubProcess(TActivity):
             "name": "adHocSubProcess",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     flow_element: List[FlowElement] = field(
         default_factory=list,
@@ -602,7 +602,7 @@ class TSubProcess(TActivity):
             "name": "flowElement",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     text_annotation: List[TextAnnotation] = field(
         default_factory=list,
@@ -610,35 +610,35 @@ class TSubProcess(TActivity):
             "name": "textAnnotation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     group: List[Group] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     association: List[Association] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     artifact: List[Artifact] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     triggered_by_event: bool = field(
         default=False,
         metadata={
             "name": "triggeredByEvent",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -660,20 +660,20 @@ class TAdHocSubProcess(TSubProcess):
             "name": "completionCondition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     cancel_remaining_instances: bool = field(
         default=True,
         metadata={
             "name": "cancelRemainingInstances",
             "type": "Attribute",
-        }
+        },
     )
     ordering: Optional[TAdHocOrdering] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -686,7 +686,7 @@ class TTransaction(TSubProcess):
         default=TTransactionMethodValue.COMPENSATE,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 

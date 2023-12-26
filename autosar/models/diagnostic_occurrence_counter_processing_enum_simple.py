@@ -12,5 +12,6 @@ class DiagnosticOccurrenceCounterProcessingEnumSimple(Enum):
         the TestFailed bit (and the fault confirmation is not
         considered).
     """
+
     CONFIRMED_DTC_BIT = "CONFIRMED-DTC-BIT"
     TEST_FAILED_BIT = "TEST-FAILED-BIT"

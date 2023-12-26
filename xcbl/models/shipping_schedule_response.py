@@ -68,7 +68,7 @@ class IdassignedBy:
         metadata={
             "name": "IDAssignedByCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -86,7 +86,7 @@ class OrderType:
         metadata={
             "name": "OrderTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -104,7 +104,7 @@ class RequestedResponse:
         metadata={
             "name": "RequestedResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -122,7 +122,7 @@ class ResponseType:
         metadata={
             "name": "ResponseTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -133,42 +133,42 @@ class ServiceLevel:
         metadata={
             "name": "ServiceLevelCoded",
             "type": "Element",
-        }
+        },
     )
     service_level_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ServiceLevelCodedOther",
             "type": "Element",
-        }
+        },
     )
     service_level_reason_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "ServiceLevelReasonCoded",
             "type": "Element",
-        }
+        },
     )
     service_level_reason_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ServiceLevelReasonCodedOther",
             "type": "Element",
-        }
+        },
     )
     service_level_responsibility_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "ServiceLevelResponsibilityCoded",
             "type": "Element",
-        }
+        },
     )
     service_level_responsibility_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ServiceLevelResponsibilityCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -208,14 +208,14 @@ class ItemResourceAuthorization:
         metadata={
             "name": "ResourceAuthorizationCodedOther",
             "type": "Element",
-        }
+        },
     )
     validity_dates: Optional[ValidityDates] = field(
         default=None,
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -238,7 +238,7 @@ class ListOfContract:
             "name": "Contract",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -277,7 +277,7 @@ class MessageId:
         metadata={
             "name": "IDAssignedDate",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -368,35 +368,35 @@ class TransportLocation:
         metadata={
             "name": "Sequence",
             "type": "Element",
-        }
+        },
     )
     estimated_arrival_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "EstimatedArrivalDate",
             "type": "Element",
-        }
+        },
     )
     actual_arrival_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "ActualArrivalDate",
             "type": "Element",
-        }
+        },
     )
     estimated_departure_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "EstimatedDepartureDate",
             "type": "Element",
-        }
+        },
     )
     actual_departure_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "ActualDepartureDate",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -466,7 +466,7 @@ class ListOfMessageId:
             "name": "MessageID",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -505,21 +505,21 @@ class ScheduleParty:
         metadata={
             "name": "BillToParty",
             "type": "Element",
-        }
+        },
     )
     material_issuer_party: Optional[MaterialIssuerParty] = field(
         default=None,
         metadata={
             "name": "MaterialIssuerParty",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -537,7 +537,7 @@ class ShipScheduleDetail:
         metadata={
             "name": "CommitmentLevelCodedOther",
             "type": "Element",
-        }
+        },
     )
     schedule_dates: ScheduleDates = field(
         metadata={
@@ -558,21 +558,21 @@ class ShipScheduleDetail:
         metadata={
             "name": "ItemResourceAuthorization",
             "type": "Element",
-        }
+        },
     )
     schedule_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "ScheduleNote",
             "type": "Element",
-        }
+        },
     )
     route_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "RouteID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -594,14 +594,14 @@ class TransportQuantities:
         metadata={
             "name": "LadingQuantity",
             "type": "Element",
-        }
+        },
     )
     list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -613,7 +613,7 @@ class ListOfShipScheduleDetail:
             "name": "ShipScheduleDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -631,14 +631,14 @@ class OrderNumber:
         metadata={
             "name": "SellerOrderNumber",
             "type": "Element",
-        }
+        },
     )
     list_of_message_id: Optional[ListOfMessageId] = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -656,7 +656,7 @@ class TransportLocationList:
         metadata={
             "name": "InterimTransportLocation",
             "type": "Element",
-        }
+        },
     )
     end_transport_location: EndTransportLocation = field(
         metadata={
@@ -674,14 +674,14 @@ class LocationShipSchedule:
         metadata={
             "name": "Location",
             "type": "Element",
-        }
+        },
     )
     list_of_contact: Optional[ListOfContact] = field(
         default=None,
         metadata={
             "name": "ListOfContact",
             "type": "Element",
-        }
+        },
     )
     list_of_ship_schedule_detail: ListOfShipScheduleDetail = field(
         metadata={
@@ -706,14 +706,14 @@ class ScheduleOrderReference:
         metadata={
             "name": "OrderIssueDate",
             "type": "Element",
-        }
+        },
     )
     order_type: Optional[OrderType] = field(
         default=None,
         metadata={
             "name": "OrderType",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -731,112 +731,112 @@ class TransportRouting:
         metadata={
             "name": "TransportMode",
             "type": "Element",
-        }
+        },
     )
     transport_means: Optional[TransportMeans] = field(
         default=None,
         metadata={
             "name": "TransportMeans",
             "type": "Element",
-        }
+        },
     )
     transport_means_identifier: Optional[TransportMeansIdentifier] = field(
         default=None,
         metadata={
             "name": "TransportMeansIdentifier",
             "type": "Element",
-        }
+        },
     )
     transport_means_reference: Optional[TransportMeansReference] = field(
         default=None,
         metadata={
             "name": "TransportMeansReference",
             "type": "Element",
-        }
+        },
     )
     transport_requirement_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "TransportRequirementCoded",
             "type": "Element",
-        }
+        },
     )
     transport_requirement_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "TransportRequirementCodedOther",
             "type": "Element",
-        }
+        },
     )
     carrier_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "CarrierName",
             "type": "Element",
-        }
+        },
     )
     carrier_id: Optional[CarrierId] = field(
         default=None,
         metadata={
             "name": "CarrierID",
             "type": "Element",
-        }
+        },
     )
     transport_quantities: Optional[TransportQuantities] = field(
         default=None,
         metadata={
             "name": "TransportQuantities",
             "type": "Element",
-        }
+        },
     )
     cust_shipping_contract_num: Optional[str] = field(
         default=None,
         metadata={
             "name": "CustShippingContractNum",
             "type": "Element",
-        }
+        },
     )
     service_level: Optional[ServiceLevel] = field(
         default=None,
         metadata={
             "name": "ServiceLevel",
             "type": "Element",
-        }
+        },
     )
     shipping_instructions: Optional[str] = field(
         default=None,
         metadata={
             "name": "ShippingInstructions",
             "type": "Element",
-        }
+        },
     )
     transport_leg_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "TransportLegCoded",
             "type": "Element",
-        }
+        },
     )
     transport_leg_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "TransportLegCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_transport_equipment: Optional[ListOfTransportEquipment] = field(
         default=None,
         metadata={
             "name": "ListOfTransportEquipment",
             "type": "Element",
-        }
+        },
     )
     transit_direction: Optional[TransitDirection] = field(
         default=None,
         metadata={
             "name": "TransitDirection",
             "type": "Element",
-        }
+        },
     )
     transport_location_list: TransportLocationList = field(
         metadata={
@@ -855,7 +855,7 @@ class ListOfLocationShipSchedule:
             "name": "LocationShipSchedule",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -867,7 +867,7 @@ class ListOfTransportRouting:
             "name": "TransportRouting",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -878,28 +878,28 @@ class ScheduleReferences:
         metadata={
             "name": "ContractReferences",
             "type": "Element",
-        }
+        },
     )
     schedule_order_reference: Optional[ScheduleOrderReference] = field(
         default=None,
         metadata={
             "name": "ScheduleOrderReference",
             "type": "Element",
-        }
+        },
     )
     order_type: Optional[OrderType] = field(
         default=None,
         metadata={
             "name": "OrderType",
             "type": "Element",
-        }
+        },
     )
     other_schedle_references: Optional[OtherSchedleReferences] = field(
         default=None,
         metadata={
             "name": "OtherSchedleReferences",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -935,14 +935,14 @@ class ShippingScheduleHeader:
         metadata={
             "name": "ScheduleReferences",
             "type": "Element",
-        }
+        },
     )
     release_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
             "type": "Element",
-        }
+        },
     )
     schedule_purpose: SchedulePurpose = field(
         metadata={
@@ -956,7 +956,7 @@ class ShippingScheduleHeader:
         metadata={
             "name": "RequestedResponse",
             "type": "Element",
-        }
+        },
     )
     schedule_type_coded: str = field(
         metadata={
@@ -970,7 +970,7 @@ class ShippingScheduleHeader:
         metadata={
             "name": "ScheduleTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     quantity_qualifier_coded: str = field(
         metadata={
@@ -984,14 +984,14 @@ class ShippingScheduleHeader:
         metadata={
             "name": "QuantityQualifierCodedOther",
             "type": "Element",
-        }
+        },
     )
     validity_dates: Optional[ValidityDates] = field(
         default=None,
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-        }
+        },
     )
     schedule_party: ScheduleParty = field(
         metadata={
@@ -1005,14 +1005,14 @@ class ShippingScheduleHeader:
         metadata={
             "name": "ListOfTransportRouting",
             "type": "Element",
-        }
+        },
     )
     terms_of_delivery: Optional[TermsOfDelivery] = field(
         default=None,
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -1026,21 +1026,21 @@ class ShippingScheduleHeader:
         metadata={
             "name": "ShippingScheduleHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1058,133 +1058,133 @@ class BaseShippingDetail:
         metadata={
             "name": "LineItemType",
             "type": "Element",
-        }
+        },
     )
     parent_item_number: Optional[ParentItemNumber] = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
-        }
+        },
     )
     item_identifiers: Optional[ItemIdentifiers] = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
-        }
+        },
     )
     list_of_dimension: Optional[ListOfDimension] = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-        }
+        },
     )
     total_quantity: Optional[TotalQuantity] = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
-        }
+        },
     )
     max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
-        }
+        },
     )
     list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
-        }
+        },
     )
     off_catalog_flag: Optional[str] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
-        }
+        },
     )
     catalog_reference: Optional[CatalogReference] = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
-        }
+        },
     )
     item_contract_references: Optional[ItemContractReferences] = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
-        }
+        },
     )
     list_of_item_references: Optional[ListOfItemReferences] = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
-        }
+        },
     )
     country_of_origin: Optional[CountryOfOrigin] = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
-        }
+        },
     )
     country_of_destination: Optional[CountryOfDestination] = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
-        }
+        },
     )
     final_recipient: Optional[FinalRecipient] = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
     conditions_of_sale: Optional[ConditionsOfSale] = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
-        }
+        },
     )
     hazardous_materials: Optional[HazardousMaterials] = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
-        }
+        },
     )
     record_keeping_year: Optional[str] = field(
         default=None,
         metadata={
             "name": "RecordKeepingYear",
             "type": "Element",
-        }
+        },
     )
     item_schedule_reference: Optional[ItemScheduleReference] = field(
         default=None,
         metadata={
             "name": "ItemScheduleReference",
             "type": "Element",
-        }
+        },
     )
     forecast_frequency_coded: str = field(
         metadata={
@@ -1198,35 +1198,35 @@ class BaseShippingDetail:
         metadata={
             "name": "ForecastFrequencyCodedOther",
             "type": "Element",
-        }
+        },
     )
     item_quantities: Optional[ItemQuantities] = field(
         default=None,
         metadata={
             "name": "ItemQuantities",
             "type": "Element",
-        }
+        },
     )
     item_release_status_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCoded",
             "type": "Element",
-        }
+        },
     )
     item_release_status_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCodedOther",
             "type": "Element",
-        }
+        },
     )
     item_packaging_reference: List[ItemPackagingReference] = field(
         default_factory=list,
         metadata={
             "name": "ItemPackagingReference",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1273,14 +1273,14 @@ class LocationShippingItemDetail:
         metadata={
             "name": "LineItemNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1305,14 +1305,14 @@ class MaterialGroupedShippingDetail:
         metadata={
             "name": "LineItemNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1344,7 +1344,7 @@ class ShippingScheduleResponseHeader:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     buyer_party: BuyerParty = field(
         metadata={
@@ -1381,40 +1381,44 @@ class ShippingScheduleResponseHeader:
             "required": True,
         }
     )
-    original_shipping_schedule_header: Optional[OriginalShippingScheduleHeader] = field(
+    original_shipping_schedule_header: Optional[
+        OriginalShippingScheduleHeader
+    ] = field(
         default=None,
         metadata={
             "name": "OriginalShippingScheduleHeader",
             "type": "Element",
-        }
+        },
     )
-    changed_shipping_schedule_header: Optional[ChangedShippingScheduleHeader] = field(
+    changed_shipping_schedule_header: Optional[
+        ChangedShippingScheduleHeader
+    ] = field(
         default=None,
         metadata={
             "name": "ChangedShippingScheduleHeader",
             "type": "Element",
-        }
+        },
     )
     shipping_schedule_response_header_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "ShippingScheduleResponseHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1437,7 +1441,7 @@ class ListOfLocationShippingItemDetail:
             "name": "LocationShippingItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1466,14 +1470,16 @@ class LocationGroupedShippingDetail:
         metadata={
             "name": "ListOfContact",
             "type": "Element",
-        }
+        },
     )
-    list_of_location_shipping_item_detail: ListOfLocationShippingItemDetail = field(
-        metadata={
-            "name": "ListOfLocationShippingItemDetail",
-            "type": "Element",
-            "required": True,
-        }
+    list_of_location_shipping_item_detail: ListOfLocationShippingItemDetail = (
+        field(
+            metadata={
+                "name": "ListOfLocationShippingItemDetail",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
 
 
@@ -1491,42 +1497,46 @@ class MaterialGroupedShippingResponse:
         metadata={
             "name": "DetailResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
-    original_material_grouped_shipping_detail: Optional[OriginalMaterialGroupedShippingDetail] = field(
+    original_material_grouped_shipping_detail: Optional[
+        OriginalMaterialGroupedShippingDetail
+    ] = field(
         default=None,
         metadata={
             "name": "OriginalMaterialGroupedShippingDetail",
             "type": "Element",
-        }
+        },
     )
-    changed_material_grouped_shipping_detail: Optional[ChangedMaterialGroupedShippingDetail] = field(
+    changed_material_grouped_shipping_detail: Optional[
+        ChangedMaterialGroupedShippingDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ChangedMaterialGroupedShippingDetail",
             "type": "Element",
-        }
+        },
     )
     line_item_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1543,13 +1553,15 @@ class ChangedLocationGroupedShippingDetail:
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedShippingResponse:
-    material_grouped_shipping_response: List[MaterialGroupedShippingResponse] = field(
+    material_grouped_shipping_response: List[
+        MaterialGroupedShippingResponse
+    ] = field(
         default_factory=list,
         metadata={
             "name": "MaterialGroupedShippingResponse",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1578,54 +1590,60 @@ class LocationGroupedShippingResponse:
         metadata={
             "name": "DetailResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
-    original_location_grouped_shipping_detail: Optional[OriginalLocationGroupedShippingDetail] = field(
+    original_location_grouped_shipping_detail: Optional[
+        OriginalLocationGroupedShippingDetail
+    ] = field(
         default=None,
         metadata={
             "name": "OriginalLocationGroupedShippingDetail",
             "type": "Element",
-        }
+        },
     )
-    changed_location_grouped_shipping_detail: Optional[ChangedLocationGroupedShippingDetail] = field(
+    changed_location_grouped_shipping_detail: Optional[
+        ChangedLocationGroupedShippingDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ChangedLocationGroupedShippingDetail",
             "type": "Element",
-        }
+        },
     )
     line_item_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedShippingResponse:
-    location_grouped_shipping_response: List[LocationGroupedShippingResponse] = field(
+    location_grouped_shipping_response: List[
+        LocationGroupedShippingResponse
+    ] = field(
         default_factory=list,
         metadata={
             "name": "LocationGroupedShippingResponse",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1638,24 +1656,30 @@ class ShippingScheduleResponse:
             "required": True,
         }
     )
-    list_of_location_grouped_shipping_response: Optional[ListOfLocationGroupedShippingResponse] = field(
+    list_of_location_grouped_shipping_response: Optional[
+        ListOfLocationGroupedShippingResponse
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfLocationGroupedShippingResponse",
             "type": "Element",
-        }
+        },
     )
-    list_of_material_grouped_shipping_response: Optional[ListOfMaterialGroupedShippingResponse] = field(
+    list_of_material_grouped_shipping_response: Optional[
+        ListOfMaterialGroupedShippingResponse
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfMaterialGroupedShippingResponse",
             "type": "Element",
-        }
+        },
     )
-    shipping_schedule_response_summary: Optional[ShippingScheduleResponseSummary] = field(
+    shipping_schedule_response_summary: Optional[
+        ShippingScheduleResponseSummary
+    ] = field(
         default=None,
         metadata={
             "name": "ShippingScheduleResponseSummary",
             "type": "Element",
-        }
+        },
     )

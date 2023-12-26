@@ -14,5 +14,5 @@ class BookingProcessFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

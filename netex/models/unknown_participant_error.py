@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .unknown_participant_error_structure import UnknownParticipantErrorStructure
+from .unknown_participant_error_structure import (
+    UnknownParticipantErrorStructure,
+)
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

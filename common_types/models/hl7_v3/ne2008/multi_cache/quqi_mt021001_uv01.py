@@ -34,7 +34,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -42,7 +42,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -50,7 +50,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -58,14 +58,14 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -73,7 +73,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -81,7 +81,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -89,7 +89,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_device: Optional[CoctMt090300Uv01AssignedDevice] = field(
         default=None,
@@ -98,7 +98,7 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -107,14 +107,14 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[XParticipationAuthorPerformer] = field(
         default=None,
@@ -122,14 +122,14 @@ class QuqiMt021001Uv01AuthorOrPerformer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -144,7 +144,7 @@ class QuqiMt021001Uv01DataEnterer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -152,7 +152,7 @@ class QuqiMt021001Uv01DataEnterer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -160,14 +160,14 @@ class QuqiMt021001Uv01DataEnterer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -176,14 +176,14 @@ class QuqiMt021001Uv01DataEnterer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -192,14 +192,14 @@ class QuqiMt021001Uv01DataEnterer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -214,7 +214,7 @@ class QuqiMt021001Uv01InformationRecipient:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -222,7 +222,7 @@ class QuqiMt021001Uv01InformationRecipient:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -230,14 +230,14 @@ class QuqiMt021001Uv01InformationRecipient:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -246,14 +246,14 @@ class QuqiMt021001Uv01InformationRecipient:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationInformationRecipient] = field(
         default=None,
@@ -261,14 +261,14 @@ class QuqiMt021001Uv01InformationRecipient:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -283,7 +283,7 @@ class QuqiMt021001Uv01Overseer:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -291,7 +291,7 @@ class QuqiMt021001Uv01Overseer:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -299,7 +299,7 @@ class QuqiMt021001Uv01Overseer:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     note_text: Optional[EdExplicit] = field(
         default=None,
@@ -307,14 +307,14 @@ class QuqiMt021001Uv01Overseer:
             "name": "noteText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -322,7 +322,7 @@ class QuqiMt021001Uv01Overseer:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_code: Optional[Ce] = field(
         default=None,
@@ -330,7 +330,7 @@ class QuqiMt021001Uv01Overseer:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     signature_text: Optional[EdExplicit] = field(
         default=None,
@@ -338,7 +338,7 @@ class QuqiMt021001Uv01Overseer:
             "name": "signatureText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
         default=None,
@@ -347,14 +347,14 @@ class QuqiMt021001Uv01Overseer:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[XParticipationVrfRespSprfWit] = field(
         default=None,
@@ -362,14 +362,14 @@ class QuqiMt021001Uv01Overseer:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_control_code: ContextControl = field(
         default=ContextControl.AP,
         metadata={
             "name": "contextControlCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -384,7 +384,7 @@ class QuqiMt021001Uv01Reason:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -392,7 +392,7 @@ class QuqiMt021001Uv01Reason:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -400,7 +400,7 @@ class QuqiMt021001Uv01Reason:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     detected_issue_event: Optional[McaiMt900001Uv01DetectedIssueEvent] = field(
         default=None,
@@ -409,14 +409,14 @@ class QuqiMt021001Uv01Reason:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ActRelationshipReason] = field(
         default=None,
@@ -424,7 +424,7 @@ class QuqiMt021001Uv01Reason:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     context_conduction_ind: Optional[str] = field(
         default=None,
@@ -432,5 +432,5 @@ class QuqiMt021001Uv01Reason:
             "name": "contextConductionInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )

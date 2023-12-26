@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import DocumentationBlock
-from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_declaration_group_prototype_subtypes_enum import (
+    ModeDeclarationGroupPrototypeSubtypesEnum,
+)
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .string import String
@@ -34,6 +36,7 @@ class ModePortAnnotation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MODE-PORT-ANNOTATION"
 
@@ -43,7 +46,7 @@ class ModePortAnnotation:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_origin: Optional[String] = field(
         default=None,
@@ -51,7 +54,7 @@ class ModePortAnnotation:
             "name": "ANNOTATION-ORIGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_text: Optional[DocumentationBlock] = field(
         default=None,
@@ -59,7 +62,7 @@ class ModePortAnnotation:
             "name": "ANNOTATION-TEXT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mode_group_ref: Optional["ModePortAnnotation.ModeGroupRef"] = field(
         default=None,
@@ -67,14 +70,14 @@ class ModePortAnnotation:
             "name": "MODE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -82,7 +85,7 @@ class ModePortAnnotation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -93,5 +96,5 @@ class ModePortAnnotation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

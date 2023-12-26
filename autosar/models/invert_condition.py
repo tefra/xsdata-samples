@@ -25,6 +25,7 @@ class InvertCondition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "INVERT-CONDITION"
 
@@ -34,14 +35,14 @@ class InvertCondition:
             "name": "CONDITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -49,7 +50,7 @@ class InvertCondition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -60,7 +61,7 @@ class InvertCondition:
                 "name": "AGGREGATION-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         invert_condition: Optional["InvertCondition"] = field(
             default=None,
@@ -68,15 +69,17 @@ class InvertCondition:
                 "name": "INVERT-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        primitive_attribute_condition: Optional[PrimitiveAttributeCondition] = field(
+        primitive_attribute_condition: Optional[
+            PrimitiveAttributeCondition
+        ] = field(
             default=None,
             metadata={
                 "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         reference_condition: Optional[ReferenceCondition] = field(
             default=None,
@@ -84,7 +87,7 @@ class InvertCondition:
                 "name": "REFERENCE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         textual_condition: Optional[TextualCondition] = field(
             default=None,
@@ -92,5 +95,5 @@ class InvertCondition:
                 "name": "TEXTUAL-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

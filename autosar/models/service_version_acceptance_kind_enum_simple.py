@@ -14,5 +14,6 @@ class ServiceVersionAcceptanceKindEnumSimple(Enum):
         equal or greater minor version than given in
         requiredMinorVersion.
     """
+
     EXACT_OR_ANY_MINOR_VERSION = "EXACT-OR-ANY-MINOR-VERSION"
     MINIMUM_MINOR_VERSION = "MINIMUM-MINOR-VERSION"

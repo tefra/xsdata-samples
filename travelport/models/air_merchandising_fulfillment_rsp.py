@@ -14,6 +14,7 @@ class AirMerchandisingFulfillmentRsp(BaseRsp1):
     universal_record
         Provider: 1G,1V,1P,ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -22,5 +23,5 @@ class AirMerchandisingFulfillmentRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-        }
+        },
     )

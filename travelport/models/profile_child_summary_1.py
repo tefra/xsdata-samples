@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_entity_status_1 import TypeProfileEntityStatus1
+from travelport.models.type_profile_entity_status_1 import (
+    TypeProfileEntityStatus1,
+)
 from travelport.models.type_profile_type_3 import TypeProfileType3
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -31,6 +33,7 @@ class ProfileChildSummary1:
         Identify if the entity is a control branch or not.
     description
     """
+
     class Meta:
         name = "ProfileChildSummary"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -41,7 +44,7 @@ class ProfileChildSummary1:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -49,7 +52,7 @@ class ProfileChildSummary1:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -59,7 +62,7 @@ class ProfileChildSummary1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     provisioning_code: None | str = field(
         default=None,
@@ -68,7 +71,7 @@ class ProfileChildSummary1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     status: None | TypeProfileEntityStatus1 = field(
         default=None,
@@ -76,7 +79,7 @@ class ProfileChildSummary1:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -85,14 +88,14 @@ class ProfileChildSummary1:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     control: bool = field(
         default=False,
         metadata={
             "name": "Control",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -101,5 +104,5 @@ class ProfileChildSummary1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

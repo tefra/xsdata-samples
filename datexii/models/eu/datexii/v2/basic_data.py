@@ -29,13 +29,14 @@ class BasicData:
     :ivar measurement_or_calculated_time_precision: The precision to
         which the time of measurement or calculation is given.
     """
+
     measurement_or_calculation_period: Optional[float] = field(
         default=None,
         metadata={
             "name": "measurementOrCalculationPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     measurement_or_calculation_time: Optional[XmlDateTime] = field(
         default=None,
@@ -43,7 +44,7 @@ class BasicData:
             "name": "measurementOrCalculationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pertinent_location: Optional[GroupOfLocations] = field(
         default=None,
@@ -51,7 +52,7 @@ class BasicData:
             "name": "pertinentLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     basic_data_extension: Optional[ExtensionType] = field(
         default=None,
@@ -59,12 +60,14 @@ class BasicData:
             "name": "basicDataExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    measurement_or_calculated_time_precision: Optional[TimePrecisionEnum] = field(
+    measurement_or_calculated_time_precision: Optional[
+        TimePrecisionEnum
+    ] = field(
         default=None,
         metadata={
             "name": "measurementOrCalculatedTimePrecision",
             "type": "Attribute",
-        }
+        },
     )

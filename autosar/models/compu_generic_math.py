@@ -24,6 +24,7 @@ class CompuGenericMath:
         by particular use-cases.
     :ivar content:
     """
+
     class Meta:
         name = "COMPU-GENERIC-MATH"
 
@@ -32,7 +33,7 @@ class CompuGenericMath:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -40,7 +41,7 @@ class CompuGenericMath:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     level: Optional[str] = field(
         default=None,
@@ -49,7 +50,7 @@ class CompuGenericMath:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -57,5 +58,5 @@ class CompuGenericMath:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

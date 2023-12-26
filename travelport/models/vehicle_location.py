@@ -13,6 +13,7 @@ class VehicleLocation:
     """
     The information for a rental car location.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -23,7 +24,7 @@ class VehicleLocation:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     distance: None | Distance1 = field(
         default=None,
@@ -31,7 +32,7 @@ class VehicleLocation:
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     coordinate_location: None | CoordinateLocation1 = field(
         default=None,
@@ -39,7 +40,7 @@ class VehicleLocation:
             "name": "CoordinateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     location_information: None | LocationInformation = field(
         default=None,
@@ -47,5 +48,5 @@ class VehicleLocation:
             "name": "LocationInformation",
             "type": "Element",
             "required": True,
-        }
+        },
     )

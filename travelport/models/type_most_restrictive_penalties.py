@@ -15,6 +15,7 @@ class TypeMostRestrictivePenalties:
     restriction_type
         Contain the type of restriction applicable
     """
+
     class Meta:
         name = "typeMostRestrictivePenalties"
 
@@ -25,5 +26,5 @@ class TypeMostRestrictivePenalties:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

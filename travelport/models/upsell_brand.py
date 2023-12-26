@@ -9,6 +9,7 @@ class UpsellBrand:
     """
     Upsell brand reference.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -17,12 +18,12 @@ class UpsellBrand:
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-        }
+        },
     )
     fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
-        }
+        },
     )

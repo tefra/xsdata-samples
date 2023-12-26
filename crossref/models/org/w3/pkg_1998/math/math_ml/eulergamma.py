@@ -15,5 +15,5 @@ class Eulergamma:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

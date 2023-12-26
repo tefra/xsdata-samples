@@ -17,6 +17,7 @@ class VmsFault(Fault):
         specified variable message sign panel.
     :ivar vms_fault_extension:
     """
+
     vms_fault: Optional[VmsFaultEnum] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class VmsFault(Fault):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms_fault_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class VmsFault(Fault):
             "name": "vmsFaultExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

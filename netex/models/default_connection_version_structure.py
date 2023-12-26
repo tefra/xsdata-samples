@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_space_ref import AccessSpaceRef
 from .boarding_position_ref import BoardingPositionRef
 from .default_connection_end_structure import DefaultConnectionEndStructure
@@ -12,7 +12,9 @@ from .parking_ref import ParkingRef
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
-from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .point_of_interest_vehicle_entrance_ref import (
+    PointOfInterestVehicleEntranceRef,
+)
 from .quay_ref import QuayRef
 from .service_site_ref import ServiceSiteRef
 from .site_component_ref import SiteComponentRef
@@ -43,7 +45,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "name": "From",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to: Optional[DefaultConnectionEndStructure] = field(
         default=None,
@@ -51,7 +53,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "name": "To",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     topographic_place_view: Optional[TopographicPlaceView] = field(
         default=None,
@@ -59,7 +61,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "name": "TopographicPlaceView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_area_ref: Optional[StopAreaRef] = field(
         default=None,
@@ -67,9 +69,36 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "name": "StopAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            VehicleStoppingPositionRef,
+            VehicleStoppingPlaceRef,
+            BoardingPositionRef,
+            AccessSpaceRef,
+            QuayRef,
+            StopPlaceSpaceRef,
+            ParkingBayRef,
+            PointOfInterestSpaceRef,
+            StopPlaceVehicleEntranceRef,
+            StopPlaceEntranceRef,
+            ParkingEntranceForVehiclesRef,
+            ParkingPassengerEntranceRef,
+            ParkingEntranceRef,
+            PointOfInterestVehicleEntranceRef,
+            PointOfInterestEntranceRef,
+            VehicleEntranceRef,
+            EntranceRef,
+            SiteComponentRef,
+            StopPlaceRef,
+            ParkingRef,
+            PointOfInterestRef,
+            ServiceSiteRef,
+            SiteRef,
+            SiteElementRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -195,5 +224,5 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

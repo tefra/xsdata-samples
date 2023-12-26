@@ -15,5 +15,5 @@ class Exponentiale:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

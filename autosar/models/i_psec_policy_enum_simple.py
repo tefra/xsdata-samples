@@ -12,6 +12,7 @@ class IPsecPolicyEnumSimple(Enum):
     :cvar REJECT: Signifying that packets should be discarded and a
         diagnostic ICMP returned.
     """
+
     DROP = "DROP"
     IPSEC = "IPSEC"
     PASSTHROUGH = "PASSTHROUGH"

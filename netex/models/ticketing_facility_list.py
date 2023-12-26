@@ -14,5 +14,5 @@ class TicketingFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

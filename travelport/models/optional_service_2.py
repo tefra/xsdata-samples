@@ -48,6 +48,7 @@ class OptionalService2:
     purchase_indicator
         Option purchased by someone other than the passenger
     """
+
     class Meta:
         name = "OptionalService"
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
@@ -57,7 +58,7 @@ class OptionalService2:
         metadata={
             "name": "OptionJourneyDetails",
             "type": "Element",
-        }
+        },
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -67,7 +68,7 @@ class OptionalService2:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 5,
-        }
+        },
     )
     feature_type: None | str = field(
         default=None,
@@ -76,7 +77,7 @@ class OptionalService2:
             "type": "Attribute",
             "required": True,
             "length": 1,
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -85,14 +86,14 @@ class OptionalService2:
             "type": "Attribute",
             "length": 2,
             "white_space": "collapse",
-        }
+        },
     )
     quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
-        }
+        },
     )
     provider_defined_type: None | str = field(
         default=None,
@@ -101,7 +102,7 @@ class OptionalService2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -110,28 +111,28 @@ class OptionalService2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-        }
+        },
     )
     booking_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BookingDate",
             "type": "Attribute",
-        }
+        },
     )
     set_identifier: None | str = field(
         default=None,
@@ -140,7 +141,7 @@ class OptionalService2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     set_name: None | str = field(
         default=None,
@@ -149,33 +150,33 @@ class OptionalService2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     transport_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "TransportIndicator",
             "type": "Attribute",
-        }
+        },
     )
     air_city_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "AirCityIndicator",
             "type": "Attribute",
-        }
+        },
     )
     purchase_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "PurchaseIndicator",
             "type": "Attribute",
-        }
+        },
     )

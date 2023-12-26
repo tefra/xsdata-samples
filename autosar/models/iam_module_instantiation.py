@@ -83,6 +83,7 @@ class IamModuleInstantiation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IAM-MODULE-INSTANTIATION"
 
@@ -93,15 +94,17 @@ class IamModuleInstantiation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["IamModuleInstantiation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "IamModuleInstantiation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -109,7 +112,7 @@ class IamModuleInstantiation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -117,7 +120,7 @@ class IamModuleInstantiation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -125,7 +128,7 @@ class IamModuleInstantiation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -133,7 +136,7 @@ class IamModuleInstantiation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -141,7 +144,7 @@ class IamModuleInstantiation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["IamModuleInstantiation.Annotations"] = field(
         default=None,
@@ -149,7 +152,7 @@ class IamModuleInstantiation:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     grant_refs: Optional["IamModuleInstantiation.GrantRefs"] = field(
         default=None,
@@ -157,7 +160,7 @@ class IamModuleInstantiation:
             "name": "GRANT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     local_com_access_control_enabled: Optional[Boolean] = field(
         default=None,
@@ -165,7 +168,7 @@ class IamModuleInstantiation:
             "name": "LOCAL-COM-ACCESS-CONTROL-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remote_access_control_enabled: Optional[Boolean] = field(
         default=None,
@@ -173,14 +176,14 @@ class IamModuleInstantiation:
             "name": "REMOTE-ACCESS-CONTROL-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -188,14 +191,14 @@ class IamModuleInstantiation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -206,7 +209,7 @@ class IamModuleInstantiation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -217,7 +220,7 @@ class IamModuleInstantiation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -228,7 +231,7 @@ class IamModuleInstantiation:
                 "name": "GRANT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -239,5 +242,5 @@ class IamModuleInstantiation:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

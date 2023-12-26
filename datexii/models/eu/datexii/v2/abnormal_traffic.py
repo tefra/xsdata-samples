@@ -1,11 +1,19 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.abnormal_traffic_type_enum import AbnormalTrafficTypeEnum
+from datexii.models.eu.datexii.v2.abnormal_traffic_type_enum import (
+    AbnormalTrafficTypeEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.relative_traffic_flow_enum import RelativeTrafficFlowEnum
+from datexii.models.eu.datexii.v2.relative_traffic_flow_enum import (
+    RelativeTrafficFlowEnum,
+)
 from datexii.models.eu.datexii.v2.traffic_element import TrafficElement
-from datexii.models.eu.datexii.v2.traffic_flow_characteristics_enum import TrafficFlowCharacteristicsEnum
-from datexii.models.eu.datexii.v2.traffic_trend_type_enum import TrafficTrendTypeEnum
+from datexii.models.eu.datexii.v2.traffic_flow_characteristics_enum import (
+    TrafficFlowCharacteristicsEnum,
+)
+from datexii.models.eu.datexii.v2.traffic_trend_type_enum import (
+    TrafficTrendTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -31,13 +39,14 @@ class AbnormalTraffic(TrafficElement):
         traffic conditions at the specified location and direction.
     :ivar abnormal_traffic_extension:
     """
+
     abnormal_traffic_type: Optional[AbnormalTrafficTypeEnum] = field(
         default=None,
         metadata={
             "name": "abnormalTrafficType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     number_of_vehicles_waiting: Optional[int] = field(
         default=None,
@@ -45,7 +54,7 @@ class AbnormalTraffic(TrafficElement):
             "name": "numberOfVehiclesWaiting",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     queue_length: Optional[int] = field(
         default=None,
@@ -53,7 +62,7 @@ class AbnormalTraffic(TrafficElement):
             "name": "queueLength",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     relative_traffic_flow: Optional[RelativeTrafficFlowEnum] = field(
         default=None,
@@ -61,15 +70,17 @@ class AbnormalTraffic(TrafficElement):
             "name": "relativeTrafficFlow",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    traffic_flow_characteristics: Optional[TrafficFlowCharacteristicsEnum] = field(
+    traffic_flow_characteristics: Optional[
+        TrafficFlowCharacteristicsEnum
+    ] = field(
         default=None,
         metadata={
             "name": "trafficFlowCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_trend_type: Optional[TrafficTrendTypeEnum] = field(
         default=None,
@@ -77,7 +88,7 @@ class AbnormalTraffic(TrafficElement):
             "name": "trafficTrendType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     abnormal_traffic_extension: Optional[ExtensionType] = field(
         default=None,
@@ -85,5 +96,5 @@ class AbnormalTraffic(TrafficElement):
             "name": "abnormalTrafficExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

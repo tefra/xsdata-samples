@@ -33,6 +33,7 @@ class TypeCreditCardType1(TypePaymentCard1):
         that the credit card used has been issued through Enett. For all
         other credit card payments this value will be set to false.
     """
+
     class Meta:
         name = "typeCreditCardType"
 
@@ -41,35 +42,35 @@ class TypeCreditCardType1(TypePaymentCard1):
         metadata={
             "name": "ExtendedPayment",
             "type": "Attribute",
-        }
+        },
     )
     customer_reference: None | str = field(
         default=None,
         metadata={
             "name": "CustomerReference",
             "type": "Attribute",
-        }
+        },
     )
     acceptance_override: None | bool = field(
         default=None,
         metadata={
             "name": "AcceptanceOverride",
             "type": "Attribute",
-        }
+        },
     )
     third_party_payment: bool = field(
         default=False,
         metadata={
             "name": "ThirdPartyPayment",
             "type": "Attribute",
-        }
+        },
     )
     bank_name: None | str = field(
         default=None,
         metadata={
             "name": "BankName",
             "type": "Attribute",
-        }
+        },
     )
     bank_country_code: None | str = field(
         default=None,
@@ -77,7 +78,7 @@ class TypeCreditCardType1(TypePaymentCard1):
             "name": "BankCountryCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     bank_state_code: None | str = field(
         default=None,
@@ -85,12 +86,12 @@ class TypeCreditCardType1(TypePaymentCard1):
             "name": "BankStateCode",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     enett: bool = field(
         default=False,
         metadata={
             "name": "Enett",
             "type": "Attribute",
-        }
+        },
     )

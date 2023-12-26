@@ -9,6 +9,7 @@ class AirSegmentRef:
     """
     Reference to a complete AirSegment from a shared list.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class AirSegmentRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

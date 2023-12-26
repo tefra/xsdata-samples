@@ -17,6 +17,7 @@ class SavedTripRetrieveReq(BaseReq1):
     traveler_last_name
         Match Traveler Last Name.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -27,7 +28,7 @@ class SavedTripRetrieveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     traveler_last_name: None | str = field(
         default=None,
@@ -36,5 +37,5 @@ class SavedTripRetrieveReq(BaseReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )

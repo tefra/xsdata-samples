@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
+from .communication_cluster_subtypes_enum import (
+    CommunicationClusterSubtypesEnum,
+)
 from .flexray_tp_connection import FlexrayTpConnection
 from .flexray_tp_connection_control import FlexrayTpConnectionControl
 from .flexray_tp_ecu import FlexrayTpEcu
@@ -105,6 +107,7 @@ class FlexrayTpConfig:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-TP-CONFIG"
 
@@ -115,15 +118,17 @@ class FlexrayTpConfig:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["FlexrayTpConfig.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "FlexrayTpConfig.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -131,7 +136,7 @@ class FlexrayTpConfig:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -139,7 +144,7 @@ class FlexrayTpConfig:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -147,7 +152,7 @@ class FlexrayTpConfig:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -155,7 +160,7 @@ class FlexrayTpConfig:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -163,7 +168,7 @@ class FlexrayTpConfig:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["FlexrayTpConfig.Annotations"] = field(
         default=None,
@@ -171,7 +176,7 @@ class FlexrayTpConfig:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -179,15 +184,17 @@ class FlexrayTpConfig:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_cluster_ref: Optional["FlexrayTpConfig.CommunicationClusterRef"] = field(
+    communication_cluster_ref: Optional[
+        "FlexrayTpConfig.CommunicationClusterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_pools: Optional["FlexrayTpConfig.PduPools"] = field(
         default=None,
@@ -195,7 +202,7 @@ class FlexrayTpConfig:
             "name": "PDU-POOLS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_addresss: Optional["FlexrayTpConfig.TpAddresss"] = field(
         default=None,
@@ -203,7 +210,7 @@ class FlexrayTpConfig:
             "name": "TP-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_connections: Optional["FlexrayTpConfig.TpConnections"] = field(
         default=None,
@@ -211,15 +218,17 @@ class FlexrayTpConfig:
             "name": "TP-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tp_connection_controls: Optional["FlexrayTpConfig.TpConnectionControls"] = field(
+    tp_connection_controls: Optional[
+        "FlexrayTpConfig.TpConnectionControls"
+    ] = field(
         default=None,
         metadata={
             "name": "TP-CONNECTION-CONTROLS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_ecus: Optional["FlexrayTpConfig.TpEcus"] = field(
         default=None,
@@ -227,7 +236,7 @@ class FlexrayTpConfig:
             "name": "TP-ECUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_nodes: Optional["FlexrayTpConfig.TpNodes"] = field(
         default=None,
@@ -235,14 +244,14 @@ class FlexrayTpConfig:
             "name": "TP-NODES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -250,14 +259,14 @@ class FlexrayTpConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -268,7 +277,7 @@ class FlexrayTpConfig:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -279,7 +288,7 @@ class FlexrayTpConfig:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -290,7 +299,7 @@ class FlexrayTpConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -301,7 +310,7 @@ class FlexrayTpConfig:
                 "name": "FLEXRAY-TP-PDU-POOL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -312,7 +321,7 @@ class FlexrayTpConfig:
                 "name": "TP-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -323,18 +332,20 @@ class FlexrayTpConfig:
                 "name": "FLEXRAY-TP-CONNECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TpConnectionControls:
-        flexray_tp_connection_control: List[FlexrayTpConnectionControl] = field(
+        flexray_tp_connection_control: List[
+            FlexrayTpConnectionControl
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-TP-CONNECTION-CONTROL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -345,7 +356,7 @@ class FlexrayTpConfig:
                 "name": "FLEXRAY-TP-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -356,5 +367,5 @@ class FlexrayTpConfig:
                 "name": "FLEXRAY-TP-NODE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

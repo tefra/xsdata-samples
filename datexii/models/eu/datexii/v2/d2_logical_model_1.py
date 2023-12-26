@@ -13,6 +13,7 @@ class D2LogicalModel1:
     The DATEX II logical model comprising exchange, content payload and management
     sub-models.
     """
+
     class Meta:
         name = "D2LogicalModel"
 
@@ -22,7 +23,7 @@ class D2LogicalModel1:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     payload_publication: Optional[PayloadPublication] = field(
         default=None,
@@ -30,7 +31,7 @@ class D2LogicalModel1:
             "name": "payloadPublication",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     d2_logical_model_extension: Optional[ExtensionType] = field(
         default=None,
@@ -38,7 +39,7 @@ class D2LogicalModel1:
             "name": "d2LogicalModelExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     model_base_version: str = field(
         init=False,
@@ -47,5 +48,5 @@ class D2LogicalModel1:
             "name": "modelBaseVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

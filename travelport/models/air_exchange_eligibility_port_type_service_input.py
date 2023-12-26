@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.air_exchange_eligibility_req import AirExchangeEligibilityReq
+from travelport.models.air_exchange_eligibility_req import (
+    AirExchangeEligibilityReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class AirExchangeEligibilityPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class AirExchangeEligibilityPortTypeServiceInput:
                 "name": "AirExchangeEligibilityReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            }
+            },
         )

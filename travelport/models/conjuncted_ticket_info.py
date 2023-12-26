@@ -19,6 +19,7 @@ class ConjunctedTicketInfo:
         Contains Ticketed PCC’s Country code.
     status
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class ConjunctedTicketInfo:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     iatanumber: None | str = field(
         default=None,
@@ -36,14 +37,14 @@ class ConjunctedTicketInfo:
             "name": "IATANumber",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
     ticket_issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "TicketIssueDate",
             "type": "Attribute",
-        }
+        },
     )
     ticketing_agent_sign_on: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class ConjunctedTicketInfo:
             "name": "TicketingAgentSignOn",
             "type": "Attribute",
             "max_length": 9,
-        }
+        },
     )
     country_code: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class ConjunctedTicketInfo:
             "name": "CountryCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     status: None | TypeTicketStatus = field(
         default=None,
@@ -67,5 +68,5 @@ class ConjunctedTicketInfo:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

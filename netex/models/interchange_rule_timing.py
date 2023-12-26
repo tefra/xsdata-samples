@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .interchange_rule_timing_version_structure import InterchangeRuleTimingVersionStructure
+from .interchange_rule_timing_version_structure import (
+    InterchangeRuleTimingVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

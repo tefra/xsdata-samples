@@ -11,7 +11,9 @@ from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .nv_block_needs_reliability_enum import NvBlockNeedsReliabilityEnum
-from .nv_block_needs_writing_priority_enum import NvBlockNeedsWritingPriorityEnum
+from .nv_block_needs_writing_priority_enum import (
+    NvBlockNeedsWritingPriorityEnum,
+)
 from .positive_integer import PositiveInteger
 from .ram_block_status_control_enum import RamBlockStatusControlEnum
 from .short_name_fragment import ShortNameFragment
@@ -138,6 +140,7 @@ class NvBlockNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "NV-BLOCK-NEEDS"
 
@@ -148,7 +151,7 @@ class NvBlockNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["NvBlockNeeds.ShortNameFragments"] = field(
         default=None,
@@ -156,7 +159,7 @@ class NvBlockNeeds:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -164,7 +167,7 @@ class NvBlockNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -172,7 +175,7 @@ class NvBlockNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -180,7 +183,7 @@ class NvBlockNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -188,7 +191,7 @@ class NvBlockNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -196,7 +199,7 @@ class NvBlockNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["NvBlockNeeds.Annotations"] = field(
         default=None,
@@ -204,7 +207,7 @@ class NvBlockNeeds:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     calc_ram_block_crc: Optional[Boolean] = field(
         default=None,
@@ -212,7 +215,7 @@ class NvBlockNeeds:
             "name": "CALC-RAM-BLOCK-CRC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     check_static_block_id: Optional[Boolean] = field(
         default=None,
@@ -220,7 +223,7 @@ class NvBlockNeeds:
             "name": "CHECK-STATIC-BLOCK-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cyclic_writing_period: Optional[TimeValue] = field(
         default=None,
@@ -228,7 +231,7 @@ class NvBlockNeeds:
             "name": "CYCLIC-WRITING-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     n_data_sets: Optional[PositiveInteger] = field(
         default=None,
@@ -236,7 +239,7 @@ class NvBlockNeeds:
             "name": "N-DATA-SETS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     n_rom_blocks: Optional[PositiveInteger] = field(
         default=None,
@@ -244,7 +247,7 @@ class NvBlockNeeds:
             "name": "N-ROM-BLOCKS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ram_block_status_control: Optional[RamBlockStatusControlEnum] = field(
         default=None,
@@ -252,7 +255,7 @@ class NvBlockNeeds:
             "name": "RAM-BLOCK-STATUS-CONTROL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     readonly: Optional[Boolean] = field(
         default=None,
@@ -260,7 +263,7 @@ class NvBlockNeeds:
             "name": "READONLY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     reliability: Optional[NvBlockNeedsReliabilityEnum] = field(
         default=None,
@@ -268,7 +271,7 @@ class NvBlockNeeds:
             "name": "RELIABILITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     resistant_to_changed_sw: Optional[Boolean] = field(
         default=None,
@@ -276,7 +279,7 @@ class NvBlockNeeds:
             "name": "RESISTANT-TO-CHANGED-SW",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     restore_at_start: Optional[Boolean] = field(
         default=None,
@@ -284,7 +287,7 @@ class NvBlockNeeds:
             "name": "RESTORE-AT-START",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     select_block_for_first_init_all: Optional[Boolean] = field(
         default=None,
@@ -292,7 +295,7 @@ class NvBlockNeeds:
             "name": "SELECT-BLOCK-FOR-FIRST-INIT-ALL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     store_at_shutdown: Optional[Boolean] = field(
         default=None,
@@ -300,7 +303,7 @@ class NvBlockNeeds:
             "name": "STORE-AT-SHUTDOWN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     store_cyclic: Optional[Boolean] = field(
         default=None,
@@ -308,7 +311,7 @@ class NvBlockNeeds:
             "name": "STORE-CYCLIC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     store_emergency: Optional[Boolean] = field(
         default=None,
@@ -316,7 +319,7 @@ class NvBlockNeeds:
             "name": "STORE-EMERGENCY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     store_immediate: Optional[Boolean] = field(
         default=None,
@@ -324,7 +327,7 @@ class NvBlockNeeds:
             "name": "STORE-IMMEDIATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_auto_validation_at_shut_down: Optional[Boolean] = field(
         default=None,
@@ -332,7 +335,7 @@ class NvBlockNeeds:
             "name": "USE-AUTO-VALIDATION-AT-SHUT-DOWN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_crc_comp_mechanism: Optional[Boolean] = field(
         default=None,
@@ -340,7 +343,7 @@ class NvBlockNeeds:
             "name": "USE-CRC-COMP-MECHANISM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     write_only_once: Optional[Boolean] = field(
         default=None,
@@ -348,7 +351,7 @@ class NvBlockNeeds:
             "name": "WRITE-ONLY-ONCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     write_verification: Optional[Boolean] = field(
         default=None,
@@ -356,7 +359,7 @@ class NvBlockNeeds:
             "name": "WRITE-VERIFICATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     writing_frequency: Optional[PositiveInteger] = field(
         default=None,
@@ -364,7 +367,7 @@ class NvBlockNeeds:
             "name": "WRITING-FREQUENCY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     writing_priority: Optional[NvBlockNeedsWritingPriorityEnum] = field(
         default=None,
@@ -372,14 +375,14 @@ class NvBlockNeeds:
             "name": "WRITING-PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -387,14 +390,14 @@ class NvBlockNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -405,7 +408,7 @@ class NvBlockNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -416,5 +419,5 @@ class NvBlockNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -14,5 +14,5 @@ class AccessibilityTool:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

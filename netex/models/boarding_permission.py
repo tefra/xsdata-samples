@@ -14,5 +14,5 @@ class BoardingPermission:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

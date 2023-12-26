@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .crypto_service_primitive_subtypes_enum import CryptoServicePrimitiveSubtypesEnum
+from .crypto_service_primitive_subtypes_enum import (
+    CryptoServicePrimitiveSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -85,6 +87,7 @@ class TlsCryptoServiceMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TLS-CRYPTO-SERVICE-MAPPING"
 
@@ -95,15 +98,17 @@ class TlsCryptoServiceMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TlsCryptoServiceMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TlsCryptoServiceMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -111,7 +116,7 @@ class TlsCryptoServiceMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -119,7 +124,7 @@ class TlsCryptoServiceMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -127,7 +132,7 @@ class TlsCryptoServiceMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -135,7 +140,7 @@ class TlsCryptoServiceMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -143,7 +148,7 @@ class TlsCryptoServiceMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TlsCryptoServiceMapping.Annotations"] = field(
         default=None,
@@ -151,7 +156,7 @@ class TlsCryptoServiceMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -159,30 +164,34 @@ class TlsCryptoServiceMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    key_exchange_refs: Optional["TlsCryptoServiceMapping.KeyExchangeRefs"] = field(
+    key_exchange_refs: Optional[
+        "TlsCryptoServiceMapping.KeyExchangeRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "KEY-EXCHANGE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tls_cipher_suites: Optional["TlsCryptoServiceMapping.TlsCipherSuites"] = field(
+    tls_cipher_suites: Optional[
+        "TlsCryptoServiceMapping.TlsCipherSuites"
+    ] = field(
         default=None,
         metadata={
             "name": "TLS-CIPHER-SUITES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -190,14 +199,14 @@ class TlsCryptoServiceMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -208,7 +217,7 @@ class TlsCryptoServiceMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -219,18 +228,20 @@ class TlsCryptoServiceMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class KeyExchangeRefs:
-        key_exchange_ref: List["TlsCryptoServiceMapping.KeyExchangeRefs.KeyExchangeRef"] = field(
+        key_exchange_ref: List[
+            "TlsCryptoServiceMapping.KeyExchangeRefs.KeyExchangeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "KEY-EXCHANGE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -241,7 +252,7 @@ class TlsCryptoServiceMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -252,5 +263,5 @@ class TlsCryptoServiceMapping:
                 "name": "TLS-CRYPTO-CIPHER-SUITE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

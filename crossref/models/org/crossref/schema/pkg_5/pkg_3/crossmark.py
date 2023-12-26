@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark_domains import CrossmarkDomains
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.custom_metadata import CustomMetadata
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark_domains import (
+    CrossmarkDomains,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.custom_metadata import (
+    CustomMetadata,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.updates import Updates
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
@@ -26,6 +30,7 @@ class Crossmark:
     :ivar updates:
     :ivar custom_metadata:
     """
+
     class Meta:
         name = "crossmark"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -34,7 +39,7 @@ class Crossmark:
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     crossmark_policy: Optional[str] = field(
         default=None,
@@ -43,29 +48,29 @@ class Crossmark:
             "min_length": 6,
             "max_length": 2048,
             "pattern": r"10\.[0-9]{4,9}/.{1,200}",
-        }
+        },
     )
     crossmark_domains: List[CrossmarkDomains] = field(
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     crossmark_domain_exclusive: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     updates: Optional[Updates] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     custom_metadata: Optional[CustomMetadata] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )

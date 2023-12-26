@@ -22,6 +22,7 @@ class PointOfSale5:
         Used for rapid reprice. This field is the IATA associated to this
         Point of Sale PCC. Providers: 1G/1V
     """
+
     class Meta:
         name = "PointOfSale"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -34,7 +35,7 @@ class PointOfSale5:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -44,14 +45,14 @@ class PointOfSale5:
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     iata: None | str = field(
         default=None,
@@ -59,5 +60,5 @@ class PointOfSale5:
             "name": "IATA",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )

@@ -9,6 +9,7 @@ class TypeResidency2(Enum):
     The passenger residency type.Residence Type can be Employee, National or
     Resident.
     """
+
     EMPLOYEE = "Employee"
     NATIONAL = "National"
     RESIDENT = "Resident"

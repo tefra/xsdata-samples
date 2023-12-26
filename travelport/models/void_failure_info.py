@@ -13,7 +13,7 @@ class VoidFailureInfo:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
@@ -21,12 +21,12 @@ class VoidFailureInfo:
             "name": "TicketNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     code: None | int = field(
         default=None,
         metadata={
             "name": "Code",
             "type": "Attribute",
-        }
+        },
     )

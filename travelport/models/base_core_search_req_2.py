@@ -11,6 +11,7 @@ class BaseCoreSearchReq2(BaseCoreReq2):
     """
     Base Request for Air Search.
     """
+
     class Meta:
         name = "BaseCoreSearchReq"
 
@@ -20,5 +21,5 @@ class BaseCoreSearchReq2(BaseCoreReq2):
             "name": "NextResultReference",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class EcucDestinationUriNestingContractEnumSimple(Enum):
         container which can be defined in arbitrary nested subContainer
         structure.
     """
+
     LEAF_OF_TARGET_CONTAINER = "LEAF-OF-TARGET-CONTAINER"
     TARGET_CONTAINER = "TARGET-CONTAINER"
     VERTEX_OF_TARGET_CONTAINER = "VERTEX-OF-TARGET-CONTAINER"

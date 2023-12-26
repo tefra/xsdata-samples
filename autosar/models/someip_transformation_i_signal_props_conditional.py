@@ -3,14 +3,22 @@ from typing import List, Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
-from .data_prototype_transformation_props import DataPrototypeTransformationProps
+from .data_prototype_transformation_props import (
+    DataPrototypeTransformationProps,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 from .someip_message_type_enum import SomeipMessageTypeEnum
-from .someip_transformer_session_handling_enum import SomeipTransformerSessionHandlingEnum
+from .someip_transformer_session_handling_enum import (
+    SomeipTransformerSessionHandlingEnum,
+)
 from .tlv_data_id_definition import TlvDataIdDefinition
-from .tlv_data_id_definition_set_subtypes_enum import TlvDataIdDefinitionSetSubtypesEnum
-from .transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
+from .tlv_data_id_definition_set_subtypes_enum import (
+    TlvDataIdDefinitionSetSubtypesEnum,
+)
+from .transformation_technology_subtypes_enum import (
+    TransformationTechnologySubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -98,6 +106,7 @@ class SomeipTransformationISignalPropsConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL"
 
@@ -107,23 +116,27 @@ class SomeipTransformationISignalPropsConditional:
             "name": "CS-ERROR-REACTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_prototype_transformation_propss: Optional["SomeipTransformationISignalPropsConditional.DataPrototypeTransformationPropss"] = field(
+    data_prototype_transformation_propss: Optional[
+        "SomeipTransformationISignalPropsConditional.DataPrototypeTransformationPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformer_ref: Optional["SomeipTransformationISignalPropsConditional.TransformerRef"] = field(
+    transformer_ref: Optional[
+        "SomeipTransformationISignalPropsConditional.TransformerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     implements_legacy_string_serialization: Optional[Boolean] = field(
         default=None,
@@ -131,7 +144,7 @@ class SomeipTransformationISignalPropsConditional:
             "name": "IMPLEMENTS-LEGACY-STRING-SERIALIZATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     implements_someip_string_handling: Optional[Boolean] = field(
         default=None,
@@ -139,7 +152,7 @@ class SomeipTransformationISignalPropsConditional:
             "name": "IMPLEMENTS-SOMEIP-STRING-HANDLING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     interface_version: Optional[PositiveInteger] = field(
         default=None,
@@ -147,7 +160,7 @@ class SomeipTransformationISignalPropsConditional:
             "name": "INTERFACE-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_dynamic_length_field_size: Optional[Boolean] = field(
         default=None,
@@ -155,7 +168,7 @@ class SomeipTransformationISignalPropsConditional:
             "name": "IS-DYNAMIC-LENGTH-FIELD-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_type: Optional[SomeipMessageTypeEnum] = field(
         default=None,
@@ -163,15 +176,17 @@ class SomeipTransformationISignalPropsConditional:
             "name": "MESSAGE-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    session_handling_sr: Optional[SomeipTransformerSessionHandlingEnum] = field(
+    session_handling_sr: Optional[
+        SomeipTransformerSessionHandlingEnum
+    ] = field(
         default=None,
         metadata={
             "name": "SESSION-HANDLING-SR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_array_length_fields: Optional[PositiveInteger] = field(
         default=None,
@@ -179,7 +194,7 @@ class SomeipTransformationISignalPropsConditional:
             "name": "SIZE-OF-ARRAY-LENGTH-FIELDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_string_length_fields: Optional[PositiveInteger] = field(
         default=None,
@@ -187,7 +202,7 @@ class SomeipTransformationISignalPropsConditional:
             "name": "SIZE-OF-STRING-LENGTH-FIELDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_struct_length_fields: Optional[PositiveInteger] = field(
         default=None,
@@ -195,7 +210,7 @@ class SomeipTransformationISignalPropsConditional:
             "name": "SIZE-OF-STRUCT-LENGTH-FIELDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_union_length_fields: Optional[PositiveInteger] = field(
         default=None,
@@ -203,31 +218,37 @@ class SomeipTransformationISignalPropsConditional:
             "name": "SIZE-OF-UNION-LENGTH-FIELDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tlv_data_ids: Optional["SomeipTransformationISignalPropsConditional.TlvDataIds"] = field(
+    tlv_data_ids: Optional[
+        "SomeipTransformationISignalPropsConditional.TlvDataIds"
+    ] = field(
         default=None,
         metadata={
             "name": "TLV-DATA-IDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tlv_data_id_0_refs: Optional["SomeipTransformationISignalPropsConditional.TlvDataId0Refs"] = field(
+    tlv_data_id_0_refs: Optional[
+        "SomeipTransformationISignalPropsConditional.TlvDataId0Refs"
+    ] = field(
         default=None,
         metadata={
             "name": "TLV-DATA-ID-0-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tlv_data_id_definition_refs: Optional["SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs"] = field(
+    tlv_data_id_definition_refs: Optional[
+        "SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "TLV-DATA-ID-DEFINITION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -235,14 +256,14 @@ class SomeipTransformationISignalPropsConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -250,18 +271,20 @@ class SomeipTransformationISignalPropsConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class DataPrototypeTransformationPropss:
-        data_prototype_transformation_props: List[DataPrototypeTransformationProps] = field(
+        data_prototype_transformation_props: List[
+            DataPrototypeTransformationProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -272,7 +295,7 @@ class SomeipTransformationISignalPropsConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -283,18 +306,20 @@ class SomeipTransformationISignalPropsConditional:
                 "name": "TLV-DATA-ID-DEFINITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TlvDataId0Refs:
-        tlv_data_id_0_ref: List["SomeipTransformationISignalPropsConditional.TlvDataId0Refs.TlvDataId0Ref"] = field(
+        tlv_data_id_0_ref: List[
+            "SomeipTransformationISignalPropsConditional.TlvDataId0Refs.TlvDataId0Ref"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TLV-DATA-ID-0-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -305,18 +330,20 @@ class SomeipTransformationISignalPropsConditional:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class TlvDataIdDefinitionRefs:
-        tlv_data_id_definition_ref: List["SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef"] = field(
+        tlv_data_id_definition_ref: List[
+            "SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TLV-DATA-ID-DEFINITION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -327,5 +354,5 @@ class SomeipTransformationISignalPropsConditional:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

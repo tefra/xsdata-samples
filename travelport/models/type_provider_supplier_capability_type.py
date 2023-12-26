@@ -8,6 +8,7 @@ class TypeProviderSupplierCapabilityType(Enum):
     """
     Enumeration of ProviderSupplier capability.
     """
+
     YES = "Yes"
     NO = "No"
     PARTIAL = "Partial"

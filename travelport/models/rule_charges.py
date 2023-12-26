@@ -21,6 +21,7 @@ class RuleCharges:
         If true, specifies that advance purchase information will be present
         in fare rules.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,33 +30,33 @@ class RuleCharges:
         metadata={
             "name": "PenaltyType",
             "type": "Attribute",
-        }
+        },
     )
     departure_status: None | str = field(
         default=None,
         metadata={
             "name": "DepartureStatus",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     percent: None | Decimal = field(
         default=None,
         metadata={
             "name": "Percent",
             "type": "Attribute",
-        }
+        },
     )
     more_rules_present: None | bool = field(
         default=None,
         metadata={
             "name": "MoreRulesPresent",
             "type": "Attribute",
-        }
+        },
     )

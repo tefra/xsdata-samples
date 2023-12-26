@@ -16,6 +16,7 @@ class TrafficFlowCharacteristicsEnum(Enum):
     :cvar TRAFFIC_BLOCKED: Traffic is blocked at the specified location
         and in the specified direction due to an unplanned event.
     """
+
     ERRATIC_FLOW = "erraticFlow"
     SMOOTH_FLOW = "smoothFlow"
     STOP_AND_GO = "stopAndGo"

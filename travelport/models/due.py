@@ -9,5 +9,6 @@ class Due:
     """
     Due balance Amount on Booking.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"

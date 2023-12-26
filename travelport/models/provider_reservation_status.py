@@ -32,6 +32,7 @@ class ProviderReservationStatus:
         Will be true if the reservation was successfuly cancelled on the
         provider system.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -40,7 +41,7 @@ class ProviderReservationStatus:
         metadata={
             "name": "CancelInfo",
             "type": "Element",
-        }
+        },
     )
     create_date: None | XmlDateTime = field(
         default=None,
@@ -48,7 +49,7 @@ class ProviderReservationStatus:
             "name": "CreateDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     modified_date: None | XmlDateTime = field(
         default=None,
@@ -56,7 +57,7 @@ class ProviderReservationStatus:
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -66,7 +67,7 @@ class ProviderReservationStatus:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -75,7 +76,7 @@ class ProviderReservationStatus:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     cancelled: None | bool = field(
         default=None,
@@ -83,5 +84,5 @@ class ProviderReservationStatus:
             "name": "Cancelled",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -11,11 +11,12 @@ class PredefinedLocationContainer:
     A container which may comprise the definition of a predefined itinerary, non
     ordered group of locations or single location.
     """
+
     predefined_location_container_extension: Optional[ExtensionType] = field(
         default=None,
         metadata={
             "name": "predefinedLocationContainerExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

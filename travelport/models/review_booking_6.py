@@ -45,6 +45,7 @@ class ReviewBooking6:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "ReviewBooking"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -54,7 +55,7 @@ class ReviewBooking6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     queue: None | int = field(
         default=None,
@@ -63,7 +64,7 @@ class ReviewBooking6:
             "type": "Attribute",
             "required": True,
             "max_inclusive": 99,
-        }
+        },
     )
     queue_category: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class ReviewBooking6:
             "name": "QueueCategory",
             "type": "Attribute",
             "max_length": 2,
-        }
+        },
     )
     date_time: None | XmlDateTime = field(
         default=None,
@@ -79,7 +80,7 @@ class ReviewBooking6:
             "name": "DateTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -88,7 +89,7 @@ class ReviewBooking6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -97,14 +98,14 @@ class ReviewBooking6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     remarks: None | str = field(
         default=None,
@@ -113,19 +114,19 @@ class ReviewBooking6:
             "type": "Attribute",
             "required": True,
             "max_length": 300,
-        }
+        },
     )
     el_stat: None | TypeElementStatus7 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

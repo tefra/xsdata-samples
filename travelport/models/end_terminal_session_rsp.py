@@ -10,5 +10,6 @@ class EndTerminalSessionRsp(BaseRsp4):
     """
     An empty response indicates success.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"

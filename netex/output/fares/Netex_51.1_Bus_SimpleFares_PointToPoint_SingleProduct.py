@@ -89,26 +89,26 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="range",
-                                version="any",
+                                id='range',
+                                version='any',
                                 from_date=XmlDateTime(2011, 1, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         FareFrameRef(
-                            value="REQUEST",
-                            ref="myfares:any"
+                            value='REQUEST',
+                            ref='myfares:any'
                         ),
                     ]
                 ),
@@ -117,12 +117,12 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple point to point fares"
+        value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="myfares:DTA@Line_1",
+                id='myfares:DTA@Line_1',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
@@ -133,60 +133,60 @@ obj = PublicationDelivery(
                         ]
                     ),
                 ],
-                version="1.0",
+                version='1.0',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="myfares",
-                            xmlns="myfares",
-                            xmlns_url="http://www.myfares,com/fares",
-                            description="Fare data"
+                            id='myfares',
+                            xmlns='myfares',
+                            xmlns_url='http://www.myfares,com/fares',
+                            description='Fare data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="myfares"
+                        ref='myfares'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="mybus:DTA@Line_1@network",
-                            version="1.0",
+                            id='mybus:DTA@Line_1@network',
+                            version='1.0',
                             name=MultilingualString(
-                                value="Stops for Line 1 Tariff"
+                                value='Stops for Line 1 Tariff'
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
-                                    ref="mybus"
+                                    ref='mybus'
                                 )
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ResourceFrameRef(
-                                        version="1.0",
-                                        ref="mybus:DTA@Common_Resources"
+                                        version='1.0',
+                                        ref='mybus:DTA@Common_Resources'
                                     ),
                                 ]
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:Line_1",
-                                        version="any",
+                                        id='mybus:Line_1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 1"
+                                            value='Line 1'
                                         ),
                                         authority_ref_or_operator_ref=OperatorRef(
-                                            version="any",
-                                            ref="mybus:DTA"
+                                            version='any',
+                                            ref='mybus:DTA'
                                         )
                                     ),
                                 ]
@@ -194,21 +194,21 @@ obj = PublicationDelivery(
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha &amp; Castle"
+                                            value='Alpha & Castle'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Alpha"
+                                            value='Alpha'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="ALPH"
+                                            value='ALPH'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -216,21 +216,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Street"
+                                            value='Bravo Street'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="BRAV"
+                                            value='BRAV'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -238,21 +238,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Crescent"
+                                            value='Charley Crescent'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="CHAS"
+                                            value='CHAS'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -263,121 +263,121 @@ obj = PublicationDelivery(
                             )
                         ),
                         FareFrame(
-                            id="myfares:DTA@Line_1@products",
-                            version="1.0",
+                            id='myfares:DTA@Line_1@products',
+                            version='1.0',
                             name=MultilingualString(
-                                value="Fare Products  for Line 1 "
+                                value='Fare Products  for Line 1 '
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ServiceFrameRef(
-                                        version="1.0",
-                                        ref="mybus:DTA@Line_1@network"
+                                        version='1.0',
+                                        ref='mybus:DTA@Line_1@network'
                                     ),
                                 ]
                             ),
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="myfares:PointToPoint",
-                                        version="1.0",
+                                        id='myfares:PointToPoint',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Point to pont tariff"
+                                            value='Point to pont tariff'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="mybus:DTA"
+                                            version='any',
+                                            ref='mybus:DTA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="ntx:v1.0",
-                                            ref="ntx:point_to_point"
+                                            version='ntx:v1.0',
+                                            ref='ntx:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="myfares:PointToPoint@access",
-                                                    version="1.0",
+                                                    id='myfares:PointToPoint@access',
+                                                    version='1.0',
                                                     choice_1=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
-                                                                version="1.0",
-                                                                ref="myfares:SSP_001+SSP_002"
+                                                                version='1.0',
+                                                                ref='myfares:SSP_001+SSP_002'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                version="1.0",
-                                                                ref="myfares:SSP_001+SSP_077"
+                                                                version='1.0',
+                                                                ref='myfares:SSP_001+SSP_077'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                version="1.0",
-                                                                ref="myfares:SSP_002+SSP_077"
+                                                                version='1.0',
+                                                                ref='myfares:SSP_002+SSP_077'
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="myfares:PointToPoint@access",
-                                                        version="1.0",
+                                                        id='myfares:PointToPoint@access',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:can_access"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:can_access'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             all_operators_ref_or_operator_ref=[
                                                                 OperatorRef(
-                                                                    version="any",
-                                                                    ref="mybus:DTA"
+                                                                    version='any',
+                                                                    ref='mybus:DTA'
                                                                 ),
                                                             ],
                                                             flexible_line_ref_or_line_ref=[
                                                                 LineRef(
-                                                                    version="any",
-                                                                    ref="mybus:Line_1"
+                                                                    version='any',
+                                                                    ref='mybus:Line_1'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="myfares:PointToPoint@conditions_of_travel",
-                                                    version="1.0",
+                                                    id='myfares:PointToPoint@conditions_of_travel',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Conditions of Travel "
+                                                        value='Conditions of Travel '
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="myfares:PointToPoint@conditions_of_travel",
-                                                        version="1.0",
+                                                        id='myfares:PointToPoint@conditions_of_travel',
+                                                        version='1.0',
                                                         name=MultilingualString(
-                                                            value="Conditions of travel"
+                                                            value='Conditions of travel'
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:condition_of_use"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:condition_of_use'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
-                                                                    id="myfares:PointToPoint@conditions_of_travel@trip",
-                                                                    version="1.0",
+                                                                    id='myfares:PointToPoint@conditions_of_travel@trip',
+                                                                    version='1.0',
                                                                     name=MultilingualString(
-                                                                        value="Single Trip"
+                                                                        value='Single Trip'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.SINGLE
                                                                 ),
                                                                 FrequencyOfUse(
-                                                                    id="myfares:PointToPoint@conditions_of_travel@frequency",
-                                                                    version="1.0",
+                                                                    id='myfares:PointToPoint@conditions_of_travel@frequency',
+                                                                    version='1.0',
                                                                     name=MultilingualString(
-                                                                        value="One trip no transfers"
+                                                                        value='One trip no transfers'
                                                                     ),
                                                                     frequency_of_use_type=FrequencyOfUseTypeEnumeration.SINGLE,
                                                                     maximal_frequency=1
                                                                 ),
                                                                 Interchanging(
-                                                                    id="myfares:PointToPoint@conditions_of_travel@interchanging",
-                                                                    version="1.0",
+                                                                    id='myfares:PointToPoint@conditions_of_travel@interchanging',
+                                                                    version='1.0',
                                                                     from_mode=VehicleModeEnumeration.BUS,
                                                                     to_mode=VehicleModeEnumeration.BUS,
                                                                     maximum_number_of_interchanges=0,
@@ -392,70 +392,70 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElement(
-                                                    id="myfares:SSP_001+SSP_002",
-                                                    version="1.0",
+                                                    id='myfares:SSP_001+SSP_002',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Alpha to Bravo"
+                                                        value='Alpha to Bravo'
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     choice_1=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
                                                         distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
-                                                                version="1.0",
-                                                                ref="myfares:SSP_001+SSP_002"
+                                                                version='1.0',
+                                                                ref='myfares:SSP_001+SSP_002'
                                                             ),
                                                         ]
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="myfares:SSP_001+SSP_077",
-                                                    version="1.0",
+                                                    id='myfares:SSP_001+SSP_077',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Alpha to Charley"
+                                                        value='Alpha to Charley'
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     choice_1=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
                                                         distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
-                                                                version="1.0",
-                                                                ref="myfares:SSP_001+SSP_077"
+                                                                version='1.0',
+                                                                ref='myfares:SSP_001+SSP_077'
                                                             ),
                                                         ]
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="myfares:SSP_002+SSP_077",
-                                                    version="1.0",
+                                                    id='myfares:SSP_002+SSP_077',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Bravo to Charley"
+                                                        value='Bravo to Charley'
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     choice_1=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
                                                         distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
-                                                                version="1.0",
-                                                                ref="myfares:SSP_002+SSP_077"
+                                                                version='1.0',
+                                                                ref='myfares:SSP_002+SSP_077'
                                                             ),
                                                         ]
                                                     )
@@ -465,8 +465,8 @@ obj = PublicationDelivery(
                                         price_groups=PriceGroupsRelStructure(
                                             price_group_ref_or_price_group=[
                                                 PriceGroupRef(
-                                                    version="1.0",
-                                                    ref="myfares:Line_1"
+                                                    version='1.0',
+                                                    ref='myfares:Line_1'
                                                 ),
                                             ]
                                         )
@@ -476,36 +476,36 @@ obj = PublicationDelivery(
                             fare_products=FareProductsInFrameRelStructure(
                                 choice=[
                                     PreassignedFareProduct(
-                                        id="myfares:Single_trip",
-                                        version="1.0",
+                                        id='myfares:Single_trip',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Single trip"
+                                            value='Single trip'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
-                                            version="ntx:v1.0",
-                                            ref="ntx:trip"
+                                            version='ntx:v1.0',
+                                            ref='ntx:trip'
                                         ),
                                         authority_ref_or_operator_ref=OperatorRef(
-                                            version="any",
-                                            ref="mybus:DTA"
+                                            version='any',
+                                            ref='mybus:DTA'
                                         ),
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElement(
-                                                    id="myfares:Single_trip@travel",
-                                                    version="1.0",
+                                                    id='myfares:Single_trip@travel',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Single trip"
+                                                        value='Single trip'
                                                     ),
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="myfares:PointToPoint@access"
+                                                                version='1.0',
+                                                                ref='myfares:PointToPoint@access'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="myfares:PointToPoint@conditions_of_travel"
+                                                                version='1.0',
+                                                                ref='myfares:PointToPoint@conditions_of_travel'
                                                             ),
                                                         ]
                                                     )
@@ -515,17 +515,17 @@ obj = PublicationDelivery(
                                         access_rights_in_product=AccessRightsInProductRelStructure(
                                             access_right_in_product_ref_or_access_right_in_product=[
                                                 AccessRightInProduct(
-                                                    id="myfares:Single_trip@travel",
-                                                    version="1.0",
+                                                    id='myfares:Single_trip@travel',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="First ride"
+                                                        value='First ride'
                                                     ),
                                                     is_first_in_sequence=True,
                                                     is_last_in_sequence=True,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
-                                                        version="1.0",
-                                                        ref="myfares:Single_trip@travel"
+                                                        version='1.0',
+                                                        ref='myfares:Single_trip@travel'
                                                     )
                                                 ),
                                             ]
@@ -536,23 +536,23 @@ obj = PublicationDelivery(
                             sales_offer_packages=SalesOfferPackagesInFrameRelStructure(
                                 sales_offer_package=[
                                     SalesOfferPackage(
-                                        id="myfares:Single_trip-SOP@p-ticket",
-                                        version="1.0",
+                                        id='myfares:Single_trip-SOP@p-ticket',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Single, Paper Ticket "
+                                            value='Single, Paper Ticket '
                                         ),
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="myfares:Single_trip-SOP@p-ticket",
-                                                    version="1.0",
+                                                    id='myfares:Single_trip-SOP@p-ticket',
+                                                    version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="any",
-                                                        ref="myfares:paper_ticket"
+                                                        version='any',
+                                                        ref='myfares:paper_ticket'
                                                     ),
                                                     choice=FareProductRef(
-                                                        version="1.0",
-                                                        ref="myfares:Single_trip"
+                                                        version='1.0',
+                                                        ref='myfares:Single_trip'
                                                     ),
                                                     order=1
                                                 ),
@@ -563,54 +563,54 @@ obj = PublicationDelivery(
                             )
                         ),
                         FareFrame(
-                            id="myfares:DTA@Line_1@prices",
-                            version="1.0",
+                            id='myfares:DTA@Line_1@prices',
+                            version='1.0',
                             name=MultilingualString(
-                                value="Prices for Line 1 "
+                                value='Prices for Line 1 '
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
-                                default_currency="EUR"
+                                default_currency='EUR'
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     FareFrameRef(
-                                        version="1.0",
-                                        ref="myfares:DTA@Line_1@products"
+                                        version='1.0',
+                                        ref='myfares:DTA@Line_1@products'
                                     ),
                                 ]
                             ),
                             price_groups=FarePricesInFrameRelStructure(
                                 price_group=[
                                     PriceGroup(
-                                        id="myfares:Line_1",
-                                        version="1.0",
+                                        id='myfares:Line_1',
+                                        version='1.0',
                                         members=FarePricesRelStructure(
                                             choice=[
                                                 DistanceMatrixElementPrice(
-                                                    id="myfares:SSP_001+SSP_002",
-                                                    version="1.0",
-                                                    amount=Decimal("1.00"),
+                                                    id='myfares:SSP_001+SSP_002',
+                                                    version='1.0',
+                                                    amount=Decimal('1.00'),
                                                     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
-                                                        version="1.0",
-                                                        ref="myfares:SSP_001+SSP_002"
+                                                        version='1.0',
+                                                        ref='myfares:SSP_001+SSP_002'
                                                     )
                                                 ),
                                                 DistanceMatrixElementPrice(
-                                                    id="myfares:SSP_001+SSP_077",
-                                                    version="1.0",
-                                                    amount=Decimal("3.00"),
+                                                    id='myfares:SSP_001+SSP_077',
+                                                    version='1.0',
+                                                    amount=Decimal('3.00'),
                                                     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
-                                                        version="1.0",
-                                                        ref="myfares:SSP_001+SSP_077"
+                                                        version='1.0',
+                                                        ref='myfares:SSP_001+SSP_077'
                                                     )
                                                 ),
                                                 DistanceMatrixElementPrice(
-                                                    id="myfares:SSP_002+SSP_077",
-                                                    version="1.0",
-                                                    amount=Decimal("2.00"),
+                                                    id='myfares:SSP_002+SSP_077',
+                                                    version='1.0',
+                                                    amount=Decimal('2.00'),
                                                     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
-                                                        version="1.0",
-                                                        ref="myfares:SSP_002+SSP_077"
+                                                        version='1.0',
+                                                        ref='myfares:SSP_002+SSP_077'
                                                     )
                                                 ),
                                             ]
@@ -620,227 +620,227 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="mybus:DTA@Common_Resources",
-                            version="1.0",
+                            id='mybus:DTA@Common_Resources',
+                            version='1.0',
                             name=MultilingualString(
-                                value="Common resources"
+                                value='Common resources'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="ntx",
-                                        xmlns="ntx",
-                                        xmlns_url="http://netex.org.uk/",
-                                        description="Netex built in value"
+                                        id='ntx',
+                                        xmlns='ntx',
+                                        xmlns_url='http://netex.org.uk/',
+                                        description='Netex built in value'
                                     ),
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
                                 choice=[
                                     ValueSet(
-                                        id="ntx:Types_of_Tariff",
-                                        version="ntx:v1.0",
+                                        id='ntx:Types_of_Tariff',
+                                        version='ntx:v1.0',
                                         name=MultilingualString(
-                                            value="Types of Tariff"
+                                            value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfTariff(
-                                                    id="ntx:Distance_kilometers",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:Distance_kilometers',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Kilometer Distance Kilometers"
+                                                        value='Kilometer Distance Kilometers'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:flat",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:flat',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Flat"
+                                                        value='Flat'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:point_to_point",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:point_to_point',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Point to point"
+                                                        value='Point to point'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:zone_to_zone",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:zone_to_zone',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Zone to Zone"
+                                                        value='Zone to Zone'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:zonal",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:zonal',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Zonal"
+                                                        value='Zonal'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:unit_distance",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:unit_distance',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Unit distance (count of stops, sections, zones)"
+                                                        value='Unit distance (count of stops, sections, zones)'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:section",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:section',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Section"
+                                                        value='Section'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:banded",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:banded',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Section"
+                                                        value='Section'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:stored_value",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:stored_value',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Stored value"
+                                                        value='Stored value'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:discount",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:discount',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Discount value"
+                                                        value='Discount value'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:multitrip",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:multitrip',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Multitrip carnet"
+                                                        value='Multitrip carnet'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:identity_card",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:identity_card',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="SIdentity"
+                                                        value='SIdentity'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfTariff"
+                                        class_of_values='TypeOfTariff'
                                     ),
                                     ValueSet(
-                                        id="ntx:Types_of_FareProduct",
-                                        version="ntx:v1.0",
+                                        id='ntx:Types_of_FareProduct',
+                                        version='ntx:v1.0',
                                         name=MultilingualString(
-                                            value="Types of Fare Product"
+                                            value='Types of Fare Product'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfFareProduct(
-                                                    id="ntx:trip",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:trip',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Trip product"
+                                                        value='Trip product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:multi_trip",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:multi_trip',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Multitrip / carnet  product"
+                                                        value='Multitrip / carnet  product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:period_pass",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:period_pass',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Peroid pass product"
+                                                        value='Peroid pass product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:day_pass",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:day_pass',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Day pass product"
+                                                        value='Day pass product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:discount_card",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:discount_card',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Discount  product"
+                                                        value='Discount  product'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfFareProduct"
+                                        class_of_values='TypeOfFareProduct'
                                     ),
                                     ValueSet(
-                                        id="myfares:Types_of_TravelDocument",
-                                        version="any",
+                                        id='myfares:Types_of_TravelDocument',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of concession"
+                                            value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfTravelDocument(
-                                                    id="myfares:paper_ticket",
-                                                    version="any",
+                                                    id='myfares:paper_ticket',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Paper ticket"
+                                                        value='Paper ticket'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfTravelDocument"
+                                        class_of_values='TypeOfTravelDocument'
                                     ),
                                     ValueSet(
-                                        id="ntx:Types_of_AccessRightAssignment",
-                                        version="ntx:v1.0",
+                                        id='ntx:Types_of_AccessRightAssignment',
+                                        version='ntx:v1.0',
                                         name=MultilingualString(
-                                            value="Types of Access Right Assignment"
+                                            value='Types of Access Right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:eligible",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:eligible',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Eligible for a product or discount"
+                                                        value='Eligible for a product or discount'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:can_access",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:can_access',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Grants access rights to use or travel on"
+                                                        value='Grants access rights to use or travel on'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:condition_of_use",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:condition_of_use',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Defines a condition or restriction on use"
+                                                        value='Defines a condition or restriction on use'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfAccessRightAssignment"
+                                        class_of_values='TypeOfAccessRightAssignment'
                                     ),
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="mybus:DTA",
-                                        version="any",
+                                        id='mybus:DTA',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Demo Transit Authority"
+                                            value='Demo Transit Authority'
                                         )
                                     ),
                                 ]

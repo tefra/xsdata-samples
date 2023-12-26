@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
 from .derived_view_structure import DerivedViewStructure
@@ -19,7 +19,17 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Zone_DerivedViewStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            StopAreaRef,
+            AccessZoneRef,
+            TransportAdministrativeZoneRef,
+            AdministrativeZoneRef,
+            FareZoneRef,
+            TariffZoneRef,
+            ZoneRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -60,7 +70,7 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -68,7 +78,7 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_zone_ref: Optional[TypeOfZoneRef] = field(
         default=None,
@@ -76,5 +86,5 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
             "name": "TypeOfZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

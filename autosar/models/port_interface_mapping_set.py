@@ -18,7 +18,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .short_name_fragment import ShortNameFragment
 from .string import String
 from .trigger_interface_mapping import TriggerInterfaceMapping
-from .variable_and_parameter_interface_mapping import VariableAndParameterInterfaceMapping
+from .variable_and_parameter_interface_mapping import (
+    VariableAndParameterInterfaceMapping,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -100,6 +102,7 @@ class PortInterfaceMappingSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PORT-INTERFACE-MAPPING-SET"
 
@@ -110,15 +113,17 @@ class PortInterfaceMappingSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PortInterfaceMappingSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PortInterfaceMappingSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -126,7 +131,7 @@ class PortInterfaceMappingSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -134,7 +139,7 @@ class PortInterfaceMappingSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -142,7 +147,7 @@ class PortInterfaceMappingSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -150,7 +155,7 @@ class PortInterfaceMappingSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -158,7 +163,7 @@ class PortInterfaceMappingSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["PortInterfaceMappingSet.Annotations"] = field(
         default=None,
@@ -166,7 +171,7 @@ class PortInterfaceMappingSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -174,15 +179,17 @@ class PortInterfaceMappingSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["PortInterfaceMappingSet.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "PortInterfaceMappingSet.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -190,22 +197,24 @@ class PortInterfaceMappingSet:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_interface_mappings: Optional["PortInterfaceMappingSet.PortInterfaceMappings"] = field(
+    port_interface_mappings: Optional[
+        "PortInterfaceMappingSet.PortInterfaceMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -213,14 +222,14 @@ class PortInterfaceMappingSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -231,7 +240,7 @@ class PortInterfaceMappingSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -242,7 +251,7 @@ class PortInterfaceMappingSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -253,15 +262,17 @@ class PortInterfaceMappingSet:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -269,18 +280,20 @@ class PortInterfaceMappingSet:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PortInterfaceMappings:
-        client_server_interface_mapping: List[ClientServerInterfaceMapping] = field(
+        client_server_interface_mapping: List[
+            ClientServerInterfaceMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-INTERFACE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         mode_interface_mapping: List[ModeInterfaceMapping] = field(
             default_factory=list,
@@ -288,7 +301,7 @@ class PortInterfaceMappingSet:
                 "name": "MODE-INTERFACE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         trigger_interface_mapping: List[TriggerInterfaceMapping] = field(
             default_factory=list,
@@ -296,13 +309,15 @@ class PortInterfaceMappingSet:
                 "name": "TRIGGER-INTERFACE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        variable_and_parameter_interface_mapping: List[VariableAndParameterInterfaceMapping] = field(
+        variable_and_parameter_interface_mapping: List[
+            VariableAndParameterInterfaceMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "VARIABLE-AND-PARAMETER-INTERFACE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

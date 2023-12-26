@@ -14,18 +14,18 @@ class ReferralType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     referrer: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | LinkTypeEnum = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )

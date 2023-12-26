@@ -22,6 +22,7 @@ class AirExchangeBundle:
     penalty
         Only used within an AirExchangeQuoteRsp
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -32,7 +33,7 @@ class AirExchangeBundle:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
@@ -40,7 +41,7 @@ class AirExchangeBundle:
             "name": "AirPricingInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TaxInfo] = field(
         default_factory=list,
@@ -48,7 +49,7 @@ class AirExchangeBundle:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     penalty: list[Penalty1] = field(
         default_factory=list,
@@ -57,5 +58,5 @@ class AirExchangeBundle:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

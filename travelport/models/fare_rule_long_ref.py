@@ -9,6 +9,7 @@ class FareRuleLongRef:
     """
     A reference to an Long Text Rule in a Shared List.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class FareRuleLongRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -9,6 +9,7 @@ class TypeSpecificFlightNumber:
     """
     Specify exact flight number.
     """
+
     class Meta:
         name = "typeSpecificFlightNumber"
 
@@ -19,5 +20,5 @@ class TypeSpecificFlightNumber:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )

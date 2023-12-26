@@ -35,6 +35,7 @@ class ExecutableEntityActivationReason:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "EXECUTABLE-ENTITY-ACTIVATION-REASON"
 
@@ -45,15 +46,17 @@ class ExecutableEntityActivationReason:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ExecutableEntityActivationReason.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ExecutableEntityActivationReason.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol: Optional[CIdentifier] = field(
         default=None,
@@ -61,7 +64,7 @@ class ExecutableEntityActivationReason:
             "name": "SYMBOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bit_position: Optional[PositiveInteger] = field(
         default=None,
@@ -69,14 +72,14 @@ class ExecutableEntityActivationReason:
             "name": "BIT-POSITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -84,7 +87,7 @@ class ExecutableEntityActivationReason:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -95,5 +98,5 @@ class ExecutableEntityActivationReason:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

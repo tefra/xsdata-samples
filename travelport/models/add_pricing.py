@@ -11,6 +11,7 @@ class AddPricing:
     """
     Container for Pricing to be added.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,7 +22,7 @@ class AddPricing:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 100,
-        }
+        },
     )
     auto_pricing_info: list[AutoPricingInfo] = field(
         default_factory=list,
@@ -30,5 +31,5 @@ class AddPricing:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 100,
-        }
+        },
     )

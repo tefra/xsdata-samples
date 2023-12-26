@@ -9,6 +9,7 @@ class TypePosition(Enum):
 
     Possible values are – Left, Right, Center, Left Center, Right Center
     """
+
     LEFT = "Left"
     RIGHT = "Right"
     CENTER = "Center"

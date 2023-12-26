@@ -12,6 +12,7 @@ class DiagnosticCompareTypeEnumSimple(Enum):
     :cvar IS_LESS_THAN: less than
     :cvar IS_NOT_EQUAL: not equal
     """
+
     IS_EQUAL = "IS-EQUAL"
     IS_GREATER_OR_EQUAL = "IS-GREATER-OR-EQUAL"
     IS_GREATER_THAN = "IS-GREATER-THAN"

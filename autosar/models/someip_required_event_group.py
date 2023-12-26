@@ -4,7 +4,9 @@ from .identifier import Identifier
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .someip_event_group_subtypes_enum import SomeipEventGroupSubtypesEnum
-from .someip_sd_client_event_group_timing_config_subtypes_enum import SomeipSdClientEventGroupTimingConfigSubtypesEnum
+from .someip_sd_client_event_group_timing_config_subtypes_enum import (
+    SomeipSdClientEventGroupTimingConfigSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -36,6 +38,7 @@ class SomeipRequiredEventGroup:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-REQUIRED-EVENT-GROUP"
 
@@ -46,38 +49,44 @@ class SomeipRequiredEventGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SomeipRequiredEventGroup.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SomeipRequiredEventGroup.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_group_ref: Optional["SomeipRequiredEventGroup.EventGroupRef"] = field(
+    event_group_ref: Optional[
+        "SomeipRequiredEventGroup.EventGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sd_client_event_group_timing_config_ref: Optional["SomeipRequiredEventGroup.SdClientEventGroupTimingConfigRef"] = field(
+    sd_client_event_group_timing_config_ref: Optional[
+        "SomeipRequiredEventGroup.SdClientEventGroupTimingConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-EVENT-GROUP-TIMING-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -85,7 +94,7 @@ class SomeipRequiredEventGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -96,7 +105,7 @@ class SomeipRequiredEventGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -107,16 +116,18 @@ class SomeipRequiredEventGroup:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class SdClientEventGroupTimingConfigRef(Ref):
-        dest: Optional[SomeipSdClientEventGroupTimingConfigSubtypesEnum] = field(
+        dest: Optional[
+            SomeipSdClientEventGroupTimingConfigSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

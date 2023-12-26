@@ -16,21 +16,21 @@ class KeyFigureData:
         metadata={
             "name": "KeyFigurePurposeCoded",
             "type": "Element",
-        }
+        },
     )
     key_figure_purpose_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "KeyFigurePurposeCodedOther",
             "type": "Element",
-        }
+        },
     )
     characteristic_combination_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationID",
             "type": "Element",
-        }
+        },
     )
     key_figure_information: KeyFigureInformation = field(
         metadata={
@@ -51,7 +51,7 @@ class KeyFigureData:
         metadata={
             "name": "KeyFigureNotes",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -85,25 +85,27 @@ class ListOfKeyFigureData:
             "name": "KeyFigureData",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class TimeSeriesRequestDetail:
-    list_of_characteristic_combinations: Optional[ListOfCharacteristicCombinations] = field(
+    list_of_characteristic_combinations: Optional[
+        ListOfCharacteristicCombinations
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfCharacteristicCombinations",
             "type": "Element",
-        }
+        },
     )
     list_of_key_figure_data: Optional[ListOfKeyFigureData] = field(
         default=None,
         metadata={
             "name": "ListOfKeyFigureData",
             "type": "Element",
-        }
+        },
     )
 
 

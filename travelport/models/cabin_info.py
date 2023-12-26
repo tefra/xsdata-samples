@@ -30,6 +30,7 @@ class CabinInfo:
         Whether user has specified his smoking preference.Can be of the
         following values : true' - Smoking' 'false' - Non-smoking
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -40,7 +41,7 @@ class CabinInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class CabinInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -57,7 +58,7 @@ class CabinInfo:
             "name": "Location",
             "type": "Attribute",
             "length": 1,
-        }
+        },
     )
     relative_location: None | str = field(
         default=None,
@@ -66,7 +67,7 @@ class CabinInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 12,
-        }
+        },
     )
     deck_name: None | str = field(
         default=None,
@@ -75,7 +76,7 @@ class CabinInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )
     bed_configuration: None | str = field(
         default=None,
@@ -84,12 +85,12 @@ class CabinInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     smoking_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "SmokingIndicator",
             "type": "Attribute",
-        }
+        },
     )

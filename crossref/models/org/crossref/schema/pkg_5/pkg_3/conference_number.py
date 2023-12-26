@@ -10,6 +10,7 @@ class ConferenceNumber:
     conference_number should include only the number of the conference
     without any extra text
     """
+
     class Meta:
         name = "conference_number"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class ConferenceNumber:
         metadata={
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeFareSearchOption(Enum):
     """
     Fare Search option indicator.
     """
+
     LEAVE = "Leave"
     RETURN = "Return"
     SEASONAL = "Seasonal"

@@ -9,7 +9,9 @@ from travelport.models.hotel_rate_by_date import HotelRateByDate
 from travelport.models.rate_match_indicator import RateMatchIndicator
 from travelport.models.room_view import RoomView
 from travelport.models.tax_details import TaxDetails
-from travelport.models.type_hotel_rate_description import TypeHotelRateDescription
+from travelport.models.type_hotel_rate_description import (
+    TypeHotelRateDescription,
+)
 from travelport.models.type_policy_codes_list_1 import TypePolicyCodesList1
 from travelport.models.type_trinary import TypeTrinary
 
@@ -102,6 +104,7 @@ class HotelRateDetail:
         When true, total amounts includes additional fees or charges."
         Enumerated values are true, false, and unknown
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -110,7 +113,7 @@ class HotelRateDetail:
         metadata={
             "name": "PolicyCodesList",
             "type": "Element",
-        }
+        },
     )
     room_rate_description: list[TypeHotelRateDescription] = field(
         default_factory=list,
@@ -118,7 +121,7 @@ class HotelRateDetail:
             "name": "RoomRateDescription",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rate_by_date: list[HotelRateByDate] = field(
         default_factory=list,
@@ -126,7 +129,7 @@ class HotelRateDetail:
             "name": "HotelRateByDate",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     corporate_discount_id: list[CorporateDiscountId1] = field(
         default_factory=list,
@@ -135,7 +138,7 @@ class HotelRateDetail:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     accepted_payment: list[AcceptedPayment] = field(
         default_factory=list,
@@ -143,14 +146,14 @@ class HotelRateDetail:
             "name": "AcceptedPayment",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     commission: None | Commission2 = field(
         default=None,
         metadata={
             "name": "Commission",
             "type": "Element",
-        }
+        },
     )
     rate_match_indicator: list[RateMatchIndicator] = field(
         default_factory=list,
@@ -158,56 +161,56 @@ class HotelRateDetail:
             "name": "RateMatchIndicator",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tax_details: None | TaxDetails = field(
         default=None,
         metadata={
             "name": "TaxDetails",
             "type": "Element",
-        }
+        },
     )
     cancel_info: None | CancelInfo = field(
         default=None,
         metadata={
             "name": "CancelInfo",
             "type": "Element",
-        }
+        },
     )
     guarantee_info: None | GuaranteeInfo = field(
         default=None,
         metadata={
             "name": "GuaranteeInfo",
             "type": "Element",
-        }
+        },
     )
     supplemental_rate_info: None | str = field(
         default=None,
         metadata={
             "name": "SupplementalRateInfo",
             "type": "Element",
-        }
+        },
     )
     room_capacity: None | HotelRateDetail.RoomCapacity = field(
         default=None,
         metadata={
             "name": "RoomCapacity",
             "type": "Element",
-        }
+        },
     )
     extra_charges: None | HotelRateDetail.ExtraCharges = field(
         default=None,
         metadata={
             "name": "ExtraCharges",
             "type": "Element",
-        }
+        },
     )
     inclusions: None | HotelRateDetail.Inclusions = field(
         default=None,
         metadata={
             "name": "Inclusions",
             "type": "Element",
-        }
+        },
     )
     rate_plan_type: None | str = field(
         default=None,
@@ -215,91 +218,91 @@ class HotelRateDetail:
             "name": "RatePlanType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     base: None | str = field(
         default=None,
         metadata={
             "name": "Base",
             "type": "Attribute",
-        }
+        },
     )
     tax: None | str = field(
         default=None,
         metadata={
             "name": "Tax",
             "type": "Attribute",
-        }
+        },
     )
     total: None | str = field(
         default=None,
         metadata={
             "name": "Total",
             "type": "Attribute",
-        }
+        },
     )
     surcharge: None | str = field(
         default=None,
         metadata={
             "name": "Surcharge",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBase",
             "type": "Attribute",
-        }
+        },
     )
     approximate_tax: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTax",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotal",
             "type": "Attribute",
-        }
+        },
     )
     approximate_surcharge: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateSurcharge",
             "type": "Attribute",
-        }
+        },
     )
     rate_guaranteed: None | bool = field(
         default=None,
         metadata={
             "name": "RateGuaranteed",
             "type": "Attribute",
-        }
+        },
     )
     approximate_rate_guaranteed: None | bool = field(
         default=None,
         metadata={
             "name": "ApproximateRateGuaranteed",
             "type": "Attribute",
-        }
+        },
     )
     rate_category: None | int = field(
         default=None,
         metadata={
             "name": "RateCategory",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     rate_supplier: None | str = field(
         default=None,
@@ -307,42 +310,42 @@ class HotelRateDetail:
             "name": "RateSupplier",
             "type": "Attribute",
             "max_length": 64,
-        }
+        },
     )
     bookable_quantity: None | int = field(
         default=None,
         metadata={
             "name": "BookableQuantity",
             "type": "Attribute",
-        }
+        },
     )
     rate_offer_id: None | str = field(
         default=None,
         metadata={
             "name": "RateOfferId",
             "type": "Attribute",
-        }
+        },
     )
     in_policy: None | bool = field(
         default=None,
         metadata={
             "name": "InPolicy",
             "type": "Attribute",
-        }
+        },
     )
     rate_change_indicator: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "RateChangeIndicator",
             "type": "Attribute",
-        }
+        },
     )
     extra_fees_included: None | TypeTrinary = field(
         default=None,
         metadata={
             "name": "ExtraFeesIncluded",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -355,20 +358,21 @@ class HotelRateDetail:
         is_package
             If true, the rooms are offered as a package by the aggregator.
         """
+
         capacity: list[int] = field(
             default_factory=list,
             metadata={
                 "name": "Capacity",
                 "type": "Element",
                 "max_occurs": 99,
-            }
+            },
         )
         is_package: None | bool = field(
             default=None,
             metadata={
                 "name": "IsPackage",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -389,40 +393,41 @@ class HotelRateDetail:
             Additional charge for an extra rollaway bed provided for a child
             guest.
         """
+
         extra_adult_amount: None | str = field(
             default=None,
             metadata={
                 "name": "ExtraAdultAmount",
                 "type": "Attribute",
-            }
+            },
         )
         extra_child_amount: None | str = field(
             default=None,
             metadata={
                 "name": "ExtraChildAmount",
                 "type": "Attribute",
-            }
+            },
         )
         crib_amount: None | str = field(
             default=None,
             metadata={
                 "name": "CribAmount",
                 "type": "Attribute",
-            }
+            },
         )
         adult_rollaway_charge: None | str = field(
             default=None,
             metadata={
                 "name": "AdultRollawayCharge",
                 "type": "Attribute",
-            }
+            },
         )
         child_rollaway_charge: None | str = field(
             default=None,
             metadata={
                 "name": "ChildRollawayCharge",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -441,34 +446,35 @@ class HotelRateDetail:
             true = Smoking false = NonSmoking unknown = Information is not
             returned by the hotel supplier (chain or property).
         """
+
         bed_types: list[HotelRateDetail.Inclusions.BedTypes] = field(
             default_factory=list,
             metadata={
                 "name": "BedTypes",
                 "type": "Element",
                 "max_occurs": 99,
-            }
+            },
         )
         meal_plans: None | HotelRateDetail.Inclusions.MealPlans = field(
             default=None,
             metadata={
                 "name": "MealPlans",
                 "type": "Element",
-            }
+            },
         )
         room_view: None | RoomView = field(
             default=None,
             metadata={
                 "name": "RoomView",
                 "type": "Element",
-            }
+            },
         )
         smoking_room_indicator: None | TypeTrinary = field(
             default=None,
             metadata={
                 "name": "SmokingRoomIndicator",
                 "type": "Attribute",
-            }
+            },
         )
 
         @dataclass
@@ -483,19 +489,20 @@ class HotelRateDetail:
             quantity
                 Bed Quantity.
             """
+
             code: None | int = field(
                 default=None,
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                }
+                },
             )
             quantity: None | int = field(
                 default=None,
                 metadata={
                     "name": "Quantity",
                     "type": "Attribute",
-                }
+                },
             )
 
         @dataclass
@@ -521,34 +528,37 @@ class HotelRateDetail:
                 included unknown = Information is not returned by the hotel
                 supplier (chain or property).
             """
-            meal_plan: list[HotelRateDetail.Inclusions.MealPlans.MealPlan] = field(
+
+            meal_plan: list[
+                HotelRateDetail.Inclusions.MealPlans.MealPlan
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "MealPlan",
                     "type": "Element",
                     "max_occurs": 99,
-                }
+                },
             )
             breakfast: None | TypeTrinary = field(
                 default=None,
                 metadata={
                     "name": "Breakfast",
                     "type": "Attribute",
-                }
+                },
             )
             lunch: None | TypeTrinary = field(
                 default=None,
                 metadata={
                     "name": "Lunch",
                     "type": "Attribute",
-                }
+                },
             )
             dinner: None | TypeTrinary = field(
                 default=None,
                 metadata={
                     "name": "Dinner",
                     "type": "Attribute",
-                }
+                },
             )
 
             @dataclass
@@ -561,10 +571,11 @@ class HotelRateDetail:
                     Type (MPT). Encode/decode data in Util
                     ReferenceDataRetrieveReq TypeCode=“HotelMealPlans”.
                 """
+
                 code: None | int = field(
                     default=None,
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
-                    }
+                    },
                 )

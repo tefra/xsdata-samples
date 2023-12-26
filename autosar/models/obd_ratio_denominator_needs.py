@@ -8,7 +8,9 @@ from .annotation import (
 from .category_string import CategoryString
 from .diag_requirement_id_string import DiagRequirementIdString
 from .diagnostic_audience_enum import DiagnosticAudienceEnum
-from .diagnostic_denominator_condition_enum import DiagnosticDenominatorConditionEnum
+from .diagnostic_denominator_condition_enum import (
+    DiagnosticDenominatorConditionEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -88,6 +90,7 @@ class ObdRatioDenominatorNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "OBD-RATIO-DENOMINATOR-NEEDS"
 
@@ -98,15 +101,17 @@ class ObdRatioDenominatorNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ObdRatioDenominatorNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ObdRatioDenominatorNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +119,7 @@ class ObdRatioDenominatorNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +127,7 @@ class ObdRatioDenominatorNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +135,7 @@ class ObdRatioDenominatorNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +143,7 @@ class ObdRatioDenominatorNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,7 +151,7 @@ class ObdRatioDenominatorNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ObdRatioDenominatorNeeds.Annotations"] = field(
         default=None,
@@ -154,7 +159,7 @@ class ObdRatioDenominatorNeeds:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     audiences: Optional["ObdRatioDenominatorNeeds.Audiences"] = field(
         default=None,
@@ -162,7 +167,7 @@ class ObdRatioDenominatorNeeds:
             "name": "AUDIENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diag_requirement: Optional[DiagRequirementIdString] = field(
         default=None,
@@ -170,7 +175,7 @@ class ObdRatioDenominatorNeeds:
             "name": "DIAG-REQUIREMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_access_level: Optional[PositiveInteger] = field(
         default=None,
@@ -178,22 +183,24 @@ class ObdRatioDenominatorNeeds:
             "name": "SECURITY-ACCESS-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    denominator_condition: Optional[DiagnosticDenominatorConditionEnum] = field(
+    denominator_condition: Optional[
+        DiagnosticDenominatorConditionEnum
+    ] = field(
         default=None,
         metadata={
             "name": "DENOMINATOR-CONDITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -201,14 +208,14 @@ class ObdRatioDenominatorNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -219,7 +226,7 @@ class ObdRatioDenominatorNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -230,7 +237,7 @@ class ObdRatioDenominatorNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,11 +248,12 @@ class ObdRatioDenominatorNeeds:
             documentation but also subsequent audience specific
             implementation.
         """
+
         audience: List[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

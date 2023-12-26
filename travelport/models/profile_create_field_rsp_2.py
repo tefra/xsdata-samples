@@ -19,6 +19,7 @@ class ProfileCreateFieldRsp2(BaseRsp5):
     field_group
         Defines a field group.
     """
+
     class Meta:
         name = "ProfileCreateFieldRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -29,7 +30,7 @@ class ProfileCreateFieldRsp2(BaseRsp5):
             "name": "Field",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_group: list[FieldGroup2] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class ProfileCreateFieldRsp2(BaseRsp5):
             "name": "FieldGroup",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

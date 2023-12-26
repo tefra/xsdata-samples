@@ -12,13 +12,14 @@ class TemperatureInformation(WeatherData):
     """
     Measurements of atmospheric temperature.
     """
+
     temperature: Optional[Temperature] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     temperature_information_extension: Optional[ExtensionType] = field(
         default=None,
@@ -26,5 +27,5 @@ class TemperatureInformation(WeatherData):
             "name": "temperatureInformationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

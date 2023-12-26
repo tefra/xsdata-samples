@@ -15,6 +15,7 @@ class NextResultReference3:
     provider_code
         The code of the Provider (e.g 1G,1S)
     """
+
     class Meta:
         name = "NextResultReference"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -25,7 +26,7 @@ class NextResultReference3:
             "required": True,
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class NextResultReference3:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

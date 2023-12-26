@@ -12,6 +12,7 @@ class RoomView:
     code
         OTA code represents different hotel room views.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -20,5 +21,5 @@ class RoomView:
         metadata={
             "name": "Code",
             "type": "Attribute",
-        }
+        },
     )

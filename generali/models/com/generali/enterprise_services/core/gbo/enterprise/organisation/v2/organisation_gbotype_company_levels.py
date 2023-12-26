@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
@@ -16,5 +18,5 @@ class OrganisationGbotypeCompanyLevels:
             "name": "CompanyLevel",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )

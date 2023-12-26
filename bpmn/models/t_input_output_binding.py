@@ -17,7 +17,7 @@ class TInputOutputBinding(TBaseElement):
             "name": "operationRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     input_data_ref: Optional[str] = field(
         default=None,
@@ -25,7 +25,7 @@ class TInputOutputBinding(TBaseElement):
             "name": "inputDataRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     output_data_ref: Optional[str] = field(
         default=None,
@@ -33,5 +33,5 @@ class TInputOutputBinding(TBaseElement):
             "name": "outputDataRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

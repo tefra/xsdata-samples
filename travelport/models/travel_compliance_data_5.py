@@ -42,6 +42,7 @@ class TravelComplianceData5:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "TravelComplianceData"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -52,15 +53,17 @@ class TravelComplianceData5:
             "name": "PolicyCompliance",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
-    contract_compliance: list[TravelComplianceData5.ContractCompliance] = field(
+    contract_compliance: list[
+        TravelComplianceData5.ContractCompliance
+    ] = field(
         default_factory=list,
         metadata={
             "name": "ContractCompliance",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     preferred_supplier: list[TravelComplianceData5.PreferredSupplier] = field(
         default_factory=list,
@@ -68,35 +71,35 @@ class TravelComplianceData5:
             "name": "PreferredSupplier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     air_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     passive_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     rail_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     reservation_locator_ref: None | str = field(
         default=None,
@@ -105,21 +108,21 @@ class TravelComplianceData5:
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -134,13 +137,14 @@ class TravelComplianceData5:
             Optional text message to set the rule or token for which it's In
             Policy or Out Of Policy.
         """
+
         in_policy: None | bool = field(
             default=None,
             metadata={
                 "name": "InPolicy",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         policy_token: None | str = field(
             default=None,
@@ -149,7 +153,7 @@ class TravelComplianceData5:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
 
     @dataclass
@@ -164,13 +168,14 @@ class TravelComplianceData5:
             Optional text message to set the rule or token for which it's In
             Contract or Out Of Contract.
         """
+
         in_contract: None | bool = field(
             default=None,
             metadata={
                 "name": "InContract",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         contract_token: None | str = field(
             default=None,
@@ -179,7 +184,7 @@ class TravelComplianceData5:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
 
     @dataclass
@@ -193,13 +198,14 @@ class TravelComplianceData5:
             Indicate profile type. e.g. if Agency Preferred then pass
             Agency, if Traveler Preferred then pass Traveler.
         """
+
         preferred: None | bool = field(
             default=None,
             metadata={
                 "name": "Preferred",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         profile_type: None | TypeProfileType8 = field(
             default=None,
@@ -207,5 +213,5 @@ class TravelComplianceData5:
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -15,6 +15,7 @@ class AddPnrElement:
     """
     Container for PNR elements to be added.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -25,7 +26,7 @@ class AddPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     action_status: None | ActionStatus1 = field(
         default=None,
@@ -33,7 +34,7 @@ class AddPnrElement:
             "name": "ActionStatus",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     osi: list[Osi1] = field(
         default_factory=list,
@@ -42,7 +43,7 @@ class AddPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     accounting_remark: list[AccountingRemark1] = field(
         default_factory=list,
@@ -51,7 +52,7 @@ class AddPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     general_remark: list[GeneralRemark1] = field(
         default_factory=list,
@@ -60,7 +61,7 @@ class AddPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     unassociated_remark: list[UnassociatedRemark1] = field(
         default_factory=list,
@@ -69,5 +70,5 @@ class AddPnrElement:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )

@@ -15,5 +15,5 @@ class ImagesType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
-        }
+        },
     )

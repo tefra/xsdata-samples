@@ -1,8 +1,12 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_2 import BaseReq2
-from travelport.models.profile_history_retrieve_criteria_1 import ProfileHistoryRetrieveCriteria1
-from travelport.models.profile_search_modifiers_1 import ProfileSearchModifiers1
+from travelport.models.profile_history_retrieve_criteria_1 import (
+    ProfileHistoryRetrieveCriteria1,
+)
+from travelport.models.profile_search_modifiers_1 import (
+    ProfileSearchModifiers1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -24,6 +28,7 @@ class ProfileRetrieveHistoryReq1(BaseReq2):
         Set to true to show data unmasked in the profile history retrieve
         response. Requires special authorization.
     """
+
     class Meta:
         name = "ProfileRetrieveHistoryReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -34,26 +39,26 @@ class ProfileRetrieveHistoryReq1(BaseReq2):
             "name": "ProfileID",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     profile_history_retrieve_criteria: None | ProfileHistoryRetrieveCriteria1 = field(
         default=None,
         metadata={
             "name": "ProfileHistoryRetrieveCriteria",
             "type": "Element",
-        }
+        },
     )
     profile_search_modifiers: None | ProfileSearchModifiers1 = field(
         default=None,
         metadata={
             "name": "ProfileSearchModifiers",
             "type": "Element",
-        }
+        },
     )
     show_data_unmasked: bool = field(
         default=False,
         metadata={
             "name": "ShowDataUnmasked",
             "type": "Attribute",
-        }
+        },
     )

@@ -31,7 +31,7 @@ class TransportServiceDescriptionRequestType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -39,7 +39,7 @@ class TransportServiceDescriptionRequestType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -47,7 +47,7 @@ class TransportServiceDescriptionRequestType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -55,7 +55,7 @@ class TransportServiceDescriptionRequestType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -63,7 +63,7 @@ class TransportServiceDescriptionRequestType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -72,7 +72,7 @@ class TransportServiceDescriptionRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -80,7 +80,7 @@ class TransportServiceDescriptionRequestType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -88,7 +88,7 @@ class TransportServiceDescriptionRequestType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -97,7 +97,7 @@ class TransportServiceDescriptionRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -106,7 +106,7 @@ class TransportServiceDescriptionRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -114,15 +114,17 @@ class TransportServiceDescriptionRequestType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
-    service_information_preference_code: Optional[ServiceInformationPreferenceCode] = field(
+    service_information_preference_code: Optional[
+        ServiceInformationPreferenceCode
+    ] = field(
         default=None,
         metadata={
             "name": "ServiceInformationPreferenceCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -130,7 +132,7 @@ class TransportServiceDescriptionRequestType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     sender_party: Optional[SenderParty] = field(
         default=None,
@@ -138,7 +140,7 @@ class TransportServiceDescriptionRequestType:
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -146,15 +148,17 @@ class TransportServiceDescriptionRequestType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    transport_service_provider_party: Optional[TransportServiceProviderParty] = field(
+    transport_service_provider_party: Optional[
+        TransportServiceProviderParty
+    ] = field(
         default=None,
         metadata={
             "name": "TransportServiceProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     transportation_service: Tuple[TransportationService, ...] = field(
         default_factory=tuple,
@@ -163,11 +167,13 @@ class TransportServiceDescriptionRequestType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(frozen=True)
-class TransportServiceDescriptionRequest(TransportServiceDescriptionRequestType):
+class TransportServiceDescriptionRequest(
+    TransportServiceDescriptionRequestType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescriptionRequest-2"

@@ -16,5 +16,5 @@ class AccessFacilityList:
         ],
         metadata={
             "tokens": True,
-        }
+        },
     )

@@ -14,6 +14,7 @@ class TypeRateDescription5:
         Optional context name of the text block being returned i.e. Room
         details
     """
+
     class Meta:
         name = "typeRateDescription"
 
@@ -25,12 +26,12 @@ class TypeRateDescription5:
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )

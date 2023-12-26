@@ -14,6 +14,7 @@ class BookingAirPnrElementReq(BookingBaseReq):
     Adds, Modifies air elements like Stored fare FOP, Credit Card Auth, Ticketing
     Modifiers etc.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -22,19 +23,19 @@ class BookingAirPnrElementReq(BookingBaseReq):
         metadata={
             "name": "AddAirPnrElement",
             "type": "Element",
-        }
+        },
     )
     update_air_pnr_element: None | UpdateAirPnrElement = field(
         default=None,
         metadata={
             "name": "UpdateAirPnrElement",
             "type": "Element",
-        }
+        },
     )
     delete_air_pnr_element: None | DeleteAirPnrElement = field(
         default=None,
         metadata={
             "name": "DeleteAirPnrElement",
             "type": "Element",
-        }
+        },
     )

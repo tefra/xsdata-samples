@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FlexibleServicePropertiesInFrameRelStructure(ContainmentAggregationStructure):
+class FlexibleServicePropertiesInFrameRelStructure(
+    ContainmentAggregationStructure
+):
     class Meta:
         name = "flexibleServicePropertiesInFrame_RelStructure"
 
@@ -18,5 +20,5 @@ class FlexibleServicePropertiesInFrameRelStructure(ContainmentAggregationStructu
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

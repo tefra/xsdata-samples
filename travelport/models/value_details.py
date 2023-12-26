@@ -12,7 +12,7 @@ class ValueDetails:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -20,5 +20,5 @@ class ValueDetails:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

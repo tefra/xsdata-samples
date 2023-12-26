@@ -89,6 +89,7 @@ class ComManagementMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COM-MANAGEMENT-MAPPING"
 
@@ -99,15 +100,17 @@ class ComManagementMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ComManagementMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ComManagementMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +118,7 @@ class ComManagementMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +126,7 @@ class ComManagementMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +134,7 @@ class ComManagementMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +142,7 @@ class ComManagementMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +150,7 @@ class ComManagementMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ComManagementMapping.Annotations"] = field(
         default=None,
@@ -155,31 +158,37 @@ class ComManagementMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    com_management_group_refs: Optional["ComManagementMapping.ComManagementGroupRefs"] = field(
+    com_management_group_refs: Optional[
+        "ComManagementMapping.ComManagementGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "COM-MANAGEMENT-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    com_management_port_group_irefs: Optional["ComManagementMapping.ComManagementPortGroupIrefs"] = field(
+    com_management_port_group_irefs: Optional[
+        "ComManagementMapping.ComManagementPortGroupIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "COM-MANAGEMENT-PORT-GROUP-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    physical_channel_refs: Optional["ComManagementMapping.PhysicalChannelRefs"] = field(
+    physical_channel_refs: Optional[
+        "ComManagementMapping.PhysicalChannelRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -187,14 +196,14 @@ class ComManagementMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -202,14 +211,14 @@ class ComManagementMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -220,7 +229,7 @@ class ComManagementMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -231,18 +240,20 @@ class ComManagementMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ComManagementGroupRefs:
-        com_management_group_ref: List["ComManagementMapping.ComManagementGroupRefs.ComManagementGroupRef"] = field(
+        com_management_group_ref: List[
+            "ComManagementMapping.ComManagementGroupRefs.ComManagementGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COM-MANAGEMENT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -253,29 +264,33 @@ class ComManagementMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ComManagementPortGroupIrefs:
-        com_management_port_group_iref: List[PortGroupInSystemInstanceRef] = field(
+        com_management_port_group_iref: List[
+            PortGroupInSystemInstanceRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COM-MANAGEMENT-PORT-GROUP-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PhysicalChannelRefs:
-        physical_channel_ref: List["ComManagementMapping.PhysicalChannelRefs.PhysicalChannelRef"] = field(
+        physical_channel_ref: List[
+            "ComManagementMapping.PhysicalChannelRefs.PhysicalChannelRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PHYSICAL-CHANNEL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -286,5 +301,5 @@ class ComManagementMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

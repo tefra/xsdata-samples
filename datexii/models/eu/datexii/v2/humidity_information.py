@@ -12,13 +12,14 @@ class HumidityInformation(WeatherData):
     """
     Measurements of atmospheric humidity.
     """
+
     humidity: Optional[Humidity] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     humidity_information_extension: Optional[ExtensionType] = field(
         default=None,
@@ -26,5 +27,5 @@ class HumidityInformation(WeatherData):
             "name": "humidityInformationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

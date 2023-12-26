@@ -10,5 +10,6 @@ class IpAddressKeepEnumSimple(Enum):
     :cvar STORE_PERSISTENTLY: After a dynamic IP address has been
         assigned store the address persistently.
     """
+
     FORGET = "FORGET"
     STORE_PERSISTENTLY = "STORE-PERSISTENTLY"

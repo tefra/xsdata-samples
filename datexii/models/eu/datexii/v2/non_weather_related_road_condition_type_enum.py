@@ -23,6 +23,7 @@ class NonWeatherRelatedRoadConditionTypeEnum(Enum):
         unspecified non-weather related cause.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     DIESEL_ON_ROAD = "dieselOnRoad"
     LEAVES_ON_ROAD = "leavesOnRoad"
     LOOSE_CHIPPINGS = "looseChippings"

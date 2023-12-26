@@ -22,6 +22,7 @@ class TypeFareStatusCode(Enum):
         To handle new enumerations added by provider but currently not
         recognized by API
     """
+
     READY_TO_TICKET = "ReadyToTicket"
     UNABLE_TO_TICKET = "UnableToTicket"
     REPRICE = "Reprice"

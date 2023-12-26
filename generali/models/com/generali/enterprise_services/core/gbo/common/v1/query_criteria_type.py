@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_algorithm_code_type import QueryAlgorithmCodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_criteria_type_query_expression import QueryCriteriaTypeQueryExpression
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_algorithm_code_type import (
+    QueryAlgorithmCodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_criteria_type_query_expression import (
+    QueryCriteriaTypeQueryExpression,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -24,6 +28,7 @@ class QueryCriteriaType:
         algorithm to use in matching the records on the server. The
         default is Strict, i.e. match strings exactly.</description>
     """
+
     query_expression: Optional[QueryCriteriaTypeQueryExpression] = field(
         default=None,
         metadata={
@@ -31,26 +36,26 @@ class QueryCriteriaType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     start_index: Optional[int] = field(
         default=None,
         metadata={
             "name": "startIndex",
             "type": "Attribute",
-        }
+        },
     )
     index_per_page: Optional[int] = field(
         default=None,
         metadata={
             "name": "indexPerPage",
             "type": "Attribute",
-        }
+        },
     )
     matching_algorithm: Optional[QueryAlgorithmCodeType] = field(
         default=None,
         metadata={
             "name": "matchingAlgorithm",
             "type": "Attribute",
-        }
+        },
     )

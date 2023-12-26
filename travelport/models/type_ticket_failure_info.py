@@ -20,6 +20,7 @@ class TypeTicketFailureInfo:
     code
     message
     """
+
     class Meta:
         name = "typeTicketFailureInfo"
 
@@ -31,7 +32,7 @@ class TypeTicketFailureInfo:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     name: None | Name1 = field(
         default=None,
@@ -39,7 +40,7 @@ class TypeTicketFailureInfo:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     tcrnumber: None | str = field(
         default=None,
@@ -47,7 +48,7 @@ class TypeTicketFailureInfo:
             "name": "TCRNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,
@@ -57,7 +58,7 @@ class TypeTicketFailureInfo:
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     code: None | int = field(
         default=None,
@@ -65,12 +66,12 @@ class TypeTicketFailureInfo:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
             "type": "Attribute",
-        }
+        },
     )

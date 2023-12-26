@@ -49,16 +49,19 @@ class AirExchangeInfo2:
     refund
         Total refund amount.
     """
+
     class Meta:
         name = "AirExchangeInfo"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    total_penalty_tax_info: None | AirExchangeInfo2.TotalPenaltyTaxInfo = field(
-        default=None,
-        metadata={
-            "name": "TotalPenaltyTaxInfo",
-            "type": "Element",
-        }
+    total_penalty_tax_info: None | AirExchangeInfo2.TotalPenaltyTaxInfo = (
+        field(
+            default=None,
+            metadata={
+                "name": "TotalPenaltyTaxInfo",
+                "type": "Element",
+            },
+        )
     )
     paid_tax: list[TypeTax2] = field(
         default_factory=list,
@@ -66,7 +69,7 @@ class AirExchangeInfo2:
             "name": "PaidTax",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ticket_fee_info: list[AirExchangeInfo2.TicketFeeInfo] = field(
         default_factory=list,
@@ -74,7 +77,7 @@ class AirExchangeInfo2:
             "name": "TicketFeeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     reason: list[str] = field(
         default_factory=list,
@@ -82,7 +85,7 @@ class AirExchangeInfo2:
             "name": "Reason",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fee_info: list[TypeFeeInfo2] = field(
         default_factory=list,
@@ -90,7 +93,7 @@ class AirExchangeInfo2:
             "name": "FeeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TypeTaxInfo2] = field(
         default_factory=list,
@@ -98,7 +101,7 @@ class AirExchangeInfo2:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     exchange_amount: None | str = field(
         default=None,
@@ -106,147 +109,147 @@ class AirExchangeInfo2:
             "name": "ExchangeAmount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     base_fare: None | str = field(
         default=None,
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_fare: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBaseFare",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     change_fee: None | str = field(
         default=None,
         metadata={
             "name": "ChangeFee",
             "type": "Attribute",
-        }
+        },
     )
     forfeit_amount: None | str = field(
         default=None,
         metadata={
             "name": "ForfeitAmount",
             "type": "Attribute",
-        }
+        },
     )
     refundable: None | bool = field(
         default=None,
         metadata={
             "name": "Refundable",
             "type": "Attribute",
-        }
+        },
     )
     exchangeable: None | bool = field(
         default=None,
         metadata={
             "name": "Exchangeable",
             "type": "Attribute",
-        }
+        },
     )
     first_class_upgrade: None | bool = field(
         default=None,
         metadata={
             "name": "FirstClassUpgrade",
             "type": "Attribute",
-        }
+        },
     )
     ticket_by_date: None | str = field(
         default=None,
         metadata={
             "name": "TicketByDate",
             "type": "Attribute",
-        }
+        },
     )
     pricing_tag: None | str = field(
         default=None,
         metadata={
             "name": "PricingTag",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_change_fee: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentChangeFee",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentExchangeAmount",
             "type": "Attribute",
-        }
+        },
     )
     add_collection: None | str = field(
         default=None,
         metadata={
             "name": "AddCollection",
             "type": "Attribute",
-        }
+        },
     )
     residual_value: None | str = field(
         default=None,
         metadata={
             "name": "ResidualValue",
             "type": "Attribute",
-        }
+        },
     )
     total_residual_value: None | str = field(
         default=None,
         metadata={
             "name": "TotalResidualValue",
             "type": "Attribute",
-        }
+        },
     )
     original_flight_value: None | str = field(
         default=None,
         metadata={
             "name": "OriginalFlightValue",
             "type": "Attribute",
-        }
+        },
     )
     flown_segment_value: None | str = field(
         default=None,
         metadata={
             "name": "FlownSegmentValue",
             "type": "Attribute",
-        }
+        },
     )
     bulk_ticket_advisory: None | bool = field(
         default=None,
         metadata={
             "name": "BulkTicketAdvisory",
             "type": "Attribute",
-        }
+        },
     )
     fare_pull: None | TypeFarePull2 = field(
         default=None,
         metadata={
             "name": "FarePull",
             "type": "Attribute",
-        }
+        },
     )
     refund: None | str = field(
         default=None,
         metadata={
             "name": "Refund",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -257,14 +260,14 @@ class AirExchangeInfo2:
                 "name": "PenaltyTaxInfo",
                 "type": "Element",
                 "max_occurs": 999,
-            }
+            },
         )
         total_penalty_tax: None | str = field(
             default=None,
             metadata={
                 "name": "TotalPenaltyTax",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -274,19 +277,19 @@ class AirExchangeInfo2:
             metadata={
                 "name": "Base",
                 "type": "Attribute",
-            }
+            },
         )
         tax: None | str = field(
             default=None,
             metadata={
                 "name": "Tax",
                 "type": "Attribute",
-            }
+            },
         )
         total: None | str = field(
             default=None,
             metadata={
                 "name": "Total",
                 "type": "Attribute",
-            }
+            },
         )

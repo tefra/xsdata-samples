@@ -13,7 +13,7 @@ class ProducerResponseStructure(ResponseStructure):
             "name": "ProducerRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     address: Optional[str] = field(
         default=None,
@@ -21,7 +21,7 @@ class ProducerResponseStructure(ResponseStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     response_message_identifier: Optional[str] = field(
         default=None,
@@ -29,7 +29,7 @@ class ProducerResponseStructure(ResponseStructure):
             "name": "ResponseMessageIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     request_message_ref: Optional[str] = field(
         default=None,
@@ -37,7 +37,7 @@ class ProducerResponseStructure(ResponseStructure):
             "name": "RequestMessageRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -45,7 +45,7 @@ class ProducerResponseStructure(ResponseStructure):
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -53,5 +53,5 @@ class ProducerResponseStructure(ResponseStructure):
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

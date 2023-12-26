@@ -10,6 +10,7 @@ class AirPricingInfoList:
     """
     The shared object list of AirSegments.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class AirPricingInfoList:
             "name": "AirPricingInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

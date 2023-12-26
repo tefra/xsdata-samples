@@ -16,5 +16,5 @@ class DeadRunWithCallsVersionStructure(DeadRunVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

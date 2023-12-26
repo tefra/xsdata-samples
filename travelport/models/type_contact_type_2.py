@@ -10,6 +10,7 @@ class TypeContactType2(Enum):
     Examples include Emergency Contact, Regular Contact, Backup Contact,
     etc.
     """
+
     ADMIN_ASSISTANT = "Admin Assistant"
     AFTER_HOUR = "After Hour"
     ASSISTANT = "Assistant"

@@ -11,6 +11,7 @@ class RailLocation4(Location4):
     RCH specific location code (a.k.a UCodes) which uniquely identifies a train
     station.
     """
+
     class Meta:
         name = "RailLocation"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -24,5 +25,5 @@ class RailLocation4(Location4):
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )

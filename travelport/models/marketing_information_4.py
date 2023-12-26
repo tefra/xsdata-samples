@@ -9,6 +9,7 @@ class MarketingInformation4:
     """
     Marketing text or Notices for Suppliers.
     """
+
     class Meta:
         name = "MarketingInformation"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -20,5 +21,5 @@ class MarketingInformation4:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

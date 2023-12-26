@@ -15,5 +15,5 @@ class TypeOfLink(TypeOfLinkValueStructure):
         metadata={
             "name": "nameOfClassifiedEntityClass",
             "type": "Attribute",
-        }
+        },
     )

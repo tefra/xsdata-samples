@@ -13,5 +13,5 @@ class AbstractServiceRequestStructure(AbstractRequestStructure):
             "name": "MessageIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

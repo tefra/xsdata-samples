@@ -18,6 +18,7 @@ class TypeSearchPhone1:
     local_number
         The phone number of the profile to search for.
     """
+
     class Meta:
         name = "typeSearchPhone"
 
@@ -27,7 +28,7 @@ class TypeSearchPhone1:
             "name": "CountryCode",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     area_code: None | str = field(
         default=None,
@@ -35,7 +36,7 @@ class TypeSearchPhone1:
             "name": "AreaCode",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     local_number: None | str = field(
         default=None,
@@ -43,5 +44,5 @@ class TypeSearchPhone1:
             "name": "LocalNumber",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )

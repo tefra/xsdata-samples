@@ -18,7 +18,7 @@ class ServiceAccessRightVersionStructure(PriceableObjectVersionStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     info_url: Optional[str] = field(
         default=None,
@@ -26,7 +26,7 @@ class ServiceAccessRightVersionStructure(PriceableObjectVersionStructure):
             "name": "InfoUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     document_links: Optional[InfoLinksRelStructure] = field(
         default=None,
@@ -34,5 +34,5 @@ class ServiceAccessRightVersionStructure(PriceableObjectVersionStructure):
             "name": "documentLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

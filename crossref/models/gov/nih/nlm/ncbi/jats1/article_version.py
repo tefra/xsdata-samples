@@ -12,6 +12,7 @@ class ArticleVersion:
     """
     <div> <h3>Article Version</h3> </div>
     """
+
     class Meta:
         name = "article-version"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -21,94 +22,94 @@ class ArticleVersion:
         metadata={
             "name": "article-version-type",
             "type": "Attribute",
-        }
+        },
     )
     assigning_authority: Optional[str] = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
-        }
+        },
     )
     content_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     designator: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     hreflang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     iso_8601_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "iso-8601-date",
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     vocab: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     vocab_identifier: Optional[str] = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
-        }
+        },
     )
     vocab_term: Optional[str] = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
-        }
+        },
     )
     vocab_term_identifier: Optional[str] = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
-        }
+        },
     )
     actuate: Optional[ActuateType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     href: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     role: Optional[str] = field(
         default=None,
@@ -116,21 +117,21 @@ class ArticleVersion:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "min_length": 1,
-        }
+        },
     )
     show: Optional[ShowType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     type_value: TypeType = field(
         init=False,
@@ -139,14 +140,14 @@ class ArticleVersion:
             "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -154,5 +155,5 @@ class ArticleVersion:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

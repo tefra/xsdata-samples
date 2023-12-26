@@ -15,6 +15,7 @@ class Ipv6AddressSourceEnumSimple(Enum):
         Parameters
     :cvar ROUTER_ADVERTISEMENT: IPv6 Stateless Autoconfiguration.
     """
+
     DHCPV_6 = "DHCPV-6"
     FIXED = "FIXED"
     LINK_LOCAL = "LINK-LOCAL"

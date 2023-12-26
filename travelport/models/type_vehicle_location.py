@@ -8,6 +8,7 @@ class TypeVehicleLocation(Enum):
     """
     The type of location requested, such as resort, city center.
     """
+
     TERMINAL = "Terminal"
     SHUTTLE_ON_AIRPORT = "ShuttleOnAirport"
     SHUTTLE_OFF_AIRPORT = "ShuttleOffAirport"

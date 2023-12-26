@@ -18,7 +18,7 @@ class CountryVersionStructure(PlaceVersionStructure):
             "name": "UicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alternative_names: Optional[AlternativeNamesRelStructure] = field(
         default=None,
@@ -26,11 +26,11 @@ class CountryVersionStructure(PlaceVersionStructure):
             "name": "alternativeNames",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     principality: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

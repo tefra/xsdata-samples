@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_1 import BaseReq1
-from travelport.models.provider_reservation_divide_req_create_child_universal_record import ProviderReservationDivideReqCreateChildUniversalRecord
+from travelport.models.provider_reservation_divide_req_create_child_universal_record import (
+    ProviderReservationDivideReqCreateChildUniversalRecord,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -23,17 +25,20 @@ class ProviderReservationDivideReq(BaseReq1):
         Represents the options given to the user to store the Child PNR
         inside existing  UR or in new UR after split.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    booking_traveler_ref: list[ProviderReservationDivideReq.BookingTravelerRef] = field(
+    booking_traveler_ref: list[
+        ProviderReservationDivideReq.BookingTravelerRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -43,7 +48,7 @@ class ProviderReservationDivideReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -53,7 +58,7 @@ class ProviderReservationDivideReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -62,7 +67,7 @@ class ProviderReservationDivideReq(BaseReq1):
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     create_child_universal_record: None | ProviderReservationDivideReqCreateChildUniversalRecord = field(
         default=None,
@@ -70,7 +75,7 @@ class ProviderReservationDivideReq(BaseReq1):
             "name": "CreateChildUniversalRecord",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -81,5 +86,5 @@ class ProviderReservationDivideReq(BaseReq1):
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

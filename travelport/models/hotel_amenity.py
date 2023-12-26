@@ -15,6 +15,7 @@ class HotelAmenity:
     amenity_code
         OTA amenity code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -24,7 +25,7 @@ class HotelAmenity:
             "name": "Level",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amenity_code: None | int = field(
         default=None,
@@ -33,5 +34,5 @@ class HotelAmenity:
             "type": "Attribute",
             "required": True,
             "total_digits": 3,
-        }
+        },
     )

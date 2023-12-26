@@ -11,7 +11,9 @@ from ubl.models.common.ccts_cct_schema_module_2_1 import (
     TextType as CctsCctSchemaModule21TextType,
 )
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+)
 
 
 @dataclass(frozen=True)
@@ -22,7 +24,7 @@ class AmountType(CctsCctSchemaModule21AmountType):
             "name": "currencyID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -34,7 +36,7 @@ class BinaryObjectType(CctsCctSchemaModule21BinaryObjectType):
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -51,7 +53,7 @@ class GraphicType(CctsCctSchemaModule21BinaryObjectType):
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -68,7 +70,7 @@ class MeasureType(CctsCctSchemaModule21MeasureType):
             "name": "unitCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -95,7 +97,7 @@ class PictureType(CctsCctSchemaModule21BinaryObjectType):
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -117,7 +119,7 @@ class SoundType(CctsCctSchemaModule21BinaryObjectType):
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -139,5 +141,5 @@ class VideoType(CctsCctSchemaModule21BinaryObjectType):
             "name": "mimeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -9,5 +9,6 @@ class DiagnosticClearDtcLimitationEnumSimple(Enum):
         values.
     :cvar CLEAR_ALL_DTCS: DEM_ClearDtc API accepts ClearAllDTCs only.
     """
+
     ALL_SUPPORTED_DTCS = "ALL-SUPPORTED-DTCS"
     CLEAR_ALL_DTCS = "CLEAR-ALL-DTCS"

@@ -11,11 +11,12 @@ class TpegPoint:
     A point on the road network which is either a junction point or a non junction
     point.
     """
+
     tpeg_point_extension: Optional[ExtensionType] = field(
         default=None,
         metadata={
             "name": "tpegPointExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_space import AccessSpace
 from .access_zone import AccessZone
 from .addressable_place import AddressablePlace
@@ -52,7 +52,50 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "zonesInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            RoutingConstraintZone,
+            StopArea,
+            AccessZone,
+            HailAndRideArea,
+            FlexibleArea,
+            FlexibleQuay,
+            FlexibleStopPlace,
+            VehicleStoppingPlace,
+            BoardingPosition,
+            AccessSpace,
+            Quay,
+            PointOfInterestSpace,
+            ParkingBay,
+            ParkingArea,
+            ParkingComponent,
+            VehicleStoppingPosition,
+            PointOfInterestVehicleEntrance,
+            PointOfInterestEntrance,
+            ParkingPassengerEntrance,
+            ParkingEntranceForVehicles,
+            StopPlaceVehicleEntrance,
+            StopPlaceEntrance,
+            Entrance,
+            PointOfInterest,
+            Parking,
+            StopPlace,
+            ServiceSite,
+            Garage,
+            TopographicPlace,
+            EquipmentPlace,
+            Country,
+            AddressablePlace,
+            PostalAddress,
+            RoadAddress,
+            TransportAdministrativeZone,
+            AdministrativeZone,
+            FareZone,
+            TariffZone,
+            GeneralZone,
+            Zone,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -258,5 +301,5 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

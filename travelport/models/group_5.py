@@ -42,6 +42,7 @@ class Group5:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "Group"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -54,14 +55,14 @@ class Group5:
             "required": True,
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     delivery_info: None | DeliveryInfo5 = field(
         default=None,
         metadata={
             "name": "DeliveryInfo",
             "type": "Element",
-        }
+        },
     )
     phone_number: list[PhoneNumber6] = field(
         default_factory=list,
@@ -69,7 +70,7 @@ class Group5:
             "name": "PhoneNumber",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ssrref: list[Group5.Ssrref] = field(
         default_factory=list,
@@ -77,14 +78,14 @@ class Group5:
             "name": "SSRRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     address: None | TypeStructuredAddress6 = field(
         default=None,
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     booking_traveler_ref: list[Group5.BookingTravelerRef] = field(
         default_factory=list,
@@ -92,14 +93,14 @@ class Group5:
             "name": "BookingTravelerRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     traveler_type: None | str = field(
         default=None,
@@ -108,7 +109,7 @@ class Group5:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     group_size: None | int = field(
         default=None,
@@ -116,21 +117,21 @@ class Group5:
             "name": "GroupSize",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -141,7 +142,7 @@ class Group5:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -152,5 +153,5 @@ class Group5:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

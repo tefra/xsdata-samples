@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import VariationPoint
-from .eth_global_time_managed_coupling_port import EthGlobalTimeManagedCouplingPort
+from .eth_global_time_managed_coupling_port import (
+    EthGlobalTimeManagedCouplingPort,
+)
 from .eth_global_time_message_format_enum import EthGlobalTimeMessageFormatEnum
 from .eth_t_syn_crc_flags import EthTSynCrcFlags
 from .mac_address_string import MacAddressString
@@ -40,6 +42,7 @@ class EthGlobalTimeDomainProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETH-GLOBAL-TIME-DOMAIN-PROPS"
 
@@ -49,7 +52,7 @@ class EthGlobalTimeDomainProps:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crc_flags: Optional[EthTSynCrcFlags] = field(
         default=None,
@@ -57,7 +60,7 @@ class EthGlobalTimeDomainProps:
             "name": "CRC-FLAGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     destination_physical_address: Optional[MacAddressString] = field(
         default=None,
@@ -65,23 +68,27 @@ class EthGlobalTimeDomainProps:
             "name": "DESTINATION-PHYSICAL-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    fup_data_id_lists: Optional["EthGlobalTimeDomainProps.FupDataIdLists"] = field(
+    fup_data_id_lists: Optional[
+        "EthGlobalTimeDomainProps.FupDataIdLists"
+    ] = field(
         default=None,
         metadata={
             "name": "FUP-DATA-ID-LISTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    managed_coupling_ports: Optional["EthGlobalTimeDomainProps.ManagedCouplingPorts"] = field(
+    managed_coupling_ports: Optional[
+        "EthGlobalTimeDomainProps.ManagedCouplingPorts"
+    ] = field(
         default=None,
         metadata={
             "name": "MANAGED-COUPLING-PORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_compliance: Optional[EthGlobalTimeMessageFormatEnum] = field(
         default=None,
@@ -89,7 +96,7 @@ class EthGlobalTimeDomainProps:
             "name": "MESSAGE-COMPLIANCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vlan_priority: Optional[PositiveInteger] = field(
         default=None,
@@ -97,14 +104,14 @@ class EthGlobalTimeDomainProps:
             "name": "VLAN-PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -112,7 +119,7 @@ class EthGlobalTimeDomainProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -121,6 +128,7 @@ class EthGlobalTimeDomainProps:
         :ivar fup_data_id_list: The DataIDList for FUP messages to
             calculate CRC.
         """
+
         fup_data_id_list: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
@@ -128,16 +136,18 @@ class EthGlobalTimeDomainProps:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 16,
-            }
+            },
         )
 
     @dataclass
     class ManagedCouplingPorts:
-        eth_global_time_managed_coupling_port: List[EthGlobalTimeManagedCouplingPort] = field(
+        eth_global_time_managed_coupling_port: List[
+            EthGlobalTimeManagedCouplingPort
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ETH-GLOBAL-TIME-MANAGED-COUPLING-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

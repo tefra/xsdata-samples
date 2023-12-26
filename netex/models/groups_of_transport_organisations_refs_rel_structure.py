@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupsOfTransportOrganisationsRefsRelStructure(OneToManyRelationshipStructure):
+class GroupsOfTransportOrganisationsRefsRelStructure(
+    OneToManyRelationshipStructure
+):
     class Meta:
         name = "groupsOfTransportOrganisationsRefs_RelStructure"
 
@@ -18,5 +20,5 @@ class GroupsOfTransportOrganisationsRefsRelStructure(OneToManyRelationshipStruct
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

@@ -14,5 +14,5 @@ class CrossmarkDomainExclusive:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

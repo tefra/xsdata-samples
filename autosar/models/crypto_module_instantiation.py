@@ -7,7 +7,9 @@ from .annotation import (
 )
 from .category_string import CategoryString
 from .crypto_certificate import CryptoCertificate
-from .crypto_certificate_to_crypto_key_slot_mapping import CryptoCertificateToCryptoKeySlotMapping
+from .crypto_certificate_to_crypto_key_slot_mapping import (
+    CryptoCertificateToCryptoKeySlotMapping,
+)
 from .crypto_provider import CryptoProvider
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -83,6 +85,7 @@ class CryptoModuleInstantiation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-MODULE-INSTANTIATION"
 
@@ -93,15 +96,17 @@ class CryptoModuleInstantiation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CryptoModuleInstantiation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CryptoModuleInstantiation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -109,7 +114,7 @@ class CryptoModuleInstantiation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -117,7 +122,7 @@ class CryptoModuleInstantiation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -125,7 +130,7 @@ class CryptoModuleInstantiation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -133,7 +138,7 @@ class CryptoModuleInstantiation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -141,7 +146,7 @@ class CryptoModuleInstantiation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CryptoModuleInstantiation.Annotations"] = field(
         default=None,
@@ -149,38 +154,44 @@ class CryptoModuleInstantiation:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    certificate_to_key_slot_mappings: Optional["CryptoModuleInstantiation.CertificateToKeySlotMappings"] = field(
+    certificate_to_key_slot_mappings: Optional[
+        "CryptoModuleInstantiation.CertificateToKeySlotMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "CERTIFICATE-TO-KEY-SLOT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    crypto_certificates: Optional["CryptoModuleInstantiation.CryptoCertificates"] = field(
+    crypto_certificates: Optional[
+        "CryptoModuleInstantiation.CryptoCertificates"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    crypto_providers: Optional["CryptoModuleInstantiation.CryptoProviders"] = field(
+    crypto_providers: Optional[
+        "CryptoModuleInstantiation.CryptoProviders"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-PROVIDERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -188,14 +199,14 @@ class CryptoModuleInstantiation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -206,7 +217,7 @@ class CryptoModuleInstantiation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -217,18 +228,20 @@ class CryptoModuleInstantiation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CertificateToKeySlotMappings:
-        crypto_certificate_to_crypto_key_slot_mapping: List[CryptoCertificateToCryptoKeySlotMapping] = field(
+        crypto_certificate_to_crypto_key_slot_mapping: List[
+            CryptoCertificateToCryptoKeySlotMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-CERTIFICATE-TO-CRYPTO-KEY-SLOT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,7 +252,7 @@ class CryptoModuleInstantiation:
                 "name": "CRYPTO-CERTIFICATE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,5 +263,5 @@ class CryptoModuleInstantiation:
                 "name": "CRYPTO-PROVIDER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

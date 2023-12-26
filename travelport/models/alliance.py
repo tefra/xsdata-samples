@@ -15,6 +15,7 @@ class Alliance:
         The possible values are *A for Star Alliance,*O for One world,*S for
         Sky team etc.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,5 +25,5 @@ class Alliance:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

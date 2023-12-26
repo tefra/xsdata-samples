@@ -28,5 +28,6 @@ class SynchronizationTypeEnumSimple(Enum):
         event is not known yet or not available in the scope of the
         model.
     """
+
     RESPONSE_SYNCHRONIZATION = "RESPONSE-SYNCHRONIZATION"
     STIMULUS_SYNCHRONIZATION = "STIMULUS-SYNCHRONIZATION"

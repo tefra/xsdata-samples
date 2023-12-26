@@ -18,7 +18,7 @@ class PageRelationFacetListType(AbstractFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     sub_search: None | PageRelationSearchType = field(
         default=None,
@@ -26,12 +26,12 @@ class PageRelationFacetListType(AbstractFacetType):
             "name": "subSearch",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     facet: list[PageRelationFacetType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

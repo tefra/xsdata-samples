@@ -18,6 +18,7 @@ class LinearElementByCode(LinearElement):
         specified in the LinearElement class.
     :ivar linear_element_by_code_extension:
     """
+
     linear_element_identifier: Optional[str] = field(
         default=None,
         metadata={
@@ -26,7 +27,7 @@ class LinearElementByCode(LinearElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     linear_element_by_code_extension: Optional[ExtensionType] = field(
         default=None,
@@ -34,5 +35,5 @@ class LinearElementByCode(LinearElement):
             "name": "linearElementByCodeExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

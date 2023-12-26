@@ -15,5 +15,5 @@ class Compose:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -15,5 +15,5 @@ class Eq:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -14,6 +14,7 @@ class TypeCustomFieldAndGroupDeleteRef1:
     id
         Unique identifier of the Custom Field or Group.
     """
+
     class Meta:
         name = "typeCustomFieldAndGroupDeleteRef"
 
@@ -23,5 +24,5 @@ class TypeCustomFieldAndGroupDeleteRef1:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

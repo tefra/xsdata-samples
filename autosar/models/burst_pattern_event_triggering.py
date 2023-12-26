@@ -15,7 +15,9 @@ from .positive_integer import PositiveInteger
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .timing_description_event_subtypes_enum import (
+    TimingDescriptionEventSubtypesEnum,
+)
 from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -109,6 +111,7 @@ class BurstPatternEventTriggering:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BURST-PATTERN-EVENT-TRIGGERING"
 
@@ -119,15 +122,17 @@ class BurstPatternEventTriggering:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BurstPatternEventTriggering.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BurstPatternEventTriggering.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -135,7 +140,7 @@ class BurstPatternEventTriggering:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -143,7 +148,7 @@ class BurstPatternEventTriggering:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -151,7 +156,7 @@ class BurstPatternEventTriggering:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -159,7 +164,7 @@ class BurstPatternEventTriggering:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -167,7 +172,7 @@ class BurstPatternEventTriggering:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["BurstPatternEventTriggering.Annotations"] = field(
         default=None,
@@ -175,7 +180,7 @@ class BurstPatternEventTriggering:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["BurstPatternEventTriggering.TraceRefs"] = field(
         default=None,
@@ -183,15 +188,17 @@ class BurstPatternEventTriggering:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    timing_condition_ref: Optional["BurstPatternEventTriggering.TimingConditionRef"] = field(
+    timing_condition_ref: Optional[
+        "BurstPatternEventTriggering.TimingConditionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -199,7 +206,7 @@ class BurstPatternEventTriggering:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_ref: Optional["BurstPatternEventTriggering.EventRef"] = field(
         default=None,
@@ -207,7 +214,7 @@ class BurstPatternEventTriggering:
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_of_occurrences: Optional[PositiveInteger] = field(
         default=None,
@@ -215,7 +222,7 @@ class BurstPatternEventTriggering:
             "name": "MAX-NUMBER-OF-OCCURRENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_inter_arrival_time: Optional[MultidimensionalTime] = field(
         default=None,
@@ -223,7 +230,7 @@ class BurstPatternEventTriggering:
             "name": "MINIMUM-INTER-ARRIVAL-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern_jitter: Optional[MultidimensionalTime] = field(
         default=None,
@@ -231,7 +238,7 @@ class BurstPatternEventTriggering:
             "name": "PATTERN-JITTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern_length: Optional[MultidimensionalTime] = field(
         default=None,
@@ -239,7 +246,7 @@ class BurstPatternEventTriggering:
             "name": "PATTERN-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern_period: Optional[MultidimensionalTime] = field(
         default=None,
@@ -247,7 +254,7 @@ class BurstPatternEventTriggering:
             "name": "PATTERN-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_number_of_occurrences: Optional[PositiveInteger] = field(
         default=None,
@@ -255,14 +262,14 @@ class BurstPatternEventTriggering:
             "name": "MIN-NUMBER-OF-OCCURRENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -270,14 +277,14 @@ class BurstPatternEventTriggering:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -288,7 +295,7 @@ class BurstPatternEventTriggering:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -299,18 +306,20 @@ class BurstPatternEventTriggering:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TraceRefs:
-        trace_ref: List["BurstPatternEventTriggering.TraceRefs.TraceRef"] = field(
+        trace_ref: List[
+            "BurstPatternEventTriggering.TraceRefs.TraceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -321,7 +330,7 @@ class BurstPatternEventTriggering:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -332,7 +341,7 @@ class BurstPatternEventTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -343,5 +352,5 @@ class BurstPatternEventTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

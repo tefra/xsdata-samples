@@ -8,6 +8,7 @@ class TypeTravelDocumentType2(Enum):
     """
     Specify the type of Travel Document.
     """
+
     VISA = "Visa"
     PASSPORT = "Passport"
     DRIVERS_LICENSE = "Drivers License"

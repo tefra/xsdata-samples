@@ -92,6 +92,7 @@ class TypeVehicleTypes(Enum):
     ALL_ETHANOL_VEHICLES
         All Ethanol powered vehicles   - GDS Pseudo Code AETH
     """
+
     ANY_VEHICLE = "AnyVehicle"
     ANY2_3_DOOR_VEHICLE = "Any2-3DoorVehicle"
     ANY2_3_DOOR_PASSENGER_CAR = "Any2-3DoorPassengerCar"

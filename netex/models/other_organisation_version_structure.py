@@ -17,5 +17,5 @@ class OtherOrganisationVersionStructure(OrganisationVersionStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

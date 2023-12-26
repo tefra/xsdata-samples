@@ -16,7 +16,7 @@ class TopicType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     scope_note: list[str] = field(
         default_factory=list,
@@ -24,19 +24,19 @@ class TopicType:
             "name": "scopeNote",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     gtaa_uri: None | str = field(
         default=None,
         metadata={
             "name": "gtaaUri",
             "type": "Attribute",
-        }
+        },
     )
     gtaa_status: None | GtaaStatusType = field(
         default=None,
         metadata={
             "name": "gtaaStatus",
             "type": "Attribute",
-        }
+        },
     )

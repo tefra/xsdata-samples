@@ -9,6 +9,7 @@ class BookingDates1:
     """
     Check in and Check out Date information.
     """
+
     class Meta:
         name = "BookingDates"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -19,7 +20,7 @@ class BookingDates1:
             "name": "CheckInDate",
             "type": "Attribute",
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     check_out_date: None | str = field(
         default=None,
@@ -27,5 +28,5 @@ class BookingDates1:
             "name": "CheckOutDate",
             "type": "Attribute",
             "pattern": r"[^:Z].*",
-        }
+        },
     )

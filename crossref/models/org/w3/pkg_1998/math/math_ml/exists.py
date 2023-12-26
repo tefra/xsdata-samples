@@ -15,5 +15,5 @@ class Exists:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

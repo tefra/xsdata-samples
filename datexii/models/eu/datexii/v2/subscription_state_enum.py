@@ -12,5 +12,6 @@ class SubscriptionStateEnum(Enum):
     :cvar SUSPENDED: The client's subscription as registered with a
         supplier is currently suspended.
     """
+
     ACTIVE = "active"
     SUSPENDED = "suspended"

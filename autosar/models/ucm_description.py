@@ -12,7 +12,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .string import String
-from .ucm_module_instantiation_subtypes_enum import UcmModuleInstantiationSubtypesEnum
+from .ucm_module_instantiation_subtypes_enum import (
+    UcmModuleInstantiationSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -79,6 +81,7 @@ class UcmDescription:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "UCM-DESCRIPTION"
 
@@ -89,15 +92,17 @@ class UcmDescription:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["UcmDescription.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "UcmDescription.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -105,7 +110,7 @@ class UcmDescription:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -113,7 +118,7 @@ class UcmDescription:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -121,7 +126,7 @@ class UcmDescription:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -129,7 +134,7 @@ class UcmDescription:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -137,7 +142,7 @@ class UcmDescription:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["UcmDescription.Annotations"] = field(
         default=None,
@@ -145,7 +150,7 @@ class UcmDescription:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     identifier: Optional[String] = field(
         default=None,
@@ -153,22 +158,24 @@ class UcmDescription:
             "name": "IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ucm_module_instantiation_ref: Optional["UcmDescription.UcmModuleInstantiationRef"] = field(
+    ucm_module_instantiation_ref: Optional[
+        "UcmDescription.UcmModuleInstantiationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "UCM-MODULE-INSTANTIATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -176,14 +183,14 @@ class UcmDescription:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -194,7 +201,7 @@ class UcmDescription:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -205,7 +212,7 @@ class UcmDescription:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -216,5 +223,5 @@ class UcmDescription:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

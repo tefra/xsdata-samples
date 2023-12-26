@@ -19,6 +19,7 @@ class OpeningStatusEnum(Enum):
     :cvar STATUS_UNKNOWN: The opening status is unknown.
     :cvar OTHER: Other.
     """
+
     OPEN = "open"
     CLOSED = "closed"
     CLOSED_ABNORMAL = "closedAbnormal"

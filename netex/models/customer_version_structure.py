@@ -4,7 +4,9 @@ from typing import Optional
 from xsdata.models.datatype import XmlDate
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .customer_accounts_rel_structure import CustomerAccountsRelStructure
-from .customer_eligibilities_rel_structure import CustomerEligibilitiesRelStructure
+from .customer_eligibilities_rel_structure import (
+    CustomerEligibilitiesRelStructure,
+)
 from .fare_contracts_rel_structure import FareContractsRelStructure
 from .gender_enumeration import GenderEnumeration
 from .postal_address import PostalAddress
@@ -25,7 +27,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "Surname",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     first_name: Optional[str] = field(
         default=None,
@@ -33,7 +35,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "FirstName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
@@ -41,7 +43,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "Title",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     date_of_birth: Optional[XmlDate] = field(
         default=None,
@@ -49,7 +51,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "DateOfBirth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gender: Optional[GenderEnumeration] = field(
         default=None,
@@ -57,7 +59,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "Gender",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     height: Optional[Decimal] = field(
         default=None,
@@ -65,7 +67,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "Height",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     photo: Optional[str] = field(
         default=None,
@@ -73,7 +75,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "Photo",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     email: Optional[str] = field(
         default=None,
@@ -81,7 +83,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "Email",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     phone: Optional[TelephoneContactStructure] = field(
         default=None,
@@ -89,7 +91,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "Phone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     postal_address: Optional[PostalAddress] = field(
         default=None,
@@ -97,7 +99,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "PostalAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     identity_document_ref: Optional[PrivateCodeStructure] = field(
         default=None,
@@ -105,15 +107,17 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "IdentityDocumentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    customer_eligibilities: Optional[CustomerEligibilitiesRelStructure] = field(
+    customer_eligibilities: Optional[
+        CustomerEligibilitiesRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "customerEligibilities",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     customer_accounts: Optional[CustomerAccountsRelStructure] = field(
         default=None,
@@ -121,7 +125,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "customerAccounts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_contracts: Optional[FareContractsRelStructure] = field(
         default=None,
@@ -129,5 +133,5 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "name": "fareContracts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

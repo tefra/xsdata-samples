@@ -14,13 +14,13 @@ class Share:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     class_value: List[str] = field(
         default_factory=list,
@@ -28,36 +28,36 @@ class Share:
             "name": "class",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     style: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     href: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
     src: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

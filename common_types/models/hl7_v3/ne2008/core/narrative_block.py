@@ -56,13 +56,13 @@ class StrucDocFootnoteRef:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -70,7 +70,7 @@ class StrucDocFootnoteRef:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     idref: Optional[str] = field(
         default=None,
@@ -78,7 +78,7 @@ class StrucDocFootnoteRef:
             "name": "IDREF",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -98,7 +98,7 @@ class StrucDocSub:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -113,7 +113,7 @@ class StrucDocSup:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -251,13 +251,13 @@ class StrucDocCaption:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -265,7 +265,7 @@ class StrucDocCaption:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -300,7 +300,7 @@ class StrucDocCaption:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -314,13 +314,13 @@ class StrucDocCol:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -328,43 +328,43 @@ class StrucDocCol:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     span: str = field(
         default="1",
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     width: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     align: Optional[StrucDocColAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocColValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -378,13 +378,13 @@ class StrucDocTitleFootnote:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -392,7 +392,7 @@ class StrucDocTitleFootnote:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -422,7 +422,7 @@ class StrucDocTitleFootnote:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -436,20 +436,20 @@ class StrucDocColgroup:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -457,43 +457,43 @@ class StrucDocColgroup:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     span: str = field(
         default="1",
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     width: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     align: Optional[StrucDocColgroupAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocColgroupValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -507,7 +507,7 @@ class StrucDocRenderMultiMedia:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     referenced_object: List[str] = field(
         default_factory=list,
@@ -516,20 +516,20 @@ class StrucDocRenderMultiMedia:
             "type": "Attribute",
             "required": True,
             "tokens": True,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -537,7 +537,7 @@ class StrucDocRenderMultiMedia:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
 
 
@@ -551,13 +551,13 @@ class StrucDocTitleContent:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -565,7 +565,7 @@ class StrucDocTitleContent:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -605,7 +605,7 @@ class StrucDocTitleContent:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -619,13 +619,13 @@ class StrucDocParagraph:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -633,7 +633,7 @@ class StrucDocParagraph:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -688,7 +688,7 @@ class StrucDocParagraph:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -702,13 +702,13 @@ class StrucDocTh:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -716,68 +716,68 @@ class StrucDocTh:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     abbr: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     axis: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     headers: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     scope: Optional[StrucDocThScope] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     rowspan: str = field(
         default="1",
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     colspan: str = field(
         default="1",
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     align: Optional[StrucDocThAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocThValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -827,7 +827,7 @@ class StrucDocTh:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -841,13 +841,13 @@ class StrucDocTitle:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -855,7 +855,7 @@ class StrucDocTitle:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     media_type: str = field(
         init=False,
@@ -863,7 +863,7 @@ class StrucDocTitle:
         metadata={
             "name": "mediaType",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -903,7 +903,7 @@ class StrucDocTitle:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -917,13 +917,13 @@ class StrucDocTd:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -931,68 +931,68 @@ class StrucDocTd:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     abbr: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     axis: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     headers: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     scope: Optional[StrucDocTdScope] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     rowspan: str = field(
         default="1",
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     colspan: str = field(
         default="1",
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     align: Optional[StrucDocTdAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocTdValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1052,7 +1052,7 @@ class StrucDocTd:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1066,27 +1066,27 @@ class StrucDocTr:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     td: List[StrucDocTd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1094,31 +1094,31 @@ class StrucDocTr:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     align: Optional[StrucDocTrAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocTrValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1133,20 +1133,20 @@ class StrucDocTbody:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1154,31 +1154,31 @@ class StrucDocTbody:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     align: Optional[StrucDocTbodyAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocTbodyValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1193,20 +1193,20 @@ class StrucDocTfoot:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1214,31 +1214,31 @@ class StrucDocTfoot:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     align: Optional[StrucDocTfootAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocTfootValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1253,20 +1253,20 @@ class StrucDocThead:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1274,31 +1274,31 @@ class StrucDocThead:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     align: Optional[StrucDocTheadAlign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     char: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     charoff: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[StrucDocTheadValign] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1312,35 +1312,35 @@ class StrucDocTable:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     col: List[StrucDocCol] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     colgroup: List[StrucDocColgroup] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     thead: Optional[StrucDocThead] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     tfoot: Optional[StrucDocTfoot] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     tbody: List[StrucDocTbody] = field(
         default_factory=list,
@@ -1348,20 +1348,20 @@ class StrucDocTable:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1369,49 +1369,49 @@ class StrucDocTable:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     summary: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     width: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     border: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     frame: Optional[StrucDocTableFrame] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     rules: Optional[StrucDocTableRules] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     cellspacing: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     cellpadding: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1425,13 +1425,13 @@ class StrucDocItem:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1439,7 +1439,7 @@ class StrucDocItem:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1509,7 +1509,7 @@ class StrucDocItem:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1523,7 +1523,7 @@ class StrucDocList:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     item: List[StrucDocItem] = field(
         default_factory=list,
@@ -1531,20 +1531,20 @@ class StrucDocList:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1552,14 +1552,14 @@ class StrucDocList:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     list_type: StrucDocListListType = field(
         default=StrucDocListListType.UNORDERED,
         metadata={
             "name": "listType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1573,13 +1573,13 @@ class StrucDocFootnote:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1587,7 +1587,7 @@ class StrucDocFootnote:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1642,7 +1642,7 @@ class StrucDocFootnote:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1655,44 +1655,44 @@ class StrucDocLinkHtml:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     href: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     rel: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     rev: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1700,7 +1700,7 @@ class StrucDocLinkHtml:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1720,7 +1720,7 @@ class StrucDocLinkHtml:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1734,13 +1734,13 @@ class StrucDocContent:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1748,13 +1748,13 @@ class StrucDocContent:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     revised: Optional[StrucDocContentRevised] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1804,7 +1804,7 @@ class StrucDocContent:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1818,13 +1818,13 @@ class StrucDocText:
         metadata={
             "name": "ID",
             "type": "Attribute",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     style_code: List[str] = field(
         default_factory=list,
@@ -1832,7 +1832,7 @@ class StrucDocText:
             "name": "styleCode",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     media_type: str = field(
         init=False,
@@ -1840,7 +1840,7 @@ class StrucDocText:
         metadata={
             "name": "mediaType",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1905,5 +1905,5 @@ class StrucDocText:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )

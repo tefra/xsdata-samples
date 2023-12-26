@@ -19,6 +19,7 @@ class FareRulesFilterCategory:
     fare_info_ref
         This tells if Low Fare Finder was used.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,12 +30,12 @@ class FareRulesFilterCategory:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 35,
-        }
+        },
     )
     fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
-        }
+        },
     )

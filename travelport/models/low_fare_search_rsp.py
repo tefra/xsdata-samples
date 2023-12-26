@@ -17,6 +17,7 @@ class LowFareSearchRsp(AirSearchRsp):
     currency_type
         Provider: 1G,1V,1P,ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class LowFareSearchRsp(AirSearchRsp):
         metadata={
             "name": "BrandList",
             "type": "Element",
-        }
+        },
     )
     currency_type: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class LowFareSearchRsp(AirSearchRsp):
             "type": "Attribute",
             "required": True,
             "length": 3,
-        }
+        },
     )

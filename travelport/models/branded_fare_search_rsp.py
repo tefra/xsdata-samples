@@ -11,6 +11,7 @@ class BrandedFareSearchRsp(BaseRsp1):
     """
     Branded Fare search response.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,7 +22,7 @@ class BrandedFareSearchRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     more_results: None | bool = field(
         default=None,
@@ -29,5 +30,5 @@ class BrandedFareSearchRsp(BaseRsp1):
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

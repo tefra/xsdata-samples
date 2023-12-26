@@ -16,7 +16,7 @@ class SystemPingPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class SystemPingPortTypeServiceInput:
                 "name": "PingReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/system_v32_0",
-            }
+            },
         )

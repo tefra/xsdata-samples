@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .all_modes_enumeration import AllModesEnumeration
-from .assistance_availability_enumeration import AssistanceAvailabilityEnumeration
+from .assistance_availability_enumeration import (
+    AssistanceAvailabilityEnumeration,
+)
 from .authority_ref import AuthorityRef
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .contact_structure import ContactStructure
@@ -20,13 +22,15 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceBookingService_VersionStructure"
 
-    assistance_availability: Optional[AssistanceAvailabilityEnumeration] = field(
+    assistance_availability: Optional[
+        AssistanceAvailabilityEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "AssistanceAvailability",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheelchair_booking_required: Optional[bool] = field(
         default=None,
@@ -34,7 +38,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "WheelchairBookingRequired",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_contact: Optional[ContactStructure] = field(
         default=None,
@@ -42,7 +46,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "BookingContact",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_arrangements: Optional[BookingArrangementsStructure] = field(
         default=None,
@@ -50,7 +54,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "BookingArrangements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     vehicle_mode: Optional[AllModesEnumeration] = field(
         default=None,
@@ -58,9 +62,11 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "VehicleMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[
+        Union[AuthorityRef, OperatorRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -76,9 +82,11 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[
+        Union[FlexibleLineRef, LineRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -94,7 +102,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     booked_object_ref: Optional[VersionOfObjectRefStructure] = field(
         default=None,
@@ -102,7 +110,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "BookedObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -110,5 +118,5 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

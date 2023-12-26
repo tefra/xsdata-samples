@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_required_port_prototype_subtypes_enum import AbstractRequiredPortPrototypeSubtypesEnum
+from .abstract_required_port_prototype_subtypes_enum import (
+    AbstractRequiredPortPrototypeSubtypesEnum,
+)
 from .ref import Ref
 from .trigger_subtypes_enum import TriggerSubtypesEnum
 
@@ -23,31 +25,36 @@ class RTriggerInAtomicSwcInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "R-TRIGGER-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_r_port_ref: Optional["RTriggerInAtomicSwcInstanceRef.ContextRPortRef"] = field(
+    context_r_port_ref: Optional[
+        "RTriggerInAtomicSwcInstanceRef.ContextRPortRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_trigger_ref: Optional["RTriggerInAtomicSwcInstanceRef.TargetTriggerRef"] = field(
+    target_trigger_ref: Optional[
+        "RTriggerInAtomicSwcInstanceRef.TargetTriggerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-TRIGGER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -55,7 +62,7 @@ class RTriggerInAtomicSwcInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -66,7 +73,7 @@ class RTriggerInAtomicSwcInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -77,5 +84,5 @@ class RTriggerInAtomicSwcInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

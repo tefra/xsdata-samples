@@ -10,5 +10,6 @@ class ISignalTypeEnumSimple(Enum):
     :cvar PRIMITIVE: ISignal shall be interpreted as a primitive type
         (e.g. UINT_8, SINT_32)
     """
+
     ARRAY = "ARRAY"
     PRIMITIVE = "PRIMITIVE"

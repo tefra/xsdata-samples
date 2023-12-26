@@ -10,6 +10,7 @@ class TransformerClassEnumSimple(Enum):
     :cvar SECURITY: The transformer is a security transformer.
     :cvar SERIALIZER: The transformer is a serializing transformer.
     """
+
     CUSTOM = "CUSTOM"
     SAFETY = "SAFETY"
     SECURITY = "SECURITY"

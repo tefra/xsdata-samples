@@ -17,5 +17,5 @@ class TypeOfZoneRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

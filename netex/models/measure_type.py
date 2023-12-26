@@ -10,7 +10,7 @@ class MeasureType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     uom: Optional[str] = field(
         default=None,
@@ -18,5 +18,5 @@ class MeasureType:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^: \n\r\t]+",
-        }
+        },
     )

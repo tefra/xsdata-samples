@@ -10,6 +10,7 @@ class FlightDetailsList:
     """
     The shared object list of FlightDetails.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class FlightDetailsList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

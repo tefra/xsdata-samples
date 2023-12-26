@@ -22,6 +22,7 @@ class BackOfficeHandOff:
     pseudo_city_code
         The PCC of the host system where it would be routed.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -31,14 +32,14 @@ class BackOfficeHandOff:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     location: None | str = field(
         default=None,
         metadata={
             "name": "Location",
             "type": "Attribute",
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -47,5 +48,5 @@ class BackOfficeHandOff:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )

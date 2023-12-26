@@ -74,7 +74,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -82,7 +82,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -90,14 +90,14 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -105,7 +105,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -113,7 +113,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: List[SxcmTsExplicit] = field(
         default_factory=list,
@@ -121,7 +121,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
@@ -129,14 +129,14 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -144,7 +144,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -152,7 +152,7 @@ class PrpaMt201310Uv02AdministrativeObservation:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -167,7 +167,7 @@ class PrpaMt201310Uv02CareGiver:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -175,7 +175,7 @@ class PrpaMt201310Uv02CareGiver:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -183,35 +183,35 @@ class PrpaMt201310Uv02CareGiver:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -219,7 +219,7 @@ class PrpaMt201310Uv02CareGiver:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -227,7 +227,7 @@ class PrpaMt201310Uv02CareGiver:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     care_giver_person: Optional[CoctMt030207UvPerson] = field(
         default=None,
@@ -236,23 +236,39 @@ class PrpaMt201310Uv02CareGiver:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassMutualRelationship.CAREGIVER,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -267,7 +283,7 @@ class PrpaMt201310Uv02ContactParty:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -275,7 +291,7 @@ class PrpaMt201310Uv02ContactParty:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -283,28 +299,28 @@ class PrpaMt201310Uv02ContactParty:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
@@ -312,7 +328,7 @@ class PrpaMt201310Uv02ContactParty:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -320,7 +336,7 @@ class PrpaMt201310Uv02ContactParty:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -328,7 +344,7 @@ class PrpaMt201310Uv02ContactParty:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     contact_person: Optional[CoctMt030207UvPerson] = field(
         default=None,
@@ -337,7 +353,7 @@ class PrpaMt201310Uv02ContactParty:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     contact_organization: Optional[CoctMt150007UvOrganization] = field(
         default=None,
@@ -346,14 +362,14 @@ class PrpaMt201310Uv02ContactParty:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassContact] = field(
         default=None,
@@ -361,7 +377,7 @@ class PrpaMt201310Uv02ContactParty:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -369,7 +385,7 @@ class PrpaMt201310Uv02ContactParty:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -384,7 +400,7 @@ class PrpaMt201310Uv02CoveredParty:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -392,7 +408,7 @@ class PrpaMt201310Uv02CoveredParty:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -400,7 +416,7 @@ class PrpaMt201310Uv02CoveredParty:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     sequence_number: Optional[Int] = field(
         default=None,
@@ -408,14 +424,14 @@ class PrpaMt201310Uv02CoveredParty:
             "name": "sequenceNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     time: Optional[IvlTsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     coverage_record: Optional[CoctMt510000Uv06CoverageRecord] = field(
         default=None,
@@ -424,14 +440,14 @@ class PrpaMt201310Uv02CoveredParty:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationType = field(
         init=False,
@@ -440,7 +456,7 @@ class PrpaMt201310Uv02CoveredParty:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -455,7 +471,7 @@ class PrpaMt201310Uv02Employee:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -463,7 +479,7 @@ class PrpaMt201310Uv02Employee:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -471,28 +487,28 @@ class PrpaMt201310Uv02Employee:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -500,7 +516,7 @@ class PrpaMt201310Uv02Employee:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -508,7 +524,7 @@ class PrpaMt201310Uv02Employee:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     job_title_name: Optional[Sc] = field(
         default=None,
@@ -516,7 +532,7 @@ class PrpaMt201310Uv02Employee:
             "name": "jobTitleName",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     job_class_code: Optional[Ce] = field(
         default=None,
@@ -524,7 +540,7 @@ class PrpaMt201310Uv02Employee:
             "name": "jobClassCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     occupation_code: Optional[Ce] = field(
         default=None,
@@ -532,7 +548,7 @@ class PrpaMt201310Uv02Employee:
             "name": "occupationCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     employer_organization: Optional[CoctMt150007UvOrganization] = field(
         default=None,
@@ -541,14 +557,14 @@ class PrpaMt201310Uv02Employee:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassEmployee] = field(
         default=None,
@@ -556,7 +572,7 @@ class PrpaMt201310Uv02Employee:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -564,7 +580,7 @@ class PrpaMt201310Uv02Employee:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -579,7 +595,7 @@ class PrpaMt201310Uv02Group:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -587,7 +603,7 @@ class PrpaMt201310Uv02Group:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -595,35 +611,35 @@ class PrpaMt201310Uv02Group:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -631,7 +647,7 @@ class PrpaMt201310Uv02Group:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     existence_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -639,28 +655,28 @@ class PrpaMt201310Uv02Group:
             "name": "existenceTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: Optional[AdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassOrganization] = field(
         default=None,
@@ -668,7 +684,7 @@ class PrpaMt201310Uv02Group:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -676,7 +692,7 @@ class PrpaMt201310Uv02Group:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -691,7 +707,7 @@ class PrpaMt201310Uv02Guardian:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -699,7 +715,7 @@ class PrpaMt201310Uv02Guardian:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -707,28 +723,28 @@ class PrpaMt201310Uv02Guardian:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -736,7 +752,7 @@ class PrpaMt201310Uv02Guardian:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -744,7 +760,7 @@ class PrpaMt201310Uv02Guardian:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     certificate_text: Optional[EdExplicit] = field(
         default=None,
@@ -752,7 +768,7 @@ class PrpaMt201310Uv02Guardian:
             "name": "certificateText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     guardian_person: Optional[CoctMt030207UvPerson] = field(
         default=None,
@@ -761,7 +777,7 @@ class PrpaMt201310Uv02Guardian:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     guardian_organization: Optional[CoctMt150007UvOrganization] = field(
         default=None,
@@ -770,23 +786,39 @@ class PrpaMt201310Uv02Guardian:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassMutualRelationship.GUARD,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -794,7 +826,7 @@ class PrpaMt201310Uv02Guardian:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -809,7 +841,7 @@ class PrpaMt201310Uv02LanguageCommunication:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -817,7 +849,7 @@ class PrpaMt201310Uv02LanguageCommunication:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -825,7 +857,7 @@ class PrpaMt201310Uv02LanguageCommunication:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     language_code: Optional[Ce] = field(
         default=None,
@@ -834,7 +866,7 @@ class PrpaMt201310Uv02LanguageCommunication:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     mode_code: Optional[Ce] = field(
         default=None,
@@ -842,7 +874,7 @@ class PrpaMt201310Uv02LanguageCommunication:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     proficiency_level_code: Optional[Ce] = field(
         default=None,
@@ -850,7 +882,7 @@ class PrpaMt201310Uv02LanguageCommunication:
             "name": "proficiencyLevelCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     preference_ind: Optional[Bl] = field(
         default=None,
@@ -858,14 +890,14 @@ class PrpaMt201310Uv02LanguageCommunication:
             "name": "preferenceInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -880,7 +912,7 @@ class PrpaMt201310Uv02Nation:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -888,7 +920,7 @@ class PrpaMt201310Uv02Nation:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -896,7 +928,7 @@ class PrpaMt201310Uv02Nation:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -904,21 +936,21 @@ class PrpaMt201310Uv02Nation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     name: Optional[OnExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClass = field(
         init=False,
@@ -926,7 +958,7 @@ class PrpaMt201310Uv02Nation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -934,7 +966,7 @@ class PrpaMt201310Uv02Nation:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -949,7 +981,7 @@ class PrpaMt201310Uv02OtherIds:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -957,7 +989,7 @@ class PrpaMt201310Uv02OtherIds:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -965,7 +997,7 @@ class PrpaMt201310Uv02OtherIds:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -973,7 +1005,7 @@ class PrpaMt201310Uv02OtherIds:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -981,7 +1013,7 @@ class PrpaMt201310Uv02OtherIds:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -989,7 +1021,7 @@ class PrpaMt201310Uv02OtherIds:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     scoping_organization: Optional[CoctMt150002Uv01Organization] = field(
         default=None,
@@ -998,23 +1030,32 @@ class PrpaMt201310Uv02OtherIds:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Optional[Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue]] = field(
+    class_code: Optional[
+        Union[
+            RoleClassMutualRelationship,
+            RoleClassPassive,
+            str,
+            RoleClassOntological,
+            RoleClassPartitive,
+            RoleClassRootValue,
+        ]
+    ] = field(
         default=None,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1029,7 +1070,7 @@ class PrpaMt201310Uv02PersonalRelationship:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1037,7 +1078,7 @@ class PrpaMt201310Uv02PersonalRelationship:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1045,14 +1086,14 @@ class PrpaMt201310Uv02PersonalRelationship:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
@@ -1060,21 +1101,21 @@ class PrpaMt201310Uv02PersonalRelationship:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -1082,7 +1123,7 @@ class PrpaMt201310Uv02PersonalRelationship:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -1090,7 +1131,7 @@ class PrpaMt201310Uv02PersonalRelationship:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     relationship_holder1: Optional[CoctMt030007UvPerson] = field(
         default=None,
@@ -1099,32 +1140,50 @@ class PrpaMt201310Uv02PersonalRelationship:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    relationship_holder2: Optional[CoctMt030007UvNonPersonLivingSubject] = field(
+    relationship_holder2: Optional[
+        CoctMt030007UvNonPersonLivingSubject
+    ] = field(
         default=None,
         metadata={
             "name": "relationshipHolder2",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassMutualRelationship.PRS,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     negation_ind: Optional[str] = field(
         default=None,
@@ -1132,7 +1191,7 @@ class PrpaMt201310Uv02PersonalRelationship:
             "name": "negationInd",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1147,7 +1206,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1155,7 +1214,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1163,7 +1222,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Cd] = field(
         default=None,
@@ -1171,7 +1230,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
@@ -1179,14 +1238,14 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[ActClassObservation] = field(
         default=None,
@@ -1194,7 +1253,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mood_code: ActMood = field(
         init=False,
@@ -1203,7 +1262,7 @@ class PrpaMt201310Uv02QueryMatchObservation:
             "name": "moodCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1218,7 +1277,7 @@ class PrpaMt201310Uv02Student:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1226,7 +1285,7 @@ class PrpaMt201310Uv02Student:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1234,28 +1293,28 @@ class PrpaMt201310Uv02Student:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -1263,7 +1322,7 @@ class PrpaMt201310Uv02Student:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -1271,7 +1330,7 @@ class PrpaMt201310Uv02Student:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     school_organization: Optional[CoctMt150007UvOrganization] = field(
         default=None,
@@ -1280,23 +1339,39 @@ class PrpaMt201310Uv02Student:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassMutualRelationship.STD,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1311,7 +1386,7 @@ class PrpaMt201310Uv02Subject2:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1319,7 +1394,7 @@ class PrpaMt201310Uv02Subject2:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1327,7 +1402,7 @@ class PrpaMt201310Uv02Subject2:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     position: Optional[CoctMt960000Uv05Position] = field(
         default=None,
@@ -1335,14 +1410,14 @@ class PrpaMt201310Uv02Subject2:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetSubject] = field(
         default=None,
@@ -1350,7 +1425,7 @@ class PrpaMt201310Uv02Subject2:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1365,7 +1440,7 @@ class PrpaMt201310Uv02Subject3:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1373,7 +1448,7 @@ class PrpaMt201310Uv02Subject3:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1381,7 +1456,7 @@ class PrpaMt201310Uv02Subject3:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     care_provision: Optional[CoctMt820000UvCareProvision] = field(
         default=None,
@@ -1390,14 +1465,14 @@ class PrpaMt201310Uv02Subject3:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetSubject] = field(
         default=None,
@@ -1405,7 +1480,7 @@ class PrpaMt201310Uv02Subject3:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1420,7 +1495,7 @@ class PrpaMt201310Uv02BirthPlace:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1428,7 +1503,7 @@ class PrpaMt201310Uv02BirthPlace:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1436,14 +1511,14 @@ class PrpaMt201310Uv02BirthPlace:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: Optional[AdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     birthplace: Optional[CoctMt710007UvPlace] = field(
         default=None,
@@ -1451,7 +1526,7 @@ class PrpaMt201310Uv02BirthPlace:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of: Optional[PrpaMt201310Uv02Subject2] = field(
         default=None,
@@ -1460,23 +1535,39 @@ class PrpaMt201310Uv02BirthPlace:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassPassive.BIRTHPL,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1491,7 +1582,7 @@ class PrpaMt201310Uv02Citizen:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1499,7 +1590,7 @@ class PrpaMt201310Uv02Citizen:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1507,14 +1598,14 @@ class PrpaMt201310Uv02Citizen:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -1522,7 +1613,7 @@ class PrpaMt201310Uv02Citizen:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     political_nation: Optional[PrpaMt201310Uv02Nation] = field(
         default=None,
@@ -1531,23 +1622,39 @@ class PrpaMt201310Uv02Citizen:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassMutualRelationship.CIT,
         metadata={
             "name": "classCode",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1562,7 +1669,7 @@ class PrpaMt201310Uv02Member:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1570,7 +1677,7 @@ class PrpaMt201310Uv02Member:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1578,21 +1685,21 @@ class PrpaMt201310Uv02Member:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -1600,7 +1707,7 @@ class PrpaMt201310Uv02Member:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -1608,7 +1715,7 @@ class PrpaMt201310Uv02Member:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     group: Optional[PrpaMt201310Uv02Group] = field(
         default=None,
@@ -1616,16 +1723,32 @@ class PrpaMt201310Uv02Member:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassPartitive.MBR,
         metadata={
@@ -1633,7 +1756,7 @@ class PrpaMt201310Uv02Member:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1648,7 +1771,7 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1656,7 +1779,7 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1664,7 +1787,7 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     subject_of: Optional[PrpaMt201310Uv02Subject3] = field(
         default=None,
@@ -1673,16 +1796,32 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={
@@ -1690,7 +1829,7 @@ class PrpaMt201310Uv02PatientOfOtherProvider:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1705,7 +1844,7 @@ class PrpaMt201310Uv02Subject:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1713,7 +1852,7 @@ class PrpaMt201310Uv02Subject:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1721,23 +1860,25 @@ class PrpaMt201310Uv02Subject:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    query_match_observation: Optional[PrpaMt201310Uv02QueryMatchObservation] = field(
+    query_match_observation: Optional[
+        PrpaMt201310Uv02QueryMatchObservation
+    ] = field(
         default=None,
         metadata={
             "name": "queryMatchObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: ParticipationTargetSubject = field(
         init=False,
@@ -1745,7 +1886,7 @@ class PrpaMt201310Uv02Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1760,7 +1901,7 @@ class PrpaMt201310Uv02Subject4:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1768,7 +1909,7 @@ class PrpaMt201310Uv02Subject4:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1776,23 +1917,25 @@ class PrpaMt201310Uv02Subject4:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    administrative_observation: Optional[PrpaMt201310Uv02AdministrativeObservation] = field(
+    administrative_observation: Optional[
+        PrpaMt201310Uv02AdministrativeObservation
+    ] = field(
         default=None,
         metadata={
             "name": "administrativeObservation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[ParticipationTargetSubject] = field(
         default=None,
@@ -1800,7 +1943,7 @@ class PrpaMt201310Uv02Subject4:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -1815,7 +1958,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -1823,7 +1966,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -1831,35 +1974,35 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     existence_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -1867,14 +2010,14 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "existenceTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     risk_code: List[Ce] = field(
         default_factory=list,
@@ -1882,7 +2025,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "riskCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     handling_code: List[Ce] = field(
         default_factory=list,
@@ -1890,7 +2033,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "handlingCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administrative_gender_code: Optional[Ce] = field(
         default=None,
@@ -1898,7 +2041,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "administrativeGenderCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     birth_time: Optional[TsExplicit] = field(
         default=None,
@@ -1906,7 +2049,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "birthTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     deceased_ind: Optional[Bl] = field(
         default=None,
@@ -1914,7 +2057,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "deceasedInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     deceased_time: Optional[TsExplicit] = field(
         default=None,
@@ -1922,7 +2065,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "deceasedTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     multiple_birth_ind: Optional[Bl] = field(
         default=None,
@@ -1930,7 +2073,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "multipleBirthInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     multiple_birth_order_number: Optional[Int] = field(
         default=None,
@@ -1938,7 +2081,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "multipleBirthOrderNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     organ_donor_ind: Optional[Bl] = field(
         default=None,
@@ -1946,7 +2089,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "organDonorInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     strain_text: Optional[EdExplicit] = field(
         default=None,
@@ -1954,7 +2097,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "strainText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     gender_status_code: Optional[Ce] = field(
         default=None,
@@ -1962,16 +2105,18 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "genderStatusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    as_patient_of_other_provider: List[PrpaMt201310Uv02PatientOfOtherProvider] = field(
+    as_patient_of_other_provider: List[
+        PrpaMt201310Uv02PatientOfOtherProvider
+    ] = field(
         default_factory=list,
         metadata={
             "name": "asPatientOfOtherProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_member: List[PrpaMt201310Uv02Member] = field(
         default_factory=list,
@@ -1980,7 +2125,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_other_ids: List[PrpaMt201310Uv02OtherIds] = field(
         default_factory=list,
@@ -1989,7 +2134,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     contact_party: List[PrpaMt201310Uv02ContactParty] = field(
         default_factory=list,
@@ -1998,7 +2143,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     guardian: List[PrpaMt201310Uv02Guardian] = field(
         default_factory=list,
@@ -2006,7 +2151,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     personal_relationship: List[PrpaMt201310Uv02PersonalRelationship] = field(
         default_factory=list,
@@ -2015,7 +2160,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     care_giver: List[PrpaMt201310Uv02CareGiver] = field(
         default_factory=list,
@@ -2024,7 +2169,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     birth_place: Optional[PrpaMt201310Uv02BirthPlace] = field(
         default=None,
@@ -2033,7 +2178,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     guarantor_role: List[CoctMt670000Uv04GuarantorRole] = field(
         default_factory=list,
@@ -2042,14 +2187,14 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassNonPersonLivingSubject] = field(
         default=None,
@@ -2057,7 +2202,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2065,7 +2210,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2080,7 +2225,7 @@ class PrpaMt201310Uv02Person:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2088,7 +2233,7 @@ class PrpaMt201310Uv02Person:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2096,14 +2241,14 @@ class PrpaMt201310Uv02Person:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[PnExplicit] = field(
         default_factory=list,
@@ -2111,21 +2256,21 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     desc: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     administrative_gender_code: Optional[Ce] = field(
         default=None,
@@ -2133,7 +2278,7 @@ class PrpaMt201310Uv02Person:
             "name": "administrativeGenderCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     birth_time: Optional[TsExplicit] = field(
         default=None,
@@ -2141,7 +2286,7 @@ class PrpaMt201310Uv02Person:
             "name": "birthTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     deceased_ind: Optional[Bl] = field(
         default=None,
@@ -2149,7 +2294,7 @@ class PrpaMt201310Uv02Person:
             "name": "deceasedInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     deceased_time: Optional[TsExplicit] = field(
         default=None,
@@ -2157,7 +2302,7 @@ class PrpaMt201310Uv02Person:
             "name": "deceasedTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     multiple_birth_ind: Optional[Bl] = field(
         default=None,
@@ -2165,7 +2310,7 @@ class PrpaMt201310Uv02Person:
             "name": "multipleBirthInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     multiple_birth_order_number: Optional[Int] = field(
         default=None,
@@ -2173,7 +2318,7 @@ class PrpaMt201310Uv02Person:
             "name": "multipleBirthOrderNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     organ_donor_ind: Optional[Bl] = field(
         default=None,
@@ -2181,14 +2326,14 @@ class PrpaMt201310Uv02Person:
             "name": "organDonorInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     marital_status_code: Optional[Ce] = field(
         default=None,
@@ -2196,7 +2341,7 @@ class PrpaMt201310Uv02Person:
             "name": "maritalStatusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     education_level_code: Optional[Ce] = field(
         default=None,
@@ -2204,7 +2349,7 @@ class PrpaMt201310Uv02Person:
             "name": "educationLevelCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     disability_code: List[Ce] = field(
         default_factory=list,
@@ -2212,7 +2357,7 @@ class PrpaMt201310Uv02Person:
             "name": "disabilityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     living_arrangement_code: Optional[Ce] = field(
         default=None,
@@ -2220,7 +2365,7 @@ class PrpaMt201310Uv02Person:
             "name": "livingArrangementCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     religious_affiliation_code: Optional[Ce] = field(
         default=None,
@@ -2228,7 +2373,7 @@ class PrpaMt201310Uv02Person:
             "name": "religiousAffiliationCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     race_code: List[Ce] = field(
         default_factory=list,
@@ -2236,7 +2381,7 @@ class PrpaMt201310Uv02Person:
             "name": "raceCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     ethnic_group_code: List[Ce] = field(
         default_factory=list,
@@ -2244,16 +2389,18 @@ class PrpaMt201310Uv02Person:
             "name": "ethnicGroupCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
-    as_patient_of_other_provider: List[PrpaMt201310Uv02PatientOfOtherProvider] = field(
+    as_patient_of_other_provider: List[
+        PrpaMt201310Uv02PatientOfOtherProvider
+    ] = field(
         default_factory=list,
         metadata={
             "name": "asPatientOfOtherProvider",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_employee: List[PrpaMt201310Uv02Employee] = field(
         default_factory=list,
@@ -2262,7 +2409,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_citizen: List[PrpaMt201310Uv02Citizen] = field(
         default_factory=list,
@@ -2271,7 +2418,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_student: List[PrpaMt201310Uv02Student] = field(
         default_factory=list,
@@ -2280,7 +2427,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_member: List[PrpaMt201310Uv02Member] = field(
         default_factory=list,
@@ -2289,7 +2436,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_other_ids: List[PrpaMt201310Uv02OtherIds] = field(
         default_factory=list,
@@ -2298,7 +2445,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     contact_party: List[PrpaMt201310Uv02ContactParty] = field(
         default_factory=list,
@@ -2307,7 +2454,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     guardian: List[PrpaMt201310Uv02Guardian] = field(
         default_factory=list,
@@ -2315,7 +2462,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     personal_relationship: List[PrpaMt201310Uv02PersonalRelationship] = field(
         default_factory=list,
@@ -2324,7 +2471,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     care_giver: List[PrpaMt201310Uv02CareGiver] = field(
         default_factory=list,
@@ -2333,7 +2480,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     birth_place: Optional[PrpaMt201310Uv02BirthPlace] = field(
         default=None,
@@ -2342,7 +2489,7 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     guarantor_role: List[CoctMt670000Uv04GuarantorRole] = field(
         default_factory=list,
@@ -2351,23 +2498,25 @@ class PrpaMt201310Uv02Person:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    language_communication: List[PrpaMt201310Uv02LanguageCommunication] = field(
+    language_communication: List[
+        PrpaMt201310Uv02LanguageCommunication
+    ] = field(
         default_factory=list,
         metadata={
             "name": "languageCommunication",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClass = field(
         init=False,
@@ -2375,7 +2524,7 @@ class PrpaMt201310Uv02Person:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -2383,7 +2532,7 @@ class PrpaMt201310Uv02Person:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2398,7 +2547,7 @@ class PrpaMt201310Uv02Patient:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -2406,7 +2555,7 @@ class PrpaMt201310Uv02Patient:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -2414,7 +2563,7 @@ class PrpaMt201310Uv02Patient:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -2422,21 +2571,21 @@ class PrpaMt201310Uv02Patient:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     status_code: Optional[Cs] = field(
         default=None,
@@ -2445,7 +2594,7 @@ class PrpaMt201310Uv02Patient:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -2453,7 +2602,7 @@ class PrpaMt201310Uv02Patient:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     confidentiality_code: List[Ce] = field(
         default_factory=list,
@@ -2461,7 +2610,7 @@ class PrpaMt201310Uv02Patient:
             "name": "confidentialityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     very_important_person_code: Optional[Ce] = field(
         default=None,
@@ -2469,7 +2618,7 @@ class PrpaMt201310Uv02Patient:
             "name": "veryImportantPersonCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     patient_person: Optional[PrpaMt201310Uv02Person] = field(
         default=None,
@@ -2478,16 +2627,18 @@ class PrpaMt201310Uv02Patient:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    patient_non_person_living_subject: Optional[PrpaMt201310Uv02NonPersonLivingSubject] = field(
+    patient_non_person_living_subject: Optional[
+        PrpaMt201310Uv02NonPersonLivingSubject
+    ] = field(
         default=None,
         metadata={
             "name": "patientNonPersonLivingSubject",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     provider_organization: Optional[CoctMt150003Uv03Organization] = field(
         default=None,
@@ -2496,7 +2647,7 @@ class PrpaMt201310Uv02Patient:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     subject_of1: List[PrpaMt201310Uv02Subject] = field(
         default_factory=list,
@@ -2506,7 +2657,7 @@ class PrpaMt201310Uv02Patient:
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
             "nillable": True,
-        }
+        },
     )
     subject_of2: List[PrpaMt201310Uv02Subject4] = field(
         default_factory=list,
@@ -2515,7 +2666,7 @@ class PrpaMt201310Uv02Patient:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     covered_party_of: List[PrpaMt201310Uv02CoveredParty] = field(
         default_factory=list,
@@ -2524,16 +2675,32 @@ class PrpaMt201310Uv02Patient:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
-    class_code: Union[RoleClassMutualRelationship, RoleClassPassive, str, RoleClassOntological, RoleClassPartitive, RoleClassRootValue, XAccommodationRequestorRole, XDocumentEntrySubject, XDocumentSubject, XInformationRecipientRole, XRoleClassAccommodationRequestor, XRoleClassCoverage, XRoleClassCoverageInvoice, XRoleClassCredentialedEntity, XRoleClassPayeePolicyRelationship] = field(
+    class_code: Union[
+        RoleClassMutualRelationship,
+        RoleClassPassive,
+        str,
+        RoleClassOntological,
+        RoleClassPartitive,
+        RoleClassRootValue,
+        XAccommodationRequestorRole,
+        XDocumentEntrySubject,
+        XDocumentSubject,
+        XInformationRecipientRole,
+        XRoleClassAccommodationRequestor,
+        XRoleClassCoverage,
+        XRoleClassCoverageInvoice,
+        XRoleClassCredentialedEntity,
+        XRoleClassPayeePolicyRelationship,
+    ] = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={
@@ -2541,5 +2708,5 @@ class PrpaMt201310Uv02Patient:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^\s]+",
-        }
+        },
     )

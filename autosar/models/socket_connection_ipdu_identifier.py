@@ -52,6 +52,7 @@ class SocketConnectionIpduIdentifier:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOCKET-CONNECTION-IPDU-IDENTIFIER"
 
@@ -61,7 +62,7 @@ class SocketConnectionIpduIdentifier:
             "name": "HEADER-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_collection_pdu_timeout: Optional[TimeValue] = field(
         default=None,
@@ -69,7 +70,7 @@ class SocketConnectionIpduIdentifier:
             "name": "PDU-COLLECTION-PDU-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_collection_semantics: Optional[PduCollectionSemanticsEnum] = field(
         default=None,
@@ -77,7 +78,7 @@ class SocketConnectionIpduIdentifier:
             "name": "PDU-COLLECTION-SEMANTICS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_collection_trigger: Optional[PduCollectionTriggerEnum] = field(
         default=None,
@@ -85,7 +86,7 @@ class SocketConnectionIpduIdentifier:
             "name": "PDU-COLLECTION-TRIGGER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_ref: Optional["SocketConnectionIpduIdentifier.PduRef"] = field(
         default=None,
@@ -93,30 +94,34 @@ class SocketConnectionIpduIdentifier:
             "name": "PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    pdu_triggering_ref: Optional["SocketConnectionIpduIdentifier.PduTriggeringRef"] = field(
+    pdu_triggering_ref: Optional[
+        "SocketConnectionIpduIdentifier.PduTriggeringRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    routing_group_refs: Optional["SocketConnectionIpduIdentifier.RoutingGroupRefs"] = field(
+    routing_group_refs: Optional[
+        "SocketConnectionIpduIdentifier.RoutingGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -124,7 +129,7 @@ class SocketConnectionIpduIdentifier:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -135,7 +140,7 @@ class SocketConnectionIpduIdentifier:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -146,18 +151,20 @@ class SocketConnectionIpduIdentifier:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RoutingGroupRefs:
-        routing_group_ref: List["SocketConnectionIpduIdentifier.RoutingGroupRefs.RoutingGroupRef"] = field(
+        routing_group_ref: List[
+            "SocketConnectionIpduIdentifier.RoutingGroupRefs.RoutingGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ROUTING-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -168,5 +175,5 @@ class SocketConnectionIpduIdentifier:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

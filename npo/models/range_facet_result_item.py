@@ -14,5 +14,5 @@ class RangeFacetResultItem(FacetResultItem):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

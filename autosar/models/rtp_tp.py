@@ -27,6 +27,7 @@ class RtpTp:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RTP-TP"
 
@@ -36,7 +37,7 @@ class RtpTp:
             "name": "SSRC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_udp_config: Optional["RtpTp.TcpUdpConfig"] = field(
         default=None,
@@ -44,14 +45,14 @@ class RtpTp:
             "name": "TCP-UDP-CONFIG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -59,7 +60,7 @@ class RtpTp:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -70,7 +71,7 @@ class RtpTp:
                 "name": "TCP-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         udp_tp: Optional[UdpTp] = field(
             default=None,
@@ -78,5 +79,5 @@ class RtpTp:
                 "name": "UDP-TP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

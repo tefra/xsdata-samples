@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.distance_1 import Distance1
 from travelport.models.type_vehicle_location import TypeVehicleLocation
-from travelport.models.type_vehicle_vendor_location import TypeVehicleVendorLocation
+from travelport.models.type_vehicle_vendor_location import (
+    TypeVehicleVendorLocation,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -36,6 +38,7 @@ class VehicleDateLocation:
     return_location_number
     key
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -45,7 +48,7 @@ class VehicleDateLocation:
             "name": "VendorLocation",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     pickup_date_time: None | str = field(
         default=None,
@@ -53,7 +56,7 @@ class VehicleDateLocation:
             "name": "PickupDateTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     pickup_location: None | str = field(
         default=None,
@@ -62,7 +65,7 @@ class VehicleDateLocation:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     return_date_time: None | str = field(
         default=None,
@@ -70,7 +73,7 @@ class VehicleDateLocation:
             "name": "ReturnDateTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     return_location: None | str = field(
         default=None,
@@ -79,42 +82,42 @@ class VehicleDateLocation:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     pickup_location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "PickupLocationType",
             "type": "Attribute",
-        }
+        },
     )
     return_location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "ReturnLocationType",
             "type": "Attribute",
-        }
+        },
     )
     pickup_location_number: None | str = field(
         default=None,
         metadata={
             "name": "PickupLocationNumber",
             "type": "Attribute",
-        }
+        },
     )
     return_location_number: None | str = field(
         default=None,
         metadata={
             "name": "ReturnLocationNumber",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -125,5 +128,5 @@ class VehicleDateLocation:
                 "name": "Distance",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-            }
+            },
         )

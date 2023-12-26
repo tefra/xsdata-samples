@@ -47,6 +47,7 @@ class Limit:
         "CLOSED".
     :ivar content:
     """
+
     class Meta:
         name = "LIMIT"
 
@@ -55,7 +56,7 @@ class Limit:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -63,28 +64,28 @@ class Limit:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     binding_time: Optional[BindingTimeEnumSimple] = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
             "type": "Attribute",
-        }
+        },
     )
     blueprint_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
-        }
+        },
     )
     sd: Optional[str] = field(
         default=None,
         metadata={
             "name": "SD",
             "type": "Attribute",
-        }
+        },
     )
     short_label: Optional[str] = field(
         default=None,
@@ -93,14 +94,14 @@ class Limit:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
-        }
+        },
     )
     interval_type: Optional[IntervalTypeEnumSimple] = field(
         default=None,
         metadata={
             "name": "INTERVAL-TYPE",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -120,7 +121,7 @@ class Limit:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -131,7 +132,7 @@ class Limit:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -142,5 +143,5 @@ class Limit:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

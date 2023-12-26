@@ -10,6 +10,7 @@ class ChargesRules:
     """
     Fare Reference associated with the BookingRules.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,7 +20,7 @@ class ChargesRules:
             "name": "VoluntaryChanges",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     voluntary_refunds: list[ChargesRules.VoluntaryRefunds] = field(
         default_factory=list,
@@ -27,7 +28,7 @@ class ChargesRules:
             "name": "VoluntaryRefunds",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
 
     @dataclass
@@ -37,14 +38,14 @@ class ChargesRules:
             metadata={
                 "name": "Penalty",
                 "type": "Element",
-            }
+            },
         )
         vol_change_ind: None | bool = field(
             default=None,
             metadata={
                 "name": "VolChangeInd",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -54,12 +55,12 @@ class ChargesRules:
             metadata={
                 "name": "Penalty",
                 "type": "Element",
-            }
+            },
         )
         vol_change_ind: None | bool = field(
             default=None,
             metadata={
                 "name": "VolChangeInd",
                 "type": "Attribute",
-            }
+            },
         )

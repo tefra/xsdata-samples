@@ -18,7 +18,7 @@ class TConversationNode(TBaseElement):
             "name": "participantRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     message_flow_ref: List[QName] = field(
         default_factory=list,
@@ -26,7 +26,7 @@ class TConversationNode(TBaseElement):
             "name": "messageFlowRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     correlation_key: List[CorrelationKey] = field(
         default_factory=list,
@@ -34,11 +34,11 @@ class TConversationNode(TBaseElement):
             "name": "correlationKey",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

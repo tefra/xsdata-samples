@@ -12,7 +12,9 @@ from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
-from .port_prototype_in_executable_instance_ref import PortPrototypeInExecutableInstanceRef
+from .port_prototype_in_executable_instance_ref import (
+    PortPrototypeInExecutableInstanceRef,
+)
 from .positive_integer import PositiveInteger
 from .process_subtypes_enum import ProcessSubtypesEnum
 from .ref import Ref
@@ -100,6 +102,7 @@ class RestHttpPortPrototypeMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REST-HTTP-PORT-PROTOTYPE-MAPPING"
 
@@ -110,15 +113,17 @@ class RestHttpPortPrototypeMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RestHttpPortPrototypeMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RestHttpPortPrototypeMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -126,7 +131,7 @@ class RestHttpPortPrototypeMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -134,7 +139,7 @@ class RestHttpPortPrototypeMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -142,7 +147,7 @@ class RestHttpPortPrototypeMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -150,7 +155,7 @@ class RestHttpPortPrototypeMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -158,7 +163,7 @@ class RestHttpPortPrototypeMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RestHttpPortPrototypeMapping.Annotations"] = field(
         default=None,
@@ -166,7 +171,7 @@ class RestHttpPortPrototypeMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -174,15 +179,17 @@ class RestHttpPortPrototypeMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    accepts_encodings: Optional["RestHttpPortPrototypeMapping.AcceptsEncodings"] = field(
+    accepts_encodings: Optional[
+        "RestHttpPortPrototypeMapping.AcceptsEncodings"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCEPTS-ENCODINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     host_ref: Optional["RestHttpPortPrototypeMapping.HostRef"] = field(
         default=None,
@@ -190,15 +197,17 @@ class RestHttpPortPrototypeMapping:
             "name": "HOST-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_prototype_iref: Optional[PortPrototypeInExecutableInstanceRef] = field(
+    port_prototype_iref: Optional[
+        PortPrototypeInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_prototype_slug_fragment: Optional[String] = field(
         default=None,
@@ -206,7 +215,7 @@ class RestHttpPortPrototypeMapping:
             "name": "PORT-PROTOTYPE-SLUG-FRAGMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     process_ref: Optional["RestHttpPortPrototypeMapping.ProcessRef"] = field(
         default=None,
@@ -214,7 +223,7 @@ class RestHttpPortPrototypeMapping:
             "name": "PROCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -222,22 +231,24 @@ class RestHttpPortPrototypeMapping:
             "name": "TCP-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tls_secure_com_props_ref: Optional["RestHttpPortPrototypeMapping.TlsSecureComPropsRef"] = field(
+    tls_secure_com_props_ref: Optional[
+        "RestHttpPortPrototypeMapping.TlsSecureComPropsRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TLS-SECURE-COM-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -245,14 +256,14 @@ class RestHttpPortPrototypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -263,7 +274,7 @@ class RestHttpPortPrototypeMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -274,7 +285,7 @@ class RestHttpPortPrototypeMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -285,7 +296,7 @@ class RestHttpPortPrototypeMapping:
                 "name": "HTTP-ACCEPT-ENCODING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -296,7 +307,7 @@ class RestHttpPortPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -307,7 +318,7 @@ class RestHttpPortPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -318,5 +329,5 @@ class RestHttpPortPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

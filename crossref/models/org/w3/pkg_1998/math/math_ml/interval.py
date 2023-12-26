@@ -15,5 +15,5 @@ class Interval:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

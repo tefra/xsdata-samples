@@ -83,6 +83,7 @@ class BaseAirPriceReq(BaseCoreReq1):
         booked itinerary with the valid preferences
         "PriceIgnoreAvailability" and "PriceWithAvailability"
     """
+
     air_itinerary: None | AirItinerary = field(
         default=None,
         metadata={
@@ -90,7 +91,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "required": True,
-        }
+        },
     )
     air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
@@ -98,7 +99,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "name": "AirPricingModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     search_passenger: list[SearchPassenger1] = field(
         default_factory=list,
@@ -108,7 +109,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 18,
-        }
+        },
     )
     air_pricing_command: list[AirPricingCommand] = field(
         default_factory=list,
@@ -118,7 +119,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 16,
-        }
+        },
     )
     air_reservation_locator_code: None | str = field(
         default=None,
@@ -128,7 +129,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
@@ -136,7 +137,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "name": "OptionalServices",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -145,7 +146,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     pcc: None | Pcc = field(
         default=None,
@@ -153,7 +154,7 @@ class BaseAirPriceReq(BaseCoreReq1):
             "name": "PCC",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     ssr: list[Ssr1] = field(
         default_factory=list,
@@ -162,21 +163,21 @@ class BaseAirPriceReq(BaseCoreReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     check_obfees: None | str = field(
         default=None,
         metadata={
             "name": "CheckOBFees",
             "type": "Attribute",
-        }
+        },
     )
     fare_rule_type: TypeFareRuleType = field(
         default=TypeFareRuleType.NONE,
         metadata={
             "name": "FareRuleType",
             "type": "Attribute",
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -185,28 +186,28 @@ class BaseAirPriceReq(BaseCoreReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     ticket_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TicketDate",
             "type": "Attribute",
-        }
+        },
     )
     check_flight_details: bool = field(
         default=False,
         metadata={
             "name": "CheckFlightDetails",
             "type": "Attribute",
-        }
+        },
     )
     return_mm: bool = field(
         default=False,
         metadata={
             "name": "ReturnMM",
             "type": "Attribute",
-        }
+        },
     )
     nscc: None | str = field(
         default=None,
@@ -215,33 +216,33 @@ class BaseAirPriceReq(BaseCoreReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     split_pricing: bool = field(
         default=False,
         metadata={
             "name": "SplitPricing",
             "type": "Attribute",
-        }
+        },
     )
     most_restrictive_penalties: bool = field(
         default=False,
         metadata={
             "name": "MostRestrictivePenalties",
             "type": "Attribute",
-        }
+        },
     )
     fare_rule_validation: bool = field(
         default=False,
         metadata={
             "name": "FareRuleValidation",
             "type": "Attribute",
-        }
+        },
     )
     pricing_preference: None | str = field(
         default=None,
         metadata={
             "name": "PricingPreference",
             "type": "Attribute",
-        }
+        },
     )

@@ -24,6 +24,7 @@ class MeansOfPaymentEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     PAYMENT_CARD = "paymentCard"
     CASH = "cash"
     CASH_COINS_ONLY = "cashCoinsOnly"

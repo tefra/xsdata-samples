@@ -43,6 +43,7 @@ class TypePassengerType4:
     residency_type
         The passenger residence type.
     """
+
     class Meta:
         name = "typePassengerType"
 
@@ -52,7 +53,7 @@ class TypePassengerType4:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard4] = field(
         default_factory=list,
@@ -61,7 +62,7 @@ class TypePassengerType4:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     discount_card: list[DiscountCard4] = field(
         default_factory=list,
@@ -70,7 +71,7 @@ class TypePassengerType4:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 9,
-        }
+        },
     )
     personal_geography: None | PersonalGeography4 = field(
         default=None,
@@ -78,7 +79,7 @@ class TypePassengerType4:
             "name": "PersonalGeography",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -88,21 +89,21 @@ class TypePassengerType4:
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Attribute",
-        }
+        },
     )
     dob: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DOB",
             "type": "Attribute",
-        }
+        },
     )
     gender: None | str = field(
         default=None,
@@ -111,33 +112,33 @@ class TypePassengerType4:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     price_ptconly: None | bool = field(
         default=None,
         metadata={
             "name": "PricePTCOnly",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     accompanied_passenger: bool = field(
         default=False,
         metadata={
             "name": "AccompaniedPassenger",
             "type": "Attribute",
-        }
+        },
     )
     residency_type: None | TypeResidency4 = field(
         default=None,
         metadata={
             "name": "ResidencyType",
             "type": "Attribute",
-        }
+        },
     )

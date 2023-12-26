@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_5 import BaseReq5
-from travelport.models.type_delete_hierarchy_lvl_profile_type import TypeDeleteHierarchyLvlProfileType
+from travelport.models.type_delete_hierarchy_lvl_profile_type import (
+    TypeDeleteHierarchyLvlProfileType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -22,6 +24,7 @@ class ProfileDeleteHierarchyLevelReq(BaseReq5):
         The type of profile hierarchy level corresponds which can be deleted
         (e.g., branchgroup and travelergroup).
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -31,7 +34,7 @@ class ProfileDeleteHierarchyLevelReq(BaseReq5):
             "name": "HierarchyLevelID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeDeleteHierarchyLvlProfileType = field(
         default=None,
@@ -39,5 +42,5 @@ class ProfileDeleteHierarchyLevelReq(BaseReq5):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

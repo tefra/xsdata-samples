@@ -26,6 +26,7 @@ class LocationInformation:
     area_type
         Location type corresponding to the group.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -34,21 +35,21 @@ class LocationInformation:
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "LocationType",
             "type": "Attribute",
-        }
+        },
     )
     area_group: None | str = field(
         default=None,
         metadata={
             "name": "AreaGroup",
             "type": "Attribute",
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -57,12 +58,12 @@ class LocationInformation:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     area_type: None | TypeAreaInfo = field(
         default=None,
         metadata={
             "name": "AreaType",
             "type": "Attribute",
-        }
+        },
     )

@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .communication_connector_subtypes_enum import CommunicationConnectorSubtypesEnum
+from .communication_connector_subtypes_enum import (
+    CommunicationConnectorSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -94,6 +96,7 @@ class UserDefinedGlobalTimeSlave:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "USER-DEFINED-GLOBAL-TIME-SLAVE"
 
@@ -104,15 +107,17 @@ class UserDefinedGlobalTimeSlave:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["UserDefinedGlobalTimeSlave.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "UserDefinedGlobalTimeSlave.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -120,7 +125,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -128,7 +133,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -136,7 +141,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -144,7 +149,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -152,7 +157,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["UserDefinedGlobalTimeSlave.Annotations"] = field(
         default=None,
@@ -160,15 +165,17 @@ class UserDefinedGlobalTimeSlave:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_connector_ref: Optional["UserDefinedGlobalTimeSlave.CommunicationConnectorRef"] = field(
+    communication_connector_ref: Optional[
+        "UserDefinedGlobalTimeSlave.CommunicationConnectorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     follow_up_timeout_value: Optional[TimeValue] = field(
         default=None,
@@ -176,7 +183,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "FOLLOW-UP-TIMEOUT-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_leap_future_threshold: Optional[TimeValue] = field(
         default=None,
@@ -184,7 +191,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "TIME-LEAP-FUTURE-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_leap_healing_counter: Optional[PositiveInteger] = field(
         default=None,
@@ -192,7 +199,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "TIME-LEAP-HEALING-COUNTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_leap_past_threshold: Optional[TimeValue] = field(
         default=None,
@@ -200,7 +207,7 @@ class UserDefinedGlobalTimeSlave:
             "name": "TIME-LEAP-PAST-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -208,14 +215,14 @@ class UserDefinedGlobalTimeSlave:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -223,14 +230,14 @@ class UserDefinedGlobalTimeSlave:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -241,7 +248,7 @@ class UserDefinedGlobalTimeSlave:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -252,7 +259,7 @@ class UserDefinedGlobalTimeSlave:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -263,5 +270,5 @@ class UserDefinedGlobalTimeSlave:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

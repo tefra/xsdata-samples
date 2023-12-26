@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .aggregation_tailoring_subtypes_enum import AggregationTailoringSubtypesEnum
+from .aggregation_tailoring_subtypes_enum import (
+    AggregationTailoringSubtypesEnum,
+)
 from .boolean import Boolean
 from .positive_integer import PositiveInteger
 from .ref import Ref
@@ -37,6 +39,7 @@ class AggregationCondition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "AGGREGATION-CONDITION"
 
@@ -46,7 +49,7 @@ class AggregationCondition:
             "name": "LOWER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -54,7 +57,7 @@ class AggregationCondition:
             "name": "UPPER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity_infinite: Optional[Boolean] = field(
         default=None,
@@ -62,7 +65,7 @@ class AggregationCondition:
             "name": "UPPER-MULTIPLICITY-INFINITE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     aggregation_ref: Optional["AggregationCondition.AggregationRef"] = field(
         default=None,
@@ -70,14 +73,14 @@ class AggregationCondition:
             "name": "AGGREGATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -85,7 +88,7 @@ class AggregationCondition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -96,5 +99,5 @@ class AggregationCondition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

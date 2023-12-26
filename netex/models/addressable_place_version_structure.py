@@ -18,7 +18,7 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
             "name": "Url",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     image: Optional[str] = field(
         default=None,
@@ -26,7 +26,7 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
             "name": "Image",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     postal_address: Optional[PostalAddress] = field(
         default=None,
@@ -34,7 +34,7 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
             "name": "PostalAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     road_address: Optional[RoadAddress] = field(
         default=None,
@@ -42,5 +42,5 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
             "name": "RoadAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

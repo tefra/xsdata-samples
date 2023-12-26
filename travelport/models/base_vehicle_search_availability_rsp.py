@@ -12,6 +12,7 @@ class BaseVehicleSearchAvailabilityRsp(BaseSearchRsp1):
     """
     Base response of vehicle availability response.
     """
+
     vehicle_date_location: None | VehicleDateLocation = field(
         default=None,
         metadata={
@@ -19,7 +20,7 @@ class BaseVehicleSearchAvailabilityRsp(BaseSearchRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "required": True,
-        }
+        },
     )
     vehicle: list[Vehicle] = field(
         default_factory=list,
@@ -28,5 +29,5 @@ class BaseVehicleSearchAvailabilityRsp(BaseSearchRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

@@ -168,6 +168,7 @@ class VmsDatexPictogramEnum(Enum):
     :cvar VEHICLE_FIRE: Vehicle fire.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ACCIDENT = "accident"
     ADVISORY_SPEED = "advisorySpeed"
     ANIMALS_ON_ROAD = "animalsOnRoad"
@@ -186,11 +187,15 @@ class VmsDatexPictogramEnum(Enum):
     COMPULSORY_MINIMUM_SPEED = "compulsoryMinimumSpeed"
     CROSS_WIND = "crossWind"
     DANGER_OF_FIRE = "dangerOfFire"
-    DRIVING_OF_VEHICLES_LESS_THAN_XMETRES_APART_PROHIBITED = "drivingOfVehiclesLessThanXMetresApartProhibited"
+    DRIVING_OF_VEHICLES_LESS_THAN_XMETRES_APART_PROHIBITED = (
+        "drivingOfVehiclesLessThanXMetresApartProhibited"
+    )
     END_OF_ADVISORY_SPEED = "endOfAdvisorySpeed"
     END_OF_COMPULSORY_MINIMUM_SPEED = "endOfCompulsoryMinimumSpeed"
     END_OF_PROHIBITION_OF_OVERTAKING = "endOfProhibitionOfOvertaking"
-    END_OF_PROHIBITION_OF_OVERTAKING_FOR_GOODS_VEHICLES = "endOfProhibitionOfOvertakingForGoodsVehicles"
+    END_OF_PROHIBITION_OF_OVERTAKING_FOR_GOODS_VEHICLES = (
+        "endOfProhibitionOfOvertakingForGoodsVehicles"
+    )
     END_OF_SPEED_LIMIT = "endOfSpeedLimit"
     EXIT_CLOSED = "exitClosed"
     FALLING_ROCKS = "fallingRocks"
@@ -225,20 +230,38 @@ class VmsDatexPictogramEnum(Enum):
     LIGHT_SIGNALS = "lightSignals"
     LOOSE_GRAVEL = "looseGravel"
     MAINTENANCE_VEHICLE_IN_ACTION = "maintenanceVehicleInAction"
-    MAXIMUM_SPEED_LIMITED_TO_THE_FIGURE_INDICATED = "maximumSpeedLimitedToTheFigureIndicated"
+    MAXIMUM_SPEED_LIMITED_TO_THE_FIGURE_INDICATED = (
+        "maximumSpeedLimitedToTheFigureIndicated"
+    )
     NARROW_LANES_AEAD = "narrowLanesAead"
     NO_ENTRY = "noEntry"
-    NO_ENTRY_FOR_ANY_POWER_DRIVEN_VEHICLE_DRAWING_ATRAILER = "noEntryForAnyPowerDrivenVehicleDrawingATrailer"
+    NO_ENTRY_FOR_ANY_POWER_DRIVEN_VEHICLE_DRAWING_ATRAILER = (
+        "noEntryForAnyPowerDrivenVehicleDrawingATrailer"
+    )
     NO_ENTRY_FOR_ANY_POWER_DRIVEN_VEHICLE_DRAWING_ATRAILER_OTHER_THAN_ASEMI_TRAILER_OR_ASINGLE_AXLE_TRAILER = "noEntryForAnyPowerDrivenVehicleDrawingATrailerOtherThanASemiTrailerOrASingleAxleTrailer"
     NO_ENTRY_FOR_GOODS_VEHICLES = "noEntryForGoodsVehicles"
-    NO_ENTRY_FOR_VEHICLES_EXCEEDING_XTONNES_LADEN_MASS = "noEntryForVehiclesExceedingXTonnesLadenMass"
-    NO_ENTRY_FOR_VEHICLES_HAVING_AMASS_EXCEEDING_XTONNES_ON_ONE_AXLE = "noEntryForVehiclesHavingAMassExceedingXTonnesOnOneAxle"
-    NO_ENTRY_FOR_VEHICLES_HAVING_AN_OVERALL_HEIGHT_EXCEEDING_XMETRES = "noEntryForVehiclesHavingAnOverallHeightExceedingXMetres"
-    NO_ENTRY_FOR_VEHICLES_HAVING_AN_OVERALL_LENGTH_EXCEEDING_XMETRES = "noEntryForVehiclesHavingAnOverallLengthExceedingXMetres"
-    NO_ENTRY_FOR_VEHICLES_HAVING_AN_OVERALL_WIDTH_EXCEEDING_XMETRES = "noEntryForVehiclesHavingAnOverallWidthExceedingXMetres"
-    NO_ENTRY_FOR_VEHICLES_CARRYING_DANGEROUS_GOODS = "noEntryForVehiclesCarryingDangerousGoods"
+    NO_ENTRY_FOR_VEHICLES_EXCEEDING_XTONNES_LADEN_MASS = (
+        "noEntryForVehiclesExceedingXTonnesLadenMass"
+    )
+    NO_ENTRY_FOR_VEHICLES_HAVING_AMASS_EXCEEDING_XTONNES_ON_ONE_AXLE = (
+        "noEntryForVehiclesHavingAMassExceedingXTonnesOnOneAxle"
+    )
+    NO_ENTRY_FOR_VEHICLES_HAVING_AN_OVERALL_HEIGHT_EXCEEDING_XMETRES = (
+        "noEntryForVehiclesHavingAnOverallHeightExceedingXMetres"
+    )
+    NO_ENTRY_FOR_VEHICLES_HAVING_AN_OVERALL_LENGTH_EXCEEDING_XMETRES = (
+        "noEntryForVehiclesHavingAnOverallLengthExceedingXMetres"
+    )
+    NO_ENTRY_FOR_VEHICLES_HAVING_AN_OVERALL_WIDTH_EXCEEDING_XMETRES = (
+        "noEntryForVehiclesHavingAnOverallWidthExceedingXMetres"
+    )
+    NO_ENTRY_FOR_VEHICLES_CARRYING_DANGEROUS_GOODS = (
+        "noEntryForVehiclesCarryingDangerousGoods"
+    )
     OTHER_DANGERS = "otherDangers"
-    OVERTAKING_BY_GOODS_VEHICLES_PROHIBITED = "overtakingByGoodsVehiclesProhibited"
+    OVERTAKING_BY_GOODS_VEHICLES_PROHIBITED = (
+        "overtakingByGoodsVehiclesProhibited"
+    )
     OVERTAKING_PROHIBITED = "overtakingProhibited"
     POLLUTION_OR_SMOG_ALERT = "pollutionOrSmogAlert"
     QUEUE = "queue"
@@ -254,8 +277,12 @@ class VmsDatexPictogramEnum(Enum):
     SNOW_PLOUGH_IN_ACTION = "snowPloughInAction"
     SPEED_CAMERAS_IN_ACTION = "speedCamerasInAction"
     TRAFFIC_CONGESTION = "trafficCongestion"
-    TRAFFIC_DEVIATED_TO_OPPOSITE_CARRIAGEWAY_AHEAD = "trafficDeviatedToOppositeCarriagewayAhead"
-    TRAFFIC_PARTIALLY_DEVIATED_TO_OPPOSITE_CARRIAGEWAY_AHEAD = "trafficPartiallyDeviatedToOppositeCarriagewayAhead"
+    TRAFFIC_DEVIATED_TO_OPPOSITE_CARRIAGEWAY_AHEAD = (
+        "trafficDeviatedToOppositeCarriagewayAhead"
+    )
+    TRAFFIC_PARTIALLY_DEVIATED_TO_OPPOSITE_CARRIAGEWAY_AHEAD = (
+        "trafficPartiallyDeviatedToOppositeCarriagewayAhead"
+    )
     TUNNEL_CLOSED = "tunnelClosed"
     TURN_LEFT = "turnLeft"
     TURN_RIGHT = "turnRight"

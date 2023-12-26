@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.agent_idoverride_2 import AgentIdoverride2
-from travelport.models.billing_point_of_sale_info_2 import BillingPointOfSaleInfo2
+from travelport.models.billing_point_of_sale_info_2 import (
+    BillingPointOfSaleInfo2,
+)
 from travelport.models.type_logging_level_2 import TypeLoggingLevel2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -32,6 +34,7 @@ class BaseCoreReq2:
         ISO  639 Language Code used to receive specific information in the
         requested  language. Supported  Provider: ACH. Supported Carriers:U2
     """
+
     class Meta:
         name = "BaseCoreReq"
 
@@ -42,7 +45,7 @@ class BaseCoreReq2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
             "required": True,
-        }
+        },
     )
     agent_idoverride: list[AgentIdoverride2] = field(
         default_factory=list,
@@ -50,7 +53,7 @@ class BaseCoreReq2:
             "name": "AgentIDOverride",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )
     terminal_session_info: None | str = field(
         default=None,
@@ -58,28 +61,28 @@ class BaseCoreReq2:
             "name": "TerminalSessionInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )
     trace_id: None | str = field(
         default=None,
         metadata={
             "name": "TraceId",
             "type": "Attribute",
-        }
+        },
     )
     token_id: None | str = field(
         default=None,
         metadata={
             "name": "TokenId",
             "type": "Attribute",
-        }
+        },
     )
     authorized_by: None | str = field(
         default=None,
         metadata={
             "name": "AuthorizedBy",
             "type": "Attribute",
-        }
+        },
     )
     target_branch: None | str = field(
         default=None,
@@ -88,19 +91,19 @@ class BaseCoreReq2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     override_logging: None | TypeLoggingLevel2 = field(
         default=None,
         metadata={
             "name": "OverrideLogging",
             "type": "Attribute",
-        }
+        },
     )
     language_code: None | str = field(
         default=None,
         metadata={
             "name": "LanguageCode",
             "type": "Attribute",
-        }
+        },
     )

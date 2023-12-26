@@ -5,5 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CustomerPurchasePackageElementAccessRefStructure(VersionOfObjectRefStructure):
+class CustomerPurchasePackageElementAccessRefStructure(
+    VersionOfObjectRefStructure
+):
     pass

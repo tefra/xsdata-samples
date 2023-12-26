@@ -51,6 +51,7 @@ class UniversalUpdate:
     form_of_payment
         Provider: 1G,1V,1P,ACH,SDK. Product : Air, Hotel, Vehicle, Cruise
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -61,7 +62,7 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     general_remark: list[GeneralRemark1] = field(
         default_factory=list,
@@ -70,7 +71,7 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     osi: list[Osi1] = field(
         default_factory=list,
@@ -79,7 +80,7 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     unassociated_remark: list[UnassociatedRemark1] = field(
         default_factory=list,
@@ -88,7 +89,7 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     xmlremark: list[Xmlremark1] = field(
         default_factory=list,
@@ -97,7 +98,7 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     postscript: None | Postscript1 = field(
         default=None,
@@ -105,7 +106,7 @@ class UniversalUpdate:
             "name": "Postscript",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     booking_traveler_info: None | BookingTravelerInfo1 = field(
         default=None,
@@ -113,7 +114,7 @@ class UniversalUpdate:
             "name": "BookingTravelerInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     service_fee_info: list[ServiceFeeInfo1] = field(
         default_factory=list,
@@ -122,14 +123,14 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     status: None | UniversalUpdateStatus = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Element",
-        }
+        },
     )
     agency_contact_info: None | AgencyContactInfo1 = field(
         default=None,
@@ -137,7 +138,7 @@ class UniversalUpdate:
             "name": "AgencyContactInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     customer_id: None | CustomerId1 = field(
         default=None,
@@ -145,7 +146,7 @@ class UniversalUpdate:
             "name": "CustomerID",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     commission_remark: None | CommissionRemark1 = field(
         default=None,
@@ -153,7 +154,7 @@ class UniversalUpdate:
             "name": "CommissionRemark",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     consolidator_remark: None | ConsolidatorRemark1 = field(
         default=None,
@@ -161,7 +162,7 @@ class UniversalUpdate:
             "name": "ConsolidatorRemark",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     invoice_remark: list[InvoiceRemark1] = field(
         default_factory=list,
@@ -170,7 +171,7 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     action_status: None | ActionStatus1 = field(
         default=None,
@@ -178,7 +179,7 @@ class UniversalUpdate:
             "name": "ActionStatus",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     review_booking: list[ReviewBooking1] = field(
         default_factory=list,
@@ -187,7 +188,7 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     ownership_change: None | OwnershipChange1 = field(
         default=None,
@@ -195,7 +196,7 @@ class UniversalUpdate:
             "name": "OwnershipChange",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -204,5 +205,5 @@ class UniversalUpdate:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

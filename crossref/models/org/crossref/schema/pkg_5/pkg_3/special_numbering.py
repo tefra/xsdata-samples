@@ -10,6 +10,7 @@ class SpecialNumbering:
     Text defining the type of special issue (e.g. "suppl") should be
     included in this element along with the number.
     """
+
     class Meta:
         name = "special_numbering"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class SpecialNumbering:
         metadata={
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )

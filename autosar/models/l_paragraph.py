@@ -41,6 +41,7 @@ class LParagraph:
         case.
     :ivar content:
     """
+
     class Meta:
         name = "L-PARAGRAPH"
 
@@ -49,7 +50,7 @@ class LParagraph:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -57,7 +58,7 @@ class LParagraph:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     l: Optional[LEnumSimple] = field(
         default=None,
@@ -65,7 +66,7 @@ class LParagraph:
             "name": "L",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -140,7 +141,7 @@ class LParagraph:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -151,5 +152,5 @@ class LParagraph:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

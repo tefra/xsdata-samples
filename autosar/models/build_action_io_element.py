@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import Sdg
 from .build_engineering_object import BuildEngineeringObject
-from .ecuc_definition_element_subtypes_enum import EcucDefinitionElementSubtypesEnum
+from .ecuc_definition_element_subtypes_enum import (
+    EcucDefinitionElementSubtypesEnum,
+)
 from .foreign_model_reference import ForeignModelReference
 from .generic_model_reference import GenericModelReference
 from .identifier import Identifier
@@ -54,6 +56,7 @@ class BuildActionIoElement:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BUILD-ACTION-IO-ELEMENT"
 
@@ -63,7 +66,7 @@ class BuildActionIoElement:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdgs: Optional["BuildActionIoElement.Sdgs"] = field(
         default=None,
@@ -71,15 +74,17 @@ class BuildActionIoElement:
             "name": "SDGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecuc_definition_ref: Optional["BuildActionIoElement.EcucDefinitionRef"] = field(
+    ecuc_definition_ref: Optional[
+        "BuildActionIoElement.EcucDefinitionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ECUC-DEFINITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     engineering_object: Optional[BuildEngineeringObject] = field(
         default=None,
@@ -87,7 +92,7 @@ class BuildActionIoElement:
             "name": "ENGINEERING-OBJECT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     foreign_model_reference: Optional[ForeignModelReference] = field(
         default=None,
@@ -95,7 +100,7 @@ class BuildActionIoElement:
             "name": "FOREIGN-MODEL-REFERENCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     model_object_reference: Optional[GenericModelReference] = field(
         default=None,
@@ -103,7 +108,7 @@ class BuildActionIoElement:
             "name": "MODEL-OBJECT-REFERENCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     role: Optional[Identifier] = field(
         default=None,
@@ -111,14 +116,14 @@ class BuildActionIoElement:
             "name": "ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -126,7 +131,7 @@ class BuildActionIoElement:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -137,7 +142,7 @@ class BuildActionIoElement:
                 "name": "SDG",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -148,5 +153,5 @@ class BuildActionIoElement:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

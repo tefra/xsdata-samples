@@ -3,7 +3,9 @@ from typing import Optional
 from .boolean import Boolean
 from .limit_value import LimitValue
 from .positive_integer import PositiveInteger
-from .primitive_attribute_tailoring_subtypes_enum import PrimitiveAttributeTailoringSubtypesEnum
+from .primitive_attribute_tailoring_subtypes_enum import (
+    PrimitiveAttributeTailoringSubtypesEnum,
+)
 from .ref import Ref
 from .regular_expression import RegularExpression
 
@@ -47,6 +49,7 @@ class PrimitiveAttributeCondition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PRIMITIVE-ATTRIBUTE-CONDITION"
 
@@ -56,7 +59,7 @@ class PrimitiveAttributeCondition:
             "name": "LOWER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -64,7 +67,7 @@ class PrimitiveAttributeCondition:
             "name": "UPPER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity_infinite: Optional[Boolean] = field(
         default=None,
@@ -72,7 +75,7 @@ class PrimitiveAttributeCondition:
             "name": "UPPER-MULTIPLICITY-INFINITE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max: Optional[LimitValue] = field(
         default=None,
@@ -80,7 +83,7 @@ class PrimitiveAttributeCondition:
             "name": "MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_length: Optional[PositiveInteger] = field(
         default=None,
@@ -88,7 +91,7 @@ class PrimitiveAttributeCondition:
             "name": "MAX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min: Optional[LimitValue] = field(
         default=None,
@@ -96,7 +99,7 @@ class PrimitiveAttributeCondition:
             "name": "MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_length: Optional[PositiveInteger] = field(
         default=None,
@@ -104,7 +107,7 @@ class PrimitiveAttributeCondition:
             "name": "MIN-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern: Optional[RegularExpression] = field(
         default=None,
@@ -112,22 +115,24 @@ class PrimitiveAttributeCondition:
             "name": "PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    attribute_ref: Optional["PrimitiveAttributeCondition.AttributeRef"] = field(
+    attribute_ref: Optional[
+        "PrimitiveAttributeCondition.AttributeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -135,7 +140,7 @@ class PrimitiveAttributeCondition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -146,5 +151,5 @@ class PrimitiveAttributeCondition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

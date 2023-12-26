@@ -11,6 +11,7 @@ class DiagnosticObdSupportEnumSimple(Enum):
     :cvar PRIMARY_ECU: This represents the role "primary ECU".
     :cvar SECONDARY_ECU: This represents the role "secondary ECU".
     """
+
     MASTER_ECU = "MASTER-ECU"
     NO_OBD_SUPPORT = "NO-OBD-SUPPORT"
     PRIMARY_ECU = "PRIMARY-ECU"

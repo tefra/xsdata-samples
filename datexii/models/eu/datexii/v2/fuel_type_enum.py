@@ -19,6 +19,7 @@ class FuelTypeEnum(Enum):
     :cvar PETROL: Petrol.
     :cvar PETROL_BATTERY_HYBRID: Petrol and battery hybrid.
     """
+
     BATTERY = "battery"
     BIODIESEL = "biodiesel"
     DIESEL = "diesel"

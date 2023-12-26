@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .capabilities_request import CapabilitiesRequest
 from .capabilities_response import CapabilitiesResponse
 from .check_status_request import CheckStatusRequest
@@ -22,7 +22,26 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SiriSchema:
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            ServiceRequest,
+            SubscriptionRequest,
+            TerminateSubscriptionRequest,
+            DataReadyNotification,
+            DataSupplyRequest,
+            CheckStatusRequest,
+            HeartbeatNotification,
+            CapabilitiesRequest,
+            SubscriptionResponse,
+            TerminateSubscriptionResponse,
+            DataReadyAcknowledgement,
+            ServiceDelivery,
+            DataReceivedAcknowledgement,
+            CheckStatusResponse,
+            CapabilitiesResponse,
+            Extensions1,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -108,11 +127,11 @@ class SiriSchema:
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-        }
+        },
     )
     version: str = field(
         default="2.0",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

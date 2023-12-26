@@ -19,6 +19,7 @@ class ExchangeEligibilityInfo:
         Indicates whether the itinerary passed initial validation for
         automated exchange
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,26 +29,26 @@ class ExchangeEligibilityInfo:
             "name": "ExchangePenaltyInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     eligible_fares: None | str = field(
         default=None,
         metadata={
             "name": "EligibleFares",
             "type": "Attribute",
-        }
+        },
     )
     refundable_fares: None | str = field(
         default=None,
         metadata={
             "name": "RefundableFares",
             "type": "Attribute",
-        }
+        },
     )
     passed_automation_checks: None | bool = field(
         default=None,
         metadata={
             "name": "PassedAutomationChecks",
             "type": "Attribute",
-        }
+        },
     )

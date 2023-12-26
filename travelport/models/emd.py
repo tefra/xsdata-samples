@@ -1,8 +1,12 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from travelport.models.emd_availability_charge_indicator import EmdAvailabilityChargeIndicator
-from travelport.models.emd_refund_reissue_indicator import EmdRefundReissueIndicator
+from travelport.models.emd_availability_charge_indicator import (
+    EmdAvailabilityChargeIndicator,
+)
+from travelport.models.emd_refund_reissue_indicator import (
+    EmdRefundReissueIndicator,
+)
 from travelport.models.type_booking import TypeBooking
 from travelport.models.type_display_category import TypeDisplayCategory
 
@@ -52,6 +56,7 @@ class Emd:
     reusable
         Identifies if the service can be re-used towards a future purchase.
     """
+
     class Meta:
         name = "EMD"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -63,49 +68,51 @@ class Emd:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 5,
-        }
+        },
     )
     fulfillment_type_description: None | str = field(
         default=None,
         metadata={
             "name": "FulfillmentTypeDescription",
             "type": "Attribute",
-        }
+        },
     )
     associated_item: None | str = field(
         default=None,
         metadata={
             "name": "AssociatedItem",
             "type": "Attribute",
-        }
+        },
     )
-    availability_charge_indicator: None | EmdAvailabilityChargeIndicator = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityChargeIndicator",
-            "type": "Attribute",
-        }
+    availability_charge_indicator: None | EmdAvailabilityChargeIndicator = (
+        field(
+            default=None,
+            metadata={
+                "name": "AvailabilityChargeIndicator",
+                "type": "Attribute",
+            },
+        )
     )
     refund_reissue_indicator: None | EmdRefundReissueIndicator = field(
         default=None,
         metadata={
             "name": "RefundReissueIndicator",
             "type": "Attribute",
-        }
+        },
     )
     commissionable: None | bool = field(
         default=None,
         metadata={
             "name": "Commissionable",
             "type": "Attribute",
-        }
+        },
     )
     mileage_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "MileageIndicator",
             "type": "Attribute",
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -114,33 +121,33 @@ class Emd:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "Date",
             "type": "Attribute",
-        }
+        },
     )
     booking: None | TypeBooking = field(
         default=None,
         metadata={
             "name": "Booking",
             "type": "Attribute",
-        }
+        },
     )
     display_category: None | TypeDisplayCategory = field(
         default=None,
         metadata={
             "name": "DisplayCategory",
             "type": "Attribute",
-        }
+        },
     )
     reusable: None | bool = field(
         default=None,
         metadata={
             "name": "Reusable",
             "type": "Attribute",
-        }
+        },
     )

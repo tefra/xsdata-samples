@@ -26,6 +26,7 @@ class RelatedTraveler:
     relation
         Relation to the pre pay id. Example flight pass user
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -36,35 +37,35 @@ class RelatedTraveler:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     person_name: None | PersonName = field(
         default=None,
         metadata={
             "name": "PersonName",
             "type": "Element",
-        }
+        },
     )
     credits_used: None | RelatedTraveler.CreditsUsed = field(
         default=None,
         metadata={
             "name": "CreditsUsed",
             "type": "Element",
-        }
+        },
     )
     status_code: None | str = field(
         default=None,
         metadata={
             "name": "StatusCode",
             "type": "Attribute",
-        }
+        },
     )
     relation: None | str = field(
         default=None,
         metadata={
             "name": "Relation",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -74,7 +75,7 @@ class RelatedTraveler:
             metadata={
                 "name": "UsedCredit",
                 "type": "Attribute",
-            }
+            },
         )
         currency_code: None | str = field(
             default=None,
@@ -82,5 +83,5 @@ class RelatedTraveler:
                 "name": "CurrencyCode",
                 "type": "Attribute",
                 "length": 3,
-            }
+            },
         )

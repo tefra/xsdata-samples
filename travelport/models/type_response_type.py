@@ -13,6 +13,7 @@ class TypeResponseType(Enum):
     segments, otherwise “Availability” will be mapped. Provider
     Supported RCH.
     """
+
     AVAILABILITY = "Availability"
     SCHEDULES = "Schedules"
     FARES = "Fares"

@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
 from .ref import Ref
-from .someip_sd_client_service_instance_config_subtypes_enum import SomeipSdClientServiceInstanceConfigSubtypesEnum
+from .someip_sd_client_service_instance_config_subtypes_enum import (
+    SomeipSdClientServiceInstanceConfigSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -26,16 +28,19 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG-REF-CONDITIONAL"
 
-    someip_sd_client_service_instance_config_ref: Optional["SomeipSdClientServiceInstanceConfigRefConditional.SomeipSdClientServiceInstanceConfigRef"] = field(
+    someip_sd_client_service_instance_config_ref: Optional[
+        "SomeipSdClientServiceInstanceConfigRefConditional.SomeipSdClientServiceInstanceConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -43,14 +48,14 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,16 +63,18 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class SomeipSdClientServiceInstanceConfigRef(Ref):
-        dest: Optional[SomeipSdClientServiceInstanceConfigSubtypesEnum] = field(
+        dest: Optional[
+            SomeipSdClientServiceInstanceConfigSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

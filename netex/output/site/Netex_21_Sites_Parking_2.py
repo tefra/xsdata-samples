@@ -145,29 +145,29 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
         choice=[
             SiteFrame(
-                id="mypark:SF01",
+                id='mypark:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="mypark:PP01@Opening_Hours",
-                                version="any",
+                                id='mypark:PP01@Opening_Hours',
+                                version='any',
                                 day_types=DayTypesRelStructure(
                                     choice=[
                                         DayType(
-                                            id="mypark:EveryDay",
-                                            version="any",
+                                            id='mypark:EveryDay',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Every day"
+                                                value='Every day'
                                             ),
                                             properties=PropertiesOfDayRelStructure(
                                                 property_of_day=[
@@ -180,15 +180,15 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
-                                            ref=""
+                                            ref=''
                                         ),
                                     ]
                                 ),
                                 timebands=TimebandsRelStructure(
                                     timeband_ref_or_timeband=[
                                         TimebandVersionedChildStructure(
-                                            id="mypark:PP01@Opening_Hours@range",
-                                            version="any",
+                                            id='mypark:PP01@Opening_Hours@range',
+                                            version='any',
                                             start_time=XmlTime(6, 30, 0, 0),
                                             end_time_or_day_offset_or_duration=[
                                                 XmlTime(12, 0, 0, 0),
@@ -198,15 +198,15 @@ obj = PublicationDelivery(
                                 )
                             ),
                             AvailabilityCondition(
-                                id="mypark:PP01@Exit_Hours",
-                                version="any",
+                                id='mypark:PP01@Exit_Hours',
+                                version='any',
                                 day_types=DayTypesRelStructure(
                                     choice=[
                                         DayType(
-                                            id="mypark:24_Hours_every_day",
-                                            version="any",
+                                            id='mypark:24_Hours_every_day',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Every day"
+                                                value='Every day'
                                             ),
                                             properties=PropertiesOfDayRelStructure(
                                                 property_of_day=[
@@ -219,7 +219,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
-                                            ref=""
+                                            ref=''
                                         ),
                                     ]
                                 )
@@ -227,39 +227,39 @@ obj = PublicationDelivery(
                         ]
                     ),
                 ],
-                version="any",
+                version='any',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mypark_data",
-                            xmlns="mypark",
-                            xmlns_url="http://www.pkgdata.co.uk/data",
-                            description="Other interchange DATA SOURCE "
+                            id='mypark_data',
+                            xmlns='mypark',
+                            xmlns_url='http://www.pkgdata.co.uk/data',
+                            description='Other interchange DATA SOURCE '
                         ),
                         Codespace(
-                            id="nptgLocality_data",
-                            xmlns="nptgLocality",
-                            xmlns_url="http://www.nptg.co.uk/data",
-                            description="NPTG gazetteer  DATA SOURCE "
+                            id='nptgLocality_data',
+                            xmlns='nptgLocality',
+                            xmlns_url='http://www.nptg.co.uk/data',
+                            description='NPTG gazetteer  DATA SOURCE '
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mypark_data"
+                        ref='mypark_data'
                     )
                 ),
                 topographic_places=TopographicPlacesInFrameRelStructure(
                     topographic_place=[
                         TopographicPlace(
-                            id="nptgLocality:TP_0032A",
-                            version="any",
+                            id='nptgLocality:TP_0032A',
+                            version='any',
                             name=MultilingualString(
-                                value="Barcester Town"
+                                value='Barcester Town'
                             ),
                             descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                 name=MultilingualString(
-                                    value="Barcester"
+                                    value='Barcester'
                                 )
                             )
                         ),
@@ -268,42 +268,42 @@ obj = PublicationDelivery(
                 parkings=ParkingsInFrameRelStructure(
                     parking=[
                         Parking(
-                            id="mypark:PP01",
+                            id='mypark:PP01',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityConditionRef(
-                                            version="any",
-                                            ref="mypark:PP01@Opening_Hours"
+                                            version='any',
+                                            ref='mypark:PP01@Opening_Hours'
                                         ),
                                     ]
                                 ),
                             ],
-                            data_source_ref_attribute="parkopedia",
-                            version="any",
+                            data_source_ref_attribute='parkopedia',
+                            version='any',
                             name=MultilingualString(
-                                value="Barcester  CIty centre  Car Park"
+                                value='Barcester  CIty centre  Car Park'
                             ),
                             short_name=MultilingualString(
-                                value="CIty Car Park"
+                                value='CIty Car Park'
                             ),
                             description=[
                                 MultilingualString(
-                                    value="Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places "
+                                    value='Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places '
                                 ),
                             ],
                             centroid=SimplePointVersionStructure(
-                                id="xyz",
+                                id='xyz',
                                 location=LocationStructure2(
-                                    longitude=Decimal("-180"),
-                                    latitude=Decimal("-90"),
-                                    id="xyz12",
-                                    srs_name="WGS84"
+                                    longitude=Decimal('-180'),
+                                    latitude=Decimal('-90'),
+                                    id='xyz12',
+                                    srs_name='WGS84'
                                 )
                             ),
                             polygon=Polygon(
-                                id="PP01_ID_1",
-                                srs_name="wgs84",
+                                id='PP01_ID_1',
+                                srs_name='wgs84',
                                 srs_dimension=2,
                                 exterior=Exterior(
                                     linear_ring=LinearRing(
@@ -313,7 +313,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                             Pos(
@@ -321,7 +321,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                             Pos(
@@ -329,7 +329,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                             Pos(
@@ -337,7 +337,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                         ]
@@ -352,7 +352,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                                 Pos(
@@ -360,7 +360,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                                 Pos(
@@ -368,7 +368,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                                 Pos(
@@ -376,7 +376,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                             ]
@@ -384,27 +384,27 @@ obj = PublicationDelivery(
                                     ),
                                 ]
                             ),
-                            url="http://www.barpark.co.uk",
-                            image="http://ww.mycarpark.com/prettypicture.jpg",
+                            url='http://www.barpark.co.uk',
+                            image='http://ww.mycarpark.com/prettypicture.jpg',
                             postal_address=PostalAddress(
-                                id="mypark:PP01@address",
-                                version="any",
+                                id='mypark:PP01@address',
+                                version='any',
                                 country_ref=CountryRef(
-                                    value="String",
+                                    value='String',
                                     ref=IanaCountryTldEnumeration.UK
                                 ),
-                                house_number="27",
+                                house_number='27',
                                 street=MultilingualString(
-                                    value="High Street"
+                                    value='High Street'
                                 ),
                                 town=MultilingualString(
-                                    value="Barcester"
+                                    value='Barcester'
                                 ),
-                                post_code="BXC 24P"
+                                post_code='BXC 24P'
                             ),
                             accessibility_assessment=AccessibilityAssessment(
-                                id="mypark:PP01",
-                                version="any",
+                                id='mypark:PP01',
+                                version='any',
                                 mobility_impaired_access=LimitationStatusEnumeration.PARTIAL,
                                 limitations=AccessibilityLimitationsRelStructure(
                                     accessibility_limitation=AccessibilityLimitation(
@@ -421,7 +421,7 @@ obj = PublicationDelivery(
                                 AccessModeEnumeration.FOOT,
                             ],
                             cross_road=MultilingualString(
-                                value=" High Street"
+                                value=' High Street'
                             ),
                             landmark=MultilingualString(
                                 value="Sainsbury's"
@@ -434,8 +434,8 @@ obj = PublicationDelivery(
                             facilities=SiteFacilitySetsRelStructure(
                                 site_facility_set_ref_or_site_facility_set=[
                                     SiteFacilitySet(
-                                        id="mypark:PP01",
-                                        version="any",
+                                        id='mypark:PP01',
+                                        version='any',
                                         accessibility_tool_list=[
                                             AccessibilityToolEnumeration.BUGGY,
                                             AccessibilityToolEnumeration.WHEELCHAIR,
@@ -451,32 +451,32 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
-                                version="any",
-                                ref="nptgLocality:TP_0032A"
+                                version='any',
+                                ref='nptgLocality:TP_0032A'
                             ),
                             site_type=SiteTypeEnumeration.RETAIL,
                             at_centre=True,
                             levels=LevelsRelStructure(
                                 level_ref_or_level=[
                                     Level(
-                                        id="mypark:PP01@Level@01",
-                                        version="any",
+                                        id='mypark:PP01@Level@01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Street Level"
+                                            value='Street Level'
                                         )
                                     ),
                                     Level(
-                                        id="mypark:PP01@Level@02",
-                                        version="any",
+                                        id='mypark:PP01@Level@02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Level 1"
+                                            value='Level 1'
                                         )
                                     ),
                                     Level(
-                                        id="mypark:PP01@Level@03",
-                                        version="any",
+                                        id='mypark:PP01@Level@03',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Level 3 (Walkway to STore)"
+                                            value='Level 3 (Walkway to STore)'
                                         )
                                     ),
                                 ]
@@ -484,48 +484,48 @@ obj = PublicationDelivery(
                             entrances=SiteEntrancesRelStructure(
                                 choice=[
                                     ParkingPassengerEntrance(
-                                        id="mypark:PP01@EP01",
+                                        id='mypark:PP01@EP01',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        version="any",
-                                                        ref="mypark:PP01@Exit_Hours"
+                                                        version='any',
+                                                        ref='mypark:PP01@Exit_Hours'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Entrance from street"
+                                            value='Main Entrance from street'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="External Entrance Street level from High Street ",
-                                                lang="en"
+                                                value='External Entrance Street level from High Street ',
+                                                lang='en'
                                             ),
                                         ],
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="mypark:PP01@Level@01"
+                                            version='any',
+                                            ref='mypark:PP01@Level@01'
                                         ),
                                         place_equipments=PlaceEquipmentsRelStructure(
                                             choice=[
                                                 RampEquipment(
-                                                    id="mypark:PP01@EP01@ramp",
-                                                    version="any",
+                                                    id='mypark:PP01@EP01@ramp',
+                                                    version='any',
                                                     direction_of_use=DirectionOfUseEnumeration.BOTH,
                                                     gradient=22,
                                                     gradient_type=GradientEnumeration.STEEP,
                                                     visual_guidance_bands=True
                                                 ),
                                                 EntranceEquipment(
-                                                    id="mypark:PP01@EP01@entrance",
-                                                    version="any",
+                                                    id='mypark:PP01@EP01@entrance',
+                                                    version='any',
                                                     door=True,
                                                     kept_open=True,
                                                     wheelchair_passable=True
@@ -533,50 +533,50 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Eingang"
+                                            value='Eingang'
                                         ),
                                         entrance_type=EntranceEnumeration.OPEN_DOOR,
                                         is_external=True,
                                         is_entry=True,
                                         is_exit=True,
-                                        width=Decimal("4.0"),
-                                        height=Decimal("8.0")
+                                        width=Decimal('4.0'),
+                                        height=Decimal('8.0')
                                     ),
                                     ParkingPassengerEntrance(
-                                        id="mypark:PP01@EP02",
+                                        id='mypark:PP01@EP02',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        version="any",
-                                                        ref="mypark:PP01@Opening_Hours"
+                                                        version='any',
+                                                        ref='mypark:PP01@Opening_Hours'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Walkway  Entrance from store"
+                                            value='Walkway  Entrance from store'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="External Entrance Walkway to store.",
-                                                lang="en"
+                                                value='External Entrance Walkway to store.',
+                                                lang='en'
                                             ),
                                         ],
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="mypark:PP01@Level@03"
+                                            version='any',
+                                            ref='mypark:PP01@Level@03'
                                         ),
                                         place_equipments=PlaceEquipmentsRelStructure(
                                             choice=[
                                                 EntranceEquipment(
-                                                    id="mypark:PP01@EP02@entrance",
-                                                    version="any",
+                                                    id='mypark:PP01@EP02@entrance',
+                                                    version='any',
                                                     door=True,
                                                     kept_open=False,
                                                     automatic_door=True,
@@ -585,46 +585,46 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Eingang"
+                                            value='Eingang'
                                         ),
                                         entrance_type=EntranceEnumeration.AUTOMATIC_DOOR,
                                         is_external=True,
                                         is_entry=True,
                                         is_exit=True,
-                                        width=Decimal("3.0"),
-                                        height=Decimal("7.0")
+                                        width=Decimal('3.0'),
+                                        height=Decimal('7.0')
                                     ),
                                     ParkingEntranceForVehicles(
-                                        id="mypark:PP01@EV11@Entrance",
+                                        id='mypark:PP01@EV11@Entrance',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        version="any",
-                                                        ref="mypark:PP01@Opening_Hours"
+                                                        version='any',
+                                                        ref='mypark:PP01@Opening_Hours'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Vehicle Entrance from street"
+                                            value='Main Vehicle Entrance from street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="mypark:PP01@Level@01"
+                                            version='any',
+                                            ref='mypark:PP01@Level@01'
                                         ),
                                         check_constraints=CheckConstraintsRelStructure(
                                             check_constraint_ref_or_check_constraint=[
                                                 CheckConstraint(
-                                                    id="mypark:PP01@EV11@Entrance",
-                                                    version="any",
+                                                    id='mypark:PP01@EV11@Entrance',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Access Queue"
+                                                        value='Access Queue'
                                                     ),
                                                     check_direction=CheckDirectionEnumeration.FORWARDS,
                                                     check_process=CheckProcessTypeEnumeration.INGRESS,
@@ -634,46 +634,46 @@ obj = PublicationDelivery(
                                                     delays=CheckConstraintDelaysRelStructure(
                                                         check_constraint_delay_ref_or_check_constraint_delay=[
                                                             CheckConstraintDelay(
-                                                                id="mypark:PP01@EV11@Entrance@peak",
+                                                                id='mypark:PP01@EV11@Entrance@peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
-                                                                                ref="mypark:Peek"
+                                                                                ref='mypark:Peek'
                                                                             ),
                                                                         ]
                                                                     ),
                                                                 ],
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="pek delay"
+                                                                    value='pek delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
-                                                                    version="any",
-                                                                    ref="mypark:PP01@EV11@Entrance"
+                                                                    version='any',
+                                                                    ref='mypark:PP01@EV11@Entrance'
                                                                 ),
                                                                 minimum_likely_delay=XmlDuration("PT5M"),
                                                                 average_delay=XmlDuration("PT7M"),
                                                                 maximum_likely_delay=XmlDuration("PT15M")
                                                             ),
                                                             CheckConstraintDelay(
-                                                                id="mypark:PP01@EV11@Entrance@off_peak",
+                                                                id='mypark:PP01@EV11@Entrance@off_peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
-                                                                                ref="mypark:Off_peak"
+                                                                                ref='mypark:Off_peak'
                                                                             ),
                                                                         ]
                                                                     ),
                                                                 ],
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Off peak delay"
+                                                                    value='Off peak delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
-                                                                    version="any",
-                                                                    ref="mypark:PP01@EV11@Entrance"
+                                                                    version='any',
+                                                                    ref='mypark:PP01@EV11@Entrance'
                                                                 ),
                                                                 minimum_likely_delay=XmlDuration("PT1M"),
                                                                 average_delay=XmlDuration("PT2M"),
@@ -684,11 +684,11 @@ obj = PublicationDelivery(
                                                     throughput=CheckConstraintThroughputsRelStructure(
                                                         check_constraint_throughput_ref_or_check_constraint_throughput=[
                                                             CheckConstraintThroughput(
-                                                                id="mypark:PP01@EV11@Entrance@peak",
-                                                                version="any",
+                                                                id='mypark:PP01@EV11@Entrance@peak',
+                                                                version='any',
                                                                 check_constraint_ref=CheckConstraintRef(
-                                                                    version="any",
-                                                                    ref="mypark:PP01@EV11@Entrance"
+                                                                    version='any',
+                                                                    ref='mypark:PP01@EV11@Entrance'
                                                                 ),
                                                                 period=XmlDuration("PT10M"),
                                                                 maximum_passengers=30,
@@ -702,8 +702,8 @@ obj = PublicationDelivery(
                                         place_equipments=PlaceEquipmentsRelStructure(
                                             choice=[
                                                 EntranceEquipment(
-                                                    id="mypark:PP01@EV11@Entrance",
-                                                    version="any",
+                                                    id='mypark:PP01@EV11@Entrance',
+                                                    version='any',
                                                     kept_open=False,
                                                     barrier=True,
                                                     automatic_door=True
@@ -711,46 +711,46 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Eingang"
+                                            value='Eingang'
                                         ),
                                         entrance_type=EntranceEnumeration.GATE,
                                         is_external=True,
                                         is_entry=True,
                                         is_exit=False,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                     ParkingEntranceForVehicles(
-                                        id="mypark:PP01@EV12@Exit",
+                                        id='mypark:PP01@EV12@Exit',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        version="any",
-                                                        ref="mypark:PP01@Opening_Hours"
+                                                        version='any',
+                                                        ref='mypark:PP01@Opening_Hours'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Vehicle Exit to street"
+                                            value='Main Vehicle Exit to street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="mypark:PP01@Level@01"
+                                            version='any',
+                                            ref='mypark:PP01@Level@01'
                                         ),
                                         check_constraints=CheckConstraintsRelStructure(
                                             check_constraint_ref_or_check_constraint=[
                                                 CheckConstraint(
-                                                    id="mypark:PP01@EV12@Exit",
-                                                    version="any",
+                                                    id='mypark:PP01@EV12@Exit',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Access Queue"
+                                                        value='Access Queue'
                                                     ),
                                                     check_direction=CheckDirectionEnumeration.FORWARDS,
                                                     check_process=CheckProcessTypeEnumeration.INGRESS,
@@ -760,44 +760,44 @@ obj = PublicationDelivery(
                                                     delays=CheckConstraintDelaysRelStructure(
                                                         check_constraint_delay_ref_or_check_constraint_delay=[
                                                             CheckConstraintDelay(
-                                                                id="mypark:PP01@EV12@Exit@peak",
+                                                                id='mypark:PP01@EV12@Exit@peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
-                                                                                ref="mypark:Peek"
+                                                                                ref='mypark:Peek'
                                                                             ),
                                                                         ]
                                                                     ),
                                                                 ],
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="pek delay"
+                                                                    value='pek delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
-                                                                    ref="mypark:PP01@EV12@Exit"
+                                                                    ref='mypark:PP01@EV12@Exit'
                                                                 ),
                                                                 minimum_likely_delay=XmlDuration("PT5M"),
                                                                 average_delay=XmlDuration("PT7M"),
                                                                 maximum_likely_delay=XmlDuration("PT15M")
                                                             ),
                                                             CheckConstraintDelay(
-                                                                id="mypark:PP01@EV12@Exit@Off_peak",
+                                                                id='mypark:PP01@EV12@Exit@Off_peak',
                                                                 validity_conditions_or_valid_between=[
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
-                                                                                ref="mypark:Off_peak"
+                                                                                ref='mypark:Off_peak'
                                                                             ),
                                                                         ]
                                                                     ),
                                                                 ],
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Off peak delay"
+                                                                    value='Off peak delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
-                                                                    ref="mypark:PP01@EV12@Exit"
+                                                                    ref='mypark:PP01@EV12@Exit'
                                                                 ),
                                                                 minimum_likely_delay=XmlDuration("PT1M"),
                                                                 average_delay=XmlDuration("PT2M"),
@@ -808,10 +808,10 @@ obj = PublicationDelivery(
                                                     throughput=CheckConstraintThroughputsRelStructure(
                                                         check_constraint_throughput_ref_or_check_constraint_throughput=[
                                                             CheckConstraintThroughput(
-                                                                id="mypark:PP01@EV12@Exit",
-                                                                version="any",
+                                                                id='mypark:PP01@EV12@Exit',
+                                                                version='any',
                                                                 check_constraint_ref=CheckConstraintRef(
-                                                                    ref="mypark:PP01@EV12@Exit"
+                                                                    ref='mypark:PP01@EV12@Exit'
                                                                 ),
                                                                 period=XmlDuration("PT10M"),
                                                                 maximum_passengers=20,
@@ -825,8 +825,8 @@ obj = PublicationDelivery(
                                         place_equipments=PlaceEquipmentsRelStructure(
                                             choice=[
                                                 EntranceEquipment(
-                                                    id="mypark:PP01@EV12@Exit",
-                                                    version="any",
+                                                    id='mypark:PP01@EV12@Exit',
+                                                    version='any',
                                                     kept_open=False,
                                                     barrier=True,
                                                     entrance_requires_ticket=True,
@@ -836,116 +836,116 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Exit"
+                                            value='Exit'
                                         ),
                                         entrance_type=EntranceEnumeration.GATE,
                                         is_external=True,
                                         is_entry=False,
                                         is_exit=True,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                     ParkingEntranceForVehicles(
-                                        id="mypark:PP01@EV01+02",
-                                        version="any",
+                                        id='mypark:PP01@EV01+02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Entrance from level 1 to level 2"
+                                            value='Entrance from level 1 to level 2'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         label=MultilingualString(
-                                            value="Up To Level 1"
+                                            value='Up To Level 1'
                                         ),
                                         is_external=False,
                                         is_entry=True,
                                         is_exit=False,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                     ParkingEntranceForVehicles(
-                                        id="mypark:PP01@EV02+03",
-                                        version="any",
+                                        id='mypark:PP01@EV02+03',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Entrance from level 2 to level 3"
+                                            value='Entrance from level 2 to level 3'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         label=MultilingualString(
-                                            value="Up To Level 2 "
+                                            value='Up To Level 2 '
                                         ),
                                         is_external=False,
                                         is_entry=True,
                                         is_exit=False,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                     ParkingEntranceForVehicles(
-                                        id="mypark:PP01@EV02+01",
-                                        version="any",
+                                        id='mypark:PP01@EV02+01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Entrance Dwon from level 2 to level 1"
+                                            value='Entrance Dwon from level 2 to level 1'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         label=MultilingualString(
-                                            value="Down  To Level 1"
+                                            value='Down  To Level 1'
                                         ),
                                         is_external=False,
                                         is_entry=False,
                                         is_exit=True,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                     ParkingEntranceForVehicles(
-                                        id="mypark:PP01@EV03+02",
-                                        version="any",
+                                        id='mypark:PP01@EV03+02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Entrance  Down from level 3 to level 2"
+                                            value='Entrance  Down from level 3 to level 2'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PP01"
+                                            version='any',
+                                            ref='mypark:PP01'
                                         ),
                                         label=MultilingualString(
-                                            value="Down  To Level 2 "
+                                            value='Down  To Level 2 '
                                         ),
                                         is_external=False,
                                         is_entry=False,
                                         is_exit=True,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                 ]
                             ),
                             equipment_places=EquipmentPlacesRelStructure(
                                 equipment_place_ref_or_equipment_place=[
                                     EquipmentPlace(
-                                        id="mypark:PP01@QP01",
-                                        version="any",
+                                        id='mypark:PP01@QP01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Location of Ticket Machines"
+                                            value='Location of Ticket Machines'
                                         ),
                                         equipment_positions=EquipmentPositionsRelStructure(
                                             equipment_position=[
                                                 EquipmentPosition(
-                                                    id="mypark:PP01@QPP01",
-                                                    version="any",
+                                                    id='mypark:PP01@QPP01',
+                                                    version='any',
                                                     choice=EquipmentRef(
-                                                        version="any",
-                                                        ref="mypark:PP01@Q01"
+                                                        version='any',
+                                                        ref='mypark:PP01@Q01'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="location of ticket machines "
+                                                        value='location of ticket machines '
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("1.00"),
-                                                        latitude=Decimal("52.00")
+                                                        longitude=Decimal('1.00'),
+                                                        latitude=Decimal('52.00')
                                                     )
                                                 ),
                                             ]
@@ -956,11 +956,11 @@ obj = PublicationDelivery(
                             place_equipments=PlaceEquipmentsRelStructure(
                                 choice=[
                                     TicketingEquipment(
-                                        id="mypark:PP01@Q01",
-                                        version="any",
+                                        id='mypark:PP01@Q01',
+                                        version='any',
                                         ticket_machines=True,
                                         number_of_machines=2,
-                                        height_of_machine_interface=Decimal("1.20"),
+                                        height_of_machine_interface=Decimal('1.20'),
                                         payment_methods=[
                                             PaymentMethodEnumeration.CREDIT_CARD,
                                             PaymentMethodEnumeration.CASH,
@@ -971,10 +971,10 @@ obj = PublicationDelivery(
                             accesses=AccessesRelStructure(
                                 access_ref_or_access=[
                                     Access(
-                                        id="mypark:PP01@S01",
-                                        version="any",
+                                        id='mypark:PP01@S01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Walk to Station"
+                                            value='Walk to Station'
                                         ),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT10M"),
@@ -984,21 +984,21 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
-                                                ref="napt:9100:00476",
-                                                version_ref="EXTERNAL"
+                                                ref='napt:9100:00476',
+                                                version_ref='EXTERNAL'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
-                                                version="any",
-                                                ref="mypark:PP01"
+                                                version='any',
+                                                ref='mypark:PP01'
                                             )
                                         )
                                     ),
                                 ]
                             ),
-                            public_code="CP1",
+                            public_code='CP1',
                             parking_type=ParkingTypeEnumeration.SHOPPING_CENTRE_PARKING,
                             parking_layout=ParkingLayoutEnumeration.MULTISTOREY,
                             number_of_parking_levels=3,
@@ -1018,23 +1018,23 @@ obj = PublicationDelivery(
                                 PaymentMethodEnumeration.CREDIT_CARD,
                                 PaymentMethodEnumeration.MOBILE_PHONE,
                             ],
-                            default_currency="GBP",
+                            default_currency='GBP',
                             currencies_accepted=[
-                                "GBP",
+                                'GBP',
                             ],
                             parking_reservation=ParkingReservationEnumeration.NO_RESERVATIONS,
-                            booking_url="http://www.bookmyparking.com",
+                            booking_url='http://www.bookmyparking.com',
                             payment_by_mobile=PaymentByMobileStructure(
-                                phone_number_to_pay="7242",
-                                support_phone_number="0202417656",
-                                payment_url="http://www.bookmyparking.com"
+                                phone_number_to_pay='7242',
+                                support_phone_number='0202417656',
+                                payment_url='http://www.bookmyparking.com'
                             ),
                             free_parking_out_of_hours=False,
                             parking_properties=ParkingPropertiesRelStructure(
                                 parking_properties=[
                                     ParkingProperties(
-                                        id="mypark:PP01",
-                                        version="any",
+                                        id='mypark:PP01',
+                                        version='any',
                                         parking_user_types=[
                                             ParkingUserEnumeration.ALL,
                                         ],
@@ -1045,11 +1045,11 @@ obj = PublicationDelivery(
                                         spaces=ParkingCapacitiesRelStructure(
                                             parking_capacity_ref_or_parking_capacity=[
                                                 ParkingCapacity(
-                                                    id="mypark:PP01@C01_disabled",
-                                                    version="any",
+                                                    id='mypark:PP01@C01_disabled',
+                                                    version='any',
                                                     parking_ref=ParkingRef(
-                                                        version="any",
-                                                        ref="mypark:PP01"
+                                                        version='any',
+                                                        ref='mypark:PP01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1057,11 +1057,11 @@ obj = PublicationDelivery(
                                                     number_of_spaces=30
                                                 ),
                                                 ParkingCapacity(
-                                                    id="mypark:PP01@C02_other",
-                                                    version="any",
+                                                    id='mypark:PP01@C02_other',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        version="any",
-                                                        ref="mypark:PP01"
+                                                        version='any',
+                                                        ref='mypark:PP01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL_USERS,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1076,31 +1076,31 @@ obj = PublicationDelivery(
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
                                     ParkingArea(
-                                        id="mypark:PP01@A01",
-                                        version="any",
+                                        id='mypark:PP01@A01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Barcester CIty Centre  Car Park - Street Level"
+                                            value='Barcester CIty Centre  Car Park - Street Level'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Street Level"
+                                            value='Street Level'
                                         ),
                                         site_ref=SiteRefStructure(
-                                            ref="mypark:PP01"
+                                            ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
-                                            ref="mypark:PP01@Level@01"
+                                            ref='mypark:PP01@Level@01'
                                         ),
                                         label=MultilingualString(
-                                            value="S1"
+                                            value='S1'
                                         ),
-                                        maximum_length=Decimal("8"),
-                                        maximum_width=Decimal("3"),
-                                        maximum_height=Decimal("2"),
-                                        maximum_weight=Decimal("15"),
+                                        maximum_length=Decimal('8'),
+                                        maximum_width=Decimal('3'),
+                                        maximum_height=Decimal('2'),
+                                        maximum_weight=Decimal('15'),
                                         total_capacity=100,
                                         parking_properties_or_parking_properties=ParkingProperties(
-                                            id="mypark:PP01@A01",
-                                            version="any",
+                                            id='mypark:PP01@A01',
+                                            version='any',
                                             parking_stay_list=[
                                                 ParkingStayEnumeration.MID_TERM,
                                             ],
@@ -1108,20 +1108,20 @@ obj = PublicationDelivery(
                                             spaces=ParkingCapacitiesRelStructure(
                                                 parking_capacity_ref_or_parking_capacity=[
                                                     ParkingCapacity(
-                                                        id="mypark:PP01@01_01",
-                                                        version="any",
+                                                        id='mypark:PP01@01_01',
+                                                        version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
-                                                            ref=""
+                                                            ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
                                                         parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
                                                         number_of_spaces=85
                                                     ),
                                                     ParkingCapacity(
-                                                        id="mypark:PP01@01_02",
-                                                        version="any",
+                                                        id='mypark:PP01@01_02',
+                                                        version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
-                                                            ref=""
+                                                            ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                         parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1133,54 +1133,54 @@ obj = PublicationDelivery(
                                         entrances=EntranceRefsRelStructure(
                                             choice=[
                                                 ParkingEntranceRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EP01"
+                                                    version='any',
+                                                    ref='mypark:PP01@EP01'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV11@Entrance"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV11@Entrance'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV12@Exit"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV12@Exit'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV01+02"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV01+02'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV02+01"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV02+01'
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingArea(
-                                        id="mypark:PP01@A02",
-                                        version="any",
+                                        id='mypark:PP01@A02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Barcester City Centret Car Park - Mezzanine  Level"
+                                            value='Barcester City Centret Car Park - Mezzanine  Level'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Mezzanine"
+                                            value='Mezzanine'
                                         ),
                                         site_ref=SiteRefStructure(
-                                            ref="mypark:PP01"
+                                            ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
-                                            ref="mypark:PP01@Level@012"
+                                            ref='mypark:PP01@Level@012'
                                         ),
                                         label=MultilingualString(
-                                            value="Parking 1"
+                                            value='Parking 1'
                                         ),
-                                        maximum_length=Decimal("8"),
-                                        maximum_width=Decimal("3"),
-                                        maximum_height=Decimal("2"),
-                                        maximum_weight=Decimal("10"),
+                                        maximum_length=Decimal('8'),
+                                        maximum_width=Decimal('3'),
+                                        maximum_height=Decimal('2'),
+                                        maximum_weight=Decimal('10'),
                                         total_capacity=50,
                                         parking_properties_or_parking_properties=ParkingProperties(
-                                            id="mypark:PP01@A02",
-                                            version="any",
+                                            id='mypark:PP01@A02',
+                                            version='any',
                                             parking_stay_list=[
                                                 ParkingStayEnumeration.MID_TERM,
                                             ],
@@ -1188,10 +1188,10 @@ obj = PublicationDelivery(
                                             spaces=ParkingCapacitiesRelStructure(
                                                 parking_capacity_ref_or_parking_capacity=[
                                                     ParkingCapacity(
-                                                        id="mypark:PP01@A02@C01",
-                                                        version="any",
+                                                        id='mypark:PP01@A02@C01',
+                                                        version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
-                                                            ref=""
+                                                            ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
                                                         parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1203,50 +1203,50 @@ obj = PublicationDelivery(
                                         entrances=EntranceRefsRelStructure(
                                             choice=[
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV02+03"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV02+03'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV03+02"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV03+02'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV01+02"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV01+02'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV02+01"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV02+01'
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingArea(
-                                        id="mypark:PP01@A03",
-                                        version="any",
+                                        id='mypark:PP01@A03',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Barchester City Centret Car Park - Store  Level"
+                                            value='Barchester City Centret Car Park - Store  Level'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Parking 2"
+                                            value='Parking 2'
                                         ),
                                         site_ref=SiteRefStructure(
-                                            ref="mypark:PP01"
+                                            ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
-                                            ref="mypark:PP01@Level@03"
+                                            ref='mypark:PP01@Level@03'
                                         ),
                                         label=MultilingualString(
-                                            value="Parking 2"
+                                            value='Parking 2'
                                         ),
-                                        maximum_length=Decimal("8"),
-                                        maximum_width=Decimal("3"),
-                                        maximum_height=Decimal("2"),
-                                        maximum_weight=Decimal("10"),
+                                        maximum_length=Decimal('8'),
+                                        maximum_width=Decimal('3'),
+                                        maximum_height=Decimal('2'),
+                                        maximum_weight=Decimal('10'),
                                         total_capacity=100,
                                         parking_properties_or_parking_properties=ParkingProperties(
-                                            id="mypark:PP01@A03",
-                                            version="any",
+                                            id='mypark:PP01@A03',
+                                            version='any',
                                             parking_stay_list=[
                                                 ParkingStayEnumeration.MID_TERM,
                                             ],
@@ -1254,20 +1254,20 @@ obj = PublicationDelivery(
                                             spaces=ParkingCapacitiesRelStructure(
                                                 parking_capacity_ref_or_parking_capacity=[
                                                     ParkingCapacity(
-                                                        id="mypark:PP01@A03@C01",
-                                                        version="any",
+                                                        id='mypark:PP01@A03@C01',
+                                                        version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
-                                                            ref=""
+                                                            ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
                                                         parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
                                                         number_of_spaces=85
                                                     ),
                                                     ParkingCapacity(
-                                                        id="mypark:PP01@A03@C02",
-                                                        version="any",
+                                                        id='mypark:PP01@A03@C02',
+                                                        version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
-                                                            ref=""
+                                                            ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                         parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1279,16 +1279,16 @@ obj = PublicationDelivery(
                                         entrances=EntranceRefsRelStructure(
                                             choice=[
                                                 ParkingEntranceRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EP02 "
+                                                    version='any',
+                                                    ref='mypark:PP01@EP02 '
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV02+03"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV02+03'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
-                                                    version="any",
-                                                    ref="mypark:PP01@EV03+02"
+                                                    version='any',
+                                                    ref='mypark:PP01@EV03+02'
                                                 ),
                                             ]
                                         )
@@ -1298,53 +1298,53 @@ obj = PublicationDelivery(
                             vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                 parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mypark:PP01@EV11@Entrance"
+                                        version='any',
+                                        ref='mypark:PP01@EV11@Entrance'
                                     ),
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mypark:PP01@EV12@Exit"
+                                        version='any',
+                                        ref='mypark:PP01@EV12@Exit'
                                     ),
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mypark:PP01@EV02+03"
+                                        version='any',
+                                        ref='mypark:PP01@EV02+03'
                                     ),
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mypark:PP01@EV03+02"
+                                        version='any',
+                                        ref='mypark:PP01@EV03+02'
                                     ),
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mypark:PP01@EV01+02"
+                                        version='any',
+                                        ref='mypark:PP01@EV01+02'
                                     ),
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mypark:PP01@EV02+01"
+                                        version='any',
+                                        ref='mypark:PP01@EV02+01'
                                     ),
                                 ]
                             )
                         ),
                         Parking(
-                            id="mypark:PS22",
+                            id='mypark:PS22',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="mypark:Parking_Charge_Hours",
-                                            version="any",
+                                            id='mypark:Parking_Charge_Hours',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Charged Parking times"
+                                                value='Charged Parking times'
                                             ),
                                             description=MultilingualString(
-                                                value="Modnay to friday not PublicHolidays"
+                                                value='Modnay to friday not PublicHolidays'
                                             ),
                                             day_types=DayTypesRelStructure(
                                                 choice=[
                                                     DayType(
-                                                        id="mypark:WorkingDay",
-                                                        version="any",
+                                                        id='mypark:WorkingDay',
+                                                        version='any',
                                                         name=MultilingualString(
-                                                            value="Working day"
+                                                            value='Working day'
                                                         ),
                                                         properties=PropertiesOfDayRelStructure(
                                                             property_of_day=[
@@ -1364,15 +1364,15 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     DayTypeRef(
-                                                        ref=""
+                                                        ref=''
                                                     ),
                                                 ]
                                             ),
                                             timebands=TimebandsRelStructure(
                                                 timeband_ref_or_timeband=[
                                                     TimebandVersionedChildStructure(
-                                                        id="mypark:Parking_Charge_Hours",
-                                                        version="any",
+                                                        id='mypark:Parking_Charge_Hours',
+                                                        version='any',
                                                         start_time=XmlTime(8, 30, 0, 0),
                                                         end_time_or_day_offset_or_duration=[
                                                             XmlTime(5, 30, 0, 0),
@@ -1384,23 +1384,23 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            data_source_ref_attribute="parkopedia",
-                            version="any",
+                            data_source_ref_attribute='parkopedia',
+                            version='any',
                             name=MultilingualString(
-                                value="Barcester  High street Parking "
+                                value='Barcester  High street Parking '
                             ),
                             short_name=MultilingualString(
-                                value="CIty Car Park"
+                                value='CIty Car Park'
                             ),
                             description=[
                                 MultilingualString(
-                                    value="On street parking metered 8.30 to 6 pm Mondat to Friday  "
+                                    value='On street parking metered 8.30 to 6 pm Mondat to Friday  '
                                 ),
                             ],
-                            url="http://www.barpccyparkingregs.co.uk",
+                            url='http://www.barpccyparkingregs.co.uk',
                             accessibility_assessment=AccessibilityAssessment(
-                                id="mypark:PS22@01",
-                                version="any",
+                                id='mypark:PS22@01',
+                                version='any',
                                 mobility_impaired_access=LimitationStatusEnumeration.TRUE
                             ),
                             access_modes=[
@@ -1411,32 +1411,32 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.WELL_LIT,
                             all_areas_wheelchair_accessible=True,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
-                                version="any",
-                                ref="nptgLocality:TP_0032A"
+                                version='any',
+                                ref='nptgLocality:TP_0032A'
                             ),
                             equipment_places=EquipmentPlacesRelStructure(
                                 equipment_place_ref_or_equipment_place=[
                                     EquipmentPlace(
-                                        id="mypark:PS22@QP01",
-                                        version="any",
+                                        id='mypark:PS22@QP01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Location of Ticket Machines"
+                                            value='Location of Ticket Machines'
                                         ),
                                         equipment_positions=EquipmentPositionsRelStructure(
                                             equipment_position=[
                                                 EquipmentPosition(
-                                                    id="mypark:PS22@QPP01@L01",
-                                                    version="any",
+                                                    id='mypark:PS22@QPP01@L01',
+                                                    version='any',
                                                     choice=EquipmentRef(
-                                                        version="any",
-                                                        ref="mypark:PS22@QP01@L01"
+                                                        version='any',
+                                                        ref='mypark:PS22@QP01@L01'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="location of ticket machines "
+                                                        value='location of ticket machines '
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("1.01"),
-                                                        latitude=Decimal("52.01")
+                                                        longitude=Decimal('1.01'),
+                                                        latitude=Decimal('52.01')
                                                     )
                                                 ),
                                             ]
@@ -1447,11 +1447,11 @@ obj = PublicationDelivery(
                             place_equipments=PlaceEquipmentsRelStructure(
                                 choice=[
                                     TicketingEquipment(
-                                        id="mypark:PS22@QP01@L01",
-                                        version="any",
+                                        id='mypark:PS22@QP01@L01',
+                                        version='any',
                                         ticket_machines=True,
                                         number_of_machines=1,
-                                        height_of_machine_interface=Decimal("1.20"),
+                                        height_of_machine_interface=Decimal('1.20'),
                                         payment_methods=[
                                             PaymentMethodEnumeration.CREDIT_CARD,
                                             PaymentMethodEnumeration.CASH,
@@ -1462,10 +1462,10 @@ obj = PublicationDelivery(
                             accesses=AccessesRelStructure(
                                 access_ref_or_access=[
                                     Access(
-                                        id="mypark:PS22@S01",
-                                        version="any",
+                                        id='mypark:PS22@S01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Walk to Station"
+                                            value='Walk to Station'
                                         ),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT15M"),
@@ -1475,15 +1475,15 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
-                                                ref="napt:9100:00476",
-                                                version_ref="EXTERNAL"
+                                                ref='napt:9100:00476',
+                                                version_ref='EXTERNAL'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
-                                                version="any",
-                                                ref="mypark:PP01"
+                                                version='any',
+                                                ref='mypark:PP01'
                                             )
                                         )
                                     ),
@@ -1507,23 +1507,23 @@ obj = PublicationDelivery(
                                 PaymentMethodEnumeration.CREDIT_CARD,
                                 PaymentMethodEnumeration.MOBILE_PHONE,
                             ],
-                            default_currency="GBP",
+                            default_currency='GBP',
                             currencies_accepted=[
-                                "GBP",
+                                'GBP',
                             ],
                             parking_reservation=ParkingReservationEnumeration.NO_RESERVATIONS,
-                            booking_url="http://www.bookmyparking.com",
+                            booking_url='http://www.bookmyparking.com',
                             payment_by_mobile=PaymentByMobileStructure(
-                                phone_number_to_pay="7242",
-                                support_phone_number="0202417656",
-                                payment_url="http://www.bookmyparking.com"
+                                phone_number_to_pay='7242',
+                                support_phone_number='0202417656',
+                                payment_url='http://www.bookmyparking.com'
                             ),
                             free_parking_out_of_hours=True,
                             parking_properties=ParkingPropertiesRelStructure(
                                 parking_properties=[
                                     ParkingProperties(
-                                        id="mypark:PS22",
-                                        version="any",
+                                        id='mypark:PS22',
+                                        version='any',
                                         parking_user_types=[
                                             ParkingUserEnumeration.ALL,
                                         ],
@@ -1533,11 +1533,11 @@ obj = PublicationDelivery(
                                         spaces=ParkingCapacitiesRelStructure(
                                             parking_capacity_ref_or_parking_capacity=[
                                                 ParkingCapacity(
-                                                    id="mypark:PS22@01_disabled",
-                                                    version="any",
+                                                    id='mypark:PS22@01_disabled',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        version="any",
-                                                        ref="mypark:PS22"
+                                                        version='any',
+                                                        ref='mypark:PS22'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1545,11 +1545,11 @@ obj = PublicationDelivery(
                                                     number_of_spaces=5
                                                 ),
                                                 ParkingCapacity(
-                                                    id="mypark:PS22@01_other",
-                                                    version="any",
+                                                    id='mypark:PS22@01_other',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        version="any",
-                                                        ref="mypark:PS22"
+                                                        version='any',
+                                                        ref='mypark:PS22'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL_USERS,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1564,26 +1564,26 @@ obj = PublicationDelivery(
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
                                     ParkingArea(
-                                        id="mypark:PS22@01",
-                                        version="any",
+                                        id='mypark:PS22@01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Street Level"
+                                            value='Street Level'
                                         ),
                                         short_name=MultilingualString(
-                                            value="S1"
+                                            value='S1'
                                         ),
                                         site_ref=SiteRefStructure(
-                                            ref="mypark:PS22"
+                                            ref='mypark:PS22'
                                         ),
-                                        parking_payment_code="ABCD",
-                                        maximum_length=Decimal("8"),
-                                        maximum_width=Decimal("3"),
-                                        maximum_height=Decimal("2"),
-                                        maximum_weight=Decimal("15"),
+                                        parking_payment_code='ABCD',
+                                        maximum_length=Decimal('8'),
+                                        maximum_width=Decimal('3'),
+                                        maximum_height=Decimal('2'),
+                                        maximum_weight=Decimal('15'),
                                         total_capacity=100,
                                         parking_properties_or_parking_properties=ParkingProperties(
-                                            id="mypark:PS22@01",
-                                            version="any",
+                                            id='mypark:PS22@01',
+                                            version='any',
                                             parking_stay_list=[
                                                 ParkingStayEnumeration.MID_TERM,
                                             ],
@@ -1591,12 +1591,12 @@ obj = PublicationDelivery(
                                             spaces=ParkingCapacitiesRelStructure(
                                                 parking_capacity_ref_or_parking_capacity=[
                                                     ParkingCapacityRef(
-                                                        version="any",
-                                                        ref="mypark:PS22@01_disabled"
+                                                        version='any',
+                                                        ref='mypark:PS22@01_disabled'
                                                     ),
                                                     ParkingCapacityRef(
-                                                        version="any",
-                                                        ref="mypark:PS22@01_other"
+                                                        version='any',
+                                                        ref='mypark:PS22@01_other'
                                                     ),
                                                 ]
                                             )
@@ -1606,24 +1606,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         Parking(
-                            id="mypark:PB44",
-                            data_source_ref_attribute="parkopedia",
-                            version="any",
+                            id='mypark:PB44',
+                            data_source_ref_attribute='parkopedia',
+                            version='any',
                             name=MultilingualString(
-                                value="Barcester  Town Hall disabled bays  street Parking "
+                                value='Barcester  Town Hall disabled bays  street Parking '
                             ),
                             short_name=MultilingualString(
-                                value="CIty Car Park"
+                                value='CIty Car Park'
                             ),
                             description=[
                                 MultilingualString(
-                                    value="On street parking  Blued badge "
+                                    value='On street parking  Blued badge '
                                 ),
                             ],
-                            url="http://www.bartwonhallparking.co.uk",
+                            url='http://www.bartwonhallparking.co.uk',
                             accessibility_assessment=AccessibilityAssessment(
-                                id="mypark:PS22",
-                                version="any",
+                                id='mypark:PS22',
+                                version='any',
                                 mobility_impaired_access=LimitationStatusEnumeration.TRUE
                             ),
                             access_modes=[
@@ -1634,8 +1634,8 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.WELL_LIT,
                             all_areas_wheelchair_accessible=True,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
-                                version="any",
-                                ref="nptgLocality:TP_0032A"
+                                version='any',
+                                ref='nptgLocality:TP_0032A'
                             ),
                             parking_type=ParkingTypeEnumeration.URBAN_PARKING,
                             parking_layout=ParkingLayoutEnumeration.ROADSIDE,
@@ -1647,8 +1647,8 @@ obj = PublicationDelivery(
                             parking_properties=ParkingPropertiesRelStructure(
                                 parking_properties=[
                                     ParkingProperties(
-                                        id="mypark:PB44",
-                                        version="any",
+                                        id='mypark:PB44',
+                                        version='any',
                                         parking_user_types=[
                                             ParkingUserEnumeration.ALL,
                                         ],
@@ -1658,11 +1658,11 @@ obj = PublicationDelivery(
                                         spaces=ParkingCapacitiesRelStructure(
                                             parking_capacity_ref_or_parking_capacity=[
                                                 ParkingCapacity(
-                                                    id="mypark:PS44@C01_disabled",
-                                                    version="any",
+                                                    id='mypark:PS44@C01_disabled',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        version="any",
-                                                        ref="mypark:PB44"
+                                                        version='any',
+                                                        ref='mypark:PB44'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1677,20 +1677,20 @@ obj = PublicationDelivery(
                             parking_areas=ParkingAreasRelStructure(
                                 parking_area_ref_or_parking_area=[
                                     ParkingArea(
-                                        id="mypark:PB44@A01",
-                                        version="any",
+                                        id='mypark:PB44@A01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Disabled Bays"
+                                            value='Disabled Bays'
                                         ),
                                         short_name=MultilingualString(
-                                            value="S1"
+                                            value='S1'
                                         ),
-                                        maximum_length=Decimal("8"),
-                                        maximum_width=Decimal("3"),
+                                        maximum_length=Decimal('8'),
+                                        maximum_width=Decimal('3'),
                                         total_capacity=30,
                                         parking_properties_or_parking_properties=ParkingProperties(
-                                            id="mypark:PB44@01",
-                                            version="any",
+                                            id='mypark:PB44@01',
+                                            version='any',
                                             parking_stay_list=[
                                                 ParkingStayEnumeration.MID_TERM,
                                             ],
@@ -1698,20 +1698,20 @@ obj = PublicationDelivery(
                                             spaces=ParkingCapacitiesRelStructure(
                                                 parking_capacity_ref_or_parking_capacity=[
                                                     ParkingCapacity(
-                                                        id="mypark:PB44@A01@C01",
-                                                        version="any",
+                                                        id='mypark:PB44@A01@C01',
+                                                        version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
-                                                            ref=""
+                                                            ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
                                                         parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
                                                         number_of_spaces=85
                                                     ),
                                                     ParkingCapacity(
-                                                        id="mypark:PB44@A01@C02",
-                                                        version="any",
+                                                        id='mypark:PB44@A01@C02',
+                                                        version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
-                                                            ref=""
+                                                            ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                         parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -1723,10 +1723,10 @@ obj = PublicationDelivery(
                                         bays=ParkingBaysRelStructure(
                                             parking_bay_ref_or_parking_bay=[
                                                 ParkingBay(
-                                                    id="mypark:PB44@A01@B001",
-                                                    version="any",
+                                                    id='mypark:PB44@A01@B001',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Disabled Bay 1"
+                                                        value='Disabled Bay 1'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -1735,13 +1735,13 @@ obj = PublicationDelivery(
                                                                     3.14159265358979,
                                                                     3.14159265358979,
                                                                 ],
-                                                                srs_name="wgs84",
+                                                                srs_name='wgs84',
                                                                 srs_dimension=2
                                                             )
                                                         )
                                                     ),
                                                     polygon=Polygon(
-                                                        id="PB44_A01_B001",
+                                                        id='PB44_A01_B001',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
                                                                 pos_or_point_property_or_pos_list=[
@@ -1750,7 +1750,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -1758,7 +1758,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -1766,7 +1766,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -1774,7 +1774,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                 ]
@@ -1789,7 +1789,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -1797,7 +1797,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -1805,7 +1805,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -1813,7 +1813,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                     ]
@@ -1822,14 +1822,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="any",
-                                                        ref="mypark:PB44@A01"
+                                                        version='any',
+                                                        ref='mypark:PB44@A01'
                                                     ),
                                                     road_address=RoadAddress(
-                                                        id="mypark:PB44@A01@B001@address",
-                                                        version="any",
+                                                        id='mypark:PB44@A01@B001@address',
+                                                        version='any',
                                                         road_name=MultilingualString(
-                                                            value="Twon Square"
+                                                            value='Twon Square'
                                                         ),
                                                         bearing_compass=CompassBearing16Enumeration.N,
                                                         odd_number_range=RoadNumberRangeStructure(
@@ -1838,8 +1838,8 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="mypark:PB44@A01@B001",
-                                                        version="any",
+                                                        id='mypark:PB44@A01@B001',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     access_modes=[
@@ -1847,22 +1847,22 @@ obj = PublicationDelivery(
                                                     ],
                                                     public_use=PublicUseEnumeration.DISABLED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.OUTDOORS,
-                                                    lighting="",
+                                                    lighting='',
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
-                                                        ref="blue_badge_Holders",
-                                                        version_ref="EXTERNAL"
+                                                        ref='blue_badge_Holders',
+                                                        version_ref='EXTERNAL'
                                                     ),
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
-                                                    length=Decimal("8"),
-                                                    width=Decimal("4"),
+                                                    length=Decimal('8'),
+                                                    width=Decimal('4'),
                                                     recharging_available=False
                                                 ),
                                                 ParkingBay(
-                                                    id="mypark:PB44@A01@B002",
-                                                    version="any",
+                                                    id='mypark:PB44@A01@B002',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Disabled Bay 2"
+                                                        value='Disabled Bay 2'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -1871,13 +1871,13 @@ obj = PublicationDelivery(
                                                                     3.14159265358979,
                                                                     3.14159265358979,
                                                                 ],
-                                                                srs_name="wgs84",
+                                                                srs_name='wgs84',
                                                                 srs_dimension=2
                                                             )
                                                         )
                                                     ),
                                                     polygon=Polygon(
-                                                        id="PB44_A01_B002",
+                                                        id='PB44_A01_B002',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
                                                                 pos_or_point_property_or_pos_list=[
@@ -1886,7 +1886,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -1894,7 +1894,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -1902,7 +1902,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -1910,7 +1910,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                 ]
@@ -1925,7 +1925,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -1933,7 +1933,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -1941,7 +1941,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -1949,7 +1949,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                     ]
@@ -1958,14 +1958,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="any",
-                                                        ref="mypark:PB44@A01"
+                                                        version='any',
+                                                        ref='mypark:PB44@A01'
                                                     ),
                                                     road_address=RoadAddress(
-                                                        id="mypark:PB44@A01@B002@address",
-                                                        version="any",
+                                                        id='mypark:PB44@A01@B002@address',
+                                                        version='any',
                                                         road_name=MultilingualString(
-                                                            value="Twon Square"
+                                                            value='Twon Square'
                                                         ),
                                                         bearing_compass=CompassBearing16Enumeration.N,
                                                         odd_number_range=RoadNumberRangeStructure(
@@ -1974,8 +1974,8 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="mypark:PB44@A01@B002",
-                                                        version="any",
+                                                        id='mypark:PB44@A01@B002',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     access_modes=[
@@ -1983,22 +1983,22 @@ obj = PublicationDelivery(
                                                     ],
                                                     public_use=PublicUseEnumeration.DISABLED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.OUTDOORS,
-                                                    lighting="",
+                                                    lighting='',
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
-                                                        ref="blue_badge_Holders",
-                                                        version_ref="EXTERNAL"
+                                                        ref='blue_badge_Holders',
+                                                        version_ref='EXTERNAL'
                                                     ),
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
-                                                    length=Decimal("8"),
-                                                    width=Decimal("4"),
+                                                    length=Decimal('8'),
+                                                    width=Decimal('4'),
                                                     recharging_available=False
                                                 ),
                                                 ParkingBay(
-                                                    id="mypark:PB44@A01@B003",
-                                                    version="any",
+                                                    id='mypark:PB44@A01@B003',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Disabled Bay 3"
+                                                        value='Disabled Bay 3'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -2007,13 +2007,13 @@ obj = PublicationDelivery(
                                                                     3.14159265358979,
                                                                     3.14159265358979,
                                                                 ],
-                                                                srs_name="wgs84",
+                                                                srs_name='wgs84',
                                                                 srs_dimension=2
                                                             )
                                                         )
                                                     ),
                                                     polygon=Polygon(
-                                                        id="def",
+                                                        id='def',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
                                                                 pos_or_point_property_or_pos_list=[
@@ -2022,7 +2022,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -2030,7 +2030,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -2038,7 +2038,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                     Pos(
@@ -2046,7 +2046,7 @@ obj = PublicationDelivery(
                                                                             3.14159265358979,
                                                                             3.14159265358979,
                                                                         ],
-                                                                        srs_name="wgs84",
+                                                                        srs_name='wgs84',
                                                                         srs_dimension=2
                                                                     ),
                                                                 ]
@@ -2061,7 +2061,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -2069,7 +2069,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -2077,7 +2077,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                         Pos(
@@ -2085,7 +2085,7 @@ obj = PublicationDelivery(
                                                                                 3.14159265358979,
                                                                                 3.14159265358979,
                                                                             ],
-                                                                            srs_name="wgs84",
+                                                                            srs_name='wgs84',
                                                                             srs_dimension=2
                                                                         ),
                                                                     ]
@@ -2094,14 +2094,14 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="any",
-                                                        ref="mypark:PB44@A01"
+                                                        version='any',
+                                                        ref='mypark:PB44@A01'
                                                     ),
                                                     road_address=RoadAddress(
-                                                        id="mypark:PB44@A01@B003@addresss",
-                                                        version="any",
+                                                        id='mypark:PB44@A01@B003@addresss',
+                                                        version='any',
                                                         road_name=MultilingualString(
-                                                            value="Twon Square"
+                                                            value='Twon Square'
                                                         ),
                                                         bearing_compass=CompassBearing16Enumeration.N,
                                                         odd_number_range=RoadNumberRangeStructure(
@@ -2110,8 +2110,8 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="PB44@A01@B003",
-                                                        version="any",
+                                                        id='PB44@A01@B003',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     access_modes=[
@@ -2119,15 +2119,15 @@ obj = PublicationDelivery(
                                                     ],
                                                     public_use=PublicUseEnumeration.DISABLED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.OUTDOORS,
-                                                    lighting="",
+                                                    lighting='',
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
-                                                        ref="blue_badge_Holders",
-                                                        version_ref="EXTERNAL"
+                                                        ref='blue_badge_Holders',
+                                                        version_ref='EXTERNAL'
                                                     ),
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
-                                                    length=Decimal("8"),
-                                                    width=Decimal("4"),
+                                                    length=Decimal('8'),
+                                                    width=Decimal('4'),
                                                     recharging_available=True
                                                 ),
                                             ]
@@ -2137,32 +2137,32 @@ obj = PublicationDelivery(
                             )
                         ),
                         Parking(
-                            id="mypark:PNR01",
-                            data_source_ref_attribute="parkopedia",
-                            version="any",
+                            id='mypark:PNR01',
+                            data_source_ref_attribute='parkopedia',
+                            version='any',
                             name=MultilingualString(
-                                value="Barcester  PARK AND RIDE A"
+                                value='Barcester  PARK AND RIDE A'
                             ),
                             short_name=MultilingualString(
-                                value="BARCEST P&amp;R A"
+                                value='BARCEST P&R A'
                             ),
                             description=[
                                 MultilingualString(
-                                    value="PARK and ride outsde town  "
+                                    value='PARK and ride outsde town  '
                                 ),
                             ],
                             centroid=SimplePointVersionStructure(
-                                id="xyz",
+                                id='xyz',
                                 location=LocationStructure2(
-                                    longitude=Decimal("-180"),
-                                    latitude=Decimal("-90"),
-                                    id="xyz12",
-                                    srs_name="WGS84"
+                                    longitude=Decimal('-180'),
+                                    latitude=Decimal('-90'),
+                                    id='xyz12',
+                                    srs_name='WGS84'
                                 )
                             ),
                             polygon=Polygon(
-                                id="I1D_12",
-                                srs_name="wgs84",
+                                id='I1D_12',
+                                srs_name='wgs84',
                                 srs_dimension=2,
                                 exterior=Exterior(
                                     linear_ring=LinearRing(
@@ -2172,7 +2172,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                             Pos(
@@ -2180,7 +2180,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                             Pos(
@@ -2188,7 +2188,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                             Pos(
@@ -2196,7 +2196,7 @@ obj = PublicationDelivery(
                                                     3.14159265358979,
                                                     3.14159265358979,
                                                 ],
-                                                srs_name="wgs84",
+                                                srs_name='wgs84',
                                                 srs_dimension=2
                                             ),
                                         ]
@@ -2211,7 +2211,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                                 Pos(
@@ -2219,7 +2219,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                                 Pos(
@@ -2227,7 +2227,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                                 Pos(
@@ -2235,7 +2235,7 @@ obj = PublicationDelivery(
                                                         3.14159265358979,
                                                         3.14159265358979,
                                                     ],
-                                                    srs_name="wgs84",
+                                                    srs_name='wgs84',
                                                     srs_dimension=2
                                                 ),
                                             ]
@@ -2243,11 +2243,11 @@ obj = PublicationDelivery(
                                     ),
                                 ]
                             ),
-                            url="http://www.barpark.co.uk",
-                            image="http://ww.mycarpark.com/pnrprettypicture.jpg",
+                            url='http://www.barpark.co.uk',
+                            image='http://ww.mycarpark.com/pnrprettypicture.jpg',
                             accessibility_assessment=AccessibilityAssessment(
-                                id="mypark:PNR01",
-                                version="any",
+                                id='mypark:PNR01',
+                                version='any',
                                 mobility_impaired_access=LimitationStatusEnumeration.PARTIAL
                             ),
                             access_modes=[
@@ -2258,57 +2258,57 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.UNLIT,
                             all_areas_wheelchair_accessible=True,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
-                                version="any",
-                                ref="nptgLocality:TP_0032A"
+                                version='any',
+                                ref='nptgLocality:TP_0032A'
                             ),
                             at_centre=False,
                             entrances=SiteEntrancesRelStructure(
                                 choice=[
                                     ParkingEntranceForVehicles(
-                                        id="mypark:PNR01@EV01",
-                                        version="any",
+                                        id='mypark:PNR01@EV01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Vehicle Entrance from street"
+                                            value='Main Vehicle Entrance from street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mypark:PNR01"
+                                            version='any',
+                                            ref='mypark:PNR01'
                                         ),
                                         label=MultilingualString(
-                                            value="IN"
+                                            value='IN'
                                         ),
                                         entrance_type=EntranceEnumeration.OPENING,
                                         is_external=True,
                                         is_entry=True,
                                         is_exit=True,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                 ]
                             ),
                             equipment_places=EquipmentPlacesRelStructure(
                                 equipment_place_ref_or_equipment_place=[
                                     EquipmentPlace(
-                                        id="mypark:PNR01@Q01",
-                                        version="any",
+                                        id='mypark:PNR01@Q01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Location of Ticket Machines"
+                                            value='Location of Ticket Machines'
                                         ),
                                         equipment_positions=EquipmentPositionsRelStructure(
                                             equipment_position=[
                                                 EquipmentPosition(
-                                                    id="mypark:PNR01@Q01",
-                                                    version="any",
+                                                    id='mypark:PNR01@Q01',
+                                                    version='any',
                                                     choice=EquipmentRef(
-                                                        version="any",
-                                                        ref="mypark:PNR01@Q01@ticketing"
+                                                        version='any',
+                                                        ref='mypark:PNR01@Q01@ticketing'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="location of ticket machines "
+                                                        value='location of ticket machines '
                                                     ),
                                                     location=LocationStructure2(
-                                                        longitude=Decimal("1.00"),
-                                                        latitude=Decimal("52.00")
+                                                        longitude=Decimal('1.00'),
+                                                        latitude=Decimal('52.00')
                                                     )
                                                 ),
                                             ]
@@ -2319,11 +2319,11 @@ obj = PublicationDelivery(
                             place_equipments=PlaceEquipmentsRelStructure(
                                 choice=[
                                     TicketingEquipment(
-                                        id="mypark:PNR01@Q01@ticketing",
-                                        version="any",
+                                        id='mypark:PNR01@Q01@ticketing',
+                                        version='any',
                                         ticket_machines=True,
                                         number_of_machines=1,
-                                        height_of_machine_interface=Decimal("1.20"),
+                                        height_of_machine_interface=Decimal('1.20'),
                                         payment_methods=[
                                             PaymentMethodEnumeration.CREDIT_CARD,
                                             PaymentMethodEnumeration.CASH,
@@ -2334,10 +2334,10 @@ obj = PublicationDelivery(
                             accesses=AccessesRelStructure(
                                 access_ref_or_access=[
                                     Access(
-                                        id="mypark:PNR01@S01",
-                                        version="any",
+                                        id='mypark:PNR01@S01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus  to Station"
+                                            value='Bus  to Station'
                                         ),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT10M"),
@@ -2347,15 +2347,15 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
-                                                ref="napt:9100:00476",
-                                                version_ref="EXTERNAL"
+                                                ref='napt:9100:00476',
+                                                version_ref='EXTERNAL'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
-                                                version="any",
-                                                ref="mypark:PNR01"
+                                                version='any',
+                                                ref='mypark:PNR01'
                                             )
                                         )
                                     ),
@@ -2378,18 +2378,18 @@ obj = PublicationDelivery(
                                 PaymentMethodEnumeration.DEBIT_CARD,
                                 PaymentMethodEnumeration.CREDIT_CARD,
                             ],
-                            default_currency="GBP",
+                            default_currency='GBP',
                             currencies_accepted=[
-                                "GBP",
+                                'GBP',
                             ],
                             parking_reservation=ParkingReservationEnumeration.NO_RESERVATIONS,
-                            booking_url="http://www.bookmyparking.com",
+                            booking_url='http://www.bookmyparking.com',
                             free_parking_out_of_hours=False,
                             parking_properties=ParkingPropertiesRelStructure(
                                 parking_properties=[
                                     ParkingProperties(
-                                        id="mypark:PNR01",
-                                        version="any",
+                                        id='mypark:PNR01',
+                                        version='any',
                                         parking_user_types=[
                                             ParkingUserEnumeration.ALL,
                                         ],
@@ -2400,10 +2400,10 @@ obj = PublicationDelivery(
                                         spaces=ParkingCapacitiesRelStructure(
                                             parking_capacity_ref_or_parking_capacity=[
                                                 ParkingCapacity(
-                                                    id="mypark:PNR01@C01_all",
-                                                    version="any",
+                                                    id='mypark:PNR01@C01_all',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        ref="mypark:PNR01"
+                                                        ref='mypark:PNR01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -2418,8 +2418,8 @@ obj = PublicationDelivery(
                             vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                 parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mypark:PNR01@EV01"
+                                        version='any',
+                                        ref='mypark:PNR01@EV01'
                                     ),
                                 ]
                             )
@@ -2428,30 +2428,30 @@ obj = PublicationDelivery(
                 )
             ),
             FareFrame(
-                id="mypark:FF01",
-                version="any",
+                id='mypark:FF01',
+                version='any',
                 name=MultilingualString(
-                    value="Parking Tariffs"
+                    value='Parking Tariffs'
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
-                    default_currency="GBP"
+                    default_currency='GBP'
                 ),
                 pricing_parameter_set=PricingParameterSet(
-                    id="mypark:FF01",
-                    version="any",
+                    id='mypark:FF01',
+                    version='any',
                     pricing_rules=PricingRulesRelStructure(
                         choice=[
                             DiscountingRule(
-                                id="mypark:Vat",
-                                version="any",
+                                id='mypark:Vat',
+                                version='any',
                                 name=MultilingualString(
-                                    value="VAT Tax rate"
+                                    value='VAT Tax rate'
                                 ),
                                 type_of_pricing_rule_ref=TypeOfPricingRuleRef(
-                                    version="any",
-                                    ref="mypark:vat@parking"
+                                    version='any',
+                                    ref='mypark:vat@parking'
                                 ),
-                                discount_as_percentage=Decimal("115")
+                                discount_as_percentage=Decimal('115')
                             ),
                         ]
                     )
@@ -2459,10 +2459,10 @@ obj = PublicationDelivery(
                 parking_tariffs=ParkingTariffsInFrameRelStructure(
                     parking_tariff=[
                         ParkingTariff(
-                            id="mypark:PP01",
-                            version="any",
+                            id='mypark:PP01',
+                            version='any',
                             description=MultilingualString(
-                                value="Tariffs for central car park"
+                                value='Tariffs for central car park'
                             ),
                             parking_stay_type=ParkingStayEnumeration.MID_TERM,
                             parking_vehicle_types=[
@@ -2471,179 +2471,179 @@ obj = PublicationDelivery(
                             applies_to=ParkingRefsRelStructure(
                                 parking_ref=[
                                     ParkingRef(
-                                        version="any",
-                                        ref="mypark:PP01"
+                                        version='any',
+                                        ref='mypark:PP01'
                                     ),
                                 ]
                             ),
                             parking_charge_bands=ParkingChargeBandsRelStructure(
                                 parking_charge_band_ref_or_parking_charge_band=[
                                     ParkingChargeBand(
-                                        id="mypark:PP01@15M",
-                                        version="any",
+                                        id='mypark:PP01@15M',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT15M"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@15M",
-                                                    version="any",
-                                                    amount=Decimal("0.25"),
+                                                    id='mypark:PP01@15M',
+                                                    version='any',
+                                                    amount=Decimal('0.25'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@30M",
-                                        version="any",
+                                        id='mypark:PP01@30M',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT30M"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@30M",
-                                                    version="any",
-                                                    amount=Decimal("1.00"),
+                                                    id='mypark:PP01@30M',
+                                                    version='any',
+                                                    amount=Decimal('1.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@1H",
-                                        version="any",
+                                        id='mypark:PP01@1H',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT1H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@1H",
-                                                    version="any",
-                                                    amount=Decimal("1.00"),
+                                                    id='mypark:PP01@1H',
+                                                    version='any',
+                                                    amount=Decimal('1.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@2H",
-                                        version="any",
+                                        id='mypark:PP01@2H',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT2H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@2H",
-                                                    version="any",
-                                                    amount=Decimal("2.00"),
+                                                    id='mypark:PP01@2H',
+                                                    version='any',
+                                                    amount=Decimal('2.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@4H",
-                                        version="any",
+                                        id='mypark:PP01@4H',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT4H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@4H",
-                                                    version="any",
-                                                    amount=Decimal("3.00"),
+                                                    id='mypark:PP01@4H',
+                                                    version='any',
+                                                    amount=Decimal('3.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@6H",
-                                        version="any",
+                                        id='mypark:PP01@6H',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT6H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@6H",
-                                                    version="any",
-                                                    amount=Decimal("4.00"),
+                                                    id='mypark:PP01@6H',
+                                                    version='any',
+                                                    amount=Decimal('4.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@12H",
-                                        version="any",
+                                        id='mypark:PP01@12H',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT12H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@12H",
-                                                    version="any",
-                                                    amount=Decimal("10.00"),
+                                                    id='mypark:PP01@12H',
+                                                    version='any',
+                                                    amount=Decimal('10.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@24H",
-                                        version="any",
+                                        id='mypark:PP01@24H',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT24H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@24H",
-                                                    version="any",
-                                                    amount=Decimal("18.00"),
+                                                    id='mypark:PP01@24H',
+                                                    version='any',
+                                                    amount=Decimal('18.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ParkingChargeBand(
-                                        id="mypark:PP01@48H",
-                                        version="any",
+                                        id='mypark:PP01@48H',
+                                        version='any',
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT2H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PP01@48H",
-                                                    version="any",
-                                                    amount=Decimal("24.00"),
+                                                    id='mypark:PP01@48H',
+                                                    version='any',
+                                                    amount=Decimal('24.00'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
@@ -2653,10 +2653,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         ParkingTariff(
-                            id="mypark:PS22@other",
-                            version="any",
+                            id='mypark:PS22@other',
+                            version='any',
                             description=MultilingualString(
-                                value="Tariffs for on PARK AND RIDE Parking  Working dates"
+                                value='Tariffs for on PARK AND RIDE Parking  Working dates'
                             ),
                             parking_user_type=ParkingUserEnumeration.OTHER,
                             parking_stay_type=ParkingStayEnumeration.SHORT_STAY,
@@ -2666,30 +2666,30 @@ obj = PublicationDelivery(
                             applies_to=ParkingRefsRelStructure(
                                 parking_ref=[
                                     ParkingRef(
-                                        version="any",
-                                        ref="mypark:PNR01"
+                                        version='any',
+                                        ref='mypark:PNR01'
                                     ),
                                 ]
                             ),
                             parking_charge_bands=ParkingChargeBandsRelStructure(
                                 parking_charge_band_ref_or_parking_charge_band=[
                                     ParkingChargeBand(
-                                        id="mypark:PS22@15M_working",
-                                        version="any",
+                                        id='mypark:PS22@15M_working',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="25P an hour"
+                                            value='25P an hour'
                                         ),
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT15M"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PS22@15M_working",
-                                                    version="any",
-                                                    amount=Decimal("0.25"),
+                                                    id='mypark:PS22@15M_working',
+                                                    version='any',
+                                                    amount=Decimal('0.25'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
@@ -2699,10 +2699,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         ParkingTariff(
-                            id="mypark:PS22@disabled",
-                            version="any",
+                            id='mypark:PS22@disabled',
+                            version='any',
                             description=MultilingualString(
-                                value="Tariffs for on street Parking  Disabled"
+                                value='Tariffs for on street Parking  Disabled'
                             ),
                             parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                             parking_stay_type=ParkingStayEnumeration.SHORT_STAY,
@@ -2712,19 +2712,19 @@ obj = PublicationDelivery(
                             parking_charge_bands=ParkingChargeBandsRelStructure(
                                 parking_charge_band_ref_or_parking_charge_band=[
                                     ParkingChargeBand(
-                                        id="mypark:PS22@15M_other",
-                                        version="any",
+                                        id='mypark:PS22@15M_other',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="free"
+                                            value='free'
                                         ),
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT15M"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PS22@15M_other",
-                                                    version="any",
-                                                    amount=Decimal("0.0")
+                                                    id='mypark:PS22@15M_other',
+                                                    version='any',
+                                                    amount=Decimal('0.0')
                                                 ),
                                             ]
                                         )
@@ -2733,10 +2733,10 @@ obj = PublicationDelivery(
                             )
                         ),
                         ParkingTariff(
-                            id="mypark:PNR01",
-                            version="any",
+                            id='mypark:PNR01',
+                            version='any',
                             description=MultilingualString(
-                                value="Tariffs for on street Parking  Disabled"
+                                value='Tariffs for on street Parking  Disabled'
                             ),
                             parking_user_type=ParkingUserEnumeration.ALL,
                             parking_stay_type=ParkingStayEnumeration.SHORT_STAY,
@@ -2746,22 +2746,22 @@ obj = PublicationDelivery(
                             parking_charge_bands=ParkingChargeBandsRelStructure(
                                 parking_charge_band_ref_or_parking_charge_band=[
                                     ParkingChargeBand(
-                                        id="mypark:PNR01@60M",
-                                        version="any",
+                                        id='mypark:PNR01@60M',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="10p an hour "
+                                            value='10p an hour '
                                         ),
                                         parking_vehicle_type=ParkingVehicleEnumeration.ALL,
                                         maximum_stay=XmlDuration("PT1H"),
                                         prices=FarePricesRelStructure(
                                             choice=[
                                                 ParkingPrice(
-                                                    id="mypark:PNR01@60M",
-                                                    version="any",
-                                                    amount=Decimal("0.10"),
+                                                    id='mypark:PNR01@60M',
+                                                    version='any',
+                                                    amount=Decimal('0.10'),
                                                     choice_1=DiscountingRuleRef(
-                                                        version="any",
-                                                        ref="mypark:Vat"
+                                                        version='any',
+                                                        ref='mypark:Vat'
                                                     )
                                                 ),
                                             ]
@@ -2774,37 +2774,37 @@ obj = PublicationDelivery(
                 )
             ),
             ResourceFrame(
-                id="mypark:Resources",
-                version="any",
+                id='mypark:Resources',
+                version='any',
                 types_of_value=TypesOfValueInFrameRelStructure(
                     choice=[
                         ValueSet(
-                            id="mypark:Types_off_VAT_Categopry",
-                            version="any",
+                            id='mypark:Types_off_VAT_Categopry',
+                            version='any',
                             name=MultilingualString(
-                                value="Types of Tariff"
+                                value='Types of Tariff'
                             ),
                             values=TypesOfValueStructure(
                                 choice=[
                                     TypeOfPricingRule(
-                                        id="mypark:vat@transportation",
-                                        version="any",
+                                        id='mypark:vat@transportation',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Transportation"
+                                            value='Transportation'
                                         ),
                                         tax_category=TaxCategoryEnumeration.TRANSPORTATION
                                     ),
                                     TypeOfPricingRule(
-                                        id="mypark:vat@parking",
-                                        version="any",
+                                        id='mypark:vat@parking',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Parking"
+                                            value='Parking'
                                         ),
                                         tax_category=TaxCategoryEnumeration.PARKING
                                     ),
                                 ]
                             ),
-                            class_of_values="TypeOfPricingRule"
+                            class_of_values='TypeOfPricingRule'
                         ),
                     ]
                 )

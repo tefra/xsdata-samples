@@ -8,6 +8,7 @@ class TypeFareRestrictionType(Enum):
     """
     The type of fare restriction.
     """
+
     DAY_OF_WEEK = "DayOfWeek"
     FLIGHT_TIME_OF_DAY = "FlightTimeOfDay"
     BOTH = "Both"

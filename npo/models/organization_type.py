@@ -13,12 +13,12 @@ class OrganizationType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[A-Z0-9_-]{2,}",
-        }
+        },
     )

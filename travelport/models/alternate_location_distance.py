@@ -19,6 +19,7 @@ class AlternateLocationDistance:
     alternate_location
         The nearby Alternate City or Airport to SearchLocation.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class AlternateLocationDistance:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -37,7 +38,7 @@ class AlternateLocationDistance:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     search_location: None | str = field(
         default=None,
@@ -47,7 +48,7 @@ class AlternateLocationDistance:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     alternate_location: None | str = field(
         default=None,
@@ -57,5 +58,5 @@ class AlternateLocationDistance:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

@@ -12,7 +12,9 @@ from .integer import Integer
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .process_argument import ProcessArgument
-from .process_execution_error_subtypes_enum import ProcessExecutionErrorSubtypesEnum
+from .process_execution_error_subtypes_enum import (
+    ProcessExecutionErrorSubtypesEnum,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .string import String
@@ -98,6 +100,7 @@ class StartupConfig:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "STARTUP-CONFIG"
 
@@ -108,7 +111,7 @@ class StartupConfig:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["StartupConfig.ShortNameFragments"] = field(
         default=None,
@@ -116,7 +119,7 @@ class StartupConfig:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +127,7 @@ class StartupConfig:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +135,7 @@ class StartupConfig:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +143,7 @@ class StartupConfig:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +151,7 @@ class StartupConfig:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,7 +159,7 @@ class StartupConfig:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["StartupConfig.Annotations"] = field(
         default=None,
@@ -164,15 +167,17 @@ class StartupConfig:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    environment_variables: Optional["StartupConfig.EnvironmentVariables"] = field(
+    environment_variables: Optional[
+        "StartupConfig.EnvironmentVariables"
+    ] = field(
         default=None,
         metadata={
             "name": "ENVIRONMENT-VARIABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     execution_error_ref: Optional["StartupConfig.ExecutionErrorRef"] = field(
         default=None,
@@ -180,7 +185,7 @@ class StartupConfig:
             "name": "EXECUTION-ERROR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     process_arguments: Optional["StartupConfig.ProcessArguments"] = field(
         default=None,
@@ -188,7 +193,7 @@ class StartupConfig:
             "name": "PROCESS-ARGUMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     scheduling_policy: Optional[String] = field(
         default=None,
@@ -196,7 +201,7 @@ class StartupConfig:
             "name": "SCHEDULING-POLICY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     scheduling_priority: Optional[Integer] = field(
         default=None,
@@ -204,7 +209,7 @@ class StartupConfig:
             "name": "SCHEDULING-PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     termination_behavior: Optional[TerminationBehaviorEnum] = field(
         default=None,
@@ -212,7 +217,7 @@ class StartupConfig:
             "name": "TERMINATION-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout: Optional[EnterExitTimeout] = field(
         default=None,
@@ -220,14 +225,14 @@ class StartupConfig:
             "name": "TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -235,14 +240,14 @@ class StartupConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -253,7 +258,7 @@ class StartupConfig:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -264,7 +269,7 @@ class StartupConfig:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -275,7 +280,7 @@ class StartupConfig:
                 "name": "TAG-WITH-OPTIONAL-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -286,7 +291,7 @@ class StartupConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -297,5 +302,5 @@ class StartupConfig:
                 "name": "PROCESS-ARGUMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -8,5 +8,6 @@ class TypeVarianceIndicator(Enum):
     """
     Type code for Variance.
     """
+
     EARLY = "Early"
     LATE = "Late"

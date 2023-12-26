@@ -15,23 +15,23 @@ class RedirectEntry:
         metadata={
             "name": "from",
             "type": "Attribute",
-        }
+        },
     )
     to: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     ultimate: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     circular: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

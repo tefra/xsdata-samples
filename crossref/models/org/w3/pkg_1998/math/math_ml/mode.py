@@ -15,5 +15,5 @@ class Mode:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

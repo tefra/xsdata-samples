@@ -10,11 +10,17 @@ from .block_state import BlockState
 from .category_string import CategoryString
 from .ecu_instance_ref_conditional import EcuInstanceRefConditional
 from .identifier import Identifier
-from .idsm_module_instantiation_subtypes_enum import IdsmModuleInstantiationSubtypesEnum
-from .idsm_rate_limitation_ref_conditional import IdsmRateLimitationRefConditional
+from .idsm_module_instantiation_subtypes_enum import (
+    IdsmModuleInstantiationSubtypesEnum,
+)
+from .idsm_rate_limitation_ref_conditional import (
+    IdsmRateLimitationRefConditional,
+)
 from .idsm_signature_support_ap import IdsmSignatureSupportAp
 from .idsm_signature_support_cp import IdsmSignatureSupportCp
-from .idsm_traffic_limitation_ref_conditional import IdsmTrafficLimitationRefConditional
+from .idsm_traffic_limitation_ref_conditional import (
+    IdsmTrafficLimitationRefConditional,
+)
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
@@ -127,6 +133,7 @@ class IdsmInstance:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IDSM-INSTANCE"
 
@@ -137,7 +144,7 @@ class IdsmInstance:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["IdsmInstance.ShortNameFragments"] = field(
         default=None,
@@ -145,7 +152,7 @@ class IdsmInstance:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -153,7 +160,7 @@ class IdsmInstance:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -161,7 +168,7 @@ class IdsmInstance:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -169,7 +176,7 @@ class IdsmInstance:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -177,7 +184,7 @@ class IdsmInstance:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -185,7 +192,7 @@ class IdsmInstance:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["IdsmInstance.Annotations"] = field(
         default=None,
@@ -193,7 +200,7 @@ class IdsmInstance:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -201,7 +208,7 @@ class IdsmInstance:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     block_states: Optional["IdsmInstance.BlockStates"] = field(
         default=None,
@@ -209,7 +216,7 @@ class IdsmInstance:
             "name": "BLOCK-STATES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_instances: Optional["IdsmInstance.EcuInstances"] = field(
         default=None,
@@ -217,7 +224,7 @@ class IdsmInstance:
             "name": "ECU-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     idsm_instance_id: Optional[PositiveInteger] = field(
         default=None,
@@ -225,23 +232,27 @@ class IdsmInstance:
             "name": "IDSM-INSTANCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    idsm_module_instantiation_ref: Optional["IdsmInstance.IdsmModuleInstantiationRef"] = field(
+    idsm_module_instantiation_ref: Optional[
+        "IdsmInstance.IdsmModuleInstantiationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IDSM-MODULE-INSTANTIATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    rate_limitation_filters: Optional["IdsmInstance.RateLimitationFilters"] = field(
+    rate_limitation_filters: Optional[
+        "IdsmInstance.RateLimitationFilters"
+    ] = field(
         default=None,
         metadata={
             "name": "RATE-LIMITATION-FILTERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     signature_support_ap: Optional[IdsmSignatureSupportAp] = field(
         default=None,
@@ -249,7 +260,7 @@ class IdsmInstance:
             "name": "SIGNATURE-SUPPORT-AP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     signature_support_cp: Optional[IdsmSignatureSupportCp] = field(
         default=None,
@@ -257,7 +268,7 @@ class IdsmInstance:
             "name": "SIGNATURE-SUPPORT-CP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timestamp_format: Optional[String] = field(
         default=None,
@@ -265,22 +276,24 @@ class IdsmInstance:
             "name": "TIMESTAMP-FORMAT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    traffic_limitation_filters: Optional["IdsmInstance.TrafficLimitationFilters"] = field(
+    traffic_limitation_filters: Optional[
+        "IdsmInstance.TrafficLimitationFilters"
+    ] = field(
         default=None,
         metadata={
             "name": "TRAFFIC-LIMITATION-FILTERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -288,14 +301,14 @@ class IdsmInstance:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -306,7 +319,7 @@ class IdsmInstance:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -317,7 +330,7 @@ class IdsmInstance:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -328,7 +341,7 @@ class IdsmInstance:
                 "name": "BLOCK-STATE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -339,7 +352,7 @@ class IdsmInstance:
                 "name": "ECU-INSTANCE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -350,27 +363,31 @@ class IdsmInstance:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RateLimitationFilters:
-        idsm_rate_limitation_ref_conditional: List[IdsmRateLimitationRefConditional] = field(
+        idsm_rate_limitation_ref_conditional: List[
+            IdsmRateLimitationRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-RATE-LIMITATION-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TrafficLimitationFilters:
-        idsm_traffic_limitation_ref_conditional: List[IdsmTrafficLimitationRefConditional] = field(
+        idsm_traffic_limitation_ref_conditional: List[
+            IdsmTrafficLimitationRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-TRAFFIC-LIMITATION-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

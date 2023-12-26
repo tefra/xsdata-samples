@@ -79,6 +79,7 @@ class DdsFieldDeployment:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DDS-FIELD-DEPLOYMENT"
 
@@ -89,15 +90,17 @@ class DdsFieldDeployment:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DdsFieldDeployment.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DdsFieldDeployment.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -105,7 +108,7 @@ class DdsFieldDeployment:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -113,7 +116,7 @@ class DdsFieldDeployment:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -121,7 +124,7 @@ class DdsFieldDeployment:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -129,7 +132,7 @@ class DdsFieldDeployment:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -137,7 +140,7 @@ class DdsFieldDeployment:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DdsFieldDeployment.Annotations"] = field(
         default=None,
@@ -145,7 +148,7 @@ class DdsFieldDeployment:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     field_ref: Optional["DdsFieldDeployment.FieldRef"] = field(
         default=None,
@@ -153,7 +156,7 @@ class DdsFieldDeployment:
             "name": "FIELD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     notifier: Optional[DdsEventDeployment] = field(
         default=None,
@@ -161,14 +164,14 @@ class DdsFieldDeployment:
             "name": "NOTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -176,14 +179,14 @@ class DdsFieldDeployment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -194,7 +197,7 @@ class DdsFieldDeployment:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -205,7 +208,7 @@ class DdsFieldDeployment:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -216,5 +219,5 @@ class DdsFieldDeployment:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

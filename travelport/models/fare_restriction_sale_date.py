@@ -10,6 +10,7 @@ class FareRestrictionSaleDate:
     """
     Restrict when this fare can be sold.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,12 +19,12 @@ class FareRestrictionSaleDate:
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-        }
+        },
     )

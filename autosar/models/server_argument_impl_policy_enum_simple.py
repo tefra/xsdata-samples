@@ -13,6 +13,7 @@ class ServerArgumentImplPolicyEnumSimple(Enum):
         base type of the array in C.
     :cvar USE_VOID: The argument type of the RunnableEntity is void.
     """
+
     USE_ARGUMENT_TYPE = "USE-ARGUMENT-TYPE"
     USE_ARRAY_BASE_TYPE = "USE-ARRAY-BASE-TYPE"
     USE_VOID = "USE-VOID"

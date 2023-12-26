@@ -18,6 +18,7 @@ class DiagnosticJumpToBootLoaderEnumSimple(Enum):
         to jump to System Supplier Bootloader and application sends
         final response.
     """
+
     NO_BOOT = "NO-BOOT"
     OEM_BOOT = "OEM-BOOT"
     OEM_BOOT_RESP_APP = "OEM-BOOT-RESP-APP"

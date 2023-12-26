@@ -3,7 +3,9 @@ from decimal import Decimal
 from typing import List, Optional
 from .accessibility_assessment import AccessibilityAssessment
 from .gender_limitation_enumeration import GenderLimitationEnumeration
-from .passenger_equipment_version_structure import PassengerEquipmentVersionStructure
+from .passenger_equipment_version_structure import (
+    PassengerEquipmentVersionStructure,
+)
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
 from .staffing_enumeration import StaffingEnumeration
@@ -22,7 +24,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "AccessibilityAssessment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gender: Optional[GenderLimitationEnumeration] = field(
         default=None,
@@ -30,7 +32,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "Gender",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     sanitary_facility_list: List[SanitaryFacilityEnumeration] = field(
         default_factory=list,
@@ -39,7 +41,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     number_of_toilets: Optional[int] = field(
         default=None,
@@ -47,7 +49,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "NumberOfToilets",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     free_to_use: Optional[bool] = field(
         default=None,
@@ -55,7 +57,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "FreeToUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     charge: Optional[Decimal] = field(
         default=None,
@@ -63,7 +65,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "Charge",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     currency: Optional[str] = field(
         default=None,
@@ -74,7 +76,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "min_length": 3,
             "max_length": 3,
             "pattern": r"[A-Z][A-Z][A-Z]",
-        }
+        },
     )
     payment_methods: List[PaymentMethodEnumeration] = field(
         default_factory=list,
@@ -83,7 +85,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     change_available: Optional[bool] = field(
         default=None,
@@ -91,7 +93,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "ChangeAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheelchair_turning_circle: Optional[Decimal] = field(
         default=None,
@@ -99,7 +101,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "WheelchairTurningCircle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     support_bar_height: Optional[Decimal] = field(
         default=None,
@@ -107,7 +109,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "SupportBarHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     call_button_available: Optional[bool] = field(
         default=None,
@@ -115,7 +117,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "CallButtonAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     sharps_disposal: Optional[bool] = field(
         default=None,
@@ -123,7 +125,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "SharpsDisposal",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     staffing: Optional[StaffingEnumeration] = field(
         default=None,
@@ -131,7 +133,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "Staffing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     locked_access: Optional[bool] = field(
         default=None,
@@ -139,7 +141,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "LockedAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     key_scheme: Optional[str] = field(
         default=None,
@@ -147,5 +149,5 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "KeyScheme",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -13,6 +13,7 @@ class ContinuityCheckOverride5:
     key
         Will use key to map continuity remark to a particular segment
     """
+
     class Meta:
         name = "ContinuityCheckOverride"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -23,12 +24,12 @@ class ContinuityCheckOverride5:
             "required": True,
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

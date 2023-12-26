@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.parking_site_status_enum import ParkingSiteStatusEnum
+from datexii.models.eu.datexii.v2.parking_site_status_enum import (
+    ParkingSiteStatusEnum,
+)
 from datexii.models.eu.datexii.v2.rgbcolour import RGBColour
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -17,6 +19,7 @@ class ParkingStatusColourMapping:
     :ivar rgb_colour:
     :ivar parking_status_colour_mapping_extension:
     """
+
     parking_site_status: Optional[ParkingSiteStatusEnum] = field(
         default=None,
         metadata={
@@ -24,7 +27,7 @@ class ParkingStatusColourMapping:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     rgb_colour: Optional[RGBColour] = field(
         default=None,
@@ -33,7 +36,7 @@ class ParkingStatusColourMapping:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_status_colour_mapping_extension: Optional[ExtensionType] = field(
         default=None,
@@ -41,5 +44,5 @@ class ParkingStatusColourMapping:
             "name": "parkingStatusColourMappingExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .composition_sw_component_type_subtypes_enum import CompositionSwComponentTypeSubtypesEnum
+from .composition_sw_component_type_subtypes_enum import (
+    CompositionSwComponentTypeSubtypesEnum,
+)
 from .ref import Ref
-from .root_sw_composition_prototype_subtypes_enum import RootSwCompositionPrototypeSubtypesEnum
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
-from .swc_service_dependency_subtypes_enum import SwcServiceDependencySubtypesEnum
+from .root_sw_composition_prototype_subtypes_enum import (
+    RootSwCompositionPrototypeSubtypesEnum,
+)
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
+from .swc_service_dependency_subtypes_enum import (
+    SwcServiceDependencySubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -28,47 +36,56 @@ class SwcServiceDependencyInCompositionInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY-IN-COMPOSITION-INSTANCE-REF"
 
-    base_ref: Optional["SwcServiceDependencyInCompositionInstanceRef.BaseRef"] = field(
+    base_ref: Optional[
+        "SwcServiceDependencyInCompositionInstanceRef.BaseRef"
+    ] = field(
         default=None,
         metadata={
             "name": "BASE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    root_context_ref: Optional["SwcServiceDependencyInCompositionInstanceRef.RootContextRef"] = field(
+    root_context_ref: Optional[
+        "SwcServiceDependencyInCompositionInstanceRef.RootContextRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ROOT-CONTEXT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_sw_component_prototype_ref: List["SwcServiceDependencyInCompositionInstanceRef.ContextSwComponentPrototypeRef"] = field(
+    context_sw_component_prototype_ref: List[
+        "SwcServiceDependencyInCompositionInstanceRef.ContextSwComponentPrototypeRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-SW-COMPONENT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_swc_service_dependency_ref: Optional["SwcServiceDependencyInCompositionInstanceRef.TargetSwcServiceDependencyRef"] = field(
+    target_swc_service_dependency_ref: Optional[
+        "SwcServiceDependencyInCompositionInstanceRef.TargetSwcServiceDependencyRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-SWC-SERVICE-DEPENDENCY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -76,7 +93,7 @@ class SwcServiceDependencyInCompositionInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -87,7 +104,7 @@ class SwcServiceDependencyInCompositionInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -98,7 +115,7 @@ class SwcServiceDependencyInCompositionInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -109,7 +126,7 @@ class SwcServiceDependencyInCompositionInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -120,5 +137,5 @@ class SwcServiceDependencyInCompositionInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

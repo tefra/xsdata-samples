@@ -9,6 +9,7 @@ class PaymentRef2:
     """
     Reference to one of the air reservation payments.
     """
+
     class Meta:
         name = "PaymentRef"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -19,5 +20,5 @@ class PaymentRef2:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

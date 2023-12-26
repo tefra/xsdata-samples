@@ -13,5 +13,5 @@ class CouchetteFacility:
         default=CouchetteFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

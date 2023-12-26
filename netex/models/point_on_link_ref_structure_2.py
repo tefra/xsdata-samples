@@ -14,5 +14,5 @@ class PointOnLinkRefStructure2(PointRefStructure):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

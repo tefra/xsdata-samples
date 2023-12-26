@@ -11,6 +11,7 @@ class FreeformTextRestriction2(TypeStringRestriction2):
 
     Min and max lengths are inclusive.
     """
+
     class Meta:
         name = "FreeformTextRestriction"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

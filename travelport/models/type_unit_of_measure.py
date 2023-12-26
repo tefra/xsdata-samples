@@ -13,6 +13,7 @@ class TypeUnitOfMeasure:
     unit
         Unit values would be lb,Lb,kg etc.
     """
+
     class Meta:
         name = "typeUnitOfMeasure"
 
@@ -21,12 +22,12 @@ class TypeUnitOfMeasure:
         metadata={
             "name": "Value",
             "type": "Attribute",
-        }
+        },
     )
     unit: None | str = field(
         default=None,
         metadata={
             "name": "Unit",
             "type": "Attribute",
-        }
+        },
     )

@@ -43,6 +43,7 @@ class SvcSegment:
     emdnumber
         Generated EMD number, if EMD is issued on the SVC
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -52,7 +53,7 @@ class SvcSegment:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -60,21 +61,21 @@ class SvcSegment:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     number_of_items: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfItems",
             "type": "Attribute",
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -83,7 +84,7 @@ class SvcSegment:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -92,56 +93,56 @@ class SvcSegment:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     rfic: None | str = field(
         default=None,
         metadata={
             "name": "RFIC",
             "type": "Attribute",
-        }
+        },
     )
     rfisc: None | str = field(
         default=None,
         metadata={
             "name": "RFISC",
             "type": "Attribute",
-        }
+        },
     )
     svc_description: None | str = field(
         default=None,
         metadata={
             "name": "SvcDescription",
             "type": "Attribute",
-        }
+        },
     )
     fee: None | str = field(
         default=None,
         metadata={
             "name": "Fee",
             "type": "Attribute",
-        }
+        },
     )
     emdnumber: None | str = field(
         default=None,
@@ -149,5 +150,5 @@ class SvcSegment:
             "name": "EMDNumber",
             "type": "Attribute",
             "length": 13,
-        }
+        },
     )

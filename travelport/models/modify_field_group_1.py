@@ -40,6 +40,7 @@ class ModifyFieldGroup1:
     force
         To specify whether this is a Force Update or Force Delete.
     """
+
     class Meta:
         name = "ModifyFieldGroup"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -49,7 +50,7 @@ class ModifyFieldGroup1:
         metadata={
             "name": "ModifyField",
             "type": "Element",
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -57,7 +58,7 @@ class ModifyFieldGroup1:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -67,7 +68,7 @@ class ModifyFieldGroup1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -76,35 +77,35 @@ class ModifyFieldGroup1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     protected: bool = field(
         default=False,
         metadata={
             "name": "Protected",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     action: None | TypeUpdateAction1 = field(
         default=None,
@@ -112,12 +113,12 @@ class ModifyFieldGroup1:
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     force: bool = field(
         default=False,
         metadata={
             "name": "Force",
             "type": "Attribute",
-        }
+        },
     )

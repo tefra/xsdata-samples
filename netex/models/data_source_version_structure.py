@@ -16,5 +16,5 @@ class DataSourceVersionStructure(TypeOfValueVersionStructure):
             "name": "Email",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

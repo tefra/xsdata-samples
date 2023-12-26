@@ -19,6 +19,7 @@ class TypeProviderInfoHistory1(TypeKeyElement1):
     iatacode
         Branch IATA Code.
     """
+
     class Meta:
         name = "typeProviderInfoHistory"
 
@@ -29,7 +30,7 @@ class TypeProviderInfoHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class TypeProviderInfoHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     iatacode: None | str = field(
         default=None,
@@ -46,5 +47,5 @@ class TypeProviderInfoHistory1(TypeKeyElement1):
             "name": "IATACode",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )

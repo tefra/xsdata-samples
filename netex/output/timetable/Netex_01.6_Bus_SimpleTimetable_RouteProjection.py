@@ -147,26 +147,26 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            value="REQUEST",
-                            ref="hde:TimetableFrameTIM_23_O"
+                            value='REQUEST',
+                            ref='hde:TimetableFrameTIM_23_O'
                         ),
                     ]
                 ),
@@ -175,50 +175,50 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple timetable   with two journeys and service calendar and route projections"
+        value='Example  of simple timetable   with two journeys and service calendar and route projections'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="hde:CAL_02",
-                version="1",
+                id='hde:CAL_02',
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Bus co data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Bus co data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="hde"
+                        ref='hde'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="mybus:svf_12",
-                            version="1",
+                            id='mybus:svf_12',
+                            version='1',
                             name=MultilingualString(
-                                value="Stops for Winter timetable for route 24 "
+                                value='Stops for Winter timetable for route 24 '
                             ),
                             directions=DirectionsInFrameRelStructure(
                                 direction=[
                                     Direction(
-                                        id="mybus:DR_Westbound",
-                                        version="any",
+                                        id='mybus:DR_Westbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Westbound"
+                                            value='Westbound'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Eastbound",
-                                        version="any",
+                                        id='mybus:DR_Eastbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eastbound"
+                                            value='Eastbound'
                                         )
                                     ),
                                 ]
@@ -226,170 +226,170 @@ obj = PublicationDelivery(
                             route_points=RoutePointsInFrameRelStructure(
                                 route_point=[
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_SSP_001@",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_SSP_001@',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road near Stop A"
+                                            value='Point in Road near Stop A'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_SSP_001@",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_SSP_001@',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto Alpha"
+                                                        value='Projects onto Alpha'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_SSP_002@",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_SSP_002@',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road near Stop B"
+                                            value='Point in Road near Stop B'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_SSP_002@_01",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_SSP_002@_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto Bravo"
+                                                        value='Projects onto Bravo'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     )
                                                 ),
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_SSP_002@_02",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_SSP_002@_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto activation point 02"
+                                                        value='Projects onto activation point 02'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="hde:ap_02"
+                                                        version='any',
+                                                        ref='hde:ap_02'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_SSP_003@",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_SSP_003@',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road near Stop C"
+                                            value='Point in Road near Stop C'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_SSP_003@",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_SSP_003@',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto Charley"
+                                                        value='Projects onto Charley'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_003"
+                                                        version='any',
+                                                        ref='mybus:SSP_003'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_1",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road between Stop A and B  1"
+                                            value='Point in Road between Stop A and B  1'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.4000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.4000')
                                         )
                                     ),
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_2",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road between Stop A and B  2"
+                                            value='Point in Road between Stop A and B  2'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.5000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.5000')
                                         )
                                     ),
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_3",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road between Stop A and B  3"
+                                            value='Point in Road between Stop A and B  3'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.6000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.6000')
                                         )
                                     ),
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_4",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_4',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road between Stop A and B  4"
+                                            value='Point in Road between Stop A and B  4'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.7000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.7000')
                                         )
                                     ),
                                     RoutePoint(
-                                        id="mybus:Rtpt_RT_24_5",
-                                        version="any",
+                                        id='mybus:Rtpt_RT_24_5',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Point in Road between Stop B and C  1"
+                                            value='Point in Road between Stop B and C  1'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.7500")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.7500')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_RT_24o_5_SSP_002_t1",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_RT_24o_5_SSP_002_t1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto timing point between Bravo and Charley"
+                                                        value='Projects onto timing point between Bravo and Charley'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1'
                                                     )
                                                 ),
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_RT_24o_5_ap_03",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_RT_24o_5_ap_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto activation point 3"
+                                                        value='Projects onto activation point 3'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:ap_03"
+                                                        version='any',
+                                                        ref='mybus:ap_03'
                                                     )
                                                 ),
                                             ]
@@ -400,132 +400,132 @@ obj = PublicationDelivery(
                             route_links=RouteLinksInFrameRelStructure(
                                 route_link=[
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_SSP_001@_to_RT_24_1",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_SSP_001@_to_RT_24_1',
+                                        version='any',
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_RL_RT_24o_SSP_001@_to_RT_24o_1_01",
-                                                    version="any",
+                                                    id='mybus:LP_RL_RT_24o_SSP_001@_to_RT_24o_1_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project on to first part of  Alpha to Bravo"
+                                                        value='Project on to first part of  Alpha to Bravo'
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_SSP_001@"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_SSP_001@'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_1"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_1'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_1_to_RT_24_2",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_1_to_RT_24_2',
+                                        version='any',
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_RL_24o_RT_24_1_to_RT_24_2_02",
-                                                    version="any",
+                                                    id='mybus:LP_RL_24o_RT_24_1_to_RT_24_2_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project on to second part of  Alpa to Bravo"
+                                                        value='Project on to second part of  Alpa to Bravo'
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_1"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_1'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_2"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_2'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_2_to_RT_24_3",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_2_to_RT_24_3',
+                                        version='any',
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_RL_24o_RT_24_2_to_RT_24_3_01",
-                                                    version="any",
+                                                    id='mybus:LP_RL_24o_RT_24_2_to_RT_24_3_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project on to third  part of  Alpha to Bravo"
+                                                        value='Project on to third  part of  Alpha to Bravo'
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_03-d600"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_03-d600'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_2"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_2'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_3"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_3'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_3_to_RT_24_4",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_3_to_RT_24_4',
+                                        version='any',
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_RL_24o_RT_24_3_to_RT_24_4_01",
-                                                    version="any",
+                                                    id='mybus:LP_RL_24o_RT_24_3_to_RT_24_4_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project on to last  part of alpha to Bravo and first part of  Bravo  to Charley "
+                                                        value='Project on to last  part of alpha to Bravo and first part of  Bravo  to Charley '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_002_to_SSP_077_rtpt_05-d800"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_002_to_SSP_077_rtpt_05-d800'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_002_to_SSP_077_rtp_SSP_003@-d2000"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_002_to_SSP_077_rtp_SSP_003@-d2000'
                                                     )
                                                 ),
                                             ]
@@ -533,180 +533,180 @@ obj = PublicationDelivery(
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_SSP_002_to_SSP_077_01-d300",
-                                                    version="any",
+                                                    id='mybus:pol_SSP_002_to_SSP_077_01-d300',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through Bravo"
+                                                        value='Goes through Bravo'
                                                     ),
-                                                    distance_from_start=Decimal("300"),
+                                                    distance_from_start=Decimal('300'),
                                                     choice=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_3"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_3'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_4"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_4'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_4_to_RT_24_5",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_4_to_RT_24_5',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Route point fopr stop 2 lies on this link"
+                                            value='Route point fopr stop 2 lies on this link'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_RL_24o_RT_24_4_to_RT_24_5_01",
-                                                    version="any",
+                                                    id='mybus:LP_RL_24o_RT_24_4_to_RT_24_5_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project on to last  part of Alpha to Bravo   to Charley "
+                                                        value='Project on to last  part of Alpha to Bravo   to Charley '
                                                     ),
                                                     order=1,
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_ap_02-d1300"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_ap_02-d1300'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_RL_24o_RT_24_4_to_RT_24_5_02",
-                                                    version="any",
+                                                    id='mybus:LP_RL_24o_RT_24_4_to_RT_24_5_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project on to first part of Bravo  to Charley "
+                                                        value='Project on to first part of Bravo  to Charley '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_4"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_4'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_5"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_5'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_5_to_RT_24_SSP_003@",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_5_to_RT_24_SSP_003@',
+                                        version='any',
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_RL_24o_RT_24_5_to_RT_24_SSP_003@_01",
-                                                    version="any",
+                                                    id='mybus:LP_RL_24o_RT_24_5_to_RT_24_SSP_003@_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project on to last  part of Alpha to Bravo   to Charley "
+                                                        value='Project on to last  part of Alpha to Bravo   to Charley '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_5"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_5'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_SSP_003@"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_SSP_003@'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_RT_24o_SSP_003@_to_RT_24o_5",
-                                        version="any",
+                                        id='mybus:RL_RT_24o_SSP_003@_to_RT_24o_5',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_SSP_003@"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_SSP_003@'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_5"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_5'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_5_to_RT_24_4",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_5_to_RT_24_4',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Route point fopr stop 2 lies on this link"
+                                            value='Route point fopr stop 2 lies on this link'
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_5"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_5'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_4"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_4'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_4_to_RT_24_3",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_4_to_RT_24_3',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_4"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_4'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_3"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_3'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_3_to_RT_24_2",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_3_to_RT_24_2',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_3"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_3'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_2"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_2'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_24o_RT_24_2_to_RT_24_1",
-                                        version="any",
+                                        id='mybus:RL_24o_RT_24_2_to_RT_24_1',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_2"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_2'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_1"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_1'
                                         )
                                     ),
                                     RouteLink(
-                                        id="mybus:RL_RT_24o_RT_24o_1_to_SSP_001@",
-                                        version="any",
+                                        id='mybus:RL_RT_24o_RT_24o_1_to_SSP_001@',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_1"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_1'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="mybus:Rtpt_RT_24_SSP_001@"
+                                            version='any',
+                                            ref='mybus:Rtpt_RT_24_SSP_001@'
                                         )
                                     ),
                                 ]
@@ -714,158 +714,158 @@ obj = PublicationDelivery(
                             routes=RoutesInFrameRelStructure(
                                 flexible_route_or_route=[
                                     Route(
-                                        id="mybus:RT_24o",
-                                        version="any",
+                                        id='mybus:RT_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 24 Alpha to Charley Green"
+                                            value='Line 24 Alpha to Charley Green'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         direction_ref=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Westbound"
+                                            version='any',
+                                            ref='mybus:DR_Westbound'
                                         ),
                                         points_in_sequence=PointsOnRouteRelStructure(
                                             point_on_route=[
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24o_001",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24o_001',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_001@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_001@'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24o_002",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24o_002',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_1"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_1'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24o_003",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24o_003',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_2"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_2'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24o_004",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24o_004',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_3'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24o_005",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24o_005',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_4'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24o_006",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24o_006',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24o_007",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24o_007',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_003@'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     Route(
-                                        id="mybus:RT_24i",
-                                        version="any",
+                                        id='mybus:RT_24i',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 24 Alpha to Charley Green"
+                                            value='Line 24 Alpha to Charley Green'
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         direction_ref=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Eastbound"
+                                            version='any',
+                                            ref='mybus:DR_Eastbound'
                                         ),
                                         points_in_sequence=PointsOnRouteRelStructure(
                                             point_on_route=[
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24i_001",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24i_001',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_003@'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24i_002",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24i_002',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24i_003",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24i_003',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_4'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24i_004",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24i_004',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_3'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24i_005",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24i_005',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_2"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_2'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24i_006",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24i_006',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_1"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_1'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="mybus:POR_Rt24i_007",
-                                                    version="any",
+                                                    id='mybus:POR_Rt24i_007',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_001@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_001@'
                                                     )
                                                 ),
                                             ]
@@ -876,78 +876,78 @@ obj = PublicationDelivery(
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:LN_24",
-                                        version="any",
+                                        id='mybus:LN_24',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 24 Alpha to Charley Green"
+                                            value='Line 24 Alpha to Charley Green'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 24"
+                                            value='Line 24'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="24"
+                                        public_code='24'
                                     ),
                                 ]
                             ),
                             destination_displays=DestinationDisplaysInFrameRelStructure(
                                 destination_display=[
                                     DestinationDisplay(
-                                        id="mybus:DST_Alpha",
-                                        version="any",
+                                        id='mybus:DST_Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha Green"
+                                            value='Alpha Green'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Charley G"
+                                            value='Charley G'
                                         ),
-                                        public_code="ALPH"
+                                        public_code='ALPH'
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Charley",
-                                        version="any",
+                                        id='mybus:DST_Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Green"
+                                            value='Charley Green'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Charley G"
+                                            value='Charley G'
                                         ),
-                                        public_code="CHAS"
+                                        public_code='CHAS'
                                     ),
                                 ]
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha &amp; Castle"
+                                            value='Alpha & Castle'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_SSP_001_01",
-                                                    version="any",
+                                                    id='mybus:ppj_SSP_001_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto route point"
+                                                        value='Projects onto route point'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_001@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_001@'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Alpha"
+                                            value='Alpha'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="EANDC"
+                                            value='EANDC'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -955,47 +955,47 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_SSP_002_01",
-                                                    version="any",
+                                                    id='mybus:ppj_SSP_002_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto route point"
+                                                        value='Projects onto route point'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_002@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_002@'
                                                     )
                                                 ),
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_SSP_002_02",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_SSP_002_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto activation point 02"
+                                                        value='Projects onto activation point 02'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="hde:ap_02"
+                                                        version='any',
+                                                        ref='hde:ap_02'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="BRAVO"
+                                            value='BRAVO'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -1003,36 +1003,36 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Green"
+                                            value='Charley Green'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_SSP_003_01",
-                                                    version="any",
+                                                    id='mybus:ppj_SSP_003_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto route point"
+                                                        value='Projects onto route point'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_003@'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="CHAS"
+                                            value='CHAS'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -1044,87 +1044,87 @@ obj = PublicationDelivery(
                             service_links=ServiceLinksInFrameRelStructure(
                                 service_link=[
                                     ServiceLink(
-                                        id="mybus:SSP_001_to_SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_001_to_SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha   to Bravo Arch"
+                                            value='Alpha   to Bravo Arch'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_01",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoRL_01',
+                                                    version='any',
                                                     order=1,
                                                     project_to_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:RL_24o_RT_SSP_001@_to_RT_24_1"
+                                                        version='any',
+                                                        ref='mybus:RL_24o_RT_SSP_001@_to_RT_24_1'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_02",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoRL_02',
+                                                    version='any',
                                                     order=2,
                                                     project_to_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:RL_24o_RT_24_1_to_RT_24_2"
+                                                        version='any',
+                                                        ref='mybus:RL_24o_RT_24_1_to_RT_24_2'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_03",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoRL_03',
+                                                    version='any',
                                                     order=3,
                                                     project_to_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:RL_24o_RT_24_2_to_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:RL_24o_RT_24_2_to_RT_24_3'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoRL_04",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoRL_04',
+                                                    version='any',
                                                     order=4,
                                                     project_to_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:RL_24o_RT_24_3_to_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:RL_24o_RT_24_3_to_RT_24_4'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_SSP_002_to_SSP_077_01-d300"
+                                                        version='any',
+                                                        ref='mybus:pol_SSP_002_to_SSP_077_01-d300'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_01",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoTL_01',
+                                                    version='any',
                                                     order=1,
                                                     project_to_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_077'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_02",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoTL_02',
+                                                    version='any',
                                                     order=2,
                                                     project_to_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_001_t1'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_03",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoTL_03',
+                                                    version='any',
                                                     order=3,
                                                     project_to_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1_to_SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1_to_SSP_001_t2'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_001_to_SSP_002_SLontoTL_04",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_001_to_SSP_002_SLontoTL_04',
+                                                    version='any',
                                                     order=4,
                                                     project_to_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2_to_SSP_002'
                                                     )
                                                 ),
                                             ]
@@ -1132,181 +1132,181 @@ obj = PublicationDelivery(
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_rtp_SSP_001@-d0",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_rtp_SSP_001@-d0',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("0"),
+                                                    distance_from_start=Decimal('0'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_001@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_001@'
                                                     ),
                                                     order=1
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("200"),
+                                                    distance_from_start=Decimal('200'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_1"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_1'
                                                     ),
                                                     order=2
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t1-d300",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t1-d300',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through timing poit SSP_001_t1   "
+                                                        value='Goes through timing poit SSP_001_t1   '
                                                     ),
-                                                    distance_from_start=Decimal("300"),
+                                                    distance_from_start=Decimal('300'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1'
                                                     ),
                                                     order=3
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_02-d400',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 2 "
+                                                        value='Goes through rtpt 2 '
                                                     ),
-                                                    distance_from_start=Decimal("400"),
+                                                    distance_from_start=Decimal('400'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_2"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_2'
                                                     ),
                                                     order=4
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_SSP_001_t2-d500',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through timing point SSP_001_t2   "
+                                                        value='Goes through timing point SSP_001_t2   '
                                                     ),
-                                                    distance_from_start=Decimal("500"),
+                                                    distance_from_start=Decimal('500'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2'
                                                     ),
                                                     order=5
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_ap_01-d550",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_ap_01-d550',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through ap1 "
+                                                        value='Goes through ap1 '
                                                     ),
-                                                    distance_from_start=Decimal("550"),
+                                                    distance_from_start=Decimal('550'),
                                                     choice=ActivationPointRef(
-                                                        version="any",
-                                                        ref="hde:ap_01"
+                                                        version='any',
+                                                        ref='hde:ap_01'
                                                     ),
                                                     order=5
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_03-d600",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_03-d600',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt  "
+                                                        value='Goes through rtpt  '
                                                     ),
-                                                    distance_from_start=Decimal("600"),
+                                                    distance_from_start=Decimal('600'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_3'
                                                     ),
                                                     order=6
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_ap_02-d1300",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_ap_02-d1300',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through ap2 "
+                                                        value='Goes through ap2 '
                                                     ),
-                                                    distance_from_start=Decimal("1300"),
+                                                    distance_from_start=Decimal('1300'),
                                                     choice=ActivationPointRef(
-                                                        version="any",
-                                                        ref="hde:ap_02"
+                                                        version='any',
+                                                        ref='hde:ap_02'
                                                     ),
                                                     order=7
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_001_to_SSP_002_rtp_SSP_002@-d1500",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_001_to_SSP_002_rtp_SSP_002@-d1500',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("1500"),
+                                                    distance_from_start=Decimal('1500'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_002@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_002@'
                                                     ),
                                                     order=8
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001"
+                                            version='any',
+                                            ref='mybus:SSP_001'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SSP_002_to_SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_002_to_SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo   to Charley  "
+                                            value='Bravo   to Charley  '
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_002_to_SSP_077_SLontoRL_01",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_002_to_SSP_077_SLontoRL_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project to Route Links NB  startpoint is 50m, along  link"
+                                                        value='Project to Route Links NB  startpoint is 50m, along  link'
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:RL_24o_RT_24_4_to_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:RL_24o_RT_24_4_to_RT_24_5'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("50")
+                                                        distance_from_start=Decimal('50')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_002_to_SSP_077_SLontoRL_03",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_002_to_SSP_077_SLontoRL_03',
+                                                    version='any',
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:RL_24o_RT_24_5_to_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:RL_24o_RT_24_5_to_RT_24_SSP_003@'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_002_to_SSP_077_SLontoTL_01",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_002_to_SSP_077_SLontoTL_01',
+                                                    version='any',
                                                     order=1,
                                                     project_to_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_002_t1'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="mybus:LP_SSP_002_to_SSP_077_SLontoTL_02",
-                                                    version="any",
+                                                    id='mybus:LP_SSP_002_to_SSP_077_SLontoTL_02',
+                                                    version='any',
                                                     order=2,
                                                     project_to_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1_to_SSP_077'
                                                     )
                                                 ),
                                             ]
@@ -1314,122 +1314,122 @@ obj = PublicationDelivery(
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_002_to_SSP_077_rtp_SSP_002@-d0",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_002_to_SSP_077_rtp_SSP_002@-d0',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("0"),
+                                                    distance_from_start=Decimal('0'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_002@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_002@'
                                                     ),
                                                     order=1
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_002_to_SSP_077_rtpt_04-d800",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_002_to_SSP_077_rtpt_04-d800',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("800"),
+                                                    distance_from_start=Decimal('800'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_4'
                                                     ),
                                                     order=3
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_002_to_SSP_077_SSP_002_t1-d900",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_002_to_SSP_077_SSP_002_t1-d900',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through timing poit SSP_001_t1   "
+                                                        value='Goes through timing poit SSP_001_t1   '
                                                     ),
-                                                    distance_from_start=Decimal("900"),
+                                                    distance_from_start=Decimal('900'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1'
                                                     ),
                                                     order=4
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_002_to_SSP_077_rtpt_05-d800",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_002_to_SSP_077_rtpt_05-d800',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("800"),
+                                                    distance_from_start=Decimal('800'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     ),
                                                     order=5
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sL_SSP_002_to_SSP_077_01_ap_03-d900",
-                                                    version="any",
+                                                    id='mybus:pol_sL_SSP_002_to_SSP_077_01_ap_03-d900',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Activation Point 3"
+                                                        value='Activation Point 3'
                                                     ),
-                                                    distance_from_start=Decimal("900"),
+                                                    distance_from_start=Decimal('900'),
                                                     choice=ActivationPointRef(
-                                                        version="any",
-                                                        ref="hde:ap_03"
+                                                        version='any',
+                                                        ref='hde:ap_03'
                                                     ),
                                                     order=6
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_002_to_SSP_077_rtp_SSP_003@-d2000",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_002_to_SSP_077_rtp_SSP_003@-d2000',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("2000"),
+                                                    distance_from_start=Decimal('2000'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_003@'
                                                     ),
                                                     order=7
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_077"
+                                            version='any',
+                                            ref='mybus:SSP_077'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SSP_002_to_SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_002_to_SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo  to ALpha"
+                                            value='Bravo  to ALpha'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001"
+                                            version='any',
+                                            ref='mybus:SSP_001'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SSP_077_to_SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_077_to_SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to Bravo "
+                                            value='Charley to Bravo '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_077"
+                                            version='any',
+                                            ref='mybus:SSP_077'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         )
                                     ),
                                 ]
@@ -1437,52 +1437,52 @@ obj = PublicationDelivery(
                             service_patterns=ServicePatternsInFrameRelStructure(
                                 service_pattern_or_journey_pattern_view=[
                                     ServicePattern(
-                                        id="hde:svp_24o",
-                                        version="any",
+                                        id='hde:svp_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Charley Outbound "
+                                            value='Alpha to Charley Outbound '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="mybus:RT_24o"
+                                            version='any',
+                                            ref='mybus:RT_24o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         journey_patterns=JourneyPatternRefsRelStructure(
                                             choice=[
                                                 ServiceJourneyPatternRef(
-                                                    version="any",
-                                                    ref="hde:sjp_24o"
+                                                    version='any',
+                                                    ref='hde:sjp_24o'
                                                 ),
                                             ]
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24o_01",
-                                                    version="any",
+                                                    id='hde:jp_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     for_alighting=False
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24o_02",
-                                                    version="any",
+                                                    id='hde:jp_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24o_03",
-                                                    version="any",
+                                                    id='hde:jp_24o_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     for_boarding=False
                                                 ),
@@ -1491,73 +1491,73 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_24o_01",
-                                                    version="any",
+                                                    id='hde:slijp_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_24o_02",
-                                                    version="any",
+                                                    id='hde:slijp_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServicePattern(
-                                        id="hde:svp_24i",
-                                        version="any",
+                                        id='hde:svp_24i',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to Alpha inbound "
+                                            value='Charley to Alpha inbound '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="mybus:RT_24i"
+                                            version='any',
+                                            ref='mybus:RT_24i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         journey_patterns=JourneyPatternRefsRelStructure(
                                             choice=[
                                                 ServiceJourneyPatternRef(
-                                                    version="any",
-                                                    ref="hde:sjp_24i"
+                                                    version='any',
+                                                    ref='hde:sjp_24i'
                                                 ),
                                             ]
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24i_01",
-                                                    version="any",
+                                                    id='hde:jp_24i_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     for_alighting=False
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24i_02",
-                                                    version="any",
+                                                    id='hde:jp_24i_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24i_03",
-                                                    version="any",
+                                                    id='hde:jp_24i_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     for_boarding=False
                                                 ),
@@ -1566,21 +1566,21 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_24i_01",
-                                                    version="any",
+                                                    id='hde:slijp_24i_01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_077_to_SSP_002'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_24i_02",
-                                                    version="any",
+                                                    id='hde:slijp_24i_02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_001'
                                                     )
                                                 ),
                                             ]
@@ -1591,38 +1591,38 @@ obj = PublicationDelivery(
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
                                     TimingPoint(
-                                        id="mybus:SSP_001_t1",
-                                        version="any",
+                                        id='mybus:SSP_001_t1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Between Alpha  and Bravo  Point 1"
+                                            value='Between Alpha  and Bravo  Point 1'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
                                     TimingPoint(
-                                        id="mybus:SSP_001_t2",
-                                        version="any",
+                                        id='mybus:SSP_001_t2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Between Alpha and Bravo  Point 2"
+                                            value='Between Alpha and Bravo  Point 2'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_TimingPoint:SSP_001_t2_ap_03",
-                                                    version="any",
+                                                    id='mybus:ppj_TimingPoint:SSP_001_t2_ap_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto activation point 3"
+                                                        value='Projects onto activation point 3'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:ap_03"
+                                                        version='any',
+                                                        ref='mybus:ap_03'
                                                     )
                                                 ),
                                             ]
@@ -1630,37 +1630,37 @@ obj = PublicationDelivery(
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
                                     TimingPoint(
-                                        id="mybus:SSP_002_t1",
-                                        version="any",
+                                        id='mybus:SSP_002_t1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Between  Bravo and Charley    Point 1"
+                                            value='Between  Bravo and Charley    Point 1'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.4000"),
-                                            latitude=Decimal("0.4000")
+                                            longitude=Decimal('53.4000'),
+                                            latitude=Decimal('0.4000')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="mybus:ppj_Rtpt_TimingPoint:SSP_002_t1_Rtpt_RT_24o_5",
-                                                    version="any",
+                                                    id='mybus:ppj_Rtpt_TimingPoint:SSP_002_t1_Rtpt_RT_24o_5',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Route  Point 5 between  Bravo  and Charley"
+                                                        value='Project onto Route  Point 5 between  Bravo  and Charley'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     )
                                                 ),
                                                 PointProjection(
-                                                    id="mybus:ppj_TimingPoint:SSP_002_t1_ap_03",
-                                                    version="any",
+                                                    id='mybus:ppj_TimingPoint:SSP_002_t1_ap_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projects onto activation point 3"
+                                                        value='Projects onto activation point 3'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:ap_03"
+                                                        version='any',
+                                                        ref='mybus:ap_03'
                                                     )
                                                 ),
                                             ]
@@ -1672,359 +1672,359 @@ obj = PublicationDelivery(
                             timing_links=TimingLinksInFrameRelStructure(
                                 timing_link=[
                                     TimingLink(
-                                        id="mybus:SSP_001_to_SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_001_to_SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Overall timing Alpha   to  Charley  "
+                                            value='Overall timing Alpha   to  Charley  '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001"
+                                            version='any',
+                                            ref='mybus:SSP_001'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_077"
+                                            version='any',
+                                            ref='mybus:SSP_077'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_001_to_SSP_001_t1",
-                                        version="any",
+                                        id='mybus:SSP_001_to_SSP_001_t1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha   to  After Alpha   t1"
+                                            value='Alpha   to  After Alpha   t1'
                                         ),
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_001_to_SSP_001_t1_rtp_SSP_001@",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_001_to_SSP_001_t1_rtp_SSP_001@',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("0"),
+                                                    distance_from_start=Decimal('0'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_001@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_001@'
                                                     ),
                                                     order=1
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_001_to_SSP_001_t1_rtpt_01",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_001_to_SSP_001_t1_rtpt_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("200"),
+                                                    distance_from_start=Decimal('200'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_1"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_1'
                                                     ),
                                                     order=2
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001"
+                                            version='any',
+                                            ref='mybus:SSP_001'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t1"
+                                            version='any',
+                                            ref='mybus:SSP_001_t1'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_001_t1_to_SSP_001_t2",
-                                        version="any",
+                                        id='mybus:SSP_001_t1_to_SSP_001_t2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Alpha    t1 to After Alpha   t2"
+                                            value='After Alpha    t1 to After Alpha   t2'
                                         ),
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_001_t1_to_SSP_001_t2_rtpt_02",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_001_t1_to_SSP_001_t2_rtpt_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 2 "
+                                                        value='Goes through rtpt 2 '
                                                     ),
-                                                    distance_from_start=Decimal("400"),
+                                                    distance_from_start=Decimal('400'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_2"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_2'
                                                     ),
                                                     order=1
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t1"
+                                            version='any',
+                                            ref='mybus:SSP_001_t1'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t2"
+                                            version='any',
+                                            ref='mybus:SSP_001_t2'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_001_t2_to_SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_001_t2_to_SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Alpha   t2 to Bravo  "
+                                            value='After Alpha   t2 to Bravo  '
                                         ),
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_001_t2_to_SSP_002_ap_01",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_001_t2_to_SSP_002_ap_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through ap1 "
+                                                        value='Goes through ap1 '
                                                     ),
-                                                    distance_from_start=Decimal("550"),
+                                                    distance_from_start=Decimal('550'),
                                                     choice=ActivationPointRef(
-                                                        version="any",
-                                                        ref="hde:ap_01"
+                                                        version='any',
+                                                        ref='hde:ap_01'
                                                     ),
                                                     order=5
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_001_t2_to_SSP_002_rtpt_03",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_001_t2_to_SSP_002_rtpt_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt  "
+                                                        value='Goes through rtpt  '
                                                     ),
-                                                    distance_from_start=Decimal("600"),
+                                                    distance_from_start=Decimal('600'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_3'
                                                     ),
                                                     order=6
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_001_t2_to_SSP_002_ap_02",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_001_t2_to_SSP_002_ap_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through ap2 "
+                                                        value='Goes through ap2 '
                                                     ),
-                                                    distance_from_start=Decimal("1300"),
+                                                    distance_from_start=Decimal('1300'),
                                                     choice=ActivationPointRef(
-                                                        version="any",
-                                                        ref="hde:ap_02"
+                                                        version='any',
+                                                        ref='hde:ap_02'
                                                     ),
                                                     order=7
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_001_t2_to_SSP_002_rtp_SSP_002@",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_001_t2_to_SSP_002_rtp_SSP_002@',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("1500"),
+                                                    distance_from_start=Decimal('1500'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_002@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_002@'
                                                     ),
                                                     order=8
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t2"
+                                            version='any',
+                                            ref='mybus:SSP_001_t2'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_002_to_SSP_002_t1",
-                                        version="any",
+                                        id='mybus:SSP_002_to_SSP_002_t1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo   to After Bravo   t1"
+                                            value='Bravo   to After Bravo   t1'
                                         ),
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_002_to_SSP_002_t1_rtp_SSP_002@",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_002_to_SSP_002_t1_rtp_SSP_002@',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("0"),
+                                                    distance_from_start=Decimal('0'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_002@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_002@'
                                                     ),
                                                     order=1
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_tl_SSP_002_to_SSP_002_t1_rtpt_04",
-                                                    version="any",
+                                                    id='mybus:pol_tl_SSP_002_to_SSP_002_t1_rtpt_04',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("800"),
+                                                    distance_from_start=Decimal('800'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_4'
                                                     ),
                                                     order=2
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002_t1"
+                                            version='any',
+                                            ref='mybus:SSP_002_t1'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_002_t1_to_SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_002_t1_to_SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Bravo   t1 to Charley  "
+                                            value='After Bravo   t1 to Charley  '
                                         ),
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_002_t1_to_SSP_077_rtpt_05",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_002_t1_to_SSP_077_rtpt_05',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("800"),
+                                                    distance_from_start=Decimal('800'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     ),
                                                     order=1
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sL_SSP_002_t1_to_SSP_077_01_ap_03",
-                                                    version="any",
+                                                    id='mybus:pol_sL_SSP_002_t1_to_SSP_077_01_ap_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Activation Point 3"
+                                                        value='Activation Point 3'
                                                     ),
-                                                    distance_from_start=Decimal("900"),
+                                                    distance_from_start=Decimal('900'),
                                                     choice=ActivationPointRef(
-                                                        version="any",
-                                                        ref="hde:ap_03"
+                                                        version='any',
+                                                        ref='hde:ap_03'
                                                     ),
                                                     order=2
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_sl_SSP_002_t1_to_SSP_077_rtp_SSP_003@",
-                                                    version="any",
+                                                    id='mybus:pol_sl_SSP_002_t1_to_SSP_077_rtp_SSP_003@',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("2000"),
+                                                    distance_from_start=Decimal('2000'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_003@'
                                                     ),
                                                     order=3
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002_t1"
+                                            version='any',
+                                            ref='mybus:SSP_002_t1'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_077"
+                                            version='any',
+                                            ref='mybus:SSP_077'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_077_to_SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_077_to_SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Overall timing Charley to Alpha        "
+                                            value='Overall timing Charley to Alpha        '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_077"
+                                            version='any',
+                                            ref='mybus:SSP_077'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001"
+                                            version='any',
+                                            ref='mybus:SSP_001'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_077_to_SSP_002_t1",
-                                        version="any",
+                                        id='mybus:SSP_077_to_SSP_002_t1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charlet to After Bravo   t1    "
+                                            value='Charlet to After Bravo   t1    '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_077"
+                                            version='any',
+                                            ref='mybus:SSP_077'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002_t1"
+                                            version='any',
+                                            ref='mybus:SSP_002_t1'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_002_t1_to_SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_002_t1_to_SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Bravo  t1  to   Bravo  "
+                                            value='After Bravo  t1  to   Bravo  '
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002_t1"
+                                            version='any',
+                                            ref='mybus:SSP_002_t1'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_002_to_SSP_001_t2",
-                                        version="any",
+                                        id='mybus:SSP_002_to_SSP_001_t2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Bravo to Alpha   t2  "
+                                            value='After Bravo to Alpha   t2  '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t2"
+                                            version='any',
+                                            ref='mybus:SSP_001_t2'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_001_t2_to_SSP_001_t1",
-                                        version="any",
+                                        id='mybus:SSP_001_t2_to_SSP_001_t1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Alpha    t2 to After Alpha   t1"
+                                            value='After Alpha    t2 to After Alpha   t1'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t2"
+                                            version='any',
+                                            ref='mybus:SSP_001_t2'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t1"
+                                            version='any',
+                                            ref='mybus:SSP_001_t1'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:SSP_001_t1_to_SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_001_t1_to_SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Alpha   t1 to alALpha "
+                                            value='After Alpha   t1 to alALpha '
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001_t1"
+                                            version='any',
+                                            ref='mybus:SSP_001_t1'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:SSP_001"
+                                            version='any',
+                                            ref='mybus:SSP_001'
                                         )
                                     ),
                                 ]
@@ -2032,192 +2032,192 @@ obj = PublicationDelivery(
                             timing_patterns=TimingPatternsInFrameRelStructure(
                                 timing_pattern=[
                                     TimingPattern(
-                                        id="hde:tp_24o",
-                                        version="any",
+                                        id='hde:tp_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Route 24"
+                                            value='Route 24'
                                         ),
                                         route_ref=RouteRefStructure(
-                                            version="any",
-                                            ref="mybus:RT_24o"
+                                            version='any',
+                                            ref='mybus:RT_24o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24o_01",
-                                                    version="any",
+                                                    id='hde:tpip_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:SSP_001"
+                                                            version='any',
+                                                            ref='mybus:SSP_001'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_001_t1'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24o_02",
-                                                    version="any",
+                                                    id='hde:tpip_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1_to_SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1_to_SSP_001_t2'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24o_03",
-                                                    version="any",
+                                                    id='hde:tpip_24o_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2_to_SSP_002'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24o_04",
-                                                    version="any",
+                                                    id='hde:tpip_24o_04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_002_t1'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24o_05",
-                                                    version="any",
+                                                    id='hde:tpip_24o_05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1_to_SSP_077'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24o_06",
-                                                    version="any",
+                                                    id='hde:tpip_24o_06',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPattern(
-                                        id="hde:tp_24i",
-                                        version="any",
+                                        id='hde:tp_24i',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Route 24 Inbound"
+                                            value='Route 24 Inbound'
                                         ),
                                         route_ref=RouteRefStructure(
-                                            version="any",
-                                            ref="mybus:RT_24i"
+                                            version='any',
+                                            ref='mybus:RT_24i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24i_01",
-                                                    version="any",
+                                                    id='hde:tpip_24i_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:SSP_077"
+                                                            version='any',
+                                                            ref='mybus:SSP_077'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_077_to_SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_077_to_SSP_002_t1'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24i_02",
-                                                    version="any",
+                                                    id='hde:tpip_24i_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1_to_SSP_002'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24i_03",
-                                                    version="any",
+                                                    id='hde:tpip_24i_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:SSP_002"
+                                                            version='any',
+                                                            ref='mybus:SSP_002'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_001_t2'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24i_04",
-                                                    version="any",
+                                                    id='hde:tpip_24i_04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2_to_SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2_to_SSP_001_t1'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24i_05",
-                                                    version="any",
+                                                    id='hde:tpip_24i_05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1_to_SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1_to_SSP_001'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_24i_06",
-                                                    version="any",
+                                                    id='hde:tpip_24i_06',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     )
                                                 ),
                                             ]
@@ -2228,28 +2228,28 @@ obj = PublicationDelivery(
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     ServiceJourneyPattern(
-                                        id="hde:sjp_24o",
-                                        version="any",
+                                        id='hde:sjp_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Charley  "
+                                            value='Alpha to Charley  '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="mybus:RT_24o"
+                                            version='any',
+                                            ref='mybus:RT_24o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         run_times=JourneyPatternRunTimesRelStructure(
                                             journey_pattern_run_time_ref_or_journey_pattern_run_time=[
                                                 JourneyPatternRunTime(
-                                                    id="mybus:jp_24o1_SSP_001_to_SSP_077",
-                                                    version="any",
+                                                    id='mybus:jp_24o1_SSP_001_to_SSP_077',
+                                                    version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="mybus:td_01"
+                                                        version='any',
+                                                        ref='mybus:td_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_077'
                                                     ),
                                                     run_time=XmlDuration("PT70M")
                                                 ),
@@ -2258,129 +2258,129 @@ obj = PublicationDelivery(
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24o_SSP_001",
-                                                    version="any",
+                                                    id='hde:pijp_24o_SSP_001',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24o_RT_24_SSP_001@",
-                                                    version="any",
+                                                    id='hde:pijp_24o_RT_24_SSP_001@',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_001@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_001@'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24o_RT_24_1",
-                                                    version="any",
+                                                    id='hde:pijp_24o_RT_24_1',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_1"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_1'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24o_RT_24_2",
-                                                    version="any",
+                                                    id='hde:pijp_24o_RT_24_2',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_2"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_2'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24o_SSP_002",
-                                                    version="any",
+                                                    id='hde:pijp_24o_SSP_002',
+                                                    version='any',
                                                     order=5,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24o_RT_24_3",
-                                                    version="any",
+                                                    id='hde:pijp_24o_RT_24_3',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_3'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24o_RT_24_4",
-                                                    version="any",
+                                                    id='hde:pijp_24o_RT_24_4',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_4'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24o_RT_24_5",
-                                                    version="any",
+                                                    id='hde:pijp_24o_RT_24_5',
+                                                    version='any',
                                                     order=8,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24o_RT_24_SSP_003@",
-                                                    version="any",
+                                                    id='hde:pijp_24o_RT_24_SSP_003@',
+                                                    version='any',
                                                     order=9,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_003@'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24o_SSP_07",
-                                                    version="any",
+                                                    id='hde:pijp_24o_SSP_07',
+                                                    version='any',
                                                     order=10,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:sjp_24i",
-                                        version="any",
+                                        id='hde:sjp_24i',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to ALpha  "
+                                            value='Charley to ALpha  '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="mybus:RT_24i"
+                                            version='any',
+                                            ref='mybus:RT_24i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         run_times=JourneyPatternRunTimesRelStructure(
                                             journey_pattern_run_time_ref_or_journey_pattern_run_time=[
                                                 JourneyPatternRunTime(
-                                                    id="mybus:jp_24i1_SSP_077_to_SSP_001",
-                                                    version="any",
+                                                    id='mybus:jp_24i1_SSP_077_to_SSP_001',
+                                                    version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="mybus:td_01"
+                                                        version='any',
+                                                        ref='mybus:td_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077_to_SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_077_to_SSP_001'
                                                     ),
                                                     run_time=XmlDuration("PT70M")
                                                 ),
@@ -2389,101 +2389,101 @@ obj = PublicationDelivery(
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24i_SSP_077",
-                                                    version="any",
+                                                    id='hde:pijp_24i_SSP_077',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_077_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_077_to_SSP_002'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24i_SSP_003@",
-                                                    version="any",
+                                                    id='hde:pijp_24i_SSP_003@',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_003@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_003@'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24i_RT_24_5",
-                                                    version="any",
+                                                    id='hde:pijp_24i_RT_24_5',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24i_RT_24_4",
-                                                    version="any",
+                                                    id='hde:pijp_24i_RT_24_4',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_4'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24i_RT_24_3",
-                                                    version="any",
+                                                    id='hde:pijp_24i_RT_24_3',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_3'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24i_SSP_002",
-                                                    version="any",
+                                                    id='hde:pijp_24i_SSP_002',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_001'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24i_RT_24_2",
-                                                    version="any",
+                                                    id='hde:pijp_24i_RT_24_2',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_2"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_2'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24i_RT_24_1",
-                                                    version="any",
+                                                    id='hde:pijp_24i_RT_24_1',
+                                                    version='any',
                                                     order=8,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_1"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_1'
                                                     )
                                                 ),
                                                 PointInJourneyPattern(
-                                                    id="hde:pijp_24i_SSP_001@",
-                                                    version="any",
+                                                    id='hde:pijp_24i_SSP_001@',
+                                                    version='any',
                                                     order=9,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_001@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_001@'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24i_SSP_001",
-                                                    version="any",
+                                                    id='hde:pijp_24i_SSP_001',
+                                                    version='any',
                                                     order=10,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     )
                                                 ),
                                             ]
@@ -2494,55 +2494,55 @@ obj = PublicationDelivery(
                             time_demand_types=TimeDemandTypesInFrameRelStructure(
                                 time_demand_type=[
                                     TimeDemandType(
-                                        id="mybus:td_01",
-                                        version="any",
+                                        id='mybus:td_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Normal Day"
+                                            value='Normal Day'
                                         ),
                                         run_times=JourneyRunTimesRelStructure(
                                             journey_run_time=[
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TD01_SSP_001_to_SSP_001_t1",
-                                                    version="any",
+                                                    id='mybus:tdtr_TD01_SSP_001_to_SSP_001_t1',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_001_t1'
                                                     ),
                                                     run_time=XmlDuration("PT10M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TD01_SSP_001_t1_to_SSP_001_t2",
-                                                    version="any",
+                                                    id='mybus:tdtr_TD01_SSP_001_t1_to_SSP_001_t2',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1_to_SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1_to_SSP_001_t2'
                                                     ),
                                                     run_time=XmlDuration("PT10M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TD01_SSP_001_t2_to_SSP_002",
-                                                    version="any",
+                                                    id='mybus:tdtr_TD01_SSP_001_t2_to_SSP_002',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2_to_SSP_002'
                                                     ),
                                                     run_time=XmlDuration("PT10M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TD01_SSP_002_to_SSP_002_t1",
-                                                    version="any",
+                                                    id='mybus:tdtr_TD01_SSP_002_to_SSP_002_t1',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_002_t1'
                                                     ),
                                                     run_time=XmlDuration("PT18M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TD01_SSP_002_t1_to_SSP_077",
-                                                    version="any",
+                                                    id='mybus:tdtr_TD01_SSP_002_t1_to_SSP_077',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1_to_SSP_077'
                                                     ),
                                                     run_time=XmlDuration("PT20M")
                                                 ),
@@ -2551,14 +2551,14 @@ obj = PublicationDelivery(
                                         wait_times=JourneyWaitTimesRelStructure(
                                             journey_wait_time=[
                                                 JourneyWaitTime(
-                                                    id="mybus:jp_24o1_SSP_002",
-                                                    version="any",
+                                                    id='mybus:jp_24o1_SSP_002',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wait at Stop B"
+                                                        value='Wait at Stop B'
                                                     ),
                                                     choice=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     wait_time=XmlDuration("PT2M")
                                                 ),
@@ -2569,74 +2569,74 @@ obj = PublicationDelivery(
                             )
                         ),
                         InfrastructureFrame(
-                            id="hde:InfrastructureFrame:INF_02",
-                            version="1",
+                            id='hde:InfrastructureFrame:INF_02',
+                            version='1',
                             name=MultilingualString(
-                                value="Activation Elements  "
+                                value='Activation Elements  '
                             ),
                             traffic_control_points=TrafficControlPointsInFrameRelStructure(
                                 traffic_control_point=[
                                     TrafficControlPoint(
-                                        id="hde:tcp_01",
-                                        version="any",
+                                        id='hde:tcp_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TCP Between Alpha and Bravo at TP1 "
+                                            value='TCP Between Alpha and Bravo at TP1 '
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("0.35"),
-                                            latitude=Decimal("52.00")
+                                            longitude=Decimal('0.35'),
+                                            latitude=Decimal('52.00')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:ppj_tcp_01_pj01",
-                                                    version="any",
+                                                    id='hde:ppj_tcp_01_pj01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Service link between A  and Charley"
+                                                        value='Project onto Service link between A  and Charley'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
-                                                    distance=Decimal("900")
+                                                    distance=Decimal('900')
                                                 ),
                                                 PointProjection(
-                                                    id="hde:ppj_tcp_01_pj02",
-                                                    version="any",
+                                                    id='hde:ppj_tcp_01_pj02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Timing Point2 between  Bravo  and Charley"
+                                                        value='Project onto Timing Point2 between  Bravo  and Charley'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TrafficControlPoint(
-                                        id="hde:tcp_02",
-                                        version="any",
+                                        id='hde:tcp_02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TCP Between Alpha and Bravo   aafter tp5"
+                                            value='TCP Between Alpha and Bravo   aafter tp5'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("0.35"),
-                                            latitude=Decimal("52.00")
+                                            longitude=Decimal('0.35'),
+                                            latitude=Decimal('52.00')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:ppj_tcp_02_pj01",
-                                                    version="any",
+                                                    id='hde:ppj_tcp_02_pj01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Service link between Bravo  and Charley"
+                                                        value='Project onto Service link between Bravo  and Charley'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     ),
-                                                    distance=Decimal("400")
+                                                    distance=Decimal('400')
                                                 ),
                                             ]
                                         )
@@ -2646,210 +2646,210 @@ obj = PublicationDelivery(
                             activation_points=ActivationPointsInFrameRelStructure(
                                 beacon_point_or_activation_point=[
                                     ActivationPoint(
-                                        id="hde:ap_01",
-                                        version="any",
+                                        id='hde:ap_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="AP 1   before Bravo  start of activation link al1"
+                                            value='AP 1   before Bravo  start of activation link al1'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("0.3"),
-                                            latitude=Decimal("52.00")
+                                            longitude=Decimal('0.3'),
+                                            latitude=Decimal('52.00')
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="hde:Type_of_point@ActPoint1"
+                                                    ref='hde:Type_of_point@ActPoint1'
                                                 ),
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:ppj_01_pj01",
-                                                    version="any",
+                                                    id='hde:ppj_01_pj01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Service link between Alpha and Bravo"
+                                                        value='Project onto Service link between Alpha and Bravo'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
-                                                    distance=Decimal("10050")
+                                                    distance=Decimal('10050')
                                                 ),
                                                 PointProjection(
-                                                    id="hde:ppj_01_pj02",
-                                                    version="any",
+                                                    id='hde:ppj_01_pj02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Timing Link  2 between Alpha and Bravo"
+                                                        value='Project onto Timing Link  2 between Alpha and Bravo'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2_to_SSP_002'
                                                     ),
-                                                    distance=Decimal("50")
+                                                    distance=Decimal('50')
                                                 ),
                                                 PointProjection(
-                                                    id="hde:ppj_01_pj03",
-                                                    version="any",
+                                                    id='hde:ppj_01_pj03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Route  Link 3 between Alpha 3@ and 4@ on way to and Bravo"
+                                                        value='Project onto Route  Link 3 between Alpha 3@ and 4@ on way to and Bravo'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref=""
+                                                        version='any',
+                                                        ref=''
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:RL_24o_RT_24_3_to_RT_24_4"
+                                                        version='any',
+                                                        ref='mybus:RL_24o_RT_24_3_to_RT_24_4'
                                                     ),
-                                                    distance=Decimal("80")
+                                                    distance=Decimal('80')
                                                 ),
                                             ]
                                         ),
                                         private_code=PrivateCode(
-                                            value="MyPoint23"
+                                            value='MyPoint23'
                                         )
                                     ),
                                     ActivationPoint(
-                                        id="hde:ap_02",
-                                        version="any",
+                                        id='hde:ap_02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="AP2 at  Bravo  end of activation link"
+                                            value='AP2 at  Bravo  end of activation link'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("0.35"),
-                                            latitude=Decimal("52.00")
+                                            longitude=Decimal('0.35'),
+                                            latitude=Decimal('52.00')
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="hde:Type_of_point@ActPoint1"
+                                                    ref='hde:Type_of_point@ActPoint1'
                                                 ),
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:ppj_02_pj01",
-                                                    version="any",
+                                                    id='hde:ppj_02_pj01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto   Bravo  "
+                                                        value='Project onto   Bravo  '
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
-                                                    distance=Decimal("2000")
+                                                    distance=Decimal('2000')
                                                 ),
                                                 PointProjection(
-                                                    id="hde:ppj_02_pj03",
-                                                    version="any",
+                                                    id='hde:ppj_02_pj03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Route  Poinbt 5 for   Bravo  "
+                                                        value='Project onto Route  Poinbt 5 for   Bravo  '
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_002@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_002@'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         private_code=PrivateCode(
-                                            value="MyPoint24"
+                                            value='MyPoint24'
                                         )
                                     ),
                                     ActivationPoint(
-                                        id="hde:ap_03",
-                                        version="any",
+                                        id='hde:ap_03',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="AP2  Between Bravo and Charlwey "
+                                            value='AP2  Between Bravo and Charlwey '
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("0.35"),
-                                            latitude=Decimal("52.00")
+                                            longitude=Decimal('0.35'),
+                                            latitude=Decimal('52.00')
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="hde:Type_of_point@ActPoint1"
+                                                    ref='hde:Type_of_point@ActPoint1'
                                                 ),
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:ppj_ap03_pj01",
-                                                    version="any",
+                                                    id='hde:ppj_ap03_pj01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Service link between Bravo  and Charley"
+                                                        value='Project onto Service link between Bravo  and Charley'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     ),
-                                                    distance=Decimal("2000")
+                                                    distance=Decimal('2000')
                                                 ),
                                                 PointProjection(
-                                                    id="hde:ppj_ap03_pj02",
-                                                    version="any",
+                                                    id='hde:ppj_ap03_pj02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Timing Point2 between  Bravo  and Charley"
+                                                        value='Project onto Timing Point2 between  Bravo  and Charley'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_t1'
                                                     )
                                                 ),
                                                 PointProjection(
-                                                    id="hde:ppj_ap03_pj03",
-                                                    version="any",
+                                                    id='hde:ppj_ap03_pj03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Route  Point 5 between  Bravo  and Charley"
+                                                        value='Project onto Route  Point 5 between  Bravo  and Charley'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_5"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_5'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         private_code=PrivateCode(
-                                            value="MyPoint25"
+                                            value='MyPoint25'
                                         )
                                     ),
                                     BeaconPoint(
-                                        id="hde:BeaconPoint:bp_01",
-                                        version="any",
+                                        id='hde:BeaconPoint:bp_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BeaconP1 Between Alpha and Bravo and Charlwey "
+                                            value='BeaconP1 Between Alpha and Bravo and Charlwey '
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("0.35"),
-                                            latitude=Decimal("52.00")
+                                            longitude=Decimal('0.35'),
+                                            latitude=Decimal('52.00')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="hde:ppj_bp_01_pj01",
-                                                    version="any",
+                                                    id='hde:ppj_bp_01_pj01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Service link between A  and Charley"
+                                                        value='Project onto Service link between A  and Charley'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
-                                                    distance=Decimal("900")
+                                                    distance=Decimal('900')
                                                 ),
                                                 PointProjection(
-                                                    id="hde:ppj_bp_01_pj02",
-                                                    version="any",
+                                                    id='hde:ppj_bp_01_pj02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Timing Point2 between  Bravo  and Charley"
+                                                        value='Project onto Timing Point2 between  Bravo  and Charley'
                                                     ),
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t1"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t1'
                                                     )
                                                 ),
                                             ]
@@ -2860,44 +2860,44 @@ obj = PublicationDelivery(
                             activation_links=ActivationLinksInFrameRelStructure(
                                 activation_link=[
                                     ActivationLink(
-                                        id="hde:ActivationLink:al_01",
-                                        version="any",
+                                        id='hde:ActivationLink:al_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="AL  1  same as TimingLink   tl3   just before Bravo "
+                                            value='AL  1  same as TimingLink   tl3   just before Bravo '
                                         ),
                                         types=LinkTypeRefsRelStructure(
                                             type_of_link_ref=[
                                                 TypeOfLinkRef(
-                                                    ref="hde:TypeOLink:ActLinkType21"
+                                                    ref='hde:TypeOLink:ActLinkType21'
                                                 ),
                                             ]
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="hde:ppj_aL01_pj01",
-                                                    version="any",
+                                                    id='hde:ppj_aL01_pj01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto Service link between Alpha and Bravo"
+                                                        value='Project onto Service link between Alpha and Bravo'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkRefStructure1(
-                                                        version="any",
-                                                        ref="mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200"
+                                                        version='any',
+                                                        ref='mybus:pol_sl_SSP_001_to_SSP_002_rtpt_01-d200'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="hde:ppj_aL01_pj02",
-                                                    version="any",
+                                                    id='hde:ppj_aL01_pj02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Project onto timing img link 3 just before Bravo"
+                                                        value='Project onto timing img link 3 just before Bravo'
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2_to_SSP_002'
                                                     )
                                                 ),
                                             ]
@@ -2905,53 +2905,53 @@ obj = PublicationDelivery(
                                         passing_through=PointsOnLinkRelStructure(
                                             point_on_link=[
                                                 PointOnLink(
-                                                    id="mybus:pol_al_01_SSP_001_t2",
-                                                    version="any",
+                                                    id='mybus:pol_al_01_SSP_001_t2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through timing poit SSP_001_t2   "
+                                                        value='Goes through timing poit SSP_001_t2   '
                                                     ),
-                                                    distance_from_start=Decimal("500"),
+                                                    distance_from_start=Decimal('500'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_t2"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_t2'
                                                     ),
                                                     order=5
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_al_01_rtpt_03",
-                                                    version="any",
+                                                    id='mybus:pol_al_01_rtpt_03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt  "
+                                                        value='Goes through rtpt  '
                                                     ),
-                                                    distance_from_start=Decimal("600"),
+                                                    distance_from_start=Decimal('600'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_3"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_3'
                                                     ),
                                                     order=6
                                                 ),
                                                 PointOnLink(
-                                                    id="mybus:pol_al_01_rtp_SSP_002@",
-                                                    version="any",
+                                                    id='mybus:pol_al_01_rtp_SSP_002@',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Goes through rtpt 11 "
+                                                        value='Goes through rtpt 11 '
                                                     ),
-                                                    distance_from_start=Decimal("1500"),
+                                                    distance_from_start=Decimal('1500'),
                                                     choice=RoutePointRef(
-                                                        version="any",
-                                                        ref="mybus:Rtpt_RT_24_SSP_002@"
+                                                        version='any',
+                                                        ref='mybus:Rtpt_RT_24_SSP_002@'
                                                     ),
                                                     order=8
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ActivationPointRefStructure(
-                                            version="any",
-                                            ref="hde:ap_01"
+                                            version='any',
+                                            ref='hde:ap_01'
                                         ),
                                         to_point_ref=ActivationPointRefStructure(
-                                            version="any",
-                                            ref="hde:ap_02"
+                                            version='any',
+                                            ref='hde:ap_02'
                                         )
                                     ),
                                 ]
@@ -2959,56 +2959,56 @@ obj = PublicationDelivery(
                             activated_equipments=ActivatedEquipmentsInFrameRelStructure(
                                 activated_equipment=[
                                     ActivatedEquipment(
-                                        id="hde:ActivatedEquipment:aeq_01",
-                                        version="any",
+                                        id='hde:ActivatedEquipment:aeq_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Equipment at TCP1"
+                                            value='Equipment at TCP1'
                                         ),
                                         out_of_service=False,
                                         traffic_control_point_ref=TrafficControlPointRef(
-                                            ref="hde:tcp_01"
+                                            ref='hde:tcp_01'
                                         ),
                                         assignments=ActivationAssignmentsRelStructure(
                                             activation_assignment_ref_or_activation_assignment=[
                                                 ActivationAssignment(
-                                                    id="hde:aeq_01",
-                                                    version="any",
+                                                    id='hde:aeq_01',
+                                                    version='any',
                                                     order=1,
                                                     link_ref=ActivationLinkRefStructure(
-                                                        version="any",
-                                                        ref="hde:ActivationLink:al_01"
+                                                        version='any',
+                                                        ref='hde:ActivationLink:al_01'
                                                     ),
                                                     point_ref=ActivationPointRefStructure(
-                                                        version="any",
-                                                        ref="hde:tcp_01"
+                                                        version='any',
+                                                        ref='hde:tcp_01'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ActivatedEquipment(
-                                        id="hde:ActivatedEquipment:aeq_02",
-                                        version="any",
+                                        id='hde:ActivatedEquipment:aeq_02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Equipment at AP3"
+                                            value='Equipment at AP3'
                                         ),
                                         out_of_service=False,
                                         traffic_control_point_ref=TrafficControlPointRef(
-                                            ref="hde:tcp_02"
+                                            ref='hde:tcp_02'
                                         ),
                                         assignments=ActivationAssignmentsRelStructure(
                                             activation_assignment_ref_or_activation_assignment=[
                                                 ActivationAssignment(
-                                                    id="hde:aeq_02",
-                                                    version="any",
+                                                    id='hde:aeq_02',
+                                                    version='any',
                                                     order=1,
                                                     link_ref=ActivationLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     ),
                                                     point_ref=ActivationPointRefStructure(
-                                                        version="any",
-                                                        ref="hde:ap_03"
+                                                        version='any',
+                                                        ref='hde:ap_03'
                                                     )
                                                 ),
                                             ]
@@ -3018,23 +3018,23 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="hde:TIM_23_O",
+                            id='hde:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="hde:Cnd001",
-                                            version="any",
+                                            id='hde:Cnd001',
+                                            version='any',
                                             description=MultilingualString(
-                                                value="Sept  to March"
+                                                value='Sept  to March'
                                             ),
                                             from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2011, 3, 31, 0, 0, 0, 0, 0),
                                             day_types=DayTypesRelStructure(
                                                 choice=[
                                                     DayTypeRef(
-                                                        version="any",
-                                                        ref="hde:DT_01-MF-NH"
+                                                        version='any',
+                                                        ref='hde:DT_01-MF-NH'
                                                     ),
                                                 ]
                                             )
@@ -3042,9 +3042,9 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            version="1",
+                            version='1',
                             name=MultilingualString(
-                                value="Winter timetable for route 24, outbound"
+                                value='Winter timetable for route 24, outbound'
                             ),
                             vehicle_modes=[
                                 VehicleModeEnumeration.BUS,
@@ -3052,62 +3052,62 @@ obj = PublicationDelivery(
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
                                     ServiceJourney(
-                                        id="hde:sj_24o_01",
-                                        version="any",
+                                        id='hde:sj_24o_01',
+                                        version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_24o"
+                                            version='any',
+                                            ref='hde:svp_24o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:td_01"
+                                            version='any',
+                                            ref='mybus:td_01'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_24"
+                                            version='any',
+                                            ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="mybus:RT_24o"
+                                                version='any',
+                                                ref='mybus:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Charley"
+                                                version='any',
+                                                ref='mybus:DST_Charley'
                                             )
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_24o_01_001",
-                                                    version="any",
+                                                    id='hde:sj_24o_01_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
-                                                            version="any",
-                                                            ref="mybus:SSP_001_to_SSP_001_t1"
+                                                            version='any',
+                                                            ref='mybus:SSP_001_to_SSP_001_t1'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:SSP_001_t1"
+                                                            version='any',
+                                                            ref='mybus:SSP_001_t1'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_001_to_SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_001_to_SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -3118,25 +3118,25 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_01_002",
-                                                    version="any",
+                                                    id='hde:sj_24o_01_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
-                                                            version="any",
-                                                            ref="mybus:SSP_002_to_SSP_002_t1"
+                                                            version='any',
+                                                            ref='mybus:SSP_002_to_SSP_002_t1'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:SSP_002_t1"
+                                                            version='any',
+                                                            ref='mybus:SSP_002_t1'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SSP_002_to_SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_002_to_SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(14, 30, 0, 0, 0)
@@ -3146,16 +3146,16 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT2M")
                                                     ),
                                                     note=MultilingualString(
-                                                        value="Arrival at Terminus"
+                                                        value='Arrival at Terminus'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_01_003",
-                                                    version="any",
+                                                    id='hde:sj_24o_01_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 10, 0, 0, 0)
@@ -3169,48 +3169,48 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_24o_02",
-                                        version="any",
+                                        id='hde:sj_24o_02',
+                                        version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_24o"
+                                            version='any',
+                                            ref='hde:svp_24o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:td_01"
+                                            version='any',
+                                            ref='mybus:td_01'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_24"
+                                            version='any',
+                                            ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="mybus:RT_24o"
+                                                version='any',
+                                                ref='mybus:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Charley"
+                                                version='any',
+                                                ref='mybus:DST_Charley'
                                             )
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_24o_02_001",
-                                                    version="any",
+                                                    id='hde:sj_24o_02_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -3221,11 +3221,11 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_02_002",
-                                                    version="any",
+                                                    id='hde:sj_24o_02_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 30, 0, 0, 0)
@@ -3237,11 +3237,11 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_02_003",
-                                                    version="any",
+                                                    id='hde:sj_24o_02_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 10, 0, 0, 0)
@@ -3255,48 +3255,48 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_24i_01",
-                                        version="any",
+                                        id='hde:sj_24i_01',
+                                        version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_24i"
+                                            version='any',
+                                            ref='hde:svp_24i'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:td_01"
+                                            version='any',
+                                            ref='mybus:td_01'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_24"
+                                            version='any',
+                                            ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="mybus:RT_24i"
+                                                version='any',
+                                                ref='mybus:RT_24i'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Charley"
+                                                version='any',
+                                                ref='mybus:DST_Charley'
                                             )
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_24i_01_001",
-                                                    version="any",
+                                                    id='hde:sj_24i_01_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -3307,11 +3307,11 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24i_01_002",
-                                                    version="any",
+                                                    id='hde:sj_24i_01_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(14, 30, 0, 0, 0)
@@ -3321,16 +3321,16 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT2M")
                                                     ),
                                                     note=MultilingualString(
-                                                        value="Arrival at Terminus"
+                                                        value='Arrival at Terminus'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24i_01_003",
-                                                    version="any",
+                                                    id='hde:sj_24i_01_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 10, 0, 0, 0)
@@ -3344,48 +3344,48 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_24i_02",
-                                        version="any",
+                                        id='hde:sj_24i_02',
+                                        version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_24i"
+                                            version='any',
+                                            ref='hde:svp_24i'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:td_01"
+                                            version='any',
+                                            ref='mybus:td_01'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_24"
+                                            version='any',
+                                            ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="mybus:RT_24i"
+                                                version='any',
+                                                ref='mybus:RT_24i'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Charley"
+                                                version='any',
+                                                ref='mybus:DST_Charley'
                                             )
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_24i_02_001",
-                                                    version="any",
+                                                    id='hde:sj_24i_02_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -3396,11 +3396,11 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24i_02_002",
-                                                    version="any",
+                                                    id='hde:sj_24i_02_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 30, 0, 0, 0)
@@ -3412,11 +3412,11 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24i_02_003",
-                                                    version="any",
+                                                    id='hde:sj_24i_02_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 10, 0, 0, 0)
@@ -3433,24 +3433,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="hde:CAL_02",
-                            version="1",
+                            id='hde:CAL_02',
+                            version='1',
                             name=MultilingualString(
-                                value="Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  "
+                                value='Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  '
                             ),
                             service_calendar=ServiceCalendar(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDate(2010, 11, 1),
                                 to_date=XmlDate(2010, 11, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="hde:DT_01-MF-NH",
-                                        version="any",
+                                        id='hde:DT_01-MF-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekdays unless a holiday"
+                                            value='Weekdays unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -3474,68 +3474,68 @@ obj = PublicationDelivery(
                             day_type_assignments=DayTypeAssignmentsInFrameRelStructure(
                                 day_type_assignment=[
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-01",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2010-11-01"
+                                            value='Monday 2010-11-01'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 1),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-02",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Tuesday 2010-11-02"
+                                            value='Tuesday 2010-11-02'
                                         ),
                                         order=2,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-03",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Wednesday 2010-11-03"
+                                            value='Wednesday 2010-11-03'
                                         ),
                                         order=3,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-04",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Thusday 2010-11-04"
+                                            value='Thusday 2010-11-04'
                                         ),
                                         order=4,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-05",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-05',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="MFriday 2010-11-05"
+                                            value='MFriday 2010-11-05'
                                         ),
                                         order=5,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                 ]

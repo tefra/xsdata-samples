@@ -9,6 +9,7 @@ class TypeKeyBasedReference1:
     """
     Generic type to be used for Key based reference.
     """
+
     class Meta:
         name = "typeKeyBasedReference"
 
@@ -18,5 +19,5 @@ class TypeKeyBasedReference1:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

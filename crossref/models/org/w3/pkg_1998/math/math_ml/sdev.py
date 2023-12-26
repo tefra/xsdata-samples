@@ -15,5 +15,5 @@ class Sdev:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

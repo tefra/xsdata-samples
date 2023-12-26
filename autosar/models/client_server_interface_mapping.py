@@ -10,7 +10,9 @@ from .blueprint_policy_list import BlueprintPolicyList
 from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
 from .blueprint_policy_single import BlueprintPolicySingle
 from .category_string import CategoryString
-from .client_server_application_error_mapping import ClientServerApplicationErrorMapping
+from .client_server_application_error_mapping import (
+    ClientServerApplicationErrorMapping,
+)
 from .client_server_operation_mapping import ClientServerOperationMapping
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -97,6 +99,7 @@ class ClientServerInterfaceMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-INTERFACE-MAPPING"
 
@@ -107,15 +110,17 @@ class ClientServerInterfaceMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ClientServerInterfaceMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ClientServerInterfaceMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +128,7 @@ class ClientServerInterfaceMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +136,7 @@ class ClientServerInterfaceMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +144,7 @@ class ClientServerInterfaceMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +152,7 @@ class ClientServerInterfaceMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +160,7 @@ class ClientServerInterfaceMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ClientServerInterfaceMapping.Annotations"] = field(
         default=None,
@@ -163,15 +168,17 @@ class ClientServerInterfaceMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["ClientServerInterfaceMapping.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "ClientServerInterfaceMapping.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -179,7 +186,7 @@ class ClientServerInterfaceMapping:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -187,30 +194,34 @@ class ClientServerInterfaceMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    error_mappings: Optional["ClientServerInterfaceMapping.ErrorMappings"] = field(
+    error_mappings: Optional[
+        "ClientServerInterfaceMapping.ErrorMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "ERROR-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    operation_mappings: Optional["ClientServerInterfaceMapping.OperationMappings"] = field(
+    operation_mappings: Optional[
+        "ClientServerInterfaceMapping.OperationMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "OPERATION-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -218,14 +229,14 @@ class ClientServerInterfaceMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -236,7 +247,7 @@ class ClientServerInterfaceMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -247,7 +258,7 @@ class ClientServerInterfaceMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -258,15 +269,17 @@ class ClientServerInterfaceMapping:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -274,27 +287,31 @@ class ClientServerInterfaceMapping:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ErrorMappings:
-        client_server_application_error_mapping: List[ClientServerApplicationErrorMapping] = field(
+        client_server_application_error_mapping: List[
+            ClientServerApplicationErrorMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-APPLICATION-ERROR-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class OperationMappings:
-        client_server_operation_mapping: List[ClientServerOperationMapping] = field(
+        client_server_operation_mapping: List[
+            ClientServerOperationMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-OPERATION-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -18,6 +18,7 @@ class ResponseEnum(Enum):
     :cvar SUBSCRIPTION_REQUEST_DENIED: A notification that the supplier
         has denied the client's request for a subscription.
     """
+
     ACKNOWLEDGE = "acknowledge"
     CATALOGUE_REQUEST_DENIED = "catalogueRequestDenied"
     FILTER_REQUEST_DENIED = "filterRequestDenied"

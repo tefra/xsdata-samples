@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .vehicle_type_preference_versioned_child_structure import VehicleTypePreferenceVersionedChildStructure
+from .vehicle_type_preference_versioned_child_structure import (
+    VehicleTypePreferenceVersionedChildStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

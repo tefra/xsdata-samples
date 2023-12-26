@@ -9,4 +9,5 @@ class LoadType2Enum(Enum):
 
     :cvar REFRIGERATED_GOODS: Refrigerated goods.
     """
+
     REFRIGERATED_GOODS = "refrigeratedGoods"

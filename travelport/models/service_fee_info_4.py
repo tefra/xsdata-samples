@@ -62,6 +62,7 @@ class ServiceFeeInfo4:
     booking_traveler_name
         The name of the passenger.
     """
+
     class Meta:
         name = "ServiceFeeInfo"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -71,7 +72,7 @@ class ServiceFeeInfo4:
         metadata={
             "name": "FormOfPayment",
             "type": "Element",
-        }
+        },
     )
     service_fee_tax_info: list[ServiceFeeTaxInfo4] = field(
         default_factory=list,
@@ -79,117 +80,117 @@ class ServiceFeeInfo4:
             "name": "ServiceFeeTaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     credit_card_auth: None | CreditCardAuth4 = field(
         default=None,
         metadata={
             "name": "CreditCardAuth",
             "type": "Element",
-        }
+        },
     )
     payment: None | Payment4 = field(
         default=None,
         metadata={
             "name": "Payment",
             "type": "Element",
-        }
+        },
     )
     status: None | TypeStatus4 = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     confirmation: None | str = field(
         default=None,
         metadata={
             "name": "Confirmation",
             "type": "Attribute",
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     total_amount: None | str = field(
         default=None,
         metadata={
             "name": "TotalAmount",
             "type": "Attribute",
-        }
+        },
     )
     base_amount: None | str = field(
         default=None,
         metadata={
             "name": "BaseAmount",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus5 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_name: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerName",
             "type": "Attribute",
-        }
+        },
     )

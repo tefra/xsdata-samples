@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_equipment_ref import AccessEquipmentRef
 from .access_feature_enumeration import AccessFeatureEnumeration
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
@@ -8,8 +8,12 @@ from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
 from .assistance_service_ref import AssistanceServiceRef
 from .catering_service_ref import CateringServiceRef
-from .check_constraint_delays_rel_structure import CheckConstraintDelaysRelStructure
-from .check_constraint_throughputs_rel_structure import CheckConstraintThroughputsRelStructure
+from .check_constraint_delays_rel_structure import (
+    CheckConstraintDelaysRelStructure,
+)
+from .check_constraint_throughputs_rel_structure import (
+    CheckConstraintThroughputsRelStructure,
+)
 from .check_direction_enumeration import CheckDirectionEnumeration
 from .check_process_type_enumeration import CheckProcessTypeEnumeration
 from .check_service_enumeration import CheckServiceEnumeration
@@ -37,7 +41,9 @@ from .luggage_service_ref import LuggageServiceRef
 from .meeting_point_service_ref import MeetingPointServiceRef
 from .money_service_ref import MoneyServiceRef
 from .passenger_equipment_ref import PassengerEquipmentRef
-from .passenger_information_equipment_ref import PassengerInformationEquipmentRef
+from .passenger_information_equipment_ref import (
+    PassengerInformationEquipmentRef,
+)
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .place_lighting_equipment_ref import PlaceLightingEquipmentRef
 from .place_ref import PlaceRef
@@ -81,7 +87,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "PlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     check_direction: Optional[CheckDirectionEnumeration] = field(
         default=None,
@@ -89,7 +95,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "CheckDirection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     check_process: Optional[CheckProcessTypeEnumeration] = field(
         default=None,
@@ -97,7 +103,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "CheckProcess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     check_service: Optional[CheckServiceEnumeration] = field(
         default=None,
@@ -105,7 +111,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "CheckService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     access_feature_type: Optional[AccessFeatureEnumeration] = field(
         default=None,
@@ -113,7 +119,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "AccessFeatureType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     congestion: Optional[CongestionEnumeration] = field(
         default=None,
@@ -121,7 +127,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "Congestion",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_congestion_ref: Optional[TypeOfCongestionRef] = field(
         default=None,
@@ -129,7 +135,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "TypeOfCongestionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -137,7 +143,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_equipment_ref: Optional[TypeOfEquipmentRef] = field(
         default=None,
@@ -145,7 +151,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "TypeOfEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     facility_ref: Optional[FacilityRef] = field(
         default=None,
@@ -153,9 +159,65 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "name": "FacilityRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailDeviceRef,
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+            VehicleChargingEquipmentRef,
+            CycleStorageEquipmentRef,
+            TicketValidatorEquipmentRef,
+            TicketingEquipmentRef,
+            TrolleyStandEquipmentRef,
+            SeatingEquipmentRef,
+            ShelterEquipmentRef,
+            LuggageLockerEquipmentRef,
+            WaitingRoomEquipmentRef,
+            WaitingEquipmentRef,
+            SiteEquipmentRef,
+            HeadingSignRef,
+            GeneralSignRef,
+            PlaceSignRef,
+            SignEquipmentRef,
+            PlaceLightingEquipmentRef,
+            RoughSurfaceRef,
+            StaircaseEquipmentRef,
+            QueueingEquipmentRef,
+            TravelatorEquipmentRef,
+            EscalatorEquipmentRef,
+            LiftEquipmentRef,
+            CrossingEquipmentRef,
+            RampEquipmentRef,
+            EntranceEquipmentRef,
+            AccessEquipmentRef,
+            ActivatedEquipmentRef,
+            PassengerInformationEquipmentRef,
+            RubbishDisposalEquipmentRef,
+            HelpPointEquipmentRef,
+            PassengerSafetyEquipmentRef,
+            SanitaryEquipmentRef,
+            WheelchairVehicleRef,
+            AccessVehicleEquipmentRef,
+            VehicleEquipmentRef,
+            PassengerEquipmentRef,
+            EquipmentRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -426,19 +488,19 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     delays: Optional[CheckConstraintDelaysRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     throughput: Optional[CheckConstraintThroughputsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

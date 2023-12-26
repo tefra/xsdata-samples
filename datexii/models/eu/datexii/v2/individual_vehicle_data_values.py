@@ -3,7 +3,9 @@ from typing import Optional
 from datexii.models.eu.datexii.v2.date_time_value import DateTimeValue
 from datexii.models.eu.datexii.v2.duration_value import DurationValue
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import FloatingPointMetreDistanceValue
+from datexii.models.eu.datexii.v2.floating_point_metre_distance_value import (
+    FloatingPointMetreDistanceValue,
+)
 from datexii.models.eu.datexii.v2.speed_value import SpeedValue
 from datexii.models.eu.datexii.v2.traffic_data import TrafficData
 
@@ -42,13 +44,14 @@ class IndividualVehicleDataValues(TrafficData):
         site.
     :ivar individual_vehicle_data_values_extension:
     """
+
     individual_vehicle_speed: Optional[SpeedValue] = field(
         default=None,
         metadata={
             "name": "individualVehicleSpeed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     arrival_time: Optional[DateTimeValue] = field(
         default=None,
@@ -56,7 +59,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "arrivalTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     exit_time: Optional[DateTimeValue] = field(
         default=None,
@@ -64,7 +67,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "exitTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     passage_duration_time: Optional[DurationValue] = field(
         default=None,
@@ -72,7 +75,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "passageDurationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     presence_duration_time: Optional[DurationValue] = field(
         default=None,
@@ -80,7 +83,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "presenceDurationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     time_gap: Optional[DurationValue] = field(
         default=None,
@@ -88,7 +91,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "timeGap",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     time_headway: Optional[DurationValue] = field(
         default=None,
@@ -96,7 +99,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "timeHeadway",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_gap: Optional[FloatingPointMetreDistanceValue] = field(
         default=None,
@@ -104,7 +107,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "distanceGap",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_headway: Optional[FloatingPointMetreDistanceValue] = field(
         default=None,
@@ -112,7 +115,7 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "distanceHeadway",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     individual_vehicle_data_values_extension: Optional[ExtensionType] = field(
         default=None,
@@ -120,5 +123,5 @@ class IndividualVehicleDataValues(TrafficData):
             "name": "individualVehicleDataValuesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

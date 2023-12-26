@@ -9,6 +9,7 @@ class TypeProfileComponentType1(Enum):
 
     (i.e AccountInfo, AirPreference, TravelDocument etc)
     """
+
     ACCOUNT_INFO = "AccountInfo"
     TRAVELER_INFO = "TravelerInfo"
     TRAVELER_IDENTITY_INFORMATION = "TravelerIdentityInformation"

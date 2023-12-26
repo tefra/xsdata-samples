@@ -21,7 +21,7 @@ class MediaTableType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "doc": "A table with all program objects in this container",
-        }
+        },
     )
     group_table: None | GroupTableType = field(
         default=None,
@@ -30,7 +30,7 @@ class MediaTableType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "doc": "A table with all group objects in this container",
-        }
+        },
     )
     location_table: None | LocationTableType = field(
         default=None,
@@ -38,7 +38,7 @@ class MediaTableType:
             "name": "locationTable",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     schedule: None | Schedule = field(
         default=None,
@@ -46,24 +46,24 @@ class MediaTableType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "doc": "A table with all schedule information in this container",
-        }
+        },
     )
     publisher: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     publication_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publicationTime",
             "type": "Attribute",
-        }
+        },
     )
     version: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -55,6 +55,7 @@ class ReferenceBase:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REFERENCE-BASE"
 
@@ -64,7 +65,7 @@ class ReferenceBase:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_default: Optional[Boolean] = field(
         default=None,
@@ -72,7 +73,7 @@ class ReferenceBase:
             "name": "IS-DEFAULT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_global: Optional[Boolean] = field(
         default=None,
@@ -80,7 +81,7 @@ class ReferenceBase:
             "name": "IS-GLOBAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     base_is_this_package: Optional[Boolean] = field(
         default=None,
@@ -88,15 +89,17 @@ class ReferenceBase:
             "name": "BASE-IS-THIS-PACKAGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    global_in_package_refs: Optional["ReferenceBase.GlobalInPackageRefs"] = field(
+    global_in_package_refs: Optional[
+        "ReferenceBase.GlobalInPackageRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "GLOBAL-IN-PACKAGE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     global_elements: Optional["ReferenceBase.GlobalElements"] = field(
         default=None,
@@ -104,7 +107,7 @@ class ReferenceBase:
             "name": "GLOBAL-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     package_ref: Optional["ReferenceBase.PackageRef"] = field(
         default=None,
@@ -112,14 +115,14 @@ class ReferenceBase:
             "name": "PACKAGE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -127,18 +130,20 @@ class ReferenceBase:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class GlobalInPackageRefs:
-        global_in_package_ref: List["ReferenceBase.GlobalInPackageRefs.GlobalInPackageRef"] = field(
+        global_in_package_ref: List[
+            "ReferenceBase.GlobalInPackageRefs.GlobalInPackageRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-IN-PACKAGE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -149,7 +154,7 @@ class ReferenceBase:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -159,13 +164,14 @@ class ReferenceBase:
             which the global referencing is supported via this reference
             base.
         """
+
         global_element: List[ReferrableSubtypesEnum] = field(
             default_factory=list,
             metadata={
                 "name": "GLOBAL-ELEMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -176,5 +182,5 @@ class ReferenceBase:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

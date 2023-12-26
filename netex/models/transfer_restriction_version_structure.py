@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
-from .transfer_constraint_type_enumeration import TransferConstraintTypeEnumeration
+from .transfer_constraint_type_enumeration import (
+    TransferConstraintTypeEnumeration,
+)
 from .type_of_transfer_ref import TypeOfTransferRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -19,7 +21,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "name": "TypeOfTransferRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     both_ways: Optional[bool] = field(
         default=None,
@@ -27,7 +29,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "name": "BothWays",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     restriction_type: Optional[TransferConstraintTypeEnumeration] = field(
         default=None,
@@ -36,7 +38,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     from_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -44,7 +46,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -52,5 +54,5 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

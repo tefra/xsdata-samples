@@ -37,6 +37,7 @@ class RuleBasedValueSpecification:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RULE-BASED-VALUE-SPECIFICATION"
 
@@ -46,7 +47,7 @@ class RuleBasedValueSpecification:
             "name": "RULE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     argumentss: Optional["RuleBasedValueSpecification.Argumentss"] = field(
         default=None,
@@ -54,7 +55,7 @@ class RuleBasedValueSpecification:
             "name": "ARGUMENTSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_size_to_fill: Optional[Integer] = field(
         default=None,
@@ -62,14 +63,14 @@ class RuleBasedValueSpecification:
             "name": "MAX-SIZE-TO-FILL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -77,7 +78,7 @@ class RuleBasedValueSpecification:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -88,5 +89,5 @@ class RuleBasedValueSpecification:
                 "name": "RULE-ARGUMENTS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

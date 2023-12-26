@@ -11,6 +11,7 @@ class EmdpricingInfo:
 
     Supported providers are 1G/1V/1P
     """
+
     class Meta:
         name = "EMDPricingInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -21,33 +22,33 @@ class EmdpricingInfo:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     base_fare: None | str = field(
         default=None,
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
-        }
+        },
     )
     total_fare: None | str = field(
         default=None,
         metadata={
             "name": "TotalFare",
             "type": "Attribute",
-        }
+        },
     )
     total_tax: None | str = field(
         default=None,
         metadata={
             "name": "TotalTax",
             "type": "Attribute",
-        }
+        },
     )
     equiv_fare: None | str = field(
         default=None,
         metadata={
             "name": "EquivFare",
             "type": "Attribute",
-        }
+        },
     )

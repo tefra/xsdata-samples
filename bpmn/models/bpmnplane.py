@@ -17,5 +17,5 @@ class Bpmnplane(Plane):
         metadata={
             "name": "bpmnElement",
             "type": "Attribute",
-        }
+        },
     )

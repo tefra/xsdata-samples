@@ -7,9 +7,15 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_memory_identifier_subtypes_enum import DiagnosticMemoryIdentifierSubtypesEnum
-from .diagnostic_read_memory_by_address_class_subtypes_enum import DiagnosticReadMemoryByAddressClassSubtypesEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_memory_identifier_subtypes_enum import (
+    DiagnosticMemoryIdentifierSubtypesEnum,
+)
+from .diagnostic_read_memory_by_address_class_subtypes_enum import (
+    DiagnosticReadMemoryByAddressClassSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -90,6 +96,7 @@ class DiagnosticReadMemoryByAddress:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-READ-MEMORY-BY-ADDRESS"
 
@@ -100,15 +107,17 @@ class DiagnosticReadMemoryByAddress:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticReadMemoryByAddress.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticReadMemoryByAddress.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +125,7 @@ class DiagnosticReadMemoryByAddress:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +133,7 @@ class DiagnosticReadMemoryByAddress:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +141,7 @@ class DiagnosticReadMemoryByAddress:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +149,7 @@ class DiagnosticReadMemoryByAddress:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +157,7 @@ class DiagnosticReadMemoryByAddress:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticReadMemoryByAddress.Annotations"] = field(
         default=None,
@@ -156,7 +165,7 @@ class DiagnosticReadMemoryByAddress:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -164,38 +173,44 @@ class DiagnosticReadMemoryByAddress:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticReadMemoryByAddress.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticReadMemoryByAddress.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    memory_range_refs: Optional["DiagnosticReadMemoryByAddress.MemoryRangeRefs"] = field(
+    memory_range_refs: Optional[
+        "DiagnosticReadMemoryByAddress.MemoryRangeRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "MEMORY-RANGE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    read_class_ref: Optional["DiagnosticReadMemoryByAddress.ReadClassRef"] = field(
+    read_class_ref: Optional[
+        "DiagnosticReadMemoryByAddress.ReadClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "READ-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +218,14 @@ class DiagnosticReadMemoryByAddress:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +236,7 @@ class DiagnosticReadMemoryByAddress:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,7 +247,7 @@ class DiagnosticReadMemoryByAddress:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,18 +258,20 @@ class DiagnosticReadMemoryByAddress:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class MemoryRangeRefs:
-        memory_range_ref: List["DiagnosticReadMemoryByAddress.MemoryRangeRefs.MemoryRangeRef"] = field(
+        memory_range_ref: List[
+            "DiagnosticReadMemoryByAddress.MemoryRangeRefs.MemoryRangeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MEMORY-RANGE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -265,7 +282,7 @@ class DiagnosticReadMemoryByAddress:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -276,5 +293,5 @@ class DiagnosticReadMemoryByAddress:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

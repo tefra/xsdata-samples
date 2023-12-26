@@ -26,6 +26,7 @@ class FmConditionByFeaturesAndAttributes:
         AUTOSAR tools to manage the timestamp.
     :ivar content:
     """
+
     class Meta:
         name = "FM-CONDITION-BY-FEATURES-AND-ATTRIBUTES"
 
@@ -34,7 +35,7 @@ class FmConditionByFeaturesAndAttributes:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -42,7 +43,7 @@ class FmConditionByFeaturesAndAttributes:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -53,16 +54,20 @@ class FmConditionByFeaturesAndAttributes:
             "choices": (
                 {
                     "name": "ATTRIBUTE-REF",
-                    "type": Type["FmConditionByFeaturesAndAttributes.AttributeRef"],
+                    "type": Type[
+                        "FmConditionByFeaturesAndAttributes.AttributeRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "FEATURE-REF",
-                    "type": Type["FmConditionByFeaturesAndAttributes.FeatureRef"],
+                    "type": Type[
+                        "FmConditionByFeaturesAndAttributes.FeatureRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -73,7 +78,7 @@ class FmConditionByFeaturesAndAttributes:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -84,5 +89,5 @@ class FmConditionByFeaturesAndAttributes:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -5,5 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SalesOfferPackageEntitlementRequiredRefStructure(UsageParameterRefStructure):
+class SalesOfferPackageEntitlementRequiredRefStructure(
+    UsageParameterRefStructure
+):
     pass

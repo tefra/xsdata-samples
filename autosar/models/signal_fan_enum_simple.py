@@ -18,5 +18,6 @@ class SignalFanEnumSimple(Enum):
         ClientServerOperation in the C/S interface of the outer
         PortPrototype is involved in a 1:1 communication pattern only.
     """
+
     NFOLD = "NFOLD"
     SINGLE = "SINGLE"

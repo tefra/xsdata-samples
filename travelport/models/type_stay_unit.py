@@ -8,6 +8,7 @@ class TypeStayUnit(Enum):
     """
     Units for the Length of Stay.
     """
+
     MINUTES = "Minutes"
     HOURS = "Hours"
     DAYS = "Days"

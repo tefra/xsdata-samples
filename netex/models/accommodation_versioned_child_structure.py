@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .accommodation_facility_enumeration import AccommodationFacilityEnumeration
+from .accommodation_facility_enumeration import (
+    AccommodationFacilityEnumeration,
+)
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .berth_facility_enumeration import BerthFacilityEnumeration
 from .class_of_use_ref import ClassOfUseRef
@@ -9,7 +11,9 @@ from .fare_class_enumeration import FareClassEnumeration
 from .gender_limitation_enumeration import GenderLimitationEnumeration
 from .multilingual_string import MultilingualString
 from .nuisance_facility_enumeration import NuisanceFacilityEnumeration
-from .passenger_comms_facility_enumeration import PassengerCommsFacilityEnumeration
+from .passenger_comms_facility_enumeration import (
+    PassengerCommsFacilityEnumeration,
+)
 from .sanitary_facility_enumeration import SanitaryFacilityEnumeration
 from .service_facility_set_ref import ServiceFacilitySetRef
 
@@ -27,7 +31,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     service_facility_set_ref: Optional[ServiceFacilitySetRef] = field(
         default=None,
@@ -35,7 +39,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "ServiceFacilitySetRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_class: Optional[FareClassEnumeration] = field(
         default=None,
@@ -43,7 +47,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -51,7 +55,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accommodation_facility: Optional[AccommodationFacilityEnumeration] = field(
         default=None,
@@ -59,7 +63,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "AccommodationFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     couchette_facility: Optional[CouchetteFacilityEnumeration] = field(
         default=None,
@@ -67,7 +71,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "CouchetteFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_berths: Optional[int] = field(
         default=None,
@@ -75,7 +79,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "MaximumNumberOfBerths",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     berth_facility: Optional[BerthFacilityEnumeration] = field(
         default=None,
@@ -83,7 +87,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "BerthFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     shower_facility: Optional[SanitaryFacilityEnumeration] = field(
         default=None,
@@ -91,7 +95,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "ShowerFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     toilet_facility: Optional[SanitaryFacilityEnumeration] = field(
         default=None,
@@ -99,7 +103,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "ToiletFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gender_limitation: Optional[GenderLimitationEnumeration] = field(
         default=None,
@@ -107,7 +111,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "GenderLimitation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     nuisance_facility_list: List[NuisanceFacilityEnumeration] = field(
         default_factory=list,
@@ -116,14 +120,16 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    passenger_comms_facility_list: List[PassengerCommsFacilityEnumeration] = field(
+    passenger_comms_facility_list: List[
+        PassengerCommsFacilityEnumeration
+    ] = field(
         default_factory=list,
         metadata={
             "name": "PassengerCommsFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

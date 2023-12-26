@@ -17,14 +17,14 @@ class PassiveCancelServicePortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | PassiveCancelServicePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +35,7 @@ class PassiveCancelServicePortTypeServiceInput:
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +46,5 @@ class PassiveCancelServicePortTypeServiceInput:
                 "name": "PassiveCancelReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )

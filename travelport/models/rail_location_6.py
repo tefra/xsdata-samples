@@ -11,6 +11,7 @@ class RailLocation6(Location6):
     RCH specific location code (a.k.a UCodes) which uniquely identifies a train
     station.
     """
+
     class Meta:
         name = "RailLocation"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -24,5 +25,5 @@ class RailLocation6(Location6):
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )

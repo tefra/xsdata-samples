@@ -15,5 +15,5 @@ class Geq:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

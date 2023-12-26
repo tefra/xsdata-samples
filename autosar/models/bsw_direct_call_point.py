@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import VariationPoint
-from .bsw_distinguished_partition_subtypes_enum import BswDistinguishedPartitionSubtypesEnum
+from .bsw_distinguished_partition_subtypes_enum import (
+    BswDistinguishedPartitionSubtypesEnum,
+)
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
-from .exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
+from .exclusive_area_nesting_order_subtypes_enum import (
+    ExclusiveAreaNestingOrderSubtypesEnum,
+)
 from .identifier import Identifier
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
@@ -44,6 +48,7 @@ class BswDirectCallPoint:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-DIRECT-CALL-POINT"
 
@@ -54,23 +59,27 @@ class BswDirectCallPoint:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BswDirectCallPoint.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BswDirectCallPoint.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_limitation_refs: Optional["BswDirectCallPoint.ContextLimitationRefs"] = field(
+    context_limitation_refs: Optional[
+        "BswDirectCallPoint.ContextLimitationRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -78,7 +87,7 @@ class BswDirectCallPoint:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     called_entry_ref: Optional["BswDirectCallPoint.CalledEntryRef"] = field(
         default=None,
@@ -86,22 +95,24 @@ class BswDirectCallPoint:
             "name": "CALLED-ENTRY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    called_from_within_exclusive_area_ref: Optional["BswDirectCallPoint.CalledFromWithinExclusiveAreaRef"] = field(
+    called_from_within_exclusive_area_ref: Optional[
+        "BswDirectCallPoint.CalledFromWithinExclusiveAreaRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CALLED-FROM-WITHIN-EXCLUSIVE-AREA-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -109,7 +120,7 @@ class BswDirectCallPoint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -120,18 +131,20 @@ class BswDirectCallPoint:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ContextLimitationRefs:
-        context_limitation_ref: List["BswDirectCallPoint.ContextLimitationRefs.ContextLimitationRef"] = field(
+        context_limitation_ref: List[
+            "BswDirectCallPoint.ContextLimitationRefs.ContextLimitationRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONTEXT-LIMITATION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -142,7 +155,7 @@ class BswDirectCallPoint:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -153,7 +166,7 @@ class BswDirectCallPoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -164,5 +177,5 @@ class BswDirectCallPoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

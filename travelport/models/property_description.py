@@ -13,6 +13,7 @@ class PropertyDescription:
     provider_code
         The host associated with this token
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -20,7 +21,7 @@ class PropertyDescription:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -30,5 +31,5 @@ class PropertyDescription:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

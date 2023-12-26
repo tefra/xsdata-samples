@@ -13,7 +13,7 @@ class FixedStartWindowStructure:
             "name": "MaximumServicesBefore",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_period_before: Optional[XmlDuration] = field(
         default=None,
@@ -21,7 +21,7 @@ class FixedStartWindowStructure:
             "name": "FlexiblePeriodBefore",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_services_after: Optional[int] = field(
         default=None,
@@ -29,7 +29,7 @@ class FixedStartWindowStructure:
             "name": "MaximumServicesAfter",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_period_after: Optional[XmlDuration] = field(
         default=None,
@@ -37,5 +37,5 @@ class FixedStartWindowStructure:
             "name": "FlexiblePeriodAfter",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

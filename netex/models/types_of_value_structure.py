@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .branding import Branding
 from .charging_moment import ChargingMoment
 from .class_of_use import ClassOfUse
@@ -12,7 +12,9 @@ from .price_unit import PriceUnit
 from .purpose_of_equipment_profile import PurposeOfEquipmentProfile
 from .purpose_of_grouping import PurposeOfGrouping
 from .purpose_of_journey_partition import PurposeOfJourneyPartition
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 from .submode import Submode
 from .timing_algorithm_type import TimingAlgorithmType
 from .type_of_access_right_assignment import TypeOfAccessRightAssignment
@@ -42,7 +44,9 @@ from .type_of_notice import TypeOfNotice
 from .type_of_operation import TypeOfOperation
 from .type_of_organisation import TypeOfOrganisation
 from .type_of_organisation_part import TypeOfOrganisationPart
-from .type_of_passenger_information_equipment import TypeOfPassengerInformationEquipment
+from .type_of_passenger_information_equipment import (
+    TypeOfPassengerInformationEquipment,
+)
 from .type_of_payment_method import TypeOfPaymentMethod
 from .type_of_place import TypeOfPlace
 from .type_of_point import TypeOfPoint
@@ -73,7 +77,73 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            TypeOfMachineReadability,
+            TypeOfConcession,
+            ChargingMoment,
+            TypeOfUsageParameter,
+            TypeOfFareTable,
+            TypeOfPricingRule,
+            PriceUnit,
+            TimingAlgorithmType,
+            PurposeOfJourneyPartition,
+            TypeOfServiceFeature,
+            PointOfInterestClassification,
+            Direction,
+            PurposeOfEquipmentProfile,
+            TypeOfSecurityList,
+            TypeOfProductCategory,
+            TypeOfPaymentMethod,
+            ClassOfUse,
+            Submode,
+            OpenTransportMode,
+            TypeOfCodespaceAssignment,
+            TypeOfValidity,
+            PurposeOfGrouping,
+            Branding,
+            DataSource,
+            TypeOfRetailDevice,
+            CustomerAccountStatus,
+            TypeOfCustomerAccount,
+            TypeOfFareContractEntry,
+            TypeOfFareContract,
+            TypeOfTravelDocument,
+            TypeOfSalesOfferPackage,
+            TypeOfFareProduct,
+            TypeOfFareStructureElement,
+            TypeOfTariff,
+            TypeOfAccessRightAssignment,
+            TypeOfFareStructureFactor,
+            TypeOfFlexibleService,
+            TypeOfTimeDemandType,
+            TypeOfPassengerInformationEquipment,
+            TypeOfCongestion,
+            TypeOfJourneyPattern,
+            TypeOfLine,
+            TypeOfActivation,
+            TypeOfDeliveryVariant,
+            TypeOfNotice,
+            TypeOfFacility,
+            TypeOfService,
+            TypeOfEquipment,
+            TypeOfFeature,
+            TypeOfLinkSequence,
+            TypeOfPlace,
+            TypeOfTransfer,
+            TypeOfOperation,
+            TypeOfOrganisationPart,
+            TypeOfOrganisation,
+            TypeOfZone,
+            TypeOfLink,
+            TypeOfPoint,
+            TypeOfProjection,
+            TypeOfFrame,
+            TypeOfResponsibilityRole,
+            TypeOfEntity,
+            TypeOfVersion,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -394,5 +464,5 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

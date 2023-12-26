@@ -8,5 +8,6 @@ class TypeAssessIndicator(Enum):
     """
     The type of AssessIndicator.
     """
+
     MILEAGE_AND_CURRENCY = "MileageAndCurrency"
     MILEAGE_OR_CURRENCY = "MileageOrCurrency"

@@ -32,6 +32,7 @@ class HotelSearchResult:
     property_description
         Hotel Property description. Maximum of 100 words returned.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -42,7 +43,7 @@ class HotelSearchResult:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_property: list[HotelProperty] = field(
         default_factory=list,
@@ -51,7 +52,7 @@ class HotelSearchResult:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     hotel_search_error: list[HotelSearchResult.HotelSearchError] = field(
         default_factory=list,
@@ -59,7 +60,7 @@ class HotelSearchResult:
             "name": "HotelSearchError",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     corporate_discount_id: list[CorporateDiscountId1] = field(
         default_factory=list,
@@ -68,7 +69,7 @@ class HotelSearchResult:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rate_info: list[RateInfo] = field(
         default_factory=list,
@@ -76,7 +77,7 @@ class HotelSearchResult:
             "name": "RateInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     media_item: None | MediaItem1 = field(
         default=None,
@@ -84,21 +85,21 @@ class HotelSearchResult:
             "name": "MediaItem",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_type: None | HotelType = field(
         default=None,
         metadata={
             "name": "HotelType",
             "type": "Element",
-        }
+        },
     )
     property_description: None | PropertyDescription = field(
         default=None,
         metadata={
             "name": "PropertyDescription",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -109,11 +110,12 @@ class HotelSearchResult:
         rate_supplier
             Indicates the supplier of the rate.
         """
+
         rate_supplier: None | str = field(
             default=None,
             metadata={
                 "name": "RateSupplier",
                 "type": "Attribute",
                 "max_length": 64,
-            }
+            },
         )

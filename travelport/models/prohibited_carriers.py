@@ -18,5 +18,5 @@ class ProhibitedCarriers:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

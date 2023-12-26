@@ -23,6 +23,7 @@ class ProfileCreateFieldReq2(BaseReq5):
         The ID of the agency or account profile that will own the field(s)
         and group(s) to be created.
     """
+
     class Meta:
         name = "ProfileCreateFieldReq"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -33,7 +34,7 @@ class ProfileCreateFieldReq2(BaseReq5):
             "name": "CreateField",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     create_field_group: list[CreateFieldGroup2] = field(
         default_factory=list,
@@ -41,7 +42,7 @@ class ProfileCreateFieldReq2(BaseReq5):
             "name": "CreateFieldGroup",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -49,5 +50,5 @@ class ProfileCreateFieldReq2(BaseReq5):
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

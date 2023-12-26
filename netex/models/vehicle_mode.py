@@ -14,5 +14,5 @@ class VehicleMode:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

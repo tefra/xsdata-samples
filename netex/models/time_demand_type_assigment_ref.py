@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .time_demand_type_assigment_ref_structure import TimeDemandTypeAssigmentRefStructure
+from .time_demand_type_assigment_ref_structure import (
+    TimeDemandTypeAssigmentRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

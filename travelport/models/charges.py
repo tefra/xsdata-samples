@@ -27,6 +27,7 @@ class Charges:
     penalty_charge
         Amount of penalty charged with Cruise
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -35,21 +36,21 @@ class Charges:
         metadata={
             "name": "AirCharge",
             "type": "Attribute",
-        }
+        },
     )
     optional_charge: None | str = field(
         default=None,
         metadata={
             "name": "OptionalCharge",
             "type": "Attribute",
-        }
+        },
     )
     waiver_charge: None | str = field(
         default=None,
         metadata={
             "name": "WaiverCharge",
             "type": "Attribute",
-        }
+        },
     )
     waiver_charge_type: None | str = field(
         default=None,
@@ -57,14 +58,14 @@ class Charges:
             "name": "WaiverChargeType",
             "type": "Attribute",
             "length": 1,
-        }
+        },
     )
     port_charge: None | str = field(
         default=None,
         metadata={
             "name": "PortCharge",
             "type": "Attribute",
-        }
+        },
     )
     port_charge_description: None | str = field(
         default=None,
@@ -73,12 +74,12 @@ class Charges:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     penalty_charge: None | str = field(
         default=None,
         metadata={
             "name": "PenaltyCharge",
             "type": "Attribute",
-        }
+        },
     )

@@ -10,6 +10,7 @@ class SearchPassenger6(TypePassengerType6):
     """
     Passenger type with code and optional age information.
     """
+
     class Meta:
         name = "SearchPassenger"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -19,5 +20,5 @@ class SearchPassenger6(TypePassengerType6):
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

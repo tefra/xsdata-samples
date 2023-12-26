@@ -23,10 +23,14 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
     Sup,
     Underline,
 )
-from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import IndexTermRangeEnd
+from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import (
+    IndexTermRangeEnd,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.inline_graphic import InlineGraphic
 from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_end import MilestoneEnd
-from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import MilestoneStart
+from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import (
+    MilestoneStart,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.private_char import PrivateChar
 from crossref.models.xml.lang_value import LangValue
 
@@ -38,6 +42,7 @@ class ConfTheme:
     """
     <div> <h3>Conference Theme</h3> </div>
     """
+
     class Meta:
         name = "conf-theme"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -47,34 +52,34 @@ class ConfTheme:
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -188,5 +193,5 @@ class ConfTheme:
                     "type": Sup,
                 },
             ),
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeGeneralRemarkType1(Enum):
     """
     A code for categorizing a remark within the GDS.
     """
+
     ALPHA = "Alpha"
     BASIC = "Basic"
     HISTORICAL = "Historical"

@@ -9,6 +9,7 @@ class BranchId:
     """
     Branch ID to restrict search.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -16,5 +17,5 @@ class BranchId:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

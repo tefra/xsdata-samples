@@ -29,13 +29,14 @@ class ElaboratedDataPublication(PayloadPublication):
     :ivar elaborated_data:
     :ivar elaborated_data_publication_extension:
     """
+
     forecast_default: Optional[bool] = field(
         default=None,
         metadata={
             "name": "forecastDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     period_default: Optional[float] = field(
         default=None,
@@ -43,7 +44,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "name": "periodDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     time_default: Optional[XmlDateTime] = field(
         default=None,
@@ -51,7 +52,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "name": "timeDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     header_information: Optional[HeaderInformation] = field(
         default=None,
@@ -60,7 +61,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     reference_settings: Optional[ReferenceSettings] = field(
         default=None,
@@ -68,7 +69,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "name": "referenceSettings",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     elaborated_data: List[ElaboratedData] = field(
         default_factory=list,
@@ -77,7 +78,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     elaborated_data_publication_extension: Optional[ExtensionType] = field(
         default=None,
@@ -85,5 +86,5 @@ class ElaboratedDataPublication(PayloadPublication):
             "name": "elaboratedDataPublicationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

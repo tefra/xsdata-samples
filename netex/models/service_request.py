@@ -17,5 +17,5 @@ class ServiceRequest(ServiceRequestStructure):
             "name": "DataObjectRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

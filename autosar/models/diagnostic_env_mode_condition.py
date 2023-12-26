@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .diagnostic_compare_type_enum import DiagnosticCompareTypeEnum
-from .diagnostic_env_mode_element_subtypes_enum import DiagnosticEnvModeElementSubtypesEnum
+from .diagnostic_env_mode_element_subtypes_enum import (
+    DiagnosticEnvModeElementSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -37,6 +39,7 @@ class DiagnosticEnvModeCondition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-ENV-MODE-CONDITION"
 
@@ -46,22 +49,24 @@ class DiagnosticEnvModeCondition:
             "name": "COMPARE-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mode_element_ref: Optional["DiagnosticEnvModeCondition.ModeElementRef"] = field(
+    mode_element_ref: Optional[
+        "DiagnosticEnvModeCondition.ModeElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MODE-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -69,7 +74,7 @@ class DiagnosticEnvModeCondition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -80,5 +85,5 @@ class DiagnosticEnvModeCondition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

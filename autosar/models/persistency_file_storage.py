@@ -10,7 +10,9 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .persistency_collection_level_update_strategy_enum import PersistencyCollectionLevelUpdateStrategyEnum
+from .persistency_collection_level_update_strategy_enum import (
+    PersistencyCollectionLevelUpdateStrategyEnum,
+)
 from .persistency_file import PersistencyFile
 from .persistency_redundancy_crc import PersistencyRedundancyCrc
 from .persistency_redundancy_hash import PersistencyRedundancyHash
@@ -100,6 +102,7 @@ class PersistencyFileStorage:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PERSISTENCY-FILE-STORAGE"
 
@@ -110,15 +113,17 @@ class PersistencyFileStorage:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PersistencyFileStorage.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PersistencyFileStorage.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -126,7 +131,7 @@ class PersistencyFileStorage:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -134,7 +139,7 @@ class PersistencyFileStorage:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -142,7 +147,7 @@ class PersistencyFileStorage:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -150,7 +155,7 @@ class PersistencyFileStorage:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -158,7 +163,7 @@ class PersistencyFileStorage:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["PersistencyFileStorage.Annotations"] = field(
         default=None,
@@ -166,7 +171,7 @@ class PersistencyFileStorage:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -174,7 +179,7 @@ class PersistencyFileStorage:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_allowed_size: Optional[PositiveUnlimitedInteger] = field(
         default=None,
@@ -182,7 +187,7 @@ class PersistencyFileStorage:
             "name": "MAXIMUM-ALLOWED-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_sustained_size: Optional[PositiveInteger] = field(
         default=None,
@@ -190,23 +195,27 @@ class PersistencyFileStorage:
             "name": "MINIMUM-SUSTAINED-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    redundancy_handlings: Optional["PersistencyFileStorage.RedundancyHandlings"] = field(
+    redundancy_handlings: Optional[
+        "PersistencyFileStorage.RedundancyHandlings"
+    ] = field(
         default=None,
         metadata={
             "name": "REDUNDANCY-HANDLINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = field(
+    update_strategy: Optional[
+        PersistencyCollectionLevelUpdateStrategyEnum
+    ] = field(
         default=None,
         metadata={
             "name": "UPDATE-STRATEGY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     files: Optional["PersistencyFileStorage.Files"] = field(
         default=None,
@@ -214,7 +223,7 @@ class PersistencyFileStorage:
             "name": "FILES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     uri: Optional[UriString] = field(
         default=None,
@@ -222,14 +231,14 @@ class PersistencyFileStorage:
             "name": "URI",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -237,14 +246,14 @@ class PersistencyFileStorage:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -255,7 +264,7 @@ class PersistencyFileStorage:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -266,7 +275,7 @@ class PersistencyFileStorage:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -277,7 +286,7 @@ class PersistencyFileStorage:
                 "name": "PERSISTENCY-REDUNDANCY-CRC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         persistency_redundancy_hash: List[PersistencyRedundancyHash] = field(
             default_factory=list,
@@ -285,15 +294,17 @@ class PersistencyFileStorage:
                 "name": "PERSISTENCY-REDUNDANCY-HASH",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        persistency_redundancy_m_out_of_n: List[PersistencyRedundancyMOutOfN] = field(
+        persistency_redundancy_m_out_of_n: List[
+            PersistencyRedundancyMOutOfN
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-M-OUT-OF-N",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -304,5 +315,5 @@ class PersistencyFileStorage:
                 "name": "PERSISTENCY-FILE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

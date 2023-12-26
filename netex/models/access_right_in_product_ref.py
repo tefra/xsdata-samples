@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .access_right_in_product_ref_structure import AccessRightInProductRefStructure
+from .access_right_in_product_ref_structure import (
+    AccessRightInProductRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

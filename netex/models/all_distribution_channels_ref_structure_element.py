@@ -12,5 +12,5 @@ class AllDistributionChannelsRefStructureElement(TypeOfValueRefStructure):
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

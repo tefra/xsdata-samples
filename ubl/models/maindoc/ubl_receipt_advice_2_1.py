@@ -38,7 +38,7 @@ class ReceiptAdviceType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -46,7 +46,7 @@ class ReceiptAdviceType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -54,7 +54,7 @@ class ReceiptAdviceType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -62,7 +62,7 @@ class ReceiptAdviceType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -70,7 +70,7 @@ class ReceiptAdviceType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -79,7 +79,7 @@ class ReceiptAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -87,7 +87,7 @@ class ReceiptAdviceType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -95,7 +95,7 @@ class ReceiptAdviceType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -104,7 +104,7 @@ class ReceiptAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -112,7 +112,7 @@ class ReceiptAdviceType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     document_status_code: Optional[DocumentStatusCode] = field(
         default=None,
@@ -120,7 +120,7 @@ class ReceiptAdviceType:
             "name": "DocumentStatusCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     receipt_advice_type_code: Optional[ReceiptAdviceTypeCode] = field(
         default=None,
@@ -128,7 +128,7 @@ class ReceiptAdviceType:
             "name": "ReceiptAdviceTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -136,7 +136,7 @@ class ReceiptAdviceType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     line_count_numeric: Optional[LineCountNumeric] = field(
         default=None,
@@ -144,7 +144,7 @@ class ReceiptAdviceType:
             "name": "LineCountNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     order_reference: Tuple[OrderReference, ...] = field(
         default_factory=tuple,
@@ -152,7 +152,7 @@ class ReceiptAdviceType:
             "name": "OrderReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
         default_factory=tuple,
@@ -160,15 +160,17 @@ class ReceiptAdviceType:
             "name": "DespatchDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+    additional_document_reference: Tuple[
+        AdditionalDocumentReference, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -176,7 +178,7 @@ class ReceiptAdviceType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     delivery_customer_party: Optional[DeliveryCustomerParty] = field(
         default=None,
@@ -185,7 +187,7 @@ class ReceiptAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     despatch_supplier_party: Optional[DespatchSupplierParty] = field(
         default=None,
@@ -194,7 +196,7 @@ class ReceiptAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     buyer_customer_party: Optional[BuyerCustomerParty] = field(
         default=None,
@@ -202,7 +204,7 @@ class ReceiptAdviceType:
             "name": "BuyerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     seller_supplier_party: Optional[SellerSupplierParty] = field(
         default=None,
@@ -210,7 +212,7 @@ class ReceiptAdviceType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     shipment: Optional[Shipment] = field(
         default=None,
@@ -218,7 +220,7 @@ class ReceiptAdviceType:
             "name": "Shipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receipt_line: Tuple[ReceiptLine, ...] = field(
         default_factory=tuple,
@@ -227,11 +229,13 @@ class ReceiptAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(frozen=True)
 class ReceiptAdvice(ReceiptAdviceType):
     class Meta:
-        namespace = "urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2"
+        namespace = (
+            "urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2"
+        )

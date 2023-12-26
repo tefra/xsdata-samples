@@ -21,6 +21,7 @@ class ProfileModifyBridgeBranchesRsp(BaseRsp5):
     user_name
         The login name of the agent.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -30,7 +31,7 @@ class ProfileModifyBridgeBranchesRsp(BaseRsp5):
             "name": "BridgeBranch",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     agent_id: None | int = field(
         default=None,
@@ -38,7 +39,7 @@ class ProfileModifyBridgeBranchesRsp(BaseRsp5):
             "name": "AgentID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     user_name: None | str = field(
         default=None,
@@ -48,5 +49,5 @@ class ProfileModifyBridgeBranchesRsp(BaseRsp5):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

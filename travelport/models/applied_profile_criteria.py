@@ -14,6 +14,7 @@ class AppliedProfileCriteria:
     traveler_profile_id
         Search with Traveler Applied Profile Id
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -22,5 +23,5 @@ class AppliedProfileCriteria:
         metadata={
             "name": "TravelerProfileId",
             "type": "Attribute",
-        }
+        },
     )

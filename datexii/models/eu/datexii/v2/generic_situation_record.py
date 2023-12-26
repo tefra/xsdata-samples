@@ -16,6 +16,7 @@ class GenericSituationRecord(SituationRecord):
         GenericSituationRecord.
     :ivar generic_situation_record_extension:
     """
+
     generic_situation_record_name: Optional[str] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class GenericSituationRecord(SituationRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     generic_situation_record_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class GenericSituationRecord(SituationRecord):
             "name": "genericSituationRecordExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

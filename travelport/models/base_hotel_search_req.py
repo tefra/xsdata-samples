@@ -25,13 +25,14 @@ class BaseHotelSearchReq(BaseSearchReq1):
         would be used to link to a ‘Policy Group’ in a policy engine
         external to UAPI.
     """
+
     hotel_search_location: None | HotelSearchLocation = field(
         default=None,
         metadata={
             "name": "HotelSearchLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     hotel_search_modifiers: None | HotelSearchModifiers = field(
         default=None,
@@ -39,7 +40,7 @@ class BaseHotelSearchReq(BaseSearchReq1):
             "name": "HotelSearchModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -48,7 +49,7 @@ class BaseHotelSearchReq(BaseSearchReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,
@@ -56,7 +57,7 @@ class BaseHotelSearchReq(BaseSearchReq1):
             "name": "PointOfSale",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     policy_reference: None | str = field(
         default=None,
@@ -65,5 +66,5 @@ class BaseHotelSearchReq(BaseSearchReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )

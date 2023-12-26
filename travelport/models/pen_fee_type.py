@@ -49,94 +49,95 @@ class PenFeeType:
     currency
         Currency code of penalty (e.g. USD).
     """
+
     dep_required: None | bool = field(
         default=None,
         metadata={
             "name": "DepRequired",
             "type": "Attribute",
-        }
+        },
     )
     dep_non_ref: None | bool = field(
         default=None,
         metadata={
             "name": "DepNonRef",
             "type": "Attribute",
-        }
+        },
     )
     tk_non_ref: None | bool = field(
         default=None,
         metadata={
             "name": "TkNonRef",
             "type": "Attribute",
-        }
+        },
     )
     air_vfee: None | bool = field(
         default=None,
         metadata={
             "name": "AirVFee",
             "type": "Attribute",
-        }
+        },
     )
     cancellation: None | bool = field(
         default=None,
         metadata={
             "name": "Cancellation",
             "type": "Attribute",
-        }
+        },
     )
     fail_confirm_space: None | bool = field(
         default=None,
         metadata={
             "name": "FailConfirmSpace",
             "type": "Attribute",
-        }
+        },
     )
     itin_chg: None | bool = field(
         default=None,
         metadata={
             "name": "ItinChg",
             "type": "Attribute",
-        }
+        },
     )
     replace_tk: None | bool = field(
         default=None,
         metadata={
             "name": "ReplaceTk",
             "type": "Attribute",
-        }
+        },
     )
     applicable: None | bool = field(
         default=None,
         metadata={
             "name": "Applicable",
             "type": "Attribute",
-        }
+        },
     )
     applicable_to: None | bool = field(
         default=None,
         metadata={
             "name": "ApplicableTo",
             "type": "Attribute",
-        }
+        },
     )
     amt: None | Decimal = field(
         default=None,
         metadata={
             "name": "Amt",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
             "type": "Attribute",
-        }
+        },
     )

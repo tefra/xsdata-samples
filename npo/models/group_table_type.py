@@ -16,5 +16,5 @@ class GroupTableType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "min_occurs": 1,
-        }
+        },
     )

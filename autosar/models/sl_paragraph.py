@@ -38,6 +38,7 @@ class SlParagraph:
         and shall be ignored.
     :ivar content:
     """
+
     class Meta:
         name = "SL-PARAGRAPH"
 
@@ -46,7 +47,7 @@ class SlParagraph:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -54,14 +55,14 @@ class SlParagraph:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     l: Optional[LEnumSimple] = field(
         default=None,
         metadata={
             "name": "L",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -136,7 +137,7 @@ class SlParagraph:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -147,5 +148,5 @@ class SlParagraph:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

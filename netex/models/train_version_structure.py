@@ -18,12 +18,12 @@ class TrainVersionStructure(VehicleTypeVersionStructure):
             "name": "TrainSize",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     components: Optional[TrainComponentsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

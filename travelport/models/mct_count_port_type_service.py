@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.mct_count_port_type_service_input import MctCountPortTypeServiceInput
-from travelport.models.mct_count_port_type_service_output import MctCountPortTypeServiceOutput
+from travelport.models.mct_count_port_type_service_input import (
+    MctCountPortTypeServiceInput,
+)
+from travelport.models.mct_count_port_type_service_output import (
+    MctCountPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

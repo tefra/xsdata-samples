@@ -17,7 +17,7 @@ class BoundingBoxStructure2:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     lower_right: Optional[LocationStructure2] = field(
         default=None,
@@ -26,5 +26,5 @@ class BoundingBoxStructure2:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

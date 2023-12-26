@@ -20,7 +20,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "name": "RefundType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     refund_policy: List[RefundPolicyEnumeration] = field(
         default_factory=list,
@@ -29,7 +29,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     partial_refund_basis: Optional[PartialRefundBasisEnumeration] = field(
         default=None,
@@ -37,7 +37,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "name": "PartialRefundBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_method: List[PaymentMethodEnumeration] = field(
         default_factory=list,
@@ -46,5 +46,5 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

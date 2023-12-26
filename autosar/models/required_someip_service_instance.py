@@ -15,13 +15,21 @@ from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
-from .service_interface_deployment_subtypes_enum import ServiceInterfaceDeploymentSubtypesEnum
-from .service_interface_element_secure_com_config import ServiceInterfaceElementSecureComConfig
-from .service_version_acceptance_kind_enum import ServiceVersionAcceptanceKindEnum
+from .service_interface_deployment_subtypes_enum import (
+    ServiceInterfaceDeploymentSubtypesEnum,
+)
+from .service_interface_element_secure_com_config import (
+    ServiceInterfaceElementSecureComConfig,
+)
+from .service_version_acceptance_kind_enum import (
+    ServiceVersionAcceptanceKindEnum,
+)
 from .short_name_fragment import ShortNameFragment
 from .someip_method_props import SomeipMethodProps
 from .someip_required_event_group import SomeipRequiredEventGroup
-from .someip_sd_client_service_instance_config_subtypes_enum import SomeipSdClientServiceInstanceConfigSubtypesEnum
+from .someip_sd_client_service_instance_config_subtypes_enum import (
+    SomeipSdClientServiceInstanceConfigSubtypesEnum,
+)
 from .someip_service_version import SomeipServiceVersion
 from .tag_with_optional_value import TagWithOptionalValue
 
@@ -121,6 +129,7 @@ class RequiredSomeipServiceInstance:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REQUIRED-SOMEIP-SERVICE-INSTANCE"
 
@@ -131,15 +140,17 @@ class RequiredSomeipServiceInstance:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RequiredSomeipServiceInstance.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RequiredSomeipServiceInstance.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -147,7 +158,7 @@ class RequiredSomeipServiceInstance:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -155,7 +166,7 @@ class RequiredSomeipServiceInstance:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -163,7 +174,7 @@ class RequiredSomeipServiceInstance:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -171,7 +182,7 @@ class RequiredSomeipServiceInstance:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -179,7 +190,7 @@ class RequiredSomeipServiceInstance:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RequiredSomeipServiceInstance.Annotations"] = field(
         default=None,
@@ -187,7 +198,7 @@ class RequiredSomeipServiceInstance:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -195,71 +206,87 @@ class RequiredSomeipServiceInstance:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    e_2_e_event_protection_propss: Optional["RequiredSomeipServiceInstance.E2EEventProtectionPropss"] = field(
+    e_2_e_event_protection_propss: Optional[
+        "RequiredSomeipServiceInstance.E2EEventProtectionPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "E-2-E-EVENT-PROTECTION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    e_2_e_method_protection_propss: Optional["RequiredSomeipServiceInstance.E2EMethodProtectionPropss"] = field(
+    e_2_e_method_protection_propss: Optional[
+        "RequiredSomeipServiceInstance.E2EMethodProtectionPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "E-2-E-METHOD-PROTECTION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    secure_com_configs: Optional["RequiredSomeipServiceInstance.SecureComConfigs"] = field(
+    secure_com_configs: Optional[
+        "RequiredSomeipServiceInstance.SecureComConfigs"
+    ] = field(
         default=None,
         metadata={
             "name": "SECURE-COM-CONFIGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_interface_deployment_ref: Optional["RequiredSomeipServiceInstance.ServiceInterfaceDeploymentRef"] = field(
+    service_interface_deployment_ref: Optional[
+        "RequiredSomeipServiceInstance.ServiceInterfaceDeploymentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-DEPLOYMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blacklisted_versions: Optional["RequiredSomeipServiceInstance.BlacklistedVersions"] = field(
+    blacklisted_versions: Optional[
+        "RequiredSomeipServiceInstance.BlacklistedVersions"
+    ] = field(
         default=None,
         metadata={
             "name": "BLACKLISTED-VERSIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    capability_records: Optional["RequiredSomeipServiceInstance.CapabilityRecords"] = field(
+    capability_records: Optional[
+        "RequiredSomeipServiceInstance.CapabilityRecords"
+    ] = field(
         default=None,
         metadata={
             "name": "CAPABILITY-RECORDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    method_request_propss: Optional["RequiredSomeipServiceInstance.MethodRequestPropss"] = field(
+    method_request_propss: Optional[
+        "RequiredSomeipServiceInstance.MethodRequestPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "METHOD-REQUEST-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    required_event_groups: Optional["RequiredSomeipServiceInstance.RequiredEventGroups"] = field(
+    required_event_groups: Optional[
+        "RequiredSomeipServiceInstance.RequiredEventGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUIRED-EVENT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     required_minor_version: Optional[AnyVersionString] = field(
         default=None,
@@ -267,7 +294,7 @@ class RequiredSomeipServiceInstance:
             "name": "REQUIRED-MINOR-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     required_service_instance_id: Optional[AnyServiceInstanceId] = field(
         default=None,
@@ -275,30 +302,34 @@ class RequiredSomeipServiceInstance:
             "name": "REQUIRED-SERVICE-INSTANCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sd_client_config_ref: Optional["RequiredSomeipServiceInstance.SdClientConfigRef"] = field(
+    sd_client_config_ref: Optional[
+        "RequiredSomeipServiceInstance.SdClientConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    version_driven_find_behavior: Optional[ServiceVersionAcceptanceKindEnum] = field(
+    version_driven_find_behavior: Optional[
+        ServiceVersionAcceptanceKindEnum
+    ] = field(
         default=None,
         metadata={
             "name": "VERSION-DRIVEN-FIND-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -306,14 +337,14 @@ class RequiredSomeipServiceInstance:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -324,7 +355,7 @@ class RequiredSomeipServiceInstance:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -335,40 +366,46 @@ class RequiredSomeipServiceInstance:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class E2EEventProtectionPropss:
-        end_2_end_event_protection_props: List[End2EndEventProtectionProps] = field(
+        end_2_end_event_protection_props: List[
+            End2EndEventProtectionProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-2-END-EVENT-PROTECTION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class E2EMethodProtectionPropss:
-        end_2_end_method_protection_props: List[End2EndMethodProtectionProps] = field(
+        end_2_end_method_protection_props: List[
+            End2EndMethodProtectionProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-2-END-METHOD-PROTECTION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SecureComConfigs:
-        service_interface_element_secure_com_config: List[ServiceInterfaceElementSecureComConfig] = field(
+        service_interface_element_secure_com_config: List[
+            ServiceInterfaceElementSecureComConfig
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE-ELEMENT-SECURE-COM-CONFIG",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -379,7 +416,7 @@ class RequiredSomeipServiceInstance:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -390,7 +427,7 @@ class RequiredSomeipServiceInstance:
                 "name": "SOMEIP-SERVICE-VERSION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -401,7 +438,7 @@ class RequiredSomeipServiceInstance:
                 "name": "TAG-WITH-OPTIONAL-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -412,7 +449,7 @@ class RequiredSomeipServiceInstance:
                 "name": "SOMEIP-METHOD-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -423,16 +460,18 @@ class RequiredSomeipServiceInstance:
                 "name": "SOMEIP-REQUIRED-EVENT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SdClientConfigRef(Ref):
-        dest: Optional[SomeipSdClientServiceInstanceConfigSubtypesEnum] = field(
+        dest: Optional[
+            SomeipSdClientServiceInstanceConfigSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -21,6 +21,7 @@ class AxleWeight:
         this specific axle on the vehicle.
     :ivar axle_weight_extension:
     """
+
     axle_position_identifier: Optional[int] = field(
         default=None,
         metadata={
@@ -28,7 +29,7 @@ class AxleWeight:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     axle_weight: Optional[float] = field(
         default=None,
@@ -36,7 +37,7 @@ class AxleWeight:
             "name": "axleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     maximum_permitted_axle_weight: Optional[float] = field(
         default=None,
@@ -44,7 +45,7 @@ class AxleWeight:
             "name": "maximumPermittedAxleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     axle_weight_extension: Optional[ExtensionType] = field(
         default=None,
@@ -52,5 +53,5 @@ class AxleWeight:
             "name": "axleWeightExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

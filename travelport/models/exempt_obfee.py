@@ -10,6 +10,7 @@ class ExemptObfee:
     Used to specify which OB fees are exempt; if none are listed, it means all
     should be exempt.
     """
+
     class Meta:
         name = "ExemptOBFee"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -20,5 +21,5 @@ class ExemptObfee:
             "name": "SubCode",
             "type": "Element",
             "max_occurs": 8,
-        }
+        },
     )

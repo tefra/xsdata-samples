@@ -20,7 +20,7 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rounding_method: Optional[RoundingMethodEnumeration] = field(
         default=None,
@@ -28,7 +28,7 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
             "name": "RoundingMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rounding_modulus: Optional[Decimal] = field(
         default=None,
@@ -36,7 +36,7 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
             "name": "RoundingModulus",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rounding_steps: Optional[RoundingStepsRelStructure] = field(
         default=None,
@@ -44,5 +44,5 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
             "name": "roundingSteps",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

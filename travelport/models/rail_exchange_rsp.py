@@ -10,5 +10,6 @@ class RailExchangeRsp(TypeRailReservationRsp):
     """
     Returns rail exchange reservation information with ticketing/refund info etc..
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"

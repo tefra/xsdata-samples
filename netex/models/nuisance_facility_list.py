@@ -14,5 +14,5 @@ class NuisanceFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

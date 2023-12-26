@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import DocumentationBlock
 from .integer import Integer
-from .lin_slave_config_ident_subtypes_enum import LinSlaveConfigIdentSubtypesEnum
+from .lin_slave_config_ident_subtypes_enum import (
+    LinSlaveConfigIdentSubtypesEnum,
+)
 from .lin_slave_subtypes_enum import LinSlaveSubtypesEnum
 from .ref import Ref
 from .time_value import TimeValue
@@ -43,6 +45,7 @@ class DataDumpEntry:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DATA-DUMP-ENTRY"
 
@@ -52,7 +55,7 @@ class DataDumpEntry:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     delay: Optional[TimeValue] = field(
         default=None,
@@ -60,7 +63,7 @@ class DataDumpEntry:
             "name": "DELAY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     position_in_table: Optional[Integer] = field(
         default=None,
@@ -68,23 +71,27 @@ class DataDumpEntry:
             "name": "POSITION-IN-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_controller_ref: Optional["DataDumpEntry.AssignedControllerRef"] = field(
+    assigned_controller_ref: Optional[
+        "DataDumpEntry.AssignedControllerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_lin_slave_config_ref: Optional["DataDumpEntry.AssignedLinSlaveConfigRef"] = field(
+    assigned_lin_slave_config_ref: Optional[
+        "DataDumpEntry.AssignedLinSlaveConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     byte_values: Optional["DataDumpEntry.ByteValues"] = field(
         default=None,
@@ -92,14 +99,14 @@ class DataDumpEntry:
             "name": "BYTE-VALUES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -107,7 +114,7 @@ class DataDumpEntry:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -118,7 +125,7 @@ class DataDumpEntry:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -129,7 +136,7 @@ class DataDumpEntry:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -137,6 +144,7 @@ class DataDumpEntry:
         """
         :ivar byte_value: Supplier specific format.
         """
+
         byte_value: List[Integer] = field(
             default_factory=list,
             metadata={
@@ -144,5 +152,5 @@ class DataDumpEntry:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 5,
-            }
+            },
         )

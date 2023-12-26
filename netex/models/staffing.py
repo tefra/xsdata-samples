@@ -14,5 +14,5 @@ class Staffing:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

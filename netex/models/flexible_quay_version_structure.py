@@ -20,7 +20,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "NameSuffix",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alternative_names: Optional[AlternativeNamesRelStructure] = field(
         default=None,
@@ -28,7 +28,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "alternativeNames",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_stop_place_ref: Optional[FlexibleStopPlaceRef] = field(
         default=None,
@@ -36,7 +36,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "FlexibleStopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_mode: Optional[VehicleModeEnumeration] = field(
         default=None,
@@ -44,7 +44,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_use: Optional[bool] = field(
         default=None,
@@ -52,7 +52,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "BoardingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alighting_use: Optional[bool] = field(
         default=None,
@@ -60,7 +60,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "AlightingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -68,5 +68,5 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

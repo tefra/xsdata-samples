@@ -19,7 +19,7 @@ class ActivationAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "EquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     link_ref: Optional[ActivationLinkRefStructure] = field(
         default=None,
@@ -27,7 +27,7 @@ class ActivationAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "LinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     point_ref: Optional[ActivationPointRefStructure] = field(
         default=None,
@@ -35,5 +35,5 @@ class ActivationAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "PointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

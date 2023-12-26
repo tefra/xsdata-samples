@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_equipment_ref import AccessEquipmentRef
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .accessibility_assessment import AccessibilityAssessment
@@ -29,8 +29,12 @@ from .luggage_service_ref import LuggageServiceRef
 from .meeting_point_service_ref import MeetingPointServiceRef
 from .money_service_ref import MoneyServiceRef
 from .passenger_equipment_ref import PassengerEquipmentRef
-from .passenger_equipment_version_structure import PassengerEquipmentVersionStructure
-from .passenger_information_equipment_ref import PassengerInformationEquipmentRef
+from .passenger_equipment_version_structure import (
+    PassengerEquipmentVersionStructure,
+)
+from .passenger_information_equipment_ref import (
+    PassengerInformationEquipmentRef,
+)
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .place_lighting_equipment_ref import PlaceLightingEquipmentRef
 from .place_sign_ref import PlaceSignRef
@@ -63,7 +67,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure):
+class ActualVehicleEquipmentVersionStructure(
+    PassengerEquipmentVersionStructure
+):
     class Meta:
         name = "ActualVehicleEquipment_VersionStructure"
 
@@ -73,9 +79,11 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
             "name": "Units",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -96,9 +104,65 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailDeviceRef,
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+            VehicleChargingEquipmentRef,
+            CycleStorageEquipmentRef,
+            TicketValidatorEquipmentRef,
+            TicketingEquipmentRef,
+            TrolleyStandEquipmentRef,
+            SeatingEquipmentRef,
+            ShelterEquipmentRef,
+            LuggageLockerEquipmentRef,
+            WaitingRoomEquipmentRef,
+            WaitingEquipmentRef,
+            SiteEquipmentRef,
+            HeadingSignRef,
+            GeneralSignRef,
+            PlaceSignRef,
+            SignEquipmentRef,
+            PlaceLightingEquipmentRef,
+            RoughSurfaceRef,
+            StaircaseEquipmentRef,
+            QueueingEquipmentRef,
+            TravelatorEquipmentRef,
+            EscalatorEquipmentRef,
+            LiftEquipmentRef,
+            CrossingEquipmentRef,
+            RampEquipmentRef,
+            EntranceEquipmentRef,
+            AccessEquipmentRef,
+            ActivatedEquipmentRef,
+            PassengerInformationEquipmentRef,
+            RubbishDisposalEquipmentRef,
+            HelpPointEquipmentRef,
+            PassengerSafetyEquipmentRef,
+            SanitaryEquipmentRef,
+            WheelchairVehicleRef,
+            AccessVehicleEquipmentRef,
+            VehicleEquipmentRef,
+            PassengerEquipmentRef,
+            EquipmentRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -369,7 +433,7 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     accessibility_assessment: Optional[AccessibilityAssessment] = field(
         default=None,
@@ -377,5 +441,5 @@ class ActualVehicleEquipmentVersionStructure(PassengerEquipmentVersionStructure)
             "name": "AccessibilityAssessment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

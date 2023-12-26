@@ -8,7 +8,9 @@ from .annotation import (
 from .category_string import CategoryString
 from .diag_requirement_id_string import DiagRequirementIdString
 from .diagnostic_audience_enum import DiagnosticAudienceEnum
-from .diagnostic_service_request_callback_type_enum import DiagnosticServiceRequestCallbackTypeEnum
+from .diagnostic_service_request_callback_type_enum import (
+    DiagnosticServiceRequestCallbackTypeEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -93,6 +95,7 @@ class DiagnosticCommunicationManagerNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-COMMUNICATION-MANAGER-NEEDS"
 
@@ -103,15 +106,17 @@ class DiagnosticCommunicationManagerNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticCommunicationManagerNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticCommunicationManagerNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +124,7 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +132,7 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +140,7 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +148,7 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,23 +156,27 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticCommunicationManagerNeeds.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticCommunicationManagerNeeds.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    audiences: Optional["DiagnosticCommunicationManagerNeeds.Audiences"] = field(
+    audiences: Optional[
+        "DiagnosticCommunicationManagerNeeds.Audiences"
+    ] = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diag_requirement: Optional[DiagRequirementIdString] = field(
         default=None,
@@ -175,7 +184,7 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "DIAG-REQUIREMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_access_level: Optional[PositiveInteger] = field(
         default=None,
@@ -183,22 +192,24 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "SECURITY-ACCESS-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_request_callback_type: Optional[DiagnosticServiceRequestCallbackTypeEnum] = field(
+    service_request_callback_type: Optional[
+        DiagnosticServiceRequestCallbackTypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-REQUEST-CALLBACK-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -206,14 +217,14 @@ class DiagnosticCommunicationManagerNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -224,7 +235,7 @@ class DiagnosticCommunicationManagerNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -235,7 +246,7 @@ class DiagnosticCommunicationManagerNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -246,11 +257,12 @@ class DiagnosticCommunicationManagerNeeds:
             documentation but also subsequent audience specific
             implementation.
         """
+
         audience: List[DiagnosticAudienceEnum] = field(
             default_factory=list,
             metadata={
                 "name": "AUDIENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -15,7 +15,7 @@ class TraceStructure:
             "name": "ObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     changed_at: Optional[XmlDateTime] = field(
         default=None,
@@ -24,7 +24,7 @@ class TraceStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     changed_by: Optional[str] = field(
         default=None,
@@ -32,7 +32,7 @@ class TraceStructure:
             "name": "ChangedBy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[str] = field(
         default=None,
@@ -40,7 +40,7 @@ class TraceStructure:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     delta: Optional[Delta] = field(
         default=None,
@@ -48,17 +48,17 @@ class TraceStructure:
             "name": "Delta",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     created: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

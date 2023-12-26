@@ -38,24 +38,29 @@ class SomeipServiceDiscovery:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-SERVICE-DISCOVERY"
 
-    multicast_sd_ip_address_ref: Optional["SomeipServiceDiscovery.MulticastSdIpAddressRef"] = field(
+    multicast_sd_ip_address_ref: Optional[
+        "SomeipServiceDiscovery.MulticastSdIpAddressRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MULTICAST-SD-IP-ADDRESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    multicast_secure_com_props_ref: Optional["SomeipServiceDiscovery.MulticastSecureComPropsRef"] = field(
+    multicast_secure_com_props_ref: Optional[
+        "SomeipServiceDiscovery.MulticastSecureComPropsRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MULTICAST-SECURE-COM-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     someip_service_discovery_port: Optional[PositiveInteger] = field(
         default=None,
@@ -63,22 +68,24 @@ class SomeipServiceDiscovery:
             "name": "SOMEIP-SERVICE-DISCOVERY-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    unicast_secure_com_props_refs: Optional["SomeipServiceDiscovery.UnicastSecureComPropsRefs"] = field(
+    unicast_secure_com_props_refs: Optional[
+        "SomeipServiceDiscovery.UnicastSecureComPropsRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "UNICAST-SECURE-COM-PROPS-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -86,7 +93,7 @@ class SomeipServiceDiscovery:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -97,7 +104,7 @@ class SomeipServiceDiscovery:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -108,18 +115,20 @@ class SomeipServiceDiscovery:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class UnicastSecureComPropsRefs:
-        unicast_secure_com_props_ref: List["SomeipServiceDiscovery.UnicastSecureComPropsRefs.UnicastSecureComPropsRef"] = field(
+        unicast_secure_com_props_ref: List[
+            "SomeipServiceDiscovery.UnicastSecureComPropsRefs.UnicastSecureComPropsRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "UNICAST-SECURE-COM-PROPS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -130,5 +139,5 @@ class SomeipServiceDiscovery:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

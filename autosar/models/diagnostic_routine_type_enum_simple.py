@@ -10,5 +10,6 @@ class DiagnosticRoutineTypeEnumSimple(Enum):
     :cvar SYNCHRONOUS: This indicates that the diagnostic routine blocks
         the diagnostic server in the ECU while the routine is running.
     """
+
     ASYNCHRONOUS = "ASYNCHRONOUS"
     SYNCHRONOUS = "SYNCHRONOUS"

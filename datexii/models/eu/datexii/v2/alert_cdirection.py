@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.alert_cdirection_enum import AlertCDirectionEnum
+from datexii.models.eu.datexii.v2.alert_cdirection_enum import (
+    AlertCDirectionEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 
@@ -24,6 +26,7 @@ class AlertCDirection:
         direction of coding of road.
     :ivar alert_cdirection_extension:
     """
+
     alert_cdirection_coded: Optional[AlertCDirectionEnum] = field(
         default=None,
         metadata={
@@ -31,7 +34,7 @@ class AlertCDirection:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     alert_cdirection_named: Optional[MultilingualString] = field(
         default=None,
@@ -39,7 +42,7 @@ class AlertCDirection:
             "name": "alertCDirectionNamed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     alert_cdirection_sense: Optional[bool] = field(
         default=None,
@@ -47,7 +50,7 @@ class AlertCDirection:
             "name": "alertCDirectionSense",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     alert_cdirection_extension: Optional[ExtensionType] = field(
         default=None,
@@ -55,5 +58,5 @@ class AlertCDirection:
             "name": "alertCDirectionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

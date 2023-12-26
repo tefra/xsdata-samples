@@ -17,5 +17,5 @@ class GroupedOptionInfo:
             "type": "Element",
             "min_occurs": 2,
             "max_occurs": 999,
-        }
+        },
     )

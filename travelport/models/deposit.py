@@ -19,6 +19,7 @@ class Deposit:
     received_date
         Date when deposit or balance is received, if received.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -27,19 +28,19 @@ class Deposit:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     due_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DueDate",
             "type": "Attribute",
-        }
+        },
     )
     received_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ReceivedDate",
             "type": "Attribute",
-        }
+        },
     )

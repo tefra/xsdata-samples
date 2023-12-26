@@ -10,6 +10,7 @@ class BookingTerminalReq(BookingBaseReq):
     """
     Allow terminal commands to be run in the session.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -19,5 +20,5 @@ class BookingTerminalReq(BookingBaseReq):
             "name": "Command",
             "type": "Element",
             "required": True,
-        }
+        },
     )

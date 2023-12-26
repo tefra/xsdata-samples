@@ -15,5 +15,5 @@ class Image:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlTime
 from .day_type_ref import DayTypeRef
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
@@ -28,9 +28,11 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
-    departure_time_or_frequency: Optional[object] = field(
+    departure_time_or_frequency: Optional[
+        Union[XmlTime, FrequencyStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -46,7 +48,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -54,7 +56,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     destination_display_view: Optional[DestinationDisplayView] = field(
         default=None,
@@ -62,9 +64,11 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "name": "DestinationDisplayView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[
+        Union[FareDayTypeRef, DayTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -80,9 +84,16 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            ServiceJourneyPatternRef,
+            ServicePatternRef,
+            DeadRunJourneyPatternRef,
+            JourneyPatternRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -108,7 +119,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     connecting_order: Optional[int] = field(
         default=None,
@@ -116,7 +127,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "name": "ConnectingOrder",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     connecting_visit_number: Optional[int] = field(
         default=None,
@@ -124,5 +135,5 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "name": "ConnectingVisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

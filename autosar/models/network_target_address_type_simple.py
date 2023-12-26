@@ -10,6 +10,7 @@ class NetworkTargetAddressTypeSimple(Enum):
     :cvar PHYSICAL: Physical request type
     :cvar PHYSICAL_CAN_FD: Physical request type via CAN FD
     """
+
     FUNCTIONAL = "FUNCTIONAL"
     FUNCTIONAL_CAN_FD = "FUNCTIONAL-CAN-FD"
     PHYSICAL = "PHYSICAL"

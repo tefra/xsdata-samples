@@ -14,6 +14,7 @@ class GraphicNotationEnumSimple(Enum):
     :cvar SVG: scalable vector graphic
     :cvar TIFF: Tagged Image File Format
     """
+
     BMP = "BMP"
     EPS = "EPS"
     GIF = "GIF"

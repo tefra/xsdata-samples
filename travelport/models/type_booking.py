@@ -8,6 +8,7 @@ class TypeBooking(Enum):
     """
     Type of booking.
     """
+
     SSR = "SSR"
     AUXILLARY_SEGMENT = "Auxillary Segment"
     AVAILABLE_FOR_DISPLAY_PRICING = "Available for Display/Pricing"

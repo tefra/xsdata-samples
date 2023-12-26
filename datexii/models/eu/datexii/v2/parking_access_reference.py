@@ -16,5 +16,5 @@ class ParkingAccessReference(Reference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -43,6 +43,7 @@ class EcuResourceEstimation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECU-RESOURCE-ESTIMATION"
 
@@ -52,7 +53,7 @@ class EcuResourceEstimation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bsw_resource_estimation: Optional[ResourceConsumption] = field(
         default=None,
@@ -60,7 +61,7 @@ class EcuResourceEstimation:
             "name": "BSW-RESOURCE-ESTIMATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_instance_ref: Optional["EcuResourceEstimation.EcuInstanceRef"] = field(
         default=None,
@@ -68,7 +69,7 @@ class EcuResourceEstimation:
             "name": "ECU-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rte_resource_estimation: Optional[ResourceConsumption] = field(
         default=None,
@@ -76,15 +77,17 @@ class EcuResourceEstimation:
             "name": "RTE-RESOURCE-ESTIMATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_comp_to_ecu_mapping_refs: Optional["EcuResourceEstimation.SwCompToEcuMappingRefs"] = field(
+    sw_comp_to_ecu_mapping_refs: Optional[
+        "EcuResourceEstimation.SwCompToEcuMappingRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-COMP-TO-ECU-MAPPING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -92,14 +95,14 @@ class EcuResourceEstimation:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -107,7 +110,7 @@ class EcuResourceEstimation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -118,18 +121,20 @@ class EcuResourceEstimation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class SwCompToEcuMappingRefs:
-        sw_comp_to_ecu_mapping_ref: List["EcuResourceEstimation.SwCompToEcuMappingRefs.SwCompToEcuMappingRef"] = field(
+        sw_comp_to_ecu_mapping_ref: List[
+            "EcuResourceEstimation.SwCompToEcuMappingRefs.SwCompToEcuMappingRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SW-COMP-TO-ECU-MAPPING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -140,5 +145,5 @@ class EcuResourceEstimation:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

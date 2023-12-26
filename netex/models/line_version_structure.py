@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .accessibility_assessment import AccessibilityAssessment
-from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
-from .allowed_line_directions_rel_structure import AllowedLineDirectionsRelStructure
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
+from .allowed_line_directions_rel_structure import (
+    AllowedLineDirectionsRelStructure,
+)
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
@@ -21,10 +25,14 @@ from .print_presentation_structure import PrintPresentationStructure
 from .private_code import PrivateCode
 from .purchase_moment_enumeration import PurchaseMomentEnumeration
 from .route_refs_rel_structure import RouteRefsRelStructure
-from .transport_organisation_refs_rel_structure import TransportOrganisationRefsRelStructure
+from .transport_organisation_refs_rel_structure import (
+    TransportOrganisationRefsRelStructure,
+)
 from .transport_submode import TransportSubmode
 from .type_of_line_ref import TypeOfLineRef
-from .type_of_payment_method_value_structure import TypeOfPaymentMethodValueStructure
+from .type_of_payment_method_value_structure import (
+    TypeOfPaymentMethodValueStructure,
+)
 from .type_of_product_category_ref import TypeOfProductCategoryRef
 from .type_of_service_ref import TypeOfServiceRef
 
@@ -43,7 +51,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -51,7 +59,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -59,7 +67,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
@@ -67,7 +75,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_submode: Optional[TransportSubmode] = field(
         default=None,
@@ -75,7 +83,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "TransportSubmode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     url: Optional[str] = field(
         default=None,
@@ -83,7 +91,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "Url",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -91,7 +99,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -99,7 +107,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     external_line_ref: Optional[ExternalObjectRefStructure] = field(
         default=None,
@@ -107,9 +115,11 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "ExternalLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    authority_ref_or_operator_ref: Optional[object] = field(
+    authority_ref_or_operator_ref: Optional[
+        Union[AuthorityRef, OperatorRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -125,15 +135,17 @@ class LineVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    additional_operators: Optional[TransportOrganisationRefsRelStructure] = field(
+    additional_operators: Optional[
+        TransportOrganisationRefsRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "additionalOperators",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     other_modes: Optional[ModeRefsRelStructure] = field(
         default=None,
@@ -141,7 +153,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "otherModes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operational_context_ref: Optional[OperationalContextRef] = field(
         default=None,
@@ -149,7 +161,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "OperationalContextRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     line_type: Optional[LineTypeEnumeration] = field(
         default=None,
@@ -157,7 +169,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "LineType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_line_ref: Optional[TypeOfLineRef] = field(
         default=None,
@@ -165,15 +177,17 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    external_product_category_ref: Optional[ExternalObjectRefStructure] = field(
+    external_product_category_ref: Optional[
+        ExternalObjectRefStructure
+    ] = field(
         default=None,
         metadata={
             "name": "ExternalProductCategoryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
         default=None,
@@ -181,7 +195,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfProductCategoryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_service_ref: Optional[TypeOfServiceRef] = field(
         default=None,
@@ -189,7 +203,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     monitored: Optional[bool] = field(
         default=None,
@@ -197,14 +211,14 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "Monitored",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     routes: Optional[RouteRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     represented_by_group_ref: Optional[GroupOfLinesRefStructure] = field(
         default=None,
@@ -212,7 +226,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "RepresentedByGroupRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     presentation: Optional[PresentationStructure] = field(
         default=None,
@@ -220,7 +234,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alternative_presentation: Optional[PresentationStructure] = field(
         default=None,
@@ -228,7 +242,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "AlternativePresentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     printed_presentation: Optional[PrintPresentationStructure] = field(
         default=None,
@@ -236,7 +250,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "PrintedPresentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_methods: List[PaymentMethodEnumeration] = field(
         default_factory=list,
@@ -245,15 +259,17 @@ class LineVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    types_of_payment_method: Optional[TypeOfPaymentMethodValueStructure] = field(
+    types_of_payment_method: Optional[
+        TypeOfPaymentMethodValueStructure
+    ] = field(
         default=None,
         metadata={
             "name": "typesOfPaymentMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     purchase_moment: List[PurchaseMomentEnumeration] = field(
         default_factory=list,
@@ -262,7 +278,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     contact_details: Optional[ContactStructure] = field(
         default=None,
@@ -270,7 +286,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "ContactDetails",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accessibility_assessment: Optional[AccessibilityAssessment] = field(
         default=None,
@@ -278,7 +294,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "AccessibilityAssessment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     allowed_directions: Optional[AllowedLineDirectionsRelStructure] = field(
         default=None,
@@ -286,7 +302,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "allowedDirections",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -294,7 +310,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     document_links: Optional[InfoLinksRelStructure] = field(
         default=None,
@@ -302,5 +318,5 @@ class LineVersionStructure(DataManagedObjectStructure):
             "name": "documentLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

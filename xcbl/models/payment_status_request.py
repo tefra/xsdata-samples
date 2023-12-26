@@ -58,7 +58,7 @@ class PaymentStatusRequestHeader:
         metadata={
             "name": "PayerParty",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -72,7 +72,7 @@ class PaymentStatusRequestHeader:
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -83,49 +83,51 @@ class PaymentStatusRequestDetail:
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
-        }
+        },
     )
     payment_request_id: Optional[PaymentRequestId] = field(
         default=None,
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
-        }
+        },
     )
     confirmation_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
-        }
+        },
     )
     payment_date_range: Optional[PaymentDateRange] = field(
         default=None,
         metadata={
             "name": "PaymentDateRange",
             "type": "Element",
-        }
+        },
     )
     payment_dates: Optional[PaymentDates] = field(
         default=None,
         metadata={
             "name": "PaymentDates",
             "type": "Element",
-        }
+        },
     )
     settlement_amount: Optional[SettlementAmount] = field(
         default=None,
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
-        }
+        },
     )
-    list_of_payment_request_references: Optional[ListOfPaymentRequestReferences] = field(
+    list_of_payment_request_references: Optional[
+        ListOfPaymentRequestReferences
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfPaymentRequestReferences",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -137,7 +139,7 @@ class ListOfPaymentStatusRequestDetail:
             "name": "PaymentStatusRequestDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -150,12 +152,14 @@ class PaymentStatusRequest:
             "required": True,
         }
     )
-    list_of_payment_status_request_detail: ListOfPaymentStatusRequestDetail = field(
-        metadata={
-            "name": "ListOfPaymentStatusRequestDetail",
-            "type": "Element",
-            "required": True,
-        }
+    list_of_payment_status_request_detail: ListOfPaymentStatusRequestDetail = (
+        field(
+            metadata={
+                "name": "ListOfPaymentStatusRequestDetail",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
     payment_status_request_summary: PaymentStatusRequestSummary = field(
         metadata={

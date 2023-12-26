@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.direction_bearing_value import DirectionBearingValue
-from datexii.models.eu.datexii.v2.direction_compass_value import DirectionCompassValue
+from datexii.models.eu.datexii.v2.direction_bearing_value import (
+    DirectionBearingValue,
+)
+from datexii.models.eu.datexii.v2.direction_compass_value import (
+    DirectionCompassValue,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.speed_value import SpeedValue
 
@@ -27,13 +31,14 @@ class Wind:
         wind blows, in terms of points of the compass.
     :ivar wind_extension:
     """
+
     wind_measurement_height: Optional[int] = field(
         default=None,
         metadata={
             "name": "windMeasurementHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     wind_speed: Optional[SpeedValue] = field(
         default=None,
@@ -41,7 +46,7 @@ class Wind:
             "name": "windSpeed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     maximum_wind_speed: Optional[SpeedValue] = field(
         default=None,
@@ -49,7 +54,7 @@ class Wind:
             "name": "maximumWindSpeed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     wind_direction_bearing: Optional[DirectionBearingValue] = field(
         default=None,
@@ -57,7 +62,7 @@ class Wind:
             "name": "windDirectionBearing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     wind_direction_compass: Optional[DirectionCompassValue] = field(
         default=None,
@@ -65,7 +70,7 @@ class Wind:
             "name": "windDirectionCompass",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     wind_extension: Optional[ExtensionType] = field(
         default=None,
@@ -73,5 +78,5 @@ class Wind:
             "name": "windExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

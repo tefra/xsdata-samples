@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from datexii.models.eu.datexii.v2.parking_table_versioned_reference import ParkingTableVersionedReference
+from datexii.models.eu.datexii.v2.parking_table_versioned_reference import (
+    ParkingTableVersionedReference,
+)
 from datexii.models.eu.datexii.v2.parking_vehicle import ParkingVehicle
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -16,13 +18,14 @@ class ParkingVehiclesPublication:
         to these tables here.
     :ivar parking_vehicle:
     """
+
     parking_table_reference: List[ParkingTableVersionedReference] = field(
         default_factory=list,
         metadata={
             "name": "parkingTableReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_vehicle: List[ParkingVehicle] = field(
         default_factory=list,
@@ -31,5 +34,5 @@ class ParkingVehiclesPublication:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )

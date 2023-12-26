@@ -24,6 +24,7 @@ class VehicleKeywordReq(BaseSearchReq1):
     keyword_list
         When true, a list of keywords should be returned.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -33,7 +34,7 @@ class VehicleKeywordReq(BaseSearchReq1):
             "name": "Vendor",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     pickup_date_location: None | TypePickupDateLocation = field(
         default=None,
@@ -41,7 +42,7 @@ class VehicleKeywordReq(BaseSearchReq1):
             "name": "PickupDateLocation",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     keyword: list[Keyword1] = field(
         default_factory=list,
@@ -50,12 +51,12 @@ class VehicleKeywordReq(BaseSearchReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 3,
-        }
+        },
     )
     keyword_list: None | bool = field(
         default=None,
         metadata={
             "name": "KeywordList",
             "type": "Attribute",
-        }
+        },
     )

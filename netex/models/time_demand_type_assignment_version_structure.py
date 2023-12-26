@@ -19,7 +19,7 @@ class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "TimeDemandTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     timeband_ref: Optional[TimebandRef] = field(
         default=None,
@@ -27,7 +27,7 @@ class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "TimebandRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     group_of_timing_links_ref: Optional[GroupOfTimingLinksRef] = field(
         default=None,
@@ -35,5 +35,5 @@ class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "GroupOfTimingLinksRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

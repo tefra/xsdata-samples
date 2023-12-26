@@ -21,6 +21,7 @@ class TagAdd1:
     tag_id
         The ID of the tag to add.
     """
+
     class Meta:
         name = "TagAdd"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -31,7 +32,7 @@ class TagAdd1:
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -39,7 +40,7 @@ class TagAdd1:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     tag_id: None | str = field(
         default=None,
@@ -47,5 +48,5 @@ class TagAdd1:
             "name": "TagID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -17,13 +17,14 @@ class PointCoordinates:
         Terrestrial Reference System 1989 (ETRS89).
     :ivar point_coordinates_extension:
     """
+
     latitude: Optional[float] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     longitude: Optional[float] = field(
         default=None,
@@ -31,7 +32,7 @@ class PointCoordinates:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     point_coordinates_extension: Optional[ExtensionType] = field(
         default=None,
@@ -39,5 +40,5 @@ class PointCoordinates:
             "name": "pointCoordinatesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

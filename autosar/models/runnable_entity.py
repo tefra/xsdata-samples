@@ -7,13 +7,19 @@ from .annotation import (
     VariationPoint,
 )
 from .asynchronous_server_call_point import AsynchronousServerCallPoint
-from .asynchronous_server_call_result_point import AsynchronousServerCallResultPoint
+from .asynchronous_server_call_result_point import (
+    AsynchronousServerCallResultPoint,
+)
 from .boolean import Boolean
 from .c_identifier import CIdentifier
 from .category_string import CategoryString
-from .exclusive_area_nesting_order_subtypes_enum import ExclusiveAreaNestingOrderSubtypesEnum
+from .exclusive_area_nesting_order_subtypes_enum import (
+    ExclusiveAreaNestingOrderSubtypesEnum,
+)
 from .exclusive_area_subtypes_enum import ExclusiveAreaSubtypesEnum
-from .executable_entity_activation_reason import ExecutableEntityActivationReason
+from .executable_entity_activation_reason import (
+    ExecutableEntityActivationReason,
+)
 from .external_triggering_point import ExternalTriggeringPoint
 from .identifier import Identifier
 from .internal_triggering_point import InternalTriggeringPoint
@@ -258,6 +264,7 @@ class RunnableEntity:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RUNNABLE-ENTITY"
 
@@ -268,15 +275,17 @@ class RunnableEntity:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RunnableEntity.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RunnableEntity.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -284,7 +293,7 @@ class RunnableEntity:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -292,7 +301,7 @@ class RunnableEntity:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -300,7 +309,7 @@ class RunnableEntity:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -308,7 +317,7 @@ class RunnableEntity:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -316,7 +325,7 @@ class RunnableEntity:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RunnableEntity.Annotations"] = field(
         default=None,
@@ -324,7 +333,7 @@ class RunnableEntity:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     activation_reasons: Optional["RunnableEntity.ActivationReasons"] = field(
         default=None,
@@ -332,23 +341,27 @@ class RunnableEntity:
             "name": "ACTIVATION-REASONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    can_enter_exclusive_area_refs: Optional["RunnableEntity.CanEnterExclusiveAreaRefs"] = field(
+    can_enter_exclusive_area_refs: Optional[
+        "RunnableEntity.CanEnterExclusiveAreaRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exclusive_area_nesting_order_refs: Optional["RunnableEntity.ExclusiveAreaNestingOrderRefs"] = field(
+    exclusive_area_nesting_order_refs: Optional[
+        "RunnableEntity.ExclusiveAreaNestingOrderRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_start_interval: Optional[TimeValue] = field(
         default=None,
@@ -356,7 +369,7 @@ class RunnableEntity:
             "name": "MINIMUM-START-INTERVAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     reentrancy_level: Optional[ReentrancyLevelEnum] = field(
         default=None,
@@ -364,15 +377,17 @@ class RunnableEntity:
             "name": "REENTRANCY-LEVEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    runs_inside_exclusive_area_refs: Optional["RunnableEntity.RunsInsideExclusiveAreaRefs"] = field(
+    runs_inside_exclusive_area_refs: Optional[
+        "RunnableEntity.RunsInsideExclusiveAreaRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_addr_method_ref: Optional["RunnableEntity.SwAddrMethodRef"] = field(
         default=None,
@@ -380,7 +395,7 @@ class RunnableEntity:
             "name": "SW-ADDR-METHOD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     arguments: Optional["RunnableEntity.Arguments"] = field(
         default=None,
@@ -388,15 +403,17 @@ class RunnableEntity:
             "name": "ARGUMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    asynchronous_server_call_result_points: Optional["RunnableEntity.AsynchronousServerCallResultPoints"] = field(
+    asynchronous_server_call_result_points: Optional[
+        "RunnableEntity.AsynchronousServerCallResultPoints"
+    ] = field(
         default=None,
         metadata={
             "name": "ASYNCHRONOUS-SERVER-CALL-RESULT-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_be_invoked_concurrently: Optional[Boolean] = field(
         default=None,
@@ -404,7 +421,7 @@ class RunnableEntity:
             "name": "CAN-BE-INVOKED-CONCURRENTLY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_read_accesss: Optional["RunnableEntity.DataReadAccesss"] = field(
         default=None,
@@ -412,23 +429,27 @@ class RunnableEntity:
             "name": "DATA-READ-ACCESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_receive_point_by_arguments: Optional["RunnableEntity.DataReceivePointByArguments"] = field(
+    data_receive_point_by_arguments: Optional[
+        "RunnableEntity.DataReceivePointByArguments"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINT-BY-ARGUMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_receive_point_by_values: Optional["RunnableEntity.DataReceivePointByValues"] = field(
+    data_receive_point_by_values: Optional[
+        "RunnableEntity.DataReceivePointByValues"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINT-BY-VALUES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_send_points: Optional["RunnableEntity.DataSendPoints"] = field(
         default=None,
@@ -436,7 +457,7 @@ class RunnableEntity:
             "name": "DATA-SEND-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_write_accesss: Optional["RunnableEntity.DataWriteAccesss"] = field(
         default=None,
@@ -444,23 +465,27 @@ class RunnableEntity:
             "name": "DATA-WRITE-ACCESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    external_triggering_points: Optional["RunnableEntity.ExternalTriggeringPoints"] = field(
+    external_triggering_points: Optional[
+        "RunnableEntity.ExternalTriggeringPoints"
+    ] = field(
         default=None,
         metadata={
             "name": "EXTERNAL-TRIGGERING-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    internal_triggering_points: Optional["RunnableEntity.InternalTriggeringPoints"] = field(
+    internal_triggering_points: Optional[
+        "RunnableEntity.InternalTriggeringPoints"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERNAL-TRIGGERING-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mode_access_points: Optional["RunnableEntity.ModeAccessPoints"] = field(
         default=None,
@@ -468,7 +493,7 @@ class RunnableEntity:
             "name": "MODE-ACCESS-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mode_switch_points: Optional["RunnableEntity.ModeSwitchPoints"] = field(
         default=None,
@@ -476,7 +501,7 @@ class RunnableEntity:
             "name": "MODE-SWITCH-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     parameter_accesss: Optional["RunnableEntity.ParameterAccesss"] = field(
         default=None,
@@ -484,15 +509,17 @@ class RunnableEntity:
             "name": "PARAMETER-ACCESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    read_local_variables: Optional["RunnableEntity.ReadLocalVariables"] = field(
+    read_local_variables: Optional[
+        "RunnableEntity.ReadLocalVariables"
+    ] = field(
         default=None,
         metadata={
             "name": "READ-LOCAL-VARIABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     server_call_points: Optional["RunnableEntity.ServerCallPoints"] = field(
         default=None,
@@ -500,7 +527,7 @@ class RunnableEntity:
             "name": "SERVER-CALL-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol: Optional[CIdentifier] = field(
         default=None,
@@ -508,7 +535,7 @@ class RunnableEntity:
             "name": "SYMBOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wait_points: Optional["RunnableEntity.WaitPoints"] = field(
         default=None,
@@ -516,15 +543,17 @@ class RunnableEntity:
             "name": "WAIT-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    written_local_variables: Optional["RunnableEntity.WrittenLocalVariables"] = field(
+    written_local_variables: Optional[
+        "RunnableEntity.WrittenLocalVariables"
+    ] = field(
         default=None,
         metadata={
             "name": "WRITTEN-LOCAL-VARIABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -532,14 +561,14 @@ class RunnableEntity:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -547,14 +576,14 @@ class RunnableEntity:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -565,7 +594,7 @@ class RunnableEntity:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -576,29 +605,33 @@ class RunnableEntity:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ActivationReasons:
-        executable_entity_activation_reason: List[ExecutableEntityActivationReason] = field(
+        executable_entity_activation_reason: List[
+            ExecutableEntityActivationReason
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXECUTABLE-ENTITY-ACTIVATION-REASON",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CanEnterExclusiveAreaRefs:
-        can_enter_exclusive_area_ref: List["RunnableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"] = field(
+        can_enter_exclusive_area_ref: List[
+            "RunnableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-ENTER-EXCLUSIVE-AREA-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -609,18 +642,20 @@ class RunnableEntity:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ExclusiveAreaNestingOrderRefs:
-        exclusive_area_nesting_order_ref: List["RunnableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"] = field(
+        exclusive_area_nesting_order_ref: List[
+            "RunnableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXCLUSIVE-AREA-NESTING-ORDER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -631,18 +666,20 @@ class RunnableEntity:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class RunsInsideExclusiveAreaRefs:
-        runs_inside_exclusive_area_ref: List["RunnableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"] = field(
+        runs_inside_exclusive_area_ref: List[
+            "RunnableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -653,7 +690,7 @@ class RunnableEntity:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -664,7 +701,7 @@ class RunnableEntity:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -675,18 +712,20 @@ class RunnableEntity:
                 "name": "RUNNABLE-ENTITY-ARGUMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AsynchronousServerCallResultPoints:
-        asynchronous_server_call_result_point: List[AsynchronousServerCallResultPoint] = field(
+        asynchronous_server_call_result_point: List[
+            AsynchronousServerCallResultPoint
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ASYNCHRONOUS-SERVER-CALL-RESULT-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -697,7 +736,7 @@ class RunnableEntity:
                 "name": "VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -708,7 +747,7 @@ class RunnableEntity:
                 "name": "VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -719,7 +758,7 @@ class RunnableEntity:
                 "name": "VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -730,7 +769,7 @@ class RunnableEntity:
                 "name": "VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -741,7 +780,7 @@ class RunnableEntity:
                 "name": "VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -752,7 +791,7 @@ class RunnableEntity:
                 "name": "EXTERNAL-TRIGGERING-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -763,7 +802,7 @@ class RunnableEntity:
                 "name": "INTERNAL-TRIGGERING-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -774,7 +813,7 @@ class RunnableEntity:
                 "name": "MODE-ACCESS-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -785,7 +824,7 @@ class RunnableEntity:
                 "name": "MODE-SWITCH-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -796,7 +835,7 @@ class RunnableEntity:
                 "name": "PARAMETER-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -807,26 +846,30 @@ class RunnableEntity:
                 "name": "VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ServerCallPoints:
-        asynchronous_server_call_point: List[AsynchronousServerCallPoint] = field(
+        asynchronous_server_call_point: List[
+            AsynchronousServerCallPoint
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ASYNCHRONOUS-SERVER-CALL-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        synchronous_server_call_point: List[SynchronousServerCallPoint] = field(
+        synchronous_server_call_point: List[
+            SynchronousServerCallPoint
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SYNCHRONOUS-SERVER-CALL-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -837,7 +880,7 @@ class RunnableEntity:
                 "name": "WAIT-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -848,5 +891,5 @@ class RunnableEntity:
                 "name": "VARIABLE-ACCESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

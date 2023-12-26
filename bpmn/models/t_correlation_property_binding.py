@@ -19,7 +19,7 @@ class TCorrelationPropertyBinding(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        }
+        },
     )
     correlation_property_ref: Optional[QName] = field(
         default=None,
@@ -27,5 +27,5 @@ class TCorrelationPropertyBinding(TBaseElement):
             "name": "correlationPropertyRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

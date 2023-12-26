@@ -29,23 +29,26 @@ class McGroupDataRefSet:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MC-GROUP-DATA-REF-SET"
 
-    mc_group_data_ref_set_variants: Optional["McGroupDataRefSet.McGroupDataRefSetVariants"] = field(
+    mc_group_data_ref_set_variants: Optional[
+        "McGroupDataRefSet.McGroupDataRefSetVariants"
+    ] = field(
         default=None,
         metadata={
             "name": "MC-GROUP-DATA-REF-SET-VARIANTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -53,16 +56,18 @@ class McGroupDataRefSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class McGroupDataRefSetVariants:
-        mc_group_data_ref_set_conditional: List[McGroupDataRefSetConditional] = field(
+        mc_group_data_ref_set_conditional: List[
+            McGroupDataRefSetConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MC-GROUP-DATA-REF-SET-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

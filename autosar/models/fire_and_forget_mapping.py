@@ -6,14 +6,18 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .client_server_operation_subtypes_enum import (
+    ClientServerOperationSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .trigger_subtypes_enum import TriggerSubtypesEnum
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -87,6 +91,7 @@ class FireAndForgetMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FIRE-AND-FORGET-MAPPING"
 
@@ -97,15 +102,17 @@ class FireAndForgetMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["FireAndForgetMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "FireAndForgetMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -113,7 +120,7 @@ class FireAndForgetMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -121,7 +128,7 @@ class FireAndForgetMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -129,7 +136,7 @@ class FireAndForgetMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -137,7 +144,7 @@ class FireAndForgetMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -145,7 +152,7 @@ class FireAndForgetMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["FireAndForgetMapping.Annotations"] = field(
         default=None,
@@ -153,7 +160,7 @@ class FireAndForgetMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_element_ref: Optional["FireAndForgetMapping.DataElementRef"] = field(
         default=None,
@@ -161,7 +168,7 @@ class FireAndForgetMapping:
             "name": "DATA-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     method_ref: Optional["FireAndForgetMapping.MethodRef"] = field(
         default=None,
@@ -169,7 +176,7 @@ class FireAndForgetMapping:
             "name": "METHOD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trigger_ref: Optional["FireAndForgetMapping.TriggerRef"] = field(
         default=None,
@@ -177,14 +184,14 @@ class FireAndForgetMapping:
             "name": "TRIGGER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -192,14 +199,14 @@ class FireAndForgetMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -210,7 +217,7 @@ class FireAndForgetMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -221,7 +228,7 @@ class FireAndForgetMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,7 +239,7 @@ class FireAndForgetMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -243,7 +250,7 @@ class FireAndForgetMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -254,5 +261,5 @@ class FireAndForgetMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

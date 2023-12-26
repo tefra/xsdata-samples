@@ -2,23 +2,55 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.amount_or_quantity_type import AmountOrQuantityType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.code_description_type import CodeDescriptionType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geographical_scope import GeographicalScope
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.perc_value_type import PercValueType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.clauses_type import ClausesType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.deductibles_type import DeductiblesType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.exposure_type_apply_rate_type import ExposureTypeApplyRateType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.exposure_type_basis import ExposureTypeBasis
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.exposure_type_calculation_rate_type import ExposureTypeCalculationRateType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.indemnity_type import IndemnityType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limits_type import LimitsType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_type import PremiumType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
+    AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.amount_or_quantity_type import (
+    AmountOrQuantityType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.code_description_type import (
+    CodeDescriptionType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.geographical_scope import (
+    GeographicalScope,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.perc_value_type import (
+    PercValueType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.clauses_type import (
+    ClausesType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.deductibles_type import (
+    DeductiblesType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.exposure_type_apply_rate_type import (
+    ExposureTypeApplyRateType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.exposure_type_basis import (
+    ExposureTypeBasis,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.exposure_type_calculation_rate_type import (
+    ExposureTypeCalculationRateType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.indemnity_type import (
+    IndemnityType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limits_type import (
+    LimitsType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.premium_type import (
+    PremiumType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -38,13 +70,14 @@ class CoverageType:
     :ivar geographical_scope:
     :ivar claims_trigger:
     """
+
     limits: Optional[LimitsType] = field(
         default=None,
         metadata={
             "name": "Limits",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     deductibles: Optional[DeductiblesType] = field(
         default=None,
@@ -52,7 +85,7 @@ class CoverageType:
             "name": "Deductibles",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     exposures: Optional["ExposuresType"] = field(
         default=None,
@@ -60,7 +93,7 @@ class CoverageType:
             "name": "Exposures",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     premium: Optional[PremiumType] = field(
         default=None,
@@ -68,7 +101,7 @@ class CoverageType:
             "name": "Premium",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     coverage_code: Optional[CodeType] = field(
         default=None,
@@ -77,7 +110,7 @@ class CoverageType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     clauses: Optional[ClausesType] = field(
         default=None,
@@ -85,7 +118,7 @@ class CoverageType:
             "name": "Clauses",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     effective_date: Optional[XmlDateTime] = field(
         default=None,
@@ -93,7 +126,7 @@ class CoverageType:
             "name": "EffectiveDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     end_date: Optional[XmlDateTime] = field(
         default=None,
@@ -101,7 +134,7 @@ class CoverageType:
             "name": "EndDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     retroactive_date: Optional[XmlDateTime] = field(
         default=None,
@@ -109,7 +142,7 @@ class CoverageType:
             "name": "RetroactiveDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     term_date: Optional[XmlDateTime] = field(
         default=None,
@@ -117,7 +150,7 @@ class CoverageType:
             "name": "TermDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     geographical_scope: Optional[GeographicalScope] = field(
         default=None,
@@ -125,7 +158,7 @@ class CoverageType:
             "name": "GeographicalScope",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     claims_trigger: Optional[str] = field(
         default=None,
@@ -133,7 +166,7 @@ class CoverageType:
             "name": "ClaimsTrigger",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
 
 
@@ -146,7 +179,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     estimated_value: Optional[AmountOrQuantityType] = field(
         default=None,
@@ -155,7 +188,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     premium: Optional[PremiumType] = field(
         default=None,
@@ -163,7 +196,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "Premium",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     calculation_factor: Optional[Decimal] = field(
         default=None,
@@ -171,7 +204,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "CalculationFactor",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     apply_rate_type: Optional[ExposureTypeApplyRateType] = field(
         default=None,
@@ -180,7 +213,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     unit: Optional[CodeDescriptionType] = field(
         default=None,
@@ -188,7 +221,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "Unit",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     item: Optional[CodeDescriptionType] = field(
         default=None,
@@ -196,7 +229,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "Item",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     basis: Optional[ExposureTypeBasis] = field(
         default=None,
@@ -204,7 +237,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "Basis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     calculation_rate_type: Optional[ExposureTypeCalculationRateType] = field(
         default=None,
@@ -212,7 +245,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "CalculationRateType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     coverage: Optional[CoverageType] = field(
         default=None,
@@ -220,7 +253,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "Coverage",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     mfl: Optional[PercValueType] = field(
         default=None,
@@ -228,7 +261,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "MFL",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     unit_price: Optional[AmountType] = field(
         default=None,
@@ -236,7 +269,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "UnitPrice",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     indemnity: Optional[IndemnityType] = field(
         default=None,
@@ -244,7 +277,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "Indemnity",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
 
 
@@ -256,5 +289,5 @@ class ExposuresType:
             "name": "Exposure",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

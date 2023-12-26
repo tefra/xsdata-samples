@@ -20,6 +20,7 @@ class TravelerCriteria1:
     viponly
         To Search for VIP traveler
     """
+
     class Meta:
         name = "TravelerCriteria"
         namespace = "http://www.travelport.com/schema/universal_v52_0"
@@ -29,26 +30,26 @@ class TravelerCriteria1:
         metadata={
             "name": "NameCriteria",
             "type": "Element",
-        }
+        },
     )
     applied_profile_criteria: None | AppliedProfileCriteria = field(
         default=None,
         metadata={
             "name": "AppliedProfileCriteria",
             "type": "Element",
-        }
+        },
     )
     phone_number: None | str = field(
         default=None,
         metadata={
             "name": "PhoneNumber",
             "type": "Attribute",
-        }
+        },
     )
     viponly: None | bool = field(
         default=None,
         metadata={
             "name": "VIPOnly",
             "type": "Attribute",
-        }
+        },
     )

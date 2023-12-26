@@ -20,7 +20,7 @@ class ProgramType(BaseMediaType):
             "name": "scheduleEvents",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     episode_of: list[MemberRefType] = field(
         default_factory=list,
@@ -32,14 +32,14 @@ class ProgramType(BaseMediaType):
                 "A program (only if its type is 'BROADCAST') can be an episode"
                 " of a group of type 'SERIES' or 'SEASON'."
             ),
-        }
+        },
     )
     segments: None | SegmentsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     type_value: None | ProgramTypeEnum = field(
         default=None,
@@ -48,5 +48,5 @@ class ProgramType(BaseMediaType):
             "type": "Attribute",
             "required": True,
             "doc": "The type of this program (e.g. BROADCAST, TRACK, CLIP)",
-        }
+        },
     )

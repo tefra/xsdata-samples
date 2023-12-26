@@ -19,6 +19,7 @@ class DetailedBillingInformation:
         Returns related air pricing infos.
     billing_detail_item
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class DetailedBillingInformation:
             "name": "FormOfPaymentRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
@@ -37,7 +38,7 @@ class DetailedBillingInformation:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     billing_detail_item: list[BillingDetailItem] = field(
         default_factory=list,
@@ -46,5 +47,5 @@ class DetailedBillingInformation:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

@@ -20,5 +20,5 @@ class Lok:
                     "type": Url,
                 },
             ),
-        }
+        },
     )

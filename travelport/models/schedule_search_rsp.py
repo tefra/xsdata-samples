@@ -10,5 +10,6 @@ class ScheduleSearchRsp(AirSearchRsp):
     """
     Schedule Search response.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

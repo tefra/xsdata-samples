@@ -6,23 +6,27 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilityGeneralInteractionStructure:
-    interaction: Optional["CapabilityGeneralInteractionStructure.Interaction"] = field(
+    interaction: Optional[
+        "CapabilityGeneralInteractionStructure.Interaction"
+    ] = field(
         default=None,
         metadata={
             "name": "Interaction",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
-    delivery: Optional["CapabilityGeneralInteractionStructure.Delivery"] = field(
+    delivery: Optional[
+        "CapabilityGeneralInteractionStructure.Delivery"
+    ] = field(
         default=None,
         metadata={
             "name": "Delivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     multipart_despatch: bool = field(
         default=True,
@@ -31,7 +35,7 @@ class CapabilityGeneralInteractionStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     multiple_subscriber_filter: bool = field(
         default=False,
@@ -40,7 +44,7 @@ class CapabilityGeneralInteractionStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     has_confirm_delivery: bool = field(
         default=False,
@@ -49,7 +53,7 @@ class CapabilityGeneralInteractionStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     has_heartbeat: bool = field(
         default=False,
@@ -58,7 +62,7 @@ class CapabilityGeneralInteractionStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     visit_numberis_order: Optional[bool] = field(
         default=None,
@@ -66,7 +70,7 @@ class CapabilityGeneralInteractionStructure:
             "name": "VisitNumberisOrder",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
 
     @dataclass
@@ -78,7 +82,7 @@ class CapabilityGeneralInteractionStructure:
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
                 "required": True,
-            }
+            },
         )
         publish_subscribe: bool = field(
             default=True,
@@ -87,7 +91,7 @@ class CapabilityGeneralInteractionStructure:
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -99,7 +103,7 @@ class CapabilityGeneralInteractionStructure:
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
                 "required": True,
-            }
+            },
         )
         fetched_delivery: Optional[bool] = field(
             default=None,
@@ -108,5 +112,5 @@ class CapabilityGeneralInteractionStructure:
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
                 "required": True,
-            }
+            },
         )

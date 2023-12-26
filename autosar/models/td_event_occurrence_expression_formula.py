@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
-from .autosar_operation_argument_instance_subtypes_enum import AutosarOperationArgumentInstanceSubtypesEnum
-from .autosar_variable_instance_subtypes_enum import AutosarVariableInstanceSubtypesEnum
+from .autosar_operation_argument_instance_subtypes_enum import (
+    AutosarOperationArgumentInstanceSubtypesEnum,
+)
+from .autosar_variable_instance_subtypes_enum import (
+    AutosarVariableInstanceSubtypesEnum,
+)
 from .ref import Ref
-from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .timing_description_event_subtypes_enum import (
+    TimingDescriptionEventSubtypesEnum,
+)
 from .timing_mode_instance_subtypes_enum import TimingModeInstanceSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -32,6 +38,7 @@ class TdEventOccurrenceExpressionFormula:
         AUTOSAR tools to manage the timestamp.
     :ivar content:
     """
+
     class Meta:
         name = "TD-EVENT-OCCURRENCE-EXPRESSION-FORMULA"
 
@@ -40,7 +47,7 @@ class TdEventOccurrenceExpressionFormula:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -48,7 +55,7 @@ class TdEventOccurrenceExpressionFormula:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -59,12 +66,16 @@ class TdEventOccurrenceExpressionFormula:
             "choices": (
                 {
                     "name": "ARGUMENT-REF",
-                    "type": Type["TdEventOccurrenceExpressionFormula.ArgumentRef"],
+                    "type": Type[
+                        "TdEventOccurrenceExpressionFormula.ArgumentRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "EVENT-REF",
-                    "type": Type["TdEventOccurrenceExpressionFormula.EventRef"],
+                    "type": Type[
+                        "TdEventOccurrenceExpressionFormula.EventRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
@@ -74,11 +85,13 @@ class TdEventOccurrenceExpressionFormula:
                 },
                 {
                     "name": "VARIABLE-REF",
-                    "type": Type["TdEventOccurrenceExpressionFormula.VariableRef"],
+                    "type": Type[
+                        "TdEventOccurrenceExpressionFormula.VariableRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -89,7 +102,7 @@ class TdEventOccurrenceExpressionFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -100,7 +113,7 @@ class TdEventOccurrenceExpressionFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -111,7 +124,7 @@ class TdEventOccurrenceExpressionFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -122,5 +135,5 @@ class TdEventOccurrenceExpressionFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

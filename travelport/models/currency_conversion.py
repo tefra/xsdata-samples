@@ -20,6 +20,7 @@ class CurrencyConversion:
     bank_selling_rate
         Currency Conversion Rate
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -30,7 +31,7 @@ class CurrencyConversion:
             "type": "Attribute",
             "required": True,
             "length": 3,
-        }
+        },
     )
     to: None | str = field(
         default=None,
@@ -39,26 +40,26 @@ class CurrencyConversion:
             "type": "Attribute",
             "required": True,
             "length": 3,
-        }
+        },
     )
     original_amount: None | float = field(
         default=None,
         metadata={
             "name": "OriginalAmount",
             "type": "Attribute",
-        }
+        },
     )
     converted_amount: None | float = field(
         default=None,
         metadata={
             "name": "ConvertedAmount",
             "type": "Attribute",
-        }
+        },
     )
     bank_selling_rate: None | float = field(
         default=None,
         metadata={
             "name": "BankSellingRate",
             "type": "Attribute",
-        }
+        },
     )

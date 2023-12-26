@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .diagnostic_data_element_subtypes_enum import DiagnosticDataElementSubtypesEnum
+from .diagnostic_data_element_subtypes_enum import (
+    DiagnosticDataElementSubtypesEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 
@@ -31,6 +33,7 @@ class DiagnosticControlEnableMaskBit:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-CONTROL-ENABLE-MASK-BIT"
 
@@ -40,22 +43,24 @@ class DiagnosticControlEnableMaskBit:
             "name": "BIT-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    controlled_data_element_refs: Optional["DiagnosticControlEnableMaskBit.ControlledDataElementRefs"] = field(
+    controlled_data_element_refs: Optional[
+        "DiagnosticControlEnableMaskBit.ControlledDataElementRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTROLLED-DATA-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -63,18 +68,20 @@ class DiagnosticControlEnableMaskBit:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class ControlledDataElementRefs:
-        controlled_data_element_ref: List["DiagnosticControlEnableMaskBit.ControlledDataElementRefs.ControlledDataElementRef"] = field(
+        controlled_data_element_ref: List[
+            "DiagnosticControlEnableMaskBit.ControlledDataElementRefs.ControlledDataElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONTROLLED-DATA-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -85,5 +92,5 @@ class DiagnosticControlEnableMaskBit:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

@@ -22,6 +22,7 @@ class AirSegmentData:
         is not identified if it is not present.
     class_of_service
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -31,7 +32,7 @@ class AirSegmentData:
             "name": "AirSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     baggage_allowance: list[BaggageAllowance] = field(
         default_factory=list,
@@ -39,7 +40,7 @@ class AirSegmentData:
             "name": "BaggageAllowance",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     brand: list[Brand] = field(
         default_factory=list,
@@ -47,14 +48,14 @@ class AirSegmentData:
             "name": "Brand",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -63,5 +64,5 @@ class AirSegmentData:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

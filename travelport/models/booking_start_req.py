@@ -15,6 +15,7 @@ class BookingStartReq(BaseReq1):
     provider_code
         Provider with which session needs to be started.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -26,5 +27,5 @@ class BookingStartReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

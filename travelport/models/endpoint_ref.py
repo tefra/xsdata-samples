@@ -18,6 +18,7 @@ class EndpointRef(TypeEndpointRef):
     end_point_code
         End Point Code description.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -27,7 +28,7 @@ class EndpointRef(TypeEndpointRef):
             "name": "PurposeTypeCode",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     end_point_code: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class EndpointRef(TypeEndpointRef):
             "name": "EndPointCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

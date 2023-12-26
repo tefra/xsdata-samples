@@ -9,6 +9,7 @@ class TypeHotelAvailability(Enum):
     Availability status of hotel Hotel is Available NotAvailable Available, but not
     for the rates requested On request Unknown.
     """
+
     AVAILABLE = "Available"
     NOT_AVAILABLE = "NotAvailable"
     AVAILABLE_FOR_OTHER_RATES = "AvailableForOtherRates"

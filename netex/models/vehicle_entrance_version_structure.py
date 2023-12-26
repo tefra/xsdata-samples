@@ -16,5 +16,5 @@ class VehicleEntranceVersionStructure(SiteEntranceVersionStructure):
             "name": "Public",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

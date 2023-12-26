@@ -14,7 +14,7 @@ class ClassAttributeInFrameStructure:
             "name": "Type",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mandatory: Optional[MandatoryEnumeration] = field(
         default=None,
@@ -22,11 +22,11 @@ class ClassAttributeInFrameStructure:
             "name": "Mandatory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[QName] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

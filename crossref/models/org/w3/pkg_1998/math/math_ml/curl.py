@@ -15,5 +15,5 @@ class Curl:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

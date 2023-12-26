@@ -7,4 +7,5 @@ class AreaEnumNohrefSimple(Enum):
     """
     :cvar NOHREF: This indicates that the area has no active link.
     """
+
     NOHREF = "NOHREF"

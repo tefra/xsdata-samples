@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .authority import Authority
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .general_organisation import GeneralOrganisation
@@ -18,7 +18,18 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationsInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            RetailConsortium,
+            Authority,
+            Operator,
+            ServicedOrganisation,
+            GeneralOrganisation,
+            ManagementAgent,
+            TravelAgent,
+            OtherOrganisation,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -64,5 +75,5 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

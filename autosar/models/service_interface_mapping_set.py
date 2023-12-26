@@ -86,6 +86,7 @@ class ServiceInterfaceMappingSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SERVICE-INTERFACE-MAPPING-SET"
 
@@ -96,15 +97,17 @@ class ServiceInterfaceMappingSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ServiceInterfaceMappingSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ServiceInterfaceMappingSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -112,7 +115,7 @@ class ServiceInterfaceMappingSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -120,7 +123,7 @@ class ServiceInterfaceMappingSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -128,7 +131,7 @@ class ServiceInterfaceMappingSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -136,7 +139,7 @@ class ServiceInterfaceMappingSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -144,7 +147,7 @@ class ServiceInterfaceMappingSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ServiceInterfaceMappingSet.Annotations"] = field(
         default=None,
@@ -152,7 +155,7 @@ class ServiceInterfaceMappingSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -160,30 +163,34 @@ class ServiceInterfaceMappingSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    element_mappings: Optional["ServiceInterfaceMappingSet.ElementMappings"] = field(
+    element_mappings: Optional[
+        "ServiceInterfaceMappingSet.ElementMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "ELEMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    interface_mappings: Optional["ServiceInterfaceMappingSet.InterfaceMappings"] = field(
+    interface_mappings: Optional[
+        "ServiceInterfaceMappingSet.InterfaceMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERFACE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -191,14 +198,14 @@ class ServiceInterfaceMappingSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -209,7 +216,7 @@ class ServiceInterfaceMappingSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -220,34 +227,40 @@ class ServiceInterfaceMappingSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ElementMappings:
-        service_interface_event_mapping: List[ServiceInterfaceEventMapping] = field(
+        service_interface_event_mapping: List[
+            ServiceInterfaceEventMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE-EVENT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        service_interface_field_mapping: List[ServiceInterfaceFieldMapping] = field(
+        service_interface_field_mapping: List[
+            ServiceInterfaceFieldMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE-FIELD-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        service_interface_method_mapping: List[ServiceInterfaceMethodMapping] = field(
+        service_interface_method_mapping: List[
+            ServiceInterfaceMethodMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INTERFACE-METHOD-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -258,5 +271,5 @@ class ServiceInterfaceMappingSet:
                 "name": "SERVICE-INTERFACE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -21,7 +21,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "BaggageUseType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     baggage_type: Optional[BaggageTypeEnumeration] = field(
         default=None,
@@ -29,7 +29,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "BaggageType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     luggage_allowance_type: Optional[LuggageAllowanceTypeEnumeration] = field(
         default=None,
@@ -37,7 +37,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "LuggageAllowanceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_items: Optional[int] = field(
         default=None,
@@ -45,7 +45,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberItems",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_height: Optional[Decimal] = field(
         default=None,
@@ -53,7 +53,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumBagHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_width: Optional[Decimal] = field(
         default=None,
@@ -61,7 +61,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumBagWidth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_depth: Optional[Decimal] = field(
         default=None,
@@ -69,7 +69,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumBagDepth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_weight: Optional[Decimal] = field(
         default=None,
@@ -77,7 +77,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumBagWeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     total_weight: Optional[Decimal] = field(
         default=None,
@@ -85,7 +85,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "TotalWeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     luggage_charging_basis: Optional[LuggageChargingBasisEnumeration] = field(
         default=None,
@@ -93,5 +93,5 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "name": "LuggageChargingBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

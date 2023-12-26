@@ -13,6 +13,7 @@ class AclScopeEnumSimple(Enum):
     :cvar EXPLICIT: This is indicates that the AclPermission applies to
         explicit objects / operations only.
     """
+
     DEPENDANT = "DEPENDANT"
     DESCENDANT = "DESCENDANT"
     EXPLICIT = "EXPLICIT"

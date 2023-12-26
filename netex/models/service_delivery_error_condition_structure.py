@@ -1,11 +1,15 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .access_not_allowed_error import AccessNotAllowedError
-from .allowed_resource_usage_exceeded_error import AllowedResourceUsageExceededError
+from .allowed_resource_usage_exceeded_error import (
+    AllowedResourceUsageExceededError,
+)
 from .beyond_data_horizon import BeyondDataHorizon
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .endpoint_denied_access_error import EndpointDeniedAccessError
-from .endpoint_not_available_access_error import EndpointNotAvailableAccessError
+from .endpoint_not_available_access_error import (
+    EndpointNotAvailableAccessError,
+)
 from .invalid_data_references_error import InvalidDataReferencesError
 from .no_info_for_topic_error import NoInfoForTopicError
 from .other_error import OtherError
@@ -21,7 +25,25 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceDeliveryErrorConditionStructure:
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            UnapprovedKeyAccessError,
+            UnknownParticipantError,
+            UnknownEndpointError,
+            EndpointDeniedAccessError,
+            EndpointNotAvailableAccessError,
+            ServiceNotAvailableError,
+            CapabilityNotSupportedError,
+            AccessNotAllowedError,
+            InvalidDataReferencesError,
+            BeyondDataHorizon,
+            NoInfoForTopicError,
+            ParametersIgnoredError,
+            UnknownExtensionsError,
+            AllowedResourceUsageExceededError,
+            OtherError,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -102,7 +124,7 @@ class ServiceDeliveryErrorConditionStructure:
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-        }
+        },
     )
     description: Optional[str] = field(
         default=None,
@@ -110,5 +132,5 @@ class ServiceDeliveryErrorConditionStructure:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

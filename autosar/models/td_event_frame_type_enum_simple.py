@@ -16,6 +16,7 @@ class TdEventFrameTypeEnumSimple(Enum):
         subscriber's communication controller receives the frame from
         the bus.
     """
+
     FRAME_QUEUED_FOR_TRANSMISSION = "FRAME-QUEUED-FOR-TRANSMISSION"
     FRAME_RECEIVED_BY_IF = "FRAME-RECEIVED-BY-IF"
     FRAME_TRANSMITTED_ON_BUS = "FRAME-TRANSMITTED-ON-BUS"

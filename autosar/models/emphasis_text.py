@@ -34,6 +34,7 @@ class EmphasisText:
         by particular formatting engines. Default is BOLD.
     :ivar content:
     """
+
     class Meta:
         name = "EMPHASIS-TEXT"
 
@@ -42,7 +43,7 @@ class EmphasisText:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -50,28 +51,28 @@ class EmphasisText:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     color: Optional[str] = field(
         default=None,
         metadata={
             "name": "COLOR",
             "type": "Attribute",
-        }
+        },
     )
     font: Optional[EEnumFontSimple] = field(
         default=None,
         metadata={
             "name": "FONT",
             "type": "Attribute",
-        }
+        },
     )
     type_value: Optional[EEnumSimple] = field(
         default=None,
         metadata={
             "name": "TYPE",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -96,5 +97,5 @@ class EmphasisText:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )

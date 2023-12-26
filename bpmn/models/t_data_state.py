@@ -14,5 +14,5 @@ class TDataState(TBaseElement):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

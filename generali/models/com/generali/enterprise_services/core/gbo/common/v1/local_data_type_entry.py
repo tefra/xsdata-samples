@@ -16,7 +16,7 @@ class LocalDataTypeEntry:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "min_occurs": 1,
-        }
+        },
     )
     key: Optional[str] = field(
         default=None,
@@ -24,5 +24,5 @@ class LocalDataTypeEntry:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

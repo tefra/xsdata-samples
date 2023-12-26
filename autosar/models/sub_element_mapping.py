@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .application_composite_data_type_sub_element_ref import ApplicationCompositeDataTypeSubElementRef
-from .implementation_data_type_sub_element_ref import ImplementationDataTypeSubElementRef
+from .application_composite_data_type_sub_element_ref import (
+    ApplicationCompositeDataTypeSubElementRef,
+)
+from .implementation_data_type_sub_element_ref import (
+    ImplementationDataTypeSubElementRef,
+)
 from .text_table_mapping import TextTableMapping
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -34,6 +38,7 @@ class SubElementMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SUB-ELEMENT-MAPPING"
 
@@ -43,7 +48,7 @@ class SubElementMapping:
             "name": "FIRST-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     second_elements: Optional["SubElementMapping.SecondElements"] = field(
         default=None,
@@ -51,22 +56,24 @@ class SubElementMapping:
             "name": "SECOND-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    text_table_mappings: Optional["SubElementMapping.TextTableMappings"] = field(
+    text_table_mappings: Optional[
+        "SubElementMapping.TextTableMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "TEXT-TABLE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -74,45 +81,53 @@ class SubElementMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class FirstElements:
-        application_composite_data_type_sub_element_ref: List[ApplicationCompositeDataTypeSubElementRef] = field(
+        application_composite_data_type_sub_element_ref: List[
+            ApplicationCompositeDataTypeSubElementRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-COMPOSITE-DATA-TYPE-SUB-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        implementation_data_type_sub_element_ref: List[ImplementationDataTypeSubElementRef] = field(
+        implementation_data_type_sub_element_ref: List[
+            ImplementationDataTypeSubElementRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-SUB-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SecondElements:
-        application_composite_data_type_sub_element_ref: List[ApplicationCompositeDataTypeSubElementRef] = field(
+        application_composite_data_type_sub_element_ref: List[
+            ApplicationCompositeDataTypeSubElementRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-COMPOSITE-DATA-TYPE-SUB-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        implementation_data_type_sub_element_ref: List[ImplementationDataTypeSubElementRef] = field(
+        implementation_data_type_sub_element_ref: List[
+            ImplementationDataTypeSubElementRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-SUB-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -124,5 +139,5 @@ class SubElementMapping:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 2,
-            }
+            },
         )

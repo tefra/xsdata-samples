@@ -12,6 +12,7 @@ class ReferenceDataRetrieveRsp(BaseRsp1):
     Response to retrieve code, name and description for a specific reference data
     type.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,7 +22,7 @@ class ReferenceDataRetrieveRsp(BaseRsp1):
             "name": "ReferenceDataItem",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     more_results: None | bool = field(
         default=None,
@@ -29,5 +30,5 @@ class ReferenceDataRetrieveRsp(BaseRsp1):
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

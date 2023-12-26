@@ -28,6 +28,7 @@ class ServiceFee2(TypeKeyElement2):
     priority_order
         Priority order associated with this ServiceFee.
     """
+
     class Meta:
         name = "ServiceFee"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -38,7 +39,7 @@ class ServiceFee2(TypeKeyElement2):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
@@ -46,7 +47,7 @@ class ServiceFee2(TypeKeyElement2):
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     supplier_type: None | TypeSupplierType2 = field(
         default=None,
@@ -54,14 +55,14 @@ class ServiceFee2(TypeKeyElement2):
             "name": "SupplierType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -70,5 +71,5 @@ class ServiceFee2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

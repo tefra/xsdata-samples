@@ -9,6 +9,7 @@ class UnitedNationsHistory2:
     """
     United Nations Form of Payments.
     """
+
     class Meta:
         name = "UnitedNationsHistory"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -18,5 +19,5 @@ class UnitedNationsHistory2:
         metadata={
             "name": "Number",
             "type": "Attribute",
-        }
+        },
     )

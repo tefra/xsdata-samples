@@ -13,6 +13,7 @@ class LinearElementNatureEnum(Enum):
     :cvar SLIP_ROAD: The nature of the linear element is a slip road.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ROAD = "road"
     ROAD_SECTION = "roadSection"
     SLIP_ROAD = "slipRoad"

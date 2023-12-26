@@ -88,6 +88,7 @@ class PlatformHealthManagementContribution:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PLATFORM-HEALTH-MANAGEMENT-CONTRIBUTION"
 
@@ -98,15 +99,17 @@ class PlatformHealthManagementContribution:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PlatformHealthManagementContribution.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PlatformHealthManagementContribution.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +117,7 @@ class PlatformHealthManagementContribution:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +125,7 @@ class PlatformHealthManagementContribution:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +133,7 @@ class PlatformHealthManagementContribution:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +141,7 @@ class PlatformHealthManagementContribution:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,15 +149,17 @@ class PlatformHealthManagementContribution:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["PlatformHealthManagementContribution.Annotations"] = field(
+    annotations: Optional[
+        "PlatformHealthManagementContribution.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -162,46 +167,54 @@ class PlatformHealthManagementContribution:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    checkpoints: Optional["PlatformHealthManagementContribution.Checkpoints"] = field(
+    checkpoints: Optional[
+        "PlatformHealthManagementContribution.Checkpoints"
+    ] = field(
         default=None,
         metadata={
             "name": "CHECKPOINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    local_supervisions: Optional["PlatformHealthManagementContribution.LocalSupervisions"] = field(
+    local_supervisions: Optional[
+        "PlatformHealthManagementContribution.LocalSupervisions"
+    ] = field(
         default=None,
         metadata={
             "name": "LOCAL-SUPERVISIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    global_supervisions: Optional["PlatformHealthManagementContribution.GlobalSupervisions"] = field(
+    global_supervisions: Optional[
+        "PlatformHealthManagementContribution.GlobalSupervisions"
+    ] = field(
         default=None,
         metadata={
             "name": "GLOBAL-SUPERVISIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    health_channels: Optional["PlatformHealthManagementContribution.HealthChannels"] = field(
+    health_channels: Optional[
+        "PlatformHealthManagementContribution.HealthChannels"
+    ] = field(
         default=None,
         metadata={
             "name": "HEALTH-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -209,14 +222,14 @@ class PlatformHealthManagementContribution:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -227,7 +240,7 @@ class PlatformHealthManagementContribution:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -238,7 +251,7 @@ class PlatformHealthManagementContribution:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -249,7 +262,7 @@ class PlatformHealthManagementContribution:
                 "name": "SUPERVISION-CHECKPOINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -260,7 +273,7 @@ class PlatformHealthManagementContribution:
                 "name": "LOCAL-SUPERVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -271,18 +284,20 @@ class PlatformHealthManagementContribution:
                 "name": "GLOBAL-SUPERVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class HealthChannels:
-        health_channel_external_status: List[HealthChannelExternalStatus] = field(
+        health_channel_external_status: List[
+            HealthChannelExternalStatus
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "HEALTH-CHANNEL-EXTERNAL-STATUS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         health_channel_supervision: List[HealthChannelSupervision] = field(
             default_factory=list,
@@ -290,5 +305,5 @@ class PlatformHealthManagementContribution:
                 "name": "HEALTH-CHANNEL-SUPERVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

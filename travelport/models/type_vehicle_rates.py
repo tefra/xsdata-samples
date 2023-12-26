@@ -31,6 +31,7 @@ class TypeVehicleRates:
     pay_later
         Pay later is added for Future Functionality
     """
+
     class Meta:
         name = "typeVehicleRates"
 
@@ -39,68 +40,68 @@ class TypeVehicleRates:
         metadata={
             "name": "EstimatedTotalAmount",
             "type": "Attribute",
-        }
+        },
     )
     base_rate: None | str = field(
         default=None,
         metadata={
             "name": "BaseRate",
             "type": "Attribute",
-        }
+        },
     )
     rate_for_period: None | str = field(
         default=None,
         metadata={
             "name": "RateForPeriod",
             "type": "Attribute",
-        }
+        },
     )
     drop_off_charge: None | str = field(
         default=None,
         metadata={
             "name": "DropOffCharge",
             "type": "Attribute",
-        }
+        },
     )
     young_driver_charge: None | str = field(
         default=None,
         metadata={
             "name": "YoungDriverCharge",
             "type": "Attribute",
-        }
+        },
     )
     senior_driver_charge: None | str = field(
         default=None,
         metadata={
             "name": "SeniorDriverCharge",
             "type": "Attribute",
-        }
+        },
     )
     fuel_surcharge: None | str = field(
         default=None,
         metadata={
             "name": "FuelSurcharge",
             "type": "Attribute",
-        }
+        },
     )
     extra_mileage_charge: None | str = field(
         default=None,
         metadata={
             "name": "ExtraMileageCharge",
             "type": "Attribute",
-        }
+        },
     )
     pay_now: None | str = field(
         default=None,
         metadata={
             "name": "PayNow",
             "type": "Attribute",
-        }
+        },
     )
     pay_later: None | str = field(
         default=None,
         metadata={
             "name": "PayLater",
             "type": "Attribute",
-        }
+        },
     )

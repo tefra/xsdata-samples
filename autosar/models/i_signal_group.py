@@ -7,17 +7,25 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .data_transformation_ref_conditional import DataTransformationRefConditional
-from .end_to_end_transformation_i_signal_props import EndToEndTransformationISignalProps
+from .data_transformation_ref_conditional import (
+    DataTransformationRefConditional,
+)
+from .end_to_end_transformation_i_signal_props import (
+    EndToEndTransformationISignalProps,
+)
 from .i_signal_subtypes_enum import ISignalSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .someip_transformation_i_signal_props import SomeipTransformationISignalProps
+from .someip_transformation_i_signal_props import (
+    SomeipTransformationISignalProps,
+)
 from .system_signal_group_subtypes_enum import SystemSignalGroupSubtypesEnum
-from .user_defined_transformation_i_signal_props import UserDefinedTransformationISignalProps
+from .user_defined_transformation_i_signal_props import (
+    UserDefinedTransformationISignalProps,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -101,6 +109,7 @@ class ISignalGroup:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "I-SIGNAL-GROUP"
 
@@ -111,7 +120,7 @@ class ISignalGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["ISignalGroup.ShortNameFragments"] = field(
         default=None,
@@ -119,7 +128,7 @@ class ISignalGroup:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -127,7 +136,7 @@ class ISignalGroup:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -135,7 +144,7 @@ class ISignalGroup:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -143,7 +152,7 @@ class ISignalGroup:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -151,7 +160,7 @@ class ISignalGroup:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -159,7 +168,7 @@ class ISignalGroup:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ISignalGroup.Annotations"] = field(
         default=None,
@@ -167,7 +176,7 @@ class ISignalGroup:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -175,15 +184,17 @@ class ISignalGroup:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    com_based_signal_group_transformations: Optional["ISignalGroup.ComBasedSignalGroupTransformations"] = field(
+    com_based_signal_group_transformations: Optional[
+        "ISignalGroup.ComBasedSignalGroupTransformations"
+    ] = field(
         default=None,
         metadata={
             "name": "COM-BASED-SIGNAL-GROUP-TRANSFORMATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     i_signal_refs: Optional["ISignalGroup.ISignalRefs"] = field(
         default=None,
@@ -191,30 +202,34 @@ class ISignalGroup:
             "name": "I-SIGNAL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    system_signal_group_ref: Optional["ISignalGroup.SystemSignalGroupRef"] = field(
+    system_signal_group_ref: Optional[
+        "ISignalGroup.SystemSignalGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformation_i_signal_propss: Optional["ISignalGroup.TransformationISignalPropss"] = field(
+    transformation_i_signal_propss: Optional[
+        "ISignalGroup.TransformationISignalPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-I-SIGNAL-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -222,14 +237,14 @@ class ISignalGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -240,7 +255,7 @@ class ISignalGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -251,18 +266,20 @@ class ISignalGroup:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ComBasedSignalGroupTransformations:
-        data_transformation_ref_conditional: List[DataTransformationRefConditional] = field(
+        data_transformation_ref_conditional: List[
+            DataTransformationRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-TRANSFORMATION-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -273,7 +290,7 @@ class ISignalGroup:
                 "name": "I-SIGNAL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -284,7 +301,7 @@ class ISignalGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -295,32 +312,38 @@ class ISignalGroup:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class TransformationISignalPropss:
-        end_to_end_transformation_i_signal_props: List[EndToEndTransformationISignalProps] = field(
+        end_to_end_transformation_i_signal_props: List[
+            EndToEndTransformationISignalProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-TO-END-TRANSFORMATION-I-SIGNAL-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        someip_transformation_i_signal_props: List[SomeipTransformationISignalProps] = field(
+        someip_transformation_i_signal_props: List[
+            SomeipTransformationISignalProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_transformation_i_signal_props: List[UserDefinedTransformationISignalProps] = field(
+        user_defined_transformation_i_signal_props: List[
+            UserDefinedTransformationISignalProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-TRANSFORMATION-I-SIGNAL-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

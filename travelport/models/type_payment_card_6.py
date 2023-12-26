@@ -32,6 +32,7 @@ class TypePaymentCard6:
         Card company directly,required for some of the CCH carriers.This
         attribute is also used for EMD retrieve and issuance transactions.
     """
+
     class Meta:
         name = "typePaymentCard"
 
@@ -41,7 +42,7 @@ class TypePaymentCard6:
             "name": "PhoneNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
-        }
+        },
     )
     billing_address: None | TypeStructuredAddress6 = field(
         default=None,
@@ -49,7 +50,7 @@ class TypePaymentCard6:
             "name": "BillingAddress",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class TypePaymentCard6:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 2,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -67,14 +68,14 @@ class TypePaymentCard6:
             "type": "Attribute",
             "min_length": 13,
             "max_length": 128,
-        }
+        },
     )
     exp_date: None | XmlPeriod = field(
         default=None,
         metadata={
             "name": "ExpDate",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -82,7 +83,7 @@ class TypePaymentCard6:
             "name": "Name",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )
     cvv: None | str = field(
         default=None,
@@ -90,7 +91,7 @@ class TypePaymentCard6:
             "name": "CVV",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )
     approval_code: None | str = field(
         default=None,
@@ -99,5 +100,5 @@ class TypePaymentCard6:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )

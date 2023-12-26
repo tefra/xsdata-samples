@@ -8,5 +8,6 @@ class TypeDirection6(Enum):
     """
     Defines the Direction for Incoming or Outgoing.
     """
+
     INCOMING = "Incoming"
     OUTGOING = "Outgoing"

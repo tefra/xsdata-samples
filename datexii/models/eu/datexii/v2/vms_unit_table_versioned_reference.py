@@ -16,5 +16,5 @@ class VmsUnitTableVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

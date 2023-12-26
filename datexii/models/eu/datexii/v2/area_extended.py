@@ -11,13 +11,14 @@ class AreaExtended:
     """
     Extension class for area used in parking publication extension.
     """
+
     named_area: Optional[NamedArea] = field(
         default=None,
         metadata={
             "name": "namedArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     polygon_area: List[PolygonArea] = field(
         default_factory=list,
@@ -25,5 +26,5 @@ class AreaExtended:
             "name": "polygonArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

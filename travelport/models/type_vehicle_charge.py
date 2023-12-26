@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_vehicle_charge_included_in_rate import TypeVehicleChargeIncludedInRate
+from travelport.models.type_vehicle_charge_included_in_rate import (
+    TypeVehicleChargeIncludedInRate,
+)
 from travelport.models.type_vehicle_charge_type import TypeVehicleChargeType
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
@@ -34,6 +36,7 @@ class TypeVehicleCharge:
         Specifies whether the charge is included in the rate and if it is,
         if it is in the base or total rate.
     """
+
     class Meta:
         name = "typeVehicleCharge"
 
@@ -43,7 +46,7 @@ class TypeVehicleCharge:
             "name": "Amount",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     percentage: None | str = field(
         default=None,
@@ -52,7 +55,7 @@ class TypeVehicleCharge:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     category: None | str = field(
         default=None,
@@ -60,33 +63,33 @@ class TypeVehicleCharge:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | TypeVehicleChargeType = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     included_in_rate: None | TypeVehicleChargeIncludedInRate = field(
         default=None,
         metadata={
             "name": "IncludedInRate",
             "type": "Attribute",
-        }
+        },
     )

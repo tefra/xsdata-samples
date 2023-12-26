@@ -19,7 +19,7 @@ class SegmentType(BaseMediaType):
             "name": "segmentOf",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     start: None | XmlDuration = field(
         default=None,
@@ -27,7 +27,7 @@ class SegmentType(BaseMediaType):
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     mid_ref: None | str = field(
         default=None,
@@ -38,7 +38,7 @@ class SegmentType(BaseMediaType):
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
-        }
+        },
     )
     urn_ref: None | str = field(
         default=None,
@@ -46,7 +46,7 @@ class SegmentType(BaseMediaType):
             "name": "urnRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | SegmentTypeEnum = field(
         default=None,
@@ -54,5 +54,5 @@ class SegmentType(BaseMediaType):
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

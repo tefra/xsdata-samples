@@ -13,6 +13,7 @@ class Head:
     contains information that will be used as a reference in error
     messages triggered during submission processing.
     """
+
     class Meta:
         name = "head"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -24,21 +25,21 @@ class Head:
             "required": True,
             "min_length": 4,
             "max_length": 100,
-        }
+        },
     )
     timestamp: Optional[int] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-        }
+        },
     )
     depositor: Optional[Depositor] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-        }
+        },
     )
     registrant: Optional[str] = field(
         default=None,
@@ -47,5 +48,5 @@ class Head:
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

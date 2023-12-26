@@ -22,6 +22,7 @@ class TypeSearchAddress1:
     country
         The country of the profile to search for.
     """
+
     class Meta:
         name = "typeSearchAddress"
 
@@ -32,7 +33,7 @@ class TypeSearchAddress1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     city: None | str = field(
         default=None,
@@ -41,7 +42,7 @@ class TypeSearchAddress1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 50,
-        }
+        },
     )
     state_province: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class TypeSearchAddress1:
             "min_length": 1,
             "max_length": 64,
             "white_space": "collapse",
-        }
+        },
     )
     postal_code: None | str = field(
         default=None,
@@ -60,7 +61,7 @@ class TypeSearchAddress1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 12,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -68,5 +69,5 @@ class TypeSearchAddress1:
             "name": "Country",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )

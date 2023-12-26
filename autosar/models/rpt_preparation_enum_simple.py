@@ -14,6 +14,7 @@ class RptPreparationEnumSimple(Enum):
         "RP global measurement buffer" to record the original ECU-
         generated value in addition to the RP value.
     """
+
     NONE = "NONE"
     RPT_LEVEL_1 = "RPT-LEVEL-1"
     RPT_LEVEL_2 = "RPT-LEVEL-2"

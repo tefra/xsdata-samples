@@ -14,5 +14,5 @@ class MedicalFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

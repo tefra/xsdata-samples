@@ -11,6 +11,7 @@ class PartNumber:
     more volumes within each part. The part number of a given volume
     should be deposited in this element.
     """
+
     class Meta:
         name = "part_number"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -20,5 +21,5 @@ class PartNumber:
         metadata={
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )

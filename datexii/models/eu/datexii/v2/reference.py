@@ -11,5 +11,5 @@ class Reference:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

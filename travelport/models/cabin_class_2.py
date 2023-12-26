@@ -9,6 +9,7 @@ class CabinClass2:
     """
     The cabin class (First, Business, Economy)
     """
+
     class Meta:
         name = "CabinClass"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -19,5 +20,5 @@ class CabinClass2:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

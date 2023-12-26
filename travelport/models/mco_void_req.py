@@ -18,6 +18,7 @@ class McoVoidReq(BaseReq1):
         The number of the MCO to void
     return_mco
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -28,7 +29,7 @@ class McoVoidReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -36,12 +37,12 @@ class McoVoidReq(BaseReq1):
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     return_mco: bool = field(
         default=False,
         metadata={
             "name": "ReturnMCO",
             "type": "Attribute",
-        }
+        },
     )

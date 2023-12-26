@@ -23,6 +23,7 @@ class PolicyInformation4:
         In Policy / Out of Policy Indicator
     segment_ref
     """
+
     class Meta:
         name = "PolicyInformation"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -32,7 +33,7 @@ class PolicyInformation4:
         metadata={
             "name": "ReasonCode",
             "type": "Element",
-        }
+        },
     )
     type_value: None | TypePolicy3 = field(
         default=None,
@@ -40,28 +41,28 @@ class PolicyInformation4:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | object = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )
     out_of_policy: None | bool = field(
         default=None,
         metadata={
             "name": "OutOfPolicy",
             "type": "Attribute",
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -75,24 +76,25 @@ class PolicyInformation4:
             Reason Code -Purpose of Trip
         remark
         """
+
         out_of_policy: None | str = field(
             default=None,
             metadata={
                 "name": "OutOfPolicy",
                 "type": "Element",
-            }
+            },
         )
         purpose_of_trip: None | str = field(
             default=None,
             metadata={
                 "name": "PurposeOfTrip",
                 "type": "Element",
-            }
+            },
         )
         remark: None | Remark4 = field(
             default=None,
             metadata={
                 "name": "Remark",
                 "type": "Element",
-            }
+            },
         )

@@ -16,5 +16,5 @@ class NuisanceFacility:
         ],
         metadata={
             "tokens": True,
-        }
+        },
     )

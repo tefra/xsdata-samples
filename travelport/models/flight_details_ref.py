@@ -9,6 +9,7 @@ class FlightDetailsRef:
     """
     Reference to a complete FlightDetails from a shared list.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class FlightDetailsRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

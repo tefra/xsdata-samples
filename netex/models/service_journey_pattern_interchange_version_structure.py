@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ServiceJourneyPatternInterchangeVersionStructure(InterchangeVersionStructure):
+class ServiceJourneyPatternInterchangeVersionStructure(
+    InterchangeVersionStructure
+):
     class Meta:
         name = "ServiceJourneyPatternInterchange_VersionStructure"
 
@@ -19,7 +21,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(InterchangeVersionStructu
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     from_visit_number: Optional[int] = field(
         default=None,
@@ -27,7 +29,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(InterchangeVersionStructu
             "name": "FromVisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -36,7 +38,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(InterchangeVersionStructu
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_visit_number: Optional[int] = field(
         default=None,
@@ -44,7 +46,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(InterchangeVersionStructu
             "name": "ToVisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     from_journey_pattern_ref: Optional[JourneyPatternRefStructure] = field(
         default=None,
@@ -53,7 +55,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(InterchangeVersionStructu
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_journey_pattern_ref: Optional[JourneyPatternRefStructure] = field(
         default=None,
@@ -62,5 +64,5 @@ class ServiceJourneyPatternInterchangeVersionStructure(InterchangeVersionStructu
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

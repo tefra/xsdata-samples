@@ -24,14 +24,14 @@ class ApplicationIdentification:
         metadata={
             "name": "ApplicationIDExtension",
             "type": "Element",
-        }
+        },
     )
     application_instance: Optional[str] = field(
         default=None,
         metadata={
             "name": "ApplicationInstance",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -82,7 +82,7 @@ class ItemReference:
         metadata={
             "name": "ScheduleLineID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -122,14 +122,14 @@ class ApplicationResponseDetail:
         metadata={
             "name": "ErrorTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     item_reference: Optional[ItemReference] = field(
         default=None,
         metadata={
             "name": "ItemReference",
             "type": "Element",
-        }
+        },
     )
     error_info: ErrorInfo = field(
         metadata={
@@ -143,7 +143,7 @@ class ApplicationResponseDetail:
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: ListOfNameValueSet = field(
         metadata={
@@ -182,7 +182,7 @@ class ApplicationResponseHeader:
         metadata={
             "name": "SendingApplication",
             "type": "Element",
-        }
+        },
     )
     application_response_receiver: ApplicationResponseReceiver = field(
         metadata={
@@ -196,7 +196,7 @@ class ApplicationResponseHeader:
         metadata={
             "name": "RespondingApplication",
             "type": "Element",
-        }
+        },
     )
     business_document_type_coded: str = field(
         metadata={
@@ -210,7 +210,7 @@ class ApplicationResponseHeader:
         metadata={
             "name": "BusinessDocumentTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     document_reference: DocumentReference = field(
         metadata={
@@ -231,28 +231,28 @@ class ApplicationResponseHeader:
         metadata={
             "name": "DocumentStatusCodedOther",
             "type": "Element",
-        }
+        },
     )
     application_response_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "ApplicationResponseNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -264,7 +264,7 @@ class ListOfApplicationResponseDetail:
             "name": "ApplicationResponseDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -277,10 +277,12 @@ class ApplicationResponse:
             "required": True,
         }
     )
-    list_of_application_response_detail: Optional[ListOfApplicationResponseDetail] = field(
+    list_of_application_response_detail: Optional[
+        ListOfApplicationResponseDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfApplicationResponseDetail",
             "type": "Element",
-        }
+        },
     )

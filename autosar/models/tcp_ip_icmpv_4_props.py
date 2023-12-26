@@ -30,6 +30,7 @@ class TcpIpIcmpv4Props:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TCP-IP-ICMPV-4-PROPS"
 
@@ -39,7 +40,7 @@ class TcpIpIcmpv4Props:
             "name": "TCP-IP-ICMP-V-4-ECHO-REPLY-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_icmp_v_4_ttl: Optional[PositiveInteger] = field(
         default=None,
@@ -47,14 +48,14 @@ class TcpIpIcmpv4Props:
             "name": "TCP-IP-ICMP-V-4-TTL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -62,5 +63,5 @@ class TcpIpIcmpv4Props:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

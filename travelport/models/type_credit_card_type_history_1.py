@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_payment_card_history_1 import TypePaymentCardHistory1
+from travelport.models.type_payment_card_history_1 import (
+    TypePaymentCardHistory1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -30,6 +32,7 @@ class TypeCreditCardTypeHistory1(TypePaymentCardHistory1):
     active
         Denotes whether the Credit Card is Active or Not.
     """
+
     class Meta:
         name = "typeCreditCardTypeHistory"
 
@@ -38,35 +41,35 @@ class TypeCreditCardTypeHistory1(TypePaymentCardHistory1):
         metadata={
             "name": "ExtendedPayment",
             "type": "Attribute",
-        }
+        },
     )
     customer_reference: None | str = field(
         default=None,
         metadata={
             "name": "CustomerReference",
             "type": "Attribute",
-        }
+        },
     )
     acceptance_override: None | bool = field(
         default=None,
         metadata={
             "name": "AcceptanceOverride",
             "type": "Attribute",
-        }
+        },
     )
     third_party_payment: bool = field(
         default=False,
         metadata={
             "name": "ThirdPartyPayment",
             "type": "Attribute",
-        }
+        },
     )
     bank_name: None | str = field(
         default=None,
         metadata={
             "name": "BankName",
             "type": "Attribute",
-        }
+        },
     )
     bank_country_code: None | str = field(
         default=None,
@@ -74,19 +77,19 @@ class TypeCreditCardTypeHistory1(TypePaymentCardHistory1):
             "name": "BankCountryCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     extract_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "ExtractIndicator",
             "type": "Attribute",
-        }
+        },
     )
     active: None | bool = field(
         default=None,
         metadata={
             "name": "Active",
             "type": "Attribute",
-        }
+        },
     )

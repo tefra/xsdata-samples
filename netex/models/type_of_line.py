@@ -15,5 +15,5 @@ class TypeOfLine(TypeOfLineValueStructure):
         metadata={
             "name": "nameOfClassifiedEntityClass",
             "type": "Attribute",
-        }
+        },
     )

@@ -14,6 +14,7 @@ class ExchangedTicketInfo:
     number
         Original Ticket that was Exchange/Reissued
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,5 +25,5 @@ class ExchangedTicketInfo:
             "type": "Attribute",
             "required": True,
             "length": 13,
-        }
+        },
     )

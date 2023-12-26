@@ -25,6 +25,7 @@ class RailRefundInfo:
     net_amount
         Net total amount to be refunded or retained by the vendor.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -33,40 +34,40 @@ class RailRefundInfo:
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
-        }
+        },
     )
     cancellation_fee: None | str = field(
         default=None,
         metadata={
             "name": "CancellationFee",
             "type": "Attribute",
-        }
+        },
     )
     refund: None | bool = field(
         default=None,
         metadata={
             "name": "Refund",
             "type": "Attribute",
-        }
+        },
     )
     retain: None | bool = field(
         default=None,
         metadata={
             "name": "Retain",
             "type": "Attribute",
-        }
+        },
     )
     retain_amount: None | str = field(
         default=None,
         metadata={
             "name": "RetainAmount",
             "type": "Attribute",
-        }
+        },
     )
     net_amount: None | str = field(
         default=None,
         metadata={
             "name": "NetAmount",
             "type": "Attribute",
-        }
+        },
     )

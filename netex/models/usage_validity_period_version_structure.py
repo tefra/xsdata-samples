@@ -7,7 +7,9 @@ from .blackout_start_enumeration import BlackoutStartEnumeration
 from .fixed_start_window_structure import FixedStartWindowStructure
 from .usage_end_enumeration import UsageEndEnumeration
 from .usage_parameter_version_structure import UsageParameterVersionStructure
-from .usage_start_constraint_type_enumeration import UsageStartConstraintTypeEnumeration
+from .usage_start_constraint_type_enumeration import (
+    UsageStartConstraintTypeEnumeration,
+)
 from .usage_trigger_enumeration import UsageTriggerEnumeration
 from .usage_validity_type_enumeration import UsageValidityTypeEnumeration
 
@@ -25,7 +27,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "ValidityPeriodType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     usage_trigger: Optional[UsageTriggerEnumeration] = field(
         default=None,
@@ -33,7 +35,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "UsageTrigger",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     usage_end: Optional[UsageEndEnumeration] = field(
         default=None,
@@ -41,7 +43,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "UsageEnd",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     standard_duration: Optional[XmlDuration] = field(
         default=None,
@@ -49,7 +51,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "StandardDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     activation_means: Optional[ActivationMeansEnumeration] = field(
         default=None,
@@ -57,7 +59,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "ActivationMeans",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_date: Optional[XmlDate] = field(
         default=None,
@@ -65,7 +67,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "StartDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_time: Optional[XmlTime] = field(
         default=None,
@@ -73,7 +75,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_date: Optional[XmlDate] = field(
         default=None,
@@ -81,7 +83,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "EndDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_time: Optional[XmlTime] = field(
         default=None,
@@ -89,15 +91,17 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    usage_start_constraint_type: Optional[UsageStartConstraintTypeEnumeration] = field(
+    usage_start_constraint_type: Optional[
+        UsageStartConstraintTypeEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "UsageStartConstraintType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_only_on: Optional[DayTypesRelStructure] = field(
         default=None,
@@ -105,7 +109,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "startOnlyOn",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fixed_start_window: Optional[FixedStartWindowStructure] = field(
         default=None,
@@ -113,7 +117,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "FixedStartWindow",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     blackout_use: Optional[BlackoutStartEnumeration] = field(
         default=None,
@@ -121,5 +125,5 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "name": "BlackoutUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

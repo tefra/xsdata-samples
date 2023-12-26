@@ -10,5 +10,6 @@ class ComplianceOptionEnum(Enum):
     :cvar ADVISORY: Advisory compliance.
     :cvar MANDATORY: Mandatory compliance.
     """
+
     ADVISORY = "advisory"
     MANDATORY = "mandatory"

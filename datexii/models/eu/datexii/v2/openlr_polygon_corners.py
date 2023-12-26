@@ -13,6 +13,7 @@ class OpenlrPolygonCorners:
     The coordinate pairs defining the corners of the underlying
     geometrical polygon.
     """
+
     openlr_coordinate: List[PointCoordinates] = field(
         default_factory=list,
         metadata={
@@ -20,7 +21,7 @@ class OpenlrPolygonCorners:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 3,
-        }
+        },
     )
     openlr_polygon_corners_extension: Optional[ExtensionType] = field(
         default=None,
@@ -28,5 +29,5 @@ class OpenlrPolygonCorners:
             "name": "openlrPolygonCornersExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

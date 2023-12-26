@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.util_currency_conversion_port_type_service_input import UtilCurrencyConversionPortTypeServiceInput
-from travelport.models.util_currency_conversion_port_type_service_output import UtilCurrencyConversionPortTypeServiceOutput
+from travelport.models.util_currency_conversion_port_type_service_input import (
+    UtilCurrencyConversionPortTypeServiceInput,
+)
+from travelport.models.util_currency_conversion_port_type_service_output import (
+    UtilCurrencyConversionPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

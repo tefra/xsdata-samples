@@ -26,6 +26,7 @@ class UniversalRecordHistorySearchModifiers:
     debug_mode
         Returns Debug info. Travelport Internal Usage Only.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -34,21 +35,21 @@ class UniversalRecordHistorySearchModifiers:
         metadata={
             "name": "ElementType",
             "type": "Element",
-        }
+        },
     )
     modified_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ModifiedDate",
             "type": "Element",
-        }
+        },
     )
     modified_range: None | UniversalRecordHistorySearchModifiers.ModifiedRange = field(
         default=None,
         metadata={
             "name": "ModifiedRange",
             "type": "Element",
-        }
+        },
     )
     max_results: int = field(
         default=20,
@@ -57,7 +58,7 @@ class UniversalRecordHistorySearchModifiers:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 200,
-        }
+        },
     )
     start_from_result: int = field(
         default=1,
@@ -65,21 +66,21 @@ class UniversalRecordHistorySearchModifiers:
             "name": "StartFromResult",
             "type": "Attribute",
             "min_inclusive": 1,
-        }
+        },
     )
     modified_by: None | object = field(
         default=None,
         metadata={
             "name": "ModifiedBy",
             "type": "Attribute",
-        }
+        },
     )
     debug_mode: bool = field(
         default=False,
         metadata={
             "name": "DebugMode",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -90,7 +91,7 @@ class UniversalRecordHistorySearchModifiers:
                 "name": "ModifiedStart",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         modified_end: None | XmlDate = field(
             default=None,
@@ -98,5 +99,5 @@ class UniversalRecordHistorySearchModifiers:
                 "name": "ModifiedEnd",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )

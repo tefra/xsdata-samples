@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SalesOfferPackageSubstitutionVersionStructure(AssignmentVersionStructure1):
+class SalesOfferPackageSubstitutionVersionStructure(
+    AssignmentVersionStructure1
+):
     class Meta:
         name = "SalesOfferPackageSubstitution_VersionStructure"
 
@@ -18,14 +20,16 @@ class SalesOfferPackageSubstitutionVersionStructure(AssignmentVersionStructure1)
             "name": "SalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    with_sales_offer_package_ref: Optional[SalesOfferPackageRefStructure] = field(
+    with_sales_offer_package_ref: Optional[
+        SalesOfferPackageRefStructure
+    ] = field(
         default=None,
         metadata={
             "name": "WithSalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

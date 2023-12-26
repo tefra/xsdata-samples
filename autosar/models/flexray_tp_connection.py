@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
-from .flexray_tp_connection_control_subtypes_enum import FlexrayTpConnectionControlSubtypesEnum
+from .flexray_tp_connection_control_subtypes_enum import (
+    FlexrayTpConnectionControlSubtypesEnum,
+)
 from .flexray_tp_node_subtypes_enum import FlexrayTpNodeSubtypesEnum
 from .flexray_tp_pdu_pool_subtypes_enum import FlexrayTpPduPoolSubtypesEnum
 from .i_pdu_subtypes_enum import IPduSubtypesEnum
@@ -68,6 +70,7 @@ class FlexrayTpConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-TP-CONNECTION"
 
@@ -77,7 +80,7 @@ class FlexrayTpConnection:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bandwidth_limitation: Optional[Boolean] = field(
         default=None,
@@ -85,7 +88,7 @@ class FlexrayTpConnection:
             "name": "BANDWIDTH-LIMITATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     direct_tp_sdu_ref: Optional["FlexrayTpConnection.DirectTpSduRef"] = field(
         default=None,
@@ -93,7 +96,7 @@ class FlexrayTpConnection:
             "name": "DIRECT-TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     multicast_ref: Optional["FlexrayTpConnection.MulticastRef"] = field(
         default=None,
@@ -101,7 +104,7 @@ class FlexrayTpConnection:
             "name": "MULTICAST-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     receiver_refs: Optional["FlexrayTpConnection.ReceiverRefs"] = field(
         default=None,
@@ -109,15 +112,17 @@ class FlexrayTpConnection:
             "name": "RECEIVER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    reversed_tp_sdu_ref: Optional["FlexrayTpConnection.ReversedTpSduRef"] = field(
+    reversed_tp_sdu_ref: Optional[
+        "FlexrayTpConnection.ReversedTpSduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REVERSED-TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rx_pdu_pool_ref: Optional["FlexrayTpConnection.RxPduPoolRef"] = field(
         default=None,
@@ -125,15 +130,17 @@ class FlexrayTpConnection:
             "name": "RX-PDU-POOL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tp_connection_control_ref: Optional["FlexrayTpConnection.TpConnectionControlRef"] = field(
+    tp_connection_control_ref: Optional[
+        "FlexrayTpConnection.TpConnectionControlRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TP-CONNECTION-CONTROL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmitter_ref: Optional["FlexrayTpConnection.TransmitterRef"] = field(
         default=None,
@@ -141,7 +148,7 @@ class FlexrayTpConnection:
             "name": "TRANSMITTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tx_pdu_pool_ref: Optional["FlexrayTpConnection.TxPduPoolRef"] = field(
         default=None,
@@ -149,7 +156,7 @@ class FlexrayTpConnection:
             "name": "TX-PDU-POOL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -157,14 +164,14 @@ class FlexrayTpConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -172,7 +179,7 @@ class FlexrayTpConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -183,7 +190,7 @@ class FlexrayTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -194,18 +201,20 @@ class FlexrayTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: List["FlexrayTpConnection.ReceiverRefs.ReceiverRef"] = field(
+        receiver_ref: List[
+            "FlexrayTpConnection.ReceiverRefs.ReceiverRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "RECEIVER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -216,7 +225,7 @@ class FlexrayTpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -227,7 +236,7 @@ class FlexrayTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -238,7 +247,7 @@ class FlexrayTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -249,7 +258,7 @@ class FlexrayTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -260,7 +269,7 @@ class FlexrayTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -271,5 +280,5 @@ class FlexrayTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

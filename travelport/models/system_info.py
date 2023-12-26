@@ -18,6 +18,7 @@ class SystemInfo:
     description
         The description of the system.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
@@ -27,7 +28,7 @@ class SystemInfo:
             "name": "SystemType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     application_version: None | str = field(
         default=None,
@@ -35,12 +36,12 @@ class SystemInfo:
             "name": "ApplicationVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

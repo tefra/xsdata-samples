@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .contact_structure import ContactStructure
 from .country_ref import CountryRef
 from .departments_rel_structure import DepartmentsRelStructure
@@ -24,9 +24,11 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "name": "CountryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    postal_address_or_road_address_or_address: Optional[object] = field(
+    postal_address_or_road_address_or_address: Optional[
+        Union[PostalAddress, RoadAddress, PostalAddressVersionStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -47,7 +49,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     primary_mode: Optional[VehicleModeEnumeration] = field(
         default=None,
@@ -55,7 +57,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "name": "PrimaryMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operator_activities: List[OperatorActivitiesEnumeration] = field(
         default_factory=list,
@@ -64,7 +66,7 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     customer_service_contact_details: Optional[ContactStructure] = field(
         default=None,
@@ -72,12 +74,12 @@ class OperatorVersionStructure(OrganisationVersionStructure):
             "name": "CustomerServiceContactDetails",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     departments: Optional[DepartmentsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

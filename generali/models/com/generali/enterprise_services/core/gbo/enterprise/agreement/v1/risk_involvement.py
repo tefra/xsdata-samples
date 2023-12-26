@@ -1,13 +1,27 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coverage_type import ExposuresType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.deductibles_type import DeductiblesType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limits_type import LimitsType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.perils_structure_type import PerilsStructureType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.coverage_type import (
+    ExposuresType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.deductibles_type import (
+    DeductiblesType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.limits_type import (
+    LimitsType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.perils_structure_type import (
+    PerilsStructureType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -18,7 +32,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "name": "ExposuresFor",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     limits: Optional[LimitsType] = field(
         default=None,
@@ -26,7 +40,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "name": "Limits",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     deductibles: Optional[DeductiblesType] = field(
         default=None,
@@ -34,7 +48,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "name": "Deductibles",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     perils_structure: Optional[PerilsStructureType] = field(
         default=None,
@@ -42,7 +56,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "name": "PerilsStructure",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     local_asset_group: Optional[CodeType] = field(
         default=None,
@@ -50,5 +64,5 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "name": "LocalAssetGroup",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

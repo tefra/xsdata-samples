@@ -16,5 +16,5 @@ class PriceUnitVersionStructure(TypeOfValueVersionStructure):
             "name": "Precision",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

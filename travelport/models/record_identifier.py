@@ -9,6 +9,7 @@ class RecordIdentifier:
     """
     The information that uniquly identifies a particular supplier reservation.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,7 +21,7 @@ class RecordIdentifier:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -29,7 +30,7 @@ class RecordIdentifier:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -37,5 +38,5 @@ class RecordIdentifier:
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )

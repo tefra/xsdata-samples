@@ -26,32 +26,32 @@ class Bld:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     lrg: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     alt: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     tip: BldTip = field(
         default=BldTip.IMG,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mrk: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -85,5 +85,5 @@ class Bld:
                     "type": Trdgrp,
                 },
             ),
-        }
+        },
     )

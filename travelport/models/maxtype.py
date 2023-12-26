@@ -36,6 +36,7 @@ class Maxtype:
     num_occur_max
         Number of maximum occurances.
     """
+
     class Meta:
         name = "MAXType"
 
@@ -44,61 +45,61 @@ class Maxtype:
         metadata={
             "name": "HoursMax",
             "type": "Attribute",
-        }
+        },
     )
     days_max: None | bool = field(
         default=None,
         metadata={
             "name": "DaysMax",
             "type": "Attribute",
-        }
+        },
     )
     months_max: None | bool = field(
         default=None,
         metadata={
             "name": "MonthsMax",
             "type": "Attribute",
-        }
+        },
     )
     occur_ind_max: None | bool = field(
         default=None,
         metadata={
             "name": "OccurIndMax",
             "type": "Attribute",
-        }
+        },
     )
     same_day_max: None | bool = field(
         default=None,
         metadata={
             "name": "SameDayMax",
             "type": "Attribute",
-        }
+        },
     )
     start_ind_max: None | bool = field(
         default=None,
         metadata={
             "name": "StartIndMax",
             "type": "Attribute",
-        }
+        },
     )
     completion_ind: None | bool = field(
         default=None,
         metadata={
             "name": "CompletionInd",
             "type": "Attribute",
-        }
+        },
     )
     tm_dowmax: None | int = field(
         default=None,
         metadata={
             "name": "TmDOWMax",
             "type": "Attribute",
-        }
+        },
     )
     num_occur_max: None | int = field(
         default=None,
         metadata={
             "name": "NumOccurMax",
             "type": "Attribute",
-        }
+        },
     )

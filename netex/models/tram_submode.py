@@ -13,5 +13,5 @@ class TramSubmode:
         default=TramSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -14,6 +14,7 @@ class ConferenceDate:
     3. If both parsed date values and the date text are available, both should be provided. This is the preferred tagging for conference_date. For example:
     <ns1:conference_date xmlns:ns1="http://www.crossref.org/schema/5.3.1" start_month="01" start_year="1997" start_day="15" end_year="1997" end_month="01" end_day="17">Jan. 15-17, 1997</ns1:conference_date>
     """
+
     class Meta:
         name = "conference_date"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -24,7 +25,7 @@ class ConferenceDate:
             "required": True,
             "min_length": 0,
             "max_length": 100,
-        }
+        },
     )
     start_day: Optional[int] = field(
         default=None,
@@ -33,7 +34,7 @@ class ConferenceDate:
             "min_inclusive": 1,
             "max_inclusive": 31,
             "total_digits": 2,
-        }
+        },
     )
     start_month: Optional[int] = field(
         default=None,
@@ -42,7 +43,7 @@ class ConferenceDate:
             "min_inclusive": 1,
             "max_inclusive": 34,
             "total_digits": 2,
-        }
+        },
     )
     start_year: Optional[int] = field(
         default=None,
@@ -51,7 +52,7 @@ class ConferenceDate:
             "min_inclusive": 1400,
             "max_inclusive": 2200,
             "total_digits": 4,
-        }
+        },
     )
     end_day: Optional[int] = field(
         default=None,
@@ -60,7 +61,7 @@ class ConferenceDate:
             "min_inclusive": 1,
             "max_inclusive": 31,
             "total_digits": 2,
-        }
+        },
     )
     end_month: Optional[int] = field(
         default=None,
@@ -69,7 +70,7 @@ class ConferenceDate:
             "min_inclusive": 1,
             "max_inclusive": 34,
             "total_digits": 2,
-        }
+        },
     )
     end_year: Optional[int] = field(
         default=None,
@@ -78,5 +79,5 @@ class ConferenceDate:
             "min_inclusive": 1400,
             "max_inclusive": 2200,
             "total_digits": 4,
-        }
+        },
     )

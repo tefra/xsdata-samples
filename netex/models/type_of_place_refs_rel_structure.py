@@ -17,5 +17,5 @@ class TypeOfPlaceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -14,6 +14,7 @@ class AreaOfInterestEnum(Enum):
     :cvar NOT_SPECIFIED: Non specified area.
     :cvar REGIONAL: Area of the local region.
     """
+
     CONTINENT_WIDE = "continentWide"
     NATIONAL = "national"
     NEIGHBOURING_COUNTRIES = "neighbouringCountries"

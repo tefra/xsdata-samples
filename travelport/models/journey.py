@@ -19,6 +19,7 @@ class Journey:
         of the first segment and the arrival time of the last segments for
         that particular entire set of connection.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,12 +29,12 @@ class Journey:
             "name": "AirSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     travel_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
-        }
+        },
     )

@@ -93,6 +93,7 @@ class ViewMap:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "VIEW-MAP"
 
@@ -103,7 +104,7 @@ class ViewMap:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["ViewMap.ShortNameFragments"] = field(
         default=None,
@@ -111,7 +112,7 @@ class ViewMap:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +120,7 @@ class ViewMap:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +128,7 @@ class ViewMap:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +136,7 @@ class ViewMap:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +144,7 @@ class ViewMap:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +152,7 @@ class ViewMap:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ViewMap.Annotations"] = field(
         default=None,
@@ -159,7 +160,7 @@ class ViewMap:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     role: Optional[Identifier] = field(
         default=None,
@@ -167,7 +168,7 @@ class ViewMap:
             "name": "ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     first_element_refs: Optional["ViewMap.FirstElementRefs"] = field(
         default=None,
@@ -175,7 +176,7 @@ class ViewMap:
             "name": "FIRST-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     second_element_refs: Optional["ViewMap.SecondElementRefs"] = field(
         default=None,
@@ -183,30 +184,34 @@ class ViewMap:
             "name": "SECOND-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    first_element_instance_irefs: Optional["ViewMap.FirstElementInstanceIrefs"] = field(
+    first_element_instance_irefs: Optional[
+        "ViewMap.FirstElementInstanceIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-ELEMENT-INSTANCE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    second_element_instance_irefs: Optional["ViewMap.SecondElementInstanceIrefs"] = field(
+    second_element_instance_irefs: Optional[
+        "ViewMap.SecondElementInstanceIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SECOND-ELEMENT-INSTANCE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -214,14 +219,14 @@ class ViewMap:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -232,7 +237,7 @@ class ViewMap:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,18 +248,20 @@ class ViewMap:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FirstElementRefs:
-        first_element_ref: List["ViewMap.FirstElementRefs.FirstElementRef"] = field(
+        first_element_ref: List[
+            "ViewMap.FirstElementRefs.FirstElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FIRST-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -265,18 +272,20 @@ class ViewMap:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class SecondElementRefs:
-        second_element_ref: List["ViewMap.SecondElementRefs.SecondElementRef"] = field(
+        second_element_ref: List[
+            "ViewMap.SecondElementRefs.SecondElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SECOND-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -287,7 +296,7 @@ class ViewMap:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -298,7 +307,7 @@ class ViewMap:
                 "name": "FIRST-ELEMENT-INSTANCE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -309,5 +318,5 @@ class ViewMap:
                 "name": "SECOND-ELEMENT-INSTANCE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

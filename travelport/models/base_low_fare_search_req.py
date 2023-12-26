@@ -4,7 +4,9 @@ from travelport.models.air_exchange_modifiers import AirExchangeModifiers
 from travelport.models.air_pricing_modifiers import AirPricingModifiers
 from travelport.models.base_air_search_req import BaseAirSearchReq
 from travelport.models.enumeration import Enumeration
-from travelport.models.fare_rules_filter_category import FareRulesFilterCategory
+from travelport.models.fare_rules_filter_category import (
+    FareRulesFilterCategory,
+)
 from travelport.models.flex_explore_modifiers import FlexExploreModifiers
 from travelport.models.form_of_payment_1 import FormOfPayment1
 from travelport.models.pcc import Pcc
@@ -106,6 +108,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
         Boolean flag used to request the MostRestrictivePenalties in the
         response
     """
+
     search_passenger: list[SearchPassenger1] = field(
         default_factory=list,
         metadata={
@@ -114,7 +117,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 18,
-        }
+        },
     )
     air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
@@ -122,7 +125,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "name": "AirPricingModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     enumeration: None | Enumeration = field(
         default=None,
@@ -130,7 +133,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "name": "Enumeration",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_exchange_modifiers: None | AirExchangeModifiers = field(
         default=None,
@@ -138,7 +141,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "name": "AirExchangeModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     flex_explore_modifiers: None | FlexExploreModifiers = field(
         default=None,
@@ -146,7 +149,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "name": "FlexExploreModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     pcc: None | Pcc = field(
         default=None,
@@ -154,7 +157,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "name": "PCC",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     fare_rules_filter_category: None | FareRulesFilterCategory = field(
         default=None,
@@ -162,7 +165,7 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "name": "FareRulesFilterCategory",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -171,42 +174,42 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     enable_point_to_point_search: bool = field(
         default=False,
         metadata={
             "name": "EnablePointToPointSearch",
             "type": "Attribute",
-        }
+        },
     )
     enable_point_to_point_alternates: bool = field(
         default=False,
         metadata={
             "name": "EnablePointToPointAlternates",
             "type": "Attribute",
-        }
+        },
     )
     max_number_of_expert_solutions: int = field(
         default=0,
         metadata={
             "name": "MaxNumberOfExpertSolutions",
             "type": "Attribute",
-        }
+        },
     )
     solution_result: bool = field(
         default=False,
         metadata={
             "name": "SolutionResult",
             "type": "Attribute",
-        }
+        },
     )
     prefer_complete_itinerary: bool = field(
         default=True,
         metadata={
             "name": "PreferCompleteItinerary",
             "type": "Attribute",
-        }
+        },
     )
     meta_option_identifier: None | str = field(
         default=None,
@@ -215,49 +218,49 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     return_upsell_fare: bool = field(
         default=False,
         metadata={
             "name": "ReturnUpsellFare",
             "type": "Attribute",
-        }
+        },
     )
     include_fare_info_messages: bool = field(
         default=False,
         metadata={
             "name": "IncludeFareInfoMessages",
             "type": "Attribute",
-        }
+        },
     )
     return_branded_fares: bool = field(
         default=True,
         metadata={
             "name": "ReturnBrandedFares",
             "type": "Attribute",
-        }
+        },
     )
     multi_gdssearch: bool = field(
         default=False,
         metadata={
             "name": "MultiGDSSearch",
             "type": "Attribute",
-        }
+        },
     )
     return_mm: bool = field(
         default=False,
         metadata={
             "name": "ReturnMM",
             "type": "Attribute",
-        }
+        },
     )
     check_obfees: None | str = field(
         default=None,
         metadata={
             "name": "CheckOBFees",
             "type": "Attribute",
-        }
+        },
     )
     nscc: None | str = field(
         default=None,
@@ -266,19 +269,19 @@ class BaseLowFareSearchReq(BaseAirSearchReq):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fare_info_rules: bool = field(
         default=False,
         metadata={
             "name": "FareInfoRules",
             "type": "Attribute",
-        }
+        },
     )
     most_restrictive_penalties: bool = field(
         default=False,
         metadata={
             "name": "MostRestrictivePenalties",
             "type": "Attribute",
-        }
+        },
     )

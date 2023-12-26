@@ -28,6 +28,7 @@ class Action:
     profile_action_code
         Profile Action Code description.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -37,7 +38,7 @@ class Action:
             "name": "Endpoint",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     id: None | int = field(
         default=None,
@@ -45,7 +46,7 @@ class Action:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -55,7 +56,7 @@ class Action:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class Action:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     consuming_system: None | str = field(
         default=None,
@@ -72,7 +73,7 @@ class Action:
             "name": "ConsumingSystem",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     target_service: None | str = field(
         default=None,
@@ -80,7 +81,7 @@ class Action:
             "name": "TargetService",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_action_code: None | str = field(
         default=None,
@@ -88,5 +89,5 @@ class Action:
             "name": "ProfileActionCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

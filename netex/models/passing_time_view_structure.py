@@ -16,5 +16,5 @@ class PassingTimeViewStructure(DataManagedObjectViewStructure):
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class FuelType2Enum(Enum):
     :cvar UNKNOWN: The sort of fuel is not known.
     :cvar OTHER: Other.
     """
+
     ALL = "all"
     PETROL95_OCTANE = "petrol95Octane"
     PETROL98_OCTANE = "petrol98Octane"

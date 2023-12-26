@@ -36,21 +36,21 @@ from xsdata.models.datatype import XmlTime
 
 obj = InventoryReport(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="CC2679"
+        value='CC2679'
     ),
     copy_indicator=False,
     issue_date=XmlDate(2010, 4, 12),
     note=[
         Note(
-            value="Report about the quantities on stock."
+            value='Report about the quantities on stock.'
         ),
     ],
     document_currency_code=DocumentCurrencyCode(
-        value="EUR",
-        list_id="ISO 4217 Alpha"
+        value='EUR',
+        list_id='ISO 4217 Alpha'
     ),
     inventory_period=InventoryPeriod(
         start_date=XmlDate(2010, 4, 11),
@@ -62,44 +62,44 @@ obj = InventoryReport(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Beta Shop"
+                        value='Beta Shop'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Via Emilia"
+                    value='Via Emilia'
                 ),
                 building_number=BuildingNumber(
-                    value="1"
+                    value='1'
                 ),
                 city_name=CityName(
-                    value="Modena"
+                    value='Modena'
                 ),
                 postal_zone=PostalZone(
-                    value="41121"
+                    value='41121'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="IT"
+                        value='IT'
                     ),
                     name=Name(
-                        value="Italy"
+                        value='Italy'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mr Delta"
+                    value='Mr Delta'
                 ),
                 telephone=Telephone(
-                    value="0039 059 33000000"
+                    value='0039 059 33000000'
                 ),
                 telefax=Telefax(
-                    value="0039 059 33000055"
+                    value='0039 059 33000055'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="delta@betashop.it"
+                    value='delta@betashop.it'
                 )
             )
         )
@@ -108,7 +108,7 @@ obj = InventoryReport(
         party_name=[
             PartyName(
                 name=Name(
-                    value="Arancio Forniture spa"
+                    value='Arancio Forniture spa'
                 )
             ),
         ],
@@ -117,38 +117,38 @@ obj = InventoryReport(
                 value="Via Dell'Arcoveggio"
             ),
             building_number=BuildingNumber(
-                value="405"
+                value='405'
             ),
             department=Department(
-                value="Sales and Planning Department"
+                value='Sales and Planning Department'
             ),
             city_name=CityName(
-                value="Bologna"
+                value='Bologna'
             ),
             postal_zone=PostalZone(
-                value="40129"
+                value='40129'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="IT"
+                    value='IT'
                 ),
                 name=Name(
-                    value="Italy"
+                    value='Italy'
                 )
             )
         ),
         contact=Contact(
             name=Name(
-                value="Mr Bianchi"
+                value='Mr Bianchi'
             ),
             telephone=Telephone(
-                value="0039 051 23000008"
+                value='0039 051 23000008'
             ),
             telefax=Telefax(
-                value="0039 051 23000025"
+                value='0039 051 23000025'
             ),
             electronic_mail=ElectronicMail(
-                value="bianchi@arancioforniture.it"
+                value='bianchi@arancioforniture.it'
             )
         )
     ),
@@ -157,7 +157,7 @@ obj = InventoryReport(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Arancio Forniture spa"
+                        value='Arancio Forniture spa'
                     )
                 ),
             ],
@@ -166,35 +166,35 @@ obj = InventoryReport(
                     value="Via Dell'Arcoveggio"
                 ),
                 building_number=BuildingNumber(
-                    value="403"
+                    value='403'
                 ),
                 city_name=CityName(
-                    value="Bologna"
+                    value='Bologna'
                 ),
                 postal_zone=PostalZone(
-                    value="40129"
+                    value='40129'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="IT"
+                        value='IT'
                     ),
                     name=Name(
-                        value="Italy"
+                        value='Italy'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mr Rossi"
+                    value='Mr Rossi'
                 ),
                 telephone=Telephone(
-                    value="0039 051 23000000"
+                    value='0039 051 23000000'
                 ),
                 telefax=Telefax(
-                    value="0039 051 23000023"
+                    value='0039 051 23000023'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="rossi@arancioforniture.it"
+                    value='rossi@arancioforniture.it'
                 )
             )
         )
@@ -202,75 +202,75 @@ obj = InventoryReport(
     inventory_report_line=[
         InventoryReportLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             quantity=Quantity(
-                value=Decimal("10"),
-                unit_code="NAR"
+                value=Decimal('10'),
+                unit_code='NAR'
             ),
             inventory_value_amount=InventoryValueAmount(
-                value=Decimal("200"),
-                currency_id="EUR"
+                value=Decimal('200'),
+                currency_id='EUR'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="shirt"
+                        value='shirt'
                     ),
                 ],
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="SH009"
+                        value='SH009'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="DD88"
+                        value='DD88'
                     )
                 )
             )
         ),
         InventoryReportLine(
             id=Id(
-                value="2"
+                value='2'
             ),
             quantity=Quantity(
-                value=Decimal("15"),
-                unit_code="NAR"
+                value=Decimal('15'),
+                unit_code='NAR'
             ),
             inventory_value_amount=InventoryValueAmount(
-                value=Decimal("750"),
-                currency_id="EUR"
+                value=Decimal('750'),
+                currency_id='EUR'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="trousers"
+                        value='trousers'
                     ),
                 ],
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="TH009"
+                        value='TH009'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="DA008"
+                        value='DA008'
                     )
                 )
             )
         ),
         InventoryReportLine(
             id=Id(
-                value="3"
+                value='3'
             ),
             quantity=Quantity(
-                value=Decimal("5"),
-                unit_code="NAR"
+                value=Decimal('5'),
+                unit_code='NAR'
             ),
             inventory_value_amount=InventoryValueAmount(
-                value=Decimal("300"),
-                currency_id="EUR"
+                value=Decimal('300'),
+                currency_id='EUR'
             ),
             item=Item(
                 description=[
@@ -280,12 +280,12 @@ obj = InventoryReport(
                 ],
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="DH019"
+                        value='DH019'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="BA058"
+                        value='BA058'
                     )
                 )
             )

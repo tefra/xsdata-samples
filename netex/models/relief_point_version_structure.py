@@ -17,5 +17,5 @@ class ReliefPointVersionStructure(TimingPointVersionStructure):
             "name": "CrewBaseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

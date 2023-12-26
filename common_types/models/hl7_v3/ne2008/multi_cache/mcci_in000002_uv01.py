@@ -17,5 +17,5 @@ class McciIn000002Uv01(McciMt000200Uv01Message):
             "name": "ITSVersion",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

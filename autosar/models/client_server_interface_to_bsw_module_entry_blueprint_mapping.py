@@ -10,8 +10,12 @@ from .blueprint_policy_list import BlueprintPolicyList
 from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
 from .blueprint_policy_single import BlueprintPolicySingle
 from .category_string import CategoryString
-from .client_server_interface_subtypes_enum import ClientServerInterfaceSubtypesEnum
-from .client_server_operation_blueprint_mapping import ClientServerOperationBlueprintMapping
+from .client_server_interface_subtypes_enum import (
+    ClientServerInterfaceSubtypesEnum,
+)
+from .client_server_operation_blueprint_mapping import (
+    ClientServerOperationBlueprintMapping,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -114,6 +118,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-INTERFACE-TO-BSW-MODULE-ENTRY-BLUEPRINT-MAPPING"
 
@@ -124,15 +129,17 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ClientServerInterfaceToBswModuleEntryBlueprintMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ClientServerInterfaceToBswModuleEntryBlueprintMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -140,7 +147,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -148,7 +155,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -156,7 +163,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -164,7 +171,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -172,15 +179,17 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["ClientServerInterfaceToBswModuleEntryBlueprintMapping.Annotations"] = field(
+    annotations: Optional[
+        "ClientServerInterfaceToBswModuleEntryBlueprintMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -188,15 +197,17 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["ClientServerInterfaceToBswModuleEntryBlueprintMapping.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "ClientServerInterfaceToBswModuleEntryBlueprintMapping.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -204,38 +215,44 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    client_server_interface_ref: Optional["ClientServerInterfaceToBswModuleEntryBlueprintMapping.ClientServerInterfaceRef"] = field(
+    client_server_interface_ref: Optional[
+        "ClientServerInterfaceToBswModuleEntryBlueprintMapping.ClientServerInterfaceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-INTERFACE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    operation_mappings: Optional["ClientServerInterfaceToBswModuleEntryBlueprintMapping.OperationMappings"] = field(
+    operation_mappings: Optional[
+        "ClientServerInterfaceToBswModuleEntryBlueprintMapping.OperationMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "OPERATION-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_defined_argument_blueprints: Optional["ClientServerInterfaceToBswModuleEntryBlueprintMapping.PortDefinedArgumentBlueprints"] = field(
+    port_defined_argument_blueprints: Optional[
+        "ClientServerInterfaceToBswModuleEntryBlueprintMapping.PortDefinedArgumentBlueprints"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-DEFINED-ARGUMENT-BLUEPRINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -243,14 +260,14 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -261,7 +278,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -272,7 +289,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -283,15 +300,17 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -299,7 +318,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -310,27 +329,31 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class OperationMappings:
-        client_server_operation_blueprint_mapping: List[ClientServerOperationBlueprintMapping] = field(
+        client_server_operation_blueprint_mapping: List[
+            ClientServerOperationBlueprintMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-OPERATION-BLUEPRINT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PortDefinedArgumentBlueprints:
-        port_defined_argument_blueprint: List[PortDefinedArgumentBlueprint] = field(
+        port_defined_argument_blueprint: List[
+            PortDefinedArgumentBlueprint
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-DEFINED-ARGUMENT-BLUEPRINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

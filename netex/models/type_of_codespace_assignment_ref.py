@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .type_of_codespace_assignment_ref_structure import TypeOfCodespaceAssignmentRefStructure
+from .type_of_codespace_assignment_ref_structure import (
+    TypeOfCodespaceAssignmentRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

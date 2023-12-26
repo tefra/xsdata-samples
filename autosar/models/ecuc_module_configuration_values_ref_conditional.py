@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
-from .ecuc_module_configuration_values_subtypes_enum import EcucModuleConfigurationValuesSubtypesEnum
+from .ecuc_module_configuration_values_subtypes_enum import (
+    EcucModuleConfigurationValuesSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -26,16 +28,19 @@ class EcucModuleConfigurationValuesRefConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL"
 
-    ecuc_module_configuration_values_ref: Optional["EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef"] = field(
+    ecuc_module_configuration_values_ref: Optional[
+        "EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ECUC-MODULE-CONFIGURATION-VALUES-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -43,14 +48,14 @@ class EcucModuleConfigurationValuesRefConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,7 +63,7 @@ class EcucModuleConfigurationValuesRefConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -69,5 +74,5 @@ class EcucModuleConfigurationValuesRefConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

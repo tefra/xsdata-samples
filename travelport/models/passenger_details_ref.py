@@ -9,6 +9,7 @@ class PassengerDetailsRef:
     """
     Reference of the Passenger.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class PassengerDetailsRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

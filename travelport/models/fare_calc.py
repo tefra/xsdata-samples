@@ -9,6 +9,7 @@ class FareCalc:
     """
     The complete fare calculation line.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -16,5 +17,5 @@ class FareCalc:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

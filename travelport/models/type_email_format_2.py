@@ -9,6 +9,7 @@ class TypeEmailFormat2(Enum):
 
     (ie. HTML, Text, PDF, etc.)
     """
+
     HTML = "HTML"
     PDF = "PDF"
     PLAIN_TEXT = "Plain Text"

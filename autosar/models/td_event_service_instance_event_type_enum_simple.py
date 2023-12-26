@@ -12,5 +12,6 @@ class TdEventServiceInstanceEventTypeEnumSimple(Enum):
         by a service is sent through the service port of the service
         provider.
     """
+
     ADAPTIVE_EVENT_RECEIVED = "ADAPTIVE-EVENT-RECEIVED"
     ADAPTIVE_EVENT_SENT = "ADAPTIVE-EVENT-SENT"

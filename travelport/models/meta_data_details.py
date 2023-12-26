@@ -25,6 +25,7 @@ class MetaDataDetails:
         This attribute will capture the unique identifier number assigned to
         the field.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -36,7 +37,7 @@ class MetaDataDetails:
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -45,7 +46,7 @@ class MetaDataDetails:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     customization: None | str = field(
         default=None,
@@ -55,12 +56,12 @@ class MetaDataDetails:
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     key: None | int = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

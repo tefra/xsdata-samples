@@ -60,6 +60,7 @@ class TypePricingMethod(Enum):
     AUTO_RAPID_REPRICE
         Auto priced by rapid reprice. Provider 1P FCI code 4 .
     """
+
     AUTO = "Auto"
     MANUAL = "Manual"
     MANUAL_FARE = "ManualFare"

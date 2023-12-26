@@ -20,7 +20,7 @@ class TGlobalTask(TCallableElement):
             "name": "potentialOwner",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     human_performer: List[HumanPerformer] = field(
         default_factory=list,
@@ -28,14 +28,14 @@ class TGlobalTask(TCallableElement):
             "name": "humanPerformer",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     performer: List[Performer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     resource_role: List[ResourceRole] = field(
         default_factory=list,
@@ -43,5 +43,5 @@ class TGlobalTask(TCallableElement):
             "name": "resourceRole",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )

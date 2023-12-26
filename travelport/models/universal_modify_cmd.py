@@ -45,6 +45,7 @@ class UniversalModifyCmd:
         Refers the universal modify command key. It should be unique in the
         request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -53,105 +54,105 @@ class UniversalModifyCmd:
         metadata={
             "name": "VehicleAdd",
             "type": "Element",
-        }
+        },
     )
     vehicle_delete: None | VehicleDelete = field(
         default=None,
         metadata={
             "name": "VehicleDelete",
             "type": "Element",
-        }
+        },
     )
     vehicle_update: None | VehicleUpdate = field(
         default=None,
         metadata={
             "name": "VehicleUpdate",
             "type": "Element",
-        }
+        },
     )
     air_add: None | AirAdd = field(
         default=None,
         metadata={
             "name": "AirAdd",
             "type": "Element",
-        }
+        },
     )
     air_delete: None | AirDelete = field(
         default=None,
         metadata={
             "name": "AirDelete",
             "type": "Element",
-        }
+        },
     )
     air_update: None | AirUpdate = field(
         default=None,
         metadata={
             "name": "AirUpdate",
             "type": "Element",
-        }
+        },
     )
     universal_add: None | UniversalAdd = field(
         default=None,
         metadata={
             "name": "UniversalAdd",
             "type": "Element",
-        }
+        },
     )
     universal_delete: None | UniversalDelete = field(
         default=None,
         metadata={
             "name": "UniversalDelete",
             "type": "Element",
-        }
+        },
     )
     universal_update: None | UniversalUpdate = field(
         default=None,
         metadata={
             "name": "UniversalUpdate",
             "type": "Element",
-        }
+        },
     )
     hotel_add: None | HotelAdd = field(
         default=None,
         metadata={
             "name": "HotelAdd",
             "type": "Element",
-        }
+        },
     )
     hotel_update: None | HotelUpdate = field(
         default=None,
         metadata={
             "name": "HotelUpdate",
             "type": "Element",
-        }
+        },
     )
     hotel_delete: None | HotelDelete = field(
         default=None,
         metadata={
             "name": "HotelDelete",
             "type": "Element",
-        }
+        },
     )
     passive_add: None | PassiveAdd = field(
         default=None,
         metadata={
             "name": "PassiveAdd",
             "type": "Element",
-        }
+        },
     )
     passive_delete: None | PassiveDelete = field(
         default=None,
         metadata={
             "name": "PassiveDelete",
             "type": "Element",
-        }
+        },
     )
     rail_update: None | RailUpdate = field(
         default=None,
         metadata={
             "name": "RailUpdate",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -159,5 +160,5 @@ class UniversalModifyCmd:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -15,6 +15,7 @@ class WinterEquipmentManagementTypeEnum(Enum):
         equipment (snow chains and/or snow tyres) is required.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     DO_NO_USE_STUD_TYRES = "doNoUseStudTyres"
     USE_SNOW_CHAINS = "useSnowChains"
     USE_SNOW_CHAINS_OR_TYRES = "useSnowChainsOrTyres"

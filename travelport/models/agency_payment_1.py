@@ -10,6 +10,7 @@ class AgencyPayment1(TypeAgencyPayment1):
     """
     Container for Agency Payment.
     """
+
     class Meta:
         name = "AgencyPayment"
         namespace = "http://www.travelport.com/schema/common_v52_0"

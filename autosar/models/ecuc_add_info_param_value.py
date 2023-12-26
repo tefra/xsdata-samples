@@ -48,6 +48,7 @@ class EcucAddInfoParamValue:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECUC-ADD-INFO-PARAM-VALUE"
 
@@ -57,7 +58,7 @@ class EcucAddInfoParamValue:
             "name": "INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     definition_ref: Optional["EcucAddInfoParamValue.DefinitionRef"] = field(
         default=None,
@@ -65,7 +66,7 @@ class EcucAddInfoParamValue:
             "name": "DEFINITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EcucAddInfoParamValue.Annotations"] = field(
         default=None,
@@ -73,7 +74,7 @@ class EcucAddInfoParamValue:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_auto_value: Optional[Boolean] = field(
         default=None,
@@ -81,7 +82,7 @@ class EcucAddInfoParamValue:
             "name": "IS-AUTO-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -89,7 +90,7 @@ class EcucAddInfoParamValue:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     value: Optional[DocumentationBlock] = field(
         default=None,
@@ -97,14 +98,14 @@ class EcucAddInfoParamValue:
             "name": "VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -112,7 +113,7 @@ class EcucAddInfoParamValue:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -123,7 +124,7 @@ class EcucAddInfoParamValue:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -134,5 +135,5 @@ class EcucAddInfoParamValue:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

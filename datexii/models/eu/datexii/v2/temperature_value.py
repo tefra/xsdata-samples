@@ -15,13 +15,14 @@ class TemperatureValue(DataValue):
         Celsius.
     :ivar temperature_value_extension:
     """
+
     temperature: Optional[float] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     temperature_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -29,5 +30,5 @@ class TemperatureValue(DataValue):
             "name": "temperatureValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

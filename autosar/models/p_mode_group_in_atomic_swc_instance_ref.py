@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_provided_port_prototype_subtypes_enum import AbstractProvidedPortPrototypeSubtypesEnum
-from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .abstract_provided_port_prototype_subtypes_enum import (
+    AbstractProvidedPortPrototypeSubtypesEnum,
+)
+from .mode_declaration_group_prototype_subtypes_enum import (
+    ModeDeclarationGroupPrototypeSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -23,31 +27,36 @@ class PModeGroupInAtomicSwcInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "P-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_p_port_ref: Optional["PModeGroupInAtomicSwcInstanceRef.ContextPPortRef"] = field(
+    context_p_port_ref: Optional[
+        "PModeGroupInAtomicSwcInstanceRef.ContextPPortRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-P-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_mode_group_ref: Optional["PModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef"] = field(
+    target_mode_group_ref: Optional[
+        "PModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -55,7 +64,7 @@ class PModeGroupInAtomicSwcInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -66,7 +75,7 @@ class PModeGroupInAtomicSwcInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -77,5 +86,5 @@ class PModeGroupInAtomicSwcInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -15,5 +15,5 @@ class Arctan:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

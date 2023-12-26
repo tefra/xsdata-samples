@@ -13,13 +13,14 @@ class AreaDestination(Destination):
     The specification of the destination of a defined route or itinerary which is
     an area.
     """
+
     area: Optional[Area] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     area_destination_extension: Optional[ExtensionType] = field(
         default=None,
@@ -27,5 +28,5 @@ class AreaDestination(Destination):
             "name": "areaDestinationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .special_service_ref import SpecialServiceRef
@@ -12,7 +12,9 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "specialServiceRefs_RelStructure"
 
-    dated_special_service_ref_or_special_service_ref: Optional[object] = field(
+    dated_special_service_ref_or_special_service_ref: Optional[
+        Union[DatedSpecialServiceRef, SpecialServiceRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

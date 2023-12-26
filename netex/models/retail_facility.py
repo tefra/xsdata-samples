@@ -13,5 +13,5 @@ class RetailFacility:
         default=RetailFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

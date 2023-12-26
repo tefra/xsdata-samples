@@ -17,5 +17,5 @@ class TrainBlockVersionStructure(BlockVersionStructure):
             "name": "coupledJourneys",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

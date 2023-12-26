@@ -10,6 +10,7 @@ class SoAdConnectorTypeSimple(Enum):
     :cvar UDP_NM: Udp Nm
     :cvar XCP: Universal Measurement and Calibration Protocol
     """
+
     DO_IP = "DO-IP"
     PDU_R = "PDU-R"
     UDP_NM = "UDP-NM"

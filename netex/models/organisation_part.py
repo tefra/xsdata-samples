@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .organisation_part_version_structure import OrganisationPartVersionStructure
+from .organisation_part_version_structure import (
+    OrganisationPartVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

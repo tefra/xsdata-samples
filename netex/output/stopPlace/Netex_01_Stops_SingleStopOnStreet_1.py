@@ -80,45 +80,45 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         description=MultilingualString(
-            value="Filter used to get  these contents: Get all STOP PLACEs, STOP ASSIGNMENTs and TOPOGRAPHIC PLACEfor Network TNET1 in specified  area    :TP_0032A.  Also return any  RESPONSIBILITY SETs  used.&#10;&#9;&#9;&#9;&#9;Also get details for &#10;&#9;&#9;&#9;&#9;"
+            value='Filter used to get  these contents: Get all STOP PLACEs, STOP ASSIGNMENTs and TOPOGRAPHIC PLACEfor Network TNET1 in specified  area    :TP_0032A.  Also return any  RESPONSIBILITY SETs  used.\n\t\t\t\tAlso get details for \n\t\t\t\t'
         ),
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         NetworkFilterByValueStructure(
                             bounding_box=BoundingBoxStructure2(
                                 upper_left=LocationStructure2(
-                                    longitude=Decimal("-0.2071300000"),
-                                    latitude=Decimal("51.4217400000")
+                                    longitude=Decimal('-0.2071300000'),
+                                    latitude=Decimal('51.4217400000')
                                 ),
                                 lower_right=LocationStructure2(
-                                    longitude=Decimal("-0.2071400000"),
-                                    latitude=Decimal("51.4217500000")
+                                    longitude=Decimal('-0.2071400000'),
+                                    latitude=Decimal('51.4217500000')
                                 )
                             ),
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     ScheduledStopPointRef(
-                                        ref=""
+                                        ref=''
                                     ),
                                     StopPlaceRef(
-                                        ref=""
+                                        ref=''
                                     ),
                                     TopographicPlaceRef(
-                                        ref=""
+                                        ref=''
                                     ),
                                 ]
                             ),
                             network_ref=NetworkRef(
-                                value="REQUEST",
-                                ref="mynet"
+                                value='REQUEST',
+                                ref='mynet'
                             )
                         ),
                     ]
@@ -128,110 +128,110 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P3M"),
     description=MultilingualString(
-        value="Single Stop On street example"
+        value='Single Stop On street example'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="frtop:RF01",
+                id='frtop:RF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="mybus:RF01",
-                                version="any",
+                                id='mybus:RF01',
+                                version='any',
                                 from_date=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                 to_date=XmlDateTime(2011, 12, 17, 9, 30, 47, 0, 0)
                             ),
                         ]
                     ),
                 ],
-                version="1",
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="frtop",
-                            xmlns="frtop",
-                            xmlns_url="http://www.ptgazetteer.fr",
-                            description="French Stop data  data"
+                            id='frtop',
+                            xmlns='frtop',
+                            xmlns_url='http://www.ptgazetteer.fr',
+                            description='French Stop data  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         SiteFrame(
-                            id="frtop:SF005",
+                            id='frtop:SF005',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="frtop:SF005",
-                                            version="any",
+                                            id='frtop:SF005',
+                                            version='any',
                                             from_date=XmlDateTime(2012, 7, 26, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2012, 8, 12, 0, 0, 0, 0, 0)
                                         ),
                                     ]
                                 ),
                             ],
-                            version="any",
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="3.0",
-                                    ref="frtop:RS_22"
+                                    version='3.0',
+                                    ref='frtop:RS_22'
                                 )
                             ),
                             topographic_places=TopographicPlacesInFrameRelStructure(
                                 topographic_place=[
                                     TopographicPlace(
-                                        id="frtop:TP_0032A",
-                                        version="any",
+                                        id='frtop:TP_0032A',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="St Jean des Fous",
-                                            lang="fr"
+                                            value='St Jean des Fous',
+                                            lang='fr'
                                         ),
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                             name=MultilingualString(
-                                                value="St Jean des Fous",
-                                                lang="fr"
+                                                value='St Jean des Fous',
+                                                lang='fr'
                                             ),
                                             short_name=MultilingualString(
-                                                value="St Jean",
-                                                lang="fr"
+                                                value='St Jean',
+                                                lang='fr'
                                             ),
                                             qualify=TopographicPlaceDescriptorVersionedChildStructure.Qualify(
                                                 qualifier_name=MultilingualString(
-                                                    value="Normandie",
-                                                    lang="fr"
+                                                    value='Normandie',
+                                                    lang='fr'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
-                                                    version="any",
-                                                    ref="frtop:TP_0082A"
+                                                    version='any',
+                                                    ref='frtop:TP_0082A'
                                                 )
                                             )
                                         )
                                     ),
                                     TopographicPlace(
-                                        id="frtop:TP_0082A",
-                                        version="any",
+                                        id='frtop:TP_0082A',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Normandie",
-                                            lang="fr"
+                                            value='Normandie',
+                                            lang='fr'
                                         ),
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                             name=MultilingualString(
-                                                value="Normandie",
-                                                lang="fr"
+                                                value='Normandie',
+                                                lang='fr'
                                             )
                                         )
                                     ),
@@ -240,39 +240,39 @@ obj = PublicationDelivery(
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="mybus:SSP_02456A",
+                                        id='mybus:SSP_02456A',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         key_list=KeyList(
                                             key_value=[
                                                 KeyValueStructure(
-                                                    key="abc:System",
-                                                    value="12345"
+                                                    key='abc:System',
+                                                    value='12345'
                                                 ),
                                                 KeyValueStructure(
-                                                    key="xxx:altkey2",
-                                                    value="kkkk12345"
+                                                    key='xxx:altkey2',
+                                                    value='kkkk12345'
                                                 ),
                                             ]
                                         ),
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Poste, St Jean",
-                                            lang="fr"
+                                            value='Poste, St Jean',
+                                            lang='fr'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Poste ",
-                                            lang="fr"
+                                            value='Poste ',
+                                            lang='fr'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-0.2071397147"),
-                                                latitude=Decimal("51.4217482061")
+                                                longitude=Decimal('-0.2071397147'),
+                                                latitude=Decimal('51.4217482061')
                                             )
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="mybus:SSP_02456A",
-                                            version="any",
+                                            id='mybus:SSP_02456A',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
@@ -284,8 +284,8 @@ obj = PublicationDelivery(
                                         facilities=SiteFacilitySetsRelStructure(
                                             site_facility_set_ref_or_site_facility_set=[
                                                 SiteFacilitySet(
-                                                    id="mybus:SSP_02456A",
-                                                    version="any",
+                                                    id='mybus:SSP_02456A',
+                                                    version='any',
                                                     accessibility_tool_list=[
                                                         AccessibilityToolEnumeration.WALKINGSTICK,
                                                         AccessibilityToolEnumeration.AUDIO_NAVIGATOR,
@@ -298,19 +298,19 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
-                                            version="any",
-                                            ref="frtop:TP_0032A"
+                                            version='any',
+                                            ref='frtop:TP_0032A'
                                         ),
                                         levels=LevelsRelStructure(
                                             level_ref_or_level=[
                                                 Level(
-                                                    id="mybus:SSP_02456A_0",
+                                                    id='mybus:SSP_02456A_0',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Erde "
+                                                        value='Erde '
                                                     ),
-                                                    public_code="E"
+                                                    public_code='E'
                                                 ),
                                             ]
                                         ),
@@ -319,47 +319,47 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SSP_02456A_1",
+                                                    id='mybus:Q_SSP_02456A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Poste",
-                                                        lang="fr"
+                                                        value='Poste',
+                                                        lang='fr'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Pres de la Gare 20m a droit .",
-                                                            lang="fr"
+                                                            value='Pres de la Gare 20m a droit .',
+                                                            lang='fr'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.207139714"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.207139714'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     road_address=RoadAddress(
-                                                        id="mybus:Rad_SP001A_01",
-                                                        version="any",
+                                                        id='mybus:Rad_SP001A_01',
+                                                        version='any',
                                                         road_name=MultilingualString(
-                                                            value="Rue  de la Gare"
+                                                            value='Rue  de la Gare'
                                                         )
                                                     ),
                                                     cross_road=MultilingualString(
-                                                        value="Rue du Chene",
-                                                        lang="fr"
+                                                        value='Rue du Chene',
+                                                        lang='fr'
                                                     ),
                                                     landmark=MultilingualString(
-                                                        value="Place Victoire",
-                                                        lang="fr"
+                                                        value='Place Victoire',
+                                                        lang='fr'
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     lighting=LightingEnumeration.UNLIT,
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             PassengerInformationEquipment(
-                                                                id="mybus:Q_SSP_02456A_1",
-                                                                version="any",
+                                                                id='mybus:Q_SSP_02456A_1',
+                                                                version='any',
                                                                 accessibility_info_facility_list=[
                                                                     AccessibilityInfoFacilityEnumeration.VISUAL_DISPLAYS,
                                                                 ]
@@ -369,10 +369,10 @@ obj = PublicationDelivery(
                                                     boarding_use=True,
                                                     alighting_use=True,
                                                     label=MultilingualString(
-                                                        value="A",
-                                                        lang="fr"
+                                                        value='A',
+                                                        lang='fr'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.NW,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
                                                 ),
@@ -383,26 +383,26 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="frtop:SVF004",
-                            version="any",
+                            id='frtop:SVF004',
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="3.0",
-                                    ref="frtop:RS_24"
+                                    version='3.0',
+                                    ref='frtop:RS_24'
                                 )
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="frtop:SSP0042A",
+                                        id='frtop:SSP0042A',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="032",
+                                        version='032',
                                         name=MultilingualString(
-                                            value="Poste, St Jean"
+                                            value='Poste, St Jean'
                                         ),
                                         private_code=PrivateCode(
-                                            value="legacy3452"
+                                            value='legacy3452'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
@@ -415,17 +415,17 @@ obj = PublicationDelivery(
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 fare_zone_or_tariff_zone=[
                                     TariffZone(
-                                        id="frtop:TZ_0010",
-                                        version="001",
+                                        id='frtop:TZ_0010',
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Zone A",
-                                            lang="fr"
+                                            value='Zone A',
+                                            lang='fr'
                                         ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 ScheduledStopPointRef(
-                                                    version="032",
-                                                    ref="frtop:SSP0042A"
+                                                    version='032',
+                                                    ref='frtop:SSP0042A'
                                                 ),
                                             ]
                                         )
@@ -435,81 +435,81 @@ obj = PublicationDelivery(
                             stop_assignments=StopAssignmentsInFrameRelStructure(
                                 choice=[
                                     PassengerStopAssignment(
-                                        id="frtop:PSA_40016_A1",
-                                        version="any",
+                                        id='frtop:PSA_40016_A1',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Assigns Timetable timetable ref to physical stop",
-                                            lang="en"
+                                            value='Assigns Timetable timetable ref to physical stop',
+                                            lang='en'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="frtop:SSP0042A"
+                                            version='032',
+                                            ref='frtop:SSP0042A'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SSP_02456A"
+                                            version='any',
+                                            ref='mybus:SSP_02456A'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SSP_02456A_1"
+                                            version='any',
+                                            ref='mybus:Q_SSP_02456A_1'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         ResourceFrame(
-                            id="frtop:RF01",
-                            version="any",
+                            id='frtop:RF01',
+                            version='any',
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="frtop:RS_22",
+                                        id='frtop:RS_22',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="3.0",
+                                        version='3.0',
                                         name=MultilingualString(
-                                            value="Stop data on street"
+                                            value='Stop data on street'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="frtop:RS_22_01",
+                                                    id='frtop:RS_22_01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="3.0",
+                                                    version='3.0',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="mybus:Org_Mb042"
+                                                        version='any',
+                                                        ref='mybus:Org_Mb042'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="frtop:RS_24",
+                                        id='frtop:RS_24',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="3.0",
+                                        version='3.0',
                                         name=MultilingualString(
-                                            value="Stop data on timetable"
+                                            value='Stop data on timetable'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="frtop:RS_24_01",
+                                                    id='frtop:RS_24_01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="3.0",
+                                                    version='3.0',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="frtop:Org_Hd001"
+                                                        version='any',
+                                                        ref='frtop:Org_Hd001'
                                                     )
                                                 ),
                                             ]
@@ -520,23 +520,23 @@ obj = PublicationDelivery(
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Authority(
-                                        id="mybus:Org_Mb042",
-                                        version="any",
+                                        id='mybus:Org_Mb042',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Pays De Fou Transport "
+                                            value='Pays De Fou Transport '
                                         ),
                                         short_name=MultilingualString(
-                                            value="PDFT"
+                                            value='PDFT'
                                         ),
                                         organisation_type=[
                                             OrganisationTypeEnumeration.AUTHORITY,
                                         ]
                                     ),
                                     Operator(
-                                        id="frtop:Org_Hd001",
-                                        version="any",
+                                        id='frtop:Org_Hd001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Voyages Fou "
+                                            value='Voyages Fou '
                                         ),
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,

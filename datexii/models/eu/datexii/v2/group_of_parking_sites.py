@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.group_of_parking_sites_type_enum import GroupOfParkingSitesTypeEnum
+from datexii.models.eu.datexii.v2.group_of_parking_sites_type_enum import (
+    GroupOfParkingSitesTypeEnum,
+)
 from datexii.models.eu.datexii.v2.parking_record import ParkingRecord
-from datexii.models.eu.datexii.v2.parking_record_versioned_reference import ParkingRecordVersionedReference
+from datexii.models.eu.datexii.v2.parking_record_versioned_reference import (
+    ParkingRecordVersionedReference,
+)
 from datexii.models.eu.datexii.v2.parking_site import ParkingSite
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -23,13 +27,14 @@ class GroupOfParkingSites(ParkingRecord):
     :ivar parking_site:
     :ivar group_of_parking_sites_extension:
     """
+
     group_of_parking_sites_type: Optional[GroupOfParkingSitesTypeEnum] = field(
         default=None,
         metadata={
             "name": "groupOfParkingSitesType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_site_by_reference: List[ParkingRecordVersionedReference] = field(
         default_factory=list,
@@ -37,7 +42,7 @@ class GroupOfParkingSites(ParkingRecord):
             "name": "parkingSiteByReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_site: List[ParkingSite] = field(
         default_factory=list,
@@ -45,7 +50,7 @@ class GroupOfParkingSites(ParkingRecord):
             "name": "parkingSite",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_parking_sites_extension: Optional[ExtensionType] = field(
         default=None,
@@ -53,5 +58,5 @@ class GroupOfParkingSites(ParkingRecord):
             "name": "groupOfParkingSitesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

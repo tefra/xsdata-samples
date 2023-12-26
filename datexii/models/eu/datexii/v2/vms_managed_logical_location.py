@@ -24,13 +24,14 @@ class VmsManagedLogicalLocation:
         car park.
     :ivar vms_managed_logical_location_extension:
     """
+
     managed_logical_location: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "managedLogicalLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_from_logical_location: Optional[int] = field(
         default=None,
@@ -38,7 +39,7 @@ class VmsManagedLogicalLocation:
             "name": "distanceFromLogicalLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     managed_location: Optional[Location] = field(
         default=None,
@@ -46,7 +47,7 @@ class VmsManagedLogicalLocation:
             "name": "managedLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_managed_logical_location_extension: Optional[ExtensionType] = field(
         default=None,
@@ -54,5 +55,5 @@ class VmsManagedLogicalLocation:
             "name": "vmsManagedLogicalLocationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

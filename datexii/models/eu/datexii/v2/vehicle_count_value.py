@@ -17,6 +17,7 @@ class VehicleCountValue(DataValue):
         negative integer.
     :ivar vehicle_count_value_extension:
     """
+
     vehicle_count: Optional[int] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class VehicleCountValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vehicle_count_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class VehicleCountValue(DataValue):
             "name": "vehicleCountValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

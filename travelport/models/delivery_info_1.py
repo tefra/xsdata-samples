@@ -3,7 +3,9 @@ from dataclasses import dataclass, field
 from travelport.models.email_1 import Email1
 from travelport.models.general_remark_1 import GeneralRemark1
 from travelport.models.phone_number_1 import PhoneNumber1
-from travelport.models.provider_reservation_info_ref_1 import ProviderReservationInfoRef1
+from travelport.models.provider_reservation_info_ref_1 import (
+    ProviderReservationInfoRef1,
+)
 from travelport.models.type_structured_address_1 import TypeStructuredAddress1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
@@ -30,6 +32,7 @@ class DeliveryInfo1:
     tracking_number
         The tracking number of the shipping company making the delivery.
     """
+
     class Meta:
         name = "DeliveryInfo"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -39,21 +42,21 @@ class DeliveryInfo1:
         metadata={
             "name": "ShippingAddress",
             "type": "Element",
-        }
+        },
     )
     phone_number: None | PhoneNumber1 = field(
         default=None,
         metadata={
             "name": "PhoneNumber",
             "type": "Element",
-        }
+        },
     )
     email: None | Email1 = field(
         default=None,
         metadata={
             "name": "Email",
             "type": "Element",
-        }
+        },
     )
     general_remark: list[GeneralRemark1] = field(
         default_factory=list,
@@ -61,7 +64,7 @@ class DeliveryInfo1:
             "name": "GeneralRemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     provider_reservation_info_ref: list[ProviderReservationInfoRef1] = field(
         default_factory=list,
@@ -69,14 +72,14 @@ class DeliveryInfo1:
             "name": "ProviderReservationInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     signature_required: None | str = field(
         default=None,
@@ -84,12 +87,12 @@ class DeliveryInfo1:
             "name": "SignatureRequired",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     tracking_number: None | str = field(
         default=None,
         metadata={
             "name": "TrackingNumber",
             "type": "Attribute",
-        }
+        },
     )

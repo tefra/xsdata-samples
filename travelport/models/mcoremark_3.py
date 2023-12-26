@@ -16,6 +16,7 @@ class Mcoremark3:
     additional_rmk
         Indicates if the remark is additional remark or not.
     """
+
     class Meta:
         name = "MCORemark"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -24,12 +25,12 @@ class Mcoremark3:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     additional_rmk: None | bool = field(
         default=None,
         metadata={
             "name": "AdditionalRmk",
             "type": "Attribute",
-        }
+        },
     )

@@ -45,6 +45,7 @@ class Ipv6Configuration:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IPV-6-CONFIGURATION"
 
@@ -54,7 +55,7 @@ class Ipv6Configuration:
             "name": "ASSIGNMENT-PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_router: Optional[Ip6AddressString] = field(
         default=None,
@@ -62,15 +63,17 @@ class Ipv6Configuration:
             "name": "DEFAULT-ROUTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    dns_server_addresses: Optional["Ipv6Configuration.DnsServerAddresses"] = field(
+    dns_server_addresses: Optional[
+        "Ipv6Configuration.DnsServerAddresses"
+    ] = field(
         default=None,
         metadata={
             "name": "DNS-SERVER-ADDRESSES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     enable_anycast: Optional[Boolean] = field(
         default=None,
@@ -78,7 +81,7 @@ class Ipv6Configuration:
             "name": "ENABLE-ANYCAST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hop_count: Optional[PositiveInteger] = field(
         default=None,
@@ -86,7 +89,7 @@ class Ipv6Configuration:
             "name": "HOP-COUNT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ip_address_keep_behavior: Optional[IpAddressKeepEnum] = field(
         default=None,
@@ -94,7 +97,7 @@ class Ipv6Configuration:
             "name": "IP-ADDRESS-KEEP-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ip_address_prefix_length: Optional[PositiveInteger] = field(
         default=None,
@@ -102,7 +105,7 @@ class Ipv6Configuration:
             "name": "IP-ADDRESS-PREFIX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ipv_6_address: Optional[Ip6AddressString] = field(
         default=None,
@@ -110,7 +113,7 @@ class Ipv6Configuration:
             "name": "IPV-6-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ipv_6_address_source: Optional[Ipv6AddressSourceEnum] = field(
         default=None,
@@ -118,14 +121,14 @@ class Ipv6Configuration:
             "name": "IPV-6-ADDRESS-SOURCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -133,7 +136,7 @@ class Ipv6Configuration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -142,11 +145,12 @@ class Ipv6Configuration:
         :ivar dns_server_address: IP addresses of pre configured DNS
             servers.
         """
+
         dns_server_address: List[Ip6AddressString] = field(
             default_factory=list,
             metadata={
                 "name": "DNS-SERVER-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

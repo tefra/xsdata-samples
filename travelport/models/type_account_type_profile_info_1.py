@@ -15,6 +15,7 @@ class TypeAccountTypeProfileInfo1(TypeProfileInfo1):
     mid_office_id
         Mid Office identifier managed by an external system.
     """
+
     class Meta:
         name = "typeAccountTypeProfileInfo"
 
@@ -25,5 +26,5 @@ class TypeAccountTypeProfileInfo1(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

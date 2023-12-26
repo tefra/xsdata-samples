@@ -27,7 +27,7 @@ class AvailabilityToPromiseSummary:
         metadata={
             "name": "TotalNumberOfLineItems",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -132,7 +132,7 @@ class AvailabilityToPromiseHeader:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     availability_to_promise_purpose: AvailabilityToPromisePurpose = field(
         metadata={
@@ -153,14 +153,14 @@ class AvailabilityToPromiseHeader:
         metadata={
             "name": "ATPCheckType",
             "type": "Element",
-        }
+        },
     )
     atpresponse: Optional[Atpresponse] = field(
         default=None,
         metadata={
             "name": "ATPResponse",
             "type": "Element",
-        }
+        },
     )
     initiating_party: InitiatingParty = field(
         metadata={
@@ -174,35 +174,39 @@ class AvailabilityToPromiseHeader:
         metadata={
             "name": "RespondingParty",
             "type": "Element",
-        }
+        },
     )
     availability_ship_to_party: Optional[AvailabilityShipToParty] = field(
         default=None,
         metadata={
             "name": "AvailabilityShipToParty",
             "type": "Element",
-        }
+        },
     )
-    availability_to_promise_header_transport: Optional[AvailabilityToPromiseHeaderTransport] = field(
+    availability_to_promise_header_transport: Optional[
+        AvailabilityToPromiseHeaderTransport
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseHeaderTransport",
             "type": "Element",
-        }
+        },
     )
     general_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
             "type": "Element",
-        }
+        },
     )
-    availability_to_promise_list_of_attachment: Optional[AvailabilityToPromiseListOfAttachment] = field(
+    availability_to_promise_list_of_attachment: Optional[
+        AvailabilityToPromiseListOfAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -215,56 +219,66 @@ class AvailabilityToPromiseItemDetail:
             "required": True,
         }
     )
-    availability_to_promise_delivery_detail: Optional[AvailabilityToPromiseDeliveryDetail] = field(
+    availability_to_promise_delivery_detail: Optional[
+        AvailabilityToPromiseDeliveryDetail
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseDeliveryDetail",
             "type": "Element",
-        }
+        },
     )
-    availability_to_promise_transport_detail: Optional[AvailabilityToPromiseTransportDetail] = field(
+    availability_to_promise_transport_detail: Optional[
+        AvailabilityToPromiseTransportDetail
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseTransportDetail",
             "type": "Element",
-        }
+        },
     )
-    availability_to_promise_item_list_of_attachment: Optional[AvailabilityToPromiseItemListOfAttachment] = field(
+    availability_to_promise_item_list_of_attachment: Optional[
+        AvailabilityToPromiseItemListOfAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseItemListOfAttachment",
             "type": "Element",
-        }
+        },
     )
     general_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "GeneralNote",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfAvailabilityToPromiseItemDetail:
-    availability_to_promise_item_detail: List[AvailabilityToPromiseItemDetail] = field(
+    availability_to_promise_item_detail: List[
+        AvailabilityToPromiseItemDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AvailabilityToPromiseItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseDetail:
-    list_of_availability_to_promise_item_detail: Optional[ListOfAvailabilityToPromiseItemDetail] = field(
+    list_of_availability_to_promise_item_detail: Optional[
+        ListOfAvailabilityToPromiseItemDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfAvailabilityToPromiseItemDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -277,17 +291,21 @@ class AvailabilityToPromise:
             "required": True,
         }
     )
-    availability_to_promise_detail: Optional[AvailabilityToPromiseDetail] = field(
+    availability_to_promise_detail: Optional[
+        AvailabilityToPromiseDetail
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseDetail",
             "type": "Element",
-        }
+        },
     )
-    availability_to_promise_summary: Optional[AvailabilityToPromiseSummary] = field(
+    availability_to_promise_summary: Optional[
+        AvailabilityToPromiseSummary
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseSummary",
             "type": "Element",
-        }
+        },
     )

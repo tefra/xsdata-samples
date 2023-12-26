@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_layer_type_limit import PricingLayerTypeLimit
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_layer_type_limit import (
+    PricingLayerTypeLimit,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -15,7 +21,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "name": "Primary",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     attachment_point: Optional[Decimal] = field(
         default=None,
@@ -23,7 +29,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "name": "AttachmentPoint",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     limit: Optional[PricingLayerTypeLimit] = field(
         default=None,
@@ -31,7 +37,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "name": "Limit",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     poshare: Optional[Decimal] = field(
         default=None,
@@ -39,5 +45,5 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "name": "POShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

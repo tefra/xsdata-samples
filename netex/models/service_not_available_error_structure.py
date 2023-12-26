@@ -14,5 +14,5 @@ class ServiceNotAvailableErrorStructure(ErrorCodeStructure):
             "name": "ExpectedRestartTime",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

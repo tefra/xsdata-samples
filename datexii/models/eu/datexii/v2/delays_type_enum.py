@@ -15,6 +15,7 @@ class DelaysTypeEnum(Enum):
     :cvar VERY_LONG_DELAYS: Delays on the road network of abnormally
         unusual severity.
     """
+
     DELAYS = "delays"
     DELAYS_OF_UNCERTAIN_DURATION = "delaysOfUncertainDuration"
     LONG_DELAYS = "longDelays"

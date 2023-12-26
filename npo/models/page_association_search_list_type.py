@@ -15,5 +15,5 @@ class PageAssociationSearchListType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

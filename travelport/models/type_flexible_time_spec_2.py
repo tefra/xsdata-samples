@@ -16,6 +16,7 @@ class TypeFlexibleTimeSpec2(TypeTimeSpec2):
     search_extra_days
         Options to search for extra days on top of the specified date
     """
+
     class Meta:
         name = "typeFlexibleTimeSpec"
 
@@ -25,7 +26,7 @@ class TypeFlexibleTimeSpec2(TypeTimeSpec2):
             "name": "SearchExtraDays",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-        }
+        },
     )
 
     @dataclass
@@ -38,17 +39,18 @@ class TypeFlexibleTimeSpec2(TypeTimeSpec2):
         days_after
             Number of days to search after the specified date
         """
+
         days_before: None | int = field(
             default=None,
             metadata={
                 "name": "DaysBefore",
                 "type": "Attribute",
-            }
+            },
         )
         days_after: None | int = field(
             default=None,
             metadata={
                 "name": "DaysAfter",
                 "type": "Attribute",
-            }
+            },
         )

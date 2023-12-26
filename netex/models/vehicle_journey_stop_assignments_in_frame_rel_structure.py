@@ -7,16 +7,20 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class VehicleJourneyStopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
+class VehicleJourneyStopAssignmentsInFrameRelStructure(
+    ContainmentAggregationStructure
+):
     class Meta:
         name = "vehicleJourneyStopAssignmentsInFrame_RelStructure"
 
-    vehicle_journey_stop_assignment: List[VehicleJourneyStopAssignment] = field(
+    vehicle_journey_stop_assignment: List[
+        VehicleJourneyStopAssignment
+    ] = field(
         default_factory=list,
         metadata={
             "name": "VehicleJourneyStopAssignment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

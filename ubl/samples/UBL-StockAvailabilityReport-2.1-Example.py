@@ -36,16 +36,16 @@ from xsdata.models.datatype import XmlTime
 
 obj = StockAvailabilityReport(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="SA2009"
+        value='SA2009'
     ),
     copy_indicator=False,
     issue_date=XmlDate(2010, 4, 11),
     note=[
         Note(
-            value="Report about quantities of each item which are (or will be) available"
+            value='Report about quantities of each item which are (or will be) available'
         ),
     ],
     inventory_period=InventoryPeriod(
@@ -58,7 +58,7 @@ obj = StockAvailabilityReport(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Arancio Forniture spa"
+                        value='Arancio Forniture spa'
                     )
                 ),
             ],
@@ -67,35 +67,35 @@ obj = StockAvailabilityReport(
                     value="Via Dell'Arcoveggio"
                 ),
                 building_number=BuildingNumber(
-                    value="403"
+                    value='403'
                 ),
                 city_name=CityName(
-                    value="Bologna"
+                    value='Bologna'
                 ),
                 postal_zone=PostalZone(
-                    value="40129"
+                    value='40129'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="IT"
+                        value='IT'
                     ),
                     name=Name(
-                        value="Italy"
+                        value='Italy'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mr Rossi"
+                    value='Mr Rossi'
                 ),
                 telephone=Telephone(
-                    value="0039 051 23000000"
+                    value='0039 051 23000000'
                 ),
                 telefax=Telefax(
-                    value="0039 051 23000023"
+                    value='0039 051 23000023'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="rossi@arancioforniture.it"
+                    value='rossi@arancioforniture.it'
                 )
             )
         )
@@ -105,44 +105,44 @@ obj = StockAvailabilityReport(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Beta Shop"
+                        value='Beta Shop'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Via Emilia"
+                    value='Via Emilia'
                 ),
                 building_number=BuildingNumber(
-                    value="1"
+                    value='1'
                 ),
                 city_name=CityName(
-                    value="Modena"
+                    value='Modena'
                 ),
                 postal_zone=PostalZone(
-                    value="41121"
+                    value='41121'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="IT"
+                        value='IT'
                     ),
                     name=Name(
-                        value="Italy"
+                        value='Italy'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mr Delta"
+                    value='Mr Delta'
                 ),
                 telephone=Telephone(
-                    value="0039 059 33000000"
+                    value='0039 059 33000000'
                 ),
                 telefax=Telefax(
-                    value="0039 059 33000055"
+                    value='0039 059 33000055'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="delta@betashop.it"
+                    value='delta@betashop.it'
                 )
             )
         )
@@ -151,148 +151,148 @@ obj = StockAvailabilityReport(
         party_name=[
             PartyName(
                 name=Name(
-                    value="Beta Shop"
+                    value='Beta Shop'
                 )
             ),
         ],
         postal_address=PostalAddress(
             floor=Floor(
-                value="2"
+                value='2'
             ),
             room=Room(
-                value="309"
+                value='309'
             ),
             street_name=StreetName(
-                value="Via Emilia"
+                value='Via Emilia'
             ),
             building_number=BuildingNumber(
-                value="1"
+                value='1'
             ),
             city_name=CityName(
-                value="Modena"
+                value='Modena'
             ),
             postal_zone=PostalZone(
-                value="41121"
+                value='41121'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="IT"
+                    value='IT'
                 ),
                 name=Name(
-                    value="Italy"
+                    value='Italy'
                 )
             )
         ),
         contact=Contact(
             name=Name(
-                value="Mr Gamma"
+                value='Mr Gamma'
             ),
             telephone=Telephone(
-                value="0039 059 33000022"
+                value='0039 059 33000022'
             ),
             telefax=Telefax(
-                value="0039 059 33000057"
+                value='0039 059 33000057'
             ),
             electronic_mail=ElectronicMail(
-                value="gamma@betashop.it"
+                value='gamma@betashop.it'
             )
         )
     ),
     stock_availability_report_line=[
         StockAvailabilityReportLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             quantity=Quantity(
-                value=Decimal("50"),
-                unit_code="NAR"
+                value=Decimal('50'),
+                unit_code='NAR'
             ),
             availability_date=XmlDate(2010, 4, 20),
             availability_status_code=AvailabilityStatusCode(
-                value="1",
-                list_id="7011",
-                list_agency_name="UN/ECE",
-                list_uri="http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm"
+                value='1',
+                list_id='7011',
+                list_agency_name='UN/ECE',
+                list_uri='http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="T-shirt"
+                        value='T-shirt'
                     ),
                 ],
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="TT319"
+                        value='TT319'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="ZZ738"
+                        value='ZZ738'
                     )
                 )
             )
         ),
         StockAvailabilityReportLine(
             id=Id(
-                value="2"
+                value='2'
             ),
             quantity=Quantity(
-                value=Decimal("80"),
-                unit_code="NAR"
+                value=Decimal('80'),
+                unit_code='NAR'
             ),
             availability_date=XmlDate(2010, 4, 11),
             availability_status_code=AvailabilityStatusCode(
-                value="2",
-                list_id="7011",
-                list_agency_name="UN/ECE",
-                list_uri="http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm"
+                value='2',
+                list_id='7011',
+                list_agency_name='UN/ECE',
+                list_uri='http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="jersey"
+                        value='jersey'
                     ),
                 ],
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="TJ043"
+                        value='TJ043'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="K0058"
+                        value='K0058'
                     )
                 )
             )
         ),
         StockAvailabilityReportLine(
             id=Id(
-                value="3"
+                value='3'
             ),
             quantity=Quantity(
-                value=Decimal("0"),
-                unit_code="NAR"
+                value=Decimal('0'),
+                unit_code='NAR'
             ),
             availability_status_code=AvailabilityStatusCode(
-                value="8",
-                list_id="7011",
-                list_agency_name="UN/ECE",
-                list_uri="http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm"
+                value='8',
+                list_id='7011',
+                list_agency_name='UN/ECE',
+                list_uri='http://www.unece.org/trade/untdid/d09b/tred/tred7011.htm'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="skirt"
+                        value='skirt'
                     ),
                 ],
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="TS893"
+                        value='TS893'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="PK009"
+                        value='PK009'
                     )
                 )
             )

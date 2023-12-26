@@ -35,6 +35,7 @@ class CryptoKeySlotAllowedModification:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-KEY-SLOT-ALLOWED-MODIFICATION"
 
@@ -44,7 +45,7 @@ class CryptoKeySlotAllowedModification:
             "name": "ALLOW-CONTENT-TYPE-CHANGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     exportability: Optional[Boolean] = field(
         default=None,
@@ -52,7 +53,7 @@ class CryptoKeySlotAllowedModification:
             "name": "EXPORTABILITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_of_allowed_updates: Optional[PositiveInteger] = field(
         default=None,
@@ -60,7 +61,7 @@ class CryptoKeySlotAllowedModification:
             "name": "MAX-NUMBER-OF-ALLOWED-UPDATES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     restrict_update: Optional[Boolean] = field(
         default=None,
@@ -68,14 +69,14 @@ class CryptoKeySlotAllowedModification:
             "name": "RESTRICT-UPDATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -83,5 +84,5 @@ class CryptoKeySlotAllowedModification:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

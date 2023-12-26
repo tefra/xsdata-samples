@@ -13,6 +13,7 @@ class BaseVehicleSearchAvailabilityReq(BaseSearchReq1):
     """
     Base request to search for vehicle availability.
     """
+
     vehicle_date_location: None | VehicleDateLocation = field(
         default=None,
         metadata={
@@ -20,7 +21,7 @@ class BaseVehicleSearchAvailabilityReq(BaseSearchReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "required": True,
-        }
+        },
     )
     vehicle_search_modifiers: None | VehicleSearchModifiers = field(
         default=None,
@@ -28,7 +29,7 @@ class BaseVehicleSearchAvailabilityReq(BaseSearchReq1):
             "name": "VehicleSearchModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,
@@ -36,5 +37,5 @@ class BaseVehicleSearchAvailabilityReq(BaseSearchReq1):
             "name": "PointOfSale",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

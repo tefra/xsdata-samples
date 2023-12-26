@@ -18,6 +18,7 @@ class TerminalReq(BaseReq4):
         calls for the same host session.
     terminal_command
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
@@ -28,7 +29,7 @@ class TerminalReq(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "required": True,
-        }
+        },
     )
     terminal_command: None | str = field(
         default=None,
@@ -36,5 +37,5 @@ class TerminalReq(BaseReq4):
             "name": "TerminalCommand",
             "type": "Element",
             "required": True,
-        }
+        },
     )

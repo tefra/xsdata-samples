@@ -15,5 +15,5 @@ class Variance:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

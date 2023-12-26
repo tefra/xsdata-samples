@@ -19,6 +19,7 @@ class VmsUnitTable:
     :ivar id:
     :ivar version:
     """
+
     vms_unit_table_identification: Optional[str] = field(
         default=None,
         metadata={
@@ -26,7 +27,7 @@ class VmsUnitTable:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     vms_unit_record: List[VmsUnitRecord] = field(
         default_factory=list,
@@ -35,7 +36,7 @@ class VmsUnitTable:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     vms_unit_table_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,19 +44,19 @@ class VmsUnitTable:
             "name": "vmsUnitTableExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

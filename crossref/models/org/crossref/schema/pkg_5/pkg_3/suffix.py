@@ -8,6 +8,7 @@ class Suffix:
     """
     The suffix of an author name, e.g. junior, senior, III.
     """
+
     class Meta:
         name = "suffix"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class Suffix:
         metadata={
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )

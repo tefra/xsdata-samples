@@ -18,7 +18,7 @@ class PreviousCallVersionedChildStructure(CallVersionedChildStructure):
             "name": "TargetPassingTimeView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     estimated_passing_time_view: Optional[EstimatedPassingTimeView] = field(
         default=None,
@@ -26,5 +26,5 @@ class PreviousCallVersionedChildStructure(CallVersionedChildStructure):
             "name": "EstimatedPassingTimeView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

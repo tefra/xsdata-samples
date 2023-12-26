@@ -38,6 +38,7 @@ class AirRefundInfo:
         This indicates whether carrier/host supports refund for the
         correcponding pnr.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -48,35 +49,35 @@ class AirRefundInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
-        }
+        },
     )
     retain_amount: None | str = field(
         default=None,
         metadata={
             "name": "RetainAmount",
             "type": "Attribute",
-        }
+        },
     )
     refund_fee: None | str = field(
         default=None,
         metadata={
             "name": "RefundFee",
             "type": "Attribute",
-        }
+        },
     )
     refundable_taxes: None | str = field(
         default=None,
         metadata={
             "name": "RefundableTaxes",
             "type": "Attribute",
-        }
+        },
     )
     filed_currency: None | str = field(
         default=None,
@@ -84,47 +85,47 @@ class AirRefundInfo:
             "name": "FiledCurrency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     conversion_rate: None | Decimal = field(
         default=None,
         metadata={
             "name": "ConversionRate",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     original_ticket_total: None | str = field(
         default=None,
         metadata={
             "name": "OriginalTicketTotal",
             "type": "Attribute",
-        }
+        },
     )
     forfeit_amount: None | str = field(
         default=None,
         metadata={
             "name": "ForfeitAmount",
             "type": "Attribute",
-        }
+        },
     )
     retain: bool = field(
         default=False,
         metadata={
             "name": "Retain",
             "type": "Attribute",
-        }
+        },
     )
     refund: bool = field(
         default=False,
         metadata={
             "name": "Refund",
             "type": "Attribute",
-        }
+        },
     )

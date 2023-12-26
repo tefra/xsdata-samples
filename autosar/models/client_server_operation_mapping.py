@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
+from .client_server_operation_subtypes_enum import (
+    ClientServerOperationSubtypesEnum,
+)
 from .data_prototype_mapping import DataPrototypeMapping
 from .data_transformation_subtypes_enum import DataTransformationSubtypesEnum
 from .ref import Ref
@@ -35,47 +37,56 @@ class ClientServerOperationMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-OPERATION-MAPPING"
 
-    argument_mappings: Optional["ClientServerOperationMapping.ArgumentMappings"] = field(
+    argument_mappings: Optional[
+        "ClientServerOperationMapping.ArgumentMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "ARGUMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    first_operation_ref: Optional["ClientServerOperationMapping.FirstOperationRef"] = field(
+    first_operation_ref: Optional[
+        "ClientServerOperationMapping.FirstOperationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-OPERATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    first_to_second_data_transformation_ref: Optional["ClientServerOperationMapping.FirstToSecondDataTransformationRef"] = field(
+    first_to_second_data_transformation_ref: Optional[
+        "ClientServerOperationMapping.FirstToSecondDataTransformationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-TO-SECOND-DATA-TRANSFORMATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    second_operation_ref: Optional["ClientServerOperationMapping.SecondOperationRef"] = field(
+    second_operation_ref: Optional[
+        "ClientServerOperationMapping.SecondOperationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SECOND-OPERATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -83,7 +94,7 @@ class ClientServerOperationMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -94,7 +105,7 @@ class ClientServerOperationMapping:
                 "name": "DATA-PROTOTYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -105,7 +116,7 @@ class ClientServerOperationMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -116,7 +127,7 @@ class ClientServerOperationMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -127,5 +138,5 @@ class ClientServerOperationMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

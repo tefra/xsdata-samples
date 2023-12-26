@@ -14,7 +14,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .timing_description_event_subtypes_enum import (
+    TimingDescriptionEventSubtypesEnum,
+)
 from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -93,6 +95,7 @@ class AgeConstraint:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "AGE-CONSTRAINT"
 
@@ -103,7 +106,7 @@ class AgeConstraint:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["AgeConstraint.ShortNameFragments"] = field(
         default=None,
@@ -111,7 +114,7 @@ class AgeConstraint:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +122,7 @@ class AgeConstraint:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +130,7 @@ class AgeConstraint:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +138,7 @@ class AgeConstraint:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +146,7 @@ class AgeConstraint:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +154,7 @@ class AgeConstraint:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["AgeConstraint.Annotations"] = field(
         default=None,
@@ -159,7 +162,7 @@ class AgeConstraint:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["AgeConstraint.TraceRefs"] = field(
         default=None,
@@ -167,7 +170,7 @@ class AgeConstraint:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timing_condition_ref: Optional["AgeConstraint.TimingConditionRef"] = field(
         default=None,
@@ -175,7 +178,7 @@ class AgeConstraint:
             "name": "TIMING-CONDITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -183,7 +186,7 @@ class AgeConstraint:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum: Optional[MultidimensionalTime] = field(
         default=None,
@@ -191,7 +194,7 @@ class AgeConstraint:
             "name": "MAXIMUM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum: Optional[MultidimensionalTime] = field(
         default=None,
@@ -199,7 +202,7 @@ class AgeConstraint:
             "name": "MINIMUM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     scope_ref: Optional["AgeConstraint.ScopeRef"] = field(
         default=None,
@@ -207,14 +210,14 @@ class AgeConstraint:
             "name": "SCOPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -222,14 +225,14 @@ class AgeConstraint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -240,7 +243,7 @@ class AgeConstraint:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -251,7 +254,7 @@ class AgeConstraint:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -262,7 +265,7 @@ class AgeConstraint:
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -273,7 +276,7 @@ class AgeConstraint:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -284,7 +287,7 @@ class AgeConstraint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -295,5 +298,5 @@ class AgeConstraint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

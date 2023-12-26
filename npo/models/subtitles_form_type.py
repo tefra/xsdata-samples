@@ -15,5 +15,5 @@ class SubtitlesFormType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

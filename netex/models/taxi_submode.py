@@ -13,5 +13,5 @@ class TaxiSubmode:
         default=TaxiSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

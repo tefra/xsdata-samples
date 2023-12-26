@@ -17,6 +17,7 @@ class UimetaDataRetrieveReq(BaseReq2):
         selected(say, Agency or Account name) for which the change in
         settings will be done.
     """
+
     class Meta:
         name = "UIMetaDataRetrieveReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -27,5 +28,5 @@ class UimetaDataRetrieveReq(BaseReq2):
             "name": "ProfileID",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -19,7 +19,7 @@ class DirectionValueStructure(TypeOfValueVersionStructure):
             "name": "ExternalDirectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
         default=None,
@@ -27,7 +27,7 @@ class DirectionValueStructure(TypeOfValueVersionStructure):
             "name": "DirectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     opposite_direction_ref: Optional[DirectionRefStructure] = field(
         default=None,
@@ -35,5 +35,5 @@ class DirectionValueStructure(TypeOfValueVersionStructure):
             "name": "OppositeDirectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

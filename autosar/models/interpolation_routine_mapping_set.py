@@ -78,6 +78,7 @@ class InterpolationRoutineMappingSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "INTERPOLATION-ROUTINE-MAPPING-SET"
 
@@ -88,15 +89,17 @@ class InterpolationRoutineMappingSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["InterpolationRoutineMappingSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "InterpolationRoutineMappingSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -104,7 +107,7 @@ class InterpolationRoutineMappingSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -112,7 +115,7 @@ class InterpolationRoutineMappingSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -120,7 +123,7 @@ class InterpolationRoutineMappingSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -128,7 +131,7 @@ class InterpolationRoutineMappingSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -136,15 +139,17 @@ class InterpolationRoutineMappingSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["InterpolationRoutineMappingSet.Annotations"] = field(
+    annotations: Optional[
+        "InterpolationRoutineMappingSet.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -152,22 +157,24 @@ class InterpolationRoutineMappingSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    interpolation_routine_mappings: Optional["InterpolationRoutineMappingSet.InterpolationRoutineMappings"] = field(
+    interpolation_routine_mappings: Optional[
+        "InterpolationRoutineMappingSet.InterpolationRoutineMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -175,14 +182,14 @@ class InterpolationRoutineMappingSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -193,7 +200,7 @@ class InterpolationRoutineMappingSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -204,16 +211,18 @@ class InterpolationRoutineMappingSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class InterpolationRoutineMappings:
-        interpolation_routine_mapping: List[InterpolationRoutineMapping] = field(
+        interpolation_routine_mapping: List[
+            InterpolationRoutineMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INTERPOLATION-ROUTINE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

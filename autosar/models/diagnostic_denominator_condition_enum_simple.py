@@ -15,6 +15,7 @@ class DiagnosticDenominatorConditionEnumSimple(Enum):
         requirements.
     :cvar OBD: Condition based on definition of OBD requirements.
     """
+
     VALUE_500_MILES = "-500-MILES"
     COLDSTART = "COLDSTART"
     EVAP = "EVAP"

@@ -43,6 +43,7 @@ class Charge:
         the charge to this period (e.g. night-tariffs).
     :ivar charge_extension:
     """
+
     charge: Optional[Decimal] = field(
         default=None,
         metadata={
@@ -51,7 +52,7 @@ class Charge:
             "required": True,
             "total_digits": 8,
             "fraction_digits": 2,
-        }
+        },
     )
     charge_interval: Optional[float] = field(
         default=None,
@@ -59,7 +60,7 @@ class Charge:
             "name": "chargeInterval",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_type: Optional[ChargeTypeEnum] = field(
         default=None,
@@ -67,7 +68,7 @@ class Charge:
             "name": "chargeType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_type_description: Optional[MultilingualString] = field(
         default=None,
@@ -75,7 +76,7 @@ class Charge:
             "name": "chargeTypeDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     max_iterations_of_charge: Optional[int] = field(
         default=None,
@@ -83,7 +84,7 @@ class Charge:
             "name": "maxIterationsOfCharge",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     min_iterations_of_charge: Optional[int] = field(
         default=None,
@@ -91,7 +92,7 @@ class Charge:
             "name": "minIterationsOfCharge",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_order_index: Optional[int] = field(
         default=None,
@@ -99,7 +100,7 @@ class Charge:
             "name": "chargeOrderIndex",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     time_period_of_day: Optional[TimePeriodOfDay] = field(
         default=None,
@@ -107,7 +108,7 @@ class Charge:
             "name": "timePeriodOfDay",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_extension: Optional[ExtensionType] = field(
         default=None,
@@ -115,5 +116,5 @@ class Charge:
             "name": "chargeExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

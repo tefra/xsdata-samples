@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+)
 
 
 @dataclass

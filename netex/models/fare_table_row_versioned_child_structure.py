@@ -1,12 +1,14 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .fare_table_ref import FareTableRef
 from .multilingual_string import MultilingualString
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .object_refs_rel_structure import ObjectRefsRelStructure
 from .standard_fare_table_ref import StandardFareTableRef
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -22,7 +24,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -30,9 +32,11 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    standard_fare_table_ref_or_fare_table_ref: Optional[object] = field(
+    standard_fare_table_ref_or_fare_table_ref: Optional[
+        Union[StandardFareTableRef, FareTableRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -48,7 +52,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -56,27 +60,27 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     representing: Optional[ObjectRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     rows: Optional["FareTableRowsRelStructure"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -98,5 +102,5 @@ class FareTableRowsRelStructure(StrictContainmentAggregationStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

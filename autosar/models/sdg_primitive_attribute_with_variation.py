@@ -101,6 +101,7 @@ class SdgPrimitiveAttributeWithVariation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SDG-PRIMITIVE-ATTRIBUTE-WITH-VARIATION"
 
@@ -111,15 +112,17 @@ class SdgPrimitiveAttributeWithVariation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SdgPrimitiveAttributeWithVariation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SdgPrimitiveAttributeWithVariation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -127,7 +130,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -135,7 +138,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -143,7 +146,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -151,7 +154,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -159,15 +162,17 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["SdgPrimitiveAttributeWithVariation.Annotations"] = field(
+    annotations: Optional[
+        "SdgPrimitiveAttributeWithVariation.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lower_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -175,7 +180,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "LOWER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity: Optional[PositiveInteger] = field(
         default=None,
@@ -183,7 +188,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "UPPER-MULTIPLICITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_multiplicity_infinite: Optional[Boolean] = field(
         default=None,
@@ -191,7 +196,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "UPPER-MULTIPLICITY-INFINITE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     gid: Optional[NmtokenString] = field(
         default=None,
@@ -199,7 +204,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "GID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max: Optional[LimitValue] = field(
         default=None,
@@ -207,7 +212,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_length: Optional[PositiveInteger] = field(
         default=None,
@@ -215,7 +220,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "MAX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min: Optional[LimitValue] = field(
         default=None,
@@ -223,7 +228,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_length: Optional[PositiveInteger] = field(
         default=None,
@@ -231,7 +236,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "MIN-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pattern: Optional[RegularExpression] = field(
         default=None,
@@ -239,7 +244,7 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation: Optional[Boolean] = field(
         default=None,
@@ -247,22 +252,24 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "VARIATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    valid_binding_times: Optional["SdgPrimitiveAttributeWithVariation.ValidBindingTimes"] = field(
+    valid_binding_times: Optional[
+        "SdgPrimitiveAttributeWithVariation.ValidBindingTimes"
+    ] = field(
         default=None,
         metadata={
             "name": "VALID-BINDING-TIMES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -270,14 +277,14 @@ class SdgPrimitiveAttributeWithVariation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -288,7 +295,7 @@ class SdgPrimitiveAttributeWithVariation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -299,7 +306,7 @@ class SdgPrimitiveAttributeWithVariation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -307,11 +314,12 @@ class SdgPrimitiveAttributeWithVariation:
         """
         :ivar valid_binding_time: List of valid binding times.
         """
+
         valid_binding_time: List[FullBindingTimeEnum] = field(
             default_factory=list,
             metadata={
                 "name": "VALID-BINDING-TIME",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

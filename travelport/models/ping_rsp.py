@@ -11,6 +11,7 @@ class PingRsp(BaseRsp3):
 
     Will contain the exact payload (if any) that was sent in
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
@@ -20,5 +21,5 @@ class PingRsp(BaseRsp3):
             "name": "Payload",
             "type": "Element",
             "max_length": 32768,
-        }
+        },
     )

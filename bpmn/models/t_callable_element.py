@@ -19,7 +19,7 @@ class TCallableElement(TRootElement):
             "name": "supportedInterfaceRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     io_specification: Optional[IoSpecification] = field(
         default=None,
@@ -27,7 +27,7 @@ class TCallableElement(TRootElement):
             "name": "ioSpecification",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     io_binding: List[IoBinding] = field(
         default_factory=list,
@@ -35,11 +35,11 @@ class TCallableElement(TRootElement):
             "name": "ioBinding",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

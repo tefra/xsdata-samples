@@ -13,11 +13,12 @@ class SituationRecordExtendedApproved:
         SituationRecord specifies a safety related message according to
         Commission Delegated Regulation (EU) No 886/2013.
     """
+
     safety_related_message: Optional[bool] = field(
         default=None,
         metadata={
             "name": "safetyRelatedMessage",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -1,8 +1,12 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_custom_field_data_format_2 import TypeCustomFieldDataFormat2
+from travelport.models.type_custom_field_data_format_2 import (
+    TypeCustomFieldDataFormat2,
+)
 from travelport.models.type_float_restriction_2 import TypeFloatRestriction2
-from travelport.models.type_integer_restriction_2 import TypeIntegerRestriction2
+from travelport.models.type_integer_restriction_2 import (
+    TypeIntegerRestriction2,
+)
 from travelport.models.type_masked_2 import TypeMasked2
 from travelport.models.type_string_restriction_2 import TypeStringRestriction2
 
@@ -65,6 +69,7 @@ class CreateField2:
         Maximum number of instances permitted. Leave blank to indicate
         unlimited (i.e., ..*).
     """
+
     class Meta:
         name = "CreateField"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -74,42 +79,42 @@ class CreateField2:
         metadata={
             "name": "FreeformTextRestriction",
             "type": "Element",
-        }
+        },
     )
     whole_number_restriction: None | TypeIntegerRestriction2 = field(
         default=None,
         metadata={
             "name": "WholeNumberRestriction",
             "type": "Element",
-        }
+        },
     )
     decimal_restriction: None | TypeFloatRestriction2 = field(
         default=None,
         metadata={
             "name": "DecimalRestriction",
             "type": "Element",
-        }
+        },
     )
     text_restriction: None | TypeStringRestriction2 = field(
         default=None,
         metadata={
             "name": "TextRestriction",
             "type": "Element",
-        }
+        },
     )
     alpha_numeric_restriction: None | TypeStringRestriction2 = field(
         default=None,
         metadata={
             "name": "AlphaNumericRestriction",
             "type": "Element",
-        }
+        },
     )
     percentage_restriction: None | TypeFloatRestriction2 = field(
         default=None,
         metadata={
             "name": "PercentageRestriction",
             "type": "Element",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -119,7 +124,7 @@ class CreateField2:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -128,7 +133,7 @@ class CreateField2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     type_value: None | TypeCustomFieldDataFormat2 = field(
         default=None,
@@ -136,21 +141,21 @@ class CreateField2:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     encrypted: bool = field(
         default=False,
         metadata={
             "name": "Encrypted",
             "type": "Attribute",
-        }
+        },
     )
     masked: TypeMasked2 = field(
         default=TypeMasked2.NOT_MASKED,
         metadata={
             "name": "Masked",
             "type": "Attribute",
-        }
+        },
     )
     default_value: None | str = field(
         default=None,
@@ -159,40 +164,40 @@ class CreateField2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     protected: bool = field(
         default=False,
         metadata={
             "name": "Protected",
             "type": "Attribute",
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     inheritable: bool = field(
         default=False,
         metadata={
             "name": "Inheritable",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )

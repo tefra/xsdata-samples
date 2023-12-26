@@ -9,5 +9,6 @@ class TypeRowLocation(Enum):
 
     Possible values are Rear, Front
     """
+
     REAR = "Rear"
     FRONT = "Front"

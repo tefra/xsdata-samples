@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .customer_account_status_ref_structure import CustomerAccountStatusRefStructure
+from .customer_account_status_ref_structure import (
+    CustomerAccountStatusRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

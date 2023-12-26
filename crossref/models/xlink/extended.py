@@ -14,6 +14,7 @@ class Extended:
     abstract. The intention is that by simply declaring elements with
     these as their substitutionGroup, all the right things will happen.
     """
+
     class Meta:
         name = "extended"
 
@@ -25,7 +26,7 @@ class Extended:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,
-        }
+        },
     )
     role: Optional[str] = field(
         default=None,
@@ -33,12 +34,12 @@ class Extended:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "min_length": 1,
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class RequestReferenceDataItem:
     request_amenity
         Requested decoded values only for the specified Hotel Amenity codes.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -24,7 +25,7 @@ class RequestReferenceDataItem:
             "name": "RequestAmenity",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
 
     @dataclass
@@ -39,6 +40,7 @@ class RequestReferenceDataItem:
             (Transportation) or “BT” (Bed Type). If no type is specified,
             all amenity types are returned.
         """
+
         type_value: None | str = field(
             default=None,
             metadata={
@@ -46,5 +48,5 @@ class RequestReferenceDataItem:
                 "type": "Attribute",
                 "required": True,
                 "length": 2,
-            }
+            },
         )

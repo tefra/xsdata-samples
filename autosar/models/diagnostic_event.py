@@ -8,16 +8,24 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .diagnostic_clear_event_allowed_behavior_enum import DiagnosticClearEventAllowedBehaviorEnum
-from .diagnostic_clear_event_behavior_enum import DiagnosticClearEventBehaviorEnum
+from .diagnostic_clear_event_allowed_behavior_enum import (
+    DiagnosticClearEventAllowedBehaviorEnum,
+)
+from .diagnostic_clear_event_behavior_enum import (
+    DiagnosticClearEventBehaviorEnum,
+)
 from .diagnostic_connected_indicator import DiagnosticConnectedIndicator
-from .diagnostic_event_clear_allowed_enum import DiagnosticEventClearAllowedEnum
+from .diagnostic_event_clear_allowed_enum import (
+    DiagnosticEventClearAllowedEnum,
+)
 from .diagnostic_event_kind_enum import DiagnosticEventKindEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -138,6 +146,7 @@ class DiagnosticEvent:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-EVENT"
 
@@ -148,15 +157,17 @@ class DiagnosticEvent:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticEvent.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticEvent.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -164,7 +175,7 @@ class DiagnosticEvent:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -172,7 +183,7 @@ class DiagnosticEvent:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -180,7 +191,7 @@ class DiagnosticEvent:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -188,7 +199,7 @@ class DiagnosticEvent:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -196,7 +207,7 @@ class DiagnosticEvent:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticEvent.Annotations"] = field(
         default=None,
@@ -204,7 +215,7 @@ class DiagnosticEvent:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -212,7 +223,7 @@ class DiagnosticEvent:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     aging_allowed: Optional[Boolean] = field(
         default=None,
@@ -220,7 +231,7 @@ class DiagnosticEvent:
             "name": "AGING-ALLOWED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     associated_event_identification: Optional[PositiveInteger] = field(
         default=None,
@@ -228,15 +239,17 @@ class DiagnosticEvent:
             "name": "ASSOCIATED-EVENT-IDENTIFICATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    clear_event_allowed_behavior: Optional[DiagnosticClearEventAllowedBehaviorEnum] = field(
+    clear_event_allowed_behavior: Optional[
+        DiagnosticClearEventAllowedBehaviorEnum
+    ] = field(
         default=None,
         metadata={
             "name": "CLEAR-EVENT-ALLOWED-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     clear_event_behavior: Optional[DiagnosticClearEventBehaviorEnum] = field(
         default=None,
@@ -244,23 +257,27 @@ class DiagnosticEvent:
             "name": "CLEAR-EVENT-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    confirmation_threshold: Optional[PositiveIntegerValueVariationPoint] = field(
+    confirmation_threshold: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "CONFIRMATION-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    connected_indicators: Optional["DiagnosticEvent.ConnectedIndicators"] = field(
+    connected_indicators: Optional[
+        "DiagnosticEvent.ConnectedIndicators"
+    ] = field(
         default=None,
         metadata={
             "name": "CONNECTED-INDICATORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_clear_allowed: Optional[DiagnosticEventClearAllowedEnum] = field(
         default=None,
@@ -268,15 +285,17 @@ class DiagnosticEvent:
             "name": "EVENT-CLEAR-ALLOWED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_failure_cycle_counter_threshold: Optional[PositiveIntegerValueVariationPoint] = field(
+    event_failure_cycle_counter_threshold: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-FAILURE-CYCLE-COUNTER-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_kind: Optional[DiagnosticEventKindEnum] = field(
         default=None,
@@ -284,7 +303,7 @@ class DiagnosticEvent:
             "name": "EVENT-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     prestorage_freeze_frame: Optional[Boolean] = field(
         default=None,
@@ -292,7 +311,7 @@ class DiagnosticEvent:
             "name": "PRESTORAGE-FREEZE-FRAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     prestored_freezeframe_stored_in_nvm: Optional[Boolean] = field(
         default=None,
@@ -300,7 +319,7 @@ class DiagnosticEvent:
             "name": "PRESTORED-FREEZEFRAME-STORED-IN-NVM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     recoverable_in_same_operation_cycle: Optional[Boolean] = field(
         default=None,
@@ -308,14 +327,14 @@ class DiagnosticEvent:
             "name": "RECOVERABLE-IN-SAME-OPERATION-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -323,14 +342,14 @@ class DiagnosticEvent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -341,7 +360,7 @@ class DiagnosticEvent:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -352,16 +371,18 @@ class DiagnosticEvent:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ConnectedIndicators:
-        diagnostic_connected_indicator: List[DiagnosticConnectedIndicator] = field(
+        diagnostic_connected_indicator: List[
+            DiagnosticConnectedIndicator
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-CONNECTED-INDICATOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

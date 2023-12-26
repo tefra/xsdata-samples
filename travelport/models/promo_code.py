@@ -18,6 +18,7 @@ class PromoCode:
     supplier_code
         To be used to specify Supplier Code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class PromoCode:
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -39,7 +40,7 @@ class PromoCode:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -49,5 +50,5 @@ class PromoCode:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )

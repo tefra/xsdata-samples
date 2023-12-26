@@ -28,6 +28,7 @@ class GdsQueueListReq(BaseReq1):
     queue_session_token
         Queue Session Token to hold session token for multiple queue
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -37,7 +38,7 @@ class GdsQueueListReq(BaseReq1):
             "name": "NextResultReference",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     gds_queue_selector: None | QueueSelectorType = field(
         default=None,
@@ -45,7 +46,7 @@ class GdsQueueListReq(BaseReq1):
             "name": "GdsQueueSelector",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -55,7 +56,7 @@ class GdsQueueListReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -64,19 +65,19 @@ class GdsQueueListReq(BaseReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     retrieve_all: None | bool = field(
         default=None,
         metadata={
             "name": "RetrieveAll",
             "type": "Attribute",
-        }
+        },
     )
     queue_session_token: None | str = field(
         default=None,
         metadata={
             "name": "QueueSessionToken",
             "type": "Attribute",
-        }
+        },
     )

@@ -11,6 +11,7 @@ class AirItinerarySolution:
     """
     The pricing container for an air travel itinerary.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,7 +21,7 @@ class AirItinerarySolution:
             "name": "AirSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     connection: list[Connection] = field(
         default_factory=list,
@@ -28,7 +29,7 @@ class AirItinerarySolution:
             "name": "Connection",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -36,5 +37,5 @@ class AirItinerarySolution:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

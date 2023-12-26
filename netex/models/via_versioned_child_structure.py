@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .border_point_ref import BorderPointRef
 from .destination_display_ref import DestinationDisplayRef
@@ -22,7 +22,11 @@ class ViaVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Via_VersionedChildStructure"
 
-    destination_display_ref_or_destination_display_view_or_name: Optional[object] = field(
+    destination_display_ref_or_destination_display_view_or_name: Optional[
+        Union[
+            DestinationDisplayRef, DestinationDisplayView, MultilingualString
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -43,9 +47,20 @@ class ViaVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -91,7 +106,7 @@ class ViaVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     via_type: Optional[ViaTypeEnumeration] = field(
         default=None,
@@ -99,5 +114,5 @@ class ViaVersionedChildStructure(VersionedChildStructure):
             "name": "ViaType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

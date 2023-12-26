@@ -46,6 +46,7 @@ class EndToEndProtectionISignalIPdu:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-TO-END-PROTECTION-I-SIGNAL-I-PDU"
 
@@ -55,23 +56,27 @@ class EndToEndProtectionISignalIPdu:
             "name": "DATA-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_signal_group_ref: Optional["EndToEndProtectionISignalIPdu.ISignalGroupRef"] = field(
+    i_signal_group_ref: Optional[
+        "EndToEndProtectionISignalIPdu.ISignalGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_signal_i_pdu_ref: Optional["EndToEndProtectionISignalIPdu.ISignalIPduRef"] = field(
+    i_signal_i_pdu_ref: Optional[
+        "EndToEndProtectionISignalIPdu.ISignalIPduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-I-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -79,14 +84,14 @@ class EndToEndProtectionISignalIPdu:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -94,7 +99,7 @@ class EndToEndProtectionISignalIPdu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -105,7 +110,7 @@ class EndToEndProtectionISignalIPdu:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -116,5 +121,5 @@ class EndToEndProtectionISignalIPdu:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

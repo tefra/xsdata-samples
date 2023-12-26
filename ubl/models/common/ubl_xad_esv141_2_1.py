@@ -23,7 +23,7 @@ class ValidationDataType:
             "name": "CertificateValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     revocation_values: Optional[RevocationValues] = field(
         default=None,
@@ -31,21 +31,21 @@ class ValidationDataType:
             "name": "RevocationValues",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
     ur: Optional[str] = field(
         default=None,
         metadata={
             "name": "UR",
             "type": "Attribute",
-        }
+        },
     )
 
 

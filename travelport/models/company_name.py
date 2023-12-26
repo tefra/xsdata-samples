@@ -9,6 +9,7 @@ class CompanyName:
     """
     Supplier info that is specific to the Unique Id.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class CompanyName:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )

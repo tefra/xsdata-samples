@@ -19,6 +19,7 @@ class FareRuleKey:
         The Fare Component to which this Rule Key applies
     provider_code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class FareRuleKey:
             "required": True,
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     fare_info_ref: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class FareRuleKey:
             "name": "FareInfoRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -46,5 +47,5 @@ class FareRuleKey:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

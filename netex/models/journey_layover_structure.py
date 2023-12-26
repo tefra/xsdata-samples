@@ -1,12 +1,14 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
-from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from .journey_timing_versioned_child_structure import (
+    JourneyTimingVersionedChildStructure,
+)
 from .parking_point_ref import ParkingPointRef
 from .point_ref import PointRef
 from .railway_point_ref import RailwayPointRef
@@ -30,9 +32,27 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
+            PointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -113,5 +133,5 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

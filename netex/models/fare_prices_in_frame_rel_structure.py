@@ -17,5 +17,5 @@ class FarePricesInFrameRelStructure(FrameContainmentStructure):
             "name": "PriceGroup",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

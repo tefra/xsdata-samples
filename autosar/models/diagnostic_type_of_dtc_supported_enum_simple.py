@@ -11,6 +11,7 @@ class DiagnosticTypeOfDtcSupportedEnumSimple(Enum):
     :cvar SAE_J_1939_73: SAEJ1939-73 DTC format
     :cvar SAE_J_2012_DA: SAE_J2012-DA_DTCFormat_00 (3 byte format)
     """
+
     ISO_11992_4 = "ISO-11992--4"
     ISO_14229_1 = "ISO-14229--1"
     ISO_15031_6 = "ISO-15031--6"

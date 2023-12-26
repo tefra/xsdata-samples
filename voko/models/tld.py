@@ -11,11 +11,11 @@ class Tld:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     var: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -13,5 +13,5 @@ class MetroSubmode:
         default=MetroSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -19,48 +19,48 @@ class ScheduleType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "min_occurs": 1,
-        }
+        },
     )
     channel: None | ChannelEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     net: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     date: None | XmlDate = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     release_version: None | int = field(
         default=None,
         metadata={
             "name": "releaseVersion",
             "type": "Attribute",
-        }
+        },
     )
     start: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     reruns: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

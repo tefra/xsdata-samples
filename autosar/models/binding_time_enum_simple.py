@@ -27,6 +27,7 @@ class BindingTimeEnumSimple(Enum):
         interconnecting Networks * Designing the Communication Matrix
         and Data Mapping
     """
+
     CODE_GENERATION_TIME = "CODE-GENERATION-TIME"
     LINK_TIME = "LINK-TIME"
     PRE_COMPILE_TIME = "PRE-COMPILE-TIME"

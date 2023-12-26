@@ -35,6 +35,7 @@ class AppliedProfile1:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "AppliedProfile"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -44,61 +45,61 @@ class AppliedProfile1:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     traveler_id: None | str = field(
         default=None,
         metadata={
             "name": "TravelerID",
             "type": "Attribute",
-        }
+        },
     )
     traveler_name: None | str = field(
         default=None,
         metadata={
             "name": "TravelerName",
             "type": "Attribute",
-        }
+        },
     )
     account_id: None | str = field(
         default=None,
         metadata={
             "name": "AccountID",
             "type": "Attribute",
-        }
+        },
     )
     account_name: None | str = field(
         default=None,
         metadata={
             "name": "AccountName",
             "type": "Attribute",
-        }
+        },
     )
     immediate_parent_id: None | str = field(
         default=None,
         metadata={
             "name": "ImmediateParentID",
             "type": "Attribute",
-        }
+        },
     )
     immediate_parent_name: None | str = field(
         default=None,
         metadata={
             "name": "ImmediateParentName",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

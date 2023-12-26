@@ -30,6 +30,7 @@ class MiscFormOfPaymentHistory2:
     acceptance_override
         Override airline restriction on the credit card.
     """
+
     class Meta:
         name = "MiscFormOfPaymentHistory"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -40,7 +41,7 @@ class MiscFormOfPaymentHistory2:
             "name": "CreditCardType",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     credit_card_number: None | str = field(
         default=None,
@@ -49,33 +50,33 @@ class MiscFormOfPaymentHistory2:
             "type": "Attribute",
             "min_length": 13,
             "max_length": 128,
-        }
+        },
     )
     exp_date: None | XmlPeriod = field(
         default=None,
         metadata={
             "name": "ExpDate",
             "type": "Attribute",
-        }
+        },
     )
     text: None | str = field(
         default=None,
         metadata={
             "name": "Text",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     acceptance_override: None | bool = field(
         default=None,
         metadata={
             "name": "AcceptanceOverride",
             "type": "Attribute",
-        }
+        },
     )

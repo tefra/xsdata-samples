@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+)
 
 
 @dataclass
@@ -75,6 +77,7 @@ class Idtype:
         <ns1:PrimitiveType
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
+
     class Meta:
         name = "IDType"
 
@@ -82,54 +85,54 @@ class Idtype:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     scheme_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "schemeID",
             "type": "Attribute",
-        }
+        },
     )
     scheme_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "schemeName",
             "type": "Attribute",
-        }
+        },
     )
     scheme_agency_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "schemeAgencyID",
             "type": "Attribute",
-        }
+        },
     )
     scheme_agency_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "schemeAgencyName",
             "type": "Attribute",
-        }
+        },
     )
     scheme_version_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "schemeVersionID",
             "type": "Attribute",
-        }
+        },
     )
     scheme_data_uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "schemeDataURI",
             "type": "Attribute",
-        }
+        },
     )
     scheme_uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "schemeURI",
             "type": "Attribute",
-        }
+        },
     )

@@ -21,13 +21,14 @@ class Comment:
     :ivar comment_type: A classification of the the type of comment.
     :ivar comment_extension:
     """
+
     comment: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     comment_date_time: Optional[XmlDateTime] = field(
         default=None,
@@ -35,7 +36,7 @@ class Comment:
             "name": "commentDateTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     comment_type: Optional[CommentTypeEnum] = field(
         default=None,
@@ -43,7 +44,7 @@ class Comment:
             "name": "commentType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     comment_extension: Optional[ExtensionType] = field(
         default=None,
@@ -51,5 +52,5 @@ class Comment:
             "name": "commentExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -9,6 +9,7 @@ class MetaName:
     """
     <div> <h3>Metadata Data Name For Custom Metadata</h3> </div>
     """
+
     class Meta:
         name = "meta-name"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -17,14 +18,14 @@ class MetaName:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -32,5 +33,5 @@ class MetaName:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

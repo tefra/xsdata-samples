@@ -9,6 +9,7 @@ class ProviderReservationInfoRef2:
     """
     Container for Provider reservation reference key.
     """
+
     class Meta:
         name = "ProviderReservationInfoRef"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -19,5 +20,5 @@ class ProviderReservationInfoRef2:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

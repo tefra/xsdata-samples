@@ -16,7 +16,7 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
             "name": "IsRestricted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     return_route_identical: Optional[bool] = field(
         default=None,
@@ -24,7 +24,7 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
             "name": "ReturnRouteIdentical",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     forwards_only: Optional[bool] = field(
         default=None,
@@ -32,7 +32,7 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
             "name": "ForwardsOnly",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     cross_border: Optional[bool] = field(
         default=None,
@@ -40,5 +40,5 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
             "name": "CrossBorder",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

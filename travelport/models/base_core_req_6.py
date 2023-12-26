@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.agent_idoverride_6 import AgentIdoverride6
-from travelport.models.billing_point_of_sale_info_6 import BillingPointOfSaleInfo6
+from travelport.models.billing_point_of_sale_info_6 import (
+    BillingPointOfSaleInfo6,
+)
 from travelport.models.type_logging_level_6 import TypeLoggingLevel6
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
@@ -34,6 +36,7 @@ class BaseCoreReq6:
         FR or FRFR for French, EN or ENGB for English.  The supported
         providers: ACH, RCH.
     """
+
     class Meta:
         name = "BaseCoreReq"
 
@@ -44,7 +47,7 @@ class BaseCoreReq6:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "required": True,
-        }
+        },
     )
     agent_idoverride: list[AgentIdoverride6] = field(
         default_factory=list,
@@ -53,7 +56,7 @@ class BaseCoreReq6:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "max_occurs": 999,
-        }
+        },
     )
     terminal_session_info: None | str = field(
         default=None,
@@ -61,28 +64,28 @@ class BaseCoreReq6:
             "name": "TerminalSessionInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
-        }
+        },
     )
     trace_id: None | str = field(
         default=None,
         metadata={
             "name": "TraceId",
             "type": "Attribute",
-        }
+        },
     )
     token_id: None | str = field(
         default=None,
         metadata={
             "name": "TokenId",
             "type": "Attribute",
-        }
+        },
     )
     authorized_by: None | str = field(
         default=None,
         metadata={
             "name": "AuthorizedBy",
             "type": "Attribute",
-        }
+        },
     )
     target_branch: None | str = field(
         default=None,
@@ -91,19 +94,19 @@ class BaseCoreReq6:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     override_logging: None | TypeLoggingLevel6 = field(
         default=None,
         metadata={
             "name": "OverrideLogging",
             "type": "Attribute",
-        }
+        },
     )
     language_code: None | str = field(
         default=None,
         metadata={
             "name": "LanguageCode",
             "type": "Attribute",
-        }
+        },
     )

@@ -13,6 +13,9 @@ class ArraySizeHandlingEnumSimple(Enum):
         dimensions of the variable size array is determined by the size
         of the contained array element.
     """
+
     ALL_INDICES_DIFFERENT_ARRAY_SIZE = "ALL-INDICES-DIFFERENT-ARRAY-SIZE"
     ALL_INDICES_SAME_ARRAY_SIZE = "ALL-INDICES-SAME-ARRAY-SIZE"
-    INHERITED_FROM_ARRAY_ELEMENT_TYPE_SIZE = "INHERITED-FROM-ARRAY-ELEMENT-TYPE-SIZE"
+    INHERITED_FROM_ARRAY_ELEMENT_TYPE_SIZE = (
+        "INHERITED-FROM-ARRAY-ELEMENT-TYPE-SIZE"
+    )

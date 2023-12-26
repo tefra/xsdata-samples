@@ -30,6 +30,7 @@ class Osi1:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "OSI"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -39,7 +40,7 @@ class Osi1:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class Osi1:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class Osi1:
             "name": "Code",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )
     text: None | str = field(
         default=None,
@@ -65,14 +66,14 @@ class Osi1:
             "type": "Attribute",
             "required": True,
             "max_length": 256,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -81,19 +82,19 @@ class Osi1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

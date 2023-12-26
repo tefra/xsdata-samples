@@ -28,6 +28,7 @@ class VariationRestrictionWithSeverity:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "VARIATION-RESTRICTION-WITH-SEVERITY"
 
@@ -37,7 +38,7 @@ class VariationRestrictionWithSeverity:
             "name": "SEVERITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation: Optional[Boolean] = field(
         default=None,
@@ -45,22 +46,24 @@ class VariationRestrictionWithSeverity:
             "name": "VARIATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    valid_binding_times: Optional["VariationRestrictionWithSeverity.ValidBindingTimes"] = field(
+    valid_binding_times: Optional[
+        "VariationRestrictionWithSeverity.ValidBindingTimes"
+    ] = field(
         default=None,
         metadata={
             "name": "VALID-BINDING-TIMES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -68,7 +71,7 @@ class VariationRestrictionWithSeverity:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -76,11 +79,12 @@ class VariationRestrictionWithSeverity:
         """
         :ivar valid_binding_time: List of valid binding times.
         """
+
         valid_binding_time: List[FullBindingTimeEnum] = field(
             default_factory=list,
             metadata={
                 "name": "VALID-BINDING-TIME",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

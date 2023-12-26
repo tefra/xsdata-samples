@@ -50,6 +50,7 @@ class LinSlaveConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIN-SLAVE-CONDITIONAL"
 
@@ -59,7 +60,7 @@ class LinSlaveConditional:
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_version: Optional[String] = field(
         default=None,
@@ -67,7 +68,7 @@ class LinSlaveConditional:
             "name": "PROTOCOL-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     assign_nad: Optional[Boolean] = field(
         default=None,
@@ -75,7 +76,7 @@ class LinSlaveConditional:
             "name": "ASSIGN-NAD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     configured_nad: Optional[Integer] = field(
         default=None,
@@ -83,7 +84,7 @@ class LinSlaveConditional:
             "name": "CONFIGURED-NAD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     function_id: Optional[PositiveInteger] = field(
         default=None,
@@ -91,7 +92,7 @@ class LinSlaveConditional:
             "name": "FUNCTION-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     initial_nad: Optional[Integer] = field(
         default=None,
@@ -99,7 +100,7 @@ class LinSlaveConditional:
             "name": "INITIAL-NAD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lin_error_response: Optional[LinErrorResponse] = field(
         default=None,
@@ -107,7 +108,7 @@ class LinSlaveConditional:
             "name": "LIN-ERROR-RESPONSE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nas_timeout: Optional[TimeValue] = field(
         default=None,
@@ -115,7 +116,7 @@ class LinSlaveConditional:
             "name": "NAS-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     save_configuration: Optional[Boolean] = field(
         default=None,
@@ -123,7 +124,7 @@ class LinSlaveConditional:
             "name": "SAVE-CONFIGURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     supplier_id: Optional[PositiveInteger] = field(
         default=None,
@@ -131,7 +132,7 @@ class LinSlaveConditional:
             "name": "SUPPLIER-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variant_id: Optional[PositiveInteger] = field(
         default=None,
@@ -139,7 +140,7 @@ class LinSlaveConditional:
             "name": "VARIANT-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -147,14 +148,14 @@ class LinSlaveConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -162,5 +163,5 @@ class LinSlaveConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

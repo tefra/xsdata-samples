@@ -55,21 +55,21 @@ class FxrateRequestHeader:
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
-        }
+        },
     )
     payment_mean_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentMeanCodedOther",
             "type": "Element",
-        }
+        },
     )
     payer_party: Optional[PayerParty] = field(
         default=None,
         metadata={
             "name": "PayerParty",
             "type": "Element",
-        }
+        },
     )
     indicative_indicator: str = field(
         metadata={
@@ -83,7 +83,7 @@ class FxrateRequestHeader:
         metadata={
             "name": "GeneralNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -111,14 +111,14 @@ class FxrateRequestDetail:
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
-        }
+        },
     )
     rate_quote_id: Optional[RateQuoteId] = field(
         default=None,
         metadata={
             "name": "RateQuoteID",
             "type": "Element",
-        }
+        },
     )
     reference_currency: ReferenceCurrency = field(
         metadata={
@@ -146,84 +146,86 @@ class FxrateRequestDetail:
         metadata={
             "name": "DebitAmount",
             "type": "Element",
-        }
+        },
     )
     credit_amount: Optional[CreditAmount] = field(
         default=None,
         metadata={
             "name": "CreditAmount",
             "type": "Element",
-        }
+        },
     )
-    originating_financial_institution: Optional[OriginatingFinancialInstitution] = field(
+    originating_financial_institution: Optional[
+        OriginatingFinancialInstitution
+    ] = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
-        }
+        },
     )
     card_info: Optional[CardInfo] = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
-        }
+        },
     )
     computational_method_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCoded",
             "type": "Element",
-        }
+        },
     )
     computational_method_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCodedOther",
             "type": "Element",
-        }
+        },
     )
     fxquote_type_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCoded",
             "type": "Element",
-        }
+        },
     )
     fxquote_type_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_reference: Optional[ListOfReference] = field(
         default=None,
         metadata={
             "name": "ListOfReference",
             "type": "Element",
-        }
+        },
     )
     payee_party: Optional[PayeeParty] = field(
         default=None,
         metadata={
             "name": "PayeeParty",
             "type": "Element",
-        }
+        },
     )
     payer_party: Optional[PayerParty] = field(
         default=None,
         metadata={
             "name": "PayerParty",
             "type": "Element",
-        }
+        },
     )
     fxrate_request_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXRateRequestNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -238,7 +240,7 @@ class ListOfFxrateRequestDetail:
             "name": "FXRateRequestDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -259,12 +261,12 @@ class FxrateRequest:
         metadata={
             "name": "ListOfFXRateRequestDetail",
             "type": "Element",
-        }
+        },
     )
     fxrate_request_summary: Optional[FxrateRequestSummary] = field(
         default=None,
         metadata={
             "name": "FXRateRequestSummary",
             "type": "Element",
-        }
+        },
     )

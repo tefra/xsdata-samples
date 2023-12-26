@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.provider_reservation_info_ref_6 import ProviderReservationInfoRef6
+from travelport.models.provider_reservation_info_ref_6 import (
+    ProviderReservationInfoRef6,
+)
 from travelport.models.type_element_status_6 import TypeElementStatus6
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
@@ -28,6 +30,7 @@ class Email5:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "Email"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -38,14 +41,14 @@ class Email5:
             "name": "ProviderReservationInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -54,7 +57,7 @@ class Email5:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     comment: None | str = field(
         default=None,
@@ -62,7 +65,7 @@ class Email5:
             "name": "Comment",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     email_id: None | str = field(
         default=None,
@@ -70,19 +73,19 @@ class Email5:
             "name": "EmailID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

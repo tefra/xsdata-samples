@@ -9,6 +9,7 @@ class ValignEnumSimple(Enum):
     :cvar MIDDLE: The contents of the table is vertically centered.
     :cvar TOP: The contents of the table cell is top aligned.
     """
+
     BOTTOM = "BOTTOM"
     MIDDLE = "MIDDLE"
     TOP = "TOP"

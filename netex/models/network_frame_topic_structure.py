@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDateTime
 from .alternative_texts_rel_structure import (
     AvailabilityCondition,
@@ -32,7 +32,14 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            EmptyType2,
+            XmlDateTime,
+            ClosedTimestampRangeStructure,
+            "NetworkFrameTopicStructure.SelectionValidityConditions",
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -59,11 +66,13 @@ class NetworkFrameTopicStructure(TopicStructure):
                 },
                 {
                     "name": "selectionValidityConditions",
-                    "type": Type["NetworkFrameTopicStructure.SelectionValidityConditions"],
+                    "type": Type[
+                        "NetworkFrameTopicStructure.SelectionValidityConditions"
+                    ],
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_frame_ref: Optional[TypeOfFrameRef] = field(
         default=None,
@@ -71,9 +80,25 @@ class NetworkFrameTopicStructure(TopicStructure):
             "name": "TypeOfFrameRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice_1: List[object] = field(
+    choice_1: List[
+        Union[
+            SalesTransactionFrameRef,
+            FareFrameRef,
+            ServiceFrameRef,
+            DriverScheduleFrameRef,
+            VehicleScheduleFrameRef,
+            TimetableFrameRef,
+            SiteFrameRef,
+            InfrastructureFrameRef,
+            GeneralFrameRef,
+            ResourceFrameRef,
+            ServiceCalendarFrameRef,
+            CompositeFrameRef,
+            NetworkFilterByValueStructure,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -144,12 +169,21 @@ class NetworkFrameTopicStructure(TopicStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
     class SelectionValidityConditions:
-        choice: List[object] = field(
+        choice: List[
+            Union[
+                SimpleAvailabilityCondition,
+                ValidDuring,
+                AvailabilityCondition,
+                ValidityRuleParameter,
+                ValidityTrigger,
+                ValidityCondition,
+            ]
+        ] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",
@@ -185,5 +219,5 @@ class NetworkFrameTopicStructure(TopicStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),
-            }
+            },
         )

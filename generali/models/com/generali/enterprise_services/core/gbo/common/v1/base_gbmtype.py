@@ -8,5 +8,6 @@ class BaseGbmtype:
     """
     <description xmlns="">The base type of the business message.</description>
     """
+
     class Meta:
         name = "BaseGBMType"

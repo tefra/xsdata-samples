@@ -33,10 +33,10 @@ from xsdata.models.datatype import XmlTime
 
 obj = TransportServiceDescriptionRequest(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="TSD_REQ_1"
+        value='TSD_REQ_1'
     ),
     issue_date=XmlDate(2011, 9, 12),
     issue_time=XmlTime(11, 1, 10, 0, 60),
@@ -44,28 +44,28 @@ obj = TransportServiceDescriptionRequest(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673827000",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673827000',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="Consignor"
+                    value='Consignor'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+8687878763"
+                value='+8687878763'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@consignor.cn"
+                value='SomeName@consignor.cn'
             )
         )
     ),
@@ -73,107 +73,107 @@ obj = TransportServiceDescriptionRequest(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673827641",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673827641',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="NECOSS"
+                    value='NECOSS'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+49450557000"
+                value='+49450557000'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@necoss.de"
+                value='SomeName@necoss.de'
             )
         )
     ),
     transportation_service=[
         TransportationService(
             transport_service_code=TransportServiceCode(
-                value="3"
+                value='3'
             ),
             transport_equipment=[
                 TransportEquipment(
                     id=Id(
-                        value="1"
+                        value='1'
                     ),
                     transport_equipment_type_code=TransportEquipmentTypeCode(
-                        value="CN"
+                        value='CN'
                     ),
                     measurement_dimension=[
                         MeasurementDimension(
                             attribute_id=AttributeId(
-                                value="Length"
+                                value='Length'
                             ),
                             measure=Measure(
-                                value=Decimal("6.1"),
-                                unit_code="MTR"
+                                value=Decimal('6.1'),
+                                unit_code='MTR'
                             )
                         ),
                         MeasurementDimension(
                             attribute_id=AttributeId(
-                                value="Height"
+                                value='Height'
                             ),
                             measure=Measure(
-                                value=Decimal("2.6"),
-                                unit_code="MTR"
+                                value=Decimal('2.6'),
+                                unit_code='MTR'
                             )
                         ),
                         MeasurementDimension(
                             attribute_id=AttributeId(
-                                value="Width"
+                                value='Width'
                             ),
                             measure=Measure(
-                                value=Decimal("2.44"),
-                                unit_code="MTR"
+                                value=Decimal('2.44'),
+                                unit_code='MTR'
                             )
                         ),
                     ]
                 ),
                 TransportEquipment(
                     id=Id(
-                        value="1"
+                        value='1'
                     ),
                     transport_equipment_type_code=TransportEquipmentTypeCode(
-                        value="CN"
+                        value='CN'
                     ),
                     measurement_dimension=[
                         MeasurementDimension(
                             attribute_id=AttributeId(
-                                value="Length"
+                                value='Length'
                             ),
                             measure=Measure(
-                                value=Decimal("6.1"),
-                                unit_code="MTR"
+                                value=Decimal('6.1'),
+                                unit_code='MTR'
                             )
                         ),
                         MeasurementDimension(
                             attribute_id=AttributeId(
-                                value="Height"
+                                value='Height'
                             ),
                             measure=Measure(
-                                value=Decimal("2.6"),
-                                unit_code="MTR"
+                                value=Decimal('2.6'),
+                                unit_code='MTR'
                             )
                         ),
                         MeasurementDimension(
                             attribute_id=AttributeId(
-                                value="Width"
+                                value='Width'
                             ),
                             measure=Measure(
-                                value=Decimal("2.44"),
-                                unit_code="MTR"
+                                value=Decimal('2.44'),
+                                unit_code='MTR'
                             )
                         ),
                     ]
@@ -182,25 +182,25 @@ obj = TransportServiceDescriptionRequest(
             shipment_stage=[
                 ShipmentStage(
                     id=Id(
-                        value="1"
+                        value='1'
                     ),
                     requested_departure_transport_event=RequestedDepartureTransportEvent(
                         location=Location(
                             address=Address(
                                 id=Id(
-                                    value="DEHAM",
-                                    scheme_name="UN/LOCODE",
-                                    scheme_agency_name="UN"
+                                    value='DEHAM',
+                                    scheme_name='UN/LOCODE',
+                                    scheme_agency_name='UN'
                                 ),
                                 street_name=StreetName(
-                                    value="Neuer Wandrahm 4"
+                                    value='Neuer Wandrahm 4'
                                 ),
                                 city_name=CityName(
-                                    value="Hamburg"
+                                    value='Hamburg'
                                 ),
                                 country=Country(
                                     identification_code=IdentificationCode(
-                                        value="DE"
+                                        value='DE'
                                     )
                                 )
                             )
@@ -216,14 +216,14 @@ obj = TransportServiceDescriptionRequest(
                         location=Location(
                             address=Address(
                                 street_name=StreetName(
-                                    value="Grosse strasse 34"
+                                    value='Grosse strasse 34'
                                 ),
                                 city_name=CityName(
-                                    value="Nurnberg"
+                                    value='Nurnberg'
                                 ),
                                 country=Country(
                                     identification_code=IdentificationCode(
-                                        value="DE"
+                                        value='DE'
                                     )
                                 )
                             )

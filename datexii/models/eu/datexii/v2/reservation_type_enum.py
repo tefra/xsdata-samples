@@ -15,6 +15,7 @@ class ReservationTypeEnum(Enum):
     :cvar UNKNOWN: Possibility of reservation is unknown,
     :cvar UNSPECIFIED: Possibility of reservation is not specified.
     """
+
     OPTIONAL = "optional"
     MANDATORY = "mandatory"
     NOT_AVAILABLE = "notAvailable"

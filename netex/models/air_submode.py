@@ -13,5 +13,5 @@ class AirSubmode:
         default=AirSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

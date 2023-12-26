@@ -29,6 +29,7 @@ class AirRetrieveDocumentRsp(BaseRsp1):
     universal_record_locator_code
         Provider: 1G,1V,1P-Represents a valid Universal Record locator code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -38,7 +39,7 @@ class AirRetrieveDocumentRsp(BaseRsp1):
             "name": "ETR",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     mco: list[Mco1] = field(
         default_factory=list,
@@ -47,7 +48,7 @@ class AirRetrieveDocumentRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     tcr: list[Tcr] = field(
         default_factory=list,
@@ -55,7 +56,7 @@ class AirRetrieveDocumentRsp(BaseRsp1):
             "name": "TCR",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     document_failure_info: list[TypeFailureInfo] = field(
         default_factory=list,
@@ -63,7 +64,7 @@ class AirRetrieveDocumentRsp(BaseRsp1):
             "name": "DocumentFailureInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     service_fee_info: list[ServiceFeeInfo1] = field(
         default_factory=list,
@@ -72,7 +73,7 @@ class AirRetrieveDocumentRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -81,5 +82,5 @@ class AirRetrieveDocumentRsp(BaseRsp1):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )

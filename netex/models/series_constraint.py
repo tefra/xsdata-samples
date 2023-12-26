@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .series_constraint_version_structure import SeriesConstraintVersionStructure
+from .series_constraint_version_structure import (
+    SeriesConstraintVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

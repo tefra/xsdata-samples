@@ -26,6 +26,7 @@ class GeneralNetworkManagementTypeEnum(Enum):
         clearance of wreckage following an accident).
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     BRIDGE_SWING_IN_OPERATION = "bridgeSwingInOperation"
     CONVOY_SERVICE = "convoyService"
     OBSTACLE_SIGNALLING = "obstacleSignalling"

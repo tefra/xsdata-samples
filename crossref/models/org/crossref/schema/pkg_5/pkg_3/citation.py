@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.citation_t import CitationT
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.citation_t import (
+    CitationT,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -13,6 +15,7 @@ class Citation(CitationT):
     For details see:
     https://www.crossref.org/education/metadata-stewardship/maintaining-your-metadata/add-references/
     """
+
     class Meta:
         name = "citation"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -25,5 +28,5 @@ class Citation(CitationT):
             "min_length": 1,
             "max_length": 128,
             "white_space": "collapse",
-        }
+        },
     )

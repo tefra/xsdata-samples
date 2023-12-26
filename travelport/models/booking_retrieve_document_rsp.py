@@ -18,6 +18,7 @@ class BookingRetrieveDocumentRsp(BookingBaseRsp):
         Provider: 1G,1V,1P -Will be optionally returned if there are
         duplicate ticket numbers.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -28,7 +29,7 @@ class BookingRetrieveDocumentRsp(BookingBaseRsp):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     document_failure_info: list[TypeFailureInfo] = field(
         default_factory=list,
@@ -36,5 +37,5 @@ class BookingRetrieveDocumentRsp(BookingBaseRsp):
             "name": "DocumentFailureInfo",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )

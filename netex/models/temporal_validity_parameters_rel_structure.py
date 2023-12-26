@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .availability_condition_ref import AvailabilityConditionRef
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
@@ -19,7 +19,9 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "temporalValidityParameters_RelStructure"
 
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[
+        Union[FareDayTypeRef, DayTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -35,7 +37,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     group_of_timebands_ref: Optional[GroupOfTimebandsRef] = field(
         default=None,
@@ -43,7 +45,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "GroupOfTimebandsRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operating_day_ref: Optional[OperatingDayRef] = field(
         default=None,
@@ -51,7 +53,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "OperatingDayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operating_period_ref: Optional[OperatingPeriodRef] = field(
         default=None,
@@ -59,9 +61,16 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "OperatingPeriodRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            AvailabilityConditionRef,
+            ValidityRuleParameterRef,
+            ValidityTriggerRef,
+            ValidityConditionRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -87,5 +96,5 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

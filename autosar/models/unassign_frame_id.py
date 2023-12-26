@@ -3,7 +3,9 @@ from typing import Optional
 from .annotation import DocumentationBlock
 from .integer import Integer
 from .lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
-from .lin_slave_config_ident_subtypes_enum import LinSlaveConfigIdentSubtypesEnum
+from .lin_slave_config_ident_subtypes_enum import (
+    LinSlaveConfigIdentSubtypesEnum,
+)
 from .lin_slave_subtypes_enum import LinSlaveSubtypesEnum
 from .positive_integer import PositiveInteger
 from .ref import Ref
@@ -49,6 +51,7 @@ class UnassignFrameId:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "UNASSIGN-FRAME-ID"
 
@@ -58,7 +61,7 @@ class UnassignFrameId:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     delay: Optional[TimeValue] = field(
         default=None,
@@ -66,7 +69,7 @@ class UnassignFrameId:
             "name": "DELAY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     position_in_table: Optional[Integer] = field(
         default=None,
@@ -74,23 +77,27 @@ class UnassignFrameId:
             "name": "POSITION-IN-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_controller_ref: Optional["UnassignFrameId.AssignedControllerRef"] = field(
+    assigned_controller_ref: Optional[
+        "UnassignFrameId.AssignedControllerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_lin_slave_config_ref: Optional["UnassignFrameId.AssignedLinSlaveConfigRef"] = field(
+    assigned_lin_slave_config_ref: Optional[
+        "UnassignFrameId.AssignedLinSlaveConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_id: Optional[PositiveInteger] = field(
         default=None,
@@ -98,22 +105,24 @@ class UnassignFrameId:
             "name": "MESSAGE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    unassigned_frame_triggering_ref: Optional["UnassignFrameId.UnassignedFrameTriggeringRef"] = field(
+    unassigned_frame_triggering_ref: Optional[
+        "UnassignFrameId.UnassignedFrameTriggeringRef"
+    ] = field(
         default=None,
         metadata={
             "name": "UNASSIGNED-FRAME-TRIGGERING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -121,7 +130,7 @@ class UnassignFrameId:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -132,7 +141,7 @@ class UnassignFrameId:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -143,7 +152,7 @@ class UnassignFrameId:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -154,5 +163,5 @@ class UnassignFrameId:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

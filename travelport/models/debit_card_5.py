@@ -21,6 +21,7 @@ class DebitCard5(TypePaymentCard6):
         The Key assigned to the payment details value from the specified
         profile.
     """
+
     class Meta:
         name = "DebitCard"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -31,19 +32,19 @@ class DebitCard5(TypePaymentCard6):
             "name": "IssueNumber",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
     profile_id: None | str = field(
         default=None,
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

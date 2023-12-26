@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .stop_area_ref_structure import StopAreaRefStructure
 from .topographic_place_ref import TopographicPlaceRef
 from .topographic_place_view import TopographicPlaceView
@@ -19,7 +19,7 @@ class StopAreaVersionStructure(ZoneVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parent_stop_area_ref: Optional[StopAreaRefStructure] = field(
         default=None,
@@ -27,9 +27,11 @@ class StopAreaVersionStructure(ZoneVersionStructure):
             "name": "ParentStopAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    topographic_place_ref_or_topographic_place_view: Optional[object] = field(
+    topographic_place_ref_or_topographic_place_view: Optional[
+        Union[TopographicPlaceRef, TopographicPlaceView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -45,5 +47,5 @@ class StopAreaVersionStructure(ZoneVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

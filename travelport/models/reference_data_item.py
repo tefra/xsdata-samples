@@ -21,6 +21,7 @@ class ReferenceDataItem:
     deprecated
         Indicates if the reference data item is deprecated.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -30,7 +31,7 @@ class ReferenceDataItem:
             "name": "AdditionalInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class ReferenceDataItem:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class ReferenceDataItem:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class ReferenceDataItem:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     deprecated: None | bool = field(
         default=None,
@@ -66,7 +67,7 @@ class ReferenceDataItem:
             "name": "Deprecated",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -78,18 +79,19 @@ class ReferenceDataItem:
         type_value
             This will identify different additionalInfo.
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 1,
                 "max_length": 255,
-            }
+            },
         )
         type_value: None | str = field(
             default=None,
             metadata={
                 "name": "Type",
                 "type": "Attribute",
-            }
+            },
         )

@@ -54,6 +54,7 @@ class WeatherRelatedRoadConditionTypeEnum(Enum):
         packed snow and ice, or rain falling on packed snow and ice.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     BLACK_ICE = "blackIce"
     DEEP_SNOW = "deepSnow"
     DRY = "dry"
@@ -66,7 +67,9 @@ class WeatherRelatedRoadConditionTypeEnum(Enum):
     ICE_WITH_WHEEL_BAR_TRACKS = "iceWithWheelBarTracks"
     ICY_PATCHES = "icyPatches"
     LOOSE_SNOW = "looseSnow"
-    NORMAL_WINTER_CONDITIONS_FOR_PEDESTRIANS = "normalWinterConditionsForPedestrians"
+    NORMAL_WINTER_CONDITIONS_FOR_PEDESTRIANS = (
+        "normalWinterConditionsForPedestrians"
+    )
     PACKED_SNOW = "packedSnow"
     ROAD_SURFACE_MELTING = "roadSurfaceMelting"
     SLIPPERY_ROAD = "slipperyRoad"

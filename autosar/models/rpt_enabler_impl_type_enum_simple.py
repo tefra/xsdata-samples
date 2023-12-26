@@ -12,6 +12,7 @@ class RptEnablerImplTypeEnumSimple(Enum):
     :cvar RPT_ENABLER_ROM: "RP enabler" is implemented as a
         calibrateable ROM variable.
     """
+
     NONE = "NONE"
     RPT_ENABLER_RAM = "RPT-ENABLER-RAM"
     RPT_ENABLER_RAM_AND_ROM = "RPT-ENABLER-RAM-AND-ROM"

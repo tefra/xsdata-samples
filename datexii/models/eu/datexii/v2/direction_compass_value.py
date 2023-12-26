@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.data_value import DataValue
-from datexii.models.eu.datexii.v2.direction_compass_enum import DirectionCompassEnum
+from datexii.models.eu.datexii.v2.direction_compass_enum import (
+    DirectionCompassEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -16,6 +18,7 @@ class DirectionCompassValue(DataValue):
         points of the compass.
     :ivar direction_compass_value_extension:
     """
+
     direction_compass: Optional[DirectionCompassEnum] = field(
         default=None,
         metadata={
@@ -23,7 +26,7 @@ class DirectionCompassValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     direction_compass_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +34,5 @@ class DirectionCompassValue(DataValue):
             "name": "directionCompassValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

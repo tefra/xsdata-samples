@@ -12,6 +12,7 @@ class MetaDataModifyCmd:
     """
     Wrapper for a set of modification commands to be applied to this profile.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -20,19 +21,19 @@ class MetaDataModifyCmd:
         metadata={
             "name": "MetaDataAdd",
             "type": "Element",
-        }
+        },
     )
     meta_data_update: None | MetaDataUpdate = field(
         default=None,
         metadata={
             "name": "MetaDataUpdate",
             "type": "Element",
-        }
+        },
     )
     meta_data_delete: None | MetaDataDelete = field(
         default=None,
         metadata={
             "name": "MetaDataDelete",
             "type": "Element",
-        }
+        },
     )

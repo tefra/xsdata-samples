@@ -10,5 +10,6 @@ class DiagnosticTroubleCodeJ1939DtcKindEnumSimple(Enum):
     :cvar STANDARD: This represents a non-specific DTC reported by e.g.
         DM1.
     """
+
     SERVICE_ONLY = "SERVICE-ONLY"
     STANDARD = "STANDARD"

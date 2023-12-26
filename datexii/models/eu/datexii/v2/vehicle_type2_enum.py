@@ -21,6 +21,7 @@ class VehicleType2Enum(Enum):
     :cvar PASSENGER_CAR: Passenger car
     :cvar UNKNOWN: Unknown.
     """
+
     MOTORHOME = "motorhome"
     LIGHT_GOODS_VEHICLE = "lightGoodsVehicle"
     HEAVY_GOODS_VEHICLE = "heavyGoodsVehicle"

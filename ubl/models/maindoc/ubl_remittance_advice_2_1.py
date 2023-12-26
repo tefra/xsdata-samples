@@ -32,7 +32,9 @@ from ubl.models.common.ubl_common_basic_components_2_1 import (
 )
 from ubl.models.common.ubl_common_extension_components_2_1 import Ublextensions
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+)
 
 
 @dataclass(frozen=True)
@@ -43,7 +45,7 @@ class RemittanceAdviceType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -51,7 +53,7 @@ class RemittanceAdviceType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -59,7 +61,7 @@ class RemittanceAdviceType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -67,7 +69,7 @@ class RemittanceAdviceType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -75,7 +77,7 @@ class RemittanceAdviceType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -84,7 +86,7 @@ class RemittanceAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -92,7 +94,7 @@ class RemittanceAdviceType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -100,7 +102,7 @@ class RemittanceAdviceType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -109,7 +111,7 @@ class RemittanceAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -117,7 +119,7 @@ class RemittanceAdviceType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -125,7 +127,7 @@ class RemittanceAdviceType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     document_currency_code: Optional[DocumentCurrencyCode] = field(
         default=None,
@@ -133,7 +135,7 @@ class RemittanceAdviceType:
             "name": "DocumentCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     total_debit_amount: Optional[TotalDebitAmount] = field(
         default=None,
@@ -141,7 +143,7 @@ class RemittanceAdviceType:
             "name": "TotalDebitAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     total_credit_amount: Optional[TotalCreditAmount] = field(
         default=None,
@@ -149,7 +151,7 @@ class RemittanceAdviceType:
             "name": "TotalCreditAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     total_payment_amount: Optional[TotalPaymentAmount] = field(
         default=None,
@@ -157,7 +159,7 @@ class RemittanceAdviceType:
             "name": "TotalPaymentAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     payment_order_reference: Optional[PaymentOrderReference] = field(
         default=None,
@@ -165,7 +167,7 @@ class RemittanceAdviceType:
             "name": "PaymentOrderReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     payer_reference: Optional[PayerReference] = field(
         default=None,
@@ -173,7 +175,7 @@ class RemittanceAdviceType:
             "name": "PayerReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     invoicing_party_reference: Optional[InvoicingPartyReference] = field(
         default=None,
@@ -181,7 +183,7 @@ class RemittanceAdviceType:
             "name": "InvoicingPartyReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     line_count_numeric: Optional[LineCountNumeric] = field(
         default=None,
@@ -189,7 +191,7 @@ class RemittanceAdviceType:
             "name": "LineCountNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     invoice_period: Tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
@@ -197,7 +199,7 @@ class RemittanceAdviceType:
             "name": "InvoicePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     billing_reference: Optional[BillingReference] = field(
         default=None,
@@ -205,15 +207,17 @@ class RemittanceAdviceType:
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+    additional_document_reference: Tuple[
+        AdditionalDocumentReference, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -221,7 +225,7 @@ class RemittanceAdviceType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     accounting_customer_party: Optional[AccountingCustomerParty] = field(
         default=None,
@@ -230,7 +234,7 @@ class RemittanceAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     accounting_supplier_party: Optional[AccountingSupplierParty] = field(
         default=None,
@@ -239,7 +243,7 @@ class RemittanceAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     payee_party: Optional[PayeeParty] = field(
         default=None,
@@ -247,7 +251,7 @@ class RemittanceAdviceType:
             "name": "PayeeParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     payment_means: Optional[PaymentMeans] = field(
         default=None,
@@ -255,7 +259,7 @@ class RemittanceAdviceType:
             "name": "PaymentMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tax_total: Tuple[TaxTotal, ...] = field(
         default_factory=tuple,
@@ -263,7 +267,7 @@ class RemittanceAdviceType:
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     remittance_advice_line: Tuple[RemittanceAdviceLine, ...] = field(
         default_factory=tuple,
@@ -272,11 +276,13 @@ class RemittanceAdviceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(frozen=True)
 class RemittanceAdvice(RemittanceAdviceType):
     class Meta:
-        namespace = "urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+        namespace = (
+            "urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+        )

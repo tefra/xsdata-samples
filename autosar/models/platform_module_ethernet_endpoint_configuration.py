@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .ethernet_communication_connector_subtypes_enum import EthernetCommunicationConnectorSubtypesEnum
+from .ethernet_communication_connector_subtypes_enum import (
+    EthernetCommunicationConnectorSubtypesEnum,
+)
 from .identifier import Identifier
 from .ip4_address_string import Ip4AddressString
 from .ip6_address_string import Ip6AddressString
@@ -92,6 +94,7 @@ class PlatformModuleEthernetEndpointConfiguration:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PLATFORM-MODULE-ETHERNET-ENDPOINT-CONFIGURATION"
 
@@ -102,15 +105,17 @@ class PlatformModuleEthernetEndpointConfiguration:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PlatformModuleEthernetEndpointConfiguration.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PlatformModuleEthernetEndpointConfiguration.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -118,7 +123,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -126,7 +131,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -134,7 +139,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -142,7 +147,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -150,15 +155,17 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["PlatformModuleEthernetEndpointConfiguration.Annotations"] = field(
+    annotations: Optional[
+        "PlatformModuleEthernetEndpointConfiguration.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -166,15 +173,17 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_connector_ref: Optional["PlatformModuleEthernetEndpointConfiguration.CommunicationConnectorRef"] = field(
+    communication_connector_ref: Optional[
+        "PlatformModuleEthernetEndpointConfiguration.CommunicationConnectorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ipv_4_multicast_ip_address: Optional[Ip4AddressString] = field(
         default=None,
@@ -182,7 +191,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "IPV-4-MULTICAST-IP-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ipv_6_multicast_ip_address: Optional[Ip6AddressString] = field(
         default=None,
@@ -190,7 +199,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "IPV-6-MULTICAST-IP-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -198,7 +207,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "TCP-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     udp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -206,14 +215,14 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "UDP-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -221,14 +230,14 @@ class PlatformModuleEthernetEndpointConfiguration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -239,7 +248,7 @@ class PlatformModuleEthernetEndpointConfiguration:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,7 +259,7 @@ class PlatformModuleEthernetEndpointConfiguration:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -261,5 +270,5 @@ class PlatformModuleEthernetEndpointConfiguration:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

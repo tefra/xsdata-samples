@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.national_id_type import NationalIdType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.national_id_type import (
+    NationalIdType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
@@ -13,5 +15,5 @@ class NationalIdsType:
             "name": "NationalId",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )

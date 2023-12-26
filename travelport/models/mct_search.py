@@ -11,6 +11,7 @@ class MctSearch:
     """
     Search the MCT data for exceptions.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -22,7 +23,7 @@ class MctSearch:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     depart_station: None | str = field(
         default=None,
@@ -31,14 +32,14 @@ class MctSearch:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     connection: None | TypeMctConnection = field(
         default=None,
         metadata={
             "name": "Connection",
             "type": "Attribute",
-        }
+        },
     )
     arrive_carrier: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class MctSearch:
             "name": "ArriveCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     depart_carrier: None | str = field(
         default=None,
@@ -54,21 +55,21 @@ class MctSearch:
             "name": "DepartCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     arrive_flight: None | str = field(
         default=None,
         metadata={
             "name": "ArriveFlight",
             "type": "Attribute",
-        }
+        },
     )
     depart_flight: None | str = field(
         default=None,
         metadata={
             "name": "DepartFlight",
             "type": "Attribute",
-        }
+        },
     )
     previous_station: None | str = field(
         default=None,
@@ -77,7 +78,7 @@ class MctSearch:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     next_station: None | str = field(
         default=None,
@@ -86,7 +87,7 @@ class MctSearch:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     previous_country: None | str = field(
         default=None,
@@ -94,7 +95,7 @@ class MctSearch:
             "name": "PreviousCountry",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     next_country: None | str = field(
         default=None,
@@ -102,7 +103,7 @@ class MctSearch:
             "name": "NextCountry",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     previous_state: None | str = field(
         default=None,
@@ -110,7 +111,7 @@ class MctSearch:
             "name": "PreviousState",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     next_state: None | str = field(
         default=None,
@@ -118,12 +119,12 @@ class MctSearch:
             "name": "NextState",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     travel_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
-        }
+        },
     )

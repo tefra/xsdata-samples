@@ -29,6 +29,7 @@ class UniversalRecordHistorySearchResult:
     agent_override
         AgentSine value that was used during PNR creation or End Transact.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -37,21 +38,21 @@ class UniversalRecordHistorySearchResult:
         metadata={
             "name": "Old",
             "type": "Element",
-        }
+        },
     )
     new: None | str = field(
         default=None,
         metadata={
             "name": "New",
             "type": "Element",
-        }
+        },
     )
     modified_by: None | str = field(
         default=None,
         metadata={
             "name": "ModifiedBy",
             "type": "Attribute",
-        }
+        },
     )
     modified_date: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class UniversalRecordHistorySearchResult:
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     element_type: None | str = field(
         default=None,
@@ -67,7 +68,7 @@ class UniversalRecordHistorySearchResult:
             "name": "ElementType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     action: None | str = field(
         default=None,
@@ -75,14 +76,14 @@ class UniversalRecordHistorySearchResult:
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     transaction_id: None | str = field(
         default=None,
         metadata={
             "name": "TransactionId",
             "type": "Attribute",
-        }
+        },
     )
     agent_override: None | str = field(
         default=None,
@@ -91,5 +92,5 @@ class UniversalRecordHistorySearchResult:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

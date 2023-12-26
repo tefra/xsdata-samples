@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .department_ref import DepartmentRef
-from .organisation_part_version_structure import OrganisationPartVersionStructure
+from .organisation_part_version_structure import (
+    OrganisationPartVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -17,5 +19,5 @@ class OrganisationalUnitVersionStructure(OrganisationPartVersionStructure):
             "name": "DepartmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

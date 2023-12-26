@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.data_ref_type import DataRefType
+from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.data_ref_type import (
+    DataRefType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+)
 
 
 @dataclass
@@ -22,13 +26,14 @@ class FailureType:
         field or component within the GBO that generated the
         failure.</description>
     """
+
     code: Optional[str] = field(
         default=None,
         metadata={
             "name": "Code",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )
     text: Optional[str] = field(
         default=None,
@@ -37,7 +42,7 @@ class FailureType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
             "required": True,
-        }
+        },
     )
     data_ref: Optional[DataRefType] = field(
         default=None,
@@ -45,5 +50,5 @@ class FailureType:
             "name": "DataRef",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )

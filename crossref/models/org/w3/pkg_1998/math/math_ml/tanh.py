@@ -15,5 +15,5 @@ class Tanh:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

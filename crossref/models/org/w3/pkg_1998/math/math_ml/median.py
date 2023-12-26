@@ -15,5 +15,5 @@ class Median:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -11,6 +11,7 @@ class FlightTimeTableCriteria:
     """
     Flight Time Table Search Criteria.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,12 +20,12 @@ class FlightTimeTableCriteria:
         metadata={
             "name": "GeneralTimeTable",
             "type": "Element",
-        }
+        },
     )
     specific_time_table: None | SpecificTimeTable = field(
         default=None,
         metadata={
             "name": "SpecificTimeTable",
             "type": "Element",
-        }
+        },
     )

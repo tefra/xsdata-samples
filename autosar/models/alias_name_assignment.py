@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
-from .flat_instance_descriptor_subtypes_enum import FlatInstanceDescriptorSubtypesEnum
+from .flat_instance_descriptor_subtypes_enum import (
+    FlatInstanceDescriptorSubtypesEnum,
+)
 from .identifiable_subtypes_enum import IdentifiableSubtypesEnum
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
@@ -42,6 +44,7 @@ class AliasNameAssignment:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ALIAS-NAME-ASSIGNMENT"
 
@@ -51,7 +54,7 @@ class AliasNameAssignment:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     label: Optional[MultilanguageLongName] = field(
         default=None,
@@ -59,7 +62,7 @@ class AliasNameAssignment:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     identifiable_ref: Optional["AliasNameAssignment.IdentifiableRef"] = field(
         default=None,
@@ -67,7 +70,7 @@ class AliasNameAssignment:
             "name": "IDENTIFIABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     flat_instance_ref: Optional["AliasNameAssignment.FlatInstanceRef"] = field(
         default=None,
@@ -75,7 +78,7 @@ class AliasNameAssignment:
             "name": "FLAT-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -83,14 +86,14 @@ class AliasNameAssignment:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -98,7 +101,7 @@ class AliasNameAssignment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -109,7 +112,7 @@ class AliasNameAssignment:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -120,5 +123,5 @@ class AliasNameAssignment:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

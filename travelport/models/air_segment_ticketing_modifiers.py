@@ -17,6 +17,7 @@ class AirSegmentTicketingModifiers:
     brand_tier
         Modifier to price by specific brand tier number.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class AirSegmentTicketingModifiers:
         metadata={
             "name": "AirSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     brand_tier: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class AirSegmentTicketingModifiers:
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )

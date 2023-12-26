@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .booking_access_enumeration import BookingAccessEnumeration
@@ -26,7 +26,17 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "FlexibleServiceProperties_VersionStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            DatedVehicleJourneyRef,
+            DatedSpecialServiceRef,
+            SpecialServiceRef,
+            TemplateServiceJourneyRef,
+            ServiceJourneyRef,
+            DeadRunRef,
+            VehicleJourneyRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -67,7 +77,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_flexible_service_ref: Optional[TypeOfFlexibleServiceRef] = field(
         default=None,
@@ -75,7 +85,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfFlexibleServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_service_type: Optional[FlexibleServiceEnumeration] = field(
         default=None,
@@ -83,7 +93,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "FlexibleServiceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     cancellation_possible: Optional[bool] = field(
         default=None,
@@ -91,7 +101,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "CancellationPossible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     change_of_time_possible: Optional[bool] = field(
         default=None,
@@ -99,7 +109,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "ChangeOfTimePossible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_contact: Optional[ContactStructure] = field(
         default=None,
@@ -107,7 +117,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "BookingContact",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_methods: List[BookingMethodEnumeration] = field(
         default_factory=list,
@@ -116,7 +126,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     booking_access: Optional[BookingAccessEnumeration] = field(
         default=None,
@@ -124,7 +134,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "BookingAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     book_when: Optional[PurchaseWhenEnumeration] = field(
         default=None,
@@ -132,7 +142,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "BookWhen",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     buy_when: List[PurchaseMomentEnumeration] = field(
         default_factory=list,
@@ -141,7 +151,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     latest_booking_time: Optional[XmlTime] = field(
         default=None,
@@ -149,7 +159,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "LatestBookingTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_booking_period: Optional[XmlDuration] = field(
         default=None,
@@ -157,7 +167,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "MinimumBookingPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_url: Optional[str] = field(
         default=None,
@@ -165,7 +175,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "BookingUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_note: Optional[MultilingualString] = field(
         default=None,
@@ -173,5 +183,5 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "name": "BookingNote",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

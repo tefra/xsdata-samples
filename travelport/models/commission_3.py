@@ -18,6 +18,7 @@ class Commission3:
     miscellaneous_description
         Text explaining other Commission amount
     """
+
     class Meta:
         name = "Commission"
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
@@ -27,14 +28,14 @@ class Commission3:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     miscellaneous_amount: None | str = field(
         default=None,
         metadata={
             "name": "MiscellaneousAmount",
             "type": "Attribute",
-        }
+        },
     )
     miscellaneous_description: None | str = field(
         default=None,
@@ -43,5 +44,5 @@ class Commission3:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )

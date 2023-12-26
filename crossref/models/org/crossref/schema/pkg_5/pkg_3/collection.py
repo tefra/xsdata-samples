@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.collection_multi_resolution import CollectionMultiResolution
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.collection_property import CollectionProperty
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.collection_multi_resolution import (
+    CollectionMultiResolution,
+)
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.collection_property import (
+    CollectionProperty,
+)
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.item import Item
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
@@ -24,6 +28,7 @@ class Collection:
     https://www.crossref.org/education/retrieve-metadata/rest-api/text-and-data-mining-for-members/</li><li>unspecified:
     can be used for additional URLs</li><li>syndication: identifies resources to be used for syndication</li><li>link-header: identifies resources to be used as an endpoint</li></ul>
     """
+
     class Meta:
         name = "collection"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -32,19 +37,19 @@ class Collection:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     property: Optional[CollectionProperty] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     multi_resolution: Optional[CollectionMultiResolution] = field(
         default=None,
         metadata={
             "name": "multi-resolution",
             "type": "Attribute",
-        }
+        },
     )

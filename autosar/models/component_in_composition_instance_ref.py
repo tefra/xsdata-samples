@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .ref import Ref
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -26,31 +28,36 @@ class ComponentInCompositionInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COMPONENT-IN-COMPOSITION-INSTANCE-REF"
 
-    context_component_ref: List["ComponentInCompositionInstanceRef.ContextComponentRef"] = field(
+    context_component_ref: List[
+        "ComponentInCompositionInstanceRef.ContextComponentRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-COMPONENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_component_ref: Optional["ComponentInCompositionInstanceRef.TargetComponentRef"] = field(
+    target_component_ref: Optional[
+        "ComponentInCompositionInstanceRef.TargetComponentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-COMPONENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,7 +65,7 @@ class ComponentInCompositionInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -69,7 +76,7 @@ class ComponentInCompositionInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -80,5 +87,5 @@ class ComponentInCompositionInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -13,5 +13,5 @@ class OperationTime:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

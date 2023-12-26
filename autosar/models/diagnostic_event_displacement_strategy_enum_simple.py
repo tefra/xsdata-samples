@@ -12,6 +12,7 @@ class DiagnosticEventDisplacementStrategyEnumSimple(Enum):
         consideration of priority and occurrence (but without
         active/passive status).
     """
+
     FULL = "FULL"
     NONE = "NONE"
     PRIO_OCC = "PRIO-OCC"

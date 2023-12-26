@@ -12,5 +12,5 @@ class WireLinkRefByValueStructure(LinkRefByValueStructure):
         metadata={
             "name": "nameOfPointRefClass",
             "type": "Attribute",
-        }
+        },
     )

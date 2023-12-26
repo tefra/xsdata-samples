@@ -17,5 +17,5 @@ class McoSearchRsp(BaseRsp1):
             "name": "McoSearchResult",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

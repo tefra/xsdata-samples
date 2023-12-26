@@ -23,6 +23,7 @@ class ExpertSolution:
     created_date
         The Date on which this solution was created
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -33,7 +34,7 @@ class ExpertSolution:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -41,21 +42,21 @@ class ExpertSolution:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     created_date: None | XmlDate = field(
         default=None,
@@ -63,5 +64,5 @@ class ExpertSolution:
             "name": "CreatedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

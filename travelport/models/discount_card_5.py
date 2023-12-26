@@ -25,6 +25,7 @@ class DiscountCard5:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "DiscountCard"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -34,7 +35,7 @@ class DiscountCard5:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class DiscountCard5:
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -53,7 +54,7 @@ class DiscountCard5:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -62,19 +63,19 @@ class DiscountCard5:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 36,
-        }
+        },
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

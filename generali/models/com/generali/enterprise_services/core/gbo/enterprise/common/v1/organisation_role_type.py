@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gboroles_type import BaseGborolesType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gboroles_type import (
+    BaseGborolesType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+)
 
 
 @dataclass
@@ -19,13 +25,14 @@ class OrganisationRoleType(BaseGborolesType):
         Generali to a single business entity held in the Business
         Partner Repository (BPR).
     """
+
     legal_name: Optional[TextType] = field(
         default=None,
         metadata={
             "name": "LegalName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     gunsnumber: Optional[str] = field(
         default=None,
@@ -35,7 +42,7 @@ class OrganisationRoleType(BaseGborolesType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "length": 10,
             "pattern": r"G([0-9]{9})",
-        }
+        },
     )
     dunsnumber: Optional[str] = field(
         default=None,
@@ -45,5 +52,5 @@ class OrganisationRoleType(BaseGborolesType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
             "length": 9,
             "pattern": r"([0-9]{9})",
-        }
+        },
     )

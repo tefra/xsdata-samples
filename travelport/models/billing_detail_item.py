@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_billing_details_data_type import TypeBillingDetailsDataType
+from travelport.models.type_billing_details_data_type import (
+    TypeBillingDetailsDataType,
+)
 from travelport.models.type_billing_details_name import TypeBillingDetailsName
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -24,6 +26,7 @@ class BillingDetailItem:
     value
         Detailed Billing Information Value
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -33,7 +36,7 @@ class BillingDetailItem:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     data_type: None | TypeBillingDetailsDataType = field(
         default=None,
@@ -41,7 +44,7 @@ class BillingDetailItem:
             "name": "DataType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     min_length: None | str = field(
         default=None,
@@ -49,7 +52,7 @@ class BillingDetailItem:
             "name": "MinLength",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     max_length: None | str = field(
         default=None,
@@ -57,12 +60,12 @@ class BillingDetailItem:
             "name": "MaxLength",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | str = field(
         default=None,
         metadata={
             "name": "Value",
             "type": "Attribute",
-        }
+        },
     )

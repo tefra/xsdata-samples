@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.session_context import SessionContext
 from travelport.models.supported_versions import SupportedVersions
-from travelport.models.universal_record_modify_req import UniversalRecordModifyReq
+from travelport.models.universal_record_modify_req import (
+    UniversalRecordModifyReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -13,19 +15,21 @@ class UniversalRecordModifyServicePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | UniversalRecordModifyServicePortTypeServiceInput.Header = field(
-        default=None,
-        metadata={
-            "name": "Header",
-            "type": "Element",
-        }
+    header: None | UniversalRecordModifyServicePortTypeServiceInput.Header = (
+        field(
+            default=None,
+            metadata={
+                "name": "Header",
+                "type": "Element",
+            },
+        )
     )
     body: None | UniversalRecordModifyServicePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -36,7 +40,7 @@ class UniversalRecordModifyServicePortTypeServiceInput:
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            }
+            },
         )
         supported_versions: None | SupportedVersions = field(
             default=None,
@@ -44,7 +48,7 @@ class UniversalRecordModifyServicePortTypeServiceInput:
                 "name": "SupportedVersions",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )
 
     @dataclass
@@ -55,5 +59,5 @@ class UniversalRecordModifyServicePortTypeServiceInput:
                 "name": "UniversalRecordModifyReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )

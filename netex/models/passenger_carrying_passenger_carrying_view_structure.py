@@ -18,7 +18,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "name": "PassengerCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     low_floor: Optional[bool] = field(
         default=None,
@@ -26,7 +26,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "name": "LowFloor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_lift_or_ramp: Optional[bool] = field(
         default=None,
@@ -34,7 +34,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "name": "HasLiftOrRamp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_hoist: Optional[bool] = field(
         default=None,
@@ -42,7 +42,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "name": "HasHoist",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_height: Optional[Decimal] = field(
         default=None,
@@ -50,7 +50,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "name": "BoardingHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gap_to_platform: Optional[Decimal] = field(
         default=None,
@@ -58,5 +58,5 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "name": "GapToPlatform",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

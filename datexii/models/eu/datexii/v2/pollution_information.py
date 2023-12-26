@@ -12,13 +12,14 @@ class PollutionInformation(WeatherData):
     """
     Measurements of atmospheric pollution.
     """
+
     pollution: List[Pollution] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     pollution_information_extension: Optional[ExtensionType] = field(
         default=None,
@@ -26,5 +27,5 @@ class PollutionInformation(WeatherData):
             "name": "pollutionInformationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .all_modes_enumeration import AllModesEnumeration
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .control_centre_ref import ControlCentreRef
@@ -24,7 +24,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -32,7 +32,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -40,9 +40,16 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            ControlCentreRef,
+            OrganisationalUnitRef,
+            DepartmentRef,
+            OrganisationPartRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,7 +75,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     vehicle_mode: Optional[AllModesEnumeration] = field(
         default=None,
@@ -76,7 +83,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "name": "VehicleMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_submode: Optional[TransportSubmode] = field(
         default=None,
@@ -84,5 +91,5 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "name": "TransportSubmode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

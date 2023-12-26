@@ -10,6 +10,7 @@ class RailSegmentList:
     """
     List of Rail Segments.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -19,5 +20,5 @@ class RailSegmentList:
             "name": "RailSegment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

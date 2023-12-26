@@ -22,6 +22,7 @@ class VehicleReservationCriteria:
     passive_only
         Search for Passives Only
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -30,14 +31,14 @@ class VehicleReservationCriteria:
         metadata={
             "name": "PickUpDate",
             "type": "Element",
-        }
+        },
     )
     vehicle_confirmation: None | str = field(
         default=None,
         metadata={
             "name": "VehicleConfirmation",
             "type": "Attribute",
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class VehicleReservationCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -55,19 +56,19 @@ class VehicleReservationCriteria:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     location_number: None | str = field(
         default=None,
         metadata={
             "name": "LocationNumber",
             "type": "Attribute",
-        }
+        },
     )
     passive_only: bool = field(
         default=False,
         metadata={
             "name": "PassiveOnly",
             "type": "Attribute",
-        }
+        },
     )

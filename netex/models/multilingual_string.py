@@ -10,18 +10,18 @@ class MultilingualString:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     lang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     text_id_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "textIdType",
             "type": "Attribute",
-        }
+        },
     )

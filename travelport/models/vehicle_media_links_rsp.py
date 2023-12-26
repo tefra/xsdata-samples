@@ -11,6 +11,7 @@ class VehicleMediaLinksRsp(BaseRsp1):
     """
     Response for vehicle image search results.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -21,5 +22,5 @@ class VehicleMediaLinksRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

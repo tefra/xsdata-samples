@@ -9,6 +9,7 @@ class FareRoutingInformation:
     """
     Contains Fare/Tariff Display Routing Information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -16,5 +17,5 @@ class FareRoutingInformation:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

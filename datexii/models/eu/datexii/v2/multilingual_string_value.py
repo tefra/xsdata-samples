@@ -11,11 +11,11 @@ class MultilingualStringValue:
         metadata={
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     lang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

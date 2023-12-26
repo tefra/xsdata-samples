@@ -15,5 +15,5 @@ class Prsubset:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -20,6 +20,7 @@ class DrivingConditionTypeEnum(Enum):
         those expected in winter.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     IMPOSSIBLE = "impossible"
     HAZARDOUS = "hazardous"
     NORMAL = "normal"

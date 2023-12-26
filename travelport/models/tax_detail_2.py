@@ -9,6 +9,7 @@ class TaxDetail2:
     """
     The tax idetail nformation for a fare quote tax.
     """
+
     class Meta:
         name = "TaxDetail"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -19,7 +20,7 @@ class TaxDetail2:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin_airport: None | str = field(
         default=None,
@@ -27,7 +28,7 @@ class TaxDetail2:
             "name": "OriginAirport",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     destination_airport: None | str = field(
         default=None,
@@ -35,19 +36,19 @@ class TaxDetail2:
             "name": "DestinationAirport",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     country_code: None | str = field(
         default=None,
         metadata={
             "name": "CountryCode",
             "type": "Attribute",
-        }
+        },
     )
     fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_agency_info_history_ursync_data_1 import TypeAgencyInfoHistoryUrsyncData1
+from travelport.models.type_agency_info_history_ursync_data_1 import (
+    TypeAgencyInfoHistoryUrsyncData1,
+)
 from travelport.models.type_profile_info_1 import TypeProfileInfo1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -29,6 +31,7 @@ class TypeAgencyInfoHistory1(TypeProfileInfo1):
     ursync_to
         Identify if Universal Record synch is activated at Agency Level.
     """
+
     class Meta:
         name = "typeAgencyInfoHistory"
 
@@ -39,7 +42,7 @@ class TypeAgencyInfoHistory1(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     iata_number: None | str = field(
         default=None,
@@ -48,7 +51,7 @@ class TypeAgencyInfoHistory1(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     agency_code: None | str = field(
         default=None,
@@ -57,26 +60,26 @@ class TypeAgencyInfoHistory1(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     uses_template: None | bool = field(
         default=None,
         metadata={
             "name": "UsesTemplate",
             "type": "Attribute",
-        }
+        },
     )
     ursync_data: None | TypeAgencyInfoHistoryUrsyncData1 = field(
         default=None,
         metadata={
             "name": "URSyncData",
             "type": "Attribute",
-        }
+        },
     )
     ursync_to: None | bool = field(
         default=None,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

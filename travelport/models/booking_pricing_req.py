@@ -12,6 +12,7 @@ class BookingPricingReq(BookingBaseReq):
     """
     Stores/Modifies pricing.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -20,12 +21,12 @@ class BookingPricingReq(BookingBaseReq):
         metadata={
             "name": "AddPricing",
             "type": "Element",
-        }
+        },
     )
     delete_pricing: None | DeletePricing = field(
         default=None,
         metadata={
             "name": "DeletePricing",
             "type": "Element",
-        }
+        },
     )

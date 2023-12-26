@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .address_ref import AddressRef
 from .boarding_position_ref import BoardingPositionRef
 from .postal_address_ref import PostalAddressRef
@@ -20,9 +20,11 @@ class TravelSpecificationSummaryEndpointStructure:
             "name": "TopographicPlaceView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    postal_address_ref_or_road_address_ref_or_address_ref: Optional[object] = field(
+    postal_address_ref_or_road_address_ref_or_address_ref: Optional[
+        Union[PostalAddressRef, RoadAddressRef, AddressRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -43,7 +45,7 @@ class TravelSpecificationSummaryEndpointStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     scheduled_stop_point_view: Optional[ScheduledStopPointView] = field(
         default=None,
@@ -51,7 +53,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "name": "ScheduledStopPointView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     quay_ref: Optional[QuayRef] = field(
         default=None,
@@ -59,7 +61,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "name": "QuayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_position_ref: Optional[BoardingPositionRef] = field(
         default=None,
@@ -67,7 +69,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "name": "BoardingPositionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tariff_zone_ref: List[TariffZoneRef] = field(
         default_factory=list,
@@ -75,5 +77,5 @@ class TravelSpecificationSummaryEndpointStructure:
             "name": "TariffZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

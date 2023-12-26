@@ -16,6 +16,7 @@ class TruckParkingDynamicManagementEnum(Enum):
     :cvar NO_DYNAMIC_PARKING_MANAGEMENT: No dynamic parking management.
     :cvar OTHER: Some other type of dynamic parking management.
     """
+
     COMPACT_PARKING = "compactParking"
     QUEUE_PARKING = "queueParking"
     NO_DYNAMIC_PARKING_MANAGEMENT = "noDynamicParkingManagement"

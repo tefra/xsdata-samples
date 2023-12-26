@@ -12,14 +12,14 @@ class SubDivisionType:
             "name": "subdivisionCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     subdivision_category: Optional[str] = field(
         default=None,
@@ -27,14 +27,14 @@ class SubDivisionType:
             "name": "subdivisionCategory",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     subdivisions: Optional["SubdivisionsType"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
 
 
@@ -46,5 +46,5 @@ class SubdivisionsType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "min_occurs": 1,
-        }
+        },
     )

@@ -19,7 +19,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Door",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     kept_open: Optional[bool] = field(
         default=None,
@@ -27,7 +27,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "KeptOpen",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     revolving_door: Optional[bool] = field(
         default=None,
@@ -35,7 +35,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "RevolvingDoor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     barrier: Optional[bool] = field(
         default=None,
@@ -43,7 +43,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Barrier",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_gates: Optional[int] = field(
         default=None,
@@ -51,7 +51,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "NumberOfGates",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     staffing: Optional[StaffingEnumeration] = field(
         default=None,
@@ -59,7 +59,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Staffing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entrance_requires_staffing: Optional[bool] = field(
         default=None,
@@ -67,7 +67,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "EntranceRequiresStaffing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entrance_requires_ticket: Optional[bool] = field(
         default=None,
@@ -75,7 +75,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "EntranceRequiresTicket",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entrance_requires_passport: Optional[bool] = field(
         default=None,
@@ -83,7 +83,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "EntranceRequiresPassport",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     drop_kerb_outside: Optional[bool] = field(
         default=None,
@@ -91,7 +91,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "DropKerbOutside",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     acoustic_sensor: Optional[bool] = field(
         default=None,
@@ -99,7 +99,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AcousticSensor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     automatic_door: Optional[bool] = field(
         default=None,
@@ -107,7 +107,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AutomaticDoor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     glass_door: Optional[bool] = field(
         default=None,
@@ -115,7 +115,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "GlassDoor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     airlock: Optional[bool] = field(
         default=None,
@@ -123,7 +123,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Airlock",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheelchair_passable: Optional[bool] = field(
         default=None,
@@ -131,7 +131,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "WheelchairPassable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheechair_unaided: Optional[bool] = field(
         default=None,
@@ -139,7 +139,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "WheechairUnaided",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     audio_or_video_intercom: Optional[bool] = field(
         default=None,
@@ -147,7 +147,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AudioOrVideoIntercom",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entrance_attention: Optional[EntranceAttentionEnumeration] = field(
         default=None,
@@ -155,7 +155,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "EntranceAttention",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     doorstep_mark: Optional[bool] = field(
         default=None,
@@ -163,7 +163,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "DoorstepMark",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     necessary_force_to_open: Optional[NecessaryForceEnumeration] = field(
         default=None,
@@ -171,7 +171,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "NecessaryForceToOpen",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     audio_passthrough_indicator: Optional[bool] = field(
         default=None,
@@ -179,7 +179,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AudioPassthroughIndicator",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     suitable_for_cycles: Optional[bool] = field(
         default=None,
@@ -187,5 +187,5 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "SuitableForCycles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -14,5 +14,5 @@ class GenderLimitation:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

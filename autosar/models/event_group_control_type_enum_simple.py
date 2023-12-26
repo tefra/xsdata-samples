@@ -15,6 +15,7 @@ class EventGroupControlTypeEnumSimple(Enum):
     :cvar TRIGGER_UNICAST: Activate the data path for triggered unicast
         events that are sent out after a client got subscribed.
     """
+
     ACTIVATION_AND_TRIGGER_UNICAST = "ACTIVATION-AND-TRIGGER-UNICAST"
     ACTIVATION_MULTICAST = "ACTIVATION-MULTICAST"
     ACTIVATION_UNICAST = "ACTIVATION-UNICAST"

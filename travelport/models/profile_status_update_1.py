@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_entity_status_1 import TypeProfileEntityStatus1
+from travelport.models.type_profile_entity_status_1 import (
+    TypeProfileEntityStatus1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -16,6 +18,7 @@ class ProfileStatusUpdate1:
         The updated status. Inactive status is not valid for all profile
         types.
     """
+
     class Meta:
         name = "ProfileStatusUpdate"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -26,5 +29,5 @@ class ProfileStatusUpdate1:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

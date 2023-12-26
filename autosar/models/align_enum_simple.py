@@ -14,6 +14,7 @@ class AlignEnumSimple(Enum):
     :cvar RIGHT: This indicates that the content of a table cell is left
         justified.
     """
+
     CENTER = "CENTER"
     JUSTIFY = "JUSTIFY"
     LEFT = "LEFT"

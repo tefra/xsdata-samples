@@ -21,6 +21,7 @@ class ParkingOccupancyTrendEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     DECREASING = "decreasing"
     INCREASING = "increasing"
     STABLE = "stable"

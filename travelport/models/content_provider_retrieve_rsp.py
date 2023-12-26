@@ -11,6 +11,7 @@ class ContentProviderRetrieveRsp(BaseRsp1):
     """
     Response with all available providers with their suppliers.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,5 +21,5 @@ class ContentProviderRetrieveRsp(BaseRsp1):
             "name": "ContentProvider",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

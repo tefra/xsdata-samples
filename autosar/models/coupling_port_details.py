@@ -3,9 +3,13 @@ from typing import List, Optional
 from .coupling_port_fifo import CouplingPortFifo
 from .coupling_port_rate_policy import CouplingPortRatePolicy
 from .coupling_port_scheduler import CouplingPortScheduler
-from .coupling_port_scheduler_subtypes_enum import CouplingPortSchedulerSubtypesEnum
+from .coupling_port_scheduler_subtypes_enum import (
+    CouplingPortSchedulerSubtypesEnum,
+)
 from .coupling_port_shaper import CouplingPortShaper
-from .coupling_port_traffic_class_assignment import CouplingPortTrafficClassAssignment
+from .coupling_port_traffic_class_assignment import (
+    CouplingPortTrafficClassAssignment,
+)
 from .ethernet_priority_regeneration import EthernetPriorityRegeneration
 from .global_time_coupling_port_props import GlobalTimeCouplingPortProps
 from .ref import Ref
@@ -43,32 +47,39 @@ class CouplingPortDetails:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COUPLING-PORT-DETAILS"
 
-    coupling_port_structural_elements: Optional["CouplingPortDetails.CouplingPortStructuralElements"] = field(
+    coupling_port_structural_elements: Optional[
+        "CouplingPortDetails.CouplingPortStructuralElements"
+    ] = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-STRUCTURAL-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ethernet_priority_regenerations: Optional["CouplingPortDetails.EthernetPriorityRegenerations"] = field(
+    ethernet_priority_regenerations: Optional[
+        "CouplingPortDetails.EthernetPriorityRegenerations"
+    ] = field(
         default=None,
         metadata={
             "name": "ETHERNET-PRIORITY-REGENERATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ethernet_traffic_class_assignments: Optional["CouplingPortDetails.EthernetTrafficClassAssignments"] = field(
+    ethernet_traffic_class_assignments: Optional[
+        "CouplingPortDetails.EthernetTrafficClassAssignments"
+    ] = field(
         default=None,
         metadata={
             "name": "ETHERNET-TRAFFIC-CLASS-ASSIGNMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     global_time_props: Optional[GlobalTimeCouplingPortProps] = field(
         default=None,
@@ -76,15 +87,17 @@ class CouplingPortDetails:
             "name": "GLOBAL-TIME-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    last_egress_scheduler_ref: Optional["CouplingPortDetails.LastEgressSchedulerRef"] = field(
+    last_egress_scheduler_ref: Optional[
+        "CouplingPortDetails.LastEgressSchedulerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "LAST-EGRESS-SCHEDULER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rate_policys: Optional["CouplingPortDetails.RatePolicys"] = field(
         default=None,
@@ -92,14 +105,14 @@ class CouplingPortDetails:
             "name": "RATE-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -107,7 +120,7 @@ class CouplingPortDetails:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -118,7 +131,7 @@ class CouplingPortDetails:
                 "name": "COUPLING-PORT-FIFO",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         coupling_port_scheduler: List[CouplingPortScheduler] = field(
             default_factory=list,
@@ -126,7 +139,7 @@ class CouplingPortDetails:
                 "name": "COUPLING-PORT-SCHEDULER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         coupling_port_shaper: List[CouplingPortShaper] = field(
             default_factory=list,
@@ -134,31 +147,35 @@ class CouplingPortDetails:
                 "name": "COUPLING-PORT-SHAPER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class EthernetPriorityRegenerations:
-        ethernet_priority_regeneration: List[EthernetPriorityRegeneration] = field(
+        ethernet_priority_regeneration: List[
+            EthernetPriorityRegeneration
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-PRIORITY-REGENERATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 8,
-            }
+            },
         )
 
     @dataclass
     class EthernetTrafficClassAssignments:
-        coupling_port_traffic_class_assignment: List[CouplingPortTrafficClassAssignment] = field(
+        coupling_port_traffic_class_assignment: List[
+            CouplingPortTrafficClassAssignment
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-PORT-TRAFFIC-CLASS-ASSIGNMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 8,
-            }
+            },
         )
 
     @dataclass
@@ -169,7 +186,7 @@ class CouplingPortDetails:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -180,5 +197,5 @@ class CouplingPortDetails:
                 "name": "COUPLING-PORT-RATE-POLICY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -8,6 +8,7 @@ class TypeLoggingLevel4(Enum):
     """
     The type of various Logging levels.
     """
+
     TRACE = "TRACE"
     DEBUG = "DEBUG"
     INFO = "INFO"

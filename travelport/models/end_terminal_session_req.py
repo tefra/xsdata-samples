@@ -16,6 +16,7 @@ class EndTerminalSessionReq(BaseReq4):
     host_token
         The host token for the session you wish to close
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
@@ -26,5 +27,5 @@ class EndTerminalSessionReq(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "required": True,
-        }
+        },
     )

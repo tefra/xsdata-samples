@@ -74,6 +74,7 @@ class TcpProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TCP-PROPS"
 
@@ -83,7 +84,7 @@ class TcpProps:
             "name": "TCP-CONGESTION-AVOIDANCE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_delayed_ack_timeout: Optional[TimeValue] = field(
         default=None,
@@ -91,7 +92,7 @@ class TcpProps:
             "name": "TCP-DELAYED-ACK-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_fast_recovery_enabled: Optional[Boolean] = field(
         default=None,
@@ -99,7 +100,7 @@ class TcpProps:
             "name": "TCP-FAST-RECOVERY-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_fast_retransmit_enabled: Optional[Boolean] = field(
         default=None,
@@ -107,7 +108,7 @@ class TcpProps:
             "name": "TCP-FAST-RETRANSMIT-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_fin_wait_2_timeout: Optional[TimeValue] = field(
         default=None,
@@ -115,7 +116,7 @@ class TcpProps:
             "name": "TCP-FIN-WAIT-2-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_keep_alive_enabled: Optional[Boolean] = field(
         default=None,
@@ -123,7 +124,7 @@ class TcpProps:
             "name": "TCP-KEEP-ALIVE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_keep_alive_interval: Optional[TimeValue] = field(
         default=None,
@@ -131,7 +132,7 @@ class TcpProps:
             "name": "TCP-KEEP-ALIVE-INTERVAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_keep_alive_probes_max: Optional[PositiveInteger] = field(
         default=None,
@@ -139,7 +140,7 @@ class TcpProps:
             "name": "TCP-KEEP-ALIVE-PROBES-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_keep_alive_time: Optional[TimeValue] = field(
         default=None,
@@ -147,7 +148,7 @@ class TcpProps:
             "name": "TCP-KEEP-ALIVE-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_max_rtx: Optional[PositiveInteger] = field(
         default=None,
@@ -155,7 +156,7 @@ class TcpProps:
             "name": "TCP-MAX-RTX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_msl: Optional[TimeValue] = field(
         default=None,
@@ -163,7 +164,7 @@ class TcpProps:
             "name": "TCP-MSL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_nagle_enabled: Optional[Boolean] = field(
         default=None,
@@ -171,7 +172,7 @@ class TcpProps:
             "name": "TCP-NAGLE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_receive_window_max: Optional[PositiveInteger] = field(
         default=None,
@@ -179,7 +180,7 @@ class TcpProps:
             "name": "TCP-RECEIVE-WINDOW-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_retransmission_timeout: Optional[TimeValue] = field(
         default=None,
@@ -187,7 +188,7 @@ class TcpProps:
             "name": "TCP-RETRANSMISSION-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_slow_start_enabled: Optional[Boolean] = field(
         default=None,
@@ -195,7 +196,7 @@ class TcpProps:
             "name": "TCP-SLOW-START-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_syn_max_rtx: Optional[PositiveInteger] = field(
         default=None,
@@ -203,7 +204,7 @@ class TcpProps:
             "name": "TCP-SYN-MAX-RTX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_syn_received_timeout: Optional[TimeValue] = field(
         default=None,
@@ -211,7 +212,7 @@ class TcpProps:
             "name": "TCP-SYN-RECEIVED-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ttl: Optional[PositiveInteger] = field(
         default=None,
@@ -219,14 +220,14 @@ class TcpProps:
             "name": "TCP-TTL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -234,5 +235,5 @@ class TcpProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

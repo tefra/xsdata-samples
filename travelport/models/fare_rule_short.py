@@ -10,6 +10,7 @@ class FareRuleShort:
     """
     Short Text Fare Rule.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,7 +21,7 @@ class FareRuleShort:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     category: None | int = field(
         default=None,
@@ -28,12 +29,12 @@ class FareRuleShort:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     table_number: None | str = field(
         default=None,
         metadata={
             "name": "TableNumber",
             "type": "Attribute",
-        }
+        },
     )

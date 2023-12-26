@@ -15,5 +15,5 @@ class Implies:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

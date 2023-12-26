@@ -17,13 +17,14 @@ class Itinerary(GroupOfLocations):
         an itinerary.
     :ivar itinerary_extension:
     """
+
     route_destination: List[Destination] = field(
         default_factory=list,
         metadata={
             "name": "routeDestination",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     itinerary_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +32,5 @@ class Itinerary(GroupOfLocations):
             "name": "itineraryExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

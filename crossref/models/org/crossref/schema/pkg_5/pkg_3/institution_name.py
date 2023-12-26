@@ -8,6 +8,7 @@ class InstitutionName:
     """
     The full name of an institution.
     """
+
     class Meta:
         name = "institution_name"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class InstitutionName:
         metadata={
             "min_length": 1,
             "max_length": 1024,
-        }
+        },
     )

@@ -12,6 +12,7 @@ class PositionRelativeEnum(Enum):
     :cvar TO_THE_LEFT: Positioned to the left of relative item.
     :cvar TO_THE_RIGHT: Positioned to the right of relative item.
     """
+
     ABOVE = "above"
     BELOW = "below"
     TO_THE_LEFT = "toTheLeft"

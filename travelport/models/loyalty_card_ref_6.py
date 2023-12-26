@@ -16,5 +16,5 @@ class LoyaltyCardRef6:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

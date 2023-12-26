@@ -23,7 +23,9 @@ from .short_name_fragment import ShortNameFragment
 from .someip_service_discovery import SomeipServiceDiscovery
 from .time_value import TimeValue
 from .ttcan_communication_connector import TtcanCommunicationConnector
-from .user_defined_communication_connector import UserDefinedCommunicationConnector
+from .user_defined_communication_connector import (
+    UserDefinedCommunicationConnector,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -104,6 +106,7 @@ class MachineDesign:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MACHINE-DESIGN"
 
@@ -114,7 +117,7 @@ class MachineDesign:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["MachineDesign.ShortNameFragments"] = field(
         default=None,
@@ -122,7 +125,7 @@ class MachineDesign:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -130,7 +133,7 @@ class MachineDesign:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -138,7 +141,7 @@ class MachineDesign:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -146,7 +149,7 @@ class MachineDesign:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -154,7 +157,7 @@ class MachineDesign:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -162,7 +165,7 @@ class MachineDesign:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["MachineDesign.Annotations"] = field(
         default=None,
@@ -170,7 +173,7 @@ class MachineDesign:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -178,7 +181,7 @@ class MachineDesign:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     access_control: Optional[AccessControlEnum] = field(
         default=None,
@@ -186,15 +189,17 @@ class MachineDesign:
             "name": "ACCESS-CONTROL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    communication_connectors: Optional["MachineDesign.CommunicationConnectors"] = field(
+    communication_connectors: Optional[
+        "MachineDesign.CommunicationConnectors"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     eth_ip_props_ref: Optional["MachineDesign.EthIpPropsRef"] = field(
         default=None,
@@ -202,7 +207,7 @@ class MachineDesign:
             "name": "ETH-IP-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pn_reset_timer: Optional[TimeValue] = field(
         default=None,
@@ -210,7 +215,7 @@ class MachineDesign:
             "name": "PN-RESET-TIMER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_prepare_sleep_timer: Optional[TimeValue] = field(
         default=None,
@@ -218,15 +223,17 @@ class MachineDesign:
             "name": "PNC-PREPARE-SLEEP-TIMER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_discover_configs: Optional["MachineDesign.ServiceDiscoverConfigs"] = field(
+    service_discover_configs: Optional[
+        "MachineDesign.ServiceDiscoverConfigs"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-DISCOVER-CONFIGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_icmp_props_ref: Optional["MachineDesign.TcpIpIcmpPropsRef"] = field(
         default=None,
@@ -234,7 +241,7 @@ class MachineDesign:
             "name": "TCP-IP-ICMP-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_props_ref: Optional["MachineDesign.TcpIpPropsRef"] = field(
         default=None,
@@ -242,14 +249,14 @@ class MachineDesign:
             "name": "TCP-IP-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -257,14 +264,14 @@ class MachineDesign:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -275,7 +282,7 @@ class MachineDesign:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -286,7 +293,7 @@ class MachineDesign:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -297,23 +304,27 @@ class MachineDesign:
                 "name": "CAN-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        ethernet_communication_connector: List[EthernetCommunicationConnector] = field(
+        ethernet_communication_connector: List[
+            EthernetCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        flexray_communication_connector: List[FlexrayCommunicationConnector] = field(
+        flexray_communication_connector: List[
+            FlexrayCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_communication_connector: List[LinCommunicationConnector] = field(
             default_factory=list,
@@ -321,23 +332,27 @@ class MachineDesign:
                 "name": "LIN-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        ttcan_communication_connector: List[TtcanCommunicationConnector] = field(
+        ttcan_communication_connector: List[
+            TtcanCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_communication_connector: List[UserDefinedCommunicationConnector] = field(
+        user_defined_communication_connector: List[
+            UserDefinedCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -348,7 +363,7 @@ class MachineDesign:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -359,7 +374,7 @@ class MachineDesign:
                 "name": "SOMEIP-SERVICE-DISCOVERY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -370,7 +385,7 @@ class MachineDesign:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -381,5 +396,5 @@ class MachineDesign:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

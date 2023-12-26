@@ -10,5 +10,6 @@ class ContainedIPduCollectionSemanticsEnumSimple(Enum):
     :cvar QUEUED: The ContainedIPdu data will instantly be stored to the
         ContainerIPdu in the context of the Transmit API.
     """
+
     LAST_IS_BEST = "LAST-IS-BEST"
     QUEUED = "QUEUED"

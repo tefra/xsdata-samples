@@ -19,7 +19,7 @@ class PaymentRestriction3:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     address_restriction: None | AddressRestriction3 = field(
         default=None,
@@ -27,5 +27,5 @@ class PaymentRestriction3:
             "name": "AddressRestriction",
             "type": "Element",
             "required": True,
-        }
+        },
     )

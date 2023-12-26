@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_hierarchy_override_type import TypeHierarchyOverrideType
+from travelport.models.type_hierarchy_override_type import (
+    TypeHierarchyOverrideType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -22,6 +24,7 @@ class DefaultTemplate:
     template_version
         The current version number of the template.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -31,7 +34,7 @@ class DefaultTemplate:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     template_id: None | int = field(
         default=None,
@@ -39,7 +42,7 @@ class DefaultTemplate:
             "name": "TemplateID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     template_version: None | int = field(
         default=None,
@@ -48,5 +51,5 @@ class DefaultTemplate:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )

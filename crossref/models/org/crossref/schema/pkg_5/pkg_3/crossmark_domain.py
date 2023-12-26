@@ -18,6 +18,7 @@ class CrossmarkDomain:
     "path" to further determine whether the content in a crossmark
     domain.
     """
+
     class Meta:
         name = "crossmark_domain"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -30,11 +31,11 @@ class CrossmarkDomain:
             "min_length": 4,
             "max_length": 1024,
             "pattern": r"[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*\.[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*",
-        }
+        },
     )
     filter: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )

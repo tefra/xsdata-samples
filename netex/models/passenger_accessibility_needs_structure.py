@@ -14,22 +14,26 @@ class PassengerAccessibilityNeedsStructure:
             "name": "AccompaniedByCarer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    user_needs: Optional["PassengerAccessibilityNeedsStructure.UserNeeds"] = field(
+    user_needs: Optional[
+        "PassengerAccessibilityNeedsStructure.UserNeeds"
+    ] = field(
         default=None,
         metadata={
             "name": "userNeeds",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    suitabilities: Optional["PassengerAccessibilityNeedsStructure.Suitabilities"] = field(
+    suitabilities: Optional[
+        "PassengerAccessibilityNeedsStructure.Suitabilities"
+    ] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
     @dataclass
@@ -40,7 +44,7 @@ class PassengerAccessibilityNeedsStructure:
                 "name": "UserNeed",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-            }
+            },
         )
 
     @dataclass
@@ -51,5 +55,5 @@ class PassengerAccessibilityNeedsStructure:
                 "name": "Suitability",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-            }
+            },
         )

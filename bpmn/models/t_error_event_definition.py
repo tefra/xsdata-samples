@@ -16,5 +16,5 @@ class TErrorEventDefinition(TEventDefinition):
         metadata={
             "name": "errorRef",
             "type": "Attribute",
-        }
+        },
     )

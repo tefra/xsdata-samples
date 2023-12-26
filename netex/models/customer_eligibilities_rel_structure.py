@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .commercial_profile_eligibility import CommercialProfileEligibility
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_eligibility import CustomerEligibility
-from .residential_qualification_eligibility import ResidentialQualificationEligibility
+from .residential_qualification_eligibility import (
+    ResidentialQualificationEligibility,
+)
 from .user_profile_eligibility import UserProfileEligibility
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -14,7 +16,14 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customerEligibilities_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            ResidentialQualificationEligibility,
+            CommercialProfileEligibility,
+            UserProfileEligibility,
+            CustomerEligibility,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -40,5 +49,5 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

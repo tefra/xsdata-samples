@@ -26,9 +26,15 @@ from travelport.models.accounting_remark_5 import AccountingRemark5
 from travelport.models.accounting_remark_6 import AccountingRemark6
 from travelport.models.ack_schedule_change_req import AckScheduleChangeReq
 from travelport.models.ack_schedule_change_rsp import AckScheduleChangeRsp
-from travelport.models.ack_schedule_change_service_port_type_service import AckScheduleChangeServicePortTypeService
-from travelport.models.ack_schedule_change_service_port_type_service_input import AckScheduleChangeServicePortTypeServiceInput
-from travelport.models.ack_schedule_change_service_port_type_service_output import AckScheduleChangeServicePortTypeServiceOutput
+from travelport.models.ack_schedule_change_service_port_type_service import (
+    AckScheduleChangeServicePortTypeService,
+)
+from travelport.models.ack_schedule_change_service_port_type_service_input import (
+    AckScheduleChangeServicePortTypeServiceInput,
+)
+from travelport.models.ack_schedule_change_service_port_type_service_output import (
+    AckScheduleChangeServicePortTypeServiceOutput,
+)
 from travelport.models.action import Action
 from travelport.models.action_details import ActionDetails
 from travelport.models.action_ref import ActionRef
@@ -56,7 +62,9 @@ from travelport.models.add_svc import AddSvc
 from travelport.models.add_traveler import AddTraveler
 from travelport.models.additional_element import AdditionalElement
 from travelport.models.additional_info import AdditionalInfo
-from travelport.models.addl_booking_code_information import AddlBookingCodeInformation
+from travelport.models.addl_booking_code_information import (
+    AddlBookingCodeInformation,
+)
 from travelport.models.address_1 import Address1
 from travelport.models.address_2 import Address2
 from travelport.models.address_line_1 import AddressLine1
@@ -80,9 +88,15 @@ from travelport.models.agency_contact_info_3 import AgencyContactInfo3
 from travelport.models.agency_contact_info_4 import AgencyContactInfo4
 from travelport.models.agency_contact_info_5 import AgencyContactInfo5
 from travelport.models.agency_contact_info_6 import AgencyContactInfo6
-from travelport.models.agency_create_service_fee_port_type_service import AgencyCreateServiceFeePortTypeService
-from travelport.models.agency_create_service_fee_port_type_service_input import AgencyCreateServiceFeePortTypeServiceInput
-from travelport.models.agency_create_service_fee_port_type_service_output import AgencyCreateServiceFeePortTypeServiceOutput
+from travelport.models.agency_create_service_fee_port_type_service import (
+    AgencyCreateServiceFeePortTypeService,
+)
+from travelport.models.agency_create_service_fee_port_type_service_input import (
+    AgencyCreateServiceFeePortTypeServiceInput,
+)
+from travelport.models.agency_create_service_fee_port_type_service_output import (
+    AgencyCreateServiceFeePortTypeServiceOutput,
+)
 from travelport.models.agency_criteria_1 import AgencyCriteria1
 from travelport.models.agency_criteria_2 import AgencyCriteria2
 from travelport.models.agency_group_criteria_1 import AgencyGroupCriteria1
@@ -120,8 +134,12 @@ from travelport.models.agency_sell_info_3 import AgencySellInfo3
 from travelport.models.agency_sell_info_4 import AgencySellInfo4
 from travelport.models.agency_sell_info_5 import AgencySellInfo5
 from travelport.models.agency_sell_info_6 import AgencySellInfo6
-from travelport.models.agency_service_fee_create_req import AgencyServiceFeeCreateReq
-from travelport.models.agency_service_fee_create_rsp import AgencyServiceFeeCreateRsp
+from travelport.models.agency_service_fee_create_req import (
+    AgencyServiceFeeCreateReq,
+)
+from travelport.models.agency_service_fee_create_rsp import (
+    AgencyServiceFeeCreateRsp,
+)
 from travelport.models.agent_action_1 import AgentAction1
 from travelport.models.agent_action_2 import AgentAction2
 from travelport.models.agent_action_3 import AgentAction3
@@ -156,30 +174,64 @@ from travelport.models.agent_voucher_history_1 import AgentVoucherHistory1
 from travelport.models.agent_voucher_history_2 import AgentVoucherHistory2
 from travelport.models.air_add import AirAdd
 from travelport.models.air_avail_info import AirAvailInfo
-from travelport.models.air_availability_search_port_type_service import AirAvailabilitySearchPortTypeService
-from travelport.models.air_availability_search_port_type_service_input import AirAvailabilitySearchPortTypeServiceInput
-from travelport.models.air_availability_search_port_type_service_output import AirAvailabilitySearchPortTypeServiceOutput
+from travelport.models.air_availability_search_port_type_service import (
+    AirAvailabilitySearchPortTypeService,
+)
+from travelport.models.air_availability_search_port_type_service_input import (
+    AirAvailabilitySearchPortTypeServiceInput,
+)
+from travelport.models.air_availability_search_port_type_service_output import (
+    AirAvailabilitySearchPortTypeServiceOutput,
+)
 from travelport.models.air_base_req import AirBaseReq
-from travelport.models.air_cancel_port_type_service import AirCancelPortTypeService
-from travelport.models.air_cancel_port_type_service_input import AirCancelPortTypeServiceInput
-from travelport.models.air_cancel_port_type_service_output import AirCancelPortTypeServiceOutput
+from travelport.models.air_cancel_port_type_service import (
+    AirCancelPortTypeService,
+)
+from travelport.models.air_cancel_port_type_service_input import (
+    AirCancelPortTypeServiceInput,
+)
+from travelport.models.air_cancel_port_type_service_output import (
+    AirCancelPortTypeServiceOutput,
+)
 from travelport.models.air_cancel_req import AirCancelReq
 from travelport.models.air_cancel_rsp import AirCancelRsp
-from travelport.models.air_create_reservation_port_type_service import AirCreateReservationPortTypeService
-from travelport.models.air_create_reservation_port_type_service_input import AirCreateReservationPortTypeServiceInput
-from travelport.models.air_create_reservation_port_type_service_output import AirCreateReservationPortTypeServiceOutput
-from travelport.models.air_create_reservation_req import AirCreateReservationReq
-from travelport.models.air_create_reservation_req_check_price_variance_type import AirCreateReservationReqCheckPriceVarianceType
-from travelport.models.air_create_reservation_rsp import AirCreateReservationRsp
+from travelport.models.air_create_reservation_port_type_service import (
+    AirCreateReservationPortTypeService,
+)
+from travelport.models.air_create_reservation_port_type_service_input import (
+    AirCreateReservationPortTypeServiceInput,
+)
+from travelport.models.air_create_reservation_port_type_service_output import (
+    AirCreateReservationPortTypeServiceOutput,
+)
+from travelport.models.air_create_reservation_req import (
+    AirCreateReservationReq,
+)
+from travelport.models.air_create_reservation_req_check_price_variance_type import (
+    AirCreateReservationReqCheckPriceVarianceType,
+)
+from travelport.models.air_create_reservation_rsp import (
+    AirCreateReservationRsp,
+)
 from travelport.models.air_delete import AirDelete
 from travelport.models.air_exchange_bundle import AirExchangeBundle
 from travelport.models.air_exchange_bundle_list import AirExchangeBundleList
 from travelport.models.air_exchange_bundle_total import AirExchangeBundleTotal
-from travelport.models.air_exchange_eligibility_port_type_service import AirExchangeEligibilityPortTypeService
-from travelport.models.air_exchange_eligibility_port_type_service_input import AirExchangeEligibilityPortTypeServiceInput
-from travelport.models.air_exchange_eligibility_port_type_service_output import AirExchangeEligibilityPortTypeServiceOutput
-from travelport.models.air_exchange_eligibility_req import AirExchangeEligibilityReq
-from travelport.models.air_exchange_eligibility_rsp import AirExchangeEligibilityRsp
+from travelport.models.air_exchange_eligibility_port_type_service import (
+    AirExchangeEligibilityPortTypeService,
+)
+from travelport.models.air_exchange_eligibility_port_type_service_input import (
+    AirExchangeEligibilityPortTypeServiceInput,
+)
+from travelport.models.air_exchange_eligibility_port_type_service_output import (
+    AirExchangeEligibilityPortTypeServiceOutput,
+)
+from travelport.models.air_exchange_eligibility_req import (
+    AirExchangeEligibilityReq,
+)
+from travelport.models.air_exchange_eligibility_rsp import (
+    AirExchangeEligibilityRsp,
+)
 from travelport.models.air_exchange_info_1 import AirExchangeInfo1
 from travelport.models.air_exchange_info_2 import AirExchangeInfo2
 from travelport.models.air_exchange_info_3 import AirExchangeInfo3
@@ -187,80 +239,182 @@ from travelport.models.air_exchange_info_4 import AirExchangeInfo4
 from travelport.models.air_exchange_info_5 import AirExchangeInfo5
 from travelport.models.air_exchange_info_6 import AirExchangeInfo6
 from travelport.models.air_exchange_modifiers import AirExchangeModifiers
-from travelport.models.air_exchange_mulit_quote_list import AirExchangeMulitQuoteList
-from travelport.models.air_exchange_multi_quote_option import AirExchangeMultiQuoteOption
-from travelport.models.air_exchange_multi_quote_port_type_service import AirExchangeMultiQuotePortTypeService
-from travelport.models.air_exchange_multi_quote_port_type_service_input import AirExchangeMultiQuotePortTypeServiceInput
-from travelport.models.air_exchange_multi_quote_port_type_service_output import AirExchangeMultiQuotePortTypeServiceOutput
-from travelport.models.air_exchange_multi_quote_req import AirExchangeMultiQuoteReq
-from travelport.models.air_exchange_multi_quote_rsp import AirExchangeMultiQuoteRsp
-from travelport.models.air_exchange_process_port_type_service import AirExchangeProcessPortTypeService
-from travelport.models.air_exchange_process_port_type_service_input import AirExchangeProcessPortTypeServiceInput
-from travelport.models.air_exchange_process_port_type_service_output import AirExchangeProcessPortTypeServiceOutput
-from travelport.models.air_exchange_quote_port_type_service import AirExchangeQuotePortTypeService
-from travelport.models.air_exchange_quote_port_type_service_input import AirExchangeQuotePortTypeServiceInput
-from travelport.models.air_exchange_quote_port_type_service_output import AirExchangeQuotePortTypeServiceOutput
+from travelport.models.air_exchange_mulit_quote_list import (
+    AirExchangeMulitQuoteList,
+)
+from travelport.models.air_exchange_multi_quote_option import (
+    AirExchangeMultiQuoteOption,
+)
+from travelport.models.air_exchange_multi_quote_port_type_service import (
+    AirExchangeMultiQuotePortTypeService,
+)
+from travelport.models.air_exchange_multi_quote_port_type_service_input import (
+    AirExchangeMultiQuotePortTypeServiceInput,
+)
+from travelport.models.air_exchange_multi_quote_port_type_service_output import (
+    AirExchangeMultiQuotePortTypeServiceOutput,
+)
+from travelport.models.air_exchange_multi_quote_req import (
+    AirExchangeMultiQuoteReq,
+)
+from travelport.models.air_exchange_multi_quote_rsp import (
+    AirExchangeMultiQuoteRsp,
+)
+from travelport.models.air_exchange_process_port_type_service import (
+    AirExchangeProcessPortTypeService,
+)
+from travelport.models.air_exchange_process_port_type_service_input import (
+    AirExchangeProcessPortTypeServiceInput,
+)
+from travelport.models.air_exchange_process_port_type_service_output import (
+    AirExchangeProcessPortTypeServiceOutput,
+)
+from travelport.models.air_exchange_quote_port_type_service import (
+    AirExchangeQuotePortTypeService,
+)
+from travelport.models.air_exchange_quote_port_type_service_input import (
+    AirExchangeQuotePortTypeServiceInput,
+)
+from travelport.models.air_exchange_quote_port_type_service_output import (
+    AirExchangeQuotePortTypeServiceOutput,
+)
 from travelport.models.air_exchange_quote_req import AirExchangeQuoteReq
 from travelport.models.air_exchange_quote_rsp import AirExchangeQuoteRsp
 from travelport.models.air_exchange_req import AirExchangeReq
 from travelport.models.air_exchange_rsp import AirExchangeRsp
-from travelport.models.air_exchange_ticket_bundle import AirExchangeTicketBundle
-from travelport.models.air_exchange_ticketing_port_type_service import AirExchangeTicketingPortTypeService
-from travelport.models.air_exchange_ticketing_port_type_service_input import AirExchangeTicketingPortTypeServiceInput
-from travelport.models.air_exchange_ticketing_port_type_service_output import AirExchangeTicketingPortTypeServiceOutput
-from travelport.models.air_exchange_ticketing_req import AirExchangeTicketingReq
-from travelport.models.air_exchange_ticketing_rsp import AirExchangeTicketingRsp
+from travelport.models.air_exchange_ticket_bundle import (
+    AirExchangeTicketBundle,
+)
+from travelport.models.air_exchange_ticketing_port_type_service import (
+    AirExchangeTicketingPortTypeService,
+)
+from travelport.models.air_exchange_ticketing_port_type_service_input import (
+    AirExchangeTicketingPortTypeServiceInput,
+)
+from travelport.models.air_exchange_ticketing_port_type_service_output import (
+    AirExchangeTicketingPortTypeServiceOutput,
+)
+from travelport.models.air_exchange_ticketing_req import (
+    AirExchangeTicketingReq,
+)
+from travelport.models.air_exchange_ticketing_rsp import (
+    AirExchangeTicketingRsp,
+)
 from travelport.models.air_fare_discount import AirFareDiscount
-from travelport.models.air_fare_display_modifiers import AirFareDisplayModifiers
-from travelport.models.air_fare_display_port_type_service import AirFareDisplayPortTypeService
-from travelport.models.air_fare_display_port_type_service_input import AirFareDisplayPortTypeServiceInput
-from travelport.models.air_fare_display_port_type_service_output import AirFareDisplayPortTypeServiceOutput
+from travelport.models.air_fare_display_modifiers import (
+    AirFareDisplayModifiers,
+)
+from travelport.models.air_fare_display_port_type_service import (
+    AirFareDisplayPortTypeService,
+)
+from travelport.models.air_fare_display_port_type_service_input import (
+    AirFareDisplayPortTypeServiceInput,
+)
+from travelport.models.air_fare_display_port_type_service_output import (
+    AirFareDisplayPortTypeServiceOutput,
+)
 from travelport.models.air_fare_display_req import AirFareDisplayReq
 from travelport.models.air_fare_display_rsp import AirFareDisplayRsp
 from travelport.models.air_fare_display_rule_key import AirFareDisplayRuleKey
 from travelport.models.air_fare_rule_category import AirFareRuleCategory
 from travelport.models.air_fare_rules_modifier import AirFareRulesModifier
-from travelport.models.air_fare_rules_port_type_service import AirFareRulesPortTypeService
-from travelport.models.air_fare_rules_port_type_service_input import AirFareRulesPortTypeServiceInput
-from travelport.models.air_fare_rules_port_type_service_output import AirFareRulesPortTypeServiceOutput
+from travelport.models.air_fare_rules_port_type_service import (
+    AirFareRulesPortTypeService,
+)
+from travelport.models.air_fare_rules_port_type_service_input import (
+    AirFareRulesPortTypeServiceInput,
+)
+from travelport.models.air_fare_rules_port_type_service_output import (
+    AirFareRulesPortTypeServiceOutput,
+)
 from travelport.models.air_fare_rules_req import AirFareRulesReq
 from travelport.models.air_fare_rules_rsp import AirFareRulesRsp
 from travelport.models.air_itinerary import AirItinerary
 from travelport.models.air_itinerary_details import AirItineraryDetails
 from travelport.models.air_itinerary_solution import AirItinerarySolution
-from travelport.models.air_itinerary_solution_ref import AirItinerarySolutionRef
+from travelport.models.air_itinerary_solution_ref import (
+    AirItinerarySolutionRef,
+)
 from travelport.models.air_leg_modifiers import AirLegModifiers
 from travelport.models.air_leg_modifiers_order_by import AirLegModifiersOrderBy
-from travelport.models.air_low_fare_search_port_type_service import AirLowFareSearchPortTypeService
-from travelport.models.air_low_fare_search_port_type_service_input import AirLowFareSearchPortTypeServiceInput
-from travelport.models.air_low_fare_search_port_type_service_output import AirLowFareSearchPortTypeServiceOutput
-from travelport.models.air_merchandising_details_port_type_service import AirMerchandisingDetailsPortTypeService
-from travelport.models.air_merchandising_details_port_type_service_input import AirMerchandisingDetailsPortTypeServiceInput
-from travelport.models.air_merchandising_details_port_type_service_output import AirMerchandisingDetailsPortTypeServiceOutput
-from travelport.models.air_merchandising_details_req import AirMerchandisingDetailsReq
-from travelport.models.air_merchandising_details_rsp import AirMerchandisingDetailsRsp
-from travelport.models.air_merchandising_fulfillment_port_type_service import AirMerchandisingFulfillmentPortTypeService
-from travelport.models.air_merchandising_fulfillment_port_type_service_input import AirMerchandisingFulfillmentPortTypeServiceInput
-from travelport.models.air_merchandising_fulfillment_port_type_service_output import AirMerchandisingFulfillmentPortTypeServiceOutput
-from travelport.models.air_merchandising_fulfillment_req import AirMerchandisingFulfillmentReq
-from travelport.models.air_merchandising_fulfillment_rsp import AirMerchandisingFulfillmentRsp
-from travelport.models.air_merchandising_offer_availability_port_type_service import AirMerchandisingOfferAvailabilityPortTypeService
-from travelport.models.air_merchandising_offer_availability_port_type_service_input import AirMerchandisingOfferAvailabilityPortTypeServiceInput
-from travelport.models.air_merchandising_offer_availability_port_type_service_output import AirMerchandisingOfferAvailabilityPortTypeServiceOutput
-from travelport.models.air_merchandising_offer_availability_req import AirMerchandisingOfferAvailabilityReq
-from travelport.models.air_merchandising_offer_availability_rsp import AirMerchandisingOfferAvailabilityRsp
-from travelport.models.air_pre_pay_port_type_service import AirPrePayPortTypeService
-from travelport.models.air_pre_pay_port_type_service_input import AirPrePayPortTypeServiceInput
-from travelport.models.air_pre_pay_port_type_service_output import AirPrePayPortTypeServiceOutput
+from travelport.models.air_low_fare_search_port_type_service import (
+    AirLowFareSearchPortTypeService,
+)
+from travelport.models.air_low_fare_search_port_type_service_input import (
+    AirLowFareSearchPortTypeServiceInput,
+)
+from travelport.models.air_low_fare_search_port_type_service_output import (
+    AirLowFareSearchPortTypeServiceOutput,
+)
+from travelport.models.air_merchandising_details_port_type_service import (
+    AirMerchandisingDetailsPortTypeService,
+)
+from travelport.models.air_merchandising_details_port_type_service_input import (
+    AirMerchandisingDetailsPortTypeServiceInput,
+)
+from travelport.models.air_merchandising_details_port_type_service_output import (
+    AirMerchandisingDetailsPortTypeServiceOutput,
+)
+from travelport.models.air_merchandising_details_req import (
+    AirMerchandisingDetailsReq,
+)
+from travelport.models.air_merchandising_details_rsp import (
+    AirMerchandisingDetailsRsp,
+)
+from travelport.models.air_merchandising_fulfillment_port_type_service import (
+    AirMerchandisingFulfillmentPortTypeService,
+)
+from travelport.models.air_merchandising_fulfillment_port_type_service_input import (
+    AirMerchandisingFulfillmentPortTypeServiceInput,
+)
+from travelport.models.air_merchandising_fulfillment_port_type_service_output import (
+    AirMerchandisingFulfillmentPortTypeServiceOutput,
+)
+from travelport.models.air_merchandising_fulfillment_req import (
+    AirMerchandisingFulfillmentReq,
+)
+from travelport.models.air_merchandising_fulfillment_rsp import (
+    AirMerchandisingFulfillmentRsp,
+)
+from travelport.models.air_merchandising_offer_availability_port_type_service import (
+    AirMerchandisingOfferAvailabilityPortTypeService,
+)
+from travelport.models.air_merchandising_offer_availability_port_type_service_input import (
+    AirMerchandisingOfferAvailabilityPortTypeServiceInput,
+)
+from travelport.models.air_merchandising_offer_availability_port_type_service_output import (
+    AirMerchandisingOfferAvailabilityPortTypeServiceOutput,
+)
+from travelport.models.air_merchandising_offer_availability_req import (
+    AirMerchandisingOfferAvailabilityReq,
+)
+from travelport.models.air_merchandising_offer_availability_rsp import (
+    AirMerchandisingOfferAvailabilityRsp,
+)
+from travelport.models.air_pre_pay_port_type_service import (
+    AirPrePayPortTypeService,
+)
+from travelport.models.air_pre_pay_port_type_service_input import (
+    AirPrePayPortTypeServiceInput,
+)
+from travelport.models.air_pre_pay_port_type_service_output import (
+    AirPrePayPortTypeServiceOutput,
+)
 from travelport.models.air_pre_pay_req import AirPrePayReq
 from travelport.models.air_pre_pay_rsp import AirPrePayRsp
 from travelport.models.air_preference_1 import AirPreference1
 from travelport.models.air_preference_2 import AirPreference2
 from travelport.models.air_price_point import AirPricePoint
 from travelport.models.air_price_point_list import AirPricePointList
-from travelport.models.air_price_port_type_service import AirPricePortTypeService
-from travelport.models.air_price_port_type_service_input import AirPricePortTypeServiceInput
-from travelport.models.air_price_port_type_service_output import AirPricePortTypeServiceOutput
+from travelport.models.air_price_port_type_service import (
+    AirPricePortTypeService,
+)
+from travelport.models.air_price_port_type_service_input import (
+    AirPricePortTypeServiceInput,
+)
+from travelport.models.air_price_port_type_service_output import (
+    AirPricePortTypeServiceOutput,
+)
 from travelport.models.air_price_req import AirPriceReq
 from travelport.models.air_price_result import AirPriceResult
 from travelport.models.air_price_rsp import AirPriceRsp
@@ -272,42 +426,84 @@ from travelport.models.air_pricing_info_ref import AirPricingInfoRef
 from travelport.models.air_pricing_modifiers import AirPricingModifiers
 from travelport.models.air_pricing_payment import AirPricingPayment
 from travelport.models.air_pricing_solution import AirPricingSolution
-from travelport.models.air_pricing_solution_itinerary import AirPricingSolutionItinerary
-from travelport.models.air_pricing_ticketing_modifiers import AirPricingTicketingModifiers
+from travelport.models.air_pricing_solution_itinerary import (
+    AirPricingSolutionItinerary,
+)
+from travelport.models.air_pricing_ticketing_modifiers import (
+    AirPricingTicketingModifiers,
+)
 from travelport.models.air_refund_bundle import AirRefundBundle
-from travelport.models.air_refund_bundle_refund_type import AirRefundBundleRefundType
+from travelport.models.air_refund_bundle_refund_type import (
+    AirRefundBundleRefundType,
+)
 from travelport.models.air_refund_info import AirRefundInfo
 from travelport.models.air_refund_modifiers import AirRefundModifiers
-from travelport.models.air_refund_quote_port_type_service import AirRefundQuotePortTypeService
-from travelport.models.air_refund_quote_port_type_service_input import AirRefundQuotePortTypeServiceInput
-from travelport.models.air_refund_quote_port_type_service_output import AirRefundQuotePortTypeServiceOutput
+from travelport.models.air_refund_quote_port_type_service import (
+    AirRefundQuotePortTypeService,
+)
+from travelport.models.air_refund_quote_port_type_service_input import (
+    AirRefundQuotePortTypeServiceInput,
+)
+from travelport.models.air_refund_quote_port_type_service_output import (
+    AirRefundQuotePortTypeServiceOutput,
+)
 from travelport.models.air_refund_quote_req import AirRefundQuoteReq
 from travelport.models.air_refund_quote_rsp import AirRefundQuoteRsp
 from travelport.models.air_refund_req import AirRefundReq
 from travelport.models.air_refund_rsp import AirRefundRsp
-from travelport.models.air_refund_ticket_port_type_service import AirRefundTicketPortTypeService
-from travelport.models.air_refund_ticket_port_type_service_input import AirRefundTicketPortTypeServiceInput
-from travelport.models.air_refund_ticket_port_type_service_output import AirRefundTicketPortTypeServiceOutput
+from travelport.models.air_refund_ticket_port_type_service import (
+    AirRefundTicketPortTypeService,
+)
+from travelport.models.air_refund_ticket_port_type_service_input import (
+    AirRefundTicketPortTypeServiceInput,
+)
+from travelport.models.air_refund_ticket_port_type_service_output import (
+    AirRefundTicketPortTypeServiceOutput,
+)
 from travelport.models.air_reprice_req import AirRepriceReq
 from travelport.models.air_reprice_rsp import AirRepriceRsp
-from travelport.models.air_reprice_search_port_type_service import AirRepriceSearchPortTypeService
-from travelport.models.air_reprice_search_port_type_service_input import AirRepriceSearchPortTypeServiceInput
-from travelport.models.air_reprice_search_port_type_service_output import AirRepriceSearchPortTypeServiceOutput
+from travelport.models.air_reprice_search_port_type_service import (
+    AirRepriceSearchPortTypeService,
+)
+from travelport.models.air_reprice_search_port_type_service_input import (
+    AirRepriceSearchPortTypeServiceInput,
+)
+from travelport.models.air_reprice_search_port_type_service_output import (
+    AirRepriceSearchPortTypeServiceOutput,
+)
 from travelport.models.air_reservation import AirReservation
 from travelport.models.air_reservation_criteria import AirReservationCriteria
-from travelport.models.air_reservation_locator_code import AirReservationLocatorCode
-from travelport.models.air_retrieve_document_port_type_service import AirRetrieveDocumentPortTypeService
-from travelport.models.air_retrieve_document_port_type_service_input import AirRetrieveDocumentPortTypeServiceInput
-from travelport.models.air_retrieve_document_port_type_service_output import AirRetrieveDocumentPortTypeServiceOutput
+from travelport.models.air_reservation_locator_code import (
+    AirReservationLocatorCode,
+)
+from travelport.models.air_retrieve_document_port_type_service import (
+    AirRetrieveDocumentPortTypeService,
+)
+from travelport.models.air_retrieve_document_port_type_service_input import (
+    AirRetrieveDocumentPortTypeServiceInput,
+)
+from travelport.models.air_retrieve_document_port_type_service_output import (
+    AirRetrieveDocumentPortTypeServiceOutput,
+)
 from travelport.models.air_retrieve_document_req import AirRetrieveDocumentReq
 from travelport.models.air_retrieve_document_rsp import AirRetrieveDocumentRsp
 from travelport.models.air_schedule_changed_info import AirScheduleChangedInfo
-from travelport.models.air_schedule_search_port_type_service import AirScheduleSearchPortTypeService
-from travelport.models.air_schedule_search_port_type_service_input import AirScheduleSearchPortTypeServiceInput
-from travelport.models.air_schedule_search_port_type_service_output import AirScheduleSearchPortTypeServiceOutput
-from travelport.models.air_search_asynch_modifiers import AirSearchAsynchModifiers
+from travelport.models.air_schedule_search_port_type_service import (
+    AirScheduleSearchPortTypeService,
+)
+from travelport.models.air_schedule_search_port_type_service_input import (
+    AirScheduleSearchPortTypeServiceInput,
+)
+from travelport.models.air_schedule_search_port_type_service_output import (
+    AirScheduleSearchPortTypeServiceOutput,
+)
+from travelport.models.air_search_asynch_modifiers import (
+    AirSearchAsynchModifiers,
+)
 from travelport.models.air_search_modifiers import AirSearchModifiers
-from travelport.models.air_search_modifiers_order_by import AirSearchModifiersOrderBy
+from travelport.models.air_search_modifiers_order_by import (
+    AirSearchModifiersOrderBy,
+)
 from travelport.models.air_search_parameters_1 import AirSearchParameters1
 from travelport.models.air_search_parameters_2 import AirSearchParameters2
 from travelport.models.air_search_parameters_3 import AirSearchParameters3
@@ -327,19 +523,37 @@ from travelport.models.air_segment_data import AirSegmentData
 from travelport.models.air_segment_details import AirSegmentDetails
 from travelport.models.air_segment_error import AirSegmentError
 from travelport.models.air_segment_list import AirSegmentList
-from travelport.models.air_segment_pricing_modifiers import AirSegmentPricingModifiers
+from travelport.models.air_segment_pricing_modifiers import (
+    AirSegmentPricingModifiers,
+)
 from travelport.models.air_segment_ref import AirSegmentRef
-from travelport.models.air_segment_sell_failure_info import AirSegmentSellFailureInfo
-from travelport.models.air_segment_special_update import AirSegmentSpecialUpdate
-from travelport.models.air_segment_special_update_action import AirSegmentSpecialUpdateAction
-from travelport.models.air_segment_ticketing_modifiers import AirSegmentTicketingModifiers
+from travelport.models.air_segment_sell_failure_info import (
+    AirSegmentSellFailureInfo,
+)
+from travelport.models.air_segment_special_update import (
+    AirSegmentSpecialUpdate,
+)
+from travelport.models.air_segment_special_update_action import (
+    AirSegmentSpecialUpdateAction,
+)
+from travelport.models.air_segment_ticketing_modifiers import (
+    AirSegmentTicketingModifiers,
+)
 from travelport.models.air_solution import AirSolution
 from travelport.models.air_solution_changed_info import AirSolutionChangedInfo
-from travelport.models.air_solution_changed_info_reason_code import AirSolutionChangedInfoReasonCode
+from travelport.models.air_solution_changed_info_reason_code import (
+    AirSolutionChangedInfoReasonCode,
+)
 from travelport.models.air_ticketing_modifiers import AirTicketingModifiers
-from travelport.models.air_ticketing_port_type_service import AirTicketingPortTypeService
-from travelport.models.air_ticketing_port_type_service_input import AirTicketingPortTypeServiceInput
-from travelport.models.air_ticketing_port_type_service_output import AirTicketingPortTypeServiceOutput
+from travelport.models.air_ticketing_port_type_service import (
+    AirTicketingPortTypeService,
+)
+from travelport.models.air_ticketing_port_type_service_input import (
+    AirTicketingPortTypeServiceInput,
+)
+from travelport.models.air_ticketing_port_type_service_output import (
+    AirTicketingPortTypeServiceOutput,
+)
 from travelport.models.air_ticketing_req import AirTicketingReq
 from travelport.models.air_ticketing_rsp import AirTicketingRsp
 from travelport.models.air_tier_1 import AirTier1
@@ -353,21 +567,39 @@ from travelport.models.air_upsell_add import AirUpsellAdd
 from travelport.models.air_upsell_criteria import AirUpsellCriteria
 from travelport.models.air_upsell_delete import AirUpsellDelete
 from travelport.models.air_upsell_offer import AirUpsellOffer
-from travelport.models.air_upsell_offer_search_criteria import AirUpsellOfferSearchCriteria
+from travelport.models.air_upsell_offer_search_criteria import (
+    AirUpsellOfferSearchCriteria,
+)
 from travelport.models.air_upsell_qualify import AirUpsellQualify
-from travelport.models.air_upsell_qualify_search_criteria import AirUpsellQualifySearchCriteria
+from travelport.models.air_upsell_qualify_search_criteria import (
+    AirUpsellQualifySearchCriteria,
+)
 from travelport.models.air_upsell_rule import AirUpsellRule
-from travelport.models.air_upsell_search_criteria import AirUpsellSearchCriteria
-from travelport.models.air_upsell_search_port_type_service import AirUpsellSearchPortTypeService
-from travelport.models.air_upsell_search_port_type_service_input import AirUpsellSearchPortTypeServiceInput
-from travelport.models.air_upsell_search_port_type_service_output import AirUpsellSearchPortTypeServiceOutput
+from travelport.models.air_upsell_search_criteria import (
+    AirUpsellSearchCriteria,
+)
+from travelport.models.air_upsell_search_port_type_service import (
+    AirUpsellSearchPortTypeService,
+)
+from travelport.models.air_upsell_search_port_type_service_input import (
+    AirUpsellSearchPortTypeServiceInput,
+)
+from travelport.models.air_upsell_search_port_type_service_output import (
+    AirUpsellSearchPortTypeServiceOutput,
+)
 from travelport.models.air_upsell_search_req import AirUpsellSearchReq
 from travelport.models.air_upsell_search_result import AirUpsellSearchResult
 from travelport.models.air_upsell_search_rsp import AirUpsellSearchRsp
 from travelport.models.air_upsell_update import AirUpsellUpdate
-from travelport.models.air_void_document_port_type_service import AirVoidDocumentPortTypeService
-from travelport.models.air_void_document_port_type_service_input import AirVoidDocumentPortTypeServiceInput
-from travelport.models.air_void_document_port_type_service_output import AirVoidDocumentPortTypeServiceOutput
+from travelport.models.air_void_document_port_type_service import (
+    AirVoidDocumentPortTypeService,
+)
+from travelport.models.air_void_document_port_type_service_input import (
+    AirVoidDocumentPortTypeServiceInput,
+)
+from travelport.models.air_void_document_port_type_service_output import (
+    AirVoidDocumentPortTypeServiceOutput,
+)
 from travelport.models.air_void_document_req import AirVoidDocumentReq
 from travelport.models.air_void_document_rsp import AirVoidDocumentRsp
 from travelport.models.airport_1 import Airport1
@@ -377,19 +609,37 @@ from travelport.models.airport_4 import Airport4
 from travelport.models.airport_5 import Airport5
 from travelport.models.airport_6 import Airport6
 from travelport.models.alliance import Alliance
-from travelport.models.alpha_numeric_restriction_1 import AlphaNumericRestriction1
-from travelport.models.alpha_numeric_restriction_2 import AlphaNumericRestriction2
+from travelport.models.alpha_numeric_restriction_1 import (
+    AlphaNumericRestriction1,
+)
+from travelport.models.alpha_numeric_restriction_2 import (
+    AlphaNumericRestriction2,
+)
 from travelport.models.alternate_contact_1 import AlternateContact1
 from travelport.models.alternate_contact_2 import AlternateContact2
-from travelport.models.alternate_contact_address_1 import AlternateContactAddress1
-from travelport.models.alternate_contact_address_2 import AlternateContactAddress2
-from travelport.models.alternate_contact_electronic_address_1 import AlternateContactElectronicAddress1
-from travelport.models.alternate_contact_electronic_address_2 import AlternateContactElectronicAddress2
+from travelport.models.alternate_contact_address_1 import (
+    AlternateContactAddress1,
+)
+from travelport.models.alternate_contact_address_2 import (
+    AlternateContactAddress2,
+)
+from travelport.models.alternate_contact_electronic_address_1 import (
+    AlternateContactElectronicAddress1,
+)
+from travelport.models.alternate_contact_electronic_address_2 import (
+    AlternateContactElectronicAddress2,
+)
 from travelport.models.alternate_contact_phone_1 import AlternateContactPhone1
 from travelport.models.alternate_contact_phone_2 import AlternateContactPhone2
-from travelport.models.alternate_location_distance import AlternateLocationDistance
-from travelport.models.alternate_location_distance_list import AlternateLocationDistanceList
-from travelport.models.alternate_location_distance_ref import AlternateLocationDistanceRef
+from travelport.models.alternate_location_distance import (
+    AlternateLocationDistance,
+)
+from travelport.models.alternate_location_distance_list import (
+    AlternateLocationDistanceList,
+)
+from travelport.models.alternate_location_distance_ref import (
+    AlternateLocationDistanceRef,
+)
 from travelport.models.alternate_route import AlternateRoute
 from travelport.models.alternate_route_list import AlternateRouteList
 from travelport.models.amenities import Amenities
@@ -439,18 +689,36 @@ from travelport.models.baggage_allowance_info import BaggageAllowanceInfo
 from travelport.models.baggage_allowances import BaggageAllowances
 from travelport.models.baggage_restriction import BaggageRestriction
 from travelport.models.balance import Balance
-from travelport.models.base_air_exchange_multi_quote_req import BaseAirExchangeMultiQuoteReq
-from travelport.models.base_air_exchange_quote_req import BaseAirExchangeQuoteReq
+from travelport.models.base_air_exchange_multi_quote_req import (
+    BaseAirExchangeMultiQuoteReq,
+)
+from travelport.models.base_air_exchange_quote_req import (
+    BaseAirExchangeQuoteReq,
+)
 from travelport.models.base_air_price_req import BaseAirPriceReq
 from travelport.models.base_air_price_rsp import BaseAirPriceRsp
 from travelport.models.base_air_search_req import BaseAirSearchReq
-from travelport.models.base_async_provider_specific_response_1 import BaseAsyncProviderSpecificResponse1
-from travelport.models.base_async_provider_specific_response_2 import BaseAsyncProviderSpecificResponse2
-from travelport.models.base_async_provider_specific_response_3 import BaseAsyncProviderSpecificResponse3
-from travelport.models.base_async_provider_specific_response_4 import BaseAsyncProviderSpecificResponse4
-from travelport.models.base_async_provider_specific_response_5 import BaseAsyncProviderSpecificResponse5
-from travelport.models.base_availability_search_rsp import BaseAvailabilitySearchRsp
-from travelport.models.base_baggage_allowance_info import BaseBaggageAllowanceInfo
+from travelport.models.base_async_provider_specific_response_1 import (
+    BaseAsyncProviderSpecificResponse1,
+)
+from travelport.models.base_async_provider_specific_response_2 import (
+    BaseAsyncProviderSpecificResponse2,
+)
+from travelport.models.base_async_provider_specific_response_3 import (
+    BaseAsyncProviderSpecificResponse3,
+)
+from travelport.models.base_async_provider_specific_response_4 import (
+    BaseAsyncProviderSpecificResponse4,
+)
+from travelport.models.base_async_provider_specific_response_5 import (
+    BaseAsyncProviderSpecificResponse5,
+)
+from travelport.models.base_availability_search_rsp import (
+    BaseAvailabilitySearchRsp,
+)
+from travelport.models.base_baggage_allowance_info import (
+    BaseBaggageAllowanceInfo,
+)
 from travelport.models.base_core_req_1 import BaseCoreReq1
 from travelport.models.base_core_req_2 import BaseCoreReq2
 from travelport.models.base_core_req_3 import BaseCoreReq3
@@ -465,18 +733,42 @@ from travelport.models.base_core_search_req_4 import BaseCoreSearchReq4
 from travelport.models.base_core_search_req_5 import BaseCoreSearchReq5
 from travelport.models.base_core_search_req_6 import BaseCoreSearchReq6
 from travelport.models.base_core_search_req_7 import BaseCoreSearchReq7
-from travelport.models.base_create_reservation_req_1 import BaseCreateReservationReq1
-from travelport.models.base_create_reservation_req_2 import BaseCreateReservationReq2
-from travelport.models.base_create_reservation_req_3 import BaseCreateReservationReq3
-from travelport.models.base_create_reservation_req_4 import BaseCreateReservationReq4
-from travelport.models.base_create_reservation_req_5 import BaseCreateReservationReq5
-from travelport.models.base_create_reservation_req_6 import BaseCreateReservationReq6
-from travelport.models.base_create_with_form_of_payment_req_1 import BaseCreateWithFormOfPaymentReq1
-from travelport.models.base_create_with_form_of_payment_req_2 import BaseCreateWithFormOfPaymentReq2
-from travelport.models.base_create_with_form_of_payment_req_3 import BaseCreateWithFormOfPaymentReq3
-from travelport.models.base_create_with_form_of_payment_req_4 import BaseCreateWithFormOfPaymentReq4
-from travelport.models.base_create_with_form_of_payment_req_5 import BaseCreateWithFormOfPaymentReq5
-from travelport.models.base_create_with_form_of_payment_req_6 import BaseCreateWithFormOfPaymentReq6
+from travelport.models.base_create_reservation_req_1 import (
+    BaseCreateReservationReq1,
+)
+from travelport.models.base_create_reservation_req_2 import (
+    BaseCreateReservationReq2,
+)
+from travelport.models.base_create_reservation_req_3 import (
+    BaseCreateReservationReq3,
+)
+from travelport.models.base_create_reservation_req_4 import (
+    BaseCreateReservationReq4,
+)
+from travelport.models.base_create_reservation_req_5 import (
+    BaseCreateReservationReq5,
+)
+from travelport.models.base_create_reservation_req_6 import (
+    BaseCreateReservationReq6,
+)
+from travelport.models.base_create_with_form_of_payment_req_1 import (
+    BaseCreateWithFormOfPaymentReq1,
+)
+from travelport.models.base_create_with_form_of_payment_req_2 import (
+    BaseCreateWithFormOfPaymentReq2,
+)
+from travelport.models.base_create_with_form_of_payment_req_3 import (
+    BaseCreateWithFormOfPaymentReq3,
+)
+from travelport.models.base_create_with_form_of_payment_req_4 import (
+    BaseCreateWithFormOfPaymentReq4,
+)
+from travelport.models.base_create_with_form_of_payment_req_5 import (
+    BaseCreateWithFormOfPaymentReq5,
+)
+from travelport.models.base_create_with_form_of_payment_req_6 import (
+    BaseCreateWithFormOfPaymentReq6,
+)
 from travelport.models.base_hotel_details_req import BaseHotelDetailsReq
 from travelport.models.base_hotel_details_rsp import BaseHotelDetailsRsp
 from travelport.models.base_hotel_search_req import BaseHotelSearchReq
@@ -519,34 +811,84 @@ from travelport.models.base_search_rsp_4 import BaseSearchRsp4
 from travelport.models.base_search_rsp_5 import BaseSearchRsp5
 from travelport.models.base_search_rsp_6 import BaseSearchRsp6
 from travelport.models.base_search_rsp_7 import BaseSearchRsp7
-from travelport.models.base_vehicle_search_availability_req import BaseVehicleSearchAvailabilityReq
-from travelport.models.base_vehicle_search_availability_rsp import BaseVehicleSearchAvailabilityRsp
+from travelport.models.base_vehicle_search_availability_req import (
+    BaseVehicleSearchAvailabilityReq,
+)
+from travelport.models.base_vehicle_search_availability_rsp import (
+    BaseVehicleSearchAvailabilityRsp,
+)
 from travelport.models.billing_detail_item import BillingDetailItem
-from travelport.models.billing_point_of_sale_info_1 import BillingPointOfSaleInfo1
-from travelport.models.billing_point_of_sale_info_2 import BillingPointOfSaleInfo2
-from travelport.models.billing_point_of_sale_info_3 import BillingPointOfSaleInfo3
-from travelport.models.billing_point_of_sale_info_4 import BillingPointOfSaleInfo4
-from travelport.models.billing_point_of_sale_info_5 import BillingPointOfSaleInfo5
-from travelport.models.billing_point_of_sale_info_6 import BillingPointOfSaleInfo6
-from travelport.models.billing_point_of_sale_info_7 import BillingPointOfSaleInfo7
-from travelport.models.booking_air_exchange_port_type_service import BookingAirExchangePortTypeService
-from travelport.models.booking_air_exchange_port_type_service_input import BookingAirExchangePortTypeServiceInput
-from travelport.models.booking_air_exchange_port_type_service_output import BookingAirExchangePortTypeServiceOutput
-from travelport.models.booking_air_exchange_quote_port_type_service import BookingAirExchangeQuotePortTypeService
-from travelport.models.booking_air_exchange_quote_port_type_service_input import BookingAirExchangeQuotePortTypeServiceInput
-from travelport.models.booking_air_exchange_quote_port_type_service_output import BookingAirExchangeQuotePortTypeServiceOutput
-from travelport.models.booking_air_exchange_quote_req import BookingAirExchangeQuoteReq
-from travelport.models.booking_air_exchange_quote_rsp import BookingAirExchangeQuoteRsp
+from travelport.models.billing_point_of_sale_info_1 import (
+    BillingPointOfSaleInfo1,
+)
+from travelport.models.billing_point_of_sale_info_2 import (
+    BillingPointOfSaleInfo2,
+)
+from travelport.models.billing_point_of_sale_info_3 import (
+    BillingPointOfSaleInfo3,
+)
+from travelport.models.billing_point_of_sale_info_4 import (
+    BillingPointOfSaleInfo4,
+)
+from travelport.models.billing_point_of_sale_info_5 import (
+    BillingPointOfSaleInfo5,
+)
+from travelport.models.billing_point_of_sale_info_6 import (
+    BillingPointOfSaleInfo6,
+)
+from travelport.models.billing_point_of_sale_info_7 import (
+    BillingPointOfSaleInfo7,
+)
+from travelport.models.booking_air_exchange_port_type_service import (
+    BookingAirExchangePortTypeService,
+)
+from travelport.models.booking_air_exchange_port_type_service_input import (
+    BookingAirExchangePortTypeServiceInput,
+)
+from travelport.models.booking_air_exchange_port_type_service_output import (
+    BookingAirExchangePortTypeServiceOutput,
+)
+from travelport.models.booking_air_exchange_quote_port_type_service import (
+    BookingAirExchangeQuotePortTypeService,
+)
+from travelport.models.booking_air_exchange_quote_port_type_service_input import (
+    BookingAirExchangeQuotePortTypeServiceInput,
+)
+from travelport.models.booking_air_exchange_quote_port_type_service_output import (
+    BookingAirExchangeQuotePortTypeServiceOutput,
+)
+from travelport.models.booking_air_exchange_quote_req import (
+    BookingAirExchangeQuoteReq,
+)
+from travelport.models.booking_air_exchange_quote_rsp import (
+    BookingAirExchangeQuoteRsp,
+)
 from travelport.models.booking_air_exchange_req import BookingAirExchangeReq
 from travelport.models.booking_air_exchange_rsp import BookingAirExchangeRsp
-from travelport.models.booking_air_pnr_element_port_type_service import BookingAirPnrElementPortTypeService
-from travelport.models.booking_air_pnr_element_port_type_service_input import BookingAirPnrElementPortTypeServiceInput
-from travelport.models.booking_air_pnr_element_port_type_service_output import BookingAirPnrElementPortTypeServiceOutput
-from travelport.models.booking_air_pnr_element_req import BookingAirPnrElementReq
-from travelport.models.booking_air_pnr_element_rsp import BookingAirPnrElementRsp
-from travelport.models.booking_air_segment_port_type_service import BookingAirSegmentPortTypeService
-from travelport.models.booking_air_segment_port_type_service_input import BookingAirSegmentPortTypeServiceInput
-from travelport.models.booking_air_segment_port_type_service_output import BookingAirSegmentPortTypeServiceOutput
+from travelport.models.booking_air_pnr_element_port_type_service import (
+    BookingAirPnrElementPortTypeService,
+)
+from travelport.models.booking_air_pnr_element_port_type_service_input import (
+    BookingAirPnrElementPortTypeServiceInput,
+)
+from travelport.models.booking_air_pnr_element_port_type_service_output import (
+    BookingAirPnrElementPortTypeServiceOutput,
+)
+from travelport.models.booking_air_pnr_element_req import (
+    BookingAirPnrElementReq,
+)
+from travelport.models.booking_air_pnr_element_rsp import (
+    BookingAirPnrElementRsp,
+)
+from travelport.models.booking_air_segment_port_type_service import (
+    BookingAirSegmentPortTypeService,
+)
+from travelport.models.booking_air_segment_port_type_service_input import (
+    BookingAirSegmentPortTypeServiceInput,
+)
+from travelport.models.booking_air_segment_port_type_service_output import (
+    BookingAirSegmentPortTypeServiceOutput,
+)
 from travelport.models.booking_air_segment_req import BookingAirSegmentReq
 from travelport.models.booking_air_segment_rsp import BookingAirSegmentRsp
 from travelport.models.booking_base_req import BookingBaseReq
@@ -560,51 +902,115 @@ from travelport.models.booking_dates_3 import BookingDates3
 from travelport.models.booking_dates_4 import BookingDates4
 from travelport.models.booking_dates_5 import BookingDates5
 from travelport.models.booking_dates_6 import BookingDates6
-from travelport.models.booking_display_port_type_service import BookingDisplayPortTypeService
-from travelport.models.booking_display_port_type_service_input import BookingDisplayPortTypeServiceInput
-from travelport.models.booking_display_port_type_service_output import BookingDisplayPortTypeServiceOutput
+from travelport.models.booking_display_port_type_service import (
+    BookingDisplayPortTypeService,
+)
+from travelport.models.booking_display_port_type_service_input import (
+    BookingDisplayPortTypeServiceInput,
+)
+from travelport.models.booking_display_port_type_service_output import (
+    BookingDisplayPortTypeServiceOutput,
+)
 from travelport.models.booking_display_req import BookingDisplayReq
 from travelport.models.booking_display_rsp import BookingDisplayRsp
-from travelport.models.booking_end_port_type_service import BookingEndPortTypeService
-from travelport.models.booking_end_port_type_service_input import BookingEndPortTypeServiceInput
-from travelport.models.booking_end_port_type_service_output import BookingEndPortTypeServiceOutput
+from travelport.models.booking_end_port_type_service import (
+    BookingEndPortTypeService,
+)
+from travelport.models.booking_end_port_type_service_input import (
+    BookingEndPortTypeServiceInput,
+)
+from travelport.models.booking_end_port_type_service_output import (
+    BookingEndPortTypeServiceOutput,
+)
 from travelport.models.booking_end_req import BookingEndReq
-from travelport.models.booking_end_req_session_activity import BookingEndReqSessionActivity
+from travelport.models.booking_end_req_session_activity import (
+    BookingEndReqSessionActivity,
+)
 from travelport.models.booking_end_rsp import BookingEndRsp
 from travelport.models.booking_guest_information import BookingGuestInformation
-from travelport.models.booking_hotel_pnr_element_port_type_service import BookingHotelPnrElementPortTypeService
-from travelport.models.booking_hotel_pnr_element_port_type_service_input import BookingHotelPnrElementPortTypeServiceInput
-from travelport.models.booking_hotel_pnr_element_port_type_service_output import BookingHotelPnrElementPortTypeServiceOutput
-from travelport.models.booking_hotel_pnr_element_req import BookingHotelPnrElementReq
-from travelport.models.booking_hotel_pnr_element_rsp import BookingHotelPnrElementRsp
-from travelport.models.booking_hotel_segment_port_type_service import BookingHotelSegmentPortTypeService
-from travelport.models.booking_hotel_segment_port_type_service_input import BookingHotelSegmentPortTypeServiceInput
-from travelport.models.booking_hotel_segment_port_type_service_output import BookingHotelSegmentPortTypeServiceOutput
+from travelport.models.booking_hotel_pnr_element_port_type_service import (
+    BookingHotelPnrElementPortTypeService,
+)
+from travelport.models.booking_hotel_pnr_element_port_type_service_input import (
+    BookingHotelPnrElementPortTypeServiceInput,
+)
+from travelport.models.booking_hotel_pnr_element_port_type_service_output import (
+    BookingHotelPnrElementPortTypeServiceOutput,
+)
+from travelport.models.booking_hotel_pnr_element_req import (
+    BookingHotelPnrElementReq,
+)
+from travelport.models.booking_hotel_pnr_element_rsp import (
+    BookingHotelPnrElementRsp,
+)
+from travelport.models.booking_hotel_segment_port_type_service import (
+    BookingHotelSegmentPortTypeService,
+)
+from travelport.models.booking_hotel_segment_port_type_service_input import (
+    BookingHotelSegmentPortTypeServiceInput,
+)
+from travelport.models.booking_hotel_segment_port_type_service_output import (
+    BookingHotelSegmentPortTypeServiceOutput,
+)
 from travelport.models.booking_hotel_segment_req import BookingHotelSegmentReq
 from travelport.models.booking_hotel_segment_rsp import BookingHotelSegmentRsp
 from travelport.models.booking_info import BookingInfo
-from travelport.models.booking_pnr_element_port_type_service import BookingPnrElementPortTypeService
-from travelport.models.booking_pnr_element_port_type_service_input import BookingPnrElementPortTypeServiceInput
-from travelport.models.booking_pnr_element_port_type_service_output import BookingPnrElementPortTypeServiceOutput
+from travelport.models.booking_pnr_element_port_type_service import (
+    BookingPnrElementPortTypeService,
+)
+from travelport.models.booking_pnr_element_port_type_service_input import (
+    BookingPnrElementPortTypeServiceInput,
+)
+from travelport.models.booking_pnr_element_port_type_service_output import (
+    BookingPnrElementPortTypeServiceOutput,
+)
 from travelport.models.booking_pnr_element_req import BookingPnrElementReq
 from travelport.models.booking_pnr_element_rsp import BookingPnrElementRsp
-from travelport.models.booking_pricing_port_type_service import BookingPricingPortTypeService
-from travelport.models.booking_pricing_port_type_service_input import BookingPricingPortTypeServiceInput
-from travelport.models.booking_pricing_port_type_service_output import BookingPricingPortTypeServiceOutput
+from travelport.models.booking_pricing_port_type_service import (
+    BookingPricingPortTypeService,
+)
+from travelport.models.booking_pricing_port_type_service_input import (
+    BookingPricingPortTypeServiceInput,
+)
+from travelport.models.booking_pricing_port_type_service_output import (
+    BookingPricingPortTypeServiceOutput,
+)
 from travelport.models.booking_pricing_req import BookingPricingReq
 from travelport.models.booking_pricing_rsp import BookingPricingRsp
-from travelport.models.booking_retrieve_document_port_type_service import BookingRetrieveDocumentPortTypeService
-from travelport.models.booking_retrieve_document_port_type_service_input import BookingRetrieveDocumentPortTypeServiceInput
-from travelport.models.booking_retrieve_document_port_type_service_output import BookingRetrieveDocumentPortTypeServiceOutput
-from travelport.models.booking_retrieve_document_req import BookingRetrieveDocumentReq
-from travelport.models.booking_retrieve_document_rsp import BookingRetrieveDocumentRsp
+from travelport.models.booking_retrieve_document_port_type_service import (
+    BookingRetrieveDocumentPortTypeService,
+)
+from travelport.models.booking_retrieve_document_port_type_service_input import (
+    BookingRetrieveDocumentPortTypeServiceInput,
+)
+from travelport.models.booking_retrieve_document_port_type_service_output import (
+    BookingRetrieveDocumentPortTypeServiceOutput,
+)
+from travelport.models.booking_retrieve_document_req import (
+    BookingRetrieveDocumentReq,
+)
+from travelport.models.booking_retrieve_document_rsp import (
+    BookingRetrieveDocumentRsp,
+)
 from travelport.models.booking_rules import BookingRules
-from travelport.models.booking_rules_fare_reference import BookingRulesFareReference
-from travelport.models.booking_seat_assignment_port_type_service import BookingSeatAssignmentPortTypeService
-from travelport.models.booking_seat_assignment_port_type_service_input import BookingSeatAssignmentPortTypeServiceInput
-from travelport.models.booking_seat_assignment_port_type_service_output import BookingSeatAssignmentPortTypeServiceOutput
-from travelport.models.booking_seat_assignment_req import BookingSeatAssignmentReq
-from travelport.models.booking_seat_assignment_rsp import BookingSeatAssignmentRsp
+from travelport.models.booking_rules_fare_reference import (
+    BookingRulesFareReference,
+)
+from travelport.models.booking_seat_assignment_port_type_service import (
+    BookingSeatAssignmentPortTypeService,
+)
+from travelport.models.booking_seat_assignment_port_type_service_input import (
+    BookingSeatAssignmentPortTypeServiceInput,
+)
+from travelport.models.booking_seat_assignment_port_type_service_output import (
+    BookingSeatAssignmentPortTypeServiceOutput,
+)
+from travelport.models.booking_seat_assignment_req import (
+    BookingSeatAssignmentReq,
+)
+from travelport.models.booking_seat_assignment_rsp import (
+    BookingSeatAssignmentRsp,
+)
 from travelport.models.booking_source_1 import BookingSource1
 from travelport.models.booking_source_2 import BookingSource2
 from travelport.models.booking_source_3 import BookingSource3
@@ -617,14 +1023,26 @@ from travelport.models.booking_source_type_3 import BookingSourceType3
 from travelport.models.booking_source_type_4 import BookingSourceType4
 from travelport.models.booking_source_type_5 import BookingSourceType5
 from travelport.models.booking_source_type_6 import BookingSourceType6
-from travelport.models.booking_start_port_type_service import BookingStartPortTypeService
-from travelport.models.booking_start_port_type_service_input import BookingStartPortTypeServiceInput
-from travelport.models.booking_start_port_type_service_output import BookingStartPortTypeServiceOutput
+from travelport.models.booking_start_port_type_service import (
+    BookingStartPortTypeService,
+)
+from travelport.models.booking_start_port_type_service_input import (
+    BookingStartPortTypeServiceInput,
+)
+from travelport.models.booking_start_port_type_service_output import (
+    BookingStartPortTypeServiceOutput,
+)
 from travelport.models.booking_start_req import BookingStartReq
 from travelport.models.booking_start_rsp import BookingStartRsp
-from travelport.models.booking_terminal_command_port_type_service import BookingTerminalCommandPortTypeService
-from travelport.models.booking_terminal_command_port_type_service_input import BookingTerminalCommandPortTypeServiceInput
-from travelport.models.booking_terminal_command_port_type_service_output import BookingTerminalCommandPortTypeServiceOutput
+from travelport.models.booking_terminal_command_port_type_service import (
+    BookingTerminalCommandPortTypeService,
+)
+from travelport.models.booking_terminal_command_port_type_service_input import (
+    BookingTerminalCommandPortTypeServiceInput,
+)
+from travelport.models.booking_terminal_command_port_type_service_output import (
+    BookingTerminalCommandPortTypeServiceOutput,
+)
 from travelport.models.booking_terminal_req import BookingTerminalReq
 from travelport.models.booking_terminal_rsp import BookingTerminalRsp
 from travelport.models.booking_traveler_1 import BookingTraveler1
@@ -639,21 +1057,39 @@ from travelport.models.booking_traveler_info_3 import BookingTravelerInfo3
 from travelport.models.booking_traveler_info_4 import BookingTravelerInfo4
 from travelport.models.booking_traveler_info_5 import BookingTravelerInfo5
 from travelport.models.booking_traveler_info_6 import BookingTravelerInfo6
-from travelport.models.booking_traveler_information_1 import BookingTravelerInformation1
-from travelport.models.booking_traveler_information_2 import BookingTravelerInformation2
-from travelport.models.booking_traveler_information_3 import BookingTravelerInformation3
-from travelport.models.booking_traveler_information_4 import BookingTravelerInformation4
-from travelport.models.booking_traveler_information_5 import BookingTravelerInformation5
-from travelport.models.booking_traveler_information_6 import BookingTravelerInformation6
+from travelport.models.booking_traveler_information_1 import (
+    BookingTravelerInformation1,
+)
+from travelport.models.booking_traveler_information_2 import (
+    BookingTravelerInformation2,
+)
+from travelport.models.booking_traveler_information_3 import (
+    BookingTravelerInformation3,
+)
+from travelport.models.booking_traveler_information_4 import (
+    BookingTravelerInformation4,
+)
+from travelport.models.booking_traveler_information_5 import (
+    BookingTravelerInformation5,
+)
+from travelport.models.booking_traveler_information_6 import (
+    BookingTravelerInformation6,
+)
 from travelport.models.booking_traveler_name_1 import BookingTravelerName1
 from travelport.models.booking_traveler_name_2 import BookingTravelerName2
 from travelport.models.booking_traveler_name_3 import BookingTravelerName3
 from travelport.models.booking_traveler_name_4 import BookingTravelerName4
 from travelport.models.booking_traveler_name_5 import BookingTravelerName5
 from travelport.models.booking_traveler_name_6 import BookingTravelerName6
-from travelport.models.booking_traveler_port_type_service import BookingTravelerPortTypeService
-from travelport.models.booking_traveler_port_type_service_input import BookingTravelerPortTypeServiceInput
-from travelport.models.booking_traveler_port_type_service_output import BookingTravelerPortTypeServiceOutput
+from travelport.models.booking_traveler_port_type_service import (
+    BookingTravelerPortTypeService,
+)
+from travelport.models.booking_traveler_port_type_service_input import (
+    BookingTravelerPortTypeServiceInput,
+)
+from travelport.models.booking_traveler_port_type_service_output import (
+    BookingTravelerPortTypeServiceOutput,
+)
 from travelport.models.booking_traveler_ref_1 import BookingTravelerRef1
 from travelport.models.booking_traveler_ref_2 import BookingTravelerRef2
 from travelport.models.booking_traveler_ref_3 import BookingTravelerRef3
@@ -678,15 +1114,29 @@ from travelport.models.brand_id import BrandId
 from travelport.models.brand_info import BrandInfo
 from travelport.models.brand_list import BrandList
 from travelport.models.brand_modifiers import BrandModifiers
-from travelport.models.branded_fare_admin_port_type_service import BrandedFareAdminPortTypeService
-from travelport.models.branded_fare_admin_port_type_service_input import BrandedFareAdminPortTypeServiceInput
-from travelport.models.branded_fare_admin_port_type_service_output import BrandedFareAdminPortTypeServiceOutput
+from travelport.models.branded_fare_admin_port_type_service import (
+    BrandedFareAdminPortTypeService,
+)
+from travelport.models.branded_fare_admin_port_type_service_input import (
+    BrandedFareAdminPortTypeServiceInput,
+)
+from travelport.models.branded_fare_admin_port_type_service_output import (
+    BrandedFareAdminPortTypeServiceOutput,
+)
 from travelport.models.branded_fare_admin_req import BrandedFareAdminReq
 from travelport.models.branded_fare_admin_rsp import BrandedFareAdminRsp
-from travelport.models.branded_fare_search_modifier import BrandedFareSearchModifier
-from travelport.models.branded_fare_search_port_type_service import BrandedFareSearchPortTypeService
-from travelport.models.branded_fare_search_port_type_service_input import BrandedFareSearchPortTypeServiceInput
-from travelport.models.branded_fare_search_port_type_service_output import BrandedFareSearchPortTypeServiceOutput
+from travelport.models.branded_fare_search_modifier import (
+    BrandedFareSearchModifier,
+)
+from travelport.models.branded_fare_search_port_type_service import (
+    BrandedFareSearchPortTypeService,
+)
+from travelport.models.branded_fare_search_port_type_service_input import (
+    BrandedFareSearchPortTypeServiceInput,
+)
+from travelport.models.branded_fare_search_port_type_service_output import (
+    BrandedFareSearchPortTypeServiceOutput,
+)
 from travelport.models.branded_fare_search_req import BrandedFareSearchReq
 from travelport.models.branded_fare_search_rsp import BrandedFareSearchRsp
 from travelport.models.branding_info import BrandingInfo
@@ -705,9 +1155,15 @@ from travelport.models.cabin_class_4 import CabinClass4
 from travelport.models.cabin_class_5 import CabinClass5
 from travelport.models.cabin_class_6 import CabinClass6
 from travelport.models.cabin_info import CabinInfo
-from travelport.models.calculate_tax_port_type_service import CalculateTaxPortTypeService
-from travelport.models.calculate_tax_port_type_service_input import CalculateTaxPortTypeServiceInput
-from travelport.models.calculate_tax_port_type_service_output import CalculateTaxPortTypeServiceOutput
+from travelport.models.calculate_tax_port_type_service import (
+    CalculateTaxPortTypeService,
+)
+from travelport.models.calculate_tax_port_type_service_input import (
+    CalculateTaxPortTypeServiceInput,
+)
+from travelport.models.calculate_tax_port_type_service_output import (
+    CalculateTaxPortTypeServiceOutput,
+)
 from travelport.models.calculate_tax_req import CalculateTaxReq
 from travelport.models.calculate_tax_result import CalculateTaxResult
 from travelport.models.calculate_tax_rsp import CalculateTaxRsp
@@ -757,7 +1213,9 @@ from travelport.models.check_5 import Check5
 from travelport.models.check_6 import Check6
 from travelport.models.check_7 import Check7
 from travelport.models.chgtype import Chgtype
-from travelport.models.child_provider_reservation_info import ChildProviderReservationInfo
+from travelport.models.child_provider_reservation_info import (
+    ChildProviderReservationInfo,
+)
 from travelport.models.city_1 import City1
 from travelport.models.city_2 import City2
 from travelport.models.city_3 import City3
@@ -812,19 +1270,45 @@ from travelport.models.consolidator_remark_4 import ConsolidatorRemark4
 from travelport.models.consolidator_remark_5 import ConsolidatorRemark5
 from travelport.models.consolidator_remark_6 import ConsolidatorRemark6
 from travelport.models.content_provider import ContentProvider
-from travelport.models.content_provider_agency_credentials import ContentProviderAgencyCredentials
-from travelport.models.content_provider_retrieve_port_type_service import ContentProviderRetrievePortTypeService
-from travelport.models.content_provider_retrieve_port_type_service_input import ContentProviderRetrievePortTypeServiceInput
-from travelport.models.content_provider_retrieve_port_type_service_output import ContentProviderRetrievePortTypeServiceOutput
-from travelport.models.content_provider_retrieve_req import ContentProviderRetrieveReq
-from travelport.models.content_provider_retrieve_rsp import ContentProviderRetrieveRsp
-from travelport.models.continuity_check_override_1 import ContinuityCheckOverride1
-from travelport.models.continuity_check_override_2 import ContinuityCheckOverride2
-from travelport.models.continuity_check_override_3 import ContinuityCheckOverride3
-from travelport.models.continuity_check_override_4 import ContinuityCheckOverride4
-from travelport.models.continuity_check_override_5 import ContinuityCheckOverride5
-from travelport.models.continuity_check_override_6 import ContinuityCheckOverride6
-from travelport.models.continuity_override_remark import ContinuityOverrideRemark
+from travelport.models.content_provider_agency_credentials import (
+    ContentProviderAgencyCredentials,
+)
+from travelport.models.content_provider_retrieve_port_type_service import (
+    ContentProviderRetrievePortTypeService,
+)
+from travelport.models.content_provider_retrieve_port_type_service_input import (
+    ContentProviderRetrievePortTypeServiceInput,
+)
+from travelport.models.content_provider_retrieve_port_type_service_output import (
+    ContentProviderRetrievePortTypeServiceOutput,
+)
+from travelport.models.content_provider_retrieve_req import (
+    ContentProviderRetrieveReq,
+)
+from travelport.models.content_provider_retrieve_rsp import (
+    ContentProviderRetrieveRsp,
+)
+from travelport.models.continuity_check_override_1 import (
+    ContinuityCheckOverride1,
+)
+from travelport.models.continuity_check_override_2 import (
+    ContinuityCheckOverride2,
+)
+from travelport.models.continuity_check_override_3 import (
+    ContinuityCheckOverride3,
+)
+from travelport.models.continuity_check_override_4 import (
+    ContinuityCheckOverride4,
+)
+from travelport.models.continuity_check_override_5 import (
+    ContinuityCheckOverride5,
+)
+from travelport.models.continuity_check_override_6 import (
+    ContinuityCheckOverride6,
+)
+from travelport.models.continuity_override_remark import (
+    ContinuityOverrideRemark,
+)
 from travelport.models.contract_1 import Contract1
 from travelport.models.contract_2 import Contract2
 from travelport.models.contract_code import ContractCode
@@ -849,11 +1333,21 @@ from travelport.models.create_field_1 import CreateField1
 from travelport.models.create_field_2 import CreateField2
 from travelport.models.create_field_group_1 import CreateFieldGroup1
 from travelport.models.create_field_group_2 import CreateFieldGroup2
-from travelport.models.create_terminal_session_req import CreateTerminalSessionReq
-from travelport.models.create_terminal_session_rsp import CreateTerminalSessionRsp
-from travelport.models.create_terminal_session_service_port_type_service import CreateTerminalSessionServicePortTypeService
-from travelport.models.create_terminal_session_service_port_type_service_input import CreateTerminalSessionServicePortTypeServiceInput
-from travelport.models.create_terminal_session_service_port_type_service_output import CreateTerminalSessionServicePortTypeServiceOutput
+from travelport.models.create_terminal_session_req import (
+    CreateTerminalSessionReq,
+)
+from travelport.models.create_terminal_session_rsp import (
+    CreateTerminalSessionRsp,
+)
+from travelport.models.create_terminal_session_service_port_type_service import (
+    CreateTerminalSessionServicePortTypeService,
+)
+from travelport.models.create_terminal_session_service_port_type_service_input import (
+    CreateTerminalSessionServicePortTypeServiceInput,
+)
+from travelport.models.create_terminal_session_service_port_type_service_output import (
+    CreateTerminalSessionServicePortTypeServiceOutput,
+)
 from travelport.models.credentials_1 import Credentials1
 from travelport.models.credentials_2 import Credentials2
 from travelport.models.credentials_3 import Credentials3
@@ -879,7 +1373,9 @@ from travelport.models.credit_card_auth_rsp import CreditCardAuthRsp
 from travelport.models.credit_card_payment_auth import CreditCardPaymentAuth
 from travelport.models.credit_summary import CreditSummary
 from travelport.models.criteria_type import CriteriaType
-from travelport.models.cruise_booking_traveler_ref import CruiseBookingTravelerRef
+from travelport.models.cruise_booking_traveler_ref import (
+    CruiseBookingTravelerRef,
+)
 from travelport.models.cruise_fees import CruiseFees
 from travelport.models.cruise_itinerary import CruiseItinerary
 from travelport.models.cruise_pricing_info import CruisePricingInfo
@@ -898,12 +1394,24 @@ from travelport.models.custom_field_group_add import CustomFieldGroupAdd
 from travelport.models.custom_field_group_delete import CustomFieldGroupDelete
 from travelport.models.custom_field_group_update import CustomFieldGroupUpdate
 from travelport.models.custom_field_update import CustomFieldUpdate
-from travelport.models.custom_profile_information_1 import CustomProfileInformation1
-from travelport.models.custom_profile_information_2 import CustomProfileInformation2
-from travelport.models.custom_profile_information_3 import CustomProfileInformation3
-from travelport.models.custom_profile_information_4 import CustomProfileInformation4
-from travelport.models.custom_profile_information_5 import CustomProfileInformation5
-from travelport.models.custom_profile_information_6 import CustomProfileInformation6
+from travelport.models.custom_profile_information_1 import (
+    CustomProfileInformation1,
+)
+from travelport.models.custom_profile_information_2 import (
+    CustomProfileInformation2,
+)
+from travelport.models.custom_profile_information_3 import (
+    CustomProfileInformation3,
+)
+from travelport.models.custom_profile_information_4 import (
+    CustomProfileInformation4,
+)
+from travelport.models.custom_profile_information_5 import (
+    CustomProfileInformation5,
+)
+from travelport.models.custom_profile_information_6 import (
+    CustomProfileInformation6,
+)
 from travelport.models.customer_id_1 import CustomerId1
 from travelport.models.customer_id_2 import CustomerId2
 from travelport.models.customer_id_3 import CustomerId3
@@ -933,7 +1441,9 @@ from travelport.models.delete_air_pnr_element import DeleteAirPnrElement
 from travelport.models.delete_air_segment import DeleteAirSegment
 from travelport.models.delete_hotel_pnr_element import DeleteHotelPnrElement
 from travelport.models.delete_hotel_segment import DeleteHotelSegment
-from travelport.models.delete_override_definition import DeleteOverrideDefinition
+from travelport.models.delete_override_definition import (
+    DeleteOverrideDefinition,
+)
 from travelport.models.delete_pnr_element import DeletePnrElement
 from travelport.models.delete_pricing import DeletePricing
 from travelport.models.delete_seats import DeleteSeats
@@ -948,7 +1458,9 @@ from travelport.models.delivery_info_6 import DeliveryInfo6
 from travelport.models.deposit import Deposit
 from travelport.models.deposit_amount import DepositAmount
 from travelport.models.destination_purpose_code import DestinationPurposeCode
-from travelport.models.detailed_billing_information import DetailedBillingInformation
+from travelport.models.detailed_billing_information import (
+    DetailedBillingInformation,
+)
 from travelport.models.dimension import Dimension
 from travelport.models.direct_payment_1 import DirectPayment1
 from travelport.models.direct_payment_2 import DirectPayment2
@@ -1022,31 +1534,59 @@ from travelport.models.email_notification_3 import EmailNotification3
 from travelport.models.email_notification_4 import EmailNotification4
 from travelport.models.email_notification_5 import EmailNotification5
 from travelport.models.email_notification_6 import EmailNotification6
-from travelport.models.email_notification_recipients_1 import EmailNotificationRecipients1
-from travelport.models.email_notification_recipients_2 import EmailNotificationRecipients2
-from travelport.models.email_notification_recipients_3 import EmailNotificationRecipients3
-from travelport.models.email_notification_recipients_4 import EmailNotificationRecipients4
-from travelport.models.email_notification_recipients_5 import EmailNotificationRecipients5
-from travelport.models.email_notification_recipients_6 import EmailNotificationRecipients6
+from travelport.models.email_notification_recipients_1 import (
+    EmailNotificationRecipients1,
+)
+from travelport.models.email_notification_recipients_2 import (
+    EmailNotificationRecipients2,
+)
+from travelport.models.email_notification_recipients_3 import (
+    EmailNotificationRecipients3,
+)
+from travelport.models.email_notification_recipients_4 import (
+    EmailNotificationRecipients4,
+)
+from travelport.models.email_notification_recipients_5 import (
+    EmailNotificationRecipients5,
+)
+from travelport.models.email_notification_recipients_6 import (
+    EmailNotificationRecipients6,
+)
 from travelport.models.embargo import Embargo
 from travelport.models.embargo_info import EmbargoInfo
 from travelport.models.embargo_list import EmbargoList
 from travelport.models.emd import Emd
-from travelport.models.emd_availability_charge_indicator import EmdAvailabilityChargeIndicator
-from travelport.models.emd_refund_reissue_indicator import EmdRefundReissueIndicator
+from travelport.models.emd_availability_charge_indicator import (
+    EmdAvailabilityChargeIndicator,
+)
+from travelport.models.emd_refund_reissue_indicator import (
+    EmdRefundReissueIndicator,
+)
 from travelport.models.emdcommission import Emdcommission
 from travelport.models.emdcoupon import Emdcoupon
 from travelport.models.emdendorsement import Emdendorsement
 from travelport.models.emdinfo import Emdinfo
-from travelport.models.emdissuance_port_type_service import EmdissuancePortTypeService
-from travelport.models.emdissuance_port_type_service_input import EmdissuancePortTypeServiceInput
-from travelport.models.emdissuance_port_type_service_output import EmdissuancePortTypeServiceOutput
+from travelport.models.emdissuance_port_type_service import (
+    EmdissuancePortTypeService,
+)
+from travelport.models.emdissuance_port_type_service_input import (
+    EmdissuancePortTypeServiceInput,
+)
+from travelport.models.emdissuance_port_type_service_output import (
+    EmdissuancePortTypeServiceOutput,
+)
 from travelport.models.emdissuance_req import EmdissuanceReq
 from travelport.models.emdissuance_rsp import EmdissuanceRsp
 from travelport.models.emdpricing_info import EmdpricingInfo
-from travelport.models.emdretrieve_port_type_service import EmdretrievePortTypeService
-from travelport.models.emdretrieve_port_type_service_input import EmdretrievePortTypeServiceInput
-from travelport.models.emdretrieve_port_type_service_output import EmdretrievePortTypeServiceOutput
+from travelport.models.emdretrieve_port_type_service import (
+    EmdretrievePortTypeService,
+)
+from travelport.models.emdretrieve_port_type_service_input import (
+    EmdretrievePortTypeServiceInput,
+)
+from travelport.models.emdretrieve_port_type_service_output import (
+    EmdretrievePortTypeServiceOutput,
+)
 from travelport.models.emdretrieve_req import EmdretrieveReq
 from travelport.models.emdretrieve_rsp import EmdretrieveRsp
 from travelport.models.emdsummary import Emdsummary
@@ -1054,9 +1594,15 @@ from travelport.models.emdsummary_info import EmdsummaryInfo
 from travelport.models.emdtraveler_info import EmdtravelerInfo
 from travelport.models.end_terminal_session_req import EndTerminalSessionReq
 from travelport.models.end_terminal_session_rsp import EndTerminalSessionRsp
-from travelport.models.end_terminal_session_service_port_type_service import EndTerminalSessionServicePortTypeService
-from travelport.models.end_terminal_session_service_port_type_service_input import EndTerminalSessionServicePortTypeServiceInput
-from travelport.models.end_terminal_session_service_port_type_service_output import EndTerminalSessionServicePortTypeServiceOutput
+from travelport.models.end_terminal_session_service_port_type_service import (
+    EndTerminalSessionServicePortTypeService,
+)
+from travelport.models.end_terminal_session_service_port_type_service_input import (
+    EndTerminalSessionServicePortTypeServiceInput,
+)
+from travelport.models.end_terminal_session_service_port_type_service_output import (
+    EndTerminalSessionServicePortTypeServiceOutput,
+)
 from travelport.models.endorsement_1 import Endorsement1
 from travelport.models.endorsement_2 import Endorsement2
 from travelport.models.endorsement_3 import Endorsement3
@@ -1098,9 +1644,15 @@ from travelport.models.exempt_taxes import ExemptTaxes
 from travelport.models.expert_solution import ExpertSolution
 from travelport.models.expert_solution_list import ExpertSolutionList
 from travelport.models.expiration_date import ExpirationDate
-from travelport.models.external_cache_access_port_type_service import ExternalCacheAccessPortTypeService
-from travelport.models.external_cache_access_port_type_service_input import ExternalCacheAccessPortTypeServiceInput
-from travelport.models.external_cache_access_port_type_service_output import ExternalCacheAccessPortTypeServiceOutput
+from travelport.models.external_cache_access_port_type_service import (
+    ExternalCacheAccessPortTypeService,
+)
+from travelport.models.external_cache_access_port_type_service_input import (
+    ExternalCacheAccessPortTypeServiceInput,
+)
+from travelport.models.external_cache_access_port_type_service_output import (
+    ExternalCacheAccessPortTypeServiceOutput,
+)
 from travelport.models.external_cache_access_req import ExternalCacheAccessReq
 from travelport.models.external_cache_access_rsp import ExternalCacheAccessRsp
 from travelport.models.external_identifier_1 import ExternalIdentifier1
@@ -1133,9 +1685,15 @@ from travelport.models.fare_remark_list import FareRemarkList
 from travelport.models.fare_remark_ref import FareRemarkRef
 from travelport.models.fare_restriction import FareRestriction
 from travelport.models.fare_restriction_date import FareRestrictionDate
-from travelport.models.fare_restriction_date_end_date_indicator import FareRestrictionDateEndDateIndicator
-from travelport.models.fare_restriction_days_of_week import FareRestrictionDaysOfWeek
-from travelport.models.fare_restriction_sale_date import FareRestrictionSaleDate
+from travelport.models.fare_restriction_date_end_date_indicator import (
+    FareRestrictionDateEndDateIndicator,
+)
+from travelport.models.fare_restriction_days_of_week import (
+    FareRestrictionDaysOfWeek,
+)
+from travelport.models.fare_restriction_sale_date import (
+    FareRestrictionSaleDate,
+)
 from travelport.models.fare_restriction_seasonal import FareRestrictionSeasonal
 from travelport.models.fare_routing_information import FareRoutingInformation
 from travelport.models.fare_rule import FareRule
@@ -1150,7 +1708,9 @@ from travelport.models.fare_rule_name_value import FareRuleNameValue
 from travelport.models.fare_rule_short import FareRuleShort
 from travelport.models.fare_rule_short_ref import FareRuleShortRef
 from travelport.models.fare_rules_filter import FareRulesFilter
-from travelport.models.fare_rules_filter_category import FareRulesFilterCategory
+from travelport.models.fare_rules_filter_category import (
+    FareRulesFilterCategory,
+)
 from travelport.models.fare_status import FareStatus
 from travelport.models.fare_status_failure_info import FareStatusFailureInfo
 from travelport.models.fare_surcharge import FareSurcharge
@@ -1178,44 +1738,78 @@ from travelport.models.file_finishing_info_3 import FileFinishingInfo3
 from travelport.models.file_finishing_info_4 import FileFinishingInfo4
 from travelport.models.file_finishing_info_5 import FileFinishingInfo5
 from travelport.models.file_finishing_info_6 import FileFinishingInfo6
-from travelport.models.find_employees_on_flight_req import FindEmployeesOnFlightReq
-from travelport.models.find_employees_on_flight_rsp import FindEmployeesOnFlightRsp
-from travelport.models.find_employees_on_flight_service_port_type_service import FindEmployeesOnFlightServicePortTypeService
-from travelport.models.find_employees_on_flight_service_port_type_service_input import FindEmployeesOnFlightServicePortTypeServiceInput
-from travelport.models.find_employees_on_flight_service_port_type_service_output import FindEmployeesOnFlightServicePortTypeServiceOutput
+from travelport.models.find_employees_on_flight_req import (
+    FindEmployeesOnFlightReq,
+)
+from travelport.models.find_employees_on_flight_rsp import (
+    FindEmployeesOnFlightRsp,
+)
+from travelport.models.find_employees_on_flight_service_port_type_service import (
+    FindEmployeesOnFlightServicePortTypeService,
+)
+from travelport.models.find_employees_on_flight_service_port_type_service_input import (
+    FindEmployeesOnFlightServicePortTypeServiceInput,
+)
+from travelport.models.find_employees_on_flight_service_port_type_service_output import (
+    FindEmployeesOnFlightServicePortTypeServiceOutput,
+)
 from travelport.models.fixed_field import FixedField
 from travelport.models.fixed_field_group import FixedFieldGroup
 from travelport.models.fixed_field_group_ref import FixedFieldGroupRef
 from travelport.models.fixed_field_update import FixedFieldUpdate
 from travelport.models.fixed_group_update import FixedGroupUpdate
 from travelport.models.flex_explore_modifiers import FlexExploreModifiers
-from travelport.models.flex_explore_modifiers_type import FlexExploreModifiersType
-from travelport.models.flight_arrival_information import FlightArrivalInformation
+from travelport.models.flex_explore_modifiers_type import (
+    FlexExploreModifiersType,
+)
+from travelport.models.flight_arrival_information import (
+    FlightArrivalInformation,
+)
 from travelport.models.flight_criteria import FlightCriteria
 from travelport.models.flight_details import FlightDetails
 from travelport.models.flight_details_list import FlightDetailsList
-from travelport.models.flight_details_port_type_service import FlightDetailsPortTypeService
-from travelport.models.flight_details_port_type_service_input import FlightDetailsPortTypeServiceInput
-from travelport.models.flight_details_port_type_service_output import FlightDetailsPortTypeServiceOutput
+from travelport.models.flight_details_port_type_service import (
+    FlightDetailsPortTypeService,
+)
+from travelport.models.flight_details_port_type_service_input import (
+    FlightDetailsPortTypeServiceInput,
+)
+from travelport.models.flight_details_port_type_service_output import (
+    FlightDetailsPortTypeServiceOutput,
+)
 from travelport.models.flight_details_ref import FlightDetailsRef
 from travelport.models.flight_details_req import FlightDetailsReq
 from travelport.models.flight_details_rsp import FlightDetailsRsp
 from travelport.models.flight_info import FlightInfo
 from travelport.models.flight_info_criteria import FlightInfoCriteria
 from travelport.models.flight_info_detail import FlightInfoDetail
-from travelport.models.flight_info_port_type_service import FlightInfoPortTypeService
-from travelport.models.flight_info_port_type_service_input import FlightInfoPortTypeServiceInput
-from travelport.models.flight_info_port_type_service_output import FlightInfoPortTypeServiceOutput
+from travelport.models.flight_info_port_type_service import (
+    FlightInfoPortTypeService,
+)
+from travelport.models.flight_info_port_type_service_input import (
+    FlightInfoPortTypeServiceInput,
+)
+from travelport.models.flight_info_port_type_service_output import (
+    FlightInfoPortTypeServiceOutput,
+)
 from travelport.models.flight_information_req import FlightInformationReq
 from travelport.models.flight_information_rsp import FlightInformationRsp
 from travelport.models.flight_option import FlightOption
 from travelport.models.flight_options_list import FlightOptionsList
 from travelport.models.flight_spec import FlightSpec
 from travelport.models.flight_time_detail import FlightTimeDetail
-from travelport.models.flight_time_table_criteria import FlightTimeTableCriteria
-from travelport.models.flight_time_table_port_type_service import FlightTimeTablePortTypeService
-from travelport.models.flight_time_table_port_type_service_input import FlightTimeTablePortTypeServiceInput
-from travelport.models.flight_time_table_port_type_service_output import FlightTimeTablePortTypeServiceOutput
+from travelport.models.flight_time_table_criteria import (
+    FlightTimeTableCriteria,
+)
+from travelport.models.flight_time_table_port_type_service import (
+    FlightTimeTablePortTypeService,
+)
+from travelport.models.flight_time_table_port_type_service_input import (
+    FlightTimeTablePortTypeServiceInput,
+)
+from travelport.models.flight_time_table_port_type_service_output import (
+    FlightTimeTablePortTypeServiceOutput,
+)
 from travelport.models.flight_time_table_req import FlightTimeTableReq
 from travelport.models.flight_time_table_rsp import FlightTimeTableRsp
 from travelport.models.flight_type import FlightType
@@ -1239,55 +1833,119 @@ from travelport.models.formatted_text_text_type_3 import FormattedTextTextType3
 from travelport.models.formatted_text_text_type_4 import FormattedTextTextType4
 from travelport.models.formatted_text_text_type_5 import FormattedTextTextType5
 from travelport.models.formatted_text_text_type_6 import FormattedTextTextType6
-from travelport.models.formatted_text_text_type_text_format_1 import FormattedTextTextTypeTextFormat1
-from travelport.models.formatted_text_text_type_text_format_2 import FormattedTextTextTypeTextFormat2
-from travelport.models.formatted_text_text_type_text_format_3 import FormattedTextTextTypeTextFormat3
-from travelport.models.formatted_text_text_type_text_format_4 import FormattedTextTextTypeTextFormat4
-from travelport.models.formatted_text_text_type_text_format_5 import FormattedTextTextTypeTextFormat5
-from travelport.models.formatted_text_text_type_text_format_6 import FormattedTextTextTypeTextFormat6
-from travelport.models.freeform_text_restriction_1 import FreeformTextRestriction1
-from travelport.models.freeform_text_restriction_2 import FreeformTextRestriction2
+from travelport.models.formatted_text_text_type_text_format_1 import (
+    FormattedTextTextTypeTextFormat1,
+)
+from travelport.models.formatted_text_text_type_text_format_2 import (
+    FormattedTextTextTypeTextFormat2,
+)
+from travelport.models.formatted_text_text_type_text_format_3 import (
+    FormattedTextTextTypeTextFormat3,
+)
+from travelport.models.formatted_text_text_type_text_format_4 import (
+    FormattedTextTextTypeTextFormat4,
+)
+from travelport.models.formatted_text_text_type_text_format_5 import (
+    FormattedTextTextTypeTextFormat5,
+)
+from travelport.models.formatted_text_text_type_text_format_6 import (
+    FormattedTextTextTypeTextFormat6,
+)
+from travelport.models.freeform_text_restriction_1 import (
+    FreeformTextRestriction1,
+)
+from travelport.models.freeform_text_restriction_2 import (
+    FreeformTextRestriction2,
+)
 from travelport.models.ful_fillment_type import FulFillmentType
 from travelport.models.gds_enter_queue_req import GdsEnterQueueReq
 from travelport.models.gds_enter_queue_rsp import GdsEnterQueueRsp
-from travelport.models.gds_enter_queue_service_port_type_service import GdsEnterQueueServicePortTypeService
-from travelport.models.gds_enter_queue_service_port_type_service_input import GdsEnterQueueServicePortTypeServiceInput
-from travelport.models.gds_enter_queue_service_port_type_service_output import GdsEnterQueueServicePortTypeServiceOutput
+from travelport.models.gds_enter_queue_service_port_type_service import (
+    GdsEnterQueueServicePortTypeService,
+)
+from travelport.models.gds_enter_queue_service_port_type_service_input import (
+    GdsEnterQueueServicePortTypeServiceInput,
+)
+from travelport.models.gds_enter_queue_service_port_type_service_output import (
+    GdsEnterQueueServicePortTypeServiceOutput,
+)
 from travelport.models.gds_exit_queue_req import GdsExitQueueReq
 from travelport.models.gds_exit_queue_rsp import GdsExitQueueRsp
-from travelport.models.gds_exit_queue_service_port_type_service import GdsExitQueueServicePortTypeService
-from travelport.models.gds_exit_queue_service_port_type_service_input import GdsExitQueueServicePortTypeServiceInput
-from travelport.models.gds_exit_queue_service_port_type_service_output import GdsExitQueueServicePortTypeServiceOutput
+from travelport.models.gds_exit_queue_service_port_type_service import (
+    GdsExitQueueServicePortTypeService,
+)
+from travelport.models.gds_exit_queue_service_port_type_service_input import (
+    GdsExitQueueServicePortTypeServiceInput,
+)
+from travelport.models.gds_exit_queue_service_port_type_service_output import (
+    GdsExitQueueServicePortTypeServiceOutput,
+)
 from travelport.models.gds_next_on_queue_req import GdsNextOnQueueReq
 from travelport.models.gds_next_on_queue_rsp import GdsNextOnQueueRsp
-from travelport.models.gds_next_on_queue_service_port_type_service import GdsNextOnQueueServicePortTypeService
-from travelport.models.gds_next_on_queue_service_port_type_service_input import GdsNextOnQueueServicePortTypeServiceInput
-from travelport.models.gds_next_on_queue_service_port_type_service_output import GdsNextOnQueueServicePortTypeServiceOutput
+from travelport.models.gds_next_on_queue_service_port_type_service import (
+    GdsNextOnQueueServicePortTypeService,
+)
+from travelport.models.gds_next_on_queue_service_port_type_service_input import (
+    GdsNextOnQueueServicePortTypeServiceInput,
+)
+from travelport.models.gds_next_on_queue_service_port_type_service_output import (
+    GdsNextOnQueueServicePortTypeServiceOutput,
+)
 from travelport.models.gds_queue_agent_list_req import GdsQueueAgentListReq
 from travelport.models.gds_queue_agent_list_rsp import GdsQueueAgentListRsp
-from travelport.models.gds_queue_agent_list_service_port_type_service import GdsQueueAgentListServicePortTypeService
-from travelport.models.gds_queue_agent_list_service_port_type_service_input import GdsQueueAgentListServicePortTypeServiceInput
-from travelport.models.gds_queue_agent_list_service_port_type_service_output import GdsQueueAgentListServicePortTypeServiceOutput
+from travelport.models.gds_queue_agent_list_service_port_type_service import (
+    GdsQueueAgentListServicePortTypeService,
+)
+from travelport.models.gds_queue_agent_list_service_port_type_service_input import (
+    GdsQueueAgentListServicePortTypeServiceInput,
+)
+from travelport.models.gds_queue_agent_list_service_port_type_service_output import (
+    GdsQueueAgentListServicePortTypeServiceOutput,
+)
 from travelport.models.gds_queue_count_req import GdsQueueCountReq
 from travelport.models.gds_queue_count_rsp import GdsQueueCountRsp
-from travelport.models.gds_queue_count_service_port_type_service import GdsQueueCountServicePortTypeService
-from travelport.models.gds_queue_count_service_port_type_service_input import GdsQueueCountServicePortTypeServiceInput
-from travelport.models.gds_queue_count_service_port_type_service_output import GdsQueueCountServicePortTypeServiceOutput
+from travelport.models.gds_queue_count_service_port_type_service import (
+    GdsQueueCountServicePortTypeService,
+)
+from travelport.models.gds_queue_count_service_port_type_service_input import (
+    GdsQueueCountServicePortTypeServiceInput,
+)
+from travelport.models.gds_queue_count_service_port_type_service_output import (
+    GdsQueueCountServicePortTypeServiceOutput,
+)
 from travelport.models.gds_queue_list_req import GdsQueueListReq
 from travelport.models.gds_queue_list_rsp import GdsQueueListRsp
-from travelport.models.gds_queue_list_service_port_type_service import GdsQueueListServicePortTypeService
-from travelport.models.gds_queue_list_service_port_type_service_input import GdsQueueListServicePortTypeServiceInput
-from travelport.models.gds_queue_list_service_port_type_service_output import GdsQueueListServicePortTypeServiceOutput
+from travelport.models.gds_queue_list_service_port_type_service import (
+    GdsQueueListServicePortTypeService,
+)
+from travelport.models.gds_queue_list_service_port_type_service_input import (
+    GdsQueueListServicePortTypeServiceInput,
+)
+from travelport.models.gds_queue_list_service_port_type_service_output import (
+    GdsQueueListServicePortTypeServiceOutput,
+)
 from travelport.models.gds_queue_place_req import GdsQueuePlaceReq
 from travelport.models.gds_queue_place_rsp import GdsQueuePlaceRsp
-from travelport.models.gds_queue_place_service_port_type_service import GdsQueuePlaceServicePortTypeService
-from travelport.models.gds_queue_place_service_port_type_service_input import GdsQueuePlaceServicePortTypeServiceInput
-from travelport.models.gds_queue_place_service_port_type_service_output import GdsQueuePlaceServicePortTypeServiceOutput
+from travelport.models.gds_queue_place_service_port_type_service import (
+    GdsQueuePlaceServicePortTypeService,
+)
+from travelport.models.gds_queue_place_service_port_type_service_input import (
+    GdsQueuePlaceServicePortTypeServiceInput,
+)
+from travelport.models.gds_queue_place_service_port_type_service_output import (
+    GdsQueuePlaceServicePortTypeServiceOutput,
+)
 from travelport.models.gds_queue_remove_req import GdsQueueRemoveReq
 from travelport.models.gds_queue_remove_rsp import GdsQueueRemoveRsp
-from travelport.models.gds_queue_remove_service_port_type_service import GdsQueueRemoveServicePortTypeService
-from travelport.models.gds_queue_remove_service_port_type_service_input import GdsQueueRemoveServicePortTypeServiceInput
-from travelport.models.gds_queue_remove_service_port_type_service_output import GdsQueueRemoveServicePortTypeServiceOutput
+from travelport.models.gds_queue_remove_service_port_type_service import (
+    GdsQueueRemoveServicePortTypeService,
+)
+from travelport.models.gds_queue_remove_service_port_type_service_input import (
+    GdsQueueRemoveServicePortTypeServiceInput,
+)
+from travelport.models.gds_queue_remove_service_port_type_service_output import (
+    GdsQueueRemoveServicePortTypeServiceOutput,
+)
 from travelport.models.general_remark_1 import GeneralRemark1
 from travelport.models.general_remark_2 import GeneralRemark2
 from travelport.models.general_remark_3 import GeneralRemark3
@@ -1295,8 +1953,12 @@ from travelport.models.general_remark_4 import GeneralRemark4
 from travelport.models.general_remark_5 import GeneralRemark5
 from travelport.models.general_remark_6 import GeneralRemark6
 from travelport.models.general_time_table import GeneralTimeTable
-from travelport.models.geo_political_area_filter_1 import GeoPoliticalAreaFilter1
-from travelport.models.geo_political_area_filter_2 import GeoPoliticalAreaFilter2
+from travelport.models.geo_political_area_filter_1 import (
+    GeoPoliticalAreaFilter1,
+)
+from travelport.models.geo_political_area_filter_2 import (
+    GeoPoliticalAreaFilter2,
+)
 from travelport.models.group_1 import Group1
 from travelport.models.group_2 import Group2
 from travelport.models.group_3 import Group3
@@ -1312,7 +1974,9 @@ from travelport.models.guarantee_4 import Guarantee4
 from travelport.models.guarantee_5 import Guarantee5
 from travelport.models.guarantee_6 import Guarantee6
 from travelport.models.guarantee_info import GuaranteeInfo
-from travelport.models.guarantee_info_guarantee_type import GuaranteeInfoGuaranteeType
+from travelport.models.guarantee_info_guarantee_type import (
+    GuaranteeInfoGuaranteeType,
+)
 from travelport.models.guarantee_payment_type import GuaranteePaymentType
 from travelport.models.guarantee_type_1 import GuaranteeType1
 from travelport.models.guarantee_type_10 import GuaranteeType10
@@ -1345,79 +2009,151 @@ from travelport.models.host_token_list_5 import HostTokenList5
 from travelport.models.host_token_list_6 import HostTokenList6
 from travelport.models.host_token_list_7 import HostTokenList7
 from travelport.models.hotel_add import HotelAdd
-from travelport.models.hotel_alternate_properties import HotelAlternateProperties
+from travelport.models.hotel_alternate_properties import (
+    HotelAlternateProperties,
+)
 from travelport.models.hotel_amenity import HotelAmenity
 from travelport.models.hotel_bedding import HotelBedding
 from travelport.models.hotel_cancel_req import HotelCancelReq
 from travelport.models.hotel_cancel_rsp import HotelCancelRsp
-from travelport.models.hotel_cancel_service_port_type_service import HotelCancelServicePortTypeService
-from travelport.models.hotel_cancel_service_port_type_service_input import HotelCancelServicePortTypeServiceInput
-from travelport.models.hotel_cancel_service_port_type_service_output import HotelCancelServicePortTypeServiceOutput
+from travelport.models.hotel_cancel_service_port_type_service import (
+    HotelCancelServicePortTypeService,
+)
+from travelport.models.hotel_cancel_service_port_type_service_input import (
+    HotelCancelServicePortTypeServiceInput,
+)
+from travelport.models.hotel_cancel_service_port_type_service_output import (
+    HotelCancelServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_chain import HotelChain
 from travelport.models.hotel_commission import HotelCommission
-from travelport.models.hotel_create_reservation_req import HotelCreateReservationReq
-from travelport.models.hotel_create_reservation_rsp import HotelCreateReservationRsp
+from travelport.models.hotel_create_reservation_req import (
+    HotelCreateReservationReq,
+)
+from travelport.models.hotel_create_reservation_rsp import (
+    HotelCreateReservationRsp,
+)
 from travelport.models.hotel_delete import HotelDelete
 from travelport.models.hotel_detail_item import HotelDetailItem
 from travelport.models.hotel_details_modifiers import HotelDetailsModifiers
 from travelport.models.hotel_details_req import HotelDetailsReq
 from travelport.models.hotel_details_rsp import HotelDetailsRsp
-from travelport.models.hotel_details_service_port_type_service import HotelDetailsServicePortTypeService
-from travelport.models.hotel_details_service_port_type_service_input import HotelDetailsServicePortTypeServiceInput
-from travelport.models.hotel_details_service_port_type_service_output import HotelDetailsServicePortTypeServiceOutput
+from travelport.models.hotel_details_service_port_type_service import (
+    HotelDetailsServicePortTypeService,
+)
+from travelport.models.hotel_details_service_port_type_service_input import (
+    HotelDetailsServicePortTypeServiceInput,
+)
+from travelport.models.hotel_details_service_port_type_service_output import (
+    HotelDetailsServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_keyword_req import HotelKeywordReq
 from travelport.models.hotel_keyword_rsp import HotelKeywordRsp
-from travelport.models.hotel_keywords_service_port_type_service import HotelKeywordsServicePortTypeService
-from travelport.models.hotel_keywords_service_port_type_service_input import HotelKeywordsServicePortTypeServiceInput
-from travelport.models.hotel_keywords_service_port_type_service_output import HotelKeywordsServicePortTypeServiceOutput
+from travelport.models.hotel_keywords_service_port_type_service import (
+    HotelKeywordsServicePortTypeService,
+)
+from travelport.models.hotel_keywords_service_port_type_service_input import (
+    HotelKeywordsServicePortTypeServiceInput,
+)
+from travelport.models.hotel_keywords_service_port_type_service_output import (
+    HotelKeywordsServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_location import HotelLocation
 from travelport.models.hotel_media_links_req import HotelMediaLinksReq
 from travelport.models.hotel_media_links_rsp import HotelMediaLinksRsp
-from travelport.models.hotel_media_links_service_port_type_service import HotelMediaLinksServicePortTypeService
-from travelport.models.hotel_media_links_service_port_type_service_input import HotelMediaLinksServicePortTypeServiceInput
-from travelport.models.hotel_media_links_service_port_type_service_output import HotelMediaLinksServicePortTypeServiceOutput
+from travelport.models.hotel_media_links_service_port_type_service import (
+    HotelMediaLinksServicePortTypeService,
+)
+from travelport.models.hotel_media_links_service_port_type_service_input import (
+    HotelMediaLinksServicePortTypeServiceInput,
+)
+from travelport.models.hotel_media_links_service_port_type_service_output import (
+    HotelMediaLinksServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_preference_1 import HotelPreference1
 from travelport.models.hotel_preference_2 import HotelPreference2
 from travelport.models.hotel_property import HotelProperty
-from travelport.models.hotel_property_with_media_items import HotelPropertyWithMediaItems
+from travelport.models.hotel_property_with_media_items import (
+    HotelPropertyWithMediaItems,
+)
 from travelport.models.hotel_rate_by_date import HotelRateByDate
 from travelport.models.hotel_rate_detail import HotelRateDetail
 from travelport.models.hotel_rate_info import HotelRateInfo
 from travelport.models.hotel_rating import HotelRating
 from travelport.models.hotel_reservation import HotelReservation
-from travelport.models.hotel_reservation_criteria import HotelReservationCriteria
-from travelport.models.hotel_reservation_service_port_type_service import HotelReservationServicePortTypeService
-from travelport.models.hotel_reservation_service_port_type_service_input import HotelReservationServicePortTypeServiceInput
-from travelport.models.hotel_reservation_service_port_type_service_output import HotelReservationServicePortTypeServiceOutput
+from travelport.models.hotel_reservation_criteria import (
+    HotelReservationCriteria,
+)
+from travelport.models.hotel_reservation_service_port_type_service import (
+    HotelReservationServicePortTypeService,
+)
+from travelport.models.hotel_reservation_service_port_type_service_input import (
+    HotelReservationServicePortTypeServiceInput,
+)
+from travelport.models.hotel_reservation_service_port_type_service_output import (
+    HotelReservationServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_retrieve_req import HotelRetrieveReq
 from travelport.models.hotel_retrieve_rsp import HotelRetrieveRsp
-from travelport.models.hotel_retrieve_service_port_type_service import HotelRetrieveServicePortTypeService
-from travelport.models.hotel_retrieve_service_port_type_service_input import HotelRetrieveServicePortTypeServiceInput
-from travelport.models.hotel_retrieve_service_port_type_service_output import HotelRetrieveServicePortTypeServiceOutput
+from travelport.models.hotel_retrieve_service_port_type_service import (
+    HotelRetrieveServicePortTypeService,
+)
+from travelport.models.hotel_retrieve_service_port_type_service_input import (
+    HotelRetrieveServicePortTypeServiceInput,
+)
+from travelport.models.hotel_retrieve_service_port_type_service_output import (
+    HotelRetrieveServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_rule_item import HotelRuleItem
-from travelport.models.hotel_rules_lookup_rules_detail_reqd import HotelRulesLookupRulesDetailReqd
+from travelport.models.hotel_rules_lookup_rules_detail_reqd import (
+    HotelRulesLookupRulesDetailReqd,
+)
 from travelport.models.hotel_rules_modifiers import HotelRulesModifiers
 from travelport.models.hotel_rules_req import HotelRulesReq
 from travelport.models.hotel_rules_rsp import HotelRulesRsp
-from travelport.models.hotel_rules_service_port_type_service import HotelRulesServicePortTypeService
-from travelport.models.hotel_rules_service_port_type_service_input import HotelRulesServicePortTypeServiceInput
-from travelport.models.hotel_rules_service_port_type_service_output import HotelRulesServicePortTypeServiceOutput
-from travelport.models.hotel_search_availability_req import HotelSearchAvailabilityReq
-from travelport.models.hotel_search_availability_rsp import HotelSearchAvailabilityRsp
+from travelport.models.hotel_rules_service_port_type_service import (
+    HotelRulesServicePortTypeService,
+)
+from travelport.models.hotel_rules_service_port_type_service_input import (
+    HotelRulesServicePortTypeServiceInput,
+)
+from travelport.models.hotel_rules_service_port_type_service_output import (
+    HotelRulesServicePortTypeServiceOutput,
+)
+from travelport.models.hotel_search_availability_req import (
+    HotelSearchAvailabilityReq,
+)
+from travelport.models.hotel_search_availability_rsp import (
+    HotelSearchAvailabilityRsp,
+)
 from travelport.models.hotel_search_location import HotelSearchLocation
 from travelport.models.hotel_search_modifiers import HotelSearchModifiers
 from travelport.models.hotel_search_result import HotelSearchResult
-from travelport.models.hotel_search_service_port_type_service import HotelSearchServicePortTypeService
-from travelport.models.hotel_search_service_port_type_service_input import HotelSearchServicePortTypeServiceInput
-from travelport.models.hotel_search_service_port_type_service_output import HotelSearchServicePortTypeServiceOutput
+from travelport.models.hotel_search_service_port_type_service import (
+    HotelSearchServicePortTypeService,
+)
+from travelport.models.hotel_search_service_port_type_service_input import (
+    HotelSearchServicePortTypeServiceInput,
+)
+from travelport.models.hotel_search_service_port_type_service_output import (
+    HotelSearchServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_special_request import HotelSpecialRequest
 from travelport.models.hotel_stay import HotelStay
 from travelport.models.hotel_super_shopper_req import HotelSuperShopperReq
-from travelport.models.hotel_super_shopper_results import HotelSuperShopperResults
+from travelport.models.hotel_super_shopper_results import (
+    HotelSuperShopperResults,
+)
 from travelport.models.hotel_super_shopper_rsp import HotelSuperShopperRsp
-from travelport.models.hotel_super_shopper_service_port_type_service import HotelSuperShopperServicePortTypeService
-from travelport.models.hotel_super_shopper_service_port_type_service_input import HotelSuperShopperServicePortTypeServiceInput
-from travelport.models.hotel_super_shopper_service_port_type_service_output import HotelSuperShopperServicePortTypeServiceOutput
+from travelport.models.hotel_super_shopper_service_port_type_service import (
+    HotelSuperShopperServicePortTypeService,
+)
+from travelport.models.hotel_super_shopper_service_port_type_service_input import (
+    HotelSuperShopperServicePortTypeServiceInput,
+)
+from travelport.models.hotel_super_shopper_service_port_type_service_output import (
+    HotelSuperShopperServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_type import HotelType
 from travelport.models.hotel_update import HotelUpdate
 from travelport.models.hotel_upsell_add import HotelUpsellAdd
@@ -1426,19 +2162,35 @@ from travelport.models.hotel_upsell_delete import HotelUpsellDelete
 from travelport.models.hotel_upsell_details_req import HotelUpsellDetailsReq
 from travelport.models.hotel_upsell_details_rsp import HotelUpsellDetailsRsp
 from travelport.models.hotel_upsell_offer import HotelUpsellOffer
-from travelport.models.hotel_upsell_offer_search_criteria import HotelUpsellOfferSearchCriteria
+from travelport.models.hotel_upsell_offer_search_criteria import (
+    HotelUpsellOfferSearchCriteria,
+)
 from travelport.models.hotel_upsell_qualify import HotelUpsellQualify
-from travelport.models.hotel_upsell_qualify_search_criteria import HotelUpsellQualifySearchCriteria
+from travelport.models.hotel_upsell_qualify_search_criteria import (
+    HotelUpsellQualifySearchCriteria,
+)
 from travelport.models.hotel_upsell_rule import HotelUpsellRule
-from travelport.models.hotel_upsell_search_criteria import HotelUpsellSearchCriteria
-from travelport.models.hotel_upsell_search_result import HotelUpsellSearchResult
-from travelport.models.hotel_upsell_search_service_port_type_service import HotelUpsellSearchServicePortTypeService
-from travelport.models.hotel_upsell_search_service_port_type_service_input import HotelUpsellSearchServicePortTypeServiceInput
-from travelport.models.hotel_upsell_search_service_port_type_service_output import HotelUpsellSearchServicePortTypeServiceOutput
+from travelport.models.hotel_upsell_search_criteria import (
+    HotelUpsellSearchCriteria,
+)
+from travelport.models.hotel_upsell_search_result import (
+    HotelUpsellSearchResult,
+)
+from travelport.models.hotel_upsell_search_service_port_type_service import (
+    HotelUpsellSearchServicePortTypeService,
+)
+from travelport.models.hotel_upsell_search_service_port_type_service_input import (
+    HotelUpsellSearchServicePortTypeServiceInput,
+)
+from travelport.models.hotel_upsell_search_service_port_type_service_output import (
+    HotelUpsellSearchServicePortTypeServiceOutput,
+)
 from travelport.models.hotel_upsell_update import HotelUpsellUpdate
 from travelport.models.image_location import ImageLocation
 from travelport.models.in_flight_services import InFlightServices
-from travelport.models.include_addl_booking_code_info import IncludeAddlBookingCodeInfo
+from travelport.models.include_addl_booking_code_info import (
+    IncludeAddlBookingCodeInfo,
+)
 from travelport.models.included_in_base_1 import IncludedInBase1
 from travelport.models.included_in_base_2 import IncludedInBase2
 from travelport.models.included_in_base_3 import IncludedInBase3
@@ -1449,7 +2201,9 @@ from travelport.models.industry_standard_ssr_3 import IndustryStandardSsr3
 from travelport.models.industry_standard_ssr_4 import IndustryStandardSsr4
 from travelport.models.industry_standard_ssr_5 import IndustryStandardSsr5
 from travelport.models.industry_standard_ssr_6 import IndustryStandardSsr6
-from travelport.models.insert_override_definition import InsertOverrideDefinition
+from travelport.models.insert_override_definition import (
+    InsertOverrideDefinition,
+)
 from travelport.models.invoice_data_1 import InvoiceData1
 from travelport.models.invoice_data_2 import InvoiceData2
 from travelport.models.invoice_data_3 import InvoiceData3
@@ -1533,8 +2287,12 @@ from travelport.models.loyalty_program_3 import LoyaltyProgram3
 from travelport.models.loyalty_program_4 import LoyaltyProgram4
 from travelport.models.loyalty_program_5 import LoyaltyProgram5
 from travelport.models.loyalty_program_6 import LoyaltyProgram6
-from travelport.models.loyalty_program_enrollment_1 import LoyaltyProgramEnrollment1
-from travelport.models.loyalty_program_enrollment_2 import LoyaltyProgramEnrollment2
+from travelport.models.loyalty_program_enrollment_1 import (
+    LoyaltyProgramEnrollment1,
+)
+from travelport.models.loyalty_program_enrollment_2 import (
+    LoyaltyProgramEnrollment2,
+)
 from travelport.models.manual_fare_adjustment import ManualFareAdjustment
 from travelport.models.marketing_information_1 import MarketingInformation1
 from travelport.models.marketing_information_2 import MarketingInformation2
@@ -1551,20 +2309,36 @@ from travelport.models.mco_3 import Mco3
 from travelport.models.mco_4 import Mco4
 from travelport.models.mco_5 import Mco5
 from travelport.models.mco_6 import Mco6
-from travelport.models.mco_create_agency_fee_port_type_service import McoCreateAgencyFeePortTypeService
-from travelport.models.mco_create_agency_fee_port_type_service_input import McoCreateAgencyFeePortTypeServiceInput
-from travelport.models.mco_create_agency_fee_port_type_service_output import McoCreateAgencyFeePortTypeServiceOutput
+from travelport.models.mco_create_agency_fee_port_type_service import (
+    McoCreateAgencyFeePortTypeService,
+)
+from travelport.models.mco_create_agency_fee_port_type_service_input import (
+    McoCreateAgencyFeePortTypeServiceInput,
+)
+from travelport.models.mco_create_agency_fee_port_type_service_output import (
+    McoCreateAgencyFeePortTypeServiceOutput,
+)
 from travelport.models.mco_create_date import McoCreateDate
 from travelport.models.mco_search_modifiers import McoSearchModifiers
-from travelport.models.mco_search_port_type_service import McoSearchPortTypeService
-from travelport.models.mco_search_port_type_service_input import McoSearchPortTypeServiceInput
-from travelport.models.mco_search_port_type_service_output import McoSearchPortTypeServiceOutput
+from travelport.models.mco_search_port_type_service import (
+    McoSearchPortTypeService,
+)
+from travelport.models.mco_search_port_type_service_input import (
+    McoSearchPortTypeServiceInput,
+)
+from travelport.models.mco_search_port_type_service_output import (
+    McoSearchPortTypeServiceOutput,
+)
 from travelport.models.mco_search_req import McoSearchReq
 from travelport.models.mco_search_result import McoSearchResult
 from travelport.models.mco_search_rsp import McoSearchRsp
 from travelport.models.mco_void_port_type_service import McoVoidPortTypeService
-from travelport.models.mco_void_port_type_service_input import McoVoidPortTypeServiceInput
-from travelport.models.mco_void_port_type_service_output import McoVoidPortTypeServiceOutput
+from travelport.models.mco_void_port_type_service_input import (
+    McoVoidPortTypeServiceInput,
+)
+from travelport.models.mco_void_port_type_service_output import (
+    McoVoidPortTypeServiceOutput,
+)
 from travelport.models.mco_void_req import McoVoidReq
 from travelport.models.mco_void_rsp import McoVoidRsp
 from travelport.models.mcoexchange_info_1 import McoexchangeInfo1
@@ -1579,12 +2353,24 @@ from travelport.models.mcofee_info_3 import McofeeInfo3
 from travelport.models.mcofee_info_4 import McofeeInfo4
 from travelport.models.mcofee_info_5 import McofeeInfo5
 from travelport.models.mcofee_info_6 import McofeeInfo6
-from travelport.models.mcofee_info_fee_applies_to_ind_1 import McofeeInfoFeeAppliesToInd1
-from travelport.models.mcofee_info_fee_applies_to_ind_2 import McofeeInfoFeeAppliesToInd2
-from travelport.models.mcofee_info_fee_applies_to_ind_3 import McofeeInfoFeeAppliesToInd3
-from travelport.models.mcofee_info_fee_applies_to_ind_4 import McofeeInfoFeeAppliesToInd4
-from travelport.models.mcofee_info_fee_applies_to_ind_5 import McofeeInfoFeeAppliesToInd5
-from travelport.models.mcofee_info_fee_applies_to_ind_6 import McofeeInfoFeeAppliesToInd6
+from travelport.models.mcofee_info_fee_applies_to_ind_1 import (
+    McofeeInfoFeeAppliesToInd1,
+)
+from travelport.models.mcofee_info_fee_applies_to_ind_2 import (
+    McofeeInfoFeeAppliesToInd2,
+)
+from travelport.models.mcofee_info_fee_applies_to_ind_3 import (
+    McofeeInfoFeeAppliesToInd3,
+)
+from travelport.models.mcofee_info_fee_applies_to_ind_4 import (
+    McofeeInfoFeeAppliesToInd4,
+)
+from travelport.models.mcofee_info_fee_applies_to_ind_5 import (
+    McofeeInfoFeeAppliesToInd5,
+)
+from travelport.models.mcofee_info_fee_applies_to_ind_6 import (
+    McofeeInfoFeeAppliesToInd6,
+)
 from travelport.models.mcoinformation_1 import Mcoinformation1
 from travelport.models.mcoinformation_2 import Mcoinformation2
 from travelport.models.mcoinformation_3 import Mcoinformation3
@@ -1610,15 +2396,27 @@ from travelport.models.mcotext_4 import Mcotext4
 from travelport.models.mcotext_5 import Mcotext5
 from travelport.models.mcotext_6 import Mcotext6
 from travelport.models.mct_count import MctCount
-from travelport.models.mct_count_port_type_service import MctCountPortTypeService
-from travelport.models.mct_count_port_type_service_input import MctCountPortTypeServiceInput
-from travelport.models.mct_count_port_type_service_output import MctCountPortTypeServiceOutput
+from travelport.models.mct_count_port_type_service import (
+    MctCountPortTypeService,
+)
+from travelport.models.mct_count_port_type_service_input import (
+    MctCountPortTypeServiceInput,
+)
+from travelport.models.mct_count_port_type_service_output import (
+    MctCountPortTypeServiceOutput,
+)
 from travelport.models.mct_count_req import MctCountReq
 from travelport.models.mct_count_rsp import MctCountRsp
 from travelport.models.mct_exception import MctException
-from travelport.models.mct_lookup_port_type_service import MctLookupPortTypeService
-from travelport.models.mct_lookup_port_type_service_input import MctLookupPortTypeServiceInput
-from travelport.models.mct_lookup_port_type_service_output import MctLookupPortTypeServiceOutput
+from travelport.models.mct_lookup_port_type_service import (
+    MctLookupPortTypeService,
+)
+from travelport.models.mct_lookup_port_type_service_input import (
+    MctLookupPortTypeServiceInput,
+)
+from travelport.models.mct_lookup_port_type_service_output import (
+    MctLookupPortTypeServiceOutput,
+)
 from travelport.models.mct_lookup_req import MctLookupReq
 from travelport.models.mct_lookup_rsp import MctLookupRsp
 from travelport.models.mct_query import MctQuery
@@ -1637,9 +2435,13 @@ from travelport.models.media_item_3 import MediaItem3
 from travelport.models.media_item_4 import MediaItem4
 from travelport.models.media_item_5 import MediaItem5
 from travelport.models.media_item_6 import MediaItem6
-from travelport.models.merchandising_availability_details import MerchandisingAvailabilityDetails
+from travelport.models.merchandising_availability_details import (
+    MerchandisingAvailabilityDetails,
+)
 from travelport.models.merchandising_details import MerchandisingDetails
-from travelport.models.merchandising_pricing_modifiers import MerchandisingPricingModifiers
+from travelport.models.merchandising_pricing_modifiers import (
+    MerchandisingPricingModifiers,
+)
 from travelport.models.meta_data_1 import MetaData1
 from travelport.models.meta_data_2 import MetaData2
 from travelport.models.meta_data_3 import MetaData3
@@ -1654,7 +2456,9 @@ from travelport.models.meta_data_modify_cmd import MetaDataModifyCmd
 from travelport.models.meta_data_update import MetaDataUpdate
 from travelport.models.mintype import Mintype
 from travelport.models.mir_report_retrieve_req import MirReportRetrieveReq
-from travelport.models.mir_report_retrieve_req_report_format import MirReportRetrieveReqReportFormat
+from travelport.models.mir_report_retrieve_req_report_format import (
+    MirReportRetrieveReqReportFormat,
+)
 from travelport.models.mir_report_retrieve_rsp import MirReportRetrieveRsp
 from travelport.models.misc_form_of_payment_1 import MiscFormOfPayment1
 from travelport.models.misc_form_of_payment_2 import MiscFormOfPayment2
@@ -1663,8 +2467,12 @@ from travelport.models.misc_form_of_payment_4 import MiscFormOfPayment4
 from travelport.models.misc_form_of_payment_5 import MiscFormOfPayment5
 from travelport.models.misc_form_of_payment_6 import MiscFormOfPayment6
 from travelport.models.misc_form_of_payment_7 import MiscFormOfPayment7
-from travelport.models.misc_form_of_payment_history_1 import MiscFormOfPaymentHistory1
-from travelport.models.misc_form_of_payment_history_2 import MiscFormOfPaymentHistory2
+from travelport.models.misc_form_of_payment_history_1 import (
+    MiscFormOfPaymentHistory1,
+)
+from travelport.models.misc_form_of_payment_history_2 import (
+    MiscFormOfPaymentHistory2,
+)
 from travelport.models.modification_type_1 import ModificationType1
 from travelport.models.modification_type_2 import ModificationType2
 from travelport.models.modification_type_3 import ModificationType3
@@ -1706,7 +2514,9 @@ from travelport.models.next_result_reference_6 import NextResultReference6
 from travelport.models.next_result_reference_7 import NextResultReference7
 from travelport.models.number_of_adults import NumberOfAdults
 from travelport.models.number_of_children import NumberOfChildren
-from travelport.models.offer_availability_modifiers import OfferAvailabilityModifiers
+from travelport.models.offer_availability_modifiers import (
+    OfferAvailabilityModifiers,
+)
 from travelport.models.operated_by_1 import OperatedBy1
 from travelport.models.operated_by_2 import OperatedBy2
 from travelport.models.operated_by_3 import OperatedBy3
@@ -1720,24 +2530,52 @@ from travelport.models.option import Option
 from travelport.models.option_journey_details import OptionJourneyDetails
 from travelport.models.optional_service_1 import OptionalService1
 from travelport.models.optional_service_2 import OptionalService2
-from travelport.models.optional_service_applicability_type_1 import OptionalServiceApplicabilityType1
-from travelport.models.optional_service_applicability_type_2 import OptionalServiceApplicabilityType2
-from travelport.models.optional_service_applicability_type_3 import OptionalServiceApplicabilityType3
-from travelport.models.optional_service_applicability_type_4 import OptionalServiceApplicabilityType4
-from travelport.models.optional_service_applicability_type_5 import OptionalServiceApplicabilityType5
-from travelport.models.optional_service_applicability_type_6 import OptionalServiceApplicabilityType6
-from travelport.models.optional_service_application_limit_type_1 import OptionalServiceApplicationLimitType1
-from travelport.models.optional_service_application_limit_type_2 import OptionalServiceApplicationLimitType2
-from travelport.models.optional_service_application_limit_type_3 import OptionalServiceApplicationLimitType3
-from travelport.models.optional_service_application_limit_type_4 import OptionalServiceApplicationLimitType4
-from travelport.models.optional_service_application_limit_type_5 import OptionalServiceApplicationLimitType5
-from travelport.models.optional_service_application_limit_type_6 import OptionalServiceApplicationLimitType6
+from travelport.models.optional_service_applicability_type_1 import (
+    OptionalServiceApplicabilityType1,
+)
+from travelport.models.optional_service_applicability_type_2 import (
+    OptionalServiceApplicabilityType2,
+)
+from travelport.models.optional_service_applicability_type_3 import (
+    OptionalServiceApplicabilityType3,
+)
+from travelport.models.optional_service_applicability_type_4 import (
+    OptionalServiceApplicabilityType4,
+)
+from travelport.models.optional_service_applicability_type_5 import (
+    OptionalServiceApplicabilityType5,
+)
+from travelport.models.optional_service_applicability_type_6 import (
+    OptionalServiceApplicabilityType6,
+)
+from travelport.models.optional_service_application_limit_type_1 import (
+    OptionalServiceApplicationLimitType1,
+)
+from travelport.models.optional_service_application_limit_type_2 import (
+    OptionalServiceApplicationLimitType2,
+)
+from travelport.models.optional_service_application_limit_type_3 import (
+    OptionalServiceApplicationLimitType3,
+)
+from travelport.models.optional_service_application_limit_type_4 import (
+    OptionalServiceApplicationLimitType4,
+)
+from travelport.models.optional_service_application_limit_type_5 import (
+    OptionalServiceApplicationLimitType5,
+)
+from travelport.models.optional_service_application_limit_type_6 import (
+    OptionalServiceApplicationLimitType6,
+)
 from travelport.models.optional_service_modifier import OptionalServiceModifier
-from travelport.models.optional_service_modifiers import OptionalServiceModifiers
+from travelport.models.optional_service_modifiers import (
+    OptionalServiceModifiers,
+)
 from travelport.models.optional_service_ref import OptionalServiceRef
 from travelport.models.optional_services import OptionalServices
 from travelport.models.optional_services_info import OptionalServicesInfo
-from travelport.models.original_itinerary_details import OriginalItineraryDetails
+from travelport.models.original_itinerary_details import (
+    OriginalItineraryDetails,
+)
 from travelport.models.osi_1 import Osi1
 from travelport.models.osi_2 import Osi2
 from travelport.models.osi_3 import Osi3
@@ -1750,12 +2588,24 @@ from travelport.models.other_guarantee_info_3 import OtherGuaranteeInfo3
 from travelport.models.other_guarantee_info_4 import OtherGuaranteeInfo4
 from travelport.models.other_guarantee_info_5 import OtherGuaranteeInfo5
 from travelport.models.other_guarantee_info_6 import OtherGuaranteeInfo6
-from travelport.models.other_guarantee_info_type_1 import OtherGuaranteeInfoType1
-from travelport.models.other_guarantee_info_type_2 import OtherGuaranteeInfoType2
-from travelport.models.other_guarantee_info_type_3 import OtherGuaranteeInfoType3
-from travelport.models.other_guarantee_info_type_4 import OtherGuaranteeInfoType4
-from travelport.models.other_guarantee_info_type_5 import OtherGuaranteeInfoType5
-from travelport.models.other_guarantee_info_type_6 import OtherGuaranteeInfoType6
+from travelport.models.other_guarantee_info_type_1 import (
+    OtherGuaranteeInfoType1,
+)
+from travelport.models.other_guarantee_info_type_2 import (
+    OtherGuaranteeInfoType2,
+)
+from travelport.models.other_guarantee_info_type_3 import (
+    OtherGuaranteeInfoType3,
+)
+from travelport.models.other_guarantee_info_type_4 import (
+    OtherGuaranteeInfoType4,
+)
+from travelport.models.other_guarantee_info_type_5 import (
+    OtherGuaranteeInfoType5,
+)
+from travelport.models.other_guarantee_info_type_6 import (
+    OtherGuaranteeInfoType6,
+)
 from travelport.models.other_preference_1 import OtherPreference1
 from travelport.models.other_preference_2 import OtherPreference2
 from travelport.models.othtype import Othtype
@@ -1774,7 +2624,9 @@ from travelport.models.ownership_change_3 import OwnershipChange3
 from travelport.models.ownership_change_4 import OwnershipChange4
 from travelport.models.ownership_change_5 import OwnershipChange5
 from travelport.models.ownership_change_6 import OwnershipChange6
-from travelport.models.parent_provider_reservation_info import ParentProviderReservationInfo
+from travelport.models.parent_provider_reservation_info import (
+    ParentProviderReservationInfo,
+)
 from travelport.models.passenger_details import PassengerDetails
 from travelport.models.passenger_details_ref import PassengerDetailsRef
 from travelport.models.passenger_info_1 import PassengerInfo1
@@ -1783,18 +2635,30 @@ from travelport.models.passenger_info_3 import PassengerInfo3
 from travelport.models.passenger_info_4 import PassengerInfo4
 from travelport.models.passenger_info_5 import PassengerInfo5
 from travelport.models.passenger_info_6 import PassengerInfo6
-from travelport.models.passenger_receipt_override import PassengerReceiptOverride
+from travelport.models.passenger_receipt_override import (
+    PassengerReceiptOverride,
+)
 from travelport.models.passenger_seat_price import PassengerSeatPrice
 from travelport.models.passenger_ticket_number import PassengerTicketNumber
 from travelport.models.passenger_type import PassengerType
 from travelport.models.passive_add import PassiveAdd
 from travelport.models.passive_cancel_req import PassiveCancelReq
 from travelport.models.passive_cancel_rsp import PassiveCancelRsp
-from travelport.models.passive_cancel_service_port_type_service import PassiveCancelServicePortTypeService
-from travelport.models.passive_cancel_service_port_type_service_input import PassiveCancelServicePortTypeServiceInput
-from travelport.models.passive_cancel_service_port_type_service_output import PassiveCancelServicePortTypeServiceOutput
-from travelport.models.passive_create_reservation_req import PassiveCreateReservationReq
-from travelport.models.passive_create_reservation_rsp import PassiveCreateReservationRsp
+from travelport.models.passive_cancel_service_port_type_service import (
+    PassiveCancelServicePortTypeService,
+)
+from travelport.models.passive_cancel_service_port_type_service_input import (
+    PassiveCancelServicePortTypeServiceInput,
+)
+from travelport.models.passive_cancel_service_port_type_service_output import (
+    PassiveCancelServicePortTypeServiceOutput,
+)
+from travelport.models.passive_create_reservation_req import (
+    PassiveCreateReservationReq,
+)
+from travelport.models.passive_create_reservation_rsp import (
+    PassiveCreateReservationRsp,
+)
 from travelport.models.passive_delete import PassiveDelete
 from travelport.models.passive_info_1 import PassiveInfo1
 from travelport.models.passive_info_2 import PassiveInfo2
@@ -1804,9 +2668,15 @@ from travelport.models.passive_info_5 import PassiveInfo5
 from travelport.models.passive_info_6 import PassiveInfo6
 from travelport.models.passive_remark import PassiveRemark
 from travelport.models.passive_reservation import PassiveReservation
-from travelport.models.passive_reservation_service_port_type_service import PassiveReservationServicePortTypeService
-from travelport.models.passive_reservation_service_port_type_service_input import PassiveReservationServicePortTypeServiceInput
-from travelport.models.passive_reservation_service_port_type_service_output import PassiveReservationServicePortTypeServiceOutput
+from travelport.models.passive_reservation_service_port_type_service import (
+    PassiveReservationServicePortTypeService,
+)
+from travelport.models.passive_reservation_service_port_type_service_input import (
+    PassiveReservationServicePortTypeServiceInput,
+)
+from travelport.models.passive_reservation_service_port_type_service_output import (
+    PassiveReservationServicePortTypeServiceOutput,
+)
 from travelport.models.passive_segment import PassiveSegment
 from travelport.models.passive_segment_ref import PassiveSegmentRef
 from travelport.models.password import Password
@@ -1890,8 +2760,12 @@ from travelport.models.phone_number_6 import PhoneNumber6
 from travelport.models.phone_number_7 import PhoneNumber7
 from travelport.models.phone_number_history_1 import PhoneNumberHistory1
 from travelport.models.phone_number_history_2 import PhoneNumberHistory2
-from travelport.models.phone_number_history_type_1 import PhoneNumberHistoryType1
-from travelport.models.phone_number_history_type_2 import PhoneNumberHistoryType2
+from travelport.models.phone_number_history_type_1 import (
+    PhoneNumberHistoryType1,
+)
+from travelport.models.phone_number_history_type_2 import (
+    PhoneNumberHistoryType2,
+)
 from travelport.models.phone_number_type_1 import PhoneNumberType1
 from travelport.models.phone_number_type_2 import PhoneNumberType2
 from travelport.models.phone_number_type_3 import PhoneNumberType3
@@ -1943,43 +2817,83 @@ from travelport.models.price_match_error import PriceMatchError
 from travelport.models.price_range import PriceRange
 from travelport.models.priced_equip import PricedEquip
 from travelport.models.pricing_details import PricingDetails
-from travelport.models.print_blank_form_itinerary import PrintBlankFormItinerary
+from travelport.models.print_blank_form_itinerary import (
+    PrintBlankFormItinerary,
+)
 from travelport.models.profile_1 import Profile1
 from travelport.models.profile_2 import Profile2
 from travelport.models.profile_association import ProfileAssociation
-from travelport.models.profile_child_search_port_type_service import ProfileChildSearchPortTypeService
-from travelport.models.profile_child_search_port_type_service_input import ProfileChildSearchPortTypeServiceInput
-from travelport.models.profile_child_search_port_type_service_output import ProfileChildSearchPortTypeServiceOutput
+from travelport.models.profile_child_search_port_type_service import (
+    ProfileChildSearchPortTypeService,
+)
+from travelport.models.profile_child_search_port_type_service_input import (
+    ProfileChildSearchPortTypeServiceInput,
+)
+from travelport.models.profile_child_search_port_type_service_output import (
+    ProfileChildSearchPortTypeServiceOutput,
+)
 from travelport.models.profile_child_search_req_1 import ProfileChildSearchReq1
 from travelport.models.profile_child_search_req_2 import ProfileChildSearchReq2
-from travelport.models.profile_child_search_req_hierarchy_type_1 import ProfileChildSearchReqHierarchyType1
-from travelport.models.profile_child_search_req_hierarchy_type_2 import ProfileChildSearchReqHierarchyType2
+from travelport.models.profile_child_search_req_hierarchy_type_1 import (
+    ProfileChildSearchReqHierarchyType1,
+)
+from travelport.models.profile_child_search_req_hierarchy_type_2 import (
+    ProfileChildSearchReqHierarchyType2,
+)
 from travelport.models.profile_child_search_rsp_1 import ProfileChildSearchRsp1
 from travelport.models.profile_child_search_rsp_2 import ProfileChildSearchRsp2
 from travelport.models.profile_child_summary_1 import ProfileChildSummary1
 from travelport.models.profile_child_summary_2 import ProfileChildSummary2
-from travelport.models.profile_create_field_port_type_service import ProfileCreateFieldPortTypeService
-from travelport.models.profile_create_field_port_type_service_input import ProfileCreateFieldPortTypeServiceInput
-from travelport.models.profile_create_field_port_type_service_output import ProfileCreateFieldPortTypeServiceOutput
+from travelport.models.profile_create_field_port_type_service import (
+    ProfileCreateFieldPortTypeService,
+)
+from travelport.models.profile_create_field_port_type_service_input import (
+    ProfileCreateFieldPortTypeServiceInput,
+)
+from travelport.models.profile_create_field_port_type_service_output import (
+    ProfileCreateFieldPortTypeServiceOutput,
+)
 from travelport.models.profile_create_field_req_1 import ProfileCreateFieldReq1
 from travelport.models.profile_create_field_req_2 import ProfileCreateFieldReq2
 from travelport.models.profile_create_field_rsp_1 import ProfileCreateFieldRsp1
 from travelport.models.profile_create_field_rsp_2 import ProfileCreateFieldRsp2
-from travelport.models.profile_create_hierarchy_level_port_type_service import ProfileCreateHierarchyLevelPortTypeService
-from travelport.models.profile_create_hierarchy_level_port_type_service_input import ProfileCreateHierarchyLevelPortTypeServiceInput
-from travelport.models.profile_create_hierarchy_level_port_type_service_output import ProfileCreateHierarchyLevelPortTypeServiceOutput
-from travelport.models.profile_create_hierarchy_level_req import ProfileCreateHierarchyLevelReq
-from travelport.models.profile_create_hierarchy_level_rsp import ProfileCreateHierarchyLevelRsp
-from travelport.models.profile_create_port_type_service import ProfileCreatePortTypeService
-from travelport.models.profile_create_port_type_service_input import ProfileCreatePortTypeServiceInput
-from travelport.models.profile_create_port_type_service_output import ProfileCreatePortTypeServiceOutput
+from travelport.models.profile_create_hierarchy_level_port_type_service import (
+    ProfileCreateHierarchyLevelPortTypeService,
+)
+from travelport.models.profile_create_hierarchy_level_port_type_service_input import (
+    ProfileCreateHierarchyLevelPortTypeServiceInput,
+)
+from travelport.models.profile_create_hierarchy_level_port_type_service_output import (
+    ProfileCreateHierarchyLevelPortTypeServiceOutput,
+)
+from travelport.models.profile_create_hierarchy_level_req import (
+    ProfileCreateHierarchyLevelReq,
+)
+from travelport.models.profile_create_hierarchy_level_rsp import (
+    ProfileCreateHierarchyLevelRsp,
+)
+from travelport.models.profile_create_port_type_service import (
+    ProfileCreatePortTypeService,
+)
+from travelport.models.profile_create_port_type_service_input import (
+    ProfileCreatePortTypeServiceInput,
+)
+from travelport.models.profile_create_port_type_service_output import (
+    ProfileCreatePortTypeServiceOutput,
+)
 from travelport.models.profile_create_req_1 import ProfileCreateReq1
 from travelport.models.profile_create_req_2 import ProfileCreateReq2
 from travelport.models.profile_create_rsp_1 import ProfileCreateRsp1
 from travelport.models.profile_create_rsp_2 import ProfileCreateRsp2
-from travelport.models.profile_create_tags_port_type_service import ProfileCreateTagsPortTypeService
-from travelport.models.profile_create_tags_port_type_service_input import ProfileCreateTagsPortTypeServiceInput
-from travelport.models.profile_create_tags_port_type_service_output import ProfileCreateTagsPortTypeServiceOutput
+from travelport.models.profile_create_tags_port_type_service import (
+    ProfileCreateTagsPortTypeService,
+)
+from travelport.models.profile_create_tags_port_type_service_input import (
+    ProfileCreateTagsPortTypeServiceInput,
+)
+from travelport.models.profile_create_tags_port_type_service_output import (
+    ProfileCreateTagsPortTypeServiceOutput,
+)
 from travelport.models.profile_create_tags_req_1 import ProfileCreateTagsReq1
 from travelport.models.profile_create_tags_req_2 import ProfileCreateTagsReq2
 from travelport.models.profile_create_tags_rsp_1 import ProfileCreateTagsRsp1
@@ -1996,146 +2910,322 @@ from travelport.models.profile_data_filter_1 import ProfileDataFilter1
 from travelport.models.profile_data_filter_2 import ProfileDataFilter2
 from travelport.models.profile_data_update_1 import ProfileDataUpdate1
 from travelport.models.profile_data_update_2 import ProfileDataUpdate2
-from travelport.models.profile_delete_hierarchy_level_port_type_service import ProfileDeleteHierarchyLevelPortTypeService
-from travelport.models.profile_delete_hierarchy_level_port_type_service_input import ProfileDeleteHierarchyLevelPortTypeServiceInput
-from travelport.models.profile_delete_hierarchy_level_port_type_service_output import ProfileDeleteHierarchyLevelPortTypeServiceOutput
-from travelport.models.profile_delete_hierarchy_level_req import ProfileDeleteHierarchyLevelReq
-from travelport.models.profile_delete_hierarchy_level_rsp import ProfileDeleteHierarchyLevelRsp
-from travelport.models.profile_delete_port_type_service import ProfileDeletePortTypeService
-from travelport.models.profile_delete_port_type_service_input import ProfileDeletePortTypeServiceInput
-from travelport.models.profile_delete_port_type_service_output import ProfileDeletePortTypeServiceOutput
+from travelport.models.profile_delete_hierarchy_level_port_type_service import (
+    ProfileDeleteHierarchyLevelPortTypeService,
+)
+from travelport.models.profile_delete_hierarchy_level_port_type_service_input import (
+    ProfileDeleteHierarchyLevelPortTypeServiceInput,
+)
+from travelport.models.profile_delete_hierarchy_level_port_type_service_output import (
+    ProfileDeleteHierarchyLevelPortTypeServiceOutput,
+)
+from travelport.models.profile_delete_hierarchy_level_req import (
+    ProfileDeleteHierarchyLevelReq,
+)
+from travelport.models.profile_delete_hierarchy_level_rsp import (
+    ProfileDeleteHierarchyLevelRsp,
+)
+from travelport.models.profile_delete_port_type_service import (
+    ProfileDeletePortTypeService,
+)
+from travelport.models.profile_delete_port_type_service_input import (
+    ProfileDeletePortTypeServiceInput,
+)
+from travelport.models.profile_delete_port_type_service_output import (
+    ProfileDeletePortTypeServiceOutput,
+)
 from travelport.models.profile_delete_req_1 import ProfileDeleteReq1
 from travelport.models.profile_delete_req_2 import ProfileDeleteReq2
 from travelport.models.profile_delete_rsp_1 import ProfileDeleteRsp1
 from travelport.models.profile_delete_rsp_2 import ProfileDeleteRsp2
-from travelport.models.profile_delete_tag_port_type_service import ProfileDeleteTagPortTypeService
-from travelport.models.profile_delete_tag_port_type_service_input import ProfileDeleteTagPortTypeServiceInput
-from travelport.models.profile_delete_tag_port_type_service_output import ProfileDeleteTagPortTypeServiceOutput
+from travelport.models.profile_delete_tag_port_type_service import (
+    ProfileDeleteTagPortTypeService,
+)
+from travelport.models.profile_delete_tag_port_type_service_input import (
+    ProfileDeleteTagPortTypeServiceInput,
+)
+from travelport.models.profile_delete_tag_port_type_service_output import (
+    ProfileDeleteTagPortTypeServiceOutput,
+)
 from travelport.models.profile_delete_tag_req_1 import ProfileDeleteTagReq1
 from travelport.models.profile_delete_tag_req_2 import ProfileDeleteTagReq2
 from travelport.models.profile_delete_tag_rsp_1 import ProfileDeleteTagRsp1
 from travelport.models.profile_delete_tag_rsp_2 import ProfileDeleteTagRsp2
 from travelport.models.profile_history_1 import ProfileHistory1
 from travelport.models.profile_history_2 import ProfileHistory2
-from travelport.models.profile_history_retrieve_criteria_1 import ProfileHistoryRetrieveCriteria1
-from travelport.models.profile_history_retrieve_criteria_2 import ProfileHistoryRetrieveCriteria2
+from travelport.models.profile_history_retrieve_criteria_1 import (
+    ProfileHistoryRetrieveCriteria1,
+)
+from travelport.models.profile_history_retrieve_criteria_2 import (
+    ProfileHistoryRetrieveCriteria2,
+)
 from travelport.models.profile_link_1 import ProfileLink1
 from travelport.models.profile_link_2 import ProfileLink2
 from travelport.models.profile_link_add_1 import ProfileLinkAdd1
 from travelport.models.profile_link_add_2 import ProfileLinkAdd2
 from travelport.models.profile_link_delete_1 import ProfileLinkDelete1
 from travelport.models.profile_link_delete_2 import ProfileLinkDelete2
-from travelport.models.profile_modify_bridge_branches_port_type_service import ProfileModifyBridgeBranchesPortTypeService
-from travelport.models.profile_modify_bridge_branches_port_type_service_input import ProfileModifyBridgeBranchesPortTypeServiceInput
-from travelport.models.profile_modify_bridge_branches_port_type_service_output import ProfileModifyBridgeBranchesPortTypeServiceOutput
-from travelport.models.profile_modify_bridge_branches_req import ProfileModifyBridgeBranchesReq
-from travelport.models.profile_modify_bridge_branches_rsp import ProfileModifyBridgeBranchesRsp
+from travelport.models.profile_modify_bridge_branches_port_type_service import (
+    ProfileModifyBridgeBranchesPortTypeService,
+)
+from travelport.models.profile_modify_bridge_branches_port_type_service_input import (
+    ProfileModifyBridgeBranchesPortTypeServiceInput,
+)
+from travelport.models.profile_modify_bridge_branches_port_type_service_output import (
+    ProfileModifyBridgeBranchesPortTypeServiceOutput,
+)
+from travelport.models.profile_modify_bridge_branches_req import (
+    ProfileModifyBridgeBranchesReq,
+)
+from travelport.models.profile_modify_bridge_branches_rsp import (
+    ProfileModifyBridgeBranchesRsp,
+)
 from travelport.models.profile_modify_cmd_1 import ProfileModifyCmd1
 from travelport.models.profile_modify_cmd_2 import ProfileModifyCmd2
-from travelport.models.profile_modify_field_port_type_service import ProfileModifyFieldPortTypeService
-from travelport.models.profile_modify_field_port_type_service_input import ProfileModifyFieldPortTypeServiceInput
-from travelport.models.profile_modify_field_port_type_service_output import ProfileModifyFieldPortTypeServiceOutput
+from travelport.models.profile_modify_field_port_type_service import (
+    ProfileModifyFieldPortTypeService,
+)
+from travelport.models.profile_modify_field_port_type_service_input import (
+    ProfileModifyFieldPortTypeServiceInput,
+)
+from travelport.models.profile_modify_field_port_type_service_output import (
+    ProfileModifyFieldPortTypeServiceOutput,
+)
 from travelport.models.profile_modify_field_req_1 import ProfileModifyFieldReq1
 from travelport.models.profile_modify_field_req_2 import ProfileModifyFieldReq2
 from travelport.models.profile_modify_field_rsp_1 import ProfileModifyFieldRsp1
 from travelport.models.profile_modify_field_rsp_2 import ProfileModifyFieldRsp2
-from travelport.models.profile_modify_hierarchy_level_port_type_service import ProfileModifyHierarchyLevelPortTypeService
-from travelport.models.profile_modify_hierarchy_level_port_type_service_input import ProfileModifyHierarchyLevelPortTypeServiceInput
-from travelport.models.profile_modify_hierarchy_level_port_type_service_output import ProfileModifyHierarchyLevelPortTypeServiceOutput
-from travelport.models.profile_modify_hierarchy_level_req import ProfileModifyHierarchyLevelReq
-from travelport.models.profile_modify_hierarchy_level_rsp import ProfileModifyHierarchyLevelRsp
-from travelport.models.profile_modify_port_type_service import ProfileModifyPortTypeService
-from travelport.models.profile_modify_port_type_service_input import ProfileModifyPortTypeServiceInput
-from travelport.models.profile_modify_port_type_service_output import ProfileModifyPortTypeServiceOutput
+from travelport.models.profile_modify_hierarchy_level_port_type_service import (
+    ProfileModifyHierarchyLevelPortTypeService,
+)
+from travelport.models.profile_modify_hierarchy_level_port_type_service_input import (
+    ProfileModifyHierarchyLevelPortTypeServiceInput,
+)
+from travelport.models.profile_modify_hierarchy_level_port_type_service_output import (
+    ProfileModifyHierarchyLevelPortTypeServiceOutput,
+)
+from travelport.models.profile_modify_hierarchy_level_req import (
+    ProfileModifyHierarchyLevelReq,
+)
+from travelport.models.profile_modify_hierarchy_level_rsp import (
+    ProfileModifyHierarchyLevelRsp,
+)
+from travelport.models.profile_modify_port_type_service import (
+    ProfileModifyPortTypeService,
+)
+from travelport.models.profile_modify_port_type_service_input import (
+    ProfileModifyPortTypeServiceInput,
+)
+from travelport.models.profile_modify_port_type_service_output import (
+    ProfileModifyPortTypeServiceOutput,
+)
 from travelport.models.profile_modify_req_1 import ProfileModifyReq1
 from travelport.models.profile_modify_req_2 import ProfileModifyReq2
 from travelport.models.profile_modify_rsp_1 import ProfileModifyRsp1
 from travelport.models.profile_modify_rsp_2 import ProfileModifyRsp2
-from travelport.models.profile_modify_tags_port_type_service import ProfileModifyTagsPortTypeService
-from travelport.models.profile_modify_tags_port_type_service_input import ProfileModifyTagsPortTypeServiceInput
-from travelport.models.profile_modify_tags_port_type_service_output import ProfileModifyTagsPortTypeServiceOutput
+from travelport.models.profile_modify_tags_port_type_service import (
+    ProfileModifyTagsPortTypeService,
+)
+from travelport.models.profile_modify_tags_port_type_service_input import (
+    ProfileModifyTagsPortTypeServiceInput,
+)
+from travelport.models.profile_modify_tags_port_type_service_output import (
+    ProfileModifyTagsPortTypeServiceOutput,
+)
 from travelport.models.profile_modify_tags_req_1 import ProfileModifyTagsReq1
 from travelport.models.profile_modify_tags_req_2 import ProfileModifyTagsReq2
 from travelport.models.profile_modify_tags_rsp_1 import ProfileModifyTagsRsp1
 from travelport.models.profile_modify_tags_rsp_2 import ProfileModifyTagsRsp2
-from travelport.models.profile_modify_template_port_type_service import ProfileModifyTemplatePortTypeService
-from travelport.models.profile_modify_template_port_type_service_input import ProfileModifyTemplatePortTypeServiceInput
-from travelport.models.profile_modify_template_port_type_service_output import ProfileModifyTemplatePortTypeServiceOutput
-from travelport.models.profile_modify_template_req import ProfileModifyTemplateReq
-from travelport.models.profile_modify_template_rsp import ProfileModifyTemplateRsp
+from travelport.models.profile_modify_template_port_type_service import (
+    ProfileModifyTemplatePortTypeService,
+)
+from travelport.models.profile_modify_template_port_type_service_input import (
+    ProfileModifyTemplatePortTypeServiceInput,
+)
+from travelport.models.profile_modify_template_port_type_service_output import (
+    ProfileModifyTemplatePortTypeServiceOutput,
+)
+from travelport.models.profile_modify_template_req import (
+    ProfileModifyTemplateReq,
+)
+from travelport.models.profile_modify_template_rsp import (
+    ProfileModifyTemplateRsp,
+)
 from travelport.models.profile_parent_add_1 import ProfileParentAdd1
 from travelport.models.profile_parent_add_2 import ProfileParentAdd2
 from travelport.models.profile_parent_delete_1 import ProfileParentDelete1
 from travelport.models.profile_parent_delete_2 import ProfileParentDelete2
-from travelport.models.profile_parent_search_summary_1 import ProfileParentSearchSummary1
-from travelport.models.profile_parent_search_summary_2 import ProfileParentSearchSummary2
+from travelport.models.profile_parent_search_summary_1 import (
+    ProfileParentSearchSummary1,
+)
+from travelport.models.profile_parent_search_summary_2 import (
+    ProfileParentSearchSummary2,
+)
 from travelport.models.profile_parent_summary_1 import ProfileParentSummary1
 from travelport.models.profile_parent_summary_2 import ProfileParentSummary2
-from travelport.models.profile_retrieve_action_port_type_service import ProfileRetrieveActionPortTypeService
-from travelport.models.profile_retrieve_action_port_type_service_input import ProfileRetrieveActionPortTypeServiceInput
-from travelport.models.profile_retrieve_action_port_type_service_output import ProfileRetrieveActionPortTypeServiceOutput
-from travelport.models.profile_retrieve_action_req import ProfileRetrieveActionReq
-from travelport.models.profile_retrieve_action_rsp import ProfileRetrieveActionRsp
-from travelport.models.profile_retrieve_bridge_branches_port_type_service import ProfileRetrieveBridgeBranchesPortTypeService
-from travelport.models.profile_retrieve_bridge_branches_port_type_service_input import ProfileRetrieveBridgeBranchesPortTypeServiceInput
-from travelport.models.profile_retrieve_bridge_branches_port_type_service_output import ProfileRetrieveBridgeBranchesPortTypeServiceOutput
-from travelport.models.profile_retrieve_bridge_branches_req import ProfileRetrieveBridgeBranchesReq
-from travelport.models.profile_retrieve_bridge_branches_rsp import ProfileRetrieveBridgeBranchesRsp
-from travelport.models.profile_retrieve_hierarchy_port_type_service import ProfileRetrieveHierarchyPortTypeService
-from travelport.models.profile_retrieve_hierarchy_port_type_service_input import ProfileRetrieveHierarchyPortTypeServiceInput
-from travelport.models.profile_retrieve_hierarchy_port_type_service_output import ProfileRetrieveHierarchyPortTypeServiceOutput
-from travelport.models.profile_retrieve_hierarchy_req import ProfileRetrieveHierarchyReq
-from travelport.models.profile_retrieve_hierarchy_rsp import ProfileRetrieveHierarchyRsp
-from travelport.models.profile_retrieve_history_port_type_service import ProfileRetrieveHistoryPortTypeService
-from travelport.models.profile_retrieve_history_port_type_service_input import ProfileRetrieveHistoryPortTypeServiceInput
-from travelport.models.profile_retrieve_history_port_type_service_output import ProfileRetrieveHistoryPortTypeServiceOutput
-from travelport.models.profile_retrieve_history_req_1 import ProfileRetrieveHistoryReq1
-from travelport.models.profile_retrieve_history_req_2 import ProfileRetrieveHistoryReq2
-from travelport.models.profile_retrieve_history_rsp_1 import ProfileRetrieveHistoryRsp1
-from travelport.models.profile_retrieve_history_rsp_2 import ProfileRetrieveHistoryRsp2
-from travelport.models.profile_retrieve_parent_port_type_service import ProfileRetrieveParentPortTypeService
-from travelport.models.profile_retrieve_parent_port_type_service_input import ProfileRetrieveParentPortTypeServiceInput
-from travelport.models.profile_retrieve_parent_port_type_service_output import ProfileRetrieveParentPortTypeServiceOutput
-from travelport.models.profile_retrieve_parent_req import ProfileRetrieveParentReq
-from travelport.models.profile_retrieve_parent_rsp import ProfileRetrieveParentRsp
-from travelport.models.profile_retrieve_port_type_service import ProfileRetrievePortTypeService
-from travelport.models.profile_retrieve_port_type_service_input import ProfileRetrievePortTypeServiceInput
-from travelport.models.profile_retrieve_port_type_service_output import ProfileRetrievePortTypeServiceOutput
+from travelport.models.profile_retrieve_action_port_type_service import (
+    ProfileRetrieveActionPortTypeService,
+)
+from travelport.models.profile_retrieve_action_port_type_service_input import (
+    ProfileRetrieveActionPortTypeServiceInput,
+)
+from travelport.models.profile_retrieve_action_port_type_service_output import (
+    ProfileRetrieveActionPortTypeServiceOutput,
+)
+from travelport.models.profile_retrieve_action_req import (
+    ProfileRetrieveActionReq,
+)
+from travelport.models.profile_retrieve_action_rsp import (
+    ProfileRetrieveActionRsp,
+)
+from travelport.models.profile_retrieve_bridge_branches_port_type_service import (
+    ProfileRetrieveBridgeBranchesPortTypeService,
+)
+from travelport.models.profile_retrieve_bridge_branches_port_type_service_input import (
+    ProfileRetrieveBridgeBranchesPortTypeServiceInput,
+)
+from travelport.models.profile_retrieve_bridge_branches_port_type_service_output import (
+    ProfileRetrieveBridgeBranchesPortTypeServiceOutput,
+)
+from travelport.models.profile_retrieve_bridge_branches_req import (
+    ProfileRetrieveBridgeBranchesReq,
+)
+from travelport.models.profile_retrieve_bridge_branches_rsp import (
+    ProfileRetrieveBridgeBranchesRsp,
+)
+from travelport.models.profile_retrieve_hierarchy_port_type_service import (
+    ProfileRetrieveHierarchyPortTypeService,
+)
+from travelport.models.profile_retrieve_hierarchy_port_type_service_input import (
+    ProfileRetrieveHierarchyPortTypeServiceInput,
+)
+from travelport.models.profile_retrieve_hierarchy_port_type_service_output import (
+    ProfileRetrieveHierarchyPortTypeServiceOutput,
+)
+from travelport.models.profile_retrieve_hierarchy_req import (
+    ProfileRetrieveHierarchyReq,
+)
+from travelport.models.profile_retrieve_hierarchy_rsp import (
+    ProfileRetrieveHierarchyRsp,
+)
+from travelport.models.profile_retrieve_history_port_type_service import (
+    ProfileRetrieveHistoryPortTypeService,
+)
+from travelport.models.profile_retrieve_history_port_type_service_input import (
+    ProfileRetrieveHistoryPortTypeServiceInput,
+)
+from travelport.models.profile_retrieve_history_port_type_service_output import (
+    ProfileRetrieveHistoryPortTypeServiceOutput,
+)
+from travelport.models.profile_retrieve_history_req_1 import (
+    ProfileRetrieveHistoryReq1,
+)
+from travelport.models.profile_retrieve_history_req_2 import (
+    ProfileRetrieveHistoryReq2,
+)
+from travelport.models.profile_retrieve_history_rsp_1 import (
+    ProfileRetrieveHistoryRsp1,
+)
+from travelport.models.profile_retrieve_history_rsp_2 import (
+    ProfileRetrieveHistoryRsp2,
+)
+from travelport.models.profile_retrieve_parent_port_type_service import (
+    ProfileRetrieveParentPortTypeService,
+)
+from travelport.models.profile_retrieve_parent_port_type_service_input import (
+    ProfileRetrieveParentPortTypeServiceInput,
+)
+from travelport.models.profile_retrieve_parent_port_type_service_output import (
+    ProfileRetrieveParentPortTypeServiceOutput,
+)
+from travelport.models.profile_retrieve_parent_req import (
+    ProfileRetrieveParentReq,
+)
+from travelport.models.profile_retrieve_parent_rsp import (
+    ProfileRetrieveParentRsp,
+)
+from travelport.models.profile_retrieve_port_type_service import (
+    ProfileRetrievePortTypeService,
+)
+from travelport.models.profile_retrieve_port_type_service_input import (
+    ProfileRetrievePortTypeServiceInput,
+)
+from travelport.models.profile_retrieve_port_type_service_output import (
+    ProfileRetrievePortTypeServiceOutput,
+)
 from travelport.models.profile_retrieve_req_1 import ProfileRetrieveReq1
 from travelport.models.profile_retrieve_req_2 import ProfileRetrieveReq2
 from travelport.models.profile_retrieve_rsp_1 import ProfileRetrieveRsp1
 from travelport.models.profile_retrieve_rsp_2 import ProfileRetrieveRsp2
-from travelport.models.profile_retrieve_template_port_type_service import ProfileRetrieveTemplatePortTypeService
-from travelport.models.profile_retrieve_template_port_type_service_input import ProfileRetrieveTemplatePortTypeServiceInput
-from travelport.models.profile_retrieve_template_port_type_service_output import ProfileRetrieveTemplatePortTypeServiceOutput
-from travelport.models.profile_retrieve_template_req import ProfileRetrieveTemplateReq
-from travelport.models.profile_retrieve_template_rsp import ProfileRetrieveTemplateRsp
+from travelport.models.profile_retrieve_template_port_type_service import (
+    ProfileRetrieveTemplatePortTypeService,
+)
+from travelport.models.profile_retrieve_template_port_type_service_input import (
+    ProfileRetrieveTemplatePortTypeServiceInput,
+)
+from travelport.models.profile_retrieve_template_port_type_service_output import (
+    ProfileRetrieveTemplatePortTypeServiceOutput,
+)
+from travelport.models.profile_retrieve_template_req import (
+    ProfileRetrieveTemplateReq,
+)
+from travelport.models.profile_retrieve_template_rsp import (
+    ProfileRetrieveTemplateRsp,
+)
 from travelport.models.profile_search_1 import ProfileSearch1
 from travelport.models.profile_search_2 import ProfileSearch2
-from travelport.models.profile_search_action_port_type_service import ProfileSearchActionPortTypeService
-from travelport.models.profile_search_action_port_type_service_input import ProfileSearchActionPortTypeServiceInput
-from travelport.models.profile_search_action_port_type_service_output import ProfileSearchActionPortTypeServiceOutput
+from travelport.models.profile_search_action_port_type_service import (
+    ProfileSearchActionPortTypeService,
+)
+from travelport.models.profile_search_action_port_type_service_input import (
+    ProfileSearchActionPortTypeServiceInput,
+)
+from travelport.models.profile_search_action_port_type_service_output import (
+    ProfileSearchActionPortTypeServiceOutput,
+)
 from travelport.models.profile_search_action_req import ProfileSearchActionReq
 from travelport.models.profile_search_action_rsp import ProfileSearchActionRsp
-from travelport.models.profile_search_field_port_type_service import ProfileSearchFieldPortTypeService
-from travelport.models.profile_search_field_port_type_service_input import ProfileSearchFieldPortTypeServiceInput
-from travelport.models.profile_search_field_port_type_service_output import ProfileSearchFieldPortTypeServiceOutput
+from travelport.models.profile_search_field_port_type_service import (
+    ProfileSearchFieldPortTypeService,
+)
+from travelport.models.profile_search_field_port_type_service_input import (
+    ProfileSearchFieldPortTypeServiceInput,
+)
+from travelport.models.profile_search_field_port_type_service_output import (
+    ProfileSearchFieldPortTypeServiceOutput,
+)
 from travelport.models.profile_search_field_req_1 import ProfileSearchFieldReq1
 from travelport.models.profile_search_field_req_2 import ProfileSearchFieldReq2
 from travelport.models.profile_search_field_rsp_1 import ProfileSearchFieldRsp1
 from travelport.models.profile_search_field_rsp_2 import ProfileSearchFieldRsp2
-from travelport.models.profile_search_modifiers_1 import ProfileSearchModifiers1
-from travelport.models.profile_search_modifiers_2 import ProfileSearchModifiers2
-from travelport.models.profile_search_port_type_service import ProfileSearchPortTypeService
-from travelport.models.profile_search_port_type_service_input import ProfileSearchPortTypeServiceInput
-from travelport.models.profile_search_port_type_service_output import ProfileSearchPortTypeServiceOutput
+from travelport.models.profile_search_modifiers_1 import (
+    ProfileSearchModifiers1,
+)
+from travelport.models.profile_search_modifiers_2 import (
+    ProfileSearchModifiers2,
+)
+from travelport.models.profile_search_port_type_service import (
+    ProfileSearchPortTypeService,
+)
+from travelport.models.profile_search_port_type_service_input import (
+    ProfileSearchPortTypeServiceInput,
+)
+from travelport.models.profile_search_port_type_service_output import (
+    ProfileSearchPortTypeServiceOutput,
+)
 from travelport.models.profile_search_req_1 import ProfileSearchReq1
 from travelport.models.profile_search_req_2 import ProfileSearchReq2
 from travelport.models.profile_search_rsp_1 import ProfileSearchRsp1
 from travelport.models.profile_search_rsp_2 import ProfileSearchRsp2
-from travelport.models.profile_search_tags_port_type_service import ProfileSearchTagsPortTypeService
-from travelport.models.profile_search_tags_port_type_service_input import ProfileSearchTagsPortTypeServiceInput
-from travelport.models.profile_search_tags_port_type_service_output import ProfileSearchTagsPortTypeServiceOutput
+from travelport.models.profile_search_tags_port_type_service import (
+    ProfileSearchTagsPortTypeService,
+)
+from travelport.models.profile_search_tags_port_type_service_input import (
+    ProfileSearchTagsPortTypeServiceInput,
+)
+from travelport.models.profile_search_tags_port_type_service_output import (
+    ProfileSearchTagsPortTypeServiceOutput,
+)
 from travelport.models.profile_search_tags_req_1 import ProfileSearchTagsReq1
 from travelport.models.profile_search_tags_req_2 import ProfileSearchTagsReq2
 from travelport.models.profile_search_tags_rsp_1 import ProfileSearchTagsRsp1
@@ -2144,8 +3234,12 @@ from travelport.models.profile_status_update_1 import ProfileStatusUpdate1
 from travelport.models.profile_status_update_2 import ProfileStatusUpdate2
 from travelport.models.profile_summary_1 import ProfileSummary1
 from travelport.models.profile_summary_2 import ProfileSummary2
-from travelport.models.profile_summary_error_info_1 import ProfileSummaryErrorInfo1
-from travelport.models.profile_summary_error_info_2 import ProfileSummaryErrorInfo2
+from travelport.models.profile_summary_error_info_1 import (
+    ProfileSummaryErrorInfo1,
+)
+from travelport.models.profile_summary_error_info_2 import (
+    ProfileSummaryErrorInfo2,
+)
 from travelport.models.profile_template import ProfileTemplate
 from travelport.models.profile_template_summary import ProfileTemplateSummary
 from travelport.models.profile_type_search_1 import ProfileTypeSearch1
@@ -2157,8 +3251,12 @@ from travelport.models.promotion_code import PromotionCode
 from travelport.models.property_description import PropertyDescription
 from travelport.models.proprietary_data_1 import ProprietaryData1
 from travelport.models.proprietary_data_2 import ProprietaryData2
-from travelport.models.proprietary_data_proprietary_data_type_1 import ProprietaryDataProprietaryDataType1
-from travelport.models.proprietary_data_proprietary_data_type_2 import ProprietaryDataProprietaryDataType2
+from travelport.models.proprietary_data_proprietary_data_type_1 import (
+    ProprietaryDataProprietaryDataType1,
+)
+from travelport.models.proprietary_data_proprietary_data_type_2 import (
+    ProprietaryDataProprietaryDataType2,
+)
 from travelport.models.provider_1 import Provider1
 from travelport.models.provider_2 import Provider2
 from travelport.models.provider_3 import Provider3
@@ -2173,38 +3271,100 @@ from travelport.models.provider_arnksegment_5 import ProviderArnksegment5
 from travelport.models.provider_arnksegment_6 import ProviderArnksegment6
 from travelport.models.provider_info_1 import ProviderInfo1
 from travelport.models.provider_info_2 import ProviderInfo2
-from travelport.models.provider_reservation_detail_1 import ProviderReservationDetail1
-from travelport.models.provider_reservation_detail_2 import ProviderReservationDetail2
-from travelport.models.provider_reservation_detail_3 import ProviderReservationDetail3
-from travelport.models.provider_reservation_detail_4 import ProviderReservationDetail4
-from travelport.models.provider_reservation_detail_5 import ProviderReservationDetail5
-from travelport.models.provider_reservation_detail_6 import ProviderReservationDetail6
-from travelport.models.provider_reservation_details import ProviderReservationDetails
-from travelport.models.provider_reservation_display_details_list import ProviderReservationDisplayDetailsList
-from travelport.models.provider_reservation_display_details_req import ProviderReservationDisplayDetailsReq
-from travelport.models.provider_reservation_display_details_rsp import ProviderReservationDisplayDetailsRsp
-from travelport.models.provider_reservation_display_service_port_type_service import ProviderReservationDisplayServicePortTypeService
-from travelport.models.provider_reservation_display_service_port_type_service_input import ProviderReservationDisplayServicePortTypeServiceInput
-from travelport.models.provider_reservation_display_service_port_type_service_output import ProviderReservationDisplayServicePortTypeServiceOutput
-from travelport.models.provider_reservation_divide_req import ProviderReservationDivideReq
-from travelport.models.provider_reservation_divide_req_create_child_universal_record import ProviderReservationDivideReqCreateChildUniversalRecord
-from travelport.models.provider_reservation_divide_rsp import ProviderReservationDivideRsp
-from travelport.models.provider_reservation_divide_service_port_type_service import ProviderReservationDivideServicePortTypeService
-from travelport.models.provider_reservation_divide_service_port_type_service_input import ProviderReservationDivideServicePortTypeServiceInput
-from travelport.models.provider_reservation_divide_service_port_type_service_output import ProviderReservationDivideServicePortTypeServiceOutput
+from travelport.models.provider_reservation_detail_1 import (
+    ProviderReservationDetail1,
+)
+from travelport.models.provider_reservation_detail_2 import (
+    ProviderReservationDetail2,
+)
+from travelport.models.provider_reservation_detail_3 import (
+    ProviderReservationDetail3,
+)
+from travelport.models.provider_reservation_detail_4 import (
+    ProviderReservationDetail4,
+)
+from travelport.models.provider_reservation_detail_5 import (
+    ProviderReservationDetail5,
+)
+from travelport.models.provider_reservation_detail_6 import (
+    ProviderReservationDetail6,
+)
+from travelport.models.provider_reservation_details import (
+    ProviderReservationDetails,
+)
+from travelport.models.provider_reservation_display_details_list import (
+    ProviderReservationDisplayDetailsList,
+)
+from travelport.models.provider_reservation_display_details_req import (
+    ProviderReservationDisplayDetailsReq,
+)
+from travelport.models.provider_reservation_display_details_rsp import (
+    ProviderReservationDisplayDetailsRsp,
+)
+from travelport.models.provider_reservation_display_service_port_type_service import (
+    ProviderReservationDisplayServicePortTypeService,
+)
+from travelport.models.provider_reservation_display_service_port_type_service_input import (
+    ProviderReservationDisplayServicePortTypeServiceInput,
+)
+from travelport.models.provider_reservation_display_service_port_type_service_output import (
+    ProviderReservationDisplayServicePortTypeServiceOutput,
+)
+from travelport.models.provider_reservation_divide_req import (
+    ProviderReservationDivideReq,
+)
+from travelport.models.provider_reservation_divide_req_create_child_universal_record import (
+    ProviderReservationDivideReqCreateChildUniversalRecord,
+)
+from travelport.models.provider_reservation_divide_rsp import (
+    ProviderReservationDivideRsp,
+)
+from travelport.models.provider_reservation_divide_service_port_type_service import (
+    ProviderReservationDivideServicePortTypeService,
+)
+from travelport.models.provider_reservation_divide_service_port_type_service_input import (
+    ProviderReservationDivideServicePortTypeServiceInput,
+)
+from travelport.models.provider_reservation_divide_service_port_type_service_output import (
+    ProviderReservationDivideServicePortTypeServiceOutput,
+)
 from travelport.models.provider_reservation_info import ProviderReservationInfo
-from travelport.models.provider_reservation_info_ref_1 import ProviderReservationInfoRef1
-from travelport.models.provider_reservation_info_ref_2 import ProviderReservationInfoRef2
-from travelport.models.provider_reservation_info_ref_3 import ProviderReservationInfoRef3
-from travelport.models.provider_reservation_info_ref_4 import ProviderReservationInfoRef4
-from travelport.models.provider_reservation_info_ref_5 import ProviderReservationInfoRef5
-from travelport.models.provider_reservation_info_ref_6 import ProviderReservationInfoRef6
-from travelport.models.provider_reservation_info_ref_7 import ProviderReservationInfoRef7
-from travelport.models.provider_reservation_search_modifiers import ProviderReservationSearchModifiers
-from travelport.models.provider_reservation_search_result import ProviderReservationSearchResult
-from travelport.models.provider_reservation_status import ProviderReservationStatus
-from travelport.models.provisioning_code_profile_type_1 import ProvisioningCodeProfileType1
-from travelport.models.provisioning_code_profile_type_2 import ProvisioningCodeProfileType2
+from travelport.models.provider_reservation_info_ref_1 import (
+    ProviderReservationInfoRef1,
+)
+from travelport.models.provider_reservation_info_ref_2 import (
+    ProviderReservationInfoRef2,
+)
+from travelport.models.provider_reservation_info_ref_3 import (
+    ProviderReservationInfoRef3,
+)
+from travelport.models.provider_reservation_info_ref_4 import (
+    ProviderReservationInfoRef4,
+)
+from travelport.models.provider_reservation_info_ref_5 import (
+    ProviderReservationInfoRef5,
+)
+from travelport.models.provider_reservation_info_ref_6 import (
+    ProviderReservationInfoRef6,
+)
+from travelport.models.provider_reservation_info_ref_7 import (
+    ProviderReservationInfoRef7,
+)
+from travelport.models.provider_reservation_search_modifiers import (
+    ProviderReservationSearchModifiers,
+)
+from travelport.models.provider_reservation_search_result import (
+    ProviderReservationSearchResult,
+)
+from travelport.models.provider_reservation_status import (
+    ProviderReservationStatus,
+)
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
+)
+from travelport.models.provisioning_code_profile_type_2 import (
+    ProvisioningCodeProfileType2,
+)
 from travelport.models.pseudo_city_code_1 import PseudoCityCode1
 from travelport.models.pseudo_city_code_2 import PseudoCityCode2
 from travelport.models.pseudo_city_code_3 import PseudoCityCode3
@@ -2222,7 +3382,9 @@ from travelport.models.queue_place_3 import QueuePlace3
 from travelport.models.queue_place_4 import QueuePlace4
 from travelport.models.queue_place_5 import QueuePlace5
 from travelport.models.queue_place_6 import QueuePlace6
-from travelport.models.queue_pseudo_city_selector import QueuePseudoCitySelector
+from travelport.models.queue_pseudo_city_selector import (
+    QueuePseudoCitySelector,
+)
 from travelport.models.queue_selector_1 import QueueSelector1
 from travelport.models.queue_selector_2 import QueueSelector2
 from travelport.models.queue_selector_3 import QueueSelector3
@@ -2233,25 +3395,57 @@ from travelport.models.queue_selector_type import QueueSelectorType
 from travelport.models.quick_response import QuickResponse
 from travelport.models.rail_auto_seat_assignment import RailAutoSeatAssignment
 from travelport.models.rail_avail_info import RailAvailInfo
-from travelport.models.rail_availability_search_port_type_service import RailAvailabilitySearchPortTypeService
-from travelport.models.rail_availability_search_port_type_service_input import RailAvailabilitySearchPortTypeServiceInput
-from travelport.models.rail_availability_search_port_type_service_output import RailAvailabilitySearchPortTypeServiceOutput
-from travelport.models.rail_availability_search_req import RailAvailabilitySearchReq
-from travelport.models.rail_availability_search_rsp import RailAvailabilitySearchRsp
+from travelport.models.rail_availability_search_port_type_service import (
+    RailAvailabilitySearchPortTypeService,
+)
+from travelport.models.rail_availability_search_port_type_service_input import (
+    RailAvailabilitySearchPortTypeServiceInput,
+)
+from travelport.models.rail_availability_search_port_type_service_output import (
+    RailAvailabilitySearchPortTypeServiceOutput,
+)
+from travelport.models.rail_availability_search_req import (
+    RailAvailabilitySearchReq,
+)
+from travelport.models.rail_availability_search_rsp import (
+    RailAvailabilitySearchRsp,
+)
 from travelport.models.rail_booking_info import RailBookingInfo
 from travelport.models.rail_coach_details import RailCoachDetails
-from travelport.models.rail_create_reservation_port_type_service import RailCreateReservationPortTypeService
-from travelport.models.rail_create_reservation_port_type_service_input import RailCreateReservationPortTypeServiceInput
-from travelport.models.rail_create_reservation_port_type_service_output import RailCreateReservationPortTypeServiceOutput
-from travelport.models.rail_create_reservation_req import RailCreateReservationReq
-from travelport.models.rail_create_reservation_rsp import RailCreateReservationRsp
-from travelport.models.rail_exchange_create_reservation_port_type_service import RailExchangeCreateReservationPortTypeService
-from travelport.models.rail_exchange_create_reservation_port_type_service_input import RailExchangeCreateReservationPortTypeServiceInput
-from travelport.models.rail_exchange_create_reservation_port_type_service_output import RailExchangeCreateReservationPortTypeServiceOutput
+from travelport.models.rail_create_reservation_port_type_service import (
+    RailCreateReservationPortTypeService,
+)
+from travelport.models.rail_create_reservation_port_type_service_input import (
+    RailCreateReservationPortTypeServiceInput,
+)
+from travelport.models.rail_create_reservation_port_type_service_output import (
+    RailCreateReservationPortTypeServiceOutput,
+)
+from travelport.models.rail_create_reservation_req import (
+    RailCreateReservationReq,
+)
+from travelport.models.rail_create_reservation_rsp import (
+    RailCreateReservationRsp,
+)
+from travelport.models.rail_exchange_create_reservation_port_type_service import (
+    RailExchangeCreateReservationPortTypeService,
+)
+from travelport.models.rail_exchange_create_reservation_port_type_service_input import (
+    RailExchangeCreateReservationPortTypeServiceInput,
+)
+from travelport.models.rail_exchange_create_reservation_port_type_service_output import (
+    RailExchangeCreateReservationPortTypeServiceOutput,
+)
 from travelport.models.rail_exchange_info import RailExchangeInfo
-from travelport.models.rail_exchange_quote_port_type_service import RailExchangeQuotePortTypeService
-from travelport.models.rail_exchange_quote_port_type_service_input import RailExchangeQuotePortTypeServiceInput
-from travelport.models.rail_exchange_quote_port_type_service_output import RailExchangeQuotePortTypeServiceOutput
+from travelport.models.rail_exchange_quote_port_type_service import (
+    RailExchangeQuotePortTypeService,
+)
+from travelport.models.rail_exchange_quote_port_type_service_input import (
+    RailExchangeQuotePortTypeServiceInput,
+)
+from travelport.models.rail_exchange_quote_port_type_service_output import (
+    RailExchangeQuotePortTypeServiceOutput,
+)
 from travelport.models.rail_exchange_quote_req import RailExchangeQuoteReq
 from travelport.models.rail_exchange_quote_rsp import RailExchangeQuoteRsp
 from travelport.models.rail_exchange_req import RailExchangeReq
@@ -2284,16 +3478,30 @@ from travelport.models.rail_pricing_info import RailPricingInfo
 from travelport.models.rail_pricing_modifiers import RailPricingModifiers
 from travelport.models.rail_pricing_solution import RailPricingSolution
 from travelport.models.rail_refund_info import RailRefundInfo
-from travelport.models.rail_refund_port_type_service import RailRefundPortTypeService
-from travelport.models.rail_refund_port_type_service_input import RailRefundPortTypeServiceInput
-from travelport.models.rail_refund_port_type_service_output import RailRefundPortTypeServiceOutput
-from travelport.models.rail_refund_quote_port_type_service import RailRefundQuotePortTypeService
-from travelport.models.rail_refund_quote_port_type_service_input import RailRefundQuotePortTypeServiceInput
-from travelport.models.rail_refund_quote_port_type_service_output import RailRefundQuotePortTypeServiceOutput
+from travelport.models.rail_refund_port_type_service import (
+    RailRefundPortTypeService,
+)
+from travelport.models.rail_refund_port_type_service_input import (
+    RailRefundPortTypeServiceInput,
+)
+from travelport.models.rail_refund_port_type_service_output import (
+    RailRefundPortTypeServiceOutput,
+)
+from travelport.models.rail_refund_quote_port_type_service import (
+    RailRefundQuotePortTypeService,
+)
+from travelport.models.rail_refund_quote_port_type_service_input import (
+    RailRefundQuotePortTypeServiceInput,
+)
+from travelport.models.rail_refund_quote_port_type_service_output import (
+    RailRefundQuotePortTypeServiceOutput,
+)
 from travelport.models.rail_refund_quote_req import RailRefundQuoteReq
 from travelport.models.rail_refund_quote_rsp import RailRefundQuoteRsp
 from travelport.models.rail_refund_req import RailRefundReq
-from travelport.models.rail_refund_req_refund_option import RailRefundReqRefundOption
+from travelport.models.rail_refund_req_refund_option import (
+    RailRefundReqRefundOption,
+)
 from travelport.models.rail_refund_rsp import RailRefundRsp
 from travelport.models.rail_reservation import RailReservation
 from travelport.models.rail_reservation_criteria import RailReservationCriteria
@@ -2304,51 +3512,99 @@ from travelport.models.rail_seat_assignment_3 import RailSeatAssignment3
 from travelport.models.rail_seat_assignment_4 import RailSeatAssignment4
 from travelport.models.rail_seat_assignment_5 import RailSeatAssignment5
 from travelport.models.rail_seat_assignment_6 import RailSeatAssignment6
-from travelport.models.rail_seat_map_port_type_service import RailSeatMapPortTypeService
-from travelport.models.rail_seat_map_port_type_service_input import RailSeatMapPortTypeServiceInput
-from travelport.models.rail_seat_map_port_type_service_output import RailSeatMapPortTypeServiceOutput
+from travelport.models.rail_seat_map_port_type_service import (
+    RailSeatMapPortTypeService,
+)
+from travelport.models.rail_seat_map_port_type_service_input import (
+    RailSeatMapPortTypeServiceInput,
+)
+from travelport.models.rail_seat_map_port_type_service_output import (
+    RailSeatMapPortTypeServiceOutput,
+)
 from travelport.models.rail_seat_map_req import RailSeatMapReq
 from travelport.models.rail_seat_map_rsp import RailSeatMapRsp
 from travelport.models.rail_segment import RailSegment
 from travelport.models.rail_segment_info import RailSegmentInfo
 from travelport.models.rail_segment_list import RailSegmentList
 from travelport.models.rail_segment_ref import RailSegmentRef
-from travelport.models.rail_solution_changed_info import RailSolutionChangedInfo
-from travelport.models.rail_solution_changed_info_reason_code import RailSolutionChangedInfoReasonCode
-from travelport.models.rail_specific_seat_assignment import RailSpecificSeatAssignment
-from travelport.models.rail_station_location_modifiers import RailStationLocationModifiers
+from travelport.models.rail_solution_changed_info import (
+    RailSolutionChangedInfo,
+)
+from travelport.models.rail_solution_changed_info_reason_code import (
+    RailSolutionChangedInfoReasonCode,
+)
+from travelport.models.rail_specific_seat_assignment import (
+    RailSpecificSeatAssignment,
+)
+from travelport.models.rail_station_location_modifiers import (
+    RailStationLocationModifiers,
+)
 from travelport.models.rail_supplier import RailSupplier
 from travelport.models.rail_ticket_info import RailTicketInfo
 from travelport.models.rail_update import RailUpdate
 from travelport.models.rate_inclusions import RateInclusions
 from travelport.models.rate_info import RateInfo
 from travelport.models.rate_match_indicator import RateMatchIndicator
-from travelport.models.rate_match_indicator_status import RateMatchIndicatorStatus
+from travelport.models.rate_match_indicator_status import (
+    RateMatchIndicatorStatus,
+)
 from travelport.models.rate_match_indicator_type import RateMatchIndicatorType
 from travelport.models.rate_modifiers import RateModifiers
 from travelport.models.rates_and_dates import RatesAndDates
 from travelport.models.rating_range import RatingRange
 from travelport.models.record_identifier import RecordIdentifier
 from travelport.models.reference_data_item import ReferenceDataItem
-from travelport.models.reference_data_item_update import ReferenceDataItemUpdate
-from travelport.models.reference_data_lookup_port_type_service import ReferenceDataLookupPortTypeService
-from travelport.models.reference_data_lookup_port_type_service_input import ReferenceDataLookupPortTypeServiceInput
-from travelport.models.reference_data_lookup_port_type_service_output import ReferenceDataLookupPortTypeServiceOutput
-from travelport.models.reference_data_retrieve_port_type_service import ReferenceDataRetrievePortTypeService
-from travelport.models.reference_data_retrieve_port_type_service_input import ReferenceDataRetrievePortTypeServiceInput
-from travelport.models.reference_data_retrieve_port_type_service_output import ReferenceDataRetrievePortTypeServiceOutput
-from travelport.models.reference_data_retrieve_req import ReferenceDataRetrieveReq
-from travelport.models.reference_data_retrieve_rsp import ReferenceDataRetrieveRsp
-from travelport.models.reference_data_search_item import ReferenceDataSearchItem
-from travelport.models.reference_data_search_item_type import ReferenceDataSearchItemType
-from travelport.models.reference_data_search_modifiers import ReferenceDataSearchModifiers
+from travelport.models.reference_data_item_update import (
+    ReferenceDataItemUpdate,
+)
+from travelport.models.reference_data_lookup_port_type_service import (
+    ReferenceDataLookupPortTypeService,
+)
+from travelport.models.reference_data_lookup_port_type_service_input import (
+    ReferenceDataLookupPortTypeServiceInput,
+)
+from travelport.models.reference_data_lookup_port_type_service_output import (
+    ReferenceDataLookupPortTypeServiceOutput,
+)
+from travelport.models.reference_data_retrieve_port_type_service import (
+    ReferenceDataRetrievePortTypeService,
+)
+from travelport.models.reference_data_retrieve_port_type_service_input import (
+    ReferenceDataRetrievePortTypeServiceInput,
+)
+from travelport.models.reference_data_retrieve_port_type_service_output import (
+    ReferenceDataRetrievePortTypeServiceOutput,
+)
+from travelport.models.reference_data_retrieve_req import (
+    ReferenceDataRetrieveReq,
+)
+from travelport.models.reference_data_retrieve_rsp import (
+    ReferenceDataRetrieveRsp,
+)
+from travelport.models.reference_data_search_item import (
+    ReferenceDataSearchItem,
+)
+from travelport.models.reference_data_search_item_type import (
+    ReferenceDataSearchItemType,
+)
+from travelport.models.reference_data_search_modifiers import (
+    ReferenceDataSearchModifiers,
+)
 from travelport.models.reference_data_search_req import ReferenceDataSearchReq
 from travelport.models.reference_data_search_rsp import ReferenceDataSearchRsp
-from travelport.models.reference_data_update_port_type_service import ReferenceDataUpdatePortTypeService
-from travelport.models.reference_data_update_port_type_service_input import ReferenceDataUpdatePortTypeServiceInput
-from travelport.models.reference_data_update_port_type_service_output import ReferenceDataUpdatePortTypeServiceOutput
+from travelport.models.reference_data_update_port_type_service import (
+    ReferenceDataUpdatePortTypeService,
+)
+from travelport.models.reference_data_update_port_type_service_input import (
+    ReferenceDataUpdatePortTypeServiceInput,
+)
+from travelport.models.reference_data_update_port_type_service_output import (
+    ReferenceDataUpdatePortTypeServiceOutput,
+)
 from travelport.models.reference_data_update_req import ReferenceDataUpdateReq
-from travelport.models.reference_data_update_req_action import ReferenceDataUpdateReqAction
+from travelport.models.reference_data_update_req_action import (
+    ReferenceDataUpdateReqAction,
+)
 from travelport.models.reference_data_update_rsp import ReferenceDataUpdateRsp
 from travelport.models.reference_point_1 import ReferencePoint1
 from travelport.models.reference_point_2 import ReferencePoint2
@@ -2372,18 +3628,28 @@ from travelport.models.remark_5 import Remark5
 from travelport.models.remark_6 import Remark6
 from travelport.models.remark_7 import Remark7
 from travelport.models.remark_8 import Remark8
-from travelport.models.report_retrieve_port_type_service import ReportRetrievePortTypeService
-from travelport.models.report_retrieve_port_type_service_input import ReportRetrievePortTypeServiceInput
-from travelport.models.report_retrieve_port_type_service_output import ReportRetrievePortTypeServiceOutput
+from travelport.models.report_retrieve_port_type_service import (
+    ReportRetrievePortTypeService,
+)
+from travelport.models.report_retrieve_port_type_service_input import (
+    ReportRetrievePortTypeServiceInput,
+)
+from travelport.models.report_retrieve_port_type_service_output import (
+    ReportRetrievePortTypeServiceOutput,
+)
 from travelport.models.repricing_modifiers import RepricingModifiers
-from travelport.models.repricing_modifiers_flight_type import RepricingModifiersFlightType
+from travelport.models.repricing_modifiers_flight_type import (
+    RepricingModifiersFlightType,
+)
 from travelport.models.request_key_mappings_1 import RequestKeyMappings1
 from travelport.models.request_key_mappings_2 import RequestKeyMappings2
 from travelport.models.request_key_mappings_3 import RequestKeyMappings3
 from travelport.models.request_key_mappings_4 import RequestKeyMappings4
 from travelport.models.request_key_mappings_5 import RequestKeyMappings5
 from travelport.models.request_key_mappings_6 import RequestKeyMappings6
-from travelport.models.request_reference_data_item import RequestReferenceDataItem
+from travelport.models.request_reference_data_item import (
+    RequestReferenceDataItem,
+)
 from travelport.models.requested_hotel_details import RequestedHotelDetails
 from travelport.models.required_field_1 import RequiredField1
 from travelport.models.required_field_2 import RequiredField2
@@ -2472,31 +3738,63 @@ from travelport.models.saved_trip_activity import SavedTripActivity
 from travelport.models.saved_trip_activity_type import SavedTripActivityType
 from travelport.models.saved_trip_create_req import SavedTripCreateReq
 from travelport.models.saved_trip_create_rsp import SavedTripCreateRsp
-from travelport.models.saved_trip_create_service_port_type_service import SavedTripCreateServicePortTypeService
-from travelport.models.saved_trip_create_service_port_type_service_input import SavedTripCreateServicePortTypeServiceInput
-from travelport.models.saved_trip_create_service_port_type_service_output import SavedTripCreateServicePortTypeServiceOutput
+from travelport.models.saved_trip_create_service_port_type_service import (
+    SavedTripCreateServicePortTypeService,
+)
+from travelport.models.saved_trip_create_service_port_type_service_input import (
+    SavedTripCreateServicePortTypeServiceInput,
+)
+from travelport.models.saved_trip_create_service_port_type_service_output import (
+    SavedTripCreateServicePortTypeServiceOutput,
+)
 from travelport.models.saved_trip_delete_req import SavedTripDeleteReq
 from travelport.models.saved_trip_delete_rsp import SavedTripDeleteRsp
-from travelport.models.saved_trip_delete_service_port_type_service import SavedTripDeleteServicePortTypeService
-from travelport.models.saved_trip_delete_service_port_type_service_input import SavedTripDeleteServicePortTypeServiceInput
-from travelport.models.saved_trip_delete_service_port_type_service_output import SavedTripDeleteServicePortTypeServiceOutput
+from travelport.models.saved_trip_delete_service_port_type_service import (
+    SavedTripDeleteServicePortTypeService,
+)
+from travelport.models.saved_trip_delete_service_port_type_service_input import (
+    SavedTripDeleteServicePortTypeServiceInput,
+)
+from travelport.models.saved_trip_delete_service_port_type_service_output import (
+    SavedTripDeleteServicePortTypeServiceOutput,
+)
 from travelport.models.saved_trip_modify_req import SavedTripModifyReq
 from travelport.models.saved_trip_modify_rsp import SavedTripModifyRsp
-from travelport.models.saved_trip_modify_service_port_type_service import SavedTripModifyServicePortTypeService
-from travelport.models.saved_trip_modify_service_port_type_service_input import SavedTripModifyServicePortTypeServiceInput
-from travelport.models.saved_trip_modify_service_port_type_service_output import SavedTripModifyServicePortTypeServiceOutput
+from travelport.models.saved_trip_modify_service_port_type_service import (
+    SavedTripModifyServicePortTypeService,
+)
+from travelport.models.saved_trip_modify_service_port_type_service_input import (
+    SavedTripModifyServicePortTypeServiceInput,
+)
+from travelport.models.saved_trip_modify_service_port_type_service_output import (
+    SavedTripModifyServicePortTypeServiceOutput,
+)
 from travelport.models.saved_trip_retrieve_req import SavedTripRetrieveReq
 from travelport.models.saved_trip_retrieve_rsp import SavedTripRetrieveRsp
-from travelport.models.saved_trip_retrieve_service_port_type_service import SavedTripRetrieveServicePortTypeService
-from travelport.models.saved_trip_retrieve_service_port_type_service_input import SavedTripRetrieveServicePortTypeServiceInput
-from travelport.models.saved_trip_retrieve_service_port_type_service_output import SavedTripRetrieveServicePortTypeServiceOutput
-from travelport.models.saved_trip_search_modifiers import SavedTripSearchModifiers
+from travelport.models.saved_trip_retrieve_service_port_type_service import (
+    SavedTripRetrieveServicePortTypeService,
+)
+from travelport.models.saved_trip_retrieve_service_port_type_service_input import (
+    SavedTripRetrieveServicePortTypeServiceInput,
+)
+from travelport.models.saved_trip_retrieve_service_port_type_service_output import (
+    SavedTripRetrieveServicePortTypeServiceOutput,
+)
+from travelport.models.saved_trip_search_modifiers import (
+    SavedTripSearchModifiers,
+)
 from travelport.models.saved_trip_search_req import SavedTripSearchReq
 from travelport.models.saved_trip_search_result import SavedTripSearchResult
 from travelport.models.saved_trip_search_rsp import SavedTripSearchRsp
-from travelport.models.saved_trip_search_service_port_type_service import SavedTripSearchServicePortTypeService
-from travelport.models.saved_trip_search_service_port_type_service_input import SavedTripSearchServicePortTypeServiceInput
-from travelport.models.saved_trip_search_service_port_type_service_output import SavedTripSearchServicePortTypeServiceOutput
+from travelport.models.saved_trip_search_service_port_type_service import (
+    SavedTripSearchServicePortTypeService,
+)
+from travelport.models.saved_trip_search_service_port_type_service_input import (
+    SavedTripSearchServicePortTypeServiceInput,
+)
+from travelport.models.saved_trip_search_service_port_type_service_output import (
+    SavedTripSearchServicePortTypeServiceOutput,
+)
 from travelport.models.schedule_search_req import ScheduleSearchReq
 from travelport.models.schedule_search_rsp import ScheduleSearchRsp
 from travelport.models.search_account import SearchAccount
@@ -2516,25 +3814,51 @@ from travelport.models.search_passenger_5 import SearchPassenger5
 from travelport.models.search_passenger_6 import SearchPassenger6
 from travelport.models.search_priority import SearchPriority
 from travelport.models.search_rail_leg import SearchRailLeg
-from travelport.models.search_specific_air_segment import SearchSpecificAirSegment
+from travelport.models.search_specific_air_segment import (
+    SearchSpecificAirSegment,
+)
 from travelport.models.search_ticketing_1 import SearchTicketing1
 from travelport.models.search_ticketing_2 import SearchTicketing2
 from travelport.models.search_ticketing_3 import SearchTicketing3
 from travelport.models.search_ticketing_4 import SearchTicketing4
 from travelport.models.search_ticketing_5 import SearchTicketing5
 from travelport.models.search_ticketing_6 import SearchTicketing6
-from travelport.models.search_ticketing_reservation_status_1 import SearchTicketingReservationStatus1
-from travelport.models.search_ticketing_reservation_status_2 import SearchTicketingReservationStatus2
-from travelport.models.search_ticketing_reservation_status_3 import SearchTicketingReservationStatus3
-from travelport.models.search_ticketing_reservation_status_4 import SearchTicketingReservationStatus4
-from travelport.models.search_ticketing_reservation_status_5 import SearchTicketingReservationStatus5
-from travelport.models.search_ticketing_reservation_status_6 import SearchTicketingReservationStatus6
-from travelport.models.search_ticketing_ticket_status_1 import SearchTicketingTicketStatus1
-from travelport.models.search_ticketing_ticket_status_2 import SearchTicketingTicketStatus2
-from travelport.models.search_ticketing_ticket_status_3 import SearchTicketingTicketStatus3
-from travelport.models.search_ticketing_ticket_status_4 import SearchTicketingTicketStatus4
-from travelport.models.search_ticketing_ticket_status_5 import SearchTicketingTicketStatus5
-from travelport.models.search_ticketing_ticket_status_6 import SearchTicketingTicketStatus6
+from travelport.models.search_ticketing_reservation_status_1 import (
+    SearchTicketingReservationStatus1,
+)
+from travelport.models.search_ticketing_reservation_status_2 import (
+    SearchTicketingReservationStatus2,
+)
+from travelport.models.search_ticketing_reservation_status_3 import (
+    SearchTicketingReservationStatus3,
+)
+from travelport.models.search_ticketing_reservation_status_4 import (
+    SearchTicketingReservationStatus4,
+)
+from travelport.models.search_ticketing_reservation_status_5 import (
+    SearchTicketingReservationStatus5,
+)
+from travelport.models.search_ticketing_reservation_status_6 import (
+    SearchTicketingReservationStatus6,
+)
+from travelport.models.search_ticketing_ticket_status_1 import (
+    SearchTicketingTicketStatus1,
+)
+from travelport.models.search_ticketing_ticket_status_2 import (
+    SearchTicketingTicketStatus2,
+)
+from travelport.models.search_ticketing_ticket_status_3 import (
+    SearchTicketingTicketStatus3,
+)
+from travelport.models.search_ticketing_ticket_status_4 import (
+    SearchTicketingTicketStatus4,
+)
+from travelport.models.search_ticketing_ticket_status_5 import (
+    SearchTicketingTicketStatus5,
+)
+from travelport.models.search_ticketing_ticket_status_6 import (
+    SearchTicketingTicketStatus6,
+)
 from travelport.models.search_traveler import SearchTraveler
 from travelport.models.seat_assignment_1 import SeatAssignment1
 from travelport.models.seat_assignment_2 import SeatAssignment2
@@ -2556,8 +3880,12 @@ from travelport.models.seat_attributes_5 import SeatAttributes5
 from travelport.models.seat_attributes_6 import SeatAttributes6
 from travelport.models.seat_information import SeatInformation
 from travelport.models.seat_map_port_type_service import SeatMapPortTypeService
-from travelport.models.seat_map_port_type_service_input import SeatMapPortTypeServiceInput
-from travelport.models.seat_map_port_type_service_output import SeatMapPortTypeServiceOutput
+from travelport.models.seat_map_port_type_service_input import (
+    SeatMapPortTypeServiceInput,
+)
+from travelport.models.seat_map_port_type_service_output import (
+    SeatMapPortTypeServiceOutput,
+)
 from travelport.models.seat_map_req import SeatMapReq
 from travelport.models.seat_map_rsp import SeatMapRsp
 from travelport.models.segment_1 import Segment1
@@ -2631,13 +3959,27 @@ from travelport.models.simple_name_3 import SimpleName3
 from travelport.models.simple_name_4 import SimpleName4
 from travelport.models.simple_name_5 import SimpleName5
 from travelport.models.simple_name_6 import SimpleName6
-from travelport.models.single_profile_migration_port_type_service import SingleProfileMigrationPortTypeService
-from travelport.models.single_profile_migration_port_type_service_input import SingleProfileMigrationPortTypeServiceInput
-from travelport.models.single_profile_migration_port_type_service_output import SingleProfileMigrationPortTypeServiceOutput
-from travelport.models.single_profile_migration_req_1 import SingleProfileMigrationReq1
-from travelport.models.single_profile_migration_req_2 import SingleProfileMigrationReq2
-from travelport.models.single_profile_migration_rsp_1 import SingleProfileMigrationRsp1
-from travelport.models.single_profile_migration_rsp_2 import SingleProfileMigrationRsp2
+from travelport.models.single_profile_migration_port_type_service import (
+    SingleProfileMigrationPortTypeService,
+)
+from travelport.models.single_profile_migration_port_type_service_input import (
+    SingleProfileMigrationPortTypeServiceInput,
+)
+from travelport.models.single_profile_migration_port_type_service_output import (
+    SingleProfileMigrationPortTypeServiceOutput,
+)
+from travelport.models.single_profile_migration_req_1 import (
+    SingleProfileMigrationReq1,
+)
+from travelport.models.single_profile_migration_req_2 import (
+    SingleProfileMigrationReq2,
+)
+from travelport.models.single_profile_migration_rsp_1 import (
+    SingleProfileMigrationRsp1,
+)
+from travelport.models.single_profile_migration_rsp_2 import (
+    SingleProfileMigrationRsp2,
+)
 from travelport.models.solution_group import SolutionGroup
 from travelport.models.special_equipment_1 import SpecialEquipment1
 from travelport.models.special_equipment_2 import SpecialEquipment2
@@ -2674,7 +4016,9 @@ from travelport.models.stock_control_3 import StockControl3
 from travelport.models.stock_control_4 import StockControl4
 from travelport.models.stock_control_5 import StockControl5
 from travelport.models.stock_control_6 import StockControl6
-from travelport.models.structured_fare_rules_type import StructuredFareRulesType
+from travelport.models.structured_fare_rules_type import (
+    StructuredFareRulesType,
+)
 from travelport.models.supplier_locator_1 import SupplierLocator1
 from travelport.models.supplier_locator_2 import SupplierLocator2
 from travelport.models.supplier_locator_3 import SupplierLocator3
@@ -2685,18 +4029,36 @@ from travelport.models.supplier_rate import SupplierRate
 from travelport.models.supported_versions import SupportedVersions
 from travelport.models.svc_segment import SvcSegment
 from travelport.models.system_info import SystemInfo
-from travelport.models.system_info_port_type_service import SystemInfoPortTypeService
-from travelport.models.system_info_port_type_service_input import SystemInfoPortTypeServiceInput
-from travelport.models.system_info_port_type_service_output import SystemInfoPortTypeServiceOutput
+from travelport.models.system_info_port_type_service import (
+    SystemInfoPortTypeService,
+)
+from travelport.models.system_info_port_type_service_input import (
+    SystemInfoPortTypeServiceInput,
+)
+from travelport.models.system_info_port_type_service_output import (
+    SystemInfoPortTypeServiceOutput,
+)
 from travelport.models.system_info_req import SystemInfoReq
 from travelport.models.system_info_rsp import SystemInfoRsp
-from travelport.models.system_ping_port_type_service import SystemPingPortTypeService
-from travelport.models.system_ping_port_type_service_input import SystemPingPortTypeServiceInput
-from travelport.models.system_ping_port_type_service_output import SystemPingPortTypeServiceOutput
+from travelport.models.system_ping_port_type_service import (
+    SystemPingPortTypeService,
+)
+from travelport.models.system_ping_port_type_service_input import (
+    SystemPingPortTypeServiceInput,
+)
+from travelport.models.system_ping_port_type_service_output import (
+    SystemPingPortTypeServiceOutput,
+)
 from travelport.models.system_time import SystemTime
-from travelport.models.system_time_port_type_service import SystemTimePortTypeService
-from travelport.models.system_time_port_type_service_input import SystemTimePortTypeServiceInput
-from travelport.models.system_time_port_type_service_output import SystemTimePortTypeServiceOutput
+from travelport.models.system_time_port_type_service import (
+    SystemTimePortTypeService,
+)
+from travelport.models.system_time_port_type_service_input import (
+    SystemTimePortTypeServiceInput,
+)
+from travelport.models.system_time_port_type_service_output import (
+    SystemTimePortTypeServiceOutput,
+)
 from travelport.models.tag_1 import Tag1
 from travelport.models.tag_2 import Tag2
 from travelport.models.tag_add_1 import TagAdd1
@@ -2720,7 +4082,9 @@ from travelport.models.tcr import Tcr
 from travelport.models.tcrexchange_bundle import TcrexchangeBundle
 from travelport.models.tcrinfo import Tcrinfo
 from travelport.models.tcrrefund_bundle import TcrrefundBundle
-from travelport.models.tcrrefund_bundle_refund_type import TcrrefundBundleRefundType
+from travelport.models.tcrrefund_bundle_refund_type import (
+    TcrrefundBundleRefundType,
+)
 from travelport.models.template_info_update import TemplateInfoUpdate
 from travelport.models.template_modify_cmd import TemplateModifyCmd
 from travelport.models.term_conditions import TermConditions
@@ -2728,9 +4092,15 @@ from travelport.models.terminal_command import TerminalCommand
 from travelport.models.terminal_command_response import TerminalCommandResponse
 from travelport.models.terminal_req import TerminalReq
 from travelport.models.terminal_rsp import TerminalRsp
-from travelport.models.terminal_service_port_type_service import TerminalServicePortTypeService
-from travelport.models.terminal_service_port_type_service_input import TerminalServicePortTypeServiceInput
-from travelport.models.terminal_service_port_type_service_output import TerminalServicePortTypeServiceOutput
+from travelport.models.terminal_service_port_type_service import (
+    TerminalServicePortTypeService,
+)
+from travelport.models.terminal_service_port_type_service_input import (
+    TerminalServicePortTypeServiceInput,
+)
+from travelport.models.terminal_service_port_type_service_output import (
+    TerminalServicePortTypeServiceOutput,
+)
 from travelport.models.terminal_session_info_1 import TerminalSessionInfo1
 from travelport.models.terminal_session_info_2 import TerminalSessionInfo2
 from travelport.models.terminal_session_info_3 import TerminalSessionInfo3
@@ -2787,10 +4157,18 @@ from travelport.models.travel_compliance_data_5 import TravelComplianceData5
 from travelport.models.travel_compliance_data_6 import TravelComplianceData6
 from travelport.models.travel_document_1 import TravelDocument1
 from travelport.models.travel_document_2 import TravelDocument2
-from travelport.models.travel_document_height_unit_1 import TravelDocumentHeightUnit1
-from travelport.models.travel_document_height_unit_2 import TravelDocumentHeightUnit2
-from travelport.models.travel_document_weight_unit_1 import TravelDocumentWeightUnit1
-from travelport.models.travel_document_weight_unit_2 import TravelDocumentWeightUnit2
+from travelport.models.travel_document_height_unit_1 import (
+    TravelDocumentHeightUnit1,
+)
+from travelport.models.travel_document_height_unit_2 import (
+    TravelDocumentHeightUnit2,
+)
+from travelport.models.travel_document_weight_unit_1 import (
+    TravelDocumentWeightUnit1,
+)
+from travelport.models.travel_document_weight_unit_2 import (
+    TravelDocumentWeightUnit2,
+)
 from travelport.models.travel_info_1 import TravelInfo1
 from travelport.models.travel_info_2 import TravelInfo2
 from travelport.models.travel_info_3 import TravelInfo3
@@ -2810,8 +4188,12 @@ from travelport.models.traveler_group_criteria_1 import TravelerGroupCriteria1
 from travelport.models.traveler_group_criteria_2 import TravelerGroupCriteria2
 from travelport.models.traveler_group_info_1 import TravelerGroupInfo1
 from travelport.models.traveler_group_info_2 import TravelerGroupInfo2
-from travelport.models.traveler_identity_information_1 import TravelerIdentityInformation1
-from travelport.models.traveler_identity_information_2 import TravelerIdentityInformation2
+from travelport.models.traveler_identity_information_1 import (
+    TravelerIdentityInformation1,
+)
+from travelport.models.traveler_identity_information_2 import (
+    TravelerIdentityInformation2,
+)
 from travelport.models.traveler_info_1 import TravelerInfo1
 from travelport.models.traveler_info_2 import TravelerInfo2
 from travelport.models.traveler_information_1 import TravelerInformation1
@@ -2826,19 +4208,37 @@ from travelport.models.traveler_type_3 import TravelerType3
 from travelport.models.traveler_type_4 import TravelerType4
 from travelport.models.traveler_type_5 import TravelerType5
 from travelport.models.traveler_type_6 import TravelerType6
-from travelport.models.type_account_info_history_1 import TypeAccountInfoHistory1
-from travelport.models.type_account_info_history_2 import TypeAccountInfoHistory2
-from travelport.models.type_account_type_profile_info_1 import TypeAccountTypeProfileInfo1
-from travelport.models.type_account_type_profile_info_2 import TypeAccountTypeProfileInfo2
-from travelport.models.type_account_type_profile_search_criteria_1 import TypeAccountTypeProfileSearchCriteria1
-from travelport.models.type_account_type_profile_search_criteria_2 import TypeAccountTypeProfileSearchCriteria2
-from travelport.models.type_accounting_reference_history_1 import TypeAccountingReferenceHistory1
-from travelport.models.type_accounting_reference_history_2 import TypeAccountingReferenceHistory2
+from travelport.models.type_account_info_history_1 import (
+    TypeAccountInfoHistory1,
+)
+from travelport.models.type_account_info_history_2 import (
+    TypeAccountInfoHistory2,
+)
+from travelport.models.type_account_type_profile_info_1 import (
+    TypeAccountTypeProfileInfo1,
+)
+from travelport.models.type_account_type_profile_info_2 import (
+    TypeAccountTypeProfileInfo2,
+)
+from travelport.models.type_account_type_profile_search_criteria_1 import (
+    TypeAccountTypeProfileSearchCriteria1,
+)
+from travelport.models.type_account_type_profile_search_criteria_2 import (
+    TypeAccountTypeProfileSearchCriteria2,
+)
+from travelport.models.type_accounting_reference_history_1 import (
+    TypeAccountingReferenceHistory1,
+)
+from travelport.models.type_accounting_reference_history_2 import (
+    TypeAccountingReferenceHistory2,
+)
 from travelport.models.type_action_1 import TypeAction1
 from travelport.models.type_action_2 import TypeAction2
 from travelport.models.type_action_ref import TypeActionRef
 from travelport.models.type_action_reference import TypeActionReference
-from travelport.models.type_adapted_room_guest_allocation import TypeAdaptedRoomGuestAllocation
+from travelport.models.type_adapted_room_guest_allocation import (
+    TypeAdaptedRoomGuestAllocation,
+)
 from travelport.models.type_address_1 import TypeAddress1
 from travelport.models.type_address_2 import TypeAddress2
 from travelport.models.type_address_history_1 import TypeAddressHistory1
@@ -2849,24 +4249,56 @@ from travelport.models.type_advisory_history_1 import TypeAdvisoryHistory1
 from travelport.models.type_advisory_history_2 import TypeAdvisoryHistory2
 from travelport.models.type_advisory_type_1 import TypeAdvisoryType1
 from travelport.models.type_advisory_type_2 import TypeAdvisoryType2
-from travelport.models.type_agency_group_info_history_1 import TypeAgencyGroupInfoHistory1
-from travelport.models.type_agency_group_info_history_2 import TypeAgencyGroupInfoHistory2
-from travelport.models.type_agency_hierarchy_long_reference_1 import TypeAgencyHierarchyLongReference1
-from travelport.models.type_agency_hierarchy_long_reference_2 import TypeAgencyHierarchyLongReference2
-from travelport.models.type_agency_hierarchy_long_reference_3 import TypeAgencyHierarchyLongReference3
-from travelport.models.type_agency_hierarchy_long_reference_4 import TypeAgencyHierarchyLongReference4
-from travelport.models.type_agency_hierarchy_long_reference_5 import TypeAgencyHierarchyLongReference5
-from travelport.models.type_agency_hierarchy_long_reference_6 import TypeAgencyHierarchyLongReference6
-from travelport.models.type_agency_hierarchy_reference_1 import TypeAgencyHierarchyReference1
-from travelport.models.type_agency_hierarchy_reference_2 import TypeAgencyHierarchyReference2
-from travelport.models.type_agency_hierarchy_reference_3 import TypeAgencyHierarchyReference3
-from travelport.models.type_agency_hierarchy_reference_4 import TypeAgencyHierarchyReference4
-from travelport.models.type_agency_hierarchy_reference_5 import TypeAgencyHierarchyReference5
-from travelport.models.type_agency_hierarchy_reference_6 import TypeAgencyHierarchyReference6
+from travelport.models.type_agency_group_info_history_1 import (
+    TypeAgencyGroupInfoHistory1,
+)
+from travelport.models.type_agency_group_info_history_2 import (
+    TypeAgencyGroupInfoHistory2,
+)
+from travelport.models.type_agency_hierarchy_long_reference_1 import (
+    TypeAgencyHierarchyLongReference1,
+)
+from travelport.models.type_agency_hierarchy_long_reference_2 import (
+    TypeAgencyHierarchyLongReference2,
+)
+from travelport.models.type_agency_hierarchy_long_reference_3 import (
+    TypeAgencyHierarchyLongReference3,
+)
+from travelport.models.type_agency_hierarchy_long_reference_4 import (
+    TypeAgencyHierarchyLongReference4,
+)
+from travelport.models.type_agency_hierarchy_long_reference_5 import (
+    TypeAgencyHierarchyLongReference5,
+)
+from travelport.models.type_agency_hierarchy_long_reference_6 import (
+    TypeAgencyHierarchyLongReference6,
+)
+from travelport.models.type_agency_hierarchy_reference_1 import (
+    TypeAgencyHierarchyReference1,
+)
+from travelport.models.type_agency_hierarchy_reference_2 import (
+    TypeAgencyHierarchyReference2,
+)
+from travelport.models.type_agency_hierarchy_reference_3 import (
+    TypeAgencyHierarchyReference3,
+)
+from travelport.models.type_agency_hierarchy_reference_4 import (
+    TypeAgencyHierarchyReference4,
+)
+from travelport.models.type_agency_hierarchy_reference_5 import (
+    TypeAgencyHierarchyReference5,
+)
+from travelport.models.type_agency_hierarchy_reference_6 import (
+    TypeAgencyHierarchyReference6,
+)
 from travelport.models.type_agency_info_history_1 import TypeAgencyInfoHistory1
 from travelport.models.type_agency_info_history_2 import TypeAgencyInfoHistory2
-from travelport.models.type_agency_info_history_ursync_data_1 import TypeAgencyInfoHistoryUrsyncData1
-from travelport.models.type_agency_info_history_ursync_data_2 import TypeAgencyInfoHistoryUrsyncData2
+from travelport.models.type_agency_info_history_ursync_data_1 import (
+    TypeAgencyInfoHistoryUrsyncData1,
+)
+from travelport.models.type_agency_info_history_ursync_data_2 import (
+    TypeAgencyInfoHistoryUrsyncData2,
+)
 from travelport.models.type_agency_payment_1 import TypeAgencyPayment1
 from travelport.models.type_agency_payment_2 import TypeAgencyPayment2
 from travelport.models.type_agency_payment_3 import TypeAgencyPayment3
@@ -2874,14 +4306,30 @@ from travelport.models.type_agency_payment_4 import TypeAgencyPayment4
 from travelport.models.type_agency_payment_5 import TypeAgencyPayment5
 from travelport.models.type_agency_payment_6 import TypeAgencyPayment6
 from travelport.models.type_agency_payment_7 import TypeAgencyPayment7
-from travelport.models.type_agency_payment_history_1 import TypeAgencyPaymentHistory1
-from travelport.models.type_agency_payment_history_2 import TypeAgencyPaymentHistory2
-from travelport.models.type_agency_profile_level_1 import TypeAgencyProfileLevel1
-from travelport.models.type_agency_profile_level_2 import TypeAgencyProfileLevel2
-from travelport.models.type_agency_profile_level_3 import TypeAgencyProfileLevel3
-from travelport.models.type_agency_profile_level_4 import TypeAgencyProfileLevel4
-from travelport.models.type_agency_profile_level_5 import TypeAgencyProfileLevel5
-from travelport.models.type_agency_profile_level_6 import TypeAgencyProfileLevel6
+from travelport.models.type_agency_payment_history_1 import (
+    TypeAgencyPaymentHistory1,
+)
+from travelport.models.type_agency_payment_history_2 import (
+    TypeAgencyPaymentHistory2,
+)
+from travelport.models.type_agency_profile_level_1 import (
+    TypeAgencyProfileLevel1,
+)
+from travelport.models.type_agency_profile_level_2 import (
+    TypeAgencyProfileLevel2,
+)
+from travelport.models.type_agency_profile_level_3 import (
+    TypeAgencyProfileLevel3,
+)
+from travelport.models.type_agency_profile_level_4 import (
+    TypeAgencyProfileLevel4,
+)
+from travelport.models.type_agency_profile_level_5 import (
+    TypeAgencyProfileLevel5,
+)
+from travelport.models.type_agency_profile_level_6 import (
+    TypeAgencyProfileLevel6,
+)
 from travelport.models.type_agent_info_1 import TypeAgentInfo1
 from travelport.models.type_agent_info_2 import TypeAgentInfo2
 from travelport.models.type_agent_info_3 import TypeAgentInfo3
@@ -2893,11 +4341,21 @@ from travelport.models.type_agent_info_history_2 import TypeAgentInfoHistory2
 from travelport.models.type_air_fare_1 import TypeAirFare1
 from travelport.models.type_air_fare_2 import TypeAirFare2
 from travelport.models.type_air_pnr_element import TypeAirPnrElement
-from travelport.models.type_air_preference_history_1 import TypeAirPreferenceHistory1
-from travelport.models.type_air_preference_history_2 import TypeAirPreferenceHistory2
-from travelport.models.type_air_reservation_with_fop import TypeAirReservationWithFop
-from travelport.models.type_alternate_contact_history_1 import TypeAlternateContactHistory1
-from travelport.models.type_alternate_contact_history_2 import TypeAlternateContactHistory2
+from travelport.models.type_air_preference_history_1 import (
+    TypeAirPreferenceHistory1,
+)
+from travelport.models.type_air_preference_history_2 import (
+    TypeAirPreferenceHistory2,
+)
+from travelport.models.type_air_reservation_with_fop import (
+    TypeAirReservationWithFop,
+)
+from travelport.models.type_alternate_contact_history_1 import (
+    TypeAlternateContactHistory1,
+)
+from travelport.models.type_alternate_contact_history_2 import (
+    TypeAlternateContactHistory2,
+)
 from travelport.models.type_amenity_level import TypeAmenityLevel
 from travelport.models.type_anchor_flight_data import TypeAnchorFlightData
 from travelport.models.type_applicable_segment import TypeApplicableSegment
@@ -2909,40 +4367,84 @@ from travelport.models.type_associated_remark_3 import TypeAssociatedRemark3
 from travelport.models.type_associated_remark_4 import TypeAssociatedRemark4
 from travelport.models.type_associated_remark_5 import TypeAssociatedRemark5
 from travelport.models.type_associated_remark_6 import TypeAssociatedRemark6
-from travelport.models.type_associated_remark_with_segment_ref_1 import TypeAssociatedRemarkWithSegmentRef1
-from travelport.models.type_associated_remark_with_segment_ref_2 import TypeAssociatedRemarkWithSegmentRef2
-from travelport.models.type_associated_remark_with_segment_ref_3 import TypeAssociatedRemarkWithSegmentRef3
-from travelport.models.type_associated_remark_with_segment_ref_4 import TypeAssociatedRemarkWithSegmentRef4
-from travelport.models.type_associated_remark_with_segment_ref_5 import TypeAssociatedRemarkWithSegmentRef5
-from travelport.models.type_associated_remark_with_segment_ref_6 import TypeAssociatedRemarkWithSegmentRef6
-from travelport.models.type_atpcoglobal_indicator import TypeAtpcoglobalIndicator
+from travelport.models.type_associated_remark_with_segment_ref_1 import (
+    TypeAssociatedRemarkWithSegmentRef1,
+)
+from travelport.models.type_associated_remark_with_segment_ref_2 import (
+    TypeAssociatedRemarkWithSegmentRef2,
+)
+from travelport.models.type_associated_remark_with_segment_ref_3 import (
+    TypeAssociatedRemarkWithSegmentRef3,
+)
+from travelport.models.type_associated_remark_with_segment_ref_4 import (
+    TypeAssociatedRemarkWithSegmentRef4,
+)
+from travelport.models.type_associated_remark_with_segment_ref_5 import (
+    TypeAssociatedRemarkWithSegmentRef5,
+)
+from travelport.models.type_associated_remark_with_segment_ref_6 import (
+    TypeAssociatedRemarkWithSegmentRef6,
+)
+from travelport.models.type_atpcoglobal_indicator import (
+    TypeAtpcoglobalIndicator,
+)
 from travelport.models.type_back_office import TypeBackOffice
 from travelport.models.type_base_air_reservation import TypeBaseAirReservation
 from travelport.models.type_base_air_segment import TypeBaseAirSegment
 from travelport.models.type_base_preference_1 import TypeBasePreference1
 from travelport.models.type_base_preference_2 import TypeBasePreference2
-from travelport.models.type_base_preference_history_1 import TypeBasePreferenceHistory1
-from travelport.models.type_base_preference_history_2 import TypeBasePreferenceHistory2
-from travelport.models.type_billing_details_data_type import TypeBillingDetailsDataType
+from travelport.models.type_base_preference_history_1 import (
+    TypeBasePreferenceHistory1,
+)
+from travelport.models.type_base_preference_history_2 import (
+    TypeBasePreferenceHistory2,
+)
+from travelport.models.type_billing_details_data_type import (
+    TypeBillingDetailsDataType,
+)
 from travelport.models.type_billing_details_name import TypeBillingDetailsName
 from travelport.models.type_booking import TypeBooking
-from travelport.models.type_booking_transactions_allowed_1 import TypeBookingTransactionsAllowed1
-from travelport.models.type_booking_transactions_allowed_2 import TypeBookingTransactionsAllowed2
-from travelport.models.type_booking_transactions_allowed_3 import TypeBookingTransactionsAllowed3
-from travelport.models.type_booking_transactions_allowed_4 import TypeBookingTransactionsAllowed4
-from travelport.models.type_booking_transactions_allowed_5 import TypeBookingTransactionsAllowed5
-from travelport.models.type_booking_transactions_allowed_6 import TypeBookingTransactionsAllowed6
-from travelport.models.type_booking_traveler_element import TypeBookingTravelerElement
-from travelport.models.type_branch_group_info_history_1 import TypeBranchGroupInfoHistory1
-from travelport.models.type_branch_group_info_history_2 import TypeBranchGroupInfoHistory2
+from travelport.models.type_booking_transactions_allowed_1 import (
+    TypeBookingTransactionsAllowed1,
+)
+from travelport.models.type_booking_transactions_allowed_2 import (
+    TypeBookingTransactionsAllowed2,
+)
+from travelport.models.type_booking_transactions_allowed_3 import (
+    TypeBookingTransactionsAllowed3,
+)
+from travelport.models.type_booking_transactions_allowed_4 import (
+    TypeBookingTransactionsAllowed4,
+)
+from travelport.models.type_booking_transactions_allowed_5 import (
+    TypeBookingTransactionsAllowed5,
+)
+from travelport.models.type_booking_transactions_allowed_6 import (
+    TypeBookingTransactionsAllowed6,
+)
+from travelport.models.type_booking_traveler_element import (
+    TypeBookingTravelerElement,
+)
+from travelport.models.type_branch_group_info_history_1 import (
+    TypeBranchGroupInfoHistory1,
+)
+from travelport.models.type_branch_group_info_history_2 import (
+    TypeBranchGroupInfoHistory2,
+)
 from travelport.models.type_branch_info_history_1 import TypeBranchInfoHistory1
 from travelport.models.type_branch_info_history_2 import TypeBranchInfoHistory2
 from travelport.models.type_bridge_branch_cmd import TypeBridgeBranchCmd
-from travelport.models.type_bulk_ticket_modifier_type import TypeBulkTicketModifierType
+from travelport.models.type_bulk_ticket_modifier_type import (
+    TypeBulkTicketModifierType,
+)
 from travelport.models.type_carrier_code import TypeCarrierCode
 from travelport.models.type_coach_class_type import TypeCoachClassType
-from travelport.models.type_commission_category_1 import TypeCommissionCategory1
-from travelport.models.type_commission_category_2 import TypeCommissionCategory2
+from travelport.models.type_commission_category_1 import (
+    TypeCommissionCategory1,
+)
+from travelport.models.type_commission_category_2 import (
+    TypeCommissionCategory2,
+)
 from travelport.models.type_commission_history_1 import TypeCommissionHistory1
 from travelport.models.type_commission_history_2 import TypeCommissionHistory2
 from travelport.models.type_commission_level_1 import TypeCommissionLevel1
@@ -2951,24 +4453,48 @@ from travelport.models.type_commission_level_3 import TypeCommissionLevel3
 from travelport.models.type_commission_level_4 import TypeCommissionLevel4
 from travelport.models.type_commission_level_5 import TypeCommissionLevel5
 from travelport.models.type_commission_level_6 import TypeCommissionLevel6
-from travelport.models.type_commission_modifier_1 import TypeCommissionModifier1
-from travelport.models.type_commission_modifier_2 import TypeCommissionModifier2
-from travelport.models.type_commission_modifier_3 import TypeCommissionModifier3
-from travelport.models.type_commission_modifier_4 import TypeCommissionModifier4
-from travelport.models.type_commission_modifier_5 import TypeCommissionModifier5
-from travelport.models.type_commission_modifier_6 import TypeCommissionModifier6
-from travelport.models.type_commission_reference_history_1 import TypeCommissionReferenceHistory1
-from travelport.models.type_commission_reference_history_2 import TypeCommissionReferenceHistory2
+from travelport.models.type_commission_modifier_1 import (
+    TypeCommissionModifier1,
+)
+from travelport.models.type_commission_modifier_2 import (
+    TypeCommissionModifier2,
+)
+from travelport.models.type_commission_modifier_3 import (
+    TypeCommissionModifier3,
+)
+from travelport.models.type_commission_modifier_4 import (
+    TypeCommissionModifier4,
+)
+from travelport.models.type_commission_modifier_5 import (
+    TypeCommissionModifier5,
+)
+from travelport.models.type_commission_modifier_6 import (
+    TypeCommissionModifier6,
+)
+from travelport.models.type_commission_reference_history_1 import (
+    TypeCommissionReferenceHistory1,
+)
+from travelport.models.type_commission_reference_history_2 import (
+    TypeCommissionReferenceHistory2,
+)
 from travelport.models.type_commission_type_1 import TypeCommissionType1
 from travelport.models.type_commission_type_2 import TypeCommissionType2
 from travelport.models.type_commission_type_3 import TypeCommissionType3
 from travelport.models.type_commission_type_4 import TypeCommissionType4
 from travelport.models.type_commission_type_5 import TypeCommissionType5
 from travelport.models.type_commission_type_6 import TypeCommissionType6
-from travelport.models.type_common_editable_field_1 import TypeCommonEditableField1
-from travelport.models.type_common_editable_field_2 import TypeCommonEditableField2
-from travelport.models.type_common_editable_group_1 import TypeCommonEditableGroup1
-from travelport.models.type_common_editable_group_2 import TypeCommonEditableGroup2
+from travelport.models.type_common_editable_field_1 import (
+    TypeCommonEditableField1,
+)
+from travelport.models.type_common_editable_field_2 import (
+    TypeCommonEditableField2,
+)
+from travelport.models.type_common_editable_group_1 import (
+    TypeCommonEditableGroup1,
+)
+from travelport.models.type_common_editable_group_2 import (
+    TypeCommonEditableGroup2,
+)
 from travelport.models.type_connection_indicator import TypeConnectionIndicator
 from travelport.models.type_contact_1 import TypeContact1
 from travelport.models.type_contact_2 import TypeContact2
@@ -2978,7 +4504,9 @@ from travelport.models.type_contact_type_1 import TypeContactType1
 from travelport.models.type_contact_type_2 import TypeContactType2
 from travelport.models.type_contract_history_1 import TypeContractHistory1
 from travelport.models.type_contract_history_2 import TypeContractHistory2
-from travelport.models.type_create_hierarchy_level import TypeCreateHierarchyLevel
+from travelport.models.type_create_hierarchy_level import (
+    TypeCreateHierarchyLevel,
+)
 from travelport.models.type_credit_card_type_1 import TypeCreditCardType1
 from travelport.models.type_credit_card_type_2 import TypeCreditCardType2
 from travelport.models.type_credit_card_type_3 import TypeCreditCardType3
@@ -2986,15 +4514,29 @@ from travelport.models.type_credit_card_type_4 import TypeCreditCardType4
 from travelport.models.type_credit_card_type_5 import TypeCreditCardType5
 from travelport.models.type_credit_card_type_6 import TypeCreditCardType6
 from travelport.models.type_credit_card_type_7 import TypeCreditCardType7
-from travelport.models.type_credit_card_type_history_1 import TypeCreditCardTypeHistory1
-from travelport.models.type_credit_card_type_history_2 import TypeCreditCardTypeHistory2
+from travelport.models.type_credit_card_type_history_1 import (
+    TypeCreditCardTypeHistory1,
+)
+from travelport.models.type_credit_card_type_history_2 import (
+    TypeCreditCardTypeHistory2,
+)
 from travelport.models.type_custom_field_1 import TypeCustomField1
 from travelport.models.type_custom_field_2 import TypeCustomField2
-from travelport.models.type_custom_field_and_group_delete_ref_1 import TypeCustomFieldAndGroupDeleteRef1
-from travelport.models.type_custom_field_and_group_delete_ref_2 import TypeCustomFieldAndGroupDeleteRef2
-from travelport.models.type_custom_field_data_format_1 import TypeCustomFieldDataFormat1
-from travelport.models.type_custom_field_data_format_2 import TypeCustomFieldDataFormat2
-from travelport.models.type_custom_field_or_group_type import TypeCustomFieldOrGroupType
+from travelport.models.type_custom_field_and_group_delete_ref_1 import (
+    TypeCustomFieldAndGroupDeleteRef1,
+)
+from travelport.models.type_custom_field_and_group_delete_ref_2 import (
+    TypeCustomFieldAndGroupDeleteRef2,
+)
+from travelport.models.type_custom_field_data_format_1 import (
+    TypeCustomFieldDataFormat1,
+)
+from travelport.models.type_custom_field_data_format_2 import (
+    TypeCustomFieldDataFormat2,
+)
+from travelport.models.type_custom_field_or_group_type import (
+    TypeCustomFieldOrGroupType,
+)
 from travelport.models.type_date_options_1 import TypeDateOptions1
 from travelport.models.type_date_options_2 import TypeDateOptions2
 from travelport.models.type_date_range_1 import TypeDateRange1
@@ -3006,10 +4548,16 @@ from travelport.models.type_date_range_6 import TypeDateRange6
 from travelport.models.type_date_spec import TypeDateSpec
 from travelport.models.type_days_of_operation import TypeDaysOfOperation
 from travelport.models.type_default_brand_detail import TypeDefaultBrandDetail
-from travelport.models.type_delete_hierarchy_lvl_profile_type import TypeDeleteHierarchyLvlProfileType
+from travelport.models.type_delete_hierarchy_lvl_profile_type import (
+    TypeDeleteHierarchyLvlProfileType,
+)
 from travelport.models.type_deposit_guarantee import TypeDepositGuarantee
-from travelport.models.type_deposit_guarantee_option_type import TypeDepositGuaranteeOptionType
-from travelport.models.type_deposit_guarantee_type import TypeDepositGuaranteeType
+from travelport.models.type_deposit_guarantee_option_type import (
+    TypeDepositGuaranteeOptionType,
+)
+from travelport.models.type_deposit_guarantee_type import (
+    TypeDepositGuaranteeType,
+)
 from travelport.models.type_destination_code import TypeDestinationCode
 from travelport.models.type_direction_1 import TypeDirection1
 from travelport.models.type_direction_2 import TypeDirection2
@@ -3022,13 +4570,21 @@ from travelport.models.type_display_detail_name import TypeDisplayDetailName
 from travelport.models.type_distance import TypeDistance
 from travelport.models.type_diversity import TypeDiversity
 from travelport.models.type_door_count import TypeDoorCount
-from travelport.models.type_editable_custom_field_1 import TypeEditableCustomField1
-from travelport.models.type_editable_custom_field_2 import TypeEditableCustomField2
+from travelport.models.type_editable_custom_field_1 import (
+    TypeEditableCustomField1,
+)
+from travelport.models.type_editable_custom_field_2 import (
+    TypeEditableCustomField2,
+)
 from travelport.models.type_editable_endpoint import TypeEditableEndpoint
 from travelport.models.type_electronic_address_1 import TypeElectronicAddress1
 from travelport.models.type_electronic_address_2 import TypeElectronicAddress2
-from travelport.models.type_electronic_address_history_1 import TypeElectronicAddressHistory1
-from travelport.models.type_electronic_address_history_2 import TypeElectronicAddressHistory2
+from travelport.models.type_electronic_address_history_1 import (
+    TypeElectronicAddressHistory1,
+)
+from travelport.models.type_electronic_address_history_2 import (
+    TypeElectronicAddressHistory2,
+)
 from travelport.models.type_element import TypeElement
 from travelport.models.type_element_status_1 import TypeElementStatus1
 from travelport.models.type_element_status_2 import TypeElementStatus2
@@ -3056,8 +4612,12 @@ from travelport.models.type_event_type_3 import TypeEventType3
 from travelport.models.type_event_type_4 import TypeEventType4
 from travelport.models.type_event_type_5 import TypeEventType5
 from travelport.models.type_event_type_6 import TypeEventType6
-from travelport.models.type_external_identifier_history_1 import TypeExternalIdentifierHistory1
-from travelport.models.type_external_identifier_history_2 import TypeExternalIdentifierHistory2
+from travelport.models.type_external_identifier_history_1 import (
+    TypeExternalIdentifierHistory1,
+)
+from travelport.models.type_external_identifier_history_2 import (
+    TypeExternalIdentifierHistory2,
+)
 from travelport.models.type_facility import TypeFacility
 from travelport.models.type_failure_info import TypeFailureInfo
 from travelport.models.type_fare_break import TypeFareBreak
@@ -3065,15 +4625,21 @@ from travelport.models.type_fare_directionality import TypeFareDirectionality
 from travelport.models.type_fare_discount import TypeFareDiscount
 from travelport.models.type_fare_guarantee import TypeFareGuarantee
 from travelport.models.type_fare_penalty import TypeFarePenalty
-from travelport.models.type_fare_penalty_penalty_applies import TypeFarePenaltyPenaltyApplies
+from travelport.models.type_fare_penalty_penalty_applies import (
+    TypeFarePenaltyPenaltyApplies,
+)
 from travelport.models.type_fare_pull_1 import TypeFarePull1
 from travelport.models.type_fare_pull_2 import TypeFarePull2
 from travelport.models.type_fare_pull_3 import TypeFarePull3
 from travelport.models.type_fare_pull_4 import TypeFarePull4
 from travelport.models.type_fare_pull_5 import TypeFarePull5
 from travelport.models.type_fare_pull_6 import TypeFarePull6
-from travelport.models.type_fare_restriction_type import TypeFareRestrictionType
-from travelport.models.type_fare_rule_category_code import TypeFareRuleCategoryCode
+from travelport.models.type_fare_restriction_type import (
+    TypeFareRestrictionType,
+)
+from travelport.models.type_fare_rule_category_code import (
+    TypeFareRuleCategoryCode,
+)
 from travelport.models.type_fare_rule_type import TypeFareRuleType
 from travelport.models.type_fare_search_option import TypeFareSearchOption
 from travelport.models.type_fare_status_code import TypeFareStatusCode
@@ -3087,13 +4653,23 @@ from travelport.models.type_fee_info_5 import TypeFeeInfo5
 from travelport.models.type_fee_info_6 import TypeFeeInfo6
 from travelport.models.type_field_data_history_1 import TypeFieldDataHistory1
 from travelport.models.type_field_data_history_2 import TypeFieldDataHistory2
-from travelport.models.type_field_group_data_history_1 import TypeFieldGroupDataHistory1
-from travelport.models.type_field_group_data_history_2 import TypeFieldGroupDataHistory2
+from travelport.models.type_field_group_data_history_1 import (
+    TypeFieldGroupDataHistory1,
+)
+from travelport.models.type_field_group_data_history_2 import (
+    TypeFieldGroupDataHistory2,
+)
 from travelport.models.type_field_ref_1 import TypeFieldRef1
 from travelport.models.type_field_ref_2 import TypeFieldRef2
-from travelport.models.type_filter_control_and_workspace_1 import TypeFilterControlAndWorkspace1
-from travelport.models.type_filter_control_and_workspace_2 import TypeFilterControlAndWorkspace2
-from travelport.models.type_fixed_field_data_format import TypeFixedFieldDataFormat
+from travelport.models.type_filter_control_and_workspace_1 import (
+    TypeFilterControlAndWorkspace1,
+)
+from travelport.models.type_filter_control_and_workspace_2 import (
+    TypeFilterControlAndWorkspace2,
+)
+from travelport.models.type_fixed_field_data_format import (
+    TypeFixedFieldDataFormat,
+)
 from travelport.models.type_flexible_time_spec_1 import TypeFlexibleTimeSpec1
 from travelport.models.type_flexible_time_spec_2 import TypeFlexibleTimeSpec2
 from travelport.models.type_flexible_time_spec_3 import TypeFlexibleTimeSpec3
@@ -3104,16 +4680,36 @@ from travelport.models.type_flight_number_range import TypeFlightNumberRange
 from travelport.models.type_flight_spec import TypeFlightSpec
 from travelport.models.type_float_restriction_1 import TypeFloatRestriction1
 from travelport.models.type_float_restriction_2 import TypeFloatRestriction2
-from travelport.models.type_form_of_payment_history_1 import TypeFormOfPaymentHistory1
-from travelport.models.type_form_of_payment_history_2 import TypeFormOfPaymentHistory2
-from travelport.models.type_form_of_payment_pnrreference_1 import TypeFormOfPaymentPnrreference1
-from travelport.models.type_form_of_payment_pnrreference_2 import TypeFormOfPaymentPnrreference2
-from travelport.models.type_form_of_payment_pnrreference_3 import TypeFormOfPaymentPnrreference3
-from travelport.models.type_form_of_payment_pnrreference_4 import TypeFormOfPaymentPnrreference4
-from travelport.models.type_form_of_payment_pnrreference_5 import TypeFormOfPaymentPnrreference5
-from travelport.models.type_form_of_payment_pnrreference_6 import TypeFormOfPaymentPnrreference6
-from travelport.models.type_form_of_payment_type_1 import TypeFormOfPaymentType1
-from travelport.models.type_form_of_payment_type_2 import TypeFormOfPaymentType2
+from travelport.models.type_form_of_payment_history_1 import (
+    TypeFormOfPaymentHistory1,
+)
+from travelport.models.type_form_of_payment_history_2 import (
+    TypeFormOfPaymentHistory2,
+)
+from travelport.models.type_form_of_payment_pnrreference_1 import (
+    TypeFormOfPaymentPnrreference1,
+)
+from travelport.models.type_form_of_payment_pnrreference_2 import (
+    TypeFormOfPaymentPnrreference2,
+)
+from travelport.models.type_form_of_payment_pnrreference_3 import (
+    TypeFormOfPaymentPnrreference3,
+)
+from travelport.models.type_form_of_payment_pnrreference_4 import (
+    TypeFormOfPaymentPnrreference4,
+)
+from travelport.models.type_form_of_payment_pnrreference_5 import (
+    TypeFormOfPaymentPnrreference5,
+)
+from travelport.models.type_form_of_payment_pnrreference_6 import (
+    TypeFormOfPaymentPnrreference6,
+)
+from travelport.models.type_form_of_payment_type_1 import (
+    TypeFormOfPaymentType1,
+)
+from travelport.models.type_form_of_payment_type_2 import (
+    TypeFormOfPaymentType2,
+)
 from travelport.models.type_form_of_refund import TypeFormOfRefund
 from travelport.models.type_fuel import TypeFuel
 from travelport.models.type_fulfillment_idtype_1 import TypeFulfillmentIdtype1
@@ -3130,53 +4726,133 @@ from travelport.models.type_general_reference_5 import TypeGeneralReference5
 from travelport.models.type_general_reference_6 import TypeGeneralReference6
 from travelport.models.type_general_remark_type_1 import TypeGeneralRemarkType1
 from travelport.models.type_general_remark_type_2 import TypeGeneralRemarkType2
-from travelport.models.type_geo_political_area_filter_type_1 import TypeGeoPoliticalAreaFilterType1
-from travelport.models.type_geo_political_area_filter_type_2 import TypeGeoPoliticalAreaFilterType2
-from travelport.models.type_geo_political_area_type_1 import TypeGeoPoliticalAreaType1
-from travelport.models.type_geo_political_area_type_2 import TypeGeoPoliticalAreaType2
-from travelport.models.type_guarantee_information_1 import TypeGuaranteeInformation1
-from travelport.models.type_guarantee_information_2 import TypeGuaranteeInformation2
-from travelport.models.type_guarantee_information_3 import TypeGuaranteeInformation3
-from travelport.models.type_guarantee_information_4 import TypeGuaranteeInformation4
-from travelport.models.type_guarantee_information_5 import TypeGuaranteeInformation5
-from travelport.models.type_guarantee_information_6 import TypeGuaranteeInformation6
-from travelport.models.type_guarantee_information_7 import TypeGuaranteeInformation7
-from travelport.models.type_guarantee_information_agency_type_1 import TypeGuaranteeInformationAgencyType1
-from travelport.models.type_guarantee_information_agency_type_2 import TypeGuaranteeInformationAgencyType2
-from travelport.models.type_guarantee_information_agency_type_3 import TypeGuaranteeInformationAgencyType3
-from travelport.models.type_guarantee_information_agency_type_4 import TypeGuaranteeInformationAgencyType4
-from travelport.models.type_guarantee_information_agency_type_5 import TypeGuaranteeInformationAgencyType5
-from travelport.models.type_guarantee_information_agency_type_6 import TypeGuaranteeInformationAgencyType6
-from travelport.models.type_guarantee_information_agency_type_7 import TypeGuaranteeInformationAgencyType7
-from travelport.models.type_guarantee_information_history_1 import TypeGuaranteeInformationHistory1
-from travelport.models.type_guarantee_information_history_2 import TypeGuaranteeInformationHistory2
-from travelport.models.type_guarantee_information_history_agency_type_1 import TypeGuaranteeInformationHistoryAgencyType1
-from travelport.models.type_guarantee_information_history_agency_type_2 import TypeGuaranteeInformationHistoryAgencyType2
-from travelport.models.type_guarantee_information_history_type_1 import TypeGuaranteeInformationHistoryType1
-from travelport.models.type_guarantee_information_history_type_2 import TypeGuaranteeInformationHistoryType2
-from travelport.models.type_guarantee_information_type_1 import TypeGuaranteeInformationType1
-from travelport.models.type_guarantee_information_type_2 import TypeGuaranteeInformationType2
-from travelport.models.type_guarantee_information_type_3 import TypeGuaranteeInformationType3
-from travelport.models.type_guarantee_information_type_4 import TypeGuaranteeInformationType4
-from travelport.models.type_guarantee_information_type_5 import TypeGuaranteeInformationType5
-from travelport.models.type_guarantee_information_type_6 import TypeGuaranteeInformationType6
-from travelport.models.type_guarantee_information_type_7 import TypeGuaranteeInformationType7
-from travelport.models.type_guest_child_information import TypeGuestChildInformation
-from travelport.models.type_guest_room_information import TypeGuestRoomInformation
-from travelport.models.type_hierarchy_override_type import TypeHierarchyOverrideType
+from travelport.models.type_geo_political_area_filter_type_1 import (
+    TypeGeoPoliticalAreaFilterType1,
+)
+from travelport.models.type_geo_political_area_filter_type_2 import (
+    TypeGeoPoliticalAreaFilterType2,
+)
+from travelport.models.type_geo_political_area_type_1 import (
+    TypeGeoPoliticalAreaType1,
+)
+from travelport.models.type_geo_political_area_type_2 import (
+    TypeGeoPoliticalAreaType2,
+)
+from travelport.models.type_guarantee_information_1 import (
+    TypeGuaranteeInformation1,
+)
+from travelport.models.type_guarantee_information_2 import (
+    TypeGuaranteeInformation2,
+)
+from travelport.models.type_guarantee_information_3 import (
+    TypeGuaranteeInformation3,
+)
+from travelport.models.type_guarantee_information_4 import (
+    TypeGuaranteeInformation4,
+)
+from travelport.models.type_guarantee_information_5 import (
+    TypeGuaranteeInformation5,
+)
+from travelport.models.type_guarantee_information_6 import (
+    TypeGuaranteeInformation6,
+)
+from travelport.models.type_guarantee_information_7 import (
+    TypeGuaranteeInformation7,
+)
+from travelport.models.type_guarantee_information_agency_type_1 import (
+    TypeGuaranteeInformationAgencyType1,
+)
+from travelport.models.type_guarantee_information_agency_type_2 import (
+    TypeGuaranteeInformationAgencyType2,
+)
+from travelport.models.type_guarantee_information_agency_type_3 import (
+    TypeGuaranteeInformationAgencyType3,
+)
+from travelport.models.type_guarantee_information_agency_type_4 import (
+    TypeGuaranteeInformationAgencyType4,
+)
+from travelport.models.type_guarantee_information_agency_type_5 import (
+    TypeGuaranteeInformationAgencyType5,
+)
+from travelport.models.type_guarantee_information_agency_type_6 import (
+    TypeGuaranteeInformationAgencyType6,
+)
+from travelport.models.type_guarantee_information_agency_type_7 import (
+    TypeGuaranteeInformationAgencyType7,
+)
+from travelport.models.type_guarantee_information_history_1 import (
+    TypeGuaranteeInformationHistory1,
+)
+from travelport.models.type_guarantee_information_history_2 import (
+    TypeGuaranteeInformationHistory2,
+)
+from travelport.models.type_guarantee_information_history_agency_type_1 import (
+    TypeGuaranteeInformationHistoryAgencyType1,
+)
+from travelport.models.type_guarantee_information_history_agency_type_2 import (
+    TypeGuaranteeInformationHistoryAgencyType2,
+)
+from travelport.models.type_guarantee_information_history_type_1 import (
+    TypeGuaranteeInformationHistoryType1,
+)
+from travelport.models.type_guarantee_information_history_type_2 import (
+    TypeGuaranteeInformationHistoryType2,
+)
+from travelport.models.type_guarantee_information_type_1 import (
+    TypeGuaranteeInformationType1,
+)
+from travelport.models.type_guarantee_information_type_2 import (
+    TypeGuaranteeInformationType2,
+)
+from travelport.models.type_guarantee_information_type_3 import (
+    TypeGuaranteeInformationType3,
+)
+from travelport.models.type_guarantee_information_type_4 import (
+    TypeGuaranteeInformationType4,
+)
+from travelport.models.type_guarantee_information_type_5 import (
+    TypeGuaranteeInformationType5,
+)
+from travelport.models.type_guarantee_information_type_6 import (
+    TypeGuaranteeInformationType6,
+)
+from travelport.models.type_guarantee_information_type_7 import (
+    TypeGuaranteeInformationType7,
+)
+from travelport.models.type_guest_child_information import (
+    TypeGuestChildInformation,
+)
+from travelport.models.type_guest_room_information import (
+    TypeGuestRoomInformation,
+)
+from travelport.models.type_hierarchy_override_type import (
+    TypeHierarchyOverrideType,
+)
 from travelport.models.type_history_sub_element_1 import TypeHistorySubElement1
 from travelport.models.type_history_sub_element_2 import TypeHistorySubElement2
 from travelport.models.type_hotel_availability import TypeHotelAvailability
 from travelport.models.type_hotel_details import TypeHotelDetails
 from travelport.models.type_hotel_location import TypeHotelLocation
 from travelport.models.type_hotel_pnr_element import TypeHotelPnrElement
-from travelport.models.type_hotel_preference_history_1 import TypeHotelPreferenceHistory1
-from travelport.models.type_hotel_preference_history_2 import TypeHotelPreferenceHistory2
-from travelport.models.type_hotel_rate_description import TypeHotelRateDescription
-from travelport.models.type_hotel_reference_point import TypeHotelReferencePoint
+from travelport.models.type_hotel_preference_history_1 import (
+    TypeHotelPreferenceHistory1,
+)
+from travelport.models.type_hotel_preference_history_2 import (
+    TypeHotelPreferenceHistory2,
+)
+from travelport.models.type_hotel_rate_description import (
+    TypeHotelRateDescription,
+)
+from travelport.models.type_hotel_reference_point import (
+    TypeHotelReferencePoint,
+)
 from travelport.models.type_ignore_stop_over import TypeIgnoreStopOver
-from travelport.models.type_integer_restriction_1 import TypeIntegerRestriction1
-from travelport.models.type_integer_restriction_2 import TypeIntegerRestriction2
+from travelport.models.type_integer_restriction_1 import (
+    TypeIntegerRestriction1,
+)
+from travelport.models.type_integer_restriction_2 import (
+    TypeIntegerRestriction2,
+)
 from travelport.models.type_inventory_request import TypeInventoryRequest
 from travelport.models.type_itinerary import TypeItinerary
 from travelport.models.type_itinerary_code import TypeItineraryCode
@@ -3211,25 +4887,49 @@ from travelport.models.type_logging_level_4 import TypeLoggingLevel4
 from travelport.models.type_logging_level_5 import TypeLoggingLevel5
 from travelport.models.type_logging_level_6 import TypeLoggingLevel6
 from travelport.models.type_logging_level_7 import TypeLoggingLevel7
-from travelport.models.type_loyalty_program_enrollment_history_1 import TypeLoyaltyProgramEnrollmentHistory1
-from travelport.models.type_loyalty_program_enrollment_history_2 import TypeLoyaltyProgramEnrollmentHistory2
+from travelport.models.type_loyalty_program_enrollment_history_1 import (
+    TypeLoyaltyProgramEnrollmentHistory1,
+)
+from travelport.models.type_loyalty_program_enrollment_history_2 import (
+    TypeLoyaltyProgramEnrollmentHistory2,
+)
 from travelport.models.type_masked_1 import TypeMasked1
 from travelport.models.type_masked_2 import TypeMasked2
 from travelport.models.type_mcostatus import TypeMcostatus
 from travelport.models.type_mcotype import TypeMcotype
 from travelport.models.type_mct_connection import TypeMctConnection
 from travelport.models.type_meal_service import TypeMealService
-from travelport.models.type_mile_or_route_based_fare import TypeMileOrRouteBasedFare
-from travelport.models.type_most_restrictive_penalties import TypeMostRestrictivePenalties
-from travelport.models.type_native_search_modifier import TypeNativeSearchModifier
+from travelport.models.type_mile_or_route_based_fare import (
+    TypeMileOrRouteBasedFare,
+)
+from travelport.models.type_most_restrictive_penalties import (
+    TypeMostRestrictivePenalties,
+)
+from travelport.models.type_native_search_modifier import (
+    TypeNativeSearchModifier,
+)
 from travelport.models.type_net_trans_commission import TypeNetTransCommission
-from travelport.models.type_non_air_reservation_ref_1 import TypeNonAirReservationRef1
-from travelport.models.type_non_air_reservation_ref_2 import TypeNonAirReservationRef2
-from travelport.models.type_non_air_reservation_ref_3 import TypeNonAirReservationRef3
-from travelport.models.type_non_air_reservation_ref_4 import TypeNonAirReservationRef4
-from travelport.models.type_non_air_reservation_ref_5 import TypeNonAirReservationRef5
-from travelport.models.type_non_air_reservation_ref_6 import TypeNonAirReservationRef6
-from travelport.models.type_non_air_reservation_ref_7 import TypeNonAirReservationRef7
+from travelport.models.type_non_air_reservation_ref_1 import (
+    TypeNonAirReservationRef1,
+)
+from travelport.models.type_non_air_reservation_ref_2 import (
+    TypeNonAirReservationRef2,
+)
+from travelport.models.type_non_air_reservation_ref_3 import (
+    TypeNonAirReservationRef3,
+)
+from travelport.models.type_non_air_reservation_ref_4 import (
+    TypeNonAirReservationRef4,
+)
+from travelport.models.type_non_air_reservation_ref_5 import (
+    TypeNonAirReservationRef5,
+)
+from travelport.models.type_non_air_reservation_ref_6 import (
+    TypeNonAirReservationRef6,
+)
+from travelport.models.type_non_air_reservation_ref_7 import (
+    TypeNonAirReservationRef7,
+)
 from travelport.models.type_otakeyword_1 import TypeOtakeyword1
 from travelport.models.type_otakeyword_2 import TypeOtakeyword2
 from travelport.models.type_otakeyword_3 import TypeOtakeyword3
@@ -3238,8 +4938,12 @@ from travelport.models.type_otasub_key_2 import TypeOtasubKey2
 from travelport.models.type_otasub_key_3 import TypeOtasubKey3
 from travelport.models.type_other_preference_1 import TypeOtherPreference1
 from travelport.models.type_other_preference_2 import TypeOtherPreference2
-from travelport.models.type_other_preference_history_1 import TypeOtherPreferenceHistory1
-from travelport.models.type_other_preference_history_2 import TypeOtherPreferenceHistory2
+from travelport.models.type_other_preference_history_1 import (
+    TypeOtherPreferenceHistory1,
+)
+from travelport.models.type_other_preference_history_2 import (
+    TypeOtherPreferenceHistory2,
+)
 from travelport.models.type_parent_profile_level import TypeParentProfileLevel
 from travelport.models.type_passenger_type_1 import TypePassengerType1
 from travelport.models.type_passenger_type_2 import TypePassengerType2
@@ -3254,10 +4958,18 @@ from travelport.models.type_payment_card_4 import TypePaymentCard4
 from travelport.models.type_payment_card_5 import TypePaymentCard5
 from travelport.models.type_payment_card_6 import TypePaymentCard6
 from travelport.models.type_payment_card_7 import TypePaymentCard7
-from travelport.models.type_payment_card_history_1 import TypePaymentCardHistory1
-from travelport.models.type_payment_card_history_2 import TypePaymentCardHistory2
-from travelport.models.type_payment_details_history_1 import TypePaymentDetailsHistory1
-from travelport.models.type_payment_details_history_2 import TypePaymentDetailsHistory2
+from travelport.models.type_payment_card_history_1 import (
+    TypePaymentCardHistory1,
+)
+from travelport.models.type_payment_card_history_2 import (
+    TypePaymentCardHistory2,
+)
+from travelport.models.type_payment_details_history_1 import (
+    TypePaymentDetailsHistory1,
+)
+from travelport.models.type_payment_details_history_2 import (
+    TypePaymentDetailsHistory2,
+)
 from travelport.models.type_payment_information import TypePaymentInformation
 from travelport.models.type_payment_type_1 import TypePaymentType1
 from travelport.models.type_payment_type_2 import TypePaymentType2
@@ -3278,12 +4990,18 @@ from travelport.models.type_policy_6 import TypePolicy6
 from travelport.models.type_policy_codes_list_1 import TypePolicyCodesList1
 from travelport.models.type_policy_codes_list_2 import TypePolicyCodesList2
 from travelport.models.type_policy_codes_list_3 import TypePolicyCodesList3
-from travelport.models.type_policy_reference_history_1 import TypePolicyReferenceHistory1
-from travelport.models.type_policy_reference_history_2 import TypePolicyReferenceHistory2
+from travelport.models.type_policy_reference_history_1 import (
+    TypePolicyReferenceHistory1,
+)
+from travelport.models.type_policy_reference_history_2 import (
+    TypePolicyReferenceHistory2,
+)
 from travelport.models.type_position import TypePosition
 from travelport.models.type_preference_purpose_1 import TypePreferencePurpose1
 from travelport.models.type_preference_purpose_2 import TypePreferencePurpose2
-from travelport.models.type_price_class_of_service import TypePriceClassOfService
+from travelport.models.type_price_class_of_service import (
+    TypePriceClassOfService,
+)
 from travelport.models.type_pricing_method import TypePricingMethod
 from travelport.models.type_pricing_type import TypePricingType
 from travelport.models.type_private_fare import TypePrivateFare
@@ -3294,16 +5012,36 @@ from travelport.models.type_product_4 import TypeProduct4
 from travelport.models.type_product_5 import TypeProduct5
 from travelport.models.type_product_6 import TypeProduct6
 from travelport.models.type_product_info import TypeProductInfo
-from travelport.models.type_profile_component_type_1 import TypeProfileComponentType1
-from travelport.models.type_profile_component_type_2 import TypeProfileComponentType2
-from travelport.models.type_profile_data_category_1 import TypeProfileDataCategory1
-from travelport.models.type_profile_data_category_2 import TypeProfileDataCategory2
-from travelport.models.type_profile_data_element_type_1 import TypeProfileDataElementType1
-from travelport.models.type_profile_data_element_type_2 import TypeProfileDataElementType2
-from travelport.models.type_profile_entity_status_1 import TypeProfileEntityStatus1
-from travelport.models.type_profile_entity_status_2 import TypeProfileEntityStatus2
-from travelport.models.type_profile_entity_status_with_delete_1 import TypeProfileEntityStatusWithDelete1
-from travelport.models.type_profile_entity_status_with_delete_2 import TypeProfileEntityStatusWithDelete2
+from travelport.models.type_profile_component_type_1 import (
+    TypeProfileComponentType1,
+)
+from travelport.models.type_profile_component_type_2 import (
+    TypeProfileComponentType2,
+)
+from travelport.models.type_profile_data_category_1 import (
+    TypeProfileDataCategory1,
+)
+from travelport.models.type_profile_data_category_2 import (
+    TypeProfileDataCategory2,
+)
+from travelport.models.type_profile_data_element_type_1 import (
+    TypeProfileDataElementType1,
+)
+from travelport.models.type_profile_data_element_type_2 import (
+    TypeProfileDataElementType2,
+)
+from travelport.models.type_profile_entity_status_1 import (
+    TypeProfileEntityStatus1,
+)
+from travelport.models.type_profile_entity_status_2 import (
+    TypeProfileEntityStatus2,
+)
+from travelport.models.type_profile_entity_status_with_delete_1 import (
+    TypeProfileEntityStatusWithDelete1,
+)
+from travelport.models.type_profile_entity_status_with_delete_2 import (
+    TypeProfileEntityStatusWithDelete2,
+)
 from travelport.models.type_profile_info_1 import TypeProfileInfo1
 from travelport.models.type_profile_info_2 import TypeProfileInfo2
 from travelport.models.type_profile_level_1 import TypeProfileLevel1
@@ -3312,12 +5050,24 @@ from travelport.models.type_profile_level_3 import TypeProfileLevel3
 from travelport.models.type_profile_level_4 import TypeProfileLevel4
 from travelport.models.type_profile_level_5 import TypeProfileLevel5
 from travelport.models.type_profile_level_6 import TypeProfileLevel6
-from travelport.models.type_profile_link_history_1 import TypeProfileLinkHistory1
-from travelport.models.type_profile_link_history_2 import TypeProfileLinkHistory2
-from travelport.models.type_profile_link_relationship_1 import TypeProfileLinkRelationship1
-from travelport.models.type_profile_link_relationship_2 import TypeProfileLinkRelationship2
-from travelport.models.type_profile_parent_history_1 import TypeProfileParentHistory1
-from travelport.models.type_profile_parent_history_2 import TypeProfileParentHistory2
+from travelport.models.type_profile_link_history_1 import (
+    TypeProfileLinkHistory1,
+)
+from travelport.models.type_profile_link_history_2 import (
+    TypeProfileLinkHistory2,
+)
+from travelport.models.type_profile_link_relationship_1 import (
+    TypeProfileLinkRelationship1,
+)
+from travelport.models.type_profile_link_relationship_2 import (
+    TypeProfileLinkRelationship2,
+)
+from travelport.models.type_profile_parent_history_1 import (
+    TypeProfileParentHistory1,
+)
+from travelport.models.type_profile_parent_history_2 import (
+    TypeProfileParentHistory2,
+)
 from travelport.models.type_profile_parent_with_data_1 import (
     ProfileParent1,
     TypeProfileParentWithData1,
@@ -3332,10 +5082,18 @@ from travelport.models.type_profile_ref_3 import TypeProfileRef3
 from travelport.models.type_profile_ref_4 import TypeProfileRef4
 from travelport.models.type_profile_ref_5 import TypeProfileRef5
 from travelport.models.type_profile_ref_6 import TypeProfileRef6
-from travelport.models.type_profile_search_criteria_1 import TypeProfileSearchCriteria1
-from travelport.models.type_profile_search_criteria_2 import TypeProfileSearchCriteria2
-from travelport.models.type_profile_status_history_1 import TypeProfileStatusHistory1
-from travelport.models.type_profile_status_history_2 import TypeProfileStatusHistory2
+from travelport.models.type_profile_search_criteria_1 import (
+    TypeProfileSearchCriteria1,
+)
+from travelport.models.type_profile_search_criteria_2 import (
+    TypeProfileSearchCriteria2,
+)
+from travelport.models.type_profile_status_history_1 import (
+    TypeProfileStatusHistory1,
+)
+from travelport.models.type_profile_status_history_2 import (
+    TypeProfileStatusHistory2,
+)
 from travelport.models.type_profile_type_1 import TypeProfileType1
 from travelport.models.type_profile_type_2 import TypeProfileType2
 from travelport.models.type_profile_type_3 import TypeProfileType3
@@ -3345,44 +5103,106 @@ from travelport.models.type_profile_type_6 import TypeProfileType6
 from travelport.models.type_profile_type_7 import TypeProfileType7
 from travelport.models.type_profile_type_8 import TypeProfileType8
 from travelport.models.type_profile_type_9 import TypeProfileType9
-from travelport.models.type_proprietary_data_history_1 import TypeProprietaryDataHistory1
-from travelport.models.type_proprietary_data_history_2 import TypeProprietaryDataHistory2
-from travelport.models.type_proprietary_data_history_proprietary_data_type_1 import TypeProprietaryDataHistoryProprietaryDataType1
-from travelport.models.type_proprietary_data_history_proprietary_data_type_2 import TypeProprietaryDataHistoryProprietaryDataType2
-from travelport.models.type_provider_info_history_1 import TypeProviderInfoHistory1
-from travelport.models.type_provider_info_history_2 import TypeProviderInfoHistory2
-from travelport.models.type_provider_reservation_detail_1 import TypeProviderReservationDetail1
-from travelport.models.type_provider_reservation_detail_2 import TypeProviderReservationDetail2
-from travelport.models.type_provider_reservation_detail_3 import TypeProviderReservationDetail3
-from travelport.models.type_provider_reservation_detail_4 import TypeProviderReservationDetail4
-from travelport.models.type_provider_reservation_detail_5 import TypeProviderReservationDetail5
-from travelport.models.type_provider_reservation_detail_6 import TypeProviderReservationDetail6
-from travelport.models.type_provider_reservation_specific_info_1 import TypeProviderReservationSpecificInfo1
-from travelport.models.type_provider_reservation_specific_info_2 import TypeProviderReservationSpecificInfo2
-from travelport.models.type_provider_reservation_specific_info_3 import TypeProviderReservationSpecificInfo3
-from travelport.models.type_provider_reservation_specific_info_4 import TypeProviderReservationSpecificInfo4
-from travelport.models.type_provider_reservation_specific_info_5 import TypeProviderReservationSpecificInfo5
-from travelport.models.type_provider_reservation_specific_info_6 import TypeProviderReservationSpecificInfo6
-from travelport.models.type_provider_supplier_capability_type import TypeProviderSupplierCapabilityType
+from travelport.models.type_proprietary_data_history_1 import (
+    TypeProprietaryDataHistory1,
+)
+from travelport.models.type_proprietary_data_history_2 import (
+    TypeProprietaryDataHistory2,
+)
+from travelport.models.type_proprietary_data_history_proprietary_data_type_1 import (
+    TypeProprietaryDataHistoryProprietaryDataType1,
+)
+from travelport.models.type_proprietary_data_history_proprietary_data_type_2 import (
+    TypeProprietaryDataHistoryProprietaryDataType2,
+)
+from travelport.models.type_provider_info_history_1 import (
+    TypeProviderInfoHistory1,
+)
+from travelport.models.type_provider_info_history_2 import (
+    TypeProviderInfoHistory2,
+)
+from travelport.models.type_provider_reservation_detail_1 import (
+    TypeProviderReservationDetail1,
+)
+from travelport.models.type_provider_reservation_detail_2 import (
+    TypeProviderReservationDetail2,
+)
+from travelport.models.type_provider_reservation_detail_3 import (
+    TypeProviderReservationDetail3,
+)
+from travelport.models.type_provider_reservation_detail_4 import (
+    TypeProviderReservationDetail4,
+)
+from travelport.models.type_provider_reservation_detail_5 import (
+    TypeProviderReservationDetail5,
+)
+from travelport.models.type_provider_reservation_detail_6 import (
+    TypeProviderReservationDetail6,
+)
+from travelport.models.type_provider_reservation_specific_info_1 import (
+    TypeProviderReservationSpecificInfo1,
+)
+from travelport.models.type_provider_reservation_specific_info_2 import (
+    TypeProviderReservationSpecificInfo2,
+)
+from travelport.models.type_provider_reservation_specific_info_3 import (
+    TypeProviderReservationSpecificInfo3,
+)
+from travelport.models.type_provider_reservation_specific_info_4 import (
+    TypeProviderReservationSpecificInfo4,
+)
+from travelport.models.type_provider_reservation_specific_info_5 import (
+    TypeProviderReservationSpecificInfo5,
+)
+from travelport.models.type_provider_reservation_specific_info_6 import (
+    TypeProviderReservationSpecificInfo6,
+)
+from travelport.models.type_provider_supplier_capability_type import (
+    TypeProviderSupplierCapabilityType,
+)
 from travelport.models.type_purchase_window import TypePurchaseWindow
 from travelport.models.type_purpose_code import TypePurposeCode
-from travelport.models.type_rail_coach_compartment_1 import TypeRailCoachCompartment1
-from travelport.models.type_rail_coach_compartment_2 import TypeRailCoachCompartment2
-from travelport.models.type_rail_create_reservation_rsp import TypeRailCreateReservationRsp
+from travelport.models.type_rail_coach_compartment_1 import (
+    TypeRailCoachCompartment1,
+)
+from travelport.models.type_rail_coach_compartment_2 import (
+    TypeRailCoachCompartment2,
+)
+from travelport.models.type_rail_create_reservation_rsp import (
+    TypeRailCreateReservationRsp,
+)
 from travelport.models.type_rail_direction import TypeRailDirection
-from travelport.models.type_rail_gender_compartment_1 import TypeRailGenderCompartment1
-from travelport.models.type_rail_gender_compartment_2 import TypeRailGenderCompartment2
-from travelport.models.type_rail_preference_history_1 import TypeRailPreferenceHistory1
-from travelport.models.type_rail_preference_history_2 import TypeRailPreferenceHistory2
-from travelport.models.type_rail_pricing_solution import TypeRailPricingSolution
+from travelport.models.type_rail_gender_compartment_1 import (
+    TypeRailGenderCompartment1,
+)
+from travelport.models.type_rail_gender_compartment_2 import (
+    TypeRailGenderCompartment2,
+)
+from travelport.models.type_rail_preference_history_1 import (
+    TypeRailPreferenceHistory1,
+)
+from travelport.models.type_rail_preference_history_2 import (
+    TypeRailPreferenceHistory2,
+)
+from travelport.models.type_rail_pricing_solution import (
+    TypeRailPricingSolution,
+)
 from travelport.models.type_rail_reservation_rsp import TypeRailReservationRsp
-from travelport.models.type_rail_seat_arrangement_1 import TypeRailSeatArrangement1
-from travelport.models.type_rail_seat_arrangement_2 import TypeRailSeatArrangement2
+from travelport.models.type_rail_seat_arrangement_1 import (
+    TypeRailSeatArrangement1,
+)
+from travelport.models.type_rail_seat_arrangement_2 import (
+    TypeRailSeatArrangement2,
+)
 from travelport.models.type_rail_seating_1 import TypeRailSeating1
 from travelport.models.type_rail_seating_2 import TypeRailSeating2
 from travelport.models.type_rail_segment_info import TypeRailSegmentInfo
-from travelport.models.type_rail_ticket_fulfillment_option_1 import TypeRailTicketFulfillmentOption1
-from travelport.models.type_rail_ticket_fulfillment_option_2 import TypeRailTicketFulfillmentOption2
+from travelport.models.type_rail_ticket_fulfillment_option_1 import (
+    TypeRailTicketFulfillmentOption1,
+)
+from travelport.models.type_rail_ticket_fulfillment_option_2 import (
+    TypeRailTicketFulfillmentOption2,
+)
 from travelport.models.type_rate_availability import TypeRateAvailability
 from travelport.models.type_rate_category import TypeRateCategory
 from travelport.models.type_rate_description_1 import TypeRateDescription1
@@ -3409,14 +5229,28 @@ from travelport.models.type_remark_history_1 import TypeRemarkHistory1
 from travelport.models.type_remark_history_2 import TypeRemarkHistory2
 from travelport.models.type_remark_type_1 import TypeRemarkType1
 from travelport.models.type_remark_type_2 import TypeRemarkType2
-from travelport.models.type_remark_with_traveler_ref_1 import TypeRemarkWithTravelerRef1
-from travelport.models.type_remark_with_traveler_ref_2 import TypeRemarkWithTravelerRef2
-from travelport.models.type_remark_with_traveler_ref_3 import TypeRemarkWithTravelerRef3
-from travelport.models.type_remark_with_traveler_ref_4 import TypeRemarkWithTravelerRef4
-from travelport.models.type_remark_with_traveler_ref_5 import TypeRemarkWithTravelerRef5
-from travelport.models.type_remark_with_traveler_ref_6 import TypeRemarkWithTravelerRef6
+from travelport.models.type_remark_with_traveler_ref_1 import (
+    TypeRemarkWithTravelerRef1,
+)
+from travelport.models.type_remark_with_traveler_ref_2 import (
+    TypeRemarkWithTravelerRef2,
+)
+from travelport.models.type_remark_with_traveler_ref_3 import (
+    TypeRemarkWithTravelerRef3,
+)
+from travelport.models.type_remark_with_traveler_ref_4 import (
+    TypeRemarkWithTravelerRef4,
+)
+from travelport.models.type_remark_with_traveler_ref_5 import (
+    TypeRemarkWithTravelerRef5,
+)
+from travelport.models.type_remark_with_traveler_ref_6 import (
+    TypeRemarkWithTravelerRef6,
+)
 from travelport.models.type_rental_period import TypeRentalPeriod
-from travelport.models.type_rental_period_rental_unit import TypeRentalPeriodRentalUnit
+from travelport.models.type_rental_period_rental_unit import (
+    TypeRentalPeriodRentalUnit,
+)
 from travelport.models.type_req_seat import TypeReqSeat
 from travelport.models.type_requested_image_size import TypeRequestedImageSize
 from travelport.models.type_reservation_ticketed import TypeReservationTicketed
@@ -3435,7 +5269,9 @@ from travelport.models.type_response_image_size_5 import TypeResponseImageSize5
 from travelport.models.type_response_image_size_6 import TypeResponseImageSize6
 from travelport.models.type_response_type import TypeResponseType
 from travelport.models.type_restriction_data import TypeRestrictionData
-from travelport.models.type_restriction_length_of_stay import TypeRestrictionLengthOfStay
+from travelport.models.type_restriction_length_of_stay import (
+    TypeRestrictionLengthOfStay,
+)
 from travelport.models.type_result_message_1 import TypeResultMessage1
 from travelport.models.type_result_message_2 import TypeResultMessage2
 from travelport.models.type_result_message_3 import TypeResultMessage3
@@ -3451,28 +5287,52 @@ from travelport.models.type_result_message_type_6 import TypeResultMessageType6
 from travelport.models.type_retain_reservation import TypeRetainReservation
 from travelport.models.type_row_location import TypeRowLocation
 from travelport.models.type_saved_trip_note import TypeSavedTripNote
-from travelport.models.type_saved_trip_product_info import TypeSavedTripProductInfo
-from travelport.models.type_saved_trip_record_status import TypeSavedTripRecordStatus
-from travelport.models.type_search_accounting_reference_1 import TypeSearchAccountingReference1
-from travelport.models.type_search_accounting_reference_2 import TypeSearchAccountingReference2
+from travelport.models.type_saved_trip_product_info import (
+    TypeSavedTripProductInfo,
+)
+from travelport.models.type_saved_trip_record_status import (
+    TypeSavedTripRecordStatus,
+)
+from travelport.models.type_search_accounting_reference_1 import (
+    TypeSearchAccountingReference1,
+)
+from travelport.models.type_search_accounting_reference_2 import (
+    TypeSearchAccountingReference2,
+)
 from travelport.models.type_search_address_1 import TypeSearchAddress1
 from travelport.models.type_search_address_2 import TypeSearchAddress2
 from travelport.models.type_search_contact_1 import TypeSearchContact1
 from travelport.models.type_search_contact_2 import TypeSearchContact2
-from travelport.models.type_search_electronic_address_1 import TypeSearchElectronicAddress1
-from travelport.models.type_search_electronic_address_2 import TypeSearchElectronicAddress2
-from travelport.models.type_search_external_identifier_1 import TypeSearchExternalIdentifier1
-from travelport.models.type_search_external_identifier_2 import TypeSearchExternalIdentifier2
+from travelport.models.type_search_electronic_address_1 import (
+    TypeSearchElectronicAddress1,
+)
+from travelport.models.type_search_electronic_address_2 import (
+    TypeSearchElectronicAddress2,
+)
+from travelport.models.type_search_external_identifier_1 import (
+    TypeSearchExternalIdentifier1,
+)
+from travelport.models.type_search_external_identifier_2 import (
+    TypeSearchExternalIdentifier2,
+)
 from travelport.models.type_search_location_1 import TypeSearchLocation1
 from travelport.models.type_search_location_2 import TypeSearchLocation2
 from travelport.models.type_search_location_3 import TypeSearchLocation3
 from travelport.models.type_search_location_4 import TypeSearchLocation4
 from travelport.models.type_search_location_5 import TypeSearchLocation5
 from travelport.models.type_search_location_6 import TypeSearchLocation6
-from travelport.models.type_search_loyalty_program_1 import TypeSearchLoyaltyProgram1
-from travelport.models.type_search_loyalty_program_2 import TypeSearchLoyaltyProgram2
-from travelport.models.type_search_payment_details_1 import TypeSearchPaymentDetails1
-from travelport.models.type_search_payment_details_2 import TypeSearchPaymentDetails2
+from travelport.models.type_search_loyalty_program_1 import (
+    TypeSearchLoyaltyProgram1,
+)
+from travelport.models.type_search_loyalty_program_2 import (
+    TypeSearchLoyaltyProgram2,
+)
+from travelport.models.type_search_payment_details_1 import (
+    TypeSearchPaymentDetails1,
+)
+from travelport.models.type_search_payment_details_2 import (
+    TypeSearchPaymentDetails2,
+)
 from travelport.models.type_search_phone_1 import TypeSearchPhone1
 from travelport.models.type_search_phone_2 import TypeSearchPhone2
 from travelport.models.type_search_time_spec_1 import TypeSearchTimeSpec1
@@ -3495,7 +5355,9 @@ from travelport.models.type_service_fee_history_2 import TypeServiceFeeHistory2
 from travelport.models.type_service_fee_type_1 import TypeServiceFeeType1
 from travelport.models.type_service_fee_type_2 import TypeServiceFeeType2
 from travelport.models.type_show_providers_type import TypeShowProvidersType
-from travelport.models.type_specific_flight_number import TypeSpecificFlightNumber
+from travelport.models.type_specific_flight_number import (
+    TypeSpecificFlightNumber,
+)
 from travelport.models.type_specific_time_1 import TypeSpecificTime1
 from travelport.models.type_specific_time_2 import TypeSpecificTime2
 from travelport.models.type_specific_time_3 import TypeSpecificTime3
@@ -3529,8 +5391,12 @@ from travelport.models.type_supplier_type_1 import TypeSupplierType1
 from travelport.models.type_supplier_type_2 import TypeSupplierType2
 from travelport.models.type_taggable_address_1 import TypeTaggableAddress1
 from travelport.models.type_taggable_address_2 import TypeTaggableAddress2
-from travelport.models.type_taggable_electronic_address_1 import TypeTaggableElectronicAddress1
-from travelport.models.type_taggable_electronic_address_2 import TypeTaggableElectronicAddress2
+from travelport.models.type_taggable_electronic_address_1 import (
+    TypeTaggableElectronicAddress1,
+)
+from travelport.models.type_taggable_electronic_address_2 import (
+    TypeTaggableElectronicAddress2,
+)
 from travelport.models.type_taggable_element_1 import TypeTaggableElement1
 from travelport.models.type_taggable_element_2 import TypeTaggableElement2
 from travelport.models.type_taggable_phone_1 import TypeTaggablePhone1
@@ -3547,19 +5413,31 @@ from travelport.models.type_tax_info_3 import TypeTaxInfo3
 from travelport.models.type_tax_info_4 import TypeTaxInfo4
 from travelport.models.type_tax_info_5 import TypeTaxInfo5
 from travelport.models.type_tax_info_6 import TypeTaxInfo6
-from travelport.models.type_tax_info_with_payment_ref import TypeTaxInfoWithPaymentRef
+from travelport.models.type_tax_info_with_payment_ref import (
+    TypeTaxInfoWithPaymentRef,
+)
 from travelport.models.type_tckey_element import TypeTckeyElement
 from travelport.models.type_tcrstatus import TypeTcrstatus
 from travelport.models.type_text_block_1 import TypeTextBlock1
 from travelport.models.type_text_block_2 import TypeTextBlock2
 from travelport.models.type_text_element import TypeTextElement
 from travelport.models.type_ticket_failure_info import TypeTicketFailureInfo
-from travelport.models.type_ticket_modifier_accounting_type import TypeTicketModifierAccountingType
-from travelport.models.type_ticket_modifier_amount_type import TypeTicketModifierAmountType
-from travelport.models.type_ticket_modifier_percent_type import TypeTicketModifierPercentType
-from travelport.models.type_ticket_modifier_value_type import TypeTicketModifierValueType
+from travelport.models.type_ticket_modifier_accounting_type import (
+    TypeTicketModifierAccountingType,
+)
+from travelport.models.type_ticket_modifier_amount_type import (
+    TypeTicketModifierAmountType,
+)
+from travelport.models.type_ticket_modifier_percent_type import (
+    TypeTicketModifierPercentType,
+)
+from travelport.models.type_ticket_modifier_value_type import (
+    TypeTicketModifierValueType,
+)
 from travelport.models.type_ticket_status import TypeTicketStatus
-from travelport.models.type_ticketing_modifiers_ref import TypeTicketingModifiersRef
+from travelport.models.type_ticketing_modifiers_ref import (
+    TypeTicketingModifiersRef,
+)
 from travelport.models.type_time_range_1 import TypeTimeRange1
 from travelport.models.type_time_range_2 import TypeTimeRange2
 from travelport.models.type_time_range_3 import TypeTimeRange3
@@ -3572,29 +5450,73 @@ from travelport.models.type_time_spec_3 import TypeTimeSpec3
 from travelport.models.type_time_spec_4 import TypeTimeSpec4
 from travelport.models.type_time_spec_5 import TypeTimeSpec5
 from travelport.models.type_time_spec_6 import TypeTimeSpec6
-from travelport.models.type_transactions_allowed_1 import TypeTransactionsAllowed1
-from travelport.models.type_transactions_allowed_2 import TypeTransactionsAllowed2
-from travelport.models.type_transactions_allowed_3 import TypeTransactionsAllowed3
-from travelport.models.type_transactions_allowed_4 import TypeTransactionsAllowed4
-from travelport.models.type_transactions_allowed_5 import TypeTransactionsAllowed5
-from travelport.models.type_transactions_allowed_6 import TypeTransactionsAllowed6
+from travelport.models.type_transactions_allowed_1 import (
+    TypeTransactionsAllowed1,
+)
+from travelport.models.type_transactions_allowed_2 import (
+    TypeTransactionsAllowed2,
+)
+from travelport.models.type_transactions_allowed_3 import (
+    TypeTransactionsAllowed3,
+)
+from travelport.models.type_transactions_allowed_4 import (
+    TypeTransactionsAllowed4,
+)
+from travelport.models.type_transactions_allowed_5 import (
+    TypeTransactionsAllowed5,
+)
+from travelport.models.type_transactions_allowed_6 import (
+    TypeTransactionsAllowed6,
+)
 from travelport.models.type_transport_mode import TypeTransportMode
-from travelport.models.type_travel_document_address_1 import TypeTravelDocumentAddress1
-from travelport.models.type_travel_document_address_2 import TypeTravelDocumentAddress2
-from travelport.models.type_travel_document_address_history_1 import TypeTravelDocumentAddressHistory1
-from travelport.models.type_travel_document_address_history_2 import TypeTravelDocumentAddressHistory2
-from travelport.models.type_travel_document_history_1 import TypeTravelDocumentHistory1
-from travelport.models.type_travel_document_history_2 import TypeTravelDocumentHistory2
-from travelport.models.type_travel_document_history_height_unit_1 import TypeTravelDocumentHistoryHeightUnit1
-from travelport.models.type_travel_document_history_height_unit_2 import TypeTravelDocumentHistoryHeightUnit2
-from travelport.models.type_travel_document_history_weight_unit_1 import TypeTravelDocumentHistoryWeightUnit1
-from travelport.models.type_travel_document_history_weight_unit_2 import TypeTravelDocumentHistoryWeightUnit2
-from travelport.models.type_travel_document_type_1 import TypeTravelDocumentType1
-from travelport.models.type_travel_document_type_2 import TypeTravelDocumentType2
-from travelport.models.type_traveler_group_info_history_1 import TypeTravelerGroupInfoHistory1
-from travelport.models.type_traveler_group_info_history_2 import TypeTravelerGroupInfoHistory2
-from travelport.models.type_traveler_info_history_1 import TypeTravelerInfoHistory1
-from travelport.models.type_traveler_info_history_2 import TypeTravelerInfoHistory2
+from travelport.models.type_travel_document_address_1 import (
+    TypeTravelDocumentAddress1,
+)
+from travelport.models.type_travel_document_address_2 import (
+    TypeTravelDocumentAddress2,
+)
+from travelport.models.type_travel_document_address_history_1 import (
+    TypeTravelDocumentAddressHistory1,
+)
+from travelport.models.type_travel_document_address_history_2 import (
+    TypeTravelDocumentAddressHistory2,
+)
+from travelport.models.type_travel_document_history_1 import (
+    TypeTravelDocumentHistory1,
+)
+from travelport.models.type_travel_document_history_2 import (
+    TypeTravelDocumentHistory2,
+)
+from travelport.models.type_travel_document_history_height_unit_1 import (
+    TypeTravelDocumentHistoryHeightUnit1,
+)
+from travelport.models.type_travel_document_history_height_unit_2 import (
+    TypeTravelDocumentHistoryHeightUnit2,
+)
+from travelport.models.type_travel_document_history_weight_unit_1 import (
+    TypeTravelDocumentHistoryWeightUnit1,
+)
+from travelport.models.type_travel_document_history_weight_unit_2 import (
+    TypeTravelDocumentHistoryWeightUnit2,
+)
+from travelport.models.type_travel_document_type_1 import (
+    TypeTravelDocumentType1,
+)
+from travelport.models.type_travel_document_type_2 import (
+    TypeTravelDocumentType2,
+)
+from travelport.models.type_traveler_group_info_history_1 import (
+    TypeTravelerGroupInfoHistory1,
+)
+from travelport.models.type_traveler_group_info_history_2 import (
+    TypeTravelerGroupInfoHistory2,
+)
+from travelport.models.type_traveler_info_history_1 import (
+    TypeTravelerInfoHistory1,
+)
+from travelport.models.type_traveler_info_history_2 import (
+    TypeTravelerInfoHistory2,
+)
 from travelport.models.type_trinary import TypeTrinary
 from travelport.models.type_trip_type import TypeTripType
 from travelport.models.type_unit_of_measure import TypeUnitOfMeasure
@@ -3606,36 +5528,70 @@ from travelport.models.type_variance_indicator import TypeVarianceIndicator
 from travelport.models.type_variance_type import TypeVarianceType
 from travelport.models.type_vehicle_category import TypeVehicleCategory
 from travelport.models.type_vehicle_charge import TypeVehicleCharge
-from travelport.models.type_vehicle_charge_included_in_rate import TypeVehicleChargeIncludedInRate
+from travelport.models.type_vehicle_charge_included_in_rate import (
+    TypeVehicleChargeIncludedInRate,
+)
 from travelport.models.type_vehicle_charge_type import TypeVehicleChargeType
 from travelport.models.type_vehicle_class import TypeVehicleClass
 from travelport.models.type_vehicle_disclaimer import TypeVehicleDisclaimer
 from travelport.models.type_vehicle_location import TypeVehicleLocation
-from travelport.models.type_vehicle_location_information import TypeVehicleLocationInformation
-from travelport.models.type_vehicle_preference_history_1 import TypeVehiclePreferenceHistory1
-from travelport.models.type_vehicle_preference_history_2 import TypeVehiclePreferenceHistory2
-from travelport.models.type_vehicle_rate_description import TypeVehicleRateDescription
+from travelport.models.type_vehicle_location_information import (
+    TypeVehicleLocationInformation,
+)
+from travelport.models.type_vehicle_preference_history_1 import (
+    TypeVehiclePreferenceHistory1,
+)
+from travelport.models.type_vehicle_preference_history_2 import (
+    TypeVehiclePreferenceHistory2,
+)
+from travelport.models.type_vehicle_rate_description import (
+    TypeVehicleRateDescription,
+)
 from travelport.models.type_vehicle_rates import TypeVehicleRates
-from travelport.models.type_vehicle_search_distance import TypeVehicleSearchDistance
+from travelport.models.type_vehicle_search_distance import (
+    TypeVehicleSearchDistance,
+)
 from travelport.models.type_vehicle_transmission import TypeVehicleTransmission
 from travelport.models.type_vehicle_types import TypeVehicleTypes
-from travelport.models.type_vehicle_vendor_location import TypeVehicleVendorLocation
-from travelport.models.type_vehicle_vendor_location_type import TypeVehicleVendorLocationType
+from travelport.models.type_vehicle_vendor_location import (
+    TypeVehicleVendorLocation,
+)
+from travelport.models.type_vehicle_vendor_location_type import (
+    TypeVehicleVendorLocationType,
+)
 from travelport.models.type_vendor_location_1 import TypeVendorLocation1
 from travelport.models.type_vendor_location_2 import TypeVendorLocation2
 from travelport.models.type_vendor_location_3 import TypeVendorLocation3
 from travelport.models.type_vendor_location_4 import TypeVendorLocation4
 from travelport.models.type_vendor_location_5 import TypeVendorLocation5
 from travelport.models.type_vendor_location_6 import TypeVendorLocation6
-from travelport.models.type_voucher_information_1 import TypeVoucherInformation1
-from travelport.models.type_voucher_information_2 import TypeVoucherInformation2
-from travelport.models.type_voucher_information_3 import TypeVoucherInformation3
-from travelport.models.type_voucher_information_4 import TypeVoucherInformation4
-from travelport.models.type_voucher_information_5 import TypeVoucherInformation5
-from travelport.models.type_voucher_information_6 import TypeVoucherInformation6
-from travelport.models.type_voucher_information_7 import TypeVoucherInformation7
-from travelport.models.type_voucher_information_history_1 import TypeVoucherInformationHistory1
-from travelport.models.type_voucher_information_history_2 import TypeVoucherInformationHistory2
+from travelport.models.type_voucher_information_1 import (
+    TypeVoucherInformation1,
+)
+from travelport.models.type_voucher_information_2 import (
+    TypeVoucherInformation2,
+)
+from travelport.models.type_voucher_information_3 import (
+    TypeVoucherInformation3,
+)
+from travelport.models.type_voucher_information_4 import (
+    TypeVoucherInformation4,
+)
+from travelport.models.type_voucher_information_5 import (
+    TypeVoucherInformation5,
+)
+from travelport.models.type_voucher_information_6 import (
+    TypeVoucherInformation6,
+)
+from travelport.models.type_voucher_information_7 import (
+    TypeVoucherInformation7,
+)
+from travelport.models.type_voucher_information_history_1 import (
+    TypeVoucherInformationHistory1,
+)
+from travelport.models.type_voucher_information_history_2 import (
+    TypeVoucherInformationHistory2,
+)
 from travelport.models.type_voucher_type_1 import TypeVoucherType1
 from travelport.models.type_voucher_type_2 import TypeVoucherType2
 from travelport.models.type_voucher_type_3 import TypeVoucherType3
@@ -3644,24 +5600,48 @@ from travelport.models.type_voucher_type_5 import TypeVoucherType5
 from travelport.models.type_voucher_type_6 import TypeVoucherType6
 from travelport.models.type_voucher_type_7 import TypeVoucherType7
 from travelport.models.type_weight import TypeWeight
-from travelport.models.uimeta_data_create_port_type_service import UimetaDataCreatePortTypeService
-from travelport.models.uimeta_data_create_port_type_service_input import UimetaDataCreatePortTypeServiceInput
-from travelport.models.uimeta_data_create_port_type_service_output import UimetaDataCreatePortTypeServiceOutput
+from travelport.models.uimeta_data_create_port_type_service import (
+    UimetaDataCreatePortTypeService,
+)
+from travelport.models.uimeta_data_create_port_type_service_input import (
+    UimetaDataCreatePortTypeServiceInput,
+)
+from travelport.models.uimeta_data_create_port_type_service_output import (
+    UimetaDataCreatePortTypeServiceOutput,
+)
 from travelport.models.uimeta_data_create_req import UimetaDataCreateReq
 from travelport.models.uimeta_data_create_rsp import UimetaDataCreateRsp
-from travelport.models.uimeta_data_delete_port_type_service import UimetaDataDeletePortTypeService
-from travelport.models.uimeta_data_delete_port_type_service_input import UimetaDataDeletePortTypeServiceInput
-from travelport.models.uimeta_data_delete_port_type_service_output import UimetaDataDeletePortTypeServiceOutput
+from travelport.models.uimeta_data_delete_port_type_service import (
+    UimetaDataDeletePortTypeService,
+)
+from travelport.models.uimeta_data_delete_port_type_service_input import (
+    UimetaDataDeletePortTypeServiceInput,
+)
+from travelport.models.uimeta_data_delete_port_type_service_output import (
+    UimetaDataDeletePortTypeServiceOutput,
+)
 from travelport.models.uimeta_data_delete_req import UimetaDataDeleteReq
 from travelport.models.uimeta_data_delete_rsp import UimetaDataDeleteRsp
-from travelport.models.uimeta_data_modify_port_type_service import UimetaDataModifyPortTypeService
-from travelport.models.uimeta_data_modify_port_type_service_input import UimetaDataModifyPortTypeServiceInput
-from travelport.models.uimeta_data_modify_port_type_service_output import UimetaDataModifyPortTypeServiceOutput
+from travelport.models.uimeta_data_modify_port_type_service import (
+    UimetaDataModifyPortTypeService,
+)
+from travelport.models.uimeta_data_modify_port_type_service_input import (
+    UimetaDataModifyPortTypeServiceInput,
+)
+from travelport.models.uimeta_data_modify_port_type_service_output import (
+    UimetaDataModifyPortTypeServiceOutput,
+)
 from travelport.models.uimeta_data_modify_req import UimetaDataModifyReq
 from travelport.models.uimeta_data_modify_rsp import UimetaDataModifyRsp
-from travelport.models.uimeta_data_retrieve_port_type_service import UimetaDataRetrievePortTypeService
-from travelport.models.uimeta_data_retrieve_port_type_service_input import UimetaDataRetrievePortTypeServiceInput
-from travelport.models.uimeta_data_retrieve_port_type_service_output import UimetaDataRetrievePortTypeServiceOutput
+from travelport.models.uimeta_data_retrieve_port_type_service import (
+    UimetaDataRetrievePortTypeService,
+)
+from travelport.models.uimeta_data_retrieve_port_type_service_input import (
+    UimetaDataRetrievePortTypeServiceInput,
+)
+from travelport.models.uimeta_data_retrieve_port_type_service_output import (
+    UimetaDataRetrievePortTypeServiceOutput,
+)
 from travelport.models.uimeta_data_retrieve_req import UimetaDataRetrieveReq
 from travelport.models.uimeta_data_retrieve_rsp import UimetaDataRetrieveRsp
 from travelport.models.unassociated_remark_1 import UnassociatedRemark1
@@ -3670,8 +5650,12 @@ from travelport.models.unassociated_remark_3 import UnassociatedRemark3
 from travelport.models.unassociated_remark_4 import UnassociatedRemark4
 from travelport.models.unassociated_remark_5 import UnassociatedRemark5
 from travelport.models.unassociated_remark_6 import UnassociatedRemark6
-from travelport.models.unique_profile_id_profile_type_1 import UniqueProfileIdProfileType1
-from travelport.models.unique_profile_id_profile_type_2 import UniqueProfileIdProfileType2
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
+)
+from travelport.models.unique_profile_id_profile_type_2 import (
+    UniqueProfileIdProfileType2,
+)
 from travelport.models.united_nations_1 import UnitedNations1
 from travelport.models.united_nations_2 import UnitedNations2
 from travelport.models.united_nations_3 import UnitedNations3
@@ -3684,62 +5668,152 @@ from travelport.models.united_nations_history_2 import UnitedNationsHistory2
 from travelport.models.universal_add import UniversalAdd
 from travelport.models.universal_delete import UniversalDelete
 from travelport.models.universal_modify_cmd import UniversalModifyCmd
-from travelport.models.universal_modify_command_error import UniversalModifyCommandError
-from travelport.models.universal_modify_error_info import UniversalModifyErrorInfo
-from travelport.models.universal_modify_failure_info import UniversalModifyFailureInfo
+from travelport.models.universal_modify_command_error import (
+    UniversalModifyCommandError,
+)
+from travelport.models.universal_modify_error_info import (
+    UniversalModifyErrorInfo,
+)
+from travelport.models.universal_modify_failure_info import (
+    UniversalModifyFailureInfo,
+)
 from travelport.models.universal_record import UniversalRecord
-from travelport.models.universal_record_cancel_req import UniversalRecordCancelReq
-from travelport.models.universal_record_cancel_rsp import UniversalRecordCancelRsp
-from travelport.models.universal_record_cancel_service_port_type_service import UniversalRecordCancelServicePortTypeService
-from travelport.models.universal_record_cancel_service_port_type_service_input import UniversalRecordCancelServicePortTypeServiceInput
-from travelport.models.universal_record_cancel_service_port_type_service_output import UniversalRecordCancelServicePortTypeServiceOutput
-from travelport.models.universal_record_error_info import UniversalRecordErrorInfo
-from travelport.models.universal_record_history_search_modifiers import UniversalRecordHistorySearchModifiers
-from travelport.models.universal_record_history_search_port_type_service import UniversalRecordHistorySearchPortTypeService
-from travelport.models.universal_record_history_search_port_type_service_input import UniversalRecordHistorySearchPortTypeServiceInput
-from travelport.models.universal_record_history_search_port_type_service_output import UniversalRecordHistorySearchPortTypeServiceOutput
-from travelport.models.universal_record_history_search_req import UniversalRecordHistorySearchReq
-from travelport.models.universal_record_history_search_result import UniversalRecordHistorySearchResult
-from travelport.models.universal_record_history_search_rsp import UniversalRecordHistorySearchRsp
-from travelport.models.universal_record_import_req import UniversalRecordImportReq
-from travelport.models.universal_record_import_rsp import UniversalRecordImportRsp
-from travelport.models.universal_record_import_service_port_type_service import UniversalRecordImportServicePortTypeService
-from travelport.models.universal_record_import_service_port_type_service_input import UniversalRecordImportServicePortTypeServiceInput
-from travelport.models.universal_record_import_service_port_type_service_output import UniversalRecordImportServicePortTypeServiceOutput
-from travelport.models.universal_record_modify_req import UniversalRecordModifyReq
-from travelport.models.universal_record_modify_rsp import UniversalRecordModifyRsp
-from travelport.models.universal_record_modify_service_port_type_service import UniversalRecordModifyServicePortTypeService
-from travelport.models.universal_record_modify_service_port_type_service_input import UniversalRecordModifyServicePortTypeServiceInput
-from travelport.models.universal_record_modify_service_port_type_service_output import UniversalRecordModifyServicePortTypeServiceOutput
-from travelport.models.universal_record_retrieve_req import UniversalRecordRetrieveReq
-from travelport.models.universal_record_retrieve_rsp import UniversalRecordRetrieveRsp
-from travelport.models.universal_record_retrieve_service_port_type_service import UniversalRecordRetrieveServicePortTypeService
-from travelport.models.universal_record_retrieve_service_port_type_service_input import UniversalRecordRetrieveServicePortTypeServiceInput
-from travelport.models.universal_record_retrieve_service_port_type_service_output import UniversalRecordRetrieveServicePortTypeServiceOutput
-from travelport.models.universal_record_search_modifiers import UniversalRecordSearchModifiers
-from travelport.models.universal_record_search_req import UniversalRecordSearchReq
-from travelport.models.universal_record_search_result import UniversalRecordSearchResult
-from travelport.models.universal_record_search_rsp import UniversalRecordSearchRsp
-from travelport.models.universal_record_search_service_port_type_service import UniversalRecordSearchServicePortTypeService
-from travelport.models.universal_record_search_service_port_type_service_input import UniversalRecordSearchServicePortTypeServiceInput
-from travelport.models.universal_record_search_service_port_type_service_output import UniversalRecordSearchServicePortTypeServiceOutput
+from travelport.models.universal_record_cancel_req import (
+    UniversalRecordCancelReq,
+)
+from travelport.models.universal_record_cancel_rsp import (
+    UniversalRecordCancelRsp,
+)
+from travelport.models.universal_record_cancel_service_port_type_service import (
+    UniversalRecordCancelServicePortTypeService,
+)
+from travelport.models.universal_record_cancel_service_port_type_service_input import (
+    UniversalRecordCancelServicePortTypeServiceInput,
+)
+from travelport.models.universal_record_cancel_service_port_type_service_output import (
+    UniversalRecordCancelServicePortTypeServiceOutput,
+)
+from travelport.models.universal_record_error_info import (
+    UniversalRecordErrorInfo,
+)
+from travelport.models.universal_record_history_search_modifiers import (
+    UniversalRecordHistorySearchModifiers,
+)
+from travelport.models.universal_record_history_search_port_type_service import (
+    UniversalRecordHistorySearchPortTypeService,
+)
+from travelport.models.universal_record_history_search_port_type_service_input import (
+    UniversalRecordHistorySearchPortTypeServiceInput,
+)
+from travelport.models.universal_record_history_search_port_type_service_output import (
+    UniversalRecordHistorySearchPortTypeServiceOutput,
+)
+from travelport.models.universal_record_history_search_req import (
+    UniversalRecordHistorySearchReq,
+)
+from travelport.models.universal_record_history_search_result import (
+    UniversalRecordHistorySearchResult,
+)
+from travelport.models.universal_record_history_search_rsp import (
+    UniversalRecordHistorySearchRsp,
+)
+from travelport.models.universal_record_import_req import (
+    UniversalRecordImportReq,
+)
+from travelport.models.universal_record_import_rsp import (
+    UniversalRecordImportRsp,
+)
+from travelport.models.universal_record_import_service_port_type_service import (
+    UniversalRecordImportServicePortTypeService,
+)
+from travelport.models.universal_record_import_service_port_type_service_input import (
+    UniversalRecordImportServicePortTypeServiceInput,
+)
+from travelport.models.universal_record_import_service_port_type_service_output import (
+    UniversalRecordImportServicePortTypeServiceOutput,
+)
+from travelport.models.universal_record_modify_req import (
+    UniversalRecordModifyReq,
+)
+from travelport.models.universal_record_modify_rsp import (
+    UniversalRecordModifyRsp,
+)
+from travelport.models.universal_record_modify_service_port_type_service import (
+    UniversalRecordModifyServicePortTypeService,
+)
+from travelport.models.universal_record_modify_service_port_type_service_input import (
+    UniversalRecordModifyServicePortTypeServiceInput,
+)
+from travelport.models.universal_record_modify_service_port_type_service_output import (
+    UniversalRecordModifyServicePortTypeServiceOutput,
+)
+from travelport.models.universal_record_retrieve_req import (
+    UniversalRecordRetrieveReq,
+)
+from travelport.models.universal_record_retrieve_rsp import (
+    UniversalRecordRetrieveRsp,
+)
+from travelport.models.universal_record_retrieve_service_port_type_service import (
+    UniversalRecordRetrieveServicePortTypeService,
+)
+from travelport.models.universal_record_retrieve_service_port_type_service_input import (
+    UniversalRecordRetrieveServicePortTypeServiceInput,
+)
+from travelport.models.universal_record_retrieve_service_port_type_service_output import (
+    UniversalRecordRetrieveServicePortTypeServiceOutput,
+)
+from travelport.models.universal_record_search_modifiers import (
+    UniversalRecordSearchModifiers,
+)
+from travelport.models.universal_record_search_req import (
+    UniversalRecordSearchReq,
+)
+from travelport.models.universal_record_search_result import (
+    UniversalRecordSearchResult,
+)
+from travelport.models.universal_record_search_rsp import (
+    UniversalRecordSearchRsp,
+)
+from travelport.models.universal_record_search_service_port_type_service import (
+    UniversalRecordSearchServicePortTypeService,
+)
+from travelport.models.universal_record_search_service_port_type_service_input import (
+    UniversalRecordSearchServicePortTypeServiceInput,
+)
+from travelport.models.universal_record_search_service_port_type_service_output import (
+    UniversalRecordSearchServicePortTypeServiceOutput,
+)
 from travelport.models.universal_update import UniversalUpdate
 from travelport.models.universal_update_status import UniversalUpdateStatus
 from travelport.models.update_air_pnr_element import UpdateAirPnrElement
 from travelport.models.update_air_segment import UpdateAirSegment
 from travelport.models.update_hotel_pnr_element import UpdateHotelPnrElement
-from travelport.models.update_override_definition import UpdateOverrideDefinition
+from travelport.models.update_override_definition import (
+    UpdateOverrideDefinition,
+)
 from travelport.models.update_pnr_element import UpdatePnrElement
 from travelport.models.update_seats import UpdateSeats
 from travelport.models.update_traveler import UpdateTraveler
-from travelport.models.upsell_admin_port_type_service import UpsellAdminPortTypeService
-from travelport.models.upsell_admin_port_type_service_input import UpsellAdminPortTypeServiceInput
-from travelport.models.upsell_admin_port_type_service_output import UpsellAdminPortTypeServiceOutput
+from travelport.models.upsell_admin_port_type_service import (
+    UpsellAdminPortTypeService,
+)
+from travelport.models.upsell_admin_port_type_service_input import (
+    UpsellAdminPortTypeServiceInput,
+)
+from travelport.models.upsell_admin_port_type_service_output import (
+    UpsellAdminPortTypeServiceOutput,
+)
 from travelport.models.upsell_admin_req import UpsellAdminReq
 from travelport.models.upsell_admin_rsp import UpsellAdminRsp
-from travelport.models.upsell_admin_search_port_type_service import UpsellAdminSearchPortTypeService
-from travelport.models.upsell_admin_search_port_type_service_input import UpsellAdminSearchPortTypeServiceInput
-from travelport.models.upsell_admin_search_port_type_service_output import UpsellAdminSearchPortTypeServiceOutput
+from travelport.models.upsell_admin_search_port_type_service import (
+    UpsellAdminSearchPortTypeService,
+)
+from travelport.models.upsell_admin_search_port_type_service_input import (
+    UpsellAdminSearchPortTypeServiceInput,
+)
+from travelport.models.upsell_admin_search_port_type_service_output import (
+    UpsellAdminSearchPortTypeServiceOutput,
+)
 from travelport.models.upsell_brand import UpsellBrand
 from travelport.models.upsell_search_criteria import UpsellSearchCriteria
 from travelport.models.upsell_search_modifier import UpsellSearchModifier
@@ -3749,12 +5823,24 @@ from travelport.models.url import Url
 from travelport.models.urlinfo import Urlinfo
 from travelport.models.urticket_status import UrticketStatus
 from travelport.models.user_id import UserId
-from travelport.models.util_credit_card_auth_port_type_service import UtilCreditCardAuthPortTypeService
-from travelport.models.util_credit_card_auth_port_type_service_input import UtilCreditCardAuthPortTypeServiceInput
-from travelport.models.util_credit_card_auth_port_type_service_output import UtilCreditCardAuthPortTypeServiceOutput
-from travelport.models.util_currency_conversion_port_type_service import UtilCurrencyConversionPortTypeService
-from travelport.models.util_currency_conversion_port_type_service_input import UtilCurrencyConversionPortTypeServiceInput
-from travelport.models.util_currency_conversion_port_type_service_output import UtilCurrencyConversionPortTypeServiceOutput
+from travelport.models.util_credit_card_auth_port_type_service import (
+    UtilCreditCardAuthPortTypeService,
+)
+from travelport.models.util_credit_card_auth_port_type_service_input import (
+    UtilCreditCardAuthPortTypeServiceInput,
+)
+from travelport.models.util_credit_card_auth_port_type_service_output import (
+    UtilCreditCardAuthPortTypeServiceOutput,
+)
+from travelport.models.util_currency_conversion_port_type_service import (
+    UtilCurrencyConversionPortTypeService,
+)
+from travelport.models.util_currency_conversion_port_type_service_input import (
+    UtilCurrencyConversionPortTypeServiceInput,
+)
+from travelport.models.util_currency_conversion_port_type_service_output import (
+    UtilCurrencyConversionPortTypeServiceOutput,
+)
 from travelport.models.value_details import ValueDetails
 from travelport.models.variable_category_type import VariableCategoryType
 from travelport.models.variance import Variance
@@ -3762,68 +5848,142 @@ from travelport.models.vehicle import Vehicle
 from travelport.models.vehicle_add import VehicleAdd
 from travelport.models.vehicle_cancel_req import VehicleCancelReq
 from travelport.models.vehicle_cancel_rsp import VehicleCancelRsp
-from travelport.models.vehicle_cancel_service_port_type_service import VehicleCancelServicePortTypeService
-from travelport.models.vehicle_cancel_service_port_type_service_input import VehicleCancelServicePortTypeServiceInput
-from travelport.models.vehicle_cancel_service_port_type_service_output import VehicleCancelServicePortTypeServiceOutput
-from travelport.models.vehicle_create_reservation_req import VehicleCreateReservationReq
-from travelport.models.vehicle_create_reservation_rsp import VehicleCreateReservationRsp
+from travelport.models.vehicle_cancel_service_port_type_service import (
+    VehicleCancelServicePortTypeService,
+)
+from travelport.models.vehicle_cancel_service_port_type_service_input import (
+    VehicleCancelServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_cancel_service_port_type_service_output import (
+    VehicleCancelServicePortTypeServiceOutput,
+)
+from travelport.models.vehicle_create_reservation_req import (
+    VehicleCreateReservationReq,
+)
+from travelport.models.vehicle_create_reservation_rsp import (
+    VehicleCreateReservationRsp,
+)
 from travelport.models.vehicle_date_location import VehicleDateLocation
 from travelport.models.vehicle_delete import VehicleDelete
 from travelport.models.vehicle_detail import VehicleDetail
 from travelport.models.vehicle_disclaimer import VehicleDisclaimer
 from travelport.models.vehicle_keyword_req import VehicleKeywordReq
 from travelport.models.vehicle_keyword_rsp import VehicleKeywordRsp
-from travelport.models.vehicle_keywords_service_port_type_service import VehicleKeywordsServicePortTypeService
-from travelport.models.vehicle_keywords_service_port_type_service_input import VehicleKeywordsServicePortTypeServiceInput
-from travelport.models.vehicle_keywords_service_port_type_service_output import VehicleKeywordsServicePortTypeServiceOutput
+from travelport.models.vehicle_keywords_service_port_type_service import (
+    VehicleKeywordsServicePortTypeService,
+)
+from travelport.models.vehicle_keywords_service_port_type_service_input import (
+    VehicleKeywordsServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_keywords_service_port_type_service_output import (
+    VehicleKeywordsServicePortTypeServiceOutput,
+)
 from travelport.models.vehicle_location import VehicleLocation
-from travelport.models.vehicle_location_detail_req import VehicleLocationDetailReq
-from travelport.models.vehicle_location_detail_rsp import VehicleLocationDetailRsp
-from travelport.models.vehicle_location_detail_service_port_type_service import VehicleLocationDetailServicePortTypeService
-from travelport.models.vehicle_location_detail_service_port_type_service_input import VehicleLocationDetailServicePortTypeServiceInput
-from travelport.models.vehicle_location_detail_service_port_type_service_output import VehicleLocationDetailServicePortTypeServiceOutput
+from travelport.models.vehicle_location_detail_req import (
+    VehicleLocationDetailReq,
+)
+from travelport.models.vehicle_location_detail_rsp import (
+    VehicleLocationDetailRsp,
+)
+from travelport.models.vehicle_location_detail_service_port_type_service import (
+    VehicleLocationDetailServicePortTypeService,
+)
+from travelport.models.vehicle_location_detail_service_port_type_service_input import (
+    VehicleLocationDetailServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_location_detail_service_port_type_service_output import (
+    VehicleLocationDetailServicePortTypeServiceOutput,
+)
 from travelport.models.vehicle_location_req import VehicleLocationReq
 from travelport.models.vehicle_location_rsp import VehicleLocationRsp
-from travelport.models.vehicle_location_service_port_type_service import VehicleLocationServicePortTypeService
-from travelport.models.vehicle_location_service_port_type_service_input import VehicleLocationServicePortTypeServiceInput
-from travelport.models.vehicle_location_service_port_type_service_output import VehicleLocationServicePortTypeServiceOutput
+from travelport.models.vehicle_location_service_port_type_service import (
+    VehicleLocationServicePortTypeService,
+)
+from travelport.models.vehicle_location_service_port_type_service_input import (
+    VehicleLocationServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_location_service_port_type_service_output import (
+    VehicleLocationServicePortTypeServiceOutput,
+)
 from travelport.models.vehicle_media_links_req import VehicleMediaLinksReq
 from travelport.models.vehicle_media_links_rsp import VehicleMediaLinksRsp
-from travelport.models.vehicle_media_links_service_port_type_service import VehicleMediaLinksServicePortTypeService
-from travelport.models.vehicle_media_links_service_port_type_service_input import VehicleMediaLinksServicePortTypeServiceInput
-from travelport.models.vehicle_media_links_service_port_type_service_output import VehicleMediaLinksServicePortTypeServiceOutput
+from travelport.models.vehicle_media_links_service_port_type_service import (
+    VehicleMediaLinksServicePortTypeService,
+)
+from travelport.models.vehicle_media_links_service_port_type_service_input import (
+    VehicleMediaLinksServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_media_links_service_port_type_service_output import (
+    VehicleMediaLinksServicePortTypeServiceOutput,
+)
 from travelport.models.vehicle_modifier import VehicleModifier
-from travelport.models.vehicle_pickup_date_location import VehiclePickupDateLocation
+from travelport.models.vehicle_pickup_date_location import (
+    VehiclePickupDateLocation,
+)
 from travelport.models.vehicle_pickup_location import VehiclePickupLocation
 from travelport.models.vehicle_policy import VehiclePolicy
 from travelport.models.vehicle_preference_1 import VehiclePreference1
 from travelport.models.vehicle_preference_2 import VehiclePreference2
 from travelport.models.vehicle_rate import VehicleRate
 from travelport.models.vehicle_rate_info import VehicleRateInfo
-from travelport.models.vehicle_rate_required_payment import VehicleRateRequiredPayment
+from travelport.models.vehicle_rate_required_payment import (
+    VehicleRateRequiredPayment,
+)
 from travelport.models.vehicle_reservation import VehicleReservation
-from travelport.models.vehicle_reservation_criteria import VehicleReservationCriteria
-from travelport.models.vehicle_reservation_service_port_type_service import VehicleReservationServicePortTypeService
-from travelport.models.vehicle_reservation_service_port_type_service_input import VehicleReservationServicePortTypeServiceInput
-from travelport.models.vehicle_reservation_service_port_type_service_output import VehicleReservationServicePortTypeServiceOutput
+from travelport.models.vehicle_reservation_criteria import (
+    VehicleReservationCriteria,
+)
+from travelport.models.vehicle_reservation_service_port_type_service import (
+    VehicleReservationServicePortTypeService,
+)
+from travelport.models.vehicle_reservation_service_port_type_service_input import (
+    VehicleReservationServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_reservation_service_port_type_service_output import (
+    VehicleReservationServicePortTypeServiceOutput,
+)
 from travelport.models.vehicle_retrieve_req import VehicleRetrieveReq
 from travelport.models.vehicle_retrieve_rsp import VehicleRetrieveRsp
-from travelport.models.vehicle_retrieve_service_port_type_service import VehicleRetrieveServicePortTypeService
-from travelport.models.vehicle_retrieve_service_port_type_service_input import VehicleRetrieveServicePortTypeServiceInput
-from travelport.models.vehicle_retrieve_service_port_type_service_output import VehicleRetrieveServicePortTypeServiceOutput
-from travelport.models.vehicle_return_date_location import VehicleReturnDateLocation
+from travelport.models.vehicle_retrieve_service_port_type_service import (
+    VehicleRetrieveServicePortTypeService,
+)
+from travelport.models.vehicle_retrieve_service_port_type_service_input import (
+    VehicleRetrieveServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_retrieve_service_port_type_service_output import (
+    VehicleRetrieveServicePortTypeServiceOutput,
+)
+from travelport.models.vehicle_return_date_location import (
+    VehicleReturnDateLocation,
+)
 from travelport.models.vehicle_rules_req import VehicleRulesReq
 from travelport.models.vehicle_rules_rsp import VehicleRulesRsp
-from travelport.models.vehicle_rules_service_port_type_service import VehicleRulesServicePortTypeService
-from travelport.models.vehicle_rules_service_port_type_service_input import VehicleRulesServicePortTypeServiceInput
-from travelport.models.vehicle_rules_service_port_type_service_output import VehicleRulesServicePortTypeServiceOutput
-from travelport.models.vehicle_search_availability_req import VehicleSearchAvailabilityReq
-from travelport.models.vehicle_search_availability_rsp import VehicleSearchAvailabilityRsp
+from travelport.models.vehicle_rules_service_port_type_service import (
+    VehicleRulesServicePortTypeService,
+)
+from travelport.models.vehicle_rules_service_port_type_service_input import (
+    VehicleRulesServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_rules_service_port_type_service_output import (
+    VehicleRulesServicePortTypeServiceOutput,
+)
+from travelport.models.vehicle_search_availability_req import (
+    VehicleSearchAvailabilityReq,
+)
+from travelport.models.vehicle_search_availability_rsp import (
+    VehicleSearchAvailabilityRsp,
+)
 from travelport.models.vehicle_search_id import VehicleSearchId
 from travelport.models.vehicle_search_modifiers import VehicleSearchModifiers
-from travelport.models.vehicle_search_service_port_type_service import VehicleSearchServicePortTypeService
-from travelport.models.vehicle_search_service_port_type_service_input import VehicleSearchServicePortTypeServiceInput
-from travelport.models.vehicle_search_service_port_type_service_output import VehicleSearchServicePortTypeServiceOutput
+from travelport.models.vehicle_search_service_port_type_service import (
+    VehicleSearchServicePortTypeService,
+)
+from travelport.models.vehicle_search_service_port_type_service_input import (
+    VehicleSearchServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_search_service_port_type_service_output import (
+    VehicleSearchServicePortTypeServiceOutput,
+)
 from travelport.models.vehicle_special_request import VehicleSpecialRequest
 from travelport.models.vehicle_type import VehicleType
 from travelport.models.vehicle_type_identifier import VehicleTypeIdentifier
@@ -3832,17 +5992,35 @@ from travelport.models.vehicle_upsell_add import VehicleUpsellAdd
 from travelport.models.vehicle_upsell_criteria import VehicleUpsellCriteria
 from travelport.models.vehicle_upsell_delete import VehicleUpsellDelete
 from travelport.models.vehicle_upsell_offer import VehicleUpsellOffer
-from travelport.models.vehicle_upsell_offer_search_criteria import VehicleUpsellOfferSearchCriteria
+from travelport.models.vehicle_upsell_offer_search_criteria import (
+    VehicleUpsellOfferSearchCriteria,
+)
 from travelport.models.vehicle_upsell_qualify import VehicleUpsellQualify
-from travelport.models.vehicle_upsell_qualify_search_criteria import VehicleUpsellQualifySearchCriteria
+from travelport.models.vehicle_upsell_qualify_search_criteria import (
+    VehicleUpsellQualifySearchCriteria,
+)
 from travelport.models.vehicle_upsell_rule import VehicleUpsellRule
-from travelport.models.vehicle_upsell_search_availability_req import VehicleUpsellSearchAvailabilityReq
-from travelport.models.vehicle_upsell_search_availability_rsp import VehicleUpsellSearchAvailabilityRsp
-from travelport.models.vehicle_upsell_search_criteria import VehicleUpsellSearchCriteria
-from travelport.models.vehicle_upsell_search_result import VehicleUpsellSearchResult
-from travelport.models.vehicle_upsell_search_service_port_type_service import VehicleUpsellSearchServicePortTypeService
-from travelport.models.vehicle_upsell_search_service_port_type_service_input import VehicleUpsellSearchServicePortTypeServiceInput
-from travelport.models.vehicle_upsell_search_service_port_type_service_output import VehicleUpsellSearchServicePortTypeServiceOutput
+from travelport.models.vehicle_upsell_search_availability_req import (
+    VehicleUpsellSearchAvailabilityReq,
+)
+from travelport.models.vehicle_upsell_search_availability_rsp import (
+    VehicleUpsellSearchAvailabilityRsp,
+)
+from travelport.models.vehicle_upsell_search_criteria import (
+    VehicleUpsellSearchCriteria,
+)
+from travelport.models.vehicle_upsell_search_result import (
+    VehicleUpsellSearchResult,
+)
+from travelport.models.vehicle_upsell_search_service_port_type_service import (
+    VehicleUpsellSearchServicePortTypeService,
+)
+from travelport.models.vehicle_upsell_search_service_port_type_service_input import (
+    VehicleUpsellSearchServicePortTypeServiceInput,
+)
+from travelport.models.vehicle_upsell_search_service_port_type_service_output import (
+    VehicleUpsellSearchServicePortTypeServiceOutput,
+)
 from travelport.models.vehicle_upsell_update import VehicleUpsellUpdate
 from travelport.models.vehicle_with_media_items import VehicleWithMediaItems
 from travelport.models.vendor import Vendor
@@ -3854,13 +6032,21 @@ from travelport.models.vendor_location_4 import VendorLocation4
 from travelport.models.vendor_location_5 import VendorLocation5
 from travelport.models.vendor_location_6 import VendorLocation6
 from travelport.models.void_document_info import VoidDocumentInfo
-from travelport.models.void_document_info_document_type import VoidDocumentInfoDocumentType
+from travelport.models.void_document_info_document_type import (
+    VoidDocumentInfoDocumentType,
+)
 from travelport.models.void_failure_info import VoidFailureInfo
 from travelport.models.void_result_info import VoidResultInfo
-from travelport.models.void_result_info_document_type import VoidResultInfoDocumentType
+from travelport.models.void_result_info_document_type import (
+    VoidResultInfoDocumentType,
+)
 from travelport.models.waiver_code import WaiverCode
-from travelport.models.whole_number_restriction_1 import WholeNumberRestriction1
-from travelport.models.whole_number_restriction_2 import WholeNumberRestriction2
+from travelport.models.whole_number_restriction_1 import (
+    WholeNumberRestriction1,
+)
+from travelport.models.whole_number_restriction_2 import (
+    WholeNumberRestriction2,
+)
 from travelport.models.xmlremark_1 import Xmlremark1
 from travelport.models.xmlremark_2 import Xmlremark2
 from travelport.models.xmlremark_3 import Xmlremark3

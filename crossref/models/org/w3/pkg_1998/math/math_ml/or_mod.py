@@ -15,5 +15,5 @@ class Or:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

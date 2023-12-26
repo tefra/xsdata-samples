@@ -9,6 +9,7 @@ class Payload:
     """
     The payload container for the PingReq/Rsp.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
@@ -16,5 +17,5 @@ class Payload:
         default="",
         metadata={
             "max_length": 32768,
-        }
+        },
     )

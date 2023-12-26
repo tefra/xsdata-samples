@@ -14,5 +14,5 @@ class CarServiceFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

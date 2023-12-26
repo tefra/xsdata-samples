@@ -26,6 +26,7 @@ class CommentTypeEnum(Enum):
         warning on VMS should be activated.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ABNORMAL_LOAD_MOVEMENT_NOTE = "abnormalLoadMovementNote"
     DATA_PROCESSING_NOTE = "dataProcessingNote"
     DESCRIPTION = "description"

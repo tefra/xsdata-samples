@@ -13,6 +13,7 @@ class RequiredField6:
     name
         The name of the required field
     """
+
     class Meta:
         name = "RequiredField"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -23,5 +24,5 @@ class RequiredField6:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

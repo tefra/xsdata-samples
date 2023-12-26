@@ -11,6 +11,7 @@ class MerchandisingAvailabilityDetails:
     """
     Rich Content and Branding for an air segment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,7 +21,7 @@ class MerchandisingAvailabilityDetails:
             "name": "AirItineraryDetails",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     account_code: None | AccountCode1 = field(
         default=None,
@@ -28,5 +29,5 @@ class MerchandisingAvailabilityDetails:
             "name": "AccountCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

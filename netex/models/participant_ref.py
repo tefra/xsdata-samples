@@ -12,5 +12,5 @@ class ParticipantRef:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

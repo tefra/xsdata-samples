@@ -38,19 +38,30 @@ class VmsDatexSupplementalPictogramEnum(Enum):
     :cvar SNOW_PLOUGHS: Snow ploughs.
     :cvar OTHER: Other than as defined in this enumeration.
     """
-    DISTANCE_TO_THE_BEGINNINGOF_THE_APPLICATION_ZONE = "distanceToTheBeginningofTheApplicationZone"
-    EXCEPT_ANY_POWER_DRIVEN_VEHICLE_DRAWING_TRAILER = "exceptAnyPowerDrivenVehicleDrawingTrailer"
+
+    DISTANCE_TO_THE_BEGINNINGOF_THE_APPLICATION_ZONE = (
+        "distanceToTheBeginningofTheApplicationZone"
+    )
+    EXCEPT_ANY_POWER_DRIVEN_VEHICLE_DRAWING_TRAILER = (
+        "exceptAnyPowerDrivenVehicleDrawingTrailer"
+    )
     EXCEPT_BUS = "exceptBus"
     EXCEPT_GOODS_VEHICLES = "exceptGoodsVehicles"
     EXCEPT_SEMI_TRAILER = "exceptSemiTrailer"
-    EXCEPT_VEHICLES_CARRYING_DANGEROUS_GOODS = "exceptVehiclesCarryingDangerousGoods"
+    EXCEPT_VEHICLES_CARRYING_DANGEROUS_GOODS = (
+        "exceptVehiclesCarryingDangerousGoods"
+    )
     IN_CASE_OF_ICE_OR_SNOW = "inCaseOfIceOrSnow"
     LENGTH_OF_THE_APPLICATION_ZONE = "lengthOfTheApplicationZone"
-    RESTRICTED_TO_ANY_POWER_DRIVEN_VEHICLE_DRAWING_TRAILER = "restrictedToAnyPowerDrivenVehicleDrawingTrailer"
+    RESTRICTED_TO_ANY_POWER_DRIVEN_VEHICLE_DRAWING_TRAILER = (
+        "restrictedToAnyPowerDrivenVehicleDrawingTrailer"
+    )
     RESTRICETD_TO_BUS = "restricetdToBus"
     RESTRICTED_TO_GOODS_VEHICLES = "restrictedToGoodsVehicles"
     RESTRICTED_TO_SEMI_TRAILER = "restrictedToSemiTrailer"
-    RESTRICTED_TO_VEHICLES_CARRYING_DANGEROUS_GOODS = "restrictedToVehiclesCarryingDangerousGoods"
+    RESTRICTED_TO_VEHICLES_CARRYING_DANGEROUS_GOODS = (
+        "restrictedToVehiclesCarryingDangerousGoods"
+    )
     MAINTENANCE_VEHICLES = "maintenanceVehicles"
     SNOW_PLOUGHS = "snowPloughs"
     OTHER = "other"

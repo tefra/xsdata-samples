@@ -9,6 +9,7 @@ class FrArTpAckTypeSimple(Enum):
     :cvar ACK_WITHOUT_RT: Acknowledgement without retry.
     :cvar NO_ACK: No acknowledgement.
     """
+
     ACK_WITH_RT = "ACK-WITH-RT"
     ACK_WITHOUT_RT = "ACK-WITHOUT-RT"
     NO_ACK = "NO-ACK"

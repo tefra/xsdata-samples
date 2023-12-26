@@ -17,6 +17,7 @@ class Characteristic3:
     padiscode
         Industry standard code that defines seat and row characteristic.
     """
+
     class Meta:
         name = "Characteristic"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -27,21 +28,21 @@ class Characteristic3:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     position: None | TypePosition = field(
         default=None,
         metadata={
             "name": "Position",
             "type": "Attribute",
-        }
+        },
     )
     row_location: None | TypeRowLocation = field(
         default=None,
         metadata={
             "name": "RowLocation",
             "type": "Attribute",
-        }
+        },
     )
     padiscode: None | str = field(
         default=None,
@@ -50,5 +51,5 @@ class Characteristic3:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 99,
-        }
+        },
     )

@@ -21,12 +21,12 @@ class Order:
         metadata={
             "name": "OrderDetail",
             "type": "Element",
-        }
+        },
     )
     order_summary: Optional[OrderSummary] = field(
         default=None,
         metadata={
             "name": "OrderSummary",
             "type": "Element",
-        }
+        },
     )

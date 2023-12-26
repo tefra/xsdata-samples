@@ -12,6 +12,7 @@ class SignSetting(OperatorAction):
     """
     Provides information on message signs and the information currently displayed.
     """
+
     vms_setting: Optional[VmsSetting] = field(
         default=None,
         metadata={
@@ -19,7 +20,7 @@ class SignSetting(OperatorAction):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     sign_setting_extension: Optional[ExtensionType] = field(
         default=None,
@@ -27,5 +28,5 @@ class SignSetting(OperatorAction):
             "name": "signSettingExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

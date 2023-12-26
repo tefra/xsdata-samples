@@ -12,6 +12,7 @@ class OpenlrOrientationEnum(Enum):
     :cvar AGAINST_LINE_DIRECTION: Against line direction
     :cvar BOTH: Both directions
     """
+
     NO_ORIENTATION_OR_UNKNOWN = "noOrientationOrUnknown"
     WITH_LINE_DIRECTION = "withLineDirection"
     AGAINST_LINE_DIRECTION = "againstLineDirection"

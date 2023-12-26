@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .country_ref import CountryRef
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .multilingual_string import MultilingualString
@@ -29,7 +29,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "stopAreas",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     tariff_zones: Optional[TariffZoneRefsRelStructure] = field(
         default=None,
@@ -37,7 +37,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "tariffZones",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -45,7 +45,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name_suffix: Optional[MultilingualString] = field(
         default=None,
@@ -53,7 +53,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "NameSuffix",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -61,7 +61,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -69,7 +69,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_stop_code: Optional[PrivateCodeStructure] = field(
         default=None,
@@ -77,7 +77,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "ShortStopCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[PrivateCodeStructure] = field(
         default=None,
@@ -85,7 +85,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -93,7 +93,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     external_stop_point_ref: Optional[ExternalObjectRefStructure] = field(
         default=None,
@@ -101,7 +101,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "ExternalStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     url: Optional[str] = field(
         default=None,
@@ -109,7 +109,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "Url",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_type: Optional[StopTypeEnumeration] = field(
         default=None,
@@ -117,7 +117,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "StopType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     compass_bearing: Optional[float] = field(
         default=None,
@@ -125,7 +125,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "CompassBearing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     presentation: Optional[PresentationStructure] = field(
         default=None,
@@ -133,7 +133,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     vehicle_modes: List[VehicleModeEnumeration] = field(
         default_factory=list,
@@ -142,7 +142,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     for_alighting: Optional[bool] = field(
         default=None,
@@ -150,7 +150,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "ForAlighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     for_boarding: Optional[bool] = field(
         default=None,
@@ -158,7 +158,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "ForBoarding",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     request_stop: Optional[bool] = field(
         default=None,
@@ -166,7 +166,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "RequestStop",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     request_method_type: Optional[RequestMethodTypeEnumeration] = field(
         default=None,
@@ -174,7 +174,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "RequestMethodType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     country_ref: Optional[CountryRef] = field(
         default=None,
@@ -182,9 +182,11 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "CountryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    topographic_place_ref_or_topographic_place_view: Optional[object] = field(
+    topographic_place_ref_or_topographic_place_view: Optional[
+        Union[TopographicPlaceRef, TopographicPlaceView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -200,7 +202,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     at_centre: Optional[bool] = field(
         default=None,
@@ -208,5 +210,5 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "AtCentre",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

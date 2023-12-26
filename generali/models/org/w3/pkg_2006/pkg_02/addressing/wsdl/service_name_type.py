@@ -11,19 +11,19 @@ class ServiceNameType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     endpoint_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "EndpointName",
             "type": "Attribute",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )

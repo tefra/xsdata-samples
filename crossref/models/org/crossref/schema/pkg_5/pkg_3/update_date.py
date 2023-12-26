@@ -9,6 +9,7 @@ class UpdateDate(DateT):
     """
     The date a dataset or database was last updated.
     """
+
     class Meta:
         name = "update_date"
         namespace = "http://www.crossref.org/schema/5.3.1"

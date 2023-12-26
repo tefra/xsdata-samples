@@ -9,6 +9,7 @@ class BookingCode:
     """
     The Booking Code (Class of Service) for a segment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class BookingCode:
             "required": True,
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

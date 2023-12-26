@@ -8,6 +8,7 @@ class TypeMcostatus(Enum):
     """
     The available status codes for an MCO.
     """
+
     OPEN = "Open"
     USED = "Used"
     REFUNDED = "Refunded"

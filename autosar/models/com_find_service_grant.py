@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
+from .adaptive_platform_service_instance_subtypes_enum import (
+    AdaptivePlatformServiceInstanceSubtypesEnum,
+)
 from .annotation import (
     AdminData,
     Annotation,
@@ -8,7 +10,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .com_find_service_grant_design_subtypes_enum import ComFindServiceGrantDesignSubtypesEnum
+from .com_find_service_grant_design_subtypes_enum import (
+    ComFindServiceGrantDesignSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -83,6 +87,7 @@ class ComFindServiceGrant:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COM-FIND-SERVICE-GRANT"
 
@@ -93,15 +98,17 @@ class ComFindServiceGrant:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ComFindServiceGrant.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ComFindServiceGrant.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -109,7 +116,7 @@ class ComFindServiceGrant:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -117,7 +124,7 @@ class ComFindServiceGrant:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -125,7 +132,7 @@ class ComFindServiceGrant:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -133,7 +140,7 @@ class ComFindServiceGrant:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -141,7 +148,7 @@ class ComFindServiceGrant:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ComFindServiceGrant.Annotations"] = field(
         default=None,
@@ -149,7 +156,7 @@ class ComFindServiceGrant:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -157,7 +164,7 @@ class ComFindServiceGrant:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     design_ref: Optional["ComFindServiceGrant.DesignRef"] = field(
         default=None,
@@ -165,22 +172,24 @@ class ComFindServiceGrant:
             "name": "DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_instance_ref: Optional["ComFindServiceGrant.ServiceInstanceRef"] = field(
+    service_instance_ref: Optional[
+        "ComFindServiceGrant.ServiceInstanceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -188,14 +197,14 @@ class ComFindServiceGrant:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -206,7 +215,7 @@ class ComFindServiceGrant:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -217,7 +226,7 @@ class ComFindServiceGrant:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -228,7 +237,7 @@ class ComFindServiceGrant:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -239,5 +248,5 @@ class ComFindServiceGrant:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

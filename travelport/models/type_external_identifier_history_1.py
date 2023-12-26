@@ -18,6 +18,7 @@ class TypeExternalIdentifierHistory1(TypeKeyElement1):
         The Source code for External ID. This depicts the origin/source of
         the External ID.
     """
+
     class Meta:
         name = "typeExternalIdentifierHistory"
 
@@ -28,7 +29,7 @@ class TypeExternalIdentifierHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     source: None | str = field(
         default=None,
@@ -37,5 +38,5 @@ class TypeExternalIdentifierHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class CheckConstraintDelaysInFrameRelStructure(ContainmentAggregationStructure):
+class CheckConstraintDelaysInFrameRelStructure(
+    ContainmentAggregationStructure
+):
     class Meta:
         name = "checkConstraintDelaysInFrame_RelStructure"
 
@@ -18,5 +20,5 @@ class CheckConstraintDelaysInFrameRelStructure(ContainmentAggregationStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

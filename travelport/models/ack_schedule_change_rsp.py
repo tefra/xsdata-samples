@@ -12,6 +12,7 @@ class AckScheduleChangeRsp(BaseRsp1):
     Return the updated air portion of the Universal Record when accepting the
     Schedule Change.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -21,5 +22,5 @@ class AckScheduleChangeRsp(BaseRsp1):
             "name": "UniversalRecord",
             "type": "Element",
             "required": True,
-        }
+        },
     )

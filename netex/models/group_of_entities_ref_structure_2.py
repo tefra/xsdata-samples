@@ -15,5 +15,5 @@ class GroupOfEntitiesRefStructure2(VersionOfObjectRefStructure):
         metadata={
             "name": "nameOfMemberClass",
             "type": "Attribute",
-        }
+        },
     )

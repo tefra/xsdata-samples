@@ -23,6 +23,7 @@ class Title:
     """
     The title of the item being registered.
     """
+
     class Meta:
         name = "title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -84,5 +85,5 @@ class Title:
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
             ),
-        }
+        },
     )

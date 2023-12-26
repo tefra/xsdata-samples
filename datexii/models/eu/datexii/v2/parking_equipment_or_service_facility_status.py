@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.opening_status_enum import OpeningStatusEnum
-from datexii.models.eu.datexii.v2.operation_status_enum import OperationStatusEnum
+from datexii.models.eu.datexii.v2.operation_status_enum import (
+    OperationStatusEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -33,13 +35,14 @@ class ParkingEquipmentOrServiceFacilityStatus:
         is available / is in operation or not.
     :ivar parking_equipment_or_service_facility_status_extension:
     """
+
     number_of_equipment_or_service_facility_override: Optional[int] = field(
         default=None,
         metadata={
             "name": "numberOfEquipmentOrServiceFacilityOverride",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     number_of_subitems_override: Optional[int] = field(
         default=None,
@@ -47,7 +50,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "name": "numberOfSubitemsOverride",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vacant_equipment_or_service_facility_subitems: Optional[int] = field(
         default=None,
@@ -55,7 +58,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "name": "vacantEquipmentOrServiceFacilitySubitems",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     service_facility_opening_status: Optional[OpeningStatusEnum] = field(
         default=None,
@@ -63,7 +66,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "name": "serviceFacilityOpeningStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     equipment_operation_status: Optional[OperationStatusEnum] = field(
         default=None,
@@ -71,13 +74,15 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "name": "equipmentOperationStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_equipment_or_service_facility_status_extension: Optional[ExtensionType] = field(
+    parking_equipment_or_service_facility_status_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "parkingEquipmentOrServiceFacilityStatusExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

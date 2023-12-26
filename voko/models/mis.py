@@ -47,5 +47,5 @@ class Mis:
                     "type": str,
                 },
             ),
-        }
+        },
     )

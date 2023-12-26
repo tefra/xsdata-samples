@@ -14,12 +14,16 @@ from travelport.models.fee_info import FeeInfo
 from travelport.models.optional_services import OptionalServices
 from travelport.models.payment_1 import Payment1
 from travelport.models.pocket_itinerary_remark import PocketItineraryRemark
-from travelport.models.provider_reservation_info_ref_1 import ProviderReservationInfoRef1
+from travelport.models.provider_reservation_info_ref_1 import (
+    ProviderReservationInfoRef1,
+)
 from travelport.models.supplier_locator_1 import SupplierLocator1
 from travelport.models.svc_segment import SvcSegment
 from travelport.models.third_party_information_1 import ThirdPartyInformation1
 from travelport.models.ticketing_modifiers import TicketingModifiers
-from travelport.models.type_tax_info_with_payment_ref import TypeTaxInfoWithPaymentRef
+from travelport.models.type_tax_info_with_payment_ref import (
+    TypeTaxInfoWithPaymentRef,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -55,6 +59,7 @@ class TypeBaseAirReservation(BaseReservation1):
         Bundle exchange, pricing, and penalty information. Providers
         ACH/1G/1V/1P
     """
+
     class Meta:
         name = "typeBaseAirReservation"
 
@@ -64,7 +69,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "name": "OptionalServices",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     supplier_locator: list[SupplierLocator1] = field(
         default_factory=list,
@@ -73,7 +78,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     third_party_information: list[ThirdPartyInformation1] = field(
         default_factory=list,
@@ -82,7 +87,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     document_info: None | DocumentInfo = field(
         default=None,
@@ -90,7 +95,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "name": "DocumentInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -99,7 +104,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     provider_reservation_info_ref: list[ProviderReservationInfoRef1] = field(
         default_factory=list,
@@ -108,7 +113,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_segment: list[AirSegment] = field(
         default_factory=list,
@@ -117,7 +122,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     svc_segment: list[SvcSegment] = field(
         default_factory=list,
@@ -126,7 +131,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_info: list[AirPricingInfo] = field(
         default_factory=list,
@@ -135,7 +140,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     payment: list[Payment1] = field(
         default_factory=list,
@@ -144,7 +149,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     credit_card_auth: list[CreditCardAuth1] = field(
         default_factory=list,
@@ -153,7 +158,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     fare_note: list[FareNote] = field(
         default_factory=list,
@@ -162,7 +167,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     fee_info: list[FeeInfo] = field(
         default_factory=list,
@@ -171,7 +176,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TypeTaxInfoWithPaymentRef] = field(
         default_factory=list,
@@ -180,7 +185,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     ticketing_modifiers: list[TicketingModifiers] = field(
         default_factory=list,
@@ -189,7 +194,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     associated_remark: list[AssociatedRemark1] = field(
         default_factory=list,
@@ -198,7 +203,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     pocket_itinerary_remark: list[PocketItineraryRemark] = field(
         default_factory=list,
@@ -207,7 +212,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
@@ -215,7 +220,7 @@ class TypeBaseAirReservation(BaseReservation1):
             "name": "AirExchangeBundleTotal",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
@@ -224,5 +229,5 @@ class TypeBaseAirReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

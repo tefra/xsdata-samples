@@ -17,7 +17,7 @@ class CreditCardPaymentAuth:
             "name": "CreditCard",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     form_of_payment_ref: None | FormOfPaymentRef1 = field(
         default=None,
@@ -25,7 +25,7 @@ class CreditCardPaymentAuth:
             "name": "FormOfPaymentRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     security_code: None | str = field(
         default=None,
@@ -34,7 +34,7 @@ class CreditCardPaymentAuth:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -42,7 +42,7 @@ class CreditCardPaymentAuth:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     perform_avs: None | bool = field(
         default=None,
@@ -50,5 +50,5 @@ class CreditCardPaymentAuth:
             "name": "PerformAVS",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

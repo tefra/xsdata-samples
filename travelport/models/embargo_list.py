@@ -11,6 +11,7 @@ class EmbargoList:
 
     Provider: 1G, 1V, 1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,5 +22,5 @@ class EmbargoList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )

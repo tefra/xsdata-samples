@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.base_air_exchange_multi_quote_req import BaseAirExchangeMultiQuoteReq
+from travelport.models.base_air_exchange_multi_quote_req import (
+    BaseAirExchangeMultiQuoteReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -16,6 +18,7 @@ class AirExchangeMultiQuoteReq(BaseAirExchangeMultiQuoteReq):
     type_value
         Type choices are "Detail" or "Summary"  Default will be Summary
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,5 +27,5 @@ class AirExchangeMultiQuoteReq(BaseAirExchangeMultiQuoteReq):
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

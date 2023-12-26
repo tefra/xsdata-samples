@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .dlt_log_channel_design_subtypes_enum import DltLogChannelDesignSubtypesEnum
+from .dlt_log_channel_design_subtypes_enum import (
+    DltLogChannelDesignSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -83,6 +85,7 @@ class DltLogChannelDesignToProcessDesignMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DLT-LOG-CHANNEL-DESIGN-TO-PROCESS-DESIGN-MAPPING"
 
@@ -93,15 +96,17 @@ class DltLogChannelDesignToProcessDesignMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DltLogChannelDesignToProcessDesignMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DltLogChannelDesignToProcessDesignMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -109,7 +114,7 @@ class DltLogChannelDesignToProcessDesignMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -117,7 +122,7 @@ class DltLogChannelDesignToProcessDesignMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -125,7 +130,7 @@ class DltLogChannelDesignToProcessDesignMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -133,7 +138,7 @@ class DltLogChannelDesignToProcessDesignMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -141,15 +146,17 @@ class DltLogChannelDesignToProcessDesignMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DltLogChannelDesignToProcessDesignMapping.Annotations"] = field(
+    annotations: Optional[
+        "DltLogChannelDesignToProcessDesignMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -157,30 +164,34 @@ class DltLogChannelDesignToProcessDesignMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    dlt_log_channel_design_ref: Optional["DltLogChannelDesignToProcessDesignMapping.DltLogChannelDesignRef"] = field(
+    dlt_log_channel_design_ref: Optional[
+        "DltLogChannelDesignToProcessDesignMapping.DltLogChannelDesignRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNEL-DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    process_design_ref: Optional["DltLogChannelDesignToProcessDesignMapping.ProcessDesignRef"] = field(
+    process_design_ref: Optional[
+        "DltLogChannelDesignToProcessDesignMapping.ProcessDesignRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -188,14 +199,14 @@ class DltLogChannelDesignToProcessDesignMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -206,7 +217,7 @@ class DltLogChannelDesignToProcessDesignMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -217,7 +228,7 @@ class DltLogChannelDesignToProcessDesignMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -228,7 +239,7 @@ class DltLogChannelDesignToProcessDesignMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -239,5 +250,5 @@ class DltLogChannelDesignToProcessDesignMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

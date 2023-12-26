@@ -21,6 +21,7 @@ class AxleSpacing:
         the VehicleCharacteristics.
     :ivar axle_spacing_extension:
     """
+
     axle_spacing: Optional[float] = field(
         default=None,
         metadata={
@@ -28,7 +29,7 @@ class AxleSpacing:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     axle_spacing_sequence_identifier: Optional[int] = field(
         default=None,
@@ -37,7 +38,7 @@ class AxleSpacing:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     axle_spacing_extension: Optional[ExtensionType] = field(
         default=None,
@@ -45,5 +46,5 @@ class AxleSpacing:
             "name": "axleSpacingExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

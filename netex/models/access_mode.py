@@ -14,5 +14,5 @@ class AccessMode:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

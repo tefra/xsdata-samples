@@ -89,6 +89,7 @@ class DiagnosticSecurityLevel:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-SECURITY-LEVEL"
 
@@ -99,15 +100,17 @@ class DiagnosticSecurityLevel:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticSecurityLevel.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticSecurityLevel.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +118,7 @@ class DiagnosticSecurityLevel:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +126,7 @@ class DiagnosticSecurityLevel:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +134,7 @@ class DiagnosticSecurityLevel:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +142,7 @@ class DiagnosticSecurityLevel:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +150,7 @@ class DiagnosticSecurityLevel:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticSecurityLevel.Annotations"] = field(
         default=None,
@@ -155,7 +158,7 @@ class DiagnosticSecurityLevel:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -163,7 +166,7 @@ class DiagnosticSecurityLevel:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     access_data_record_size: Optional[PositiveInteger] = field(
         default=None,
@@ -171,7 +174,7 @@ class DiagnosticSecurityLevel:
             "name": "ACCESS-DATA-RECORD-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     key_size: Optional[PositiveInteger] = field(
         default=None,
@@ -179,7 +182,7 @@ class DiagnosticSecurityLevel:
             "name": "KEY-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     num_failed_security_access: Optional[PositiveInteger] = field(
         default=None,
@@ -187,7 +190,7 @@ class DiagnosticSecurityLevel:
             "name": "NUM-FAILED-SECURITY-ACCESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     security_delay_time: Optional[TimeValue] = field(
         default=None,
@@ -195,7 +198,7 @@ class DiagnosticSecurityLevel:
             "name": "SECURITY-DELAY-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     seed_size: Optional[PositiveInteger] = field(
         default=None,
@@ -203,14 +206,14 @@ class DiagnosticSecurityLevel:
             "name": "SEED-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -218,14 +221,14 @@ class DiagnosticSecurityLevel:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -236,7 +239,7 @@ class DiagnosticSecurityLevel:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -247,5 +250,5 @@ class DiagnosticSecurityLevel:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -17,7 +17,7 @@ class TTimerEventDefinition(TEventDefinition):
             "name": "timeDate",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     time_duration: Optional[TExpression] = field(
         default=None,
@@ -25,7 +25,7 @@ class TTimerEventDefinition(TEventDefinition):
             "name": "timeDuration",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     time_cycle: Optional[TExpression] = field(
         default=None,
@@ -33,5 +33,5 @@ class TTimerEventDefinition(TEventDefinition):
             "name": "timeCycle",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )

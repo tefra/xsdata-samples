@@ -10,5 +10,6 @@ class DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple(Enum):
     :cvar CONFIGURED: Freeze frame records will be numbered based on the
         given configuration in their chronological order.
     """
+
     CALCULATED = "CALCULATED"
     CONFIGURED = "CONFIGURED"

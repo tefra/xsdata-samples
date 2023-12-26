@@ -9,6 +9,7 @@ class LocatorCode3:
     """
     A locator code that identifies a PNR or searches for one.
     """
+
     class Meta:
         name = "LocatorCode"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -17,5 +18,5 @@ class LocatorCode3:
         default="",
         metadata={
             "min_length": 1,
-        }
+        },
     )

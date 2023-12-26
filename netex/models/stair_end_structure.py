@@ -12,7 +12,7 @@ class StairEndStructure:
             "name": "ContinuingHandrail",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     textured_surface: Optional[bool] = field(
         default=None,
@@ -20,7 +20,7 @@ class StairEndStructure:
             "name": "TexturedSurface",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     visual_contrast: Optional[bool] = field(
         default=None,
@@ -28,5 +28,5 @@ class StairEndStructure:
             "name": "VisualContrast",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

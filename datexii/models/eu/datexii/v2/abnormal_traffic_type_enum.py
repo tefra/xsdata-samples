@@ -24,6 +24,7 @@ class AbnormalTrafficTypeEnum(Enum):
         conditions of an unspecified nature at the specified location.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     STATIONARY_TRAFFIC = "stationaryTraffic"
     QUEUING_TRAFFIC = "queuingTraffic"
     SLOW_TRAFFIC = "slowTraffic"

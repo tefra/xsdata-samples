@@ -16,5 +16,5 @@ class TGroup(TArtifact):
         metadata={
             "name": "categoryValueRef",
             "type": "Attribute",
-        }
+        },
     )

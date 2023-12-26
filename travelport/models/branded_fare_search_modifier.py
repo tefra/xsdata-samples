@@ -9,6 +9,7 @@ class BrandedFareSearchModifier:
     """
     Search modifiers for Upsell.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class BrandedFareSearchModifier:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 200,
-        }
+        },
     )
     start_from_result: int = field(
         default=1,
@@ -27,5 +28,5 @@ class BrandedFareSearchModifier:
             "name": "StartFromResult",
             "type": "Attribute",
             "min_inclusive": 1,
-        }
+        },
     )

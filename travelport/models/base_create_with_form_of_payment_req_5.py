@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.base_create_reservation_req_5 import BaseCreateReservationReq5
+from travelport.models.base_create_reservation_req_5 import (
+    BaseCreateReservationReq5,
+)
 from travelport.models.form_of_payment_7 import FormOfPayment7
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
@@ -16,6 +18,7 @@ class BaseCreateWithFormOfPaymentReq5(BaseCreateReservationReq5):
     form_of_payment
         Provider:1G,1V,1P,1J,ACH,SDK.
     """
+
     class Meta:
         name = "BaseCreateWithFormOfPaymentReq"
 
@@ -26,5 +29,5 @@ class BaseCreateWithFormOfPaymentReq5(BaseCreateReservationReq5):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "max_occurs": 999,
-        }
+        },
     )

@@ -51,6 +51,7 @@ class VehicleUpsellQualify:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -59,7 +60,7 @@ class VehicleUpsellQualify:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -69,7 +70,7 @@ class VehicleUpsellQualify:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     effective_date: None | str = field(
         default=None,
@@ -78,7 +79,7 @@ class VehicleUpsellQualify:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     expiration_date: None | str = field(
         default=None,
@@ -87,7 +88,7 @@ class VehicleUpsellQualify:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -96,14 +97,14 @@ class VehicleUpsellQualify:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     pickup_date_time: None | str = field(
         default=None,
         metadata={
             "name": "PickupDateTime",
             "type": "Attribute",
-        }
+        },
     )
     pickup_location: None | str = field(
         default=None,
@@ -112,14 +113,14 @@ class VehicleUpsellQualify:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     return_date_time: None | str = field(
         default=None,
         metadata={
             "name": "ReturnDateTime",
             "type": "Attribute",
-        }
+        },
     )
     return_location: None | str = field(
         default=None,
@@ -128,70 +129,70 @@ class VehicleUpsellQualify:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     pickup_location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "PickupLocationType",
             "type": "Attribute",
-        }
+        },
     )
     return_location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "ReturnLocationType",
             "type": "Attribute",
-        }
+        },
     )
     pickup_location_number: None | str = field(
         default=None,
         metadata={
             "name": "PickupLocationNumber",
             "type": "Attribute",
-        }
+        },
     )
     return_location_number: None | str = field(
         default=None,
         metadata={
             "name": "ReturnLocationNumber",
             "type": "Attribute",
-        }
+        },
     )
     air_conditioning: None | bool = field(
         default=None,
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
-        }
+        },
     )
     transmission_type: None | TypeVehicleTransmission = field(
         default=None,
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
-        }
+        },
     )
     vehicle_class: None | TypeVehicleClass = field(
         default=None,
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
-        }
+        },
     )
     category: None | TypeVehicleCategory = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     door_count: None | TypeDoorCount = field(
         default=None,
         metadata={
             "name": "DoorCount",
             "type": "Attribute",
-        }
+        },
     )
     rate_code: None | str = field(
         default=None,
@@ -199,14 +200,14 @@ class VehicleUpsellQualify:
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     rate_category: None | TypeRateCategory = field(
         default=None,
         metadata={
             "name": "RateCategory",
             "type": "Attribute",
-        }
+        },
     )
     discount_number: None | str = field(
         default=None,
@@ -214,26 +215,26 @@ class VehicleUpsellQualify:
             "name": "DiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     offer_ref: None | str = field(
         default=None,
         metadata={
             "name": "OfferRef",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .service_journey_interchange import ServiceJourneyInterchange
-from .service_journey_pattern_interchange import ServiceJourneyPatternInterchange
+from .service_journey_pattern_interchange import (
+    ServiceJourneyPatternInterchange,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -12,7 +14,9 @@ class JourneyInterchangesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyInterchangesInFrame_RelStructure"
 
-    service_journey_pattern_interchange_or_service_journey_interchange: List[object] = field(
+    service_journey_pattern_interchange_or_service_journey_interchange: List[
+        Union[ServiceJourneyPatternInterchange, ServiceJourneyInterchange]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +32,5 @@ class JourneyInterchangesInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

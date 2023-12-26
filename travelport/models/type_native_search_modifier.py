@@ -13,6 +13,7 @@ class TypeNativeSearchModifier:
     provider_code
         The host for which the NativeModfier being added to
     """
+
     class Meta:
         name = "typeNativeSearchModifier"
 
@@ -20,7 +21,7 @@ class TypeNativeSearchModifier:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -30,5 +31,5 @@ class TypeNativeSearchModifier:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

@@ -18,7 +18,7 @@ class SiteConnectionVersionStructure(TransferVersionStructure):
             "name": "From",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to: Optional[SiteConnectionEndStructure] = field(
         default=None,
@@ -26,7 +26,7 @@ class SiteConnectionVersionStructure(TransferVersionStructure):
             "name": "To",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     navigation_paths: Optional[NavigationPathsRelStructure] = field(
         default=None,
@@ -34,5 +34,5 @@ class SiteConnectionVersionStructure(TransferVersionStructure):
             "name": "navigationPaths",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

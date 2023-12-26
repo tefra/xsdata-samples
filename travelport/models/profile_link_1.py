@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_link_relationship_1 import TypeProfileLinkRelationship1
+from travelport.models.type_profile_link_relationship_1 import (
+    TypeProfileLinkRelationship1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -39,6 +41,7 @@ class ProfileLink1:
         data is taken from TravelerInfo and will be returned in the Create,
         Retrieve and Modify response. This is only used in the response.
     """
+
     class Meta:
         name = "ProfileLink"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -49,7 +52,7 @@ class ProfileLink1:
             "name": "TravelerID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     relationship: None | TypeProfileLinkRelationship1 = field(
         default=None,
@@ -57,7 +60,7 @@ class ProfileLink1:
             "name": "Relationship",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
@@ -66,7 +69,7 @@ class ProfileLink1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     other_name: None | str = field(
         default=None,
@@ -75,7 +78,7 @@ class ProfileLink1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -84,7 +87,7 @@ class ProfileLink1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     nickname: None | str = field(
         default=None,
@@ -93,7 +96,7 @@ class ProfileLink1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     electronic_address: None | str = field(
         default=None,
@@ -102,5 +105,5 @@ class ProfileLink1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

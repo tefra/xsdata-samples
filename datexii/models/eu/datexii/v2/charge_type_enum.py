@@ -20,6 +20,7 @@ class ChargeTypeEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     MINIMUM = "minimum"
     MAXIMUM = "maximum"
     ADDITIONAL_INTERVAL_PRICE = "additionalIntervalPrice"

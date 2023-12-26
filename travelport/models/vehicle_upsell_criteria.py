@@ -12,6 +12,7 @@ class VehicleUpsellCriteria:
     """
     Wraps all Upsell Admin commands related to Vehicle.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,7 +22,7 @@ class VehicleUpsellCriteria:
             "name": "VehicleUpsellAdd",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_upsell_update: list[VehicleUpsellUpdate] = field(
         default_factory=list,
@@ -29,7 +30,7 @@ class VehicleUpsellCriteria:
             "name": "VehicleUpsellUpdate",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_upsell_delete: list[VehicleUpsellDelete] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class VehicleUpsellCriteria:
             "name": "VehicleUpsellDelete",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

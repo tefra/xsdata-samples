@@ -20,7 +20,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "keyList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     destination_display_ref: Optional[DestinationDisplayRef] = field(
         default=None,
@@ -28,7 +28,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "DestinationDisplayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -36,7 +36,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -44,7 +44,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     side_text: Optional[MultilingualString] = field(
         default=None,
@@ -52,7 +52,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "SideText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     front_text: Optional[MultilingualString] = field(
         default=None,
@@ -60,7 +60,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "FrontText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     driver_display_text: Optional[MultilingualString] = field(
         default=None,
@@ -68,7 +68,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "DriverDisplayText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_code: Optional[str] = field(
         default=None,
@@ -76,7 +76,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "ShortCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -84,7 +84,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -92,5 +92,5 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

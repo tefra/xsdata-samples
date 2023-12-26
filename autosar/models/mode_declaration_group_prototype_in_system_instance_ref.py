@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_declaration_group_prototype_subtypes_enum import (
+    ModeDeclarationGroupPrototypeSubtypesEnum,
+)
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .ref import Ref
-from .root_sw_composition_prototype_subtypes_enum import RootSwCompositionPrototypeSubtypesEnum
-from .sw_component_prototype_subtypes_enum import SwComponentPrototypeSubtypesEnum
+from .root_sw_composition_prototype_subtypes_enum import (
+    RootSwCompositionPrototypeSubtypesEnum,
+)
+from .sw_component_prototype_subtypes_enum import (
+    SwComponentPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -27,47 +33,56 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: Optional["ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextCompositionRef"] = field(
+    context_composition_ref: Optional[
+        "ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextCompositionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_component_ref: List["ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextComponentRef"] = field(
+    context_component_ref: List[
+        "ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextComponentRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-COMPONENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_port_ref: Optional["ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextPortRef"] = field(
+    context_port_ref: Optional[
+        "ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextPortRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_mode_declaration_group_prototype_ref: Optional["ModeDeclarationGroupPrototypeInSystemInstanceRef.TargetModeDeclarationGroupPrototypeRef"] = field(
+    target_mode_declaration_group_prototype_ref: Optional[
+        "ModeDeclarationGroupPrototypeInSystemInstanceRef.TargetModeDeclarationGroupPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -75,7 +90,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -86,7 +101,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -97,7 +112,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -108,7 +123,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -119,5 +134,5 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

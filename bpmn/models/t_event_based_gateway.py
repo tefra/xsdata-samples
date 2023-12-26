@@ -14,12 +14,12 @@ class TEventBasedGateway(TGateway):
         default=False,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     event_gateway_type: TEventBasedGatewayType = field(
         default=TEventBasedGatewayType.EXCLUSIVE,
         metadata={
             "name": "eventGatewayType",
             "type": "Attribute",
-        }
+        },
     )

@@ -17,7 +17,7 @@ class VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     pictogram_sequencing_index: Optional[int] = field(
         default=None,
@@ -25,5 +25,5 @@ class VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram:
             "name": "pictogramSequencingIndex",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

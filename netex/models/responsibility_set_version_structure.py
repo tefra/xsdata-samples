@@ -3,7 +3,9 @@ from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .private_code import PrivateCode
-from .responsibility_role_assignments_rel_structure import ResponsibilityRoleAssignmentsRelStructure
+from .responsibility_role_assignments_rel_structure import (
+    ResponsibilityRoleAssignmentsRelStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -19,7 +21,7 @@ class ResponsibilitySetVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -27,12 +29,12 @@ class ResponsibilitySetVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     roles: Optional[ResponsibilityRoleAssignmentsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

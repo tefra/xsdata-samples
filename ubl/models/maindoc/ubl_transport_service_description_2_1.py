@@ -35,7 +35,7 @@ class TransportServiceDescriptionType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -43,7 +43,7 @@ class TransportServiceDescriptionType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -51,7 +51,7 @@ class TransportServiceDescriptionType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -59,7 +59,7 @@ class TransportServiceDescriptionType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -67,7 +67,7 @@ class TransportServiceDescriptionType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -76,7 +76,7 @@ class TransportServiceDescriptionType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -84,7 +84,7 @@ class TransportServiceDescriptionType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -92,7 +92,7 @@ class TransportServiceDescriptionType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -100,7 +100,7 @@ class TransportServiceDescriptionType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -108,7 +108,7 @@ class TransportServiceDescriptionType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -116,7 +116,7 @@ class TransportServiceDescriptionType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     service_name: Optional[ServiceName] = field(
         default=None,
@@ -124,7 +124,7 @@ class TransportServiceDescriptionType:
             "name": "ServiceName",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     response_code: Optional[ResponseCode] = field(
         default=None,
@@ -132,7 +132,7 @@ class TransportServiceDescriptionType:
             "name": "ResponseCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -140,7 +140,7 @@ class TransportServiceDescriptionType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     sender_party: Optional[SenderParty] = field(
         default=None,
@@ -148,7 +148,7 @@ class TransportServiceDescriptionType:
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receiver_party: Optional[ReceiverParty] = field(
         default=None,
@@ -156,23 +156,27 @@ class TransportServiceDescriptionType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    transport_service_description_request_document_reference: Optional[TransportServiceDescriptionRequestDocumentReference] = field(
+    transport_service_description_request_document_reference: Optional[
+        TransportServiceDescriptionRequestDocumentReference
+    ] = field(
         default=None,
         metadata={
             "name": "TransportServiceDescriptionRequestDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    transport_service_provider_party: Optional[TransportServiceProviderParty] = field(
+    transport_service_provider_party: Optional[
+        TransportServiceProviderParty
+    ] = field(
         default=None,
         metadata={
             "name": "TransportServiceProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     service_charge_payment_terms: Optional[ServiceChargePaymentTerms] = field(
         default=None,
@@ -180,7 +184,7 @@ class TransportServiceDescriptionType:
             "name": "ServiceChargePaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     validity_period: Optional[ValidityPeriod] = field(
         default=None,
@@ -188,7 +192,7 @@ class TransportServiceDescriptionType:
             "name": "ValidityPeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     transportation_service: Tuple[TransportationService, ...] = field(
         default_factory=tuple,
@@ -196,7 +200,7 @@ class TransportServiceDescriptionType:
             "name": "TransportationService",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
 
 

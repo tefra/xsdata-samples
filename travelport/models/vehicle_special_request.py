@@ -9,6 +9,7 @@ class VehicleSpecialRequest:
     """
     Make a textual request to the Vehicle supplier.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -17,12 +18,12 @@ class VehicleSpecialRequest:
         metadata={
             "required": True,
             "max_length": 250,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

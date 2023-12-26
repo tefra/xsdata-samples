@@ -1,10 +1,16 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.vehicle_type import VehicleType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.vehicle_type import (
+    VehicleType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+)
 
 
 @dataclass
@@ -15,7 +21,7 @@ class TrainType(VehicleType):
             "name": "NumberOfCarriages",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     primary_depot: Optional[TextType] = field(
         default=None,
@@ -23,7 +29,7 @@ class TrainType(VehicleType):
             "name": "PrimaryDepot",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     seated_capacity: Optional[Decimal] = field(
         default=None,
@@ -31,7 +37,7 @@ class TrainType(VehicleType):
             "name": "SeatedCapacity",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     standing_capacity: Optional[int] = field(
         default=None,
@@ -39,7 +45,7 @@ class TrainType(VehicleType):
             "name": "StandingCapacity",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     total_capacity: Optional[int] = field(
         default=None,
@@ -47,5 +53,5 @@ class TrainType(VehicleType):
             "name": "TotalCapacity",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )

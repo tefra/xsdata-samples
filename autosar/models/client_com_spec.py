@@ -1,12 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .client_intent_enum import ClientIntentEnum
-from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
-from .end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
+from .client_server_operation_subtypes_enum import (
+    ClientServerOperationSubtypesEnum,
+)
+from .end_to_end_transformation_com_spec_props import (
+    EndToEndTransformationComSpecProps,
+)
 from .field_subtypes_enum import FieldSubtypesEnum
 from .ref import Ref
 from .time_value import TimeValue
-from .user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
+from .user_defined_transformation_com_spec_props import (
+    UserDefinedTransformationComSpecProps,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -49,6 +55,7 @@ class ClientComSpec:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-COM-SPEC"
 
@@ -58,7 +65,7 @@ class ClientComSpec:
             "name": "CLIENT-INTENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     end_to_end_call_response_timeout: Optional[TimeValue] = field(
         default=None,
@@ -66,7 +73,7 @@ class ClientComSpec:
             "name": "END-TO-END-CALL-RESPONSE-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     getter_ref: Optional["ClientComSpec.GetterRef"] = field(
         default=None,
@@ -74,7 +81,7 @@ class ClientComSpec:
             "name": "GETTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     operation_ref: Optional["ClientComSpec.OperationRef"] = field(
         default=None,
@@ -82,7 +89,7 @@ class ClientComSpec:
             "name": "OPERATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     setter_ref: Optional["ClientComSpec.SetterRef"] = field(
         default=None,
@@ -90,22 +97,24 @@ class ClientComSpec:
             "name": "SETTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformation_com_spec_propss: Optional["ClientComSpec.TransformationComSpecPropss"] = field(
+    transformation_com_spec_propss: Optional[
+        "ClientComSpec.TransformationComSpecPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-COM-SPEC-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -113,7 +122,7 @@ class ClientComSpec:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -124,7 +133,7 @@ class ClientComSpec:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -135,7 +144,7 @@ class ClientComSpec:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -146,24 +155,28 @@ class ClientComSpec:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class TransformationComSpecPropss:
-        end_to_end_transformation_com_spec_props: List[EndToEndTransformationComSpecProps] = field(
+        end_to_end_transformation_com_spec_props: List[
+            EndToEndTransformationComSpecProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-TO-END-TRANSFORMATION-COM-SPEC-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_transformation_com_spec_props: List[UserDefinedTransformationComSpecProps] = field(
+        user_defined_transformation_com_spec_props: List[
+            UserDefinedTransformationComSpecProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-TRANSFORMATION-COM-SPEC-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

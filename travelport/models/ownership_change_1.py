@@ -15,6 +15,7 @@ class OwnershipChange1:
     owning_pcc
         New owning PCC of the PNR.
     """
+
     class Meta:
         name = "OwnershipChange"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -25,5 +26,5 @@ class OwnershipChange1:
             "name": "OwningPCC",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

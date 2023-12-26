@@ -30,6 +30,7 @@ class CreditCardAuth6:
     provider_reservation_info_ref
     form_of_payment_ref
     """
+
     class Meta:
         name = "CreditCardAuth"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -39,21 +40,21 @@ class CreditCardAuth6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     payment_ref: None | str = field(
         default=None,
         metadata={
             "name": "PaymentRef",
             "type": "Attribute",
-        }
+        },
     )
     trans_id: None | str = field(
         default=None,
         metadata={
             "name": "TransId",
             "type": "Attribute",
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -62,7 +63,7 @@ class CreditCardAuth6:
             "type": "Attribute",
             "min_length": 13,
             "max_length": 128,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -70,14 +71,14 @@ class CreditCardAuth6:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     auth_code: None | str = field(
         default=None,
         metadata={
             "name": "AuthCode",
             "type": "Attribute",
-        }
+        },
     )
     auth_result_code: None | str = field(
         default=None,
@@ -85,33 +86,33 @@ class CreditCardAuth6:
             "name": "AuthResultCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     avsresult_code: None | str = field(
         default=None,
         metadata={
             "name": "AVSResultCode",
             "type": "Attribute",
-        }
+        },
     )
     message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     form_of_payment_ref: None | str = field(
         default=None,
         metadata={
             "name": "FormOfPaymentRef",
             "type": "Attribute",
-        }
+        },
     )

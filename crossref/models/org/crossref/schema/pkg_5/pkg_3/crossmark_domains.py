@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark_domain import CrossmarkDomain
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.crossmark_domain import (
+    CrossmarkDomain,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -16,6 +18,7 @@ class CrossmarkDomains:
     Ebsco, IngentaConnect) or archives with which the publisher has
     agreements to update the content
     """
+
     class Meta:
         name = "crossmark_domains"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -25,5 +28,5 @@ class CrossmarkDomains:
         metadata={
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )

@@ -21,6 +21,7 @@ class HotelBedding:
     content
         Additional information Providers: 1p
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -31,26 +32,26 @@ class HotelBedding:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     number_of_beds: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfBeds",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     content: None | str = field(
         default=None,
         metadata={
             "name": "Content",
             "type": "Attribute",
-        }
+        },
     )

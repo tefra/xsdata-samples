@@ -5,7 +5,9 @@ from travelport.models.air_segment import AirSegment
 from travelport.models.base_req_1 import BaseReq1
 from travelport.models.host_reservation import HostReservation
 from travelport.models.host_token_1 import HostToken1
-from travelport.models.merchandising_pricing_modifiers import MerchandisingPricingModifiers
+from travelport.models.merchandising_pricing_modifiers import (
+    MerchandisingPricingModifiers,
+)
 from travelport.models.search_traveler import SearchTraveler
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -39,6 +41,7 @@ class SeatMapReq(BaseReq1):
         if applicable. A value of false will not return the BrandingInfo
         block in the response. Providers: 1G, 1V, 1P, ACH
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -48,7 +51,7 @@ class SeatMapReq(BaseReq1):
             "name": "AgencySellInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_segment: list[AirSegment] = field(
         default_factory=list,
@@ -56,7 +59,7 @@ class SeatMapReq(BaseReq1):
             "name": "AirSegment",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -65,7 +68,7 @@ class SeatMapReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     search_traveler: list[SearchTraveler] = field(
         default_factory=list,
@@ -73,21 +76,23 @@ class SeatMapReq(BaseReq1):
             "name": "SearchTraveler",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     host_reservation: None | HostReservation = field(
         default=None,
         metadata={
             "name": "HostReservation",
             "type": "Element",
-        }
+        },
     )
-    merchandising_pricing_modifiers: None | MerchandisingPricingModifiers = field(
-        default=None,
-        metadata={
-            "name": "MerchandisingPricingModifiers",
-            "type": "Element",
-        }
+    merchandising_pricing_modifiers: None | MerchandisingPricingModifiers = (
+        field(
+            default=None,
+            metadata={
+                "name": "MerchandisingPricingModifiers",
+                "type": "Element",
+            },
+        )
     )
     return_seat_pricing: None | bool = field(
         default=None,
@@ -95,12 +100,12 @@ class SeatMapReq(BaseReq1):
             "name": "ReturnSeatPricing",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     return_branding_info: bool = field(
         default=False,
         metadata={
             "name": "ReturnBrandingInfo",
             "type": "Attribute",
-        }
+        },
     )

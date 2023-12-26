@@ -8,6 +8,7 @@ class TypeMileOrRouteBasedFare(Enum):
     """
     Whether the fare is Mile or Route based.
     """
+
     MILE = "Mile"
     ROUTE = "Route"
     BOTH = "Both"

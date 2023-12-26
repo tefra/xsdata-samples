@@ -105,26 +105,26 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="hde:range",
-                                version="any",
+                                id='hde:range',
+                                version='any',
                                 from_date=XmlDateTime(2011, 8, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         FareFrameRef(
-                            value="REQUEST",
-                            ref="cdla:FF01"
+                            value='REQUEST',
+                            ref='cdla:FF01'
                         ),
                     ]
                 ),
@@ -133,12 +133,12 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple point to point fares"
+        value='Example  of simple point to point fares'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="cdla:CDLA@Multiple_packages",
+                id='cdla:CDLA@Multiple_packages',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
@@ -149,54 +149,54 @@ obj = PublicationDelivery(
                         ]
                     ),
                 ],
-                version="1.0",
+                version='1.0',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="cdla",
-                            xmlns="cdla",
-                            xmlns_url="http://cdla.com/stuff",
-                            description="My fares"
+                            id='cdla',
+                            xmlns='cdla',
+                            xmlns_url='http://cdla.com/stuff',
+                            description='My fares'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="cdla"
+                        ref='cdla'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="cdla:CDLA@Multiple_packages@network",
-                            version="1.0",
+                            id='cdla:CDLA@Multiple_packages@network',
+                            version='1.0',
                             name=MultilingualString(
-                                value="Farezones  for 2012 fares "
+                                value='Farezones  for 2012 fares '
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ResourceFrameRef(
-                                        version="1.0",
-                                        ref="cdla:CDLA@Common_resources"
+                                        version='1.0',
+                                        ref='cdla:CDLA@Common_resources'
                                     ),
                                 ]
                             ),
                             network=Network(
-                                id="cdla:Northern_England",
-                                version="1.0",
+                                id='cdla:Northern_England',
+                                version='1.0',
                                 authority_ref_or_operator_ref=OperatorRef(
-                                    version="any",
-                                    ref="mybus:CDLA"
+                                    version='any',
+                                    ref='mybus:CDLA'
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
                                         TariffZoneRef(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         ),
                                         TariffZoneRef(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         ),
                                     ]
                                 )
@@ -204,393 +204,393 @@ obj = PublicationDelivery(
                             tariff_zones=TariffZonesInFrameRelStructure(
                                 fare_zone_or_tariff_zone=[
                                     FareZone(
-                                        id="cdla:Midlands_Area",
-                                        version="any",
+                                        id='cdla:Midlands_Area',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Midlands Area"
+                                            value='Midlands Area'
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Burton_And_Swadlincote"
+                                                    version='any',
+                                                    ref='cdla:Burton_And_Swadlincote'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Cannock"
+                                                    version='any',
+                                                    ref='cdla:Cannock'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Coalville"
+                                                    version='any',
+                                                    ref='cdla:Coalville'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Derby"
+                                                    version='any',
+                                                    ref='cdla:Derby'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Leicester_City_Plus"
+                                                    version='any',
+                                                    ref='cdla:Leicester_City_Plus'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Midlands"
+                                                    version='any',
+                                                    ref='cdla:Midlands'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Shrewsbury"
+                                                    version='any',
+                                                    ref='cdla:Shrewsbury'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Stafford"
+                                                    version='any',
+                                                    ref='cdla:Stafford'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Sutton_And_Birmingham"
+                                                    version='any',
+                                                    ref='cdla:Sutton_And_Birmingham'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Tamworth"
+                                                    version='any',
+                                                    ref='cdla:Tamworth'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Telford"
+                                                    version='any',
+                                                    ref='cdla:Telford'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Burton_And_Swadlincote",
-                                        version="any",
+                                        id='cdla:Burton_And_Swadlincote',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Burton &amp; Swadlincote"
+                                            value='Burton & Swadlincote'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Cannock",
-                                        version="any",
+                                        id='cdla:Cannock',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Cannock"
+                                            value='Cannock'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Coalville",
-                                        version="any",
+                                        id='cdla:Coalville',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Coalville"
+                                            value='Coalville'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Derby",
-                                        version="any",
+                                        id='cdla:Derby',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Derby"
+                                            value='Derby'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Leicester_City_Plus",
-                                        version="any",
+                                        id='cdla:Leicester_City_Plus',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Leicester City Plus"
+                                            value='Leicester City Plus'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Midlands",
-                                        version="any",
+                                        id='cdla:Midlands',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Midlands"
+                                            value='Midlands'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Shrewsbury",
-                                        version="any",
+                                        id='cdla:Shrewsbury',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Shrewsbury"
+                                            value='Shrewsbury'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Stafford",
-                                        version="any",
+                                        id='cdla:Stafford',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stafford"
+                                            value='Stafford'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Sutton_And_Birmingham",
-                                        version="any",
+                                        id='cdla:Sutton_And_Birmingham',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Sutton &amp; Birmingham"
+                                            value='Sutton & Birmingham'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Tamworth",
-                                        version="any",
+                                        id='cdla:Tamworth',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Tamworth"
+                                            value='Tamworth'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Telford",
-                                        version="any",
+                                        id='cdla:Telford',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Telford"
+                                            value='Telford'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:Midlands_Area"
+                                            version='any',
+                                            ref='cdla:Midlands_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:North_East_Area",
-                                        version="any",
+                                        id='cdla:North_East_Area',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="North East Area"
+                                            value='North East Area'
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:North_East_Area"
+                                                    version='any',
+                                                    ref='cdla:North_East_Area'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:North_East"
+                                                    version='any',
+                                                    ref='cdla:North_East'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Ashington_Triple"
+                                                    version='any',
+                                                    ref='cdla:Ashington_Triple'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Bishop_Auckland"
+                                                    version='any',
+                                                    ref='cdla:Bishop_Auckland'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Blyth_Triple"
+                                                    version='any',
+                                                    ref='cdla:Blyth_Triple'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Blyth_plus_Ashington_Triple"
+                                                    version='any',
+                                                    ref='cdla:Blyth_plus_Ashington_Triple'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Blyth_plus_Morpeth_Triple"
+                                                    version='any',
+                                                    ref='cdla:Blyth_plus_Morpeth_Triple'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Blyth_plus_TandW_Triple"
+                                                    version='any',
+                                                    ref='cdla:Blyth_plus_TandW_Triple'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Brandon"
+                                                    version='any',
+                                                    ref='cdla:Brandon'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:County_Durham"
+                                                    version='any',
+                                                    ref='cdla:County_Durham'
                                                 ),
                                                 TariffZoneRef(
-                                                    version="any",
-                                                    ref="cdla:Cramlington"
+                                                    version='any',
+                                                    ref='cdla:Cramlington'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:North_East",
-                                        version="any",
+                                        id='cdla:North_East',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="North East Zone"
+                                            value='North East Zone'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Ashington_Triple",
-                                        version="any",
+                                        id='cdla:Ashington_Triple',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Ashington Triple"
+                                            value='Ashington Triple'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Bishop_Auckland",
-                                        version="any",
+                                        id='cdla:Bishop_Auckland',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bishop Auckland"
+                                            value='Bishop Auckland'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Blyth_Triple",
-                                        version="any",
+                                        id='cdla:Blyth_Triple',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Blyth Triple"
+                                            value='Blyth Triple'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Blyth_plus_Ashington_Triple",
-                                        version="any",
+                                        id='cdla:Blyth_plus_Ashington_Triple',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Blyth plus Ashington Triple"
+                                            value='Blyth plus Ashington Triple'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Blyth_plus_Morpeth_Triple",
-                                        version="any",
+                                        id='cdla:Blyth_plus_Morpeth_Triple',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Blyth plus Morpeth Triple"
+                                            value='Blyth plus Morpeth Triple'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Blyth_plus_TandW_Triple",
-                                        version="any",
+                                        id='cdla:Blyth_plus_TandW_Triple',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Blyth plus T &amp; W Triple"
+                                            value='Blyth plus T & W Triple'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Brandon",
-                                        version="any",
+                                        id='cdla:Brandon',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Brandon"
+                                            value='Brandon'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:County_Durham",
-                                        version="any",
+                                        id='cdla:County_Durham',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="County Durham"
+                                            value='County Durham'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                     FareZone(
-                                        id="cdla:Cramlington",
-                                        version="any",
+                                        id='cdla:Cramlington',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Cramlington"
+                                            value='Cramlington'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="cdla:North_East_Area"
+                                            version='any',
+                                            ref='cdla:North_East_Area'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         FareFrame(
-                            id="cdla:CDLA@Multiple_packages@products@standard",
-                            version="1.0",
+                            id='cdla:CDLA@Multiple_packages@products@standard',
+                            version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ServiceFrameRef(
-                                        version="1.0",
-                                        ref="cdla:CDLA@Multiple_packages@network"
+                                        version='1.0',
+                                        ref='cdla:CDLA@Multiple_packages@network'
                                     ),
                                 ]
                             ),
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="cdla:Time_interval@standard",
-                                        version="1.0",
+                                        id='cdla:Time_interval@standard',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Time interval tariff"
+                                            value='Time interval tariff'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="mybus:CDLA"
+                                            version='any',
+                                            ref='mybus:CDLA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="ntx:v1.0",
-                                            ref="ntx:zonal"
+                                            version='ntx:v1.0',
+                                            ref='ntx:zonal'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeInterval(
-                                                    id="cdla:1day",
-                                                    version="1.0",
+                                                    id='cdla:1day',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="All Day Use on day of purchase"
+                                                        value='All Day Use on day of purchase'
                                                     ),
                                                     start_time=XmlTime(6, 0, 0, 0),
                                                     end_time=XmlTime(2, 0, 0, 0),
                                                     day_offset=1
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:1week",
-                                                    version="1.0",
+                                                    id='cdla:1week',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="7 Days use"
+                                                        value='7 Days use'
                                                     ),
                                                     start_time=XmlTime(6, 0, 0, 0),
                                                     end_time=XmlTime(2, 0, 0, 0),
@@ -598,10 +598,10 @@ obj = PublicationDelivery(
                                                     duration=XmlDuration("P7D")
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:4week",
-                                                    version="1.0",
+                                                    id='cdla:4week',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="7 Days use"
+                                                        value='7 Days use'
                                                     ),
                                                     start_time=XmlTime(6, 0, 0, 0),
                                                     end_time=XmlTime(2, 0, 0, 0),
@@ -609,10 +609,10 @@ obj = PublicationDelivery(
                                                     duration=XmlDuration("P28D")
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:1year",
-                                                    version="1.0",
+                                                    id='cdla:1year',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="7 Days use"
+                                                        value='7 Days use'
                                                     ),
                                                     start_time=XmlTime(6, 0, 0, 0),
                                                     end_time=XmlTime(2, 0, 0, 0),
@@ -623,187 +623,187 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@standard@access",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@standard@access',
+                                                    version='1.0',
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@access",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@access',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:can_access"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:can_access'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Midlands_Area"
+                                                                    version='any',
+                                                                    ref='cdla:Midlands_Area'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Burton_And_Swadlincote"
+                                                                    version='any',
+                                                                    ref='cdla:Burton_And_Swadlincote'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Cannock"
+                                                                    version='any',
+                                                                    ref='cdla:Cannock'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Coalville"
+                                                                    version='any',
+                                                                    ref='cdla:Coalville'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Derby"
+                                                                    version='any',
+                                                                    ref='cdla:Derby'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Leicester_City_Plus"
+                                                                    version='any',
+                                                                    ref='cdla:Leicester_City_Plus'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Midlands"
+                                                                    version='any',
+                                                                    ref='cdla:Midlands'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Shrewsbury"
+                                                                    version='any',
+                                                                    ref='cdla:Shrewsbury'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Stafford"
+                                                                    version='any',
+                                                                    ref='cdla:Stafford'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Sutton_And_Birmingham"
+                                                                    version='any',
+                                                                    ref='cdla:Sutton_And_Birmingham'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Tamworth"
+                                                                    version='any',
+                                                                    ref='cdla:Tamworth'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Telford"
+                                                                    version='any',
+                                                                    ref='cdla:Telford'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:North_East_Area"
+                                                                    version='any',
+                                                                    ref='cdla:North_East_Area'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:North_East"
+                                                                    version='any',
+                                                                    ref='cdla:North_East'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Ashington_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Ashington_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Bishop_Auckland"
+                                                                    version='any',
+                                                                    ref='cdla:Bishop_Auckland'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_plus_Ashington_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_plus_Ashington_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_plus_Morpeth_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_plus_Morpeth_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_plus_TandW_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_plus_TandW_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Brandon"
+                                                                    version='any',
+                                                                    ref='cdla:Brandon'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:County_Durham"
+                                                                    version='any',
+                                                                    ref='cdla:County_Durham'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Cramlington"
+                                                                    version='any',
+                                                                    ref='cdla:Cramlington'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@standard@access_when",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@standard@access_when',
+                                                    version='1.0',
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:1day"
+                                                                version='1.0',
+                                                                ref='cdla:1day'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:1week"
+                                                                version='1.0',
+                                                                ref='cdla:1week'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:4week"
+                                                                version='1.0',
+                                                                ref='cdla:4week'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:1year"
+                                                                version='1.0',
+                                                                ref='cdla:1year'
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="myfares:Time_interval@standard@access_when",
-                                                        version="1.0",
+                                                        id='myfares:Time_interval@standard@access_when',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:can_access_when"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:can_access_when'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@standard@eligibility",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@standard@eligibility',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Eligible user types"
+                                                        value='Eligible user types'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@eligibility",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@eligibility',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:eligible"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.XOR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
-                                                                    id="cdla:adult",
-                                                                    version="any",
+                                                                    id='cdla:adult',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Child Fare"
+                                                                        value='Child Fare'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="cdla:adult"
+                                                                        version='any',
+                                                                        ref='cdla:adult'
                                                                     ),
                                                                     minimum_age=17
                                                                 ),
                                                                 UserProfile(
-                                                                    id="cdla:child",
-                                                                    version="any",
+                                                                    id='cdla:child',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Child Fare"
+                                                                        value='Child Fare'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="cdla:child"
+                                                                        version='any',
+                                                                        ref='cdla:child'
                                                                     ),
                                                                     maximum_age=16
                                                                 ),
@@ -812,33 +812,33 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@standard@conditions_of_travel",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@standard@conditions_of_travel',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Conditions of travel"
+                                                        value='Conditions of travel'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@standard@conditions_of_travel",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@standard@conditions_of_travel',
+                                                        version='1.0',
                                                         name=MultilingualString(
-                                                            value="Conditions of travel"
+                                                            value='Conditions of travel'
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:condition_of_use"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:condition_of_use'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUse(
-                                                                    id="cdla:Time_interval@standard@conditions_of_travel@frequency",
-                                                                    version="1.0",
+                                                                    id='cdla:Time_interval@standard@conditions_of_travel@frequency',
+                                                                    version='1.0',
                                                                     frequency_of_use_type=FrequencyOfUseTypeEnumeration.UNLIMITED
                                                                 ),
                                                                 Interchanging(
-                                                                    id="cdla:Time_interval@standard@conditions_of_travel@interchanging",
-                                                                    version="1.0",
+                                                                    id='cdla:Time_interval@standard@conditions_of_travel@interchanging',
+                                                                    version='1.0',
                                                                     can_interchange=True,
                                                                     can_break_journey=True
                                                                 ),
@@ -854,36 +854,36 @@ obj = PublicationDelivery(
                             fare_products=FareProductsInFrameRelStructure(
                                 choice=[
                                     PreassignedFareProduct(
-                                        id="cdla:Period_pass@standard",
-                                        version="1.0",
+                                        id='cdla:Period_pass@standard',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Adult   Zonal  Period pass    "
+                                            value='Adult   Zonal  Period pass    '
                                         ),
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElement(
-                                                    id="cdla:Period_pass@standard@travel",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass@standard@travel',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Single  ride"
+                                                        value='Single  ride'
                                                     ),
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@standard@access"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@standard@access'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@standard@access_when"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@standard@access_when'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@standard@eligibility"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@standard@eligibility'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@standard@conditions_of_travel"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@standard@conditions_of_travel'
                                                             ),
                                                         ]
                                                     )
@@ -896,15 +896,15 @@ obj = PublicationDelivery(
                             distribution_channels=DistributionChannelsInFrameRelStructure(
                                 distribution_channel=[
                                     DistributionChannel(
-                                        id="cdla:online",
-                                        version="1.0",
+                                        id='cdla:online',
+                                        version='1.0',
                                         payment_methods=[
                                             PaymentMethodEnumeration.CARDS_ONLY,
                                         ]
                                     ),
                                     DistributionChannel(
-                                        id="cdla:at_counter",
-                                        version="1.0",
+                                        id='cdla:at_counter',
+                                        version='1.0',
                                         payment_methods=[
                                             PaymentMethodEnumeration.CASH_AND_CARD,
                                         ]
@@ -914,18 +914,18 @@ obj = PublicationDelivery(
                             fulfilment_methods=FulfilmentMethodsInFrameRelStructure(
                                 fulfilment_method=[
                                     FulfilmentMethod(
-                                        id="cdla:mobile_app",
-                                        version="1.0",
+                                        id='cdla:mobile_app',
+                                        version='1.0',
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.MOBILE_APP
                                     ),
                                     FulfilmentMethod(
-                                        id="cdla:post",
-                                        version="1.0",
+                                        id='cdla:post',
+                                        version='1.0',
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.POST
                                     ),
                                     FulfilmentMethod(
-                                        id="cdla:collect",
-                                        version="1.0",
+                                        id='cdla:collect',
+                                        version='1.0',
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.TICKET_OFFICE
                                     ),
                                 ]
@@ -933,24 +933,24 @@ obj = PublicationDelivery(
                             sales_offer_packages=SalesOfferPackagesInFrameRelStructure(
                                 sales_offer_package=[
                                     SalesOfferPackage(
-                                        id="cdla:Period_pass-SOP@mobile",
-                                        version="1.0",
+                                        id='cdla:Period_pass-SOP@mobile',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Adult  Pass  Mobile "
+                                            value='Adult  Pass  Mobile '
                                         ),
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="cdla:Period_pass-SOP@mobile",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@mobile',
+                                                    version='1.0',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="1.0",
-                                                        ref="cdla:online"
+                                                        version='1.0',
+                                                        ref='cdla:online'
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
-                                                        version="1.0",
-                                                        ref="cdla:mobile_app"
+                                                        version='1.0',
+                                                        ref='cdla:mobile_app'
                                                     )
                                                 ),
                                             ]
@@ -958,15 +958,15 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="cdla:Period_pass-SOP@mobile",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@mobile',
+                                                    version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="any",
-                                                        ref="cdla:mobile_app"
+                                                        version='any',
+                                                        ref='cdla:mobile_app'
                                                     ),
                                                     choice=FareProductRef(
-                                                        version="1.0",
-                                                        ref="cdla:Period_pass@standard"
+                                                        version='1.0',
+                                                        ref='cdla:Period_pass@standard'
                                                     ),
                                                     order=1
                                                 ),
@@ -974,39 +974,39 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     SalesOfferPackage(
-                                        id="cdla:Period_pass-SOP@smartcard",
-                                        version="1.0",
+                                        id='cdla:Period_pass-SOP@smartcard',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Adult   Pass on smartcard  4weeks or annual   "
+                                            value='Adult   Pass on smartcard  4weeks or annual   '
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
-                                                    id="cdla:Period_pass-SOP@smartcard@can_access_when",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@smartcard@can_access_when',
+                                                    version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="ntx:v1.0",
-                                                        ref="ntx:can_access_when"
+                                                        version='ntx:v1.0',
+                                                        ref='ntx:can_access_when'
                                                     ),
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
-                                                                id="cdla:Period_pass-SOP@smartcard@can_access_when@4week",
-                                                                version="1.0",
+                                                                id='cdla:Period_pass-SOP@smartcard@can_access_when@4week',
+                                                                version='1.0',
                                                                 order=1,
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:4week"
+                                                                    version='1.0',
+                                                                    ref='cdla:4week'
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
-                                                                id="cdla:Period_pass-SOP@smartcard@can_access_when@1year",
-                                                                version="1.0",
+                                                                id='cdla:Period_pass-SOP@smartcard@can_access_when@1year',
+                                                                version='1.0',
                                                                 order=1,
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:1year"
+                                                                    version='1.0',
+                                                                    ref='cdla:1year'
                                                                 )
                                                             ),
                                                         ]
@@ -1017,29 +1017,29 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="cdla:Period_pass-SOP@smartcard@online",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@smartcard@online',
+                                                    version='1.0',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="1.0",
-                                                        ref="cdla:online"
+                                                        version='1.0',
+                                                        ref='cdla:online'
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
-                                                        version="1.0",
-                                                        ref="cdla:post"
+                                                        version='1.0',
+                                                        ref='cdla:post'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="cdla:Period_pass-SOP@smartcard@at_counter",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@smartcard@at_counter',
+                                                    version='1.0',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="1.0",
-                                                        ref="cdla:at_counter"
+                                                        version='1.0',
+                                                        ref='cdla:at_counter'
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
-                                                        version="1.0",
-                                                        ref="cdla:collect"
+                                                        version='1.0',
+                                                        ref='cdla:collect'
                                                     )
                                                 ),
                                             ]
@@ -1047,15 +1047,15 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="cdla:Period_pass-SOP@smartcard",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@smartcard',
+                                                    version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="any",
-                                                        ref="cdla:card"
+                                                        version='any',
+                                                        ref='cdla:card'
                                                     ),
                                                     choice=FareProductRef(
-                                                        version="1.0",
-                                                        ref="cdla:Period_pass@standard"
+                                                        version='1.0',
+                                                        ref='cdla:Period_pass@standard'
                                                     ),
                                                     order=1
                                                 ),
@@ -1066,113 +1066,113 @@ obj = PublicationDelivery(
                             )
                         ),
                         FareFrame(
-                            id="cdla:CDLA@Multiple_packages@products@family",
-                            version="1.0",
+                            id='cdla:CDLA@Multiple_packages@products@family',
+                            version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ServiceFrameRef(
-                                        version="1.0",
-                                        ref="cdla:CDLA@Multiple_packages@network"
+                                        version='1.0',
+                                        ref='cdla:CDLA@Multiple_packages@network'
                                     ),
                                 ]
                             ),
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="cdla:Time_interval@family",
-                                        version="1.0",
+                                        id='cdla:Time_interval@family',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Day pass  fares - Family group ticket"
+                                            value='Day pass  fares - Family group ticket'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="mybus:CDLA"
+                                            version='any',
+                                            ref='mybus:CDLA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="ntx:v1.0",
-                                            ref="ntx:zonal"
+                                            version='ntx:v1.0',
+                                            ref='ntx:zonal'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
-                                                    version="1.0",
-                                                    ref="cdla:1day"
+                                                    version='1.0',
+                                                    ref='cdla:1day'
                                                 ),
                                             ]
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@family@access_when",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@family@access_when',
+                                                    version='1.0',
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:1day"
+                                                                version='1.0',
+                                                                ref='cdla:1day'
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="myfares:Time_interval@family@access_when",
-                                                        version="1.0",
+                                                        id='myfares:Time_interval@family@access_when',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:can_access_when"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:can_access_when'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@family@eligibility",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@family@eligibility',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Eligible user types"
+                                                        value='Eligible user types'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@family@eligibility",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@family@eligibility',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:eligible"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.XOR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
-                                                                    id="cdla:family",
-                                                                    version="any",
+                                                                    id='cdla:family',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Family ticket"
+                                                                        value='Family ticket'
                                                                     ),
                                                                     minimum_number_of_persons=2,
                                                                     maximum_number_of_persons=7,
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="cdla:family@adult",
-                                                                                version="any",
+                                                                                id='cdla:family@adult',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="At least one adult"
+                                                                                    value='At least one adult'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="cdla:adult"
+                                                                                    version='any',
+                                                                                    ref='cdla:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
                                                                                 maximum_number_of_persons=2
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="cdla:family@child",
-                                                                                version="any",
+                                                                                id='cdla:family@child',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="Up to 5 Children"
+                                                                                    value='Up to 5 Children'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="cdla:child"
+                                                                                    version='any',
+                                                                                    ref='cdla:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
                                                                                 maximum_number_of_persons=5
@@ -1192,36 +1192,36 @@ obj = PublicationDelivery(
                             fare_products=FareProductsInFrameRelStructure(
                                 choice=[
                                     PreassignedFareProduct(
-                                        id="cdla:Day_pass@family",
-                                        version="any",
+                                        id='cdla:Day_pass@family',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Family  Day Zonal  pass"
+                                            value='Family  Day Zonal  pass'
                                         ),
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElement(
-                                                    id="cdla:Day_pass@standard@travel",
-                                                    version="any",
+                                                    id='cdla:Day_pass@standard@travel',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Single  ride"
+                                                        value='Single  ride'
                                                     ),
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@standard@access"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@standard@access'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@family@access_when"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@family@access_when'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@family@eligibility"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@family@eligibility'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@standard@conditions_of_travel"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@standard@conditions_of_travel'
                                                             ),
                                                         ]
                                                     )
@@ -1234,24 +1234,24 @@ obj = PublicationDelivery(
                             sales_offer_packages=SalesOfferPackagesInFrameRelStructure(
                                 sales_offer_package=[
                                     SalesOfferPackage(
-                                        id="cdla:Day_pass-SOP@family@mobile",
-                                        version="any",
+                                        id='cdla:Day_pass-SOP@family@mobile',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Family day  Mobile "
+                                            value='Family day  Mobile '
                                         ),
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="cdla:Day_pass-SOP@family@mobile",
-                                                    version="1.0",
+                                                    id='cdla:Day_pass-SOP@family@mobile',
+                                                    version='1.0',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="1.0",
-                                                        ref="cdla:online"
+                                                        version='1.0',
+                                                        ref='cdla:online'
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
-                                                        version="1.0",
-                                                        ref="cdla:mobile_app"
+                                                        version='1.0',
+                                                        ref='cdla:mobile_app'
                                                     )
                                                 ),
                                             ]
@@ -1259,15 +1259,15 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="cdla:Day_pass-SOP@family@mobile",
-                                                    version="any",
+                                                    id='cdla:Day_pass-SOP@family@mobile',
+                                                    version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="any",
-                                                        ref="cdla:mobile_app"
+                                                        version='any',
+                                                        ref='cdla:mobile_app'
                                                     ),
                                                     choice=FareProductRef(
-                                                        version="1.0",
-                                                        ref="cdla:Day_pass@family"
+                                                        version='1.0',
+                                                        ref='cdla:Day_pass@family'
                                                     ),
                                                     order=1
                                                 ),
@@ -1278,50 +1278,50 @@ obj = PublicationDelivery(
                             )
                         ),
                         FareFrame(
-                            id="cdla:CDLA@Multiple_packages@products@student",
-                            version="1.0",
+                            id='cdla:CDLA@Multiple_packages@products@student',
+                            version='1.0',
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     ServiceFrameRef(
-                                        version="1.0",
-                                        ref="cdla:CDLA@Multiple_packages@network"
+                                        version='1.0',
+                                        ref='cdla:CDLA@Multiple_packages@network'
                                     ),
                                 ]
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
                                 choice=[
                                     AvailabilityCondition(
-                                        id="cdla:academic_year",
-                                        version="1.0",
+                                        id='cdla:academic_year',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Academic Year"
+                                            value='Academic Year'
                                         ),
                                         from_date=XmlDateTime(2011, 8, 22, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2011, 10, 31, 23, 59, 59, 0, 0)
                                     ),
                                     AvailabilityCondition(
-                                        id="cdla:academic_term@autumn",
-                                        version="1.0",
+                                        id='cdla:academic_term@autumn',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Autumn term"
+                                            value='Autumn term'
                                         ),
                                         from_date=XmlDateTime(2011, 8, 22, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2011, 10, 31, 23, 59, 59, 0, 0)
                                     ),
                                     AvailabilityCondition(
-                                        id="cdla:academic_term@spring",
-                                        version="1.0",
+                                        id='cdla:academic_term@spring',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Spring  term"
+                                            value='Spring  term'
                                         ),
                                         from_date=XmlDateTime(2011, 12, 12, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2012, 2, 29, 23, 59, 59, 0, 0)
                                     ),
                                     AvailabilityCondition(
-                                        id="cdla:academic_term@summer",
-                                        version="1.0",
+                                        id='cdla:academic_term@summer',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Summer term"
+                                            value='Summer term'
                                         ),
                                         from_date=XmlDateTime(2012, 3, 19, 0, 0, 0, 0, 0),
                                         to_date=XmlDateTime(2012, 5, 31, 23, 59, 59, 0, 0)
@@ -1331,42 +1331,42 @@ obj = PublicationDelivery(
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="cdla:Time_interval@student",
-                                        version="1.0",
+                                        id='cdla:Time_interval@student',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Student zonal pass fares"
+                                            value='Student zonal pass fares'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="mybus:CDLA"
+                                            version='any',
+                                            ref='mybus:CDLA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="ntx:v1.0",
-                                            ref="ntx:zonal"
+                                            version='ntx:v1.0',
+                                            ref='ntx:zonal'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
-                                                    version="1.0",
-                                                    ref="cdla:1day"
+                                                    version='1.0',
+                                                    ref='cdla:1day'
                                                 ),
                                                 TimeIntervalRef(
-                                                    version="1.0",
-                                                    ref="cdla:1week"
+                                                    version='1.0',
+                                                    ref='cdla:1week'
                                                 ),
                                                 TimeIntervalRef(
-                                                    version="1.0",
-                                                    ref="cdla:4week"
+                                                    version='1.0',
+                                                    ref='cdla:4week'
                                                 ),
                                                 TimeIntervalRef(
-                                                    version="1.0",
-                                                    ref="cdla:1year"
+                                                    version='1.0',
+                                                    ref='cdla:1year'
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:15week",
-                                                    version="1.0",
+                                                    id='cdla:15week',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="7 Days use"
+                                                        value='7 Days use'
                                                     ),
                                                     start_time=XmlTime(6, 0, 0, 0),
                                                     end_time=XmlTime(2, 0, 0, 0),
@@ -1374,71 +1374,71 @@ obj = PublicationDelivery(
                                                     duration=XmlDuration("P28D")
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:academic_term@autumn",
+                                                    id='cdla:academic_term@autumn',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_term@autumn"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_term@autumn'
                                                                 ),
                                                             ]
                                                         ),
                                                     ],
-                                                    version="1.0",
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Academic  Term - Autumn"
+                                                        value='Academic  Term - Autumn'
                                                     )
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:academic_term@spring",
+                                                    id='cdla:academic_term@spring',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_term@spring"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_term@spring'
                                                                 ),
                                                             ]
                                                         ),
                                                     ],
-                                                    version="1.0",
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Academic  Term - Spring"
+                                                        value='Academic  Term - Spring'
                                                     )
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:academic_term@summer",
+                                                    id='cdla:academic_term@summer',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_term@summer"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_term@summer'
                                                                 ),
                                                             ]
                                                         ),
                                                     ],
-                                                    version="1.0",
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Academic  Term - Summer"
+                                                        value='Academic  Term - Summer'
                                                     )
                                                 ),
                                                 TimeInterval(
-                                                    id="cdla:academic_year",
+                                                    id='cdla:academic_year',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_year"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_year'
                                                                 ),
                                                             ]
                                                         ),
                                                     ],
-                                                    version="1.0",
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Academic Year"
+                                                        value='Academic Year'
                                                     )
                                                 ),
                                             ]
@@ -1446,326 +1446,326 @@ obj = PublicationDelivery(
                                         quality_structure_factors=QualityStructureFactorsRelStructure(
                                             choice=[
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@funded@80",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@funded@80',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Funding type - 80%"
+                                                        value='Funding type - 80%'
                                                     ),
-                                                    factor="80"
+                                                    factor='80'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@funded@115",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@funded@115',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Funding type - 115 "
+                                                        value='Funding type - 115 '
                                                     ),
-                                                    factor="115"
+                                                    factor='115'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@funded@135",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@funded@135',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Fundingtype - 135"
+                                                        value='Fundingtype - 135'
                                                     ),
-                                                    factor="135"
+                                                    factor='135'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@unfunded",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@unfunded',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Unfunded"
+                                                        value='Unfunded'
                                                     )
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@promo@103.5",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo@103.5',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Promotional code - 103.5"
+                                                        value='Promotional code - 103.5'
                                                     ),
-                                                    factor="103.5"
+                                                    factor='103.5'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@promo@198",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo@198',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Promotional code - 198"
+                                                        value='Promotional code - 198'
                                                     ),
-                                                    factor="198"
+                                                    factor='198'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@promo@225",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo@225',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Promotional code - 225"
+                                                        value='Promotional code - 225'
                                                     ),
-                                                    factor="225"
+                                                    factor='225'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@promo@288",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo@288',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Promotional code - 288"
+                                                        value='Promotional code - 288'
                                                     ),
-                                                    factor="288"
+                                                    factor='288'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@promo@360",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo@360',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Promotional code - 360"
+                                                        value='Promotional code - 360'
                                                     ),
-                                                    factor="360"
+                                                    factor='360'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@promo@648",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo@648',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Promotional code - 576"
+                                                        value='Promotional code - 576'
                                                     ),
-                                                    factor="576"
+                                                    factor='576'
                                                 ),
                                                 QualityStructureFactor(
-                                                    id="cdla:Time_interval@student@promo@576",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo@576',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Promotional code - 648"
+                                                        value='Promotional code - 648'
                                                     ),
-                                                    factor="648"
+                                                    factor='648'
                                                 ),
                                             ]
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@student@access",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@access',
+                                                    version='1.0',
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:1day"
+                                                                version='1.0',
+                                                                ref='cdla:1day'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:1week"
+                                                                version='1.0',
+                                                                ref='cdla:1week'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:4week"
+                                                                version='1.0',
+                                                                ref='cdla:4week'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:1year"
+                                                                version='1.0',
+                                                                ref='cdla:1year'
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@student@access",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@student@access',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:can_access"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:can_access'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Midlands_Area"
+                                                                    version='any',
+                                                                    ref='cdla:Midlands_Area'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Burton_And_Swadlincote"
+                                                                    version='any',
+                                                                    ref='cdla:Burton_And_Swadlincote'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Cannock"
+                                                                    version='any',
+                                                                    ref='cdla:Cannock'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Coalville"
+                                                                    version='any',
+                                                                    ref='cdla:Coalville'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Derby"
+                                                                    version='any',
+                                                                    ref='cdla:Derby'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Leicester_City_Plus"
+                                                                    version='any',
+                                                                    ref='cdla:Leicester_City_Plus'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Midlands"
+                                                                    version='any',
+                                                                    ref='cdla:Midlands'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Shrewsbury"
+                                                                    version='any',
+                                                                    ref='cdla:Shrewsbury'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Stafford"
+                                                                    version='any',
+                                                                    ref='cdla:Stafford'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Sutton_And_Birmingham"
+                                                                    version='any',
+                                                                    ref='cdla:Sutton_And_Birmingham'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Tamworth"
+                                                                    version='any',
+                                                                    ref='cdla:Tamworth'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Telford"
+                                                                    version='any',
+                                                                    ref='cdla:Telford'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:North_East_Area"
+                                                                    version='any',
+                                                                    ref='cdla:North_East_Area'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:North_East"
+                                                                    version='any',
+                                                                    ref='cdla:North_East'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Ashington_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Ashington_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Bishop_Auckland"
+                                                                    version='any',
+                                                                    ref='cdla:Bishop_Auckland'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_plus_Ashington_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_plus_Ashington_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_plus_Morpeth_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_plus_Morpeth_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Blyth_plus_TandW_Triple"
+                                                                    version='any',
+                                                                    ref='cdla:Blyth_plus_TandW_Triple'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Brandon"
+                                                                    version='any',
+                                                                    ref='cdla:Brandon'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:County_Durham"
+                                                                    version='any',
+                                                                    ref='cdla:County_Durham'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Cramlington"
+                                                                    version='any',
+                                                                    ref='cdla:Cramlington'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@student@access@academic",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@access@academic',
+                                                    version='1.0',
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:15week"
+                                                                version='1.0',
+                                                                ref='cdla:15week'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:academic_term@spring"
+                                                                version='1.0',
+                                                                ref='cdla:academic_term@spring'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:academic_term@summer"
+                                                                version='1.0',
+                                                                ref='cdla:academic_term@summer'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:academic_term@autumn"
+                                                                version='1.0',
+                                                                ref='cdla:academic_term@autumn'
                                                             ),
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:academic_year"
+                                                                version='1.0',
+                                                                ref='cdla:academic_year'
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@student@academic",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@student@academic',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:can_access"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:can_access'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.XOR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Leicester_City_Plus"
+                                                                    version='any',
+                                                                    ref='cdla:Leicester_City_Plus'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Midlands"
+                                                                    version='any',
+                                                                    ref='cdla:Midlands'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Stafford"
+                                                                    version='any',
+                                                                    ref='cdla:Stafford'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Sutton_And_Birmingham"
+                                                                    version='any',
+                                                                    ref='cdla:Sutton_And_Birmingham'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Tamworth"
+                                                                    version='any',
+                                                                    ref='cdla:Tamworth'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:Telford"
+                                                                    version='any',
+                                                                    ref='cdla:Telford'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:North_East"
+                                                                    version='any',
+                                                                    ref='cdla:North_East'
                                                                 ),
                                                                 TariffZoneRef(
-                                                                    version="any",
-                                                                    ref="cdla:County_Durham"
+                                                                    version='any',
+                                                                    ref='cdla:County_Durham'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@student@eligibility",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@eligibility',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Eligible user types"
+                                                        value='Eligible user types'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@student@eligibility",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@student@eligibility',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:eligible"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.XOR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
-                                                                    id="cdla:student",
-                                                                    version="any",
+                                                                    id='cdla:student',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="student Fare"
+                                                                        value='student Fare'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="cdla:student"
+                                                                        version='any',
+                                                                        ref='cdla:student'
                                                                     )
                                                                 ),
                                                             ]
@@ -1773,83 +1773,83 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@student@funding",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@funding',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Eligible user types"
+                                                        value='Eligible user types'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:15week"
+                                                                version='1.0',
+                                                                ref='cdla:15week'
                                                             ),
                                                         ]
                                                     ),
                                                     choice=QualityStructureFactorsRelStructure(
                                                         choice=[
                                                             QualityStructureFactorRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@funded@80"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@funded@80'
                                                             ),
                                                             QualityStructureFactorRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@funded@115"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@funded@115'
                                                             ),
                                                             QualityStructureFactorRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@funded@135"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@funded@135'
                                                             ),
                                                             QualityStructureFactorRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@unfunded"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@unfunded'
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@student@funding",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@student@funding',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:eligible"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.XOR
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="cdla:Time_interval@student@promo",
-                                                    version="1.0",
+                                                    id='cdla:Time_interval@student@promo',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Eligible user types"
+                                                        value='Eligible user types'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
-                                                                version="1.0",
-                                                                ref="cdla:15week"
+                                                                version='1.0',
+                                                                ref='cdla:15week'
                                                             ),
                                                         ]
                                                     ),
                                                     choice=QualityStructureFactorsRelStructure(
                                                         choice=[
                                                             QualityStructureFactorRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@promo@103.5"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@promo@103.5'
                                                             ),
                                                             QualityStructureFactorRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@promo@288"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@promo@288'
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="cdla:Time_interval@student@promo",
-                                                        version="1.0",
+                                                        id='cdla:Time_interval@student@promo',
+                                                        version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="ntx:v1.0",
-                                                            ref="ntx:eligible"
+                                                            version='ntx:v1.0',
+                                                            ref='ntx:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.XOR
                                                     )
@@ -1862,44 +1862,44 @@ obj = PublicationDelivery(
                             fare_products=FareProductsInFrameRelStructure(
                                 choice=[
                                     PreassignedFareProduct(
-                                        id="cdla:Period_pass@student",
-                                        version="1.0",
+                                        id='cdla:Period_pass@student',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Adult Day Zonal  fare    "
+                                            value='Adult Day Zonal  fare    '
                                         ),
                                         authority_ref_or_operator_ref=OperatorRef(
-                                            version="any",
-                                            ref="mybus:CDLA"
+                                            version='any',
+                                            ref='mybus:CDLA'
                                         ),
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElement(
-                                                    id="cdla:Period_pass@student@travel",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass@student@travel',
+                                                    version='1.0',
                                                     name=MultilingualString(
-                                                        value="Single  ride"
+                                                        value='Single  ride'
                                                     ),
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@access"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@access'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@access@academic"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@access@academic'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@eligibility"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@eligibility'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@student@funding"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@student@funding'
                                                             ),
                                                             FareStructureElementRef(
-                                                                version="1.0",
-                                                                ref="cdla:Time_interval@standard@conditions_of_travel"
+                                                                version='1.0',
+                                                                ref='cdla:Time_interval@standard@conditions_of_travel'
                                                             ),
                                                         ]
                                                     )
@@ -1912,31 +1912,31 @@ obj = PublicationDelivery(
                             sales_offer_packages=SalesOfferPackagesInFrameRelStructure(
                                 sales_offer_package=[
                                     SalesOfferPackage(
-                                        id="cdla:Period_pass-SOP@student@mobile",
-                                        version="1.0",
+                                        id='cdla:Period_pass-SOP@student@mobile',
+                                        version='1.0',
                                         name=MultilingualString(
-                                            value="Student Annual Mobile"
+                                            value='Student Annual Mobile'
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
-                                                    id="cdla:Period_pass@student@mobile@purchase_window",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass@student@mobile@purchase_window',
+                                                    version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="ntx:v1.0",
-                                                        ref="ntx:can_purchase_when"
+                                                        version='ntx:v1.0',
+                                                        ref='ntx:can_purchase_when'
                                                     ),
                                                     includes=GenericParameterAssignmentsRelStructure(
                                                         generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                             GenericParameterAssignment(
-                                                                id="cdla:Period_pass@student@mobile@purchase_window@academic_year",
-                                                                version="1.0",
+                                                                id='cdla:Period_pass@student@mobile@purchase_window@academic_year',
+                                                                version='1.0',
                                                                 order=1,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         PurchaseWindow(
-                                                                            id="cdla:Period_pass@student@mobile@purchase_window@academic_year",
+                                                                            id='cdla:Period_pass@student@mobile@purchase_window@academic_year',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
@@ -1947,94 +1947,94 @@ obj = PublicationDelivery(
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="1.0"
+                                                                            version='1.0'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_year"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_year'
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
-                                                                id="cdla:Period_pass@student@mobile@purchase_window@autumn",
-                                                                version="1.0",
+                                                                id='cdla:Period_pass@student@mobile@purchase_window@autumn',
+                                                                version='1.0',
                                                                 order=1,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         PurchaseWindow(
-                                                                            id="cdla::student@purchase_window@autum",
+                                                                            id='cdla::student@purchase_window@autum',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="1.0",
-                                                                                            ref="cdla:academic_term@autumn"
+                                                                                            version='1.0',
+                                                                                            ref='cdla:academic_term@autumn'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="1.0"
+                                                                            version='1.0'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_term@autumn"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_term@autumn'
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
-                                                                id="cdla:student@purchase_window@spring",
-                                                                version="1.0",
+                                                                id='cdla:student@purchase_window@spring',
+                                                                version='1.0',
                                                                 order=1,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         PurchaseWindow(
-                                                                            id="cdla:Period_pass@student@mobile@purchase_window@spring",
+                                                                            id='cdla:Period_pass@student@mobile@purchase_window@spring',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="1.0",
-                                                                                            ref="cdla:academic_term@spring"
+                                                                                            version='1.0',
+                                                                                            ref='cdla:academic_term@spring'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="1.0"
+                                                                            version='1.0'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_term@spring"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_term@spring'
                                                                 )
                                                             ),
                                                             GenericParameterAssignment(
-                                                                id="cdla:student@purchase_window@summer",
-                                                                version="1.0",
+                                                                id='cdla:student@purchase_window@summer',
+                                                                version='1.0',
                                                                 order=1,
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         PurchaseWindow(
-                                                                            id="cdla:Period_pass@student@mobile@purchase_window@summer",
+                                                                            id='cdla:Period_pass@student@mobile@purchase_window@summer',
                                                                             validity_conditions_or_valid_between=[
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
-                                                                                            version="1.0",
-                                                                                            ref="cdla:academic_term@summer"
+                                                                                            version='1.0',
+                                                                                            ref='cdla:academic_term@summer'
                                                                                         ),
                                                                                     ]
                                                                                 ),
                                                                             ],
-                                                                            version="1.0"
+                                                                            version='1.0'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
-                                                                    version="1.0",
-                                                                    ref="cdla:academic_term@summer"
+                                                                    version='1.0',
+                                                                    ref='cdla:academic_term@summer'
                                                                 )
                                                             ),
                                                         ]
@@ -2045,16 +2045,16 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="cdla:Period_pass-SOP@student@mobile",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@student@mobile',
+                                                    version='1.0',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="1.0",
-                                                        ref="cdla:online"
+                                                        version='1.0',
+                                                        ref='cdla:online'
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
-                                                        version="1.0",
-                                                        ref="cdla:mobile_app"
+                                                        version='1.0',
+                                                        ref='cdla:mobile_app'
                                                     )
                                                 ),
                                             ]
@@ -2062,15 +2062,15 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="cdla:Period_pass-SOP@student@mobile",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@student@mobile',
+                                                    version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="any",
-                                                        ref="cdla:mobile_app"
+                                                        version='any',
+                                                        ref='cdla:mobile_app'
                                                     ),
                                                     choice=FareProductRef(
-                                                        version="1.0",
-                                                        ref="cdla:Period_pass@student"
+                                                        version='1.0',
+                                                        ref='cdla:Period_pass@student'
                                                     ),
                                                     order=1
                                                 ),
@@ -2078,25 +2078,25 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     SalesOfferPackage(
-                                        id="cdla:Period_pass-SOP@student@smartcard",
-                                        version="any",
+                                        id='cdla:Period_pass-SOP@student@smartcard',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="student 15 Weekly Card - Smartcard only"
+                                            value='student 15 Weekly Card - Smartcard only'
                                         ),
                                         validity_parameter_assignments=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
-                                                    id="cdla:Period_pass-SOP@student@smartcard",
-                                                    version="any",
+                                                    id='cdla:Period_pass-SOP@student@smartcard',
+                                                    version='any',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="ntx:v1.0",
-                                                        ref="ntx:eligible"
+                                                        version='ntx:v1.0',
+                                                        ref='ntx:eligible'
                                                     ),
                                                     limitation_grouping_type=BooleanOperatorEnumeration.XOR,
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
-                                                        version="1.0",
-                                                        ref="cdla:15week"
+                                                        version='1.0',
+                                                        ref='cdla:15week'
                                                     )
                                                 ),
                                             ]
@@ -2104,29 +2104,29 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="cdla:Period_pass-SOP@student@smartcard@online",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@student@smartcard@online',
+                                                    version='1.0',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="1.0",
-                                                        ref="cdla:online"
+                                                        version='1.0',
+                                                        ref='cdla:online'
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
-                                                        version="1.0",
-                                                        ref="cdla:post"
+                                                        version='1.0',
+                                                        ref='cdla:post'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="cdla:Period_pass-SOP@student@smartcard@at_counter",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@student@smartcard@at_counter',
+                                                    version='1.0',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="1.0",
-                                                        ref="cdla:at_counter"
+                                                        version='1.0',
+                                                        ref='cdla:at_counter'
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
-                                                        version="1.0",
-                                                        ref="cdla:collect"
+                                                        version='1.0',
+                                                        ref='cdla:collect'
                                                     )
                                                 ),
                                             ]
@@ -2134,15 +2134,15 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="cdla:Period_pass-SOP@studen@smartcard",
-                                                    version="1.0",
+                                                    id='cdla:Period_pass-SOP@studen@smartcard',
+                                                    version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="any",
-                                                        ref="cdla:card"
+                                                        version='any',
+                                                        ref='cdla:card'
                                                     ),
                                                     choice=FareProductRef(
-                                                        version="1.0",
-                                                        ref="cdla:Period_pass@student"
+                                                        version='1.0',
+                                                        ref='cdla:Period_pass@student'
                                                     ),
                                                     order=1
                                                 ),
@@ -2153,51 +2153,51 @@ obj = PublicationDelivery(
                             )
                         ),
                         FareFrame(
-                            id="cdla:CDLA@Multiple_packages@prices",
-                            version="1.0",
+                            id='cdla:CDLA@Multiple_packages@prices',
+                            version='1.0',
                             frame_defaults=VersionFrameDefaultsStructure(
-                                default_currency="GBP"
+                                default_currency='GBP'
                             ),
                             prerequisites=VersionFrameRefsRelStructure(
                                 choice=[
                                     FareFrameRef(
-                                        version="1.0",
-                                        ref="cdla:CDLA@Multiple_packages@products@standard"
+                                        version='1.0',
+                                        ref='cdla:CDLA@Multiple_packages@products@standard'
                                     ),
                                     FareFrameRef(
-                                        version="1.0",
-                                        ref="cdla:CDLA@Multiple_packages@products@family"
+                                        version='1.0',
+                                        ref='cdla:CDLA@Multiple_packages@products@family'
                                     ),
                                     FareFrameRef(
-                                        version="1.0",
-                                        ref="cdla:CDLA@Multiple_packages@products@student"
+                                        version='1.0',
+                                        ref='cdla:CDLA@Multiple_packages@products@student'
                                     ),
                                 ]
                             ),
                             pricing_parameter_set=PricingParameterSet(
-                                id="cdla:Multiple_packages:pp",
-                                version="1.0",
+                                id='cdla:Multiple_packages:pp',
+                                version='1.0',
                                 pricing_rules=PricingRulesRelStructure(
                                     choice=[
                                         DiscountingRule(
-                                            id="cdla:£0-Off",
-                                            version="any",
-                                            discount_as_value=Decimal("0")
+                                            id='cdla:£0-Off',
+                                            version='any',
+                                            discount_as_value=Decimal('0')
                                         ),
                                         DiscountingRule(
-                                            id="cdla:£80-Off",
-                                            version="any",
-                                            discount_as_value=Decimal("80")
+                                            id='cdla:£80-Off',
+                                            version='any',
+                                            discount_as_value=Decimal('80')
                                         ),
                                         DiscountingRule(
-                                            id="cdla:£115-Off",
-                                            version="any",
-                                            discount_as_value=Decimal("115")
+                                            id='cdla:£115-Off',
+                                            version='any',
+                                            discount_as_value=Decimal('115')
                                         ),
                                         DiscountingRule(
-                                            id="cdla:£135-Off",
-                                            version="any",
-                                            discount_as_value=Decimal("135")
+                                            id='cdla:£135-Off',
+                                            version='any',
+                                            discount_as_value=Decimal('135')
                                         ),
                                     ]
                                 )
@@ -2205,939 +2205,939 @@ obj = PublicationDelivery(
                             fare_tables=FareTablesInFrameRelStructure(
                                 standard_fare_table_or_fare_table_in_context_or_fare_table=[
                                     FareTable(
-                                        id="cdla:PriceGroup:zonal@Midlands",
-                                        version="any",
+                                        id='cdla:PriceGroup:zonal@Midlands',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Prices for Zonal Fare Product  "
+                                            value='Prices for Zonal Fare Product  '
                                         ),
                                         cells=CellsRelStructure(
                                             choice=[
                                                 Cell(
-                                                    id="cdla:Midlands@adult@day",
-                                                    version="any",
+                                                    id='cdla:Midlands@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Adult full fare day"
+                                                            value='Midlands Adult full fare day'
                                                         ),
-                                                        amount=Decimal("5.20")
+                                                        amount=Decimal('5.20')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@family@day",
-                                                    version="any",
+                                                    id='cdla:Midlands@family@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Adult full fare day"
+                                                            value='Midlands Adult full fare day'
                                                         ),
-                                                        amount=Decimal("8.00")
+                                                        amount=Decimal('8.00')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Day_pass@family"
+                                                            version='1.0',
+                                                            ref='cdla:Day_pass@family'
                                                         ),
                                                         GroupTicketRef(
-                                                            version="any",
-                                                            ref="cdla:family"
+                                                            version='any',
+                                                            ref='cdla:family'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Midlands@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Adult full fare weekly"
+                                                            value='Midlands Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("21")
+                                                        amount=Decimal('21')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@adult@4weekly",
-                                                    version="any",
+                                                    id='cdla:Midlands@adult@4weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Adult full fare 4 weekly"
+                                                            value='Midlands Adult full fare 4 weekly'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:4week"
+                                                            version='1.0',
+                                                            ref='cdla:4week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@adult@annual",
-                                                    version="any",
+                                                    id='cdla:Midlands@adult@annual',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Adult full fare Annual"
+                                                            value='Midlands Adult full fare Annual'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1year"
+                                                            version='1.0',
+                                                            ref='cdla:1year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=5
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@student@term_autumn",
-                                                    version="any",
+                                                    id='cdla:Midlands@student@term_autumn',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Student fare price Autumn Terml "
+                                                            value='Midlands Student fare price Autumn Terml '
                                                         ),
                                                         start_date=XmlDate(2011, 8, 22),
                                                         end_date=XmlDate(2012, 7, 31),
-                                                        amount=Decimal("140")
+                                                        amount=Decimal('140')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_term@autumn"
+                                                            version='1.0',
+                                                            ref='cdla:academic_term@autumn'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@103.5"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=6
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@student@term_spring",
-                                                    version="any",
+                                                    id='cdla:Midlands@student@term_spring',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Student fare price Spring Term"
+                                                            value='Midlands Student fare price Spring Term'
                                                         ),
                                                         start_date=XmlDate(2012, 1, 2),
                                                         end_date=XmlDate(2012, 3, 30),
-                                                        amount=Decimal("140")
+                                                        amount=Decimal('140')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_term@spring"
+                                                            version='1.0',
+                                                            ref='cdla:academic_term@spring'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@103.5"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=7
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@student@term_summer",
-                                                    version="any",
+                                                    id='cdla:Midlands@student@term_summer',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Student fare price Summer"
+                                                            value='Midlands Student fare price Summer'
                                                         ),
                                                         start_date=XmlDate(2012, 4, 16),
                                                         end_date=XmlDate(2012, 7, 31),
-                                                        amount=Decimal("140")
+                                                        amount=Decimal('140')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_term@summer"
+                                                            version='1.0',
+                                                            ref='cdla:academic_term@summer'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@103.5"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=8
                                                 ),
                                                 Cell(
-                                                    id="cdla:Midlands@student@academic_year",
-                                                    version="any",
+                                                    id='cdla:Midlands@student@academic_year',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Midlands Student fare price Annual"
+                                                            value='Midlands Student fare price Annual'
                                                         ),
                                                         start_date=XmlDate(2011, 9, 1),
                                                         end_date=XmlDate(2012, 7, 31),
-                                                        amount=Decimal("400")
+                                                        amount=Decimal('400')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_year"
+                                                            version='1.0',
+                                                            ref='cdla:academic_year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@360"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@360'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Midlands"
+                                                        version='any',
+                                                        ref='cdla:Midlands'
                                                     ),
                                                     order=9
                                                 ),
                                                 Cell(
-                                                    id="cdla:Burton_And_Swadlincote@adult@day",
-                                                    version="any",
+                                                    id='cdla:Burton_And_Swadlincote@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Burton and Swadlincote Adult full fare weekly"
+                                                            value='Burton and Swadlincote Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("3.6")
+                                                        amount=Decimal('3.6')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Burton_And_Swadlincote"
+                                                        version='any',
+                                                        ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:Burton_And_Swadlincote@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Burton_And_Swadlincote@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Burton and Swadlincote Adult full fare weekly"
+                                                            value='Burton and Swadlincote Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("15")
+                                                        amount=Decimal('15')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Burton_And_Swadlincote"
+                                                        version='any',
+                                                        ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:Burton_And_Swadlincote@adult@4weekly",
-                                                    version="any",
+                                                    id='cdla:Burton_And_Swadlincote@adult@4weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Burton and Swadlincote Adult full fare 4 weekly"
+                                                            value='Burton and Swadlincote Adult full fare 4 weekly'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:4week"
+                                                            version='1.0',
+                                                            ref='cdla:4week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Burton_And_Swadlincote"
+                                                        version='any',
+                                                        ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:Burton_And_Swadlincote@adult@annual",
-                                                    version="any",
+                                                    id='cdla:Burton_And_Swadlincote@adult@annual',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Burton and Swadlincote Adult full fare"
+                                                            value='Burton and Swadlincote Adult full fare'
                                                         ),
-                                                        amount=Decimal("490")
+                                                        amount=Decimal('490')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1year"
+                                                            version='1.0',
+                                                            ref='cdla:1year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Burton_And_Swadlincote"
+                                                        version='any',
+                                                        ref='cdla:Burton_And_Swadlincote'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:Cannock@adult@day",
-                                                    version="any",
+                                                    id='cdla:Cannock@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Cannock Adult full fare day"
+                                                            value='Cannock Adult full fare day'
                                                         ),
-                                                        amount=Decimal("3.80")
+                                                        amount=Decimal('3.80')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Cannock"
+                                                        version='any',
+                                                        ref='cdla:Cannock'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:Cannock@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Cannock@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Cannock Adult full fare weekly"
+                                                            value='Cannock Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("15")
+                                                        amount=Decimal('15')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Cannock"
+                                                        version='any',
+                                                        ref='cdla:Cannock'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:Cannock@adult@4weekly",
-                                                    version="any",
+                                                    id='cdla:Cannock@adult@4weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Cannock Adult full fare 4 weekly"
+                                                            value='Cannock Adult full fare 4 weekly'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:4week"
+                                                            version='1.0',
+                                                            ref='cdla:4week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Cannock"
+                                                        version='any',
+                                                        ref='cdla:Cannock'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:Cannock@adult@annual",
-                                                    version="any",
+                                                    id='cdla:Cannock@adult@annual',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Cannock Adult full fare Annual"
+                                                            value='Cannock Adult full fare Annual'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1year"
+                                                            version='1.0',
+                                                            ref='cdla:1year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Cannock"
+                                                        version='any',
+                                                        ref='cdla:Cannock'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:Leicester_City_Plus@adult@day",
-                                                    version="any",
+                                                    id='cdla:Leicester_City_Plus@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Leicester_City_Plus Adult full fare day"
+                                                            value='Leicester_City_Plus Adult full fare day'
                                                         ),
-                                                        amount=Decimal("3.60")
+                                                        amount=Decimal('3.60')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Leicester_City_Plus"
+                                                        version='any',
+                                                        ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:Leicester_City_Plus@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Leicester_City_Plus@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Leicester_City_Plus Adult full fare weekly"
+                                                            value='Leicester_City_Plus Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("15")
+                                                        amount=Decimal('15')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Leicester_City_Plus"
+                                                        version='any',
+                                                        ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:Leicester_City_Plus@adult@4weekly",
-                                                    version="any",
+                                                    id='cdla:Leicester_City_Plus@adult@4weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Leicester_City_Plus Adult full fare 4 weekly"
+                                                            value='Leicester_City_Plus Adult full fare 4 weekly'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:4week"
+                                                            version='1.0',
+                                                            ref='cdla:4week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Leicester_City_Plus"
+                                                        version='any',
+                                                        ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:Leicester_City_Plus@adult@annual",
-                                                    version="any",
+                                                    id='cdla:Leicester_City_Plus@adult@annual',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Leicester_City_Plus Adult full fare Annual"
+                                                            value='Leicester_City_Plus Adult full fare Annual'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1year"
+                                                            version='1.0',
+                                                            ref='cdla:1year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Leicester_City_Plus"
+                                                        version='any',
+                                                        ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:Leicester_City_Plus@student@academic_year",
-                                                    version="any",
+                                                    id='cdla:Leicester_City_Plus@student@academic_year',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Leicester_City_Plus Student fare Annual"
+                                                            value='Leicester_City_Plus Student fare Annual'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 22),
                                                         end_date=XmlDate(2012, 7, 31),
-                                                        amount=Decimal("320")
+                                                        amount=Decimal('320')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_year"
+                                                            version='1.0',
+                                                            ref='cdla:academic_year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@288"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@288'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Leicester_City_Plus"
+                                                        version='any',
+                                                        ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=5
                                                 ),
                                                 Cell(
-                                                    id="cdla:Leicester_City_Plus@student@academic_year@Promo",
-                                                    version="any",
+                                                    id='cdla:Leicester_City_Plus@student@academic_year@Promo',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Leicester_City_Plus Student fare Annual - Promotional Price"
+                                                            value='Leicester_City_Plus Student fare Annual - Promotional Price'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 22),
                                                         end_date=XmlDate(2012, 7, 31),
-                                                        amount=Decimal("320"),
+                                                        amount=Decimal('320'),
                                                         choice_1=DiscountingRule(
-                                                            id="cdla:Leicester_City_Plus@student@academic_year@Promo",
-                                                            version="any",
-                                                            discount_as_value=Decimal("288")
+                                                            id='cdla:Leicester_City_Plus@student@academic_year@Promo',
+                                                            version='any',
+                                                            discount_as_value=Decimal('288')
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_year"
+                                                            version='1.0',
+                                                            ref='cdla:academic_year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@288"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@288'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Leicester_City_Plus"
+                                                        version='any',
+                                                        ref='cdla:Leicester_City_Plus'
                                                     ),
                                                     order=6
                                                 ),
                                                 Cell(
-                                                    id="cdla:Stafford@adult@day",
-                                                    version="any",
+                                                    id='cdla:Stafford@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Stafford Adult full fare day"
+                                                            value='Stafford Adult full fare day'
                                                         ),
-                                                        amount=Decimal("3.80")
+                                                        amount=Decimal('3.80')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Stafford"
+                                                        version='any',
+                                                        ref='cdla:Stafford'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:Stafford@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Stafford@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Stafford Adult full fare weekly"
+                                                            value='Stafford Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("15")
+                                                        amount=Decimal('15')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Stafford"
+                                                        version='any',
+                                                        ref='cdla:Stafford'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:Stafford@adult@4weekly",
-                                                    version="any",
+                                                    id='cdla:Stafford@adult@4weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Stafford Adult full fare 4 weekly"
+                                                            value='Stafford Adult full fare 4 weekly'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:4week"
+                                                            version='1.0',
+                                                            ref='cdla:4week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Stafford"
+                                                        version='any',
+                                                        ref='cdla:Stafford'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:Stafford@adult@annual",
-                                                    version="any",
+                                                    id='cdla:Stafford@adult@annual',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Stafford Adult full fare Annual"
+                                                            value='Stafford Adult full fare Annual'
                                                         ),
-                                                        amount=Decimal("45")
+                                                        amount=Decimal('45')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1year"
+                                                            version='1.0',
+                                                            ref='cdla:1year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Stafford"
+                                                        version='any',
+                                                        ref='cdla:Stafford'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:Stafford@student@term_autumn",
-                                                    version="any",
+                                                    id='cdla:Stafford@student@term_autumn',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Stafford Student fare price Autumn Term  "
+                                                            value='Stafford Student fare price Autumn Term  '
                                                         ),
                                                         start_date=XmlDate(2011, 8, 22),
                                                         end_date=XmlDate(2012, 7, 31),
-                                                        amount=Decimal("115")
+                                                        amount=Decimal('115')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_term@autumn"
+                                                            version='1.0',
+                                                            ref='cdla:academic_term@autumn'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@103.5"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Stafford"
+                                                        version='any',
+                                                        ref='cdla:Stafford'
                                                     ),
                                                     order=5
                                                 ),
                                                 Cell(
-                                                    id="cdla:Stafford@student@term_spring",
-                                                    version="any",
+                                                    id='cdla:Stafford@student@term_spring',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Stafford Student fare price Spring Term"
+                                                            value='Stafford Student fare price Spring Term'
                                                         ),
                                                         start_date=XmlDate(2012, 1, 2),
                                                         end_date=XmlDate(2012, 3, 30),
-                                                        amount=Decimal("115")
+                                                        amount=Decimal('115')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_term@spring"
+                                                            version='1.0',
+                                                            ref='cdla:academic_term@spring'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@103.5"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Stafford"
+                                                        version='any',
+                                                        ref='cdla:Stafford'
                                                     ),
                                                     order=6
                                                 ),
                                                 Cell(
-                                                    id="cdla:Stafford@student@term_summer",
-                                                    version="any",
+                                                    id='cdla:Stafford@student@term_summer',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Stafford Student fare price Summer"
+                                                            value='Stafford Student fare price Summer'
                                                         ),
                                                         start_date=XmlDate(2012, 4, 16),
                                                         end_date=XmlDate(2012, 7, 31),
-                                                        amount=Decimal("115")
+                                                        amount=Decimal('115')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_term@summer"
+                                                            version='1.0',
+                                                            ref='cdla:academic_term@summer'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@103.5"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@103.5'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Stafford"
+                                                        version='any',
+                                                        ref='cdla:Stafford'
                                                     ),
                                                     order=7
                                                 ),
@@ -3145,949 +3145,949 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareTable(
-                                        id="cdla:PriceGroup:zonal@North_East",
-                                        version="any",
+                                        id='cdla:PriceGroup:zonal@North_East',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Prices for Zonal Fare Products North East  "
+                                            value='Prices for Zonal Fare Products North East  '
                                         ),
                                         cells=CellsRelStructure(
                                             choice=[
                                                 Cell(
-                                                    id="cdla:North_East_Area@adult@day",
-                                                    version="any",
+                                                    id='cdla:North_East_Area@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East All zones Triple adult   fare Day"
+                                                            value='North East All zones Triple adult   fare Day'
                                                         ),
-                                                        amount=Decimal("6.00")
+                                                        amount=Decimal('6.00')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East_Area"
+                                                        version='any',
+                                                        ref='cdla:North_East_Area'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East_Area@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:North_East_Area@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East All zones Triple adult   fare Weekly"
+                                                            value='North East All zones Triple adult   fare Weekly'
                                                         ),
-                                                        amount=Decimal("20.70")
+                                                        amount=Decimal('20.70')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East_Area"
+                                                        version='any',
+                                                        ref='cdla:North_East_Area'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@adult@day",
-                                                    version="any",
+                                                    id='cdla:North_East@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East Adult full fare weekly"
+                                                            value='North East Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("6.5")
+                                                        amount=Decimal('6.5')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@family@day",
-                                                    version="any",
+                                                    id='cdla:North_East@family@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East Adult full fare weekly"
+                                                            value='North East Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("12")
+                                                        amount=Decimal('12')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         GroupTicketRef(
-                                                            version="any",
-                                                            ref="cdla:family"
+                                                            version='any',
+                                                            ref='cdla:family'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:North_East@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East Adult full fare weekly"
+                                                            value='North East Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("21.6")
+                                                        amount=Decimal('21.6')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@adult@4weekly",
-                                                    version="any",
+                                                    id='cdla:North_East@adult@4weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East Adult full fare 4 weekly"
+                                                            value='North East Adult full fare 4 weekly'
                                                         ),
-                                                        amount=Decimal("82.8")
+                                                        amount=Decimal('82.8')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:4week"
+                                                            version='1.0',
+                                                            ref='cdla:4week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@adult@annual",
-                                                    version="any",
+                                                    id='cdla:North_East@adult@annual',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East Adult full fare Annual"
+                                                            value='North East Adult full fare Annual'
                                                         ),
-                                                        amount=Decimal("900")
+                                                        amount=Decimal('900')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1year"
+                                                            version='1.0',
+                                                            ref='cdla:1year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=5
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@student@15Week@unfunded",
-                                                    version="any",
+                                                    id='cdla:North_East@student@15Week@unfunded',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East    student   fare 15Week unfunded"
+                                                            value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("250"),
+                                                        amount=Decimal('250'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£0-Off"
+                                                            version='any',
+                                                            ref='cdla:£0-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@225"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@225'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@unfunded"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=6
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@student@15Week@funded_80",
-                                                    version="any",
+                                                    id='cdla:North_East@student@15Week@funded_80',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East    student   fare 15Week unfunded"
+                                                            value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("170"),
+                                                        amount=Decimal('170'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£80-Off"
+                                                            version='any',
+                                                            ref='cdla:£80-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@funded@80"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@funded@80'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=7
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@student@15Week@funded_115",
-                                                    version="any",
+                                                    id='cdla:North_East@student@15Week@funded_115',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East    student   fare 15Week unfunded"
+                                                            value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("135"),
+                                                        amount=Decimal('135'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£115-Off"
+                                                            version='any',
+                                                            ref='cdla:£115-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@funded@115"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@funded@115'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=8
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@student@15Week@funded_135",
-                                                    version="any",
+                                                    id='cdla:North_East@student@15Week@funded_135',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East    student   fare 15Week unfunded"
+                                                            value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("115"),
+                                                        amount=Decimal('115'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£115-Off"
+                                                            version='any',
+                                                            ref='cdla:£115-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@funded@135"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@funded@135'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=9
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@student@15Week@NCupgrade",
-                                                    version="any",
+                                                    id='cdla:North_East@student@15Week@NCupgrade',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East    student   fare 15Week unfunded"
+                                                            value='North East    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("50")
+                                                        amount=Decimal('50')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@unfunded"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=10
                                                 ),
                                                 Cell(
-                                                    id="cdla:North_East@student@academic_year",
-                                                    version="any",
+                                                    id='cdla:North_East@student@academic_year',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="North East Student fare price Annual"
+                                                            value='North East Student fare price Annual'
                                                         ),
                                                         start_date=XmlDate(2011, 9, 5),
                                                         end_date=XmlDate(2012, 7, 27),
-                                                        amount=Decimal("720")
+                                                        amount=Decimal('720')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_year"
+                                                            version='1.0',
+                                                            ref='cdla:academic_year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@648"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@648'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:North_East"
+                                                        version='any',
+                                                        ref='cdla:North_East'
                                                     ),
                                                     order=11
                                                 ),
                                                 Cell(
-                                                    id="cdla:Ashington_Triple@adult@day",
-                                                    version="any",
+                                                    id='cdla:Ashington_Triple@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Ashington Triple  adult   fare Day"
+                                                            value='Ashington Triple  adult   fare Day'
                                                         ),
-                                                        amount=Decimal("3.80")
+                                                        amount=Decimal('3.80')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Ashington_Triple"
+                                                        version='any',
+                                                        ref='cdla:Ashington_Triple'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:Ashington_Triple@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Ashington_Triple@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Ashington Triple  adult   fare Weekly"
+                                                            value='Ashington Triple  adult   fare Weekly'
                                                         ),
-                                                        amount=Decimal("15.5")
+                                                        amount=Decimal('15.5')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Ashington_Triple"
+                                                        version='any',
+                                                        ref='cdla:Ashington_Triple'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:Bishop_Auckland@adult@day",
-                                                    version="any",
+                                                    id='cdla:Bishop_Auckland@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Bishop Auckland Adult full fare day"
+                                                            value='Bishop Auckland Adult full fare day'
                                                         ),
-                                                        amount=Decimal("3.80")
+                                                        amount=Decimal('3.80')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Bishop_Auckland"
+                                                        version='any',
+                                                        ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:Bishop_Auckland@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Bishop_Auckland@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Bishop Auckland Adult full fare weekly"
+                                                            value='Bishop Auckland Adult full fare weekly'
                                                         ),
-                                                        amount=Decimal("15")
+                                                        amount=Decimal('15')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Bishop_Auckland"
+                                                        version='any',
+                                                        ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:Bishop_Auckland@adult@4weekly",
-                                                    version="any",
+                                                    id='cdla:Bishop_Auckland@adult@4weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Bishop Auckland Adult full fare 4 weekly"
+                                                            value='Bishop Auckland Adult full fare 4 weekly'
                                                         ),
-                                                        amount=Decimal("55.8")
+                                                        amount=Decimal('55.8')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:4week"
+                                                            version='1.0',
+                                                            ref='cdla:4week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Bishop_Auckland"
+                                                        version='any',
+                                                        ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:Bishop_Auckland@adult@annual",
-                                                    version="any",
+                                                    id='cdla:Bishop_Auckland@adult@annual',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Bishop Auckland Adult full fare Annual"
+                                                            value='Bishop Auckland Adult full fare Annual'
                                                         ),
-                                                        amount=Decimal("500")
+                                                        amount=Decimal('500')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1year"
+                                                            version='1.0',
+                                                            ref='cdla:1year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Bishop_Auckland"
+                                                        version='any',
+                                                        ref='cdla:Bishop_Auckland'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:Blyth_Triple@adult@day",
-                                                    version="any",
+                                                    id='cdla:Blyth_Triple@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Blyth Triple  adult   fare Day"
+                                                            value='Blyth Triple  adult   fare Day'
                                                         ),
-                                                        amount=Decimal("3.80")
+                                                        amount=Decimal('3.80')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Blyth_Triple"
+                                                        version='any',
+                                                        ref='cdla:Blyth_Triple'
                                                     ),
                                                     order=5
                                                 ),
                                                 Cell(
-                                                    id="cdla:Blyth_Triple@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Blyth_Triple@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Blyth Triple  adult   fare Weekly"
+                                                            value='Blyth Triple  adult   fare Weekly'
                                                         ),
-                                                        amount=Decimal("15.5")
+                                                        amount=Decimal('15.5')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Blyth_Triple"
+                                                        version='any',
+                                                        ref='cdla:Blyth_Triple'
                                                     ),
                                                     order=6
                                                 ),
                                                 Cell(
-                                                    id="cdla:Blyth_plus_Ashington_Triple@adult@day",
-                                                    version="any",
+                                                    id='cdla:Blyth_plus_Ashington_Triple@adult@day',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Blyth plus Ashington Triple  adult   fare Day"
+                                                            value='Blyth plus Ashington Triple  adult   fare Day'
                                                         ),
-                                                        amount=Decimal("5")
+                                                        amount=Decimal('5')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1day"
+                                                            version='1.0',
+                                                            ref='cdla:1day'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Blyth_plus_Ashington_Triple"
+                                                        version='any',
+                                                        ref='cdla:Blyth_plus_Ashington_Triple'
                                                     ),
                                                     order=7
                                                 ),
                                                 Cell(
-                                                    id="cdla:Blyth_plus_Ashington_Triple@adult@weekly",
-                                                    version="any",
+                                                    id='cdla:Blyth_plus_Ashington_Triple@adult@weekly',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="Blyth plus Ashington Triple  adult   fare Weekly"
+                                                            value='Blyth plus Ashington Triple  adult   fare Weekly'
                                                         ),
-                                                        amount=Decimal("20.0")
+                                                        amount=Decimal('20.0')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@standard"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@standard'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:1week"
+                                                            version='1.0',
+                                                            ref='cdla:1week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:adult"
+                                                            version='any',
+                                                            ref='cdla:adult'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:Blyth_plus_Ashington_Triple"
+                                                        version='any',
+                                                        ref='cdla:Blyth_plus_Ashington_Triple'
                                                     ),
                                                     order=8
                                                 ),
                                                 Cell(
-                                                    id="cdla:County_Durham@student@15Week@unfunded",
-                                                    version="any",
+                                                    id='cdla:County_Durham@student@15Week@unfunded',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="County Durham    student   fare 15Week unfunded"
+                                                            value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("220"),
+                                                        amount=Decimal('220'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£0-Off"
+                                                            version='any',
+                                                            ref='cdla:£0-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@unfunded"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:County_Durham"
+                                                        version='any',
+                                                        ref='cdla:County_Durham'
                                                     ),
                                                     order=1
                                                 ),
                                                 Cell(
-                                                    id="cdla:County_Durham@student@15Week@funded_80",
-                                                    version="any",
+                                                    id='cdla:County_Durham@student@15Week@funded_80',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="County Durham    student   fare 15Week unfunded"
+                                                            value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("140"),
+                                                        amount=Decimal('140'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£80-Off"
+                                                            version='any',
+                                                            ref='cdla:£80-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@funded@80"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@funded@80'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:County_Durham"
+                                                        version='any',
+                                                        ref='cdla:County_Durham'
                                                     ),
                                                     order=2
                                                 ),
                                                 Cell(
-                                                    id="cdla:County_Durham@student@15Week@funded_115",
-                                                    version="any",
+                                                    id='cdla:County_Durham@student@15Week@funded_115',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="County Durham    student   fare 15Week unfunded"
+                                                            value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("105"),
+                                                        amount=Decimal('105'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£115-Off"
+                                                            version='any',
+                                                            ref='cdla:£115-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@funded@115"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@funded@115'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:County_Durham"
+                                                        version='any',
+                                                        ref='cdla:County_Durham'
                                                     ),
                                                     order=3
                                                 ),
                                                 Cell(
-                                                    id="cdla:County_Durham@student@15Week@funded_135",
-                                                    version="any",
+                                                    id='cdla:County_Durham@student@15Week@funded_135',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="County Durham    student   fare 15Week unfunded"
+                                                            value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("85"),
+                                                        amount=Decimal('85'),
                                                         choice_1=DiscountingRuleRef(
-                                                            version="any",
-                                                            ref="cdla:£135-Off"
+                                                            version='any',
+                                                            ref='cdla:£135-Off'
                                                         )
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@funded@135"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@funded@135'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:County_Durham"
+                                                        version='any',
+                                                        ref='cdla:County_Durham'
                                                     ),
                                                     order=4
                                                 ),
                                                 Cell(
-                                                    id="cdla:County_Durham@student@15Week@NCupgrade",
-                                                    version="any",
+                                                    id='cdla:County_Durham@student@15Week@NCupgrade',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="County Durham    student   fare 15Week unfunded"
+                                                            value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 8, 8),
-                                                        amount=Decimal("35")
+                                                        amount=Decimal('35')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:15week"
+                                                            version='1.0',
+                                                            ref='cdla:15week'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@unfunded"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@unfunded'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:County_Durham"
+                                                        version='any',
+                                                        ref='cdla:County_Durham'
                                                     ),
                                                     order=5
                                                 ),
                                                 Cell(
-                                                    id="cdla:County_Durham@student@academic_year",
-                                                    version="any",
+                                                    id='cdla:County_Durham@student@academic_year',
+                                                    version='any',
                                                     choice=FarePriceVersionedChildStructure(
                                                         name=MultilingualString(
-                                                            value="County Durham    student   fare 15Week unfunded"
+                                                            value='County Durham    student   fare 15Week unfunded'
                                                         ),
                                                         start_date=XmlDate(2011, 9, 5),
                                                         end_date=XmlDate(2012, 7, 27),
-                                                        amount=Decimal("640")
+                                                        amount=Decimal('640')
                                                     ),
                                                     choice_1=[
                                                         FareProductRef(
-                                                            version="1.0",
-                                                            ref="cdla:Period_pass@student"
+                                                            version='1.0',
+                                                            ref='cdla:Period_pass@student'
                                                         ),
                                                         TimeIntervalRef(
-                                                            version="1.0",
-                                                            ref="cdla:academic_year"
+                                                            version='1.0',
+                                                            ref='cdla:academic_year'
                                                         ),
                                                         UserProfileRef(
-                                                            version="any",
-                                                            ref="cdla:student"
+                                                            version='any',
+                                                            ref='cdla:student'
                                                         ),
                                                         QualityStructureFactorRef(
-                                                            version="1.0",
-                                                            ref="cdla:Time_interval@student@promo@576"
+                                                            version='1.0',
+                                                            ref='cdla:Time_interval@student@promo@576'
                                                         ),
                                                     ],
                                                     tariff_zone_ref=TariffZoneRef(
-                                                        version="any",
-                                                        ref="cdla:County_Durham"
+                                                        version='any',
+                                                        ref='cdla:County_Durham'
                                                     ),
                                                     order=6
                                                 ),
@@ -4098,278 +4098,278 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="cdla:CDLA@Common_resources",
-                            version="1.0",
+                            id='cdla:CDLA@Common_resources',
+                            version='1.0',
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="ntx",
-                                        xmlns="ntx",
-                                        xmlns_url="http://netex.org.uk/",
-                                        description="Netex built in value"
+                                        id='ntx',
+                                        xmlns='ntx',
+                                        xmlns_url='http://netex.org.uk/',
+                                        description='Netex built in value'
                                     ),
                                 ]
                             ),
                             types_of_value=TypesOfValueInFrameRelStructure(
                                 choice=[
                                     ValueSet(
-                                        id="cdla:Types_of_Concession",
-                                        version="any",
+                                        id='cdla:Types_of_Concession',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of concession"
+                                            value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfConcession(
-                                                    id="cdla:adult",
-                                                    version="any",
+                                                    id='cdla:adult',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Adult"
+                                                        value='Adult'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="cdla:child",
-                                                    version="any",
+                                                    id='cdla:child',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Child"
+                                                        value='Child'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="cdla:student",
-                                                    version="any",
+                                                    id='cdla:student',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Student"
+                                                        value='Student'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfConcession"
+                                        class_of_values='TypeOfConcession'
                                     ),
                                     ValueSet(
-                                        id="ntx:Types_of_Tariff",
-                                        version="ntx:v1.0",
+                                        id='ntx:Types_of_Tariff',
+                                        version='ntx:v1.0',
                                         name=MultilingualString(
-                                            value="Types of Tariff"
+                                            value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfTariff(
-                                                    id="ntx:Distance_kilometers",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:Distance_kilometers',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Kilometer Distance Kilometers"
+                                                        value='Kilometer Distance Kilometers'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:flat",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:flat',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Flat"
+                                                        value='Flat'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:point_to_point",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:point_to_point',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Point to point"
+                                                        value='Point to point'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:zone_to_zone",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:zone_to_zone',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Zone to Zone"
+                                                        value='Zone to Zone'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:zonal",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:zonal',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Zonal"
+                                                        value='Zonal'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:unit_distance",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:unit_distance',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Unit distance (count of stops, sections, zones)"
+                                                        value='Unit distance (count of stops, sections, zones)'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:section",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:section',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Section"
+                                                        value='Section'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:banded",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:banded',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Section"
+                                                        value='Section'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:stored_value",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:stored_value',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Stored value"
+                                                        value='Stored value'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:discount",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:discount',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Discount value"
+                                                        value='Discount value'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:multitrip",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:multitrip',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Multitrip carnet"
+                                                        value='Multitrip carnet'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="ntx:identity_card",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:identity_card',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="SIdentity"
+                                                        value='SIdentity'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfTariff"
+                                        class_of_values='TypeOfTariff'
                                     ),
                                     ValueSet(
-                                        id="ntx:Types_of_FareProduct",
-                                        version="ntx:v1.0",
+                                        id='ntx:Types_of_FareProduct',
+                                        version='ntx:v1.0',
                                         name=MultilingualString(
-                                            value="Types of Fare Product"
+                                            value='Types of Fare Product'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfFareProduct(
-                                                    id="ntx:trip",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:trip',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Trip product"
+                                                        value='Trip product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:multi_trip",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:multi_trip',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Multitrip / carnet  product"
+                                                        value='Multitrip / carnet  product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:period_pass",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:period_pass',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Peroid pass product"
+                                                        value='Peroid pass product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:day_pass",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:day_pass',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Day pass product"
+                                                        value='Day pass product'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="ntx:discount_card",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:discount_card',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Discount  product"
+                                                        value='Discount  product'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfFareProduct"
+                                        class_of_values='TypeOfFareProduct'
                                     ),
                                     ValueSet(
-                                        id="cdla:Types_of_TravelDocument",
-                                        version="any",
+                                        id='cdla:Types_of_TravelDocument',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of Travel document"
+                                            value='Types of Travel document'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfTravelDocument(
-                                                    id="cdla:mobile_app",
-                                                    version="any",
+                                                    id='cdla:mobile_app',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Mobile Electronic"
+                                                        value='Mobile Electronic'
                                                     )
                                                 ),
                                                 TypeOfTravelDocument(
-                                                    id="cdla:card",
-                                                    version="any",
+                                                    id='cdla:card',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Travel Card"
+                                                        value='Travel Card'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfTravelDocument"
+                                        class_of_values='TypeOfTravelDocument'
                                     ),
                                     ValueSet(
-                                        id="ntx:Types_of_AccessRightAssignment",
-                                        version="ntx:v1.0",
+                                        id='ntx:Types_of_AccessRightAssignment',
+                                        version='ntx:v1.0',
                                         name=MultilingualString(
-                                            value="Types of Access Right Assignment"
+                                            value='Types of Access Right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:eligible",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:eligible',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Eligible for a product or discount"
+                                                        value='Eligible for a product or discount'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:can_access",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:can_access',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Grants access rights to use or travel on a network"
+                                                        value='Grants access rights to use or travel on a network'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:can_access_when",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:can_access_when',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Grants access rights to use or travel within a given period"
+                                                        value='Grants access rights to use or travel within a given period'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:can_purchase_when",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:can_purchase_when',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Specified conditiosn on when a product can be purchased"
+                                                        value='Specified conditiosn on when a product can be purchased'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="ntx:condition_of_use",
-                                                    version="ntx:v1.0",
+                                                    id='ntx:condition_of_use',
+                                                    version='ntx:v1.0',
                                                     name=MultilingualString(
-                                                        value="Defines a condition or restriction on use"
+                                                        value='Defines a condition or restriction on use'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfAccessRightAssignment"
+                                        class_of_values='TypeOfAccessRightAssignment'
                                     ),
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="mybus:CDLA",
-                                        version="any",
+                                        id='mybus:CDLA',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Northern area operator"
+                                            value='Northern area operator'
                                         )
                                     ),
                                 ]

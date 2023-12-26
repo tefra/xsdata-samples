@@ -15,5 +15,5 @@ class Not:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

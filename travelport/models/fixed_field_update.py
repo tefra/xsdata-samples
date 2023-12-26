@@ -39,6 +39,7 @@ class FixedFieldUpdate:
         Minimum number of instances permitted (e.g., 0, 1).  Leave blank to
         indicate 0.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -48,68 +49,68 @@ class FixedFieldUpdate:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     label: None | str = field(
         default=None,
         metadata={
             "name": "Label",
             "type": "Attribute",
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     hide: bool = field(
         default=False,
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )
     search_option: bool = field(
         default=False,
         metadata={
             "name": "SearchOption",
             "type": "Attribute",
-        }
+        },
     )
     search_option_display_order: None | int = field(
         default=None,
         metadata={
             "name": "SearchOptionDisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MinOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )

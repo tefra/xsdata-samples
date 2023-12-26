@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .scheduled_stop_point_derived_view_structure import ScheduledStopPointDerivedViewStructure
+from .scheduled_stop_point_derived_view_structure import (
+    ScheduledStopPointDerivedViewStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -21,6 +21,7 @@ class ProfileChildSearchRsp1(BaseRsp2):
     number_of_children
         Total number of children that the profile searched under has,
     """
+
     class Meta:
         name = "ProfileChildSearchRsp"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -30,7 +31,7 @@ class ProfileChildSearchRsp1(BaseRsp2):
         metadata={
             "name": "ProfileChildSummary",
             "type": "Element",
-        }
+        },
     )
     more_results: None | bool = field(
         default=None,
@@ -38,12 +39,12 @@ class ProfileChildSearchRsp1(BaseRsp2):
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     number_of_children: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfChildren",
             "type": "Attribute",
-        }
+        },
     )

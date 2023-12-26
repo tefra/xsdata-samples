@@ -26,6 +26,7 @@ class GdsQueueListRsp(BaseRsp1):
     queue_session_token
         Queue Session Token to hold session token for multiple queue
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -35,7 +36,7 @@ class GdsQueueListRsp(BaseRsp1):
             "name": "NextResultReference",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     queue_element: list[QueueElement] = field(
         default_factory=list,
@@ -43,19 +44,19 @@ class GdsQueueListRsp(BaseRsp1):
             "name": "QueueElement",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     more_pnrexists: None | bool = field(
         default=None,
         metadata={
             "name": "MorePNRExists",
             "type": "Attribute",
-        }
+        },
     )
     queue_session_token: None | str = field(
         default=None,
         metadata={
             "name": "QueueSessionToken",
             "type": "Attribute",
-        }
+        },
     )

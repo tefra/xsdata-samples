@@ -20,6 +20,7 @@ class TypeProductInfo:
     provider_code
     provider_locator_code
     """
+
     class Meta:
         name = "typeProductInfo"
 
@@ -29,14 +30,14 @@ class TypeProductInfo:
             "name": "ProductType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class TypeProductInfo:
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -52,5 +53,5 @@ class TypeProductInfo:
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

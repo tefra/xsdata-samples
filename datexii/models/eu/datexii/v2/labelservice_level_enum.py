@@ -16,6 +16,7 @@ class LABELServiceLevelEnum(Enum):
     :cvar SERVICE_LEVEL5: Providing the high end of comfort levels.
     :cvar UNKNOWN: Unknown.
     """
+
     NONE = "none"
     SERVICE_LEVEL1 = "serviceLevel1"
     SERVICE_LEVEL2 = "serviceLevel2"

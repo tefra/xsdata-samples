@@ -21,7 +21,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -29,7 +29,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -37,7 +37,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_travel_document_ref: Optional[TypeOfTravelDocumentRef] = field(
         default=None,
@@ -45,15 +45,17 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfTravelDocumentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    customer_purchase_package_ref: Optional[CustomerPurchasePackageRef] = field(
+    customer_purchase_package_ref: Optional[
+        CustomerPurchasePackageRef
+    ] = field(
         default=None,
         metadata={
             "name": "CustomerPurchasePackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     marked_as: Optional[MarkedAsEnumeration] = field(
         default=None,
@@ -61,5 +63,5 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "name": "MarkedAs",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

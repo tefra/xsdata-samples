@@ -28,6 +28,7 @@ class Tbody:
     :ivar valign: Indicates how the cells in the rows shall be aligned.
         Default is inherited from tbody, otherwise it is "TOP"
     """
+
     class Meta:
         name = "TBODY"
 
@@ -37,14 +38,14 @@ class Tbody:
             "name": "ROW",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -52,12 +53,12 @@ class Tbody:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     valign: Optional[ValignEnumSimple] = field(
         default=None,
         metadata={
             "name": "VALIGN",
             "type": "Attribute",
-        }
+        },
     )

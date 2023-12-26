@@ -32,10 +32,14 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
 )
 from crossref.models.gov.nih.nlm.ncbi.jats1.break_mod import Break
 from crossref.models.gov.nih.nlm.ncbi.jats1.email import Email
-from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import IndexTermRangeEnd
+from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import (
+    IndexTermRangeEnd,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.inline_graphic import InlineGraphic
 from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_end import MilestoneEnd
-from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import MilestoneStart
+from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import (
+    MilestoneStart,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.private_char import PrivateChar
 from crossref.models.gov.nih.nlm.ncbi.jats1.tex_math import TexMath
 from crossref.models.gov.nih.nlm.ncbi.jats1.uri import Uri
@@ -50,6 +54,7 @@ class TransSubtitle:
     """
     <div> <h3>Translated Subtitle</h3> </div>
     """
+
     class Meta:
         name = "trans-subtitle"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -58,28 +63,28 @@ class TransSubtitle:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -242,5 +247,5 @@ class TransSubtitle:
                     "type": Break,
                 },
             ),
-        }
+        },
     )

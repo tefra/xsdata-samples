@@ -29,6 +29,7 @@ class TypePhone2(TypeKeyElement2):
         The IATA airport/city code that corresponds to the location of the
         phone number.
     """
+
     class Meta:
         name = "typePhone"
 
@@ -38,7 +39,7 @@ class TypePhone2(TypeKeyElement2):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class TypePhone2(TypeKeyElement2):
             "name": "Country",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     area_code: None | str = field(
         default=None,
@@ -54,7 +55,7 @@ class TypePhone2(TypeKeyElement2):
             "name": "AreaCode",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     local_number: None | str = field(
         default=None,
@@ -63,7 +64,7 @@ class TypePhone2(TypeKeyElement2):
             "type": "Attribute",
             "required": True,
             "max_length": 50,
-        }
+        },
     )
     extension: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class TypePhone2(TypeKeyElement2):
             "name": "Extension",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -80,7 +81,7 @@ class TypePhone2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -88,5 +89,5 @@ class TypePhone2(TypeKeyElement2):
             "name": "Location",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )

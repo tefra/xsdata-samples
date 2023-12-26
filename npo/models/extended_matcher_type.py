@@ -15,31 +15,31 @@ class ExtendedMatcherType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     fuzziness: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     match_type: None | StandardMatchType = field(
         default=None,
         metadata={
             "name": "matchType",
             "type": "Attribute",
-        }
+        },
     )
     case_sensitive: None | bool = field(
         default=None,
         metadata={
             "name": "caseSensitive",
             "type": "Attribute",
-        }
+        },
     )
     match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

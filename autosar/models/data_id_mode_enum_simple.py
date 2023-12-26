@@ -20,6 +20,7 @@ class DataIdModeEnumSimple(Enum):
         used. This is applicable if the IDs in a particular system are 8
         bits.
     """
+
     ALL_16_BIT = "ALL-16-BIT"
     ALTERNATING_8_BIT = "ALTERNATING-8-BIT"
     LOWER_12_BIT = "LOWER-12-BIT"

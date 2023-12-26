@@ -25,6 +25,7 @@ class PrmCharMinTypMax:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PRM-CHAR-MIN-TYP-MAX"
 
@@ -34,7 +35,7 @@ class PrmCharMinTypMax:
             "name": "MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     typ: Optional[NumericalValue] = field(
         default=None,
@@ -42,7 +43,7 @@ class PrmCharMinTypMax:
             "name": "TYP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max: Optional[NumericalValue] = field(
         default=None,
@@ -50,14 +51,14 @@ class PrmCharMinTypMax:
             "name": "MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -65,5 +66,5 @@ class PrmCharMinTypMax:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

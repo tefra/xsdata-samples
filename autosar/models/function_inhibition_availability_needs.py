@@ -6,7 +6,9 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .function_inhibition_needs_subtypes_enum import FunctionInhibitionNeedsSubtypesEnum
+from .function_inhibition_needs_subtypes_enum import (
+    FunctionInhibitionNeedsSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -77,6 +79,7 @@ class FunctionInhibitionAvailabilityNeeds:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FUNCTION-INHIBITION-AVAILABILITY-NEEDS"
 
@@ -87,15 +90,17 @@ class FunctionInhibitionAvailabilityNeeds:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["FunctionInhibitionAvailabilityNeeds.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "FunctionInhibitionAvailabilityNeeds.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -103,7 +108,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -111,7 +116,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -119,7 +124,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -127,7 +132,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -135,30 +140,34 @@ class FunctionInhibitionAvailabilityNeeds:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["FunctionInhibitionAvailabilityNeeds.Annotations"] = field(
+    annotations: Optional[
+        "FunctionInhibitionAvailabilityNeeds.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    controlled_fid_ref: Optional["FunctionInhibitionAvailabilityNeeds.ControlledFidRef"] = field(
+    controlled_fid_ref: Optional[
+        "FunctionInhibitionAvailabilityNeeds.ControlledFidRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CONTROLLED-FID-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -166,14 +175,14 @@ class FunctionInhibitionAvailabilityNeeds:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -184,7 +193,7 @@ class FunctionInhibitionAvailabilityNeeds:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -195,7 +204,7 @@ class FunctionInhibitionAvailabilityNeeds:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -206,5 +215,5 @@ class FunctionInhibitionAvailabilityNeeds:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

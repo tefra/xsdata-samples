@@ -8,6 +8,7 @@ class TypeDiversity(Enum):
     """
     Used in Low Fare Search to better promote unique results.
     """
+
     BLEND = "Blend"
     AIRPORTS = "Airports"
     CARRIER = "Carrier"

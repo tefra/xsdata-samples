@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.mcofee_info_fee_applies_to_ind_3 import McofeeInfoFeeAppliesToInd3
+from travelport.models.mcofee_info_fee_applies_to_ind_3 import (
+    McofeeInfoFeeAppliesToInd3,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
@@ -20,6 +22,7 @@ class McofeeInfo3:
     fee_applies_to_ind
         Indicates if PTA/TOD fee is for the entire MCO or is per person.
     """
+
     class Meta:
         name = "MCOFeeInfo"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -29,7 +32,7 @@ class McofeeInfo3:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     percentage: None | str = field(
         default=None,
@@ -37,12 +40,12 @@ class McofeeInfo3:
             "name": "Percentage",
             "type": "Attribute",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     fee_applies_to_ind: None | McofeeInfoFeeAppliesToInd3 = field(
         default=None,
         metadata={
             "name": "FeeAppliesToInd",
             "type": "Attribute",
-        }
+        },
     )

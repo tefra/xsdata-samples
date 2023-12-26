@@ -20,6 +20,7 @@ class HotelSuperShopperResults:
         for requested property
     hotel_results_error
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -29,7 +30,7 @@ class HotelSuperShopperResults:
             "name": "HotelProperty",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     hotel_detail_item: list[HotelDetailItem] = field(
         default_factory=list,
@@ -37,7 +38,7 @@ class HotelSuperShopperResults:
             "name": "HotelDetailItem",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
         default_factory=list,
@@ -45,7 +46,7 @@ class HotelSuperShopperResults:
             "name": "HotelRateDetail",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_results_error: list[TypeResultMessage1] = field(
         default_factory=list,
@@ -53,5 +54,5 @@ class HotelSuperShopperResults:
             "name": "HotelResultsError",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

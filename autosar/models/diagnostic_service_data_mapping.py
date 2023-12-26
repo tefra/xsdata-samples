@@ -7,9 +7,15 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .data_prototype_in_executable_instance_ref import DataPrototypeInExecutableInstanceRef
-from .data_prototype_in_system_instance_ref import DataPrototypeInSystemInstanceRef
-from .diagnostic_data_element_subtypes_enum import DiagnosticDataElementSubtypesEnum
+from .data_prototype_in_executable_instance_ref import (
+    DataPrototypeInExecutableInstanceRef,
+)
+from .data_prototype_in_system_instance_ref import (
+    DataPrototypeInSystemInstanceRef,
+)
+from .diagnostic_data_element_subtypes_enum import (
+    DiagnosticDataElementSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -97,6 +103,7 @@ class DiagnosticServiceDataMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-SERVICE-DATA-MAPPING"
 
@@ -107,15 +114,17 @@ class DiagnosticServiceDataMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticServiceDataMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticServiceDataMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +132,7 @@ class DiagnosticServiceDataMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +140,7 @@ class DiagnosticServiceDataMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +148,7 @@ class DiagnosticServiceDataMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +156,7 @@ class DiagnosticServiceDataMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +164,7 @@ class DiagnosticServiceDataMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticServiceDataMapping.Annotations"] = field(
         default=None,
@@ -163,7 +172,7 @@ class DiagnosticServiceDataMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -171,31 +180,37 @@ class DiagnosticServiceDataMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    diagnostic_data_element_ref: Optional["DiagnosticServiceDataMapping.DiagnosticDataElementRef"] = field(
+    diagnostic_data_element_ref: Optional[
+        "DiagnosticServiceDataMapping.DiagnosticDataElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-DATA-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mapped_ap_data_element_iref: Optional[DataPrototypeInExecutableInstanceRef] = field(
+    mapped_ap_data_element_iref: Optional[
+        DataPrototypeInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "MAPPED-AP-DATA-ELEMENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mapped_data_element_iref: Optional[DataPrototypeInSystemInstanceRef] = field(
+    mapped_data_element_iref: Optional[
+        DataPrototypeInSystemInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "MAPPED-DATA-ELEMENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     process_ref: Optional["DiagnosticServiceDataMapping.ProcessRef"] = field(
         default=None,
@@ -203,14 +218,14 @@ class DiagnosticServiceDataMapping:
             "name": "PROCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -218,14 +233,14 @@ class DiagnosticServiceDataMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -236,7 +251,7 @@ class DiagnosticServiceDataMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -247,7 +262,7 @@ class DiagnosticServiceDataMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -258,7 +273,7 @@ class DiagnosticServiceDataMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -269,5 +284,5 @@ class DiagnosticServiceDataMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

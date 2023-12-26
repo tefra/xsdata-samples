@@ -9,5 +9,6 @@ class IPduSignalProcessingEnumSimple(Enum):
     :cvar IMMEDIATE: The signal indications / confirmations are
         performed.
     """
+
     DEFERRED = "DEFERRED"
     IMMEDIATE = "IMMEDIATE"

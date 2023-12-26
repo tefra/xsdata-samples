@@ -15,6 +15,7 @@ class TravelTimeTypeEnum(Enum):
     :cvar RECONSTITUTED: Travel time is reconstituted from other
         measurements.
     """
+
     BEST = "best"
     ESTIMATED = "estimated"
     INSTANTANEOUS = "instantaneous"

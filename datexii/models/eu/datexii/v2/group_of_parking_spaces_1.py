@@ -3,9 +3,15 @@ from typing import List, Optional
 from datexii.models.eu.datexii.v2.dimension import Dimension
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.group_of_locations import GroupOfLocations
-from datexii.models.eu.datexii.v2.group_of_parking_spaces_parking_space_index_parking_space import GroupOfParkingSpacesParkingSpaceIndexParkingSpace
-from datexii.models.eu.datexii.v2.parking_space_basics import ParkingSpaceBasics
-from datexii.models.eu.datexii.v2.parking_type_of_group import ParkingTypeOfGroup
+from datexii.models.eu.datexii.v2.group_of_parking_spaces_parking_space_index_parking_space import (
+    GroupOfParkingSpacesParkingSpaceIndexParkingSpace,
+)
+from datexii.models.eu.datexii.v2.parking_space_basics import (
+    ParkingSpaceBasics,
+)
+from datexii.models.eu.datexii.v2.parking_type_of_group import (
+    ParkingTypeOfGroup,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -48,6 +54,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
     :ivar group_of_locations:
     :ivar group_of_parking_spaces_extension:
     """
+
     class Meta:
         name = "GroupOfParkingSpaces"
 
@@ -58,7 +65,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_type_of_group: Optional[ParkingTypeOfGroup] = field(
         default=None,
@@ -67,7 +74,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     identical_to_group: List[str] = field(
         default_factory=list,
@@ -76,7 +83,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     real_subset_of_group: List[str] = field(
         default_factory=list,
@@ -85,7 +92,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     minimum_parking_space_dimension: Optional[Dimension] = field(
         default=None,
@@ -93,7 +100,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "minimumParkingSpaceDimension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dimension_of_group: Optional[Dimension] = field(
         default=None,
@@ -101,7 +108,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "dimensionOfGroup",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     maximum_parking_space_dimension: Optional[Dimension] = field(
         default=None,
@@ -109,15 +116,17 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "maximumParkingSpaceDimension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_space: List[GroupOfParkingSpacesParkingSpaceIndexParkingSpace] = field(
+    parking_space: List[
+        GroupOfParkingSpacesParkingSpaceIndexParkingSpace
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingSpace",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_locations: Optional[GroupOfLocations] = field(
         default=None,
@@ -125,7 +134,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "groupOfLocations",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_parking_spaces_extension: Optional[ExtensionType] = field(
         default=None,
@@ -133,5 +142,5 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "groupOfParkingSpacesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

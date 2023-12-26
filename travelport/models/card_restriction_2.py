@@ -16,6 +16,7 @@ class CardRestriction2:
     name
         Card merchant description
     """
+
     class Meta:
         name = "CardRestriction"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -27,7 +28,7 @@ class CardRestriction2:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -37,7 +38,7 @@ class CardRestriction2:
             "required": True,
             "min_length": 2,
             "max_length": 2,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -45,5 +46,5 @@ class CardRestriction2:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -19,54 +19,54 @@ class Bpmnshape(LabeledShape):
         metadata={
             "name": "BPMNLabel",
             "type": "Element",
-        }
+        },
     )
     bpmn_element: Optional[QName] = field(
         default=None,
         metadata={
             "name": "bpmnElement",
             "type": "Attribute",
-        }
+        },
     )
     is_horizontal: Optional[bool] = field(
         default=None,
         metadata={
             "name": "isHorizontal",
             "type": "Attribute",
-        }
+        },
     )
     is_expanded: Optional[bool] = field(
         default=None,
         metadata={
             "name": "isExpanded",
             "type": "Attribute",
-        }
+        },
     )
     is_marker_visible: Optional[bool] = field(
         default=None,
         metadata={
             "name": "isMarkerVisible",
             "type": "Attribute",
-        }
+        },
     )
     is_message_visible: Optional[bool] = field(
         default=None,
         metadata={
             "name": "isMessageVisible",
             "type": "Attribute",
-        }
+        },
     )
     participant_band_kind: Optional[ParticipantBandKind] = field(
         default=None,
         metadata={
             "name": "participantBandKind",
             "type": "Attribute",
-        }
+        },
     )
     choreography_activity_shape: Optional[QName] = field(
         default=None,
         metadata={
             "name": "choreographyActivityShape",
             "type": "Attribute",
-        }
+        },
     )

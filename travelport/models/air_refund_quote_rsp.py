@@ -16,6 +16,7 @@ class AirRefundQuoteRsp(BaseRsp1):
     tcrrefund_bundle
         Provider: ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class AirRefundQuoteRsp(BaseRsp1):
             "name": "AirRefundBundle",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tcrrefund_bundle: list[TcrrefundBundle] = field(
         default_factory=list,
@@ -33,5 +34,5 @@ class AirRefundQuoteRsp(BaseRsp1):
             "name": "TCRRefundBundle",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

@@ -29,6 +29,7 @@ class McDataAccessDetails:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MC-DATA-ACCESS-DETAILS"
 
@@ -38,22 +39,24 @@ class McDataAccessDetails:
             "name": "RTE-EVENT-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    variable_access_irefs: Optional["McDataAccessDetails.VariableAccessIrefs"] = field(
+    variable_access_irefs: Optional[
+        "McDataAccessDetails.VariableAccessIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "VARIABLE-ACCESS-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -61,7 +64,7 @@ class McDataAccessDetails:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -72,7 +75,7 @@ class McDataAccessDetails:
                 "name": "RTE-EVENT-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -83,5 +86,5 @@ class McDataAccessDetails:
                 "name": "VARIABLE-ACCESS-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -35,6 +35,7 @@ class BswExclusiveAreaPolicy:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-EXCLUSIVE-AREA-POLICY"
 
@@ -44,7 +45,7 @@ class BswExclusiveAreaPolicy:
             "name": "ENABLE-TAKE-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     api_principle: Optional[ApiPrincipleEnum] = field(
         default=None,
@@ -52,15 +53,17 @@ class BswExclusiveAreaPolicy:
             "name": "API-PRINCIPLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exclusive_area_ref: Optional["BswExclusiveAreaPolicy.ExclusiveAreaRef"] = field(
+    exclusive_area_ref: Optional[
+        "BswExclusiveAreaPolicy.ExclusiveAreaRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -68,14 +71,14 @@ class BswExclusiveAreaPolicy:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -83,7 +86,7 @@ class BswExclusiveAreaPolicy:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -94,5 +97,5 @@ class BswExclusiveAreaPolicy:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

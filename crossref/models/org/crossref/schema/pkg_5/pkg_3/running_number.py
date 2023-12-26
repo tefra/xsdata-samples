@@ -8,6 +8,7 @@ class RunningNumber:
     """
     Running numbers to specify the various reports (ex: RC1 to RC4)
     """
+
     class Meta:
         name = "running_number"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -16,5 +17,5 @@ class RunningNumber:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

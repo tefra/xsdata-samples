@@ -16,7 +16,7 @@ class HotelUpsellSearchServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class HotelUpsellSearchServicePortTypeServiceInput:
                 "name": "HotelUpsellDetailsReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            }
+            },
         )

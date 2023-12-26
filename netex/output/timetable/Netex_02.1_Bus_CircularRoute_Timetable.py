@@ -136,18 +136,18 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         TimetableFrameRef(
-                            value="REQUEST",
-                            ref="hde:TimetableFrameTIM_42o_O"
+                            value='REQUEST',
+                            ref='hde:TimetableFrameTIM_42o_O'
                         ),
                     ]
                 ),
@@ -156,31 +156,31 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple timetable frame for line with branched bus route"
+        value='Example  of simple timetable frame for line with branched bus route'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="hde:CF_1",
+                id='hde:CF_1',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             ValidityRuleParameter(
-                                id="hde:VR_1",
-                                version="1",
+                                id='hde:VR_1',
+                                version='1',
                                 name=MultilingualString(
-                                    value="Applies to area west"
+                                    value='Applies to area west'
                                 ),
                                 description=MultilingualString(
-                                    value="Name "
+                                    value='Name '
                                 ),
                                 conditioned_object_ref=VersionOfObjectRefStructure(
-                                    version="1",
-                                    ref="hde:CF_1"
+                                    version='1',
+                                    ref='hde:CF_1'
                                 ),
                                 rule_object_ref=VersionOfObjectRefStructure(
-                                    version="any",
-                                    ref="hde:TP_1"
+                                    version='any',
+                                    ref='hde:TP_1'
                                 ),
                                 choice=[
                                     True,
@@ -189,102 +189,102 @@ obj = PublicationDelivery(
                         ]
                     ),
                 ],
-                version="1",
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="hde:svf_42",
-                            version="1",
+                            id='hde:svf_42',
+                            version='1',
                             name=MultilingualString(
-                                value="Stops for Winter timetable for route 24 "
+                                value='Stops for Winter timetable for route 24 '
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:LN_42",
-                                        version="any",
+                                        id='mybus:LN_42',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 42  "
+                                            value='Line 42  '
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 42"
+                                            value='Line 42'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="42"
+                                        public_code='42'
                                     ),
                                 ]
                             ),
                             destination_displays=DestinationDisplaysInFrameRelStructure(
                                 destination_display=[
                                     DestinationDisplay(
-                                        id="mybus:DST_Alpha",
-                                        version="any",
+                                        id='mybus:DST_Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha Avenue"
+                                            value='Alpha Avenue'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Alpha"
+                                            value='Alpha'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Bravo",
-                                        version="any",
+                                        id='mybus:DST_Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Boulevard"
+                                            value='Bravo Boulevard'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Charley",
-                                        version="any",
+                                        id='mybus:DST_Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Crescent"
+                                            value='Charley Crescent'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Delta",
-                                        version="any",
+                                        id='mybus:DST_Delta',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Delta Street"
+                                            value='Delta Street'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Delta"
+                                            value='Delta'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Echo",
-                                        version="any",
+                                        id='mybus:DST_Echo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo and  Castle"
+                                            value='Echo and  Castle'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Echo"
+                                            value='Echo'
                                         )
                                     ),
                                 ]
@@ -292,14 +292,14 @@ obj = PublicationDelivery(
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:Alpha",
-                                        version="any",
+                                        id='mybus:Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha"
+                                            value='Alpha'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -307,14 +307,14 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:Bravo",
-                                        version="any",
+                                        id='mybus:Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -322,14 +322,14 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:Charley",
-                                        version="any",
+                                        id='mybus:Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -337,14 +337,14 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:Delta",
-                                        version="any",
+                                        id='mybus:Delta',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Delta"
+                                            value='Delta'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -352,14 +352,14 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:Echo",
-                                        version="any",
+                                        id='mybus:Echo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo"
+                                            value='Echo'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -371,153 +371,153 @@ obj = PublicationDelivery(
                             service_links=ServiceLinksInFrameRelStructure(
                                 service_link=[
                                     ServiceLink(
-                                        id="mybus:SL@Alpha+Bravo",
-                                        version="any",
+                                        id='mybus:SL@Alpha+Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Bravo."
+                                            value='Alpha to Bravo.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Bravo+Charley",
-                                        version="any",
+                                        id='mybus:SL@Bravo+Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo to Charley."
+                                            value='Bravo to Charley.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Charley+Delta",
-                                        version="any",
+                                        id='mybus:SL@Charley+Delta',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to Delta."
+                                            value='Charley to Delta.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Delta+Echo",
-                                        version="any",
+                                        id='mybus:SL@Delta+Echo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to Echo."
+                                            value='Charley to Echo.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Echo+Alpha",
-                                        version="any",
+                                        id='mybus:SL@Echo+Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo to Alpha."
+                                            value='Echo to Alpha.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Echo+Delta",
-                                        version="any",
+                                        id='mybus:SL@Echo+Delta',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo to Delta."
+                                            value='Echo to Delta.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Delta+Charley",
-                                        version="any",
+                                        id='mybus:SL@Delta+Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Delta to Charley."
+                                            value='Delta to Charley.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Charley+Bravo",
-                                        version="any",
+                                        id='mybus:SL@Charley+Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to Bravo."
+                                            value='Charley to Bravo.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Bravo+Alpha",
-                                        version="any",
+                                        id='mybus:SL@Bravo+Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo to Alpha."
+                                            value='Bravo to Alpha.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="mybus:SL@Alpha+Echo",
-                                        version="any",
+                                        id='mybus:SL@Alpha+Echo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Echo."
+                                            value='Alpha to Echo.'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         )
                                     ),
                                 ]
@@ -525,100 +525,100 @@ obj = PublicationDelivery(
                             service_patterns=ServicePatternsInFrameRelStructure(
                                 service_pattern_or_journey_pattern_view=[
                                     ServicePattern(
-                                        id="hde:svp_42c@A+E",
-                                        version="any",
+                                        id='hde:svp_42c@A+E',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="42 Alpha to Echo Clockwise."
+                                            value='42 Alpha to Echo Clockwise.'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_42c@A+E"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_42c@A+E'
                                         ),
                                         direction_type=DirectionTypeEnumeration.CLOCKWISE,
                                         journey_patterns=JourneyPatternRefsRelStructure(
                                             choice=[
                                                 ServiceJourneyPatternRef(
-                                                    version="any",
-                                                    ref="hde:sjp_42c@A+E"
+                                                    version='any',
+                                                    ref='hde:sjp_42c@A+E'
                                                 ),
                                             ]
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42c@A+E@01",
-                                                    version="any",
+                                                    id='hde:spijp_42c@A+E@01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42c@A+E@02",
-                                                    version="any",
+                                                    id='hde:spijp_42c@A+E@02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42c@A+E@03",
-                                                    version="any",
+                                                    id='hde:spijp_42c@A+E@03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42c@A+E@04",
-                                                    version="any",
+                                                    id='hde:spijp_42c@A+E@04',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     change_of_destination_display=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42c@A+E@05",
-                                                    version="any",
+                                                    id='hde:spijp_42c@A+E@05',
+                                                    version='any',
                                                     order=5,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42c@A+E@06",
-                                                    version="any",
+                                                    id='hde:spijp_42c@A+E@06',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True
                                                 ),
@@ -627,153 +627,153 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_42c@A+E@01",
-                                                    version="any",
+                                                    id='hde:slijp_42c@A+E@01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Alpha+Bravo"
+                                                        version='any',
+                                                        ref='mybus:SL@Alpha+Bravo'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_42c@A+E@02",
-                                                    version="any",
+                                                    id='hde:slijp_42c@A+E@02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Bravo+Charley"
+                                                        version='any',
+                                                        ref='mybus:SL@Bravo+Charley'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_42c@A+E@03",
-                                                    version="any",
+                                                    id='hde:slijp_42c@A+E@03',
+                                                    version='any',
                                                     order=3,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Charley+Delta"
+                                                        version='any',
+                                                        ref='mybus:SL@Charley+Delta'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_42c@A+E@04",
-                                                    version="any",
+                                                    id='hde:slijp_42c@A+E@04',
+                                                    version='any',
                                                     order=4,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Delta+Echo"
+                                                        version='any',
+                                                        ref='mybus:SL@Delta+Echo'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_42c@A+E@05",
-                                                    version="any",
+                                                    id='hde:slijp_42c@A+E@05',
+                                                    version='any',
                                                     order=5,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Echo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:SL@Echo+Alpha'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServicePattern(
-                                        id="hde:svp_42a@E+A",
-                                        version="any",
+                                        id='hde:svp_42a@E+A',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="42  Echo to Alpha Anticlockwise."
+                                            value='42  Echo to Alpha Anticlockwise.'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_42a@E+A"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_42a@E+A'
                                         ),
                                         direction_type=DirectionTypeEnumeration.ANTICLOCKWISE,
                                         journey_patterns=JourneyPatternRefsRelStructure(
                                             choice=[
                                                 ServiceJourneyPatternRef(
-                                                    version="any",
-                                                    ref="hde:sjp_42a@E+A"
+                                                    version='any',
+                                                    ref='hde:sjp_42a@E+A'
                                                 ),
                                             ]
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42a@E+A@01",
-                                                    version="any",
+                                                    id='hde:spijp_42a@E+A@01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42a@E+A@02",
-                                                    version="any",
+                                                    id='hde:spijp_42a@E+A@02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42a@E+A@03",
-                                                    version="any",
+                                                    id='hde:spijp_42a@E+A@03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     change_of_destination_display=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42a@E+A@04",
-                                                    version="any",
+                                                    id='hde:spijp_42a@E+A@04',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42a@E+A@05",
-                                                    version="any",
+                                                    id='hde:spijp_42a@E+A@05',
+                                                    version='any',
                                                     order=5,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:spijp_42a@E+A@06",
-                                                    version="any",
+                                                    id='hde:spijp_42a@E+A@06',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     )
                                                 ),
                                             ]
@@ -781,48 +781,48 @@ obj = PublicationDelivery(
                                         links_in_sequence=ServiceLinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_42c@E+A@01",
-                                                    version="any",
+                                                    id='hde:slijp_42c@E+A@01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Alpha+Bravo"
+                                                        version='any',
+                                                        ref='mybus:SL@Alpha+Bravo'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijjp_42c@E+A@02",
-                                                    version="any",
+                                                    id='hde:slijjp_42c@E+A@02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Bravo+Charley"
+                                                        version='any',
+                                                        ref='mybus:SL@Bravo+Charley'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijjp_42c@E+A@03",
-                                                    version="any",
+                                                    id='hde:slijjp_42c@E+A@03',
+                                                    version='any',
                                                     order=3,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Charley+Delta"
+                                                        version='any',
+                                                        ref='mybus:SL@Charley+Delta'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijjp_42c@E+A@04",
-                                                    version="any",
+                                                    id='hde:slijjp_42c@E+A@04',
+                                                    version='any',
                                                     order=4,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Delta+Echo"
+                                                        version='any',
+                                                        ref='mybus:SL@Delta+Echo'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="hde:slijp_42c@E+A@05",
-                                                    version="any",
+                                                    id='hde:slijp_42c@E+A@05',
+                                                    version='any',
                                                     order=5,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="mybus:SL@Echo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:SL@Echo+Alpha'
                                                     )
                                                 ),
                                             ]
@@ -833,183 +833,183 @@ obj = PublicationDelivery(
                             timing_links=TimingLinksInFrameRelStructure(
                                 timing_link=[
                                     TimingLink(
-                                        id="mybus:TL@Alpha+Bravo",
-                                        version="any",
+                                        id='mybus:TL@Alpha+Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Bravo"
+                                            value='Alpha to Bravo'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Bravo+Charley",
-                                        version="any",
+                                        id='mybus:TL@Bravo+Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo to Charley"
+                                            value='Bravo to Charley'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Charley+Delta",
-                                        version="any",
+                                        id='mybus:TL@Charley+Delta',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to Delta"
+                                            value='Charley to Delta'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Delta+Echo",
-                                        version="any",
+                                        id='mybus:TL@Delta+Echo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Delta to Echo"
+                                            value='Delta to Echo'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Echo+Alpha",
-                                        version="any",
+                                        id='mybus:TL@Echo+Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo to Alpha   "
+                                            value='Echo to Alpha   '
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Alpha+Alpha_clockwise",
-                                        version="any",
+                                        id='mybus:TL@Alpha+Alpha_clockwise',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Alpha   clockwise"
+                                            value='Alpha to Alpha   clockwise'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Echo+Delta",
-                                        version="any",
+                                        id='mybus:TL@Echo+Delta',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo to Delta"
+                                            value='Echo to Delta'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Delta+Charley",
-                                        version="any",
+                                        id='mybus:TL@Delta+Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Delta to Charley"
+                                            value='Delta to Charley'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Delta"
+                                            version='any',
+                                            ref='mybus:Delta'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Charley+Bravo",
-                                        version="any",
+                                        id='mybus:TL@Charley+Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley to Bravo"
+                                            value='Charley to Bravo'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Charley"
+                                            version='any',
+                                            ref='mybus:Charley'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Bravo+Alpha",
-                                        version="any",
+                                        id='mybus:TL@Bravo+Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo to Alpha"
+                                            value='Bravo to Alpha'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Bravo"
+                                            version='any',
+                                            ref='mybus:Bravo'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Alpha+Echo",
-                                        version="any",
+                                        id='mybus:TL@Alpha+Echo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Echo"
+                                            value='Alpha to Echo'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Echo"
+                                            version='any',
+                                            ref='mybus:Echo'
                                         )
                                     ),
                                     TimingLink(
-                                        id="mybus:TL@Alpha+Alpha_anticlockwise",
-                                        version="any",
+                                        id='mybus:TL@Alpha+Alpha_anticlockwise',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Alpha Anticlockwise   "
+                                            value='Alpha to Alpha Anticlockwise   '
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="mybus:Alpha"
+                                            version='any',
+                                            ref='mybus:Alpha'
                                         )
                                     ),
                                 ]
@@ -1017,200 +1017,200 @@ obj = PublicationDelivery(
                             timing_patterns=TimingPatternsInFrameRelStructure(
                                 timing_pattern=[
                                     TimingPattern(
-                                        id="hde:tp_42c",
-                                        version="any",
+                                        id='hde:tp_42c',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo to ALPHA clockwise"
+                                            value='Echo to ALPHA clockwise'
                                         ),
                                         route_ref=RouteRefStructure(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_42c@E+A"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_42c@E+A'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42c@01",
-                                                    version="any",
+                                                    id='hde:tpip_42c@01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:Alpha"
+                                                            version='any',
+                                                            ref='mybus:Alpha'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Alpha+Bravo"
+                                                        version='any',
+                                                        ref='mybus:TL@Alpha+Bravo'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42c@02",
-                                                    version="any",
+                                                    id='hde:tpip_42c@02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Bravo+Charley"
+                                                        version='any',
+                                                        ref='mybus:TL@Bravo+Charley'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42c@03",
-                                                    version="any",
+                                                    id='hde:tpip_42c@03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Charley+Delta"
+                                                        version='any',
+                                                        ref='mybus:TL@Charley+Delta'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42c@04",
-                                                    version="any",
+                                                    id='hde:tpip_42c@04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Delta+Echo"
+                                                        version='any',
+                                                        ref='mybus:TL@Delta+Echo'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42c@05",
-                                                    version="any",
+                                                    id='hde:tpip_42c@05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:Echo"
+                                                            version='any',
+                                                            ref='mybus:Echo'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Echo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:TL@Echo+Alpha'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42c@06",
-                                                    version="any",
+                                                    id='hde:tpip_42c@06',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:Alpha"
+                                                            version='any',
+                                                            ref='mybus:Alpha'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPattern(
-                                        id="hde:tp_42a",
-                                        version="any",
+                                        id='hde:tp_42a',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo  to ALpha anticlockwise"
+                                            value='Echo  to ALpha anticlockwise'
                                         ),
                                         route_ref=RouteRefStructure(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_42a@E+A"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_42a@E+A'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42a@01",
-                                                    version="any",
+                                                    id='hde:tpip_42a@01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Echo+Delta"
+                                                        version='any',
+                                                        ref='mybus:TL@Echo+Delta'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42a@021",
-                                                    version="any",
+                                                    id='hde:tpip_42a@021',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:Delta"
+                                                            version='any',
+                                                            ref='mybus:Delta'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Delta+Charley"
+                                                        version='any',
+                                                        ref='mybus:TL@Delta+Charley'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42a@03",
-                                                    version="any",
+                                                    id='hde:tpip_42a@03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="mybus:Charley"
+                                                            version='any',
+                                                            ref='mybus:Charley'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Charley+Bravo"
+                                                        version='any',
+                                                        ref='mybus:TL@Charley+Bravo'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42a@04",
-                                                    version="any",
+                                                    id='hde:tpip_42a@04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Bravo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:TL@Bravo+Alpha'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42a@05",
-                                                    version="any",
+                                                    id='hde:tpip_42a@05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:TL@Alpha+Echo"
+                                                        version='any',
+                                                        ref='mybus:TL@Alpha+Echo'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="hde:tpip_42a@06",
-                                                    version="any",
+                                                    id='hde:tpip_42a@06',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     )
                                                 ),
                                             ]
@@ -1221,24 +1221,24 @@ obj = PublicationDelivery(
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     ServiceJourneyPattern(
-                                        id="hde:sjp_42c@A+E",
-                                        version="any",
+                                        id='hde:sjp_42c@A+E',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Echo Clockwise to Delta"
+                                            value='Alpha to Echo Clockwise to Delta'
                                         ),
                                         direction_type=DirectionTypeEnumeration.CLOCKWISE,
                                         run_times=JourneyPatternRunTimesRelStructure(
                                             journey_pattern_run_time_ref_or_journey_pattern_run_time=[
                                                 JourneyPatternRunTime(
-                                                    id="mybus:jprt_42c@A+E",
-                                                    version="any",
+                                                    id='mybus:jprt_42c@A+E',
+                                                    version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="mybus:TDT01"
+                                                        version='any',
+                                                        ref='mybus:TDT01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Alpha+Alpha_clockwise"
+                                                        version='any',
+                                                        ref='mybus:TL@Alpha+Alpha_clockwise'
                                                     ),
                                                     run_time=XmlDuration("PT75M")
                                                 ),
@@ -1247,101 +1247,101 @@ obj = PublicationDelivery(
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42c@A+E@01",
-                                                    version="any",
+                                                    id='hde:pijp_42c@A+E@01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Alpha+Bravo"
+                                                        version='any',
+                                                        ref='mybus:SL@Alpha+Bravo'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42c@A+E@02",
-                                                    version="any",
+                                                    id='hde:pijp_42c@A+E@02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Bravo+Charley"
+                                                        version='any',
+                                                        ref='mybus:SL@Bravo+Charley'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42c@A+E@03",
-                                                    version="any",
+                                                    id='hde:pijp_42c@A+E@03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Charley+Delta"
+                                                        version='any',
+                                                        ref='mybus:SL@Charley+Delta'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42c@A+E@04",
-                                                    version="any",
+                                                    id='hde:pijp_42c@A+E@04',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Delta+Echo"
+                                                        version='any',
+                                                        ref='mybus:SL@Delta+Echo'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42c@A+E@05",
-                                                    version="any",
+                                                    id='hde:pijp_42c@A+E@05',
+                                                    version='any',
                                                     order=5,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Echo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:SL@Echo+Alpha'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42c@A+E@06",
-                                                    version="any",
+                                                    id='hde:pijp_42c@A+E@06',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:sjp_42a@E+A",
-                                        version="any",
+                                        id='hde:sjp_42a@E+A',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Echo to Alpha anticlockwise"
+                                            value='Echo to Alpha anticlockwise'
                                         ),
                                         direction_type=DirectionTypeEnumeration.ANTICLOCKWISE,
                                         run_times=JourneyPatternRunTimesRelStructure(
                                             journey_pattern_run_time_ref_or_journey_pattern_run_time=[
                                                 JourneyPatternRunTime(
-                                                    id="mybus:jprt_42c@E+A",
-                                                    version="any",
+                                                    id='mybus:jprt_42c@E+A',
+                                                    version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="mybus:TDT01"
+                                                        version='any',
+                                                        ref='mybus:TDT01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Alpha+Alpha_anticlockwise"
+                                                        version='any',
+                                                        ref='mybus:TL@Alpha+Alpha_anticlockwise'
                                                     ),
                                                     run_time=XmlDuration("PT75M")
                                                 ),
@@ -1350,77 +1350,77 @@ obj = PublicationDelivery(
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42a@E+A@01",
-                                                    version="any",
+                                                    id='hde:pijp_42a@E+A@01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Echo+Delta"
+                                                        version='any',
+                                                        ref='mybus:SL@Echo+Delta'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42a@E+A@02",
-                                                    version="any",
+                                                    id='hde:pijp_42a@E+A@02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Delta+Charley"
+                                                        version='any',
+                                                        ref='mybus:SL@Delta+Charley'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42a@E+A@03",
-                                                    version="any",
+                                                    id='hde:pijp_42a@E+A@03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Charley+Bravo"
+                                                        version='any',
+                                                        ref='mybus:SL@Charley+Bravo'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_42a@E+A@04",
-                                                    version="any",
+                                                    id='hde:pijp_42a@E+A@04',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Bravo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:SL@Bravo+Alpha'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:JP_42a@E+A@05",
-                                                    version="any",
+                                                    id='hde:JP_42a@E+A@05',
+                                                    version='any',
                                                     order=5,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="mybus:SL@Alpha+Echo"
+                                                        version='any',
+                                                        ref='mybus:SL@Alpha+Echo'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:JP_42a@E+A@06",
-                                                    version="any",
+                                                    id='hde:JP_42a@E+A@06',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     )
                                                 ),
                                             ]
@@ -1431,100 +1431,100 @@ obj = PublicationDelivery(
                             time_demand_types=TimeDemandTypesInFrameRelStructure(
                                 time_demand_type=[
                                     TimeDemandType(
-                                        id="mybus:TDT01",
-                                        version="any",
+                                        id='mybus:TDT01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Normal Day"
+                                            value='Normal Day'
                                         ),
                                         run_times=JourneyRunTimesRelStructure(
                                             journey_run_time=[
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Alpha+Bravo",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Alpha+Bravo',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Alpha+Bravo"
+                                                        version='any',
+                                                        ref='mybus:TL@Alpha+Bravo'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Bravo+Charley",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Bravo+Charley',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Bravo+Charley"
+                                                        version='any',
+                                                        ref='mybus:TL@Bravo+Charley'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Charley+Delta",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Charley+Delta',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Charley+Delta"
+                                                        version='any',
+                                                        ref='mybus:TL@Charley+Delta'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Charley+Echo",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Charley+Echo',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Delta+Echo"
+                                                        version='any',
+                                                        ref='mybus:TL@Delta+Echo'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Echo+Alpha",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Echo+Alpha',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Echo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:TL@Echo+Alpha'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Echo+Delta",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Echo+Delta',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Echo+Delta"
+                                                        version='any',
+                                                        ref='mybus:TL@Echo+Delta'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Delta+Charley",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Delta+Charley',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Delta+Charley"
+                                                        version='any',
+                                                        ref='mybus:TL@Delta+Charley'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Charley+Bravo",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Charley+Bravo',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Charley+Bravo"
+                                                        version='any',
+                                                        ref='mybus:TL@Charley+Bravo'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Bravo+Alpha",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Bravo+Alpha',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Bravo+Alpha"
+                                                        version='any',
+                                                        ref='mybus:TL@Bravo+Alpha'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="mybus:tdtr_TDT01_Alpha+Echo",
-                                                    version="any",
+                                                    id='mybus:tdtr_TDT01_Alpha+Echo',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="mybus:TL@Alpha+Echo"
+                                                        version='any',
+                                                        ref='mybus:TL@Alpha+Echo'
                                                     ),
                                                     run_time=XmlDuration("PT15M")
                                                 ),
@@ -1535,23 +1535,23 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="hde:TIM_42o_O",
+                            id='hde:TIM_42o_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="hde:Cnd001",
-                                            version="any",
+                                            id='hde:Cnd001',
+                                            version='any',
                                             description=MultilingualString(
-                                                value="Sept  to March"
+                                                value='Sept  to March'
                                             ),
                                             from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2011, 3, 31, 0, 0, 0, 0, 0),
                                             day_types=DayTypesRelStructure(
                                                 choice=[
                                                     DayTypeRef(
-                                                        version="any",
-                                                        ref="hde:DT_01-MF-NH"
+                                                        version='any',
+                                                        ref='hde:DT_01-MF-NH'
                                                     ),
                                                 ]
                                             )
@@ -1559,9 +1559,9 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            version="1",
+                            version='1',
                             name=MultilingualString(
-                                value="Winter timetable for route 23 outbound"
+                                value='Winter timetable for route 23 outbound'
                             ),
                             vehicle_modes=[
                                 VehicleModeEnumeration.BUS,
@@ -1569,46 +1569,46 @@ obj = PublicationDelivery(
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
                                     ServiceJourney(
-                                        id="hde:sj_42c@A+E@01",
-                                        version="any",
+                                        id='hde:sj_42c@A+E@01',
+                                        version='any',
                                         departure_time=XmlTime(14, 0, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_42c@A+E"
+                                            version='any',
+                                            ref='hde:svp_42c@A+E'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:TDT01"
+                                            version='any',
+                                            ref='mybus:TDT01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_42c@A+E"
+                                            version='any',
+                                            ref='ops:blk_42c@A+E'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_42"
+                                            version='any',
+                                            ref='mybus:LN_42'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                value="EXTERNAL",
-                                                ref="mybus:RT_42c@A+E"
+                                                value='EXTERNAL',
+                                                ref='mybus:RT_42c@A+E'
                                             ),
                                             direction_type=DirectionTypeEnumeration.CLOCKWISE
                                         ),
                                         run_times=VehicleJourneyRunTimesRelStructure(
                                             vehicle_journey_run_time=[
                                                 VehicleJourneyRunTime(
-                                                    id="hde:vjrt_sj_42c@A+E@01",
+                                                    id='hde:vjrt_sj_42c@A+E@01',
                                                     name=MultilingualString(
-                                                        value="Overall run time"
+                                                        value='Overall run time'
                                                     ),
                                                     run_time=XmlDuration("PT75M")
                                                 ),
@@ -1617,56 +1617,56 @@ obj = PublicationDelivery(
                                         passing_times=TimetabledPassingTimesRelStructure(
                                             timetabled_passing_time=[
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@01@Alpha1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@01@Alpha1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@01"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@01'
                                                     ),
                                                     departure_time=XmlTime(14, 30, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@01@Bravo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@01@Bravo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@02"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@02'
                                                     ),
                                                     departure_time=XmlTime(14, 40, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@01@Charley1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@01@Charley1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@03"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@03'
                                                     ),
                                                     departure_time=XmlTime(15, 0, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@01@Delta1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@01@Delta1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@04"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@04'
                                                     ),
                                                     departure_time=XmlTime(15, 15, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@01@Echo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@01@Echo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@05"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@05'
                                                     ),
                                                     departure_time=XmlTime(15, 30, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@01@Alpha2",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@01@Alpha2',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@06"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@06'
                                                     ),
                                                     arrival_time=XmlTime(15, 45, 0, 0, 0)
                                                 ),
@@ -1675,8 +1675,8 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_42c@A+E@01@Alpha1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@01@Alpha1',
+                                                    version='any',
                                                     visit_number=1,
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -1685,89 +1685,89 @@ obj = PublicationDelivery(
                                                         time=XmlTime(14, 0, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@01@Bravo1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@01@Bravo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(14, 15, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@01@Charley1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@01@Charley1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(14, 30, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@01@Delta1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@01@Delta1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(14, 45, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     order=4
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@01@Echo1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@01@Echo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(15, 0, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=5
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@01@Alpha2",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@01@Alpha2',
+                                                    version='any',
                                                     visit_number=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 15, 0, 0, 0)
@@ -1776,8 +1776,8 @@ obj = PublicationDelivery(
                                                         journey_meetings=JourneyMeetingViewsRelStructure(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingRef(
-                                                                    version="any",
-                                                                    ref="hde:jm_42c@A+E@01+42c@A+E@02"
+                                                                    version='any',
+                                                                    ref='hde:jm_42c@A+E@01+42c@A+E@02'
                                                                 ),
                                                             ]
                                                         ),
@@ -1785,11 +1785,11 @@ obj = PublicationDelivery(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeView(
                                                                     service_journey_interchange_ref=ServiceJourneyInterchangeRef(
-                                                                        version="any",
-                                                                        ref="hde:sji_42c@A+E@01+42c@A+E@02"
+                                                                        version='any',
+                                                                        ref='hde:sji_42c@A+E@01+42c@A+E@02'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Bus goes on round "
+                                                                        value='Bus goes on round '
                                                                     ),
                                                                     stay_seated=True,
                                                                     planned=True,
@@ -1797,16 +1797,16 @@ obj = PublicationDelivery(
                                                                     advertised=True,
                                                                     connecting_journey_ref_or_connecting_journey_view=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="hde:sj_42c@A+E@02"
+                                                                            version='any',
+                                                                            ref='hde:sj_42c@A+E@02'
                                                                         ),
                                                                         connecting_visit_number=1
                                                                     ),
                                                                     connecting_line_view=LineDerivedViewStructure(
-                                                                        id="",
+                                                                        id='',
                                                                         flexible_line_ref_or_line_ref=LineRef(
-                                                                            version="any",
-                                                                            ref="mybus:LN_42"
+                                                                            version='any',
+                                                                            ref='mybus:LN_42'
                                                                         )
                                                                     ),
                                                                     standard_transfer_time=XmlDuration("PT0M")
@@ -1815,8 +1815,8 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=6
@@ -1825,50 +1825,50 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_42c@A+E@02",
-                                        version="any",
+                                        id='hde:sj_42c@A+E@02',
+                                        version='any',
                                         departure_time=XmlTime(15, 15, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_42c@A+E"
+                                            version='any',
+                                            ref='hde:svp_42c@A+E'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:TDT01"
+                                            version='any',
+                                            ref='mybus:TDT01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_42c@A+E"
+                                            version='any',
+                                            ref='ops:blk_42c@A+E'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_42"
+                                            version='any',
+                                            ref='mybus:LN_42'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                value="EXTERNAL",
-                                                ref="mybus:RT_42c@A+E"
+                                                value='EXTERNAL',
+                                                ref='mybus:RT_42c@A+E'
                                             ),
                                             direction_type=DirectionTypeEnumeration.CLOCKWISE,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Echo"
+                                                version='any',
+                                                ref='mybus:DST_Echo'
                                             )
                                         ),
                                         run_times=VehicleJourneyRunTimesRelStructure(
                                             vehicle_journey_run_time=[
                                                 VehicleJourneyRunTime(
-                                                    id="hde:vjrt_sj_42c@A+E@02",
+                                                    id='hde:vjrt_sj_42c@A+E@02',
                                                     name=MultilingualString(
-                                                        value="Overall run time"
+                                                        value='Overall run time'
                                                     ),
                                                     run_time=XmlDuration("PT75M")
                                                 ),
@@ -1877,56 +1877,56 @@ obj = PublicationDelivery(
                                         passing_times=TimetabledPassingTimesRelStructure(
                                             timetabled_passing_time=[
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@02@Alpha1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@02@Alpha1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@01"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@01'
                                                     ),
                                                     departure_time=XmlTime(15, 45, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@02@Bravo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@02@Bravo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@02"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@02'
                                                     ),
                                                     departure_time=XmlTime(16, 0, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@02@Charley1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@02@Charley1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@03"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@03'
                                                     ),
                                                     departure_time=XmlTime(16, 15, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@02@Delta1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@02@Delta1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@04"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@04'
                                                     ),
                                                     departure_time=XmlTime(16, 30, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@02@Echo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@02@Echo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@05"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@05'
                                                     ),
                                                     departure_time=XmlTime(16, 45, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42c@A+E@02@Alpha2",
-                                                    version="any",
+                                                    id='mybus:tpt_42c@A+E@02@Alpha2',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42c@A+E@06"
+                                                        version='any',
+                                                        ref='hde:spijp_42c@A+E@06'
                                                     ),
                                                     arrival_time=XmlTime(17, 0, 0, 0, 0)
                                                 ),
@@ -1935,19 +1935,19 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_42c@A+E@02@Alpha1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@02@Alpha1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         journey_meetings=JourneyMeetingViewsRelStructure(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingRef(
-                                                                    version="any",
-                                                                    ref="hde:jm_42c@A+E@01+42c@A+E@02"
+                                                                    version='any',
+                                                                    ref='hde:jm_42c@A+E@01+42c@A+E@02'
                                                                 ),
                                                             ]
                                                         ),
@@ -1955,11 +1955,11 @@ obj = PublicationDelivery(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeView(
                                                                     service_journey_interchange_ref=ServiceJourneyInterchangeRef(
-                                                                        version="any",
-                                                                        ref="hde:sji_42c@A+E@01+42c@A+E@02"
+                                                                        version='any',
+                                                                        ref='hde:sji_42c@A+E@01+42c@A+E@02'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Bus goes on round "
+                                                                        value='Bus goes on round '
                                                                     ),
                                                                     stay_seated=True,
                                                                     planned=True,
@@ -1967,16 +1967,16 @@ obj = PublicationDelivery(
                                                                     advertised=True,
                                                                     connecting_journey_ref_or_connecting_journey_view=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="hde:sj_42c@A+E@01"
+                                                                            version='any',
+                                                                            ref='hde:sj_42c@A+E@01'
                                                                         ),
                                                                         connecting_visit_number=2
                                                                     ),
                                                                     connecting_line_view=LineDerivedViewStructure(
-                                                                        id="",
+                                                                        id='',
                                                                         flexible_line_ref_or_line_ref=LineRef(
-                                                                            version="any",
-                                                                            ref="mybus:LN_42"
+                                                                            version='any',
+                                                                            ref='mybus:LN_42'
                                                                         )
                                                                     ),
                                                                     standard_transfer_time=XmlDuration("PT0M")
@@ -1988,88 +1988,88 @@ obj = PublicationDelivery(
                                                         time=XmlTime(15, 0, 15, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@02@Bravo1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@02@Bravo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(15, 30, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@02@Charley1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@02@Charley1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(15, 45, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@02@Delta1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@02@Delta1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(16, 0, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     order=4
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@02@Echo1",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@02@Echo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(16, 15, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     order=5
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42c@A+E@02@Alpha2",
-                                                    version="any",
+                                                    id='hde:sj_42c@A+E@02@Alpha2',
+                                                    version='any',
                                                     visit_number=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 30, 0, 0, 0)
@@ -2078,8 +2078,8 @@ obj = PublicationDelivery(
                                                         for_boarding=False
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     order=6
                                                 ),
@@ -2087,50 +2087,50 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_42a@E+A@03",
-                                        version="any",
+                                        id='hde:sj_42a@E+A@03',
+                                        version='any',
                                         departure_time=XmlTime(14, 30, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_42a@E+A"
+                                            version='any',
+                                            ref='hde:svp_42a@E+A'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:TDT01"
+                                            version='any',
+                                            ref='mybus:TDT01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_42a@E+A"
+                                            version='any',
+                                            ref='ops:blk_42a@E+A'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_42"
+                                            version='any',
+                                            ref='mybus:LN_42'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                value="EXTERNAL",
-                                                ref="mybus:RT_42a@E+A"
+                                                value='EXTERNAL',
+                                                ref='mybus:RT_42a@E+A'
                                             ),
                                             direction_type=DirectionTypeEnumeration.ANTICLOCKWISE,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Alpha"
+                                                version='any',
+                                                ref='mybus:DST_Alpha'
                                             )
                                         ),
                                         run_times=VehicleJourneyRunTimesRelStructure(
                                             vehicle_journey_run_time=[
                                                 VehicleJourneyRunTime(
-                                                    id="hde:vjrt_sj_42c@E+A@03",
+                                                    id='hde:vjrt_sj_42c@E+A@03',
                                                     name=MultilingualString(
-                                                        value="Overall run time"
+                                                        value='Overall run time'
                                                     ),
                                                     run_time=XmlDuration("PT75M")
                                                 ),
@@ -2139,56 +2139,56 @@ obj = PublicationDelivery(
                                         passing_times=TimetabledPassingTimesRelStructure(
                                             timetabled_passing_time=[
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@03@Echo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@03@Echo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@01"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@01'
                                                     ),
                                                     departure_time=XmlTime(14, 30, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@03@Delta1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@03@Delta1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@02"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@02'
                                                     ),
                                                     departure_time=XmlTime(14, 45, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@03@Charley1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@03@Charley1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@03"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@03'
                                                     ),
                                                     departure_time=XmlTime(15, 0, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@03@Bravo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@03@Bravo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@04"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@04'
                                                     ),
                                                     departure_time=XmlTime(15, 15, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@03@Alpha2",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@03@Alpha2',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@05"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@05'
                                                     ),
                                                     departure_time=XmlTime(15, 30, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@03@Echo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@03@Echo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@06"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@06'
                                                     ),
                                                     arrival_time=XmlTime(15, 45, 0, 0, 0)
                                                 ),
@@ -2197,12 +2197,12 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_42a@E+A@03@Echo1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@03@Echo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -2211,89 +2211,89 @@ obj = PublicationDelivery(
                                                         time=XmlTime(14, 30, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@03@Delta1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@03@Delta1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(14, 45, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@03@Charley1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@03@Charley1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(15, 0, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Echo"
+                                                        version='any',
+                                                        ref='mybus:DST_Echo'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@03@Bravo1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@03@Bravo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(15, 15, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Echo"
+                                                        version='any',
+                                                        ref='mybus:DST_Echo'
                                                     ),
                                                     order=4
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@03_E+A@Echo1",
-                                                    version="any",
+                                                    id='hde:sj_42a@03_E+A@Echo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(15, 30, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=5
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@03_E+A@Alpha2",
-                                                    version="any",
+                                                    id='hde:sj_42a@03_E+A@Alpha2',
+                                                    version='any',
                                                     visit_number=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Alpha"
+                                                        version='any',
+                                                        ref='mybus:Alpha'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 45, 0, 0, 0)
@@ -2302,8 +2302,8 @@ obj = PublicationDelivery(
                                                         journey_meetings=JourneyMeetingViewsRelStructure(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingRef(
-                                                                    version="any",
-                                                                    ref="hde:jm_42a@E+A@03+42a@E+A@04"
+                                                                    version='any',
+                                                                    ref='hde:jm_42a@E+A@03+42a@E+A@04'
                                                                 ),
                                                             ]
                                                         ),
@@ -2311,11 +2311,11 @@ obj = PublicationDelivery(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeView(
                                                                     service_journey_interchange_ref=ServiceJourneyInterchangeRef(
-                                                                        version="any",
-                                                                        ref="hde:sji_42a@E+A@03+42a@E+A@04"
+                                                                        version='any',
+                                                                        ref='hde:sji_42a@E+A@03+42a@E+A@04'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Bus goes on round "
+                                                                        value='Bus goes on round '
                                                                     ),
                                                                     stay_seated=True,
                                                                     planned=True,
@@ -2323,16 +2323,16 @@ obj = PublicationDelivery(
                                                                     advertised=True,
                                                                     connecting_journey_ref_or_connecting_journey_view=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="hde:sj_42a@E+A@04"
+                                                                            version='any',
+                                                                            ref='hde:sj_42a@E+A@04'
                                                                         ),
                                                                         connecting_visit_number=1
                                                                     ),
                                                                     connecting_line_view=LineDerivedViewStructure(
-                                                                        id="",
+                                                                        id='',
                                                                         flexible_line_ref_or_line_ref=LineRef(
-                                                                            version="any",
-                                                                            ref="mybus:LN_42"
+                                                                            version='any',
+                                                                            ref='mybus:LN_42'
                                                                         )
                                                                     ),
                                                                     standard_transfer_time=XmlDuration("PT0M")
@@ -2341,8 +2341,8 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     order=6
                                                 ),
@@ -2350,50 +2350,50 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_42a@E+A@04",
-                                        version="any",
+                                        id='hde:sj_42a@E+A@04',
+                                        version='any',
                                         departure_time=XmlTime(15, 45, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="hde:svp_42a@E+A"
+                                            version='any',
+                                            ref='hde:svp_42a@E+A'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="mybus:TDT01"
+                                            version='any',
+                                            ref='mybus:TDT01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_42a@E+A"
+                                            version='any',
+                                            ref='ops:blk_42a@E+A'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_42"
+                                            version='any',
+                                            ref='mybus:LN_42'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                value="EXERNAL",
-                                                ref="mybus:RT_42a@E+A"
+                                                value='EXERNAL',
+                                                ref='mybus:RT_42a@E+A'
                                             ),
                                             direction_type=DirectionTypeEnumeration.ANTICLOCKWISE,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Alpha"
+                                                version='any',
+                                                ref='mybus:DST_Alpha'
                                             )
                                         ),
                                         run_times=VehicleJourneyRunTimesRelStructure(
                                             vehicle_journey_run_time=[
                                                 VehicleJourneyRunTime(
-                                                    id="hde:vjrt_sj_42c@E+A@04",
+                                                    id='hde:vjrt_sj_42c@E+A@04',
                                                     name=MultilingualString(
-                                                        value="Overall run time"
+                                                        value='Overall run time'
                                                     ),
                                                     run_time=XmlDuration("PT75M")
                                                 ),
@@ -2402,56 +2402,56 @@ obj = PublicationDelivery(
                                         passing_times=TimetabledPassingTimesRelStructure(
                                             timetabled_passing_time=[
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@04_Echo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@04_Echo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@01"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@01'
                                                     ),
                                                     departure_time=XmlTime(15, 45, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@04_Delta1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@04_Delta1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@02"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@02'
                                                     ),
                                                     departure_time=XmlTime(16, 0, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@04_Charley1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@04_Charley1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@03"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@03'
                                                     ),
                                                     departure_time=XmlTime(16, 15, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@04_Bravo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@04_Bravo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@04"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@04'
                                                     ),
                                                     departure_time=XmlTime(16, 30, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@04_Alpha2",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@04_Alpha2',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@05"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@05'
                                                     ),
                                                     departure_time=XmlTime(16, 45, 0, 0, 0)
                                                 ),
                                                 TimetabledPassingTime(
-                                                    id="mybus:tpt_42a@E+A@04_Echo1",
-                                                    version="any",
+                                                    id='mybus:tpt_42a@E+A@04_Echo1',
+                                                    version='any',
                                                     choice_1=StopPointInJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:spijp_42a@E+A@06"
+                                                        version='any',
+                                                        ref='hde:spijp_42a@E+A@06'
                                                     ),
                                                     arrival_time=XmlTime(17, 0, 0, 0, 0)
                                                 ),
@@ -2460,19 +2460,19 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_42a@E+A@04_Echo1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@04_Echo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         journey_meetings=JourneyMeetingViewsRelStructure(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingRef(
-                                                                    version="any",
-                                                                    ref="hde:jm_42a@E+A@03+42a@E+A@04"
+                                                                    version='any',
+                                                                    ref='hde:jm_42a@E+A@03+42a@E+A@04'
                                                                 ),
                                                             ]
                                                         ),
@@ -2480,11 +2480,11 @@ obj = PublicationDelivery(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeView(
                                                                     service_journey_interchange_ref=ServiceJourneyInterchangeRef(
-                                                                        version="any",
-                                                                        ref="hde:sji_42a@E+A@03+42a@E+A@04"
+                                                                        version='any',
+                                                                        ref='hde:sji_42a@E+A@03+42a@E+A@04'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Bus goes on round "
+                                                                        value='Bus goes on round '
                                                                     ),
                                                                     stay_seated=True,
                                                                     planned=True,
@@ -2492,16 +2492,16 @@ obj = PublicationDelivery(
                                                                     advertised=True,
                                                                     connecting_journey_ref_or_connecting_journey_view=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="hde:sj_42a@E+A@03"
+                                                                            version='any',
+                                                                            ref='hde:sj_42a@E+A@03'
                                                                         ),
                                                                         connecting_visit_number=2
                                                                     ),
                                                                     connecting_line_view=LineDerivedViewStructure(
-                                                                        id="",
+                                                                        id='',
                                                                         flexible_line_ref_or_line_ref=LineRef(
-                                                                            version="any",
-                                                                            ref="mybus:LN_42"
+                                                                            version='any',
+                                                                            ref='mybus:LN_42'
                                                                         )
                                                                     ),
                                                                     standard_transfer_time=XmlDuration("PT0M")
@@ -2513,89 +2513,89 @@ obj = PublicationDelivery(
                                                         time=XmlTime(15, 45, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@04_Delta1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@04_Delta1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Delta"
+                                                        version='any',
+                                                        ref='mybus:Delta'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(16, 0, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Charley"
+                                                        version='any',
+                                                        ref='mybus:DST_Charley'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@04_Charley1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@04_Charley1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Charley"
+                                                        version='any',
+                                                        ref='mybus:Charley'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(16, 15, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=3
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@04_Bravo1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@04_Bravo1',
+                                                    version='any',
                                                     visit_number=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Bravo"
+                                                        version='any',
+                                                        ref='mybus:Bravo'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(16, 30, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Alpha"
+                                                        version='any',
+                                                        ref='mybus:DST_Alpha'
                                                     ),
                                                     order=4
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@04_Alpha1",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@04_Alpha1',
+                                                    version='any',
                                                     visit_number=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     departure=DepartureStructure(
                                                         time=XmlTime(16, 45, 0, 0, 0)
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Echo"
+                                                        version='any',
+                                                        ref='mybus:DST_Echo'
                                                     ),
                                                     change_of_destination_display=True,
                                                     order=5
                                                 ),
                                                 Call(
-                                                    id="hde:sj_42a@E+A@04_Echo2",
-                                                    version="any",
+                                                    id='hde:sj_42a@E+A@04_Echo2',
+                                                    version='any',
                                                     visit_number=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:Echo"
+                                                        version='any',
+                                                        ref='mybus:Echo'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(17, 0, 0, 0, 0)
@@ -2604,8 +2604,8 @@ obj = PublicationDelivery(
                                                         for_boarding=False
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="mybus:DST_Echo"
+                                                        version='any',
+                                                        ref='mybus:DST_Echo'
                                                     ),
                                                     order=65
                                                 ),
@@ -2617,21 +2617,21 @@ obj = PublicationDelivery(
                             groups_of_services=GroupsOfServicesInFrameRelStructure(
                                 group_of_services=[
                                     GroupOfServices(
-                                        id="hde:gs_42c@A+E@clockwise",
-                                        version="any",
+                                        id='hde:gs_42c@A+E@clockwise',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Monday to Friday"
+                                            value='Monday to Friday'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Line 42    Monday to Friday timetable - Clockwise services "
+                                                value='Line 42    Monday to Friday timetable - Clockwise services '
                                             ),
                                         ],
                                         day_types=GroupOfServicesVersionStructure.DayTypes(
                                             day_type_ref=[
                                                 DayTypeRefStructure(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
@@ -2639,42 +2639,42 @@ obj = PublicationDelivery(
                                         members=GroupOfServicesMembersRelStructure(
                                             group_of_services_member=[
                                                 GroupOfServicesMemberStructure(
-                                                    id="hde:gsm_42c@A+E@01",
-                                                    version="any",
+                                                    id='hde:gsm_42c@A+E@01',
+                                                    version='any',
                                                     order=1,
                                                     choice=ServiceJourneyRef(
-                                                        version="any",
-                                                        ref="hde:sj_42c@A+E@01"
+                                                        version='any',
+                                                        ref='hde:sj_42c@A+E@01'
                                                     )
                                                 ),
                                                 GroupOfServicesMemberStructure(
-                                                    id="hde:gsm_42c@A+E@02",
-                                                    version="any",
+                                                    id='hde:gsm_42c@A+E@02',
+                                                    version='any',
                                                     order=2,
                                                     choice=ServiceJourneyRef(
-                                                        version="any",
-                                                        ref="hde:sj_42c@A+E@02"
+                                                        version='any',
+                                                        ref='hde:sj_42c@A+E@02'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     GroupOfServices(
-                                        id="hde:gs_42a@E+A@anticlockwise",
-                                        version="any",
+                                        id='hde:gs_42a@E+A@anticlockwise',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Monday to Friday"
+                                            value='Monday to Friday'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Line 42    Monday to Friday timetable - AntiClockwise services "
+                                                value='Line 42    Monday to Friday timetable - AntiClockwise services '
                                             ),
                                         ],
                                         day_types=GroupOfServicesVersionStructure.DayTypes(
                                             day_type_ref=[
                                                 DayTypeRefStructure(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
@@ -2682,21 +2682,21 @@ obj = PublicationDelivery(
                                         members=GroupOfServicesMembersRelStructure(
                                             group_of_services_member=[
                                                 GroupOfServicesMemberStructure(
-                                                    id="hde:gsm_42a@E+A@01",
-                                                    version="any",
+                                                    id='hde:gsm_42a@E+A@01',
+                                                    version='any',
                                                     order=1,
                                                     choice=ServiceJourneyRef(
-                                                        version="any",
-                                                        ref="hde:sj_42a@E+A@03"
+                                                        version='any',
+                                                        ref='hde:sj_42a@E+A@03'
                                                     )
                                                 ),
                                                 GroupOfServicesMemberStructure(
-                                                    id="hde:gsm_42a@E+A@02",
-                                                    version="any",
+                                                    id='hde:gsm_42a@E+A@02',
+                                                    version='any',
                                                     order=2,
                                                     choice=ServiceJourneyRef(
-                                                        version="any",
-                                                        ref="hde:sj_42a@E+A@04"
+                                                        version='any',
+                                                        ref='hde:sj_42a@E+A@04'
                                                     )
                                                 ),
                                             ]
@@ -2707,33 +2707,33 @@ obj = PublicationDelivery(
                             journey_meetings=JourneyMeetingsInFrameRelStructure(
                                 journey_meeting=[
                                     JourneyMeeting(
-                                        id="hde:jm_42c@A+E@01+42c@A+E@02",
-                                        version="any",
+                                        id='hde:jm_42c@A+E@01+42c@A+E@02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bus goes on round "
+                                            value='Bus goes on round '
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42c@A+E@01"
+                                            version='any',
+                                            ref='hde:sj_42c@A+E@01'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42c@A+E@02"
+                                            version='any',
+                                            ref='hde:sj_42c@A+E@02'
                                         )
                                     ),
                                     JourneyMeeting(
-                                        id="hde:jm_42a@E+A@03+42a@E+A@04",
-                                        version="any",
+                                        id='hde:jm_42a@E+A@03+42a@E+A@04',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bus goes on round "
+                                            value='Bus goes on round '
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42a@E+A@03"
+                                            version='any',
+                                            ref='hde:sj_42a@E+A@03'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42a@E+A@04"
+                                            version='any',
+                                            ref='hde:sj_42a@E+A@04'
                                         )
                                     ),
                                 ]
@@ -2741,10 +2741,10 @@ obj = PublicationDelivery(
                             journey_interchanges=JourneyInterchangesInFrameRelStructure(
                                 service_journey_pattern_interchange_or_service_journey_interchange=[
                                     ServiceJourneyInterchange(
-                                        id="hde:sji_42c@A+E@01+42c@A+E@02",
-                                        version="any",
+                                        id='hde:sji_42c@A+E@01+42c@A+E@02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="15:15   Can Stay Seated  42c_A+E@01  to   42c_A+E@02   "
+                                            value='15:15   Can Stay Seated  42c_A+E@01  to   42c_A+E@02   '
                                         ),
                                         stay_seated=True,
                                         planned=True,
@@ -2754,19 +2754,19 @@ obj = PublicationDelivery(
                                         standard_wait_time=XmlDuration("PT15M"),
                                         standard_transfer_time=XmlDuration("PT0M"),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42c@A+E@01"
+                                            version='any',
+                                            ref='hde:sj_42c@A+E@01'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42c@A+E@02"
+                                            version='any',
+                                            ref='hde:sj_42c@A+E@02'
                                         )
                                     ),
                                     ServiceJourneyInterchange(
-                                        id="hde:sji_42a@E+A@03+42a@E+A@04",
-                                        version="any",
+                                        id='hde:sji_42a@E+A@03+42a@E+A@04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="15:30    Can Stay Seated  &#9; 42a_E+A@03     to   42a_E+A@04  &#9;&#9;"
+                                            value='15:30    Can Stay Seated  \t 42a_E+A@03     to   42a_E+A@04  \t\t'
                                         ),
                                         stay_seated=True,
                                         planned=True,
@@ -2776,67 +2776,67 @@ obj = PublicationDelivery(
                                         standard_wait_time=XmlDuration("PT15M"),
                                         standard_transfer_time=XmlDuration("PT0M"),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42a@E+A@03"
+                                            version='any',
+                                            ref='hde:sj_42a@E+A@03'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="hde:sj_42a@E+A@04"
+                                            version='any',
+                                            ref='hde:sj_42a@E+A@04'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         VehicleScheduleFrame(
-                            id="ops:VSF_23_O",
-                            version="1",
+                            id='ops:VSF_23_O',
+                            version='1',
                             name=MultilingualString(
-                                value="BLOCKS Winter timetable for VS Line 12 Example"
+                                value='BLOCKS Winter timetable for VS Line 12 Example'
                             ),
                             blocks=BlocksInFrameRelStructure(
                                 block_or_compound_block_or_train_block=[
                                     Block(
-                                        id="ops:blk_42c@A+E",
-                                        version="any",
+                                        id='ops:blk_42c@A+E',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Clockwise block"
+                                            value='Clockwise block'
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT10H"),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=VehicleTypeRef(
-                                            value="EXTERNAL",
-                                            ref="xj:vt-447"
+                                            value='EXTERNAL',
+                                            ref='xj:vt-447'
                                         ),
                                         start_point_ref=PointRefStructure(
-                                            ref="mybus:Alpha"
+                                            ref='mybus:Alpha'
                                         ),
                                         end_point_ref=PointRefStructure(
-                                            ref="mybus:Alpha"
+                                            ref='mybus:Alpha'
                                         ),
                                         courses_of_journeys=CoursesOfJourneysRelStructure(
                                             course_of_journeys_ref_or_course_of_journeys=[
                                                 CourseOfJourneys(
-                                                    id="ops:coj_42c@A+E",
-                                                    version="any",
+                                                    id='ops:coj_42c@A+E',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="&gt;Run forClockwise  Block 1  2 journeys  "
+                                                        value='>Run forClockwise  Block 1  2 journeys  '
                                                     ),
                                                     preparation_duration=XmlDuration("PT10M"),
                                                     start_time_in_block=XmlTime(14, 0, 0, 0),
                                                     finishing_duration=XmlDuration("PT0M"),
                                                     flexible_line_ref_or_line_ref=LineRef(
-                                                        version="any",
-                                                        ref="mybus:LN_42"
+                                                        version='any',
+                                                        ref='mybus:LN_42'
                                                     ),
                                                     journeys=JourneyRefsRelStructure(
                                                         choice=[
                                                             VehicleJourneyRef(
-                                                                version="any",
-                                                                ref="hde:sj_42c@A+E@01"
+                                                                version='any',
+                                                                ref='hde:sj_42c@A+E@01'
                                                             ),
                                                             VehicleJourneyRef(
-                                                                version="any",
-                                                                ref="hde:sj_42c@A+E@02"
+                                                                version='any',
+                                                                ref='hde:sj_42c@A+E@02'
                                                             ),
                                                         ]
                                                     )
@@ -2845,47 +2845,47 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Block(
-                                        id="ops:blk_42a@E+A",
-                                        version="any",
+                                        id='ops:blk_42a@E+A',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Clockwise block"
+                                            value='Clockwise block'
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT10H"),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=VehicleTypeRef(
-                                            value="EXTERNAL",
-                                            ref="xj:vt-447"
+                                            value='EXTERNAL',
+                                            ref='xj:vt-447'
                                         ),
                                         start_point_ref=PointRefStructure(
-                                            ref="mybus:Alpha"
+                                            ref='mybus:Alpha'
                                         ),
                                         end_point_ref=PointRefStructure(
-                                            ref="mybus:Alpha"
+                                            ref='mybus:Alpha'
                                         ),
                                         courses_of_journeys=CoursesOfJourneysRelStructure(
                                             course_of_journeys_ref_or_course_of_journeys=[
                                                 CourseOfJourneys(
-                                                    id="ops:coj__42a@E+A",
-                                                    version="any",
+                                                    id='ops:coj__42a@E+A',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="&gt;Run for Block 1  3 journeys  "
+                                                        value='>Run for Block 1  3 journeys  '
                                                     ),
                                                     preparation_duration=XmlDuration("PT10M"),
                                                     start_time_in_block=XmlTime(14, 30, 0, 0),
                                                     finishing_duration=XmlDuration("PT0M"),
                                                     flexible_line_ref_or_line_ref=LineRef(
-                                                        version="any",
-                                                        ref="mybus:LN_42"
+                                                        version='any',
+                                                        ref='mybus:LN_42'
                                                     ),
                                                     journeys=JourneyRefsRelStructure(
                                                         choice=[
                                                             VehicleJourneyRef(
-                                                                version="any",
-                                                                ref="hde:sj_42a@E+A@03"
+                                                                version='any',
+                                                                ref='hde:sj_42a@E+A@03'
                                                             ),
                                                             VehicleJourneyRef(
-                                                                version="any",
-                                                                ref="hde:sj_42a@E+A@04"
+                                                                version='any',
+                                                                ref='hde:sj_42a@E+A@04'
                                                             ),
                                                         ]
                                                     )
@@ -2897,24 +2897,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="hde:CAL_02",
-                            version="1",
+                            id='hde:CAL_02',
+                            version='1',
                             name=MultilingualString(
-                                value="Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  "
+                                value='Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  '
                             ),
                             service_calendar=ServiceCalendar(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDate(2010, 11, 1),
                                 to_date=XmlDate(2010, 11, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="hde:DT_01-MF-NH",
-                                        version="any",
+                                        id='hde:DT_01-MF-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekdays unless a holiday"
+                                            value='Weekdays unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -2938,115 +2938,115 @@ obj = PublicationDelivery(
                             day_type_assignments=DayTypeAssignmentsInFrameRelStructure(
                                 day_type_assignment=[
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-01",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2010-11-01"
+                                            value='Monday 2010-11-01'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 1),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-02",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Tuesday 2010-11-02"
+                                            value='Tuesday 2010-11-02'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-03",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Wednesday 2010-11-03"
+                                            value='Wednesday 2010-11-03'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-04",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Thusday 2010-11-04"
+                                            value='Thusday 2010-11-04'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-05",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-05',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="MFriday 2010-11-05"
+                                            value='MFriday 2010-11-05'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-06",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-06',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2010-11-06"
+                                            value='Saturday 2010-11-06'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 6),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-07",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-07',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2010-11-07"
+                                            value='Sunday 2010-11-07'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 7),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         SiteFrame(
-                            id="hde:CAL_02",
-                            version="1",
+                            id='hde:CAL_02',
+                            version='1',
                             topographic_places=TopographicPlacesInFrameRelStructure(
                                 topographic_place=[
                                     TopographicPlace(
-                                        id="hde:TP_1",
-                                        version="any",
+                                        id='hde:TP_1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Western Area"
+                                            value='Western Area'
                                         ),
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
-                                            id="hde:TP_1",
-                                            version="any",
+                                            id='hde:TP_1',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Area West"
+                                                value='Area West'
                                             )
                                         )
                                     ),

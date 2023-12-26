@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .flexible_line import FlexibleLine
 from .line import Line
@@ -12,7 +12,7 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInFrame_RelStructure"
 
-    flexible_line_or_line: List[object] = field(
+    flexible_line_or_line: List[Union[FlexibleLine, Line]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +28,5 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

@@ -12,7 +12,7 @@ class CanonicalizationMethodType:
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -20,7 +20,7 @@ class CanonicalizationMethodType:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -36,7 +36,7 @@ class DsakeyValueType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "format": "base64",
-        }
+        },
     )
     q: Optional[bytes] = field(
         default=None,
@@ -45,7 +45,7 @@ class DsakeyValueType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "format": "base64",
-        }
+        },
     )
     g: Optional[bytes] = field(
         default=None,
@@ -54,7 +54,7 @@ class DsakeyValueType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "format": "base64",
-        }
+        },
     )
     y: Optional[bytes] = field(
         default=None,
@@ -64,7 +64,7 @@ class DsakeyValueType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        }
+        },
     )
     j: Optional[bytes] = field(
         default=None,
@@ -73,7 +73,7 @@ class DsakeyValueType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "format": "base64",
-        }
+        },
     )
     seed: Optional[bytes] = field(
         default=None,
@@ -82,7 +82,7 @@ class DsakeyValueType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "format": "base64",
-        }
+        },
     )
     pgen_counter: Optional[bytes] = field(
         default=None,
@@ -91,7 +91,7 @@ class DsakeyValueType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "format": "base64",
-        }
+        },
     )
 
 
@@ -103,7 +103,7 @@ class DigestMethodType:
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -111,7 +111,7 @@ class DigestMethodType:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -122,21 +122,21 @@ class ObjectType:
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
     mime_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "MimeType",
             "type": "Attribute",
-        }
+        },
     )
     encoding: Optional[str] = field(
         default=None,
         metadata={
             "name": "Encoding",
             "type": "Attribute",
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -144,7 +144,7 @@ class ObjectType:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -161,7 +161,7 @@ class PgpdataType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        }
+        },
     )
     pgpkey_packet: Tuple[bytes, ...] = field(
         default_factory=tuple,
@@ -171,14 +171,14 @@ class PgpdataType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "max_occurs": 2,
             "format": "base64",
-        }
+        },
     )
     other_element: Tuple[object, ...] = field(
         default_factory=tuple,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -195,7 +195,7 @@ class RsakeyValueType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        }
+        },
     )
     exponent: Optional[bytes] = field(
         default=None,
@@ -205,7 +205,7 @@ class RsakeyValueType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        }
+        },
     )
 
 
@@ -223,7 +223,7 @@ class SpkidataType:
             "min_occurs": 1,
             "sequence": 1,
             "format": "base64",
-        }
+        },
     )
     other_element: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -231,7 +231,7 @@ class SpkidataType:
             "type": "Wildcard",
             "namespace": "##other",
             "sequence": 1,
-        }
+        },
     )
 
 
@@ -243,7 +243,7 @@ class SignatureMethodType:
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -258,7 +258,7 @@ class SignatureMethodType:
                     "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 },
             ),
-        }
+        },
     )
 
 
@@ -270,14 +270,14 @@ class SignaturePropertyType:
             "name": "Target",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -285,7 +285,7 @@ class SignaturePropertyType:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -296,14 +296,14 @@ class SignatureValueType:
         metadata={
             "required": True,
             "format": "base64",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -315,7 +315,7 @@ class TransformType:
             "name": "Algorithm",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -330,7 +330,7 @@ class TransformType:
                     "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 },
             ),
-        }
+        },
     )
 
 
@@ -343,7 +343,7 @@ class X509IssuerSerialType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     x509_serial_number: Optional[int] = field(
         default=None,
@@ -352,7 +352,7 @@ class X509IssuerSerialType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
 
 
@@ -435,7 +435,7 @@ class X509DataType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "sequence": 1,
-        }
+        },
     )
     x509_ski: Tuple[bytes, ...] = field(
         default_factory=tuple,
@@ -445,7 +445,7 @@ class X509DataType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "sequence": 1,
             "format": "base64",
-        }
+        },
     )
     x509_subject_name: Tuple[str, ...] = field(
         default_factory=tuple,
@@ -454,7 +454,7 @@ class X509DataType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "sequence": 1,
-        }
+        },
     )
     x509_certificate: Tuple[bytes, ...] = field(
         default_factory=tuple,
@@ -464,7 +464,7 @@ class X509DataType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "sequence": 1,
             "format": "base64",
-        }
+        },
     )
     x509_crl: Tuple[bytes, ...] = field(
         default_factory=tuple,
@@ -474,7 +474,7 @@ class X509DataType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "sequence": 1,
             "format": "base64",
-        }
+        },
     )
     other_element: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -482,7 +482,7 @@ class X509DataType:
             "type": "Wildcard",
             "namespace": "##other",
             "sequence": 1,
-        }
+        },
     )
 
 
@@ -506,7 +506,7 @@ class KeyValueType:
                     "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 },
             ),
-        }
+        },
     )
 
 
@@ -519,14 +519,14 @@ class SignaturePropertiesType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -539,7 +539,7 @@ class TransformsType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -575,7 +575,7 @@ class ReferenceType:
             "name": "Transforms",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
+        },
     )
     digest_method: Optional[DigestMethod] = field(
         default=None,
@@ -584,7 +584,7 @@ class ReferenceType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     digest_value: Optional[bytes] = field(
         default=None,
@@ -594,28 +594,28 @@ class ReferenceType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
             "format": "base64",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
     uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
-        }
+        },
     )
     type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -627,21 +627,21 @@ class RetrievalMethodType:
             "name": "Transforms",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
+        },
     )
     uri: Optional[str] = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
-        }
+        },
     )
     type_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -664,7 +664,7 @@ class KeyInfoType:
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
     content: Tuple[object, ...] = field(
         default_factory=tuple,
@@ -709,7 +709,7 @@ class KeyInfoType:
                     "namespace": "http://www.w3.org/2000/09/xmldsig#",
                 },
             ),
-        }
+        },
     )
 
 
@@ -722,14 +722,14 @@ class ManifestType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -742,7 +742,7 @@ class SignedInfoType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     signature_method: Optional[SignatureMethod] = field(
         default=None,
@@ -751,7 +751,7 @@ class SignedInfoType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     reference: Tuple[Reference, ...] = field(
         default_factory=tuple,
@@ -760,14 +760,14 @@ class SignedInfoType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -798,7 +798,7 @@ class SignatureType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     signature_value: Optional[SignatureValue] = field(
         default=None,
@@ -807,7 +807,7 @@ class SignatureType:
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
             "required": True,
-        }
+        },
     )
     key_info: Optional[KeyInfo] = field(
         default=None,
@@ -815,7 +815,7 @@ class SignatureType:
             "name": "KeyInfo",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
+        },
     )
     object_value: Tuple[Object, ...] = field(
         default_factory=tuple,
@@ -823,14 +823,14 @@ class SignatureType:
             "name": "Object",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
-        }
+        },
     )
 
 

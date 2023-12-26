@@ -17,5 +17,8 @@ class MemoryAllocationKeywordPolicyTypeSimple(Enum):
         postfix. Thereby the alignment postfix needs to be consistent
         with the alignment attribute of the related MemorySection.
     """
+
     ADDR_METHOD_SHORT_NAME = "ADDR-METHOD-SHORT-NAME"
-    ADDR_METHOD_SHORT_NAME_AND_ALIGNMENT = "ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT"
+    ADDR_METHOD_SHORT_NAME_AND_ALIGNMENT = (
+        "ADDR-METHOD-SHORT-NAME-AND-ALIGNMENT"
+    )

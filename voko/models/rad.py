@@ -11,11 +11,11 @@ class Rad:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     value: str = field(
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

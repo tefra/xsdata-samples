@@ -36,6 +36,7 @@ class HistoryElement1:
         The value that should be put in the attribute that the
         CorrelationElement defines.  This is a read-only attribute.
     """
+
     class Meta:
         name = "HistoryElement"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -45,14 +46,14 @@ class HistoryElement1:
         metadata={
             "name": "Original",
             "type": "Element",
-        }
+        },
     )
     new: None | TypeHistorySubElement1 = field(
         default=None,
         metadata={
             "name": "New",
             "type": "Element",
-        }
+        },
     )
     action: None | TypeAction1 = field(
         default=None,
@@ -60,7 +61,7 @@ class HistoryElement1:
             "name": "Action",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     modified_by_agent_id: None | int = field(
         default=None,
@@ -68,7 +69,7 @@ class HistoryElement1:
             "name": "ModifiedByAgentID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     modified_by_agent_user_name: None | str = field(
         default=None,
@@ -77,7 +78,7 @@ class HistoryElement1:
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-zA-Z0-9\-_\.@ ]{1,128}",
-        }
+        },
     )
     modified_date: None | XmlDateTime = field(
         default=None,
@@ -85,7 +86,7 @@ class HistoryElement1:
             "name": "ModifiedDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     component: None | str = field(
         default=None,
@@ -94,7 +95,7 @@ class HistoryElement1:
             "type": "Attribute",
             "required": True,
             "max_length": 50,
-        }
+        },
     )
     correlation_element: None | str = field(
         default=None,
@@ -102,7 +103,7 @@ class HistoryElement1:
             "name": "CorrelationElement",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     correlation_value: None | str = field(
         default=None,
@@ -111,5 +112,5 @@ class HistoryElement1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

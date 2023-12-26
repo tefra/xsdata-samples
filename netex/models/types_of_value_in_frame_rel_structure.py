@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .branding import Branding
 from .charging_moment import ChargingMoment
 from .class_of_use import ClassOfUse
@@ -42,7 +42,9 @@ from .type_of_notice import TypeOfNotice
 from .type_of_operation import TypeOfOperation
 from .type_of_organisation import TypeOfOrganisation
 from .type_of_organisation_part import TypeOfOrganisationPart
-from .type_of_passenger_information_equipment import TypeOfPassengerInformationEquipment
+from .type_of_passenger_information_equipment import (
+    TypeOfPassengerInformationEquipment,
+)
 from .type_of_payment_method import TypeOfPaymentMethod
 from .type_of_place import TypeOfPlace
 from .type_of_point import TypeOfPoint
@@ -74,7 +76,74 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            ValueSet,
+            TypeOfMachineReadability,
+            TypeOfConcession,
+            ChargingMoment,
+            TypeOfUsageParameter,
+            TypeOfFareTable,
+            TypeOfPricingRule,
+            PriceUnit,
+            TimingAlgorithmType,
+            PurposeOfJourneyPartition,
+            TypeOfServiceFeature,
+            PointOfInterestClassification,
+            Direction,
+            PurposeOfEquipmentProfile,
+            TypeOfSecurityList,
+            TypeOfProductCategory,
+            TypeOfPaymentMethod,
+            ClassOfUse,
+            Submode,
+            OpenTransportMode,
+            TypeOfCodespaceAssignment,
+            TypeOfValidity,
+            PurposeOfGrouping,
+            Branding,
+            DataSource,
+            TypeOfRetailDevice,
+            CustomerAccountStatus,
+            TypeOfCustomerAccount,
+            TypeOfFareContractEntry,
+            TypeOfFareContract,
+            TypeOfTravelDocument,
+            TypeOfSalesOfferPackage,
+            TypeOfFareProduct,
+            TypeOfFareStructureElement,
+            TypeOfTariff,
+            TypeOfAccessRightAssignment,
+            TypeOfFareStructureFactor,
+            TypeOfFlexibleService,
+            TypeOfTimeDemandType,
+            TypeOfPassengerInformationEquipment,
+            TypeOfCongestion,
+            TypeOfJourneyPattern,
+            TypeOfLine,
+            TypeOfActivation,
+            TypeOfDeliveryVariant,
+            TypeOfNotice,
+            TypeOfFacility,
+            TypeOfService,
+            TypeOfEquipment,
+            TypeOfFeature,
+            TypeOfLinkSequence,
+            TypeOfPlace,
+            TypeOfTransfer,
+            TypeOfOperation,
+            TypeOfOrganisationPart,
+            TypeOfOrganisation,
+            TypeOfZone,
+            TypeOfLink,
+            TypeOfPoint,
+            TypeOfProjection,
+            TypeOfFrame,
+            TypeOfResponsibilityRole,
+            TypeOfEntity,
+            TypeOfVersion,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -400,5 +469,5 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

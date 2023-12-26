@@ -9,6 +9,7 @@ class AirPricingInfoRef:
     """
     Reference to a AirPricing from a shared list.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class AirPricingInfoRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

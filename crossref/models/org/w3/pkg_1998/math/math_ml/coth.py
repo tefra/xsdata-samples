@@ -15,5 +15,5 @@ class Coth:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

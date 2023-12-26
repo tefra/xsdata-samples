@@ -34,6 +34,7 @@ class OtherHeiIdValue(Enum):
         future, it also MAY contain other similar identifiers, if the
         European Commission decides to replace ECHE numbers with such.
     """
+
     PREVIOUS_SCHAC = "previous-schac"
     PIC = "pic"
     ERASMUS = "erasmus"
@@ -62,6 +63,7 @@ class ApisImplemented:
         common-types.xsd schema: https://github.com/erasmus-without-
         paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd
     """
+
     class Meta:
         name = "apis-implemented"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -71,7 +73,7 @@ class ApisImplemented:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -82,6 +84,7 @@ class Empty:
     See:
     http://stackoverflow.com/questions/20751782/
     """
+
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
@@ -118,6 +121,7 @@ class ManifestApiEntryBase:
         API, which has not been officially released yet and doesn't have
         any version number yet.
     """
+
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
@@ -128,7 +132,7 @@ class ManifestApiEntryBase:
             "type": "Element",
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
             "pattern": r"[^@]+@[^.]+\..+",
-        }
+        },
     )
     admin_notes: Optional[str] = field(
         default=None,
@@ -136,7 +140,7 @@ class ManifestApiEntryBase:
             "name": "admin-notes",
             "type": "Element",
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
@@ -144,7 +148,7 @@ class ManifestApiEntryBase:
             "type": "Attribute",
             "required": True,
             "pattern": r"[0-9]+\.[0-9]+\.[0-9]+",
-        }
+        },
     )
 
 
@@ -157,6 +161,7 @@ class AdminEmail:
     being used in multiple schemas throughout the EWP project (most
     notably, various sections of the manifest file).
     """
+
     class Meta:
         name = "admin-email"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
@@ -166,7 +171,7 @@ class AdminEmail:
         metadata={
             "required": True,
             "pattern": r"[^@]+@[^.]+\..+",
-        }
+        },
     )
 
 
@@ -178,6 +183,7 @@ class AdminNotes:
     being used in multiple schemas throughout the EWP project (most
     notably, various sections of the manifest file).
     """
+
     class Meta:
         name = "admin-notes"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
@@ -186,7 +192,7 @@ class AdminNotes:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
 
 
@@ -198,6 +204,7 @@ class OtherHeiId:
         types provided in the enumeration (case sensitive), but custom
         identifier types are also allowed.
     """
+
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
@@ -205,7 +212,7 @@ class OtherHeiId:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: Optional[OtherHeiIdValue] = field(
         default=None,
@@ -213,7 +220,7 @@ class OtherHeiId:
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -233,6 +240,7 @@ class HttpwithOptionalLang:
         should expect the website content to be in. Also see comments on
         xml:lang attribute in StringWithOptionalLang type.
     """
+
     class Meta:
         name = "HTTPWithOptionalLang"
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
@@ -242,14 +250,14 @@ class HttpwithOptionalLang:
         metadata={
             "required": True,
             "pattern": r"https?://.+",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
 
 
@@ -265,6 +273,7 @@ class MultilineStringWithOptionalLang:
     :ivar lang: Also see comments on xml:lang attribute in
         StringWithOptionalLang type.
     """
+
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
@@ -272,14 +281,14 @@ class MultilineStringWithOptionalLang:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
 
 
@@ -302,6 +311,7 @@ class StringWithOptionalLang:
         tag in context of EWP here: https://github.com/erasmus-without-
         paper/ewp-specs-architecture/issues/11
     """
+
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
@@ -309,14 +319,14 @@ class StringWithOptionalLang:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
 
 
@@ -350,6 +360,7 @@ class Hei:
         add to their manifest (acquiring them manually is usually quite
         simple).
     """
+
     class Meta:
         name = "hei"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -359,21 +370,21 @@ class Hei:
         metadata={
             "name": "other-id",
             "type": "Element",
-        }
+        },
     )
     name: List[StringWithOptionalLang] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -408,6 +419,7 @@ class ErrorResponse:
         change.''' User messages MAY be provided in multiple languages.
         English SHOULD be among them.
     """
+
     class Meta:
         name = "error-response"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
@@ -418,14 +430,14 @@ class ErrorResponse:
             "name": "developer-message",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     user_message: List[MultilineStringWithOptionalLang] = field(
         default_factory=list,
         metadata={
             "name": "user-message",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -451,6 +463,7 @@ class SuccessUserMessage(MultilineStringWithOptionalLang):
     order to allow servers to provide the message in multiple languages. It is
     RECOMMENDED for the server to provide it at least in English.
     """
+
     class Meta:
         name = "success-user-message"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
@@ -528,6 +541,7 @@ class Host:
         reason, your credentials are not being imported, and you're not
         sure why, please contact the Registry Service administrators.
     """
+
     class Meta:
         name = "host"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
@@ -539,7 +553,7 @@ class Host:
             "type": "Element",
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
             "pattern": r"[^@]+@[^.]+\..+",
-        }
+        },
     )
     admin_notes: Optional[str] = field(
         default=None,
@@ -547,7 +561,7 @@ class Host:
             "name": "admin-notes",
             "type": "Element",
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
-        }
+        },
     )
     apis_implemented: Optional[ApisImplemented] = field(
         default=None,
@@ -555,28 +569,28 @@ class Host:
             "name": "apis-implemented",
             "type": "Element",
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1",
-        }
+        },
     )
     institutions_covered: Optional["Host.InstitutionsCovered"] = field(
         default=None,
         metadata={
             "name": "institutions-covered",
             "type": "Element",
-        }
+        },
     )
     client_credentials_in_use: Optional["Host.ClientCredentialsInUse"] = field(
         default=None,
         metadata={
             "name": "client-credentials-in-use",
             "type": "Element",
-        }
+        },
     )
     server_credentials_in_use: Optional["Host.ServerCredentialsInUse"] = field(
         default=None,
         metadata={
             "name": "server-credentials-in-use",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -586,7 +600,7 @@ class Host:
             metadata={
                 "type": "Element",
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1",
-            }
+            },
         )
 
     @dataclass
@@ -605,12 +619,13 @@ class Host:
             compromised, you MUST immediately remove all public keys
             related to this key from your manifest.
         """
+
         certificate: List[bytes] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
                 "format": "base64",
-            }
+            },
         )
         rsa_public_key: List[bytes] = field(
             default_factory=list,
@@ -618,7 +633,7 @@ class Host:
                 "name": "rsa-public-key",
                 "type": "Element",
                 "format": "base64",
-            }
+            },
         )
 
     @dataclass
@@ -631,13 +646,14 @@ class Host:
             compromised, you MUST immediately remove all public keys
             related to this key from your manifest.
         """
+
         rsa_public_key: List[bytes] = field(
             default_factory=list,
             metadata={
                 "name": "rsa-public-key",
                 "type": "Element",
                 "format": "base64",
-            }
+            },
         )
 
 
@@ -664,6 +680,7 @@ class Catalogue:
         that (and reduce the size of the catalogue response), we publish
         these elements in an entirely separate `binaries` section.
     """
+
     class Meta:
         name = "catalogue"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
@@ -673,20 +690,20 @@ class Catalogue:
         metadata={
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
     institutions: Optional["Catalogue.Institutions"] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-        }
+        },
     )
     binaries: Optional["Catalogue.Binaries"] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -728,6 +745,7 @@ class Catalogue:
             the one used in the Discovery Manifest API (it has the same
             name, but a different namespace and contents).
         """
+
         admin_email: List[str] = field(
             default_factory=list,
             metadata={
@@ -735,7 +753,7 @@ class Catalogue:
                 "type": "Element",
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
                 "pattern": r"[^@]+@[^.]+\..+",
-            }
+            },
         )
         admin_notes: Optional[str] = field(
             default=None,
@@ -743,35 +761,41 @@ class Catalogue:
                 "name": "admin-notes",
                 "type": "Element",
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
-            }
+            },
         )
         apis_implemented: Optional[ApisImplemented] = field(
             default=None,
             metadata={
                 "name": "apis-implemented",
                 "type": "Element",
-            }
+            },
         )
-        institutions_covered: Optional["Catalogue.Host.InstitutionsCovered"] = field(
+        institutions_covered: Optional[
+            "Catalogue.Host.InstitutionsCovered"
+        ] = field(
             default=None,
             metadata={
                 "name": "institutions-covered",
                 "type": "Element",
-            }
+            },
         )
-        client_credentials_in_use: Optional["Catalogue.Host.ClientCredentialsInUse"] = field(
+        client_credentials_in_use: Optional[
+            "Catalogue.Host.ClientCredentialsInUse"
+        ] = field(
             default=None,
             metadata={
                 "name": "client-credentials-in-use",
                 "type": "Element",
-            }
+            },
         )
-        server_credentials_in_use: Optional["Catalogue.Host.ServerCredentialsInUse"] = field(
+        server_credentials_in_use: Optional[
+            "Catalogue.Host.ServerCredentialsInUse"
+        ] = field(
             default=None,
             metadata={
                 "name": "server-credentials-in-use",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -782,12 +806,13 @@ class Catalogue:
                 attached mapping (see `institutions` element described
                 below).
             """
+
             hei_id: List[str] = field(
                 default_factory=list,
                 metadata={
                     "name": "hei-id",
                     "type": "Element",
-                }
+                },
             )
 
         @dataclass
@@ -818,18 +843,23 @@ class Catalogue:
                 here. Instead, you can look up it's SHA-256 digest in
                 the `binaries` section below.
             """
-            certificate: List["Catalogue.Host.ClientCredentialsInUse.Certificate"] = field(
+
+            certificate: List[
+                "Catalogue.Host.ClientCredentialsInUse.Certificate"
+            ] = field(
                 default_factory=list,
                 metadata={
                     "type": "Element",
-                }
+                },
             )
-            rsa_public_key: List["Catalogue.Host.ClientCredentialsInUse.RsaPublicKey"] = field(
+            rsa_public_key: List[
+                "Catalogue.Host.ClientCredentialsInUse.RsaPublicKey"
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "rsa-public-key",
                     "type": "Element",
-                }
+                },
             )
 
             @dataclass
@@ -837,6 +867,7 @@ class Catalogue:
                 """
                 :ivar sha_256: Certificate's SHA-256 digest (in HEX).
                 """
+
                 sha_256: Optional[str] = field(
                     default=None,
                     metadata={
@@ -844,7 +875,7 @@ class Catalogue:
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9a-f]{64}",
-                    }
+                    },
                 )
 
             @dataclass
@@ -852,6 +883,7 @@ class Catalogue:
                 """
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
+
                 sha_256: Optional[str] = field(
                     default=None,
                     metadata={
@@ -859,7 +891,7 @@ class Catalogue:
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9a-f]{64}",
-                    }
+                    },
                 )
 
         @dataclass
@@ -883,12 +915,15 @@ class Catalogue:
                 content is not included here. Instead, you can look up
                 it's SHA-256 digest in the `binaries` section below.
             """
-            rsa_public_key: List["Catalogue.Host.ServerCredentialsInUse.RsaPublicKey"] = field(
+
+            rsa_public_key: List[
+                "Catalogue.Host.ServerCredentialsInUse.RsaPublicKey"
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "rsa-public-key",
                     "type": "Element",
-                }
+                },
             )
 
             @dataclass
@@ -896,6 +931,7 @@ class Catalogue:
                 """
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
+
                 sha_256: Optional[str] = field(
                     default=None,
                     metadata={
@@ -903,7 +939,7 @@ class Catalogue:
                         "type": "Attribute",
                         "required": True,
                         "pattern": r"[0-9a-f]{64}",
-                    }
+                    },
                 )
 
     @dataclass
@@ -912,7 +948,7 @@ class Catalogue:
             default_factory=list,
             metadata={
                 "type": "Element",
-            }
+            },
         )
 
     @dataclass
@@ -921,12 +957,13 @@ class Catalogue:
         :ivar rsa_public_key: Contains base64-encoded binary content of
             RSA public key.
         """
+
         rsa_public_key: List["Catalogue.Binaries.RsaPublicKey"] = field(
             default_factory=list,
             metadata={
                 "name": "rsa-public-key",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -941,12 +978,13 @@ class Catalogue:
                 by the clients, and to make it easier for manual
                 matching by humans when debugging XML).
             """
+
             value: Optional[bytes] = field(
                 default=None,
                 metadata={
                     "required": True,
                     "format": "base64",
-                }
+                },
             )
             sha_256: Optional[str] = field(
                 default=None,
@@ -955,7 +993,7 @@ class Catalogue:
                     "type": "Attribute",
                     "required": True,
                     "pattern": r"[0-9a-f]{64}",
-                }
+                },
             )
 
 
@@ -970,6 +1008,7 @@ class Manifest:
         (this is the primary difference between v4 and v5 of Discovery
         API).
     """
+
     class Meta:
         name = "manifest"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-discovery/tree/stable-v5"
@@ -978,5 +1017,5 @@ class Manifest:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )

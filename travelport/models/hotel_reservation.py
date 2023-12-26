@@ -17,8 +17,12 @@ from travelport.models.phone_number_1 import PhoneNumber1
 from travelport.models.promotion_code import PromotionCode
 from travelport.models.reservation_name_1 import ReservationName1
 from travelport.models.third_party_information_1 import ThirdPartyInformation1
-from travelport.models.type_adapted_room_guest_allocation import TypeAdaptedRoomGuestAllocation
-from travelport.models.type_hotel_rate_description import TypeHotelRateDescription
+from travelport.models.type_adapted_room_guest_allocation import (
+    TypeAdaptedRoomGuestAllocation,
+)
+from travelport.models.type_hotel_rate_description import (
+    TypeHotelRateDescription,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -76,6 +80,7 @@ class HotelReservation(BaseReservation1):
     passive_provider_reservation_info_ref
         Passive Provider reservation reference key.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -86,7 +91,7 @@ class HotelReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     reservation_name: None | ReservationName1 = field(
         default=None,
@@ -94,7 +99,7 @@ class HotelReservation(BaseReservation1):
             "name": "ReservationName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     third_party_information: None | ThirdPartyInformation1 = field(
         default=None,
@@ -102,7 +107,7 @@ class HotelReservation(BaseReservation1):
             "name": "ThirdPartyInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     email: list[Email1] = field(
         default_factory=list,
@@ -111,7 +116,7 @@ class HotelReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -120,7 +125,7 @@ class HotelReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_property: None | HotelProperty = field(
         default=None,
@@ -128,7 +133,7 @@ class HotelReservation(BaseReservation1):
             "name": "HotelProperty",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
         default_factory=list,
@@ -137,7 +142,7 @@ class HotelReservation(BaseReservation1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -145,7 +150,7 @@ class HotelReservation(BaseReservation1):
             "name": "HotelStay",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     hotel_special_request: None | str = field(
         default=None,
@@ -153,7 +158,7 @@ class HotelReservation(BaseReservation1):
             "name": "HotelSpecialRequest",
             "type": "Element",
             "max_length": 250,
-        }
+        },
     )
     guarantee: None | Guarantee1 = field(
         default=None,
@@ -161,14 +166,14 @@ class HotelReservation(BaseReservation1):
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     promotion_code: None | PromotionCode = field(
         default=None,
         metadata={
             "name": "PromotionCode",
             "type": "Element",
-        }
+        },
     )
     booking_source: None | BookingSource1 = field(
         default=None,
@@ -176,7 +181,7 @@ class HotelReservation(BaseReservation1):
             "name": "BookingSource",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -184,14 +189,14 @@ class HotelReservation(BaseReservation1):
             "name": "HotelBedding",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     guest_information: None | GuestInformation = field(
         default=None,
         metadata={
             "name": "GuestInformation",
             "type": "Element",
-        }
+        },
     )
     associated_remark: list[AssociatedRemark3] = field(
         default_factory=list,
@@ -199,7 +204,7 @@ class HotelReservation(BaseReservation1):
             "name": "AssociatedRemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     sell_message: list[str] = field(
         default_factory=list,
@@ -208,28 +213,30 @@ class HotelReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_commission: None | str = field(
         default=None,
         metadata={
             "name": "HotelCommission",
             "type": "Element",
-        }
+        },
     )
     cancel_info: None | CancelInfo = field(
         default=None,
         metadata={
             "name": "CancelInfo",
             "type": "Element",
-        }
+        },
     )
-    total_reservation_price: None | HotelReservation.TotalReservationPrice = field(
-        default=None,
-        metadata={
-            "name": "TotalReservationPrice",
-            "type": "Element",
-        }
+    total_reservation_price: None | HotelReservation.TotalReservationPrice = (
+        field(
+            default=None,
+            metadata={
+                "name": "TotalReservationPrice",
+                "type": "Element",
+            },
+        )
     )
     hotel_detail_item: list[HotelDetailItem] = field(
         default_factory=list,
@@ -237,14 +244,14 @@ class HotelReservation(BaseReservation1):
             "name": "HotelDetailItem",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     adapted_room_guest_allocation: None | HotelReservation.AdaptedRoomGuestAllocation = field(
         default=None,
         metadata={
             "name": "AdaptedRoomGuestAllocation",
             "type": "Element",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -252,35 +259,35 @@ class HotelReservation(BaseReservation1):
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     booking_confirmation: None | str = field(
         default=None,
         metadata={
             "name": "BookingConfirmation",
             "type": "Attribute",
-        }
+        },
     )
     cancel_confirmation: None | str = field(
         default=None,
         metadata={
             "name": "CancelConfirmation",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
-        }
+        },
     )
     provider_segment_order: None | int = field(
         default=None,
@@ -288,14 +295,14 @@ class HotelReservation(BaseReservation1):
             "name": "ProviderSegmentOrder",
             "type": "Attribute",
             "max_inclusive": 999,
-        }
+        },
     )
     passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -311,27 +318,28 @@ class HotelReservation(BaseReservation1):
             The approximate amount of the total hotel price, including fees,
             in another currency.
         """
+
         room_rate_description: list[TypeHotelRateDescription] = field(
             default_factory=list,
             metadata={
                 "name": "RoomRateDescription",
                 "type": "Element",
                 "max_occurs": 99,
-            }
+            },
         )
         total_price: None | str = field(
             default=None,
             metadata={
                 "name": "TotalPrice",
                 "type": "Attribute",
-            }
+            },
         )
         approx_total_price: None | str = field(
             default=None,
             metadata={
                 "name": "ApproxTotalPrice",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -344,6 +352,7 @@ class HotelReservation(BaseReservation1):
             rooms in the request. Maximum number of rooms may vary by
             supplier or aggregator.
         """
+
         room: list[TypeAdaptedRoomGuestAllocation] = field(
             default_factory=list,
             metadata={
@@ -351,5 +360,5 @@ class HotelReservation(BaseReservation1):
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 9,
-            }
+            },
         )

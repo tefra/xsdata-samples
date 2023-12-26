@@ -14,5 +14,6 @@ class ModificationTypeEnumSimple(Enum):
         the object. Usually this means e.g. that not all derived
         artifacts need to be regenerated (e.g. code generation).
     """
+
     CONTENT_RELATED = "CONTENT-RELATED"
     DOC_RELATED = "DOC-RELATED"

@@ -14,6 +14,7 @@ class TagRef1:
     id
         The Tag ID.
     """
+
     class Meta:
         name = "TagRef"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -24,5 +25,5 @@ class TagRef1:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

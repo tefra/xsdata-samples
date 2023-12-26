@@ -58,6 +58,7 @@ class HotelDetailsModifiers:
     max_wait
         Maximum wait time in milliseconds for hotel detail results.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -67,7 +68,7 @@ class HotelDetailsModifiers:
             "name": "PermittedProviders",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard1] = field(
         default_factory=list,
@@ -76,7 +77,7 @@ class HotelDetailsModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 4,
-        }
+        },
     )
     corporate_discount_id: list[CorporateDiscountId1] = field(
         default_factory=list,
@@ -85,7 +86,7 @@ class HotelDetailsModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -93,14 +94,14 @@ class HotelDetailsModifiers:
             "name": "HotelStay",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     number_of_children: None | NumberOfChildren = field(
         default=None,
         metadata={
             "name": "NumberOfChildren",
             "type": "Element",
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -108,7 +109,7 @@ class HotelDetailsModifiers:
             "name": "HotelBedding",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     rate_category: list[int] = field(
         default_factory=list,
@@ -116,42 +117,42 @@ class HotelDetailsModifiers:
             "name": "RateCategory",
             "type": "Element",
             "max_occurs": 8,
-        }
+        },
     )
     booking_guest_information: None | BookingGuestInformation = field(
         default=None,
         metadata={
             "name": "BookingGuestInformation",
             "type": "Element",
-        }
+        },
     )
     number_of_adults: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfAdults",
             "type": "Attribute",
-        }
+        },
     )
     rate_rule_detail: TypeRateRuleDetail = field(
         default=TypeRateRuleDetail.NONE,
         metadata={
             "name": "RateRuleDetail",
             "type": "Attribute",
-        }
+        },
     )
     number_of_rooms: int = field(
         default=1,
         metadata={
             "name": "NumberOfRooms",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     preferred_currency: None | str = field(
         default=None,
@@ -159,26 +160,26 @@ class HotelDetailsModifiers:
             "name": "PreferredCurrency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     total_occupants: None | int = field(
         default=None,
         metadata={
             "name": "TotalOccupants",
             "type": "Attribute",
-        }
+        },
     )
     process_all_nego_rates_ind: bool = field(
         default=False,
         metadata={
             "name": "ProcessAllNegoRatesInd",
             "type": "Attribute",
-        }
+        },
     )
     max_wait: None | int = field(
         default=None,
         metadata={
             "name": "MaxWait",
             "type": "Attribute",
-        }
+        },
     )

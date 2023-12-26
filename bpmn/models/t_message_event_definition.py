@@ -17,12 +17,12 @@ class TMessageEventDefinition(TEventDefinition):
             "name": "operationRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     message_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "messageRef",
             "type": "Attribute",
-        }
+        },
     )

@@ -17,6 +17,7 @@ class SavedTripSearchModifiers(BaseSearchModifiers):
     exclude_urassociated
         Exclude SavedTrips associated with a UniversalRecord.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -25,12 +26,12 @@ class SavedTripSearchModifiers(BaseSearchModifiers):
         metadata={
             "name": "SavedTripName",
             "type": "Attribute",
-        }
+        },
     )
     exclude_urassociated: bool = field(
         default=True,
         metadata={
             "name": "ExcludeURAssociated",
             "type": "Attribute",
-        }
+        },
     )

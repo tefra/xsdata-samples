@@ -16,6 +16,7 @@ class InvolvementRolesEnum(Enum):
     :cvar VEHICLE_PASSENGER: Vehicle passenger.
     :cvar WITNESS: Witness.
     """
+
     CYCLIST = "cyclist"
     PEDESTRIAN = "pedestrian"
     UNKNOWN = "unknown"

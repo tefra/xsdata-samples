@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_space_ref import AccessSpaceRef
-from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .boarding_position_ref import BoardingPositionRef
 from .multilingual_string import MultilingualString
 from .operator_ref import OperatorRef
@@ -31,7 +33,7 @@ class SiteConnectionEndStructure:
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_area_ref: Optional[StopAreaRefStructure] = field(
         default=None,
@@ -39,7 +41,7 @@ class SiteConnectionEndStructure:
             "name": "StopAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     scheduled_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -47,9 +49,25 @@ class SiteConnectionEndStructure:
             "name": "ScheduledStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            StopPlaceRef,
+            AccessSpaceRef,
+            BoardingPositionRef,
+            QuayRef,
+            StopPlaceEntranceRef,
+            PointOfInterestRef,
+            PointOfInterestSpaceRef,
+            PointOfInterestEntranceRef,
+            ParkingRef,
+            ParkingAreaRef,
+            ParkingEntranceForVehiclesRef,
+            ParkingPassengerEntranceRef,
+            ParkingEntranceRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -121,9 +139,11 @@ class SiteConnectionEndStructure:
                 },
             ),
             "max_occurs": 5,
-        }
+        },
     )
-    operator_ref_or_operator_view: Optional[object] = field(
+    operator_ref_or_operator_view: Optional[
+        Union[OperatorRef, OperatorView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -139,7 +159,7 @@ class SiteConnectionEndStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -147,5 +167,5 @@ class SiteConnectionEndStructure:
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

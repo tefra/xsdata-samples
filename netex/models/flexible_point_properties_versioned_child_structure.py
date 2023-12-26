@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .beacon_point_ref import BeaconPointRef
@@ -26,7 +26,26 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexiblePointProperties_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            PointOnRouteRef,
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
+            PointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -112,7 +131,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     may_be_skipped: Optional[bool] = field(
         default=None,
@@ -120,7 +139,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "MayBeSkipped",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     on_main_route: Optional[bool] = field(
         default=None,
@@ -128,7 +147,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "OnMainRoute",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     point_standing_for_azone: Optional[bool] = field(
         default=None,
@@ -136,7 +155,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "PointStandingForAZone",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     zone_containing_stops: Optional[bool] = field(
         default=None,
@@ -144,5 +163,5 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "name": "ZoneContainingStops",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

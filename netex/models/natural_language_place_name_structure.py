@@ -13,12 +13,12 @@ class NaturalLanguagePlaceNameStructure:
             "required": True,
             "min_length": 1,
             "pattern": r"[^,\[\]\{\}\?$%\^=@#;:]+",
-        }
+        },
     )
     lang: Optional[LangValue] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )

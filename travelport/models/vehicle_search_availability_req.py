@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.base_vehicle_search_availability_req import BaseVehicleSearchAvailabilityReq
+from travelport.models.base_vehicle_search_availability_req import (
+    BaseVehicleSearchAvailabilityReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -31,6 +33,7 @@ class VehicleSearchAvailabilityReq(BaseVehicleSearchAvailabilityReq):
         Set indicator to true to retrieve the Rate Inclusion Details.
         Default False
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -39,28 +42,28 @@ class VehicleSearchAvailabilityReq(BaseVehicleSearchAvailabilityReq):
         metadata={
             "name": "ReturnMediaLinks",
             "type": "Attribute",
-        }
+        },
     )
     return_all_rates: bool = field(
         default=False,
         metadata={
             "name": "ReturnAllRates",
             "type": "Attribute",
-        }
+        },
     )
     return_approximate_total: bool = field(
         default=False,
         metadata={
             "name": "ReturnApproximateTotal",
             "type": "Attribute",
-        }
+        },
     )
     return_extra_rate_info: bool = field(
         default=False,
         metadata={
             "name": "ReturnExtraRateInfo",
             "type": "Attribute",
-        }
+        },
     )
     policy_reference: None | str = field(
         default=None,
@@ -69,12 +72,12 @@ class VehicleSearchAvailabilityReq(BaseVehicleSearchAvailabilityReq):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
     return_inclusion_details: bool = field(
         default=False,
         metadata={
             "name": "ReturnInclusionDetails",
             "type": "Attribute",
-        }
+        },
     )

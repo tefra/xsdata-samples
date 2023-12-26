@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.type_vehicle_location import TypeVehicleLocation
-from travelport.models.type_vehicle_vendor_location_type import TypeVehicleVendorLocationType
+from travelport.models.type_vehicle_vendor_location_type import (
+    TypeVehicleVendorLocationType,
+)
 from travelport.models.type_vendor_location_1 import TypeVendorLocation1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
@@ -19,6 +21,7 @@ class TypeVehicleVendorLocation(TypeVendorLocation1):
     type_value
         Pickup or Return
     """
+
     class Meta:
         name = "typeVehicleVendorLocation"
 
@@ -27,7 +30,7 @@ class TypeVehicleVendorLocation(TypeVendorLocation1):
         metadata={
             "name": "LocationType",
             "type": "Attribute",
-        }
+        },
     )
     location_code: None | str = field(
         default=None,
@@ -36,12 +39,12 @@ class TypeVehicleVendorLocation(TypeVendorLocation1):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     type_value: None | TypeVehicleVendorLocationType = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

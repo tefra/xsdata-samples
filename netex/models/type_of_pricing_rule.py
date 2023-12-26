@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .type_of_pricing_rule_version_structure import TypeOfPricingRuleVersionStructure
+from .type_of_pricing_rule_version_structure import (
+    TypeOfPricingRuleVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

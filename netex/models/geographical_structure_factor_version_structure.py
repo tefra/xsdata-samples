@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from .cell_versioned_child_structure import FareStructureFactorVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .geographical_interval_ref import GeographicalIntervalRef
@@ -12,11 +12,15 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStructure):
+class GeographicalStructureFactorVersionStructure(
+    FareStructureFactorVersionStructure
+):
     class Meta:
         name = "GeographicalStructureFactor_VersionStructure"
 
-    parking_tariff_ref_or_tariff_ref: Optional[object] = field(
+    parking_tariff_ref_or_tariff_ref: Optional[
+        Union[ParkingTariffRef, TariffRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -32,7 +36,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     geographical_interval_ref: Optional[GeographicalIntervalRef] = field(
         default=None,
@@ -40,7 +44,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
             "name": "GeographicalIntervalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     distance_matrix_element_ref: Optional[DistanceMatrixElementRef] = field(
         default=None,
@@ -48,7 +52,7 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
             "name": "DistanceMatrixElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     geographical_unit_ref: Optional[GeographicalUnitRef] = field(
         default=None,
@@ -56,9 +60,9 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
             "name": "GeographicalUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    number_of_units_or_amount_factor: Optional[object] = field(
+    number_of_units_or_amount_factor: Optional[Union[int, Decimal]] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -74,5 +78,5 @@ class GeographicalStructureFactorVersionStructure(FareStructureFactorVersionStru
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

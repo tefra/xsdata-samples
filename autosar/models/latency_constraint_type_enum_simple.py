@@ -14,5 +14,6 @@ class LatencyConstraintTypeEnumSimple(Enum):
         chain. Given a certain stimulus event, the reaction interval of
         the first response is constrained.
     """
+
     AGE = "AGE"
     REACTION = "REACTION"

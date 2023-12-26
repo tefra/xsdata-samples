@@ -17,6 +17,7 @@ class ExchangePenaltyInfo:
     maximum_change_fee
         Maximum change fee for changes  to the itinerary.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,7 +27,7 @@ class ExchangePenaltyInfo:
             "name": "PenaltyInformation",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ptc: None | str = field(
         default=None,
@@ -35,19 +36,19 @@ class ExchangePenaltyInfo:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     minimum_change_fee: None | str = field(
         default=None,
         metadata={
             "name": "MinimumChangeFee",
             "type": "Attribute",
-        }
+        },
     )
     maximum_change_fee: None | str = field(
         default=None,
         metadata={
             "name": "MaximumChangeFee",
             "type": "Attribute",
-        }
+        },
     )

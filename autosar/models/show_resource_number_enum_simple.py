@@ -10,5 +10,6 @@ class ShowResourceNumberEnumSimple(Enum):
     :cvar SHOW_NUMBER: The number of the target is rendered at the place
         of the reference.
     """
+
     NO_SHOW_NUMBER = "NO-SHOW-NUMBER"
     SHOW_NUMBER = "SHOW-NUMBER"

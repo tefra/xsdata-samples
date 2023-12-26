@@ -16,7 +16,7 @@ class VmsUnitVmsIndexVms:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms_index: Optional[int] = field(
         default=None,
@@ -24,5 +24,5 @@ class VmsUnitVmsIndexVms:
             "name": "vmsIndex",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

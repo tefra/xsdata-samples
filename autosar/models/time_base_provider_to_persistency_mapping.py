@@ -10,10 +10,14 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .persistency_deployment_element_subtypes_enum import PersistencyDeploymentElementSubtypesEnum
+from .persistency_deployment_element_subtypes_enum import (
+    PersistencyDeploymentElementSubtypesEnum,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .synchronized_time_base_provider_subtypes_enum import SynchronizedTimeBaseProviderSubtypesEnum
+from .synchronized_time_base_provider_subtypes_enum import (
+    SynchronizedTimeBaseProviderSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -85,6 +89,7 @@ class TimeBaseProviderToPersistencyMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TIME-BASE-PROVIDER-TO-PERSISTENCY-MAPPING"
 
@@ -95,15 +100,17 @@ class TimeBaseProviderToPersistencyMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TimeBaseProviderToPersistencyMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TimeBaseProviderToPersistencyMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -111,7 +118,7 @@ class TimeBaseProviderToPersistencyMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -119,7 +126,7 @@ class TimeBaseProviderToPersistencyMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -127,7 +134,7 @@ class TimeBaseProviderToPersistencyMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -135,7 +142,7 @@ class TimeBaseProviderToPersistencyMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -143,15 +150,17 @@ class TimeBaseProviderToPersistencyMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["TimeBaseProviderToPersistencyMapping.Annotations"] = field(
+    annotations: Optional[
+        "TimeBaseProviderToPersistencyMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -159,30 +168,34 @@ class TimeBaseProviderToPersistencyMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    persistency_deployment_element_ref: Optional["TimeBaseProviderToPersistencyMapping.PersistencyDeploymentElementRef"] = field(
+    persistency_deployment_element_ref: Optional[
+        "TimeBaseProviderToPersistencyMapping.PersistencyDeploymentElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PERSISTENCY-DEPLOYMENT-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    time_base_provider_ref: Optional["TimeBaseProviderToPersistencyMapping.TimeBaseProviderRef"] = field(
+    time_base_provider_ref: Optional[
+        "TimeBaseProviderToPersistencyMapping.TimeBaseProviderRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TIME-BASE-PROVIDER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -190,14 +203,14 @@ class TimeBaseProviderToPersistencyMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -208,7 +221,7 @@ class TimeBaseProviderToPersistencyMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -219,7 +232,7 @@ class TimeBaseProviderToPersistencyMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -230,7 +243,7 @@ class TimeBaseProviderToPersistencyMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -241,5 +254,5 @@ class TimeBaseProviderToPersistencyMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

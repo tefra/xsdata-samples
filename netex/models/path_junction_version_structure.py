@@ -24,7 +24,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "ParentZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_use: Optional[PublicUseEnumeration] = field(
         default=None,
@@ -32,7 +32,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "PublicUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     covered: Optional[CoveredEnumeration] = field(
         default=None,
@@ -40,7 +40,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "Covered",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gated: Optional[GatedEnumeration] = field(
         default=None,
@@ -48,7 +48,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "Gated",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lighting: Optional[LightingEnumeration] = field(
         default=None,
@@ -56,7 +56,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "Lighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     all_areas_wheelchair_accessible: Optional[bool] = field(
         default=None,
@@ -64,7 +64,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "AllAreasWheelchairAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     person_capacity: Optional[int] = field(
         default=None,
@@ -72,14 +72,14 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "PersonCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     facilities: Optional[SiteFacilitySetsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -87,7 +87,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     site_component_ref: Optional[SiteComponentRefStructure] = field(
         default=None,
@@ -95,5 +95,5 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "SiteComponentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

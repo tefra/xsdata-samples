@@ -21,6 +21,7 @@ class TypeTaggablePhone1(TypePhone1):
     priority_order
         Priority order associated with this Phone.
     """
+
     class Meta:
         name = "typeTaggablePhone"
 
@@ -30,14 +31,14 @@ class TypeTaggablePhone1(TypePhone1):
             "name": "TagRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     purpose: None | TypeContactPurpose1 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -46,5 +47,5 @@ class TypeTaggablePhone1(TypePhone1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

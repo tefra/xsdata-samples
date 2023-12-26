@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.parking_status_colour_mapping import ParkingStatusColourMapping
+from datexii.models.eu.datexii.v2.parking_status_colour_mapping import (
+    ParkingStatusColourMapping,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -55,13 +57,14 @@ class ParkingThresholds:
     :ivar parking_status_colour_mapping:
     :ivar parking_thresholds_extension:
     """
+
     almost_full_decreasing: Optional[int] = field(
         default=None,
         metadata={
             "name": "almostFullDecreasing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     almost_full_increasing: Optional[int] = field(
         default=None,
@@ -69,7 +72,7 @@ class ParkingThresholds:
             "name": "almostFullIncreasing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     entrance_full: Optional[int] = field(
         default=None,
@@ -77,7 +80,7 @@ class ParkingThresholds:
             "name": "entranceFull",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     full_decreasing: Optional[int] = field(
         default=None,
@@ -85,7 +88,7 @@ class ParkingThresholds:
             "name": "fullDecreasing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     full_increasing: Optional[int] = field(
         default=None,
@@ -93,14 +96,14 @@ class ParkingThresholds:
             "name": "fullIncreasing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     overcrowding: Optional[int] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     overcrowding_level1: Optional[int] = field(
         default=None,
@@ -108,7 +111,7 @@ class ParkingThresholds:
             "name": "overcrowdingLevel1",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     overcrowding_level2: Optional[int] = field(
         default=None,
@@ -116,7 +119,7 @@ class ParkingThresholds:
             "name": "overcrowdingLevel2",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_last_maximum_occupancy: Optional[int] = field(
         default=None,
@@ -124,7 +127,7 @@ class ParkingThresholds:
             "name": "parkingLastMaximumOccupancy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_status_colour_mapping: List[ParkingStatusColourMapping] = field(
         default_factory=list,
@@ -132,7 +135,7 @@ class ParkingThresholds:
             "name": "parkingStatusColourMapping",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_thresholds_extension: Optional[ExtensionType] = field(
         default=None,
@@ -140,5 +143,5 @@ class ParkingThresholds:
             "name": "parkingThresholdsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

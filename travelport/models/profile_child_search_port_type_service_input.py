@@ -16,14 +16,14 @@ class ProfileChildSearchPortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | ProfileChildSearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -34,5 +34,5 @@ class ProfileChildSearchPortTypeServiceInput:
                 "name": "ProfileChildSearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-            }
+            },
         )

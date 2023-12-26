@@ -64,6 +64,7 @@ class ObstructionTypeEnum(Enum):
         protected and may present a hazard to road users.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AIR_CRASH = "airCrash"
     CHILDREN_ON_ROADWAY = "childrenOnRoadway"
     CLEARANCE_WORK = "clearanceWork"
@@ -87,7 +88,9 @@ class ObstructionTypeEnum(Enum):
     SEVERE_FROST_DAMAGED_ROADWAY = "severeFrostDamagedRoadway"
     SHED_LOAD = "shedLoad"
     SNOW_AND_ICE_DEBRIS = "snowAndIceDebris"
-    SPILLAGE_OCCURRING_FROM_MOVING_VEHICLE = "spillageOccurringFromMovingVehicle"
+    SPILLAGE_OCCURRING_FROM_MOVING_VEHICLE = (
+        "spillageOccurringFromMovingVehicle"
+    )
     SPILLAGE_ON_THE_ROAD = "spillageOnTheRoad"
     UNPROTECTED_ACCIDENT_AREA = "unprotectedAccidentArea"
     OTHER = "other"

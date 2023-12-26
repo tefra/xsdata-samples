@@ -38,16 +38,19 @@ class FlexrayAbsolutelyScheduledTiming:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-ABSOLUTELY-SCHEDULED-TIMING"
 
-    communication_cycle: Optional["FlexrayAbsolutelyScheduledTiming.CommunicationCycle"] = field(
+    communication_cycle: Optional[
+        "FlexrayAbsolutelyScheduledTiming.CommunicationCycle"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     slot_id: Optional[PositiveInteger] = field(
         default=None,
@@ -55,14 +58,14 @@ class FlexrayAbsolutelyScheduledTiming:
             "name": "SLOT-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -70,7 +73,7 @@ class FlexrayAbsolutelyScheduledTiming:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -81,7 +84,7 @@ class FlexrayAbsolutelyScheduledTiming:
                 "name": "CYCLE-COUNTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         cycle_repetition: Optional[CycleRepetition] = field(
             default=None,
@@ -89,5 +92,5 @@ class FlexrayAbsolutelyScheduledTiming:
                 "name": "CYCLE-REPETITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -6,16 +6,24 @@ from datexii.models.eu.datexii.v2.contact import Contact
 from datexii.models.eu.datexii.v2.dimension import Dimension
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.group_of_locations import GroupOfLocations
-from datexii.models.eu.datexii.v2.group_of_parking_spaces_2 import GroupOfParkingSpaces2
+from datexii.models.eu.datexii.v2.group_of_parking_spaces_2 import (
+    GroupOfParkingSpaces2,
+)
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.occupancy_detection_type_enum import OccupancyDetectionTypeEnum
+from datexii.models.eu.datexii.v2.occupancy_detection_type_enum import (
+    OccupancyDetectionTypeEnum,
+)
 from datexii.models.eu.datexii.v2.parking_assignment import ParkingAssignment
-from datexii.models.eu.datexii.v2.parking_record_equipment_or_service_facility_index_parking_equipment_or_service_facility import ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility
+from datexii.models.eu.datexii.v2.parking_record_equipment_or_service_facility_index_parking_equipment_or_service_facility import (
+    ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility,
+)
 from datexii.models.eu.datexii.v2.parking_route import ParkingRoute
 from datexii.models.eu.datexii.v2.parking_space_2 import ParkingSpace2
 from datexii.models.eu.datexii.v2.parking_thresholds import ParkingThresholds
 from datexii.models.eu.datexii.v2.parking_vms import ParkingVMS
-from datexii.models.eu.datexii.v2.permits_and_prohibitions import PermitsAndProhibitions
+from datexii.models.eu.datexii.v2.permits_and_prohibitions import (
+    PermitsAndProhibitions,
+)
 from datexii.models.eu.datexii.v2.rgbcolour import RGBColour
 from datexii.models.eu.datexii.v2.tariffs_and_payment import TariffsAndPayment
 
@@ -110,13 +118,14 @@ class ParkingRecord:
     :ivar id:
     :ivar version:
     """
+
     parking_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "parkingName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_alias: List[MultilingualString] = field(
         default_factory=list,
@@ -124,7 +133,7 @@ class ParkingRecord:
             "name": "parkingAlias",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_description: Optional[MultilingualString] = field(
         default=None,
@@ -132,7 +141,7 @@ class ParkingRecord:
             "name": "parkingDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_record_version_time: Optional[XmlDateTime] = field(
         default=None,
@@ -141,7 +150,7 @@ class ParkingRecord:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_number_of_spaces: Optional[int] = field(
         default=None,
@@ -149,7 +158,7 @@ class ParkingRecord:
             "name": "parkingNumberOfSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_principal_number_of_spaces: Optional[int] = field(
         default=None,
@@ -157,7 +166,7 @@ class ParkingRecord:
             "name": "parkingPrincipalNumberOfSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     maximum_parking_duration: Optional[float] = field(
         default=None,
@@ -165,7 +174,7 @@ class ParkingRecord:
             "name": "maximumParkingDuration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     photo_url: Optional[str] = field(
         default=None,
@@ -173,7 +182,7 @@ class ParkingRecord:
             "name": "photoUrl",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     url_link_address: Optional[str] = field(
         default=None,
@@ -181,7 +190,7 @@ class ParkingRecord:
             "name": "urlLinkAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_occupany_detection_type: List[OccupancyDetectionTypeEnum] = field(
         default_factory=list,
@@ -189,7 +198,7 @@ class ParkingRecord:
             "name": "parkingOccupanyDetectionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     emergency_contact: List[Contact] = field(
         default_factory=list,
@@ -197,14 +206,14 @@ class ParkingRecord:
             "name": "emergencyContact",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     owner: List[Contact] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     responisble_authority: List[Contact] = field(
         default_factory=list,
@@ -212,7 +221,7 @@ class ParkingRecord:
             "name": "responisbleAuthority",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     security_service: List[Contact] = field(
         default_factory=list,
@@ -220,14 +229,14 @@ class ParkingRecord:
             "name": "securityService",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     operator: List[Contact] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     service_partner: List[Contact] = field(
         default_factory=list,
@@ -235,7 +244,7 @@ class ParkingRecord:
             "name": "servicePartner",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_vms: List[ParkingVMS] = field(
         default_factory=list,
@@ -243,7 +252,7 @@ class ParkingRecord:
             "name": "parkingVMS",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_location: Optional[GroupOfLocations] = field(
         default=None,
@@ -252,7 +261,7 @@ class ParkingRecord:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_route: List[ParkingRoute] = field(
         default_factory=list,
@@ -260,7 +269,7 @@ class ParkingRecord:
             "name": "parkingRoute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_colour: Optional[RGBColour] = field(
         default=None,
@@ -268,7 +277,7 @@ class ParkingRecord:
             "name": "parkingColour",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     only_assigned_parking: Optional[ParkingAssignment] = field(
         default=None,
@@ -276,7 +285,7 @@ class ParkingRecord:
             "name": "onlyAssignedParking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     assigned_parking_among_others: Optional[ParkingAssignment] = field(
         default=None,
@@ -284,7 +293,7 @@ class ParkingRecord:
             "name": "assignedParkingAmongOthers",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     prohibited_parking: Optional[ParkingAssignment] = field(
         default=None,
@@ -292,7 +301,7 @@ class ParkingRecord:
             "name": "prohibitedParking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     tariffs_and_payment: Optional[TariffsAndPayment] = field(
         default=None,
@@ -300,15 +309,17 @@ class ParkingRecord:
             "name": "tariffsAndPayment",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_equipment_or_service_facility: List[ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility] = field(
+    parking_equipment_or_service_facility: List[
+        ParkingRecordEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingEquipmentOrServiceFacility",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_space: List[ParkingSpace2] = field(
         default_factory=list,
@@ -316,7 +327,7 @@ class ParkingRecord:
             "name": "parkingSpace",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_parking_spaces: List[GroupOfParkingSpaces2] = field(
         default_factory=list,
@@ -324,7 +335,7 @@ class ParkingRecord:
             "name": "groupOfParkingSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_thresholds: Optional[ParkingThresholds] = field(
         default=None,
@@ -332,7 +343,7 @@ class ParkingRecord:
             "name": "parkingThresholds",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     permits_and_prohibitions: List[PermitsAndProhibitions] = field(
         default_factory=list,
@@ -340,7 +351,7 @@ class ParkingRecord:
             "name": "permitsAndProhibitions",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     emergency_assembly_point: Optional[GroupOfLocations] = field(
         default=None,
@@ -348,7 +359,7 @@ class ParkingRecord:
             "name": "emergencyAssemblyPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     entire_area: Optional[Area] = field(
         default=None,
@@ -356,7 +367,7 @@ class ParkingRecord:
             "name": "entireArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_record_dimension: Optional[Dimension] = field(
         default=None,
@@ -364,7 +375,7 @@ class ParkingRecord:
             "name": "parkingRecordDimension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_record_extension: Optional[ExtensionType] = field(
         default=None,
@@ -372,19 +383,19 @@ class ParkingRecord:
             "name": "parkingRecordExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

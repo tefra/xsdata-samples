@@ -17,7 +17,7 @@ class SubscriptionResponseStructure(ResponseEndpointStructure):
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "min_occurs": 1,
-        }
+        },
     )
     subscription_manager_address: Optional[str] = field(
         default=None,
@@ -25,7 +25,7 @@ class SubscriptionResponseStructure(ResponseEndpointStructure):
             "name": "SubscriptionManagerAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     service_started_time: Optional[XmlDateTime] = field(
         default=None,
@@ -33,7 +33,7 @@ class SubscriptionResponseStructure(ResponseEndpointStructure):
             "name": "ServiceStartedTime",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     extensions: Optional[Extensions1] = field(
         default=None,
@@ -41,5 +41,5 @@ class SubscriptionResponseStructure(ResponseEndpointStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

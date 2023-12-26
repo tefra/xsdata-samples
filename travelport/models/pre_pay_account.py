@@ -26,6 +26,7 @@ class PrePayAccount:
     expire_date
         Expiry date for the pre pay account
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -34,47 +35,47 @@ class PrePayAccount:
         metadata={
             "name": "CreditSummary",
             "type": "Element",
-        }
+        },
     )
     pre_pay_price_info: None | PrePayPriceInfo = field(
         default=None,
         metadata={
             "name": "PrePayPriceInfo",
             "type": "Element",
-        }
+        },
     )
     program_title: None | str = field(
         default=None,
         metadata={
             "name": "ProgramTitle",
             "type": "Attribute",
-        }
+        },
     )
     certificate_number: None | str = field(
         default=None,
         metadata={
             "name": "CertificateNumber",
             "type": "Attribute",
-        }
+        },
     )
     program_name: None | str = field(
         default=None,
         metadata={
             "name": "ProgramName",
             "type": "Attribute",
-        }
+        },
     )
     effective_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
-        }
+        },
     )
     expire_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ExpireDate",
             "type": "Attribute",
-        }
+        },
     )

@@ -14,7 +14,7 @@ class AbstractSubscriptionRequestStructure(RequestStructure):
             "name": "ConsumerAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscription_filter_identifier: Optional[str] = field(
         default=None,
@@ -22,7 +22,7 @@ class AbstractSubscriptionRequestStructure(RequestStructure):
             "name": "SubscriptionFilterIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscription_context: Optional[SubscriptionContextStructure] = field(
         default=None,
@@ -30,5 +30,5 @@ class AbstractSubscriptionRequestStructure(RequestStructure):
             "name": "SubscriptionContext",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

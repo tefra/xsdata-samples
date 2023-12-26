@@ -9,5 +9,6 @@ class EthernetSwitchVlanIngressTagEnumSimple(Enum):
     :cvar FORWARD_AS_IS: Forward with the same VLAN as received. Also
         untagged frames will be forwarded as untagged.
     """
+
     DROP_UNTAGGED = "DROP-UNTAGGED"
     FORWARD_AS_IS = "FORWARD-AS-IS"

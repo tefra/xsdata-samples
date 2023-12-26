@@ -28,31 +28,36 @@ class PortInterfaceBlueprintMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PORT-INTERFACE-BLUEPRINT-MAPPING"
 
-    port_interface_blueprint_ref: Optional["PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef"] = field(
+    port_interface_blueprint_ref: Optional[
+        "PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-BLUEPRINT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    derived_port_interface_ref: Optional["PortInterfaceBlueprintMapping.DerivedPortInterfaceRef"] = field(
+    derived_port_interface_ref: Optional[
+        "PortInterfaceBlueprintMapping.DerivedPortInterfaceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DERIVED-PORT-INTERFACE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -60,7 +65,7 @@ class PortInterfaceBlueprintMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -71,7 +76,7 @@ class PortInterfaceBlueprintMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -82,5 +87,5 @@ class PortInterfaceBlueprintMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

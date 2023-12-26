@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.optional_service_applicability_type_1 import OptionalServiceApplicabilityType1
+from travelport.models.optional_service_applicability_type_1 import (
+    OptionalServiceApplicabilityType1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
@@ -22,6 +24,7 @@ class OptionalServiceApplicationLimitType1:
     minimum_quantity
         Indicates the minimum number of the option that can be selected.
     """
+
     class Meta:
         name = "OptionalServiceApplicationLimitType"
 
@@ -31,14 +34,14 @@ class OptionalServiceApplicationLimitType1:
             "name": "ApplicableLevel",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_defined_applicable_levels: None | str = field(
         default=None,
         metadata={
             "name": "ProviderDefinedApplicableLevels",
             "type": "Attribute",
-        }
+        },
     )
     maximum_quantity: None | int = field(
         default=None,
@@ -46,12 +49,12 @@ class OptionalServiceApplicationLimitType1:
             "name": "MaximumQuantity",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     minimum_quantity: None | int = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
             "type": "Attribute",
-        }
+        },
     )

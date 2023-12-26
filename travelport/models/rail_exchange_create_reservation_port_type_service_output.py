@@ -12,12 +12,14 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | RailExchangeCreateReservationPortTypeServiceOutput.Body = field(
-        default=None,
-        metadata={
-            "name": "Body",
-            "type": "Element",
-        }
+    body: None | RailExchangeCreateReservationPortTypeServiceOutput.Body = (
+        field(
+            default=None,
+            metadata={
+                "name": "Body",
+                "type": "Element",
+            },
+        )
     )
 
     @dataclass
@@ -28,14 +30,14 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
                 "name": "RailExchangeRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/rail_v52_0",
-            }
+            },
         )
         fault: None | RailExchangeCreateReservationPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +47,28 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | RailExchangeCreateReservationPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +79,5 @@ class RailExchangeCreateReservationPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

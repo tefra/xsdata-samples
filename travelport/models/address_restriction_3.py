@@ -18,5 +18,5 @@ class AddressRestriction3:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

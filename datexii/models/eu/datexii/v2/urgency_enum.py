@@ -14,6 +14,7 @@ class UrgencyEnum(Enum):
     :cvar NORMAL_URGENCY: Dissemination of the information is of normal
         urgency.
     """
+
     EXTREMELY_URGENT = "extremelyUrgent"
     URGENT = "urgent"
     NORMAL_URGENCY = "normalUrgency"

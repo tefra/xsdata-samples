@@ -61,6 +61,7 @@ class BuildEngineeringObject:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BUILD-ENGINEERING-OBJECT"
 
@@ -70,7 +71,7 @@ class BuildEngineeringObject:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[NmtokenString] = field(
         default=None,
@@ -78,7 +79,7 @@ class BuildEngineeringObject:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     revision_labels: Optional["BuildEngineeringObject.RevisionLabels"] = field(
         default=None,
@@ -86,7 +87,7 @@ class BuildEngineeringObject:
             "name": "REVISION-LABELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     domain: Optional[NmtokenString] = field(
         default=None,
@@ -94,7 +95,7 @@ class BuildEngineeringObject:
             "name": "DOMAIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     file_type: Optional[NmtokenString] = field(
         default=None,
@@ -102,7 +103,7 @@ class BuildEngineeringObject:
             "name": "FILE-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     intended_filename: Optional[UriString] = field(
         default=None,
@@ -110,7 +111,7 @@ class BuildEngineeringObject:
             "name": "INTENDED-FILENAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     parent_category: Optional[NmtokenString] = field(
         default=None,
@@ -118,7 +119,7 @@ class BuildEngineeringObject:
             "name": "PARENT-CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     parent_short_label: Optional[NmtokenString] = field(
         default=None,
@@ -126,7 +127,7 @@ class BuildEngineeringObject:
             "name": "PARENT-SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_label_pattern: Optional[RegularExpression] = field(
         default=None,
@@ -134,7 +135,7 @@ class BuildEngineeringObject:
             "name": "SHORT-LABEL-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     file_type_pattern: Optional[RegularExpression] = field(
         default=None,
@@ -142,14 +143,14 @@ class BuildEngineeringObject:
             "name": "FILE-TYPE-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -157,7 +158,7 @@ class BuildEngineeringObject:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -166,11 +167,12 @@ class BuildEngineeringObject:
         :ivar revision_label: This is a revision label denoting a
             particular version of the engineering object.
         """
+
         revision_label: List[RevisionLabelString] = field(
             default_factory=list,
             metadata={
                 "name": "REVISION-LABEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

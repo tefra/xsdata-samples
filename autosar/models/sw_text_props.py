@@ -46,6 +46,7 @@ class SwTextProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-TEXT-PROPS"
 
@@ -55,7 +56,7 @@ class SwTextProps:
             "name": "ARRAY-SIZE-SEMANTICS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_max_text_size: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -63,7 +64,7 @@ class SwTextProps:
             "name": "SW-MAX-TEXT-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     base_type_ref: Optional["SwTextProps.BaseTypeRef"] = field(
         default=None,
@@ -71,7 +72,7 @@ class SwTextProps:
             "name": "BASE-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_fill_character: Optional[Integer] = field(
         default=None,
@@ -79,14 +80,14 @@ class SwTextProps:
             "name": "SW-FILL-CHARACTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -94,7 +95,7 @@ class SwTextProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -105,5 +106,5 @@ class SwTextProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

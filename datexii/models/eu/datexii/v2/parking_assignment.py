@@ -2,11 +2,15 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.hazardous_materials import HazardousMaterials
-from datexii.models.eu.datexii.v2.parking_duration_enum import ParkingDurationEnum
+from datexii.models.eu.datexii.v2.parking_duration_enum import (
+    ParkingDurationEnum,
+)
 from datexii.models.eu.datexii.v2.parking_permit import ParkingPermit
 from datexii.models.eu.datexii.v2.time_period_by_hour import TimePeriodByHour
 from datexii.models.eu.datexii.v2.user_type_enum import UserTypeEnum
-from datexii.models.eu.datexii.v2.vehicle_characteristics import VehicleCharacteristics
+from datexii.models.eu.datexii.v2.vehicle_characteristics import (
+    VehicleCharacteristics,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -34,13 +38,14 @@ class ParkingAssignment:
     :ivar parking_permit:
     :ivar parking_assignment_extension:
     """
+
     applicable_for_user: List[UserTypeEnum] = field(
         default_factory=list,
         metadata={
             "name": "applicableForUser",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_duration: List[ParkingDurationEnum] = field(
         default_factory=list,
@@ -48,7 +53,7 @@ class ParkingAssignment:
             "name": "parkingDuration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_characteristics: List[VehicleCharacteristics] = field(
         default_factory=list,
@@ -56,7 +61,7 @@ class ParkingAssignment:
             "name": "vehicleCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     hazardous_materials: List[HazardousMaterials] = field(
         default_factory=list,
@@ -64,7 +69,7 @@ class ParkingAssignment:
             "name": "hazardousMaterials",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     time_period_by_hour: List[TimePeriodByHour] = field(
         default_factory=list,
@@ -72,7 +77,7 @@ class ParkingAssignment:
             "name": "timePeriodByHour",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_permit: List[ParkingPermit] = field(
         default_factory=list,
@@ -80,7 +85,7 @@ class ParkingAssignment:
             "name": "parkingPermit",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_assignment_extension: Optional[ExtensionType] = field(
         default=None,
@@ -88,5 +93,5 @@ class ParkingAssignment:
             "name": "parkingAssignmentExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -10,6 +10,7 @@ class TypeErrorInfo2:
     """
     Container for error data when there is an application error.
     """
+
     class Meta:
         name = "typeErrorInfo"
 
@@ -20,7 +21,7 @@ class TypeErrorInfo2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
             "required": True,
-        }
+        },
     )
     service: None | str = field(
         default=None,
@@ -29,7 +30,7 @@ class TypeErrorInfo2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class TypeErrorInfo2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -47,7 +48,7 @@ class TypeErrorInfo2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
             "required": True,
-        }
+        },
     )
     transaction_id: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class TypeErrorInfo2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
             "required": True,
-        }
+        },
     )
     trace_id: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class TypeErrorInfo2:
             "name": "TraceId",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )
     command_history: None | str = field(
         default=None,
@@ -72,7 +73,7 @@ class TypeErrorInfo2:
             "name": "CommandHistory",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )
     auxdata: None | Auxdata2 = field(
         default=None,
@@ -80,7 +81,7 @@ class TypeErrorInfo2:
             "name": "Auxdata",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )
     stack_trace: None | str = field(
         default=None,
@@ -88,5 +89,5 @@ class TypeErrorInfo2:
             "name": "StackTrace",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-        }
+        },
     )

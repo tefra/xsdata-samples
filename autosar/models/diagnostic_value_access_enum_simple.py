@@ -15,6 +15,7 @@ class DiagnosticValueAccessEnumSimple(Enum):
         data to the application software without the intention to read
         it back,
     """
+
     READ_ONLY = "READ-ONLY"
     READ_WRITE = "READ-WRITE"
     WRITE_ONLY = "WRITE-ONLY"

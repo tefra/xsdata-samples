@@ -18,7 +18,7 @@ class TOperation(TBaseElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "required": True,
-        }
+        },
     )
     out_message_ref: Optional[QName] = field(
         default=None,
@@ -26,7 +26,7 @@ class TOperation(TBaseElement):
             "name": "outMessageRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     error_ref: List[QName] = field(
         default_factory=list,
@@ -34,19 +34,19 @@ class TOperation(TBaseElement):
             "name": "errorRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     implementation_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "implementationRef",
             "type": "Attribute",
-        }
+        },
     )

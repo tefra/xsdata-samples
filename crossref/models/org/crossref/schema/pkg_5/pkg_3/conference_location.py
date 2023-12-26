@@ -10,6 +10,7 @@ class ConferenceLocation:
     The city, state, province or country of the conference may be
     provided as appropriate.
     """
+
     class Meta:
         name = "conference_location"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class ConferenceLocation:
         metadata={
             "min_length": 2,
             "max_length": 255,
-        }
+        },
     )

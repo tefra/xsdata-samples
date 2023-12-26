@@ -16,5 +16,5 @@ class CouchetteFacilityList:
         ],
         metadata={
             "tokens": True,
-        }
+        },
     )

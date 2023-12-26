@@ -1,8 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_address_domain_part_type import EmailAddressDomainPartType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_address_full_type import EmailAddressFullType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_address_local_part_type import EmailAddressLocalPartType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_address_domain_part_type import (
+    EmailAddressDomainPartType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_address_full_type import (
+    EmailAddressFullType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_address_local_part_type import (
+    EmailAddressLocalPartType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -20,6 +26,7 @@ class EmailAddressType:
     :ivar local_part_text: <description xmlns="">The username e.g.
         peter.jackson</description>
     """
+
     full_address_text: Optional[EmailAddressFullType] = field(
         default=None,
         metadata={
@@ -27,7 +34,7 @@ class EmailAddressType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     domain_part_text: Optional[EmailAddressDomainPartType] = field(
         default=None,
@@ -35,7 +42,7 @@ class EmailAddressType:
             "name": "DomainPartText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     local_part_text: Optional[EmailAddressLocalPartType] = field(
         default=None,
@@ -43,5 +50,5 @@ class EmailAddressType:
             "name": "LocalPartText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

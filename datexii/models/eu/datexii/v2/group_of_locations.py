@@ -14,11 +14,12 @@ class GroupOfLocations:
     location using different Location objects for different referencing
     systems.
     """
+
     group_of_locations_extension: Optional[ExtensionType] = field(
         default=None,
         metadata={
             "name": "groupOfLocationsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

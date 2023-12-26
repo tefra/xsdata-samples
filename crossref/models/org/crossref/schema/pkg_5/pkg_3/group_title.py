@@ -11,6 +11,7 @@ class GroupTitle:
     publishers will have a small number of groups each of which reflect
     a topic or subject area.
     """
+
     class Meta:
         name = "group_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -20,5 +21,5 @@ class GroupTitle:
         metadata={
             "min_length": 1,
             "max_length": 1024,
-        }
+        },
     )

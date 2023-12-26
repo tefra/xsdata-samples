@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.external_cache_access_port_type_service_input import ExternalCacheAccessPortTypeServiceInput
-from travelport.models.external_cache_access_port_type_service_output import ExternalCacheAccessPortTypeServiceOutput
+from travelport.models.external_cache_access_port_type_service_input import (
+    ExternalCacheAccessPortTypeServiceInput,
+)
+from travelport.models.external_cache_access_port_type_service_output import (
+    ExternalCacheAccessPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

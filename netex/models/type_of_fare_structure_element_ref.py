@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .type_of_fare_structure_element_ref_structure import TypeOfFareStructureElementRefStructure
+from .type_of_fare_structure_element_ref_structure import (
+    TypeOfFareStructureElementRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_guest_child_information import TypeGuestChildInformation
+from travelport.models.type_guest_child_information import (
+    TypeGuestChildInformation,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -21,6 +23,7 @@ class TypeAdaptedRoomGuestAllocation:
         The number of adult guests per room. Maximum number of adults may
         vary by supplier or aggregator.
     """
+
     class Meta:
         name = "typeAdaptedRoomGuestAllocation"
 
@@ -31,12 +34,12 @@ class TypeAdaptedRoomGuestAllocation:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 6,
-        }
+        },
     )
     number_of_adults: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfAdults",
             "type": "Attribute",
-        }
+        },
     )

@@ -18,7 +18,7 @@ class TypeLocation5:
             "name": "Airport",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
-        }
+        },
     )
     city: None | City5 = field(
         default=None,
@@ -26,7 +26,7 @@ class TypeLocation5:
             "name": "City",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
-        }
+        },
     )
     city_or_airport: None | CityOrAirport5 = field(
         default=None,
@@ -34,5 +34,5 @@ class TypeLocation5:
             "name": "CityOrAirport",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
-        }
+        },
     )

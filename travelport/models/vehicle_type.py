@@ -10,6 +10,7 @@ class VehicleType:
     """
     A standard list or classification of vehicle types .
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -17,5 +18,5 @@ class VehicleType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

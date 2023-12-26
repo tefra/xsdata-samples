@@ -77,6 +77,7 @@ class Facility:
         Specifies the seat information for the seat. Providers: ACH, 1G, 1V,
         1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -86,7 +87,7 @@ class Facility:
             "name": "Characteristic",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     remark: list[Remark1] = field(
         default_factory=list,
@@ -95,7 +96,7 @@ class Facility:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     passenger_seat_price: list[PassengerSeatPrice] = field(
         default_factory=list,
@@ -103,7 +104,7 @@ class Facility:
             "name": "PassengerSeatPrice",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TaxInfo] = field(
         default_factory=list,
@@ -111,14 +112,14 @@ class Facility:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     emd: None | Emd = field(
         default=None,
         metadata={
             "name": "EMD",
             "type": "Element",
-        }
+        },
     )
     service_data: list[ServiceData1] = field(
         default_factory=list,
@@ -127,14 +128,14 @@ class Facility:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
-        }
+        },
     )
     type_value: None | TypeFacility = field(
         default=None,
@@ -142,35 +143,35 @@ class Facility:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     seat_code: None | str = field(
         default=None,
         metadata={
             "name": "SeatCode",
             "type": "Attribute",
-        }
+        },
     )
     availability: None | TypeSeatAvailability = field(
         default=None,
         metadata={
             "name": "Availability",
             "type": "Attribute",
-        }
+        },
     )
     seat_price: None | str = field(
         default=None,
         metadata={
             "name": "SeatPrice",
             "type": "Attribute",
-        }
+        },
     )
     paid: None | bool = field(
         default=None,
         metadata={
             "name": "Paid",
             "type": "Attribute",
-        }
+        },
     )
     service_sub_code: None | str = field(
         default=None,
@@ -178,7 +179,7 @@ class Facility:
             "name": "ServiceSubCode",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )
     ssrcode: None | str = field(
         default=None,
@@ -187,7 +188,7 @@ class Facility:
             "type": "Attribute",
             "min_length": 4,
             "max_length": 4,
-        }
+        },
     )
     issuance_reason: None | str = field(
         default=None,
@@ -196,75 +197,75 @@ class Facility:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     base_seat_price: None | str = field(
         default=None,
         metadata={
             "name": "BaseSeatPrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
-        }
+        },
     )
     sequence_number: None | int = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Attribute",
-        }
+        },
     )
     inclusive_of_tax: None | bool = field(
         default=None,
         metadata={
             "name": "InclusiveOfTax",
             "type": "Attribute",
-        }
+        },
     )
     interline_settlement_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "InterlineSettlementAllowed",
             "type": "Attribute",
-        }
+        },
     )
     geography_specification: None | str = field(
         default=None,
         metadata={
             "name": "GeographySpecification",
             "type": "Attribute",
-        }
+        },
     )
     source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
-        }
+        },
     )
     optional_service_ref: None | str = field(
         default=None,
         metadata={
             "name": "OptionalServiceRef",
             "type": "Attribute",
-        }
+        },
     )
     seat_information_ref: None | str = field(
         default=None,
         metadata={
             "name": "SeatInformationRef",
             "type": "Attribute",
-        }
+        },
     )

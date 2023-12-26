@@ -12,7 +12,7 @@ class PaymentByMobileStructure:
             "name": "PhoneNumberToPay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     support_phone_number: Optional[str] = field(
         default=None,
@@ -20,7 +20,7 @@ class PaymentByMobileStructure:
             "name": "SupportPhoneNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_url: Optional[str] = field(
         default=None,
@@ -28,7 +28,7 @@ class PaymentByMobileStructure:
             "name": "PaymentUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_app_download_url: Optional[str] = field(
         default=None,
@@ -36,5 +36,5 @@ class PaymentByMobileStructure:
             "name": "PaymentAppDownloadUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

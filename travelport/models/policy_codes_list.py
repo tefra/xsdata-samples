@@ -13,6 +13,7 @@ class PolicyCodesList:
         A code that indicates why an item was determined to be ‘out of
         policy’.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,5 +26,5 @@ class PolicyCodesList:
             "max_occurs": 10,
             "min_inclusive": 1,
             "max_inclusive": 9999,
-        }
+        },
     )

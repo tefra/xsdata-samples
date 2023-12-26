@@ -20,6 +20,7 @@ class GuestInformation:
         Providers: 1p
     number_of_rooms
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -28,28 +29,28 @@ class GuestInformation:
         metadata={
             "name": "NumberOfAdults",
             "type": "Element",
-        }
+        },
     )
     number_of_children: None | NumberOfChildren = field(
         default=None,
         metadata={
             "name": "NumberOfChildren",
             "type": "Element",
-        }
+        },
     )
     extra_child: None | GuestInformation.ExtraChild = field(
         default=None,
         metadata={
             "name": "ExtraChild",
             "type": "Element",
-        }
+        },
     )
     number_of_rooms: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfRooms",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -62,17 +63,18 @@ class GuestInformation:
         content
             Additional information
         """
+
         count: None | int = field(
             default=None,
             metadata={
                 "name": "Count",
                 "type": "Attribute",
-            }
+            },
         )
         content: None | str = field(
             default=None,
             metadata={
                 "name": "Content",
                 "type": "Attribute",
-            }
+            },
         )

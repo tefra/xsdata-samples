@@ -12,6 +12,7 @@ class BaggageRestriction:
     """
     Information related to  Baggage restriction rules .
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,7 +22,7 @@ class BaggageRestriction:
             "name": "Dimension",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     max_weight: list[TypeUnitOfMeasure] = field(
         default_factory=list,
@@ -29,7 +30,7 @@ class BaggageRestriction:
             "name": "MaxWeight",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     text_info: list[TextInfo] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class BaggageRestriction:
             "name": "TextInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

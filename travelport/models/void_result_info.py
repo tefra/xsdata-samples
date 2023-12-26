@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.void_result_info_document_type import VoidResultInfoDocumentType
+from travelport.models.void_result_info_document_type import (
+    VoidResultInfoDocumentType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,6 +24,7 @@ class VoidResultInfo:
     result_type
         Successful Or Failed result indicator.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -30,7 +33,7 @@ class VoidResultInfo:
         metadata={
             "name": "FailureRemark",
             "type": "Element",
-        }
+        },
     )
     document_number: None | str = field(
         default=None,
@@ -39,19 +42,19 @@ class VoidResultInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     document_type: None | VoidResultInfoDocumentType = field(
         default=None,
         metadata={
             "name": "DocumentType",
             "type": "Attribute",
-        }
+        },
     )
     result_type: None | str = field(
         default=None,
         metadata={
             "name": "ResultType",
             "type": "Attribute",
-        }
+        },
     )

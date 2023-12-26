@@ -31,6 +31,7 @@ class AvailabilitySearchReq(AirSearchReq):
         Allows the agency to bypass/override the Search Control Console
         rule.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -41,7 +42,7 @@ class AvailabilitySearchReq(AirSearchReq):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 18,
-        }
+        },
     )
     point_of_sale: list[PointOfSale1] = field(
         default_factory=list,
@@ -50,14 +51,14 @@ class AvailabilitySearchReq(AirSearchReq):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 5,
-        }
+        },
     )
     return_brand_indicator: bool = field(
         default=False,
         metadata={
             "name": "ReturnBrandIndicator",
             "type": "Attribute",
-        }
+        },
     )
     channel_id: None | str = field(
         default=None,
@@ -66,7 +67,7 @@ class AvailabilitySearchReq(AirSearchReq):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 4,
-        }
+        },
     )
     nscc: None | str = field(
         default=None,
@@ -75,5 +76,5 @@ class AvailabilitySearchReq(AirSearchReq):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )

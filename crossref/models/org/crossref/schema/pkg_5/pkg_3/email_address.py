@@ -8,6 +8,7 @@ class EmailAddress:
     """
     E-mail address to which batch success and/or error messages are sent.
     """
+
     class Meta:
         name = "email_address"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class EmailAddress:
         metadata={
             "min_length": 6,
             "max_length": 200,
-        }
+        },
     )

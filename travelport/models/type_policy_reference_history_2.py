@@ -26,6 +26,7 @@ class TypePolicyReferenceHistory2(TypeKeyElement2):
     desc
         An optional description.
     """
+
     class Meta:
         name = "typePolicyReferenceHistory"
 
@@ -34,7 +35,7 @@ class TypePolicyReferenceHistory2(TypeKeyElement2):
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -43,14 +44,14 @@ class TypePolicyReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     controlling_profile_id: None | int = field(
         default=None,
         metadata={
             "name": "ControllingProfileID",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -59,7 +60,7 @@ class TypePolicyReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     desc: None | str = field(
         default=None,
@@ -68,5 +69,5 @@ class TypePolicyReferenceHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

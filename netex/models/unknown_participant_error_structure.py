@@ -13,5 +13,5 @@ class UnknownParticipantErrorStructure(ErrorCodeStructure):
             "name": "ParticipantRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

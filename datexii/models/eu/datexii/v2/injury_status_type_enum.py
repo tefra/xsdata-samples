@@ -16,6 +16,7 @@ class InjuryStatusTypeEnum(Enum):
     :cvar UNINJURED: Uninjured.
     :cvar UNKNOWN: Injury status unknown.
     """
+
     DEAD = "dead"
     INJURED = "injured"
     SERIOUSLY_INJURED = "seriouslyInjured"

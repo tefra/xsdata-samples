@@ -17,11 +17,11 @@ class GeoLocationsType:
             "name": "geoLocation",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

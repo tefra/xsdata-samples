@@ -14,12 +14,12 @@ class Point:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     y: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

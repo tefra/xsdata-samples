@@ -47,6 +47,7 @@ class CanControllerFdConfiguration:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-CONTROLLER-FD-CONFIGURATION"
 
@@ -56,7 +57,7 @@ class CanControllerFdConfiguration:
             "name": "PADDING-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     prop_seg: Optional[PositiveInteger] = field(
         default=None,
@@ -64,7 +65,7 @@ class CanControllerFdConfiguration:
             "name": "PROP-SEG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ssp_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -72,7 +73,7 @@ class CanControllerFdConfiguration:
             "name": "SSP-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_jump_width: Optional[PositiveInteger] = field(
         default=None,
@@ -80,7 +81,7 @@ class CanControllerFdConfiguration:
             "name": "SYNC-JUMP-WIDTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_seg_1: Optional[PositiveInteger] = field(
         default=None,
@@ -88,7 +89,7 @@ class CanControllerFdConfiguration:
             "name": "TIME-SEG-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_seg_2: Optional[PositiveInteger] = field(
         default=None,
@@ -96,7 +97,7 @@ class CanControllerFdConfiguration:
             "name": "TIME-SEG-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trcv_delay_compensation_offset: Optional[TimeValue] = field(
         default=None,
@@ -104,7 +105,7 @@ class CanControllerFdConfiguration:
             "name": "TRCV-DELAY-COMPENSATION-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tx_bit_rate_switch: Optional[Boolean] = field(
         default=None,
@@ -112,14 +113,14 @@ class CanControllerFdConfiguration:
             "name": "TX-BIT-RATE-SWITCH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -127,5 +128,5 @@ class CanControllerFdConfiguration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

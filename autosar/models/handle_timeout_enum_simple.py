@@ -11,6 +11,9 @@ class HandleTimeoutEnumSimple(Enum):
     :cvar REPLACE_BY_TIMEOUT_SUBSTITUTION_VALUE: If set to replace, the
         replacement value shall be the timeout substitution value.
     """
+
     NONE = "NONE"
     REPLACE = "REPLACE"
-    REPLACE_BY_TIMEOUT_SUBSTITUTION_VALUE = "REPLACE-BY-TIMEOUT-SUBSTITUTION-VALUE"
+    REPLACE_BY_TIMEOUT_SUBSTITUTION_VALUE = (
+        "REPLACE-BY-TIMEOUT-SUBSTITUTION-VALUE"
+    )

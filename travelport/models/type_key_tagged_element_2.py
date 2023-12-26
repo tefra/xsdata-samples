@@ -11,6 +11,7 @@ class TypeKeyTaggedElement2(TypeKeyElement2):
     """
     An Element with a Key and a list of Tags.
     """
+
     class Meta:
         name = "typeKeyTaggedElement"
 
@@ -21,5 +22,5 @@ class TypeKeyTaggedElement2(TypeKeyElement2):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             "max_occurs": 999,
-        }
+        },
     )

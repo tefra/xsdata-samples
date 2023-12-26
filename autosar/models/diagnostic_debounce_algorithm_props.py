@@ -2,9 +2,13 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .boolean import Boolean
 from .diag_event_debounce_counter_based import DiagEventDebounceCounterBased
-from .diag_event_debounce_monitor_internal import DiagEventDebounceMonitorInternal
+from .diag_event_debounce_monitor_internal import (
+    DiagEventDebounceMonitorInternal,
+)
 from .diag_event_debounce_time_based import DiagEventDebounceTimeBased
-from .diagnostic_debounce_behavior_enum_value_variation_point import DiagnosticDebounceBehaviorEnumValueVariationPoint
+from .diagnostic_debounce_behavior_enum_value_variation_point import (
+    DiagnosticDebounceBehaviorEnumValueVariationPoint,
+)
 from .identifier import Identifier
 from .short_name_fragment import ShortNameFragment
 
@@ -41,6 +45,7 @@ class DiagnosticDebounceAlgorithmProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-DEBOUNCE-ALGORITHM-PROPS"
 
@@ -51,31 +56,37 @@ class DiagnosticDebounceAlgorithmProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticDebounceAlgorithmProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticDebounceAlgorithmProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    debounce_algorithm: Optional["DiagnosticDebounceAlgorithmProps.DebounceAlgorithm"] = field(
+    debounce_algorithm: Optional[
+        "DiagnosticDebounceAlgorithmProps.DebounceAlgorithm"
+    ] = field(
         default=None,
         metadata={
             "name": "DEBOUNCE-ALGORITHM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    debounce_behavior: Optional[DiagnosticDebounceBehaviorEnumValueVariationPoint] = field(
+    debounce_behavior: Optional[
+        DiagnosticDebounceBehaviorEnumValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "DEBOUNCE-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     debounce_counter_storage: Optional[Boolean] = field(
         default=None,
@@ -83,14 +94,14 @@ class DiagnosticDebounceAlgorithmProps:
             "name": "DEBOUNCE-COUNTER-STORAGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -98,7 +109,7 @@ class DiagnosticDebounceAlgorithmProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -109,32 +120,38 @@ class DiagnosticDebounceAlgorithmProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DebounceAlgorithm:
-        diag_event_debounce_counter_based: Optional[DiagEventDebounceCounterBased] = field(
+        diag_event_debounce_counter_based: Optional[
+            DiagEventDebounceCounterBased
+        ] = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-COUNTER-BASED",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        diag_event_debounce_monitor_internal: Optional[DiagEventDebounceMonitorInternal] = field(
+        diag_event_debounce_monitor_internal: Optional[
+            DiagEventDebounceMonitorInternal
+        ] = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-MONITOR-INTERNAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        diag_event_debounce_time_based: Optional[DiagEventDebounceTimeBased] = field(
+        diag_event_debounce_time_based: Optional[
+            DiagEventDebounceTimeBased
+        ] = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-TIME-BASED",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

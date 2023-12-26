@@ -15,5 +15,5 @@ class TypeSegmentRef2:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

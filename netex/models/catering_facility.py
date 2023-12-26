@@ -13,5 +13,5 @@ class CateringFacility:
         default=CateringFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -17,18 +17,18 @@ class MemberRefSearchType:
             "name": "mediaIds",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     types: None | TextMatcherListType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import DocumentationBlock
-from .argument_data_prototype_subtypes_enum import ArgumentDataPrototypeSubtypesEnum
+from .argument_data_prototype_subtypes_enum import (
+    ArgumentDataPrototypeSubtypesEnum,
+)
 from .filter_debouncing_enum import FilterDebouncingEnum
 from .float_mod import Float
 from .multidimensional_time import MultidimensionalTime
@@ -11,7 +13,9 @@ from .pulse_test_enum import PulseTestEnum
 from .ref import Ref
 from .string import String
 from .trigger_subtypes_enum import TriggerSubtypesEnum
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -75,6 +79,7 @@ class IoHwAbstractionServerAnnotation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IO-HW-ABSTRACTION-SERVER-ANNOTATION"
 
@@ -84,7 +89,7 @@ class IoHwAbstractionServerAnnotation:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_origin: Optional[String] = field(
         default=None,
@@ -92,7 +97,7 @@ class IoHwAbstractionServerAnnotation:
             "name": "ANNOTATION-ORIGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_text: Optional[DocumentationBlock] = field(
         default=None,
@@ -100,7 +105,7 @@ class IoHwAbstractionServerAnnotation:
             "name": "ANNOTATION-TEXT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     age: Optional[MultidimensionalTime] = field(
         default=None,
@@ -108,15 +113,17 @@ class IoHwAbstractionServerAnnotation:
             "name": "AGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    argument_ref: Optional["IoHwAbstractionServerAnnotation.ArgumentRef"] = field(
+    argument_ref: Optional[
+        "IoHwAbstractionServerAnnotation.ArgumentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ARGUMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bsw_resolution: Optional[Float] = field(
         default=None,
@@ -124,23 +131,27 @@ class IoHwAbstractionServerAnnotation:
             "name": "BSW-RESOLUTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_element_ref: Optional["IoHwAbstractionServerAnnotation.DataElementRef"] = field(
+    data_element_ref: Optional[
+        "IoHwAbstractionServerAnnotation.DataElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    failure_monitoring_ref: Optional["IoHwAbstractionServerAnnotation.FailureMonitoringRef"] = field(
+    failure_monitoring_ref: Optional[
+        "IoHwAbstractionServerAnnotation.FailureMonitoringRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FAILURE-MONITORING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     filtering_debouncing: Optional[FilterDebouncingEnum] = field(
         default=None,
@@ -148,7 +159,7 @@ class IoHwAbstractionServerAnnotation:
             "name": "FILTERING-DEBOUNCING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pulse_test: Optional[PulseTestEnum] = field(
         default=None,
@@ -156,22 +167,24 @@ class IoHwAbstractionServerAnnotation:
             "name": "PULSE-TEST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    trigger_ref: Optional["IoHwAbstractionServerAnnotation.TriggerRef"] = field(
+    trigger_ref: Optional[
+        "IoHwAbstractionServerAnnotation.TriggerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -179,7 +192,7 @@ class IoHwAbstractionServerAnnotation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -190,7 +203,7 @@ class IoHwAbstractionServerAnnotation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -201,7 +214,7 @@ class IoHwAbstractionServerAnnotation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -212,7 +225,7 @@ class IoHwAbstractionServerAnnotation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -223,5 +236,5 @@ class IoHwAbstractionServerAnnotation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

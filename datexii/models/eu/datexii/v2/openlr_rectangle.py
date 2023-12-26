@@ -15,6 +15,7 @@ class OpenlrRectangle:
     :ivar openlr_upper_right: the upper right corner of the rectangle
     :ivar openlr_rectangle_extension:
     """
+
     openlr_lower_left: Optional[PointCoordinates] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class OpenlrRectangle:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_upper_right: Optional[PointCoordinates] = field(
         default=None,
@@ -31,7 +32,7 @@ class OpenlrRectangle:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_rectangle_extension: Optional[ExtensionType] = field(
         default=None,
@@ -39,5 +40,5 @@ class OpenlrRectangle:
             "name": "openlrRectangleExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

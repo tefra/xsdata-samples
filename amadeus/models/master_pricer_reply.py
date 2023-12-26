@@ -15,6 +15,7 @@ class AdditionalFareQualifierDetailsTypeI:
     :ivar pricing_group: Pricing group
     :ivar second_rate_class: Second rate class
     """
+
     rate_class: None | str = field(
         default=None,
         metadata={
@@ -23,7 +24,7 @@ class AdditionalFareQualifierDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     ticket_designator: None | str = field(
         default=None,
@@ -33,7 +34,7 @@ class AdditionalFareQualifierDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 18,
-        }
+        },
     )
     pricing_group: None | str = field(
         default=None,
@@ -43,7 +44,7 @@ class AdditionalFareQualifierDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     second_rate_class: list[str] = field(
         default_factory=list,
@@ -54,7 +55,7 @@ class AdditionalFareQualifierDetailsTypeI:
             "max_occurs": 29,
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
 
 
@@ -67,6 +68,7 @@ class AdditionalProductDetailsType:
         different from 0
     :ivar location_id: Location places of the stops
     """
+
     equipment_type: None | str = field(
         default=None,
         metadata={
@@ -75,7 +77,7 @@ class AdditionalProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     operating_day: None | str = field(
         default=None,
@@ -85,7 +87,7 @@ class AdditionalProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 7,
-        }
+        },
     )
     tech_stop_number: None | str = field(
         default=None,
@@ -94,7 +96,7 @@ class AdditionalProductDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,2}",
-        }
+        },
     )
     location_id: list[str] = field(
         default_factory=list,
@@ -105,7 +107,7 @@ class AdditionalProductDetailsType:
             "max_occurs": 3,
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
 
 
@@ -115,6 +117,7 @@ class ApplicationErrorInformationType:
     :ivar error: The code assigned by the receiver of a message for
         identification of a data validation error condition.
     """
+
     error: None | str = field(
         default=None,
         metadata={
@@ -123,7 +126,7 @@ class ApplicationErrorInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 4,
-        }
+        },
     )
 
 
@@ -135,6 +138,7 @@ class AttributeInformationType:
     :ivar fee_parameter_type: Type of parameter.
     :ivar fee_parameter_description: Reference to company Id.
     """
+
     fee_parameter_type: None | str = field(
         default=None,
         metadata={
@@ -143,7 +147,7 @@ class AttributeInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 3,
             "max_length": 3,
-        }
+        },
     )
     fee_parameter_description: None | str = field(
         default=None,
@@ -153,7 +157,7 @@ class AttributeInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )
 
 
@@ -165,6 +169,7 @@ class AttributeInformationTypeU:
     :ivar attribute_type: Attribute type
     :ivar attribute_description: Attribute description
     """
+
     attribute_type: None | str = field(
         default=None,
         metadata={
@@ -174,7 +179,7 @@ class AttributeInformationTypeU:
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     attribute_description: None | str = field(
         default=None,
@@ -184,7 +189,7 @@ class AttributeInformationTypeU:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
 
 
@@ -196,6 +201,7 @@ class AttributeInformationType97181C:
     :ivar attribute_type: Attribute type
     :ivar attribute_description: Attribute description
     """
+
     class Meta:
         name = "AttributeInformationType_97181C"
 
@@ -208,7 +214,7 @@ class AttributeInformationType97181C:
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     attribute_description: None | str = field(
         default=None,
@@ -218,7 +224,7 @@ class AttributeInformationType97181C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
 
 
@@ -232,6 +238,7 @@ class BaggageDetailsType:
         or weight)
     :ivar unit_qualifier: Unit qualifier
     """
+
     free_allowance: None | str = field(
         default=None,
         metadata={
@@ -239,7 +246,7 @@ class BaggageDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,15}",
-        }
+        },
     )
     quantity_code: None | str = field(
         default=None,
@@ -248,7 +255,7 @@ class BaggageDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"[0-9A-Z]{1,3}",
-        }
+        },
     )
     unit_qualifier: None | str = field(
         default=None,
@@ -258,7 +265,7 @@ class BaggageDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -270,6 +277,7 @@ class BagtagDetailsType:
     :ivar identifier: Identifier
     :ivar number: Number
     """
+
     identifier: None | str = field(
         default=None,
         metadata={
@@ -277,7 +285,7 @@ class BagtagDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -285,7 +293,7 @@ class BagtagDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,15}",
-        }
+        },
     )
 
 
@@ -295,6 +303,7 @@ class BucketInformationType:
     :ivar number: Number
     :ivar name: Name
     """
+
     number: None | str = field(
         default=None,
         metadata={
@@ -302,7 +311,7 @@ class BucketInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -311,7 +320,7 @@ class BucketInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
 
 
@@ -321,6 +330,7 @@ class CabinInformationType:
     :ivar service: Identify the features associated to the cabin/class
     :ivar cabin: Cabin code designator
     """
+
     service: None | str = field(
         default=None,
         metadata={
@@ -329,7 +339,7 @@ class CabinInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     cabin: list[str] = field(
         default_factory=list,
@@ -339,7 +349,7 @@ class CabinInformationType:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
 
 
@@ -351,6 +361,7 @@ class CabinProductDetailsType:
     :ivar cabin: Indicates the cabin related to the Booking code
     :ivar avl_status: Availibility status : posting level
     """
+
     rbd: None | str = field(
         default=None,
         metadata={
@@ -359,7 +370,7 @@ class CabinProductDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     booking_modifier: None | str = field(
         default=None,
@@ -369,7 +380,7 @@ class CabinProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 1,
-        }
+        },
     )
     cabin: None | str = field(
         default=None,
@@ -378,7 +389,7 @@ class CabinProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     avl_status: None | str = field(
         default=None,
@@ -388,7 +399,7 @@ class CabinProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -400,6 +411,7 @@ class CabinProductDetailsType195516C:
     :ivar cabin: Indicates the cabin related to the Booking code
     :ivar avl_status: Availibility status : posting level
     """
+
     class Meta:
         name = "CabinProductDetailsType_195516C"
 
@@ -410,7 +422,7 @@ class CabinProductDetailsType195516C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     booking_modifier: None | str = field(
         default=None,
@@ -420,7 +432,7 @@ class CabinProductDetailsType195516C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 1,
-        }
+        },
     )
     cabin: None | str = field(
         default=None,
@@ -429,7 +441,7 @@ class CabinProductDetailsType195516C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     avl_status: None | str = field(
         default=None,
@@ -440,7 +452,7 @@ class CabinProductDetailsType195516C:
             "required": True,
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -452,6 +464,7 @@ class CabinProductDetailsType205138C:
     :ivar cabin: Indicates the cabin related to the Booking code
     :ivar avl_status: Availibility status : posting level
     """
+
     class Meta:
         name = "CabinProductDetailsType_205138C"
 
@@ -463,7 +476,7 @@ class CabinProductDetailsType205138C:
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     booking_modifier: None | str = field(
         default=None,
@@ -472,7 +485,7 @@ class CabinProductDetailsType205138C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"[0-9A-Z]",
-        }
+        },
     )
     cabin: None | str = field(
         default=None,
@@ -481,7 +494,7 @@ class CabinProductDetailsType205138C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     avl_status: None | str = field(
         default=None,
@@ -490,7 +503,7 @@ class CabinProductDetailsType205138C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"[0-9A-Z]{1,3}",
-        }
+        },
     )
 
 
@@ -501,6 +514,7 @@ class CabinProductDetailsType229142C:
     :ivar cabin: Indicates the cabin related to the Booking code
     :ivar avl_status: Availibility status : posting level
     """
+
     class Meta:
         name = "CabinProductDetailsType_229142C"
 
@@ -512,7 +526,7 @@ class CabinProductDetailsType229142C:
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     cabin: None | str = field(
         default=None,
@@ -521,7 +535,7 @@ class CabinProductDetailsType229142C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     avl_status: None | str = field(
         default=None,
@@ -530,7 +544,7 @@ class CabinProductDetailsType229142C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"[0-9A-Z]{1,3}",
-        }
+        },
     )
 
 
@@ -543,6 +557,7 @@ class CategoryDescriptionType:
         purchase, STP for stopover restrictions, ELG for eligibility
         restrictions...)
     """
+
     number: None | str = field(
         default=None,
         metadata={
@@ -550,7 +565,7 @@ class CategoryDescriptionType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -559,7 +574,7 @@ class CategoryDescriptionType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -569,6 +584,7 @@ class ClassInformationType:
     :ivar service: Identify the features associated to the cabin/class
     :ivar rbd: Class designator
     """
+
     service: None | str = field(
         default=None,
         metadata={
@@ -577,7 +593,7 @@ class ClassInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     rbd: list[str] = field(
         default_factory=list,
@@ -587,7 +603,7 @@ class ClassInformationType:
             "max_occurs": 26,
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
 
 
@@ -599,6 +615,7 @@ class CodedAttributeInformationType:
     :ivar attribute_type: Type of fee/reduction
     :ivar attribute_description: Fee Id Number
     """
+
     attribute_type: None | str = field(
         default=None,
         metadata={
@@ -608,7 +625,7 @@ class CodedAttributeInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     attribute_description: None | str = field(
         default=None,
@@ -618,7 +635,7 @@ class CodedAttributeInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
 
 
@@ -630,6 +647,7 @@ class CodedAttributeInformationType270108C:
     :ivar attribute_type:
     :ivar attribute_description: Attribute description
     """
+
     class Meta:
         name = "CodedAttributeInformationType_270108C"
 
@@ -642,7 +660,7 @@ class CodedAttributeInformationType270108C:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     attribute_description: None | str = field(
         default=None,
@@ -652,7 +670,7 @@ class CodedAttributeInformationType270108C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
 
 
@@ -664,6 +682,7 @@ class CompanyIdentificationTextType:
     :ivar text_ref_number: Company Id Text reference.
     :ivar company_text: Company id free text.
     """
+
     text_ref_number: None | str = field(
         default=None,
         metadata={
@@ -671,7 +690,7 @@ class CompanyIdentificationTextType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{0,4}",
-        }
+        },
     )
     company_text: None | str = field(
         default=None,
@@ -681,7 +700,7 @@ class CompanyIdentificationTextType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 70,
-        }
+        },
     )
 
 
@@ -692,6 +711,7 @@ class CompanyIdentificationType:
     :ivar operating_carrier: Operating carrier
     :ivar alliance: airline alliance code
     """
+
     marketing_carrier: None | str = field(
         default=None,
         metadata={
@@ -701,7 +721,7 @@ class CompanyIdentificationType:
             "required": True,
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
     operating_carrier: None | str = field(
         default=None,
@@ -711,7 +731,7 @@ class CompanyIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
     alliance: None | str = field(
         default=None,
@@ -720,7 +740,7 @@ class CompanyIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
 
 
@@ -733,6 +753,7 @@ class CompanyIdentificationTypeI:
     :ivar operating_company: Company
     :ivar other_company: Company
     """
+
     marketing_company: None | str = field(
         default=None,
         metadata={
@@ -741,7 +762,7 @@ class CompanyIdentificationTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
     operating_company: None | str = field(
         default=None,
@@ -751,7 +772,7 @@ class CompanyIdentificationTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
     other_company: None | str = field(
         default=None,
@@ -761,7 +782,7 @@ class CompanyIdentificationTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -774,6 +795,7 @@ class CompanyRoleIdentificationType:
     :ivar airline_designator: company identification
     :ivar flight_number: flight number
     """
+
     code_share_type: None | str = field(
         default=None,
         metadata={
@@ -782,7 +804,7 @@ class CompanyRoleIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     airline_designator: None | str = field(
         default=None,
@@ -792,7 +814,7 @@ class CompanyRoleIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -801,7 +823,7 @@ class CompanyRoleIdentificationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,4}",
-        }
+        },
     )
 
 
@@ -813,6 +835,7 @@ class CompanyRoleIdentificationType120771C:
     :ivar transport_stage_qualifier: Type of code share agreement.
     :ivar company: company identification
     """
+
     class Meta:
         name = "CompanyRoleIdentificationType_120771C"
 
@@ -824,7 +847,7 @@ class CompanyRoleIdentificationType120771C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     company: None | str = field(
         default=None,
@@ -833,7 +856,7 @@ class CompanyRoleIdentificationType120771C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -844,6 +867,7 @@ class ConversionRateDetailsTypeI:
     :ivar currency: Currency
     :ivar amount: amount
     """
+
     conversion_type: None | str = field(
         default=None,
         metadata={
@@ -852,7 +876,7 @@ class ConversionRateDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -861,7 +885,7 @@ class ConversionRateDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -870,7 +894,7 @@ class ConversionRateDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 12,
-        }
+        },
     )
 
 
@@ -884,6 +908,7 @@ class ConversionRateDetailsTypeI179848C:
     :ivar tax_qualifier: Applicable ISO country code or Tax designator
         code.
     """
+
     class Meta:
         name = "ConversionRateDetailsTypeI_179848C"
 
@@ -895,7 +920,7 @@ class ConversionRateDetailsTypeI179848C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -905,7 +930,7 @@ class ConversionRateDetailsTypeI179848C:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     rate: None | str = field(
         default=None,
@@ -914,7 +939,7 @@ class ConversionRateDetailsTypeI179848C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 18,
-        }
+        },
     )
     converted_amount_link: None | str = field(
         default=None,
@@ -924,7 +949,7 @@ class ConversionRateDetailsTypeI179848C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 18,
-        }
+        },
     )
     tax_qualifier: None | str = field(
         default=None,
@@ -934,13 +959,14 @@ class ConversionRateDetailsTypeI179848C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
 
 
 @dataclass
 class CriteriaDetailsType:
     """Criteria details : weights/parameters list"""
+
     class Meta:
         name = "CriteriaiDetaislType"
 
@@ -952,7 +978,7 @@ class CriteriaDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -961,7 +987,7 @@ class CriteriaDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 18,
-        }
+        },
     )
 
 
@@ -972,6 +998,7 @@ class DataInformationType:
 
     :ivar indicator: Ancillary services options
     """
+
     indicator: None | str = field(
         default=None,
         metadata={
@@ -979,7 +1006,7 @@ class DataInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -992,6 +1019,7 @@ class DataTypeInformationType:
     :ivar option: Status (automated, manually added, exempted). Default
         is automated
     """
+
     sub_type: None | str = field(
         default=None,
         metadata={
@@ -1001,7 +1029,7 @@ class DataTypeInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     option: None | str = field(
         default=None,
@@ -1010,7 +1038,7 @@ class DataTypeInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1023,6 +1051,7 @@ class DateAndTimeDetailsType:
     :ivar equipement_type: Movement type.
     :ivar location_id: Place/location identification.
     """
+
     date_qualifier: None | str = field(
         default=None,
         metadata={
@@ -1031,7 +1060,7 @@ class DateAndTimeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     date: None | str = field(
         default=None,
@@ -1039,7 +1068,7 @@ class DateAndTimeDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
-        }
+        },
     )
     first_time: None | str = field(
         default=None,
@@ -1048,7 +1077,7 @@ class DateAndTimeDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
-        }
+        },
     )
     equipement_type: None | str = field(
         default=None,
@@ -1058,7 +1087,7 @@ class DateAndTimeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     location_id: None | str = field(
         default=None,
@@ -1068,7 +1097,7 @@ class DateAndTimeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
 
 
@@ -1082,6 +1111,7 @@ class DateAndTimeDetailsType256192C:
     :ivar time: Time
     :ivar location: Location
     """
+
     class Meta:
         name = "DateAndTimeDetailsType_256192C"
 
@@ -1092,7 +1122,7 @@ class DateAndTimeDetailsType256192C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     date: None | str = field(
         default=None,
@@ -1101,7 +1131,7 @@ class DateAndTimeDetailsType256192C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     time: None | str = field(
         default=None,
@@ -1109,7 +1139,7 @@ class DateAndTimeDetailsType256192C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -1118,7 +1148,7 @@ class DateAndTimeDetailsType256192C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
 
 
@@ -1130,6 +1160,7 @@ class DateTimePeriodDetailsTypeI:
     :ivar qualifier: Qualifier
     :ivar value: Value
     """
+
     qualifier: None | str = field(
         default=None,
         metadata={
@@ -1138,7 +1169,7 @@ class DateTimePeriodDetailsTypeI:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -1147,7 +1178,7 @@ class DateTimePeriodDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
 
 
@@ -1161,6 +1192,7 @@ class DiscountPenaltyInformationType:
     :ivar amount: Amount
     :ivar percentage: Percentage
     """
+
     fare_qualifier: None | str = field(
         default=None,
         metadata={
@@ -1170,7 +1202,7 @@ class DiscountPenaltyInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     rate_category: None | str = field(
         default=None,
@@ -1180,21 +1212,21 @@ class DiscountPenaltyInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     amount: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     percentage: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -1210,6 +1242,7 @@ class DiscountPenaltyMonetaryInformationType:
     :ivar fee_amount: specify the value
     :ivar fee_currency: Fee currency code.
     """
+
     fee_type: None | str = field(
         default=None,
         metadata={
@@ -1218,7 +1251,7 @@ class DiscountPenaltyMonetaryInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fee_amount_type: None | str = field(
         default=None,
@@ -1228,7 +1261,7 @@ class DiscountPenaltyMonetaryInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fee_amount: None | Decimal = field(
         default=None,
@@ -1236,7 +1269,7 @@ class DiscountPenaltyMonetaryInformationType:
             "name": "feeAmount",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     fee_currency: None | str = field(
         default=None,
@@ -1246,7 +1279,7 @@ class DiscountPenaltyMonetaryInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1269,6 +1302,7 @@ class FareCalculationCodeDetailsType:
     :ivar other_location_code: Other location code
     :ivar rate: Rate
     """
+
     qualifier: None | str = field(
         default=None,
         metadata={
@@ -1276,14 +1310,14 @@ class FareCalculationCodeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     amount: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     location_code: None | str = field(
         default=None,
@@ -1293,7 +1327,7 @@ class FareCalculationCodeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     other_location_code: None | str = field(
         default=None,
@@ -1303,14 +1337,14 @@ class FareCalculationCodeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     rate: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -1322,6 +1356,7 @@ class FareCategoryCodesTypeI:
     :ivar fare_type: Fare type
     :ivar other_fare_type: Other fare type
     """
+
     fare_type: None | str = field(
         default=None,
         metadata={
@@ -1331,7 +1366,7 @@ class FareCategoryCodesTypeI:
             "required": True,
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
     other_fare_type: list[str] = field(
         default_factory=list,
@@ -1342,7 +1377,7 @@ class FareCategoryCodesTypeI:
             "max_occurs": 8,
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
 
 
@@ -1353,6 +1388,7 @@ class FareDetailsType:
 
     :ivar passenger_type_qualifier: Passenger Type qualifier
     """
+
     passenger_type_qualifier: None | str = field(
         default=None,
         metadata={
@@ -1361,7 +1397,7 @@ class FareDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1375,6 +1411,7 @@ class FareDetailsTypeI:
     :ivar country: Country
     :ivar fare_category: Fare category
     """
+
     qualifier: None | str = field(
         default=None,
         metadata={
@@ -1382,14 +1419,14 @@ class FareDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     rate: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -1398,7 +1435,7 @@ class FareDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fare_category: None | str = field(
         default=None,
@@ -1408,7 +1445,7 @@ class FareDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1420,6 +1457,7 @@ class FareDetailsType193037C:
     :ivar country: Country
     :ivar fare_category: Fare Category
     """
+
     class Meta:
         name = "FareDetailsType_193037C"
 
@@ -1429,7 +1467,7 @@ class FareDetailsType193037C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"[0-9A-Z]{1,3}",
-        }
+        },
     )
     rate: None | str = field(
         default=None,
@@ -1437,7 +1475,7 @@ class FareDetailsType193037C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,8}",
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -1446,7 +1484,7 @@ class FareDetailsType193037C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fare_category: None | str = field(
         default=None,
@@ -1455,7 +1493,7 @@ class FareDetailsType193037C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"[0-9A-Z]{1,3}",
-        }
+        },
     )
 
 
@@ -1466,6 +1504,7 @@ class FareFamilyDetailsType:
 
     :ivar commercial_family: Commercial fare Family Short name
     """
+
     commercial_family: None | str = field(
         default=None,
         metadata={
@@ -1475,7 +1514,7 @@ class FareFamilyDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
 
 
@@ -1487,6 +1526,7 @@ class FareInformationTypeI:
     :ivar value_qualifier: Value qualifier
     :ivar value: Value
     """
+
     value_qualifier: None | str = field(
         default=None,
         metadata={
@@ -1495,7 +1535,7 @@ class FareInformationTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -1503,7 +1543,7 @@ class FareInformationTypeI:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,15}",
-        }
+        },
     )
 
 
@@ -1512,6 +1552,7 @@ class FareProductDetailsType:
     """
     :ivar fare_basis: Fare basis code
     """
+
     fare_basis: None | str = field(
         default=None,
         metadata={
@@ -1520,7 +1561,7 @@ class FareProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 18,
-        }
+        },
     )
 
 
@@ -1531,6 +1572,7 @@ class FareProductDetailsType248552C:
     :ivar passenger_type: PTC priced
     :ivar fare_type: Type of fare
     """
+
     class Meta:
         name = "FareProductDetailsType_248552C"
 
@@ -1542,7 +1584,7 @@ class FareProductDetailsType248552C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 18,
-        }
+        },
     )
     passenger_type: None | str = field(
         default=None,
@@ -1552,7 +1594,7 @@ class FareProductDetailsType248552C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     fare_type: list[str] = field(
         default_factory=list,
@@ -1563,7 +1605,7 @@ class FareProductDetailsType248552C:
             "max_occurs": 9,
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1572,6 +1614,7 @@ class FareTypeGroupingInformationType:
     """
     :ivar pricing_group: Pricing Group
     """
+
     pricing_group: None | str = field(
         default=None,
         metadata={
@@ -1580,7 +1623,7 @@ class FareTypeGroupingInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
 
 
@@ -1591,6 +1634,7 @@ class FreeTextQualificationType:
     :ivar information_type: Coded Text or type of information in 4440
         (e.g. type of OSI or free text, canned message value)
     """
+
     text_subject_qualifier: None | str = field(
         default=None,
         metadata={
@@ -1600,7 +1644,7 @@ class FreeTextQualificationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     information_type: None | str = field(
         default=None,
@@ -1610,7 +1654,7 @@ class FreeTextQualificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 4,
-        }
+        },
     )
 
 
@@ -1622,6 +1666,7 @@ class FreeTextQualificationTypeI:
 
     :ivar text_subject_qualifier: Text subject qualifier
     """
+
     text_subject_qualifier: None | str = field(
         default=None,
         metadata={
@@ -1631,7 +1676,7 @@ class FreeTextQualificationTypeI:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1644,6 +1689,7 @@ class FreeTextQualificationType120769C:
     :ivar language: ISO code for language of free text (default is
         English)
     """
+
     class Meta:
         name = "FreeTextQualificationType_120769C"
 
@@ -1656,7 +1702,7 @@ class FreeTextQualificationType120769C:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     information_type: None | str = field(
         default=None,
@@ -1666,7 +1712,7 @@ class FreeTextQualificationType120769C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 4,
-        }
+        },
     )
     language: None | str = field(
         default=None,
@@ -1675,7 +1721,7 @@ class FreeTextQualificationType120769C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1687,6 +1733,7 @@ class FrequentTravellerIdentificationType:
     :ivar tier_level: To specify a Tier linked to the FQTV
     :ivar priority_code: For example : priority code
     """
+
     carrier: None | str = field(
         default=None,
         metadata={
@@ -1694,7 +1741,7 @@ class FrequentTravellerIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -1703,7 +1750,7 @@ class FrequentTravellerIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 28,
-        }
+        },
     )
     tier_level: None | str = field(
         default=None,
@@ -1713,7 +1760,7 @@ class FrequentTravellerIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     priority_code: None | str = field(
         default=None,
@@ -1723,7 +1770,7 @@ class FrequentTravellerIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 12,
-        }
+        },
     )
 
 
@@ -1737,6 +1784,7 @@ class ItemNumberIdentificationType:
     :ivar qualifier: Qualifier
     :ivar responsible_agency: Responsible agency
     """
+
     number: None | str = field(
         default=None,
         metadata={
@@ -1744,7 +1792,7 @@ class ItemNumberIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 4,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -1754,7 +1802,7 @@ class ItemNumberIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     qualifier: None | str = field(
         default=None,
@@ -1763,7 +1811,7 @@ class ItemNumberIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     responsible_agency: None | str = field(
         default=None,
@@ -1773,7 +1821,7 @@ class ItemNumberIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1783,6 +1831,7 @@ class ItemNumberIdentificationType191597C:
     :ivar number: Item number.
     :ivar number_type: Indicates the item type .
     """
+
     class Meta:
         name = "ItemNumberIdentificationType_191597C"
 
@@ -1793,7 +1842,7 @@ class ItemNumberIdentificationType191597C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     number_type: None | str = field(
         default=None,
@@ -1803,7 +1852,7 @@ class ItemNumberIdentificationType191597C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1817,6 +1866,7 @@ class ItemNumberIdentificationType192331C:
     :ivar qualifier: Qualifier
     :ivar responsible_agency: Responsible agency
     """
+
     class Meta:
         name = "ItemNumberIdentificationType_192331C"
 
@@ -1827,7 +1877,7 @@ class ItemNumberIdentificationType192331C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -1837,7 +1887,7 @@ class ItemNumberIdentificationType192331C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     qualifier: None | str = field(
         default=None,
@@ -1846,7 +1896,7 @@ class ItemNumberIdentificationType192331C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     responsible_agency: None | str = field(
         default=None,
@@ -1856,7 +1906,7 @@ class ItemNumberIdentificationType192331C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1868,6 +1918,7 @@ class ItemNumberIdentificationType234878C:
     :ivar number: Number
     :ivar type_value: Type
     """
+
     class Meta:
         name = "ItemNumberIdentificationType_234878C"
 
@@ -1877,7 +1928,7 @@ class ItemNumberIdentificationType234878C:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,6}",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -1887,7 +1938,7 @@ class ItemNumberIdentificationType234878C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -1896,6 +1947,7 @@ class ItemNumberIdentificationType248537C:
     """
     Goods identification for a specified source.
     """
+
     class Meta:
         name = "ItemNumberIdentificationType_248537C"
 
@@ -1906,7 +1958,7 @@ class ItemNumberIdentificationType248537C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
 
 
@@ -1918,6 +1970,7 @@ class ItemReferencesAndVersionsType:
     :ivar reference_type: Qualifies the type of the reference used.
     :ivar ref_number: Unique fee reference.
     """
+
     reference_type: None | str = field(
         default=None,
         metadata={
@@ -1926,7 +1979,7 @@ class ItemReferencesAndVersionsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     ref_number: None | str = field(
         default=None,
@@ -1935,7 +1988,7 @@ class ItemReferencesAndVersionsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
 
 
@@ -1947,6 +2000,7 @@ class ItemReferencesAndVersionsType78536S:
     :ivar reference_type: Qualifies the type of the reference used.
     :ivar ref_number: Unique fee reference.
     """
+
     class Meta:
         name = "ItemReferencesAndVersionsType_78536S"
 
@@ -1958,7 +2012,7 @@ class ItemReferencesAndVersionsType78536S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     ref_number: None | str = field(
         default=None,
@@ -1967,7 +2021,7 @@ class ItemReferencesAndVersionsType78536S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
 
 
@@ -1979,6 +2033,7 @@ class ItemReferencesAndVersionsType78564S:
     :ivar reference_type: Qualifies the type of the reference used.
     :ivar fee_ref_number: Unique fee reference.
     """
+
     class Meta:
         name = "ItemReferencesAndVersionsType_78564S"
 
@@ -1990,7 +2045,7 @@ class ItemReferencesAndVersionsType78564S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fee_ref_number: None | str = field(
         default=None,
@@ -1999,7 +2054,7 @@ class ItemReferencesAndVersionsType78564S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
 
 
@@ -2013,6 +2068,7 @@ class ItineraryDetailsType:
         specified requested segment
     :ivar segment_number: Requested segment number
     """
+
     airport_city_qualifier: None | str = field(
         default=None,
         metadata={
@@ -2022,7 +2078,7 @@ class ItineraryDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     segment_number: None | str = field(
         default=None,
@@ -2032,7 +2088,7 @@ class ItineraryDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
 
 
@@ -2044,6 +2100,7 @@ class LocationIdentificationDetailsType:
         point is an airport when ambiguity exists (e.g. HOU)
     :ivar terminal: Terminal information
     """
+
     location_id: None | str = field(
         default=None,
         metadata={
@@ -2053,7 +2110,7 @@ class LocationIdentificationDetailsType:
             "required": True,
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     airport_city_qualifier: None | str = field(
         default=None,
@@ -2063,7 +2120,7 @@ class LocationIdentificationDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     terminal: None | str = field(
         default=None,
@@ -2072,7 +2129,7 @@ class LocationIdentificationDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
 
 
@@ -2082,6 +2139,7 @@ class MiniRulesDetailsType:
     :ivar interpretation: Coded text (period or day)
     :ivar value: Data type coded or value of interpretation
     """
+
     interpretation: None | str = field(
         default=None,
         metadata={
@@ -2089,7 +2147,7 @@ class MiniRulesDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 9,
-        }
+        },
     )
     value: list[str] = field(
         default_factory=list,
@@ -2099,7 +2157,7 @@ class MiniRulesDetailsType:
             "max_occurs": 10,
             "min_length": 0,
             "max_length": 5,
-        }
+        },
     )
 
 
@@ -2109,6 +2167,7 @@ class MiniRulesIndicatorType:
     :ivar rule_indicator: See rule indicator and free form text
         indicator
     """
+
     rule_indicator: list[str] = field(
         default_factory=list,
         metadata={
@@ -2118,7 +2177,7 @@ class MiniRulesIndicatorType:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
 
 
@@ -2129,6 +2188,7 @@ class MiniRulesType:
 
     :ivar category: Categoty of restriction: PTC, Max Adv Pur, Days, ...
     """
+
     category: None | str = field(
         default=None,
         metadata={
@@ -2137,7 +2197,7 @@ class MiniRulesType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2148,6 +2208,7 @@ class MonetaryInformationDetailsType:
     :ivar amount: Amount
     :ivar currency: ISO currency code
     """
+
     amount_type: None | str = field(
         default=None,
         metadata={
@@ -2156,7 +2217,7 @@ class MonetaryInformationDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
     amount: None | Decimal = field(
         default=None,
@@ -2164,7 +2225,7 @@ class MonetaryInformationDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -2173,7 +2234,7 @@ class MonetaryInformationDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2186,6 +2247,7 @@ class MonetaryInformationDetailsTypeI:
     :ivar amount: Amount
     :ivar currency: Currency
     """
+
     type_qualifier: None | str = field(
         default=None,
         metadata={
@@ -2195,7 +2257,7 @@ class MonetaryInformationDetailsTypeI:
             "required": True,
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -2204,7 +2266,7 @@ class MonetaryInformationDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -2213,7 +2275,7 @@ class MonetaryInformationDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2227,6 +2289,7 @@ class MonetaryInformationDetailsType245528C:
     :ivar currency: Currency
     :ivar location: location
     """
+
     class Meta:
         name = "MonetaryInformationDetailsType_245528C"
 
@@ -2239,14 +2302,14 @@ class MonetaryInformationDetailsType245528C:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     amount: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -2255,7 +2318,7 @@ class MonetaryInformationDetailsType245528C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -2264,7 +2327,7 @@ class MonetaryInformationDetailsType245528C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
 
 
@@ -2275,6 +2338,7 @@ class OnTimePerformanceType:
     :ivar percentage: Percentage
     :ivar accuracy: Accuracy
     """
+
     date_time_period: None | str = field(
         default=None,
         metadata={
@@ -2283,14 +2347,14 @@ class OnTimePerformanceType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     percentage: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     accuracy: None | str = field(
         default=None,
@@ -2299,7 +2363,7 @@ class OnTimePerformanceType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2310,6 +2374,7 @@ class OriginAndDestinationRequestType134833S:
 
     :ivar seg_ref: Requested segment number
     """
+
     class Meta:
         name = "OriginAndDestinationRequestType_134833S"
 
@@ -2321,7 +2386,7 @@ class OriginAndDestinationRequestType134833S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,2}",
-        }
+        },
     )
 
 
@@ -2335,6 +2400,7 @@ class OriginatorIdentificationDetailsTypeI:
     :ivar confidential_office: Confidential Office Name.
     :ivar other_office: Other Office Name
     """
+
     office_name: None | str = field(
         default=None,
         metadata={
@@ -2342,7 +2408,7 @@ class OriginatorIdentificationDetailsTypeI:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,9}",
-        }
+        },
     )
     agent_signin: None | str = field(
         default=None,
@@ -2352,7 +2418,7 @@ class OriginatorIdentificationDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 9,
-        }
+        },
     )
     confidential_office: None | str = field(
         default=None,
@@ -2362,7 +2428,7 @@ class OriginatorIdentificationDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 9,
-        }
+        },
     )
     other_office: None | str = field(
         default=None,
@@ -2372,7 +2438,7 @@ class OriginatorIdentificationDetailsTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 9,
-        }
+        },
     )
 
 
@@ -2383,6 +2449,7 @@ class PricingTicketingInformationType:
 
     :ivar price_type: Price type qualifier
     """
+
     price_type: list[str] = field(
         default_factory=list,
         metadata={
@@ -2393,7 +2460,7 @@ class PricingTicketingInformationType:
             "max_occurs": 20,
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2404,6 +2471,7 @@ class PricingTicketingSubsequentType:
 
     :ivar pax_fare_num: Passenger fare product number
     """
+
     pax_fare_num: list[str] = field(
         default_factory=list,
         metadata={
@@ -2414,7 +2482,7 @@ class PricingTicketingSubsequentType:
             "max_occurs": 10,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2427,6 +2495,7 @@ class ProcessingInformationType:
     :ivar reference_qualifier: Reference qualifier
     :ivar ref_num: Reference number
     """
+
     action_qualifier: None | str = field(
         default=None,
         metadata={
@@ -2435,7 +2504,7 @@ class ProcessingInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     reference_qualifier: None | str = field(
         default=None,
@@ -2445,7 +2514,7 @@ class ProcessingInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     ref_num: None | str = field(
         default=None,
@@ -2455,7 +2524,7 @@ class ProcessingInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
 
 
@@ -2469,6 +2538,7 @@ class ProductDateTimeType:
     :ivar date_variation: Arrival date compared to departure date, only
         if different from 0
     """
+
     date_of_departure: None | str = field(
         default=None,
         metadata={
@@ -2477,7 +2547,7 @@ class ProductDateTimeType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
-        }
+        },
     )
     time_of_departure: None | str = field(
         default=None,
@@ -2486,7 +2556,7 @@ class ProductDateTimeType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
-        }
+        },
     )
     date_of_arrival: None | str = field(
         default=None,
@@ -2495,7 +2565,7 @@ class ProductDateTimeType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
-        }
+        },
     )
     time_of_arrival: None | str = field(
         default=None,
@@ -2504,7 +2574,7 @@ class ProductDateTimeType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
-        }
+        },
     )
     date_variation: None | str = field(
         default=None,
@@ -2513,7 +2583,7 @@ class ProductDateTimeType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,1}",
-        }
+        },
     )
 
 
@@ -2522,6 +2592,7 @@ class ProductDetailsType:
     """
     To specify availability and additional services for a product class.
     """
+
     designator: None | str = field(
         default=None,
         metadata={
@@ -2530,7 +2601,7 @@ class ProductDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 17,
-        }
+        },
     )
     availability_status: None | str = field(
         default=None,
@@ -2540,7 +2611,7 @@ class ProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     special_service: None | str = field(
         default=None,
@@ -2550,7 +2621,7 @@ class ProductDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     option: list[str] = field(
         default_factory=list,
@@ -2560,7 +2631,7 @@ class ProductDetailsType:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 7,
-        }
+        },
     )
 
 
@@ -2580,6 +2651,7 @@ class ProductFacilitiesType:
     :ivar flight_characteristic: Add some flight restrictions (See code
         set list)
     """
+
     last_seat_available: None | str = field(
         default=None,
         metadata={
@@ -2588,7 +2660,7 @@ class ProductFacilitiesType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     level_of_access: None | str = field(
         default=None,
@@ -2598,7 +2670,7 @@ class ProductFacilitiesType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     electronic_ticketing: None | str = field(
         default=None,
@@ -2608,7 +2680,7 @@ class ProductFacilitiesType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     operational_suffix: None | str = field(
         default=None,
@@ -2618,7 +2690,7 @@ class ProductFacilitiesType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     product_detail_qualifier: None | str = field(
         default=None,
@@ -2628,7 +2700,7 @@ class ProductFacilitiesType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     flight_characteristic: list[str] = field(
         default_factory=list,
@@ -2639,7 +2711,7 @@ class ProductFacilitiesType:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2650,6 +2722,7 @@ class ProductTypeDetailsType:
 
     :ivar availability_cnx_type: Availability connection type.
     """
+
     availability_cnx_type: list[str] = field(
         default_factory=list,
         metadata={
@@ -2660,7 +2733,7 @@ class ProductTypeDetailsType:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2671,6 +2744,7 @@ class ProductTypeDetailsType205137C:
 
     :ivar avl: indicates whether the flight is domestic or international
     """
+
     class Meta:
         name = "ProductTypeDetailsType_205137C"
 
@@ -2683,7 +2757,7 @@ class ProductTypeDetailsType205137C:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
 
 
@@ -2693,6 +2767,7 @@ class ProposedSegmentDetailsType:
     :ivar ref: Flight proposal reference
     :ivar unit_qualifier: Elapse Flying Time
     """
+
     ref: None | str = field(
         default=None,
         metadata={
@@ -2700,7 +2775,7 @@ class ProposedSegmentDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     unit_qualifier: None | str = field(
         default=None,
@@ -2710,7 +2785,7 @@ class ProposedSegmentDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2724,6 +2799,7 @@ class ReferenceType:
     :ivar first_item_identifier: Reference of segment starting range
     :ivar last_item_identifier: Reference of segment ending range
     """
+
     ref_of_leg: None | str = field(
         default=None,
         metadata={
@@ -2732,7 +2808,7 @@ class ReferenceType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     first_item_identifier: None | str = field(
         default=None,
@@ -2741,7 +2817,7 @@ class ReferenceType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
     last_item_identifier: None | str = field(
         default=None,
@@ -2750,7 +2826,7 @@ class ReferenceType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
 
 
@@ -2760,6 +2836,7 @@ class ReferencingDetailsType:
     :ivar ref_qualifier: Reference qualifier
     :ivar ref_number: Requested segment reference
     """
+
     ref_qualifier: None | str = field(
         default=None,
         metadata={
@@ -2768,7 +2845,7 @@ class ReferencingDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
     ref_number: None | str = field(
         default=None,
@@ -2778,7 +2855,7 @@ class ReferencingDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{0,3}",
-        }
+        },
     )
 
 
@@ -2790,6 +2867,7 @@ class ReferencingDetailsType191583C:
     :ivar ref_qualifier: Service reference qualifier
     :ivar ref_number: Service reference
     """
+
     class Meta:
         name = "ReferencingDetailsType_191583C"
 
@@ -2801,7 +2879,7 @@ class ReferencingDetailsType191583C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     ref_number: None | str = field(
         default=None,
@@ -2811,7 +2889,7 @@ class ReferencingDetailsType191583C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{0,6}",
-        }
+        },
     )
 
 
@@ -2823,6 +2901,7 @@ class ReferencingDetailsType195561C:
     :ivar ref_qualifier: Segment reference qualifier
     :ivar ref_number: Flight or flight group reference
     """
+
     class Meta:
         name = "ReferencingDetailsType_195561C"
 
@@ -2834,7 +2913,7 @@ class ReferencingDetailsType195561C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     ref_number: None | str = field(
         default=None,
@@ -2844,7 +2923,7 @@ class ReferencingDetailsType195561C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{0,3}",
-        }
+        },
     )
 
 
@@ -2856,6 +2935,7 @@ class ReferencingDetailsType234704C:
     :ivar type_value: Type
     :ivar value: Value
     """
+
     class Meta:
         name = "ReferencingDetailsType_234704C"
 
@@ -2867,7 +2947,7 @@ class ReferencingDetailsType234704C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -2876,7 +2956,7 @@ class ReferencingDetailsType234704C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 60,
-        }
+        },
     )
 
 
@@ -2888,13 +2968,14 @@ class SegmentRepetitionControlDetailsTypeI:
     :ivar quantity: traveller number
     :ivar number_of_units: range of traveller
     """
+
     quantity: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,15}",
-        }
+        },
     )
     number_of_units: None | str = field(
         default=None,
@@ -2903,7 +2984,7 @@ class SegmentRepetitionControlDetailsTypeI:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,15}",
-        }
+        },
     )
 
 
@@ -2915,6 +2996,7 @@ class SelectionDetailsInformationType:
     :ivar type_value: Carrier fee type
     :ivar option_information: Carrier fee status
     """
+
     type_value: None | str = field(
         default=None,
         metadata={
@@ -2924,7 +3006,7 @@ class SelectionDetailsInformationType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     option_information: None | str = field(
         default=None,
@@ -2934,7 +3016,7 @@ class SelectionDetailsInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -2946,6 +3028,7 @@ class SequenceInformationTypeU:
     :ivar number: Number
     :ivar identification_code: Identification code
     """
+
     number: None | str = field(
         default=None,
         metadata={
@@ -2954,7 +3037,7 @@ class SequenceInformationTypeU:
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     identification_code: None | str = field(
         default=None,
@@ -2964,7 +3047,7 @@ class SequenceInformationTypeU:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 17,
-        }
+        },
     )
 
 
@@ -2975,6 +3058,7 @@ class ServicesReferences:
     :ivar status: Status of the service
     :ivar from_price: Service lowest price
     """
+
     reference: None | str = field(
         default=None,
         metadata={
@@ -2982,7 +3066,7 @@ class ServicesReferences:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 4,
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -2991,7 +3075,7 @@ class ServicesReferences:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     from_price: None | str = field(
         default=None,
@@ -3001,7 +3085,7 @@ class ServicesReferences:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 18,
-        }
+        },
     )
 
 
@@ -3012,6 +3096,7 @@ class SpecialRequirementsDataDetailsType:
 
     :ivar seat_characteristics: SSR seat characteristic
     """
+
     seat_characteristics: list[str] = field(
         default_factory=list,
         metadata={
@@ -3021,7 +3106,7 @@ class SpecialRequirementsDataDetailsType:
             "max_occurs": 5,
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
 
 
@@ -3039,6 +3124,7 @@ class SpecialRequirementsTypeDetailsType:
     :ivar service_sub_group: Specify the Service Sub-Group
     :ivar service_free_text: Free Text attached to the Service.
     """
+
     service_classification: None | str = field(
         default=None,
         metadata={
@@ -3048,7 +3134,7 @@ class SpecialRequirementsTypeDetailsType:
             "required": True,
             "min_length": 1,
             "max_length": 4,
-        }
+        },
     )
     service_status: None | str = field(
         default=None,
@@ -3058,7 +3144,7 @@ class SpecialRequirementsTypeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     service_number_of_instances: None | str = field(
         default=None,
@@ -3067,7 +3153,7 @@ class SpecialRequirementsTypeDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,15}",
-        }
+        },
     )
     service_marketing_carrier: None | str = field(
         default=None,
@@ -3077,7 +3163,7 @@ class SpecialRequirementsTypeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     service_group: None | str = field(
         default=None,
@@ -3087,7 +3173,7 @@ class SpecialRequirementsTypeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     service_sub_group: None | str = field(
         default=None,
@@ -3097,7 +3183,7 @@ class SpecialRequirementsTypeDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     service_free_text: list[str] = field(
         default_factory=list,
@@ -3108,7 +3194,7 @@ class SpecialRequirementsTypeDetailsType:
             "max_occurs": 99,
             "min_length": 1,
             "max_length": 70,
-        }
+        },
     )
 
 
@@ -3119,6 +3205,7 @@ class SpecificTravellerDetailsType:
 
     :ivar reference_number: Reference number
     """
+
     reference_number: None | str = field(
         default=None,
         metadata={
@@ -3127,7 +3214,7 @@ class SpecificTravellerDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
 
 
@@ -3139,6 +3226,7 @@ class StatusDetailsType:
     :ivar notification2: CPU time,user type
     :ivar description: Capture and trace information
     """
+
     advisory_type_info: None | str = field(
         default=None,
         metadata={
@@ -3147,7 +3235,7 @@ class StatusDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     notification: None | str = field(
         default=None,
@@ -3156,7 +3244,7 @@ class StatusDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     notification2: None | str = field(
         default=None,
@@ -3165,7 +3253,7 @@ class StatusDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -3174,7 +3262,7 @@ class StatusDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 70,
-        }
+        },
     )
 
 
@@ -3188,6 +3276,7 @@ class StatusDetailsType256255C:
         or     Crt for Current
     :ivar action:
     """
+
     class Meta:
         name = "StatusDetailsType_256255C"
 
@@ -3198,7 +3287,7 @@ class StatusDetailsType256255C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     action: None | str = field(
         default=None,
@@ -3207,7 +3296,7 @@ class StatusDetailsType256255C:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -3222,6 +3311,7 @@ class TaxDetailsType:
     :ivar type_value: Type
     :ivar indicator: Indicator
     """
+
     rate: None | str = field(
         default=None,
         metadata={
@@ -3229,7 +3319,7 @@ class TaxDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 12,
-        }
+        },
     )
     country_code: None | str = field(
         default=None,
@@ -3239,7 +3329,7 @@ class TaxDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     currency_code: None | str = field(
         default=None,
@@ -3249,7 +3339,7 @@ class TaxDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -3259,7 +3349,7 @@ class TaxDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     indicator: list[str] = field(
         default_factory=list,
@@ -3269,7 +3359,7 @@ class TaxDetailsType:
             "max_occurs": 98,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -3280,13 +3370,14 @@ class TravellerDetailsType:
         system.
     :ivar infant_indicator: Traveller is an infant
     """
+
     ref: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
     infant_indicator: None | str = field(
         default=None,
@@ -3295,7 +3386,7 @@ class TravellerDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,1}",
-        }
+        },
     )
 
 
@@ -3307,13 +3398,14 @@ class ActionDetailsType:
     :ivar number_of_items_details: Number of items details
     :ivar last_items_details: Range of segments
     """
+
     number_of_items_details: None | ProcessingInformationType = field(
         default=None,
         metadata={
             "name": "numberOfItemsDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     last_items_details: list[ReferenceType] = field(
         default_factory=list,
@@ -3322,7 +3414,7 @@ class ActionDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -3333,6 +3425,7 @@ class ApplicationErrorInformationType78543S:
 
     :ivar application_error_detail: Details on application error.
     """
+
     class Meta:
         name = "ApplicationErrorInformationType_78543S"
 
@@ -3343,7 +3436,7 @@ class ApplicationErrorInformationType78543S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
 
 
@@ -3355,6 +3448,7 @@ class AttributeType:
     :ivar attribute_qualifier: Criteria Set Type
     :ivar attribute_details: Criteria details
     """
+
     attribute_qualifier: None | str = field(
         default=None,
         metadata={
@@ -3363,7 +3457,7 @@ class AttributeType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     attribute_details: list[AttributeInformationType97181C] = field(
         default_factory=list,
@@ -3373,7 +3467,7 @@ class AttributeType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -3383,6 +3477,7 @@ class AttributeTypeU:
     :ivar attribute_function: provides the function of the attribute
     :ivar attribute_details: provides details for the Attribute
     """
+
     attribute_function: None | str = field(
         default=None,
         metadata={
@@ -3391,7 +3486,7 @@ class AttributeTypeU:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     attribute_details: None | AttributeInformationTypeU = field(
         default=None,
@@ -3400,7 +3495,7 @@ class AttributeTypeU:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
 
 
@@ -3411,6 +3506,7 @@ class AttributeType78561S:
 
     :ivar fee_parameter: Fee/reduction parameters.
     """
+
     class Meta:
         name = "AttributeType_78561S"
 
@@ -3421,7 +3517,7 @@ class AttributeType78561S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 20,
-        }
+        },
     )
 
 
@@ -3433,6 +3529,7 @@ class CategDescrType:
     :ivar description_info: Category description information
     :ivar process_indicator: Category processing indicator
     """
+
     description_info: None | CategoryDescriptionType = field(
         default=None,
         metadata={
@@ -3440,7 +3537,7 @@ class CategDescrType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
     process_indicator: None | str = field(
         default=None,
@@ -3450,7 +3547,7 @@ class CategDescrType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -3461,6 +3558,7 @@ class CodedAttributeType:
 
     :ivar attribute_details: Fee/reduction Id
     """
+
     attribute_details: list[CodedAttributeInformationType] = field(
         default_factory=list,
         metadata={
@@ -3469,7 +3567,7 @@ class CodedAttributeType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
 
 
@@ -3482,13 +3580,14 @@ class CommercialAgreementsType:
     :ivar codeshare_details: Codeshare Details
     :ivar other_codeshare_details: Other codeshare details
     """
+
     codeshare_details: None | CompanyRoleIdentificationType = field(
         default=None,
         metadata={
             "name": "codeshareDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     other_codeshare_details: list[CompanyRoleIdentificationType] = field(
         default_factory=list,
@@ -3497,7 +3596,7 @@ class CommercialAgreementsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 9,
-        }
+        },
     )
 
 
@@ -3509,6 +3608,7 @@ class ConversionRateTypeI:
     :ivar conversion_rate_detail: Detail of conversion rate of First
         Monetary Unit.
     """
+
     conversion_rate_detail: list[ConversionRateDetailsTypeI179848C] = field(
         default_factory=list,
         metadata={
@@ -3517,7 +3617,7 @@ class ConversionRateTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
 
 
@@ -3528,6 +3628,7 @@ class ConversionRateTypeI78562S:
 
     :ivar conversion_rate_detail: Details of conversion
     """
+
     class Meta:
         name = "ConversionRateTypeI_78562S"
 
@@ -3539,7 +3640,7 @@ class ConversionRateTypeI78562S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
 
 
@@ -3550,6 +3651,7 @@ class DateAndTimeInformationType:
 
     :ivar stop_details: Details on date and time
     """
+
     stop_details: list[DateAndTimeDetailsType] = field(
         default_factory=list,
         metadata={
@@ -3558,7 +3660,7 @@ class DateAndTimeInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 2,
-        }
+        },
     )
 
 
@@ -3570,6 +3672,7 @@ class DateAndTimeInformationType182345S:
 
     :ivar date_and_time_details: DATE AND TIME DETAILS
     """
+
     class Meta:
         name = "DateAndTimeInformationType_182345S"
 
@@ -3580,7 +3683,7 @@ class DateAndTimeInformationType182345S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 400,
-        }
+        },
     )
 
 
@@ -3593,6 +3696,7 @@ class DiscountAndPenaltyInformationType:
         agent collected fee.
     :ivar fee_information: Used to specify penalty information
     """
+
     fee_identification: None | str = field(
         default=None,
         metadata={
@@ -3601,7 +3705,7 @@ class DiscountAndPenaltyInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fee_information: None | DiscountPenaltyMonetaryInformationType = field(
         default=None,
@@ -3609,7 +3713,7 @@ class DiscountAndPenaltyInformationType:
             "name": "feeInformation",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -3619,13 +3723,14 @@ class ExcessBaggageType:
     :ivar baggage_details: Baggage details
     :ivar bag_tag_details: Free baggage allowance details
     """
+
     baggage_details: None | BaggageDetailsType = field(
         default=None,
         metadata={
             "name": "baggageDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     bag_tag_details: list[BagtagDetailsType] = field(
         default_factory=list,
@@ -3634,7 +3739,7 @@ class ExcessBaggageType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -3653,6 +3758,7 @@ class FareFamilyType:
     :ivar carrier: Carrier code
     :ivar services: Reference to the services details
     """
+
     ref_number: None | str = field(
         default=None,
         metadata={
@@ -3661,7 +3767,7 @@ class FareFamilyType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,3}",
-        }
+        },
     )
     fare_familyname: None | str = field(
         default=None,
@@ -3671,7 +3777,7 @@ class FareFamilyType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     hierarchy: None | str = field(
         default=None,
@@ -3679,7 +3785,7 @@ class FareFamilyType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,4}",
-        }
+        },
     )
     cabin: None | str = field(
         default=None,
@@ -3688,7 +3794,7 @@ class FareFamilyType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     commercial_family_details: list[FareFamilyDetailsType] = field(
         default_factory=list,
@@ -3697,7 +3803,7 @@ class FareFamilyType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 20,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -3706,7 +3812,7 @@ class FareFamilyType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 100,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -3715,7 +3821,7 @@ class FareFamilyType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 2,
             "max_length": 3,
-        }
+        },
     )
     services: list[ServicesReferences] = field(
         default_factory=list,
@@ -3723,7 +3829,7 @@ class FareFamilyType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 20,
-        }
+        },
     )
 
 
@@ -3737,6 +3843,7 @@ class FareInformationType:
     :ivar fare_type_grouping: Fare Type Grouping
     :ivar rate_category: Rate Category
     """
+
     value_qualifier: None | str = field(
         default=None,
         metadata={
@@ -3744,7 +3851,7 @@ class FareInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"[0-9A-Z]{1,3}",
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -3752,7 +3859,7 @@ class FareInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "pattern": r"-?[0-9]{1,15}",
-        }
+        },
     )
     fare_details: None | FareDetailsType193037C = field(
         default=None,
@@ -3760,7 +3867,7 @@ class FareInformationType:
             "name": "fareDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     identity_number: None | str = field(
         default=None,
@@ -3770,7 +3877,7 @@ class FareInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     fare_type_grouping: None | FareTypeGroupingInformationType = field(
         default=None,
@@ -3778,7 +3885,7 @@ class FareInformationType:
             "name": "fareTypeGrouping",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     rate_category: None | str = field(
         default=None,
@@ -3788,7 +3895,7 @@ class FareInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
 
 
@@ -3799,6 +3906,7 @@ class FareInformationType80868S:
 
     :ivar fare_details: Fare details
     """
+
     class Meta:
         name = "FareInformationType_80868S"
 
@@ -3808,7 +3916,7 @@ class FareInformationType80868S:
             "name": "fareDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -3823,6 +3931,7 @@ class FareQualifierDetailsType:
     :ivar additional_fare_details: Additional fare details
     :ivar discount_details: Discount details
     """
+
     movement_type: None | str = field(
         default=None,
         metadata={
@@ -3831,7 +3940,7 @@ class FareQualifierDetailsType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     fare_categories: None | FareCategoryCodesTypeI = field(
         default=None,
@@ -3839,7 +3948,7 @@ class FareQualifierDetailsType:
             "name": "fareCategories",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     fare_details: None | FareDetailsTypeI = field(
         default=None,
@@ -3847,15 +3956,17 @@ class FareQualifierDetailsType:
             "name": "fareDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
-    additional_fare_details: None | AdditionalFareQualifierDetailsTypeI = field(
-        default=None,
-        metadata={
-            "name": "additionalFareDetails",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+    additional_fare_details: None | AdditionalFareQualifierDetailsTypeI = (
+        field(
+            default=None,
+            metadata={
+                "name": "additionalFareDetails",
+                "type": "Element",
+                "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+            },
+        )
     )
     discount_details: list[DiscountPenaltyInformationType] = field(
         default_factory=list,
@@ -3864,7 +3975,7 @@ class FareQualifierDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 9,
-        }
+        },
     )
 
 
@@ -3876,13 +3987,14 @@ class FlightCharacteristicsType:
     :ivar on_time_performance: On-Time Performance
     :ivar in_flight_srv: In flight services
     """
+
     on_time_performance: None | OnTimePerformanceType = field(
         default=None,
         metadata={
             "name": "onTimePerformance",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     in_flight_srv: list[str] = field(
         default_factory=list,
@@ -3893,7 +4005,7 @@ class FlightCharacteristicsType:
             "max_occurs": 99,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
 
 
@@ -3905,6 +4017,7 @@ class FlightProductInformationType:
     :ivar cabin_product: Indicates flight cabin details
     :ivar context_details: To specify additional characteristics.
     """
+
     cabin_product: list[CabinProductDetailsType195516C] = field(
         default_factory=list,
         metadata={
@@ -3912,7 +4025,7 @@ class FlightProductInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 6,
-        }
+        },
     )
     context_details: None | ProductTypeDetailsType = field(
         default=None,
@@ -3920,7 +4033,7 @@ class FlightProductInformationType:
             "name": "contextDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -3932,6 +4045,7 @@ class FlightProductInformationType141442S:
     :ivar cabin_product: Indicates flight cabin details
     :ivar context_details: To specify additional characteristics.
     """
+
     class Meta:
         name = "FlightProductInformationType_141442S"
 
@@ -3942,7 +4056,7 @@ class FlightProductInformationType141442S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 26,
-        }
+        },
     )
     context_details: None | ProductTypeDetailsType205137C = field(
         default=None,
@@ -3950,7 +4064,7 @@ class FlightProductInformationType141442S:
             "name": "contextDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -3962,6 +4076,7 @@ class FlightProductInformationType161491S:
     :ivar cabin_product: Indicates flight cabin details
     :ivar fare_product_detail: Fare product details
     """
+
     class Meta:
         name = "FlightProductInformationType_161491S"
 
@@ -3971,7 +4086,7 @@ class FlightProductInformationType161491S:
             "name": "cabinProduct",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     fare_product_detail: None | FareProductDetailsType = field(
         default=None,
@@ -3979,7 +4094,7 @@ class FlightProductInformationType161491S:
             "name": "fareProductDetail",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -3994,6 +4109,7 @@ class FlightProductInformationType176659S:
     :ivar break_point: To determine if Fare Breaks at this segment
     :ivar context_details: To specify additional characteristics.
     """
+
     class Meta:
         name = "FlightProductInformationType_176659S"
 
@@ -4003,7 +4119,7 @@ class FlightProductInformationType176659S:
             "name": "cabinProduct",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     fare_product_detail: None | FareProductDetailsType248552C = field(
         default=None,
@@ -4011,7 +4127,7 @@ class FlightProductInformationType176659S:
             "name": "fareProductDetail",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     corporate_id: list[str] = field(
         default_factory=list,
@@ -4022,7 +4138,7 @@ class FlightProductInformationType176659S:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
     break_point: None | str = field(
         default=None,
@@ -4032,7 +4148,7 @@ class FlightProductInformationType176659S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     context_details: None | ProductTypeDetailsType = field(
         default=None,
@@ -4040,7 +4156,7 @@ class FlightProductInformationType176659S:
             "name": "contextDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -4053,6 +4169,7 @@ class FlightServicesType:
     :ivar cabin_info:
     :ivar class_info:
     """
+
     service_type: None | str = field(
         default=None,
         metadata={
@@ -4062,7 +4179,7 @@ class FlightServicesType:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     cabin_info: list[CabinInformationType] = field(
         default_factory=list,
@@ -4071,7 +4188,7 @@ class FlightServicesType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
     class_info: list[ClassInformationType] = field(
         default_factory=list,
@@ -4080,7 +4197,7 @@ class FlightServicesType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4091,7 +4208,10 @@ class FrequentTravellerIdentificationCodeType:
 
     :ivar frequent_traveller_details: Frequent Traveller Info
     """
-    frequent_traveller_details: list[FrequentTravellerIdentificationType] = field(
+
+    frequent_traveller_details: list[
+        FrequentTravellerIdentificationType
+    ] = field(
         default_factory=list,
         metadata={
             "name": "frequentTravellerDetails",
@@ -4099,7 +4219,7 @@ class FrequentTravellerIdentificationCodeType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4114,6 +4234,7 @@ class HeaderInformationTypeI:
     :ivar product_identification: Contains product identification such
         as UIC code...
     """
+
     status: list[str] = field(
         default_factory=list,
         metadata={
@@ -4122,7 +4243,7 @@ class HeaderInformationTypeI:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     date_time_period_details: None | DateTimePeriodDetailsTypeI = field(
         default=None,
@@ -4130,7 +4251,7 @@ class HeaderInformationTypeI:
             "name": "dateTimePeriodDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     reference_number: None | str = field(
         default=None,
@@ -4140,7 +4261,7 @@ class HeaderInformationTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     product_identification: list[str] = field(
         default_factory=list,
@@ -4151,7 +4272,7 @@ class HeaderInformationTypeI:
             "max_occurs": 2,
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
 
 
@@ -4163,13 +4284,14 @@ class InteractiveFreeTextType:
     :ivar free_text_qualification: Free text qualification
     :ivar free_text: Free text
     """
+
     free_text_qualification: None | FreeTextQualificationTypeI = field(
         default=None,
         metadata={
             "name": "freeTextQualification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     free_text: None | str = field(
         default=None,
@@ -4179,7 +4301,7 @@ class InteractiveFreeTextType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
 
 
@@ -4191,6 +4313,7 @@ class InteractiveFreeTextType78534S:
     :ivar free_text_qualification: Details on interactive free text
     :ivar description: Free text
     """
+
     class Meta:
         name = "InteractiveFreeTextType_78534S"
 
@@ -4200,7 +4323,7 @@ class InteractiveFreeTextType78534S:
             "name": "freeTextQualification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     description: list[str] = field(
         default_factory=list,
@@ -4210,7 +4333,7 @@ class InteractiveFreeTextType78534S:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 70,
-        }
+        },
     )
 
 
@@ -4222,6 +4345,7 @@ class InteractiveFreeTextType78544S:
     :ivar free_text_qualification: Details on interactive free text
     :ivar description: Free text
     """
+
     class Meta:
         name = "InteractiveFreeTextType_78544S"
 
@@ -4231,7 +4355,7 @@ class InteractiveFreeTextType78544S:
             "name": "freeTextQualification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     description: list[str] = field(
         default_factory=list,
@@ -4241,7 +4365,7 @@ class InteractiveFreeTextType78544S:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 70,
-        }
+        },
     )
 
 
@@ -4253,6 +4377,7 @@ class InteractiveFreeTextType78559S:
     :ivar free_text_qualification: Details on interactive free text
     :ivar description: Free text
     """
+
     class Meta:
         name = "InteractiveFreeTextType_78559S"
 
@@ -4262,7 +4387,7 @@ class InteractiveFreeTextType78559S:
             "name": "freeTextQualification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     description: list[str] = field(
         default_factory=list,
@@ -4272,7 +4397,7 @@ class InteractiveFreeTextType78559S:
             "max_occurs": 9,
             "min_length": 1,
             "max_length": 500,
-        }
+        },
     )
 
 
@@ -4283,6 +4408,7 @@ class ItemNumberType:
 
     :ivar item_number: Item number details
     """
+
     item_number: None | ItemNumberIdentificationType192331C = field(
         default=None,
         metadata={
@@ -4290,7 +4416,7 @@ class ItemNumberType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
 
 
@@ -4303,6 +4429,7 @@ class ItemNumberType161497S:
     :ivar code_share_details: Code share details.
     :ivar price_ticketing: Pricing ticketind details.
     """
+
     class Meta:
         name = "ItemNumberType_161497S"
 
@@ -4312,7 +4439,7 @@ class ItemNumberType161497S:
             "name": "itemNumberId",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     code_share_details: list[CompanyRoleIdentificationType120771C] = field(
         default_factory=list,
@@ -4321,7 +4448,7 @@ class ItemNumberType161497S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 6,
-        }
+        },
     )
     price_ticketing: None | PricingTicketingInformationType = field(
         default=None,
@@ -4329,7 +4456,7 @@ class ItemNumberType161497S:
             "name": "priceTicketing",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -4340,6 +4467,7 @@ class ItemNumberType166130S:
 
     :ivar item_number_details: Item number details
     """
+
     class Meta:
         name = "ItemNumberType_166130S"
 
@@ -4351,7 +4479,7 @@ class ItemNumberType166130S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4360,6 +4488,7 @@ class ItemNumberType176648S:
     """
     To specify an item number.
     """
+
     class Meta:
         name = "ItemNumberType_176648S"
 
@@ -4371,7 +4500,7 @@ class ItemNumberType176648S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4382,6 +4511,7 @@ class ItemNumberType80866S:
 
     :ivar item_number_details: Item number details
     """
+
     class Meta:
         name = "ItemNumberType_80866S"
 
@@ -4392,7 +4522,7 @@ class ItemNumberType80866S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
 
 
@@ -4407,6 +4537,7 @@ class MiniRulesType78547S:
     :ivar indicator: Indicators
     :ivar mini_rules: Mini rules
     """
+
     class Meta:
         name = "MiniRulesType_78547S"
 
@@ -4418,7 +4549,7 @@ class MiniRulesType78547S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 6,
-        }
+        },
     )
     category: None | str = field(
         default=None,
@@ -4428,14 +4559,14 @@ class MiniRulesType78547S:
             "required": True,
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
     indicator: None | MiniRulesIndicatorType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     mini_rules: list[MiniRulesDetailsType] = field(
         default_factory=list,
@@ -4444,7 +4575,7 @@ class MiniRulesType78547S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 5,
-        }
+        },
     )
 
 
@@ -4455,6 +4586,7 @@ class MonetaryInformationType:
 
     :ivar monetary_detail: Monetary information.
     """
+
     monetary_detail: list[MonetaryInformationDetailsType] = field(
         default_factory=list,
         metadata={
@@ -4462,7 +4594,7 @@ class MonetaryInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 20,
-        }
+        },
     )
 
 
@@ -4473,6 +4605,7 @@ class MonetaryInformationTypeI:
 
     :ivar monetary_details: Monetary details
     """
+
     monetary_details: list[MonetaryInformationDetailsTypeI] = field(
         default_factory=list,
         metadata={
@@ -4481,7 +4614,7 @@ class MonetaryInformationTypeI:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4490,6 +4623,7 @@ class MonetaryInformationType174241S:
     """
     To convey monetary amounts, rates and percentages.
     """
+
     class Meta:
         name = "MonetaryInformationType_174241S"
 
@@ -4500,16 +4634,18 @@ class MonetaryInformationType174241S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
-    other_monetary_details: list[MonetaryInformationDetailsType245528C] = field(
+    other_monetary_details: list[
+        MonetaryInformationDetailsType245528C
+    ] = field(
         default_factory=list,
         metadata={
             "name": "otherMonetaryDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 19,
-        }
+        },
     )
 
 
@@ -4520,6 +4656,7 @@ class MonetaryInformationType185955S:
 
     :ivar monetary_detail: Monetary information
     """
+
     class Meta:
         name = "MonetaryInformationType_185955S"
 
@@ -4531,7 +4668,7 @@ class MonetaryInformationType185955S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 2,
-        }
+        },
     )
 
 
@@ -4542,6 +4679,7 @@ class MonetaryInformationType193024S:
 
     :ivar monetary_detail: Monetary information.
     """
+
     class Meta:
         name = "MonetaryInformationType_193024S"
 
@@ -4552,7 +4690,7 @@ class MonetaryInformationType193024S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 30,
-        }
+        },
     )
 
 
@@ -4565,6 +4703,7 @@ class OriginAndDestinationRequestType:
     :ivar location_forcing: Forces arrival or departure, from/to the
         same airport/city
     """
+
     seg_ref: None | str = field(
         default=None,
         metadata={
@@ -4573,7 +4712,7 @@ class OriginAndDestinationRequestType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
             "pattern": r"-?[0-9]{1,2}",
-        }
+        },
     )
     location_forcing: list[ItineraryDetailsType] = field(
         default_factory=list,
@@ -4582,7 +4721,7 @@ class OriginAndDestinationRequestType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 2,
-        }
+        },
     )
 
 
@@ -4598,6 +4737,7 @@ class PricingTicketingSubsequentType193023S:
     :ivar monetary_details: Monetary information.
     :ivar pricing_ticketing: Pricing ticketing details.
     """
+
     class Meta:
         name = "PricingTicketingSubsequentType_193023S"
 
@@ -4610,7 +4750,7 @@ class PricingTicketingSubsequentType193023S:
             "required": True,
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     total_fare_amount: None | Decimal = field(
         default=None,
@@ -4619,7 +4759,7 @@ class PricingTicketingSubsequentType193023S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
     total_tax_amount: None | Decimal = field(
         default=None,
@@ -4627,7 +4767,7 @@ class PricingTicketingSubsequentType193023S:
             "name": "totalTaxAmount",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     code_share_details: list[CompanyRoleIdentificationType120771C] = field(
         default_factory=list,
@@ -4636,7 +4776,7 @@ class PricingTicketingSubsequentType193023S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 6,
-        }
+        },
     )
     monetary_details: list[MonetaryInformationDetailsType] = field(
         default_factory=list,
@@ -4645,7 +4785,7 @@ class PricingTicketingSubsequentType193023S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 20,
-        }
+        },
     )
     pricing_ticketing: None | PricingTicketingInformationType = field(
         default=None,
@@ -4653,7 +4793,7 @@ class PricingTicketingSubsequentType193023S:
             "name": "pricingTicketing",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -4667,6 +4807,7 @@ class ProductInformationType:
         CM#10569 INVALID INTERNATIONAL INDICATOR is returned.
     :ivar booking_class_details:
     """
+
     product_details_qualifier: None | str = field(
         default=None,
         metadata={
@@ -4675,7 +4816,7 @@ class ProductInformationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     booking_class_details: list[ProductDetailsType] = field(
         default_factory=list,
@@ -4684,7 +4825,7 @@ class ProductInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 26,
-        }
+        },
     )
 
 
@@ -4697,6 +4838,7 @@ class ProposedSegmentType:
     :ivar flight_characteristic: Flight characteristics.
     :ivar maj_cabin: Majority cabin
     """
+
     flight_proposal: list[ProposedSegmentDetailsType] = field(
         default_factory=list,
         metadata={
@@ -4705,7 +4847,7 @@ class ProposedSegmentType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
     flight_characteristic: None | str = field(
         default=None,
@@ -4715,7 +4857,7 @@ class ProposedSegmentType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 0,
             "max_length": 3,
-        }
+        },
     )
     maj_cabin: None | str = field(
         default=None,
@@ -4725,7 +4867,7 @@ class ProposedSegmentType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
 
 
@@ -4736,6 +4878,7 @@ class ReferenceInfoType:
 
     :ivar referencing_detail: Referencing details
     """
+
     referencing_detail: list[ReferencingDetailsType191583C] = field(
         default_factory=list,
         metadata={
@@ -4743,7 +4886,7 @@ class ReferenceInfoType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 200,
-        }
+        },
     )
 
 
@@ -4755,6 +4898,7 @@ class ReferenceInfoType133176S:
 
     :ivar referencing_detail: Referencing details
     """
+
     class Meta:
         name = "ReferenceInfoType_133176S"
 
@@ -4765,7 +4909,7 @@ class ReferenceInfoType133176S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4776,6 +4920,7 @@ class ReferenceInfoType134839S:
 
     :ivar referencing_detail: Referencing details
     """
+
     class Meta:
         name = "ReferenceInfoType_134839S"
 
@@ -4786,7 +4931,7 @@ class ReferenceInfoType134839S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4797,6 +4942,7 @@ class ReferenceInfoType134840S:
 
     :ivar referencing_detail: Referencing details
     """
+
     class Meta:
         name = "ReferenceInfoType_134840S"
 
@@ -4807,7 +4953,7 @@ class ReferenceInfoType134840S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 200,
-        }
+        },
     )
 
 
@@ -4818,6 +4964,7 @@ class ReferenceInfoType165972S:
 
     :ivar reference_details: Reference details
     """
+
     class Meta:
         name = "ReferenceInfoType_165972S"
 
@@ -4828,7 +4975,7 @@ class ReferenceInfoType165972S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 20,
-        }
+        },
     )
 
 
@@ -4840,6 +4987,7 @@ class ReferenceInfoType176658S:
 
     :ivar referencing_detail: Referencing details
     """
+
     class Meta:
         name = "ReferenceInfoType_176658S"
 
@@ -4850,7 +4998,7 @@ class ReferenceInfoType176658S:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 6,
-        }
+        },
     )
 
 
@@ -4861,14 +5009,17 @@ class SegmentRepetitionControlTypeI:
 
     :ivar segment_control_details: Segment control details
     """
-    segment_control_details: list[SegmentRepetitionControlDetailsTypeI] = field(
+
+    segment_control_details: list[
+        SegmentRepetitionControlDetailsTypeI
+    ] = field(
         default_factory=list,
         metadata={
             "name": "segmentControlDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 9,
-        }
+        },
     )
 
 
@@ -4879,6 +5030,7 @@ class SelectionDetailsType:
 
     :ivar carrier_fee_details: Carrier fees options
     """
+
     carrier_fee_details: None | SelectionDetailsInformationType = field(
         default=None,
         metadata={
@@ -4886,7 +5038,7 @@ class SelectionDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
 
 
@@ -4897,13 +5049,14 @@ class SequenceDetailsTypeU:
 
     :ivar sequence_details: Sequence details
     """
+
     sequence_details: None | SequenceInformationTypeU = field(
         default=None,
         metadata={
             "name": "sequenceDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -4916,14 +5069,17 @@ class SpecialRequirementsDetailsType:
         of the customer
     :ivar seat_details: Seat details
     """
-    service_requirements_info: None | SpecialRequirementsTypeDetailsType = field(
-        default=None,
-        metadata={
-            "name": "serviceRequirementsInfo",
-            "type": "Element",
-            "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
-        }
+
+    service_requirements_info: None | SpecialRequirementsTypeDetailsType = (
+        field(
+            default=None,
+            metadata={
+                "name": "serviceRequirementsInfo",
+                "type": "Element",
+                "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
+                "required": True,
+            },
+        )
     )
     seat_details: list[SpecialRequirementsDataDetailsType] = field(
         default_factory=list,
@@ -4932,7 +5088,7 @@ class SpecialRequirementsDetailsType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 999,
-        }
+        },
     )
 
 
@@ -4945,6 +5101,7 @@ class SpecificDataInformationType:
     :ivar data_type_information: Carrier fee description
     :ivar data_information: Data information
     """
+
     data_type_information: None | DataTypeInformationType = field(
         default=None,
         metadata={
@@ -4952,7 +5109,7 @@ class SpecificDataInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
     data_information: list[DataInformationType] = field(
         default_factory=list,
@@ -4961,7 +5118,7 @@ class SpecificDataInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4972,6 +5129,7 @@ class SpecificTravellerType:
 
     :ivar traveller_details: Traveller details
     """
+
     traveller_details: list[SpecificTravellerDetailsType] = field(
         default_factory=list,
         metadata={
@@ -4979,7 +5137,7 @@ class SpecificTravellerType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -4990,6 +5148,7 @@ class StatusType:
 
     :ivar status: Status details
     """
+
     status: list[StatusDetailsType] = field(
         default_factory=list,
         metadata={
@@ -4997,7 +5156,7 @@ class StatusType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 10,
-        }
+        },
     )
 
 
@@ -5008,6 +5167,7 @@ class StatusType182386S:
 
     :ivar status_information: STATUS DETAILS
     """
+
     class Meta:
         name = "StatusType_182386S"
 
@@ -5019,7 +5179,7 @@ class StatusType182386S:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -5031,6 +5191,7 @@ class TaxType:
     :ivar tax_category: Tax category
     :ivar tax_details: Tax details
     """
+
     tax_category: None | str = field(
         default=None,
         metadata={
@@ -5039,7 +5200,7 @@ class TaxType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     tax_details: list[TaxDetailsType] = field(
         default_factory=list,
@@ -5048,7 +5209,7 @@ class TaxType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 99,
-        }
+        },
     )
 
 
@@ -5059,13 +5220,14 @@ class TransportIdentifierType:
 
     :ivar company_identification: Company identification
     """
+
     company_identification: None | CompanyIdentificationTypeI = field(
         default=None,
         metadata={
             "name": "companyIdentification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
 
 
@@ -5083,6 +5245,7 @@ class TravelProductType:
     :ivar add_product_detail: Additional product details
     :ivar attribute_details: Attribute details
     """
+
     product_date_time: None | ProductDateTimeType = field(
         default=None,
         metadata={
@@ -5090,7 +5253,7 @@ class TravelProductType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "required": True,
-        }
+        },
     )
     location: list[LocationIdentificationDetailsType] = field(
         default_factory=list,
@@ -5099,7 +5262,7 @@ class TravelProductType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_occurs": 1,
             "max_occurs": 2,
-        }
+        },
     )
     company_id: None | CompanyIdentificationType = field(
         default=None,
@@ -5107,7 +5270,7 @@ class TravelProductType:
             "name": "companyId",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     flight_ortrain_number: None | str = field(
         default=None,
@@ -5117,7 +5280,7 @@ class TravelProductType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     product_detail: None | AdditionalProductDetailsType = field(
         default=None,
@@ -5125,7 +5288,7 @@ class TravelProductType:
             "name": "productDetail",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     add_product_detail: None | ProductFacilitiesType = field(
         default=None,
@@ -5133,7 +5296,7 @@ class TravelProductType:
             "name": "addProductDetail",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     attribute_details: list[CodedAttributeInformationType270108C] = field(
         default_factory=list,
@@ -5142,7 +5305,7 @@ class TravelProductType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 20,
-        }
+        },
     )
 
 
@@ -5154,6 +5317,7 @@ class TravellerReferenceInformationType:
     :ivar ptc: Requested passenger type
     :ivar traveller: Traveller details
     """
+
     ptc: list[str] = field(
         default_factory=list,
         metadata={
@@ -5162,7 +5326,7 @@ class TravellerReferenceInformationType:
             "max_occurs": 3,
             "min_length": 1,
             "max_length": 6,
-        }
+        },
     )
     traveller: list[TravellerDetailsType] = field(
         default_factory=list,
@@ -5170,7 +5334,7 @@ class TravellerReferenceInformationType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 9,
-        }
+        },
     )
 
 
@@ -5185,13 +5349,14 @@ class UserIdentificationType:
     :ivar office_code: The code given to an agent by the originating
         reservation system.
     """
+
     office_identification: None | OriginatorIdentificationDetailsTypeI = field(
         default=None,
         metadata={
             "name": "officeIdentification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-        }
+        },
     )
     office_type: None | str = field(
         default=None,
@@ -5201,7 +5366,7 @@ class UserIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     office_code: None | str = field(
         default=None,
@@ -5211,7 +5376,7 @@ class UserIdentificationType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )
 
 
@@ -5220,6 +5385,7 @@ class ValueSearchCriteriaType:
     """
     To specify Criteria with list of parameters.
     """
+
     ref: None | str = field(
         default=None,
         metadata={
@@ -5227,7 +5393,7 @@ class ValueSearchCriteriaType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 35,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -5236,7 +5402,7 @@ class ValueSearchCriteriaType:
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "min_length": 1,
             "max_length": 18,
-        }
+        },
     )
     criteria_details: list[CriteriaDetailsType] = field(
         default_factory=list,
@@ -5245,7 +5411,7 @@ class ValueSearchCriteriaType:
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
             "max_occurs": 10,
-        }
+        },
     )
 
 
@@ -5277,6 +5443,7 @@ class FareMasterPricerTravelBoardSearchReply:
     :ivar value:
     :ivar mnr_grp:
     """
+
     class Meta:
         name = "Fare_MasterPricerTravelBoardSearchReply"
         namespace = "http://xml.amadeus.com/FMPTBR_15_3_1A"
@@ -5286,21 +5453,21 @@ class FareMasterPricerTravelBoardSearchReply:
         metadata={
             "name": "replyStatus",
             "type": "Element",
-        }
+        },
     )
     error_message: None | FareMasterPricerTravelBoardSearchReply.ErrorMessage = field(
         default=None,
         metadata={
             "name": "errorMessage",
             "type": "Element",
-        }
+        },
     )
     conversion_rate: None | ConversionRateTypeI = field(
         default=None,
         metadata={
             "name": "conversionRate",
             "type": "Element",
-        }
+        },
     )
     solution_family: list[FareInformationType] = field(
         default_factory=list,
@@ -5308,7 +5475,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "name": "solutionFamily",
             "type": "Element",
             "max_occurs": 20,
-        }
+        },
     )
     family_information: list[FareFamilyType] = field(
         default_factory=list,
@@ -5316,30 +5483,34 @@ class FareMasterPricerTravelBoardSearchReply:
             "name": "familyInformation",
             "type": "Element",
             "max_occurs": 200,
-        }
+        },
     )
     amount_info_for_all_pax: None | FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax = field(
         default=None,
         metadata={
             "name": "amountInfoForAllPax",
             "type": "Element",
-        }
+        },
     )
-    amount_info_per_pax: list[FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax] = field(
+    amount_info_per_pax: list[
+        FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax
+    ] = field(
         default_factory=list,
         metadata={
             "name": "amountInfoPerPax",
             "type": "Element",
             "max_occurs": 20,
-        }
+        },
     )
-    fee_details: list[FareMasterPricerTravelBoardSearchReply.FeeDetails] = field(
+    fee_details: list[
+        FareMasterPricerTravelBoardSearchReply.FeeDetails
+    ] = field(
         default_factory=list,
         metadata={
             "name": "feeDetails",
             "type": "Element",
             "max_occurs": 2099,
-        }
+        },
     )
     bucket_info: list[BucketInformationType] = field(
         default_factory=list,
@@ -5347,7 +5518,7 @@ class FareMasterPricerTravelBoardSearchReply:
             "name": "bucketInfo",
             "type": "Element",
             "max_occurs": 10,
-        }
+        },
     )
     company_id_text: list[CompanyIdentificationTextType] = field(
         default_factory=list,
@@ -5355,76 +5526,90 @@ class FareMasterPricerTravelBoardSearchReply:
             "name": "companyIdText",
             "type": "Element",
             "max_occurs": 5000,
-        }
+        },
     )
-    office_id_details: list[FareMasterPricerTravelBoardSearchReply.OfficeIdDetails] = field(
+    office_id_details: list[
+        FareMasterPricerTravelBoardSearchReply.OfficeIdDetails
+    ] = field(
         default_factory=list,
         metadata={
             "name": "officeIdDetails",
             "type": "Element",
             "max_occurs": 20,
-        }
+        },
     )
-    flight_index: list[FareMasterPricerTravelBoardSearchReply.FlightIndex] = field(
+    flight_index: list[
+        FareMasterPricerTravelBoardSearchReply.FlightIndex
+    ] = field(
         default_factory=list,
         metadata={
             "name": "flightIndex",
             "type": "Element",
             "max_occurs": 6,
-        }
+        },
     )
-    recommendation: list[FareMasterPricerTravelBoardSearchReply.Recommendation] = field(
+    recommendation: list[
+        FareMasterPricerTravelBoardSearchReply.Recommendation
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 100000,
-        }
+        },
     )
-    other_solutions: list[FareMasterPricerTravelBoardSearchReply.OtherSolutions] = field(
+    other_solutions: list[
+        FareMasterPricerTravelBoardSearchReply.OtherSolutions
+    ] = field(
         default_factory=list,
         metadata={
             "name": "otherSolutions",
             "type": "Element",
             "max_occurs": 100009,
-        }
+        },
     )
-    warning_info: list[FareMasterPricerTravelBoardSearchReply.WarningInfo] = field(
+    warning_info: list[
+        FareMasterPricerTravelBoardSearchReply.WarningInfo
+    ] = field(
         default_factory=list,
         metadata={
             "name": "warningInfo",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
-    global_information: list[FareMasterPricerTravelBoardSearchReply.GlobalInformation] = field(
+    global_information: list[
+        FareMasterPricerTravelBoardSearchReply.GlobalInformation
+    ] = field(
         default_factory=list,
         metadata={
             "name": "globalInformation",
             "type": "Element",
             "max_occurs": 9,
-        }
+        },
     )
-    service_fees_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp] = field(
+    service_fees_grp: list[
+        FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp
+    ] = field(
         default_factory=list,
         metadata={
             "name": "serviceFeesGrp",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     value: list[ValueSearchCriteriaType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "max_occurs": 100009,
-        }
+        },
     )
     mnr_grp: None | FareMasterPricerTravelBoardSearchReply.MnrGrp = field(
         default=None,
         metadata={
             "name": "mnrGrp",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -5433,20 +5618,23 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar application_error: Application error details.
         :ivar error_message_text: Type of error message and free text
         """
-        application_error: None | ApplicationErrorInformationType78543S = field(
-            default=None,
-            metadata={
-                "name": "applicationError",
-                "type": "Element",
-                "required": True,
-            }
+
+        application_error: None | ApplicationErrorInformationType78543S = (
+            field(
+                default=None,
+                metadata={
+                    "name": "applicationError",
+                    "type": "Element",
+                    "required": True,
+                },
+            )
         )
         error_message_text: None | InteractiveFreeTextType78544S = field(
             default=None,
             metadata={
                 "name": "errorMessageText",
                 "type": "Element",
-            }
+            },
         )
 
     @dataclass
@@ -5455,21 +5643,24 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar itinerary_amounts: Itinerary amounts for all passengers
         :ivar amounts_per_sgt: Amounts information per segment
         """
+
         itinerary_amounts: None | MonetaryInformationType = field(
             default=None,
             metadata={
                 "name": "itineraryAmounts",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        amounts_per_sgt: list[FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax.AmountsPerSgt] = field(
+        amounts_per_sgt: list[
+            FareMasterPricerTravelBoardSearchReply.AmountInfoForAllPax.AmountsPerSgt
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "amountsPerSgt",
                 "type": "Element",
                 "max_occurs": 9,
-            }
+            },
         )
 
         @dataclass
@@ -5479,19 +5670,20 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar amounts: Amounts : Issue total amount, issue taxes
                 amount, non refundable taxes amount
             """
+
             sgt_ref: None | ReferenceInfoType133176S = field(
                 default=None,
                 metadata={
                     "name": "sgtRef",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
             amounts: None | MonetaryInformationType = field(
                 default=None,
                 metadata={
                     "type": "Element",
-                }
+                },
             )
 
     @dataclass
@@ -5502,20 +5694,21 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar itinerary_amounts: Itinerary amounts information
         :ivar amounts_per_sgt: Amounts per segment
         """
+
         pax_ref: None | SpecificTravellerType = field(
             default=None,
             metadata={
                 "name": "paxRef",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         pax_attributes: None | FareInformationType80868S = field(
             default=None,
             metadata={
                 "name": "paxAttributes",
                 "type": "Element",
-            }
+            },
         )
         itinerary_amounts: None | MonetaryInformationType = field(
             default=None,
@@ -5523,15 +5716,17 @@ class FareMasterPricerTravelBoardSearchReply:
                 "name": "itineraryAmounts",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        amounts_per_sgt: list[FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax.AmountsPerSgt] = field(
+        amounts_per_sgt: list[
+            FareMasterPricerTravelBoardSearchReply.AmountInfoPerPax.AmountsPerSgt
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "amountsPerSgt",
                 "type": "Element",
                 "max_occurs": 9,
-            }
+            },
         )
 
         @dataclass
@@ -5541,19 +5736,20 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar amounts: Amounts : Issue total amount, issue taxes
                 amount, non refundable taxes amount
             """
+
             sgt_ref: None | ReferenceInfoType133176S = field(
                 default=None,
                 metadata={
                     "name": "sgtRef",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
             amounts: None | MonetaryInformationType = field(
                 default=None,
                 metadata={
                     "type": "Element",
-                }
+                },
             )
 
     @dataclass
@@ -5565,34 +5761,35 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar converted_or_original_info: To specify conversion rate
             details
         """
+
         fee_reference: None | ItemReferencesAndVersionsType78564S = field(
             default=None,
             metadata={
                 "name": "feeReference",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         fee_information: None | DiscountAndPenaltyInformationType = field(
             default=None,
             metadata={
                 "name": "feeInformation",
                 "type": "Element",
-            }
+            },
         )
         fee_parameters: None | AttributeType78561S = field(
             default=None,
             metadata={
                 "name": "feeParameters",
                 "type": "Element",
-            }
+            },
         )
         converted_or_original_info: None | ConversionRateTypeI78562S = field(
             default=None,
             metadata={
                 "name": "convertedOrOriginalInfo",
                 "type": "Element",
-            }
+            },
         )
 
     @dataclass
@@ -5601,21 +5798,24 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar office_id_information: Office Id Information
         :ivar office_id_reference: Office Id Reference Number
         """
+
         office_id_information: None | UserIdentificationType = field(
             default=None,
             metadata={
                 "name": "officeIdInformation",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        office_id_reference: None | ItemReferencesAndVersionsType78536S = field(
-            default=None,
-            metadata={
-                "name": "officeIdReference",
-                "type": "Element",
-                "required": True,
-            }
+        office_id_reference: None | ItemReferencesAndVersionsType78536S = (
+            field(
+                default=None,
+                metadata={
+                    "name": "officeIdReference",
+                    "type": "Element",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass
@@ -5625,22 +5825,25 @@ class FareMasterPricerTravelBoardSearchReply:
             about requested segments
         :ivar group_of_flights: List of flights per requested segment
         """
+
         requested_segment_ref: None | OriginAndDestinationRequestType = field(
             default=None,
             metadata={
                 "name": "requestedSegmentRef",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        group_of_flights: list[FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights] = field(
+        group_of_flights: list[
+            FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "groupOfFlights",
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 100000,
-            }
+            },
         )
 
         @dataclass
@@ -5650,22 +5853,25 @@ class FareMasterPricerTravelBoardSearchReply:
                 proposed flight group.
             :ivar flight_details: List of flight per Elapse Flying time
             """
+
             prop_flight_gr_detail: None | ProposedSegmentType = field(
                 default=None,
                 metadata={
                     "name": "propFlightGrDetail",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
-            flight_details: list[FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights.FlightDetails] = field(
+            flight_details: list[
+                FareMasterPricerTravelBoardSearchReply.FlightIndex.GroupOfFlights.FlightDetails
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "flightDetails",
                     "type": "Element",
                     "min_occurs": 1,
                     "max_occurs": 4,
-                }
+                },
             )
 
             @dataclass
@@ -5684,13 +5890,14 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar flight_characteristics: Flight characteristics
                 :ivar flight_services: Flight Services by cabin/rbd
                 """
+
                 flight_information: None | TravelProductType = field(
                     default=None,
                     metadata={
                         "name": "flightInformation",
                         "type": "Element",
                         "required": True,
-                    }
+                    },
                 )
                 avl_info: list[FlightProductInformationType141442S] = field(
                     default_factory=list,
@@ -5698,7 +5905,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "name": "avlInfo",
                         "type": "Element",
                         "max_occurs": 6,
-                    }
+                    },
                 )
                 technical_stop: list[DateAndTimeInformationType] = field(
                     default_factory=list,
@@ -5706,28 +5913,30 @@ class FareMasterPricerTravelBoardSearchReply:
                         "name": "technicalStop",
                         "type": "Element",
                         "max_occurs": 5,
-                    }
+                    },
                 )
                 commercial_agreement: None | CommercialAgreementsType = field(
                     default=None,
                     metadata={
                         "name": "commercialAgreement",
                         "type": "Element",
-                    }
+                    },
                 )
                 add_info: None | HeaderInformationTypeI = field(
                     default=None,
                     metadata={
                         "name": "addInfo",
                         "type": "Element",
-                    }
+                    },
                 )
-                flight_characteristics: None | FlightCharacteristicsType = field(
-                    default=None,
-                    metadata={
-                        "name": "flightCharacteristics",
-                        "type": "Element",
-                    }
+                flight_characteristics: None | FlightCharacteristicsType = (
+                    field(
+                        default=None,
+                        metadata={
+                            "name": "flightCharacteristics",
+                            "type": "Element",
+                        },
+                    )
                 )
                 flight_services: list[FlightServicesType] = field(
                     default_factory=list,
@@ -5735,7 +5944,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "name": "flightServices",
                         "type": "Element",
                         "max_occurs": 9,
-                    }
+                    },
                 )
 
     @dataclass
@@ -5755,13 +5964,14 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar pax_fare_product: Passenger fare product details
         :ivar specific_rec_details: Specific recommendation details
         """
+
         item_number: None | ItemNumberType161497S = field(
             default=None,
             metadata={
                 "name": "itemNumber",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         warning_message: list[InteractiveFreeTextType78544S] = field(
             default_factory=list,
@@ -5769,14 +5979,14 @@ class FareMasterPricerTravelBoardSearchReply:
                 "name": "warningMessage",
                 "type": "Element",
                 "max_occurs": 4,
-            }
+            },
         )
         fare_family_ref: None | ReferenceInfoType133176S = field(
             default=None,
             metadata={
                 "name": "fareFamilyRef",
                 "type": "Element",
-            }
+            },
         )
         rec_price_info: None | MonetaryInformationType193024S = field(
             default=None,
@@ -5784,7 +5994,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "name": "recPriceInfo",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         mini_rule: list[MiniRulesType78547S] = field(
             default_factory=list,
@@ -5792,7 +6002,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "name": "miniRule",
                 "type": "Element",
                 "max_occurs": 9,
-            }
+            },
         )
         segment_flight_ref: list[ReferenceInfoType] = field(
             default_factory=list,
@@ -5800,32 +6010,38 @@ class FareMasterPricerTravelBoardSearchReply:
                 "name": "segmentFlightRef",
                 "type": "Element",
                 "max_occurs": 100009,
-            }
+            },
         )
-        recommandation_segments_fare_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.RecommandationSegmentsFareDetails] = field(
+        recommandation_segments_fare_details: list[
+            FareMasterPricerTravelBoardSearchReply.Recommendation.RecommandationSegmentsFareDetails
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "recommandationSegmentsFareDetails",
                 "type": "Element",
                 "max_occurs": 6,
-            }
+            },
         )
-        pax_fare_product: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct] = field(
+        pax_fare_product: list[
+            FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "paxFareProduct",
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 10,
-            }
+            },
         )
-        specific_rec_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails] = field(
+        specific_rec_details: list[
+            FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "specificRecDetails",
                 "type": "Element",
                 "max_occurs": 100000,
-            }
+            },
         )
 
         @dataclass
@@ -5836,20 +6052,25 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar segment_monetary_information: Amounts per requested
                 segment.
             """
-            recommendation_seg_ref: None | OriginAndDestinationRequestType = field(
-                default=None,
-                metadata={
-                    "name": "recommendationSegRef",
-                    "type": "Element",
-                    "required": True,
-                }
+
+            recommendation_seg_ref: None | OriginAndDestinationRequestType = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "recommendationSegRef",
+                        "type": "Element",
+                        "required": True,
+                    },
+                )
             )
-            segment_monetary_information: None | MonetaryInformationType = field(
-                default=None,
-                metadata={
-                    "name": "segmentMonetaryInformation",
-                    "type": "Element",
-                }
+            segment_monetary_information: None | MonetaryInformationType = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "segmentMonetaryInformation",
+                        "type": "Element",
+                    },
+                )
             )
 
         @dataclass
@@ -5865,20 +6086,23 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar fare: fare Details
             :ivar fare_details: Fare details by Requested segment number
             """
-            pax_fare_detail: None | PricingTicketingSubsequentType193023S = field(
-                default=None,
-                metadata={
-                    "name": "paxFareDetail",
-                    "type": "Element",
-                    "required": True,
-                }
+
+            pax_fare_detail: None | PricingTicketingSubsequentType193023S = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "paxFareDetail",
+                        "type": "Element",
+                        "required": True,
+                    },
+                )
             )
             fee_ref: None | ReferenceInfoType134839S = field(
                 default=None,
                 metadata={
                     "name": "feeRef",
                     "type": "Element",
-                }
+                },
             )
             pax_reference: list[TravellerReferenceInformationType] = field(
                 default_factory=list,
@@ -5887,30 +6111,34 @@ class FareMasterPricerTravelBoardSearchReply:
                     "type": "Element",
                     "min_occurs": 1,
                     "max_occurs": 6,
-                }
+                },
             )
             passenger_tax_details: None | TaxType = field(
                 default=None,
                 metadata={
                     "name": "passengerTaxDetails",
                     "type": "Element",
-                }
+                },
             )
-            fare: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.Fare] = field(
+            fare: list[
+                FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.Fare
+            ] = field(
                 default_factory=list,
                 metadata={
                     "type": "Element",
                     "max_occurs": 7,
-                }
+                },
             )
-            fare_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails] = field(
+            fare_details: list[
+                FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "fareDetails",
                     "type": "Element",
                     "min_occurs": 1,
                     "max_occurs": 6,
-                }
+                },
             )
 
             @dataclass
@@ -5920,20 +6148,23 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar monetary_information: Amount of penalties,
                     Surcharges...
                 """
+
                 pricing_message: None | InteractiveFreeTextType78559S = field(
                     default=None,
                     metadata={
                         "name": "pricingMessage",
                         "type": "Element",
                         "required": True,
-                    }
+                    },
                 )
-                monetary_information: None | MonetaryInformationType185955S = field(
-                    default=None,
-                    metadata={
-                        "name": "monetaryInformation",
-                        "type": "Element",
-                    }
+                monetary_information: None | MonetaryInformationType185955S = (
+                    field(
+                        default=None,
+                        metadata={
+                            "name": "monetaryInformation",
+                            "type": "Element",
+                        },
+                    )
                 )
 
             @dataclass
@@ -5946,28 +6177,31 @@ class FareMasterPricerTravelBoardSearchReply:
                     passenger per requested segment.
                 :ivar maj_cabin: Majority Cabin Info
                 """
+
                 segment_ref: None | OriginAndDestinationRequestType = field(
                     default=None,
                     metadata={
                         "name": "segmentRef",
                         "type": "Element",
                         "required": True,
-                    }
+                    },
                 )
-                group_of_fares: list[FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails.GroupOfFares] = field(
+                group_of_fares: list[
+                    FareMasterPricerTravelBoardSearchReply.Recommendation.PaxFareProduct.FareDetails.GroupOfFares
+                ] = field(
                     default_factory=list,
                     metadata={
                         "name": "groupOfFares",
                         "type": "Element",
                         "max_occurs": 4,
-                    }
+                    },
                 )
                 psg_seg_monetary_information: None | MonetaryInformationType = field(
                     default=None,
                     metadata={
                         "name": "psgSegMonetaryInformation",
                         "type": "Element",
-                    }
+                    },
                 )
                 maj_cabin: list[ProductInformationType] = field(
                     default_factory=list,
@@ -5975,7 +6209,7 @@ class FareMasterPricerTravelBoardSearchReply:
                         "name": "majCabin",
                         "type": "Element",
                         "max_occurs": 10,
-                    }
+                    },
                 )
 
                 @dataclass
@@ -5990,35 +6224,38 @@ class FareMasterPricerTravelBoardSearchReply:
                     :ivar fare_families_ref: Reference of Fare Family
                         for each Fare Component
                     """
+
                     product_information: None | FlightProductInformationType176659S = field(
                         default=None,
                         metadata={
                             "name": "productInformation",
                             "type": "Element",
                             "required": True,
-                        }
+                        },
                     )
-                    fare_calculation_code_details: list[FareCalculationCodeDetailsType] = field(
+                    fare_calculation_code_details: list[
+                        FareCalculationCodeDetailsType
+                    ] = field(
                         default_factory=list,
                         metadata={
                             "name": "fareCalculationCodeDetails",
                             "type": "Element",
                             "max_occurs": 9,
-                        }
+                        },
                     )
                     ticket_infos: None | FareQualifierDetailsType = field(
                         default=None,
                         metadata={
                             "name": "ticketInfos",
                             "type": "Element",
-                        }
+                        },
                     )
                     fare_families_ref: None | ReferenceInfoType176658S = field(
                         default=None,
                         metadata={
                             "name": "fareFamiliesRef",
                             "type": "Element",
-                        }
+                        },
                     )
 
         @dataclass
@@ -6028,21 +6265,24 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar specific_product_details: Specific fare product
                 details
             """
+
             specific_rec_item: None | ItemReferencesAndVersionsType = field(
                 default=None,
                 metadata={
                     "name": "specificRecItem",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
-            specific_product_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails] = field(
+            specific_product_details: list[
+                FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "specificProductDetails",
                     "type": "Element",
                     "max_occurs": 10,
-                }
+                },
             )
 
             @dataclass
@@ -6052,21 +6292,26 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar fare_context_details: Specific fare details per
                     requested segments.
                 """
-                product_references: None | PricingTicketingSubsequentType = field(
-                    default=None,
-                    metadata={
-                        "name": "productReferences",
-                        "type": "Element",
-                        "required": True,
-                    }
+
+                product_references: None | PricingTicketingSubsequentType = (
+                    field(
+                        default=None,
+                        metadata={
+                            "name": "productReferences",
+                            "type": "Element",
+                            "required": True,
+                        },
+                    )
                 )
-                fare_context_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails] = field(
+                fare_context_details: list[
+                    FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails
+                ] = field(
                     default_factory=list,
                     metadata={
                         "name": "fareContextDetails",
                         "type": "Element",
                         "max_occurs": 6,
-                    }
+                    },
                 )
 
                 @dataclass
@@ -6077,21 +6322,24 @@ class FareMasterPricerTravelBoardSearchReply:
                     :ivar cnx_context_details: Fare connection context
                         details
                     """
+
                     requested_segment_info: None | OriginAndDestinationRequestType134833S = field(
                         default=None,
                         metadata={
                             "name": "requestedSegmentInfo",
                             "type": "Element",
                             "required": True,
-                        }
+                        },
                     )
-                    cnx_context_details: list[FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails.CnxContextDetails] = field(
+                    cnx_context_details: list[
+                        FareMasterPricerTravelBoardSearchReply.Recommendation.SpecificRecDetails.SpecificProductDetails.FareContextDetails.CnxContextDetails
+                    ] = field(
                         default_factory=list,
                         metadata={
                             "name": "cnxContextDetails",
                             "type": "Element",
                             "max_occurs": 4,
-                        }
+                        },
                     )
 
                     @dataclass
@@ -6100,13 +6348,16 @@ class FareMasterPricerTravelBoardSearchReply:
                         :ivar fare_cnx_info: Fare connection context
                             details
                         """
-                        fare_cnx_info: None | FlightProductInformationType = field(
-                            default=None,
-                            metadata={
-                                "name": "fareCnxInfo",
-                                "type": "Element",
-                                "required": True,
-                            }
+
+                        fare_cnx_info: None | FlightProductInformationType = (
+                            field(
+                                default=None,
+                                metadata={
+                                    "name": "fareCnxInfo",
+                                    "type": "Element",
+                                    "required": True,
+                                },
+                            )
                         )
 
     @dataclass
@@ -6117,28 +6368,33 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar psg_info: Passenger Related info (discount card, PTC, fare
             info, amount ...)
         """
+
         reference: None | SequenceDetailsTypeU = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        amt_group: list[FareMasterPricerTravelBoardSearchReply.OtherSolutions.AmtGroup] = field(
+        amt_group: list[
+            FareMasterPricerTravelBoardSearchReply.OtherSolutions.AmtGroup
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "amtGroup",
                 "type": "Element",
                 "max_occurs": 10,
-            }
+            },
         )
-        psg_info: list[FareMasterPricerTravelBoardSearchReply.OtherSolutions.PsgInfo] = field(
+        psg_info: list[
+            FareMasterPricerTravelBoardSearchReply.OtherSolutions.PsgInfo
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "psgInfo",
                 "type": "Element",
                 "max_occurs": 99,
-            }
+            },
         )
 
         @dataclass
@@ -6148,18 +6404,19 @@ class FareMasterPricerTravelBoardSearchReply:
                 segment...)
             :ivar amount: Amount Description
             """
+
             ref: None | ReferenceInfoType165972S = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
             amount: None | MonetaryInformationTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
-                }
+                },
             )
 
         @dataclass
@@ -6172,44 +6429,47 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar fare: Fare description
             :ivar attribute: Additional Information
             """
+
             ref: None | SegmentRepetitionControlTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
             description: None | FareInformationTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
-                }
+                },
             )
-            freq_traveller: None | FrequentTravellerIdentificationCodeType = field(
-                default=None,
-                metadata={
-                    "name": "freqTraveller",
-                    "type": "Element",
-                }
+            freq_traveller: None | FrequentTravellerIdentificationCodeType = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "freqTraveller",
+                        "type": "Element",
+                    },
+                )
             )
             amount: None | MonetaryInformationTypeI = field(
                 default=None,
                 metadata={
                     "type": "Element",
-                }
+                },
             )
             fare: None | FlightProductInformationType161491S = field(
                 default=None,
                 metadata={
                     "type": "Element",
-                }
+                },
             )
             attribute: list[AttributeTypeU] = field(
                 default_factory=list,
                 metadata={
                     "type": "Element",
                     "max_occurs": 10,
-                }
+                },
             )
 
     @dataclass
@@ -6218,13 +6478,14 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar global_message_marker: Dummy Segment
         :ivar global_message: Informative free text information
         """
+
         global_message_marker: None | DummySegmentTypeI = field(
             default=None,
             metadata={
                 "name": "globalMessageMarker",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
         global_message: None | InteractiveFreeTextType78534S = field(
             default=None,
@@ -6232,7 +6493,7 @@ class FareMasterPricerTravelBoardSearchReply:
                 "name": "globalMessage",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -6240,12 +6501,13 @@ class FareMasterPricerTravelBoardSearchReply:
         """
         :ivar attributes: Coded attributes
         """
+
         attributes: None | CodedAttributeType = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -6262,29 +6524,34 @@ class FareMasterPricerTravelBoardSearchReply:
         :ivar free_bag_allowance_grp: Free baggage allowance information
             group
         """
+
         service_type_info: None | SelectionDetailsType = field(
             default=None,
             metadata={
                 "name": "serviceTypeInfo",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        service_fee_ref_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeRefGrp] = field(
+        service_fee_ref_grp: list[
+            FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeRefGrp
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "serviceFeeRefGrp",
                 "type": "Element",
                 "max_occurs": 100000,
-            }
+            },
         )
-        service_coverage_info_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp] = field(
+        service_coverage_info_grp: list[
+            FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "serviceCoverageInfoGrp",
                 "type": "Element",
                 "max_occurs": 100000,
-            }
+            },
         )
         global_message_marker: None | DummySegmentTypeI = field(
             default=None,
@@ -6292,31 +6559,37 @@ class FareMasterPricerTravelBoardSearchReply:
                 "name": "globalMessageMarker",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        service_fee_info_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp] = field(
+        service_fee_info_grp: list[
+            FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "serviceFeeInfoGrp",
                 "type": "Element",
                 "max_occurs": 100000,
-            }
+            },
         )
-        service_details_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp] = field(
+        service_details_grp: list[
+            FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "serviceDetailsGrp",
                 "type": "Element",
                 "max_occurs": 200,
-            }
+            },
         )
-        free_bag_allowance_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.FreeBagAllowanceGrp] = field(
+        free_bag_allowance_grp: list[
+            FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.FreeBagAllowanceGrp
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "freeBagAllowanceGrp",
                 "type": "Element",
                 "max_occurs": 100000,
-            }
+            },
         )
 
         @dataclass
@@ -6324,13 +6597,14 @@ class FareMasterPricerTravelBoardSearchReply:
             """
             :ivar ref_info: Reference of service fee global information
             """
+
             ref_info: None | ReferenceInfoType = field(
                 default=None,
                 metadata={
                     "name": "refInfo",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
 
         @dataclass
@@ -6341,21 +6615,24 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar service_cov_info_grp: Service coverage information
                 group
             """
+
             item_number_info: None | ItemNumberType = field(
                 default=None,
                 metadata={
                     "name": "itemNumberInfo",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
-            service_cov_info_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp.ServiceCovInfoGrp] = field(
+            service_cov_info_grp: list[
+                FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceCoverageInfoGrp.ServiceCovInfoGrp
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "serviceCovInfoGrp",
                     "type": "Element",
                     "max_occurs": 200,
-                }
+                },
             )
 
             @dataclass
@@ -6368,13 +6645,14 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar carrier_info: Carrier information
                 :ivar ref_info: Service reference number
                 """
+
                 pax_ref_info: None | SpecificTravellerType = field(
                     default=None,
                     metadata={
                         "name": "paxRefInfo",
                         "type": "Element",
                         "required": True,
-                    }
+                    },
                 )
                 coverage_per_flights_info: list[ActionDetailsType] = field(
                     default_factory=list,
@@ -6382,21 +6660,21 @@ class FareMasterPricerTravelBoardSearchReply:
                         "name": "coveragePerFlightsInfo",
                         "type": "Element",
                         "max_occurs": 6,
-                    }
+                    },
                 )
                 carrier_info: None | TransportIdentifierType = field(
                     default=None,
                     metadata={
                         "name": "carrierInfo",
                         "type": "Element",
-                    }
+                    },
                 )
                 ref_info: None | ReferenceInfoType134840S = field(
                     default=None,
                     metadata={
                         "name": "refInfo",
                         "type": "Element",
-                    }
+                    },
                 )
 
         @dataclass
@@ -6405,21 +6683,24 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar item_number_info: Item number details
             :ivar service_details_grp: Service fee informations
             """
+
             item_number_info: None | ItemNumberType = field(
                 default=None,
                 metadata={
                     "name": "itemNumberInfo",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
-            service_details_grp: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp] = field(
+            service_details_grp: list[
+                FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "serviceDetailsGrp",
                     "type": "Element",
                     "max_occurs": 200,
-                }
+                },
             )
 
             @dataclass
@@ -6429,21 +6710,24 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar service_matched_info_group: Service matched
                     information
                 """
+
                 ref_info: None | ReferenceInfoType134840S = field(
                     default=None,
                     metadata={
                         "name": "refInfo",
                         "type": "Element",
                         "required": True,
-                    }
+                    },
                 )
-                service_matched_info_group: list[FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp.ServiceMatchedInfoGroup] = field(
+                service_matched_info_group: list[
+                    FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceFeeInfoGrp.ServiceDetailsGrp.ServiceMatchedInfoGroup
+                ] = field(
                     default_factory=list,
                     metadata={
                         "name": "serviceMatchedInfoGroup",
                         "type": "Element",
                         "max_occurs": 99,
-                    }
+                    },
                 )
 
                 @dataclass
@@ -6454,27 +6738,28 @@ class FareMasterPricerTravelBoardSearchReply:
                         information
                     :ivar amount_info: Informative Service amount
                     """
+
                     pax_ref_info: None | SpecificTravellerType = field(
                         default=None,
                         metadata={
                             "name": "paxRefInfo",
                             "type": "Element",
                             "required": True,
-                        }
+                        },
                     )
                     pricing_info: None | FareInformationType80868S = field(
                         default=None,
                         metadata={
                             "name": "pricingInfo",
                             "type": "Element",
-                        }
+                        },
                     )
                     amount_info: None | MonetaryInformationType193024S = field(
                         default=None,
                         metadata={
                             "name": "amountInfo",
                             "type": "Element",
-                        }
+                        },
                     )
 
         @dataclass
@@ -6484,20 +6769,21 @@ class FareMasterPricerTravelBoardSearchReply:
                 (exclusion,inclusion, mode pushed,polled)
             :ivar fee_description_grp: Fee description
             """
+
             service_option_info: None | SpecificDataInformationType = field(
                 default=None,
                 metadata={
                     "name": "serviceOptionInfo",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
             fee_description_grp: None | FareMasterPricerTravelBoardSearchReply.ServiceFeesGrp.ServiceDetailsGrp.FeeDescriptionGrp = field(
                 default=None,
                 metadata={
                     "name": "feeDescriptionGrp",
                     "type": "Element",
-                }
+                },
             )
 
             @dataclass
@@ -6510,34 +6796,35 @@ class FareMasterPricerTravelBoardSearchReply:
                     information (service description, ...)
                 :ivar commercial_name: Commercial name
                 """
+
                 item_number_info: None | ItemNumberType80866S = field(
                     default=None,
                     metadata={
                         "name": "itemNumberInfo",
                         "type": "Element",
                         "required": True,
-                    }
+                    },
                 )
                 service_attributes_info: None | AttributeType = field(
                     default=None,
                     metadata={
                         "name": "serviceAttributesInfo",
                         "type": "Element",
-                    }
+                    },
                 )
                 service_description_info: None | SpecialRequirementsDetailsType = field(
                     default=None,
                     metadata={
                         "name": "serviceDescriptionInfo",
                         "type": "Element",
-                    }
+                    },
                 )
                 commercial_name: None | InteractiveFreeTextType = field(
                     default=None,
                     metadata={
                         "name": "commercialName",
                         "type": "Element",
-                    }
+                    },
                 )
 
         @dataclass
@@ -6547,20 +6834,21 @@ class FareMasterPricerTravelBoardSearchReply:
                 information
             :ivar item_number_info: Item number information
             """
+
             free_bag_allownce_info: None | ExcessBaggageType = field(
                 default=None,
                 metadata={
                     "name": "freeBagAllownceInfo",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
             item_number_info: None | ItemNumberType166130S = field(
                 default=None,
                 metadata={
                     "name": "itemNumberInfo",
                     "type": "Element",
-                }
+                },
             )
 
     @dataclass
@@ -6570,15 +6858,17 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
-        mnr_details: list[FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails] = field(
+        mnr_details: list[
+            FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "mnrDetails",
                 "type": "Element",
                 "max_occurs": 999,
-            }
+            },
         )
 
         @dataclass
@@ -6588,13 +6878,14 @@ class FareMasterPricerTravelBoardSearchReply:
             :ivar date_info:
             :ivar cat_grp: Categories
             """
+
             mnr_ref: None | ItemNumberType176648S = field(
                 default=None,
                 metadata={
                     "name": "mnrRef",
                     "type": "Element",
                     "required": True,
-                }
+                },
             )
             date_info: list[DateAndTimeInformationType182345S] = field(
                 default_factory=list,
@@ -6602,15 +6893,17 @@ class FareMasterPricerTravelBoardSearchReply:
                     "name": "dateInfo",
                     "type": "Element",
                     "max_occurs": 16,
-                }
+                },
             )
-            cat_grp: list[FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails.CatGrp] = field(
+            cat_grp: list[
+                FareMasterPricerTravelBoardSearchReply.MnrGrp.MnrDetails.CatGrp
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "catGrp",
                     "type": "Element",
                     "max_occurs": 5,
-                }
+                },
             )
 
             @dataclass
@@ -6620,25 +6913,26 @@ class FareMasterPricerTravelBoardSearchReply:
                 :ivar mon_info: Monetary information
                 :ivar status_info: Status information
                 """
+
                 cat_info: None | CategDescrType = field(
                     default=None,
                     metadata={
                         "name": "catInfo",
                         "type": "Element",
                         "required": True,
-                    }
+                    },
                 )
                 mon_info: None | MonetaryInformationType174241S = field(
                     default=None,
                     metadata={
                         "name": "monInfo",
                         "type": "Element",
-                    }
+                    },
                 )
                 status_info: None | StatusType182386S = field(
                     default=None,
                     metadata={
                         "name": "statusInfo",
                         "type": "Element",
-                    }
+                    },
                 )

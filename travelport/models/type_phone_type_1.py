@@ -9,6 +9,7 @@ class TypePhoneType1(Enum):
 
     (ie. Home, Business, Mobile, etc)
     """
+
     WORK = "Work"
     HOME = "Home"
     FAX = "Fax"

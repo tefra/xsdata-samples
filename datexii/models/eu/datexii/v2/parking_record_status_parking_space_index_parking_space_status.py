@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.parking_space_status import ParkingSpaceStatus
+from datexii.models.eu.datexii.v2.parking_space_status import (
+    ParkingSpaceStatus,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,7 +19,7 @@ class ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_space_index: Optional[int] = field(
         default=None,
@@ -25,5 +27,5 @@ class ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus:
             "name": "parkingSpaceIndex",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -17,6 +17,7 @@ class TypePurposeCode(Enum):
     CHARTER_SERVICE
         Charter Service
     """
+
     BUSINESS = "Business"
     PLEASURE = "Pleasure"
     CHARTER_SERVICE = "CharterService"

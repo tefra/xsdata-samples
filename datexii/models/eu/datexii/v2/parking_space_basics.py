@@ -4,15 +4,29 @@ from datexii.models.eu.datexii.v2.accessibility_enum import AccessibilityEnum
 from datexii.models.eu.datexii.v2.dedicated_access import DedicatedAccess
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.occupancy_detection_type_enum import OccupancyDetectionTypeEnum
+from datexii.models.eu.datexii.v2.occupancy_detection_type_enum import (
+    OccupancyDetectionTypeEnum,
+)
 from datexii.models.eu.datexii.v2.parking_assignment import ParkingAssignment
 from datexii.models.eu.datexii.v2.parking_mode_enum import ParkingModeEnum
-from datexii.models.eu.datexii.v2.parking_security_enum import ParkingSecurityEnum
-from datexii.models.eu.datexii.v2.parking_space_accessibility_enum import ParkingSpaceAccessibilityEnum
-from datexii.models.eu.datexii.v2.parking_space_basics_equipment_or_service_facility_index_parking_equipment_or_service_facility import ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility
-from datexii.models.eu.datexii.v2.parking_space_basics_scenario_index_parking_usage_scenario import ParkingSpaceBasicsScenarioIndexParkingUsageScenario
-from datexii.models.eu.datexii.v2.parking_space_physics_enum import ParkingSpacePhysicsEnum
-from datexii.models.eu.datexii.v2.reservation_type_enum import ReservationTypeEnum
+from datexii.models.eu.datexii.v2.parking_security_enum import (
+    ParkingSecurityEnum,
+)
+from datexii.models.eu.datexii.v2.parking_space_accessibility_enum import (
+    ParkingSpaceAccessibilityEnum,
+)
+from datexii.models.eu.datexii.v2.parking_space_basics_equipment_or_service_facility_index_parking_equipment_or_service_facility import (
+    ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility,
+)
+from datexii.models.eu.datexii.v2.parking_space_basics_scenario_index_parking_usage_scenario import (
+    ParkingSpaceBasicsScenarioIndexParkingUsageScenario,
+)
+from datexii.models.eu.datexii.v2.parking_space_physics_enum import (
+    ParkingSpacePhysicsEnum,
+)
+from datexii.models.eu.datexii.v2.reservation_type_enum import (
+    ReservationTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -68,13 +82,14 @@ class ParkingSpaceBasics:
     :ivar parking_usage_scenario:
     :ivar parking_space_basics_extension:
     """
+
     parking_space_or_group_identifier: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "parkingSpaceOrGroupIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_floor_or_level: Optional[int] = field(
         default=None,
@@ -82,14 +97,14 @@ class ParkingSpaceBasics:
             "name": "parkingFloorOrLevel",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accessibility: List[AccessibilityEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_space_accessibility: List[ParkingSpaceAccessibilityEnum] = field(
         default_factory=list,
@@ -97,7 +112,7 @@ class ParkingSpaceBasics:
             "name": "parkingSpaceAccessibility",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_space_physics: List[ParkingSpacePhysicsEnum] = field(
         default_factory=list,
@@ -106,7 +121,7 @@ class ParkingSpaceBasics:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_occurs": 2,
-        }
+        },
     )
     parking_mode: Optional[ParkingModeEnum] = field(
         default=None,
@@ -114,7 +129,7 @@ class ParkingSpaceBasics:
             "name": "parkingMode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_reservation: Optional[ReservationTypeEnum] = field(
         default=None,
@@ -122,7 +137,7 @@ class ParkingSpaceBasics:
             "name": "parkingReservation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     maximum_parking_duration: Optional[float] = field(
         default=None,
@@ -130,7 +145,7 @@ class ParkingSpaceBasics:
             "name": "maximumParkingDuration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_from_primary_road: Optional[int] = field(
         default=None,
@@ -138,7 +153,7 @@ class ParkingSpaceBasics:
             "name": "distanceFromPrimaryRoad",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_occupany_detection_type: List[OccupancyDetectionTypeEnum] = field(
         default_factory=list,
@@ -146,7 +161,7 @@ class ParkingSpaceBasics:
             "name": "parkingOccupanyDetectionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_security: List[ParkingSecurityEnum] = field(
         default_factory=list,
@@ -154,7 +169,7 @@ class ParkingSpaceBasics:
             "name": "parkingSecurity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dedicated_access: List[DedicatedAccess] = field(
         default_factory=list,
@@ -162,7 +177,7 @@ class ParkingSpaceBasics:
             "name": "dedicatedAccess",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     only_assigned_parking: Optional[ParkingAssignment] = field(
         default=None,
@@ -170,7 +185,7 @@ class ParkingSpaceBasics:
             "name": "onlyAssignedParking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     assigned_parking_among_others: Optional[ParkingAssignment] = field(
         default=None,
@@ -178,7 +193,7 @@ class ParkingSpaceBasics:
             "name": "assignedParkingAmongOthers",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     prohibited_parking: Optional[ParkingAssignment] = field(
         default=None,
@@ -186,23 +201,27 @@ class ParkingSpaceBasics:
             "name": "prohibitedParking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_equipment_or_service_facility: List[ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility] = field(
+    parking_equipment_or_service_facility: List[
+        ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingEquipmentOrServiceFacility",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_usage_scenario: List[ParkingSpaceBasicsScenarioIndexParkingUsageScenario] = field(
+    parking_usage_scenario: List[
+        ParkingSpaceBasicsScenarioIndexParkingUsageScenario
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingUsageScenario",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_space_basics_extension: Optional[ExtensionType] = field(
         default=None,
@@ -210,5 +229,5 @@ class ParkingSpaceBasics:
             "name": "parkingSpaceBasicsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

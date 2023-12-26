@@ -46,6 +46,7 @@ class BrandingInfo:
         Indicates if the optional service is not offered, is available for a
         charge, or is included in the brand.  Providers: 1G, 1V, 1P, ACH
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -55,7 +56,7 @@ class BrandingInfo:
             "name": "PriceRange",
             "type": "Element",
             "max_occurs": 5,
-        }
+        },
     )
     text: list[Text] = field(
         default_factory=list,
@@ -63,7 +64,7 @@ class BrandingInfo:
             "name": "Text",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     title: list[Title] = field(
         default_factory=list,
@@ -71,7 +72,7 @@ class BrandingInfo:
             "name": "Title",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     image_location: list[ImageLocation] = field(
         default_factory=list,
@@ -79,14 +80,14 @@ class BrandingInfo:
             "name": "ImageLocation",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     service_group: None | ServiceGroup = field(
         default=None,
         metadata={
             "name": "ServiceGroup",
             "type": "Element",
-        }
+        },
     )
     air_segment_ref: list[TypeSegmentRef1] = field(
         default_factory=list,
@@ -95,35 +96,35 @@ class BrandingInfo:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     service_sub_code: None | str = field(
         default=None,
         metadata={
             "name": "ServiceSubCode",
             "type": "Attribute",
-        }
+        },
     )
     external_service_name: None | str = field(
         default=None,
         metadata={
             "name": "ExternalServiceName",
             "type": "Attribute",
-        }
+        },
     )
     service_type: None | str = field(
         default=None,
         metadata={
             "name": "ServiceType",
             "type": "Attribute",
-        }
+        },
     )
     commercial_name: None | str = field(
         default=None,
@@ -131,12 +132,12 @@ class BrandingInfo:
             "name": "CommercialName",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     chargeable: None | str = field(
         default=None,
         metadata={
             "name": "Chargeable",
             "type": "Attribute",
-        }
+        },
     )

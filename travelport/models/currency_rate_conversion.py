@@ -26,6 +26,7 @@ class CurrencyRateConversion:
         The number of decimal places for the requested currency at
         conversion.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -34,7 +35,7 @@ class CurrencyRateConversion:
         metadata={
             "name": "RateConversion",
             "type": "Attribute",
-        }
+        },
     )
     source_currency_code: None | str = field(
         default=None,
@@ -42,7 +43,7 @@ class CurrencyRateConversion:
             "name": "SourceCurrencyCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     requested_currency_code: None | str = field(
         default=None,
@@ -50,12 +51,12 @@ class CurrencyRateConversion:
             "name": "RequestedCurrencyCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     decimal_places: None | int = field(
         default=None,
         metadata={
             "name": "DecimalPlaces",
             "type": "Attribute",
-        }
+        },
     )

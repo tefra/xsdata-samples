@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
-from .destination_display_context_enumeration import DestinationDisplayContextEnumeration
+from .destination_display_context_enumeration import (
+    DestinationDisplayContextEnumeration,
+)
 from .destination_display_ref import DestinationDisplayRef
 from .multilingual_string import MultilingualString
 from .vias_rel_structure import ViasRelStructure
@@ -21,24 +23,28 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "DestinationDisplayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    destination_display_context: Optional[DestinationDisplayContextEnumeration] = field(
+    destination_display_context: Optional[
+        DestinationDisplayContextEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "DestinationDisplayContext",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    destination_display_variant_media_type: DeliveryVariantTypeEnumeration = field(
-        default=DeliveryVariantTypeEnumeration.ANY,
-        metadata={
-            "name": "DestinationDisplayVariantMediaType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        }
+    destination_display_variant_media_type: DeliveryVariantTypeEnumeration = (
+        field(
+            default=DeliveryVariantTypeEnumeration.ANY,
+            metadata={
+                "name": "DestinationDisplayVariantMediaType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "required": True,
+            },
+        )
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -46,7 +52,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -54,7 +60,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     side_text: Optional[MultilingualString] = field(
         default=None,
@@ -62,7 +68,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "SideText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     front_text: Optional[MultilingualString] = field(
         default=None,
@@ -70,7 +76,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "FrontText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     driver_display_text: Optional[MultilingualString] = field(
         default=None,
@@ -78,12 +84,12 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "DriverDisplayText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     vias: Optional[ViasRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

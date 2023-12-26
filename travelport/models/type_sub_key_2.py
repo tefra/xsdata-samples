@@ -18,6 +18,7 @@ class TypeSubKey2:
     description
         A brief description of a subkey.
     """
+
     class Meta:
         name = "typeSubKey"
 
@@ -28,7 +29,7 @@ class TypeSubKey2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -37,12 +38,12 @@ class TypeSubKey2:
             "type": "Attribute",
             "required": True,
             "max_length": 10,
-        }
+        },
     )
     description: None | object = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

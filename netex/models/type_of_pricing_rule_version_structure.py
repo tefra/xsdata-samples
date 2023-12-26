@@ -17,5 +17,5 @@ class TypeOfPricingRuleVersionStructure(TypeOfValueVersionStructure):
             "name": "TaxCategory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

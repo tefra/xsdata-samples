@@ -3,7 +3,9 @@ from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.parking_site import ParkingSite
-from datexii.models.eu.datexii.v2.parking_special_location_enum import ParkingSpecialLocationEnum
+from datexii.models.eu.datexii.v2.parking_special_location_enum import (
+    ParkingSpecialLocationEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,6 +22,7 @@ class SpecialLocationParkingSite(ParkingSite):
         available in the enumeration. Use literal 'other' in this case.
     :ivar special_location_parking_site_extension:
     """
+
     parking_special_location: Optional[ParkingSpecialLocationEnum] = field(
         default=None,
         metadata={
@@ -27,7 +30,7 @@ class SpecialLocationParkingSite(ParkingSite):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_other_special_location: Optional[MultilingualString] = field(
         default=None,
@@ -35,7 +38,7 @@ class SpecialLocationParkingSite(ParkingSite):
             "name": "parkingOtherSpecialLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     special_location_parking_site_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,5 +46,5 @@ class SpecialLocationParkingSite(ParkingSite):
             "name": "specialLocationParkingSiteExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

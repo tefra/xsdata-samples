@@ -21,6 +21,7 @@ class VehicleReturnDateLocation:
     PickupLocationType and PickupLocationNumber of existing booking then ReturnLocation,
     ReturnLocationType and ReturnLocationNumber will be updated.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -29,7 +30,7 @@ class VehicleReturnDateLocation:
         metadata={
             "name": "ReturnDateTime",
             "type": "Attribute",
-        }
+        },
     )
     return_location: None | str = field(
         default=None,
@@ -38,19 +39,19 @@ class VehicleReturnDateLocation:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     return_location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "ReturnLocationType",
             "type": "Attribute",
-        }
+        },
     )
     return_location_number: None | str = field(
         default=None,
         metadata={
             "name": "ReturnLocationNumber",
             "type": "Attribute",
-        }
+        },
     )

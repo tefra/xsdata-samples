@@ -21,21 +21,21 @@ class ScheduleEventType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     description: list[ScheduleEventDescription] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     repeat: None | RepeatType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     member_of: None | str = field(
         default=None,
@@ -43,7 +43,7 @@ class ScheduleEventType:
             "name": "memberOf",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     av_attributes: None | AvAttributesType = field(
         default=None,
@@ -51,7 +51,7 @@ class ScheduleEventType:
             "name": "avAttributes",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     text_subtitles: None | str = field(
         default=None,
@@ -59,7 +59,7 @@ class ScheduleEventType:
             "name": "textSubtitles",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     text_page: None | str = field(
         default=None,
@@ -67,7 +67,7 @@ class ScheduleEventType:
             "name": "textPage",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     guide_day: None | XmlDate = field(
         default=None,
@@ -76,7 +76,7 @@ class ScheduleEventType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     start: None | XmlDateTime = field(
         default=None,
@@ -84,14 +84,14 @@ class ScheduleEventType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     offset: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     duration: None | XmlDuration = field(
         default=None,
@@ -99,7 +99,7 @@ class ScheduleEventType:
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
             "required": True,
-        }
+        },
     )
     po_prog_id: None | str = field(
         default=None,
@@ -107,7 +107,7 @@ class ScheduleEventType:
             "name": "poProgID",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     primary_lifestyle: None | str = field(
         default=None,
@@ -115,7 +115,7 @@ class ScheduleEventType:
             "name": "primaryLifestyle",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     secondary_lifestyle: None | str = field(
         default=None,
@@ -123,32 +123,32 @@ class ScheduleEventType:
             "name": "secondaryLifestyle",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     imi: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     channel: None | ChannelEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     net: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     guide_day_attribute: None | XmlDate = field(
         default=None,
         metadata={
             "name": "guideDay",
             "type": "Attribute",
-        }
+        },
     )
     mid_ref: None | str = field(
         default=None,
@@ -159,7 +159,7 @@ class ScheduleEventType:
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
-        }
+        },
     )
     urn_ref: None | str = field(
         default=None,
@@ -167,12 +167,12 @@ class ScheduleEventType:
             "name": "urnRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | ScheduleEventTypeEnum = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )

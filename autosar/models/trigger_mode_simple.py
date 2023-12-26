@@ -14,6 +14,7 @@ class TriggerModeSimple(Enum):
     :cvar STATIC_PART_TRIGGER: IPduM sends a transmission request to the
         PduR if a static part is received.
     """
+
     DYNAMIC_PART_TRIGGER = "DYNAMIC-PART-TRIGGER"
     NONE = "NONE"
     STATIC_OR_DYNAMIC_PART_TRIGGER = "STATIC-OR-DYNAMIC-PART-TRIGGER"

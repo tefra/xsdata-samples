@@ -16,7 +16,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "NumberOfServers",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     railed_queue: Optional[bool] = field(
         default=None,
@@ -24,7 +24,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "RailedQueue",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     ticketed_queue: Optional[bool] = field(
         default=None,
@@ -32,7 +32,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "TicketedQueue",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     disabled_priority: Optional[bool] = field(
         default=None,
@@ -40,7 +40,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "DisabledPriority",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     queuing_seated_possible: Optional[bool] = field(
         default=None,
@@ -48,5 +48,5 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "QueuingSeatedPossible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import List
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from typing import List, Union
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 from .validable_element import ValidableElement
 from .validable_element_ref import ValidableElementRef
 
@@ -12,7 +14,9 @@ class ValidableElementsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "validableElements_RelStructure"
 
-    validable_element_ref_or_validable_element: List[object] = field(
+    validable_element_ref_or_validable_element: List[
+        Union[ValidableElementRef, ValidableElement]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +32,5 @@ class ValidableElementsRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

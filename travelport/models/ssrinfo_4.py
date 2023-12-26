@@ -16,6 +16,7 @@ class Ssrinfo4:
     booking_traveler_ref
         Reference to Booking Traveler.
     """
+
     class Meta:
         name = "SSRInfo"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -26,7 +27,7 @@ class Ssrinfo4:
             "name": "SSR",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,
@@ -34,5 +35,5 @@ class Ssrinfo4:
             "name": "BookingTravelerRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

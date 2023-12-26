@@ -15,6 +15,7 @@ class TransitServiceTypeEnum(Enum):
     :cvar TRAM: Tram service.
     :cvar UNDERGROUND_METRO: Underground or metro service.
     """
+
     AIR = "air"
     BUS = "bus"
     FERRY = "ferry"

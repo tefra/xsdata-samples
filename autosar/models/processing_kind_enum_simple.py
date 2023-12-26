@@ -13,6 +13,7 @@ class ProcessingKindEnumSimple(Enum):
         indicates to a developer that the control algorithm in the
         software has to provide filters.
     """
+
     FILTERED = "FILTERED"
     NONE = "NONE"
     RAW = "RAW"

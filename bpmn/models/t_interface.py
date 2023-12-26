@@ -18,19 +18,19 @@ class TInterface(TRootElement):
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
             "min_occurs": 1,
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     implementation_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "implementationRef",
             "type": "Attribute",
-        }
+        },
     )

@@ -18,7 +18,7 @@ class TrolleyStandEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "name": "FreeToUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     charge: Optional[Decimal] = field(
         default=None,
@@ -26,7 +26,7 @@ class TrolleyStandEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "name": "Charge",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     currency: Optional[str] = field(
         default=None,
@@ -37,7 +37,7 @@ class TrolleyStandEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "min_length": 3,
             "max_length": 3,
             "pattern": r"[A-Z][A-Z][A-Z]",
-        }
+        },
     )
     payment_methods: List[PaymentMethodEnumeration] = field(
         default_factory=list,
@@ -46,5 +46,5 @@ class TrolleyStandEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

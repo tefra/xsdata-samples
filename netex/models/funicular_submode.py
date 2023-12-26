@@ -13,5 +13,5 @@ class FunicularSubmode:
         default=FunicularSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

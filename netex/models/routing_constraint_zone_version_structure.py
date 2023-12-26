@@ -1,9 +1,11 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .group_of_lines_ref import GroupOfLinesRef
 from .line_refs_rel_structure import LineRefsRelStructure
 from .network_ref import NetworkRef
-from .points_in_journey_pattern_rel_structure import PointsInJourneyPatternRelStructure
+from .points_in_journey_pattern_rel_structure import (
+    PointsInJourneyPatternRelStructure,
+)
 from .zone_use_enumeration import ZoneUseEnumeration
 from .zone_version_structure import ZoneVersionStructure
 
@@ -21,7 +23,7 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "name": "ZoneUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     points_in_pattern: Optional[PointsInJourneyPatternRelStructure] = field(
         default=None,
@@ -29,16 +31,18 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "name": "pointsInPattern",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lines: Optional[LineRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    network_ref_or_group_of_lines_ref: Optional[object] = field(
+    network_ref_or_group_of_lines_ref: Optional[
+        Union[NetworkRef, GroupOfLinesRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -54,5 +58,5 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

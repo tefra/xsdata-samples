@@ -23,6 +23,7 @@ class EmdissuanceRsp(BaseRsp1):
         List of EMDInfo elements to show detailoed information in issuance
         response. Appears for ShowDetails=true in the request.
     """
+
     class Meta:
         name = "EMDIssuanceRsp"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -33,7 +34,7 @@ class EmdissuanceRsp(BaseRsp1):
             "name": "EMDSummaryInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     emdinfo: list[Emdinfo] = field(
         default_factory=list,
@@ -41,5 +42,5 @@ class EmdissuanceRsp(BaseRsp1):
             "name": "EMDInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeTaggableElement1(Enum):
     """
     Specify which fixed field type this field refers to.
     """
+
     TRAVEL_DOCUMENT = "TravelDocument"
     LOYALTY_PROGRAM_ENROLLMENT = "LoyaltyProgramEnrollment"
     CONTRACT = "Contract"

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_equipment import AccessEquipment
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
@@ -41,7 +41,9 @@ from .money_service_ref import MoneyServiceRef
 from .other_place_equipment import OtherPlaceEquipment
 from .passenger_equipment_ref import PassengerEquipmentRef
 from .passenger_information_equipment import PassengerInformationEquipment
-from .passenger_information_equipment_ref import PassengerInformationEquipmentRef
+from .passenger_information_equipment_ref import (
+    PassengerInformationEquipmentRef,
+)
 from .passenger_safety_equipment import PassengerSafetyEquipment
 from .passenger_safety_equipment_ref import PassengerSafetyEquipmentRef
 from .place_lighting import PlaceLighting
@@ -80,7 +82,80 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "explicitEquipments_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            PassengerInformationEquipmentRef,
+            RubbishDisposalEquipmentRef,
+            HelpPointEquipmentRef,
+            PassengerSafetyEquipmentRef,
+            SanitaryEquipmentRef,
+            WheelchairVehicleRef,
+            AccessVehicleEquipmentRef,
+            VehicleEquipmentRef,
+            PassengerEquipmentRef,
+            RetailDevice,
+            TicketValidatorEquipment,
+            TicketingEquipment,
+            SeatingEquipment,
+            ShelterEquipment,
+            TrolleyStandEquipment,
+            WaitingRoomEquipment,
+            CrossingEquipment,
+            QueueingEquipment,
+            EntranceEquipment,
+            RampEquipment,
+            LiftEquipment,
+            TravelatorEquipment,
+            StaircaseEquipment,
+            EscalatorEquipment,
+            PlaceLighting,
+            RoughSurface,
+            AccessEquipment,
+            GeneralSign,
+            HeadingSign,
+            PlaceSign,
+            SignEquipment,
+            WheelchairVehicleEquipment,
+            AccessVehicleEquipment,
+            VehicleChargingEquipment,
+            CycleStorageEquipment,
+            PassengerInformationEquipment,
+            RubbishDisposalEquipment,
+            HelpPointEquipment,
+            PassengerSafetyEquipment,
+            SanitaryEquipment,
+            AssistanceBookingServiceRef,
+            CateringServiceRef,
+            RetailServiceRef,
+            MoneyServiceRef,
+            HireServiceRef,
+            CommunicationServiceRef,
+            MeetingPointServiceRef,
+            LeftLuggageServiceRef,
+            LuggageServiceRef,
+            LostPropertyServiceRef,
+            ComplaintsServiceRef,
+            CustomerServiceRef,
+            AssistanceServiceRef,
+            TicketingServiceRef,
+            LocalServiceRef,
+            AssistanceBookingService,
+            CateringService,
+            RetailService,
+            MoneyService,
+            HireService,
+            CommunicationService,
+            MeetingPointService,
+            LostPropertyService,
+            LeftLuggageService,
+            ComplaintsService,
+            CustomerService,
+            LuggageService,
+            AssistanceService,
+            TicketingService,
+            OtherPlaceEquipment,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -436,5 +511,5 @@ class ExplicitEquipmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

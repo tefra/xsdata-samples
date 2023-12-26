@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.non_road_event_information import NonRoadEventInformation
-from datexii.models.eu.datexii.v2.roadside_service_disruption_type_enum import RoadsideServiceDisruptionTypeEnum
+from datexii.models.eu.datexii.v2.non_road_event_information import (
+    NonRoadEventInformation,
+)
+from datexii.models.eu.datexii.v2.roadside_service_disruption_type_enum import (
+    RoadsideServiceDisruptionTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,14 +21,17 @@ class RoadsideServiceDisruption(NonRoadEventInformation):
         which is disrupted.
     :ivar roadside_service_disruption_extension:
     """
-    roadside_service_disruption_type: List[RoadsideServiceDisruptionTypeEnum] = field(
+
+    roadside_service_disruption_type: List[
+        RoadsideServiceDisruptionTypeEnum
+    ] = field(
         default_factory=list,
         metadata={
             "name": "roadsideServiceDisruptionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     roadside_service_disruption_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +39,5 @@ class RoadsideServiceDisruption(NonRoadEventInformation):
             "name": "roadsideServiceDisruptionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

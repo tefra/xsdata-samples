@@ -37,6 +37,7 @@ class TypeTaxInfo3:
     supplier_code
         Code of the supplier returning this TaxInfo.
     """
+
     class Meta:
         name = "typeTaxInfo"
 
@@ -47,14 +48,14 @@ class TypeTaxInfo3:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
@@ -62,35 +63,35 @@ class TypeTaxInfo3:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier_defined_category: None | str = field(
         default=None,
         metadata={
             "name": "CarrierDefinedCategory",
             "type": "Attribute",
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     flight_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "FlightDetailsRef",
             "type": "Attribute",
-        }
+        },
     )
     coupon_ref: None | str = field(
         default=None,
         metadata={
             "name": "CouponRef",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
@@ -98,7 +99,7 @@ class TypeTaxInfo3:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin_airport: None | str = field(
         default=None,
@@ -106,7 +107,7 @@ class TypeTaxInfo3:
             "name": "OriginAirport",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     destination_airport: None | str = field(
         default=None,
@@ -114,28 +115,28 @@ class TypeTaxInfo3:
             "name": "DestinationAirport",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     country_code: None | str = field(
         default=None,
         metadata={
             "name": "CountryCode",
             "type": "Attribute",
-        }
+        },
     )
     fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     tax_exempted: None | bool = field(
         default=None,
         metadata={
             "name": "TaxExempted",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -144,7 +145,7 @@ class TypeTaxInfo3:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -153,5 +154,5 @@ class TypeTaxInfo3:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

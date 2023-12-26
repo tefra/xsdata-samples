@@ -16,7 +16,7 @@ class NameType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     scope_note: list[str] = field(
         default_factory=list,
@@ -24,26 +24,26 @@ class NameType:
             "name": "scopeNote",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     role: None | RoleType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     gtaa_uri: None | str = field(
         default=None,
         metadata={
             "name": "gtaaUri",
             "type": "Attribute",
-        }
+        },
     )
     gtaa_status: None | GtaaStatusType = field(
         default=None,
         metadata={
             "name": "gtaaStatus",
             "type": "Attribute",
-        }
+        },
     )

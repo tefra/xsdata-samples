@@ -10,6 +10,7 @@ class OptionalServiceModifiers:
     """
     Rich Content and Branding for an optional service.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class OptionalServiceModifiers:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )

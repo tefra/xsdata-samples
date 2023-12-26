@@ -28,6 +28,7 @@ class GraphicFitEnumSimple(Enum):
     :cvar ROTATE_90_CW_LIMIT_TO_TEXT: Rotate by 90 degree and then fit
         to text
     """
+
     AS_IS = "AS-IS"
     FIT_TO_PAGE = "FIT-TO-PAGE"
     FIT_TO_TEXT = "FIT-TO-TEXT"

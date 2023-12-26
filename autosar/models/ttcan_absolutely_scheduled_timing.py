@@ -34,16 +34,19 @@ class TtcanAbsolutelyScheduledTiming:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TTCAN-ABSOLUTELY-SCHEDULED-TIMING"
 
-    communication_cycle: Optional["TtcanAbsolutelyScheduledTiming.CommunicationCycle"] = field(
+    communication_cycle: Optional[
+        "TtcanAbsolutelyScheduledTiming.CommunicationCycle"
+    ] = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_mark: Optional[Integer] = field(
         default=None,
@@ -51,7 +54,7 @@ class TtcanAbsolutelyScheduledTiming:
             "name": "TIME-MARK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trigger: Optional[TtcanTriggerType] = field(
         default=None,
@@ -59,14 +62,14 @@ class TtcanAbsolutelyScheduledTiming:
             "name": "TRIGGER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -74,7 +77,7 @@ class TtcanAbsolutelyScheduledTiming:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -85,7 +88,7 @@ class TtcanAbsolutelyScheduledTiming:
                 "name": "CYCLE-COUNTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         cycle_repetition: Optional[CycleRepetition] = field(
             default=None,
@@ -93,5 +96,5 @@ class TtcanAbsolutelyScheduledTiming:
                 "name": "CYCLE-REPETITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

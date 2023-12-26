@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.upsell_admin_search_port_type_service_input import UpsellAdminSearchPortTypeServiceInput
-from travelport.models.upsell_admin_search_port_type_service_output import UpsellAdminSearchPortTypeServiceOutput
+from travelport.models.upsell_admin_search_port_type_service_input import (
+    UpsellAdminSearchPortTypeServiceInput,
+)
+from travelport.models.upsell_admin_search_port_type_service_output import (
+    UpsellAdminSearchPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

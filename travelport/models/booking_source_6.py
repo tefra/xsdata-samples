@@ -18,6 +18,7 @@ class BookingSource6:
         “BookingSourceOverrride”. “BookingSourceOverrride” is only
         applicable in VehicleCreateReservationReq. 1P/1J.
     """
+
     class Meta:
         name = "BookingSource"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -29,7 +30,7 @@ class BookingSource6:
             "type": "Attribute",
             "required": True,
             "min_length": 1,
-        }
+        },
     )
     type_value: None | BookingSourceType6 = field(
         default=None,
@@ -37,5 +38,5 @@ class BookingSource6:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

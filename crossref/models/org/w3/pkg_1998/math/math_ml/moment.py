@@ -15,5 +15,5 @@ class Moment:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

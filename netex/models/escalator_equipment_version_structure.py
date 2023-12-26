@@ -16,7 +16,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "TactileActuators",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     energy_saving: Optional[bool] = field(
         default=None,
@@ -24,7 +24,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "EnergySaving",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     dogs_must_be_carried: Optional[bool] = field(
         default=None,
@@ -32,7 +32,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "DogsMustBeCarried",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     escalator_with_landing: Optional[bool] = field(
         default=None,
@@ -40,5 +40,5 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "EscalatorWithLanding",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

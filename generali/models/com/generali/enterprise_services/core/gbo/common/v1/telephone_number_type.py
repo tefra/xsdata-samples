@@ -1,9 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telephone_number_country_code_type import TelephoneNumberCountryCodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telephone_number_identification_code_type import TelephoneNumberIdentificationCodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telephone_number_subscriber_number_type import TelephoneNumberSubscriberNumberType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telephone_number_country_code_type import (
+    TelephoneNumberCountryCodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telephone_number_identification_code_type import (
+    TelephoneNumberIdentificationCodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.telephone_number_subscriber_number_type import (
+    TelephoneNumberSubscriberNumberType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -27,6 +35,7 @@ class TelephoneNumberType:
         <description>The Subscriber Number of the Telephone Number, 1-3
         digits.</description> </description>
     """
+
     full_number_text: Optional[TextType] = field(
         default=None,
         metadata={
@@ -34,7 +43,7 @@ class TelephoneNumberType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     country_code_text: Optional[TelephoneNumberCountryCodeType] = field(
         default=None,
@@ -42,21 +51,25 @@ class TelephoneNumberType:
             "name": "CountryCodeText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
-    identification_code_text: Optional[TelephoneNumberIdentificationCodeType] = field(
+    identification_code_text: Optional[
+        TelephoneNumberIdentificationCodeType
+    ] = field(
         default=None,
         metadata={
             "name": "IdentificationCodeText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
-    subscriber_number_text: Optional[TelephoneNumberSubscriberNumberType] = field(
+    subscriber_number_text: Optional[
+        TelephoneNumberSubscriberNumberType
+    ] = field(
         default=None,
         metadata={
             "name": "SubscriberNumberText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

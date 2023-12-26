@@ -19,6 +19,7 @@ class LegPrice:
     approximate_total_price
         The Converted Total Price in Agency's Default Currency Value
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class LegPrice:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -37,7 +38,7 @@ class LegPrice:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
@@ -45,12 +46,12 @@ class LegPrice:
             "name": "TotalPrice",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )

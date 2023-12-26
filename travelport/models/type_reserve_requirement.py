@@ -8,6 +8,7 @@ class TypeReserveRequirement(Enum):
     """
     Type of payment required to reserve travel i.e. Hotel Reservation requirement.
     """
+
     DEPOSIT = "Deposit"
     GUARANTEE = "Guarantee"
     PREPAYMENT = "Prepayment"

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .consumer_response_endpoint_structure import ConsumerResponseEndpointStructure
+from typing import Optional, Union
+from .consumer_response_endpoint_structure import (
+    ConsumerResponseEndpointStructure,
+)
 from .other_error import OtherError
 from .unknown_subscription_error import UnknownSubscriptionError
 
@@ -15,20 +17,24 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
-    error_condition: Optional["DataReadyResponseStructure.ErrorCondition"] = field(
+    error_condition: Optional[
+        "DataReadyResponseStructure.ErrorCondition"
+    ] = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
 
     @dataclass
     class ErrorCondition:
-        unknown_subscription_error_or_other_error: Optional[object] = field(
+        unknown_subscription_error_or_other_error: Optional[
+            Union[UnknownSubscriptionError, OtherError]
+        ] = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -44,7 +50,7 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-            }
+            },
         )
         description: Optional[str] = field(
             default=None,
@@ -52,5 +58,5 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
                 "name": "Description",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-            }
+            },
         )

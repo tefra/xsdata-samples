@@ -18,6 +18,7 @@ class ValidityStatusEnum(Enum):
         described event, action or item is in accordance with the
         definition of the validity time specification.
     """
+
     ACTIVE = "active"
     SUSPENDED = "suspended"
     DEFINED_BY_VALIDITY_TIME_SPEC = "definedByValidityTimeSpec"

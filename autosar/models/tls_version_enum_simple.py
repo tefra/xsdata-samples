@@ -9,6 +9,7 @@ class TlsVersionEnumSimple(Enum):
     :cvar TLS_12: TLS version 1.2
     :cvar TLS_13: TLS version 1.3
     """
+
     LTS_13 = "LTS-13"
     TLS_12 = "TLS-12"
     TLS_13 = "TLS-13"

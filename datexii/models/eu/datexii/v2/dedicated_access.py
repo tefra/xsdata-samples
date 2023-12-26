@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.parking_access_reference import ParkingAccessReference
+from datexii.models.eu.datexii.v2.parking_access_reference import (
+    ParkingAccessReference,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,6 +22,7 @@ class DedicatedAccess:
         changing the side of a motorway.
     :ivar dedicated_access_extension:
     """
+
     dedicated_access: Optional[ParkingAccessReference] = field(
         default=None,
         metadata={
@@ -27,7 +30,7 @@ class DedicatedAccess:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     distance_from_parking_space: Optional[int] = field(
         default=None,
@@ -35,7 +38,7 @@ class DedicatedAccess:
             "name": "distanceFromParkingSpace",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dedicated_access_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,5 +46,5 @@ class DedicatedAccess:
             "name": "dedicatedAccessExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

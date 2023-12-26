@@ -8,6 +8,7 @@ class TypeAdvisoryType1(Enum):
     """
     Specify the type of Advisory.
     """
+
     AGENCY = "Agency"
     AIR = "Air"
     CUSTOMER = "Customer"

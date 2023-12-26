@@ -15,5 +15,5 @@ class ContainmentAggregationStructure(RelationshipStructure):
         metadata={
             "name": "modificationSet",
             "type": "Attribute",
-        }
+        },
     )

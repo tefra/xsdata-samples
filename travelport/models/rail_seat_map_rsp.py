@@ -11,6 +11,7 @@ class RailSeatMapRsp(BaseRsp1):
     """
     Returns rail seat map/coach map.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -20,5 +21,5 @@ class RailSeatMapRsp(BaseRsp1):
             "name": "Coach",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

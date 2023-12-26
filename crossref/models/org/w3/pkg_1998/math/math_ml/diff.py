@@ -15,5 +15,5 @@ class Diff:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

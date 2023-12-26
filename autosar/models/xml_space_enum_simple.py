@@ -11,5 +11,6 @@ class XmlSpaceEnumSimple(Enum):
     :cvar PRESERVE: the value "preserve" indicates the intent that
         applications preserve all the white space.
     """
+
     DEFAULT = "default"
     PRESERVE = "preserve"

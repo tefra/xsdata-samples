@@ -14,5 +14,5 @@ class DataObjectPermissions:
         metadata={
             "name": "DataObjectPermission",
             "type": "Element",
-        }
+        },
     )

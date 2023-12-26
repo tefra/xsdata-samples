@@ -28,7 +28,7 @@ class CoctMt040008UvResponsible:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -36,7 +36,7 @@ class CoctMt040008UvResponsible:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -44,7 +44,7 @@ class CoctMt040008UvResponsible:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -52,14 +52,14 @@ class CoctMt040008UvResponsible:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     effective_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -67,7 +67,7 @@ class CoctMt040008UvResponsible:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     agent_organization: Optional[CoctMt150007UvOrganization] = field(
         default=None,
@@ -76,7 +76,7 @@ class CoctMt040008UvResponsible:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     agent_person: Optional[CoctMt030207UvPerson] = field(
         default=None,
@@ -85,7 +85,7 @@ class CoctMt040008UvResponsible:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     agent_device: Optional[CoctMt140007UvDevice] = field(
         default=None,
@@ -94,7 +94,7 @@ class CoctMt040008UvResponsible:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     represented_organization: Optional[CoctMt150007UvOrganization] = field(
         default=None,
@@ -103,7 +103,7 @@ class CoctMt040008UvResponsible:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     represented_person: Optional[CoctMt030207UvPerson] = field(
         default=None,
@@ -112,19 +112,19 @@ class CoctMt040008UvResponsible:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: RoleClassAgent = field(
         default=RoleClassAgent.AGNT,
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )

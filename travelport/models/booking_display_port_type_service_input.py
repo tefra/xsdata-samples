@@ -17,14 +17,14 @@ class BookingDisplayPortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | BookingDisplayPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +35,7 @@ class BookingDisplayPortTypeServiceInput:
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +46,5 @@ class BookingDisplayPortTypeServiceInput:
                 "name": "BookingDisplayReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/sharedBooking_v52_0",
-            }
+            },
         )

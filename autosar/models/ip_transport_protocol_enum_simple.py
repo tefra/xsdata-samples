@@ -8,5 +8,6 @@ class IpTransportProtocolEnumSimple(Enum):
     :cvar TCP: Transmission Control Protocol (TCP)
     :cvar UDP: User Datagram Protocol (UDP).
     """
+
     TCP = "TCP"
     UDP = "UDP"

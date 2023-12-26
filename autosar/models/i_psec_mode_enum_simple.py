@@ -13,5 +13,6 @@ class IPsecModeEnumSimple(Enum):
         IPSec. This means IPSec wraps the original packet, encrypts it,
         adds a new IP header and sends it to the other side.
     """
+
     TRANSPORT = "TRANSPORT"
     TUNNEL = "TUNNEL"

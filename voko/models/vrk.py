@@ -20,5 +20,5 @@ class Vrk:
                     "type": Url,
                 },
             ),
-        }
+        },
     )

@@ -7,7 +7,9 @@ from travelport.models.type_deposit_guarantee import TypeDepositGuarantee
 from travelport.models.type_rental_period import TypeRentalPeriod
 from travelport.models.type_start_end_time import TypeStartEndTime
 from travelport.models.type_vehicle_charge import TypeVehicleCharge
-from travelport.models.type_vehicle_location_information import TypeVehicleLocationInformation
+from travelport.models.type_vehicle_location_information import (
+    TypeVehicleLocationInformation,
+)
 from travelport.models.vehicle import Vehicle
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
@@ -43,6 +45,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
     return_location_information
         Return Location  Information ,  1P only.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -52,7 +55,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "name": "Vehicle",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     operation_time: list[str] = field(
         default_factory=list,
@@ -60,21 +63,21 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "name": "OperationTime",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     start_end_times: None | VehicleRulesRsp.StartEndTimes = field(
         default=None,
         metadata={
             "name": "StartEndTimes",
             "type": "Element",
-        }
+        },
     )
     rental_period_rules: None | VehicleRulesRsp.RentalPeriodRules = field(
         default=None,
         metadata={
             "name": "RentalPeriodRules",
             "type": "Element",
-        }
+        },
     )
     pre_pay_cancel_info: list[VehicleRulesRsp.PrePayCancelInfo] = field(
         default_factory=list,
@@ -82,7 +85,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "name": "PrePayCancelInfo",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     payment_rule: list[VehicleRulesRsp.PaymentRule] = field(
         default_factory=list,
@@ -90,7 +93,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "name": "PaymentRule",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     payment_credit_card: list[str] = field(
         default_factory=list,
@@ -99,7 +102,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "type": "Element",
             "max_occurs": 13,
             "length": 2,
-        }
+        },
     )
     vehicle_charge: list[TypeVehicleCharge] = field(
         default_factory=list,
@@ -107,7 +110,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "name": "VehicleCharge",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     marketing_information: None | MarketingInformation1 = field(
         default=None,
@@ -115,7 +118,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "name": "MarketingInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     policy: list[Policy] = field(
         default_factory=list,
@@ -123,21 +126,21 @@ class VehicleRulesRsp(BaseSearchRsp1):
             "name": "Policy",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     pickup_location_information: None | TypeVehicleLocationInformation = field(
         default=None,
         metadata={
             "name": "PickupLocationInformation",
             "type": "Element",
-        }
+        },
     )
     return_location_information: None | TypeVehicleLocationInformation = field(
         default=None,
         metadata={
             "name": "ReturnLocationInformation",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -152,26 +155,27 @@ class VehicleRulesRsp(BaseSearchRsp1):
         latest_end
             The latest a vehicle may be dropped off.
         """
+
         earliest_start: None | TypeStartEndTime = field(
             default=None,
             metadata={
                 "name": "EarliestStart",
                 "type": "Element",
-            }
+            },
         )
         latest_start: None | TypeStartEndTime = field(
             default=None,
             metadata={
                 "name": "LatestStart",
                 "type": "Element",
-            }
+            },
         )
         latest_end: None | TypeStartEndTime = field(
             default=None,
             metadata={
                 "name": "LatestEnd",
                 "type": "Element",
-            }
+            },
         )
 
     @dataclass
@@ -186,26 +190,27 @@ class VehicleRulesRsp(BaseSearchRsp1):
         absolute_max
             The absolute maximum rental period for this rate.
         """
+
         max_rental: None | TypeRentalPeriod = field(
             default=None,
             metadata={
                 "name": "MaxRental",
                 "type": "Element",
-            }
+            },
         )
         min_rental: None | TypeRentalPeriod = field(
             default=None,
             metadata={
                 "name": "MinRental",
                 "type": "Element",
-            }
+            },
         )
         absolute_max: None | TypeRentalPeriod = field(
             default=None,
             metadata={
                 "name": "AbsoluteMax",
                 "type": "Element",
-            }
+            },
         )
 
     @dataclass
@@ -227,41 +232,42 @@ class VehicleRulesRsp(BaseSearchRsp1):
         rental_days
             Number of rental days (e.g. 001 up to 365), 1P only.
         """
+
         code: None | int = field(
             default=None,
             metadata={
                 "name": "Code",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         amount: None | str = field(
             default=None,
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-            }
+            },
         )
         percent: None | int = field(
             default=None,
             metadata={
                 "name": "Percent",
                 "type": "Attribute",
-            }
+            },
         )
         number_of_days_hours: None | int = field(
             default=None,
             metadata={
                 "name": "NumberOfDaysHours",
                 "type": "Attribute",
-            }
+            },
         )
         rental_days: None | int = field(
             default=None,
             metadata={
                 "name": "RentalDays",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -272,6 +278,7 @@ class VehicleRulesRsp(BaseSearchRsp1):
         credit_card
             The two character credit card code.
         """
+
         credit_card: list[str] = field(
             default_factory=list,
             metadata={
@@ -279,5 +286,5 @@ class VehicleRulesRsp(BaseSearchRsp1):
                 "type": "Element",
                 "max_occurs": 13,
                 "length": 2,
-            }
+            },
         )

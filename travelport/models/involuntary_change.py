@@ -10,6 +10,7 @@ class InvoluntaryChange:
     """
     Specify the Ticket Endorsement value.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class InvoluntaryChange:
             "name": "TicketEndorsement",
             "type": "Element",
             "required": True,
-        }
+        },
     )

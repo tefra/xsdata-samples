@@ -17,14 +17,14 @@ class AirAvailabilitySearchPortTypeServiceInput:
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: None | AirAvailabilitySearchPortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +35,7 @@ class AirAvailabilitySearchPortTypeServiceInput:
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +46,5 @@ class AirAvailabilitySearchPortTypeServiceInput:
                 "name": "AvailabilitySearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            }
+            },
         )

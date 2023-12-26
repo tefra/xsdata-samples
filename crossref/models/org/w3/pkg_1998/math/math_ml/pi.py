@@ -15,5 +15,5 @@ class Pi:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

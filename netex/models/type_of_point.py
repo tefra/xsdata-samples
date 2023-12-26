@@ -15,5 +15,5 @@ class TypeOfPoint(TypeOfPointValueStructure):
         metadata={
             "name": "nameOfClassifiedEntityClass",
             "type": "Attribute",
-        }
+        },
     )

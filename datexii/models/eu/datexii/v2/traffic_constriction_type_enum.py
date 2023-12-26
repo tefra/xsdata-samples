@@ -20,6 +20,7 @@ class TrafficConstrictionTypeEnum(Enum):
     :cvar ROAD_PARTIALLY_OBSTRUCTED: The road is partially obstructed in
         both directions due to an unplanned event.
     """
+
     CARRIAGEWAY_BLOCKED = "carriagewayBlocked"
     CARRIAGEWAY_PARTIALLY_OBSTRUCTED = "carriagewayPartiallyObstructed"
     LANES_BLOCKED = "lanesBlocked"

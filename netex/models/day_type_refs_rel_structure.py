@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,9 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dayTypeRefs_RelStructure"
 
-    fare_day_type_ref_or_day_type_ref: List[object] = field(
+    fare_day_type_ref_or_day_type_ref: List[
+        Union[FareDayTypeRef, DayTypeRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

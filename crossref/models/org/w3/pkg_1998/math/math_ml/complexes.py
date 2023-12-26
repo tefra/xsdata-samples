@@ -15,5 +15,5 @@ class Complexes:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

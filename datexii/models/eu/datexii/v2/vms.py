@@ -2,12 +2,22 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
-from datexii.models.eu.datexii.v2.text_display_area_settings import TextDisplayAreaSettings
-from datexii.models.eu.datexii.v2.vms_dynamic_characteristics import VmsDynamicCharacteristics
+from datexii.models.eu.datexii.v2.text_display_area_settings import (
+    TextDisplayAreaSettings,
+)
+from datexii.models.eu.datexii.v2.vms_dynamic_characteristics import (
+    VmsDynamicCharacteristics,
+)
 from datexii.models.eu.datexii.v2.vms_fault import VmsFault
-from datexii.models.eu.datexii.v2.vms_managed_logical_location import VmsManagedLogicalLocation
-from datexii.models.eu.datexii.v2.vms_message_index_vms_message import VmsMessageIndexVmsMessage
-from datexii.models.eu.datexii.v2.vms_pictogram_display_area_index_pictogram_display_area_settings import VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings
+from datexii.models.eu.datexii.v2.vms_managed_logical_location import (
+    VmsManagedLogicalLocation,
+)
+from datexii.models.eu.datexii.v2.vms_message_index_vms_message import (
+    VmsMessageIndexVmsMessage,
+)
+from datexii.models.eu.datexii.v2.vms_pictogram_display_area_index_pictogram_display_area_settings import (
+    VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -41,6 +51,7 @@ class Vms:
     :ivar vms_fault:
     :ivar vms_extension:
     """
+
     vms_working: Optional[bool] = field(
         default=None,
         metadata={
@@ -48,7 +59,7 @@ class Vms:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms_message_sequencing_interval: Optional[float] = field(
         default=None,
@@ -56,7 +67,7 @@ class Vms:
             "name": "vmsMessageSequencingInterval",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_message: List[VmsMessageIndexVmsMessage] = field(
         default_factory=list,
@@ -64,7 +75,7 @@ class Vms:
             "name": "vmsMessage",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     text_display_area_settings: Optional[TextDisplayAreaSettings] = field(
         default=None,
@@ -72,15 +83,17 @@ class Vms:
             "name": "textDisplayAreaSettings",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    pictogram_display_area_settings: List[VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings] = field(
+    pictogram_display_area_settings: List[
+        VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings
+    ] = field(
         default_factory=list,
         metadata={
             "name": "pictogramDisplayAreaSettings",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_location_override: Optional[Location] = field(
         default=None,
@@ -88,15 +101,17 @@ class Vms:
             "name": "vmsLocationOverride",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    managed_logical_location_override: Optional[VmsManagedLogicalLocation] = field(
+    managed_logical_location_override: Optional[
+        VmsManagedLogicalLocation
+    ] = field(
         default=None,
         metadata={
             "name": "managedLogicalLocationOverride",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_dynamic_characteristics: Optional[VmsDynamicCharacteristics] = field(
         default=None,
@@ -104,7 +119,7 @@ class Vms:
             "name": "vmsDynamicCharacteristics",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_fault: List[VmsFault] = field(
         default_factory=list,
@@ -112,7 +127,7 @@ class Vms:
             "name": "vmsFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_extension: Optional[ExtensionType] = field(
         default=None,
@@ -120,5 +135,5 @@ class Vms:
             "name": "vmsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

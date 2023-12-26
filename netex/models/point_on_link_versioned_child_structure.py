@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
+from typing import Optional, Union
 from .activation_point import ActivationPoint
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
@@ -50,7 +50,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     link_ref: Optional[LinkRefStructure] = field(
         default=None,
@@ -58,7 +58,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "name": "LinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     distance_from_start: Optional[Decimal] = field(
         default=None,
@@ -66,9 +66,43 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "name": "DistanceFromStart",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
+            PointRef,
+            BorderPoint,
+            FareScheduledStopPoint,
+            ScheduledStopPoint,
+            PathJunction,
+            RoutePoint,
+            ParkingPoint,
+            GaragePoint,
+            ReliefPoint,
+            TimingPoint,
+            WireJunction,
+            RoadJunction,
+            RailwayJunction,
+            TrafficControlPoint,
+            BeaconPoint,
+            ActivationPoint,
+            Point2,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -229,11 +263,11 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

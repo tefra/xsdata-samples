@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional, Type
-from .ecuc_definition_element_subtypes_enum import EcucDefinitionElementSubtypesEnum
+from .ecuc_definition_element_subtypes_enum import (
+    EcucDefinitionElementSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -26,6 +28,7 @@ class EcucQueryExpression:
         AUTOSAR tools to manage the timestamp.
     :ivar content:
     """
+
     class Meta:
         name = "ECUC-QUERY-EXPRESSION"
 
@@ -34,7 +37,7 @@ class EcucQueryExpression:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -42,7 +45,7 @@ class EcucQueryExpression:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -53,16 +56,20 @@ class EcucQueryExpression:
             "choices": (
                 {
                     "name": "CONFIG-ELEMENT-DEF-GLOBAL-REF",
-                    "type": Type["EcucQueryExpression.ConfigElementDefGlobalRef"],
+                    "type": Type[
+                        "EcucQueryExpression.ConfigElementDefGlobalRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "CONFIG-ELEMENT-DEF-LOCAL-REF",
-                    "type": Type["EcucQueryExpression.ConfigElementDefLocalRef"],
+                    "type": Type[
+                        "EcucQueryExpression.ConfigElementDefLocalRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -73,7 +80,7 @@ class EcucQueryExpression:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -84,5 +91,5 @@ class EcucQueryExpression:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

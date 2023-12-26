@@ -12,6 +12,7 @@ class HotelUpsellCriteria:
     """
     Wraps all Upsell Admin commands related to Hotel.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,7 +22,7 @@ class HotelUpsellCriteria:
             "name": "HotelUpsellAdd",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_upsell_update: list[HotelUpsellUpdate] = field(
         default_factory=list,
@@ -29,7 +30,7 @@ class HotelUpsellCriteria:
             "name": "HotelUpsellUpdate",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_upsell_delete: list[HotelUpsellDelete] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class HotelUpsellCriteria:
             "name": "HotelUpsellDelete",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

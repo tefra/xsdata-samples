@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.type_contact_type_1 import TypeContactType1
 from travelport.models.type_search_address_1 import TypeSearchAddress1
-from travelport.models.type_search_electronic_address_1 import TypeSearchElectronicAddress1
+from travelport.models.type_search_electronic_address_1 import (
+    TypeSearchElectronicAddress1,
+)
 from travelport.models.type_search_phone_1 import TypeSearchPhone1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -27,6 +29,7 @@ class TypeSearchContact1:
         Examples include Emergency Contact, Regular Contact, Backup Contact,
         etc.
     """
+
     class Meta:
         name = "typeSearchContact"
 
@@ -36,7 +39,7 @@ class TypeSearchContact1:
             "name": "GivenName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     other_name: None | str = field(
         default=None,
@@ -44,7 +47,7 @@ class TypeSearchContact1:
             "name": "OtherName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -52,7 +55,7 @@ class TypeSearchContact1:
             "name": "Surname",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     nick_name: None | str = field(
         default=None,
@@ -60,7 +63,7 @@ class TypeSearchContact1:
             "name": "NickName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     address: None | TypeSearchAddress1 = field(
         default=None,
@@ -68,7 +71,7 @@ class TypeSearchContact1:
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     phone: None | TypeSearchPhone1 = field(
         default=None,
@@ -76,7 +79,7 @@ class TypeSearchContact1:
             "name": "Phone",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     electronic_address: None | TypeSearchElectronicAddress1 = field(
         default=None,
@@ -84,12 +87,12 @@ class TypeSearchContact1:
             "name": "ElectronicAddress",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     type_value: None | TypeContactType1 = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

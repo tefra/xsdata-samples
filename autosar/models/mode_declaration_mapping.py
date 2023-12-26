@@ -80,6 +80,7 @@ class ModeDeclarationMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MODE-DECLARATION-MAPPING"
 
@@ -90,15 +91,17 @@ class ModeDeclarationMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ModeDeclarationMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ModeDeclarationMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -106,7 +109,7 @@ class ModeDeclarationMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -114,7 +117,7 @@ class ModeDeclarationMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -122,7 +125,7 @@ class ModeDeclarationMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -130,7 +133,7 @@ class ModeDeclarationMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -138,7 +141,7 @@ class ModeDeclarationMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ModeDeclarationMapping.Annotations"] = field(
         default=None,
@@ -146,7 +149,7 @@ class ModeDeclarationMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     first_mode_refs: Optional["ModeDeclarationMapping.FirstModeRefs"] = field(
         default=None,
@@ -154,7 +157,7 @@ class ModeDeclarationMapping:
             "name": "FIRST-MODE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     second_mode_ref: Optional["ModeDeclarationMapping.SecondModeRef"] = field(
         default=None,
@@ -162,14 +165,14 @@ class ModeDeclarationMapping:
             "name": "SECOND-MODE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -177,14 +180,14 @@ class ModeDeclarationMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -195,7 +198,7 @@ class ModeDeclarationMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -206,18 +209,20 @@ class ModeDeclarationMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FirstModeRefs:
-        first_mode_ref: List["ModeDeclarationMapping.FirstModeRefs.FirstModeRef"] = field(
+        first_mode_ref: List[
+            "ModeDeclarationMapping.FirstModeRefs.FirstModeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FIRST-MODE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -228,7 +233,7 @@ class ModeDeclarationMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -239,5 +244,5 @@ class ModeDeclarationMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

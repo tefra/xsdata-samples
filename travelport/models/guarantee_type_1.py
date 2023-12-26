@@ -9,6 +9,7 @@ class GuaranteeType1:
     """
     A type of guarantee i.e.
     """
+
     class Meta:
         name = "GuaranteeType"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -18,5 +19,5 @@ class GuaranteeType1:
         metadata={
             "required": True,
             "max_length": 250,
-        }
+        },
     )

@@ -16,7 +16,7 @@ class AcademicTitle:
         metadata={
             "name": "AcademicTitleCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -34,28 +34,28 @@ class Agency:
         metadata={
             "name": "AgencyCodedOther",
             "type": "Element",
-        }
+        },
     )
     agency_description: Optional[str] = field(
         default=None,
         metadata={
             "name": "AgencyDescription",
             "type": "Element",
-        }
+        },
     )
     code_list_identifier_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "CodeListIdentifierCoded",
             "type": "Element",
-        }
+        },
     )
     code_list_identifier_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "CodeListIdentifierCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -73,7 +73,7 @@ class CertificatePurpose:
         metadata={
             "name": "CertificatePurposeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -91,7 +91,7 @@ class ContactRelationType:
         metadata={
             "name": "ContactRelationTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -109,7 +109,7 @@ class Country:
         metadata={
             "name": "CountryCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -127,7 +127,7 @@ class DateFormat:
         metadata={
             "name": "DateFormatCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -138,7 +138,7 @@ class Language:
         metadata={
             "name": "LanguageDependent",
             "type": "Attribute",
-        }
+        },
     )
     language_coded: str = field(
         metadata={
@@ -152,21 +152,21 @@ class Language:
         metadata={
             "name": "LanguageCodedOther",
             "type": "Element",
-        }
+        },
     )
     locale_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "LocaleCoded",
             "type": "Element",
-        }
+        },
     )
     locale_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "LocaleCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -180,13 +180,13 @@ class Pobox:
         metadata={
             "name": "POBoxPostalCode",
             "type": "Attribute",
-        }
+        },
     )
     value: str = field(
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
 
 
@@ -222,7 +222,7 @@ class Region:
         metadata={
             "name": "RegionCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -240,7 +240,7 @@ class Timezone:
         metadata={
             "name": "TimezoneCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -258,7 +258,7 @@ class Title:
         metadata={
             "name": "TitleCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -276,7 +276,7 @@ class TradingPartnerUserPurpose:
         metadata={
             "name": "TradingPartnerUserPurposeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -290,13 +290,13 @@ class UserId:
         metadata={
             "name": "UserShortID",
             "type": "Attribute",
-        }
+        },
     )
     value: str = field(
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
 
 
@@ -307,7 +307,7 @@ class UserRole:
         metadata={
             "name": "UserRoleAuthority",
             "type": "Element",
-        }
+        },
     )
     user_role_name: str = field(
         metadata={
@@ -321,7 +321,7 @@ class UserRole:
         metadata={
             "name": "UserRoleID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -339,7 +339,7 @@ class UserStatus:
         metadata={
             "name": "UserStatusCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -393,7 +393,7 @@ class CommunicationDetail:
         metadata={
             "name": "CommunicationDetailDescription",
             "type": "Element",
-        }
+        },
     )
     person_communication_type: PersonCommunicationType = field(
         metadata={
@@ -414,7 +414,7 @@ class CommunicationDetail:
         metadata={
             "name": "DefaultCommunication",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -454,7 +454,7 @@ class ListOfCertificatePurpose:
         metadata={
             "name": "CertificatePurpose",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -477,7 +477,7 @@ class ListOfUserRole:
             "name": "UserRole",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -516,14 +516,14 @@ class PrimaryId:
         metadata={
             "name": "ShortID",
             "type": "Element",
-        }
+        },
     )
     primary_idurn: Optional[str] = field(
         default=None,
         metadata={
             "name": "PrimaryIDURN",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -534,14 +534,14 @@ class UserAdministration:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-        }
+        },
     )
     user_status: Optional[UserStatus] = field(
         default=None,
         metadata={
             "name": "UserStatus",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -553,7 +553,7 @@ class ListOfCommunicationDetail:
             "name": "CommunicationDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -578,21 +578,21 @@ class X509Certificate:
         metadata={
             "name": "ListOfCertificatePurpose",
             "type": "Element",
-        }
+        },
     )
     x509_cert: Optional[str] = field(
         default=None,
         metadata={
             "name": "X509Cert",
             "type": "Element",
-        }
+        },
     )
     x509_certificate_info: Optional[X509CertificateInfo] = field(
         default=None,
         metadata={
             "name": "X509CertificateInfo",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -607,7 +607,7 @@ class ListOfTradingPartnerId:
             "name": "TradingPartnerID",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -618,7 +618,7 @@ class ListOfX509Certificate:
         metadata={
             "name": "X509Certificate",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -629,119 +629,119 @@ class PersonAddress:
         metadata={
             "name": "OrganizationAddressID",
             "type": "Element",
-        }
+        },
     )
     pobox: Optional[Pobox] = field(
         default=None,
         metadata={
             "name": "POBox",
             "type": "Element",
-        }
+        },
     )
     street: Optional[str] = field(
         default=None,
         metadata={
             "name": "Street",
             "type": "Element",
-        }
+        },
     )
     house_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "HouseNumber",
             "type": "Element",
-        }
+        },
     )
     street_supplement1: Optional[str] = field(
         default=None,
         metadata={
             "name": "StreetSupplement1",
             "type": "Element",
-        }
+        },
     )
     street_supplement2: Optional[str] = field(
         default=None,
         metadata={
             "name": "StreetSupplement2",
             "type": "Element",
-        }
+        },
     )
     postal_code: Optional[str] = field(
         default=None,
         metadata={
             "name": "PostalCode",
             "type": "Element",
-        }
+        },
     )
     city: Optional[str] = field(
         default=None,
         metadata={
             "name": "City",
             "type": "Element",
-        }
+        },
     )
     county: Optional[str] = field(
         default=None,
         metadata={
             "name": "County",
             "type": "Element",
-        }
+        },
     )
     region: Optional[Region] = field(
         default=None,
         metadata={
             "name": "Region",
             "type": "Element",
-        }
+        },
     )
     district: Optional[str] = field(
         default=None,
         metadata={
             "name": "District",
             "type": "Element",
-        }
+        },
     )
     country: Optional[Country] = field(
         default=None,
         metadata={
             "name": "Country",
             "type": "Element",
-        }
+        },
     )
     building: Optional[str] = field(
         default=None,
         metadata={
             "name": "Building",
             "type": "Element",
-        }
+        },
     )
     floor: Optional[str] = field(
         default=None,
         metadata={
             "name": "Floor",
             "type": "Element",
-        }
+        },
     )
     room_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "RoomNumber",
             "type": "Element",
-        }
+        },
     )
     inhouse_mail: Optional[str] = field(
         default=None,
         metadata={
             "name": "InhouseMail",
             "type": "Element",
-        }
+        },
     )
     department: Optional[str] = field(
         default=None,
         metadata={
             "name": "Department",
             "type": "Element",
-        }
+        },
     )
     list_of_communication_detail: ListOfCommunicationDetail = field(
         metadata={
@@ -759,14 +759,14 @@ class Identifications:
         metadata={
             "name": "PrimaryID",
             "type": "Element",
-        }
+        },
     )
     list_of_trading_partner_id: Optional[ListOfTradingPartnerId] = field(
         default=None,
         metadata={
             "name": "ListOfTradingPartnerID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -777,14 +777,14 @@ class PersonProfile:
         metadata={
             "name": "Title",
             "type": "Element",
-        }
+        },
     )
     academic_title: Optional[AcademicTitle] = field(
         default=None,
         metadata={
             "name": "AcademicTitle",
             "type": "Element",
-        }
+        },
     )
     last_name: str = field(
         metadata={
@@ -798,63 +798,63 @@ class PersonProfile:
         metadata={
             "name": "FirstName",
             "type": "Element",
-        }
+        },
     )
     middle_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "MiddleName",
             "type": "Element",
-        }
+        },
     )
     full_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "FullName",
             "type": "Element",
-        }
+        },
     )
     correspondence_language: Optional[CorrespondenceLanguage] = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
             "type": "Element",
-        }
+        },
     )
     number_format: Optional[str] = field(
         default=None,
         metadata={
             "name": "NumberFormat",
             "type": "Element",
-        }
+        },
     )
     date_format: Optional[DateFormat] = field(
         default=None,
         metadata={
             "name": "DateFormat",
             "type": "Element",
-        }
+        },
     )
     time_format: Optional[str] = field(
         default=None,
         metadata={
             "name": "TimeFormat",
             "type": "Element",
-        }
+        },
     )
     person_timezone: Optional[PersonTimezone] = field(
         default=None,
         metadata={
             "name": "PersonTimezone",
             "type": "Element",
-        }
+        },
     )
     list_of_x509_certificate: Optional[ListOfX509Certificate] = field(
         default=None,
         metadata={
             "name": "ListOfX509Certificate",
             "type": "Element",
-        }
+        },
     )
     person_address: PersonAddress = field(
         metadata={
@@ -868,7 +868,7 @@ class PersonProfile:
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -911,21 +911,21 @@ class TradingPartnerUser:
         metadata={
             "name": "ListOfUserRole",
             "type": "Element",
-        }
+        },
     )
     user_administration: Optional[UserAdministration] = field(
         default=None,
         metadata={
             "name": "UserAdministration",
             "type": "Element",
-        }
+        },
     )
     list_of_contact_relation_type: Optional[ListOfContactRelationType] = field(
         default=None,
         metadata={
             "name": "ListOfContactRelationType",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -937,7 +937,7 @@ class ListOfTradingPartnerUser:
             "name": "TradingPartnerUser",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 

@@ -9,6 +9,7 @@ class RailSegmentRef:
     """
     Reference to a RaiLSegment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -18,5 +19,5 @@ class RailSegmentRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

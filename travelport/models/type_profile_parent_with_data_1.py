@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_info_1 import BaseInfo1
 from travelport.models.profile_data_1 import ProfileData1
-from travelport.models.type_profile_entity_status_with_delete_1 import TypeProfileEntityStatusWithDelete1
+from travelport.models.type_profile_entity_status_with_delete_1 import (
+    TypeProfileEntityStatusWithDelete1,
+)
 from travelport.models.type_profile_type_3 import TypeProfileType3
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -39,6 +41,7 @@ class TypeProfileParentWithData1:
     version
         Version number of the profile.
     """
+
     class Meta:
         name = "typeProfileParentWithData"
 
@@ -48,7 +51,7 @@ class TypeProfileParentWithData1:
             "name": "BaseInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     profile_parent: None | ProfileParent1 = field(
         default=None,
@@ -56,7 +59,7 @@ class TypeProfileParentWithData1:
             "name": "ProfileParent",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     profile_data: None | ProfileData1 = field(
         default=None,
@@ -64,7 +67,7 @@ class TypeProfileParentWithData1:
             "name": "ProfileData",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -72,7 +75,7 @@ class TypeProfileParentWithData1:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -80,7 +83,7 @@ class TypeProfileParentWithData1:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -88,7 +91,7 @@ class TypeProfileParentWithData1:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | TypeProfileEntityStatusWithDelete1 = field(
         default=None,
@@ -96,7 +99,7 @@ class TypeProfileParentWithData1:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -105,7 +108,7 @@ class TypeProfileParentWithData1:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
 
 
@@ -115,6 +118,7 @@ class ProfileParent1(TypeProfileParentWithData1):
     A parent's profile, including the profile data (if specified in the request)
     and a list of its parents as well.
     """
+
     class Meta:
         name = "ProfileParent"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"

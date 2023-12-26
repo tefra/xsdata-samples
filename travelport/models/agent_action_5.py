@@ -30,6 +30,7 @@ class AgentAction5:
     event_time
         Date and time at which this event took place.
     """
+
     class Meta:
         name = "AgentAction"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -40,7 +41,7 @@ class AgentAction5:
             "name": "ActionType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     agent_code: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class AgentAction5:
             "name": "AgentCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     branch_code: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class AgentAction5:
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     agency_code: None | str = field(
         default=None,
@@ -66,14 +67,14 @@ class AgentAction5:
             "name": "AgencyCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     agent_sine: None | str = field(
         default=None,
         metadata={
             "name": "AgentSine",
             "type": "Attribute",
-        }
+        },
     )
     event_time: None | XmlDateTime = field(
         default=None,
@@ -81,5 +82,5 @@ class AgentAction5:
             "name": "EventTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -19,7 +19,7 @@ class ActivationPointVersionStructure(PointVersionStructure):
             "name": "ActivationPointNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class ActivationPointVersionStructure(PointVersionStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -35,7 +35,7 @@ class ActivationPointVersionStructure(PointVersionStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_activation_ref: Optional[TypeOfActivationRef] = field(
         default=None,
@@ -43,5 +43,5 @@ class ActivationPointVersionStructure(PointVersionStructure):
             "name": "TypeOfActivationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

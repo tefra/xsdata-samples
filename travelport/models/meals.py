@@ -10,6 +10,7 @@ class Meals:
     """
     Available Meal Service.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -17,5 +18,5 @@ class Meals:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

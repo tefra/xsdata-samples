@@ -31,7 +31,7 @@ class TCatchEvent(TEvent):
             "name": "dataOutput",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_output_association: List[DataOutputAssociation] = field(
         default_factory=list,
@@ -39,7 +39,7 @@ class TCatchEvent(TEvent):
             "name": "dataOutputAssociation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     output_set: Optional[OutputSet] = field(
         default=None,
@@ -47,7 +47,7 @@ class TCatchEvent(TEvent):
             "name": "outputSet",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     timer_event_definition: List[TimerEventDefinition] = field(
         default_factory=list,
@@ -55,7 +55,7 @@ class TCatchEvent(TEvent):
             "name": "timerEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     terminate_event_definition: List[TerminateEventDefinition] = field(
         default_factory=list,
@@ -63,7 +63,7 @@ class TCatchEvent(TEvent):
             "name": "terminateEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     signal_event_definition: List[SignalEventDefinition] = field(
         default_factory=list,
@@ -71,7 +71,7 @@ class TCatchEvent(TEvent):
             "name": "signalEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     message_event_definition: List[MessageEventDefinition] = field(
         default_factory=list,
@@ -79,7 +79,7 @@ class TCatchEvent(TEvent):
             "name": "messageEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     link_event_definition: List[LinkEventDefinition] = field(
         default_factory=list,
@@ -87,7 +87,7 @@ class TCatchEvent(TEvent):
             "name": "linkEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     escalation_event_definition: List[EscalationEventDefinition] = field(
         default_factory=list,
@@ -95,7 +95,7 @@ class TCatchEvent(TEvent):
             "name": "escalationEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     error_event_definition: List[ErrorEventDefinition] = field(
         default_factory=list,
@@ -103,7 +103,7 @@ class TCatchEvent(TEvent):
             "name": "errorEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     conditional_event_definition: List[ConditionalEventDefinition] = field(
         default_factory=list,
@@ -111,7 +111,7 @@ class TCatchEvent(TEvent):
             "name": "conditionalEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     compensate_event_definition: List[CompensateEventDefinition] = field(
         default_factory=list,
@@ -119,7 +119,7 @@ class TCatchEvent(TEvent):
             "name": "compensateEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     cancel_event_definition: List[CancelEventDefinition] = field(
         default_factory=list,
@@ -127,7 +127,7 @@ class TCatchEvent(TEvent):
             "name": "cancelEventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     event_definition: List[EventDefinition] = field(
         default_factory=list,
@@ -135,7 +135,7 @@ class TCatchEvent(TEvent):
             "name": "eventDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     event_definition_ref: List[QName] = field(
         default_factory=list,
@@ -143,12 +143,12 @@ class TCatchEvent(TEvent):
             "name": "eventDefinitionRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     parallel_multiple: bool = field(
         default=False,
         metadata={
             "name": "parallelMultiple",
             "type": "Attribute",
-        }
+        },
     )

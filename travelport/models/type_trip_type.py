@@ -8,6 +8,7 @@ class TypeTripType(Enum):
     """
     Used in Low Fare Search to better target the results.
     """
+
     CHEAPEST = "Cheapest"
     QUICKEST = "Quickest"
     MOST_CONVENIENT = "MostConvenient"

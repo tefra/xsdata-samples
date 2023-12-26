@@ -10,5 +10,6 @@ class ShowResourcePageEnumSimple(Enum):
     :cvar SHOW_PAGE: The page number  of the target is rendered at the
         place of the reference.
     """
+
     NO_SHOW_PAGE = "NO-SHOW-PAGE"
     SHOW_PAGE = "SHOW-PAGE"

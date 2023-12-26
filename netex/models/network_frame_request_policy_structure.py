@@ -14,7 +14,7 @@ class NetworkFrameRequestPolicyStructure:
             "name": "MaximumNumberOfElements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     include_deleted: Optional[bool] = field(
         default=None,
@@ -22,7 +22,7 @@ class NetworkFrameRequestPolicyStructure:
             "name": "IncludeDeleted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     urgency: Optional[XmlDuration] = field(
         default=None,
@@ -30,7 +30,7 @@ class NetworkFrameRequestPolicyStructure:
             "name": "Urgency",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     must_have_by: Optional[XmlDateTime] = field(
         default=None,
@@ -38,7 +38,7 @@ class NetworkFrameRequestPolicyStructure:
             "name": "MustHaveBy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
@@ -46,7 +46,7 @@ class NetworkFrameRequestPolicyStructure:
             "name": "Language",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     request_detail: List[OutputDetailEnumeration] = field(
         default_factory=list,
@@ -55,5 +55,5 @@ class NetworkFrameRequestPolicyStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

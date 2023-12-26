@@ -2,14 +2,16 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .response_structure import ResponseStructure
-from .service_delivery_error_condition_structure import ServiceDeliveryErrorConditionStructure
+from .service_delivery_error_condition_structure import (
+    ServiceDeliveryErrorConditionStructure,
+)
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class AbstractServiceDeliveryStructure(ResponseStructure):
-    choice: List[object] = field(
+    choice: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -36,7 +38,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
                 },
             ),
             "max_occurs": 3,
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -44,7 +46,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -52,7 +54,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     status: Optional[bool] = field(
         default=None,
@@ -60,7 +62,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     error_condition: Optional[ServiceDeliveryErrorConditionStructure] = field(
         default=None,
@@ -68,7 +70,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     valid_until: Optional[XmlDateTime] = field(
         default=None,
@@ -76,7 +78,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "name": "ValidUntil",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     shortest_possible_cycle: Optional[XmlDuration] = field(
         default=None,
@@ -84,7 +86,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "name": "ShortestPossibleCycle",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     default_language: Optional[str] = field(
         default=None,
@@ -92,5 +94,5 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "name": "DefaultLanguage",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

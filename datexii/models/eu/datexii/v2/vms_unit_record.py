@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.vms_unit_record_vms_index_vms_record import VmsUnitRecordVmsIndexVmsRecord
+from datexii.models.eu.datexii.v2.vms_unit_record_vms_index_vms_record import (
+    VmsUnitRecordVmsIndexVmsRecord,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -24,13 +26,14 @@ class VmsUnitRecord:
     :ivar id:
     :ivar version:
     """
+
     number_of_vms: Optional[int] = field(
         default=None,
         metadata={
             "name": "numberOfVms",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_unit_identifier: Optional[str] = field(
         default=None,
@@ -39,7 +42,7 @@ class VmsUnitRecord:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     vms_unit_ipaddress: Optional[str] = field(
         default=None,
@@ -48,7 +51,7 @@ class VmsUnitRecord:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     vms_unit_electronic_address: Optional[str] = field(
         default=None,
@@ -57,7 +60,7 @@ class VmsUnitRecord:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     vms_record: List[VmsUnitRecordVmsIndexVmsRecord] = field(
         default_factory=list,
@@ -65,7 +68,7 @@ class VmsUnitRecord:
             "name": "vmsRecord",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_unit_record_extension: Optional[ExtensionType] = field(
         default=None,
@@ -73,19 +76,19 @@ class VmsUnitRecord:
             "name": "vmsUnitRecordExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

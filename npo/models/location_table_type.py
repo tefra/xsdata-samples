@@ -16,7 +16,7 @@ class LocationTableType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     schedule_event: list[ScheduleEventType] = field(
         default_factory=list,
@@ -24,5 +24,5 @@ class LocationTableType:
             "name": "scheduleEvent",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )

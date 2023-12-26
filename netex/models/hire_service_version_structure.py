@@ -19,5 +19,5 @@ class HireServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
             "tokens": True,
-        }
+        },
     )

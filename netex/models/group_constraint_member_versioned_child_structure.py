@@ -19,7 +19,7 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
             "name": "PurposeOfGroupingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     member_class_ref: Optional[ClassRefStructure] = field(
         default=None,
@@ -28,7 +28,7 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     member_type_of_value_ref: Optional[TypeOfValueRefStructure] = field(
         default=None,
@@ -36,5 +36,5 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
             "name": "MemberTypeOfValueRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -10,6 +10,7 @@ class Affiliations:
     """
     Affiliations related for pre pay profiles.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class Affiliations:
             "name": "TravelArranger",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

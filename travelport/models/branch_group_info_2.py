@@ -39,6 +39,7 @@ class BranchGroupInfo2(TypeProfileInfo2):
         Identify if Universal Record synch is activated at Branch Group
         Level.
     """
+
     class Meta:
         name = "BranchGroupInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -49,7 +50,7 @@ class BranchGroupInfo2(TypeProfileInfo2):
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone: list[Phone2] = field(
         default_factory=list,
@@ -57,7 +58,7 @@ class BranchGroupInfo2(TypeProfileInfo2):
             "name": "Phone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     electronic_address: list[ElectronicAddress2] = field(
         default_factory=list,
@@ -65,7 +66,7 @@ class BranchGroupInfo2(TypeProfileInfo2):
             "name": "ElectronicAddress",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier2] = field(
         default_factory=list,
@@ -73,7 +74,7 @@ class BranchGroupInfo2(TypeProfileInfo2):
             "name": "ExternalIdentifier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -83,7 +84,7 @@ class BranchGroupInfo2(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     branch_group_code: None | str = field(
         default=None,
@@ -93,26 +94,26 @@ class BranchGroupInfo2(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     profile_sync_to: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncTo",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_from: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncFrom",
             "type": "Attribute",
-        }
+        },
     )
     ursync_to: bool = field(
         default=False,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

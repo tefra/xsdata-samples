@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_layer_type import PricingLayerType
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_layer_type import (
+    PricingLayerType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -16,5 +20,5 @@ class PricingTypeLayers:
             "name": "Layer",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

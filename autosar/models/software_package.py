@@ -8,8 +8,12 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
-from .function_group_state_in_function_group_set_instance_ref import FunctionGroupStateInFunctionGroupSetInstanceRef
+from .crypto_service_certificate_subtypes_enum import (
+    CryptoServiceCertificateSubtypesEnum,
+)
+from .function_group_state_in_function_group_set_instance_ref import (
+    FunctionGroupStateInFunctionGroupSetInstanceRef,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -117,6 +121,7 @@ class SoftwarePackage:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOFTWARE-PACKAGE"
 
@@ -127,15 +132,17 @@ class SoftwarePackage:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SoftwarePackage.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SoftwarePackage.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -143,7 +150,7 @@ class SoftwarePackage:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -151,7 +158,7 @@ class SoftwarePackage:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -159,7 +166,7 @@ class SoftwarePackage:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -167,7 +174,7 @@ class SoftwarePackage:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -175,7 +182,7 @@ class SoftwarePackage:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SoftwarePackage.Annotations"] = field(
         default=None,
@@ -183,7 +190,7 @@ class SoftwarePackage:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -191,7 +198,7 @@ class SoftwarePackage:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     action_type: Optional[SoftwarePackageActionTypeEnum] = field(
         default=None,
@@ -199,7 +206,7 @@ class SoftwarePackage:
             "name": "ACTION-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     compressed_software_package_size: Optional[PositiveInteger] = field(
         default=None,
@@ -207,15 +214,17 @@ class SoftwarePackage:
             "name": "COMPRESSED-SOFTWARE-PACKAGE-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    delta_package_applicable_version: Optional[StrongRevisionLabelString] = field(
+    delta_package_applicable_version: Optional[
+        StrongRevisionLabelString
+    ] = field(
         default=None,
         metadata={
             "name": "DELTA-PACKAGE-APPLICABLE-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_supported_ucm_version: Optional[RevisionLabelString] = field(
         default=None,
@@ -223,7 +232,7 @@ class SoftwarePackage:
             "name": "MAXIMUM-SUPPORTED-UCM-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_supported_ucm_version: Optional[RevisionLabelString] = field(
         default=None,
@@ -231,7 +240,7 @@ class SoftwarePackage:
             "name": "MINIMUM-SUPPORTED-UCM-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     packager_id: Optional[PositiveInteger] = field(
         default=None,
@@ -239,15 +248,17 @@ class SoftwarePackage:
             "name": "PACKAGER-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    packager_signature_ref: Optional["SoftwarePackage.PackagerSignatureRef"] = field(
+    packager_signature_ref: Optional[
+        "SoftwarePackage.PackagerSignatureRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PACKAGER-SIGNATURE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     post_verification_reboot: Optional[Boolean] = field(
         default=None,
@@ -255,7 +266,7 @@ class SoftwarePackage:
             "name": "POST-VERIFICATION-REBOOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pre_activate_irefs: Optional["SoftwarePackage.PreActivateIrefs"] = field(
         default=None,
@@ -263,7 +274,7 @@ class SoftwarePackage:
             "name": "PRE-ACTIVATE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pre_activation_reboot: Optional[Boolean] = field(
         default=None,
@@ -271,15 +282,17 @@ class SoftwarePackage:
             "name": "PRE-ACTIVATION-REBOOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    software_cluster_ref: Optional["SoftwarePackage.SoftwareClusterRef"] = field(
+    software_cluster_ref: Optional[
+        "SoftwarePackage.SoftwareClusterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     uncompressed_software_cluster_size: Optional[PositiveInteger] = field(
         default=None,
@@ -287,7 +300,7 @@ class SoftwarePackage:
             "name": "UNCOMPRESSED-SOFTWARE-CLUSTER-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verify_irefs: Optional["SoftwarePackage.VerifyIrefs"] = field(
         default=None,
@@ -295,14 +308,14 @@ class SoftwarePackage:
             "name": "VERIFY-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -310,14 +323,14 @@ class SoftwarePackage:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -328,7 +341,7 @@ class SoftwarePackage:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -339,7 +352,7 @@ class SoftwarePackage:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -350,18 +363,20 @@ class SoftwarePackage:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class PreActivateIrefs:
-        pre_activate_iref: List[FunctionGroupStateInFunctionGroupSetInstanceRef] = field(
+        pre_activate_iref: List[
+            FunctionGroupStateInFunctionGroupSetInstanceRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PRE-ACTIVATE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -372,16 +387,18 @@ class SoftwarePackage:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class VerifyIrefs:
-        verify_iref: List[FunctionGroupStateInFunctionGroupSetInstanceRef] = field(
+        verify_iref: List[
+            FunctionGroupStateInFunctionGroupSetInstanceRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "VERIFY-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -12,6 +12,7 @@ class AirScheduleChangedInfo:
     Contents will be a new AirPricingSolution that contains all the new schedule
     information as well as the pricing information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,5 +22,5 @@ class AirScheduleChangedInfo:
             "name": "AirPricingSolution",
             "type": "Element",
             "required": True,
-        }
+        },
     )

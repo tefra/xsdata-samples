@@ -12,25 +12,25 @@ class DistanceMatrixElementRefByValueStructure:
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
-        }
+        },
     )
     created: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     changed: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     from_ref: Optional[str] = field(
         default=None,
@@ -38,7 +38,7 @@ class DistanceMatrixElementRefByValueStructure:
             "name": "fromRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     to_ref: Optional[str] = field(
         default=None,
@@ -46,12 +46,12 @@ class DistanceMatrixElementRefByValueStructure:
             "name": "toRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name_of_point_ref_class: Optional[str] = field(
         default=None,
         metadata={
             "name": "nameOfPointRefClass",
             "type": "Attribute",
-        }
+        },
     )

@@ -53,26 +53,26 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="hde:01",
-                                version="any",
+                                id='hde:01',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            value="REQUEST",
-                            ref="hde:TIM_24o_FS_Outbound"
+                            value='REQUEST',
+                            ref='hde:TIM_24o_FS_Outbound'
                         ),
                     ]
                 ),
@@ -81,52 +81,52 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple Headwayal  template timetable   with three    journeys  "
+        value='Example  of simple Headwayal  template timetable   with three    journeys  '
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="hde:CF_1",
-                version="1",
+                id='hde:CF_1',
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceCalendarFrame(
-                            id="hde:TIM_24o_FS_Outbound",
-                            version="any",
+                            id='hde:TIM_24o_FS_Outbound',
+                            version='any',
                             name=MultilingualString(
 
                             ),
                             service_calendar=ServiceCalendar(
-                                id="hde:TIM_24o_FS_Outbound",
-                                version="any",
+                                id='hde:TIM_24o_FS_Outbound',
+                                version='any',
                                 day_types=DayTypesRelStructure(
                                     choice=[
                                         DayType(
-                                            id="hde:DT_01MTWTFSS",
-                                            version="any",
+                                            id='hde:DT_01MTWTFSS',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Everyday"
+                                                value='Everyday'
                                             ),
                                             properties=PropertiesOfDayRelStructure(
                                                 property_of_day=[
@@ -139,10 +139,10 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayType(
-                                            id="hde:DT_01MTWTF",
-                                            version="any",
+                                            id='hde:DT_01MTWTF',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Weekdays"
+                                                value='Weekdays'
                                             ),
                                             properties=PropertiesOfDayRelStructure(
                                                 property_of_day=[
@@ -163,15 +163,15 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="hde:TIM_24o_FS_Outbound",
+                            id='hde:TIM_24o_FS_Outbound',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="hde:TIM_24o_FS_Outbound",
-                                            version="any",
+                                            id='hde:TIM_24o_FS_Outbound',
+                                            version='any',
                                             description=MultilingualString(
-                                                value="Sept  to March"
+                                                value='Sept  to March'
                                             ),
                                             from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2011, 3, 31, 0, 0, 0, 0, 0)
@@ -179,9 +179,9 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            version="001",
+                            version='001',
                             name=MultilingualString(
-                                value="Winter timetable for route 234 outbound"
+                                value='Winter timetable for route 234 outbound'
                             ),
                             vehicle_modes=[
                                 VehicleModeEnumeration.BUS,
@@ -189,33 +189,33 @@ obj = PublicationDelivery(
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
                                     TemplateServiceJourney(
-                                        id="hde:tvjh_24o_01",
-                                        version="any",
+                                        id='hde:tvjh_24o_01',
+                                        version='any',
                                         departure_time=XmlTime(10, 0, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01MTWTFSS"
+                                                    version='any',
+                                                    ref='hde:DT_01MTWTFSS'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            value="EXTERNAL",
-                                            ref="hde:svp_24o"
+                                            value='EXTERNAL',
+                                            ref='hde:svp_24o'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_234"
+                                            version='any',
+                                            ref='mybus:LN_234'
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:tvjh_24o_02_001",
-                                                    version="any",
+                                                    id='hde:tvjh_24o_02_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -226,11 +226,11 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:tvjh_24o_02_002",
-                                                    version="any",
+                                                    id='hde:tvjh_24o_02_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(11, 20, 0, 0, 0)
@@ -242,11 +242,11 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:tvjh_24o_02_003",
-                                                    version="any",
+                                                    id='hde:tvjh_24o_02_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(12, 20, 0, 0, 0)
@@ -261,14 +261,14 @@ obj = PublicationDelivery(
                                         frequency_groups=FrequencyGroupsRelStructure(
                                             choice=[
                                                 HeadwayJourneyGroup(
-                                                    id="hde:hjg_24o_01",
-                                                    version="any",
+                                                    id='hde:hjg_24o_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Regular  Interval service between 10am and 12:00 pm"
+                                                        value='Regular  Interval service between 10am and 12:00 pm'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="About every 12 minutes"
+                                                            value='About every 12 minutes'
                                                         ),
                                                     ],
                                                     first_departure_time=XmlTime(10, 0, 0, 0),
@@ -277,14 +277,14 @@ obj = PublicationDelivery(
                                                     headway_display=HeadwayUseEnumeration.DISPLAY_INSTEAD_OF_PASSING_TIMES
                                                 ),
                                                 HeadwayJourneyGroup(
-                                                    id="hde:hjg_24o_02",
-                                                    version="any",
+                                                    id='hde:hjg_24o_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Regular  Interval service between 12am and 18:00 pm"
+                                                        value='Regular  Interval service between 12am and 18:00 pm'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="About every 20 minutes"
+                                                            value='About every 20 minutes'
                                                         ),
                                                     ],
                                                     first_departure_time=XmlTime(12, 0, 0, 0),
@@ -299,45 +299,45 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="mybus:svf_12",
-                            version="any",
+                            id='mybus:svf_12',
+                            version='any',
                             name=MultilingualString(
-                                value="Stops for Winter timetable for route 234 "
+                                value='Stops for Winter timetable for route 234 '
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:LN_234",
-                                        version="any",
+                                        id='mybus:LN_234',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 234 Alpha to Charley Green"
+                                            value='Line 234 Alpha to Charley Green'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 234"
+                                            value='Line 234'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="234"
+                                        public_code='234'
                                     ),
                                 ]
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha &amp; Castle"
+                                            value='Alpha & Castle'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Alpha"
+                                            value='Alpha'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="EANDC"
+                                            value='EANDC'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -345,21 +345,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="BRAV"
+                                            value='BRAV'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -367,21 +367,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Green"
+                                            value='Charley Green'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="CHAS"
+                                            value='CHAS'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[

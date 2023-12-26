@@ -12,5 +12,5 @@ class AllCountriesRefStructure(TypeOfValueRefStructure):
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

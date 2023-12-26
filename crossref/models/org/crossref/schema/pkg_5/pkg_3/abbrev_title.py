@@ -10,6 +10,7 @@ class AbbrevTitle:
     It is recommended that periods be included after abbreviated words
     within the title.
     """
+
     class Meta:
         name = "abbrev_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class AbbrevTitle:
         metadata={
             "min_length": 1,
             "max_length": 150,
-        }
+        },
     )

@@ -13,5 +13,5 @@ class SnowAndIceSubmode:
         default=SnowAndIceSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

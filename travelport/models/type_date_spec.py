@@ -11,6 +11,7 @@ class TypeDateSpec:
     """
     Specifies dates as either specific date or a date range.
     """
+
     class Meta:
         name = "typeDateSpec"
 
@@ -20,7 +21,7 @@ class TypeDateSpec:
             "name": "DateRange",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/universal_v52_0",
-        }
+        },
     )
     specific_date: None | XmlDate = field(
         default=None,
@@ -28,5 +29,5 @@ class TypeDateSpec:
             "name": "SpecificDate",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/universal_v52_0",
-        }
+        },
     )

@@ -8,11 +8,15 @@ from .annotation import (
 )
 from .category_string import CategoryString
 from .identifier import Identifier
-from .inner_data_prototype_group_in_composition_instance_ref import InnerDataPrototypeGroupInCompositionInstanceRef
+from .inner_data_prototype_group_in_composition_instance_ref import (
+    InnerDataPrototypeGroupInCompositionInstanceRef,
+)
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .short_name_fragment import ShortNameFragment
-from .variable_data_prototype_in_composition_instance_ref import VariableDataPrototypeInCompositionInstanceRef
+from .variable_data_prototype_in_composition_instance_ref import (
+    VariableDataPrototypeInCompositionInstanceRef,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -85,6 +89,7 @@ class DataPrototypeGroup:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DATA-PROTOTYPE-GROUP"
 
@@ -95,15 +100,17 @@ class DataPrototypeGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DataPrototypeGroup.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DataPrototypeGroup.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -111,7 +118,7 @@ class DataPrototypeGroup:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -119,7 +126,7 @@ class DataPrototypeGroup:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -127,7 +134,7 @@ class DataPrototypeGroup:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -135,7 +142,7 @@ class DataPrototypeGroup:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -143,7 +150,7 @@ class DataPrototypeGroup:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DataPrototypeGroup.Annotations"] = field(
         default=None,
@@ -151,23 +158,27 @@ class DataPrototypeGroup:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_prototype_group_irefs: Optional["DataPrototypeGroup.DataPrototypeGroupIrefs"] = field(
+    data_prototype_group_irefs: Optional[
+        "DataPrototypeGroup.DataPrototypeGroupIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-GROUP-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    implicit_data_access_irefs: Optional["DataPrototypeGroup.ImplicitDataAccessIrefs"] = field(
+    implicit_data_access_irefs: Optional[
+        "DataPrototypeGroup.ImplicitDataAccessIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPLICIT-DATA-ACCESS-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -175,14 +186,14 @@ class DataPrototypeGroup:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -190,14 +201,14 @@ class DataPrototypeGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -208,7 +219,7 @@ class DataPrototypeGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -219,27 +230,31 @@ class DataPrototypeGroup:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DataPrototypeGroupIrefs:
-        data_prototype_group_iref: List[InnerDataPrototypeGroupInCompositionInstanceRef] = field(
+        data_prototype_group_iref: List[
+            InnerDataPrototypeGroupInCompositionInstanceRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-PROTOTYPE-GROUP-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ImplicitDataAccessIrefs:
-        implicit_data_access_iref: List[VariableDataPrototypeInCompositionInstanceRef] = field(
+        implicit_data_access_iref: List[
+            VariableDataPrototypeInCompositionInstanceRef
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IMPLICIT-DATA-ACCESS-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

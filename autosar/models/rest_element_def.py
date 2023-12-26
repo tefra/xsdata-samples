@@ -87,6 +87,7 @@ class RestElementDef:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REST-ELEMENT-DEF"
 
@@ -97,15 +98,17 @@ class RestElementDef:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RestElementDef.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RestElementDef.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -113,7 +116,7 @@ class RestElementDef:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -121,7 +124,7 @@ class RestElementDef:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -129,7 +132,7 @@ class RestElementDef:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -137,7 +140,7 @@ class RestElementDef:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -145,7 +148,7 @@ class RestElementDef:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RestElementDef.Annotations"] = field(
         default=None,
@@ -153,7 +156,7 @@ class RestElementDef:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     endpoints: Optional["RestElementDef.Endpoints"] = field(
         default=None,
@@ -161,7 +164,7 @@ class RestElementDef:
             "name": "ENDPOINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     propertys: Optional["RestElementDef.Propertys"] = field(
         default=None,
@@ -169,14 +172,14 @@ class RestElementDef:
             "name": "PROPERTYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -184,14 +187,14 @@ class RestElementDef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -202,7 +205,7 @@ class RestElementDef:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -213,7 +216,7 @@ class RestElementDef:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -224,7 +227,7 @@ class RestElementDef:
                 "name": "REST-ENDPOINT-DELETE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_endpoint_get: List[RestEndpointGet] = field(
             default_factory=list,
@@ -232,7 +235,7 @@ class RestElementDef:
                 "name": "REST-ENDPOINT-GET",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_endpoint_post: List[RestEndpointPost] = field(
             default_factory=list,
@@ -240,7 +243,7 @@ class RestElementDef:
                 "name": "REST-ENDPOINT-POST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_endpoint_put: List[RestEndpointPut] = field(
             default_factory=list,
@@ -248,7 +251,7 @@ class RestElementDef:
                 "name": "REST-ENDPOINT-PUT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -259,7 +262,7 @@ class RestElementDef:
                 "name": "REST-ARRAY-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_boolean_property_def: List[RestBooleanPropertyDef] = field(
             default_factory=list,
@@ -267,7 +270,7 @@ class RestElementDef:
                 "name": "REST-BOOLEAN-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_integer_property_def: List[RestIntegerPropertyDef] = field(
             default_factory=list,
@@ -275,7 +278,7 @@ class RestElementDef:
                 "name": "REST-INTEGER-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_number_property_def: List[RestNumberPropertyDef] = field(
             default_factory=list,
@@ -283,7 +286,7 @@ class RestElementDef:
                 "name": "REST-NUMBER-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_object_ref: List[RestObjectRef] = field(
             default_factory=list,
@@ -291,7 +294,7 @@ class RestElementDef:
                 "name": "REST-OBJECT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         rest_string_property_def: List[RestStringPropertyDef] = field(
             default_factory=list,
@@ -299,5 +302,5 @@ class RestElementDef:
                 "name": "REST-STRING-PROPERTY-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

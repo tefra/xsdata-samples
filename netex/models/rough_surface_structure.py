@@ -15,7 +15,7 @@ class RoughSurfaceStructure(AccessEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     suitable_for_cycles: Optional[bool] = field(
         default=None,
@@ -23,5 +23,5 @@ class RoughSurfaceStructure(AccessEquipmentVersionStructure):
             "name": "SuitableForCycles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -14,5 +14,5 @@ class RetailFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

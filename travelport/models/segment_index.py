@@ -9,6 +9,7 @@ class SegmentIndex:
     """
     Identifies the segment that is part of this group.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -16,5 +17,5 @@ class SegmentIndex:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

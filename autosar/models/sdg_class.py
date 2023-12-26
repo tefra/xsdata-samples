@@ -15,9 +15,13 @@ from .nmtoken_string import NmtokenString
 from .ref import Ref
 from .sdg_aggregation_with_variation import SdgAggregationWithVariation
 from .sdg_foreign_reference import SdgForeignReference
-from .sdg_foreign_reference_with_variation import SdgForeignReferenceWithVariation
+from .sdg_foreign_reference_with_variation import (
+    SdgForeignReferenceWithVariation,
+)
 from .sdg_primitive_attribute import SdgPrimitiveAttribute
-from .sdg_primitive_attribute_with_variation import SdgPrimitiveAttributeWithVariation
+from .sdg_primitive_attribute_with_variation import (
+    SdgPrimitiveAttributeWithVariation,
+)
 from .sdg_reference import SdgReference
 from .short_name_fragment import ShortNameFragment
 from .traceable_text_subtypes_enum import TraceableTextSubtypesEnum
@@ -93,6 +97,7 @@ class SdgClass:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SDG-CLASS"
 
@@ -103,7 +108,7 @@ class SdgClass:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["SdgClass.ShortNameFragments"] = field(
         default=None,
@@ -111,7 +116,7 @@ class SdgClass:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +124,7 @@ class SdgClass:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +132,7 @@ class SdgClass:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +140,7 @@ class SdgClass:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +148,7 @@ class SdgClass:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +156,7 @@ class SdgClass:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SdgClass.Annotations"] = field(
         default=None,
@@ -159,7 +164,7 @@ class SdgClass:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     gid: Optional[NmtokenString] = field(
         default=None,
@@ -167,7 +172,7 @@ class SdgClass:
             "name": "GID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     extends_meta_class: Optional[MetaClassName] = field(
         default=None,
@@ -175,7 +180,7 @@ class SdgClass:
             "name": "EXTENDS-META-CLASS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     caption: Optional[Boolean] = field(
         default=None,
@@ -183,7 +188,7 @@ class SdgClass:
             "name": "CAPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     attributes: Optional["SdgClass.Attributes"] = field(
         default=None,
@@ -191,7 +196,7 @@ class SdgClass:
             "name": "ATTRIBUTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdg_constraint_refs: Optional["SdgClass.SdgConstraintRefs"] = field(
         default=None,
@@ -199,14 +204,14 @@ class SdgClass:
             "name": "SDG-CONSTRAINT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -214,14 +219,14 @@ class SdgClass:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -232,7 +237,7 @@ class SdgClass:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,18 +248,20 @@ class SdgClass:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class Attributes:
-        sdg_aggregation_with_variation: List[SdgAggregationWithVariation] = field(
+        sdg_aggregation_with_variation: List[
+            SdgAggregationWithVariation
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-AGGREGATION-WITH-VARIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         sdg_foreign_reference: List[SdgForeignReference] = field(
             default_factory=list,
@@ -262,15 +269,17 @@ class SdgClass:
                 "name": "SDG-FOREIGN-REFERENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        sdg_foreign_reference_with_variation: List[SdgForeignReferenceWithVariation] = field(
+        sdg_foreign_reference_with_variation: List[
+            SdgForeignReferenceWithVariation
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-FOREIGN-REFERENCE-WITH-VARIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         sdg_primitive_attribute: List[SdgPrimitiveAttribute] = field(
             default_factory=list,
@@ -278,15 +287,17 @@ class SdgClass:
                 "name": "SDG-PRIMITIVE-ATTRIBUTE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        sdg_primitive_attribute_with_variation: List[SdgPrimitiveAttributeWithVariation] = field(
+        sdg_primitive_attribute_with_variation: List[
+            SdgPrimitiveAttributeWithVariation
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-PRIMITIVE-ATTRIBUTE-WITH-VARIATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         sdg_reference: List[SdgReference] = field(
             default_factory=list,
@@ -294,18 +305,20 @@ class SdgClass:
                 "name": "SDG-REFERENCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SdgConstraintRefs:
-        sdg_constraint_ref: List["SdgClass.SdgConstraintRefs.SdgConstraintRef"] = field(
+        sdg_constraint_ref: List[
+            "SdgClass.SdgConstraintRefs.SdgConstraintRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SDG-CONSTRAINT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -316,5 +329,5 @@ class SdgClass:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

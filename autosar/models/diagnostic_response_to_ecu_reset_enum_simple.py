@@ -10,5 +10,6 @@ class DiagnosticResponseToEcuResetEnumSimple(Enum):
     :cvar RESPOND_BEFORE_RESET: Answer to EcuReset service should come
         before the reset.
     """
+
     RESPOND_AFTER_RESET = "RESPOND-AFTER-RESET"
     RESPOND_BEFORE_RESET = "RESPOND-BEFORE-RESET"

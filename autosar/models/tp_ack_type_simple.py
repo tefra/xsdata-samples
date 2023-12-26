@@ -8,5 +8,6 @@ class TpAckTypeSimple(Enum):
     :cvar ACK_WITH_RT: Acknowledgement with retry.
     :cvar NO_ACK: No acknowledgement.
     """
+
     ACK_WITH_RT = "ACK-WITH-RT"
     NO_ACK = "NO-ACK"

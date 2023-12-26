@@ -14,5 +14,5 @@ class UicTrainRate:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

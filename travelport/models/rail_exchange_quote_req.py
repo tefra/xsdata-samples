@@ -38,6 +38,7 @@ class RailExchangeQuoteReq(BaseReq1):
         for a specific rail segments, otherwise “Availability” will be
         mapped. Provider Supported RCH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -48,14 +49,14 @@ class RailExchangeQuoteReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
     rail_search_modifiers: None | RailSearchModifiers = field(
         default=None,
         metadata={
             "name": "RailSearchModifiers",
             "type": "Element",
-        }
+        },
     )
     search_passenger: list[SearchPassenger1] = field(
         default_factory=list,
@@ -64,7 +65,7 @@ class RailExchangeQuoteReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 18,
-        }
+        },
     )
     host_token_list: None | HostTokenList1 = field(
         default=None,
@@ -72,21 +73,21 @@ class RailExchangeQuoteReq(BaseReq1):
             "name": "HostTokenList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     rail_pricing_solution: None | RailPricingSolution = field(
         default=None,
         metadata={
             "name": "RailPricingSolution",
             "type": "Element",
-        }
+        },
     )
     rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
         metadata={
             "name": "RailFareNoteList",
             "type": "Element",
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
@@ -96,12 +97,12 @@ class RailExchangeQuoteReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     response_type: None | TypeResponseType = field(
         default=None,
         metadata={
             "name": "ResponseType",
             "type": "Attribute",
-        }
+        },
     )

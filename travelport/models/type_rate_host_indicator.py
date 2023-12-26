@@ -16,6 +16,7 @@ class TypeRateHostIndicator:
     rate_token
         Assocates shop response to sell request
     """
+
     class Meta:
         name = "typeRateHostIndicator"
 
@@ -24,12 +25,12 @@ class TypeRateHostIndicator:
         metadata={
             "name": "InventoryToken",
             "type": "Attribute",
-        }
+        },
     )
     rate_token: None | str = field(
         default=None,
         metadata={
             "name": "RateToken",
             "type": "Attribute",
-        }
+        },
     )

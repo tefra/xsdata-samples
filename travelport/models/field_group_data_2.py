@@ -22,6 +22,7 @@ class FieldGroupData2(TypeKeyTaggedElement2):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "FieldGroupData"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -32,7 +33,7 @@ class FieldGroupData2(TypeKeyTaggedElement2):
             "name": "FieldData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_group_id: None | str = field(
         default=None,
@@ -40,12 +41,12 @@ class FieldGroupData2(TypeKeyTaggedElement2):
             "name": "FieldGroupID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

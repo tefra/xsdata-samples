@@ -13,7 +13,7 @@ class AuthenticatedRequestStructure(AbstractRequestStructure):
             "name": "AccountId",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     account_key: Optional[str] = field(
         default=None,
@@ -21,5 +21,5 @@ class AuthenticatedRequestStructure(AbstractRequestStructure):
             "name": "AccountKey",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

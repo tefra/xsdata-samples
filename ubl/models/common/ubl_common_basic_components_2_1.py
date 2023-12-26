@@ -13,7 +13,9 @@ from ubl.models.common.ubl_unqualified_data_types_2_1 import (
     TextType as UblUnqualifiedDataTypes21TextType,
 )
 
-__NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+)
 
 
 @dataclass(frozen=True)
@@ -63,7 +65,9 @@ class ActivityTypeType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
-class ActualTemperatureReductionQuantityType(UblUnqualifiedDataTypes21QuantityType):
+class ActualTemperatureReductionQuantityType(
+    UblUnqualifiedDataTypes21QuantityType
+):
     pass
 
 
@@ -812,7 +816,9 @@ class CustomizationIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
-class CustomsClearanceServiceInstructionsType(UblUnqualifiedDataTypes21TextType):
+class CustomsClearanceServiceInstructionsType(
+    UblUnqualifiedDataTypes21TextType
+):
     pass
 
 
@@ -912,7 +918,9 @@ class DespatchAdviceTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
-class DifferenceTemperatureReductionQuantityType(UblUnqualifiedDataTypes21QuantityType):
+class DifferenceTemperatureReductionQuantityType(
+    UblUnqualifiedDataTypes21QuantityType
+):
     pass
 
 
@@ -1065,7 +1073,9 @@ class EstimatedOverallContractAmountType(UblUnqualifiedDataTypes21AmountType):
 
 
 @dataclass(frozen=True)
-class EstimatedOverallContractQuantityType(UblUnqualifiedDataTypes21QuantityType):
+class EstimatedOverallContractQuantityType(
+    UblUnqualifiedDataTypes21QuantityType
+):
     pass
 
 
@@ -1983,7 +1993,9 @@ class NetworkIdtype(IdentifierType):
 
 
 @dataclass(frozen=True)
-class NormalTemperatureReductionQuantityType(UblUnqualifiedDataTypes21QuantityType):
+class NormalTemperatureReductionQuantityType(
+    UblUnqualifiedDataTypes21QuantityType
+):
     pass
 
 
@@ -2369,7 +2381,9 @@ class PositionCodeType(CodeType):
 
 
 @dataclass(frozen=True)
-class PostEventNotificationDurationMeasureType(UblUnqualifiedDataTypes21MeasureType):
+class PostEventNotificationDurationMeasureType(
+    UblUnqualifiedDataTypes21MeasureType
+):
     pass
 
 
@@ -2384,7 +2398,9 @@ class PostboxType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
-class PreEventNotificationDurationMeasureType(UblUnqualifiedDataTypes21MeasureType):
+class PreEventNotificationDurationMeasureType(
+    UblUnqualifiedDataTypes21MeasureType
+):
     pass
 
 
@@ -2618,7 +2634,9 @@ class ReceiptAdviceTypeCodeType(CodeType):
 
 
 @dataclass(frozen=True)
-class ReceivedElectronicTenderQuantityType(UblUnqualifiedDataTypes21QuantityType):
+class ReceivedElectronicTenderQuantityType(
+    UblUnqualifiedDataTypes21QuantityType
+):
     pass
 
 
@@ -3456,7 +3474,9 @@ class TotalTaxAmountType(UblUnqualifiedDataTypes21AmountType):
 
 
 @dataclass(frozen=True)
-class TotalTransportHandlingUnitQuantityType(UblUnqualifiedDataTypes21QuantityType):
+class TotalTransportHandlingUnitQuantityType(
+    UblUnqualifiedDataTypes21QuantityType
+):
     pass
 
 
@@ -3565,7 +3585,9 @@ class TransportServiceProviderRemarksType(UblUnqualifiedDataTypes21TextType):
 
 
 @dataclass(frozen=True)
-class TransportServiceProviderSpecialTermsType(UblUnqualifiedDataTypes21TextType):
+class TransportServiceProviderSpecialTermsType(
+    UblUnqualifiedDataTypes21TextType
+):
     pass
 
 
@@ -3822,7 +3844,9 @@ class ActivityTypeCode(ActivityTypeCodeType):
 
 
 @dataclass(frozen=True)
-class ActualTemperatureReductionQuantity(ActualTemperatureReductionQuantityType):
+class ActualTemperatureReductionQuantity(
+    ActualTemperatureReductionQuantityType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4716,7 +4740,9 @@ class CustomizationId(CustomizationIdtype):
 
 
 @dataclass(frozen=True)
-class CustomsClearanceServiceInstructions(CustomsClearanceServiceInstructionsType):
+class CustomsClearanceServiceInstructions(
+    CustomsClearanceServiceInstructionsType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -4836,7 +4862,9 @@ class DespatchAdviceTypeCode(DespatchAdviceTypeCodeType):
 
 
 @dataclass(frozen=True)
-class DifferenceTemperatureReductionQuantity(DifferenceTemperatureReductionQuantityType):
+class DifferenceTemperatureReductionQuantity(
+    DifferenceTemperatureReductionQuantityType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6116,7 +6144,9 @@ class NetworkId(NetworkIdtype):
 
 
 @dataclass(frozen=True)
-class NormalTemperatureReductionQuantity(NormalTemperatureReductionQuantityType):
+class NormalTemperatureReductionQuantity(
+    NormalTemperatureReductionQuantityType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6577,7 +6607,9 @@ class PositionCode(PositionCodeType):
 
 
 @dataclass(frozen=True)
-class PostEventNotificationDurationMeasure(PostEventNotificationDurationMeasureType):
+class PostEventNotificationDurationMeasure(
+    PostEventNotificationDurationMeasureType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -6595,7 +6627,9 @@ class Postbox(PostboxType):
 
 
 @dataclass(frozen=True)
-class PreEventNotificationDurationMeasure(PreEventNotificationDurationMeasureType):
+class PreEventNotificationDurationMeasure(
+    PreEventNotificationDurationMeasureType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7640,7 +7674,9 @@ class TelecommunicationsServiceCategory(TelecommunicationsServiceCategoryType):
 
 
 @dataclass(frozen=True)
-class TelecommunicationsServiceCategoryCode(TelecommunicationsServiceCategoryCodeType):
+class TelecommunicationsServiceCategoryCode(
+    TelecommunicationsServiceCategoryCodeType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -7875,7 +7911,9 @@ class TotalTaxAmount(TotalTaxAmountType):
 
 
 @dataclass(frozen=True)
-class TotalTransportHandlingUnitQuantity(TotalTransportHandlingUnitQuantityType):
+class TotalTransportHandlingUnitQuantity(
+    TotalTransportHandlingUnitQuantityType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 
@@ -8005,7 +8043,9 @@ class TransportServiceProviderRemarks(TransportServiceProviderRemarksType):
 
 
 @dataclass(frozen=True)
-class TransportServiceProviderSpecialTerms(TransportServiceProviderSpecialTermsType):
+class TransportServiceProviderSpecialTerms(
+    TransportServiceProviderSpecialTermsType
+):
     class Meta:
         namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 

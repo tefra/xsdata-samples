@@ -33,6 +33,7 @@ class FullBindingTimeEnumSimple(Enum):
         interconnecting Networks * Designing the Communication Matrix
         and Data Mapping
     """
+
     BLUEPRINT_DERIVATION_TIME = "BLUEPRINT-DERIVATION-TIME"
     CODE_GENERATION_TIME = "CODE-GENERATION-TIME"
     LINK_TIME = "LINK-TIME"

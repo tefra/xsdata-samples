@@ -19,7 +19,7 @@ class AmountOfPriceUnitProductVersionStructure(FareProductVersionStructure):
             "name": "ProductType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     price_unit_ref: Optional[PriceUnitRef] = field(
         default=None,
@@ -27,7 +27,7 @@ class AmountOfPriceUnitProductVersionStructure(FareProductVersionStructure):
             "name": "PriceUnitRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     amount: Optional[Decimal] = field(
         default=None,
@@ -35,5 +35,5 @@ class AmountOfPriceUnitProductVersionStructure(FareProductVersionStructure):
             "name": "Amount",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

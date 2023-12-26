@@ -33,16 +33,19 @@ class SwSystemconstValue:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-SYSTEMCONST-VALUE"
 
-    sw_systemconst_ref: Optional["SwSystemconstValue.SwSystemconstRef"] = field(
+    sw_systemconst_ref: Optional[
+        "SwSystemconstValue.SwSystemconstRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-SYSTEMCONST-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     value: Optional[NumericalValueVariationPoint] = field(
         default=None,
@@ -50,7 +53,7 @@ class SwSystemconstValue:
             "name": "VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SwSystemconstValue.Annotations"] = field(
         default=None,
@@ -58,14 +61,14 @@ class SwSystemconstValue:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -73,7 +76,7 @@ class SwSystemconstValue:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -84,7 +87,7 @@ class SwSystemconstValue:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -95,5 +98,5 @@ class SwSystemconstValue:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

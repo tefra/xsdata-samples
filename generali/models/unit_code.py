@@ -13,5 +13,5 @@ class UnitCode:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )

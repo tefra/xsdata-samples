@@ -16,6 +16,7 @@ class ProfileSearchActionRsp(BaseRsp5):
     action_summary
         Summary of each action.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -25,5 +26,5 @@ class ProfileSearchActionRsp(BaseRsp5):
             "name": "ActionSummary",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

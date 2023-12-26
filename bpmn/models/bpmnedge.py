@@ -19,33 +19,33 @@ class Bpmnedge(LabeledEdge):
         metadata={
             "name": "BPMNLabel",
             "type": "Element",
-        }
+        },
     )
     bpmn_element: Optional[QName] = field(
         default=None,
         metadata={
             "name": "bpmnElement",
             "type": "Attribute",
-        }
+        },
     )
     source_element: Optional[QName] = field(
         default=None,
         metadata={
             "name": "sourceElement",
             "type": "Attribute",
-        }
+        },
     )
     target_element: Optional[QName] = field(
         default=None,
         metadata={
             "name": "targetElement",
             "type": "Attribute",
-        }
+        },
     )
     message_visible_kind: Optional[MessageVisibleKind] = field(
         default=None,
         metadata={
             "name": "messageVisibleKind",
             "type": "Attribute",
-        }
+        },
     )

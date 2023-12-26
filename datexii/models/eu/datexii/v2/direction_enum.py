@@ -32,6 +32,7 @@ class DirectionEnum(Enum):
         at this point on the road network.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ALL_DIRECTIONS = "allDirections"
     BOTH_WAYS = "bothWays"
     CLOCKWISE = "clockwise"

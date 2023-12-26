@@ -79,6 +79,7 @@ class SocketConnectionIpduIdentifierSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOCKET-CONNECTION-IPDU-IDENTIFIER-SET"
 
@@ -89,15 +90,17 @@ class SocketConnectionIpduIdentifierSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SocketConnectionIpduIdentifierSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SocketConnectionIpduIdentifierSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -105,7 +108,7 @@ class SocketConnectionIpduIdentifierSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -113,7 +116,7 @@ class SocketConnectionIpduIdentifierSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -121,7 +124,7 @@ class SocketConnectionIpduIdentifierSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -129,7 +132,7 @@ class SocketConnectionIpduIdentifierSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -137,15 +140,17 @@ class SocketConnectionIpduIdentifierSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["SocketConnectionIpduIdentifierSet.Annotations"] = field(
+    annotations: Optional[
+        "SocketConnectionIpduIdentifierSet.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -153,22 +158,24 @@ class SocketConnectionIpduIdentifierSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_pdu_identifiers: Optional["SocketConnectionIpduIdentifierSet.IPduIdentifiers"] = field(
+    i_pdu_identifiers: Optional[
+        "SocketConnectionIpduIdentifierSet.IPduIdentifiers"
+    ] = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -176,14 +183,14 @@ class SocketConnectionIpduIdentifierSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -194,7 +201,7 @@ class SocketConnectionIpduIdentifierSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -205,7 +212,7 @@ class SocketConnectionIpduIdentifierSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -216,5 +223,5 @@ class SocketConnectionIpduIdentifierSet:
                 "name": "SO-CON-I-PDU-IDENTIFIER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

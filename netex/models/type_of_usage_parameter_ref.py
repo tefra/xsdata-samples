@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .type_of_usage_parameter_ref_structure import TypeOfUsageParameterRefStructure
+from .type_of_usage_parameter_ref_structure import (
+    TypeOfUsageParameterRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

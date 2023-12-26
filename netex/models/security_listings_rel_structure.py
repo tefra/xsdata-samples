@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .customer_account_security_listing import CustomerAccountSecurityListing
 from .customer_security_listing import CustomerSecurityListing
@@ -15,7 +15,15 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityListings_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            TravelDocumentSecurityListing,
+            RetailDeviceSecurityListing,
+            FareContractSecurityListing,
+            CustomerSecurityListing,
+            CustomerAccountSecurityListing,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -46,5 +54,5 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

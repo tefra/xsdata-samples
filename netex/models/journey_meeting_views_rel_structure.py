@@ -1,8 +1,10 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .journey_meeting_ref import JourneyMeetingRef
 from .journey_meeting_view import JourneyMeetingView
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -12,7 +14,9 @@ class JourneyMeetingViewsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "journeyMeetingViews_RelStructure"
 
-    journey_meeting_ref_or_journey_meeting_view: List[object] = field(
+    journey_meeting_ref_or_journey_meeting_view: List[
+        Union[JourneyMeetingRef, JourneyMeetingView]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +32,5 @@ class JourneyMeetingViewsRelStructure(StrictContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

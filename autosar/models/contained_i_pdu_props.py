@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .contained_i_pdu_collection_semantics_enum import ContainedIPduCollectionSemanticsEnum
+from .contained_i_pdu_collection_semantics_enum import (
+    ContainedIPduCollectionSemanticsEnum,
+)
 from .pdu_collection_trigger_enum import PduCollectionTriggerEnum
 from .positive_integer import PositiveInteger
 from .time_value import TimeValue
@@ -47,16 +49,19 @@ class ContainedIPduProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONTAINED-I-PDU-PROPS"
 
-    collection_semantics: Optional[ContainedIPduCollectionSemanticsEnum] = field(
+    collection_semantics: Optional[
+        ContainedIPduCollectionSemanticsEnum
+    ] = field(
         default=None,
         metadata={
             "name": "COLLECTION-SEMANTICS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     header_id_long_header: Optional[PositiveInteger] = field(
         default=None,
@@ -64,7 +69,7 @@ class ContainedIPduProps:
             "name": "HEADER-ID-LONG-HEADER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     header_id_short_header: Optional[PositiveInteger] = field(
         default=None,
@@ -72,7 +77,7 @@ class ContainedIPduProps:
             "name": "HEADER-ID-SHORT-HEADER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     offset: Optional[PositiveInteger] = field(
         default=None,
@@ -80,7 +85,7 @@ class ContainedIPduProps:
             "name": "OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     priority: Optional[PositiveInteger] = field(
         default=None,
@@ -88,7 +93,7 @@ class ContainedIPduProps:
             "name": "PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout: Optional[TimeValue] = field(
         default=None,
@@ -96,7 +101,7 @@ class ContainedIPduProps:
             "name": "TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trigger: Optional[PduCollectionTriggerEnum] = field(
         default=None,
@@ -104,7 +109,7 @@ class ContainedIPduProps:
             "name": "TRIGGER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     update_indication_bit_position: Optional[PositiveInteger] = field(
         default=None,
@@ -112,14 +117,14 @@ class ContainedIPduProps:
             "name": "UPDATE-INDICATION-BIT-POSITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -127,5 +132,5 @@ class ContainedIPduProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

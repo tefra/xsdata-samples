@@ -11,6 +11,7 @@ class DiagnosticMemoryEntryStorageTriggerEnumSimple(Enum):
     :cvar PENDING: Status information of UDS DTC status bit 2.
     :cvar TEST_FAILED: Status information of UDS DTC status bit 0.
     """
+
     CONFIRMED = "CONFIRMED"
     FDC_THRESHOLD = "FDC-THRESHOLD"
     PENDING = "PENDING"

@@ -14,5 +14,5 @@ class MatcherList:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

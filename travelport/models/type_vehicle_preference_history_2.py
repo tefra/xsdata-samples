@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
-from travelport.models.type_base_preference_history_2 import TypeBasePreferenceHistory2
+from travelport.models.type_base_preference_history_2 import (
+    TypeBasePreferenceHistory2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -33,6 +35,7 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
     vehicle_type_ref_category
         Util: ReferenceDataRetrieveReq, TypeCode VehicleMiscType
     """
+
     class Meta:
         name = "typeVehiclePreferenceHistory"
 
@@ -42,21 +45,21 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "CorporateID",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     pick_up_start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "PickUpStartDate",
             "type": "Attribute",
-        }
+        },
     )
     pick_up_end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "PickUpEndDate",
             "type": "Attribute",
-        }
+        },
     )
     rate_code: None | str = field(
         default=None,
@@ -64,7 +67,7 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     special_equip_misc_travel: None | str = field(
         default=None,
@@ -72,7 +75,7 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "SpecialEquipMiscTravel",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     special_equip_ref_category: str = field(
         default="CEQ",
@@ -80,7 +83,7 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "SpecialEquipRefCategory",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )
     special_request_misc_travel: None | str = field(
         default=None,
@@ -88,7 +91,7 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "SpecialRequestMiscTravel",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     special_request_ref_category: None | str = field(
         default=None,
@@ -96,7 +99,7 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "SpecialRequestRefCategory",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )
     vehicle_type_misc_travel: None | str = field(
         default=None,
@@ -104,7 +107,7 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "VehicleTypeMiscTravel",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     vehicle_type_ref_category: str = field(
         default="CTP",
@@ -112,5 +115,5 @@ class TypeVehiclePreferenceHistory2(TypeBasePreferenceHistory2):
             "name": "VehicleTypeRefCategory",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )

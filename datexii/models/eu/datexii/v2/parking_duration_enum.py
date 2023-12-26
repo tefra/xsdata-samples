@@ -20,6 +20,7 @@ class ParkingDurationEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     PICK_UP_DROP_OFF = "pickUpDropOff"
     SHORT_TERM = "shortTerm"
     SHORT_TERM24HOURS = "shortTerm24hours"

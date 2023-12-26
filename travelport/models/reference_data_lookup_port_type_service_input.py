@@ -16,7 +16,7 @@ class ReferenceDataLookupPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class ReferenceDataLookupPortTypeServiceInput:
                 "name": "ReferenceDataSearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            }
+            },
         )

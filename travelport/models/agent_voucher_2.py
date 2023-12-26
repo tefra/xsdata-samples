@@ -9,6 +9,7 @@ class AgentVoucher2:
     """
     Agent Voucher Form of Payments.
     """
+
     class Meta:
         name = "AgentVoucher"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -19,5 +20,5 @@ class AgentVoucher2:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

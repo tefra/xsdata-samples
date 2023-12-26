@@ -35,6 +35,7 @@ class RailReservationCriteria:
     passive_only
         Search for Passives Only
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -43,28 +44,28 @@ class RailReservationCriteria:
         metadata={
             "name": "JourneyDepartureDate",
             "type": "Element",
-        }
+        },
     )
     journey_arrival_date: None | TypeDateSpec = field(
         default=None,
         metadata={
             "name": "JourneyArrivalDate",
             "type": "Element",
-        }
+        },
     )
     segment_departure_date: None | TypeDateSpec = field(
         default=None,
         metadata={
             "name": "SegmentDepartureDate",
             "type": "Element",
-        }
+        },
     )
     segment_arrival_date: None | TypeDateSpec = field(
         default=None,
         metadata={
             "name": "SegmentArrivalDate",
             "type": "Element",
-        }
+        },
     )
     journey_origin: None | str = field(
         default=None,
@@ -73,7 +74,7 @@ class RailReservationCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     journey_destination: None | str = field(
         default=None,
@@ -82,7 +83,7 @@ class RailReservationCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     journey_rail_loc_origin: None | str = field(
         default=None,
@@ -92,7 +93,7 @@ class RailReservationCriteria:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     journey_rail_loc_destination: None | str = field(
         default=None,
@@ -102,26 +103,26 @@ class RailReservationCriteria:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-        }
+        },
     )
     train_number: None | str = field(
         default=None,
         metadata={
             "name": "TrainNumber",
             "type": "Attribute",
-        }
+        },
     )
     passive_only: bool = field(
         default=False,
         metadata={
             "name": "PassiveOnly",
             "type": "Attribute",
-        }
+        },
     )

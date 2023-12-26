@@ -9,6 +9,7 @@ class TypeFulfillmentIdtype2(Enum):
     IdentificationType to define how the customer will identify himself when
     collecting the ticket.
     """
+
     BAHN_CARD = "Bahn Card"
     CREDIT_CARD = "Credit Card"
     EURO_CHEQUE_CARD = "Euro Cheque Card"

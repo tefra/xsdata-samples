@@ -13,5 +13,5 @@ class EndpointDeniedAccessStructure(ErrorCodeStructure):
             "name": "Endpoint",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

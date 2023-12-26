@@ -8,5 +8,6 @@ class TypeCreateHierarchyLevel(Enum):
     """
     Profile types that are used in creating a hiearchy.
     """
+
     BRANCH_GROUP = "BranchGroup"
     TRAVELER_GROUP = "TravelerGroup"

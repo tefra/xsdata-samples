@@ -13,6 +13,7 @@ class BswCallTypeSimple(Enum):
     :cvar REGULAR: Regular API call
     :cvar SCHEDULED: Called by the scheduler
     """
+
     CALLBACK = "CALLBACK"
     CALLOUT = "CALLOUT"
     INTERRUPT = "INTERRUPT"

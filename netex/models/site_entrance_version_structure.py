@@ -19,7 +19,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entrance_type: Optional[EntranceEnumeration] = field(
         default=None,
@@ -35,7 +35,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "EntranceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_external: Optional[bool] = field(
         default=None,
@@ -43,7 +43,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "IsExternal",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_entry: Optional[bool] = field(
         default=None,
@@ -51,7 +51,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "IsEntry",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_exit: Optional[bool] = field(
         default=None,
@@ -59,7 +59,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "IsExit",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     width: Optional[Decimal] = field(
         default=None,
@@ -67,7 +67,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "Width",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     height: Optional[Decimal] = field(
         default=None,
@@ -75,7 +75,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "Height",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     dropped_kerb_outside: Optional[bool] = field(
         default=None,
@@ -83,7 +83,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "DroppedKerbOutside",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     drop_off_point_close: Optional[bool] = field(
         default=None,
@@ -91,5 +91,5 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "DropOffPointClose",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

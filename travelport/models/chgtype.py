@@ -10,6 +10,7 @@ class Chgtype:
     """
     PenFee list will be populated.
     """
+
     class Meta:
         name = "CHGType"
 
@@ -20,5 +21,5 @@ class Chgtype:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 2,
-        }
+        },
     )

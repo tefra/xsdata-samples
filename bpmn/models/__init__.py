@@ -37,7 +37,9 @@ from .conversation_node import ConversationNode
 from .correlation_key import CorrelationKey
 from .correlation_property import CorrelationProperty
 from .correlation_property_binding import CorrelationPropertyBinding
-from .correlation_property_retrieval_expression import CorrelationPropertyRetrievalExpression
+from .correlation_property_retrieval_expression import (
+    CorrelationPropertyRetrievalExpression,
+)
 from .correlation_subscription import CorrelationSubscription
 from .data_association import DataAssociation
 from .data_input import DataInput
@@ -103,7 +105,9 @@ from .message_flow import MessageFlow
 from .message_flow_association import MessageFlowAssociation
 from .message_visible_kind import MessageVisibleKind
 from .monitoring import Monitoring
-from .multi_instance_loop_characteristics import MultiInstanceLoopCharacteristics
+from .multi_instance_loop_characteristics import (
+    MultiInstanceLoopCharacteristics,
+)
 from .node import Node
 from .operation import Operation
 from .output_set import OutputSet
@@ -175,7 +179,9 @@ from .t_conversation_node import TConversationNode
 from .t_correlation_key import TCorrelationKey
 from .t_correlation_property import TCorrelationProperty
 from .t_correlation_property_binding import TCorrelationPropertyBinding
-from .t_correlation_property_retrieval_expression import TCorrelationPropertyRetrievalExpression
+from .t_correlation_property_retrieval_expression import (
+    TCorrelationPropertyRetrievalExpression,
+)
 from .t_correlation_subscription import TCorrelationSubscription
 from .t_data_association import TDataAssociation
 from .t_data_input import TDataInput
@@ -243,7 +249,9 @@ from .t_message_flow import TMessageFlow
 from .t_message_flow_association import TMessageFlowAssociation
 from .t_monitoring import TMonitoring
 from .t_multi_instance_flow_condition import TMultiInstanceFlowCondition
-from .t_multi_instance_loop_characteristics import TMultiInstanceLoopCharacteristics
+from .t_multi_instance_loop_characteristics import (
+    TMultiInstanceLoopCharacteristics,
+)
 from .t_operation import TOperation
 from .t_output_set import TOutputSet
 from .t_parallel_gateway import TParallelGateway

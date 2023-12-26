@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
-from datexii.models.eu.datexii.v2.validity_status_enum import ValidityStatusEnum
+from datexii.models.eu.datexii.v2.validity_status_enum import (
+    ValidityStatusEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -24,6 +26,7 @@ class Validity:
         (exception periods overriding valid periods).
     :ivar validity_extension:
     """
+
     validity_status: Optional[ValidityStatusEnum] = field(
         default=None,
         metadata={
@@ -31,14 +34,14 @@ class Validity:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     overrunning: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     validity_time_specification: Optional[OverallPeriod] = field(
         default=None,
@@ -47,7 +50,7 @@ class Validity:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     validity_extension: Optional[ExtensionType] = field(
         default=None,
@@ -55,5 +58,5 @@ class Validity:
             "name": "validityExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

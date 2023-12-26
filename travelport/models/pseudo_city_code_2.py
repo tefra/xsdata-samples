@@ -18,5 +18,5 @@ class PseudoCityCode2:
             "required": True,
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )

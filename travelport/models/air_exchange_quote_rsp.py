@@ -32,6 +32,7 @@ class AirExchangeQuoteRsp(BaseRsp1):
     fare_rule
         Provider: ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -44,7 +45,7 @@ class AirExchangeQuoteRsp(BaseRsp1):
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -53,14 +54,14 @@ class AirExchangeQuoteRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
         metadata={
             "name": "AirExchangeBundleTotal",
             "type": "Element",
-        }
+        },
     )
     air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
@@ -68,7 +69,7 @@ class AirExchangeQuoteRsp(BaseRsp1):
             "name": "AirExchangeBundle",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -77,14 +78,14 @@ class AirExchangeQuoteRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
-        }
+        },
     )
     fare_rule: list[FareRule] = field(
         default_factory=list,
@@ -92,5 +93,5 @@ class AirExchangeQuoteRsp(BaseRsp1):
             "name": "FareRule",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

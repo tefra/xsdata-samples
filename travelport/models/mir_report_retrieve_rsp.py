@@ -10,6 +10,7 @@ class MirReportRetrieveRsp(BaseRsp1):
     """
     Carries the report payload.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,5 +20,5 @@ class MirReportRetrieveRsp(BaseRsp1):
             "name": "Report",
             "type": "Element",
             "required": True,
-        }
+        },
     )

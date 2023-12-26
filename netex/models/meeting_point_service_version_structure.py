@@ -19,7 +19,7 @@ class MeetingPointServiceVersionStructure(CustomerServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -27,5 +27,5 @@ class MeetingPointServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

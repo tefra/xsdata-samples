@@ -16,5 +16,5 @@ class BundledServices:
             "name": "BundledService",
             "type": "Element",
             "max_occurs": 16,
-        }
+        },
     )

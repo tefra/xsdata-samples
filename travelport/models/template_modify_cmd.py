@@ -40,6 +40,7 @@ class TemplateModifyCmd:
     custom_field_delete
     custom_field_group_delete
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -48,75 +49,75 @@ class TemplateModifyCmd:
         metadata={
             "name": "TemplateInfoUpdate",
             "type": "Element",
-        }
+        },
     )
     fixed_field_update: None | FixedFieldUpdate = field(
         default=None,
         metadata={
             "name": "FixedFieldUpdate",
             "type": "Element",
-        }
+        },
     )
     fixed_group_update: None | FixedGroupUpdate = field(
         default=None,
         metadata={
             "name": "FixedGroupUpdate",
             "type": "Element",
-        }
+        },
     )
     custom_field_add: None | CustomFieldAdd = field(
         default=None,
         metadata={
             "name": "CustomFieldAdd",
             "type": "Element",
-        }
+        },
     )
     custom_field_update: None | CustomFieldUpdate = field(
         default=None,
         metadata={
             "name": "CustomFieldUpdate",
             "type": "Element",
-        }
+        },
     )
     custom_field_group_add: None | CustomFieldGroupAdd = field(
         default=None,
         metadata={
             "name": "CustomFieldGroupAdd",
             "type": "Element",
-        }
+        },
     )
     custom_field_group_update: None | CustomFieldGroupUpdate = field(
         default=None,
         metadata={
             "name": "CustomFieldGroupUpdate",
             "type": "Element",
-        }
+        },
     )
     endpoint_add: None | EndpointAdd = field(
         default=None,
         metadata={
             "name": "EndpointAdd",
             "type": "Element",
-        }
+        },
     )
     endpoint_remove: None | EndpointRemove = field(
         default=None,
         metadata={
             "name": "EndpointRemove",
             "type": "Element",
-        }
+        },
     )
     custom_field_delete: None | CustomFieldDelete = field(
         default=None,
         metadata={
             "name": "CustomFieldDelete",
             "type": "Element",
-        }
+        },
     )
     custom_field_group_delete: None | CustomFieldGroupDelete = field(
         default=None,
         metadata={
             "name": "CustomFieldGroupDelete",
             "type": "Element",
-        }
+        },
     )

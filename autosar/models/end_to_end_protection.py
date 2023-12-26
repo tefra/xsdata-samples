@@ -9,7 +9,9 @@ from .annotation import (
 from .category_string import CategoryString
 from .end_to_end_description import EndToEndDescription
 from .end_to_end_protection_i_signal_i_pdu import EndToEndProtectionISignalIPdu
-from .end_to_end_protection_variable_prototype import EndToEndProtectionVariablePrototype
+from .end_to_end_protection_variable_prototype import (
+    EndToEndProtectionVariablePrototype,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -104,6 +106,7 @@ class EndToEndProtection:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-TO-END-PROTECTION"
 
@@ -114,15 +117,17 @@ class EndToEndProtection:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["EndToEndProtection.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "EndToEndProtection.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -130,7 +135,7 @@ class EndToEndProtection:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -138,7 +143,7 @@ class EndToEndProtection:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -146,7 +151,7 @@ class EndToEndProtection:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -154,7 +159,7 @@ class EndToEndProtection:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -162,7 +167,7 @@ class EndToEndProtection:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EndToEndProtection.Annotations"] = field(
         default=None,
@@ -170,7 +175,7 @@ class EndToEndProtection:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     end_to_end_profile: Optional[EndToEndDescription] = field(
         default=None,
@@ -178,23 +183,27 @@ class EndToEndProtection:
             "name": "END-TO-END-PROFILE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    end_to_end_protection_i_signal_i_pdus: Optional["EndToEndProtection.EndToEndProtectionISignalIPdus"] = field(
+    end_to_end_protection_i_signal_i_pdus: Optional[
+        "EndToEndProtection.EndToEndProtectionISignalIPdus"
+    ] = field(
         default=None,
         metadata={
             "name": "END-TO-END-PROTECTION-I-SIGNAL-I-PDUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    end_to_end_protection_variable_prototypes: Optional["EndToEndProtection.EndToEndProtectionVariablePrototypes"] = field(
+    end_to_end_protection_variable_prototypes: Optional[
+        "EndToEndProtection.EndToEndProtectionVariablePrototypes"
+    ] = field(
         default=None,
         metadata={
             "name": "END-TO-END-PROTECTION-VARIABLE-PROTOTYPES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -202,14 +211,14 @@ class EndToEndProtection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -217,14 +226,14 @@ class EndToEndProtection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -235,7 +244,7 @@ class EndToEndProtection:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -246,27 +255,31 @@ class EndToEndProtection:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class EndToEndProtectionISignalIPdus:
-        end_to_end_protection_i_signal_i_pdu: List[EndToEndProtectionISignalIPdu] = field(
+        end_to_end_protection_i_signal_i_pdu: List[
+            EndToEndProtectionISignalIPdu
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-TO-END-PROTECTION-I-SIGNAL-I-PDU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class EndToEndProtectionVariablePrototypes:
-        end_to_end_protection_variable_prototype: List[EndToEndProtectionVariablePrototype] = field(
+        end_to_end_protection_variable_prototype: List[
+            EndToEndProtectionVariablePrototype
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-TO-END-PROTECTION-VARIABLE-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

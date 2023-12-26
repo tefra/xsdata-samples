@@ -19,6 +19,7 @@ class Mcoinformation6:
         The Type of MCO. Once of Agency Fee, Airline Service Fee, or
         Residual value from an Exchange.
     """
+
     class Meta:
         name = "MCOInformation"
 
@@ -29,26 +30,26 @@ class Mcoinformation6:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
             "max_occurs": 999,
-        }
+        },
     )
     mconumber: None | str = field(
         default=None,
         metadata={
             "name": "MCONumber",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     mcotype: None | str = field(
         default=None,
         metadata={
             "name": "MCOType",
             "type": "Attribute",
-        }
+        },
     )

@@ -20,13 +20,14 @@ class TimePeriodType:
     :ivar duration: <description xmlns="">The duration from the start
         date of the time period.</description>
     """
+
     from_date_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "FromDateTime",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     to_date_time: Optional[XmlDateTime] = field(
         default=None,
@@ -34,7 +35,7 @@ class TimePeriodType:
             "name": "ToDateTime",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     duration: Optional[XmlDuration] = field(
         default=None,
@@ -42,5 +43,5 @@ class TimePeriodType:
             "name": "Duration",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

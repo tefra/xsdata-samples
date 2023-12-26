@@ -2,9 +2,15 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.opening_status_enum import OpeningStatusEnum
-from datexii.models.eu.datexii.v2.parking_record_status import ParkingRecordStatus
-from datexii.models.eu.datexii.v2.parking_site_overcrowding_status_enum import ParkingSiteOvercrowdingStatusEnum
-from datexii.models.eu.datexii.v2.parking_site_status_enum import ParkingSiteStatusEnum
+from datexii.models.eu.datexii.v2.parking_record_status import (
+    ParkingRecordStatus,
+)
+from datexii.models.eu.datexii.v2.parking_site_overcrowding_status_enum import (
+    ParkingSiteOvercrowdingStatusEnum,
+)
+from datexii.models.eu.datexii.v2.parking_site_status_enum import (
+    ParkingSiteStatusEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -26,13 +32,14 @@ class ParkingSiteStatus(ParkingRecordStatus):
         specified floor(s).
     :ivar parking_site_status_extension:
     """
+
     parking_site_status: Optional[ParkingSiteStatusEnum] = field(
         default=None,
         metadata={
             "name": "parkingSiteStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_site_opening_status: Optional[OpeningStatusEnum] = field(
         default=None,
@@ -40,15 +47,17 @@ class ParkingSiteStatus(ParkingRecordStatus):
             "name": "parkingSiteOpeningStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_site_overcrowding_status: Optional[ParkingSiteOvercrowdingStatusEnum] = field(
+    parking_site_overcrowding_status: Optional[
+        ParkingSiteOvercrowdingStatusEnum
+    ] = field(
         default=None,
         metadata={
             "name": "parkingSiteOvercrowdingStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_site_full_at_floor: List[int] = field(
         default_factory=list,
@@ -56,7 +65,7 @@ class ParkingSiteStatus(ParkingRecordStatus):
             "name": "parkingSiteFullAtFloor",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_site_status_extension: Optional[ExtensionType] = field(
         default=None,
@@ -64,5 +73,5 @@ class ParkingSiteStatus(ParkingRecordStatus):
             "name": "parkingSiteStatusExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

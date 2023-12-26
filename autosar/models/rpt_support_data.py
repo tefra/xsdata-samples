@@ -37,6 +37,7 @@ class RptSupportData:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RPT-SUPPORT-DATA"
 
@@ -46,7 +47,7 @@ class RptSupportData:
             "name": "EXECUTION-CONTEXTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_components: Optional["RptSupportData.RptComponents"] = field(
         default=None,
@@ -54,7 +55,7 @@ class RptSupportData:
             "name": "RPT-COMPONENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_service_points: Optional["RptSupportData.RptServicePoints"] = field(
         default=None,
@@ -62,14 +63,14 @@ class RptSupportData:
             "name": "RPT-SERVICE-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -77,7 +78,7 @@ class RptSupportData:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -88,7 +89,7 @@ class RptSupportData:
                 "name": "RPT-EXECUTION-CONTEXT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -99,7 +100,7 @@ class RptSupportData:
                 "name": "RPT-COMPONENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -110,5 +111,5 @@ class RptSupportData:
                 "name": "RPT-SERVICE-POINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

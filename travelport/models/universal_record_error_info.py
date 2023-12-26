@@ -15,6 +15,7 @@ class UniversalRecordErrorInfo(TypeErrorInfo1):
     version
         Version of Universal Record.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -26,7 +27,7 @@ class UniversalRecordErrorInfo(TypeErrorInfo1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -34,5 +35,5 @@ class UniversalRecordErrorInfo(TypeErrorInfo1):
             "name": "Version",
             "type": "Element",
             "required": True,
-        }
+        },
     )

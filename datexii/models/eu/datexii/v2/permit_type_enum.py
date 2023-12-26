@@ -25,6 +25,7 @@ class PermitTypeEnum(Enum):
     :cvar TAXI_PERMIT: Permit for a taxi.
     :cvar OTHER: Some other permit.
     """
+
     BLUE_ZONE_PERMIT = "blueZonePermit"
     CARE_TAKING_PERMIT = "careTakingPermit"
     CARPOOLING_PERMIT = "carpoolingPermit"

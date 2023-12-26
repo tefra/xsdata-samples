@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.clinicaltrials.clinical_trial_number_type import ClinicalTrialNumberType
+from crossref.models.org.crossref.clinicaltrials.clinical_trial_number_type import (
+    ClinicalTrialNumberType,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/clinicaltrials.xsd"
 
@@ -14,6 +16,7 @@ class ClinicalTrialNumber:
         relation to the issuance of the trial results
     :ivar content:
     """
+
     class Meta:
         name = "clinical-trial-number"
         namespace = "http://www.crossref.org/clinicaltrials.xsd"
@@ -26,14 +29,14 @@ class ClinicalTrialNumber:
             "min_length": 12,
             "max_length": 200,
             "pattern": r"10.18810/[a-z-]+",
-        }
+        },
     )
     type_value: Optional[ClinicalTrialNumberType] = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -41,5 +44,5 @@ class ClinicalTrialNumber:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

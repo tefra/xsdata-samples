@@ -10,6 +10,7 @@ class CalculateTaxResult:
     """
     Result container for a tax calculation.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class CalculateTaxResult:
             "name": "TaxCalcInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     total_base_fare: None | str = field(
         default=None,
@@ -27,7 +28,7 @@ class CalculateTaxResult:
             "name": "TotalBaseFare",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     total_tax: None | str = field(
         default=None,
@@ -35,7 +36,7 @@ class CalculateTaxResult:
             "name": "TotalTax",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     total_fare: None | str = field(
         default=None,
@@ -43,5 +44,5 @@ class CalculateTaxResult:
             "name": "TotalFare",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

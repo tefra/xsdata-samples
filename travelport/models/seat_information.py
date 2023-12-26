@@ -27,6 +27,7 @@ class SeatInformation:
         Definition of the seat rating. Providers: 1G, 1V, 1P
     key
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -36,7 +37,7 @@ class SeatInformation:
             "name": "Power",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     video: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class SeatInformation:
             "name": "Video",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -52,7 +53,7 @@ class SeatInformation:
             "name": "Type",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -60,7 +61,7 @@ class SeatInformation:
             "name": "Description",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     rating: None | SeatInformation.Rating = field(
         default=None,
@@ -68,7 +69,7 @@ class SeatInformation:
             "name": "Rating",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -76,7 +77,7 @@ class SeatInformation:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -89,11 +90,12 @@ class SeatInformation:
             Numerical rating of the seat from 1 to 5 with 1 being bad and 5
             being good. Providers: 1G, 1V, 1P
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
-            }
+            },
         )
         number: None | int = field(
             default=None,
@@ -101,5 +103,5 @@ class SeatInformation:
                 "name": "Number",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -11,6 +11,7 @@ class TerminalSessionInfo2:
     This element contains CDATA information representing existing GDS
     session data or ACH credentials information of the terminal user
     """
+
     class Meta:
         name = "TerminalSessionInfo"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -19,5 +20,5 @@ class TerminalSessionInfo2:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

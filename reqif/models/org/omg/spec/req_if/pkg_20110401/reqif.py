@@ -21,7 +21,7 @@ class AlternativeId:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -37,7 +37,7 @@ class AttributeValueBoolean:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     the_value: Optional[bool] = field(
         default=None,
@@ -45,7 +45,7 @@ class AttributeValueBoolean:
             "name": "THE-VALUE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -57,7 +57,7 @@ class AttributeValueBoolean:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -73,7 +73,7 @@ class AttributeValueDate:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     the_value: Optional[XmlDateTime] = field(
         default=None,
@@ -81,7 +81,7 @@ class AttributeValueDate:
             "name": "THE-VALUE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -93,7 +93,7 @@ class AttributeValueDate:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -109,7 +109,7 @@ class AttributeValueEnumeration:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     values: Optional["AttributeValueEnumeration.Values"] = field(
         default=None,
@@ -117,7 +117,7 @@ class AttributeValueEnumeration:
             "name": "VALUES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
 
     @dataclass
@@ -129,7 +129,7 @@ class AttributeValueEnumeration:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -140,7 +140,7 @@ class AttributeValueEnumeration:
                 "name": "ENUM-VALUE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -156,7 +156,7 @@ class AttributeValueInteger:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     the_value: Optional[int] = field(
         default=None,
@@ -164,7 +164,7 @@ class AttributeValueInteger:
             "name": "THE-VALUE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -176,7 +176,7 @@ class AttributeValueInteger:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -192,7 +192,7 @@ class AttributeValueReal:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     the_value: Optional[float] = field(
         default=None,
@@ -200,7 +200,7 @@ class AttributeValueReal:
             "name": "THE-VALUE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -212,7 +212,7 @@ class AttributeValueReal:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -228,7 +228,7 @@ class AttributeValueString:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     the_value: Optional[str] = field(
         default=None,
@@ -236,7 +236,7 @@ class AttributeValueString:
             "name": "THE-VALUE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -248,7 +248,7 @@ class AttributeValueString:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -263,7 +263,7 @@ class EmbeddedValue:
             "name": "KEY",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     other_content: Optional[str] = field(
         default=None,
@@ -271,7 +271,7 @@ class EmbeddedValue:
             "name": "OTHER-CONTENT",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -286,7 +286,7 @@ class ReqIfHeader:
             "name": "COMMENT",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     creation_time: Optional[XmlDateTime] = field(
         default=None,
@@ -295,7 +295,7 @@ class ReqIfHeader:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     repository_id: Optional[str] = field(
         default=None,
@@ -303,7 +303,7 @@ class ReqIfHeader:
             "name": "REPOSITORY-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     req_if_tool_id: Optional[str] = field(
         default=None,
@@ -312,7 +312,7 @@ class ReqIfHeader:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     req_if_version: str = field(
         init=False,
@@ -322,7 +322,7 @@ class ReqIfHeader:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     source_tool_id: Optional[str] = field(
         default=None,
@@ -331,7 +331,7 @@ class ReqIfHeader:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
@@ -340,7 +340,7 @@ class ReqIfHeader:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -348,7 +348,7 @@ class ReqIfHeader:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -362,7 +362,7 @@ class ReqIfToolExtension:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -371,13 +371,15 @@ class AttributeDefinitionBoolean:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-BOOLEAN"
 
-    alternative_id: Optional["AttributeDefinitionBoolean.AlternativeId"] = field(
+    alternative_id: Optional[
+        "AttributeDefinitionBoolean.AlternativeId"
+    ] = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     default_value: Optional["AttributeDefinitionBoolean.DefaultValue"] = field(
         default=None,
@@ -385,7 +387,7 @@ class AttributeDefinitionBoolean:
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["AttributeDefinitionBoolean.TypeType"] = field(
         default=None,
@@ -394,14 +396,14 @@ class AttributeDefinitionBoolean:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -409,14 +411,14 @@ class AttributeDefinitionBoolean:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -424,14 +426,14 @@ class AttributeDefinitionBoolean:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -442,7 +444,7 @@ class AttributeDefinitionBoolean:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -453,7 +455,7 @@ class AttributeDefinitionBoolean:
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -465,7 +467,7 @@ class AttributeDefinitionBoolean:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -480,7 +482,7 @@ class AttributeDefinitionDate:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     default_value: Optional["AttributeDefinitionDate.DefaultValue"] = field(
         default=None,
@@ -488,7 +490,7 @@ class AttributeDefinitionDate:
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["AttributeDefinitionDate.TypeType"] = field(
         default=None,
@@ -497,14 +499,14 @@ class AttributeDefinitionDate:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -512,14 +514,14 @@ class AttributeDefinitionDate:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -527,14 +529,14 @@ class AttributeDefinitionDate:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -545,7 +547,7 @@ class AttributeDefinitionDate:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -556,7 +558,7 @@ class AttributeDefinitionDate:
                 "name": "ATTRIBUTE-VALUE-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -568,7 +570,7 @@ class AttributeDefinitionDate:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -577,21 +579,25 @@ class AttributeDefinitionEnumeration:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-ENUMERATION"
 
-    default_value: Optional["AttributeDefinitionEnumeration.DefaultValue"] = field(
+    default_value: Optional[
+        "AttributeDefinitionEnumeration.DefaultValue"
+    ] = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
-    alternative_id: Optional["AttributeDefinitionEnumeration.AlternativeId"] = field(
+    alternative_id: Optional[
+        "AttributeDefinitionEnumeration.AlternativeId"
+    ] = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["AttributeDefinitionEnumeration.TypeType"] = field(
         default=None,
@@ -600,14 +606,14 @@ class AttributeDefinitionEnumeration:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -615,14 +621,14 @@ class AttributeDefinitionEnumeration:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -630,14 +636,14 @@ class AttributeDefinitionEnumeration:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
     multi_valued: Optional[bool] = field(
         default=None,
@@ -645,18 +651,20 @@ class AttributeDefinitionEnumeration:
             "name": "MULTI-VALUED",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
     class DefaultValue:
-        attribute_value_enumeration: Optional[AttributeValueEnumeration] = field(
+        attribute_value_enumeration: Optional[
+            AttributeValueEnumeration
+        ] = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -667,7 +675,7 @@ class AttributeDefinitionEnumeration:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -679,7 +687,7 @@ class AttributeDefinitionEnumeration:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -688,13 +696,15 @@ class AttributeDefinitionInteger:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-INTEGER"
 
-    alternative_id: Optional["AttributeDefinitionInteger.AlternativeId"] = field(
+    alternative_id: Optional[
+        "AttributeDefinitionInteger.AlternativeId"
+    ] = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     default_value: Optional["AttributeDefinitionInteger.DefaultValue"] = field(
         default=None,
@@ -702,7 +712,7 @@ class AttributeDefinitionInteger:
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["AttributeDefinitionInteger.TypeType"] = field(
         default=None,
@@ -711,14 +721,14 @@ class AttributeDefinitionInteger:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -726,14 +736,14 @@ class AttributeDefinitionInteger:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -741,14 +751,14 @@ class AttributeDefinitionInteger:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -759,7 +769,7 @@ class AttributeDefinitionInteger:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -770,7 +780,7 @@ class AttributeDefinitionInteger:
                 "name": "ATTRIBUTE-VALUE-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -782,7 +792,7 @@ class AttributeDefinitionInteger:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -797,7 +807,7 @@ class AttributeDefinitionReal:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     default_value: Optional["AttributeDefinitionReal.DefaultValue"] = field(
         default=None,
@@ -805,7 +815,7 @@ class AttributeDefinitionReal:
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["AttributeDefinitionReal.TypeType"] = field(
         default=None,
@@ -814,14 +824,14 @@ class AttributeDefinitionReal:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -829,14 +839,14 @@ class AttributeDefinitionReal:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -844,14 +854,14 @@ class AttributeDefinitionReal:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -862,7 +872,7 @@ class AttributeDefinitionReal:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -873,7 +883,7 @@ class AttributeDefinitionReal:
                 "name": "ATTRIBUTE-VALUE-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -885,7 +895,7 @@ class AttributeDefinitionReal:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -894,13 +904,15 @@ class AttributeDefinitionString:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-STRING"
 
-    alternative_id: Optional["AttributeDefinitionString.AlternativeId"] = field(
+    alternative_id: Optional[
+        "AttributeDefinitionString.AlternativeId"
+    ] = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     default_value: Optional["AttributeDefinitionString.DefaultValue"] = field(
         default=None,
@@ -908,7 +920,7 @@ class AttributeDefinitionString:
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["AttributeDefinitionString.TypeType"] = field(
         default=None,
@@ -917,14 +929,14 @@ class AttributeDefinitionString:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -932,14 +944,14 @@ class AttributeDefinitionString:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -947,14 +959,14 @@ class AttributeDefinitionString:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -965,7 +977,7 @@ class AttributeDefinitionString:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -976,7 +988,7 @@ class AttributeDefinitionString:
                 "name": "ATTRIBUTE-VALUE-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -988,7 +1000,7 @@ class AttributeDefinitionString:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -997,20 +1009,22 @@ class DatatypeDefinitionBoolean:
     class Meta:
         name = "DATATYPE-DEFINITION-BOOLEAN"
 
-    alternative_id: Optional["DatatypeDefinitionBoolean.AlternativeId"] = field(
+    alternative_id: Optional[
+        "DatatypeDefinitionBoolean.AlternativeId"
+    ] = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1018,7 +1032,7 @@ class DatatypeDefinitionBoolean:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1026,14 +1040,14 @@ class DatatypeDefinitionBoolean:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1044,7 +1058,7 @@ class DatatypeDefinitionBoolean:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -1059,14 +1073,14 @@ class DatatypeDefinitionDate:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1074,7 +1088,7 @@ class DatatypeDefinitionDate:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1082,14 +1096,14 @@ class DatatypeDefinitionDate:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1100,7 +1114,7 @@ class DatatypeDefinitionDate:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -1109,20 +1123,22 @@ class DatatypeDefinitionInteger:
     class Meta:
         name = "DATATYPE-DEFINITION-INTEGER"
 
-    alternative_id: Optional["DatatypeDefinitionInteger.AlternativeId"] = field(
+    alternative_id: Optional[
+        "DatatypeDefinitionInteger.AlternativeId"
+    ] = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1130,7 +1146,7 @@ class DatatypeDefinitionInteger:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1138,14 +1154,14 @@ class DatatypeDefinitionInteger:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
     max: Optional[int] = field(
         default=None,
@@ -1153,7 +1169,7 @@ class DatatypeDefinitionInteger:
             "name": "MAX",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     min: Optional[int] = field(
         default=None,
@@ -1161,7 +1177,7 @@ class DatatypeDefinitionInteger:
             "name": "MIN",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -1172,7 +1188,7 @@ class DatatypeDefinitionInteger:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -1187,7 +1203,7 @@ class DatatypeDefinitionReal:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     accuracy: Optional[int] = field(
         default=None,
@@ -1195,14 +1211,14 @@ class DatatypeDefinitionReal:
             "name": "ACCURACY",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1210,7 +1226,7 @@ class DatatypeDefinitionReal:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1218,14 +1234,14 @@ class DatatypeDefinitionReal:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
     max: Optional[float] = field(
         default=None,
@@ -1233,7 +1249,7 @@ class DatatypeDefinitionReal:
             "name": "MAX",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     min: Optional[float] = field(
         default=None,
@@ -1241,7 +1257,7 @@ class DatatypeDefinitionReal:
             "name": "MIN",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -1252,7 +1268,7 @@ class DatatypeDefinitionReal:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -1267,14 +1283,14 @@ class DatatypeDefinitionString:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1282,7 +1298,7 @@ class DatatypeDefinitionString:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1290,14 +1306,14 @@ class DatatypeDefinitionString:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
     max_length: Optional[int] = field(
         default=None,
@@ -1305,7 +1321,7 @@ class DatatypeDefinitionString:
             "name": "MAX-LENGTH",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -1316,7 +1332,7 @@ class DatatypeDefinitionString:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -1331,14 +1347,14 @@ class DatatypeDefinitionXhtml:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1346,7 +1362,7 @@ class DatatypeDefinitionXhtml:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1354,14 +1370,14 @@ class DatatypeDefinitionXhtml:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1372,7 +1388,7 @@ class DatatypeDefinitionXhtml:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -1387,7 +1403,7 @@ class EnumValue:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     properties: Optional["EnumValue.Properties"] = field(
         default=None,
@@ -1396,14 +1412,14 @@ class EnumValue:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1411,7 +1427,7 @@ class EnumValue:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1419,14 +1435,14 @@ class EnumValue:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1437,7 +1453,7 @@ class EnumValue:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -1449,7 +1465,7 @@ class EnumValue:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -1464,16 +1480,18 @@ class RelationGroup:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
-    source_specification: Optional["RelationGroup.SourceSpecification"] = field(
+    source_specification: Optional[
+        "RelationGroup.SourceSpecification"
+    ] = field(
         default=None,
         metadata={
             "name": "SOURCE-SPECIFICATION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     spec_relations: Optional["RelationGroup.SpecRelations"] = field(
         default=None,
@@ -1481,16 +1499,18 @@ class RelationGroup:
             "name": "SPEC-RELATIONS",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
-    target_specification: Optional["RelationGroup.TargetSpecification"] = field(
+    target_specification: Optional[
+        "RelationGroup.TargetSpecification"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-SPECIFICATION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     type_value: Optional["RelationGroup.TypeType"] = field(
         default=None,
@@ -1499,14 +1519,14 @@ class RelationGroup:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1514,7 +1534,7 @@ class RelationGroup:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1522,14 +1542,14 @@ class RelationGroup:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1540,7 +1560,7 @@ class RelationGroup:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -1552,7 +1572,7 @@ class RelationGroup:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -1563,7 +1583,7 @@ class RelationGroup:
                 "name": "SPEC-RELATION-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -1575,7 +1595,7 @@ class RelationGroup:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -1587,7 +1607,7 @@ class RelationGroup:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -1602,7 +1622,7 @@ class SpecHierarchy:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     children: Optional["SpecHierarchy.Children"] = field(
         default=None,
@@ -1610,7 +1630,7 @@ class SpecHierarchy:
             "name": "CHILDREN",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     editable_atts: Optional["SpecHierarchy.EditableAtts"] = field(
         default=None,
@@ -1618,7 +1638,7 @@ class SpecHierarchy:
             "name": "EDITABLE-ATTS",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     object_value: Optional["SpecHierarchy.Object"] = field(
         default=None,
@@ -1627,14 +1647,14 @@ class SpecHierarchy:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1642,21 +1662,21 @@ class SpecHierarchy:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     is_table_internal: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-TABLE-INTERNAL",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1664,14 +1684,14 @@ class SpecHierarchy:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1682,7 +1702,7 @@ class SpecHierarchy:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -1693,7 +1713,7 @@ class SpecHierarchy:
                 "name": "SPEC-HIERARCHY",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -1704,7 +1724,7 @@ class SpecHierarchy:
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_date_ref: List[str] = field(
             default_factory=list,
@@ -1712,7 +1732,7 @@ class SpecHierarchy:
                 "name": "ATTRIBUTE-DEFINITION-DATE-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_enumeration_ref: List[str] = field(
             default_factory=list,
@@ -1720,7 +1740,7 @@ class SpecHierarchy:
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_integer_ref: List[str] = field(
             default_factory=list,
@@ -1728,7 +1748,7 @@ class SpecHierarchy:
                 "name": "ATTRIBUTE-DEFINITION-INTEGER-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_real_ref: List[str] = field(
             default_factory=list,
@@ -1736,7 +1756,7 @@ class SpecHierarchy:
                 "name": "ATTRIBUTE-DEFINITION-REAL-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_string_ref: List[str] = field(
             default_factory=list,
@@ -1744,7 +1764,7 @@ class SpecHierarchy:
                 "name": "ATTRIBUTE-DEFINITION-STRING-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_xhtml_ref: List[str] = field(
             default_factory=list,
@@ -1752,7 +1772,7 @@ class SpecHierarchy:
                 "name": "ATTRIBUTE-DEFINITION-XHTML-REF",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -1764,7 +1784,7 @@ class SpecHierarchy:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -1778,14 +1798,14 @@ class XhtmlContent:
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-        }
+        },
     )
     div: Optional[XhtmlDivType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
-        }
+        },
     )
 
 
@@ -1801,7 +1821,7 @@ class AttributeValueXhtml:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     the_original_value: Optional[XhtmlContent] = field(
         default=None,
@@ -1809,7 +1829,7 @@ class AttributeValueXhtml:
             "name": "THE-ORIGINAL-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     definition: Optional["AttributeValueXhtml.Definition"] = field(
         default=None,
@@ -1818,14 +1838,14 @@ class AttributeValueXhtml:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     is_simplified: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-SIMPLIFIED",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1837,7 +1857,7 @@ class AttributeValueXhtml:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -1846,28 +1866,32 @@ class DatatypeDefinitionEnumeration:
     class Meta:
         name = "DATATYPE-DEFINITION-ENUMERATION"
 
-    alternative_id: Optional["DatatypeDefinitionEnumeration.AlternativeId"] = field(
+    alternative_id: Optional[
+        "DatatypeDefinitionEnumeration.AlternativeId"
+    ] = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
-    specified_values: Optional["DatatypeDefinitionEnumeration.SpecifiedValues"] = field(
+    specified_values: Optional[
+        "DatatypeDefinitionEnumeration.SpecifiedValues"
+    ] = field(
         default=None,
         metadata={
             "name": "SPECIFIED-VALUES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1875,7 +1899,7 @@ class DatatypeDefinitionEnumeration:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1883,14 +1907,14 @@ class DatatypeDefinitionEnumeration:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1901,7 +1925,7 @@ class DatatypeDefinitionEnumeration:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -1912,7 +1936,7 @@ class DatatypeDefinitionEnumeration:
                 "name": "ENUM-VALUE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -1927,7 +1951,7 @@ class AttributeDefinitionXhtml:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     default_value: Optional["AttributeDefinitionXhtml.DefaultValue"] = field(
         default=None,
@@ -1935,7 +1959,7 @@ class AttributeDefinitionXhtml:
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["AttributeDefinitionXhtml.TypeType"] = field(
         default=None,
@@ -1944,14 +1968,14 @@ class AttributeDefinitionXhtml:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -1959,14 +1983,14 @@ class AttributeDefinitionXhtml:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_editable: Optional[bool] = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -1974,14 +1998,14 @@ class AttributeDefinitionXhtml:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1992,7 +2016,7 @@ class AttributeDefinitionXhtml:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2003,7 +2027,7 @@ class AttributeDefinitionXhtml:
                 "name": "ATTRIBUTE-VALUE-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2015,7 +2039,7 @@ class AttributeDefinitionXhtml:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -2030,7 +2054,7 @@ class SpecObject:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     values: Optional["SpecObject.Values"] = field(
         default=None,
@@ -2038,7 +2062,7 @@ class SpecObject:
             "name": "VALUES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["SpecObject.TypeType"] = field(
         default=None,
@@ -2047,14 +2071,14 @@ class SpecObject:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -2062,7 +2086,7 @@ class SpecObject:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -2070,14 +2094,14 @@ class SpecObject:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -2088,7 +2112,7 @@ class SpecObject:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2099,7 +2123,7 @@ class SpecObject:
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_date: List[AttributeValueDate] = field(
             default_factory=list,
@@ -2107,7 +2131,7 @@ class SpecObject:
                 "name": "ATTRIBUTE-VALUE-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_enumeration: List[AttributeValueEnumeration] = field(
             default_factory=list,
@@ -2115,7 +2139,7 @@ class SpecObject:
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_integer: List[AttributeValueInteger] = field(
             default_factory=list,
@@ -2123,7 +2147,7 @@ class SpecObject:
                 "name": "ATTRIBUTE-VALUE-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_real: List[AttributeValueReal] = field(
             default_factory=list,
@@ -2131,7 +2155,7 @@ class SpecObject:
                 "name": "ATTRIBUTE-VALUE-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_string: List[AttributeValueString] = field(
             default_factory=list,
@@ -2139,7 +2163,7 @@ class SpecObject:
                 "name": "ATTRIBUTE-VALUE-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_xhtml: List[AttributeValueXhtml] = field(
             default_factory=list,
@@ -2147,7 +2171,7 @@ class SpecObject:
                 "name": "ATTRIBUTE-VALUE-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2159,7 +2183,7 @@ class SpecObject:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -2174,7 +2198,7 @@ class SpecRelation:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     values: Optional["SpecRelation.Values"] = field(
         default=None,
@@ -2182,7 +2206,7 @@ class SpecRelation:
             "name": "VALUES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     source: Optional["SpecRelation.Source"] = field(
         default=None,
@@ -2191,7 +2215,7 @@ class SpecRelation:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     target: Optional["SpecRelation.Target"] = field(
         default=None,
@@ -2200,7 +2224,7 @@ class SpecRelation:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     type_value: Optional["SpecRelation.TypeType"] = field(
         default=None,
@@ -2209,14 +2233,14 @@ class SpecRelation:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -2224,7 +2248,7 @@ class SpecRelation:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -2232,14 +2256,14 @@ class SpecRelation:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -2250,7 +2274,7 @@ class SpecRelation:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2261,7 +2285,7 @@ class SpecRelation:
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_date: List[AttributeValueDate] = field(
             default_factory=list,
@@ -2269,7 +2293,7 @@ class SpecRelation:
                 "name": "ATTRIBUTE-VALUE-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_enumeration: List[AttributeValueEnumeration] = field(
             default_factory=list,
@@ -2277,7 +2301,7 @@ class SpecRelation:
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_integer: List[AttributeValueInteger] = field(
             default_factory=list,
@@ -2285,7 +2309,7 @@ class SpecRelation:
                 "name": "ATTRIBUTE-VALUE-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_real: List[AttributeValueReal] = field(
             default_factory=list,
@@ -2293,7 +2317,7 @@ class SpecRelation:
                 "name": "ATTRIBUTE-VALUE-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_string: List[AttributeValueString] = field(
             default_factory=list,
@@ -2301,7 +2325,7 @@ class SpecRelation:
                 "name": "ATTRIBUTE-VALUE-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_xhtml: List[AttributeValueXhtml] = field(
             default_factory=list,
@@ -2309,7 +2333,7 @@ class SpecRelation:
                 "name": "ATTRIBUTE-VALUE-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2321,7 +2345,7 @@ class SpecRelation:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -2333,7 +2357,7 @@ class SpecRelation:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -2345,7 +2369,7 @@ class SpecRelation:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -2360,7 +2384,7 @@ class Specification:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     values: Optional["Specification.Values"] = field(
         default=None,
@@ -2368,7 +2392,7 @@ class Specification:
             "name": "VALUES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     children: Optional["Specification.Children"] = field(
         default=None,
@@ -2376,7 +2400,7 @@ class Specification:
             "name": "CHILDREN",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     type_value: Optional["Specification.TypeType"] = field(
         default=None,
@@ -2385,14 +2409,14 @@ class Specification:
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
             "required": True,
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -2400,7 +2424,7 @@ class Specification:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -2408,14 +2432,14 @@ class Specification:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -2426,7 +2450,7 @@ class Specification:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2437,7 +2461,7 @@ class Specification:
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_date: List[AttributeValueDate] = field(
             default_factory=list,
@@ -2445,7 +2469,7 @@ class Specification:
                 "name": "ATTRIBUTE-VALUE-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_enumeration: List[AttributeValueEnumeration] = field(
             default_factory=list,
@@ -2453,7 +2477,7 @@ class Specification:
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_integer: List[AttributeValueInteger] = field(
             default_factory=list,
@@ -2461,7 +2485,7 @@ class Specification:
                 "name": "ATTRIBUTE-VALUE-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_real: List[AttributeValueReal] = field(
             default_factory=list,
@@ -2469,7 +2493,7 @@ class Specification:
                 "name": "ATTRIBUTE-VALUE-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_string: List[AttributeValueString] = field(
             default_factory=list,
@@ -2477,7 +2501,7 @@ class Specification:
                 "name": "ATTRIBUTE-VALUE-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_value_xhtml: List[AttributeValueXhtml] = field(
             default_factory=list,
@@ -2485,7 +2509,7 @@ class Specification:
                 "name": "ATTRIBUTE-VALUE-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2496,7 +2520,7 @@ class Specification:
                 "name": "SPEC-HIERARCHY",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2508,7 +2532,7 @@ class Specification:
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
                 "required": True,
-            }
+            },
         )
 
 
@@ -2523,7 +2547,7 @@ class RelationGroupType:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_attributes: Optional["RelationGroupType.SpecAttributes"] = field(
         default=None,
@@ -2531,14 +2555,14 @@ class RelationGroupType:
             "name": "SPEC-ATTRIBUTES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -2546,7 +2570,7 @@ class RelationGroupType:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -2554,14 +2578,14 @@ class RelationGroupType:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -2572,7 +2596,7 @@ class RelationGroupType:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2583,7 +2607,7 @@ class RelationGroupType:
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_date: List[AttributeDefinitionDate] = field(
             default_factory=list,
@@ -2591,15 +2615,17 @@ class RelationGroupType:
                 "name": "ATTRIBUTE-DEFINITION-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
-        attribute_definition_enumeration: List[AttributeDefinitionEnumeration] = field(
+        attribute_definition_enumeration: List[
+            AttributeDefinitionEnumeration
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_integer: List[AttributeDefinitionInteger] = field(
             default_factory=list,
@@ -2607,7 +2633,7 @@ class RelationGroupType:
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_real: List[AttributeDefinitionReal] = field(
             default_factory=list,
@@ -2615,7 +2641,7 @@ class RelationGroupType:
                 "name": "ATTRIBUTE-DEFINITION-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_string: List[AttributeDefinitionString] = field(
             default_factory=list,
@@ -2623,7 +2649,7 @@ class RelationGroupType:
                 "name": "ATTRIBUTE-DEFINITION-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
             default_factory=list,
@@ -2631,7 +2657,7 @@ class RelationGroupType:
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -2646,7 +2672,7 @@ class SpecObjectType:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_attributes: Optional["SpecObjectType.SpecAttributes"] = field(
         default=None,
@@ -2654,14 +2680,14 @@ class SpecObjectType:
             "name": "SPEC-ATTRIBUTES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -2669,7 +2695,7 @@ class SpecObjectType:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -2677,14 +2703,14 @@ class SpecObjectType:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -2695,7 +2721,7 @@ class SpecObjectType:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2706,7 +2732,7 @@ class SpecObjectType:
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_date: List[AttributeDefinitionDate] = field(
             default_factory=list,
@@ -2714,15 +2740,17 @@ class SpecObjectType:
                 "name": "ATTRIBUTE-DEFINITION-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
-        attribute_definition_enumeration: List[AttributeDefinitionEnumeration] = field(
+        attribute_definition_enumeration: List[
+            AttributeDefinitionEnumeration
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_integer: List[AttributeDefinitionInteger] = field(
             default_factory=list,
@@ -2730,7 +2758,7 @@ class SpecObjectType:
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_real: List[AttributeDefinitionReal] = field(
             default_factory=list,
@@ -2738,7 +2766,7 @@ class SpecObjectType:
                 "name": "ATTRIBUTE-DEFINITION-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_string: List[AttributeDefinitionString] = field(
             default_factory=list,
@@ -2746,7 +2774,7 @@ class SpecObjectType:
                 "name": "ATTRIBUTE-DEFINITION-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
             default_factory=list,
@@ -2754,7 +2782,7 @@ class SpecObjectType:
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -2769,7 +2797,7 @@ class SpecRelationType:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_attributes: Optional["SpecRelationType.SpecAttributes"] = field(
         default=None,
@@ -2777,14 +2805,14 @@ class SpecRelationType:
             "name": "SPEC-ATTRIBUTES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -2792,7 +2820,7 @@ class SpecRelationType:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -2800,14 +2828,14 @@ class SpecRelationType:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -2818,7 +2846,7 @@ class SpecRelationType:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2829,7 +2857,7 @@ class SpecRelationType:
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_date: List[AttributeDefinitionDate] = field(
             default_factory=list,
@@ -2837,15 +2865,17 @@ class SpecRelationType:
                 "name": "ATTRIBUTE-DEFINITION-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
-        attribute_definition_enumeration: List[AttributeDefinitionEnumeration] = field(
+        attribute_definition_enumeration: List[
+            AttributeDefinitionEnumeration
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_integer: List[AttributeDefinitionInteger] = field(
             default_factory=list,
@@ -2853,7 +2883,7 @@ class SpecRelationType:
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_real: List[AttributeDefinitionReal] = field(
             default_factory=list,
@@ -2861,7 +2891,7 @@ class SpecRelationType:
                 "name": "ATTRIBUTE-DEFINITION-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_string: List[AttributeDefinitionString] = field(
             default_factory=list,
@@ -2869,7 +2899,7 @@ class SpecRelationType:
                 "name": "ATTRIBUTE-DEFINITION-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
             default_factory=list,
@@ -2877,7 +2907,7 @@ class SpecRelationType:
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -2892,7 +2922,7 @@ class SpecificationType:
             "name": "ALTERNATIVE-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_attributes: Optional["SpecificationType.SpecAttributes"] = field(
         default=None,
@@ -2900,14 +2930,14 @@ class SpecificationType:
             "name": "SPEC-ATTRIBUTES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     desc: Optional[str] = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
-        }
+        },
     )
     identifier: Optional[str] = field(
         default=None,
@@ -2915,7 +2945,7 @@ class SpecificationType:
             "name": "IDENTIFIER",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     last_change: Optional[XmlDateTime] = field(
         default=None,
@@ -2923,14 +2953,14 @@ class SpecificationType:
             "name": "LAST-CHANGE",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     long_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -2941,7 +2971,7 @@ class SpecificationType:
                 "name": "ALTERNATIVE-ID",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -2952,7 +2982,7 @@ class SpecificationType:
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_date: List[AttributeDefinitionDate] = field(
             default_factory=list,
@@ -2960,15 +2990,17 @@ class SpecificationType:
                 "name": "ATTRIBUTE-DEFINITION-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
-        attribute_definition_enumeration: List[AttributeDefinitionEnumeration] = field(
+        attribute_definition_enumeration: List[
+            AttributeDefinitionEnumeration
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_integer: List[AttributeDefinitionInteger] = field(
             default_factory=list,
@@ -2976,7 +3008,7 @@ class SpecificationType:
                 "name": "ATTRIBUTE-DEFINITION-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_real: List[AttributeDefinitionReal] = field(
             default_factory=list,
@@ -2984,7 +3016,7 @@ class SpecificationType:
                 "name": "ATTRIBUTE-DEFINITION-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_string: List[AttributeDefinitionString] = field(
             default_factory=list,
@@ -2992,7 +3024,7 @@ class SpecificationType:
                 "name": "ATTRIBUTE-DEFINITION-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         attribute_definition_xhtml: List[AttributeDefinitionXhtml] = field(
             default_factory=list,
@@ -3000,7 +3032,7 @@ class SpecificationType:
                 "name": "ATTRIBUTE-DEFINITION-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -3015,7 +3047,7 @@ class ReqIfContent:
             "name": "DATATYPES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_types: Optional["ReqIfContent.SpecTypes"] = field(
         default=None,
@@ -3023,7 +3055,7 @@ class ReqIfContent:
             "name": "SPEC-TYPES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_objects: Optional["ReqIfContent.SpecObjects"] = field(
         default=None,
@@ -3031,7 +3063,7 @@ class ReqIfContent:
             "name": "SPEC-OBJECTS",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_relations: Optional["ReqIfContent.SpecRelations"] = field(
         default=None,
@@ -3039,7 +3071,7 @@ class ReqIfContent:
             "name": "SPEC-RELATIONS",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     specifications: Optional["ReqIfContent.Specifications"] = field(
         default=None,
@@ -3047,7 +3079,7 @@ class ReqIfContent:
             "name": "SPECIFICATIONS",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
     spec_relation_groups: Optional["ReqIfContent.SpecRelationGroups"] = field(
         default=None,
@@ -3055,7 +3087,7 @@ class ReqIfContent:
             "name": "SPEC-RELATION-GROUPS",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-        }
+        },
     )
 
     @dataclass
@@ -3066,7 +3098,7 @@ class ReqIfContent:
                 "name": "DATATYPE-DEFINITION-BOOLEAN",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         datatype_definition_date: List[DatatypeDefinitionDate] = field(
             default_factory=list,
@@ -3074,15 +3106,17 @@ class ReqIfContent:
                 "name": "DATATYPE-DEFINITION-DATE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
-        datatype_definition_enumeration: List[DatatypeDefinitionEnumeration] = field(
+        datatype_definition_enumeration: List[
+            DatatypeDefinitionEnumeration
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATATYPE-DEFINITION-ENUMERATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         datatype_definition_integer: List[DatatypeDefinitionInteger] = field(
             default_factory=list,
@@ -3090,7 +3124,7 @@ class ReqIfContent:
                 "name": "DATATYPE-DEFINITION-INTEGER",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         datatype_definition_real: List[DatatypeDefinitionReal] = field(
             default_factory=list,
@@ -3098,7 +3132,7 @@ class ReqIfContent:
                 "name": "DATATYPE-DEFINITION-REAL",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         datatype_definition_string: List[DatatypeDefinitionString] = field(
             default_factory=list,
@@ -3106,7 +3140,7 @@ class ReqIfContent:
                 "name": "DATATYPE-DEFINITION-STRING",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         datatype_definition_xhtml: List[DatatypeDefinitionXhtml] = field(
             default_factory=list,
@@ -3114,7 +3148,7 @@ class ReqIfContent:
                 "name": "DATATYPE-DEFINITION-XHTML",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -3125,7 +3159,7 @@ class ReqIfContent:
                 "name": "RELATION-GROUP-TYPE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         spec_object_type: List[SpecObjectType] = field(
             default_factory=list,
@@ -3133,7 +3167,7 @@ class ReqIfContent:
                 "name": "SPEC-OBJECT-TYPE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         spec_relation_type: List[SpecRelationType] = field(
             default_factory=list,
@@ -3141,7 +3175,7 @@ class ReqIfContent:
                 "name": "SPEC-RELATION-TYPE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
         specification_type: List[SpecificationType] = field(
             default_factory=list,
@@ -3149,7 +3183,7 @@ class ReqIfContent:
                 "name": "SPECIFICATION-TYPE",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -3160,7 +3194,7 @@ class ReqIfContent:
                 "name": "SPEC-OBJECT",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -3171,7 +3205,7 @@ class ReqIfContent:
                 "name": "SPEC-RELATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -3182,7 +3216,7 @@ class ReqIfContent:
                 "name": "SPECIFICATION",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
     @dataclass
@@ -3193,7 +3227,7 @@ class ReqIfContent:
                 "name": "RELATION-GROUP",
                 "type": "Element",
                 "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            }
+            },
         )
 
 
@@ -3209,7 +3243,7 @@ class ReqIf:
             "name": "THE-HEADER",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     core_content: Optional["ReqIf.CoreContent"] = field(
         default=None,
@@ -3217,21 +3251,21 @@ class ReqIf:
             "name": "CORE-CONTENT",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     tool_extensions: Optional["ReqIf.ToolExtensions"] = field(
         default=None,
         metadata={
             "name": "TOOL-EXTENSIONS",
             "type": "Element",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
 
     @dataclass
@@ -3242,7 +3276,7 @@ class ReqIf:
                 "name": "REQ-IF-HEADER",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -3253,7 +3287,7 @@ class ReqIf:
                 "name": "REQ-IF-CONTENT",
                 "type": "Element",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -3263,5 +3297,5 @@ class ReqIf:
             metadata={
                 "name": "REQ-IF-TOOL-EXTENSION",
                 "type": "Element",
-            }
+            },
         )

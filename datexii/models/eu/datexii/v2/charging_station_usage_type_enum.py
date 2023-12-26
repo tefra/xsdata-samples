@@ -18,6 +18,7 @@ class ChargingStationUsageTypeEnum(Enum):
         (e.g. shaver, mobile phones, hair dryer, ...)
     :cvar OTHER: Other usage for the electric charging stations.
     """
+
     ELECTRIC_VEHICLE = "electricVehicle"
     MOTORHOME_OR_CARAVAN_SUPPLY = "motorhomeOrCaravanSupply"
     ELECTRIC_BIKE_OR_MOTORCYCLE = "electricBikeOrMotorcycle"

@@ -12,5 +12,5 @@ class AllOrganisationsRefStructure(VersionOfObjectRefStructure):
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

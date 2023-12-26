@@ -16,12 +16,12 @@ class TTextAnnotation(TArtifact):
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     text_format: str = field(
         default="text/plain",
         metadata={
             "name": "textFormat",
             "type": "Attribute",
-        }
+        },
     )

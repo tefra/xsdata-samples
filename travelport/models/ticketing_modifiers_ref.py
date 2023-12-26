@@ -9,6 +9,7 @@ class TicketingModifiersRef:
     """
     Reference to a shared list of Ticketing Modifers.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class TicketingModifiersRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

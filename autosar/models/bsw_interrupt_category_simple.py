@@ -16,5 +16,6 @@ class BswInterruptCategorySimple(Enum):
         implemented by the interrupt handler, which is called from the
         OS.
     """
+
     CAT_1 = "CAT-1"
     CAT_2 = "CAT-2"

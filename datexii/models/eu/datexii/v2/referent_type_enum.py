@@ -25,6 +25,7 @@ class ReferentTypeEnum(Enum):
         according to defined business rules or may constitute a purely
         topological representation of a road network.
     """
+
     BOUNDARY = "boundary"
     INTERSECTION = "intersection"
     REFERENCE_MARKER = "referenceMarker"

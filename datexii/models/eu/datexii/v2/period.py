@@ -3,7 +3,9 @@ from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.day_week_month import DayWeekMonth
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.period_extension_type import PeriodExtensionType
+from datexii.models.eu.datexii.v2.period_extension_type import (
+    PeriodExtensionType,
+)
 from datexii.models.eu.datexii.v2.time_period_of_day import TimePeriodOfDay
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -24,13 +26,14 @@ class Period:
         year.
     :ivar period_extension:
     """
+
     start_of_period: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "startOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     end_of_period: Optional[XmlDateTime] = field(
         default=None,
@@ -38,7 +41,7 @@ class Period:
             "name": "endOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     period_name: Optional[MultilingualString] = field(
         default=None,
@@ -46,7 +49,7 @@ class Period:
             "name": "periodName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     recurring_time_period_of_day: List[TimePeriodOfDay] = field(
         default_factory=list,
@@ -54,7 +57,7 @@ class Period:
             "name": "recurringTimePeriodOfDay",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     recurring_day_week_month_period: List[DayWeekMonth] = field(
         default_factory=list,
@@ -62,7 +65,7 @@ class Period:
             "name": "recurringDayWeekMonthPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     period_extension: Optional[PeriodExtensionType] = field(
         default=None,
@@ -70,5 +73,5 @@ class Period:
             "name": "periodExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

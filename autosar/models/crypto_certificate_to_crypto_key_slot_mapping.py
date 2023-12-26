@@ -28,31 +28,36 @@ class CryptoCertificateToCryptoKeySlotMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-CERTIFICATE-TO-CRYPTO-KEY-SLOT-MAPPING"
 
-    crypto_certificate_ref: Optional["CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef"] = field(
+    crypto_certificate_ref: Optional[
+        "CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    crypto_key_slot_refs: Optional["CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs"] = field(
+    crypto_key_slot_refs: Optional[
+        "CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -60,7 +65,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -71,19 +76,21 @@ class CryptoCertificateToCryptoKeySlotMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class CryptoKeySlotRefs:
-        crypto_key_slot_ref: List["CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs.CryptoKeySlotRef"] = field(
+        crypto_key_slot_ref: List[
+            "CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs.CryptoKeySlotRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-KEY-SLOT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 2,
-            }
+            },
         )
 
         @dataclass
@@ -94,5 +101,5 @@ class CryptoCertificateToCryptoKeySlotMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

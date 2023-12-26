@@ -12,6 +12,7 @@ class DiagnosticOperationCycleTypeEnumSimple(Enum):
     :cvar TIME: Time based operation cycle
     :cvar WARMUP: OBD Warm up cycle
     """
+
     IGNITION = "IGNITION"
     OBD_DRIVING_CYCLE = "OBD-DRIVING-CYCLE"
     OTHER = "OTHER"

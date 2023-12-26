@@ -19,6 +19,7 @@ class McopriceData6:
     mcototal_amount
         The Total amount for the MCO.
     """
+
     class Meta:
         name = "MCOPriceData"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -29,14 +30,14 @@ class McopriceData6:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     commission: None | McopriceData6.Commission = field(
         default=None,
         metadata={
             "name": "Commission",
             "type": "Element",
-        }
+        },
     )
     mcoamount: None | str = field(
         default=None,
@@ -44,21 +45,21 @@ class McopriceData6:
             "name": "MCOAmount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mcoequivalent_fare: None | str = field(
         default=None,
         metadata={
             "name": "MCOEquivalentFare",
             "type": "Attribute",
-        }
+        },
     )
     mcototal_amount: None | str = field(
         default=None,
         metadata={
             "name": "MCOTotalAmount",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -71,12 +72,13 @@ class McopriceData6:
         percentage
             The percentage.
         """
+
         amount: None | str = field(
             default=None,
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-            }
+            },
         )
         percentage: None | str = field(
             default=None,
@@ -84,5 +86,5 @@ class McopriceData6:
                 "name": "Percentage",
                 "type": "Attribute",
                 "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-            }
+            },
         )

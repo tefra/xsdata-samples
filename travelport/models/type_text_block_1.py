@@ -17,5 +17,5 @@ class TypeTextBlock1:
             "namespace": "",
             "min_occurs": 1,
             "max_occurs": 100,
-        }
+        },
     )

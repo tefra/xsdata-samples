@@ -9,5 +9,6 @@ class CryptoCertificateFormatEnumSimple(Enum):
         Certificate (CVC) format
     :cvar X_509: The certificate is created in X.509 format.
     """
+
     CVC = "CVC"
     X_509 = "X-509"

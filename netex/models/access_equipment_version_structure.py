@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 from .direction_of_use_enumeration import DirectionOfUseEnumeration
-from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .installed_equipment_version_structure import (
+    InstalledEquipmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -18,7 +20,7 @@ class AccessEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "Width",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     direction_of_use: Optional[DirectionOfUseEnumeration] = field(
         default=None,
@@ -26,7 +28,7 @@ class AccessEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "DirectionOfUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     passengers_per_minute: Optional[int] = field(
         default=None,
@@ -34,7 +36,7 @@ class AccessEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "PassengersPerMinute",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     relative_weighting: Optional[int] = field(
         default=None,
@@ -42,7 +44,7 @@ class AccessEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "RelativeWeighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     safe_for_guide_dog: Optional[bool] = field(
         default=None,
@@ -50,5 +52,5 @@ class AccessEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "SafeForGuideDog",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

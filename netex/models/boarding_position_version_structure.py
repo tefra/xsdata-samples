@@ -18,7 +18,7 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_position_type: Optional[BoardingPositionTypeEnumeration] = field(
         default=None,
@@ -26,7 +26,7 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
             "name": "BoardingPositionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_position_entrances: Optional[EntranceRefsRelStructure] = field(
         default=None,
@@ -34,5 +34,5 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
             "name": "boardingPositionEntrances",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

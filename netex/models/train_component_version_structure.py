@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .train_element import TrainElement
@@ -21,7 +21,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -29,7 +29,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     train_ref: Optional[TrainRef] = field(
         default=None,
@@ -37,9 +37,11 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "name": "TrainRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    train_element_ref_or_train_element: Optional[object] = field(
+    train_element_ref_or_train_element: Optional[
+        Union[TrainElementRef, TrainElement]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -55,7 +57,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     operational_orientation: Optional[VehicleOrientationEnumeration] = field(
         default=None,
@@ -63,11 +65,11 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "name": "OperationalOrientation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -9,6 +9,7 @@ class Command:
     """
     The command to pass to the host.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -16,5 +17,5 @@ class Command:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

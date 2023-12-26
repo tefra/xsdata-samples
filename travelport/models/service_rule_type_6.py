@@ -2,8 +2,12 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.formatted_text_text_type_6 import FormattedTextTextType6
 from travelport.models.modification_type_6 import ModificationType6
-from travelport.models.optional_service_applicability_type_6 import OptionalServiceApplicabilityType6
-from travelport.models.optional_service_application_limit_type_6 import OptionalServiceApplicationLimitType6
+from travelport.models.optional_service_applicability_type_6 import (
+    OptionalServiceApplicabilityType6,
+)
+from travelport.models.optional_service_application_limit_type_6 import (
+    OptionalServiceApplicationLimitType6,
+)
 from travelport.models.service_data_6 import ServiceData6
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
@@ -32,6 +36,7 @@ class ServiceRuleType6:
     key
         Unique ID to identify an optional service rule
     """
+
     class Meta:
         name = "ServiceRuleType"
 
@@ -41,7 +46,7 @@ class ServiceRuleType6:
             "name": "ApplicationRules",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     application_level: None | ServiceRuleType6.ApplicationLevel = field(
         default=None,
@@ -49,7 +54,7 @@ class ServiceRuleType6:
             "name": "ApplicationLevel",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     modify_rules: None | ServiceRuleType6.ModifyRules = field(
         default=None,
@@ -57,7 +62,7 @@ class ServiceRuleType6:
             "name": "ModifyRules",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     secondary_type_rules: None | ServiceRuleType6.SecondaryTypeRules = field(
         default=None,
@@ -65,7 +70,7 @@ class ServiceRuleType6:
             "name": "SecondaryTypeRules",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     remarks: list[FormattedTextTextType6] = field(
         default_factory=list,
@@ -74,7 +79,7 @@ class ServiceRuleType6:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
             "max_occurs": 99,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -82,7 +87,7 @@ class ServiceRuleType6:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -108,40 +113,41 @@ class ServiceRuleType6:
             If set to true, the secondary option code is required for this
             option
         """
+
         required_for_all_travelers: None | bool = field(
             default=None,
             metadata={
                 "name": "RequiredForAllTravelers",
                 "type": "Attribute",
-            }
+            },
         )
         required_for_all_segments: None | bool = field(
             default=None,
             metadata={
                 "name": "RequiredForAllSegments",
                 "type": "Attribute",
-            }
+            },
         )
         required_for_all_segments_in_od: None | bool = field(
             default=None,
             metadata={
                 "name": "RequiredForAllSegmentsInOD",
                 "type": "Attribute",
-            }
+            },
         )
         unselected_option_required: None | bool = field(
             default=None,
             metadata={
                 "name": "UnselectedOptionRequired",
                 "type": "Attribute",
-            }
+            },
         )
         secondary_option_code_required: None | bool = field(
             default=None,
             metadata={
                 "name": "SecondaryOptionCodeRequired",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
@@ -159,13 +165,14 @@ class ServiceRuleType6:
             Indicates the actual provider defined ApplicableLevels which is
             mapped to Other
         """
+
         application_limits: None | ServiceRuleType6.ApplicationLevel.ApplicationLimits = field(
             default=None,
             metadata={
                 "name": "ApplicationLimits",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v38_0",
-            }
+            },
         )
         service_data: list[ServiceData6] = field(
             default_factory=list,
@@ -174,7 +181,7 @@ class ServiceRuleType6:
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v38_0",
                 "max_occurs": 999,
-            }
+            },
         )
         applicable_levels: list[OptionalServiceApplicabilityType6] = field(
             default_factory=list,
@@ -182,14 +189,14 @@ class ServiceRuleType6:
                 "name": "ApplicableLevels",
                 "type": "Attribute",
                 "tokens": True,
-            }
+            },
         )
         provider_defined_applicable_levels: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderDefinedApplicableLevels",
                 "type": "Attribute",
-            }
+            },
         )
 
         @dataclass
@@ -200,7 +207,10 @@ class ServiceRuleType6:
             application_limit
                 The application limits for a particular level
             """
-            application_limit: list[OptionalServiceApplicationLimitType6] = field(
+
+            application_limit: list[
+                OptionalServiceApplicationLimitType6
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "ApplicationLimit",
@@ -208,7 +218,7 @@ class ServiceRuleType6:
                     "namespace": "http://www.travelport.com/schema/common_v38_0",
                     "min_occurs": 1,
                     "max_occurs": 10,
-                }
+                },
             )
 
     @dataclass
@@ -225,6 +235,7 @@ class ServiceRuleType6:
             Indicates the actual provider defined modification type which is
             mapped to Other
         """
+
         modify_rule: list[ServiceRuleType6.ModifyRules.ModifyRule] = field(
             default_factory=list,
             metadata={
@@ -233,7 +244,7 @@ class ServiceRuleType6:
                 "namespace": "http://www.travelport.com/schema/common_v38_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
         supported_modifications: list[ModificationType6] = field(
             default_factory=list,
@@ -241,14 +252,14 @@ class ServiceRuleType6:
                 "name": "SupportedModifications",
                 "type": "Attribute",
                 "tokens": True,
-            }
+            },
         )
         provider_defined_modification_type: None | str = field(
             default=None,
             metadata={
                 "name": "ProviderDefinedModificationType",
                 "type": "Attribute",
-            }
+            },
         )
 
         @dataclass
@@ -273,48 +284,49 @@ class ServiceRuleType6:
                 Indicates the actual provider defined modification type
                 which is mapped to Other
             """
+
             modification: None | ModificationType6 = field(
                 default=None,
                 metadata={
                     "name": "Modification",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
             automatically_applied_on_add: bool = field(
                 default=False,
                 metadata={
                     "name": "AutomaticallyAppliedOnAdd",
                     "type": "Attribute",
-                }
+                },
             )
             can_delete: None | bool = field(
                 default=None,
                 metadata={
                     "name": "CanDelete",
                     "type": "Attribute",
-                }
+                },
             )
             can_add: None | bool = field(
                 default=None,
                 metadata={
                     "name": "CanAdd",
                     "type": "Attribute",
-                }
+                },
             )
             refundable: None | bool = field(
                 default=None,
                 metadata={
                     "name": "Refundable",
                     "type": "Attribute",
-                }
+                },
             )
             provider_defined_modification_type: None | str = field(
                 default=None,
                 metadata={
                     "name": "ProviderDefinedModificationType",
                     "type": "Attribute",
-                }
+                },
             )
 
     @dataclass
@@ -326,7 +338,10 @@ class ServiceRuleType6:
             Lists a single secondary code for the optional / additional
             service.
         """
-        secondary_type_rule: list[ServiceRuleType6.SecondaryTypeRules.SecondaryTypeRule] = field(
+
+        secondary_type_rule: list[
+            ServiceRuleType6.SecondaryTypeRules.SecondaryTypeRule
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SecondaryTypeRule",
@@ -334,7 +349,7 @@ class ServiceRuleType6:
                 "namespace": "http://www.travelport.com/schema/common_v38_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
         @dataclass
@@ -347,14 +362,17 @@ class ServiceRuleType6:
                 The unique type to associate a secondary type in an optional
                 service
             """
-            application_limit: list[OptionalServiceApplicationLimitType6] = field(
+
+            application_limit: list[
+                OptionalServiceApplicationLimitType6
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "ApplicationLimit",
                     "type": "Element",
                     "namespace": "http://www.travelport.com/schema/common_v38_0",
                     "max_occurs": 10,
-                }
+                },
             )
             secondary_type: None | str = field(
                 default=None,
@@ -362,5 +380,5 @@ class ServiceRuleType6:
                     "name": "SecondaryType",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

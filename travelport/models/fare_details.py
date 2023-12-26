@@ -20,6 +20,7 @@ class FareDetails:
     fare_basis
         The fare basis code for this fare
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class FareDetails:
         metadata={
             "name": "FareTicketDesignator",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class FareDetails:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     passenger_detail_ref: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class FareDetails:
             "name": "PassengerDetailRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     fare_basis: None | str = field(
         default=None,
@@ -53,5 +54,5 @@ class FareDetails:
             "type": "Attribute",
             "required": True,
             "max_length": 20,
-        }
+        },
     )

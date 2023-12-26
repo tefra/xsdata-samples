@@ -16,7 +16,7 @@ class AirScheduleSearchPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class AirScheduleSearchPortTypeServiceInput:
                 "name": "ScheduleSearchReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            }
+            },
         )

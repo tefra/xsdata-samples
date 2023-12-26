@@ -15,5 +15,5 @@ class Cosh:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

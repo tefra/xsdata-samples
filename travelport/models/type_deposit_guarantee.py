@@ -2,8 +2,12 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 from xsdata.models.datatype import XmlDate
-from travelport.models.type_deposit_guarantee_option_type import TypeDepositGuaranteeOptionType
-from travelport.models.type_deposit_guarantee_type import TypeDepositGuaranteeType
+from travelport.models.type_deposit_guarantee_option_type import (
+    TypeDepositGuaranteeOptionType,
+)
+from travelport.models.type_deposit_guarantee_type import (
+    TypeDepositGuaranteeType,
+)
 from travelport.models.type_reserve_requirement import TypeReserveRequirement
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
@@ -41,6 +45,7 @@ class TypeDepositGuarantee:
         If true, the rental information passes the guarantee or deposit
         requirements.
     """
+
     class Meta:
         name = "typeDepositGuarantee"
 
@@ -50,61 +55,61 @@ class TypeDepositGuarantee:
             "name": "Purpose",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | TypeDepositGuaranteeType = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     percent: None | Decimal = field(
         default=None,
         metadata={
             "name": "Percent",
             "type": "Attribute",
-        }
+        },
     )
     due_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DueDate",
             "type": "Attribute",
-        }
+        },
     )
     number_of_days: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfDays",
             "type": "Attribute",
-        }
+        },
     )
     option_type: None | TypeDepositGuaranteeOptionType = field(
         default=None,
         metadata={
             "name": "OptionType",
             "type": "Attribute",
-        }
+        },
     )
     required: None | bool = field(
         default=None,
         metadata={
             "name": "Required",
             "type": "Attribute",
-        }
+        },
     )
     requirement_passed: None | bool = field(
         default=None,
         metadata={
             "name": "RequirementPassed",
             "type": "Attribute",
-        }
+        },
     )

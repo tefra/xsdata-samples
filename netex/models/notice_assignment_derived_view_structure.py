@@ -21,7 +21,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_ref: Optional[NoticeRef] = field(
         default=None,
@@ -29,7 +29,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "NoticeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mark: Optional[str] = field(
         default=None,
@@ -37,7 +37,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "Mark",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mark_url: Optional[str] = field(
         default=None,
@@ -45,7 +45,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "MarkUrl",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     publicity_channel: Optional[PublicityChannelEnumeration] = field(
         default=None,
@@ -53,7 +53,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "PublicityChannel",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     advertised: Optional[bool] = field(
         default=None,
@@ -61,7 +61,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "Advertised",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text: Optional[MultilingualString] = field(
         default=None,
@@ -69,7 +69,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "Text",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -77,7 +77,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_code: Optional[str] = field(
         default=None,
@@ -85,7 +85,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "ShortCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -93,7 +93,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_notice_ref: Optional[TypeOfNoticeRef] = field(
         default=None,
@@ -101,7 +101,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "TypeOfNoticeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     can_be_advertised: Optional[bool] = field(
         default=None,
@@ -109,11 +109,11 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "CanBeAdvertised",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

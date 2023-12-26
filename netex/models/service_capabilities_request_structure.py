@@ -14,7 +14,7 @@ class ServiceCapabilitiesRequestStructure(AbstractServiceRequestStructure):
             "name": "ParticipantPermissions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     extensions: Optional[Extensions1] = field(
         default=None,
@@ -22,11 +22,11 @@ class ServiceCapabilitiesRequestStructure(AbstractServiceRequestStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     version: str = field(
         default="2.0",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

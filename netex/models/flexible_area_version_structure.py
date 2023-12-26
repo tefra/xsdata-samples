@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .destination_display_views_rel_structure import DestinationDisplayViewsRelStructure
+from .destination_display_views_rel_structure import (
+    DestinationDisplayViewsRelStructure,
+)
 from .flexible_quay_version_structure import FlexibleQuayVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -16,5 +18,5 @@ class FlexibleAreaVersionStructure(FlexibleQuayVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

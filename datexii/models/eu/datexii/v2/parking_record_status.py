@@ -3,19 +3,39 @@ from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.parking_access_status import ParkingAccessStatus
-from datexii.models.eu.datexii.v2.parking_conditions_enum import ParkingConditionsEnum
+from datexii.models.eu.datexii.v2.parking_access_status import (
+    ParkingAccessStatus,
+)
+from datexii.models.eu.datexii.v2.parking_conditions_enum import (
+    ParkingConditionsEnum,
+)
 from datexii.models.eu.datexii.v2.parking_fault_enum import ParkingFaultEnum
 from datexii.models.eu.datexii.v2.parking_occupancy import ParkingOccupancy
-from datexii.models.eu.datexii.v2.parking_record_status_equipment_or_service_facility_index_parking_equipment_or_service_facility_status import ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus
-from datexii.models.eu.datexii.v2.parking_record_status_group_index_group_of_parking_spaces_status import ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus
-from datexii.models.eu.datexii.v2.parking_record_status_parking_space_index_parking_space_status import ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus
-from datexii.models.eu.datexii.v2.parking_record_status_scenario_index_parking_usage_scenario_status import ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus
-from datexii.models.eu.datexii.v2.parking_record_versioned_reference import ParkingRecordVersionedReference
-from datexii.models.eu.datexii.v2.parking_route_status import ParkingRouteStatus
-from datexii.models.eu.datexii.v2.parking_status_validity import ParkingStatusValidity
+from datexii.models.eu.datexii.v2.parking_record_status_equipment_or_service_facility_index_parking_equipment_or_service_facility_status import (
+    ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus,
+)
+from datexii.models.eu.datexii.v2.parking_record_status_group_index_group_of_parking_spaces_status import (
+    ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus,
+)
+from datexii.models.eu.datexii.v2.parking_record_status_parking_space_index_parking_space_status import (
+    ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus,
+)
+from datexii.models.eu.datexii.v2.parking_record_status_scenario_index_parking_usage_scenario_status import (
+    ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus,
+)
+from datexii.models.eu.datexii.v2.parking_record_versioned_reference import (
+    ParkingRecordVersionedReference,
+)
+from datexii.models.eu.datexii.v2.parking_route_status import (
+    ParkingRouteStatus,
+)
+from datexii.models.eu.datexii.v2.parking_status_validity import (
+    ParkingStatusValidity,
+)
 from datexii.models.eu.datexii.v2.parking_thresholds import ParkingThresholds
-from datexii.models.eu.datexii.v2.winter_equipment_management_type_enum import WinterEquipmentManagementTypeEnum
+from datexii.models.eu.datexii.v2.winter_equipment_management_type_enum import (
+    WinterEquipmentManagementTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -61,14 +81,17 @@ class ParkingRecordStatus:
     :ivar parking_route_status:
     :ivar parking_record_status_extension:
     """
-    parking_record_reference: Optional[ParkingRecordVersionedReference] = field(
+
+    parking_record_reference: Optional[
+        ParkingRecordVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "parkingRecordReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_status_origin_time: Optional[XmlDateTime] = field(
         default=None,
@@ -77,7 +100,7 @@ class ParkingRecordStatus:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_status_description: Optional[MultilingualString] = field(
         default=None,
@@ -85,7 +108,7 @@ class ParkingRecordStatus:
             "name": "parkingStatusDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_queueing_time: Optional[float] = field(
         default=None,
@@ -93,7 +116,7 @@ class ParkingRecordStatus:
             "name": "parkingQueueingTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_conditions: Optional[ParkingConditionsEnum] = field(
         default=None,
@@ -101,7 +124,7 @@ class ParkingRecordStatus:
             "name": "parkingConditions",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     blurred_availability: List[bool] = field(
         default_factory=list,
@@ -109,7 +132,7 @@ class ParkingRecordStatus:
             "name": "blurredAvailability",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_fault: List[ParkingFaultEnum] = field(
         default_factory=list,
@@ -117,23 +140,27 @@ class ParkingRecordStatus:
             "name": "parkingFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    winter_equipment_management_type: List[WinterEquipmentManagementTypeEnum] = field(
+    winter_equipment_management_type: List[
+        WinterEquipmentManagementTypeEnum
+    ] = field(
         default_factory=list,
         metadata={
             "name": "winterEquipmentManagementType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_space_status: List[ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus] = field(
+    parking_space_status: List[
+        ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingSpaceStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_occupancy: Optional[ParkingOccupancy] = field(
         default=None,
@@ -142,15 +169,17 @@ class ParkingRecordStatus:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    group_of_parking_spaces_status: List[ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus] = field(
+    group_of_parking_spaces_status: List[
+        ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus
+    ] = field(
         default_factory=list,
         metadata={
             "name": "groupOfParkingSpacesStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_status_validity: Optional[ParkingStatusValidity] = field(
         default=None,
@@ -158,7 +187,7 @@ class ParkingRecordStatus:
             "name": "parkingStatusValidity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     override_parking_thresholds: Optional[ParkingThresholds] = field(
         default=None,
@@ -166,23 +195,27 @@ class ParkingRecordStatus:
             "name": "overrideParkingThresholds",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_equipment_or_service_facility_status: List[ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus] = field(
+    parking_equipment_or_service_facility_status: List[
+        ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingEquipmentOrServiceFacilityStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_usage_scenario_status: List[ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus] = field(
+    parking_usage_scenario_status: List[
+        ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingUsageScenarioStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_access_status: List[ParkingAccessStatus] = field(
         default_factory=list,
@@ -190,7 +223,7 @@ class ParkingRecordStatus:
             "name": "parkingAccessStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_route_status: List[ParkingRouteStatus] = field(
         default_factory=list,
@@ -198,7 +231,7 @@ class ParkingRecordStatus:
             "name": "parkingRouteStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_record_status_extension: Optional[ExtensionType] = field(
         default=None,
@@ -206,5 +239,5 @@ class ParkingRecordStatus:
             "name": "parkingRecordStatusExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

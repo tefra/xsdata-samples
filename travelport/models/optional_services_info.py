@@ -18,7 +18,7 @@ class OptionalServicesInfo:
             "name": "AirPricingSolution",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -27,7 +27,7 @@ class OptionalServicesInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     form_of_payment_ref: list[FormOfPaymentRef1] = field(
         default_factory=list,
@@ -36,5 +36,5 @@ class OptionalServicesInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

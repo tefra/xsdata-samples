@@ -80,26 +80,26 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            value="REQUEST",
-                            ref="hde:TimetableFrameTIM_23_O"
+                            value='REQUEST',
+                            ref='hde:TimetableFrameTIM_23_O'
                         ),
                     ]
                 ),
@@ -108,102 +108,102 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple timetable frame with two journeys and service calendar"
+        value='Example  of simple timetable frame with two journeys and service calendar'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="hde:CAL_02",
-                version="2",
+                id='hde:CAL_02',
+                version='2',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="mybus:svf_12",
-                            version="1",
+                            id='mybus:svf_12',
+                            version='1',
                             name=MultilingualString(
-                                value="Stops for Winter timetable for route 24 "
+                                value='Stops for Winter timetable for route 24 '
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:LN_24",
-                                        version="any",
+                                        id='mybus:LN_24',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 24 Alpha to Charley"
+                                            value='Line 24 Alpha to Charley'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 24"
+                                            value='Line 24'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="24"
+                                        public_code='24'
                                     ),
                                 ]
                             ),
                             destination_displays=DestinationDisplaysInFrameRelStructure(
                                 destination_display=[
                                     DestinationDisplay(
-                                        id="mybus:DST_Bravo",
-                                        version="any",
+                                        id='mybus:DST_Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Road"
+                                            value='Bravo Road'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bravo Rd"
+                                            value='Bravo Rd'
                                         ),
-                                        public_code="BRAV"
+                                        public_code='BRAV'
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Charley",
-                                        version="any",
+                                        id='mybus:DST_Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Cresecnt"
+                                            value='Charley Cresecnt'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Charley C"
+                                            value='Charley C'
                                         ),
-                                        public_code="CHAS"
+                                        public_code='CHAS'
                                     ),
                                 ]
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha &amp; Castle"
+                                            value='Alpha & Castle'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Alpha"
+                                            value='Alpha'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="ALPH"
+                                            value='ALPH'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -211,21 +211,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Street"
+                                            value='Bravo Street'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="BRAV"
+                                            value='BRAV'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -233,21 +233,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Crescent"
+                                            value='Charley Crescent'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="CHAS"
+                                            value='CHAS'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -255,21 +255,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_015",
-                                        version="any",
+                                        id='mybus:SSP_015',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Park Lane"
+                                            value='Park Lane'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Park Lane"
+                                            value='Park Lane'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="PARK"
+                                            value='PARK'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -280,27 +280,27 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="hde:TIM_23_O",
+                            id='hde:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="hde:Cnd001",
-                                            version="any",
+                                            id='hde:Cnd001',
+                                            version='any',
                                             description=MultilingualString(
-                                                value="Sept  to March"
+                                                value='Sept  to March'
                                             ),
                                             from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2011, 3, 31, 0, 0, 0, 0, 0),
                                             day_types=DayTypesRelStructure(
                                                 choice=[
                                                     DayTypeRef(
-                                                        version="any",
-                                                        ref="hde:DT_01-MF-NH"
+                                                        version='any',
+                                                        ref='hde:DT_01-MF-NH'
                                                     ),
                                                     DayTypeRef(
-                                                        version="any",
-                                                        ref="hde:DT_03-WE-NH"
+                                                        version='any',
+                                                        ref='hde:DT_03-WE-NH'
                                                     ),
                                                 ]
                                             )
@@ -308,13 +308,13 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            version="2",
+                            version='2',
                             name=MultilingualString(
-                                value="Winter timetable for route 23 outbound"
+                                value='Winter timetable for route 23 outbound'
                             ),
                             baseline_version_frame_ref=VersionRefStructure(
-                                name_of_ref_class="TimetableFrame",
-                                ref="hde:1"
+                                name_of_ref_class='TimetableFrame',
+                                ref='hde:1'
                             ),
                             vehicle_modes=[
                                 VehicleModeEnumeration.BUS,
@@ -322,53 +322,53 @@ obj = PublicationDelivery(
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
                                     ServiceJourney(
-                                        id="hde:sj_24o_01",
-                                        version="2",
+                                        id='hde:sj_24o_01',
+                                        version='2',
                                         service_alteration=ServiceAlterationEnumeration.CANCELLATION,
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServiceJourneyPatternRef(
-                                            value="EXTERNAL",
-                                            ref="hde:jp_24o"
+                                            value='EXTERNAL',
+                                            ref='hde:jp_24o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            value="EXTERNAL",
-                                            ref="mybus:td_01"
+                                            value='EXTERNAL',
+                                            ref='mybus:td_01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:BLK_24o5"
+                                            value='EXTERNAL',
+                                            ref='mybus:BLK_24o5'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_24"
+                                            version='any',
+                                            ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                value="EXTERNAL",
-                                                ref="mybus:RT_24o"
+                                                value='EXTERNAL',
+                                                ref='mybus:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Charley"
+                                                version='any',
+                                                ref='mybus:DST_Charley'
                                             )
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_24o_01_001",
-                                                    version="any",
+                                                    id='hde:sj_24o_01_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -379,11 +379,11 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_01_002",
-                                                    version="any",
+                                                    id='hde:sj_24o_01_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(14, 30, 0, 0, 0)
@@ -393,16 +393,16 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT2M")
                                                     ),
                                                     note=MultilingualString(
-                                                        value="Arrival at Terminus"
+                                                        value='Arrival at Terminus'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_01_003",
-                                                    version="any",
+                                                    id='hde:sj_24o_01_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 10, 0, 0, 0)
@@ -417,60 +417,60 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="hde:sfs_24o_01"
+                                                    version='any',
+                                                    ref='hde:sfs_24o_01'
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_24o_02",
-                                        version="2",
+                                        id='hde:sj_24o_02',
+                                        version='2',
                                         service_alteration=ServiceAlterationEnumeration.PLANNED,
                                         departure_time=XmlTime(15, 30, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServiceJourneyPatternRef(
-                                            value="EXTERNAL",
-                                            ref="hde:jp_24o"
+                                            value='EXTERNAL',
+                                            ref='hde:jp_24o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            value="EXTERNAL",
-                                            ref="mybus:td_01"
+                                            value='EXTERNAL',
+                                            ref='mybus:td_01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:BLK_24o5"
+                                            value='EXTERNAL',
+                                            ref='mybus:BLK_24o5'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_24"
+                                            version='any',
+                                            ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                value="EXTERNAL",
-                                                ref="mybus:RT_24o"
+                                                value='EXTERNAL',
+                                                ref='mybus:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Charley"
+                                                version='any',
+                                                ref='mybus:DST_Charley'
                                             )
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_24o_02",
-                                                    version="any",
+                                                    id='hde:sj_24o_02',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -482,8 +482,8 @@ obj = PublicationDelivery(
                                                         none_or_via=[
                                                             ViaVersionedChildStructure(
                                                                 destination_display_ref_or_destination_display_view_or_name=DestinationDisplayRef(
-                                                                    version="any",
-                                                                    ref="mybus:DST_Bravo"
+                                                                    version='any',
+                                                                    ref='mybus:DST_Bravo'
                                                                 )
                                                             ),
                                                         ]
@@ -492,11 +492,11 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_02",
-                                                    version="any",
+                                                    id='hde:sj_24o_02',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 40, 0, 0, 0)
@@ -508,11 +508,11 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_02",
-                                                    version="any",
+                                                    id='hde:sj_24o_02',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 20, 0, 0, 0)
@@ -527,21 +527,21 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="hde:sfs_24o_01"
+                                                    version='any',
+                                                    ref='hde:sfs_24o_01'
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="hde:sj_24o_03",
-                                        version="1",
+                                        id='hde:sj_24o_03',
+                                        version='1',
                                         notice_assignments=NoticeAssignmentsRelStructure(
                                             sales_notice_assignment_or_notice_assignment_or_notice_assignment_view=[
                                                 NoticeAssignmentView(
                                                     advertised=True,
                                                     text=MultilingualString(
-                                                        value="foot note text"
+                                                        value='foot note text'
                                                     )
                                                 ),
                                             ]
@@ -551,46 +551,46 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NH"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         choice=ServiceJourneyPatternRef(
-                                            value="EXTERNAL",
-                                            ref="hde:jp_24o"
+                                            value='EXTERNAL',
+                                            ref='hde:jp_24o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            value="EXTERNAL",
-                                            ref="mybus:td_01"
+                                            value='EXTERNAL',
+                                            ref='mybus:td_01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:BLK_24o5"
+                                            value='EXTERNAL',
+                                            ref='mybus:BLK_24o5'
                                         ),
                                         choice_1=LineRef(
-                                            version="any",
-                                            ref="mybus:LN_24"
+                                            version='any',
+                                            ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                value="EXTERNAL",
-                                                ref="mybus:RT_24o"
+                                                value='EXTERNAL',
+                                                ref='mybus:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="mybus:DST_Charley"
+                                                version='any',
+                                                ref='mybus:DST_Charley'
                                             )
                                         ),
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="hde:sj_24o_03",
-                                                    version="any",
+                                                    id='hde:sj_24o_03',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -602,8 +602,8 @@ obj = PublicationDelivery(
                                                         none_or_via=[
                                                             ViaVersionedChildStructure(
                                                                 destination_display_ref_or_destination_display_view_or_name=DestinationDisplayRef(
-                                                                    version="any",
-                                                                    ref="mybus:DST_Bravo"
+                                                                    version='any',
+                                                                    ref='mybus:DST_Bravo'
                                                                 )
                                                             ),
                                                         ]
@@ -612,11 +612,11 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_03",
-                                                    version="any",
+                                                    id='hde:sj_24o_03',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 30, 0, 0, 0)
@@ -628,11 +628,11 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="hde:sj_24o_03",
-                                                    version="any",
+                                                    id='hde:sj_24o_03',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(17, 10, 0, 0, 0)
@@ -647,8 +647,8 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="hde:sfs_24o_01"
+                                                    version='any',
+                                                    ref='hde:sfs_24o_01'
                                                 ),
                                             ]
                                         )
@@ -658,11 +658,11 @@ obj = PublicationDelivery(
                             service_facility_sets=ServiceFacilitySetsInFrameRelStructure(
                                 service_facility_set=[
                                     ServiceFacilitySet(
-                                        id="hde:sfs_24o_01",
-                                        version="any",
+                                        id='hde:sfs_24o_01',
+                                        version='any',
                                         provided_by_ref=OrganisationRefStructure(
-                                            value="EXTERNAL",
-                                            ref="xyz:4567"
+                                            value='EXTERNAL',
+                                            ref='xyz:4567'
                                         ),
                                         assistance_facility_list=[
                                             AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
@@ -692,24 +692,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="hde:CAL_02",
-                            version="any",
+                            id='hde:CAL_02',
+                            version='any',
                             name=MultilingualString(
-                                value="Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  "
+                                value='Service Calendar Nov 2010 ALTERNATE MORE COMPACT Coding  '
                             ),
                             service_calendar=ServiceCalendar(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDate(2010, 11, 1),
                                 to_date=XmlDate(2010, 11, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="hde:DT_01-MF-NH",
-                                        version="any",
+                                        id='hde:DT_01-MF-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekdays unless a holiday"
+                                            value='Weekdays unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -729,10 +729,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="hde:DT_02-AA-NH",
-                                        version="any",
+                                        id='hde:DT_02-AA-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Everyday unless a holiday"
+                                            value='Everyday unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -748,10 +748,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="hde:DT_03-WE-NH",
-                                        version="any",
+                                        id='hde:DT_03-WE-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekends unless a holiday"
+                                            value='Weekends unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -768,10 +768,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="hde:DT_04-AA-NH",
-                                        version="any",
+                                        id='hde:DT_04-AA-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Holidays"
+                                            value='Holidays'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -791,185 +791,185 @@ obj = PublicationDelivery(
                             day_type_assignments=DayTypeAssignmentsInFrameRelStructure(
                                 day_type_assignment=[
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-01",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2010-11-01"
+                                            value='Monday 2010-11-01'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 1),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-02",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Tuesday 2010-11-02"
+                                            value='Tuesday 2010-11-02'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-03",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Wednesday 2010-11-03"
+                                            value='Wednesday 2010-11-03'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-04",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Thusday 2010-11-04"
+                                            value='Thusday 2010-11-04'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-05",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-05',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="MFriday 2010-11-05"
+                                            value='MFriday 2010-11-05'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-06",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-06',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2010-11-06"
+                                            value='Saturday 2010-11-06'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 6),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_03-WE-NH"
+                                            version='any',
+                                            ref='hde:DT_03-WE-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-07",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-07',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2010-11-07"
+                                            value='Sunday 2010-11-07'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 7),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_03-WE-NH"
+                                            version='any',
+                                            ref='hde:DT_03-WE-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-08",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-08',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2010-11-08"
+                                            value='Monday 2010-11-08'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 8),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-09",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-09',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Tuesday 2010-11-09"
+                                            value='Tuesday 2010-11-09'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 9),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-10",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-10',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Wednesday 2010-11-10"
+                                            value='Wednesday 2010-11-10'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 10),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-11",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-11',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Thusday 2010-11-11"
+                                            value='Thusday 2010-11-11'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 11),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-12",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-12',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="MFriday 2010-11-12"
+                                            value='MFriday 2010-11-12'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 12),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_01-MF-NH"
+                                            version='any',
+                                            ref='hde:DT_01-MF-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-113",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-113',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2010-11-13"
+                                            value='Saturday 2010-11-13'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 13),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_03-WE-NH"
+                                            version='any',
+                                            ref='hde:DT_03-WE-NH'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="hde:DayAsgn_2010-11-14",
-                                        version="any",
+                                        id='hde:DayAsgn_2010-11-14',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2010-11-14"
+                                            value='Sunday 2010-11-14'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 14),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="hde:DT_03-WE-NH"
+                                            version='any',
+                                            ref='hde:DT_03-WE-NH'
                                         )
                                     ),
                                 ]

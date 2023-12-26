@@ -16,8 +16,12 @@ from .multilanguage_long_name import MultilanguageLongName
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .secure_communication_authentication_props_subtypes_enum import SecureCommunicationAuthenticationPropsSubtypesEnum
-from .secure_communication_freshness_props_subtypes_enum import SecureCommunicationFreshnessPropsSubtypesEnum
+from .secure_communication_authentication_props_subtypes_enum import (
+    SecureCommunicationAuthenticationPropsSubtypesEnum,
+)
+from .secure_communication_freshness_props_subtypes_enum import (
+    SecureCommunicationFreshnessPropsSubtypesEnum,
+)
 from .secure_communication_props import SecureCommunicationProps
 from .secured_pdu_header_enum import SecuredPduHeaderEnum
 from .short_name_fragment import ShortNameFragment
@@ -126,6 +130,7 @@ class SecuredIPdu:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SECURED-I-PDU"
 
@@ -136,7 +141,7 @@ class SecuredIPdu:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["SecuredIPdu.ShortNameFragments"] = field(
         default=None,
@@ -144,7 +149,7 @@ class SecuredIPdu:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -152,7 +157,7 @@ class SecuredIPdu:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -160,7 +165,7 @@ class SecuredIPdu:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -168,7 +173,7 @@ class SecuredIPdu:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -176,7 +181,7 @@ class SecuredIPdu:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -184,7 +189,7 @@ class SecuredIPdu:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SecuredIPdu.Annotations"] = field(
         default=None,
@@ -192,7 +197,7 @@ class SecuredIPdu:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -200,7 +205,7 @@ class SecuredIPdu:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     has_dynamic_length: Optional[Boolean] = field(
         default=None,
@@ -208,7 +213,7 @@ class SecuredIPdu:
             "name": "HAS-DYNAMIC-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     length: Optional[Integer] = field(
         default=None,
@@ -216,7 +221,7 @@ class SecuredIPdu:
             "name": "LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     meta_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -224,7 +229,7 @@ class SecuredIPdu:
             "name": "META-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     contained_i_pdu_props: Optional[ContainedIPduProps] = field(
         default=None,
@@ -232,15 +237,17 @@ class SecuredIPdu:
             "name": "CONTAINED-I-PDU-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    authentication_props_ref: Optional["SecuredIPdu.AuthenticationPropsRef"] = field(
+    authentication_props_ref: Optional[
+        "SecuredIPdu.AuthenticationPropsRef"
+    ] = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_props_ref: Optional["SecuredIPdu.FreshnessPropsRef"] = field(
         default=None,
@@ -248,7 +255,7 @@ class SecuredIPdu:
             "name": "FRESHNESS-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     payload_ref: Optional["SecuredIPdu.PayloadRef"] = field(
         default=None,
@@ -256,7 +263,7 @@ class SecuredIPdu:
             "name": "PAYLOAD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     secure_communication_props: Optional[SecureCommunicationProps] = field(
         default=None,
@@ -264,7 +271,7 @@ class SecuredIPdu:
             "name": "SECURE-COMMUNICATION-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_as_cryptographic_i_pdu: Optional[Boolean] = field(
         default=None,
@@ -272,7 +279,7 @@ class SecuredIPdu:
             "name": "USE-AS-CRYPTOGRAPHIC-I-PDU",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_secured_pdu_header: Optional[SecuredPduHeaderEnum] = field(
         default=None,
@@ -280,14 +287,14 @@ class SecuredIPdu:
             "name": "USE-SECURED-PDU-HEADER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -295,14 +302,14 @@ class SecuredIPdu:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -313,7 +320,7 @@ class SecuredIPdu:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -324,18 +331,20 @@ class SecuredIPdu:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AuthenticationPropsRef(Ref):
-        dest: Optional[SecureCommunicationAuthenticationPropsSubtypesEnum] = field(
+        dest: Optional[
+            SecureCommunicationAuthenticationPropsSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -346,7 +355,7 @@ class SecuredIPdu:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -357,5 +366,5 @@ class SecuredIPdu:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

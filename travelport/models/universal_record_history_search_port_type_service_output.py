@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.error_info_1 import ErrorInfo1
-from travelport.models.universal_record_history_search_rsp import UniversalRecordHistorySearchRsp
+from travelport.models.universal_record_history_search_rsp import (
+    UniversalRecordHistorySearchRsp,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -12,12 +14,14 @@ class UniversalRecordHistorySearchPortTypeServiceOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: None | UniversalRecordHistorySearchPortTypeServiceOutput.Body = field(
-        default=None,
-        metadata={
-            "name": "Body",
-            "type": "Element",
-        }
+    body: None | UniversalRecordHistorySearchPortTypeServiceOutput.Body = (
+        field(
+            default=None,
+            metadata={
+                "name": "Body",
+                "type": "Element",
+            },
+        )
     )
 
     @dataclass
@@ -28,14 +32,14 @@ class UniversalRecordHistorySearchPortTypeServiceOutput:
                 "name": "UniversalRecordHistorySearchRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/universal_v52_0",
-            }
+            },
         )
         fault: None | UniversalRecordHistorySearchPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +49,28 @@ class UniversalRecordHistorySearchPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             detail: None | UniversalRecordHistorySearchPortTypeServiceOutput.Body.Fault.Detail = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
 
             @dataclass
@@ -77,5 +81,5 @@ class UniversalRecordHistorySearchPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

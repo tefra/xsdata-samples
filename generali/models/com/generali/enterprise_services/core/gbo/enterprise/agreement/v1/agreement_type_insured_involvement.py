@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insured_involvement import InsuredInvolvement
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insured_involvement import (
+    InsuredInvolvement,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -16,5 +20,5 @@ class AgreementTypeInsuredInvolvement:
             "name": "Insured",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

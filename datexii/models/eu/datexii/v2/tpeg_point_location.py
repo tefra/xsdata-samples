@@ -15,6 +15,7 @@ class TpegPointLocation:
     :ivar tpeg_direction: The direction of traffic flow.
     :ivar tpeg_point_location_extension:
     """
+
     tpeg_direction: Optional[DirectionEnum] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class TpegPointLocation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     tpeg_point_location_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class TpegPointLocation:
             "name": "tpegPointLocationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

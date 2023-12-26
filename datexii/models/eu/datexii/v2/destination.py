@@ -11,11 +11,12 @@ class Destination:
 
     This may be either a point location or an area location.
     """
+
     destination_extension: Optional[ExtensionType] = field(
         default=None,
         metadata={
             "name": "destinationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

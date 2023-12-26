@@ -1,15 +1,19 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef
-from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from .journey_timing_versioned_child_structure import (
+    JourneyTimingVersionedChildStructure,
+)
 from .vehicle_type_preference_ref import VehicleTypePreferenceRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class VehicleTypePreferenceVersionedChildStructure(JourneyTimingVersionedChildStructure):
+class VehicleTypePreferenceVersionedChildStructure(
+    JourneyTimingVersionedChildStructure
+):
     class Meta:
         name = "VehicleTypePreference_VersionedChildStructure"
 
@@ -19,9 +23,11 @@ class VehicleTypePreferenceVersionedChildStructure(JourneyTimingVersionedChildSt
             "name": "Rank",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[
+        Union[FareDayTypeRef, DayTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -37,7 +43,7 @@ class VehicleTypePreferenceVersionedChildStructure(JourneyTimingVersionedChildSt
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     vehicle_type_preference_ref: Optional[VehicleTypePreferenceRef] = field(
         default=None,
@@ -45,5 +51,5 @@ class VehicleTypePreferenceVersionedChildStructure(JourneyTimingVersionedChildSt
             "name": "VehicleTypePreferenceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

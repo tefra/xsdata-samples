@@ -14,7 +14,9 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .short_name_fragment import ShortNameFragment
 from .sw_pointer_target_props import SwDataDefProps
 
@@ -116,6 +118,7 @@ class ImplementationDataTypeElement:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT"
 
@@ -126,15 +129,17 @@ class ImplementationDataTypeElement:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ImplementationDataTypeElement.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ImplementationDataTypeElement.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -142,7 +147,7 @@ class ImplementationDataTypeElement:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -150,7 +155,7 @@ class ImplementationDataTypeElement:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -158,7 +163,7 @@ class ImplementationDataTypeElement:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -166,7 +171,7 @@ class ImplementationDataTypeElement:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -174,7 +179,7 @@ class ImplementationDataTypeElement:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ImplementationDataTypeElement.Annotations"] = field(
         default=None,
@@ -182,7 +187,7 @@ class ImplementationDataTypeElement:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     array_impl_policy: Optional[ArrayImplPolicyEnum] = field(
         default=None,
@@ -190,7 +195,7 @@ class ImplementationDataTypeElement:
             "name": "ARRAY-IMPL-POLICY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     array_size: Optional[PositiveIntegerValueVariationPoint] = field(
         default=None,
@@ -198,7 +203,7 @@ class ImplementationDataTypeElement:
             "name": "ARRAY-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     array_size_handling: Optional[ArraySizeHandlingEnum] = field(
         default=None,
@@ -206,7 +211,7 @@ class ImplementationDataTypeElement:
             "name": "ARRAY-SIZE-HANDLING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     array_size_semantics: Optional[ArraySizeSemanticsEnum] = field(
         default=None,
@@ -214,7 +219,7 @@ class ImplementationDataTypeElement:
             "name": "ARRAY-SIZE-SEMANTICS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_optional: Optional[Boolean] = field(
         default=None,
@@ -222,15 +227,17 @@ class ImplementationDataTypeElement:
             "name": "IS-OPTIONAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sub_elements: Optional["ImplementationDataTypeElement.SubElements"] = field(
+    sub_elements: Optional[
+        "ImplementationDataTypeElement.SubElements"
+    ] = field(
         default=None,
         metadata={
             "name": "SUB-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_data_def_props: Optional[SwDataDefProps] = field(
         default=None,
@@ -238,7 +245,7 @@ class ImplementationDataTypeElement:
             "name": "SW-DATA-DEF-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -246,14 +253,14 @@ class ImplementationDataTypeElement:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -261,14 +268,14 @@ class ImplementationDataTypeElement:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -279,7 +286,7 @@ class ImplementationDataTypeElement:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -290,16 +297,18 @@ class ImplementationDataTypeElement:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SubElements:
-        implementation_data_type_element: List["ImplementationDataTypeElement"] = field(
+        implementation_data_type_element: List[
+            "ImplementationDataTypeElement"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

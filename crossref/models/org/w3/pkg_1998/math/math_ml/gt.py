@@ -15,5 +15,5 @@ class Gt:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -24,7 +24,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -32,7 +32,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -40,7 +40,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     external_interchange_ref: Optional[ExternalObjectRefStructure] = field(
         default=None,
@@ -48,7 +48,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "ExternalInterchangeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     connection_ref: Optional[ConnectionRefStructure] = field(
         default=None,
@@ -56,7 +56,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "ConnectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     priority: Optional[int] = field(
         default=None,
@@ -64,7 +64,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Priority",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stay_seated: Optional[bool] = field(
         default=None,
@@ -72,7 +72,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "StaySeated",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     cross_border: Optional[bool] = field(
         default=None,
@@ -80,7 +80,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "CrossBorder",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     planned: Optional[bool] = field(
         default=None,
@@ -88,7 +88,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Planned",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     guaranteed: Optional[bool] = field(
         default=None,
@@ -96,7 +96,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Guaranteed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     advertised: Optional[bool] = field(
         default=None,
@@ -104,7 +104,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Advertised",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     controlled: Optional[bool] = field(
         default=None,
@@ -112,7 +112,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Controlled",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     connection_certainty: Optional[ConnectionCertaintyEnumeration] = field(
         default=None,
@@ -120,7 +120,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "ConnectionCertainty",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     standard_wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -128,7 +128,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "StandardWaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -136,7 +136,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MaximumWaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_automatic_wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -144,7 +144,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MaximumAutomaticWaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     standard_transfer_time: Optional[XmlDuration] = field(
         default=None,
@@ -152,7 +152,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "StandardTransferTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_transfer_time: Optional[XmlDuration] = field(
         default=None,
@@ -160,7 +160,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MinimumTransferTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_transfer_time: Optional[XmlDuration] = field(
         default=None,
@@ -168,7 +168,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MaximumTransferTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     control_centre_notify_threshold: Optional[XmlDuration] = field(
         default=None,
@@ -176,7 +176,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "ControlCentreNotifyThreshold",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transfer_modes: List[AccessModeEnumeration] = field(
         default_factory=list,
@@ -185,7 +185,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -193,5 +193,5 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

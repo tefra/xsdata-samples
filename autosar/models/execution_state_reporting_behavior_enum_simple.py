@@ -10,5 +10,6 @@ class ExecutionStateReportingBehaviorEnumSimple(Enum):
     :cvar REPORTS_EXECUTION_STATE: The Executable shall report its
         execution state to the Execution Management.
     """
+
     DOES_NOT_REPORT_EXECUTION_STATE = "DOES-NOT-REPORT-EXECUTION-STATE"
     REPORTS_EXECUTION_STATE = "REPORTS-EXECUTION-STATE"

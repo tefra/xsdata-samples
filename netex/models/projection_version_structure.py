@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .complex_feature_ref import ComplexFeatureRef
 from .multilingual_string import MultilingualString
@@ -21,7 +21,7 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -29,9 +29,11 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref: Optional[object] = field(
+    complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref: Optional[
+        Union[ComplexFeatureRef, SimpleFeatureRef, SpatialFeatureRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -52,11 +54,11 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

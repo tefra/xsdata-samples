@@ -17,6 +17,7 @@ class RoadsideAssistanceTypeEnum(Enum):
     :cvar VEHICLE_RECOVERY: Vehicle recovery.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AIR_AMBULANCE = "airAmbulance"
     BUS_PASSENGER_ASSISTANCE = "busPassengerAssistance"
     EMERGENCY_SERVICES = "emergencyServices"

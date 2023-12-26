@@ -73,7 +73,7 @@ class AuctionResultResponseHeader:
         metadata={
             "name": "AuctionResultReference",
             "type": "Element",
-        }
+        },
     )
     auction_result_response_coded: str = field(
         metadata={
@@ -87,7 +87,7 @@ class AuctionResultResponseHeader:
         metadata={
             "name": "AuctionResultResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -101,7 +101,7 @@ class AuctionResultResponseHeader:
         metadata={
             "name": "GeneralNote",
             "type": "Element",
-        }
+        },
     )
 
 

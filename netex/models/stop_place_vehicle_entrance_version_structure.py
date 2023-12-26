@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .bus_submode_enumeration import BusSubmodeEnumeration
 from .coach_submode_enumeration import CoachSubmodeEnumeration
@@ -18,7 +18,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class StopPlaceVehicleEntranceVersionStructure(VehicleEntranceVersionStructure):
+class StopPlaceVehicleEntranceVersionStructure(
+    VehicleEntranceVersionStructure
+):
     class Meta:
         name = "StopPlaceVehicleEntrance_VersionStructure"
 
@@ -28,9 +30,22 @@ class StopPlaceVehicleEntranceVersionStructure(VehicleEntranceVersionStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            AirSubmodeEnumeration,
+            BusSubmodeEnumeration,
+            CoachSubmodeEnumeration,
+            FunicularSubmodeEnumeration,
+            MetroSubmodeEnumeration,
+            TramSubmodeEnumeration,
+            TelecabinSubmodeEnumeration,
+            RailSubmodeEnumeration,
+            WaterSubmodeEnumeration,
+            SnowAndIceSubmodeEnumeration,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -86,7 +101,7 @@ class StopPlaceVehicleEntranceVersionStructure(VehicleEntranceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     other_transport_modes: List[VehicleModeEnumeration] = field(
         default_factory=list,
@@ -95,7 +110,7 @@ class StopPlaceVehicleEntranceVersionStructure(VehicleEntranceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     tariff_zones: Optional[TariffZoneRefsRelStructure] = field(
         default=None,
@@ -103,5 +118,5 @@ class StopPlaceVehicleEntranceVersionStructure(VehicleEntranceVersionStructure):
             "name": "tariffZones",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

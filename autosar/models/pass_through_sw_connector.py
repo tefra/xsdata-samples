@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .abstract_provided_port_prototype_subtypes_enum import AbstractProvidedPortPrototypeSubtypesEnum
-from .abstract_required_port_prototype_subtypes_enum import AbstractRequiredPortPrototypeSubtypesEnum
+from .abstract_provided_port_prototype_subtypes_enum import (
+    AbstractProvidedPortPrototypeSubtypesEnum,
+)
+from .abstract_required_port_prototype_subtypes_enum import (
+    AbstractRequiredPortPrototypeSubtypesEnum,
+)
 from .annotation import (
     AdminData,
     Annotation,
@@ -12,7 +16,9 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .port_interface_mapping_subtypes_enum import PortInterfaceMappingSubtypesEnum
+from .port_interface_mapping_subtypes_enum import (
+    PortInterfaceMappingSubtypesEnum,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 
@@ -88,6 +94,7 @@ class PassThroughSwConnector:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PASS-THROUGH-SW-CONNECTOR"
 
@@ -98,15 +105,17 @@ class PassThroughSwConnector:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PassThroughSwConnector.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PassThroughSwConnector.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +123,7 @@ class PassThroughSwConnector:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +131,7 @@ class PassThroughSwConnector:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +139,7 @@ class PassThroughSwConnector:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +147,7 @@ class PassThroughSwConnector:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,7 +155,7 @@ class PassThroughSwConnector:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["PassThroughSwConnector.Annotations"] = field(
         default=None,
@@ -154,7 +163,7 @@ class PassThroughSwConnector:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mapping_ref: Optional["PassThroughSwConnector.MappingRef"] = field(
         default=None,
@@ -162,7 +171,7 @@ class PassThroughSwConnector:
             "name": "MAPPING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -170,30 +179,34 @@ class PassThroughSwConnector:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    provided_outer_port_ref: Optional["PassThroughSwConnector.ProvidedOuterPortRef"] = field(
+    provided_outer_port_ref: Optional[
+        "PassThroughSwConnector.ProvidedOuterPortRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROVIDED-OUTER-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    required_outer_port_ref: Optional["PassThroughSwConnector.RequiredOuterPortRef"] = field(
+    required_outer_port_ref: Optional[
+        "PassThroughSwConnector.RequiredOuterPortRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUIRED-OUTER-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -201,14 +214,14 @@ class PassThroughSwConnector:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -219,7 +232,7 @@ class PassThroughSwConnector:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -230,7 +243,7 @@ class PassThroughSwConnector:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,7 +254,7 @@ class PassThroughSwConnector:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -252,7 +265,7 @@ class PassThroughSwConnector:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -263,5 +276,5 @@ class PassThroughSwConnector:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

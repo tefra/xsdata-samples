@@ -64,6 +64,7 @@ class SavedTripActivity:
         Service which is the source for the references present in this
         element.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -73,7 +74,7 @@ class SavedTripActivity:
             "name": "BookingTravelerRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     search_passenger_ref: list[SavedTripActivity.SearchPassengerRef] = field(
         default_factory=list,
@@ -81,7 +82,7 @@ class SavedTripActivity:
             "name": "SearchPassengerRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     point_of_sale_ref: list[SavedTripActivity.PointOfSaleRef] = field(
         default_factory=list,
@@ -89,7 +90,7 @@ class SavedTripActivity:
             "name": "PointOfSaleRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     accounting_remark_ref: list[SavedTripActivity.AccountingRemarkRef] = field(
         default_factory=list,
@@ -97,7 +98,7 @@ class SavedTripActivity:
             "name": "AccountingRemarkRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     general_remark_ref: list[SavedTripActivity.GeneralRemarkRef] = field(
         default_factory=list,
@@ -105,39 +106,47 @@ class SavedTripActivity:
             "name": "GeneralRemarkRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    air_pricing_modifier_ref: list[SavedTripActivity.AirPricingModifierRef] = field(
+    air_pricing_modifier_ref: list[
+        SavedTripActivity.AirPricingModifierRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingModifierRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    air_pricing_solution_ref: list[SavedTripActivity.AirPricingSolutionRef] = field(
+    air_pricing_solution_ref: list[
+        SavedTripActivity.AirPricingSolutionRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AirPricingSolutionRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    vehicle_search_modifiers_ref: list[SavedTripActivity.VehicleSearchModifiersRef] = field(
+    vehicle_search_modifiers_ref: list[
+        SavedTripActivity.VehicleSearchModifiersRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "VehicleSearchModifiersRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    vehicle_date_location_ref: list[SavedTripActivity.VehicleDateLocationRef] = field(
+    vehicle_date_location_ref: list[
+        SavedTripActivity.VehicleDateLocationRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "VehicleDateLocationRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     special_equipment_ref: list[SavedTripActivity.SpecialEquipmentRef] = field(
         default_factory=list,
@@ -145,23 +154,27 @@ class SavedTripActivity:
             "name": "SpecialEquipmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    vehicle_special_request_ref: list[SavedTripActivity.VehicleSpecialRequestRef] = field(
+    vehicle_special_request_ref: list[
+        SavedTripActivity.VehicleSpecialRequestRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "VehicleSpecialRequestRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    payment_information_ref: list[SavedTripActivity.PaymentInformationRef] = field(
+    payment_information_ref: list[
+        SavedTripActivity.PaymentInformationRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "PaymentInformationRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     delivery_address_ref: list[SavedTripActivity.DeliveryAddressRef] = field(
         default_factory=list,
@@ -169,23 +182,27 @@ class SavedTripActivity:
             "name": "DeliveryAddressRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    collection_address_ref: list[SavedTripActivity.CollectionAddressRef] = field(
+    collection_address_ref: list[
+        SavedTripActivity.CollectionAddressRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CollectionAddressRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    flight_arrival_information_ref: list[SavedTripActivity.FlightArrivalInformationRef] = field(
+    flight_arrival_information_ref: list[
+        SavedTripActivity.FlightArrivalInformationRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "FlightArrivalInformationRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_ref: list[SavedTripActivity.VehicleRef] = field(
         default_factory=list,
@@ -193,7 +210,7 @@ class SavedTripActivity:
             "name": "VehicleRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vendor_location_ref: list[SavedTripActivity.VendorLocationRef] = field(
         default_factory=list,
@@ -201,7 +218,7 @@ class SavedTripActivity:
             "name": "VendorLocationRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_property_ref: list[SavedTripActivity.HotelPropertyRef] = field(
         default_factory=list,
@@ -209,7 +226,7 @@ class SavedTripActivity:
             "name": "HotelPropertyRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_stay_ref: list[SavedTripActivity.HotelStayRef] = field(
         default_factory=list,
@@ -217,23 +234,27 @@ class SavedTripActivity:
             "name": "HotelStayRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    hotel_rules_modifiers_ref: list[SavedTripActivity.HotelRulesModifiersRef] = field(
+    hotel_rules_modifiers_ref: list[
+        SavedTripActivity.HotelRulesModifiersRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "HotelRulesModifiersRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    hotel_details_modifiers_ref: list[SavedTripActivity.HotelDetailsModifiersRef] = field(
+    hotel_details_modifiers_ref: list[
+        SavedTripActivity.HotelDetailsModifiersRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "HotelDetailsModifiersRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rate_detail_ref: list[SavedTripActivity.HotelRateDetailRef] = field(
         default_factory=list,
@@ -241,7 +262,7 @@ class SavedTripActivity:
             "name": "HotelRateDetailRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     promotion_code_ref: list[SavedTripActivity.PromotionCodeRef] = field(
         default_factory=list,
@@ -249,15 +270,17 @@ class SavedTripActivity:
             "name": "PromotionCodeRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    rail_pricing_solution_ref: list[SavedTripActivity.RailPricingSolutionRef] = field(
+    rail_pricing_solution_ref: list[
+        SavedTripActivity.RailPricingSolutionRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "RailPricingSolutionRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     type_value: None | SavedTripActivityType = field(
         default=None,
@@ -265,7 +288,7 @@ class SavedTripActivity:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -276,7 +299,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -287,7 +310,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -298,7 +321,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -309,7 +332,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -320,7 +343,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -331,7 +354,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -342,7 +365,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -353,7 +376,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -364,7 +387,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -375,7 +398,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -386,7 +409,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -397,7 +420,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -408,7 +431,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -419,7 +442,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -430,7 +453,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -441,7 +464,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -452,7 +475,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -463,7 +486,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -474,7 +497,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -485,7 +508,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -496,7 +519,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -507,7 +530,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -518,7 +541,7 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -529,5 +552,5 @@ class SavedTripActivity:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

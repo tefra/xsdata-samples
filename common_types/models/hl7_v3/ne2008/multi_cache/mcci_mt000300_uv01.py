@@ -41,7 +41,7 @@ class McciMt000300Uv01AcknowledgementDetail:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -49,7 +49,7 @@ class McciMt000300Uv01AcknowledgementDetail:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -57,42 +57,42 @@ class McciMt000300Uv01AcknowledgementDetail:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     text: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     location: List[St] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[AcknowledgementDetailType] = field(
         default=None,
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -107,7 +107,7 @@ class McciMt000300Uv01AttentionLine:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -115,7 +115,7 @@ class McciMt000300Uv01AttentionLine:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -123,7 +123,7 @@ class McciMt000300Uv01AttentionLine:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     key_word_text: Optional[Sc] = field(
         default=None,
@@ -131,21 +131,21 @@ class McciMt000300Uv01AttentionLine:
             "name": "keyWordText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[AnyType] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -160,7 +160,7 @@ class McciMt000300Uv01EntityRsp:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -168,7 +168,7 @@ class McciMt000300Uv01EntityRsp:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -176,7 +176,7 @@ class McciMt000300Uv01EntityRsp:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -184,28 +184,28 @@ class McciMt000300Uv01EntityRsp:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassRoot] = field(
         default=None,
@@ -213,7 +213,7 @@ class McciMt000300Uv01EntityRsp:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -222,7 +222,7 @@ class McciMt000300Uv01EntityRsp:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -237,7 +237,7 @@ class McciMt000300Uv01Organization:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -245,7 +245,7 @@ class McciMt000300Uv01Organization:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -253,7 +253,7 @@ class McciMt000300Uv01Organization:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -261,21 +261,21 @@ class McciMt000300Uv01Organization:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     notification_party: Optional[CoctMt040203Uv01NotificationParty] = field(
         default=None,
@@ -284,14 +284,14 @@ class McciMt000300Uv01Organization:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassOrganization] = field(
         default=None,
@@ -299,7 +299,7 @@ class McciMt000300Uv01Organization:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -308,7 +308,7 @@ class McciMt000300Uv01Organization:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -323,7 +323,7 @@ class McciMt000300Uv01Place:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -331,7 +331,7 @@ class McciMt000300Uv01Place:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -339,7 +339,7 @@ class McciMt000300Uv01Place:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -347,28 +347,28 @@ class McciMt000300Uv01Place:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassPlace] = field(
         default=None,
@@ -376,7 +376,7 @@ class McciMt000300Uv01Place:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -385,7 +385,7 @@ class McciMt000300Uv01Place:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -400,7 +400,7 @@ class McciMt000300Uv01TargetMessage:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -408,7 +408,7 @@ class McciMt000300Uv01TargetMessage:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -416,7 +416,7 @@ class McciMt000300Uv01TargetMessage:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: Optional[Ii] = field(
         default=None,
@@ -424,14 +424,14 @@ class McciMt000300Uv01TargetMessage:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -446,7 +446,7 @@ class McciMt000300Uv01Acknowledgement:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -454,7 +454,7 @@ class McciMt000300Uv01Acknowledgement:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -462,7 +462,7 @@ class McciMt000300Uv01Acknowledgement:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_code: Optional[Cs] = field(
         default=None,
@@ -471,7 +471,7 @@ class McciMt000300Uv01Acknowledgement:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     message_waiting_number: Optional[Int] = field(
         default=None,
@@ -479,7 +479,7 @@ class McciMt000300Uv01Acknowledgement:
             "name": "messageWaitingNumber",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     message_waiting_priority_code: Optional[Ce] = field(
         default=None,
@@ -487,7 +487,7 @@ class McciMt000300Uv01Acknowledgement:
             "name": "messageWaitingPriorityCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     target_message: Optional[McciMt000300Uv01TargetMessage] = field(
         default=None,
@@ -496,23 +496,25 @@ class McciMt000300Uv01Acknowledgement:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    acknowledgement_detail: List[McciMt000300Uv01AcknowledgementDetail] = field(
+    acknowledgement_detail: List[
+        McciMt000300Uv01AcknowledgementDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "acknowledgementDetail",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -527,7 +529,7 @@ class McciMt000300Uv01Agent:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -535,7 +537,7 @@ class McciMt000300Uv01Agent:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -543,7 +545,7 @@ class McciMt000300Uv01Agent:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     represented_organization: Optional[McciMt000300Uv01Organization] = field(
         default=None,
@@ -552,14 +554,14 @@ class McciMt000300Uv01Agent:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassAgent] = field(
         default=None,
@@ -567,7 +569,7 @@ class McciMt000300Uv01Agent:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -582,7 +584,7 @@ class McciMt000300Uv01LocatedEntity:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -590,7 +592,7 @@ class McciMt000300Uv01LocatedEntity:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -598,7 +600,7 @@ class McciMt000300Uv01LocatedEntity:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     location: Optional[McciMt000300Uv01Place] = field(
         default=None,
@@ -606,14 +608,14 @@ class McciMt000300Uv01LocatedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassLocatedEntity] = field(
         default=None,
@@ -621,7 +623,7 @@ class McciMt000300Uv01LocatedEntity:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -636,7 +638,7 @@ class McciMt000300Uv01RespondTo:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -644,7 +646,7 @@ class McciMt000300Uv01RespondTo:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -652,14 +654,14 @@ class McciMt000300Uv01RespondTo:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: Optional[TelExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     entity_rsp: List[McciMt000300Uv01EntityRsp] = field(
         default_factory=list,
@@ -669,14 +671,14 @@ class McciMt000300Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[CommunicationFunctionType] = field(
         default=None,
@@ -684,7 +686,7 @@ class McciMt000300Uv01RespondTo:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -699,7 +701,7 @@ class McciMt000300Uv01Device:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -707,7 +709,7 @@ class McciMt000300Uv01Device:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -715,7 +717,7 @@ class McciMt000300Uv01Device:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -723,21 +725,21 @@ class McciMt000300Uv01Device:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     desc: Optional[EdExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     existence_time: Optional[IvlTsExplicit] = field(
         default=None,
@@ -745,14 +747,14 @@ class McciMt000300Uv01Device:
             "name": "existenceTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     manufacturer_model_name: Optional[Sc] = field(
         default=None,
@@ -760,7 +762,7 @@ class McciMt000300Uv01Device:
             "name": "manufacturerModelName",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     software_name: Optional[Sc] = field(
         default=None,
@@ -768,7 +770,7 @@ class McciMt000300Uv01Device:
             "name": "softwareName",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     as_agent: Optional[McciMt000300Uv01Agent] = field(
         default=None,
@@ -777,7 +779,7 @@ class McciMt000300Uv01Device:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     as_located_entity: List[McciMt000300Uv01LocatedEntity] = field(
         default_factory=list,
@@ -786,14 +788,14 @@ class McciMt000300Uv01Device:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[EntityClassDevice] = field(
         default=None,
@@ -801,7 +803,7 @@ class McciMt000300Uv01Device:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -810,7 +812,7 @@ class McciMt000300Uv01Device:
             "name": "determinerCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -825,7 +827,7 @@ class McciMt000300Uv01Receiver:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -833,7 +835,7 @@ class McciMt000300Uv01Receiver:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -841,14 +843,14 @@ class McciMt000300Uv01Receiver:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: Optional[TelExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     device: Optional[McciMt000300Uv01Device] = field(
         default=None,
@@ -856,14 +858,14 @@ class McciMt000300Uv01Receiver:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[CommunicationFunctionType] = field(
         default=None,
@@ -871,7 +873,7 @@ class McciMt000300Uv01Receiver:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
 
@@ -886,7 +888,7 @@ class McciMt000300Uv01Sender:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -894,7 +896,7 @@ class McciMt000300Uv01Sender:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -902,14 +904,14 @@ class McciMt000300Uv01Sender:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: Optional[TelExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     device: Optional[McciMt000300Uv01Device] = field(
         default=None,
@@ -917,14 +919,14 @@ class McciMt000300Uv01Sender:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     type_code: Optional[CommunicationFunctionType] = field(
         default=None,
@@ -932,5 +934,5 @@ class McciMt000300Uv01Sender:
             "name": "typeCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

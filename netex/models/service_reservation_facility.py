@@ -13,5 +13,5 @@ class ServiceReservationFacility:
         default=ReservationEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

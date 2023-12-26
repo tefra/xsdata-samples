@@ -20,7 +20,7 @@ class Reference:
         metadata={
             "name": "RefDate",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -38,28 +38,28 @@ class SecondaryMessageInformation:
         metadata={
             "name": "MessageTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     message_class: Optional[str] = field(
         default=None,
         metadata={
             "name": "MessageClass",
             "type": "Element",
-        }
+        },
     )
     message_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "MessageNumber",
             "type": "Element",
-        }
+        },
     )
     message_description: Optional[str] = field(
         default=None,
         metadata={
             "name": "MessageDescription",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -71,7 +71,7 @@ class ListOfSecondaryMessageInformation:
             "name": "SecondaryMessageInformation",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -121,7 +121,7 @@ class PrimaryMessageInformation:
         metadata={
             "name": "PrimaryReturnCodeDescription",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -132,28 +132,28 @@ class ReturnedIdentification:
         metadata={
             "name": "TradingPartnerPrimaryID",
             "type": "Element",
-        }
+        },
     )
     alternate_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "AlternateID",
             "type": "Element",
-        }
+        },
     )
     user_id: Optional[UserId] = field(
         default=None,
         metadata={
             "name": "UserID",
             "type": "Element",
-        }
+        },
     )
     returned_identification_urn: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReturnedIdentificationURN",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -165,7 +165,7 @@ class ListOfReturnedIdentification:
             "name": "ReturnedIdentification",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -178,12 +178,14 @@ class ReturnMessageInformation:
             "required": True,
         }
     )
-    list_of_secondary_message_information: Optional[ListOfSecondaryMessageInformation] = field(
+    list_of_secondary_message_information: Optional[
+        ListOfSecondaryMessageInformation
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfSecondaryMessageInformation",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -196,26 +198,28 @@ class TradingPartnerResponseInfo:
             "required": True,
         }
     )
-    list_of_returned_identification: Optional[ListOfReturnedIdentification] = field(
+    list_of_returned_identification: Optional[
+        ListOfReturnedIdentification
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfReturnedIdentification",
             "type": "Element",
-        }
+        },
     )
     redirect_url: Optional[str] = field(
         default=None,
         metadata={
             "name": "RedirectURL",
             "type": "Element",
-        }
+        },
     )
     service_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "ServiceID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -227,16 +231,18 @@ class ListOfTradingPartnerResponseInfo:
             "name": "TradingPartnerResponseInfo",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class TradingPartnerResponse:
-    list_of_trading_partner_response_info: ListOfTradingPartnerResponseInfo = field(
-        metadata={
-            "name": "ListOfTradingPartnerResponseInfo",
-            "type": "Element",
-            "required": True,
-        }
+    list_of_trading_partner_response_info: ListOfTradingPartnerResponseInfo = (
+        field(
+            metadata={
+                "name": "ListOfTradingPartnerResponseInfo",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )

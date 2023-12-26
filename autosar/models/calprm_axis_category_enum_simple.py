@@ -39,6 +39,7 @@ class CalprmAxisCategoryEnumSimple(Enum):
         definition are stored within this CURVE, MAP, CUBOID, CUBE_4,
         and CUBE_5. There is no shared or calculated axis.
     """
+
     COM_AXIS = "COM-AXIS"
     COM_AXIS_1 = "COM_AXIS"
     CURVE_AXIS = "CURVE-AXIS"

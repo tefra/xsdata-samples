@@ -11,7 +11,9 @@ from .dlt_message_subtypes_enum import DltMessageSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+from .platform_module_ethernet_endpoint_configuration_subtypes_enum import (
+    PlatformModuleEthernetEndpointConfigurationSubtypesEnum,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 
@@ -86,6 +88,7 @@ class DltLogChannelDesign:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DLT-LOG-CHANNEL-DESIGN"
 
@@ -96,15 +99,17 @@ class DltLogChannelDesign:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DltLogChannelDesign.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DltLogChannelDesign.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -112,7 +117,7 @@ class DltLogChannelDesign:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -120,7 +125,7 @@ class DltLogChannelDesign:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -128,7 +133,7 @@ class DltLogChannelDesign:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -136,7 +141,7 @@ class DltLogChannelDesign:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -144,7 +149,7 @@ class DltLogChannelDesign:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DltLogChannelDesign.Annotations"] = field(
         default=None,
@@ -152,7 +157,7 @@ class DltLogChannelDesign:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -160,7 +165,7 @@ class DltLogChannelDesign:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dlt_message_refs: Optional["DltLogChannelDesign.DltMessageRefs"] = field(
         default=None,
@@ -168,22 +173,24 @@ class DltLogChannelDesign:
             "name": "DLT-MESSAGE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    endpoint_configuration_ref: Optional["DltLogChannelDesign.EndpointConfigurationRef"] = field(
+    endpoint_configuration_ref: Optional[
+        "DltLogChannelDesign.EndpointConfigurationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ENDPOINT-CONFIGURATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -191,14 +198,14 @@ class DltLogChannelDesign:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -209,7 +216,7 @@ class DltLogChannelDesign:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -220,18 +227,20 @@ class DltLogChannelDesign:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DltMessageRefs:
-        dlt_message_ref: List["DltLogChannelDesign.DltMessageRefs.DltMessageRef"] = field(
+        dlt_message_ref: List[
+            "DltLogChannelDesign.DltMessageRefs.DltMessageRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DLT-MESSAGE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -242,16 +251,18 @@ class DltLogChannelDesign:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class EndpointConfigurationRef(Ref):
-        dest: Optional[PlatformModuleEthernetEndpointConfigurationSubtypesEnum] = field(
+        dest: Optional[
+            PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

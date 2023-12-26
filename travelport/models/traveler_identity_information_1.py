@@ -37,6 +37,7 @@ class TravelerIdentityInformation1(TypeKeyElement1):
         If the Security Answer is transmitted then the corresponding
         Security Question is required.
     """
+
     class Meta:
         name = "TravelerIdentityInformation"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -48,14 +49,14 @@ class TravelerIdentityInformation1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     mask_secondary_id_code: None | TypeMasked1 = field(
         default=None,
         metadata={
             "name": "MaskSecondaryIdCode",
             "type": "Attribute",
-        }
+        },
     )
     security_question1: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class TravelerIdentityInformation1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     security_answer1: None | str = field(
         default=None,
@@ -73,7 +74,7 @@ class TravelerIdentityInformation1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     security_question2: None | str = field(
         default=None,
@@ -82,7 +83,7 @@ class TravelerIdentityInformation1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     security_answer2: None | str = field(
         default=None,
@@ -91,5 +92,5 @@ class TravelerIdentityInformation1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

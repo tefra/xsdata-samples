@@ -1,14 +1,20 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
-from .journey_pattern_headways_rel_structure import JourneyPatternHeadwaysRelStructure
-from .journey_pattern_wait_times_rel_structure import JourneyPatternWaitTimesRelStructure
+from .journey_pattern_headways_rel_structure import (
+    JourneyPatternHeadwaysRelStructure,
+)
+from .journey_pattern_wait_times_rel_structure import (
+    JourneyPatternWaitTimesRelStructure,
+)
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_point_ref import ParkingPointRef
-from .point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
+from .point_in_link_sequence_versioned_child_structure import (
+    PointInLinkSequenceVersionedChildStructure,
+)
 from .relief_point_ref import ReliefPointRef
 from .scheduled_stop_point_ref import ScheduledStopPointRef
 from .timing_link_ref_structure import TimingLinkRefStructure
@@ -18,11 +24,23 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVersionedChildStructure):
+class TimingPointInJourneyPatternVersionedChildStructure(
+    PointInLinkSequenceVersionedChildStructure
+):
     class Meta:
         name = "TimingPointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -63,7 +81,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     onward_timing_link_ref: Optional[TimingLinkRefStructure] = field(
         default=None,
@@ -71,7 +89,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "OnwardTimingLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_wait_point: Optional[bool] = field(
         default=None,
@@ -79,9 +97,11 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "IsWaitPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    wait_time_or_wait_times: Optional[object] = field(
+    wait_time_or_wait_times: Optional[
+        Union[XmlDuration, JourneyPatternWaitTimesRelStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -97,14 +117,14 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -112,5 +132,5 @@ class TimingPointInJourneyPatternVersionedChildStructure(PointInLinkSequenceVers
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

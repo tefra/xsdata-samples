@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.code_description_type import CodeDescriptionType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_type import ValueType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.code_description_type import (
+    CodeDescriptionType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_type import (
+    ValueType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -15,7 +23,7 @@ class PricingDeductionType(BaseIdentifiedComponentType):
             "name": "DeductionType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     value: Optional[ValueType] = field(
         default=None,
@@ -23,5 +31,5 @@ class PricingDeductionType(BaseIdentifiedComponentType):
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

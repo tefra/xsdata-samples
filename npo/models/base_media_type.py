@@ -39,6 +39,7 @@ class BaseMediaType:
 
     Actually these objects are very similar and share most properties.
     """
+
     class Meta:
         name = "baseMediaType"
 
@@ -52,14 +53,14 @@ class BaseMediaType:
                 "entity in another system. E.g. a crid "
                 "like\ncrid://broadcast.radiobox2/335793 refers to a broadcast"
                 " with id 335793 in Radiobox. A crid must be a valid\nURI "
-                "starting with \"crid://\". Crids must be unique, but they can"
+                'starting with "crid://". Crids must be unique, but they can'
                 " be made up freely. It is a good idea to use\na logical "
                 "structure which can easily be associated with another system."
                 " Any POMS object can have zero or\nmore crids. They can refer"
                 " to different systems, but a POMS object could also actually "
                 "represent more than\none entity in a remote system."
             ),
-        }
+        },
     )
     broadcaster: list[BroadcasterType] = field(
         default_factory=list,
@@ -74,7 +75,7 @@ class BaseMediaType:
                 "the object in the POMS backend to employees of these given "
                 "broadcasting companies."
             ),
-        }
+        },
     )
     portal: list[OrganizationType] = field(
         default_factory=list,
@@ -87,7 +88,7 @@ class BaseMediaType:
                 "certain portal.\nThis is because some portal are shared by "
                 "several broadcasting companies."
             ),
-        }
+        },
     )
     exclusive: list[PortalRestrictionType] = field(
         default_factory=list,
@@ -101,7 +102,7 @@ class BaseMediaType:
                 "restrictions the media object may only be shown on these "
                 "portals."
             ),
-        }
+        },
     )
     region: list[GeoRestrictionType] = field(
         default_factory=list,
@@ -114,7 +115,7 @@ class BaseMediaType:
                 "doesn't apply to the metadata of the media object. It only "
                 "applies to the actual playable content."
             ),
-        }
+        },
     )
     title: list[TitleType] = field(
         default_factory=list,
@@ -133,7 +134,7 @@ class BaseMediaType:
                 "published document will be a title owned by BROADCASTER of "
                 "type\nMAIN, if that title exists."
             ),
-        }
+        },
     )
     description: list[DescriptionType] = field(
         default_factory=list,
@@ -144,28 +145,28 @@ class BaseMediaType:
                 "Optional descriptions for the media object. Descriptions have"
                 " an owner and a type, and are ordered just like titles."
             ),
-        }
+        },
     )
     genre: list[GenreType1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     tag: list[TagType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     intentions: list[IntentionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     target_groups: list[TargetGroupsType] = field(
         default_factory=list,
@@ -173,7 +174,7 @@ class BaseMediaType:
             "name": "targetGroups",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     geo_locations: list[GeoLocationsType] = field(
         default_factory=list,
@@ -181,35 +182,35 @@ class BaseMediaType:
             "name": "geoLocations",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     topics: list[TopicsType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     source: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     country: list[CountryType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     language: list[LanguageType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     is_dubbed: None | bool = field(
         default=None,
@@ -217,7 +218,7 @@ class BaseMediaType:
             "name": "isDubbed",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     available_subtitles: list[AvailableSubtitleType] = field(
         default_factory=list,
@@ -225,7 +226,7 @@ class BaseMediaType:
             "name": "availableSubtitles",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     av_attributes: None | AvAttributesType = field(
         default=None,
@@ -233,7 +234,7 @@ class BaseMediaType:
             "name": "avAttributes",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     release_year: None | int = field(
         default=None,
@@ -241,28 +242,28 @@ class BaseMediaType:
             "name": "releaseYear",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     duration: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     credits: None | CreditsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     award: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     descendant_of: list[DescendantRefType] = field(
         default_factory=list,
@@ -270,7 +271,7 @@ class BaseMediaType:
             "name": "descendantOf",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     member_of: list[MemberRefType] = field(
         default_factory=list,
@@ -278,7 +279,7 @@ class BaseMediaType:
             "name": "memberOf",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     age_rating: None | AgeRatingType = field(
         default=None,
@@ -286,7 +287,7 @@ class BaseMediaType:
             "name": "ageRating",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     content_rating: list[ContentRatingType] = field(
         default_factory=list,
@@ -294,14 +295,14 @@ class BaseMediaType:
             "name": "contentRating",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     email: list[str] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     website: list[str] = field(
         default_factory=list,
@@ -310,49 +311,49 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     twitter: list[TwitterType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     teletext: None | int = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     prediction: list[PredictionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     locations: None | LocationsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     relation: list[RelationType1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     images: None | ImagesType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     mid: None | str = field(
         default=None,
@@ -361,7 +362,7 @@ class BaseMediaType:
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
-        }
+        },
     )
     av_type: None | AvTypeEnum = field(
         default=None,
@@ -369,74 +370,74 @@ class BaseMediaType:
             "name": "avType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     sort_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "sortDate",
             "type": "Attribute",
-        }
+        },
     )
     embeddable: bool = field(
         default=True,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     has_subtitles: bool = field(
         default=False,
         metadata={
             "name": "hasSubtitles",
             "type": "Attribute",
-        }
+        },
     )
     urn: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     publish_start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStart",
             "type": "Attribute",
-        }
+        },
     )
     publish_stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishStop",
             "type": "Attribute",
-        }
+        },
     )
     publish_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "publishDate",
             "type": "Attribute",
-        }
+        },
     )
     creation_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "creationDate",
             "type": "Attribute",
-        }
+        },
     )
     last_modified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastModified",
             "type": "Attribute",
-        }
+        },
     )
     workflow: None | WorkflowEnumType = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     merged_to: None | str = field(
         default=None,
@@ -446,5 +447,5 @@ class BaseMediaType:
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
-        }
+        },
     )

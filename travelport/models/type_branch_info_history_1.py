@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.type_profile_info_1 import TypeProfileInfo1
-from travelport.models.type_provider_info_history_1 import TypeProviderInfoHistory1
+from travelport.models.type_provider_info_history_1 import (
+    TypeProviderInfoHistory1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -34,6 +36,7 @@ class TypeBranchInfoHistory1(TypeProfileInfo1):
     ursync_to
         Identify if Universal Record synch is activated at Branch Level.
     """
+
     class Meta:
         name = "typeBranchInfoHistory"
 
@@ -43,7 +46,7 @@ class TypeBranchInfoHistory1(TypeProfileInfo1):
             "name": "ProviderInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -52,7 +55,7 @@ class TypeBranchInfoHistory1(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     geo_city_code: None | str = field(
         default=None,
@@ -60,14 +63,14 @@ class TypeBranchInfoHistory1(TypeProfileInfo1):
             "name": "GeoCityCode",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     control: None | bool = field(
         default=None,
         metadata={
             "name": "Control",
             "type": "Attribute",
-        }
+        },
     )
     branch_code: None | str = field(
         default=None,
@@ -76,7 +79,7 @@ class TypeBranchInfoHistory1(TypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -84,26 +87,26 @@ class TypeBranchInfoHistory1(TypeProfileInfo1):
             "name": "Currency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     profile_sync_to: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncTo",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_from: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncFrom",
             "type": "Attribute",
-        }
+        },
     )
     ursync_to: None | bool = field(
         default=None,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.agreement_interface_notify_agreement_output_body import AgreementInterfaceNotifyAgreementOutputBody
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.agreement_interface_notify_agreement_output_body import (
+    AgreementInterfaceNotifyAgreementOutputBody,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
 
@@ -16,5 +18,5 @@ class AgreementInterfaceNotifyAgreementOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )

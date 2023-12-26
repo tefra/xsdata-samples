@@ -9,6 +9,7 @@ class TypeUnstructuredAddress:
     """
     A simple unstructured address (e.g. 123 South State Avenue, Chicago, IL 60612)
     """
+
     class Meta:
         name = "typeUnstructuredAddress"
 
@@ -22,5 +23,5 @@ class TypeUnstructuredAddress:
             "max_occurs": 6,
             "min_length": 0,
             "max_length": 50,
-        }
+        },
     )

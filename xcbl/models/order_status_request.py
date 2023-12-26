@@ -43,7 +43,7 @@ class OrderStatusRequestSummary:
         metadata={
             "name": "TotalNumberOfLineItem",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -119,126 +119,126 @@ class OrderStatusItem:
         metadata={
             "name": "LineItemType",
             "type": "Element",
-        }
+        },
     )
     parent_item_number: Optional[ParentItemNumber] = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
-        }
+        },
     )
     item_identifiers: Optional[ItemIdentifiers] = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
-        }
+        },
     )
     list_of_dimension: Optional[ListOfDimension] = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-        }
+        },
     )
     total_quantity: Optional[TotalQuantity] = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
-        }
+        },
     )
     max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
-        }
+        },
     )
     list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
-        }
+        },
     )
     off_catalog_flag: Optional[str] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
-        }
+        },
     )
     catalog_reference: Optional[CatalogReference] = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
-        }
+        },
     )
     item_contract_references: Optional[ItemContractReferences] = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
-        }
+        },
     )
     list_of_item_references: Optional[ListOfItemReferences] = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
-        }
+        },
     )
     country_of_origin: Optional[CountryOfOrigin] = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
-        }
+        },
     )
     country_of_destination: Optional[CountryOfDestination] = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
-        }
+        },
     )
     final_recipient: Optional[FinalRecipient] = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
     conditions_of_sale: Optional[ConditionsOfSale] = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
-        }
+        },
     )
     hazardous_materials: Optional[HazardousMaterials] = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
-        }
+        },
     )
     order_status_item_transport: Optional[OrderStatusItemTransport] = field(
         default=None,
         metadata={
             "name": "OrderStatusItemTransport",
             "type": "Element",
-        }
+        },
     )
     variance_qty: VarianceQty = field(
         metadata={
@@ -277,21 +277,23 @@ class OrderStatusRequestHeader:
         metadata={
             "name": "OrderStatusLanguage",
             "type": "Element",
-        }
+        },
     )
     order_status_request_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderStatusRequestNote",
             "type": "Element",
-        }
+        },
     )
-    order_status_list_of_attachment: Optional[OrderStatusListOfAttachment] = field(
+    order_status_list_of_attachment: Optional[
+        OrderStatusListOfAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "OrderStatusListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -303,7 +305,7 @@ class ListOfOrderStatusItem:
             "name": "OrderStatusItem",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -314,7 +316,7 @@ class OrderStatusReference:
         metadata={
             "name": "AccountCode",
             "type": "Element",
-        }
+        },
     )
     buyer_reference_number: BuyerReferenceNumber = field(
         metadata={
@@ -335,7 +337,7 @@ class OrderStatusReference:
         metadata={
             "name": "OtherReference",
             "type": "Element",
-        }
+        },
     )
     order_date: str = field(
         metadata={
@@ -349,7 +351,7 @@ class OrderStatusReference:
         metadata={
             "name": "ListOfOrderStatusItem",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -367,14 +369,14 @@ class OrderStatusDetailRequest:
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
-        }
+        },
     )
     line_item_attachment: Optional[LineItemAttachment] = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -386,18 +388,20 @@ class ListOfOrderStatusRequestDetail:
             "name": "OrderStatusDetailRequest",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class OrderStatusRequestDetail:
-    list_of_order_status_request_detail: ListOfOrderStatusRequestDetail = field(
-        metadata={
-            "name": "ListOfOrderStatusRequestDetail",
-            "type": "Element",
-            "required": True,
-        }
+    list_of_order_status_request_detail: ListOfOrderStatusRequestDetail = (
+        field(
+            metadata={
+                "name": "ListOfOrderStatusRequestDetail",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
 
 
@@ -415,12 +419,12 @@ class OrderStatusRequest:
         metadata={
             "name": "OrderStatusRequestDetail",
             "type": "Element",
-        }
+        },
     )
     order_status_request_summary: Optional[OrderStatusRequestSummary] = field(
         default=None,
         metadata={
             "name": "OrderStatusRequestSummary",
             "type": "Element",
-        }
+        },
     )

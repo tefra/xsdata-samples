@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.intermediate_point_on_linear_element import IntermediatePointOnLinearElement
+from datexii.models.eu.datexii.v2.intermediate_point_on_linear_element import (
+    IntermediatePointOnLinearElement,
+)
 from datexii.models.eu.datexii.v2.linear_element import LinearElement
 from datexii.models.eu.datexii.v2.referent import Referent
 
@@ -25,6 +27,7 @@ class LinearElementByPoints(LinearElement):
         element.
     :ivar linear_element_by_points_extension:
     """
+
     start_point_of_linear_element: Optional[Referent] = field(
         default=None,
         metadata={
@@ -32,15 +35,17 @@ class LinearElementByPoints(LinearElement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    intermediate_point_on_linear_element: List[IntermediatePointOnLinearElement] = field(
+    intermediate_point_on_linear_element: List[
+        IntermediatePointOnLinearElement
+    ] = field(
         default_factory=list,
         metadata={
             "name": "intermediatePointOnLinearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     end_point_of_linear_element: Optional[Referent] = field(
         default=None,
@@ -49,7 +54,7 @@ class LinearElementByPoints(LinearElement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     linear_element_by_points_extension: Optional[ExtensionType] = field(
         default=None,
@@ -57,5 +62,5 @@ class LinearElementByPoints(LinearElement):
             "name": "linearElementByPointsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

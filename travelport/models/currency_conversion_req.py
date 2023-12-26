@@ -11,6 +11,7 @@ class CurrencyConversionReq(BaseReq1):
     """
     Performs A Currency Conversion between two Currencies.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,5 +22,5 @@ class CurrencyConversionReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

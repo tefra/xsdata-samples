@@ -18,5 +18,6 @@ class DiagnosticDebounceBehaviorEnumSimple(Enum):
         qualification of the event will be restarted with the next valid
         event report.
     """
+
     FREEZE = "FREEZE"
     RESET = "RESET"

@@ -30,6 +30,7 @@ class AirVoidDocumentReq(BaseReq1):
         Provider: 1G - If set as true, Spanish Residency will be validated
         for Provisioned Customers.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -40,7 +41,7 @@ class AirVoidDocumentReq(BaseReq1):
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     void_document_info: list[VoidDocumentInfo] = field(
         default_factory=list,
@@ -48,14 +49,14 @@ class AirVoidDocumentReq(BaseReq1):
             "name": "VoidDocumentInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     show_etr: bool = field(
         default=False,
         metadata={
             "name": "ShowETR",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -64,19 +65,19 @@ class AirVoidDocumentReq(BaseReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-        }
+        },
     )
     validate_spanish_residency: bool = field(
         default=False,
         metadata={
             "name": "ValidateSpanishResidency",
             "type": "Attribute",
-        }
+        },
     )

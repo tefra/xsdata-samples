@@ -11,5 +11,6 @@ class CommandResponse(TypeTextBlock1):
 
     Usually pre-formatted.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"

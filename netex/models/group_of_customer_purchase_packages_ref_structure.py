@@ -5,5 +5,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupOfCustomerPurchasePackagesRefStructure(GroupOfEntitiesRefStructure1):
+class GroupOfCustomerPurchasePackagesRefStructure(
+    GroupOfEntitiesRefStructure1
+):
     pass

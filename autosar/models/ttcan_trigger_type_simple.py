@@ -16,6 +16,7 @@ class TtcanTriggerTypeSimple(Enum):
     :cvar WATCH_TRIGGER_GAP: Check for missing reference message in
         event-synchronised case
     """
+
     RX_TRIGGER = "RX-TRIGGER"
     TX_REF_TRIGGER = "TX-REF-TRIGGER"
     TX_REF_TRIGGER_GAP = "TX-REF-TRIGGER-GAP"

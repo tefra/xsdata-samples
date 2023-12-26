@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
-from .constant_specification_subtypes_enum import ConstantSpecificationSubtypesEnum
+from .constant_specification_subtypes_enum import (
+    ConstantSpecificationSubtypesEnum,
+)
 from .identifier import Identifier
 from .ref import Ref
 
@@ -30,6 +32,7 @@ class ConstantReference:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONSTANT-REFERENCE"
 
@@ -39,7 +42,7 @@ class ConstantReference:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -47,7 +50,7 @@ class ConstantReference:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     constant_ref: Optional["ConstantReference.ConstantRef"] = field(
         default=None,
@@ -55,14 +58,14 @@ class ConstantReference:
             "name": "CONSTANT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -70,7 +73,7 @@ class ConstantReference:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -81,5 +84,5 @@ class ConstantReference:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

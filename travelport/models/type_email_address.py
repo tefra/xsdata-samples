@@ -17,7 +17,7 @@ class TypeEmailAddress:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     simple_name: None | str = field(
         default=None,
@@ -25,5 +25,5 @@ class TypeEmailAddress:
             "name": "SimpleName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

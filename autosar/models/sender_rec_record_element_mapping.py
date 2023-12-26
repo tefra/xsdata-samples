@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .application_record_element_subtypes_enum import ApplicationRecordElementSubtypesEnum
-from .implementation_data_type_element_subtypes_enum import ImplementationDataTypeElementSubtypesEnum
+from .application_record_element_subtypes_enum import (
+    ApplicationRecordElementSubtypesEnum,
+)
+from .implementation_data_type_element_subtypes_enum import (
+    ImplementationDataTypeElementSubtypesEnum,
+)
 from .indexed_array_element import IndexedArrayElement
 from .ref import Ref
 from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
@@ -55,32 +59,39 @@ class SenderRecRecordElementMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SENDER-REC-RECORD-ELEMENT-MAPPING"
 
-    application_record_element_ref: Optional["SenderRecRecordElementMapping.ApplicationRecordElementRef"] = field(
+    application_record_element_ref: Optional[
+        "SenderRecRecordElementMapping.ApplicationRecordElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLICATION-RECORD-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    complex_type_mapping: Optional["SenderRecRecordElementMapping.ComplexTypeMapping"] = field(
+    complex_type_mapping: Optional[
+        "SenderRecRecordElementMapping.ComplexTypeMapping"
+    ] = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    implementation_record_element_ref: Optional["SenderRecRecordElementMapping.ImplementationRecordElementRef"] = field(
+    implementation_record_element_ref: Optional[
+        "SenderRecRecordElementMapping.ImplementationRecordElementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-RECORD-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sender_to_signal_text_table_mapping: Optional[TextTableMapping] = field(
         default=None,
@@ -88,7 +99,7 @@ class SenderRecRecordElementMapping:
             "name": "SENDER-TO-SIGNAL-TEXT-TABLE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     signal_to_receiver_text_table_mapping: Optional[TextTableMapping] = field(
         default=None,
@@ -96,22 +107,24 @@ class SenderRecRecordElementMapping:
             "name": "SIGNAL-TO-RECEIVER-TEXT-TABLE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    system_signal_ref: Optional["SenderRecRecordElementMapping.SystemSignalRef"] = field(
+    system_signal_ref: Optional[
+        "SenderRecRecordElementMapping.SystemSignalRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -119,7 +132,7 @@ class SenderRecRecordElementMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -130,26 +143,30 @@ class SenderRecRecordElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ComplexTypeMapping:
-        sender_rec_array_type_mapping: Optional["SenderRecArrayTypeMapping"] = field(
+        sender_rec_array_type_mapping: Optional[
+            "SenderRecArrayTypeMapping"
+        ] = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-ARRAY-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        sender_rec_record_type_mapping: Optional["SenderRecRecordTypeMapping"] = field(
+        sender_rec_record_type_mapping: Optional[
+            "SenderRecRecordTypeMapping"
+        ] = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-RECORD-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -160,7 +177,7 @@ class SenderRecRecordElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -171,7 +188,7 @@ class SenderRecRecordElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
 
@@ -194,23 +211,26 @@ class SenderRecRecordTypeMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SENDER-REC-RECORD-TYPE-MAPPING"
 
-    record_element_mappings: Optional["SenderRecRecordTypeMapping.RecordElementMappings"] = field(
+    record_element_mappings: Optional[
+        "SenderRecRecordTypeMapping.RecordElementMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "RECORD-ELEMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -218,18 +238,20 @@ class SenderRecRecordTypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class RecordElementMappings:
-        sender_rec_record_element_mapping: List[SenderRecRecordElementMapping] = field(
+        sender_rec_record_element_mapping: List[
+            SenderRecRecordElementMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SENDER-REC-RECORD-ELEMENT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -269,16 +291,19 @@ class SenderRecArrayElementMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SENDER-REC-ARRAY-ELEMENT-MAPPING"
 
-    complex_type_mapping: Optional["SenderRecArrayElementMapping.ComplexTypeMapping"] = field(
+    complex_type_mapping: Optional[
+        "SenderRecArrayElementMapping.ComplexTypeMapping"
+    ] = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     indexed_array_element: Optional[IndexedArrayElement] = field(
         default=None,
@@ -286,22 +311,24 @@ class SenderRecArrayElementMapping:
             "name": "INDEXED-ARRAY-ELEMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    system_signal_ref: Optional["SenderRecArrayElementMapping.SystemSignalRef"] = field(
+    system_signal_ref: Optional[
+        "SenderRecArrayElementMapping.SystemSignalRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -309,26 +336,30 @@ class SenderRecArrayElementMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class ComplexTypeMapping:
-        sender_rec_array_type_mapping: Optional["SenderRecArrayTypeMapping"] = field(
+        sender_rec_array_type_mapping: Optional[
+            "SenderRecArrayTypeMapping"
+        ] = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-ARRAY-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        sender_rec_record_type_mapping: Optional[SenderRecRecordTypeMapping] = field(
+        sender_rec_record_type_mapping: Optional[
+            SenderRecRecordTypeMapping
+        ] = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-RECORD-TYPE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -339,7 +370,7 @@ class SenderRecArrayElementMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
 
@@ -370,16 +401,19 @@ class SenderRecArrayTypeMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SENDER-REC-ARRAY-TYPE-MAPPING"
 
-    array_element_mappings: Optional["SenderRecArrayTypeMapping.ArrayElementMappings"] = field(
+    array_element_mappings: Optional[
+        "SenderRecArrayTypeMapping.ArrayElementMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "ARRAY-ELEMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sender_to_signal_text_table_mapping: Optional[TextTableMapping] = field(
         default=None,
@@ -387,7 +421,7 @@ class SenderRecArrayTypeMapping:
             "name": "SENDER-TO-SIGNAL-TEXT-TABLE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     signal_to_receiver_text_table_mapping: Optional[TextTableMapping] = field(
         default=None,
@@ -395,14 +429,14 @@ class SenderRecArrayTypeMapping:
             "name": "SIGNAL-TO-RECEIVER-TEXT-TABLE-MAPPING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -410,16 +444,18 @@ class SenderRecArrayTypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class ArrayElementMappings:
-        sender_rec_array_element_mapping: List[SenderRecArrayElementMapping] = field(
+        sender_rec_array_element_mapping: List[
+            SenderRecArrayElementMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SENDER-REC-ARRAY-ELEMENT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

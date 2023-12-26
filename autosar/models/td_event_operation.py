@@ -8,12 +8,18 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .client_server_operation_subtypes_enum import ClientServerOperationSubtypesEnum
-from .component_in_composition_instance_ref import ComponentInCompositionInstanceRef
+from .client_server_operation_subtypes_enum import (
+    ClientServerOperationSubtypesEnum,
+)
+from .component_in_composition_instance_ref import (
+    ComponentInCompositionInstanceRef,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .port_prototype_blueprint_subtypes_enum import PortPrototypeBlueprintSubtypesEnum
+from .port_prototype_blueprint_subtypes_enum import (
+    PortPrototypeBlueprintSubtypesEnum,
+)
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
@@ -97,6 +103,7 @@ class TdEventOperation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TD-EVENT-OPERATION"
 
@@ -107,15 +114,17 @@ class TdEventOperation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TdEventOperation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TdEventOperation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +132,7 @@ class TdEventOperation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +140,7 @@ class TdEventOperation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +148,7 @@ class TdEventOperation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +156,7 @@ class TdEventOperation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +164,7 @@ class TdEventOperation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TdEventOperation.Annotations"] = field(
         default=None,
@@ -163,7 +172,7 @@ class TdEventOperation:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -171,7 +180,7 @@ class TdEventOperation:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
         default=None,
@@ -179,7 +188,7 @@ class TdEventOperation:
             "name": "OCCURRENCE-EXPRESSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     component_iref: Optional[ComponentInCompositionInstanceRef] = field(
         default=None,
@@ -187,7 +196,7 @@ class TdEventOperation:
             "name": "COMPONENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_external: Optional[Boolean] = field(
         default=None,
@@ -195,15 +204,17 @@ class TdEventOperation:
             "name": "IS-EXTERNAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_prototype_blueprint_ref: Optional["TdEventOperation.PortPrototypeBlueprintRef"] = field(
+    port_prototype_blueprint_ref: Optional[
+        "TdEventOperation.PortPrototypeBlueprintRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-BLUEPRINT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_ref: Optional["TdEventOperation.PortRef"] = field(
         default=None,
@@ -211,7 +222,7 @@ class TdEventOperation:
             "name": "PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     operation_ref: Optional["TdEventOperation.OperationRef"] = field(
         default=None,
@@ -219,7 +230,7 @@ class TdEventOperation:
             "name": "OPERATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     td_event_operation_type: Optional[TdEventOperationTypeEnum] = field(
         default=None,
@@ -227,14 +238,14 @@ class TdEventOperation:
             "name": "TD-EVENT-OPERATION-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -242,14 +253,14 @@ class TdEventOperation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -260,7 +271,7 @@ class TdEventOperation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -271,7 +282,7 @@ class TdEventOperation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -282,7 +293,7 @@ class TdEventOperation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -293,7 +304,7 @@ class TdEventOperation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -304,5 +315,5 @@ class TdEventOperation:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

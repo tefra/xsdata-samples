@@ -21,6 +21,7 @@ class ClientDataList:
     value
         The Value that will be associated with the Name.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -32,7 +33,7 @@ class ClientDataList:
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -42,5 +43,5 @@ class ClientDataList:
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

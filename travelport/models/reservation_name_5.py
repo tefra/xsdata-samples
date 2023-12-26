@@ -18,6 +18,7 @@ class ReservationName5:
         To be used if the reservation name is other than booking travelers
         in the PNR
     """
+
     class Meta:
         name = "ReservationName"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -27,12 +28,12 @@ class ReservationName5:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Element",
-        }
+        },
     )
     name_override: None | NameOverride5 = field(
         default=None,
         metadata={
             "name": "NameOverride",
             "type": "Element",
-        }
+        },
     )

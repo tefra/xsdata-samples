@@ -106,6 +106,7 @@ class AclPermission:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ACL-PERMISSION"
 
@@ -116,7 +117,7 @@ class AclPermission:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["AclPermission.ShortNameFragments"] = field(
         default=None,
@@ -124,7 +125,7 @@ class AclPermission:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -132,7 +133,7 @@ class AclPermission:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -140,7 +141,7 @@ class AclPermission:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -148,7 +149,7 @@ class AclPermission:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -156,7 +157,7 @@ class AclPermission:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -164,7 +165,7 @@ class AclPermission:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["AclPermission.Annotations"] = field(
         default=None,
@@ -172,7 +173,7 @@ class AclPermission:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -180,7 +181,7 @@ class AclPermission:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_policys: Optional["AclPermission.BlueprintPolicys"] = field(
         default=None,
@@ -188,7 +189,7 @@ class AclPermission:
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -196,7 +197,7 @@ class AclPermission:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     acl_contexts: Optional["AclPermission.AclContexts"] = field(
         default=None,
@@ -204,7 +205,7 @@ class AclPermission:
             "name": "ACL-CONTEXTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     acl_object_refs: Optional["AclPermission.AclObjectRefs"] = field(
         default=None,
@@ -212,7 +213,7 @@ class AclPermission:
             "name": "ACL-OBJECT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     acl_operation_refs: Optional["AclPermission.AclOperationRefs"] = field(
         default=None,
@@ -220,7 +221,7 @@ class AclPermission:
             "name": "ACL-OPERATION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     acl_role_refs: Optional["AclPermission.AclRoleRefs"] = field(
         default=None,
@@ -228,7 +229,7 @@ class AclPermission:
             "name": "ACL-ROLE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     acl_scope: Optional[AclScopeEnum] = field(
         default=None,
@@ -236,14 +237,14 @@ class AclPermission:
             "name": "ACL-SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -251,14 +252,14 @@ class AclPermission:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -269,7 +270,7 @@ class AclPermission:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -280,7 +281,7 @@ class AclPermission:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -291,15 +292,17 @@ class AclPermission:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -307,7 +310,7 @@ class AclPermission:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -319,24 +322,27 @@ class AclPermission:
             stakeholders. For examples the values can be the names of
             binding times.
         """
+
         acl_context: List[NmtokenString] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-CONTEXT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AclObjectRefs:
-        acl_object_ref: List["AclPermission.AclObjectRefs.AclObjectRef"] = field(
+        acl_object_ref: List[
+            "AclPermission.AclObjectRefs.AclObjectRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-OBJECT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -347,18 +353,20 @@ class AclPermission:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class AclOperationRefs:
-        acl_operation_ref: List["AclPermission.AclOperationRefs.AclOperationRef"] = field(
+        acl_operation_ref: List[
+            "AclPermission.AclOperationRefs.AclOperationRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-OPERATION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -369,7 +377,7 @@ class AclPermission:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -380,7 +388,7 @@ class AclPermission:
                 "name": "ACL-ROLE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -391,5 +399,5 @@ class AclPermission:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

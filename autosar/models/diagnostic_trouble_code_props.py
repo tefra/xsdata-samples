@@ -9,18 +9,32 @@ from .annotation import (
 from .boolean import Boolean
 from .category_string import CategoryString
 from .diagnostic_aging_subtypes_enum import DiagnosticAgingSubtypesEnum
-from .diagnostic_data_identifier_set_ref_conditional import DiagnosticDataIdentifierSetRefConditional
-from .diagnostic_data_identifier_set_subtypes_enum import DiagnosticDataIdentifierSetSubtypesEnum
-from .diagnostic_extended_data_record_ref_conditional import DiagnosticExtendedDataRecordRefConditional
-from .diagnostic_freeze_frame_ref_conditional import DiagnosticFreezeFrameRefConditional
-from .diagnostic_memory_destination_subtypes_enum import DiagnosticMemoryDestinationSubtypesEnum
+from .diagnostic_data_identifier_set_ref_conditional import (
+    DiagnosticDataIdentifierSetRefConditional,
+)
+from .diagnostic_data_identifier_set_subtypes_enum import (
+    DiagnosticDataIdentifierSetSubtypesEnum,
+)
+from .diagnostic_extended_data_record_ref_conditional import (
+    DiagnosticExtendedDataRecordRefConditional,
+)
+from .diagnostic_freeze_frame_ref_conditional import (
+    DiagnosticFreezeFrameRefConditional,
+)
+from .diagnostic_memory_destination_subtypes_enum import (
+    DiagnosticMemoryDestinationSubtypesEnum,
+)
 from .diagnostic_significance_enum import DiagnosticSignificanceEnum
-from .environment_capture_to_reporting_enum import EnvironmentCaptureToReportingEnum
+from .environment_capture_to_reporting_enum import (
+    EnvironmentCaptureToReportingEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 
@@ -128,6 +142,7 @@ class DiagnosticTroubleCodeProps:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-PROPS"
 
@@ -138,15 +153,17 @@ class DiagnosticTroubleCodeProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticTroubleCodeProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticTroubleCodeProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -154,7 +171,7 @@ class DiagnosticTroubleCodeProps:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -162,7 +179,7 @@ class DiagnosticTroubleCodeProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -170,7 +187,7 @@ class DiagnosticTroubleCodeProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -178,7 +195,7 @@ class DiagnosticTroubleCodeProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -186,7 +203,7 @@ class DiagnosticTroubleCodeProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticTroubleCodeProps.Annotations"] = field(
         default=None,
@@ -194,7 +211,7 @@ class DiagnosticTroubleCodeProps:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -202,7 +219,7 @@ class DiagnosticTroubleCodeProps:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     aging_allowed: Optional[Boolean] = field(
         default=None,
@@ -210,7 +227,7 @@ class DiagnosticTroubleCodeProps:
             "name": "AGING-ALLOWED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     aging_ref: Optional["DiagnosticTroubleCodeProps.AgingRef"] = field(
         default=None,
@@ -218,23 +235,27 @@ class DiagnosticTroubleCodeProps:
             "name": "AGING-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    environment_capture_to_reporting: Optional[EnvironmentCaptureToReportingEnum] = field(
+    environment_capture_to_reporting: Optional[
+        EnvironmentCaptureToReportingEnum
+    ] = field(
         default=None,
         metadata={
             "name": "ENVIRONMENT-CAPTURE-TO-REPORTING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    extended_data_records: Optional["DiagnosticTroubleCodeProps.ExtendedDataRecords"] = field(
+    extended_data_records: Optional[
+        "DiagnosticTroubleCodeProps.ExtendedDataRecords"
+    ] = field(
         default=None,
         metadata={
             "name": "EXTENDED-DATA-RECORDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fdc_threshold_storage_value: Optional[PositiveInteger] = field(
         default=None,
@@ -242,7 +263,7 @@ class DiagnosticTroubleCodeProps:
             "name": "FDC-THRESHOLD-STORAGE-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freeze_frames: Optional["DiagnosticTroubleCodeProps.FreezeFrames"] = field(
         default=None,
@@ -250,23 +271,27 @@ class DiagnosticTroubleCodeProps:
             "name": "FREEZE-FRAMES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    freeze_frame_content_ref: Optional["DiagnosticTroubleCodeProps.FreezeFrameContentRef"] = field(
+    freeze_frame_content_ref: Optional[
+        "DiagnosticTroubleCodeProps.FreezeFrameContentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAME-CONTENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    freeze_frame_content_wwh_obd_ref: Optional["DiagnosticTroubleCodeProps.FreezeFrameContentWwhObdRef"] = field(
+    freeze_frame_content_wwh_obd_ref: Optional[
+        "DiagnosticTroubleCodeProps.FreezeFrameContentWwhObdRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAME-CONTENT-WWH-OBD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     immediate_nv_data_storage: Optional[Boolean] = field(
         default=None,
@@ -274,15 +299,17 @@ class DiagnosticTroubleCodeProps:
             "name": "IMMEDIATE-NV-DATA-STORAGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    legislated_freeze_frame_content_wwh_obds: Optional["DiagnosticTroubleCodeProps.LegislatedFreezeFrameContentWwhObds"] = field(
+    legislated_freeze_frame_content_wwh_obds: Optional[
+        "DiagnosticTroubleCodeProps.LegislatedFreezeFrameContentWwhObds"
+    ] = field(
         default=None,
         metadata={
             "name": "LEGISLATED-FREEZE-FRAME-CONTENT-WWH-OBDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_freeze_frame_records: Optional[PositiveInteger] = field(
         default=None,
@@ -290,15 +317,17 @@ class DiagnosticTroubleCodeProps:
             "name": "MAX-NUMBER-FREEZE-FRAME-RECORDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    memory_destination_refs: Optional["DiagnosticTroubleCodeProps.MemoryDestinationRefs"] = field(
+    memory_destination_refs: Optional[
+        "DiagnosticTroubleCodeProps.MemoryDestinationRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "MEMORY-DESTINATION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     priority: Optional[PositiveIntegerValueVariationPoint] = field(
         default=None,
@@ -306,7 +335,7 @@ class DiagnosticTroubleCodeProps:
             "name": "PRIORITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     significance: Optional[DiagnosticSignificanceEnum] = field(
         default=None,
@@ -314,22 +343,24 @@ class DiagnosticTroubleCodeProps:
             "name": "SIGNIFICANCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    snapshot_record_contents: Optional["DiagnosticTroubleCodeProps.SnapshotRecordContents"] = field(
+    snapshot_record_contents: Optional[
+        "DiagnosticTroubleCodeProps.SnapshotRecordContents"
+    ] = field(
         default=None,
         metadata={
             "name": "SNAPSHOT-RECORD-CONTENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -337,14 +368,14 @@ class DiagnosticTroubleCodeProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -355,7 +386,7 @@ class DiagnosticTroubleCodeProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -366,7 +397,7 @@ class DiagnosticTroubleCodeProps:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -377,29 +408,33 @@ class DiagnosticTroubleCodeProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ExtendedDataRecords:
-        diagnostic_extended_data_record_ref_conditional: List[DiagnosticExtendedDataRecordRefConditional] = field(
+        diagnostic_extended_data_record_ref_conditional: List[
+            DiagnosticExtendedDataRecordRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-EXTENDED-DATA-RECORD-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FreezeFrames:
-        diagnostic_freeze_frame_ref_conditional: List[DiagnosticFreezeFrameRefConditional] = field(
+        diagnostic_freeze_frame_ref_conditional: List[
+            DiagnosticFreezeFrameRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-FREEZE-FRAME-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -410,7 +445,7 @@ class DiagnosticTroubleCodeProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -421,29 +456,33 @@ class DiagnosticTroubleCodeProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class LegislatedFreezeFrameContentWwhObds:
-        diagnostic_data_identifier_set_ref_conditional: List[DiagnosticDataIdentifierSetRefConditional] = field(
+        diagnostic_data_identifier_set_ref_conditional: List[
+            DiagnosticDataIdentifierSetRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DATA-IDENTIFIER-SET-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class MemoryDestinationRefs:
-        memory_destination_ref: List["DiagnosticTroubleCodeProps.MemoryDestinationRefs.MemoryDestinationRef"] = field(
+        memory_destination_ref: List[
+            "DiagnosticTroubleCodeProps.MemoryDestinationRefs.MemoryDestinationRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MEMORY-DESTINATION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -454,16 +493,18 @@ class DiagnosticTroubleCodeProps:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class SnapshotRecordContents:
-        diagnostic_data_identifier_set_ref_conditional: List[DiagnosticDataIdentifierSetRefConditional] = field(
+        diagnostic_data_identifier_set_ref_conditional: List[
+            DiagnosticDataIdentifierSetRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-DATA-IDENTIFIER-SET-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

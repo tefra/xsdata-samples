@@ -10,6 +10,7 @@ class CoordinateLocation2(Location2):
     """
     Specific lat/long location, usually associated with a Distance.
     """
+
     class Meta:
         name = "CoordinateLocation"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -19,12 +20,12 @@ class CoordinateLocation2(Location2):
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     longitude: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

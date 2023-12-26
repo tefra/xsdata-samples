@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration, XmlTime
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .block_parts_rel_structure import BlockPartsRelStructure
@@ -29,7 +29,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -37,7 +37,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -45,7 +45,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     preparation_duration: Optional[XmlDuration] = field(
         default=None,
@@ -53,7 +53,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "PreparationDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_time: Optional[XmlTime] = field(
         default=None,
@@ -61,7 +61,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_time_day_offset: Optional[int] = field(
         default=None,
@@ -69,7 +69,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "StartTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     finishing_duration: Optional[XmlDuration] = field(
         default=None,
@@ -77,7 +77,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "FinishingDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_time: Optional[XmlTime] = field(
         default=None,
@@ -85,7 +85,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_time_day_offset: Optional[int] = field(
         default=None,
@@ -93,7 +93,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "EndTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_types: Optional[DayTypeRefsRelStructure] = field(
         default=None,
@@ -101,7 +101,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "dayTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     vehicle_service_part_ref: Optional[VehicleServicePartRef] = field(
         default=None,
@@ -109,9 +109,11 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "VehicleServicePartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[object] = field(
+    compound_train_ref_or_train_ref_or_vehicle_type_ref: Optional[
+        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -132,7 +134,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     start_point_ref: Optional[PointRefStructure] = field(
         default=None,
@@ -140,7 +142,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "StartPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_point_ref: Optional[PointRefStructure] = field(
         default=None,
@@ -148,14 +150,14 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "EndPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     journeys: Optional[JourneyRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     courses_of_journeys: Optional[CoursesOfJourneysRelStructure] = field(
         default=None,
@@ -163,7 +165,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "coursesOfJourneys",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     block_parts: Optional[BlockPartsRelStructure] = field(
         default=None,
@@ -171,7 +173,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "blockParts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     relief_opportunities: Optional[ReliefOpportunitiesRelStructure] = field(
         default=None,
@@ -179,5 +181,5 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "name": "reliefOpportunities",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

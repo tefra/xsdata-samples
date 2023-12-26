@@ -10,6 +10,7 @@ class InsertOverrideDefinition:
     """
     Insert new override Definition.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -20,5 +21,5 @@ class InsertOverrideDefinition:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

@@ -95,6 +95,7 @@ class TraceableTable:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "TRACEABLE-TABLE"
 
@@ -105,15 +106,17 @@ class TraceableTable:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TraceableTable.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TraceableTable.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -121,7 +124,7 @@ class TraceableTable:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -129,7 +132,7 @@ class TraceableTable:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -137,7 +140,7 @@ class TraceableTable:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -145,7 +148,7 @@ class TraceableTable:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -153,7 +156,7 @@ class TraceableTable:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TraceableTable.Annotations"] = field(
         default=None,
@@ -161,7 +164,7 @@ class TraceableTable:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["TraceableTable.TraceRefs"] = field(
         default=None,
@@ -169,7 +172,7 @@ class TraceableTable:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     table: Optional[Table] = field(
         default=None,
@@ -177,14 +180,14 @@ class TraceableTable:
             "name": "TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -192,14 +195,14 @@ class TraceableTable:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -207,7 +210,7 @@ class TraceableTable:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -215,21 +218,21 @@ class TraceableTable:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -240,7 +243,7 @@ class TraceableTable:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -251,7 +254,7 @@ class TraceableTable:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -262,7 +265,7 @@ class TraceableTable:
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -273,5 +276,5 @@ class TraceableTable:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

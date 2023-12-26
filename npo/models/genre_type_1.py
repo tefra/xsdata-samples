@@ -14,7 +14,7 @@ class GenreType1:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     id: None | str = field(
         default=None,
@@ -22,5 +22,5 @@ class GenreType1:
             "type": "Attribute",
             "required": True,
             "pattern": r"3(\.[0-9]+)+",
-        }
+        },
     )

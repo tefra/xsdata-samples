@@ -10,12 +10,12 @@ class CodeListType:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )
     code_space: Optional[str] = field(
         default=None,
         metadata={
             "name": "codeSpace",
             "type": "Attribute",
-        }
+        },
     )

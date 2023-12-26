@@ -21,6 +21,7 @@ class Leg:
     destination
         Returns the destination airport or city code for the leg.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -30,7 +31,7 @@ class Leg:
             "name": "LegDetail",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class Leg:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     group: None | int = field(
         default=None,
@@ -46,7 +47,7 @@ class Leg:
             "name": "Group",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -57,7 +58,7 @@ class Leg:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -68,5 +69,5 @@ class Leg:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )

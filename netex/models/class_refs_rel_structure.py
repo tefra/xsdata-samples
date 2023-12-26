@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .class_in_frame_ref import ClassInFrameRef
 from .class_ref import ClassRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,9 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "classRefs_RelStructure"
 
-    class_in_frame_ref_or_class_ref: List[object] = field(
+    class_in_frame_ref_or_class_ref: List[
+        Union[ClassInFrameRef, ClassRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

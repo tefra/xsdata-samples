@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .application_composite_element_data_prototype_subtypes_enum import ApplicationCompositeElementDataPrototypeSubtypesEnum
-from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .application_composite_element_data_prototype_subtypes_enum import (
+    ApplicationCompositeElementDataPrototypeSubtypesEnum,
+)
+from .autosar_data_prototype_subtypes_enum import (
+    AutosarDataPrototypeSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -28,39 +32,46 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "APPLICATION-COMPOSITE-ELEMENT-IN-PORT-INTERFACE-INSTANCE-REF"
 
-    root_data_prototype_ref: Optional["ApplicationCompositeElementInPortInterfaceInstanceRef.RootDataPrototypeRef"] = field(
+    root_data_prototype_ref: Optional[
+        "ApplicationCompositeElementInPortInterfaceInstanceRef.RootDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_data_prototype_ref: List["ApplicationCompositeElementInPortInterfaceInstanceRef.ContextDataPrototypeRef"] = field(
+    context_data_prototype_ref: List[
+        "ApplicationCompositeElementInPortInterfaceInstanceRef.ContextDataPrototypeRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_data_prototype_ref: Optional["ApplicationCompositeElementInPortInterfaceInstanceRef.TargetDataPrototypeRef"] = field(
+    target_data_prototype_ref: Optional[
+        "ApplicationCompositeElementInPortInterfaceInstanceRef.TargetDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -68,7 +79,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -79,27 +90,31 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: Optional[ApplicationCompositeElementDataPrototypeSubtypesEnum] = field(
+        dest: Optional[
+            ApplicationCompositeElementDataPrototypeSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[ApplicationCompositeElementDataPrototypeSubtypesEnum] = field(
+        dest: Optional[
+            ApplicationCompositeElementDataPrototypeSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -19,6 +19,7 @@ class PointOfCommencement2:
     time
         Specify a date or date and time
     """
+
     class Meta:
         name = "PointOfCommencement"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -31,7 +32,7 @@ class PointOfCommencement2:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     time: None | str = field(
         default=None,
@@ -39,5 +40,5 @@ class PointOfCommencement2:
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

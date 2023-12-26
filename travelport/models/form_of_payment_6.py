@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass
-from travelport.models.type_form_of_payment_type_2 import TypeFormOfPaymentType2
+from travelport.models.type_form_of_payment_type_2 import (
+    TypeFormOfPaymentType2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 

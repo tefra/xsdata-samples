@@ -13,7 +13,7 @@ class PartyLocalIdType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        }
+        },
     )
     sender: Optional[str] = field(
         default=None,
@@ -22,7 +22,7 @@ class PartyLocalIdType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        }
+        },
     )
     party_type: Optional[str] = field(
         default=None,
@@ -31,5 +31,5 @@ class PartyLocalIdType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
             "required": True,
-        }
+        },
     )

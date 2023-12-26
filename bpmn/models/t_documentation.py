@@ -13,14 +13,14 @@ class TDocumentation:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     text_format: str = field(
         default="text/plain",
         metadata={
             "name": "textFormat",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -28,5 +28,5 @@ class TDocumentation:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

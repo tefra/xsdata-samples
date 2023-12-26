@@ -16,6 +16,7 @@ class DirectionBearingValue(DataValue):
         the reference direction corresponding to 0 degrees is North.
     :ivar direction_bearing_value_extension:
     """
+
     direction_bearing: Optional[int] = field(
         default=None,
         metadata={
@@ -23,7 +24,7 @@ class DirectionBearingValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     direction_bearing_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -31,5 +32,5 @@ class DirectionBearingValue(DataValue):
             "name": "directionBearingValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -6,9 +6,13 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .application_partition_subtypes_enum import ApplicationPartitionSubtypesEnum
+from .application_partition_subtypes_enum import (
+    ApplicationPartitionSubtypesEnum,
+)
 from .category_string import CategoryString
-from .cp_software_cluster_resource_subtypes_enum import CpSoftwareClusterResourceSubtypesEnum
+from .cp_software_cluster_resource_subtypes_enum import (
+    CpSoftwareClusterResourceSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -83,6 +87,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-RESOURCE-TO-APPLICATION-PARTITION-MAPPING"
 
@@ -93,15 +98,17 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CpSoftwareClusterResourceToApplicationPartitionMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CpSoftwareClusterResourceToApplicationPartitionMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -109,7 +116,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -117,7 +124,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -125,7 +132,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -133,7 +140,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -141,31 +148,37 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["CpSoftwareClusterResourceToApplicationPartitionMapping.Annotations"] = field(
+    annotations: Optional[
+        "CpSoftwareClusterResourceToApplicationPartitionMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    application_partition_ref: Optional["CpSoftwareClusterResourceToApplicationPartitionMapping.ApplicationPartitionRef"] = field(
+    application_partition_ref: Optional[
+        "CpSoftwareClusterResourceToApplicationPartitionMapping.ApplicationPartitionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLICATION-PARTITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    resource_ref: Optional["CpSoftwareClusterResourceToApplicationPartitionMapping.ResourceRef"] = field(
+    resource_ref: Optional[
+        "CpSoftwareClusterResourceToApplicationPartitionMapping.ResourceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RESOURCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -173,14 +186,14 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -188,14 +201,14 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -206,7 +219,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -217,7 +230,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -228,7 +241,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -239,5 +252,5 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

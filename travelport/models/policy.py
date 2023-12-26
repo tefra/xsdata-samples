@@ -11,5 +11,6 @@ class Policy(TypeKeyword1):
 
     Valid for 1P only.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"

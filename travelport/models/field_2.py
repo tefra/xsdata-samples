@@ -20,6 +20,7 @@ class Field2(TypeCustomField2):
     is_used
         True if the custom field is in use by one or more profiles.
     """
+
     class Meta:
         name = "Field"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -30,7 +31,7 @@ class Field2(TypeCustomField2):
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -38,7 +39,7 @@ class Field2(TypeCustomField2):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_used: None | bool = field(
         default=None,
@@ -46,5 +47,5 @@ class Field2(TypeCustomField2):
             "name": "IsUsed",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

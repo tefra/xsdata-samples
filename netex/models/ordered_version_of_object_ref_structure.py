@@ -11,5 +11,5 @@ class OrderedVersionOfObjectRefStructure(VersionOfObjectRefStructure):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

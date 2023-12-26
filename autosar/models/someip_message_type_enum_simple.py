@@ -12,6 +12,7 @@ class SomeipMessageTypeEnumSimple(Enum):
     :cvar REQUEST_NO_RETURN: A fire&amp;forget request.
     :cvar RESPONSE: The response message.
     """
+
     ERROR = "ERROR"
     NOTIFICATION = "NOTIFICATION"
     REQUEST = "REQUEST"

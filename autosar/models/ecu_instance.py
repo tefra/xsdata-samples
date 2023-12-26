@@ -12,7 +12,9 @@ from .can_communication_controller import CanCommunicationController
 from .can_tp_address_subtypes_enum import CanTpAddressSubtypesEnum
 from .category_string import CategoryString
 from .client_id_range import ClientIdRange
-from .consumed_provided_service_instance_group_ref_conditional import ConsumedProvidedServiceInstanceGroupRefConditional
+from .consumed_provided_service_instance_group_ref_conditional import (
+    ConsumedProvidedServiceInstanceGroupRefConditional,
+)
 from .diagnostic_ecu_props import DiagnosticEcuProps
 from .dlt_config import DltConfig
 from .do_ip_config import DoIpConfig
@@ -39,8 +41,12 @@ from .time_value import TimeValue
 from .tp_address_subtypes_enum import TpAddressSubtypesEnum
 from .ttcan_communication_connector import TtcanCommunicationConnector
 from .ttcan_communication_controller import TtcanCommunicationController
-from .user_defined_communication_connector import UserDefinedCommunicationConnector
-from .user_defined_communication_controller import UserDefinedCommunicationController
+from .user_defined_communication_connector import (
+    UserDefinedCommunicationConnector,
+)
+from .user_defined_communication_controller import (
+    UserDefinedCommunicationController,
+)
 from .v_2_x_support_enum import V2XSupportEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -193,6 +199,7 @@ class EcuInstance:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECU-INSTANCE"
 
@@ -203,7 +210,7 @@ class EcuInstance:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["EcuInstance.ShortNameFragments"] = field(
         default=None,
@@ -211,7 +218,7 @@ class EcuInstance:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -219,7 +226,7 @@ class EcuInstance:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -227,7 +234,7 @@ class EcuInstance:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -235,7 +242,7 @@ class EcuInstance:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -243,7 +250,7 @@ class EcuInstance:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -251,7 +258,7 @@ class EcuInstance:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EcuInstance.Annotations"] = field(
         default=None,
@@ -259,7 +266,7 @@ class EcuInstance:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -267,31 +274,37 @@ class EcuInstance:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    associated_com_i_pdu_group_refs: Optional["EcuInstance.AssociatedComIPduGroupRefs"] = field(
+    associated_com_i_pdu_group_refs: Optional[
+        "EcuInstance.AssociatedComIPduGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-COM-I-PDU-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    associated_consumed_provided_service_instance_groups: Optional["EcuInstance.AssociatedConsumedProvidedServiceInstanceGroups"] = field(
+    associated_consumed_provided_service_instance_groups: Optional[
+        "EcuInstance.AssociatedConsumedProvidedServiceInstanceGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    associated_pdur_i_pdu_group_refs: Optional["EcuInstance.AssociatedPdurIPduGroupRefs"] = field(
+    associated_pdur_i_pdu_group_refs: Optional[
+        "EcuInstance.AssociatedPdurIPduGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-PDUR-I-PDU-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_tp_address_refs: Optional["EcuInstance.CanTpAddressRefs"] = field(
         default=None,
@@ -299,7 +312,7 @@ class EcuInstance:
             "name": "CAN-TP-ADDRESS-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     client_id_range: Optional[ClientIdRange] = field(
         default=None,
@@ -307,7 +320,7 @@ class EcuInstance:
             "name": "CLIENT-ID-RANGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     com_configuration_gw_time_base: Optional[TimeValue] = field(
         default=None,
@@ -315,7 +328,7 @@ class EcuInstance:
             "name": "COM-CONFIGURATION-GW-TIME-BASE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     com_configuration_rx_time_base: Optional[TimeValue] = field(
         default=None,
@@ -323,7 +336,7 @@ class EcuInstance:
             "name": "COM-CONFIGURATION-RX-TIME-BASE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     com_configuration_tx_time_base: Optional[TimeValue] = field(
         default=None,
@@ -331,7 +344,7 @@ class EcuInstance:
             "name": "COM-CONFIGURATION-TX-TIME-BASE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     com_enable_mdt_for_cyclic_transmission: Optional[Boolean] = field(
         default=None,
@@ -339,7 +352,7 @@ class EcuInstance:
             "name": "COM-ENABLE-MDT-FOR-CYCLIC-TRANSMISSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     comm_controllers: Optional["EcuInstance.CommControllers"] = field(
         default=None,
@@ -347,7 +360,7 @@ class EcuInstance:
             "name": "COMM-CONTROLLERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     connectors: Optional["EcuInstance.Connectors"] = field(
         default=None,
@@ -355,7 +368,7 @@ class EcuInstance:
             "name": "CONNECTORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diagnostic_address: Optional[Integer] = field(
         default=None,
@@ -363,7 +376,7 @@ class EcuInstance:
             "name": "DIAGNOSTIC-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     diagnostic_props: Optional[DiagnosticEcuProps] = field(
         default=None,
@@ -371,7 +384,7 @@ class EcuInstance:
             "name": "DIAGNOSTIC-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dlt_config: Optional[DltConfig] = field(
         default=None,
@@ -379,7 +392,7 @@ class EcuInstance:
             "name": "DLT-CONFIG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     do_ip_config: Optional[DoIpConfig] = field(
         default=None,
@@ -387,7 +400,7 @@ class EcuInstance:
             "name": "DO-IP-CONFIG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_instance_propss: Optional["EcuInstance.EcuInstancePropss"] = field(
         default=None,
@@ -395,7 +408,7 @@ class EcuInstance:
             "name": "ECU-INSTANCE-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     eth_switch_port_group_derivation: Optional[Boolean] = field(
         default=None,
@@ -403,7 +416,7 @@ class EcuInstance:
             "name": "ETH-SWITCH-PORT-GROUP-DERIVATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     partitions: Optional["EcuInstance.Partitions"] = field(
         default=None,
@@ -411,7 +424,7 @@ class EcuInstance:
             "name": "PARTITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pn_reset_time: Optional[TimeValue] = field(
         default=None,
@@ -419,7 +432,7 @@ class EcuInstance:
             "name": "PN-RESET-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_prepare_sleep_timer: Optional[TimeValue] = field(
         default=None,
@@ -427,7 +440,7 @@ class EcuInstance:
             "name": "PNC-PREPARE-SLEEP-TIMER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_synchronous_wakeup: Optional[Boolean] = field(
         default=None,
@@ -435,7 +448,7 @@ class EcuInstance:
             "name": "PNC-SYNCHRONOUS-WAKEUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sleep_mode_supported: Optional[Boolean] = field(
         default=None,
@@ -443,7 +456,7 @@ class EcuInstance:
             "name": "SLEEP-MODE-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_icmp_props_ref: Optional["EcuInstance.TcpIpIcmpPropsRef"] = field(
         default=None,
@@ -451,7 +464,7 @@ class EcuInstance:
             "name": "TCP-IP-ICMP-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_props_ref: Optional["EcuInstance.TcpIpPropsRef"] = field(
         default=None,
@@ -459,7 +472,7 @@ class EcuInstance:
             "name": "TCP-IP-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_address_refs: Optional["EcuInstance.TpAddressRefs"] = field(
         default=None,
@@ -467,7 +480,7 @@ class EcuInstance:
             "name": "TP-ADDRESS-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     v_2_x_supported: Optional[V2XSupportEnum] = field(
         default=None,
@@ -475,7 +488,7 @@ class EcuInstance:
             "name": "V-2-X-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wake_up_over_bus_supported: Optional[Boolean] = field(
         default=None,
@@ -483,14 +496,14 @@ class EcuInstance:
             "name": "WAKE-UP-OVER-BUS-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -498,14 +511,14 @@ class EcuInstance:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -516,7 +529,7 @@ class EcuInstance:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -527,18 +540,20 @@ class EcuInstance:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AssociatedComIPduGroupRefs:
-        associated_com_i_pdu_group_ref: List["EcuInstance.AssociatedComIPduGroupRefs.AssociatedComIPduGroupRef"] = field(
+        associated_com_i_pdu_group_ref: List[
+            "EcuInstance.AssociatedComIPduGroupRefs.AssociatedComIPduGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ASSOCIATED-COM-I-PDU-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -549,29 +564,33 @@ class EcuInstance:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class AssociatedConsumedProvidedServiceInstanceGroups:
-        consumed_provided_service_instance_group_ref_conditional: List[ConsumedProvidedServiceInstanceGroupRefConditional] = field(
+        consumed_provided_service_instance_group_ref_conditional: List[
+            ConsumedProvidedServiceInstanceGroupRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AssociatedPdurIPduGroupRefs:
-        associated_pdur_i_pdu_group_ref: List["EcuInstance.AssociatedPdurIPduGroupRefs.AssociatedPdurIPduGroupRef"] = field(
+        associated_pdur_i_pdu_group_ref: List[
+            "EcuInstance.AssociatedPdurIPduGroupRefs.AssociatedPdurIPduGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ASSOCIATED-PDUR-I-PDU-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -582,18 +601,20 @@ class EcuInstance:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class CanTpAddressRefs:
-        can_tp_address_ref: List["EcuInstance.CanTpAddressRefs.CanTpAddressRef"] = field(
+        can_tp_address_ref: List[
+            "EcuInstance.CanTpAddressRefs.CanTpAddressRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CAN-TP-ADDRESS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -604,7 +625,7 @@ class EcuInstance:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -615,23 +636,27 @@ class EcuInstance:
                 "name": "CAN-COMMUNICATION-CONTROLLER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        ethernet_communication_controller: List[EthernetCommunicationController] = field(
+        ethernet_communication_controller: List[
+            EthernetCommunicationController
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-COMMUNICATION-CONTROLLER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        flexray_communication_controller: List[FlexrayCommunicationController] = field(
+        flexray_communication_controller: List[
+            FlexrayCommunicationController
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-COMMUNICATION-CONTROLLER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_master: List[LinMaster] = field(
             default_factory=list,
@@ -639,7 +664,7 @@ class EcuInstance:
                 "name": "LIN-MASTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_slave: List[LinSlave] = field(
             default_factory=list,
@@ -647,23 +672,27 @@ class EcuInstance:
                 "name": "LIN-SLAVE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        ttcan_communication_controller: List[TtcanCommunicationController] = field(
+        ttcan_communication_controller: List[
+            TtcanCommunicationController
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-COMMUNICATION-CONTROLLER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_communication_controller: List[UserDefinedCommunicationController] = field(
+        user_defined_communication_controller: List[
+            UserDefinedCommunicationController
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-COMMUNICATION-CONTROLLER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -674,23 +703,27 @@ class EcuInstance:
                 "name": "CAN-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        ethernet_communication_connector: List[EthernetCommunicationConnector] = field(
+        ethernet_communication_connector: List[
+            EthernetCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ETHERNET-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        flexray_communication_connector: List[FlexrayCommunicationConnector] = field(
+        flexray_communication_connector: List[
+            FlexrayCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_communication_connector: List[LinCommunicationConnector] = field(
             default_factory=list,
@@ -698,23 +731,27 @@ class EcuInstance:
                 "name": "LIN-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        ttcan_communication_connector: List[TtcanCommunicationConnector] = field(
+        ttcan_communication_connector: List[
+            TtcanCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TTCAN-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_communication_connector: List[UserDefinedCommunicationConnector] = field(
+        user_defined_communication_connector: List[
+            UserDefinedCommunicationConnector
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-COMMUNICATION-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -725,7 +762,7 @@ class EcuInstance:
                 "name": "ECU-INSTANCE-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -736,7 +773,7 @@ class EcuInstance:
                 "name": "ECU-PARTITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -747,7 +784,7 @@ class EcuInstance:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -758,7 +795,7 @@ class EcuInstance:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -769,7 +806,7 @@ class EcuInstance:
                 "name": "TP-ADDRESS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -780,5 +817,5 @@ class EcuInstance:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

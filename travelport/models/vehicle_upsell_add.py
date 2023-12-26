@@ -11,6 +11,7 @@ class VehicleUpsellAdd:
     """
     Add command for adding VehicleUpsellQualify,VehicleUpsellOffer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,12 +21,12 @@ class VehicleUpsellAdd:
             "name": "VehicleUpsellQualify",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     vehicle_upsell_offer: None | VehicleUpsellOffer = field(
         default=None,
         metadata={
             "name": "VehicleUpsellOffer",
             "type": "Element",
-        }
+        },
     )

@@ -15,5 +15,5 @@ class Laplacian:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

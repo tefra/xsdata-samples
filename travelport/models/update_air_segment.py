@@ -10,6 +10,7 @@ class UpdateAirSegment:
     """
     Container for Air Segment to be updated.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,5 +22,5 @@ class UpdateAirSegment:
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 1,
             "max_occurs": 8,
-        }
+        },
     )

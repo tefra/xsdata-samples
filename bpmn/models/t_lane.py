@@ -17,7 +17,7 @@ class TLane(TBaseElement):
             "name": "partitionElement",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     flow_node_ref: List[str] = field(
         default_factory=list,
@@ -25,7 +25,7 @@ class TLane(TBaseElement):
             "name": "flowNodeRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     child_lane_set: Optional["TLaneSet"] = field(
         default=None,
@@ -33,20 +33,20 @@ class TLane(TBaseElement):
             "name": "childLaneSet",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     partition_element_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "partitionElementRef",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -67,11 +67,11 @@ class TLaneSet(TBaseElement):
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

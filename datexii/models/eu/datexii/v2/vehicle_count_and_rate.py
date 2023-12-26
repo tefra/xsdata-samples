@@ -2,9 +2,15 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.measurement_site_record_versioned_reference import MeasurementSiteRecordVersionedReference
-from datexii.models.eu.datexii.v2.parking_access_reference import ParkingAccessReference
-from datexii.models.eu.datexii.v2.vehicle_count_within_interval import VehicleCountWithinInterval
+from datexii.models.eu.datexii.v2.measurement_site_record_versioned_reference import (
+    MeasurementSiteRecordVersionedReference,
+)
+from datexii.models.eu.datexii.v2.parking_access_reference import (
+    ParkingAccessReference,
+)
+from datexii.models.eu.datexii.v2.vehicle_count_within_interval import (
+    VehicleCountWithinInterval,
+)
 from datexii.models.eu.datexii.v2.vehicle_rate import VehicleRate
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -36,13 +42,16 @@ class VehicleCountAndRate:
     :ivar vehicle_rate:
     :ivar vehicle_count_and_rate_extension:
     """
-    measurement_site_reference: Optional[MeasurementSiteRecordVersionedReference] = field(
+
+    measurement_site_reference: Optional[
+        MeasurementSiteRecordVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "measurementSiteReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     measured_value_index: Optional[int] = field(
         default=None,
@@ -50,7 +59,7 @@ class VehicleCountAndRate:
             "name": "measuredValueIndex",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dedicated_access: Optional[ParkingAccessReference] = field(
         default=None,
@@ -58,7 +67,7 @@ class VehicleCountAndRate:
             "name": "dedicatedAccess",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     measurement_time_default: Optional[XmlDateTime] = field(
         default=None,
@@ -66,7 +75,7 @@ class VehicleCountAndRate:
             "name": "measurementTimeDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     last_calibration: Optional[XmlDateTime] = field(
         default=None,
@@ -74,7 +83,7 @@ class VehicleCountAndRate:
             "name": "lastCalibration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     covering_petrol_station_area: Optional[bool] = field(
         default=None,
@@ -82,7 +91,7 @@ class VehicleCountAndRate:
             "name": "coveringPetrolStationArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_count_within_interval: List[VehicleCountWithinInterval] = field(
         default_factory=list,
@@ -90,7 +99,7 @@ class VehicleCountAndRate:
             "name": "vehicleCountWithinInterval",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_rate: List[VehicleRate] = field(
         default_factory=list,
@@ -98,7 +107,7 @@ class VehicleCountAndRate:
             "name": "vehicleRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_count_and_rate_extension: Optional[ExtensionType] = field(
         default=None,
@@ -106,5 +115,5 @@ class VehicleCountAndRate:
             "name": "vehicleCountAndRateExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

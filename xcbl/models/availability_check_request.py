@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from xcbl.models.availability_to_promise_response import AvailabilityShipToParty
+from xcbl.models.availability_to_promise_response import (
+    AvailabilityShipToParty,
+)
 from xcbl.models.price_check_request import RequestListOfAttachment
 from xcbl.models.price_check_result import LineItemAttachment
 from xcbl.models.remittance_advice import SupplierParty
@@ -39,7 +41,7 @@ class AvailabilityCheckRequestSummary:
         metadata={
             "name": "TotalNumberOfLineItem",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -93,134 +95,136 @@ class AvailabilityCheckRequestBaseItemDetail:
         metadata={
             "name": "LineItemType",
             "type": "Element",
-        }
+        },
     )
     parent_item_number: Optional[ParentItemNumber] = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
-        }
+        },
     )
     item_identifiers: Optional[ItemIdentifiers] = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
-        }
+        },
     )
     list_of_dimension: Optional[ListOfDimension] = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-        }
+        },
     )
     total_quantity: Optional[TotalQuantity] = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
-        }
+        },
     )
     max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
-        }
+        },
     )
     list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
-        }
+        },
     )
     off_catalog_flag: Optional[str] = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
-        }
+        },
     )
     catalog_reference: Optional[CatalogReference] = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
-        }
+        },
     )
     item_contract_references: Optional[ItemContractReferences] = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
-        }
+        },
     )
     list_of_item_references: Optional[ListOfItemReferences] = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
-        }
+        },
     )
     country_of_origin: Optional[CountryOfOrigin] = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
-        }
+        },
     )
     country_of_destination: Optional[CountryOfDestination] = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
-        }
+        },
     )
     final_recipient: Optional[FinalRecipient] = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
     conditions_of_sale: Optional[ConditionsOfSale] = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
-        }
+        },
     )
     hazardous_materials: Optional[HazardousMaterials] = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
-        }
+        },
     )
     delivery_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
-        }
+        },
     )
-    availability_check_request_transport: List[AvailabilityCheckRequestTransport] = field(
+    availability_check_request_transport: List[
+        AvailabilityCheckRequestTransport
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AvailabilityCheckRequestTransport",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -252,7 +256,7 @@ class AvailabilityCheckRequestHeader:
         metadata={
             "name": "SupplierIDReferenceDate",
             "type": "Element",
-        }
+        },
     )
     buyer_party: BuyerParty = field(
         metadata={
@@ -266,14 +270,14 @@ class AvailabilityCheckRequestHeader:
         metadata={
             "name": "BuyerIDReferenceDate",
             "type": "Element",
-        }
+        },
     )
     account_code: Optional[AccountCode] = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Element",
-        }
+        },
     )
     availability_ship_to_party: AvailabilityShipToParty = field(
         metadata={
@@ -282,26 +286,28 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    availability_check_request_language: Optional[AvailabilityCheckRequestLanguage] = field(
+    availability_check_request_language: Optional[
+        AvailabilityCheckRequestLanguage
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestLanguage",
             "type": "Element",
-        }
+        },
     )
     availability_check_request_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestNote",
             "type": "Element",
-        }
+        },
     )
     request_list_of_attachment: Optional[RequestListOfAttachment] = field(
         default=None,
         metadata={
             "name": "RequestListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -319,26 +325,28 @@ class AvailabilityCheckRequestItemDetail:
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
-        }
+        },
     )
     line_item_attachment: Optional[LineItemAttachment] = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfAvailabilityCheckRequestItemDetail:
-    availability_check_request_item_detail: List[AvailabilityCheckRequestItemDetail] = field(
+    availability_check_request_item_detail: List[
+        AvailabilityCheckRequestItemDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AvailabilityCheckRequestItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -362,17 +370,21 @@ class AvailabilityCheckRequest:
             "required": True,
         }
     )
-    availability_check_request_detail: Optional[AvailabilityCheckRequestDetail] = field(
+    availability_check_request_detail: Optional[
+        AvailabilityCheckRequestDetail
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestDetail",
             "type": "Element",
-        }
+        },
     )
-    availability_check_request_summary: Optional[AvailabilityCheckRequestSummary] = field(
+    availability_check_request_summary: Optional[
+        AvailabilityCheckRequestSummary
+    ] = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestSummary",
             "type": "Element",
-        }
+        },
     )

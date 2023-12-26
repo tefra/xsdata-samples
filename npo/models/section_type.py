@@ -13,11 +13,11 @@ class SectionType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     path: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

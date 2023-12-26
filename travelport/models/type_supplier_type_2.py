@@ -9,6 +9,7 @@ class TypeSupplierType2(Enum):
 
     (Air, Car, Hotel, etc)
     """
+
     AIR = "Air"
     VEHICLE = "Vehicle"
     HOTEL = "Hotel"

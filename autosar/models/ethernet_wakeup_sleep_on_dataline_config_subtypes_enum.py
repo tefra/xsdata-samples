@@ -4,4 +4,6 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
 class EthernetWakeupSleepOnDatalineConfigSubtypesEnum(Enum):
-    ETHERNET_WAKEUP_SLEEP_ON_DATALINE_CONFIG = "ETHERNET-WAKEUP-SLEEP-ON-DATALINE-CONFIG"
+    ETHERNET_WAKEUP_SLEEP_ON_DATALINE_CONFIG = (
+        "ETHERNET-WAKEUP-SLEEP-ON-DATALINE-CONFIG"
+    )

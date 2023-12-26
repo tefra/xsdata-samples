@@ -15,19 +15,19 @@ class DescriptionType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: None | TextualTypeEnum = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

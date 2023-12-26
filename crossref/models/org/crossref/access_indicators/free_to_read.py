@@ -15,11 +15,11 @@ class FreeToRead:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     start_date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

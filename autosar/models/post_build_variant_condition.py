@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .integer_value_variation_point import IntegerValueVariationPoint
-from .post_build_variant_criterion_subtypes_enum import PostBuildVariantCriterionSubtypesEnum
+from .post_build_variant_criterion_subtypes_enum import (
+    PostBuildVariantCriterionSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -32,16 +34,19 @@ class PostBuildVariantCondition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "POST-BUILD-VARIANT-CONDITION"
 
-    matching_criterion_ref: Optional["PostBuildVariantCondition.MatchingCriterionRef"] = field(
+    matching_criterion_ref: Optional[
+        "PostBuildVariantCondition.MatchingCriterionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MATCHING-CRITERION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     value: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -49,14 +54,14 @@ class PostBuildVariantCondition:
             "name": "VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -64,7 +69,7 @@ class PostBuildVariantCondition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -75,5 +80,5 @@ class PostBuildVariantCondition:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

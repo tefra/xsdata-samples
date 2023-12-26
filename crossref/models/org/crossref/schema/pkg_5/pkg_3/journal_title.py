@@ -8,6 +8,7 @@ class JournalTitle:
     """
     Journal title in a citation.
     """
+
     class Meta:
         name = "journal_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -16,5 +17,5 @@ class JournalTitle:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

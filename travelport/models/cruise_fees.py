@@ -16,6 +16,7 @@ class CruiseFees:
     description
         Text explaining fee amount
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -25,7 +26,7 @@ class CruiseFees:
             "name": "Amount",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class CruiseFees:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )

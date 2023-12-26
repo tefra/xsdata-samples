@@ -16,6 +16,7 @@ class DiagnosticAudienceEnumSimple(Enum):
     :cvar SUPPLIER: The object is relevant for the ECU-supplier
         aftermarket organization.
     """
+
     AFTER_SALES = "AFTER-SALES"
     AFTERMAKET = "AFTERMAKET"
     AFTERMARKET = "AFTERMARKET"

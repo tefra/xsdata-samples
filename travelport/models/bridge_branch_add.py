@@ -10,5 +10,6 @@ class BridgeBranchAdd(TypeBridgeBranchCmd):
     """
     Command to add a bridge branch assoication of an agent.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

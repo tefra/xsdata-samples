@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDate
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .day_type_ref import DayTypeRef
@@ -23,9 +23,11 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "ServiceCalendarRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    operating_period_ref_or_operating_day_ref_or_date: Optional[object] = field(
+    operating_period_ref_or_operating_day_ref_or_date: Optional[
+        Union[OperatingPeriodRef, OperatingDayRef, XmlDate]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -46,9 +48,11 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    fare_day_type_ref_or_day_type_ref: Optional[object] = field(
+    fare_day_type_ref_or_day_type_ref: Optional[
+        Union[FareDayTypeRef, DayTypeRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -64,7 +68,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     timeband_ref: List[TimebandRef] = field(
         default_factory=list,
@@ -73,7 +77,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "max_occurs": 5,
-        }
+        },
     )
     is_available: Optional[bool] = field(
         default=None,
@@ -81,5 +85,5 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "isAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

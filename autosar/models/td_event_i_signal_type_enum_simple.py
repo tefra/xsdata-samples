@@ -14,5 +14,6 @@ class TdEventISignalTypeEnumSimple(Enum):
         group and the new value is stored to the carrier COM I-PDU
         buffer.
     """
+
     I_SIGNAL_AVAILABLE_FOR_RTE = "I-SIGNAL-AVAILABLE-FOR-RTE"
     I_SIGNAL_SENT_TO_COM = "I-SIGNAL-SENT-TO-COM"

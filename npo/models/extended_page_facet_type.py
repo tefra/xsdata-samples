@@ -16,12 +16,12 @@ class ExtendedPageFacetType(TextFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     case_sensitive: None | bool = field(
         default=None,
         metadata={
             "name": "caseSensitive",
             "type": "Attribute",
-        }
+        },
     )

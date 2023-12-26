@@ -64,6 +64,7 @@ class RailPricingInfo:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -73,7 +74,7 @@ class RailPricingInfo:
             "name": "RailFare",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_fare_ref: list[RailFareRef] = field(
         default_factory=list,
@@ -81,7 +82,7 @@ class RailPricingInfo:
             "name": "RailFareRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_booking_info: list[RailBookingInfo] = field(
         default_factory=list,
@@ -89,7 +90,7 @@ class RailPricingInfo:
             "name": "RailBookingInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     passenger_type: list[TypePassengerType1] = field(
         default_factory=list,
@@ -97,7 +98,7 @@ class RailPricingInfo:
             "name": "PassengerType",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -106,7 +107,7 @@ class RailPricingInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -114,103 +115,103 @@ class RailPricingInfo:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
-        }
+        },
     )
     approximate_exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateExchangeAmount",
             "type": "Attribute",
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

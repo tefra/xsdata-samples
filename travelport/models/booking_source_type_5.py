@@ -18,6 +18,7 @@ class BookingSourceType5(Enum):
         agency/e-commerce to use in place of an IATA number. Supported
         provider(s) : 1P/1J
     """
+
     PSEUDO_CITY_CODE = "PseudoCityCode"
     ARC_NUMBER = "ArcNumber"
     IATA_NUMBER = "IataNumber"

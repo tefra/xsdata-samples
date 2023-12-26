@@ -7,7 +7,9 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
 from datexii.models.eu.datexii.v2.parking_permit import ParkingPermit
 from datexii.models.eu.datexii.v2.user_type_enum import UserTypeEnum
-from datexii.models.eu.datexii.v2.vehicle_characteristics import VehicleCharacteristics
+from datexii.models.eu.datexii.v2.vehicle_characteristics import (
+    VehicleCharacteristics,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -36,6 +38,7 @@ class ChargeBand:
     :ivar id:
     :ivar version:
     """
+
     charge_currency: Optional[CurrencyEnum] = field(
         default=None,
         metadata={
@@ -43,7 +46,7 @@ class ChargeBand:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     maximum_duration: Optional[float] = field(
         default=None,
@@ -51,7 +54,7 @@ class ChargeBand:
             "name": "maximumDuration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_band_name: Optional[MultilingualString] = field(
         default=None,
@@ -59,7 +62,7 @@ class ChargeBand:
             "name": "chargeBandName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     applicable_for_user: List[UserTypeEnum] = field(
         default_factory=list,
@@ -67,7 +70,7 @@ class ChargeBand:
             "name": "applicableForUser",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge: List[Charge] = field(
         default_factory=list,
@@ -75,7 +78,7 @@ class ChargeBand:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     applicable_for_period: Optional[OverallPeriod] = field(
         default=None,
@@ -83,7 +86,7 @@ class ChargeBand:
             "name": "applicableForPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     applicable_for_vehicles: List[VehicleCharacteristics] = field(
         default_factory=list,
@@ -91,7 +94,7 @@ class ChargeBand:
             "name": "applicableForVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_permit: List[ParkingPermit] = field(
         default_factory=list,
@@ -99,7 +102,7 @@ class ChargeBand:
             "name": "parkingPermit",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charge_band_extension: Optional[ExtensionType] = field(
         default=None,
@@ -107,19 +110,19 @@ class ChargeBand:
             "name": "chargeBandExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -14,5 +14,5 @@ class ResponseTimestamp:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

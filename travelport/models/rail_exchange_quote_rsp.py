@@ -17,6 +17,7 @@ class RailExchangeQuoteRsp(BaseRsp1):
     """
     Returns the result of an availability search on host.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -25,14 +26,14 @@ class RailExchangeQuoteRsp(BaseRsp1):
         metadata={
             "name": "RailSegmentList",
             "type": "Element",
-        }
+        },
     )
     rail_journey_list: None | RailJourneyList = field(
         default=None,
         metadata={
             "name": "RailJourneyList",
             "type": "Element",
-        }
+        },
     )
     rail_exchange_solution: list[RailExchangeSolution] = field(
         default_factory=list,
@@ -40,28 +41,28 @@ class RailExchangeQuoteRsp(BaseRsp1):
             "name": "RailExchangeSolution",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
         metadata={
             "name": "RailFareNoteList",
             "type": "Element",
-        }
+        },
     )
     rail_fare_idlist: None | RailFareIdlist = field(
         default=None,
         metadata={
             "name": "RailFareIDList",
             "type": "Element",
-        }
+        },
     )
     rail_fare_list: None | RailFareList = field(
         default=None,
         metadata={
             "name": "RailFareList",
             "type": "Element",
-        }
+        },
     )
     host_token_list: None | HostTokenList1 = field(
         default=None,
@@ -69,5 +70,5 @@ class RailExchangeQuoteRsp(BaseRsp1):
             "name": "HostTokenList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

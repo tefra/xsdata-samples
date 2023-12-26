@@ -19,7 +19,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "DriverAccessDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     driver_return_duration: Optional[XmlDuration] = field(
         default=None,
@@ -27,7 +27,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "DriverReturnDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     duty_ref: Optional[DutyRef] = field(
         default=None,
@@ -35,7 +35,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "DutyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_time: Optional[XmlTime] = field(
         default=None,
@@ -43,7 +43,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_offset: Optional[int] = field(
         default=None,
@@ -51,7 +51,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_time: Optional[XmlTime] = field(
         default=None,
@@ -59,7 +59,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_day_offset: Optional[int] = field(
         default=None,
@@ -67,7 +67,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "EndDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_point_ref: Optional[TimingPointRefStructure] = field(
         default=None,
@@ -75,7 +75,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "StartPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_point_ref: Optional[TimingPointRefStructure] = field(
         default=None,
@@ -83,5 +83,5 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "EndPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

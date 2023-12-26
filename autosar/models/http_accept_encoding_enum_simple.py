@@ -8,5 +8,6 @@ class HttpAcceptEncodingEnumSimple(Enum):
     :cvar DEFLATE: Use deflate compression.
     :cvar GZIP: Use gzip pcompression.
     """
+
     DEFLATE = "DEFLATE"
     GZIP = "GZIP"

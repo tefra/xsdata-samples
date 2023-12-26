@@ -21,14 +21,14 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
             "name": "PostalAddress",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     members: Optional[OrganisationRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     blacklist_refs: Optional[BlacklistRefsRelStructure] = field(
         default=None,
@@ -36,7 +36,7 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
             "name": "blacklistRefs",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     whitelist_refs: Optional[WhitelistRefsRelStructure] = field(
         default=None,
@@ -44,7 +44,7 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
             "name": "whitelistRefs",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     retail_devices: Optional[RetailDevicesRelStructure] = field(
         default=None,
@@ -52,5 +52,5 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
             "name": "retailDevices",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class AxleFlowValue(DataValue):
         expressed in axles per hour.
     :ivar axle_flow_value_extension:
     """
+
     axle_flow_rate: Optional[int] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class AxleFlowValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     axle_flow_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class AxleFlowValue(DataValue):
             "name": "axleFlowValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

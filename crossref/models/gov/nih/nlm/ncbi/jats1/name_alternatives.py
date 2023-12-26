@@ -11,6 +11,7 @@ class NameAlternatives:
     """
     <div> <h3>Name Alternatives</h3> </div>
     """
+
     class Meta:
         name = "name-alternatives"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -19,25 +20,25 @@ class NameAlternatives:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )
     string_name: List[StringName] = field(
         default_factory=list,
         metadata={
             "name": "string-name",
             "type": "Element",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )

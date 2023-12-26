@@ -33,6 +33,7 @@ class EnettVan1:
         maximum value it has been authorized for. The default value will be
         TRUE to indicate a multi-use VAN is being issued.
     """
+
     class Meta:
         name = "EnettVan"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -44,7 +45,7 @@ class EnettVan1:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 100,
-        }
+        },
     )
     max_percentage: None | int = field(
         default=None,
@@ -53,7 +54,7 @@ class EnettVan1:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 100,
-        }
+        },
     )
     expiry_days: None | XmlDuration = field(
         default=None,
@@ -62,12 +63,12 @@ class EnettVan1:
             "type": "Attribute",
             "min_inclusive": XmlDuration("P1D"),
             "max_inclusive": XmlDuration("P366D"),
-        }
+        },
     )
     multi_use: bool = field(
         default=True,
         metadata={
             "name": "MultiUse",
             "type": "Attribute",
-        }
+        },
     )

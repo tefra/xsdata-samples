@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ValidityParameterAssignmentsInFrameRelStructure(FrameContainmentStructure):
+class ValidityParameterAssignmentsInFrameRelStructure(
+    FrameContainmentStructure
+):
     class Meta:
         name = "validityParameterAssignmentsInFrame_RelStructure"
 
@@ -18,5 +20,5 @@ class ValidityParameterAssignmentsInFrameRelStructure(FrameContainmentStructure)
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

@@ -16,7 +16,7 @@ class PathLinkEndStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     level_ref: Optional[LevelRefStructure] = field(
         default=None,
@@ -24,7 +24,7 @@ class PathLinkEndStructure:
             "name": "LevelRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entrance_ref: Optional[EntranceRefStructure] = field(
         default=None,
@@ -32,5 +32,5 @@ class PathLinkEndStructure:
             "name": "EntranceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

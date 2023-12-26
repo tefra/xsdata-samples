@@ -12,13 +12,14 @@ class VisibilityInformation(WeatherData):
     """
     Measurements of atmospheric visibility.
     """
+
     visibility: Optional[Visibility] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     visibility_information_extension: Optional[ExtensionType] = field(
         default=None,
@@ -26,5 +27,5 @@ class VisibilityInformation(WeatherData):
             "name": "visibilityInformationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

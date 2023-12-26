@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .group_of_operators import GroupOfOperators
 from .group_of_operators_ref import GroupOfOperatorsRef
 from .multilingual_string import MultilingualString
@@ -19,7 +19,7 @@ class BorderPointValueStructure(TimingPointVersionStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -27,9 +27,11 @@ class BorderPointValueStructure(TimingPointVersionStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    group_of_operators_ref_or_group_of_operators: Optional[object] = field(
+    group_of_operators_ref_or_group_of_operators: Optional[
+        Union[GroupOfOperatorsRef, GroupOfOperators]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -45,5 +47,5 @@ class BorderPointValueStructure(TimingPointVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

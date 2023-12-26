@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.profile_modify_bridge_branches_req import ProfileModifyBridgeBranchesReq
+from travelport.models.profile_modify_bridge_branches_req import (
+    ProfileModifyBridgeBranchesReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class ProfileModifyBridgeBranchesPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class ProfileModifyBridgeBranchesPortTypeServiceInput:
                 "name": "ProfileModifyBridgeBranchesReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            }
+            },
         )

@@ -12,13 +12,13 @@ class AssociationRoleType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )
     owns: bool = field(
         default=False,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     nil_reason: Optional[Union[str, NilReasonEnumerationValue]] = field(
         default=None,
@@ -26,5 +26,5 @@ class AssociationRoleType:
             "name": "nilReason",
             "type": "Attribute",
             "pattern": r"other:\w{2,}",
-        }
+        },
     )

@@ -9,6 +9,7 @@ class ProceedingsSubject:
     The subject of the conference proceeding, e.g. "Computer Graphics" is the
     subject matter of SIGGRAPH.
     """
+
     class Meta:
         name = "proceedings_subject"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -18,5 +19,5 @@ class ProceedingsSubject:
         metadata={
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

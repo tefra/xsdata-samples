@@ -23,6 +23,7 @@ class TicketFailureInfo:
     message
     booking_traveler_ref
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -33,7 +34,7 @@ class TicketFailureInfo:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     name: None | Name1 = field(
         default=None,
@@ -42,7 +43,7 @@ class TicketFailureInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     code: None | int = field(
         default=None,
@@ -50,14 +51,14 @@ class TicketFailureInfo:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -65,5 +66,5 @@ class TicketFailureInfo:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

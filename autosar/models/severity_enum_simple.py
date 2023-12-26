@@ -12,6 +12,7 @@ class SeverityEnumSimple(Enum):
     :cvar WARNING: Something might be wrong depending on the context.
         Medium risk of interoperability issues.
     """
+
     ERROR = "ERROR"
     INFO = "INFO"
     WARNING = "WARNING"

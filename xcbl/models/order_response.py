@@ -61,7 +61,7 @@ class ChangeType:
         metadata={
             "name": "ChangeTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -90,14 +90,14 @@ class ChangeOrderNumber:
         metadata={
             "name": "SellerChangeOrderNumber",
             "type": "Element",
-        }
+        },
     )
     list_of_message_id: Optional[ListOfMessageId] = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -142,7 +142,7 @@ class ListOfErrorInfo:
             "name": "ErrorInfo",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -154,7 +154,7 @@ class ListOfTransport:
             "name": "Transport",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -249,14 +249,14 @@ class OrderResponseNumber:
         metadata={
             "name": "SellerOrderResponseNumber",
             "type": "Element",
-        }
+        },
     )
     list_of_message_id: Optional[ListOfMessageId] = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -406,42 +406,42 @@ class ChangeOrderItemDetail:
         metadata={
             "name": "ItemDetailChangeCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     original_item_detail: Optional[OriginalItemDetail] = field(
         default=None,
         metadata={
             "name": "OriginalItemDetail",
             "type": "Element",
-        }
+        },
     )
     item_detail_changes: Optional[ItemDetailChanges] = field(
         default=None,
         metadata={
             "name": "ItemDetailChanges",
             "type": "Element",
-        }
+        },
     )
     line_item_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -459,28 +459,28 @@ class ChangeOrderPackageDetail:
         metadata={
             "name": "PackageDetailChangeCodedOther",
             "type": "Element",
-        }
+        },
     )
     original_package_detail: Optional[OriginalPackageDetail] = field(
         default=None,
         metadata={
             "name": "OriginalPackageDetail",
             "type": "Element",
-        }
+        },
     )
     package_detail_changes: Optional[PackageDetailChanges] = field(
         default=None,
         metadata={
             "name": "PackageDetailChanges",
             "type": "Element",
-        }
+        },
     )
     package_detail_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "PackageDetailNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -505,14 +505,14 @@ class OrderHeader:
         metadata={
             "name": "OrderReferences",
             "type": "Element",
-        }
+        },
     )
     release_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
             "type": "Element",
-        }
+        },
     )
     purpose: Purpose = field(
         metadata={
@@ -526,14 +526,14 @@ class OrderHeader:
         metadata={
             "name": "RequestedResponse",
             "type": "Element",
-        }
+        },
     )
     order_type: Optional[OrderType] = field(
         default=None,
         metadata={
             "name": "OrderType",
             "type": "Element",
-        }
+        },
     )
     order_currency: OrderCurrency = field(
         metadata={
@@ -547,7 +547,7 @@ class OrderHeader:
         metadata={
             "name": "TaxAccountingCurrency",
             "type": "Element",
-        }
+        },
     )
     order_language: OrderLanguage = field(
         metadata={
@@ -561,35 +561,35 @@ class OrderHeader:
         metadata={
             "name": "OrderTaxReference",
             "type": "Element",
-        }
+        },
     )
     order_invoice_medium_type_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderInvoiceMediumTypeCoded",
             "type": "Element",
-        }
+        },
     )
     order_invoice_medium_type_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderInvoiceMediumTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     order_dates: Optional[OrderDates] = field(
         default=None,
         metadata={
             "name": "OrderDates",
             "type": "Element",
-        }
+        },
     )
     partial_shipment_allowed: Optional[str] = field(
         default=None,
         metadata={
             "name": "PartialShipmentAllowed",
             "type": "Element",
-        }
+        },
     )
     order_party: OrderParty = field(
         metadata={
@@ -603,77 +603,77 @@ class OrderHeader:
         metadata={
             "name": "PartLocation",
             "type": "Element",
-        }
+        },
     )
     list_of_transport: Optional[ListOfTransport] = field(
         default=None,
         metadata={
             "name": "ListOfTransport",
             "type": "Element",
-        }
+        },
     )
     order_terms_of_delivery: List[OrderTermsOfDelivery] = field(
         default_factory=list,
         metadata={
             "name": "OrderTermsOfDelivery",
             "type": "Element",
-        }
+        },
     )
     order_header_price: Optional[OrderHeaderPrice] = field(
         default=None,
         metadata={
             "name": "OrderHeaderPrice",
             "type": "Element",
-        }
+        },
     )
     order_payment_instructions: Optional[OrderPaymentInstructions] = field(
         default=None,
         metadata={
             "name": "OrderPaymentInstructions",
             "type": "Element",
-        }
+        },
     )
     order_allowances_or_charges: Optional[OrderAllowancesOrCharges] = field(
         default=None,
         metadata={
             "name": "OrderAllowancesOrCharges",
             "type": "Element",
-        }
+        },
     )
     round_trip_information: Optional[RoundTripInformation] = field(
         default=None,
         metadata={
             "name": "RoundTripInformation",
             "type": "Element",
-        }
+        },
     )
     order_header_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
     order_header_attachments: Optional[OrderHeaderAttachments] = field(
         default=None,
         metadata={
             "name": "OrderHeaderAttachments",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -684,56 +684,56 @@ class TransportPackagingTotals:
         metadata={
             "name": "TotalPackages",
             "type": "Element",
-        }
+        },
     )
     total_package_depth: Optional[str] = field(
         default=None,
         metadata={
             "name": "TotalPackageDepth",
             "type": "Element",
-        }
+        },
     )
     total_transport: Optional[str] = field(
         default=None,
         metadata={
             "name": "TotalTransport",
             "type": "Element",
-        }
+        },
     )
     total_gross_weight: Optional[TotalGrossWeight] = field(
         default=None,
         metadata={
             "name": "TotalGrossWeight",
             "type": "Element",
-        }
+        },
     )
     total_net_weight: Optional[TotalNetWeight] = field(
         default=None,
         metadata={
             "name": "TotalNetWeight",
             "type": "Element",
-        }
+        },
     )
     total_net_net_weight: Optional[TotalNetNetWeight] = field(
         default=None,
         metadata={
             "name": "TotalNetNetWeight",
             "type": "Element",
-        }
+        },
     )
     total_tare_weight: Optional[TotalTareWeight] = field(
         default=None,
         metadata={
             "name": "TotalTareWeight",
             "type": "Element",
-        }
+        },
     )
     gross_volume: Optional[GrossVolume] = field(
         default=None,
         metadata={
             "name": "GrossVolume",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -762,98 +762,98 @@ class OrderResponseItemDetail:
         metadata={
             "name": "ItemDetailResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
     item_status_event: Optional[ItemStatusEvent] = field(
         default=None,
         metadata={
             "name": "ItemStatusEvent",
             "type": "Element",
-        }
+        },
     )
     shipment_status_event: Optional[ShipmentStatusEvent] = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEvent",
             "type": "Element",
-        }
+        },
     )
     payment_status_event: Optional[PaymentStatusEvent] = field(
         default=None,
         metadata={
             "name": "PaymentStatusEvent",
             "type": "Element",
-        }
+        },
     )
     price_error_info: Optional[PriceErrorInfo] = field(
         default=None,
         metadata={
             "name": "PriceErrorInfo",
             "type": "Element",
-        }
+        },
     )
     availability_error_info: Optional[AvailabilityErrorInfo] = field(
         default=None,
         metadata={
             "name": "AvailabilityErrorInfo",
             "type": "Element",
-        }
+        },
     )
     list_of_error_info: Optional[ListOfErrorInfo] = field(
         default=None,
         metadata={
             "name": "ListOfErrorInfo",
             "type": "Element",
-        }
+        },
     )
     tracking_url: Optional[str] = field(
         default=None,
         metadata={
             "name": "TrackingURL",
             "type": "Element",
-        }
+        },
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     original_item_detail: Optional[OriginalItemDetail] = field(
         default=None,
         metadata={
             "name": "OriginalItemDetail",
             "type": "Element",
-        }
+        },
     )
     change_order_item_detail: Optional[ChangeOrderItemDetail] = field(
         default=None,
         metadata={
             "name": "ChangeOrderItemDetail",
             "type": "Element",
-        }
+        },
     )
     item_detail_changes: Optional[ItemDetailChanges] = field(
         default=None,
         metadata={
             "name": "ItemDetailChanges",
             "type": "Element",
-        }
+        },
     )
     line_item_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -871,35 +871,35 @@ class OrderResponsePackageDetail:
         metadata={
             "name": "PackageDetailResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
     original_package_detail: Optional[OriginalPackageDetail] = field(
         default=None,
         metadata={
             "name": "OriginalPackageDetail",
             "type": "Element",
-        }
+        },
     )
     change_order_package_detail: Optional[ChangeOrderPackageDetail] = field(
         default=None,
         metadata={
             "name": "ChangeOrderPackageDetail",
             "type": "Element",
-        }
+        },
     )
     package_detail_changes: Optional[PackageDetailChanges] = field(
         default=None,
         metadata={
             "name": "PackageDetailChanges",
             "type": "Element",
-        }
+        },
     )
     package_detail_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "PackageDetailNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -910,35 +910,35 @@ class OrderSummary:
         metadata={
             "name": "NumberOfLines",
             "type": "Element",
-        }
+        },
     )
     total_tax: Optional[TotalTax] = field(
         default=None,
         metadata={
             "name": "TotalTax",
             "type": "Element",
-        }
+        },
     )
     total_amount: Optional[TotalAmount] = field(
         default=None,
         metadata={
             "name": "TotalAmount",
             "type": "Element",
-        }
+        },
     )
     transport_packaging_totals: Optional[TransportPackagingTotals] = field(
         default=None,
         metadata={
             "name": "TransportPackagingTotals",
             "type": "Element",
-        }
+        },
     )
     summary_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "SummaryNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1002,7 +1002,7 @@ class ChangeOrderHeader:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     purpose: Purpose = field(
         metadata={
@@ -1016,7 +1016,7 @@ class ChangeOrderHeader:
         metadata={
             "name": "RequestedResponse",
             "type": "Element",
-        }
+        },
     )
     change_type: ChangeType = field(
         metadata={
@@ -1030,35 +1030,35 @@ class ChangeOrderHeader:
         metadata={
             "name": "OrderType",
             "type": "Element",
-        }
+        },
     )
     original_order_header: Optional[OriginalOrderHeader] = field(
         default=None,
         metadata={
             "name": "OriginalOrderHeader",
             "type": "Element",
-        }
+        },
     )
     order_header_changes: Optional[OrderHeaderChanges] = field(
         default=None,
         metadata={
             "name": "OrderHeaderChanges",
             "type": "Element",
-        }
+        },
     )
     change_order_header_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "ChangeOrderHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1070,7 +1070,7 @@ class ListOfOrderResponseItemDetail:
             "name": "OrderResponseItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1082,7 +1082,7 @@ class ListOfOrderResponsePackageDetail:
             "name": "OrderResponsePackageDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1110,19 +1110,23 @@ class RevisedOrderSummary:
 
 @dataclass(kw_only=True)
 class OrderResponseDetail:
-    list_of_order_response_item_detail: Optional[ListOfOrderResponseItemDetail] = field(
+    list_of_order_response_item_detail: Optional[
+        ListOfOrderResponseItemDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfOrderResponseItemDetail",
             "type": "Element",
-        }
+        },
     )
-    list_of_order_response_package_detail: Optional[ListOfOrderResponsePackageDetail] = field(
+    list_of_order_response_package_detail: Optional[
+        ListOfOrderResponsePackageDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfOrderResponsePackageDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1154,7 +1158,7 @@ class OrderResponseHeader:
         metadata={
             "name": "OrderResponseDocTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     order_reference: OrderReference = field(
         metadata={
@@ -1168,7 +1172,7 @@ class OrderResponseHeader:
         metadata={
             "name": "ChangeOrderReference",
             "type": "Element",
-        }
+        },
     )
     seller_party: SellerParty = field(
         metadata={
@@ -1189,14 +1193,14 @@ class OrderResponseHeader:
         metadata={
             "name": "TrackingURL",
             "type": "Element",
-        }
+        },
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     purpose: Purpose = field(
         metadata={
@@ -1217,56 +1221,56 @@ class OrderResponseHeader:
         metadata={
             "name": "OrderStatus",
             "type": "Element",
-        }
+        },
     )
     shipment_status_event: Optional[ShipmentStatusEvent] = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEvent",
             "type": "Element",
-        }
+        },
     )
     payment_status_event: Optional[PaymentStatusEvent] = field(
         default=None,
         metadata={
             "name": "PaymentStatusEvent",
             "type": "Element",
-        }
+        },
     )
     original_order_header: Optional[OriginalOrderHeader] = field(
         default=None,
         metadata={
             "name": "OriginalOrderHeader",
             "type": "Element",
-        }
+        },
     )
     change_order_header: Optional[ChangeOrderHeader] = field(
         default=None,
         metadata={
             "name": "ChangeOrderHeader",
             "type": "Element",
-        }
+        },
     )
     order_header_changes: Optional[OrderHeaderChanges] = field(
         default=None,
         metadata={
             "name": "OrderHeaderChanges",
             "type": "Element",
-        }
+        },
     )
     order_response_header_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderResponseHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1277,21 +1281,21 @@ class OrderResponseSummary:
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-        }
+        },
     )
     original_order_summary: Optional[OriginalOrderSummary] = field(
         default=None,
         metadata={
             "name": "OriginalOrderSummary",
             "type": "Element",
-        }
+        },
     )
     revised_order_summary: Optional[RevisedOrderSummary] = field(
         default=None,
         metadata={
             "name": "RevisedOrderSummary",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1309,12 +1313,12 @@ class OrderResponse:
         metadata={
             "name": "OrderResponseDetail",
             "type": "Element",
-        }
+        },
     )
     order_response_summary: Optional[OrderResponseSummary] = field(
         default=None,
         metadata={
             "name": "OrderResponseSummary",
             "type": "Element",
-        }
+        },
     )

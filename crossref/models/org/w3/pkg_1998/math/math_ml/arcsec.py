@@ -15,5 +15,5 @@ class Arcsec:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -6,9 +6,15 @@ from datexii.models.eu.datexii.v2.opening_times import OpeningTimes
 from datexii.models.eu.datexii.v2.parking_access import ParkingAccess
 from datexii.models.eu.datexii.v2.parking_layout_enum import ParkingLayoutEnum
 from datexii.models.eu.datexii.v2.parking_record import ParkingRecord
-from datexii.models.eu.datexii.v2.parking_site_scenario_index_parking_usage_scenario import ParkingSiteScenarioIndexParkingUsageScenario
-from datexii.models.eu.datexii.v2.parking_standards_and_security import ParkingStandardsAndSecurity
-from datexii.models.eu.datexii.v2.reservation_type_enum import ReservationTypeEnum
+from datexii.models.eu.datexii.v2.parking_site_scenario_index_parking_usage_scenario import (
+    ParkingSiteScenarioIndexParkingUsageScenario,
+)
+from datexii.models.eu.datexii.v2.parking_standards_and_security import (
+    ParkingStandardsAndSecurity,
+)
+from datexii.models.eu.datexii.v2.reservation_type_enum import (
+    ReservationTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -47,13 +53,14 @@ class ParkingSite(ParkingRecord):
     :ivar parking_standards_and_security:
     :ivar parking_site_extension:
     """
+
     parking_reservation: Optional[ReservationTypeEnum] = field(
         default=None,
         metadata={
             "name": "parkingReservation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_layout: List[ParkingLayoutEnum] = field(
         default_factory=list,
@@ -61,7 +68,7 @@ class ParkingSite(ParkingRecord):
             "name": "parkingLayout",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     highest_floor: Optional[int] = field(
         default=None,
@@ -69,7 +76,7 @@ class ParkingSite(ParkingRecord):
             "name": "highestFloor",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     lowest_floor: Optional[int] = field(
         default=None,
@@ -77,7 +84,7 @@ class ParkingSite(ParkingRecord):
             "name": "lowestFloor",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     temporary_parking: Optional[bool] = field(
         default=None,
@@ -85,7 +92,7 @@ class ParkingSite(ParkingRecord):
             "name": "temporaryParking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_site_address: List[Contact] = field(
         default_factory=list,
@@ -93,7 +100,7 @@ class ParkingSite(ParkingRecord):
             "name": "parkingSiteAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     reservation_service: List[Contact] = field(
         default_factory=list,
@@ -101,15 +108,17 @@ class ParkingSite(ParkingRecord):
             "name": "reservationService",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_usage_scenario: List[ParkingSiteScenarioIndexParkingUsageScenario] = field(
+    parking_usage_scenario: List[
+        ParkingSiteScenarioIndexParkingUsageScenario
+    ] = field(
         default_factory=list,
         metadata={
             "name": "parkingUsageScenario",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     opening_times: Optional[OpeningTimes] = field(
         default=None,
@@ -117,7 +126,7 @@ class ParkingSite(ParkingRecord):
             "name": "openingTimes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_access: List[ParkingAccess] = field(
         default_factory=list,
@@ -125,15 +134,17 @@ class ParkingSite(ParkingRecord):
             "name": "parkingAccess",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_standards_and_security: Optional[ParkingStandardsAndSecurity] = field(
+    parking_standards_and_security: Optional[
+        ParkingStandardsAndSecurity
+    ] = field(
         default=None,
         metadata={
             "name": "parkingStandardsAndSecurity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_site_extension: Optional[ExtensionType] = field(
         default=None,
@@ -141,5 +152,5 @@ class ParkingSite(ParkingRecord):
             "name": "parkingSiteExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

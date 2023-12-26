@@ -13,5 +13,5 @@ class CrossmarkVersion:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

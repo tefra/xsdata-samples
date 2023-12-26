@@ -25,6 +25,7 @@ class AirReservationCriteria:
     passive_only
         Search for Passives Only
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -33,14 +34,14 @@ class AirReservationCriteria:
         metadata={
             "name": "DepartureDate",
             "type": "Element",
-        }
+        },
     )
     arrival_date: None | TypeDateSpec = field(
         default=None,
         metadata={
             "name": "ArrivalDate",
             "type": "Element",
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class AirReservationCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -58,14 +59,14 @@ class AirReservationCriteria:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -73,12 +74,12 @@ class AirReservationCriteria:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     passive_only: bool = field(
         default=False,
         metadata={
             "name": "PassiveOnly",
             "type": "Attribute",
-        }
+        },
     )

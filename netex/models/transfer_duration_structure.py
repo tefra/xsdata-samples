@@ -13,7 +13,7 @@ class TransferDurationStructure:
             "name": "DefaultDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     frequent_traveller_duration: Optional[XmlDuration] = field(
         default=None,
@@ -21,7 +21,7 @@ class TransferDurationStructure:
             "name": "FrequentTravellerDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     occasional_traveller_duration: Optional[XmlDuration] = field(
         default=None,
@@ -29,7 +29,7 @@ class TransferDurationStructure:
             "name": "OccasionalTravellerDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mobility_restricted_traveller_duration: Optional[XmlDuration] = field(
         default=None,
@@ -37,5 +37,5 @@ class TransferDurationStructure:
             "name": "MobilityRestrictedTravellerDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

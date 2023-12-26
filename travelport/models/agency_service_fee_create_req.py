@@ -23,6 +23,7 @@ class AgencyServiceFeeCreateReq(BaseReq1):
         To be used with ProviderLocatorCode, which host the reservation
         being added to belongs to.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -34,7 +35,7 @@ class AgencyServiceFeeCreateReq(BaseReq1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class AgencyServiceFeeCreateReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -54,7 +55,7 @@ class AgencyServiceFeeCreateReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -62,5 +63,5 @@ class AgencyServiceFeeCreateReq(BaseReq1):
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

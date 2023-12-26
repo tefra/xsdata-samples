@@ -14,6 +14,7 @@ class PassiveRemark:
     passive_segment_ref
         The Passive Segment key that this remark refers to.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/passive_v52_0"
 
@@ -22,14 +23,14 @@ class PassiveRemark:
         metadata={
             "name": "Text",
             "type": "Element",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Element",
-        }
+        },
     )
     passive_segment_ref: None | str = field(
         default=None,
@@ -37,5 +38,5 @@ class PassiveRemark:
             "name": "PassiveSegmentRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

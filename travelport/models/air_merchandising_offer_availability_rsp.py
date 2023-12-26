@@ -23,6 +23,7 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp1):
     optional_services
     embargo_list
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -32,7 +33,7 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp1):
             "name": "AirSolution",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     remark: None | Remark1 = field(
         default=None,
@@ -40,19 +41,19 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp1):
             "name": "Remark",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
-        }
+        },
     )
     embargo_list: None | EmbargoList = field(
         default=None,
         metadata={
             "name": "EmbargoList",
             "type": "Element",
-        }
+        },
     )

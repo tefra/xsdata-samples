@@ -15,5 +15,5 @@ class MediaGenreFacetResultItemType(TermFacetResultItemType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

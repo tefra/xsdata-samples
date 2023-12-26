@@ -22,7 +22,7 @@ class PropertyOfDayStructure:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -30,7 +30,7 @@ class PropertyOfDayStructure:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     days_of_week: List[DayOfWeekEnumeration] = field(
         default_factory=list,
@@ -39,7 +39,7 @@ class PropertyOfDayStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     weeks_of_month: List[WeekOfMonthEnumeration] = field(
         default_factory=list,
@@ -48,9 +48,9 @@ class PropertyOfDayStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    month_of_year_or_day_of_month_or_day_of_year: Optional[object] = field(
+    month_of_year_or_day_of_month_or_day_of_year: Optional[XmlPeriod] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -71,7 +71,7 @@ class PropertyOfDayStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     country_ref: Optional[CountryRefStructure] = field(
         default=None,
@@ -79,7 +79,7 @@ class PropertyOfDayStructure:
             "name": "CountryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     holiday_types: List[HolidayTypeEnumeration] = field(
         default_factory=list,
@@ -88,7 +88,7 @@ class PropertyOfDayStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     seasons: List[SeasonEnumeration] = field(
         default_factory=list,
@@ -97,7 +97,7 @@ class PropertyOfDayStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     tides: List[TideEnumeration] = field(
         default_factory=list,
@@ -106,7 +106,7 @@ class PropertyOfDayStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     day_event: Optional[DayEventEnumeration] = field(
         default=None,
@@ -114,7 +114,7 @@ class PropertyOfDayStructure:
             "name": "DayEvent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     crowding: Optional[CrowdingEnumeration] = field(
         default=None,
@@ -122,5 +122,5 @@ class PropertyOfDayStructure:
             "name": "Crowding",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

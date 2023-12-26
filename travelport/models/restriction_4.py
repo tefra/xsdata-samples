@@ -16,6 +16,7 @@ class Restriction4:
     reason
         The reason it is restricted
     """
+
     class Meta:
         name = "Restriction"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -26,12 +27,12 @@ class Restriction4:
             "name": "Operation",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     reason: None | str = field(
         default=None,
         metadata={
             "name": "Reason",
             "type": "Attribute",
-        }
+        },
     )

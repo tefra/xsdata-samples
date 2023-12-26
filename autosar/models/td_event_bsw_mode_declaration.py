@@ -6,16 +6,22 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .bsw_module_description_subtypes_enum import BswModuleDescriptionSubtypesEnum
+from .bsw_module_description_subtypes_enum import (
+    BswModuleDescriptionSubtypesEnum,
+)
 from .category_string import CategoryString
 from .identifier import Identifier
-from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_declaration_group_prototype_subtypes_enum import (
+    ModeDeclarationGroupPrototypeSubtypesEnum,
+)
 from .mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .td_event_bsw_mode_declaration_type_enum import TdEventBswModeDeclarationTypeEnum
+from .td_event_bsw_mode_declaration_type_enum import (
+    TdEventBswModeDeclarationTypeEnum,
+)
 from .td_event_occurrence_expression import TdEventOccurrenceExpression
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -98,6 +104,7 @@ class TdEventBswModeDeclaration:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TD-EVENT-BSW-MODE-DECLARATION"
 
@@ -108,15 +115,17 @@ class TdEventBswModeDeclaration:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TdEventBswModeDeclaration.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TdEventBswModeDeclaration.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +133,7 @@ class TdEventBswModeDeclaration:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +141,7 @@ class TdEventBswModeDeclaration:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +149,7 @@ class TdEventBswModeDeclaration:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +157,7 @@ class TdEventBswModeDeclaration:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,7 +165,7 @@ class TdEventBswModeDeclaration:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TdEventBswModeDeclaration.Annotations"] = field(
         default=None,
@@ -164,7 +173,7 @@ class TdEventBswModeDeclaration:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -172,7 +181,7 @@ class TdEventBswModeDeclaration:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
         default=None,
@@ -180,54 +189,64 @@ class TdEventBswModeDeclaration:
             "name": "OCCURRENCE-EXPRESSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    bsw_module_description_ref: Optional["TdEventBswModeDeclaration.BswModuleDescriptionRef"] = field(
+    bsw_module_description_ref: Optional[
+        "TdEventBswModeDeclaration.BswModuleDescriptionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-DESCRIPTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    entry_mode_declaration_ref: Optional["TdEventBswModeDeclaration.EntryModeDeclarationRef"] = field(
+    entry_mode_declaration_ref: Optional[
+        "TdEventBswModeDeclaration.EntryModeDeclarationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ENTRY-MODE-DECLARATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exit_mode_declaration_ref: Optional["TdEventBswModeDeclaration.ExitModeDeclarationRef"] = field(
+    exit_mode_declaration_ref: Optional[
+        "TdEventBswModeDeclaration.ExitModeDeclarationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EXIT-MODE-DECLARATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mode_declaration_ref: Optional["TdEventBswModeDeclaration.ModeDeclarationRef"] = field(
+    mode_declaration_ref: Optional[
+        "TdEventBswModeDeclaration.ModeDeclarationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    td_event_bsw_mode_declaration_type: Optional[TdEventBswModeDeclarationTypeEnum] = field(
+    td_event_bsw_mode_declaration_type: Optional[
+        TdEventBswModeDeclarationTypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "TD-EVENT-BSW-MODE-DECLARATION-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -235,14 +254,14 @@ class TdEventBswModeDeclaration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -253,7 +272,7 @@ class TdEventBswModeDeclaration:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -264,7 +283,7 @@ class TdEventBswModeDeclaration:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -275,7 +294,7 @@ class TdEventBswModeDeclaration:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -286,7 +305,7 @@ class TdEventBswModeDeclaration:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -297,7 +316,7 @@ class TdEventBswModeDeclaration:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -308,5 +327,5 @@ class TdEventBswModeDeclaration:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

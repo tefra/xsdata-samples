@@ -14,5 +14,5 @@ class UsingAddressing:
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )

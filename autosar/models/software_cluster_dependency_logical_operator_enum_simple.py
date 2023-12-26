@@ -8,5 +8,6 @@ class SoftwareClusterDependencyLogicalOperatorEnumSimple(Enum):
     :cvar LOGICAL_AND: logical and
     :cvar LOGICAL_OR: logical or
     """
+
     LOGICAL_AND = "LOGICAL-AND"
     LOGICAL_OR = "LOGICAL-OR"

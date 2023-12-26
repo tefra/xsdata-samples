@@ -7,6 +7,7 @@ class SimpleUomAmountOfInformationCodeType(Enum):
     """
     A codelist for the amount of information.
     """
+
     BIT = "Bit"
     BYTE = "Byte"
     GIBIBYTE = "Gibibyte"

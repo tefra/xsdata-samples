@@ -19,5 +19,5 @@ class Gra:
                     "type": str,
                 },
             ),
-        }
+        },
     )

@@ -16,7 +16,7 @@ class DeadRunCallPartStructure:
             "name": "Time",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_offset: Optional[int] = field(
         default=None,
@@ -24,7 +24,7 @@ class DeadRunCallPartStructure:
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -32,7 +32,7 @@ class DeadRunCallPartStructure:
             "name": "WaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     journey_part_ref: Optional[JourneyPartRef] = field(
         default=None,
@@ -40,7 +40,7 @@ class DeadRunCallPartStructure:
             "name": "JourneyPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
         default=None,
@@ -48,7 +48,7 @@ class DeadRunCallPartStructure:
             "name": "TimeDemandTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     duty_part_ref: Optional[DutyPartRef] = field(
         default=None,
@@ -56,5 +56,5 @@ class DeadRunCallPartStructure:
             "name": "DutyPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -9,6 +9,7 @@ class FareRuleFailureInfo:
     """
     Returns fare rule failure reason codes when fare basis code is forced.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class FareRuleFailureInfo:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

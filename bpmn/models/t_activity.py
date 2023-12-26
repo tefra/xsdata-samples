@@ -5,7 +5,9 @@ from .data_output_association import DataOutputAssociation
 from .human_performer import HumanPerformer
 from .io_specification import IoSpecification
 from .loop_characteristics import LoopCharacteristics
-from .multi_instance_loop_characteristics import MultiInstanceLoopCharacteristics
+from .multi_instance_loop_characteristics import (
+    MultiInstanceLoopCharacteristics,
+)
 from .performer import Performer
 from .potential_owner import PotentialOwner
 from .property import Property
@@ -27,14 +29,14 @@ class TActivity(TFlowNode):
             "name": "ioSpecification",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     property: List[Property] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_input_association: List[DataInputAssociation] = field(
         default_factory=list,
@@ -42,7 +44,7 @@ class TActivity(TFlowNode):
             "name": "dataInputAssociation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     data_output_association: List[DataOutputAssociation] = field(
         default_factory=list,
@@ -50,7 +52,7 @@ class TActivity(TFlowNode):
             "name": "dataOutputAssociation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     potential_owner: List[PotentialOwner] = field(
         default_factory=list,
@@ -58,7 +60,7 @@ class TActivity(TFlowNode):
             "name": "potentialOwner",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     human_performer: List[HumanPerformer] = field(
         default_factory=list,
@@ -66,14 +68,14 @@ class TActivity(TFlowNode):
             "name": "humanPerformer",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     performer: List[Performer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     resource_role: List[ResourceRole] = field(
         default_factory=list,
@@ -81,23 +83,27 @@ class TActivity(TFlowNode):
             "name": "resourceRole",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
-    standard_loop_characteristics: Optional[StandardLoopCharacteristics] = field(
+    standard_loop_characteristics: Optional[
+        StandardLoopCharacteristics
+    ] = field(
         default=None,
         metadata={
             "name": "standardLoopCharacteristics",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
-    multi_instance_loop_characteristics: Optional[MultiInstanceLoopCharacteristics] = field(
+    multi_instance_loop_characteristics: Optional[
+        MultiInstanceLoopCharacteristics
+    ] = field(
         default=None,
         metadata={
             "name": "multiInstanceLoopCharacteristics",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     loop_characteristics: Optional[LoopCharacteristics] = field(
         default=None,
@@ -105,32 +111,32 @@ class TActivity(TFlowNode):
             "name": "loopCharacteristics",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     is_for_compensation: bool = field(
         default=False,
         metadata={
             "name": "isForCompensation",
             "type": "Attribute",
-        }
+        },
     )
     start_quantity: int = field(
         default=1,
         metadata={
             "name": "startQuantity",
             "type": "Attribute",
-        }
+        },
     )
     completion_quantity: int = field(
         default=1,
         metadata={
             "name": "completionQuantity",
             "type": "Attribute",
-        }
+        },
     )
     default: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

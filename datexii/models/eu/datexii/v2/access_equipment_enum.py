@@ -20,6 +20,7 @@ class AccessEquipmentEnum(Enum):
         directly by inserting a payment or identity card.
     :cvar OTHER: Other.
     """
+
     BARRIER = "barrier"
     TRAFFIC_SIGNAL = "trafficSignal"
     TICKET_BUTTON_MACHINE = "ticketButtonMachine"

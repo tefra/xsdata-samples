@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.locations import Locations
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.locations import (
+    Locations,
+)
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = (
+    "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+)
 
 
 @dataclass
@@ -16,7 +20,7 @@ class Risk:
             "name": "GlobalRiskID",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     local_risk_id: Optional[str] = field(
         default=None,
@@ -24,7 +28,7 @@ class Risk:
             "name": "LocalRiskID",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     reinsurance_agreement: Optional[str] = field(
         default=None,
@@ -32,7 +36,7 @@ class Risk:
             "name": "ReinsuranceAgreement",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     locations: Optional[Locations] = field(
         default=None,
@@ -40,5 +44,5 @@ class Risk:
             "name": "Locations",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_expression_type import QueryExpressionType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_expression_type import ValueExpressionType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_expression_type import (
+    QueryExpressionType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.value_expression_type import (
+    ValueExpressionType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -18,6 +22,7 @@ class QueryCriteriaTypeQueryExpression:
         that allows complex queries to be formulated out of a series of
         value expressions (criteria).</description>
     """
+
     class Meta:
         global_type = False
 
@@ -27,7 +32,7 @@ class QueryCriteriaTypeQueryExpression:
             "name": "ValueExpression",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     query_expression: Optional[QueryExpressionType] = field(
         default=None,
@@ -35,5 +40,5 @@ class QueryCriteriaTypeQueryExpression:
             "name": "QueryExpression",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

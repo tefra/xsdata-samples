@@ -12,6 +12,7 @@ class SavedTripModifyRsp(BaseRsp1):
 
     Contains the SavedTrip successfully modified.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,5 +21,5 @@ class SavedTripModifyRsp(BaseRsp1):
         metadata={
             "name": "SavedTrip",
             "type": "Element",
-        }
+        },
     )

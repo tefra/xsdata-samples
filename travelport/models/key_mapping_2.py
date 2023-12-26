@@ -19,6 +19,7 @@ class KeyMapping2:
     new_key
         The mapping key that comes in the response.
     """
+
     class Meta:
         name = "KeyMapping"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -29,7 +30,7 @@ class KeyMapping2:
             "name": "ElementName",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     original_key: None | str = field(
         default=None,
@@ -37,7 +38,7 @@ class KeyMapping2:
             "name": "OriginalKey",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     new_key: None | str = field(
         default=None,
@@ -45,5 +46,5 @@ class KeyMapping2:
             "name": "NewKey",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

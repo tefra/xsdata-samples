@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.session_context import SessionContext
-from travelport.models.vehicle_location_detail_req import VehicleLocationDetailReq
+from travelport.models.vehicle_location_detail_req import (
+    VehicleLocationDetailReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -12,19 +14,21 @@ class VehicleLocationDetailServicePortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: None | VehicleLocationDetailServicePortTypeServiceInput.Header = field(
-        default=None,
-        metadata={
-            "name": "Header",
-            "type": "Element",
-        }
+    header: None | VehicleLocationDetailServicePortTypeServiceInput.Header = (
+        field(
+            default=None,
+            metadata={
+                "name": "Header",
+                "type": "Element",
+            },
+        )
     )
     body: None | VehicleLocationDetailServicePortTypeServiceInput.Body = field(
         default=None,
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -35,7 +39,7 @@ class VehicleLocationDetailServicePortTypeServiceInput:
                 "name": "SessionContext",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/soa/common/security/SessionContext_v1",
-            }
+            },
         )
 
     @dataclass
@@ -46,5 +50,5 @@ class VehicleLocationDetailServicePortTypeServiceInput:
                 "name": "VehicleLocationDetailReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            }
+            },
         )

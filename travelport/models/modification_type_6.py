@@ -26,6 +26,7 @@ class ModificationType6(Enum):
     OTHER
         Other modification types
     """
+
     ADD_SEGMENT = "AddSegment"
     REMOVE_SEGMENT = "RemoveSegment"
     REPLACE_SEGMENT = "ReplaceSegment"

@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.operator_action_origin_enum import OperatorActionOriginEnum
-from datexii.models.eu.datexii.v2.operator_action_status_enum import OperatorActionStatusEnum
+from datexii.models.eu.datexii.v2.operator_action_origin_enum import (
+    OperatorActionOriginEnum,
+)
+from datexii.models.eu.datexii.v2.operator_action_status_enum import (
+    OperatorActionStatusEnum,
+)
 from datexii.models.eu.datexii.v2.situation_record import SituationRecord
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -24,13 +28,14 @@ class OperatorAction(SituationRecord):
         action.
     :ivar operator_action_extension:
     """
+
     action_origin: Optional[OperatorActionOriginEnum] = field(
         default=None,
         metadata={
             "name": "actionOrigin",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     action_plan_identifier: Optional[str] = field(
         default=None,
@@ -39,7 +44,7 @@ class OperatorAction(SituationRecord):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     operator_action_status: Optional[OperatorActionStatusEnum] = field(
         default=None,
@@ -47,7 +52,7 @@ class OperatorAction(SituationRecord):
             "name": "operatorActionStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     operator_action_extension: Optional[ExtensionType] = field(
         default=None,
@@ -55,5 +60,5 @@ class OperatorAction(SituationRecord):
             "name": "operatorActionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

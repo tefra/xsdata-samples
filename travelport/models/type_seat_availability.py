@@ -8,6 +8,7 @@ class TypeSeatAvailability(Enum):
     """
     Seat availability info of a seat map.
     """
+
     AVAILABLE = "Available"
     OCCUPIED = "Occupied"
     RESERVED = "Reserved"

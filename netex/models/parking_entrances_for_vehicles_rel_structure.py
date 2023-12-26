@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_entrance_for_vehicles import ParkingEntranceForVehicles
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
@@ -12,7 +12,9 @@ class ParkingEntrancesForVehiclesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingEntrancesForVehicles_RelStructure"
 
-    parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles: List[object] = field(
+    parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles: List[
+        Union[ParkingEntranceForVehiclesRef, ParkingEntranceForVehicles]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class ParkingEntrancesForVehiclesRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

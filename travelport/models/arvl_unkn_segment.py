@@ -23,6 +23,7 @@ class ArvlUnknSegment:
         segments/reservations based on travel dates. This ordering is
         applicable across the UR not provider or traveler specific
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -32,7 +33,7 @@ class ArvlUnknSegment:
             "name": "BookingTravelerRef",
             "type": "Element",
             "max_occurs": 255,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class ArvlUnknSegment:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class ArvlUnknSegment:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -58,14 +59,14 @@ class ArvlUnknSegment:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -76,5 +77,5 @@ class ArvlUnknSegment:
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

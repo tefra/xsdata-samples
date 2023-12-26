@@ -15,12 +15,12 @@ class TMessage(TRootElement):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     item_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "itemRef",
             "type": "Attribute",
-        }
+        },
     )

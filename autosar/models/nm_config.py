@@ -93,6 +93,7 @@ class NmConfig:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "NM-CONFIG"
 
@@ -103,7 +104,7 @@ class NmConfig:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["NmConfig.ShortNameFragments"] = field(
         default=None,
@@ -111,7 +112,7 @@ class NmConfig:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -119,7 +120,7 @@ class NmConfig:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -127,7 +128,7 @@ class NmConfig:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -135,7 +136,7 @@ class NmConfig:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -143,7 +144,7 @@ class NmConfig:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -151,7 +152,7 @@ class NmConfig:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["NmConfig.Annotations"] = field(
         default=None,
@@ -159,7 +160,7 @@ class NmConfig:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -167,7 +168,7 @@ class NmConfig:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_clusters: Optional["NmConfig.NmClusters"] = field(
         default=None,
@@ -175,7 +176,7 @@ class NmConfig:
             "name": "NM-CLUSTERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_cluster_couplings: Optional["NmConfig.NmClusterCouplings"] = field(
         default=None,
@@ -183,7 +184,7 @@ class NmConfig:
             "name": "NM-CLUSTER-COUPLINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_if_ecus: Optional["NmConfig.NmIfEcus"] = field(
         default=None,
@@ -191,14 +192,14 @@ class NmConfig:
             "name": "NM-IF-ECUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -206,14 +207,14 @@ class NmConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -224,7 +225,7 @@ class NmConfig:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -235,7 +236,7 @@ class NmConfig:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -246,7 +247,7 @@ class NmConfig:
                 "name": "CAN-NM-CLUSTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_nm_cluster: List[FlexrayNmCluster] = field(
             default_factory=list,
@@ -254,7 +255,7 @@ class NmConfig:
                 "name": "FLEXRAY-NM-CLUSTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         j_1939_nm_cluster: List[J1939NmCluster] = field(
             default_factory=list,
@@ -262,7 +263,7 @@ class NmConfig:
                 "name": "J-1939-NM-CLUSTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_nm_cluster: List[LinNmCluster] = field(
             default_factory=list,
@@ -270,7 +271,7 @@ class NmConfig:
                 "name": "LIN-NM-CLUSTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         udp_nm_cluster: List[UdpNmCluster] = field(
             default_factory=list,
@@ -278,7 +279,7 @@ class NmConfig:
                 "name": "UDP-NM-CLUSTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -289,7 +290,7 @@ class NmConfig:
                 "name": "CAN-NM-CLUSTER-COUPLING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_nm_cluster_coupling: List[FlexrayNmClusterCoupling] = field(
             default_factory=list,
@@ -297,7 +298,7 @@ class NmConfig:
                 "name": "FLEXRAY-NM-CLUSTER-COUPLING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         udp_nm_cluster_coupling: List[UdpNmClusterCoupling] = field(
             default_factory=list,
@@ -305,7 +306,7 @@ class NmConfig:
                 "name": "UDP-NM-CLUSTER-COUPLING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -316,5 +317,5 @@ class NmConfig:
                 "name": "NM-ECU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

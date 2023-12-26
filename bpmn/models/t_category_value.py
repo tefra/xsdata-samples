@@ -14,5 +14,5 @@ class TCategoryValue(TBaseElement):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

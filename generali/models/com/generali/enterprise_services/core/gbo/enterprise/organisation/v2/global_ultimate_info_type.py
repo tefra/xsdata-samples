@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
+    AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
@@ -32,6 +36,7 @@ class GlobalUltimateInfoType:
     :ivar number_of_eusites_gugroup:
     :ivar number_of_eusites_gugroup_exc_branches:
     """
+
     gunsnumber_gu: Optional[str] = field(
         default=None,
         metadata={
@@ -40,7 +45,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "length": 10,
             "pattern": r"G([0-9]{9})",
-        }
+        },
     )
     full_name_gu: Optional[str] = field(
         default=None,
@@ -48,7 +53,7 @@ class GlobalUltimateInfoType:
             "name": "FullNameGU",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     dunsnumber_gu: Optional[str] = field(
         default=None,
@@ -58,7 +63,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "length": 9,
             "pattern": r"([0-9]{9})",
-        }
+        },
     )
     country_code_gu: Optional[str] = field(
         default=None,
@@ -67,7 +72,7 @@ class GlobalUltimateInfoType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "pattern": r"[A-Z][A-Z]",
-        }
+        },
     )
     assigned_turnover_global_group: Optional[AmountType] = field(
         default=None,
@@ -76,7 +81,7 @@ class GlobalUltimateInfoType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "nillable": True,
-        }
+        },
     )
     assigned_number_of_employees_global_group: Optional[Decimal] = field(
         default=None,
@@ -84,7 +89,7 @@ class GlobalUltimateInfoType:
             "name": "AssignedNumberOfEmployeesGlobalGroup",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     assigned_sicgu: Optional[str] = field(
         default=None,
@@ -92,7 +97,7 @@ class GlobalUltimateInfoType:
             "name": "AssignedSICGU",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     assigned_sicname_gu: Optional[str] = field(
         default=None,
@@ -100,7 +105,7 @@ class GlobalUltimateInfoType:
             "name": "AssignedSICNameGU",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     assigned_sicguproportion_code: Optional[CodeType] = field(
         default=None,
@@ -108,7 +113,7 @@ class GlobalUltimateInfoType:
             "name": "AssignedSICGUProportionCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     number_of_level_in_corporate_tree: Optional[int] = field(
         default=None,
@@ -116,7 +121,7 @@ class GlobalUltimateInfoType:
             "name": "NumberOfLevelInCorporateTree",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     number_of_countries_in_group: Optional[int] = field(
         default=None,
@@ -124,7 +129,7 @@ class GlobalUltimateInfoType:
             "name": "NumberOfCountriesInGroup",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     is_multinational: Optional[bool] = field(
         default=None,
@@ -132,7 +137,7 @@ class GlobalUltimateInfoType:
             "name": "IsMultinational",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     is_multinational_exc_branches: Optional[bool] = field(
         default=None,
@@ -140,7 +145,7 @@ class GlobalUltimateInfoType:
             "name": "IsMultinationalExcBranches",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     number_of_sites_gugroup: Optional[int] = field(
         default=None,
@@ -148,7 +153,7 @@ class GlobalUltimateInfoType:
             "name": "NumberOfSitesGUGroup",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     number_of_sites_gugroup_exc_branches: Optional[int] = field(
         default=None,
@@ -156,7 +161,7 @@ class GlobalUltimateInfoType:
             "name": "NumberOfSitesGUGroupExcBranches",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     number_of_sites_gugroup_in_this_country: Optional[int] = field(
         default=None,
@@ -164,15 +169,17 @@ class GlobalUltimateInfoType:
             "name": "NumberOfSitesGUGroupInThisCountry",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
-    number_of_sites_gugroup_in_this_country_exc_branches: Optional[int] = field(
+    number_of_sites_gugroup_in_this_country_exc_branches: Optional[
+        int
+    ] = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroupInThisCountryExcBranches",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     number_of_eusites_gugroup: Optional[int] = field(
         default=None,
@@ -180,7 +187,7 @@ class GlobalUltimateInfoType:
             "name": "NumberOfEUSitesGUGroup",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     number_of_eusites_gugroup_exc_branches: Optional[int] = field(
         default=None,
@@ -188,5 +195,5 @@ class GlobalUltimateInfoType:
             "name": "NumberOfEUSitesGUGroupExcBranches",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )

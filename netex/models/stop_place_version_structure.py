@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_spaces_rel_structure import AccessSpacesRelStructure
 from .accesses_rel_structure import AccessesRelStructure
 from .air_submode_enumeration import AirSubmodeEnumeration
@@ -21,10 +21,14 @@ from .stop_place_weight_enumeration import StopPlaceWeightEnumeration
 from .stop_type_enumeration import StopTypeEnumeration
 from .tariff_zone_refs_rel_structure import TariffZoneRefsRelStructure
 from .telecabin_submode_enumeration import TelecabinSubmodeEnumeration
-from .topographic_place_refs_rel_structure import TopographicPlaceRefsRelStructure
+from .topographic_place_refs_rel_structure import (
+    TopographicPlaceRefsRelStructure,
+)
 from .tram_submode_enumeration import TramSubmodeEnumeration
 from .vehicle_mode_enumeration import VehicleModeEnumeration
-from .vehicle_stopping_places_rel_structure import VehicleStoppingPlacesRelStructure
+from .vehicle_stopping_places_rel_structure import (
+    VehicleStoppingPlacesRelStructure,
+)
 from .water_submode_enumeration import WaterSubmodeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -41,7 +45,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_mode: Optional[VehicleModeEnumeration] = field(
         default=None,
@@ -49,9 +53,22 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            AirSubmodeEnumeration,
+            BusSubmodeEnumeration,
+            CoachSubmodeEnumeration,
+            FunicularSubmodeEnumeration,
+            MetroSubmodeEnumeration,
+            TramSubmodeEnumeration,
+            TelecabinSubmodeEnumeration,
+            RailSubmodeEnumeration,
+            WaterSubmodeEnumeration,
+            SnowAndIceSubmodeEnumeration,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +124,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     other_transport_modes: List[VehicleModeEnumeration] = field(
         default_factory=list,
@@ -116,7 +133,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     tariff_zones: Optional[TariffZoneRefsRelStructure] = field(
         default=None,
@@ -124,7 +141,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "tariffZones",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_place_type: Optional[StopTypeEnumeration] = field(
         default=None,
@@ -132,7 +149,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "StopPlaceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     border_crossing: Optional[bool] = field(
         default=None,
@@ -140,7 +157,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "BorderCrossing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     unlocalised_equipments: Optional[ExplicitEquipmentsRelStructure] = field(
         default=None,
@@ -148,7 +165,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "unlocalisedEquipments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     served_places: Optional[TopographicPlaceRefsRelStructure] = field(
         default=None,
@@ -156,15 +173,17 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "servedPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    main_terminus_for_places: Optional[TopographicPlaceRefsRelStructure] = field(
+    main_terminus_for_places: Optional[
+        TopographicPlaceRefsRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "mainTerminusForPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     limited_use: Optional[LimitedUseTypeEnumeration] = field(
         default=None,
@@ -172,7 +191,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "LimitedUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     weighting: Optional[InterchangeWeightingEnumeration] = field(
         default=None,
@@ -180,7 +199,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "Weighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_place_weight: Optional[StopPlaceWeightEnumeration] = field(
         default=None,
@@ -188,14 +207,14 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "StopPlaceWeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     quays: Optional[QuaysRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     access_spaces: Optional[AccessSpacesRelStructure] = field(
         default=None,
@@ -203,7 +222,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "accessSpaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     path_links: Optional[SitePathLinksRelStructure] = field(
         default=None,
@@ -211,7 +230,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "pathLinks",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     path_junctions: Optional[PathJunctionsRelStructure] = field(
         default=None,
@@ -219,14 +238,14 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "pathJunctions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accesses: Optional[AccessesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     navigation_paths: Optional[NavigationPathsRelStructure] = field(
         default=None,
@@ -234,13 +253,15 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "navigationPaths",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    vehicle_stopping_places: Optional[VehicleStoppingPlacesRelStructure] = field(
+    vehicle_stopping_places: Optional[
+        VehicleStoppingPlacesRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "vehicleStoppingPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

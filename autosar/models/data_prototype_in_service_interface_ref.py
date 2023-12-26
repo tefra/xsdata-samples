@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .data_prototype_in_service_interface_instance_ref import DataPrototypeInServiceInterfaceInstanceRef
-from .port_interface_element_in_implementation_datatype_ref import PortInterfaceElementInImplementationDatatypeRef
+from .data_prototype_in_service_interface_instance_ref import (
+    DataPrototypeInServiceInterfaceInstanceRef,
+)
+from .port_interface_element_in_implementation_datatype_ref import (
+    PortInterfaceElementInImplementationDatatypeRef,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -32,31 +36,36 @@ class DataPrototypeInServiceInterfaceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DATA-PROTOTYPE-IN-SERVICE-INTERFACE-REF"
 
-    data_prototype_iref: Optional[DataPrototypeInServiceInterfaceInstanceRef] = field(
+    data_prototype_iref: Optional[
+        DataPrototypeInServiceInterfaceInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    element_in_impl_datatype: Optional[PortInterfaceElementInImplementationDatatypeRef] = field(
+    element_in_impl_datatype: Optional[
+        PortInterfaceElementInImplementationDatatypeRef
+    ] = field(
         default=None,
         metadata={
             "name": "ELEMENT-IN-IMPL-DATATYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -64,5 +73,5 @@ class DataPrototypeInServiceInterfaceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

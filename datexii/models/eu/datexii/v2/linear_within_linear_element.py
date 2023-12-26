@@ -1,11 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.direction_enum import DirectionEnum
-from datexii.models.eu.datexii.v2.distance_along_linear_element import DistanceAlongLinearElement
+from datexii.models.eu.datexii.v2.distance_along_linear_element import (
+    DistanceAlongLinearElement,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.height_grade_enum import HeightGradeEnum
 from datexii.models.eu.datexii.v2.linear_element import LinearElement
-from datexii.models.eu.datexii.v2.linear_referencing_direction_enum import LinearReferencingDirectionEnum
+from datexii.models.eu.datexii.v2.linear_referencing_direction_enum import (
+    LinearReferencingDirectionEnum,
+)
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -39,13 +43,16 @@ class LinearWithinLinearElement:
         node of the linear section.
     :ivar linear_within_linear_element_extension:
     """
-    administrative_area_of_linear_section: Optional[MultilingualString] = field(
+
+    administrative_area_of_linear_section: Optional[
+        MultilingualString
+    ] = field(
         default=None,
         metadata={
             "name": "administrativeAreaOfLinearSection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     direction_bound_on_linear_section: Optional[DirectionEnum] = field(
         default=None,
@@ -53,15 +60,17 @@ class LinearWithinLinearElement:
             "name": "directionBoundOnLinearSection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    direction_relative_on_linear_section: Optional[LinearReferencingDirectionEnum] = field(
+    direction_relative_on_linear_section: Optional[
+        LinearReferencingDirectionEnum
+    ] = field(
         default=None,
         metadata={
             "name": "directionRelativeOnLinearSection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     height_grade_of_linear_section: Optional[HeightGradeEnum] = field(
         default=None,
@@ -69,7 +78,7 @@ class LinearWithinLinearElement:
             "name": "heightGradeOfLinearSection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     linear_element: Optional[LinearElement] = field(
         default=None,
@@ -78,7 +87,7 @@ class LinearWithinLinearElement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     from_point: Optional[DistanceAlongLinearElement] = field(
         default=None,
@@ -87,7 +96,7 @@ class LinearWithinLinearElement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     to_point: Optional[DistanceAlongLinearElement] = field(
         default=None,
@@ -96,7 +105,7 @@ class LinearWithinLinearElement:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     linear_within_linear_element_extension: Optional[ExtensionType] = field(
         default=None,
@@ -104,5 +113,5 @@ class LinearWithinLinearElement:
             "name": "linearWithinLinearElementExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

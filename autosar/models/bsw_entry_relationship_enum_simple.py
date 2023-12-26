@@ -9,4 +9,5 @@ class BswEntryRelationshipEnumSimple(Enum):
         "to" needs to have the same signature as the "abstract"
         BswModuleEntry referenced as "from".
     """
+
     DERIVED_FROM = "DERIVED-FROM"

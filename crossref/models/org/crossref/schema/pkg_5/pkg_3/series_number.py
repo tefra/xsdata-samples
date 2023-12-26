@@ -8,6 +8,7 @@ class SeriesNumber:
     """
     The series number within a specific published conference discipline.
     """
+
     class Meta:
         name = "series_number"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class SeriesNumber:
         metadata={
             "min_length": 1,
             "max_length": 15,
-        }
+        },
     )

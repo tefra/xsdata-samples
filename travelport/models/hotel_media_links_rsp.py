@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_rsp_1 import BaseRsp1
-from travelport.models.hotel_property_with_media_items import HotelPropertyWithMediaItems
+from travelport.models.hotel_property_with_media_items import (
+    HotelPropertyWithMediaItems,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -18,5 +20,5 @@ class HotelMediaLinksRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 20,
-        }
+        },
     )

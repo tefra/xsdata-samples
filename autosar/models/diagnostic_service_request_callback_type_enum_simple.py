@@ -12,5 +12,6 @@ class DiagnosticServiceRequestCallbackTypeEnumSimple(Enum):
         the usage of PortInterface ServiceRequestNotification has the
         characteristics of being used by a supplier.
     """
+
     REQUEST_CALLBACK_TYPE_MANUFACTURER = "REQUEST-CALLBACK-TYPE-MANUFACTURER"
     REQUEST_CALLBACK_TYPE_SUPPLIER = "REQUEST-CALLBACK-TYPE-SUPPLIER"

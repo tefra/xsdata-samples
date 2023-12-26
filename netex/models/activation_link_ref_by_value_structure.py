@@ -12,5 +12,5 @@ class ActivationLinkRefByValueStructure(LinkRefByValueStructure):
         metadata={
             "name": "nameOfPointRefClass",
             "type": "Attribute",
-        }
+        },
     )

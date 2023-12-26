@@ -8,6 +8,7 @@ class TypeTrinary(Enum):
     """
     Extension of boolean, that allows for unknown values.
     """
+
     TRUE = "true"
     FALSE = "false"
     UNKNOWN = "unknown"

@@ -18,7 +18,7 @@ class LogicalDisplayVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -26,7 +26,7 @@ class LogicalDisplayVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     display_assignments: Optional[DisplayAssignmentsRelStructure] = field(
         default=None,
@@ -34,5 +34,5 @@ class LogicalDisplayVersionStructure(DataManagedObjectStructure):
             "name": "displayAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

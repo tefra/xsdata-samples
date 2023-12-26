@@ -56,6 +56,7 @@ class PricingDetails:
     original_ticket_currency
         The currency of the original ticket.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -65,7 +66,7 @@ class PricingDetails:
             "name": "AdvisoryMessage",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     endorsement_text: list[str] = field(
         default_factory=list,
@@ -73,49 +74,49 @@ class PricingDetails:
             "name": "EndorsementText",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     waiver_text: None | str = field(
         default=None,
         metadata={
             "name": "WaiverText",
             "type": "Element",
-        }
+        },
     )
     low_fare_pricing: bool = field(
         default=False,
         metadata={
             "name": "LowFarePricing",
             "type": "Attribute",
-        }
+        },
     )
     low_fare_found: bool = field(
         default=False,
         metadata={
             "name": "LowFareFound",
             "type": "Attribute",
-        }
+        },
     )
     penalty_applies: bool = field(
         default=False,
         metadata={
             "name": "PenaltyApplies",
             "type": "Attribute",
-        }
+        },
     )
     discount_applies: bool = field(
         default=False,
         metadata={
             "name": "DiscountApplies",
             "type": "Attribute",
-        }
+        },
     )
     itinerary_type: None | TypeItineraryCode = field(
         default=None,
         metadata={
             "name": "ItineraryType",
             "type": "Attribute",
-        }
+        },
     )
     validating_vendor_code: None | str = field(
         default=None,
@@ -123,63 +124,63 @@ class PricingDetails:
             "name": "ValidatingVendorCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     for_ticketing_on_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ForTicketingOnDate",
             "type": "Attribute",
-        }
+        },
     )
     last_date_to_ticket: None | XmlDate = field(
         default=None,
         metadata={
             "name": "LastDateToTicket",
             "type": "Attribute",
-        }
+        },
     )
     form_of_refund: None | TypeFormOfRefund = field(
         default=None,
         metadata={
             "name": "FormOfRefund",
             "type": "Attribute",
-        }
+        },
     )
     account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
-        }
+        },
     )
     bankers_selling_rate: None | Decimal = field(
         default=None,
         metadata={
             "name": "BankersSellingRate",
             "type": "Attribute",
-        }
+        },
     )
     pricing_type: None | TypePricingType = field(
         default=None,
         metadata={
             "name": "PricingType",
             "type": "Attribute",
-        }
+        },
     )
     conversion_rate: None | Decimal = field(
         default=None,
         metadata={
             "name": "ConversionRate",
             "type": "Attribute",
-        }
+        },
     )
     rate_of_exchange: None | Decimal = field(
         default=None,
         metadata={
             "name": "RateOfExchange",
             "type": "Attribute",
-        }
+        },
     )
     original_ticket_currency: None | str = field(
         default=None,
@@ -187,5 +188,5 @@ class PricingDetails:
             "name": "OriginalTicketCurrency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )

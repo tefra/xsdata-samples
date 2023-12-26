@@ -23,6 +23,7 @@ class HotelRulesRsp(BaseRsp1):
     hotel_type
         Supported Providers:1G/1V/1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -32,7 +33,7 @@ class HotelRulesRsp(BaseRsp1):
             "name": "HotelRateDetail",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rule_item: list[HotelRuleItem] = field(
         default_factory=list,
@@ -40,12 +41,12 @@ class HotelRulesRsp(BaseRsp1):
             "name": "HotelRuleItem",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_type: None | HotelType = field(
         default=None,
         metadata={
             "name": "HotelType",
             "type": "Element",
-        }
+        },
     )

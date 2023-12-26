@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.air_exchange_multi_quote_req import AirExchangeMultiQuoteReq
+from travelport.models.air_exchange_multi_quote_req import (
+    AirExchangeMultiQuoteReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class AirExchangeMultiQuotePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class AirExchangeMultiQuotePortTypeServiceInput:
                 "name": "AirExchangeMultiQuoteReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/air_v52_0",
-            }
+            },
         )

@@ -9,6 +9,7 @@ class AirRefundModifiers:
     """
     Provides controls and switches for the Refund process.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -17,14 +18,14 @@ class AirRefundModifiers:
         metadata={
             "name": "RefundDate",
             "type": "Attribute",
-        }
+        },
     )
     account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
-        }
+        },
     )
     ticket_designator: None | str = field(
         default=None,
@@ -33,5 +34,5 @@ class AirRefundModifiers:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 20,
-        }
+        },
     )

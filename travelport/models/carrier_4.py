@@ -9,6 +9,7 @@ class Carrier4:
     """
     Carrier identifier.
     """
+
     class Meta:
         name = "Carrier"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -20,5 +21,5 @@ class Carrier4:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )

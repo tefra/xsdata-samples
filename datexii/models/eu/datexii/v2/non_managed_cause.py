@@ -21,13 +21,14 @@ class NonManagedCause(Cause):
         causation of components of a situation.
     :ivar non_managed_cause_extension:
     """
+
     cause_description: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "causeDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     cause_type: Optional[CauseTypeEnum] = field(
         default=None,
@@ -35,7 +36,7 @@ class NonManagedCause(Cause):
             "name": "causeType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     non_managed_cause_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,5 +44,5 @@ class NonManagedCause(Cause):
             "name": "nonManagedCauseExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -13,5 +13,5 @@ class TargetElement:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

@@ -8,5 +8,6 @@ class CommunicationDirectionTypeSimple(Enum):
     :cvar IN: Reception (Input)
     :cvar OUT: Transmission (Output)
     """
+
     IN = "IN"
     OUT = "OUT"

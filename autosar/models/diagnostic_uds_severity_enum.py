@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .diagnostic_uds_severity_enum_simple import DiagnosticUdsSeverityEnumSimple
+from .diagnostic_uds_severity_enum_simple import (
+    DiagnosticUdsSeverityEnumSimple,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -22,6 +24,7 @@ class DiagnosticUdsSeverityEnum:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-UDS-SEVERITY-ENUM"
 
@@ -29,14 +32,14 @@ class DiagnosticUdsSeverityEnum:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -44,5 +47,5 @@ class DiagnosticUdsSeverityEnum:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

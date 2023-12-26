@@ -15,6 +15,7 @@ class Keyword2(TypeKeyword2):
     text
         Information for a keyword.
     """
+
     class Meta:
         name = "Keyword"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -25,5 +26,5 @@ class Keyword2(TypeKeyword2):
             "name": "Text",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

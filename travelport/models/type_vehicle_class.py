@@ -8,6 +8,7 @@ class TypeVehicleClass(Enum):
     """
     The class of vehicle.
     """
+
     MINI = "Mini"
     ECONOMY = "Economy"
     COMPACT = "Compact"

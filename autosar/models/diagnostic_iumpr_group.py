@@ -90,6 +90,7 @@ class DiagnosticIumprGroup:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-IUMPR-GROUP"
 
@@ -100,15 +101,17 @@ class DiagnosticIumprGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticIumprGroup.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticIumprGroup.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +119,7 @@ class DiagnosticIumprGroup:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +127,7 @@ class DiagnosticIumprGroup:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +135,7 @@ class DiagnosticIumprGroup:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +143,7 @@ class DiagnosticIumprGroup:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +151,7 @@ class DiagnosticIumprGroup:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticIumprGroup.Annotations"] = field(
         default=None,
@@ -156,7 +159,7 @@ class DiagnosticIumprGroup:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -164,7 +167,7 @@ class DiagnosticIumprGroup:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     group_identifier: Optional[NameTokenValueVariationPoint] = field(
         default=None,
@@ -172,15 +175,17 @@ class DiagnosticIumprGroup:
             "name": "GROUP-IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    iumpr_group_identifiers: Optional["DiagnosticIumprGroup.IumprGroupIdentifiers"] = field(
+    iumpr_group_identifiers: Optional[
+        "DiagnosticIumprGroup.IumprGroupIdentifiers"
+    ] = field(
         default=None,
         metadata={
             "name": "IUMPR-GROUP-IDENTIFIERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     iumpr_refs: Optional["DiagnosticIumprGroup.IumprRefs"] = field(
         default=None,
@@ -188,14 +193,14 @@ class DiagnosticIumprGroup:
             "name": "IUMPR-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +208,14 @@ class DiagnosticIumprGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +226,7 @@ class DiagnosticIumprGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,18 +237,20 @@ class DiagnosticIumprGroup:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class IumprGroupIdentifiers:
-        diagnostic_iumpr_group_identifier: List[DiagnosticIumprGroupIdentifier] = field(
+        diagnostic_iumpr_group_identifier: List[
+            DiagnosticIumprGroupIdentifier
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-IUMPR-GROUP-IDENTIFIER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -254,7 +261,7 @@ class DiagnosticIumprGroup:
                 "name": "IUMPR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -265,5 +272,5 @@ class DiagnosticIumprGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

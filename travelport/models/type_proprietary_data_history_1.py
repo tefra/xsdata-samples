@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.type_key_element_1 import TypeKeyElement1
-from travelport.models.type_proprietary_data_history_proprietary_data_type_1 import TypeProprietaryDataHistoryProprietaryDataType1
+from travelport.models.type_proprietary_data_history_proprietary_data_type_1 import (
+    TypeProprietaryDataHistoryProprietaryDataType1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -21,6 +23,7 @@ class TypeProprietaryDataHistory1(TypeKeyElement1):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typeProprietaryDataHistory"
 
@@ -29,7 +32,7 @@ class TypeProprietaryDataHistory1(TypeKeyElement1):
         metadata={
             "name": "ProprietaryDataType",
             "type": "Attribute",
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -38,12 +41,12 @@ class TypeProprietaryDataHistory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

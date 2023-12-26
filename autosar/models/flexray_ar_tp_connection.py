@@ -59,6 +59,7 @@ class FlexrayArTpConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-AR-TP-CONNECTION"
 
@@ -68,7 +69,7 @@ class FlexrayArTpConnection:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     connection_prio_pdus: Optional[Integer] = field(
         default=None,
@@ -76,23 +77,27 @@ class FlexrayArTpConnection:
             "name": "CONNECTION-PRIO-PDUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    direct_tp_sdu_ref: Optional["FlexrayArTpConnection.DirectTpSduRef"] = field(
+    direct_tp_sdu_ref: Optional[
+        "FlexrayArTpConnection.DirectTpSduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DIRECT-TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    flow_control_pdu_ref: Optional["FlexrayArTpConnection.FlowControlPduRef"] = field(
+    flow_control_pdu_ref: Optional[
+        "FlexrayArTpConnection.FlowControlPduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FLOW-CONTROL-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     multicast_ref: Optional["FlexrayArTpConnection.MulticastRef"] = field(
         default=None,
@@ -100,15 +105,17 @@ class FlexrayArTpConnection:
             "name": "MULTICAST-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    reversed_tp_sdu_ref: Optional["FlexrayArTpConnection.ReversedTpSduRef"] = field(
+    reversed_tp_sdu_ref: Optional[
+        "FlexrayArTpConnection.ReversedTpSduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REVERSED-TP-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_ref: Optional["FlexrayArTpConnection.SourceRef"] = field(
         default=None,
@@ -116,7 +123,7 @@ class FlexrayArTpConnection:
             "name": "SOURCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     target_refs: Optional["FlexrayArTpConnection.TargetRefs"] = field(
         default=None,
@@ -124,22 +131,24 @@ class FlexrayArTpConnection:
             "name": "TARGET-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transmit_pdu_refs: Optional["FlexrayArTpConnection.TransmitPduRefs"] = field(
+    transmit_pdu_refs: Optional[
+        "FlexrayArTpConnection.TransmitPduRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSMIT-PDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -147,7 +156,7 @@ class FlexrayArTpConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -158,7 +167,7 @@ class FlexrayArTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -169,7 +178,7 @@ class FlexrayArTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -180,7 +189,7 @@ class FlexrayArTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -191,7 +200,7 @@ class FlexrayArTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -202,7 +211,7 @@ class FlexrayArTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -213,7 +222,7 @@ class FlexrayArTpConnection:
                 "name": "TARGET-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -224,18 +233,20 @@ class FlexrayArTpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class TransmitPduRefs:
-        transmit_pdu_ref: List["FlexrayArTpConnection.TransmitPduRefs.TransmitPduRef"] = field(
+        transmit_pdu_ref: List[
+            "FlexrayArTpConnection.TransmitPduRefs.TransmitPduRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TRANSMIT-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -246,5 +257,5 @@ class FlexrayArTpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

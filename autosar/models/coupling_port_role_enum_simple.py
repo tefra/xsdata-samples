@@ -16,6 +16,7 @@ class CouplingPortRoleEnumSimple(Enum):
         (CouplingElement.ecuInstance) using the CouplingPortConnection.
         This is used to model a cascaded switch.
     """
+
     HOST_PORT = "HOST-PORT"
     STANDARD_PORT = "STANDARD-PORT"
     UP_LINK_PORT = "UP-LINK-PORT"

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from datexii.models.eu.datexii.v2.charging_station_usage_type_enum import ChargingStationUsageTypeEnum
+from datexii.models.eu.datexii.v2.charging_station_usage_type_enum import (
+    ChargingStationUsageTypeEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 
@@ -33,6 +35,7 @@ class ElectricCharging:
         omitted, 1 charging point per station is assumed.
     :ivar electric_charging_extension:
     """
+
     charging_station_usage_type: List[ChargingStationUsageTypeEnum] = field(
         default_factory=list,
         metadata={
@@ -40,7 +43,7 @@ class ElectricCharging:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     charging_station_model_type: Optional[MultilingualString] = field(
         default=None,
@@ -48,7 +51,7 @@ class ElectricCharging:
             "name": "chargingStationModelType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     maximum_current: Optional[float] = field(
         default=None,
@@ -56,14 +59,14 @@ class ElectricCharging:
             "name": "maximumCurrent",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     voltage: List[float] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     charging_station_connector_type: List[MultilingualString] = field(
         default_factory=list,
@@ -71,7 +74,7 @@ class ElectricCharging:
             "name": "chargingStationConnectorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     number_of_charging_points: Optional[int] = field(
         default=None,
@@ -79,7 +82,7 @@ class ElectricCharging:
             "name": "numberOfChargingPoints",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     electric_charging_extension: Optional[ExtensionType] = field(
         default=None,
@@ -87,5 +90,5 @@ class ElectricCharging:
             "name": "electricChargingExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

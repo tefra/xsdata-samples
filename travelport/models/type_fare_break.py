@@ -19,6 +19,7 @@ class TypeFareBreak(Enum):
     MUST_NOT_BREAK
         No Fare Break allowed at the associated segment.
     """
+
     MUST_BREAK = "MustBreak"
     MUST_ONLY_BREAK = "MustOnlyBreak"
     MUST_NOT_BREAK = "MustNotBreak"

@@ -9,6 +9,7 @@ class TypeCommissionCategory2(Enum):
 
     Example include per booking, by monetary amount, etc.
     """
+
     PER_BOOKING = "Per Booking"
     PER_PERSON = "Per Person"
     PER_TICKET = "Per Ticket"

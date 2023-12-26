@@ -16,5 +16,5 @@ class BrandList:
             "name": "Brand",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )

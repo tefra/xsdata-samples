@@ -14,13 +14,14 @@ class SpeedValue(DataValue):
     :ivar speed: A value of speed expressed in kilometres per hour.
     :ivar speed_value_extension:
     """
+
     speed: Optional[float] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     speed_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -28,5 +29,5 @@ class SpeedValue(DataValue):
             "name": "speedValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

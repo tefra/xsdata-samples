@@ -10,5 +10,6 @@ class CryptoKeySlotTypeEnumSimple(Enum):
     :cvar MACHINE: Key slot is used by platform modules only. The
         application manages the key but is not able to use the key.
     """
+
     APPLICATION = "APPLICATION"
     MACHINE = "MACHINE"

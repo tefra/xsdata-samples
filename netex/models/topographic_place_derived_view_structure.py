@@ -19,7 +19,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "TopographicPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -35,7 +35,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     qualifier_name: Optional[MultilingualString] = field(
         default=None,
@@ -43,7 +43,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "QualifierName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     country_ref: Optional[CountryRef] = field(
         default=None,
@@ -51,5 +51,5 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "CountryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

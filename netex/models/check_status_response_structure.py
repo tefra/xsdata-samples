@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .extensions_1 import Extensions1
 from .other_error import OtherError
@@ -17,7 +17,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     data_ready: Optional[bool] = field(
         default=None,
@@ -25,15 +25,17 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "name": "DataReady",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
-    error_condition: Optional["CheckStatusResponseStructure.ErrorCondition"] = field(
+    error_condition: Optional[
+        "CheckStatusResponseStructure.ErrorCondition"
+    ] = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     valid_until: Optional[XmlDateTime] = field(
         default=None,
@@ -41,7 +43,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "name": "ValidUntil",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     shortest_possible_cycle: Optional[XmlDuration] = field(
         default=None,
@@ -49,7 +51,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "name": "ShortestPossibleCycle",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     service_started_time: Optional[XmlDateTime] = field(
         default=None,
@@ -57,7 +59,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "name": "ServiceStartedTime",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     extensions: Optional[Extensions1] = field(
         default=None,
@@ -65,12 +67,14 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
 
     @dataclass
     class ErrorCondition:
-        service_not_available_error_or_other_error: Optional[object] = field(
+        service_not_available_error_or_other_error: Optional[
+            Union[ServiceNotAvailableError, OtherError]
+        ] = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -86,7 +90,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-            }
+            },
         )
         description: Optional[str] = field(
             default=None,
@@ -94,5 +98,5 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
                 "name": "Description",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-            }
+            },
         )

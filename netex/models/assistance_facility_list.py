@@ -14,5 +14,5 @@ class AssistanceFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .other_error import OtherError
@@ -17,7 +17,7 @@ class TerminationResponseStatusStructure:
             "name": "ResponseTimestamp",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     request_message_ref: Optional[str] = field(
         default=None,
@@ -25,7 +25,7 @@ class TerminationResponseStatusStructure:
             "name": "RequestMessageRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscriber_ref: Optional[str] = field(
         default=None,
@@ -33,7 +33,7 @@ class TerminationResponseStatusStructure:
             "name": "SubscriberRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscription_filter_ref: Optional[str] = field(
         default=None,
@@ -41,7 +41,7 @@ class TerminationResponseStatusStructure:
             "name": "SubscriptionFilterRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     subscription_ref: Optional[str] = field(
         default=None,
@@ -49,7 +49,7 @@ class TerminationResponseStatusStructure:
             "name": "SubscriptionRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     status: bool = field(
         default=True,
@@ -58,20 +58,29 @@ class TerminationResponseStatusStructure:
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
-    error_condition: Optional["TerminationResponseStatusStructure.ErrorCondition"] = field(
+    error_condition: Optional[
+        "TerminationResponseStatusStructure.ErrorCondition"
+    ] = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
 
     @dataclass
     class ErrorCondition:
-        choice: Optional[object] = field(
+        choice: Optional[
+            Union[
+                CapabilityNotSupportedError,
+                UnknownSubscriberError,
+                UnknownSubscriptionError,
+                OtherError,
+            ]
+        ] = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -97,7 +106,7 @@ class TerminationResponseStatusStructure:
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-            }
+            },
         )
         description: Optional[str] = field(
             default=None,
@@ -105,5 +114,5 @@ class TerminationResponseStatusStructure:
                 "name": "Description",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-            }
+            },
         )

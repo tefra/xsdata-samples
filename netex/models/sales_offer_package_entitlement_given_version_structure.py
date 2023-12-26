@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class SalesOfferPackageEntitlementGivenVersionStructure(UsageParameterVersionStructure):
+class SalesOfferPackageEntitlementGivenVersionStructure(
+    UsageParameterVersionStructure
+):
     class Meta:
         name = "SalesOfferPackageEntitlementGiven_VersionStructure"
 
@@ -20,7 +22,7 @@ class SalesOfferPackageEntitlementGivenVersionStructure(UsageParameterVersionStr
             "name": "SalesOfferPackageRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_qualification_period: Optional[XmlDuration] = field(
         default=None,
@@ -28,7 +30,7 @@ class SalesOfferPackageEntitlementGivenVersionStructure(UsageParameterVersionStr
             "name": "MinimumQualificationPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entitlement_constraint: Optional[EntitlementConstraintStructure] = field(
         default=None,
@@ -36,7 +38,7 @@ class SalesOfferPackageEntitlementGivenVersionStructure(UsageParameterVersionStr
             "name": "EntitlementConstraint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entitlement_type: Optional[EntitlementTypeEnumeration] = field(
         default=None,
@@ -44,5 +46,5 @@ class SalesOfferPackageEntitlementGivenVersionStructure(UsageParameterVersionStr
             "name": "EntitlementType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

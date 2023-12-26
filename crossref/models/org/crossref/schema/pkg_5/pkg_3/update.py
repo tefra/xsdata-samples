@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDate
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.cm_update_type import CmUpdateType
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.cm_update_type import (
+    CmUpdateType,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -24,6 +26,7 @@ class Update:
         they are likley to have seen the update.
     :ivar content:
     """
+
     class Meta:
         name = "update"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -34,14 +37,14 @@ class Update:
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     date: Optional[XmlDate] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -58,5 +61,5 @@ class Update:
                     "pattern": r"10\.[0-9]{4,9}/.{1,200}",
                 },
             ),
-        }
+        },
     )

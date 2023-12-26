@@ -8,7 +8,9 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .nmtoken_string import NmtokenString
 from .record_layout_iterator_point import RecordLayoutIteratorPoint
 from .ref import Ref
-from .sw_generic_axis_param_type_subtypes_enum import SwGenericAxisParamTypeSubtypesEnum
+from .sw_generic_axis_param_type_subtypes_enum import (
+    SwGenericAxisParamTypeSubtypesEnum,
+)
 from .sw_record_layout_subtypes_enum import SwRecordLayoutSubtypesEnum
 from .sw_record_layout_v import SwRecordLayoutV
 
@@ -100,6 +102,7 @@ class SwRecordLayoutGroup:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-RECORD-LAYOUT-GROUP"
 
@@ -109,7 +112,7 @@ class SwRecordLayoutGroup:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[AsamRecordLayoutSemantics] = field(
         default=None,
@@ -117,7 +120,7 @@ class SwRecordLayoutGroup:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +128,7 @@ class SwRecordLayoutGroup:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_group_axis: Optional[AxisIndexType] = field(
         default=None,
@@ -133,7 +136,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-GROUP-AXIS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_group_index: Optional[NmtokenString] = field(
         default=None,
@@ -141,15 +144,17 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-GROUP-INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_generic_axis_param_type_ref: Optional["SwRecordLayoutGroup.SwGenericAxisParamTypeRef"] = field(
+    sw_generic_axis_param_type_ref: Optional[
+        "SwRecordLayoutGroup.SwGenericAxisParamTypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAM-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_group_from: Optional[RecordLayoutIteratorPoint] = field(
         default=None,
@@ -157,7 +162,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-GROUP-FROM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_group_to: Optional[RecordLayoutIteratorPoint] = field(
         default=None,
@@ -165,7 +170,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-GROUP-TO",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_group_step: Optional[Integer] = field(
         default=None,
@@ -173,7 +178,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-GROUP-STEP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_component: Optional[Identifier] = field(
         default=None,
@@ -181,15 +186,17 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-COMPONENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_record_layout_ref: List["SwRecordLayoutGroup.SwRecordLayoutRef"] = field(
+    sw_record_layout_ref: List[
+        "SwRecordLayoutGroup.SwRecordLayoutRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "SW-RECORD-LAYOUT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_v: List[SwRecordLayoutV] = field(
         default_factory=list,
@@ -197,7 +204,7 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-V",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_group: List["SwRecordLayoutGroup"] = field(
         default_factory=list,
@@ -205,14 +212,14 @@ class SwRecordLayoutGroup:
             "name": "SW-RECORD-LAYOUT-GROUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -220,7 +227,7 @@ class SwRecordLayoutGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -231,7 +238,7 @@ class SwRecordLayoutGroup:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -242,5 +249,5 @@ class SwRecordLayoutGroup:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

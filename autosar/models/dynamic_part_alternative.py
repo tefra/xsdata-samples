@@ -37,6 +37,7 @@ class DynamicPartAlternative:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DYNAMIC-PART-ALTERNATIVE"
 
@@ -46,7 +47,7 @@ class DynamicPartAlternative:
             "name": "I-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     initial_dynamic_part: Optional[Boolean] = field(
         default=None,
@@ -54,7 +55,7 @@ class DynamicPartAlternative:
             "name": "INITIAL-DYNAMIC-PART",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     selector_field_code: Optional[Integer] = field(
         default=None,
@@ -62,14 +63,14 @@ class DynamicPartAlternative:
             "name": "SELECTOR-FIELD-CODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -77,7 +78,7 @@ class DynamicPartAlternative:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -88,5 +89,5 @@ class DynamicPartAlternative:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

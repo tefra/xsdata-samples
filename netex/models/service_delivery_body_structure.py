@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .data_object_delivery import DataObjectDelivery
 from .other_error import OtherError
@@ -15,15 +15,17 @@ class ServiceDeliveryBodyStructure:
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
-    error_condition: Optional["ServiceDeliveryBodyStructure.ErrorCondition"] = field(
+    error_condition: Optional[
+        "ServiceDeliveryBodyStructure.ErrorCondition"
+    ] = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     more_data: Optional[bool] = field(
         default=None,
@@ -31,7 +33,7 @@ class ServiceDeliveryBodyStructure:
             "name": "MoreData",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     data_object_delivery: List[DataObjectDelivery] = field(
         default_factory=list,
@@ -39,19 +41,21 @@ class ServiceDeliveryBodyStructure:
             "name": "DataObjectDelivery",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     srs_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "srsName",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error_or_other_error: Optional[object] = field(
+        capability_not_supported_error_or_other_error: Optional[
+            Union[CapabilityNotSupportedError, OtherError]
+        ] = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -67,7 +71,7 @@ class ServiceDeliveryBodyStructure:
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-            }
+            },
         )
         description: Optional[str] = field(
             default=None,
@@ -75,5 +79,5 @@ class ServiceDeliveryBodyStructure:
                 "name": "Description",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-            }
+            },
         )

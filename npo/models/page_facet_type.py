@@ -16,5 +16,5 @@ class PageFacetType(TextFacetType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

@@ -11,6 +11,7 @@ class RptAccessEnumSimple(Enum):
         its usage for RP can be restricted. Use case: limitation based
         on access rights
     """
+
     ENABLED = "ENABLED"
     NONE = "NONE"
     PROTECTED = "PROTECTED"

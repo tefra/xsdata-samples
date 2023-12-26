@@ -11,6 +11,7 @@ class PassengerType(TypePassengerType1):
     """
     The passenger type details associated to a fare.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class PassengerType(TypePassengerType1):
         metadata={
             "name": "FareGuaranteeInfo",
             "type": "Element",
-        }
+        },
     )

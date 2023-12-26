@@ -14,5 +14,5 @@ class MealFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

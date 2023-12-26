@@ -11,6 +11,7 @@ class TypeMasked2(Enum):
     All masking is simple character substitution (replace each masked
     character with an asterisk).
     """
+
     NOT_MASKED = "Not Masked"
     MASK_ALL = "Mask All"
     MASK_FIRST_AND_LAST = "Mask First and Last"

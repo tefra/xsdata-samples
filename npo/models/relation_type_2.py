@@ -13,21 +13,21 @@ class RelationType2:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     uri_ref: None | str = field(
         default=None,
         metadata={
             "name": "uriRef",
             "type": "Attribute",
-        }
+        },
     )
     broadcaster: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -35,5 +35,5 @@ class RelationType2:
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

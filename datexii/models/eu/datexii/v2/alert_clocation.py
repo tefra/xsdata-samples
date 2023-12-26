@@ -18,13 +18,14 @@ class AlertCLocation:
         location.
     :ivar alert_clocation_extension:
     """
+
     alert_clocation_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "alertCLocationName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     specific_location: Optional[int] = field(
         default=None,
@@ -33,7 +34,7 @@ class AlertCLocation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     alert_clocation_extension: Optional[ExtensionType] = field(
         default=None,
@@ -41,5 +42,5 @@ class AlertCLocation:
             "name": "alertCLocationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -34,6 +34,7 @@ class RailInfo:
     provider_code
     supplier_code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -44,7 +45,7 @@ class RailInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     rail_loc_origin: None | str = field(
         default=None,
@@ -54,7 +55,7 @@ class RailInfo:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -63,7 +64,7 @@ class RailInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     rail_loc_destination: None | str = field(
         default=None,
@@ -73,7 +74,7 @@ class RailInfo:
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
@@ -81,14 +82,14 @@ class RailInfo:
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )
     train_number: None | str = field(
         default=None,
@@ -98,7 +99,7 @@ class RailInfo:
             "required": True,
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -108,7 +109,7 @@ class RailInfo:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -118,5 +119,5 @@ class RailInfo:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )

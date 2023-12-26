@@ -17,7 +17,7 @@ class TypeTicketingModifiersRef:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -25,5 +25,5 @@ class TypeTicketingModifiersRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

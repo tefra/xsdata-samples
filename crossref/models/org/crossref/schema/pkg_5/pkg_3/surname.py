@@ -8,6 +8,7 @@ class Surname:
     """
     The family_name of a contributor.
     """
+
     class Meta:
         name = "surname"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class Surname:
             "max_length": 60,
             "white_space": "collapse",
             "pattern": r"[^\d\?]*[^\?\s]+[^\d]*",
-        }
+        },
     )

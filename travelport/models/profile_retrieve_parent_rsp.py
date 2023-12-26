@@ -11,6 +11,7 @@ class ProfileRetrieveParentRsp(BaseRsp2):
     """
     Response of parent profile data.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -20,5 +21,5 @@ class ProfileRetrieveParentRsp(BaseRsp2):
             "name": "Profile",
             "type": "Element",
             "required": True,
-        }
+        },
     )

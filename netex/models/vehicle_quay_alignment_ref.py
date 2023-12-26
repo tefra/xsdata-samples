@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .vehicle_quay_alignment_ref_structure import VehicleQuayAlignmentRefStructure
+from .vehicle_quay_alignment_ref_structure import (
+    VehicleQuayAlignmentRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

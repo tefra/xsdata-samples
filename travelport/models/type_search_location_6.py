@@ -21,7 +21,7 @@ class TypeSearchLocation6:
             "name": "Airport",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     city: None | City6 = field(
         default=None,
@@ -29,7 +29,7 @@ class TypeSearchLocation6:
             "name": "City",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     city_or_airport: None | CityOrAirport6 = field(
         default=None,
@@ -37,7 +37,7 @@ class TypeSearchLocation6:
             "name": "CityOrAirport",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     coordinate_location: None | CoordinateLocation6 = field(
         default=None,
@@ -45,7 +45,7 @@ class TypeSearchLocation6:
             "name": "CoordinateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     rail_location: None | RailLocation6 = field(
         default=None,
@@ -53,7 +53,7 @@ class TypeSearchLocation6:
             "name": "RailLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )
     distance: None | Distance6 = field(
         default=None,
@@ -61,5 +61,5 @@ class TypeSearchLocation6:
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v38_0",
-        }
+        },
     )

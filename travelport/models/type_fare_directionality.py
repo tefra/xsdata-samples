@@ -8,6 +8,7 @@ class TypeFareDirectionality(Enum):
     """
     A fare's directionality (e.g. one-way, return )
     """
+
     OUTBOUND = "Outbound"
     RETURN = "Return"
     ALL = "All"

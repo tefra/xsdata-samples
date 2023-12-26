@@ -10,6 +10,7 @@ class AddTraveler:
     """
     Container for Travelers or its contents to be added.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,5 +22,5 @@ class AddTraveler:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 18,
-        }
+        },
     )

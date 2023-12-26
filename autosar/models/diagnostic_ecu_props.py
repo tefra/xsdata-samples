@@ -30,6 +30,7 @@ class DiagnosticEcuProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-ECU-PROPS"
 
@@ -39,7 +40,7 @@ class DiagnosticEcuProps:
             "name": "IS-OBD-RELEVANT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     send_resp_pend_on_trans_to_boot: Optional[Boolean] = field(
         default=None,
@@ -47,14 +48,14 @@ class DiagnosticEcuProps:
             "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -62,5 +63,5 @@ class DiagnosticEcuProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

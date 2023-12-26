@@ -12,5 +12,6 @@ class TpegLoc01SimplePointLocationSubtypeEnum(Enum):
     :cvar NON_LINKED_POINT: A point on the road network which is not at
         a junction or intersection.
     """
+
     INTERSECTION = "intersection"
     NON_LINKED_POINT = "nonLinkedPoint"

@@ -19,6 +19,7 @@ class Apiprovider6:
     iatacode
         Agency IATA or ARC code, used as an ID with airlines.
     """
+
     class Meta:
         name = "APIProvider"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -28,15 +29,17 @@ class Apiprovider6:
         metadata={
             "name": "TransactionType",
             "type": "Element",
-        }
+        },
     )
-    available_pseudo_city_code: list[Apiprovider6.AvailablePseudoCityCode] = field(
+    available_pseudo_city_code: list[
+        Apiprovider6.AvailablePseudoCityCode
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AvailablePseudoCityCode",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -46,7 +49,7 @@ class Apiprovider6:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -55,7 +58,7 @@ class Apiprovider6:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     iatacode: None | str = field(
         default=None,
@@ -63,7 +66,7 @@ class Apiprovider6:
             "name": "IATACode",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
 
     @dataclass
@@ -74,6 +77,7 @@ class Apiprovider6:
         pseudo_city_code
             The PseudoCityCode used to connect to the host.
         """
+
         pseudo_city_code: None | str = field(
             default=None,
             metadata={
@@ -81,5 +85,5 @@ class Apiprovider6:
                 "type": "Attribute",
                 "min_length": 2,
                 "max_length": 10,
-            }
+            },
         )

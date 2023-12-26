@@ -26,6 +26,7 @@ class TypeVoucherInformation4:
         segment. It is required when VoucherType selected as
         "RegularVoucher" for 1P, 1J only.
     """
+
     class Meta:
         name = "typeVoucherInformation"
 
@@ -35,28 +36,28 @@ class TypeVoucherInformation4:
             "name": "VoucherType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     confirmation_number: None | str = field(
         default=None,
         metadata={
             "name": "ConfirmationNumber",
             "type": "Attribute",
-        }
+        },
     )
     account_name: None | str = field(
         default=None,
         metadata={
             "name": "AccountName",
             "type": "Attribute",
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -65,5 +66,5 @@ class TypeVoucherInformation4:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )

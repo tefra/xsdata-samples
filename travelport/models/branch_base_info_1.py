@@ -18,6 +18,7 @@ class BranchBaseInfo1:
     phone
         Branch Phone Number
     """
+
     class Meta:
         name = "BranchBaseInfo"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -27,12 +28,12 @@ class BranchBaseInfo1:
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     phone: list[Phone1] = field(
         default_factory=list,
         metadata={
             "name": "Phone",
             "type": "Element",
-        }
+        },
     )

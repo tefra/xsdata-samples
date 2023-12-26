@@ -17,5 +17,5 @@ class Bpmnlabel(Label):
         metadata={
             "name": "labelStyle",
             "type": "Attribute",
-        }
+        },
     )

@@ -12,7 +12,9 @@ from .idsm_instance_ref_conditional import IdsmInstanceRefConditional
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .security_event_context_props import SecurityEventContextProps
-from .security_event_filter_chain_ref_conditional import SecurityEventFilterChainRefConditional
+from .security_event_filter_chain_ref_conditional import (
+    SecurityEventFilterChainRefConditional,
+)
 from .short_name_fragment import ShortNameFragment
 from .string import String
 
@@ -100,6 +102,7 @@ class SecurityEventContextMappingApplication:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SECURITY-EVENT-CONTEXT-MAPPING-APPLICATION"
 
@@ -110,15 +113,17 @@ class SecurityEventContextMappingApplication:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SecurityEventContextMappingApplication.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SecurityEventContextMappingApplication.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -126,7 +131,7 @@ class SecurityEventContextMappingApplication:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -134,7 +139,7 @@ class SecurityEventContextMappingApplication:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -142,7 +147,7 @@ class SecurityEventContextMappingApplication:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -150,7 +155,7 @@ class SecurityEventContextMappingApplication:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -158,15 +163,17 @@ class SecurityEventContextMappingApplication:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["SecurityEventContextMappingApplication.Annotations"] = field(
+    annotations: Optional[
+        "SecurityEventContextMappingApplication.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -174,31 +181,37 @@ class SecurityEventContextMappingApplication:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    filter_chains: Optional["SecurityEventContextMappingApplication.FilterChains"] = field(
+    filter_chains: Optional[
+        "SecurityEventContextMappingApplication.FilterChains"
+    ] = field(
         default=None,
         metadata={
             "name": "FILTER-CHAINS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    idsm_instances: Optional["SecurityEventContextMappingApplication.IdsmInstances"] = field(
+    idsm_instances: Optional[
+        "SecurityEventContextMappingApplication.IdsmInstances"
+    ] = field(
         default=None,
         metadata={
             "name": "IDSM-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mapped_security_events: Optional["SecurityEventContextMappingApplication.MappedSecurityEvents"] = field(
+    mapped_security_events: Optional[
+        "SecurityEventContextMappingApplication.MappedSecurityEvents"
+    ] = field(
         default=None,
         metadata={
             "name": "MAPPED-SECURITY-EVENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     affected_application: Optional[String] = field(
         default=None,
@@ -206,14 +219,14 @@ class SecurityEventContextMappingApplication:
             "name": "AFFECTED-APPLICATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -221,14 +234,14 @@ class SecurityEventContextMappingApplication:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -239,7 +252,7 @@ class SecurityEventContextMappingApplication:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,29 +263,33 @@ class SecurityEventContextMappingApplication:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FilterChains:
-        security_event_filter_chain_ref_conditional: List[SecurityEventFilterChainRefConditional] = field(
+        security_event_filter_chain_ref_conditional: List[
+            SecurityEventFilterChainRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SECURITY-EVENT-FILTER-CHAIN-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class IdsmInstances:
-        idsm_instance_ref_conditional: List[IdsmInstanceRefConditional] = field(
+        idsm_instance_ref_conditional: List[
+            IdsmInstanceRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "IDSM-INSTANCE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -283,5 +300,5 @@ class SecurityEventContextMappingApplication:
                 "name": "SECURITY-EVENT-CONTEXT-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

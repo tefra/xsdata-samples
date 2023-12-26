@@ -8,5 +8,6 @@ class IkeAuthenticationMethodEnumSimple(Enum):
     :cvar DSA: Digital Signature Authentication
     :cvar PSK: Pre-shared key authentication
     """
+
     DSA = "DSA"
     PSK = "PSK"

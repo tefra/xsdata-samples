@@ -16,6 +16,7 @@ class InterUrbanParkingSiteLocationEnum(Enum):
     :cvar ON_STREET: Vehicles are parking on the roadside.
     :cvar OTHER: The parking is located somewhere else.
     """
+
     MOTORWAY = "motorway"
     NEARBY_MOTORWAY = "nearbyMotorway"
     LAY_BY = "layBy"

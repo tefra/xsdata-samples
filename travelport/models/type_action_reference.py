@@ -16,6 +16,7 @@ class TypeActionReference:
     profile_action_code
         Profile Action Code.
     """
+
     class Meta:
         name = "typeActionReference"
 
@@ -25,7 +26,7 @@ class TypeActionReference:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_action_code: None | str = field(
         default=None,
@@ -33,5 +34,5 @@ class TypeActionReference:
             "name": "ProfileActionCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

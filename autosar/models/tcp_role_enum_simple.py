@@ -9,5 +9,6 @@ class TcpRoleEnumSimple(Enum):
     :cvar LISTEN: Socket is put into the server mode (listen for
         connections).
     """
+
     CONNECT = "CONNECT"
     LISTEN = "LISTEN"

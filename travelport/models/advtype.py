@@ -98,6 +98,7 @@ class Advtype:
     latest_tk_dt
         Latest ticketing date.
     """
+
     class Meta:
         name = "ADVType"
 
@@ -106,222 +107,222 @@ class Advtype:
         metadata={
             "name": "AdvRsvnOnlyIfTk",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_any_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnAnyTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_hrs: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnHrs",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_days: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnDays",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_months: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnMonths",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_earliest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnEarliestTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_latest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnLatestTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_waived: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnWaived",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_data_exists: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnDataExists",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_end_item: None | bool = field(
         default=None,
         metadata={
             "name": "AdvRsvnEndItem",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_earliest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkEarliestTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_latest_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkLatestTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_rsvn_hrs: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnHrs",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_rsvn_days: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnDays",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_rsvn_months: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnMonths",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_start_hrs: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkStartHrs",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_start_days: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkStartDays",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_start_months: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkStartMonths",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_waived: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkWaived",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_any_tm: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkAnyTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_end_item: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTkEndItem",
             "type": "Attribute",
-        }
+        },
     )
     adv_rsvn_tm: None | int = field(
         default=None,
         metadata={
             "name": "AdvRsvnTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_rsvn_tm: None | int = field(
         default=None,
         metadata={
             "name": "AdvTkRsvnTm",
             "type": "Attribute",
-        }
+        },
     )
     adv_tk_start_tm: None | int = field(
         default=None,
         metadata={
             "name": "AdvTkStartTm",
             "type": "Attribute",
-        }
+        },
     )
     earliest_rsvn_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "EarliestRsvnDtPresent",
             "type": "Attribute",
-        }
+        },
     )
     earliest_tk_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "EarliestTkDtPresent",
             "type": "Attribute",
-        }
+        },
     )
     latest_rsvn_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "LatestRsvnDtPresent",
             "type": "Attribute",
-        }
+        },
     )
     latest_tk_dt_present: None | bool = field(
         default=None,
         metadata={
             "name": "LatestTkDtPresent",
             "type": "Attribute",
-        }
+        },
     )
     earliest_rsvn_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EarliestRsvnDt",
             "type": "Attribute",
-        }
+        },
     )
     earliest_tk_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EarliestTkDt",
             "type": "Attribute",
-        }
+        },
     )
     latest_rsvn_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "LatestRsvnDt",
             "type": "Attribute",
-        }
+        },
     )
     latest_tk_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "LatestTkDt",
             "type": "Attribute",
-        }
+        },
     )

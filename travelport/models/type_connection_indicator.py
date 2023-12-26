@@ -9,6 +9,7 @@ class TypeConnectionIndicator(Enum):
     AvailabilityAndPricing : Specified availability and pricing connection;
     TurnAround : Specified turn around;
     Stopover : Specified stopover;"""
+
     AVAILABILITY_AND_PRICING = "AvailabilityAndPricing"
     TURN_AROUND = "TurnAround"
     STOPOVER = "Stopover"

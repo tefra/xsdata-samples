@@ -41,6 +41,7 @@ class AdxpExplicit:
         address label as is.
     :ivar content:
     """
+
     class Meta:
         name = "ADXP_explicit"
 
@@ -49,7 +50,7 @@ class AdxpExplicit:
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -57,7 +58,7 @@ class AdxpExplicit:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -73,6 +74,7 @@ class AnyType:
         information and possibly the reason why the information is
         missing.
     """
+
     class Meta:
         name = "ANY"
 
@@ -81,7 +83,7 @@ class AnyType:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -102,6 +104,7 @@ class EnxpExplicit:
         family name may be a pseudonym or a name of public records.
     :ivar content:
     """
+
     class Meta:
         name = "ENXP_explicit"
 
@@ -110,14 +113,14 @@ class EnxpExplicit:
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -125,7 +128,7 @@ class EnxpExplicit:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -140,6 +143,7 @@ class IvxbTsExplicit:
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_TS_explicit"
 
@@ -148,21 +152,21 @@ class IvxbTsExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     value: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
-        }
+        },
     )
     inclusive: str = field(
         default="true",
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -179,6 +183,7 @@ class SxcmTsExplicit:
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_TS_explicit"
 
@@ -187,20 +192,20 @@ class SxcmTsExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     value: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
-        }
+        },
     )
     operator: SetOperator = field(
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -215,6 +220,7 @@ class TsExplicit:
         missing.
     :ivar value:
     """
+
     class Meta:
         name = "TS_explicit"
 
@@ -223,14 +229,14 @@ class TsExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     value: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
-        }
+        },
     )
 
 
@@ -240,6 +246,7 @@ class AnynonNull(AnyType):
 
     A Boolean value can be either true or false.
     """
+
     class Meta:
         name = "ANYNonNull"
 
@@ -247,7 +254,7 @@ class AnynonNull(AnyType):
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
 
 
@@ -262,6 +269,7 @@ class Bin(AnyType):
         data that is the content of the binary data value.
     :ivar content:
     """
+
     class Meta:
         name = "BIN"
 
@@ -269,7 +277,7 @@ class Bin(AnyType):
         default=BinaryDataEncoding.TXT,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -277,7 +285,7 @@ class Bin(AnyType):
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )
 
 
@@ -288,6 +296,7 @@ class Bl(AnyType):
     A Boolean value can be either true or false, or, as any other value
     may be NULL.
     """
+
     class Meta:
         name = "BL"
 
@@ -296,7 +305,7 @@ class Bl(AnyType):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -328,6 +337,7 @@ class Cr(AnyType):
         defines inversion but does not provide reciprocal pairs of role
         names. By default, inverted is false.
     """
+
     class Meta:
         name = "CR"
 
@@ -336,21 +346,21 @@ class Cr(AnyType):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional["Cd"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     inverted: str = field(
         default="false",
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -378,6 +388,7 @@ class Ii(AnyType):
         display and data entry (displayable = true) as opposed to pure
         machine interoperation (displayable = false).
     """
+
     class Meta:
         name = "II"
 
@@ -386,14 +397,14 @@ class Ii(AnyType):
         metadata={
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     extension: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     assigning_authority_name: Optional[str] = field(
         default=None,
@@ -401,14 +412,14 @@ class Ii(AnyType):
             "name": "assigningAuthorityName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     displayable: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -421,6 +432,7 @@ class Qty(AnyType):
     The quantity type abstraction is needed in defining certain other
     types, such as the interval and the probability distribution.
     """
+
     class Meta:
         name = "QTY"
 
@@ -448,6 +460,7 @@ class TelExplicit:
         telecommunication address in a set of like addresses to select
         for a given telecommunication need.
     """
+
     class Meta:
         name = "TEL_explicit"
 
@@ -457,27 +470,27 @@ class TelExplicit:
             "name": "useablePeriod",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     value: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     use: List[TelecommunicationAddressUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
 
 
@@ -491,6 +504,7 @@ class Url(AnyType):
     telecommunication address data type are for telephone and
     telefax numbers, e-mail addresses, Hypertext references,
     FTP references, etc."""
+
     class Meta:
         name = "URL"
 
@@ -498,7 +512,7 @@ class Url(AnyType):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -513,7 +527,7 @@ class AdxpExplicitAdditionalLocator(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -528,7 +542,7 @@ class AdxpExplicitBuildingNumberSuffix(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -543,7 +557,7 @@ class AdxpExplicitCareOf(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -558,7 +572,7 @@ class AdxpExplicitCensusTract(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -573,7 +587,7 @@ class AdxpExplicitCity(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -588,7 +602,7 @@ class AdxpExplicitCountry(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -603,7 +617,7 @@ class AdxpExplicitCounty(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -618,7 +632,7 @@ class AdxpExplicitDelimiter(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -633,7 +647,7 @@ class AdxpExplicitDeliveryAddressLine(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -648,7 +662,7 @@ class AdxpExplicitDeliveryInstallationArea(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -663,7 +677,7 @@ class AdxpExplicitDeliveryInstallationQualifier(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -678,7 +692,7 @@ class AdxpExplicitDeliveryInstallationType(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -693,7 +707,7 @@ class AdxpExplicitDeliveryMode(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -708,7 +722,7 @@ class AdxpExplicitDeliveryModeIdentifier(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -723,7 +737,7 @@ class AdxpExplicitDirection(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -738,7 +752,7 @@ class AdxpExplicitHouseNumber(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -753,7 +767,7 @@ class AdxpExplicitHouseNumberNumeric(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -768,7 +782,7 @@ class AdxpExplicitPostBox(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -783,7 +797,7 @@ class AdxpExplicitPostalCode(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -798,7 +812,7 @@ class AdxpExplicitPrecinct(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -813,7 +827,7 @@ class AdxpExplicitState(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -828,7 +842,7 @@ class AdxpExplicitStreetAddressLine(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -843,7 +857,7 @@ class AdxpExplicitStreetName(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -858,7 +872,7 @@ class AdxpExplicitStreetNameBase(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -873,7 +887,7 @@ class AdxpExplicitStreetNameType1(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -888,7 +902,7 @@ class AdxpExplicitUnitId(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -903,7 +917,7 @@ class AdxpExplicitUnitType(AdxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -918,7 +932,7 @@ class EnExplicitDelimiter(EnxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -933,7 +947,7 @@ class EnExplicitFamily(EnxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -948,7 +962,7 @@ class EnExplicitGiven(EnxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -963,7 +977,7 @@ class EnExplicitPrefix(EnxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -978,7 +992,7 @@ class EnExplicitSuffix(EnxpExplicit):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1001,6 +1015,7 @@ class AdExplicit:
         this information.
     :ivar content:
     """
+
     class Meta:
         name = "AD_explicit"
 
@@ -1009,14 +1024,14 @@ class AdExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     use: List[PostalAddressUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     is_not_ordered: Optional[str] = field(
         default=None,
@@ -1024,7 +1039,7 @@ class AdExplicit:
             "name": "isNotOrdered",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1174,7 +1189,7 @@ class AdExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1184,6 +1199,7 @@ class Bn(AnynonNull):
 
     A Boolean value can be either true or false.
     """
+
     class Meta:
         name = "BN"
 
@@ -1192,7 +1208,7 @@ class Bn(AnynonNull):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1223,6 +1239,7 @@ class Ed(Bin):
     :ivar integrity_check_algorithm: Specifies the algorithm used to
         compute the integrityCheck value.
     """
+
     class Meta:
         name = "ED"
 
@@ -1232,20 +1249,20 @@ class Ed(Bin):
             "name": "mediaType",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     integrity_check: Optional[bytes] = field(
         default=None,
@@ -1253,14 +1270,14 @@ class Ed(Bin):
             "name": "integrityCheck",
             "type": "Attribute",
             "format": "base64",
-        }
+        },
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
         metadata={
             "name": "integrityCheckAlgorithm",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1274,6 +1291,7 @@ class Int(Qty):
     numbers. Two NULL flavors are defined for the positive and negative
     infinity.
     """
+
     class Meta:
         name = "INT"
 
@@ -1281,7 +1299,7 @@ class Int(Qty):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1301,6 +1319,7 @@ class Mo(Qty):
         currency unit.
     :ivar currency: The currency unit as defined in ISO 4217.
     """
+
     class Meta:
         name = "MO"
 
@@ -1308,14 +1327,14 @@ class Mo(Qty):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     currency: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -1333,6 +1352,7 @@ class Real(Qty):
     without necessarily implying the full set of the mathematical real
     numbers.
     """
+
     class Meta:
         name = "REAL"
 
@@ -1340,7 +1360,7 @@ class Real(Qty):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1353,6 +1373,7 @@ class RtoQtyQty(Qty):
         ratio. The default is the integer number 1 (one). The
         denominator must not be zero.
     """
+
     class Meta:
         name = "RTO_QTY_QTY"
 
@@ -1362,7 +1383,7 @@ class RtoQtyQty(Qty):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     denominator: Optional[Qty] = field(
         default=None,
@@ -1370,7 +1391,7 @@ class RtoQtyQty(Qty):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -1380,6 +1401,7 @@ class Ts(Qty):
 
     A point in time is most often represented as a calendar expression.
     """
+
     class Meta:
         name = "TS"
 
@@ -1388,7 +1410,7 @@ class Ts(Qty):
         metadata={
             "type": "Attribute",
             "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
-        }
+        },
     )
 
 
@@ -1424,6 +1446,7 @@ class ThumbnailExplicit:
         compute the integrityCheck value.
     :ivar content:
     """
+
     class Meta:
         name = "thumbnail_explicit"
 
@@ -1432,13 +1455,13 @@ class ThumbnailExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     media_type: str = field(
         default="text/plain",
@@ -1446,20 +1469,20 @@ class ThumbnailExplicit:
             "name": "mediaType",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     integrity_check: Optional[bytes] = field(
         default=None,
@@ -1467,14 +1490,14 @@ class ThumbnailExplicit:
             "name": "integrityCheck",
             "type": "Attribute",
             "format": "base64",
-        }
+        },
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
         metadata={
             "name": "integrityCheckAlgorithm",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1489,7 +1512,7 @@ class ThumbnailExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1525,6 +1548,7 @@ class Cd(AnyType):
     :ivar value_set:
     :ivar value_set_version:
     """
+
     class Meta:
         name = "CD"
 
@@ -1534,28 +1558,28 @@ class Cd(AnyType):
             "name": "originalText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     qualifier: List[Cr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     translation: List["Cd"] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     code_system: Optional[str] = field(
         default=None,
@@ -1563,7 +1587,7 @@ class Cd(AnyType):
             "name": "codeSystem",
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     code_system_name: Optional[str] = field(
         default=None,
@@ -1571,7 +1595,7 @@ class Cd(AnyType):
             "name": "codeSystemName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     code_system_version: Optional[str] = field(
         default=None,
@@ -1579,7 +1603,7 @@ class Cd(AnyType):
             "name": "codeSystemVersion",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     display_name: Optional[str] = field(
         default=None,
@@ -1587,7 +1611,7 @@ class Cd(AnyType):
             "name": "displayName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     value_set: Optional[str] = field(
         default=None,
@@ -1596,7 +1620,7 @@ class Cd(AnyType):
             "type": "Attribute",
             "namespace": "urn:hl7-org:sdtc",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     value_set_version: Optional[str] = field(
         default=None,
@@ -1605,7 +1629,7 @@ class Cd(AnyType):
             "type": "Attribute",
             "namespace": "urn:hl7-org:sdtc",
             "min_length": 1,
-        }
+        },
     )
 
 
@@ -1642,6 +1666,7 @@ class EdExplicit:
         compute the integrityCheck value.
     :ivar content:
     """
+
     class Meta:
         name = "ED_explicit"
 
@@ -1650,13 +1675,13 @@ class EdExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     media_type: str = field(
         default="text/plain",
@@ -1664,20 +1689,20 @@ class EdExplicit:
             "name": "mediaType",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     integrity_check: Optional[bytes] = field(
         default=None,
@@ -1685,14 +1710,14 @@ class EdExplicit:
             "name": "integrityCheck",
             "type": "Attribute",
             "format": "base64",
-        }
+        },
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
         metadata={
             "name": "integrityCheckAlgorithm",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1712,7 +1737,7 @@ class EdExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1723,6 +1748,7 @@ class IvxbTs(Ts):
         interval (interval is closed) or excluded from the interval
         (interval is open).
     """
+
     class Meta:
         name = "IVXB_TS"
 
@@ -1731,7 +1757,7 @@ class IvxbTs(Ts):
         metadata={
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
 
 
@@ -1747,6 +1773,7 @@ class Rto(RtoQtyQty):
     blood pressure measurements (e.g. "120/60") are not ratios. In many
     cases REAL should be used instead of .
     """
+
     class Meta:
         name = "RTO"
 
@@ -1789,6 +1816,7 @@ class ScExplicit:
         sending system shows the code value to its users.
     :ivar content:
     """
+
     class Meta:
         name = "SC_explicit"
 
@@ -1797,13 +1825,13 @@ class ScExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     representation: BinaryDataEncoding = field(
         default=BinaryDataEncoding.TXT,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     media_type: str = field(
         default="text/plain",
@@ -1811,20 +1839,20 @@ class ScExplicit:
             "name": "mediaType",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     integrity_check: Optional[bytes] = field(
         default=None,
@@ -1832,21 +1860,21 @@ class ScExplicit:
             "name": "integrityCheck",
             "type": "Attribute",
             "format": "base64",
-        }
+        },
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
         metadata={
             "name": "integrityCheckAlgorithm",
             "type": "Attribute",
-        }
+        },
     )
     code: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     code_system: Optional[str] = field(
         default=None,
@@ -1854,7 +1882,7 @@ class ScExplicit:
             "name": "codeSystem",
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     code_system_name: Optional[str] = field(
         default=None,
@@ -1862,7 +1890,7 @@ class ScExplicit:
             "name": "codeSystemName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     code_system_version: Optional[str] = field(
         default=None,
@@ -1870,7 +1898,7 @@ class ScExplicit:
             "name": "codeSystemVersion",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     display_name: Optional[str] = field(
         default=None,
@@ -1878,7 +1906,7 @@ class ScExplicit:
             "name": "displayName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -1898,7 +1926,7 @@ class ScExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -1909,6 +1937,7 @@ class St(Ed):
     machine processing (e.g., sorting, querying, indexing, etc.) Used for names,
     symbols, and formal expressions.
     """
+
     class Meta:
         name = "ST"
 
@@ -1917,7 +1946,7 @@ class St(Ed):
         default=BinaryDataEncoding.TXT,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     media_type: str = field(
         init=False,
@@ -1926,25 +1955,25 @@ class St(Ed):
             "name": "mediaType",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     compression: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
     integrity_check: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
     integrity_check_algorithm: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
 
 
@@ -1974,6 +2003,7 @@ class StExplicit:
         compute the integrityCheck value.
     :ivar content:
     """
+
     class Meta:
         name = "ST_explicit"
 
@@ -1981,7 +2011,7 @@ class StExplicit:
         default=BinaryDataEncoding.TXT,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     media_type: str = field(
         default="text/plain",
@@ -1989,20 +2019,20 @@ class StExplicit:
             "name": "mediaType",
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     language: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     compression: Optional[CompressionAlgorithm] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     integrity_check: Optional[bytes] = field(
         default=None,
@@ -2010,14 +2040,14 @@ class StExplicit:
             "name": "integrityCheck",
             "type": "Attribute",
             "format": "base64",
-        }
+        },
     )
     integrity_check_algorithm: IntegrityCheckAlgorithm = field(
         default=IntegrityCheckAlgorithm.SHA_1,
         metadata={
             "name": "integrityCheckAlgorithm",
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -2037,7 +2067,7 @@ class StExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -2050,6 +2080,7 @@ class SxcmTs(Ts):
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "SXCM_TS"
 
@@ -2057,7 +2088,7 @@ class SxcmTs(Ts):
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2071,6 +2102,7 @@ class Thumbnail(Ed):
     encapsulated data. It allows a user to select data more efficiently
     before actually downloading through the reference.
     """
+
     class Meta:
         name = "thumbnail"
 
@@ -2092,6 +2124,7 @@ class Adxp(St):
         the address part is unclassified and would simply appear on an
         address label as is.
     """
+
     class Meta:
         name = "ADXP"
 
@@ -2100,7 +2133,7 @@ class Adxp(St):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2136,6 +2169,7 @@ class CdExplicit(AnyType):
     :ivar value_set:
     :ivar value_set_version:
     """
+
     class Meta:
         name = "CD_explicit"
 
@@ -2145,28 +2179,28 @@ class CdExplicit(AnyType):
             "name": "originalText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     qualifier: List[Cr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     translation: List[Cd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     code_system: Optional[str] = field(
         default=None,
@@ -2174,7 +2208,7 @@ class CdExplicit(AnyType):
             "name": "codeSystem",
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     code_system_name: Optional[str] = field(
         default=None,
@@ -2182,7 +2216,7 @@ class CdExplicit(AnyType):
             "name": "codeSystemName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     code_system_version: Optional[str] = field(
         default=None,
@@ -2190,7 +2224,7 @@ class CdExplicit(AnyType):
             "name": "codeSystemVersion",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     display_name: Optional[str] = field(
         default=None,
@@ -2198,7 +2232,7 @@ class CdExplicit(AnyType):
             "name": "displayName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     value_set: Optional[str] = field(
         default=None,
@@ -2207,7 +2241,7 @@ class CdExplicit(AnyType):
             "type": "Attribute",
             "namespace": "urn:hl7-org:sdtc",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     value_set_version: Optional[str] = field(
         default=None,
@@ -2216,7 +2250,7 @@ class CdExplicit(AnyType):
             "type": "Attribute",
             "namespace": "urn:hl7-org:sdtc",
             "min_length": 1,
-        }
+        },
     )
 
 
@@ -2227,6 +2261,7 @@ class Ce(Cd):
 
     Used when alternative codes may exist.
     """
+
     class Meta:
         name = "CE"
 
@@ -2234,7 +2269,7 @@ class Ce(Cd):
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
 
 
@@ -2254,6 +2289,7 @@ class Enxp(St):
         type. For example, a given name may be flagged as a nickname, a
         family name may be a pseudonym or a name of public records.
     """
+
     class Meta:
         name = "ENXP"
 
@@ -2262,14 +2298,14 @@ class Enxp(St):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
     qualifier: List[EntityNamePartQualifier] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
 
 
@@ -2296,6 +2332,7 @@ class PqrExplicit:
     :ivar value: The magnitude of the measurement value in terms of the
         unit specified in the code.
     """
+
     class Meta:
         name = "PQR_explicit"
 
@@ -2305,21 +2342,21 @@ class PqrExplicit:
             "name": "originalText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     code: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     code_system: Optional[str] = field(
         default=None,
@@ -2327,7 +2364,7 @@ class PqrExplicit:
             "name": "codeSystem",
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     code_system_name: Optional[str] = field(
         default=None,
@@ -2335,7 +2372,7 @@ class PqrExplicit:
             "name": "codeSystemName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     code_system_version: Optional[str] = field(
         default=None,
@@ -2343,7 +2380,7 @@ class PqrExplicit:
             "name": "codeSystemVersion",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     display_name: Optional[str] = field(
         default=None,
@@ -2351,13 +2388,13 @@ class PqrExplicit:
             "name": "displayName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2378,6 +2415,7 @@ class Sc(St):
     :ivar display_name: A name or title for the code, under which the
         sending system shows the code value to its users.
     """
+
     class Meta:
         name = "SC"
 
@@ -2386,7 +2424,7 @@ class Sc(St):
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
     code_system: Optional[str] = field(
         default=None,
@@ -2394,7 +2432,7 @@ class Sc(St):
             "name": "codeSystem",
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     code_system_name: Optional[str] = field(
         default=None,
@@ -2402,7 +2440,7 @@ class Sc(St):
             "name": "codeSystemName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     code_system_version: Optional[str] = field(
         default=None,
@@ -2410,7 +2448,7 @@ class Sc(St):
             "name": "codeSystemVersion",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
     display_name: Optional[str] = field(
         default=None,
@@ -2418,7 +2456,7 @@ class Sc(St):
             "name": "displayName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
 
 
@@ -2441,6 +2479,7 @@ class Tel(Url):
         telecommunication address in a set of like addresses to select
         for a given telecommunication need.
     """
+
     class Meta:
         name = "TEL"
 
@@ -2450,14 +2489,14 @@ class Tel(Url):
             "name": "useablePeriod",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     use: List[TelecommunicationAddressUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
 
 
@@ -2468,6 +2507,7 @@ class CeExplicit(CdExplicit):
 
     Used when alternative codes may exist.
     """
+
     class Meta:
         name = "CE_explicit"
 
@@ -2475,7 +2515,7 @@ class CeExplicit(CdExplicit):
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
 
 
@@ -2486,6 +2526,7 @@ class Cv(Ce):
 
     Used when a single code value must be sent.
     """
+
     class Meta:
         name = "CV"
 
@@ -2493,7 +2534,7 @@ class Cv(Ce):
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
 
 
@@ -2503,6 +2544,7 @@ class EivlEvent(Ce):
     A code for a common (periodical) activity of daily living based on which the
     event related periodic interval is specified.
     """
+
     class Meta:
         name = "EIVL.event"
 
@@ -2513,7 +2555,7 @@ class EivlEvent(Ce):
             "name": "codeSystem",
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
-        }
+        },
     )
     code_system_name: str = field(
         init=False,
@@ -2522,7 +2564,7 @@ class EivlEvent(Ce):
             "name": "codeSystemName",
             "type": "Attribute",
             "min_length": 1,
-        }
+        },
     )
 
 
@@ -2542,6 +2584,7 @@ class PqExplicit:
     :ivar unit: The unit of measure specified in the Unified Code for
         Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
     """
+
     class Meta:
         name = "PQ_explicit"
 
@@ -2550,27 +2593,27 @@ class PqExplicit:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     unit: str = field(
         default="1",
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -2585,7 +2628,7 @@ class AdxpAdditionalLocator(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2600,7 +2643,7 @@ class AdxpBuildingNumberSuffix(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2615,7 +2658,7 @@ class AdxpCareOf(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2630,7 +2673,7 @@ class AdxpCensusTract(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2645,7 +2688,7 @@ class AdxpCity(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2660,7 +2703,7 @@ class AdxpCountry(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2675,7 +2718,7 @@ class AdxpCounty(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2690,7 +2733,7 @@ class AdxpDelimiter(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2705,7 +2748,7 @@ class AdxpDeliveryAddressLine(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2720,7 +2763,7 @@ class AdxpDeliveryInstallationArea(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2735,7 +2778,7 @@ class AdxpDeliveryInstallationQualifier(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2750,7 +2793,7 @@ class AdxpDeliveryInstallationType(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2765,7 +2808,7 @@ class AdxpDeliveryMode(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2780,7 +2823,7 @@ class AdxpDeliveryModeIdentifier(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2795,7 +2838,7 @@ class AdxpDirection(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2810,7 +2853,7 @@ class AdxpHouseNumber(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2825,7 +2868,7 @@ class AdxpHouseNumberNumeric(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2840,7 +2883,7 @@ class AdxpPostBox(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2855,7 +2898,7 @@ class AdxpPostalCode(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2870,7 +2913,7 @@ class AdxpPrecinct(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2885,7 +2928,7 @@ class AdxpState(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2900,7 +2943,7 @@ class AdxpStreetAddressLine(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2915,7 +2958,7 @@ class AdxpStreetName(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2930,7 +2973,7 @@ class AdxpStreetNameBase(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2945,7 +2988,7 @@ class AdxpStreetNameType(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2960,7 +3003,7 @@ class AdxpUnitId(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2975,7 +3018,7 @@ class AdxpUnitType(Adxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2990,7 +3033,7 @@ class EnDelimiter(Enxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3005,7 +3048,7 @@ class EnFamily(Enxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3020,7 +3063,7 @@ class EnGiven(Enxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3035,7 +3078,7 @@ class EnPrefix(Enxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3050,7 +3093,7 @@ class EnSuffix(Enxp):
         metadata={
             "name": "partType",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3070,6 +3113,7 @@ class Ad(AnyType):
         this information.
     :ivar content:
     """
+
     class Meta:
         name = "AD"
 
@@ -3078,7 +3122,7 @@ class Ad(AnyType):
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     is_not_ordered: Optional[str] = field(
         default=None,
@@ -3086,7 +3130,7 @@ class Ad(AnyType):
             "name": "isNotOrdered",
             "type": "Attribute",
             "pattern": r"true|false",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -3236,7 +3280,7 @@ class Ad(AnyType):
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -3249,6 +3293,7 @@ class Co(Cv):
     elements that involve statements about the order of the terms in a
     domain.
     """
+
     class Meta:
         name = "CO"
 
@@ -3260,6 +3305,7 @@ class Cs(Cv):
 
     Used when a single code value must be sent.
     """
+
     class Meta:
         name = "CS"
 
@@ -3267,25 +3313,25 @@ class Cs(Cv):
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
     code_system_name: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
     code_system_version: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
     display_name: Any = field(
         init=False,
         metadata={
             "type": "Ignore",
-        }
+        },
     )
 
 
@@ -3313,6 +3359,7 @@ class IvlTsExplicit:
         as constructed from the representation stream up to the current
         point.
     """
+
     class Meta:
         name = "IVL_TS_explicit"
 
@@ -3321,7 +3368,7 @@ class IvlTsExplicit:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[PqExplicit] = field(
         default_factory=list,
@@ -3329,7 +3376,7 @@ class IvlTsExplicit:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbTsExplicit] = field(
         default_factory=list,
@@ -3337,34 +3384,34 @@ class IvlTsExplicit:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[TsExplicit] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     value: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[0-9]{1,8}|([0-9]{9,14}|[0-9]{14,14}\.[0-9]+)([+\-][0-9]{1,4})?",
-        }
+        },
     )
     operator: SetOperator = field(
         default=SetOperator.I,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3377,6 +3424,7 @@ class Pqr(Cv):
     :ivar value: The magnitude of the measurement value in terms of the
         unit specified in the code.
     """
+
     class Meta:
         name = "PQR"
 
@@ -3384,7 +3432,7 @@ class Pqr(Cv):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -3406,6 +3454,7 @@ class EnExplicit:
         for that respective purpose.
     :ivar content:
     """
+
     class Meta:
         name = "EN_explicit"
 
@@ -3414,14 +3463,14 @@ class EnExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -3461,7 +3510,7 @@ class EnExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -3483,6 +3532,7 @@ class OnExplicit:
         for that respective purpose.
     :ivar content:
     """
+
     class Meta:
         name = "ON_explicit"
 
@@ -3491,14 +3541,14 @@ class OnExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -3528,7 +3578,7 @@ class OnExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -3550,6 +3600,7 @@ class PnExplicit:
         for that respective purpose.
     :ivar content:
     """
+
     class Meta:
         name = "PN_explicit"
 
@@ -3558,14 +3609,14 @@ class PnExplicit:
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     use: List[EntityNameUse] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -3605,7 +3656,7 @@ class PnExplicit:
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -3622,6 +3673,7 @@ class Pq(Qty):
     :ivar unit: The unit of measure specified in the Unified Code for
         Units of Measure (UCUM) [http://aurora.rg.iupui.edu/UCUM].
     """
+
     class Meta:
         name = "PQ"
 
@@ -3630,20 +3682,20 @@ class Pq(Qty):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     value: Optional[Union[Decimal, float]] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     unit: str = field(
         default="1",
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
-        }
+        },
     )
 
 
@@ -3662,6 +3714,7 @@ class IvlTs(SxcmTs):
         semantic property is for conversions of intervals from and to
         point values.
     """
+
     class Meta:
         name = "IVL_TS"
 
@@ -3670,7 +3723,7 @@ class IvlTs(SxcmTs):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     width: List[Pq] = field(
         default_factory=list,
@@ -3678,7 +3731,7 @@ class IvlTs(SxcmTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     high: List[IvxbTs] = field(
         default_factory=list,
@@ -3686,14 +3739,14 @@ class IvlTs(SxcmTs):
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "max_occurs": 3,
-        }
+        },
     )
     center: Optional[Ts] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -3715,6 +3768,7 @@ class En(AnyType):
         for that respective purpose.
     :ivar content:
     """
+
     class Meta:
         name = "EN"
 
@@ -3723,7 +3777,7 @@ class En(AnyType):
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -3763,7 +3817,7 @@ class En(AnyType):
                     "namespace": "urn:hl7-org:v3",
                 },
             ),
-        }
+        },
     )
 
 
@@ -3773,6 +3827,7 @@ class On(En):
 
     A sequence of name parts.
     """
+
     class Meta:
         name = "ON"
 
@@ -3785,6 +3840,7 @@ class Pn(En):
     suffix, etc. PN differs from EN because the qualifier type cannot
     include LS (Legal Status).
     """
+
     class Meta:
         name = "PN"
 
@@ -3795,5 +3851,6 @@ class Tn(En):
     A restriction of entity name that is effectively a simple string used for a
     simple name for things and places.
     """
+
     class Meta:
         name = "TN"

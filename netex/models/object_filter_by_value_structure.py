@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_ref import AccessRef
 from .access_right_in_product_ref import AccessRightInProductRef
 from .access_space_ref import AccessSpaceRef
@@ -54,18 +54,26 @@ from .compound_block_ref import CompoundBlockRef
 from .compound_train_ref import CompoundTrainRef
 from .connection_ref import ConnectionRef
 from .control_centre_ref import ControlCentreRef
-from .controllable_element_in_sequence_ref import ControllableElementInSequenceRef
+from .controllable_element_in_sequence_ref import (
+    ControllableElementInSequenceRef,
+)
 from .controllable_element_price_ref import ControllableElementPriceRef
 from .controllable_element_ref import ControllableElementRef
 from .coupled_journey_ref import CoupledJourneyRef
 from .course_of_journeys_ref import CourseOfJourneysRef
 from .crew_base_ref import CrewBaseRef
 from .customer_account_ref import CustomerAccountRef
-from .customer_account_security_listing_ref import CustomerAccountSecurityListingRef
+from .customer_account_security_listing_ref import (
+    CustomerAccountSecurityListingRef,
+)
 from .customer_account_status_ref import CustomerAccountStatusRef
 from .customer_eligibility_ref import CustomerEligibilityRef
-from .customer_purchase_package_element_ref import CustomerPurchasePackageElementRef
-from .customer_purchase_package_price_ref import CustomerPurchasePackagePriceRef
+from .customer_purchase_package_element_ref import (
+    CustomerPurchasePackageElementRef,
+)
+from .customer_purchase_package_price_ref import (
+    CustomerPurchasePackagePriceRef,
+)
 from .customer_purchase_package_ref import CustomerPurchasePackageRef
 from .customer_ref import CustomerRef
 from .customer_security_listing_ref import CustomerSecurityListingRef
@@ -87,7 +95,9 @@ from .destination_display_variant_ref import DestinationDisplayVariantRef
 from .direction_ref import DirectionRef
 from .discounting_rule_ref import DiscountingRuleRef
 from .display_assignment_ref import DisplayAssignmentRef
-from .distance_matrix_element_inverse_ref import DistanceMatrixElementInverseRef
+from .distance_matrix_element_inverse_ref import (
+    DistanceMatrixElementInverseRef,
+)
 from .distance_matrix_element_price_ref import DistanceMatrixElementPriceRef
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distribution_assignment_ref import DistributionAssignmentRef
@@ -124,7 +134,9 @@ from .fare_quota_factor_ref import FareQuotaFactorRef
 from .fare_request_ref import FareRequestRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .fare_section_ref import FareSectionRef
-from .fare_structure_element_in_sequence_ref import FareStructureElementInSequenceRef
+from .fare_structure_element_in_sequence_ref import (
+    FareStructureElementInSequenceRef,
+)
 from .fare_structure_element_price_ref import FareStructureElementPriceRef
 from .fare_structure_element_ref import FareStructureElementRef
 from .fare_table_column_ref import FareTableColumnRef
@@ -153,8 +165,12 @@ from .geographical_interval_ref import GeographicalIntervalRef
 from .geographical_structure_factor_ref import GeographicalStructureFactorRef
 from .geographical_unit_price_ref import GeographicalUnitPriceRef
 from .geographical_unit_ref import GeographicalUnitRef
-from .group_of_customer_purchase_packages_ref import GroupOfCustomerPurchasePackagesRef
-from .group_of_distance_matrix_elements_ref import GroupOfDistanceMatrixElementsRef
+from .group_of_customer_purchase_packages_ref import (
+    GroupOfCustomerPurchasePackagesRef,
+)
+from .group_of_distance_matrix_elements_ref import (
+    GroupOfDistanceMatrixElementsRef,
+)
 from .group_of_distribution_channels_ref import GroupOfDistributionChannelsRef
 from .group_of_lines_ref import GroupOfLinesRef
 from .group_of_operators_ref import GroupOfOperatorsRef
@@ -168,7 +184,9 @@ from .group_ticket_ref import GroupTicketRef
 from .hail_and_ride_area_ref import HailAndRideAreaRef
 from .headway_journey_group_ref import HeadwayJourneyGroupRef
 from .infrastructure_frame_ref import InfrastructureFrameRef
-from .infrastructure_link_restriction_ref import InfrastructureLinkRestrictionRef
+from .infrastructure_link_restriction_ref import (
+    InfrastructureLinkRestrictionRef,
+)
 from .interchange_ref import InterchangeRef
 from .interchange_rule_ref import InterchangeRuleRef
 from .interchange_rule_timing_ref import InterchangeRuleTimingRef
@@ -245,12 +263,16 @@ from .path_junction_ref import PathJunctionRef
 from .path_link_ref import PathLinkRef
 from .penalty_policy_ref import PenaltyPolicyRef
 from .place_ref import PlaceRef
-from .point_of_interest_classification_ref import PointOfInterestClassificationRef
+from .point_of_interest_classification_ref import (
+    PointOfInterestClassificationRef,
+)
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_hierarchy_ref import PointOfInterestHierarchyRef
 from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
-from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .point_of_interest_vehicle_entrance_ref import (
+    PointOfInterestVehicleEntranceRef,
+)
 from .point_projection_ref import PointProjectionRef
 from .point_ref import PointRef
 from .postal_address_ref import PostalAddressRef
@@ -279,7 +301,9 @@ from .replacing_ref import ReplacingRef
 from .requested_travel_specification_ref import RequestedTravelSpecificationRef
 from .reselling_ref import ResellingRef
 from .reserving_ref import ReservingRef
-from .residential_qualification_eligibility_ref import ResidentialQualificationEligibilityRef
+from .residential_qualification_eligibility_ref import (
+    ResidentialQualificationEligibilityRef,
+)
 from .residential_qualification_ref import ResidentialQualificationRef
 from .resource_frame_ref import ResourceFrameRef
 from .responsibility_role_ref import ResponsibilityRoleRef
@@ -302,11 +326,17 @@ from .routing_constraint_zone_ref import RoutingConstraintZoneRef
 from .routing_ref import RoutingRef
 from .sale_discount_right_ref import SaleDiscountRightRef
 from .sales_offer_package_element_ref import SalesOfferPackageElementRef
-from .sales_offer_package_entitlement_given_ref import SalesOfferPackageEntitlementGivenRef
-from .sales_offer_package_entitlement_required_ref import SalesOfferPackageEntitlementRequiredRef
+from .sales_offer_package_entitlement_given_ref import (
+    SalesOfferPackageEntitlementGivenRef,
+)
+from .sales_offer_package_entitlement_required_ref import (
+    SalesOfferPackageEntitlementRequiredRef,
+)
 from .sales_offer_package_price_ref import SalesOfferPackagePriceRef
 from .sales_offer_package_ref import SalesOfferPackageRef
-from .sales_offer_package_substitution_ref import SalesOfferPackageSubstitutionRef
+from .sales_offer_package_substitution_ref import (
+    SalesOfferPackageSubstitutionRef,
+)
 from .sales_transaction_frame_ref import SalesTransactionFrameRef
 from .sales_transaction_ref import SalesTransactionRef
 from .schedule_request_ref import ScheduleRequestRef
@@ -323,7 +353,9 @@ from .service_exclusion_ref import ServiceExclusionRef
 from .service_facility_set_ref import ServiceFacilitySetRef
 from .service_frame_ref import ServiceFrameRef
 from .service_journey_interchange_ref import ServiceJourneyInterchangeRef
-from .service_journey_pattern_interchange_ref import ServiceJourneyPatternInterchangeRef
+from .service_journey_pattern_interchange_ref import (
+    ServiceJourneyPatternInterchangeRef,
+)
 from .service_journey_pattern_ref import ServiceJourneyPatternRef
 from .service_journey_ref import ServiceJourneyRef
 from .service_link_ref import ServiceLinkRef
@@ -380,7 +412,9 @@ from .topographic_projection_ref import TopographicProjectionRef
 from .traffic_control_point_ref import TrafficControlPointRef
 from .train_block_part_ref import TrainBlockPartRef
 from .train_block_ref import TrainBlockRef
-from .train_component_label_assignment_ref import TrainComponentLabelAssignmentRef
+from .train_component_label_assignment_ref import (
+    TrainComponentLabelAssignmentRef,
+)
 from .train_component_ref import TrainComponentRef
 from .train_element_ref import TrainElementRef
 from .train_in_compound_train_ref import TrainInCompoundTrainRef
@@ -392,7 +426,9 @@ from .transferability_ref import TransferabilityRef
 from .transport_administrative_zone_ref import TransportAdministrativeZoneRef
 from .travel_agent_ref import TravelAgentRef
 from .travel_document_ref import TravelDocumentRef
-from .travel_document_security_listing_ref import TravelDocumentSecurityListingRef
+from .travel_document_security_listing_ref import (
+    TravelDocumentSecurityListingRef,
+)
 from .travel_specification_ref import TravelSpecificationRef
 from .trip_plan_request_ref import TripPlanRequestRef
 from .turnaround_time_limit_time_ref import TurnaroundTimeLimitTimeRef
@@ -423,7 +459,9 @@ from .type_of_notice_ref import TypeOfNoticeRef
 from .type_of_operation_ref import TypeOfOperationRef
 from .type_of_organisation_part_ref import TypeOfOrganisationPartRef
 from .type_of_organisation_ref import TypeOfOrganisationRef
-from .type_of_passenger_information_equipment_ref import TypeOfPassengerInformationEquipmentRef
+from .type_of_passenger_information_equipment_ref import (
+    TypeOfPassengerInformationEquipmentRef,
+)
 from .type_of_payment_method_ref import TypeOfPaymentMethodRef
 from .type_of_place_ref import TypeOfPlaceRef
 from .type_of_point_ref import TypeOfPointRef
@@ -456,8 +494,12 @@ from .validity_trigger_ref import ValidityTriggerRef
 from .vehicle_entrance_ref import VehicleEntranceRef
 from .vehicle_equipment_profile_ref import VehicleEquipmentProfileRef
 from .vehicle_journey_ref import VehicleJourneyRef
-from .vehicle_journey_stop_assignment_ref import VehicleJourneyStopAssignmentRef
-from .vehicle_manoeuvring_requirement_ref import VehicleManoeuvringRequirementRef
+from .vehicle_journey_stop_assignment_ref import (
+    VehicleJourneyStopAssignmentRef,
+)
+from .vehicle_manoeuvring_requirement_ref import (
+    VehicleManoeuvringRequirementRef,
+)
 from .vehicle_model_ref import VehicleModelRef
 from .vehicle_position_alignment_ref import VehiclePositionAlignmentRef
 from .vehicle_quay_alignment_ref import VehicleQuayAlignmentRef
@@ -491,7 +533,7 @@ class ObjectFilterByValueStructure:
             "name": "LayerRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     bounding_box: Optional[BoundingBoxStructure2] = field(
         default=None,
@@ -499,20 +541,503 @@ class ObjectFilterByValueStructure:
             "name": "BoundingBox",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    object_references: Optional["ObjectFilterByValueStructure.ObjectReferences"] = field(
+    object_references: Optional[
+        "ObjectFilterByValueStructure.ObjectReferences"
+    ] = field(
         default=None,
         metadata={
             "name": "objectReferences",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
     @dataclass
     class ObjectReferences:
-        choice: List[object] = field(
+        choice: List[
+            Union[
+                TravelDocumentRef,
+                RepeatedTripFareRequestRef,
+                SingleTripFareRequestRef,
+                FareRequestRef,
+                StopFinderRequestRef,
+                StopEventRequestRef,
+                ScheduleRequestRef,
+                TripPlanRequestRef,
+                ResidentialQualificationEligibilityRef,
+                CommercialProfileEligibilityRef,
+                UserProfileEligibilityRef,
+                CustomerEligibilityRef,
+                CustomerAccountRef,
+                FareContractRef,
+                CustomerRef,
+                StartTimeAtStopPointRef,
+                ResidentialQualificationRef,
+                TypeOfConcessionRef,
+                TypeOfUsageParameterRef,
+                TariffObjectRef,
+                ParkingTariffRef,
+                TariffRef,
+                TypeOfFareTableRef,
+                FareTableRowRef,
+                FareTableColumnRef,
+                TimeUnitRef,
+                GeographicalUnitRef,
+                ControllableElementInSequenceRef,
+                FareStructureElementInSequenceRef,
+                AccessRightInProductRef,
+                CellRef,
+                CustomerPurchasePackagePriceRef,
+                ParkingPriceRef,
+                TimeIntervalPriceRef,
+                TimeUnitPriceRef,
+                QualityStructureFactorPriceRef,
+                ControllableElementPriceRef,
+                ValidableElementPriceRef,
+                GeographicalIntervalPriceRef,
+                GeographicalUnitPriceRef,
+                UsageParameterPriceRef,
+                SalesOfferPackagePriceRef,
+                DistanceMatrixElementPriceRef,
+                FareStructureElementPriceRef,
+                FulfilmentMethodPriceRef,
+                SeriesConstraintPriceRef,
+                CappingRulePriceRef,
+                FareProductPriceRef,
+                FarePriceRef,
+                CustomerPurchasePackageElementRef,
+                CustomerPurchasePackageRef,
+                ControllableElementRef,
+                ValidableElementRef,
+                SalesOfferPackageEntitlementGivenRef,
+                SalesOfferPackageEntitlementRequiredRef,
+                MinimumStayRef,
+                InterchangingRef,
+                FrequencyOfUseRef,
+                SuspendingRef,
+                UsageValidityPeriodRef,
+                StepLimitRef,
+                RoutingRef,
+                RoundTripRef,
+                LuggageAllowanceRef,
+                EntitlementGivenRef,
+                EntitlementRequiredRef,
+                EligibilityChangePolicyRef,
+                GroupTicketRef,
+                CommercialProfileRef,
+                CompanionProfileRef,
+                UserProfileRef,
+                ProfileParameterRef,
+                SubscribingRef,
+                PenaltyPolicyRef,
+                ChargingPolicyRef,
+                TransferabilityRef,
+                ReplacingRef,
+                RefundingRef,
+                ExchangingRef,
+                ResellingRef,
+                CancellingRef,
+                ReservingRef,
+                PurchaseWindowRef,
+                SalesOfferPackageElementRef,
+                SalesOfferPackageRef,
+                DistanceMatrixElementInverseRef,
+                DistanceMatrixElementRef,
+                FareStructureElementRef,
+                FulfilmentMethodRef,
+                SeriesConstraintRef,
+                CappingRuleRef,
+                EntitlementProductRef,
+                SupplementProductRef,
+                PreassignedFareProductRef,
+                AmountOfPriceUnitProductRef,
+                UsageDiscountRightRef,
+                ThirdPartyProductRef,
+                CappedDiscountRightRef,
+                SaleDiscountRightRef,
+                FareProductRef,
+                ServiceAccessRightRef,
+                TimeIntervalRef,
+                GeographicalIntervalRef,
+                ParkingChargeBandRef,
+                TimeStructureFactorRef,
+                FareQuotaFactorRef,
+                FareDemandFactorRef,
+                QualityStructureFactorRef,
+                GeographicalStructureFactorRef,
+                PriceableObjectRef,
+                MonthValidityOffsetRef,
+                LimitingRuleRef,
+                DiscountingRuleRef,
+                PricingRuleRef,
+                PricingServiceRef,
+                RoundingStepRef,
+                RoundingRef,
+                PricingParameterSetRef,
+                SupplyContractRef,
+                FlexibleServicePropertiesRef,
+                DriverTripTimeRef,
+                DriverTripRef,
+                DutyPartRef,
+                AccountableElementRef,
+                DutyRef,
+                ReliefOpportunityRef,
+                CourseOfJourneysRef,
+                DriverRef,
+                VehicleServicePartRef,
+                VehicleServiceRef,
+                CompoundBlockRef,
+                TrainBlockPartRef,
+                BlockPartRef,
+                TrainBlockRef,
+                BlockRef,
+                JourneyPartCoupleRef,
+                CoupledJourneyRef,
+                JourneyPartRef,
+                TimetabledPassingTimeRef,
+                EstimatedPassingTimeRef,
+                ObservedPassingTimeRef,
+                TargetPassingTimeRef,
+                PassingTimeRef,
+                InterchangeRuleTimingRef,
+                InterchangeRuleRef,
+                ServiceJourneyPatternInterchangeRef,
+                ServiceJourneyInterchangeRef,
+                DefaultInterchangeRef,
+                InterchangeRef,
+                JourneyMeetingRef,
+                TrainNumberRef,
+                RoutingConstraintZoneRef,
+                VehiclePositionAlignmentRef,
+                VehicleQuayAlignmentRef,
+                LogicalDisplayRef,
+                ParkingAreaRef,
+                ParkingPropertiesRef,
+                ParkingCapacityRef,
+                LineNetworkRef,
+                RouteInstructionRef,
+                LevelRef,
+                FlexiblePointPropertiesRef,
+                FlexibleLinkPropertiesRef,
+                TimeDemandProfileRef,
+                TimeDemandTypeRef,
+                VehicleTypePreferenceRef,
+                JourneyPatternHeadwayRef,
+                JourneyPatternLayoverRef,
+                JourneyPatternRunTimeRef,
+                JourneyPatternWaitTimeRef,
+                DefaultServiceJourneyTimeRef,
+                DefaultDeadRunRunTimeRef,
+                TurnaroundTimeLimitTimeRef,
+                JourneyTimingRef,
+                CrewBaseRef,
+                PassengerSeatRef,
+                OperatingDepartmentRef,
+                OperationalContextRef,
+                TrainComponentRef,
+                TrainElementRef,
+                TrainInCompoundTrainRef,
+                TravelDocumentSecurityListingRef,
+                RetailDeviceSecurityListingRef,
+                CustomerAccountSecurityListingRef,
+                FareContractSecurityListingRef,
+                CustomerSecurityListingRef,
+                WhitelistRef,
+                BlacklistRef,
+                SchematicMapMemberRef,
+                SchematicMapRef,
+                DeliveryVariantRef,
+                NoticeRef,
+                VehicleEquipmentProfileRef,
+                VehicleModelRef,
+                VehicleRef,
+                PassengerCapacityRef,
+                FacilityRequirementRef,
+                VehicleManoeuvringRequirementRef,
+                PassengerCarryingRequirementRef,
+                VehicleRequirementRef,
+                CompoundTrainRef,
+                TrainRef,
+                VehicleTypeRef,
+                OnboardStayRef,
+                AccommodationRef,
+                ServiceFacilitySetRef,
+                SiteFacilitySetRef,
+                FacilitySetRef,
+                FacilityRef,
+                ModeRef,
+                SubmodeRef,
+                OpenTransportModeRef,
+                TopographicProjectionRef,
+                ComplexFeatureProjectionRef,
+                LinkSequenceProjectionRef,
+                ZoneProjectionRef,
+                LinkProjectionRef,
+                PointProjectionRef,
+                DatedVehicleJourneyRef,
+                DatedSpecialServiceRef,
+                SpecialServiceRef,
+                TemplateServiceJourneyRef,
+                ServiceJourneyRef,
+                DeadRunRef,
+                VehicleJourneyRef,
+                NavigationPathRef,
+                ServiceJourneyPatternRef,
+                ServicePatternRef,
+                DeadRunJourneyPatternRef,
+                JourneyPatternRef,
+                TimingPatternRef,
+                RouteRef,
+                LinkSequenceRef,
+                SalesTransactionRef,
+                OfferedTravelSpecificationRef,
+                RequestedTravelSpecificationRef,
+                TravelSpecificationRef,
+                FareContractEntryRef,
+                LogEntryRef,
+                AlternativeNameRef,
+                TimebandRef,
+                FareDayTypeRef,
+                DayTypeRef,
+                DefaultConnectionRef,
+                SiteConnectionRef,
+                ConnectionRef,
+                AccessRef,
+                HailAndRideAreaRef,
+                FlexibleAreaRef,
+                FlexibleQuayRef,
+                FlexibleStopPlaceRef,
+                PathJunctionRef,
+                TopographicPlaceRef,
+                EquipmentPlaceRef,
+                EquipmentPositionRef,
+                VehicleStoppingPositionRef,
+                VehicleStoppingPlaceRef,
+                BoardingPositionRef,
+                AccessSpaceRef,
+                QuayRef,
+                StopPlaceSpaceRef,
+                ParkingBayRef,
+                PointOfInterestSpaceRef,
+                StopPlaceVehicleEntranceRef,
+                StopPlaceEntranceRef,
+                ParkingEntranceForVehiclesRef,
+                ParkingPassengerEntranceRef,
+                ParkingEntranceRef,
+                PointOfInterestVehicleEntranceRef,
+                PointOfInterestEntranceRef,
+                VehicleEntranceRef,
+                EntranceRef,
+                SiteComponentRef,
+                StopPlaceRef,
+                ParkingRef,
+                PointOfInterestRef,
+                ServiceSiteRef,
+                SiteRef,
+                SiteElementRef,
+                GarageRef,
+                AddressablePlaceRef,
+                PostalAddressRef,
+                RoadAddressRef,
+                AddressRef,
+                ServiceLinkRef,
+                LineLinkRef,
+                PathLinkRef,
+                TimingLinkRef,
+                RouteLinkRef,
+                WireLinkRef,
+                RoadLinkRef,
+                RailwayLinkRef,
+                ActivationLinkRef,
+                BorderPointRef,
+                FareScheduledStopPointRef,
+                ScheduledStopPointRef,
+                GaragePointRef,
+                ParkingPointRef,
+                ReliefPointRef,
+                TimingPointRef,
+                RoutePointRef,
+                WirePointRef,
+                RoadPointRef,
+                RailwayPointRef,
+                TrafficControlPointRef,
+                BeaconPointRef,
+                ActivationPointRef,
+                PointRef,
+                OperatingPeriodRef,
+                OperatingDayRef,
+                ServiceCalendarRef,
+                AlternativeTextRef,
+                AvailabilityConditionRef,
+                ValidityRuleParameterRef,
+                ValidityTriggerRef,
+                ValidityConditionRef,
+                ResponsibilityRoleRef,
+                ControlCentreRef,
+                OrganisationalUnitRef,
+                DepartmentRef,
+                OrganisationPartRef,
+                AllAuthoritiesRef,
+                AllOperatorsRef,
+                AllTransportOrganisationsRef,
+                AllOrganisationsRef,
+                RetailConsortiumRef,
+                AuthorityRef,
+                OperatorRef,
+                GeneralOrganisationRef,
+                ManagementAgentRef,
+                ServicedOrganisationRef,
+                TravelAgentRef,
+                OtherOrganisationRef,
+                OrganisationRef,
+                ResponsibilitySetRef,
+                DestinationDisplayVariantRef,
+                DestinationDisplayRef,
+                AllowedLineDirectionRef,
+                FlexibleLineRef,
+                LineRef,
+                GroupOfCustomerPurchasePackagesRef,
+                GroupOfSalesOfferPackagesRef,
+                GroupOfDistanceMatrixElementsRef,
+                GroupOfDistributionChannelsRef,
+                StandardFareTableRef,
+                FareTableRef,
+                PriceGroupRef,
+                RhythmicalJourneyGroupRef,
+                HeadwayJourneyGroupRef,
+                JourneyFrequencyGroupRef,
+                GroupOfServicesRef,
+                GroupOfStopPlacesRef,
+                PointOfInterestHierarchyRef,
+                GroupOfTimingLinksRef,
+                GroupOfOperatorsRef,
+                GroupOfPlacesRef,
+                ParentSectionRef,
+                ParentCommonSectionRef,
+                CommonSectionRef,
+                LineSectionRef,
+                FareSectionRef,
+                GeneralSectionRef,
+                SectionRef,
+                LogRef,
+                GroupOfTimebandsRef,
+                PlaceRef,
+                StopAreaRef,
+                AccessZoneRef,
+                TransportAdministrativeZoneRef,
+                AdministrativeZoneRef,
+                FareZoneRef,
+                TariffZoneRef,
+                ZoneRef,
+                LayerRef,
+                NetworkRef,
+                GroupOfLinesRef,
+                GeneralGroupOfEntitiesRef,
+                SalesTransactionFrameRef,
+                FareFrameRef,
+                ServiceFrameRef,
+                DriverScheduleFrameRef,
+                VehicleScheduleFrameRef,
+                TimetableFrameRef,
+                SiteFrameRef,
+                InfrastructureFrameRef,
+                GeneralFrameRef,
+                ResourceFrameRef,
+                ServiceCalendarFrameRef,
+                CompositeFrameRef,
+                DistributionChannelRef,
+                ChargingMomentRef,
+                PriceUnitRef,
+                PurposeOfJourneyPartitionRef,
+                TimingAlgorithmTypeRef,
+                PointOfInterestClassificationRef,
+                DirectionRef,
+                TypeOfActivationRef,
+                PurposeOfEquipmentProfileRef,
+                TypeOfProductCategoryRef,
+                TypeOfPaymentMethodRef,
+                ClassOfUseRef,
+                TypeOfOperationRef,
+                TypeOfCodespaceAssignmentRef,
+                BrandingRef,
+                TypeOfResponsibilityRoleRef,
+                PurposeOfGroupingRef,
+                TypeOfRetailDeviceRef,
+                CustomerAccountStatusRef,
+                TypeOfCustomerAccountRef,
+                TypeOfFareContractEntryRef,
+                TypeOfFareContractRef,
+                TypeOfAccessRightAssignmentRef,
+                TypeOfSalesOfferPackageRef,
+                TypeOfFareStructureElementRef,
+                TypeOfTariffRef,
+                AllDistributionChannelsRef,
+                TypeOfMachineReadabilityRef,
+                TypeOfTravelDocumentRef,
+                TypeOfFareProductRef,
+                TypeOfFareStructureFactorRef,
+                TypeOfPricingRuleRef,
+                TypeOfFlexibleServiceRef,
+                TypeOfPassengerInformationEquipmentRef,
+                TypeOfServiceFeatureRef,
+                TypeOfCongestionRef,
+                TypeOfTimeDemandTypeRef,
+                TypeOfJourneyPatternRef,
+                TypeOfSecurityListRef,
+                TypeOfDeliveryVariantRef,
+                TypeOfNoticeRef,
+                TypeOfServiceRef,
+                TypeOfFacilityRef,
+                TypeOfEquipmentRef,
+                TypeOfProjectionRef,
+                TypeOfFeatureRef,
+                TypeOfLinkSequenceRef,
+                TypeOfOrganisationPartRef,
+                TypeOfOrganisationRef,
+                TypeOfPlaceRef,
+                TypeOfTransferRef,
+                TypeOfZoneRef,
+                TypeOfLinkRef,
+                TypeOfPointRef,
+                TypeOfLineRef,
+                TypeOfValidityRef,
+                TypeOfFrameRef,
+                DataSourceRef,
+                VersionRef,
+                VersionOfObjectRef,
+                DistributionAssignmentRef,
+                SalesOfferPackageSubstitutionRef,
+                JourneyAccountingRef,
+                TrainComponentLabelAssignmentRef,
+                TransferRestrictionRef,
+                ServiceExclusionRef,
+                FlexibleServiceAssignmentRef,
+                VehicleTypeStopAssignmentRef,
+                PathAssignmentRef,
+                TrainStopAssignmentRef,
+                VehicleJourneyStopAssignmentRef,
+                DynamicStopAssignmentRef,
+                PassengerStopAssignmentRef,
+                StopAssignmentRef,
+                DisplayAssignmentRef,
+                CheckConstraintThroughputRef,
+                CheckConstraintDelayRef,
+                CheckConstraintRef,
+                TimeDemandTypeAssigmentRef,
+                OvertakingPossibilityRef,
+                MeetingRestrictionRef,
+                RestrictedManoeuvreRef,
+                InfrastructureLinkRestrictionRef,
+                VehicleTypeAtPointRef,
+                NetworkRestrictionRef,
+                ActivationAssignmentRef,
+                DayTypeAssignmentRef,
+                AssignmentRef,
+                ClassInFrameRef,
+            ]
+        ] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",
@@ -2908,5 +3433,5 @@ class ObjectFilterByValueStructure:
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),
-            }
+            },
         )

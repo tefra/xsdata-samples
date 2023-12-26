@@ -17,6 +17,7 @@ class ImageLocation:
     image_height
         The height of the image
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,7 +25,7 @@ class ImageLocation:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -32,7 +33,7 @@ class ImageLocation:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     image_width: None | int = field(
         default=None,
@@ -40,7 +41,7 @@ class ImageLocation:
             "name": "ImageWidth",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     image_height: None | int = field(
         default=None,
@@ -48,5 +49,5 @@ class ImageLocation:
             "name": "ImageHeight",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

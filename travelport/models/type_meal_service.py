@@ -8,6 +8,7 @@ class TypeMealService(Enum):
     """
     Available Meal Service.
     """
+
     MEAL = "Meal"
     COLD_MEAL = "ColdMeal"
     HOT_MEAL = "HotMeal"

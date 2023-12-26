@@ -15,7 +15,9 @@ from .positive_integer import PositiveInteger
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .someip_event_group_subtypes_enum import SomeipEventGroupSubtypesEnum
-from .someip_sd_server_event_group_timing_config_subtypes_enum import SomeipSdServerEventGroupTimingConfigSubtypesEnum
+from .someip_sd_server_event_group_timing_config_subtypes_enum import (
+    SomeipSdServerEventGroupTimingConfigSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -103,6 +105,7 @@ class SomeipProvidedEventGroup:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-PROVIDED-EVENT-GROUP"
 
@@ -113,15 +116,17 @@ class SomeipProvidedEventGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SomeipProvidedEventGroup.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SomeipProvidedEventGroup.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -129,7 +134,7 @@ class SomeipProvidedEventGroup:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -137,7 +142,7 @@ class SomeipProvidedEventGroup:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -145,7 +150,7 @@ class SomeipProvidedEventGroup:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -153,7 +158,7 @@ class SomeipProvidedEventGroup:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -161,7 +166,7 @@ class SomeipProvidedEventGroup:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SomeipProvidedEventGroup.Annotations"] = field(
         default=None,
@@ -169,15 +174,17 @@ class SomeipProvidedEventGroup:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_group_ref: Optional["SomeipProvidedEventGroup.EventGroupRef"] = field(
+    event_group_ref: Optional[
+        "SomeipProvidedEventGroup.EventGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_multicast_udp_port: Optional[PositiveInteger] = field(
         default=None,
@@ -185,7 +192,7 @@ class SomeipProvidedEventGroup:
             "name": "EVENT-MULTICAST-UDP-PORT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ipv_4_multicast_ip_address: Optional[Ip4AddressString] = field(
         default=None,
@@ -193,7 +200,7 @@ class SomeipProvidedEventGroup:
             "name": "IPV-4-MULTICAST-IP-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ipv_6_multicast_ip_address: Optional[Ip6AddressString] = field(
         default=None,
@@ -201,7 +208,7 @@ class SomeipProvidedEventGroup:
             "name": "IPV-6-MULTICAST-IP-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     multicast_threshold: Optional[PositiveInteger] = field(
         default=None,
@@ -209,22 +216,24 @@ class SomeipProvidedEventGroup:
             "name": "MULTICAST-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sd_server_event_group_timing_config_ref: Optional["SomeipProvidedEventGroup.SdServerEventGroupTimingConfigRef"] = field(
+    sd_server_event_group_timing_config_ref: Optional[
+        "SomeipProvidedEventGroup.SdServerEventGroupTimingConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SD-SERVER-EVENT-GROUP-TIMING-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -232,14 +241,14 @@ class SomeipProvidedEventGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -250,7 +259,7 @@ class SomeipProvidedEventGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -261,7 +270,7 @@ class SomeipProvidedEventGroup:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -272,16 +281,18 @@ class SomeipProvidedEventGroup:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class SdServerEventGroupTimingConfigRef(Ref):
-        dest: Optional[SomeipSdServerEventGroupTimingConfigSubtypesEnum] = field(
+        dest: Optional[
+            SomeipSdServerEventGroupTimingConfigSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

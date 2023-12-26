@@ -22,6 +22,7 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
         The number of children that the profile attempted to being deleted
         has.
     """
+
     class Meta:
         name = "ProfileSummaryErrorInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -33,14 +34,14 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 100,
-        }
+        },
     )
     number_of_children: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfChildren",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -63,13 +64,14 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
         provisioning_code
             Provisioning code given to the profile if applicable.
         """
+
         profile_id: None | int = field(
             default=None,
             metadata={
                 "name": "ProfileID",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         profile_type: None | TypeProfileType7 = field(
             default=None,
@@ -77,7 +79,7 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         name: None | str = field(
             default=None,
@@ -85,14 +87,14 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
                 "name": "Name",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         description: None | str = field(
             default=None,
             metadata={
                 "name": "Description",
                 "type": "Attribute",
-            }
+            },
         )
         provisioning_code: None | str = field(
             default=None,
@@ -101,5 +103,5 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )

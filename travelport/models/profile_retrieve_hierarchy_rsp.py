@@ -11,6 +11,7 @@ class ProfileRetrieveHierarchyRsp(BaseRsp5):
     """
     Response with the requested hierarchy structure.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -21,5 +22,5 @@ class ProfileRetrieveHierarchyRsp(BaseRsp5):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

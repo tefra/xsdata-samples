@@ -13,6 +13,7 @@ class AirPricingPayment:
     """AirPricing Payment information - used to
     associate a FormOfPayment withiin the UR with one or more
     AirPricingInfos"""
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -23,7 +24,7 @@ class AirPricingPayment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -32,7 +33,7 @@ class AirPricingPayment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     form_of_payment_ref: None | FormOfPaymentRef1 = field(
         default=None,
@@ -40,7 +41,7 @@ class AirPricingPayment:
             "name": "FormOfPaymentRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
         default_factory=list,
@@ -49,5 +50,5 @@ class AirPricingPayment:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

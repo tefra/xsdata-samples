@@ -70,6 +70,7 @@ class EquipmentTypeEnum(Enum):
     :cvar OTHER: Some other equipment. Use
         'otherEquipmentOrServiceFacility' to specify it.
     """
+
     TOILET = "toilet"
     SHOWER = "shower"
     INFORMATION_POINT = "informationPoint"

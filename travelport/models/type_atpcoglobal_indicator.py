@@ -53,6 +53,7 @@ class TypeAtpcoglobalIndicator(Enum):
     ZZ
         Any Global
     """
+
     AL = "AL"
     AP = "AP"
     AT = "AT"

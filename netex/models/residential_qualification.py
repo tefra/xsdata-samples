@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .residential_qualification_version_structure import ResidentialQualificationVersionStructure
+from .residential_qualification_version_structure import (
+    ResidentialQualificationVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

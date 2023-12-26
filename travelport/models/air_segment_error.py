@@ -10,6 +10,7 @@ class AirSegmentError:
     """
     Container to return error messages corresponding to AirSegment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,7 +20,7 @@ class AirSegmentError:
             "name": "AirSegment",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     error_message: None | str = field(
         default=None,
@@ -27,5 +28,5 @@ class AirSegmentError:
             "name": "ErrorMessage",
             "type": "Element",
             "required": True,
-        }
+        },
     )

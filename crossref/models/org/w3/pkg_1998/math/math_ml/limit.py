@@ -15,5 +15,5 @@ class Limit:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

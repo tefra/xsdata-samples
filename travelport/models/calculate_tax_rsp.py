@@ -11,6 +11,7 @@ class CalculateTaxRsp(BaseRsp1):
     """
     Response containg calculated total of base prices and taxes.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,5 +21,5 @@ class CalculateTaxRsp(BaseRsp1):
             "name": "CalculateTaxResult",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -23,6 +23,7 @@ class TypeTravelDocumentAddressHistory1:
     city
         The city of which this address is located.
     """
+
     class Meta:
         name = "typeTravelDocumentAddressHistory"
 
@@ -35,7 +36,7 @@ class TypeTravelDocumentAddressHistory1:
             "max_occurs": 3,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     state: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class TypeTravelDocumentAddressHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     other_state_province: None | str = field(
         default=None,
@@ -53,7 +54,7 @@ class TypeTravelDocumentAddressHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -62,7 +63,7 @@ class TypeTravelDocumentAddressHistory1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     postal: None | str = field(
         default=None,
@@ -70,7 +71,7 @@ class TypeTravelDocumentAddressHistory1:
             "name": "Postal",
             "type": "Attribute",
             "max_length": 12,
-        }
+        },
     )
     city: None | str = field(
         default=None,
@@ -78,5 +79,5 @@ class TypeTravelDocumentAddressHistory1:
             "name": "City",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )

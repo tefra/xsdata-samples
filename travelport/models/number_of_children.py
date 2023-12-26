@@ -20,6 +20,7 @@ class NumberOfChildren:
     amount
         Fee per child. Providers: 1g/1v
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -29,7 +30,7 @@ class NumberOfChildren:
             "name": "Age",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     count: None | int = field(
         default=None,
@@ -37,12 +38,12 @@ class NumberOfChildren:
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )

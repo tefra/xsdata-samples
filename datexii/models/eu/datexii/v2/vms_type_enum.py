@@ -17,6 +17,7 @@ class VmsTypeEnum(Enum):
         regarded as a pictogram area in DATEX II.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     COLOUR_GRAPHIC = "colourGraphic"
     CONTINUOUS_SIGN = "continuousSign"
     MONOCHROME_GRAPHIC = "monochromeGraphic"

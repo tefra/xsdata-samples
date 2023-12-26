@@ -10,6 +10,7 @@ class FlightOptionsList:
     """
     List of Flight Options for the itinerary.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class FlightOptionsList:
             "name": "FlightOption",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

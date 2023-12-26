@@ -25,10 +25,14 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
     Sup,
     Underline,
 )
-from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import IndexTermRangeEnd
+from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import (
+    IndexTermRangeEnd,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.inline_graphic import InlineGraphic
 from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_end import MilestoneEnd
-from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import MilestoneStart
+from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import (
+    MilestoneStart,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.private_char import PrivateChar
 from crossref.models.xlink.actuate_type import ActuateType
 from crossref.models.xlink.show_type import ShowType
@@ -43,6 +47,7 @@ class SupportSource:
     """
     <div> <h3>Support Source</h3> </div>
     """
+
     class Meta:
         name = "support-source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -51,54 +56,54 @@ class SupportSource:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     hreflang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     rid: List[str] = field(
         default_factory=list,
         metadata={
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     support_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "support-type",
             "type": "Attribute",
-        }
+        },
     )
     actuate: Optional[ActuateType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     href: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     role: Optional[str] = field(
         default=None,
@@ -106,21 +111,21 @@ class SupportSource:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "min_length": 1,
-        }
+        },
     )
     show: Optional[ShowType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     type_value: TypeType = field(
         init=False,
@@ -129,21 +134,21 @@ class SupportSource:
             "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -265,5 +270,5 @@ class SupportSource:
                     "type": InstitutionWrap,
                 },
             ),
-        }
+        },
     )

@@ -17,7 +17,7 @@ class MctCountPortTypeServiceOutput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,14 +28,14 @@ class MctCountPortTypeServiceOutput:
                 "name": "MctCountRsp",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            }
+            },
         )
         fault: None | MctCountPortTypeServiceOutput.Body.Fault = field(
             default=None,
             metadata={
                 "name": "Fault",
                 "type": "Element",
-            }
+            },
         )
 
         @dataclass
@@ -45,28 +45,30 @@ class MctCountPortTypeServiceOutput:
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultstring: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
             faultactor: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "",
-                }
+                },
             )
-            detail: None | MctCountPortTypeServiceOutput.Body.Fault.Detail = field(
-                default=None,
-                metadata={
-                    "type": "Element",
-                    "namespace": "",
-                }
+            detail: None | MctCountPortTypeServiceOutput.Body.Fault.Detail = (
+                field(
+                    default=None,
+                    metadata={
+                        "type": "Element",
+                        "namespace": "",
+                    },
+                )
             )
 
             @dataclass
@@ -77,5 +79,5 @@ class MctCountPortTypeServiceOutput:
                         "name": "ErrorInfo",
                         "type": "Element",
                         "namespace": "http://www.travelport.com/schema/common_v52_0",
-                    }
+                    },
                 )

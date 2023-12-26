@@ -229,276 +229,276 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2018, 4, 1, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     description=MultilingualString(
-        value="Example of Cross border tariffs from multiple operators De"
+        value='Example of Cross border tariffs from multiple operators De'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="tlx:Trilex",
+                id='tlx:Trilex',
                 validity_conditions_or_valid_between=[
                     ValidBetween(
                         from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                         to_date=XmlDateTime(2020, 12, 31, 12, 0, 0)
                     ),
                 ],
-                version="any",
-                responsibility_set_ref_attribute="tlx:products@TLX",
+                version='any',
+                responsibility_set_ref_attribute='tlx:products@TLX',
                 name=MultilingualString(
-                    value="Trilex Tariffs"
+                    value='Trilex Tariffs'
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="tlx_data"
+                        ref='tlx_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version="any",
-                        ref="tlx:example"
+                        version='any',
+                        ref='tlx:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        version="any",
-                        ref="tlx:products@TLX"
+                        version='any',
+                        ref='tlx:products@TLX'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         FareFrame(
-                            id="tlx:Trilex@Tariffs",
-                            version="01",
-                            responsibility_set_ref_attribute="tlx:products@TLX",
+                            id='tlx:Trilex@Tariffs',
+                            version='01',
+                            responsibility_set_ref_attribute='tlx:products@TLX',
                             name=MultilingualString(
-                                value="This frame holds stop points and distance matrix elements referenced by other frames"
+                                value='This frame holds stop points and distance matrix elements referenced by other frames'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
-                                        ref="tlx_data"
+                                        ref='tlx_data'
                                     ),
                                 ]
                             ),
                             fare_zones=FareZonesInFrameRelStructure(
                                 fare_zone=[
                                     FareZone(
-                                        id="tlx:Trilex@Tagesticket@zones",
-                                        version="01",
+                                        id='tlx:Trilex@Tagesticket@zones',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Fare sections",
-                                            lang="en"
+                                            value='Fare sections',
+                                            lang='en'
                                         ),
                                         fare_sections=FareSectionsRelStructure(
                                             fare_section_ref_or_fare_section=[
                                                 FareSection(
-                                                    id="tlx:Trilex@Dresden-to-Bischofswerda",
-                                                    version="01",
+                                                    id='tlx:Trilex@Dresden-to-Bischofswerda',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bischofswerda"
+                                                        value='Bischofswerda'
                                                     ),
                                                     from_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Dresden",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@6050",
+                                                        value='Dresden',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@6050',
                                                         order=1
                                                     ),
                                                     to_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Bischofswerda",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@6103",
+                                                        value='Bischofswerda',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@6103',
                                                         order=4
                                                     )
                                                 ),
                                                 FareSection(
-                                                    id="tlx:Trilex@Dresden-to-Bautzen",
-                                                    version="01",
+                                                    id='tlx:Trilex@Dresden-to-Bautzen',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden - Bautzen"
+                                                        value='Dresden - Bautzen'
                                                     ),
                                                     from_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Dresden",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@6050",
+                                                        value='Dresden',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@6050',
                                                         order=1
                                                     ),
                                                     to_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Bautzen",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@56145",
+                                                        value='Bautzen',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@56145',
                                                         order=5
                                                     )
                                                 ),
                                                 FareSection(
-                                                    id="tlx:Trilex@Dresden-to-Goerlitz",
-                                                    version="01",
+                                                    id='tlx:Trilex@Dresden-to-Goerlitz',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden - Goerlitz"
+                                                        value='Dresden - Goerlitz'
                                                     ),
                                                     from_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Dresden",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@6050",
+                                                        value='Dresden',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@6050',
                                                         order=1
                                                     ),
                                                     to_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Goertlitz",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@56715",
+                                                        value='Goertlitz',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@56715',
                                                         order=6
                                                     )
                                                 ),
                                                 FareSection(
-                                                    id="tlx:Trilex@Dresden-to-Wroclaw",
-                                                    version="01",
+                                                    id='tlx:Trilex@Dresden-to-Wroclaw',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden - Wroclaw"
+                                                        value='Dresden - Wroclaw'
                                                     ),
                                                     from_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Dresden",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@6050",
+                                                        value='Dresden',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@6050',
                                                         order=1
                                                     ),
                                                     to_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Wroclaw",
-                                                        version="01",
-                                                        ref="tlx:6050-to-6010@6010",
+                                                        value='Wroclaw',
+                                                        version='01',
+                                                        ref='tlx:6050-to-6010@6010',
                                                         order=7
                                                     )
                                                 ),
                                                 FareSection(
-                                                    id="tlx:Trilex@Dresden-to-Wilthen",
-                                                    version="01",
+                                                    id='tlx:Trilex@Dresden-to-Wilthen',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden - Wilthen"
+                                                        value='Dresden - Wilthen'
                                                     ),
                                                     from_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Dresden",
-                                                        version="01",
-                                                        ref="tlx:6050-to-54212@6050",
+                                                        value='Dresden',
+                                                        version='01',
+                                                        ref='tlx:6050-to-54212@6050',
                                                         order=1
                                                     ),
                                                     to_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Wilthen",
-                                                        version="01",
-                                                        ref="tlx:6050-to-54212@6129",
+                                                        value='Wilthen',
+                                                        version='01',
+                                                        ref='tlx:6050-to-54212@6129',
                                                         order=5
                                                     )
                                                 ),
                                                 FareSection(
-                                                    id="tlx:Trilex@Dresden-to-Liberec",
-                                                    version="01",
+                                                    id='tlx:Trilex@Dresden-to-Liberec',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Liberec -Dresden - Spexial"
+                                                        value='Liberec -Dresden - Spexial'
                                                     ),
                                                     from_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Dresden",
-                                                        version="01",
-                                                        ref="tlx:6050-to-54212@6050",
+                                                        value='Dresden',
+                                                        version='01',
+                                                        ref='tlx:6050-to-54212@6050',
                                                         order=1
                                                     ),
                                                     to_point_in_pattern_ref=FarePointInPatternRefStructure(
-                                                        value="Liberec",
-                                                        version="01",
-                                                        ref="tlx:6050-to-54212@54212",
+                                                        value='Liberec',
+                                                        version='01',
+                                                        ref='tlx:6050-to-54212@54212',
                                                         order=7
                                                     )
                                                 ),
                                                 FareSection(
-                                                    id="tlx:Trilex@Rybniste-to-Liberec",
-                                                    version="01",
+                                                    id='tlx:Trilex@Rybniste-to-Liberec',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Rybniste to Liberec"
+                                                        value='Rybniste to Liberec'
                                                     ),
                                                     points_on_section=PointsOnSectionRelStructure(
                                                         point_on_line_section_or_point_on_section=[
                                                             PointOnSection(
-                                                                id="tlx:Rybniste-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Rybniste-to-Liberec',
+                                                                version='01',
                                                                 order=1,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Rybniste",
-                                                                    version="01",
-                                                                    ref="uic:56719"
+                                                                    value='Rybniste',
+                                                                    version='01',
+                                                                    ref='uic:56719'
                                                                 )
                                                             ),
                                                             PointOnSection(
-                                                                id="tlx:Rybniste-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Rybniste-to-Liberec',
+                                                                version='01',
                                                                 order=2,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Varnsdorf",
-                                                                    version="01",
-                                                                    ref="uic:96045"
+                                                                    value='Varnsdorf',
+                                                                    version='01',
+                                                                    ref='uic:96045'
                                                                 )
                                                             ),
                                                             PointOnSection(
-                                                                id="tlx:Rybniste-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Rybniste-to-Liberec',
+                                                                version='01',
                                                                 order=5,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Zittau",
-                                                                    version="01",
-                                                                    ref="uic:6113"
+                                                                    value='Zittau',
+                                                                    version='01',
+                                                                    ref='uic:6113'
                                                                 )
                                                             ),
                                                             PointOnSection(
-                                                                id="tlx:Rybniste-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Rybniste-to-Liberec',
+                                                                version='01',
                                                                 order=6,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Liberec",
-                                                                    version="01",
-                                                                    ref="uic:54212"
+                                                                    value='Liberec',
+                                                                    version='01',
+                                                                    ref='uic:54212'
                                                                 )
                                                             ),
                                                         ]
                                                     )
                                                 ),
                                                 FareSection(
-                                                    id="tlx:Trilex@Seifhennersdorf-to-Liberec",
-                                                    version="01",
+                                                    id='tlx:Trilex@Seifhennersdorf-to-Liberec',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Seifhennersdorf to Liberec"
+                                                        value='Seifhennersdorf to Liberec'
                                                     ),
                                                     points_on_section=PointsOnSectionRelStructure(
                                                         point_on_line_section_or_point_on_section=[
                                                             PointOnSection(
-                                                                id="tlx:Seifhennersdorf-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Seifhennersdorf-to-Liberec',
+                                                                version='01',
                                                                 order=1,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Seifhennersdorf",
-                                                                    version="01",
-                                                                    ref="uic:6121"
+                                                                    value='Seifhennersdorf',
+                                                                    version='01',
+                                                                    ref='uic:6121'
                                                                 )
                                                             ),
                                                             PointOnSection(
-                                                                id="tlx:Seifhennersdorf-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Seifhennersdorf-to-Liberec',
+                                                                version='01',
                                                                 order=2,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Varnsdorf",
-                                                                    version="01",
-                                                                    ref="uic:96045"
+                                                                    value='Varnsdorf',
+                                                                    version='01',
+                                                                    ref='uic:96045'
                                                                 )
                                                             ),
                                                             PointOnSection(
-                                                                id="tlx:Seifhennersdorf-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Seifhennersdorf-to-Liberec',
+                                                                version='01',
                                                                 order=5,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Zittau",
-                                                                    version="01",
-                                                                    ref="uic:6113"
+                                                                    value='Zittau',
+                                                                    version='01',
+                                                                    ref='uic:6113'
                                                                 )
                                                             ),
                                                             PointOnSection(
-                                                                id="tlx:Seifhennersdorf-to-Liberec",
-                                                                version="01",
+                                                                id='tlx:Seifhennersdorf-to-Liberec',
+                                                                version='01',
                                                                 order=6,
                                                                 choice_1=FareScheduledStopPointRef(
-                                                                    value="Liberec",
-                                                                    version="01",
-                                                                    ref="uic:54212"
+                                                                    value='Liberec',
+                                                                    version='01',
+                                                                    ref='uic:54212'
                                                                 )
                                                             ),
                                                         ]
@@ -512,26 +512,26 @@ obj = PublicationDelivery(
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="tlx:Trilex@Tariff@Tagesticket",
-                                        version="01",
+                                        id='tlx:Trilex@Tariff@Tagesticket',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Flat fares   based fares for  Tagesticket"
+                                            value='Flat fares   based fares for  Tagesticket'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="db:TLX"
+                                            version='any',
+                                            ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:flat"
+                                            version='any',
+                                            ref='eura:flat'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeInterval(
-                                                    id="tlx:Trilex@1day",
-                                                    version="01",
+                                                    id='tlx:Trilex@1day',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="1 day"
+                                                        value='1 day'
                                                     ),
                                                     start_time=XmlTime(0, 0, 0, 0),
                                                     end_time=XmlTime(2, 30, 0, 0),
@@ -542,69 +542,69 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Tagesticket@sections",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Tagesticket@sections',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden to Goerlitz section"
+                                                        value='Dresden to Goerlitz section'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Tagesticket@sections",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Tagesticket@sections',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Goerlitz"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Goerlitz'
                                                                 ),
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Liberec"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Liberec'
                                                                 ),
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Seifhennersdorf-to-Liberec"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Seifhennersdorf-to-Liberec'
                                                                 ),
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Rybniste-to-Liberec"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Rybniste-to-Liberec'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Tagesticket@groups",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Tagesticket@groups',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Group tickets"
+                                                        value='Group tickets'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Tagesticket@groups",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Tagesticket@groups',
+                                                        version='01',
                                                         order=1,
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@group",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@group',
+                                                                    version='01',
                                                                     name=MultilingualString(
-                                                                        value="Group"
+                                                                        value='Group'
                                                                     ),
                                                                     description=MultilingualString(
 
                                                                     ),
-                                                                    url="https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/",
+                                                                    url='https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/',
                                                                     prices=UsageParameterPricesRelStructure(
                                                                         usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref=[
                                                                             UsageParameterPrice(
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@group",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@group',
+                                                                                version='any',
                                                                                 choice_1=DiscountingRule(
-                                                                                    id="tlx:Trilex@Tariff@Tagesticket@group@rate",
-                                                                                    version="any",
+                                                                                    id='tlx:Trilex@Tariff@Tagesticket@group@rate',
+                                                                                    version='any',
                                                                                     can_be_cumulative=False
                                                                                 )
                                                                             ),
@@ -615,39 +615,39 @@ obj = PublicationDelivery(
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@adult",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@adult',
+                                                                                version='any',
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:adult"
+                                                                                    version='any',
+                                                                                    ref='db:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
                                                                                 maximum_number_of_persons=5,
                                                                                 discount_basis=DiscountBasisEnumeration.DISCOUNT
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@child",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@child',
+                                                                                version='any',
                                                                                 description=MultilingualString(
-                                                                                    value="Children up to the age of five are free of charge."
+                                                                                    value='Children up to the age of five are free of charge.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:child"
+                                                                                    version='any',
+                                                                                    ref='db:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 maximum_number_of_persons=3,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@small_animal",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@small_animal',
+                                                                                version='any',
                                                                                 description=MultilingualString(
-                                                                                    value="Accompanied dogs liable for pay are counted as persons in the determination of the number of persons. Further reductions can not be granted."
+                                                                                    value='Accompanied dogs liable for pay are counted as persons in the determination of the number of persons. Further reductions can not be granted.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:small_animal"
+                                                                                    version='any',
+                                                                                    ref='db:small_animal'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 maximum_number_of_persons=3,
@@ -664,31 +664,31 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Tagesticket@validities",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Tagesticket@validities',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Day pass"
+                                                        value='Day pass'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="3. Period of validity&#10;The day ticket is valid on the day of validity stated on the ticket for any number of journeys within the scope of validity at the following times:&#10;&#10;Mondays to Fridays: 9:00 am to 3:00 pm following day (opening for certain trains before 9:00 am 3 )&#10;Saturdays / Sundays / public holidays: 00:00 to 03:00 the following day"
+                                                        value='3. Period of validity\nThe day ticket is valid on the day of validity stated on the ticket for any number of journeys within the scope of validity at the following times:\n\nMondays to Fridays: 9:00 am to 3:00 pm following day (opening for certain trains before 9:00 am 3 )\nSaturdays / Sundays / public holidays: 00:00 to 03:00 the following day'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tarif@Tagesticket@validity",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tarif@Tagesticket@validity',
+                                                        version='01',
                                                         description=MultilingualString(
-                                                            value="Product entitles"
+                                                            value='Product entitles'
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:can_access_when"
+                                                            version='any',
+                                                            ref='eura:can_access_when'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UsageValidityPeriod(
-                                                                    id="tlx:Trilex@Tarif@Tagesticket@validity@day",
-                                                                    version="any",
+                                                                    id='tlx:Trilex@Tarif@Tagesticket@validity@day',
+                                                                    version='any',
                                                                     validity_period_type=UsageValidityTypeEnumeration.DAY_PASS,
                                                                     usage_trigger=UsageTriggerEnumeration.SPECIFIED_START_DATE,
                                                                     usage_end=UsageEndEnumeration.END_OF_FARE_DAY
@@ -699,32 +699,32 @@ obj = PublicationDelivery(
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@validity@off_peak",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@validity@off_peak',
+                                                                    version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                                        version="any",
-                                                                        ref="eura:can_access_when"
+                                                                        version='any',
+                                                                        ref='eura:can_access_when'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                                                            version="any",
-                                                                            ref="tlx:working_day@off_peak"
+                                                                            version='any',
+                                                                            ref='tlx:working_day@off_peak'
                                                                         )
                                                                     )
                                                                 ),
                                                                 GenericParameterAssignment(
-                                                                    id="tlx:Trilex@Tarif@Tagesticket@validity@not_working_day",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tarif@Tagesticket@validity@not_working_day',
+                                                                    version='01',
                                                                     order=2,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                                        version="any",
-                                                                        ref="eura:can_access_when"
+                                                                        version='any',
+                                                                        ref='eura:can_access_when'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                                                            version="any",
-                                                                            ref="tlx:not_working_day"
+                                                                            version='any',
+                                                                            ref='tlx:not_working_day'
                                                                         )
                                                                     )
                                                                 ),
@@ -733,55 +733,55 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Tagesticket@COMPOSITION",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Tagesticket@COMPOSITION',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Season"
+                                                        value='Season'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Available for any1D"
+                                                        value='Available for any1D'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
-                                                                version="01",
-                                                                ref="tlx:Trilex@1day"
+                                                                version='01',
+                                                                ref='tlx:Trilex@1day'
                                                             ),
                                                         ]
                                                     ),
                                                     fare_structure_elements_in_sequence=FareStructureElementsInSequenceRelStructure(
                                                         fare_structure_element_in_sequence_or_controllable_element_in_sequence=[
                                                             FareStructureElementInSequence(
-                                                                id="tlx:Trilex@Tariff@Tagesticket@COMPOSITION@trips",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Tagesticket@COMPOSITION@trips',
+                                                                version='01',
                                                                 name=MultilingualString(
-                                                                    value="Unlimited travel between two points"
+                                                                    value='Unlimited travel between two points'
                                                                 ),
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Product@Pass@Tagesticket@repeated_trip"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip'
                                                                 )
                                                             ),
                                                         ]
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Tagesticket@frequency",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Tagesticket@frequency',
+                                                        version='01',
                                                         description=MultilingualString(
-                                                            value="Repeated use"
+                                                            value='Repeated use'
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:can_access"
+                                                            version='any',
+                                                            ref='eura:can_access'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUse(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@unlimited_use",
-                                                                    version="any",
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@unlimited_use',
+                                                                    version='any',
                                                                     frequency_of_use_type=FrequencyOfUseTypeEnumeration.UNLIMITED
                                                                 ),
                                                             ]
@@ -793,345 +793,345 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Arnsdorf",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6176"
+                                                    value='Dresden hbf to Arnsdorf',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6176'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6105"
+                                                    value='Dresden hbf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6103"
+                                                    value='Dresden hbf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56145"
+                                                    value='Dresden hbf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56715"
+                                                    value='Dresden hbf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Wilthern",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6129"
+                                                    value='Dresden hbf to Wilthern',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6113"
+                                                    value='Dresden hbf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6050-to-54212"
+                                                    value='Dresden hbf to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6050-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6105"
+                                                    value='Arnsdorf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6103"
+                                                    value='Arnsdorf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56145"
+                                                    value='Arnsdorf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56715"
+                                                    value='Arnsdorf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Wilthern",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6129"
+                                                    value='Arnsdorf to Wilthern',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6113"
+                                                    value='Arnsdorf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6176-to-54212"
+                                                    value='Arnsdorf to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6176-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6103"
+                                                    value='Grossharthau to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56145"
+                                                    value='Grossharthau to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56715"
+                                                    value='Grossharthau to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Wilthern",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6129"
+                                                    value='Grossharthau to Wilthern',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6113"
+                                                    value='Grossharthau to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6105-to-54212"
+                                                    value='Grossharthau to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6105-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56145"
+                                                    value='Bischofswerda to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56715"
+                                                    value='Bischofswerda to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Wilthern",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6129"
+                                                    value='Bischofswerda to Wilthern',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6113"
+                                                    value='Bischofswerda to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6103-to-54212"
+                                                    value='Bischofswerda to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6103-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bautzen to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:56145-to-56715"
+                                                    value='Bautzen to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:56145-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Wilthern to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6129-to-6113"
+                                                    value='Wilthern to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6129-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Wilthern to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6129-to-54212"
+                                                    value='Wilthern to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6129-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Zittau to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6113-to-54212"
+                                                    value='Zittau to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6113-to-54212'
                                                 ),
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
                                                 FareTable(
-                                                    id="tlx:Trilex@Tariff@Tagesticket",
+                                                    id='tlx:Trilex@Tariff@Tagesticket',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
                                                             from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0)
                                                         ),
                                                     ],
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Prices for  Trilex Tagesticket "
+                                                        value='Prices for  Trilex Tagesticket '
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Prices&#10;1 person with up to 3 children (6-14 y.) 21,00  EURO &#10;2 persons with a total of up to 3 children (6-14 y.) 28,00  EURO &#10;3 persons with a total of up to 3 children (6-14 years)  EURO  35.00&#10;4 persons with a total of up to 3 children (6-14 years)  EURO  42.00&#10;5 persons with a total of up to 3 children (6-14 years) 49,00  EURO "
+                                                            value='Prices\n1 person with up to 3 children (6-14 y.) 21,00  EURO \n2 persons with a total of up to 3 children (6-14 y.) 28,00  EURO \n3 persons with a total of up to 3 children (6-14 years)  EURO  35.00\n4 persons with a total of up to 3 children (6-14 years)  EURO  42.00\n5 persons with a total of up to 3 children (6-14 years) 49,00  EURO '
                                                         ),
                                                     ],
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
-                                                                version="01",
-                                                                ref="tlx:Trilex@Product@Pass@Tagesticket@period-SOP"
+                                                                version='01',
+                                                                ref='tlx:Trilex@Product@Pass@Tagesticket@period-SOP'
                                                             ),
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
                                                             Cell(
-                                                                id="tlx:Trilex@Tariff@Tagesticket@group@1",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Tagesticket@group@1',
+                                                                version='01',
                                                                 choice=UsageParameterPrice(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@1",
-                                                                    version="01",
-                                                                    amount=Decimal("21.00"),
-                                                                    currency="EUR",
-                                                                    units=Decimal("1"),
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@1',
+                                                                    version='01',
+                                                                    amount=Decimal('21.00'),
+                                                                    currency='EUR',
+                                                                    units=Decimal('1'),
                                                                     choice_1=LimitingRule(
-                                                                        id="tlx:Trilex@Tariff@Tagesticket@price_per_person",
-                                                                        version="01",
-                                                                        minimum_price=Decimal("7"),
-                                                                        minimum_limit_price=Decimal("21")
+                                                                        id='tlx:Trilex@Tariff@Tagesticket@price_per_person',
+                                                                        version='01',
+                                                                        minimum_price=Decimal('7'),
+                                                                        minimum_limit_price=Decimal('21')
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice_2=GroupTicketRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Tagesticket@group"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
                                                                 ),
                                                                 order=1
                                                             ),
                                                             Cell(
-                                                                id="tlx:Trilex@Tariff@Tagesticket@group@2",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Tagesticket@group@2',
+                                                                version='01',
                                                                 choice=UsageParameterPrice(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@2",
-                                                                    version="01",
-                                                                    amount=Decimal("28.00"),
-                                                                    currency="EUR",
-                                                                    units=Decimal("2"),
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@2',
+                                                                    version='01',
+                                                                    amount=Decimal('28.00'),
+                                                                    currency='EUR',
+                                                                    units=Decimal('2'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 choice=UsageParameterPriceRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@1"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
-                                                                                adjustment_amount=Decimal("7.00"),
-                                                                                adjustment_units=Decimal("2"),
+                                                                                adjustment_amount=Decimal('7.00'),
+                                                                                adjustment_units=Decimal('2'),
                                                                                 limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@price_per_person"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@2",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@2',
                                                                                 order=1
                                                                             ),
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice_2=GroupTicketRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Tagesticket@group"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
                                                                 ),
                                                                 order=2
                                                             ),
                                                             Cell(
-                                                                id="tlx:Trilex@Tariff@Tagesticket@group@3",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Tagesticket@group@3',
+                                                                version='01',
                                                                 choice=UsageParameterPrice(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@3",
-                                                                    version="01",
-                                                                    amount=Decimal("28.00"),
-                                                                    currency="EUR",
-                                                                    units=Decimal("3"),
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@3',
+                                                                    version='01',
+                                                                    amount=Decimal('28.00'),
+                                                                    currency='EUR',
+                                                                    units=Decimal('3'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 choice=UsageParameterPriceRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@1"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
-                                                                                adjustment_amount=Decimal("7.00"),
-                                                                                adjustment_units=Decimal("3"),
+                                                                                adjustment_amount=Decimal('7.00'),
+                                                                                adjustment_units=Decimal('3'),
                                                                                 limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@price_per_person"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@3",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@3',
                                                                                 order=1
                                                                             ),
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice_2=GroupTicketRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Tagesticket@group"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
                                                                 ),
                                                                 order=3
                                                             ),
                                                             Cell(
-                                                                id="tlx:Trilex@Tariff@Tagesticket@group@4",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Tagesticket@group@4',
+                                                                version='01',
                                                                 choice=UsageParameterPrice(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@4",
-                                                                    version="01",
-                                                                    amount=Decimal("35.00"),
-                                                                    currency="EUR",
-                                                                    units=Decimal("4"),
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@4',
+                                                                    version='01',
+                                                                    amount=Decimal('35.00'),
+                                                                    currency='EUR',
+                                                                    units=Decimal('4'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 choice=UsageParameterPriceRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@1"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
-                                                                                adjustment_amount=Decimal("7.00"),
-                                                                                adjustment_units=Decimal("4"),
+                                                                                adjustment_amount=Decimal('7.00'),
+                                                                                adjustment_units=Decimal('4'),
                                                                                 limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@price_per_person"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@4",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@4',
                                                                                 order=1
                                                                             ),
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice_2=GroupTicketRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Tagesticket@group"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
                                                                 ),
                                                                 order=4
                                                             ),
                                                             Cell(
-                                                                id="tlx:Trilex@Tariff@Tagesticket@group@5",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Tagesticket@group@5',
+                                                                version='01',
                                                                 choice=UsageParameterPrice(
-                                                                    id="tlx:Trilex@Tariff@Tagesticket@5",
-                                                                    version="01",
-                                                                    amount=Decimal("49.00"),
-                                                                    currency="EUR",
-                                                                    units=Decimal("5"),
+                                                                    id='tlx:Trilex@Tariff@Tagesticket@5',
+                                                                    version='01',
+                                                                    amount=Decimal('49.00'),
+                                                                    currency='EUR',
+                                                                    units=Decimal('5'),
                                                                     rule_step_results=PriceRuleStepResultsRelStructure(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 choice=UsageParameterPriceRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@1"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
-                                                                                adjustment_amount=Decimal("7.00"),
-                                                                                adjustment_units=Decimal("5"),
+                                                                                adjustment_amount=Decimal('7.00'),
+                                                                                adjustment_units=Decimal('5'),
                                                                                 limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
-                                                                                    version="01",
-                                                                                    ref="tlx:Trilex@Tariff@Tagesticket@price_per_person"
+                                                                                    version='01',
+                                                                                    ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@5",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@5',
                                                                                 order=1
                                                                             ),
                                                                         ]
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice_2=GroupTicketRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Tagesticket@group"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
                                                                 ),
                                                                 order=5
@@ -1143,80 +1143,80 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Tariff(
-                                        id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl",
-                                        version="01",
+                                        id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Flat fare  based fares for  internal germany routes"
+                                            value='Flat fare  based fares for  internal germany routes'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="db:TLX"
+                                            version='any',
+                                            ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:flat"
+                                            version='any',
+                                            ref='eura:flat'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@1day"
+                                                    version='01',
+                                                    ref='tlx:Trilex@1day'
                                                 ),
                                             ]
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden to Wroclaw section"
+                                                        value='Dresden to Wroclaw section'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@de_pl',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Wroclaw"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Wroclaw'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@groups",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@groups',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Group tickets"
+                                                        value='Group tickets'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@groups",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@groups',
+                                                        version='01',
                                                         order=1,
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
-                                                                    id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial',
+                                                                    version='01',
                                                                     name=MultilingualString(
-                                                                        value="Group"
+                                                                        value='Group'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="&#10;How much is the ticket&#10;1 person with up to 2 children (6-14 y.) 35,00  EURO &#10;2 persons with a total of up to 2 children (6-14 y.) 69,00  EURO &#10;3 persons with a total of up to 2 children (6-14 years)  EURO  89.00&#10;4 persons with a total of up to 2 children (6-14 y.) 94,00  EURO &#10;5 persons with a total of up to 2 children (6-14 years)  EURO  99.00&#10;Further fare reductions will not be granted. "
+                                                                        value='\nHow much is the ticket\n1 person with up to 2 children (6-14 y.) 35,00  EURO \n2 persons with a total of up to 2 children (6-14 y.) 69,00  EURO \n3 persons with a total of up to 2 children (6-14 years)  EURO  89.00\n4 persons with a total of up to 2 children (6-14 y.) 94,00  EURO \n5 persons with a total of up to 2 children (6-14 years)  EURO  99.00\nFurther fare reductions will not be granted. '
                                                                     ),
-                                                                    url="https://www.laenderbahn.com/trilex/tarife/dresden-wroclaw-spezial/",
+                                                                    url='https://www.laenderbahn.com/trilex/tarife/dresden-wroclaw-spezial/',
                                                                     prices=UsageParameterPricesRelStructure(
                                                                         usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref=[
                                                                             UsageParameterPrice(
-                                                                                id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@group",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@group',
+                                                                                version='any',
                                                                                 choice_1=DiscountingRule(
-                                                                                    id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@group@rate",
-                                                                                    version="any",
+                                                                                    id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@group@rate',
+                                                                                    version='any',
                                                                                     can_be_cumulative=False
                                                                                 )
                                                                             ),
@@ -1227,25 +1227,25 @@ obj = PublicationDelivery(
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@adult",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@adult',
+                                                                                version='any',
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:adult"
+                                                                                    version='any',
+                                                                                    ref='db:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
                                                                                 maximum_number_of_persons=5,
                                                                                 discount_basis=DiscountBasisEnumeration.DISCOUNT
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@child",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@child',
+                                                                                version='any',
                                                                                 description=MultilingualString(
-                                                                                    value="Children up to the age of five are free of charge."
+                                                                                    value='Children up to the age of five are free of charge.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:child"
+                                                                                    version='any',
+                                                                                    ref='db:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 maximum_number_of_persons=2,
@@ -1266,171 +1266,171 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Arnsdorf",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6176"
+                                                    value='Dresden hbf to Arnsdorf',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6176'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6105"
+                                                    value='Dresden hbf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6103"
+                                                    value='Dresden hbf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56145"
+                                                    value='Dresden hbf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56715"
+                                                    value='Dresden hbf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf  to Wroclaw",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6010"
+                                                    value='Dresden hbf  to Wroclaw',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6010'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6105"
+                                                    value='Arnsdorf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6103"
+                                                    value='Arnsdorf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56145"
+                                                    value='Arnsdorf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56715"
+                                                    value='Arnsdorf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Wroclaw",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6010"
+                                                    value='Arnsdorf to Wroclaw',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6010'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6103"
+                                                    value='Grossharthau to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56145"
+                                                    value='Grossharthau to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56715"
+                                                    value='Grossharthau to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Wroclaw",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6010"
+                                                    value='Grossharthau to Wroclaw',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6010'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56145"
+                                                    value='Bischofswerda to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56715"
+                                                    value='Bischofswerda to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Wroclaw",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6010"
+                                                    value='Bischofswerda to Wroclaw',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6010'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bautzen to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:56145-to-56715"
+                                                    value='Bautzen to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:56145-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bautzen to Wroclaw",
-                                                    version="01",
-                                                    ref="dbn:56145-to-6010"
+                                                    value='Bautzen to Wroclaw',
+                                                    version='01',
+                                                    ref='dbn:56145-to-6010'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Goerlitz to Wroclaw",
-                                                    version="01",
-                                                    ref="dbn:56715-to-6010"
+                                                    value='Goerlitz to Wroclaw',
+                                                    version='01',
+                                                    ref='dbn:56715-to-6010'
                                                 ),
                                             ]
                                         ),
                                         price_groups=PriceGroupsRelStructure(
                                             price_group_ref_or_price_group=[
                                                 PriceGroup(
-                                                    id="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial",
+                                                    id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
                                                             from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0)
                                                         ),
                                                     ],
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Prices for  Trilex Dresden-Wroclaw-Spezial "
+                                                        value='Prices for  Trilex Dresden-Wroclaw-Spezial '
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="How much is the ticket&#10;1 person with up to 2 children (6-14 y.) 35,00  EURO &#10;2 persons with a total of up to 2 children (6-14 y.) 69,00  EURO &#10;3 persons with a total of up to 2 children (6-14 years)  EURO  89.00&#10;4 persons with a total of up to 2 children (6-14 y.) 94,00  EURO &#10;5 persons with a total of up to 2 children (6-14 years)  EURO  99.00&#10;Further fare reductions will not be granted.  "
+                                                            value='How much is the ticket\n1 person with up to 2 children (6-14 y.) 35,00  EURO \n2 persons with a total of up to 2 children (6-14 y.) 69,00  EURO \n3 persons with a total of up to 2 children (6-14 years)  EURO  89.00\n4 persons with a total of up to 2 children (6-14 y.) 94,00  EURO \n5 persons with a total of up to 2 children (6-14 years)  EURO  99.00\nFurther fare reductions will not be granted.  '
                                                         ),
                                                     ],
                                                     members=FarePricesRelStructure(
                                                         choice=[
                                                             SalesOfferPackagePrice(
-                                                                id="tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@1",
-                                                                version="01",
-                                                                amount=Decimal("35.00"),
-                                                                currency="EUR",
-                                                                units=Decimal("1"),
+                                                                id='tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@1',
+                                                                version='01',
+                                                                amount=Decimal('35.00'),
+                                                                currency='EUR',
+                                                                units=Decimal('1'),
                                                                 can_be_cumulative=False
                                                             ),
                                                             SalesOfferPackagePrice(
-                                                                id="tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@2",
-                                                                version="01",
-                                                                amount=Decimal("69.00"),
-                                                                currency="EUR",
-                                                                units=Decimal("2"),
+                                                                id='tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@2',
+                                                                version='01',
+                                                                amount=Decimal('69.00'),
+                                                                currency='EUR',
+                                                                units=Decimal('2'),
                                                                 can_be_cumulative=False
                                                             ),
                                                             SalesOfferPackagePrice(
-                                                                id="tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@3",
-                                                                version="01",
-                                                                amount=Decimal("89.00"),
-                                                                currency="EUR",
-                                                                units=Decimal("3"),
+                                                                id='tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@3',
+                                                                version='01',
+                                                                amount=Decimal('89.00'),
+                                                                currency='EUR',
+                                                                units=Decimal('3'),
                                                                 can_be_cumulative=False
                                                             ),
                                                             SalesOfferPackagePrice(
-                                                                id="tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@4",
-                                                                version="01",
-                                                                amount=Decimal("94.00"),
-                                                                currency="EUR",
-                                                                units=Decimal("4"),
+                                                                id='tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@4',
+                                                                version='01',
+                                                                amount=Decimal('94.00'),
+                                                                currency='EUR',
+                                                                units=Decimal('4'),
                                                                 can_be_cumulative=False
                                                             ),
                                                             SalesOfferPackagePrice(
-                                                                id="tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@5",
-                                                                version="01",
-                                                                amount=Decimal("99.00"),
-                                                                currency="EUR",
-                                                                units=Decimal("5"),
+                                                                id='tlx:Trilex@Pass@Dresden-Wroclaw-Spezial@5',
+                                                                version='01',
+                                                                amount=Decimal('99.00'),
+                                                                currency='EUR',
+                                                                units=Decimal('5'),
                                                                 can_be_cumulative=False
                                                             ),
                                                         ]
@@ -1440,107 +1440,107 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Tariff(
-                                        id="tlx:Trilex@Tariff@Katzensprungticket@",
-                                        version="01",
+                                        id='tlx:Trilex@Tariff@Katzensprungticket@',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Flat fare  Dresden Bautzen"
+                                            value='Flat fare  Dresden Bautzen'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="db:TLX"
+                                            version='any',
+                                            ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:flat"
+                                            version='any',
+                                            ref='eura:flat'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@1day"
+                                                    version='01',
+                                                    ref='tlx:Trilex@1day'
                                                 ),
                                             ]
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Katzensprungticket@eligibilities",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Katzensprungticket@eligibilities',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="User types"
+                                                        value='User types'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Tagesticket@eligibilities",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Tagesticket@eligibilities',
+                                                        version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:eligible"
+                                                            version='any',
+                                                            ref='eura:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
-                                                                    id="@eligibilities",
-                                                                    version="any",
+                                                                    id='@eligibilities',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Adult Fare - 15 or over"
+                                                                        value='Adult Fare - 15 or over'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Adult  - if not eligible for CONCESSION"
+                                                                        value='Adult  - if not eligible for CONCESSION'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:adult"
+                                                                        version='any',
+                                                                        ref='eura:adult'
                                                                     ),
                                                                     minimum_age=16,
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@eligibilities@adult@companion@infant",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@eligibilities@adult@companion@infant',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="AccompanyingI nfant"
+                                                                                    value='AccompanyingI nfant'
                                                                                 ),
                                                                                 description=MultilingualString(
-                                                                                    value=" Children up to the age of five are free of charge.  "
+                                                                                    value=' Children up to the age of five are free of charge.  '
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:infant"
+                                                                                    version='any',
+                                                                                    ref='db:infant'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@eligibilities@adult@companion@child",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@eligibilities@adult@companion@child',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="Accompanying Child"
+                                                                                    value='Accompanying Child'
                                                                                 ),
                                                                                 description=MultilingualString(
-                                                                                    value="A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted."
+                                                                                    value='A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:child"
+                                                                                    version='any',
+                                                                                    ref='db:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 maximum_number_of_persons=3,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Tagesticket@eligibilities@adult@companion@small_animal",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Tagesticket@eligibilities@adult@companion@small_animal',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="AccompanyingI animal"
+                                                                                    value='AccompanyingI animal'
                                                                                 ),
                                                                                 description=MultilingualString(
-                                                                                    value=" Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. &#10;Guide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).&#10;Dogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .&#10;&#10;All other animals and animals with infectious diseases are excluded from carriage."
+                                                                                    value=' Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. \nGuide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).\nDogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .\n\nAll other animals and animals with infectious diseases are excluded from carriage.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:small_animal"
+                                                                                    version='any',
+                                                                                    ref='db:small_animal'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
@@ -1553,143 +1553,143 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden to Bautzen  "
+                                                        value='Dresden to Bautzen  '
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Bautzen"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Bautzen'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden to   or Withen    "
+                                                        value='Dresden to   or Withen    '
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Wilthen"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Wilthen'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden to  Bischoswerda"
+                                                        value='Dresden to  Bischoswerda'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Bischofswerda"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Bischofswerda'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Katzensprungticket@sections",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Katzensprungticket@sections',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden to Bautzen  "
+                                                        value='Dresden to Bautzen  '
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Katzensprungticket@sections",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Katzensprungticket@sections',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Bautzen"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Bautzen'
                                                                 ),
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Bischofswerda"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Bischofswerda'
                                                                 ),
                                                                 FareSectionRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Dresden-to-Wilthen"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Dresden-to-Wilthen'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Katzensprungticket@groups",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Katzensprungticket@groups',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Group tickets"
+                                                        value='Group tickets'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Katzensprungticket@groups",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Katzensprungticket@groups',
+                                                        version='01',
                                                         order=1,
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
-                                                                    id="tlx:Trilex@Tariff@Katzensprungticket",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tariff@Katzensprungticket',
+                                                                    version='01',
                                                                     name=MultilingualString(
-                                                                        value="Group"
+                                                                        value='Group'
                                                                     ),
                                                                     description=MultilingualString(
 
                                                                     ),
-                                                                    url="https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/",
+                                                                    url='https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/',
                                                                     minimum_number_of_persons=1,
                                                                     maximum_number_of_persons=4,
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Katzensprungticket@adult",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Katzensprungticket@adult',
+                                                                                version='any',
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:adult"
+                                                                                    version='any',
+                                                                                    ref='db:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
                                                                                 maximum_number_of_persons=1
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@Katzensprungticket@child",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@Katzensprungticket@child',
+                                                                                version='any',
                                                                                 description=MultilingualString(
-                                                                                    value="Three free children."
+                                                                                    value='Three free children.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:child"
+                                                                                    version='any',
+                                                                                    ref='db:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 maximum_number_of_persons=3,
@@ -1707,156 +1707,156 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Arnsdorf",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6176"
+                                                    value='Dresden hbf to Arnsdorf',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6176'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6105"
+                                                    value='Dresden hbf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6103"
+                                                    value='Dresden hbf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56145"
+                                                    value='Dresden hbf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6105"
+                                                    value='Arnsdorf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6103"
+                                                    value='Arnsdorf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56145"
+                                                    value='Arnsdorf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6103"
+                                                    value='Grossharthau to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56145"
+                                                    value='Grossharthau to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56145"
+                                                    value='Bischofswerda to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56715"
+                                                    value='Bischofswerda to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6129"
+                                                    value='Dresden hbf to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6129"
+                                                    value='Grossharthau to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6129"
+                                                    value='Bischofswerda to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6129"
+                                                    value='Arnsdorf to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6129'
                                                 ),
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
                                                 FareTable(
-                                                    id="tlx:Trilex@Tariff@Katzensprungticket",
+                                                    id='tlx:Trilex@Tariff@Katzensprungticket',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
                                                             from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                                                             to_date=XmlDateTime(2019, 1, 1, 0, 0, 0)
                                                         ),
                                                     ],
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Prices for Katzensprungticket "
+                                                        value='Prices for Katzensprungticket '
                                                     ),
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
-                                                                version="01",
-                                                                ref="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP"
+                                                                version='01',
+                                                                ref='tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP'
                                                             ),
                                                         ]
                                                     ),
                                                     cells=CellsRelStructure(
                                                         choice=[
                                                             Cell(
-                                                                id="tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bischofswerda",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bischofswerda',
+                                                                version='01',
                                                                 choice=SalesOfferPackagePrice(
-                                                                    id="tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bischofswerda",
-                                                                    version="01",
-                                                                    amount=Decimal("10.00"),
-                                                                    currency="EUR",
+                                                                    id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bischofswerda',
+                                                                    version='01',
+                                                                    amount=Decimal('10.00'),
+                                                                    currency='EUR',
                                                                     can_be_cumulative=False
                                                                 ),
                                                                 choice_1=[
                                                                     FareStructureElementRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda'
                                                                     ),
                                                                 ],
                                                                 order=1
                                                             ),
                                                             Cell(
-                                                                id="tlx:Trilex@Pass@Katzensprungticket@Dresden-to-Bautzen",
-                                                                version="01",
+                                                                id='tlx:Trilex@Pass@Katzensprungticket@Dresden-to-Bautzen',
+                                                                version='01',
                                                                 choice=SalesOfferPackagePrice(
-                                                                    id="tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bautzen",
-                                                                    version="01",
-                                                                    amount=Decimal("15.00"),
-                                                                    currency="EUR",
+                                                                    id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Bautzen',
+                                                                    version='01',
+                                                                    amount=Decimal('15.00'),
+                                                                    currency='EUR',
                                                                     can_be_cumulative=False
                                                                 ),
                                                                 choice_1=[
                                                                     FareStructureElementRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen'
                                                                     ),
                                                                 ],
                                                                 order=2
                                                             ),
                                                             Cell(
-                                                                id="tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Wilthen",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Wilthen',
+                                                                version='01',
                                                                 choice=SalesOfferPackagePrice(
-                                                                    id="tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Wilthen",
-                                                                    version="01",
-                                                                    amount=Decimal("15.00"),
-                                                                    currency="EUR",
+                                                                    id='tlx:Trilex@Tariff@Katzensprungticket@Dresden-to-Wilthen',
+                                                                    version='01',
+                                                                    amount=Decimal('15.00'),
+                                                                    currency='EUR',
                                                                     can_be_cumulative=False
                                                                 ),
                                                                 choice_1=[
                                                                     FareStructureElementRef(
-                                                                        version="01",
-                                                                        ref="tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen"
+                                                                        version='01',
+                                                                        ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen'
                                                                     ),
                                                                 ],
                                                                 order=3
@@ -1868,107 +1868,107 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Tariff(
-                                        id="tlx:Trilex@Tariff@L7@",
-                                        version="01",
+                                        id='tlx:Trilex@Tariff@L7@',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="L7 tariff"
+                                            value='L7 tariff'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="db:TLX"
+                                            version='any',
+                                            ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@1day"
+                                                    version='01',
+                                                    ref='tlx:Trilex@1day'
                                                 ),
                                             ]
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@L7@eligibilities",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@L7@eligibilities',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="User types"
+                                                        value='User types'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@L7@eligibilities",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@L7@eligibilities',
+                                                        version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:eligible"
+                                                            version='any',
+                                                            ref='eura:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
-                                                                    id="tlx:Trilex@Tariff@L7@eligibilities@adult",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tariff@L7@eligibilities@adult',
+                                                                    version='01',
                                                                     name=MultilingualString(
-                                                                        value="Adult Fare - 15 or over"
+                                                                        value='Adult Fare - 15 or over'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Adult  - if not eligible for CONCESSION"
+                                                                        value='Adult  - if not eligible for CONCESSION'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:adult"
+                                                                        version='any',
+                                                                        ref='eura:adult'
                                                                     ),
                                                                     minimum_age=16,
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@L7@eligibilities@adult@companion@infant",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@L7@eligibilities@adult@companion@infant',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="Accompanying  Infant"
+                                                                                    value='Accompanying  Infant'
                                                                                 ),
                                                                                 description=MultilingualString(
-                                                                                    value=" Children up to the age of five are free of charge.  "
+                                                                                    value=' Children up to the age of five are free of charge.  '
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:infant"
+                                                                                    version='any',
+                                                                                    ref='db:infant'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@L7@eligibilities@adult@companion@child",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@L7@eligibilities@adult@companion@child',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="Accompanying Child"
+                                                                                    value='Accompanying Child'
                                                                                 ),
                                                                                 description=MultilingualString(
-                                                                                    value="A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted."
+                                                                                    value='A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:child"
+                                                                                    version='any',
+                                                                                    ref='db:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 maximum_number_of_persons=3,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@L7@eligibilities@adult@companion@small_animal",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@L7@eligibilities@adult@companion@small_animal',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="AccompanyingI animal"
+                                                                                    value='AccompanyingI animal'
                                                                                 ),
                                                                                 description=MultilingualString(
-                                                                                    value=" Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. &#10;Guide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).&#10;Dogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .&#10;&#10;All other animals and animals with infectious diseases are excluded from carriage."
+                                                                                    value=' Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. \nGuide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).\nDogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .\n\nAll other animals and animals with infectious diseases are excluded from carriage.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:small_animal"
+                                                                                    version='any',
+                                                                                    ref='db:small_animal'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
@@ -1977,14 +1977,14 @@ obj = PublicationDelivery(
                                                                     )
                                                                 ),
                                                                 UserProfile(
-                                                                    id="tlx:Trilex@Tariff@L7@eligibilities@child",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tariff@L7@eligibilities@child',
+                                                                    version='01',
                                                                     name=MultilingualString(
-                                                                        value="Child fare 5e - 15 or over"
+                                                                        value='Child fare 5e - 15 or over'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:child"
+                                                                        version='any',
+                                                                        ref='eura:child'
                                                                     ),
                                                                     minimum_age=5,
                                                                     maximum_age=15
@@ -1994,51 +1994,51 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@L7@groups",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@L7@groups',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Group tickets"
+                                                        value='Group tickets'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@L7@groups",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@L7@groups',
+                                                        version='01',
                                                         order=1,
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 GroupTicket(
-                                                                    id="tlx:Trilex@Tariff@L7",
-                                                                    version="01",
+                                                                    id='tlx:Trilex@Tariff@L7',
+                                                                    version='01',
                                                                     name=MultilingualString(
-                                                                        value="Group"
+                                                                        value='Group'
                                                                     ),
                                                                     description=MultilingualString(
 
                                                                     ),
-                                                                    url="https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/",
+                                                                    url='https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/',
                                                                     minimum_number_of_persons=1,
                                                                     maximum_number_of_persons=4,
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@L7@adult",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@L7@adult',
+                                                                                version='any',
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:adult"
+                                                                                    version='any',
+                                                                                    ref='db:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
                                                                                 maximum_number_of_persons=1
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="tlx:Trilex@Tariff@L7@child",
-                                                                                version="any",
+                                                                                id='tlx:Trilex@Tariff@L7@child',
+                                                                                version='any',
                                                                                 description=MultilingualString(
-                                                                                    value="Three free children."
+                                                                                    value='Three free children.'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:child"
+                                                                                    version='any',
+                                                                                    ref='db:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=0,
                                                                                 maximum_number_of_persons=3,
@@ -2056,150 +2056,150 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Seifhennersdorf to Varnsdorf",
-                                                    version="01",
-                                                    ref="dbn:6121-to-96045"
+                                                    value='Seifhennersdorf to Varnsdorf',
+                                                    version='01',
+                                                    ref='dbn:6121-to-96045'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Seifhennersdorf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6121-to-6113"
+                                                    value='Seifhennersdorf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6121-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Seifhennersdorf to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6121-to-54212"
+                                                    value='Seifhennersdorf to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6121-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Rybniste to Varnsdorf",
-                                                    version="01",
-                                                    ref="dbn:56719-to-96045"
+                                                    value='Rybniste to Varnsdorf',
+                                                    version='01',
+                                                    ref='dbn:56719-to-96045'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Rybniste to Zittau",
-                                                    version="01",
-                                                    ref="dbn:56719-to-6113"
+                                                    value='Rybniste to Zittau',
+                                                    version='01',
+                                                    ref='dbn:56719-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Rybniste to Liberec",
-                                                    version="01",
-                                                    ref="dbn:56719-to-54212"
+                                                    value='Rybniste to Liberec',
+                                                    version='01',
+                                                    ref='dbn:56719-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Varnsdorf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:96045-to-6113"
+                                                    value='Varnsdorf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:96045-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Varnsdorf to Liberec",
-                                                    version="01",
-                                                    ref="dbn:96045-to-54212"
+                                                    value='Varnsdorf to Liberec',
+                                                    version='01',
+                                                    ref='dbn:96045-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Zittau to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6113-to-54212"
+                                                    value='Zittau to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6113-to-54212'
                                                 ),
                                             ]
                                         ),
                                         fare_tables=FareTablesRelStructure(
                                             choice=[
                                                 FareTable(
-                                                    id="tlx:Trilex@Tariff@L7",
+                                                    id='tlx:Trilex@Tariff@L7',
                                                     validity_conditions_or_valid_between=[
                                                         ValidBetween(
                                                             from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                                                             to_date=XmlDateTime(2019, 1, 1, 0, 0, 0)
                                                         ),
                                                     ],
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Prices for Trilexex:    Rynbiste / Seifhennersdorf /Varnsdorf / Zittau  / Liberec   "
+                                                        value='Prices for Trilexex:    Rynbiste / Seifhennersdorf /Varnsdorf / Zittau  / Liberec   '
                                                     ),
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
-                                                                version="01",
-                                                                ref="tlx:Trilex@Product@Trip@single-SOP"
+                                                                version='01',
+                                                                ref='tlx:Trilex@Product@Trip@single-SOP'
                                                             ),
                                                         ]
                                                     ),
                                                     includes=FareTablesRelStructure(
                                                         choice=[
                                                             FareTable(
-                                                                id="tlx:Trilex@Tariff@L7@adult",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@L7@adult',
+                                                                version='01',
                                                                 name=MultilingualString(
-                                                                    value="Adult Prices for Trilexex:    Rynbiste / Seifhennersdorf /Varnsdorf / Zittau  / Liberec   "
+                                                                    value='Adult Prices for Trilexex:    Rynbiste / Seifhennersdorf /Varnsdorf / Zittau  / Liberec   '
                                                                 ),
                                                                 limitations=UsageParameterRefsRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
-                                                                            version="01",
-                                                                            ref="tlx:Trilex@Tariff@L7@eligibilities@adult"
+                                                                            version='01',
+                                                                            ref='tlx:Trilex@Tariff@L7@eligibilities@adult'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 includes=FareTablesRelStructure(
                                                                     choice=[
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@adult@Seifhennersdorf",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@adult@Seifhennersdorf',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Seifhennersdorf  "
+                                                                                value='Seifhennersdorf  '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@adult@Seifhennersdorf-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@adult@Seifhennersdorf-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@6121-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("2.80"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@6121-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('2.80'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6121-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:6121-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Zittau",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Zittau',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@6121-to-6113",
-                                                                                            version="01",
-                                                                                            amount=Decimal("1.60"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@6121-to-6113',
+                                                                                            version='01',
+                                                                                            amount=Decimal('1.60'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6121-to-6113"
+                                                                                                version='01',
+                                                                                                ref='dbn:6121-to-6113'
                                                                                             ),
                                                                                         ],
                                                                                         order=2
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Varnsdorf",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@adult@Seifhennersdorf-to-Varnsdorf',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@6121-to-96045",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.90"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@6121-to-96045',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.90'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6121-to-96045"
+                                                                                                version='01',
+                                                                                                ref='dbn:6121-to-96045'
                                                                                             ),
                                                                                         ],
                                                                                         order=3
@@ -2208,63 +2208,63 @@ obj = PublicationDelivery(
                                                                             )
                                                                         ),
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@adult@Rybniste",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@adult@Rybniste',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Rybniste "
+                                                                                value='Rybniste '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@adult@Rybniste-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@adult@Rybniste-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@56719-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("2.80"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@56719-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('2.80'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:56719-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:56719-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@adult@Rybniste-to-Zittau",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@adult@Rybniste-to-Zittau',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@56719-to-6113",
-                                                                                            version="01",
-                                                                                            amount=Decimal("1.60"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@56719-to-6113',
+                                                                                            version='01',
+                                                                                            amount=Decimal('1.60'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:56719-to-6113"
+                                                                                                version='01',
+                                                                                                ref='dbn:56719-to-6113'
                                                                                             ),
                                                                                         ],
                                                                                         order=2
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@adult@Rybniste-to-Varnsdorf",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@adult@Rybniste-to-Varnsdorf',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@56719-to-96045",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.90"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@56719-to-96045',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.90'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:56719-to-96045"
+                                                                                                version='01',
+                                                                                                ref='dbn:56719-to-96045'
                                                                                             ),
                                                                                         ],
                                                                                         order=3
@@ -2273,45 +2273,45 @@ obj = PublicationDelivery(
                                                                             )
                                                                         ),
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@adult@Varnsdorf",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@adult@Varnsdorf',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Varnsdorf "
+                                                                                value='Varnsdorf '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@adult@Varnsdorf-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@adult@Varnsdorf-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@6045-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("2.20"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@6045-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('2.20'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:96045-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:96045-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@adult@Varnsdorf-to-Zittau",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@adult@Varnsdorf-to-Zittau',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@6045-to-6113",
-                                                                                            version="01",
-                                                                                            amount=Decimal("1.50"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@6045-to-6113',
+                                                                                            version='01',
+                                                                                            amount=Decimal('1.50'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:96045-to-6113"
+                                                                                                version='01',
+                                                                                                ref='dbn:96045-to-6113'
                                                                                             ),
                                                                                         ],
                                                                                         order=2
@@ -2320,27 +2320,27 @@ obj = PublicationDelivery(
                                                                             )
                                                                         ),
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@adult@Zittau",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@adult@Zittau',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Zittau "
+                                                                                value='Zittau '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@adult@Zittau-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@adult@Zittau-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@adult@6113-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("1.60"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@adult@6113-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('1.60'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6113-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:6113-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
@@ -2352,79 +2352,79 @@ obj = PublicationDelivery(
                                                                 )
                                                             ),
                                                             FareTable(
-                                                                id="tlx:Trilex@Tariff@L7@child",
-                                                                version="01",
+                                                                id='tlx:Trilex@Tariff@L7@child',
+                                                                version='01',
                                                                 name=MultilingualString(
-                                                                    value="child Prices for Trilexex:    Rynbiste / Seifhennersdorf /Varnsdorf / Zittau  / Liberec   "
+                                                                    value='child Prices for Trilexex:    Rynbiste / Seifhennersdorf /Varnsdorf / Zittau  / Liberec   '
                                                                 ),
                                                                 limitations=UsageParameterRefsRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
-                                                                            version="01",
-                                                                            ref="tlx:Trilex@Tariff@L7@eligibilities@child"
+                                                                            version='01',
+                                                                            ref='tlx:Trilex@Tariff@L7@eligibilities@child'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 includes=FareTablesRelStructure(
                                                                     choice=[
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@child@Seifhennersdorf",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@child@Seifhennersdorf',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Seifhennersdorf  "
+                                                                                value='Seifhennersdorf  '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@child@Seifhennersdorf-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@child@Seifhennersdorf-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@6121-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("1.40"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@6121-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('1.40'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6121-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:6121-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Zittau",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Zittau',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@6121-to-6113",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.80"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@6121-to-6113',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.80'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6121-to-6113"
+                                                                                                version='01',
+                                                                                                ref='dbn:6121-to-6113'
                                                                                             ),
                                                                                         ],
                                                                                         order=2
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Varnsdorf",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@child@Seifhennersdorf-to-Varnsdorf',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@6121-to-96045",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.50"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@6121-to-96045',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.50'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6121-to-96045"
+                                                                                                version='01',
+                                                                                                ref='dbn:6121-to-96045'
                                                                                             ),
                                                                                         ],
                                                                                         order=3
@@ -2433,63 +2433,63 @@ obj = PublicationDelivery(
                                                                             )
                                                                         ),
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@child@Rybniste",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@child@Rybniste',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Rybniste "
+                                                                                value='Rybniste '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@child@Rybniste-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@child@Rybniste-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@56719-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("1.40"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@56719-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('1.40'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:56719-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:56719-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@child@Rybniste-to-Zittau",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@child@Rybniste-to-Zittau',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@56719-to-6113",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.80"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@56719-to-6113',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.80'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:56719-to-6113"
+                                                                                                version='01',
+                                                                                                ref='dbn:56719-to-6113'
                                                                                             ),
                                                                                         ],
                                                                                         order=2
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@child@Rybniste-to-Varnsdorf",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@child@Rybniste-to-Varnsdorf',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@56719-to-96045",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.50"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@56719-to-96045',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.50'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:56719-to-96045"
+                                                                                                version='01',
+                                                                                                ref='dbn:56719-to-96045'
                                                                                             ),
                                                                                         ],
                                                                                         order=3
@@ -2498,45 +2498,45 @@ obj = PublicationDelivery(
                                                                             )
                                                                         ),
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@child@Varnsdorf",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@child@Varnsdorf',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Varnsdorf "
+                                                                                value='Varnsdorf '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@child@Varnsdorf-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@child@Varnsdorf-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@6045-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("1.10"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@6045-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('1.10'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:96045-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:96045-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
                                                                                     ),
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Pass@L7@child@Varnsdorf-to-Zittau",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Pass@L7@child@Varnsdorf-to-Zittau',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@6045-to-6113",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.80"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@6045-to-6113',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.80'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:96045-to-6113"
+                                                                                                version='01',
+                                                                                                ref='dbn:96045-to-6113'
                                                                                             ),
                                                                                         ],
                                                                                         order=2
@@ -2545,27 +2545,27 @@ obj = PublicationDelivery(
                                                                             )
                                                                         ),
                                                                         FareTable(
-                                                                            id="tlx:Trilex@Tariff@L7@child@Zittau",
-                                                                            version="01",
+                                                                            id='tlx:Trilex@Tariff@L7@child@Zittau',
+                                                                            version='01',
                                                                             name=MultilingualString(
-                                                                                value="Zittau "
+                                                                                value='Zittau '
                                                                             ),
                                                                             cells=CellsRelStructure(
                                                                                 choice=[
                                                                                     Cell(
-                                                                                        id="tlx:Trilex@Tariff@L7@child@Zittau-to-Liberec",
-                                                                                        version="01",
+                                                                                        id='tlx:Trilex@Tariff@L7@child@Zittau-to-Liberec',
+                                                                                        version='01',
                                                                                         choice=DistanceMatrixElementPrice(
-                                                                                            id="tlx:Trilex@Tariff@L7@child@6113-to-54212",
-                                                                                            version="01",
-                                                                                            amount=Decimal("0.80"),
-                                                                                            currency="EUR",
+                                                                                            id='tlx:Trilex@Tariff@L7@child@6113-to-54212',
+                                                                                            version='01',
+                                                                                            amount=Decimal('0.80'),
+                                                                                            currency='EUR',
                                                                                             can_be_cumulative=False
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
-                                                                                                version="01",
-                                                                                                ref="dbn:6113-to-54212"
+                                                                                                version='01',
+                                                                                                ref='dbn:6113-to-54212'
                                                                                             ),
                                                                                         ],
                                                                                         order=1
@@ -2587,115 +2587,115 @@ obj = PublicationDelivery(
                             validable_elements=ValidableElementsInFrameRelStructure(
                                 validable_element=[
                                     ValidableElement(
-                                        id="tlx:Trilex@Product@Pass@Tagesticket@repeated_trip",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Day  Pass "
+                                            value='Day  Pass '
                                         ),
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Tagesticket@sections"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Tagesticket@sections'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Tagesticket@groups"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Tagesticket@groups'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Tagesticket@validities"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Tagesticket@validities'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Tagesticket@COMPOSITION"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Tagesticket@COMPOSITION'
                                                 ),
                                             ]
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
                                                 FareStructureElementInSequenceRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips",
+                                                    version='01',
+                                                    ref='tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips',
                                                     order=1
                                                 ),
                                             ]
                                         )
                                     ),
                                     ValidableElement(
-                                        id="tlx:Trilex@Product@Pass@Katzensprungticket@repeated_trip",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Pass@Katzensprungticket@repeated_trip',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Day  Pass A Train Ride"
+                                            value='Day  Pass A Train Ride'
                                         ),
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Katzensprungticket@eligibilities"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Katzensprungticket@eligibilities'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Katzensprungticket@sections"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Katzensprungticket@sections'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Tagesticket@validities"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Tagesticket@validities'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Tariff@Tagesticket@COMPOSITION"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Tariff@Tagesticket@COMPOSITION'
                                                 ),
                                             ]
                                         ),
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             controllable_element_in_sequence_ref_or_fare_structure_element_in_sequence_ref_or_access_right_in_product_ref=[
                                                 FareStructureElementInSequenceRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips",
+                                                    version='01',
+                                                    ref='tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips',
                                                     order=1
                                                 ),
                                             ]
                                         )
                                     ),
                                     ValidableElement(
-                                        id="tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Outbound rail leg"
+                                            value='Outbound rail leg'
                                         ),
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="db:DB@Tariff@General@access@modes"
+                                                    version='01',
+                                                    ref='db:DB@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="db:DB@Tariff@General@access@classes"
+                                                    version='01',
+                                                    ref='db:DB@Tariff@General@access@classes'
                                                 ),
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
                                             choice=[
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg@access",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg@access',
+                                                    version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_access"
+                                                        version='any',
+                                                        ref='eura:can_access'
                                                     ),
                                                     limitation_grouping_type=BooleanOperatorEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
-                                                                version="any",
-                                                                ref="db:DB@Tariff@Trip@trip_type@period_return@outbound"
+                                                                version='any',
+                                                                ref='db:DB@Tariff@Trip@trip_type@period_return@outbound'
                                                             ),
                                                             FrequencyOfUseRef(
-                                                                version="any",
-                                                                ref="db:DB@Tariff@Trip@frequency@single_use"
+                                                                version='any',
+                                                                ref='db:DB@Tariff@Trip@frequency@single_use'
                                                             ),
                                                         ]
                                                     )
@@ -2704,40 +2704,40 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ValidableElement(
-                                        id="tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg',
+                                        version='01',
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="db:DB@Tariff@General@access@modes"
+                                                    version='01',
+                                                    ref='db:DB@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="db:DB@Tariff@General@access@classes"
+                                                    version='01',
+                                                    ref='db:DB@Tariff@General@access@classes'
                                                 ),
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
                                             choice=[
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg@access",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg@access',
+                                                    version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_access"
+                                                        version='any',
+                                                        ref='eura:can_access'
                                                     ),
                                                     limitation_grouping_type=BooleanOperatorEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
-                                                                version="any",
-                                                                ref="db:DB@Tariff@Trip@trip_type@period_return@inbound"
+                                                                version='any',
+                                                                ref='db:DB@Tariff@Trip@trip_type@period_return@inbound'
                                                             ),
                                                             FrequencyOfUseRef(
-                                                                version="any",
-                                                                ref="db:DB@Tariff@Trip@frequency@single_use"
+                                                                version='any',
+                                                                ref='db:DB@Tariff@Trip@frequency@single_use'
                                                             ),
                                                         ]
                                                     )
@@ -2746,43 +2746,43 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ValidableElement(
-                                        id="tlx:Trilex@Product@Trip@single@rail_leg",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Trip@single@rail_leg',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Outbound rail leg"
+                                            value='Outbound rail leg'
                                         ),
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="db:DB@Tariff@General@access@modes"
+                                                    version='01',
+                                                    ref='db:DB@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
-                                                    version="01",
-                                                    ref="db:DB@Tariff@General@access@classes"
+                                                    version='01',
+                                                    ref='db:DB@Tariff@General@access@classes'
                                                 ),
                                             ]
                                         ),
                                         validity_parameter_assignments=ValidityParameterAssignmentsRelStructure(
                                             choice=[
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Trip@single@rail_leg@access",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@single@rail_leg@access',
+                                                    version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_access"
+                                                        version='any',
+                                                        ref='eura:can_access'
                                                     ),
                                                     limitation_grouping_type=BooleanOperatorEnumeration.AND,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
-                                                                version="any",
-                                                                ref="db:DB@Tariff@Trip@trip_type@single"
+                                                                version='any',
+                                                                ref='db:DB@Tariff@Trip@trip_type@single'
                                                             ),
                                                             FrequencyOfUseRef(
-                                                                version="any",
-                                                                ref="db:DB@Tariff@Trip@frequency@single_use"
+                                                                version='any',
+                                                                ref='db:DB@Tariff@Trip@frequency@single_use'
                                                             ),
                                                         ]
                                                     )
@@ -2795,63 +2795,63 @@ obj = PublicationDelivery(
                             fare_products=FareProductsInFrameRelStructure(
                                 choice=[
                                     PreassignedFareProduct(
-                                        id="tlx:Trilex@Product@Pass@Tagesticket",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Pass@Tagesticket',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Trilex Day pass - rail"
+                                            value='Trilex Day pass - rail'
                                         ),
-                                        info_url="https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/",
+                                        info_url='https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/',
                                         charging_moment_ref=ChargingMomentRef(
-                                            version="any",
-                                            ref="eura:prepaid"
+                                            version='any',
+                                            ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
-                                            version="any",
-                                            ref="eura:standard_product@single_toc"
+                                            version='any',
+                                            ref='eura:standard_product@single_toc'
                                         ),
                                         authority_ref_or_operator_ref=OperatorRef(
-                                            version="any",
-                                            ref="db:TLX"
+                                            version='any',
+                                            ref='db:TLX'
                                         ),
                                         validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Tagesticket@user_profiles@classes",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Tagesticket@user_profiles@classes',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Available seat classes"
+                                                        value='Available seat classes'
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_access"
+                                                        version='any',
+                                                        ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
-                                                                ref="eura:second"
+                                                                ref='eura:second'
                                                             ),
                                                         ]
                                                     )
                                                 ),
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Tagesticket@user_profiles@usertypes",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Tagesticket@user_profiles@usertypes',
+                                                    version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:eligible"
+                                                        version='any',
+                                                        ref='eura:eligible'
                                                     ),
                                                     limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
-                                                                version="any",
-                                                                ref="db:adult"
+                                                                version='any',
+                                                                ref='db:adult'
                                                             ),
                                                             UserProfileRef(
-                                                                version="any",
-                                                                ref="db:child"
+                                                                version='any',
+                                                                ref='db:child'
                                                             ),
                                                         ]
                                                     )
@@ -2861,75 +2861,75 @@ obj = PublicationDelivery(
                                         access_rights_in_product=AccessRightsInProductRelStructure(
                                             access_right_in_product_ref_or_access_right_in_product=[
                                                 AccessRightInProduct(
-                                                    id="tlx:Trilex@Product@Pass@Tagesticket@repeated_trip",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip',
+                                                    version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Pass@Tagesticket@repeated_trip"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     PreassignedFareProduct(
-                                        id="tlx:Trilex@Product@Pass@Katzensprungticket",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Pass@Katzensprungticket',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Trilex Day pass - rail"
+                                            value='Trilex Day pass - rail'
                                         ),
-                                        info_url="https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/",
+                                        info_url='https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/',
                                         charging_moment_ref=ChargingMomentRef(
-                                            version="any",
-                                            ref="eura:prepaid"
+                                            version='any',
+                                            ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
-                                            version="any",
-                                            ref="eura:standard_product@single_toc"
+                                            version='any',
+                                            ref='eura:standard_product@single_toc'
                                         ),
                                         authority_ref_or_operator_ref=OperatorRef(
-                                            version="any",
-                                            ref="db:TLX"
+                                            version='any',
+                                            ref='db:TLX'
                                         ),
                                         validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Katzensprungticket@user_profiles@classes",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Katzensprungticket@user_profiles@classes',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Available seat classes"
+                                                        value='Available seat classes'
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_access"
+                                                        version='any',
+                                                        ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
-                                                                ref="eura:second"
+                                                                ref='eura:second'
                                                             ),
                                                         ]
                                                     )
                                                 ),
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Katzensprungticket@user_profiles@usertypes",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Katzensprungticket@user_profiles@usertypes',
+                                                    version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:eligible"
+                                                        version='any',
+                                                        ref='eura:eligible'
                                                     ),
                                                     limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
-                                                                version="any",
-                                                                ref="db:adult"
+                                                                version='any',
+                                                                ref='db:adult'
                                                             ),
                                                             UserProfileRef(
-                                                                version="any",
-                                                                ref="db:child"
+                                                                version='any',
+                                                                ref='db:child'
                                                             ),
                                                         ]
                                                     )
@@ -2939,84 +2939,84 @@ obj = PublicationDelivery(
                                         access_rights_in_product=AccessRightsInProductRelStructure(
                                             access_right_in_product_ref_or_access_right_in_product=[
                                                 AccessRightInProduct(
-                                                    id="tlx:Trilex@Product@Pass@Katzensprungticket@repeated_trip",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Katzensprungticket@repeated_trip',
+                                                    version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Pass@Katzensprungticket@repeated_trip"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Pass@Katzensprungticket@repeated_trip'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     PreassignedFareProduct(
-                                        id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Special return Fare"
+                                            value='Special return Fare'
                                         ),
                                         description=MultilingualString(
-                                            value="The Dresden Wrocław Special is valid from the date of validity stated on the ticket and entitles you to a one-way return journey within 14 days. It is possible to change between the direct connections (Dresden - Wrocław) and the non-interchangeable KD trains (eg Węgliniec - Görlitz). Longer breaks (eg stopover during outward or return journey) are not permitted."
+                                            value='The Dresden Wrocław Special is valid from the date of validity stated on the ticket and entitles you to a one-way return journey within 14 days. It is possible to change between the direct connections (Dresden - Wrocław) and the non-interchangeable KD trains (eg Węgliniec - Görlitz). Longer breaks (eg stopover during outward or return journey) are not permitted.'
                                         ),
-                                        url="https://www.laenderbahn.com/trilex/tarife/dresden-wroclaw-spezial/",
+                                        url='https://www.laenderbahn.com/trilex/tarife/dresden-wroclaw-spezial/',
                                         validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@user_profiles",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@user_profiles',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Available seat classes"
+                                                        value='Available seat classes'
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_access"
+                                                        version='any',
+                                                        ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
-                                                                ref="eura:second"
+                                                                ref='eura:second'
                                                             ),
                                                         ]
                                                     )
                                                 ),
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@groups",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@groups',
+                                                    version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_purchase"
+                                                        version='any',
+                                                        ref='eura:can_purchase'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@groups"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@groups'
                                                     )
                                                 ),
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@usage",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@usage',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="The Dresden Wrocław Special is valid from the date of validity stated on the ticket and entitles you to a one-way return journey within 14 days. It is possible to change between the direct connections (Dresden - Wrocław) and the non-interchangeable KD trains (eg Węgliniec - Görlitz). Longer breaks (eg stopover during outward or return journey) are not permitted."
+                                                        value='The Dresden Wrocław Special is valid from the date of validity stated on the ticket and entitles you to a one-way return journey within 14 days. It is possible to change between the direct connections (Dresden - Wrocław) and the non-interchangeable KD trains (eg Węgliniec - Görlitz). Longer breaks (eg stopover during outward or return journey) are not permitted.'
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:condition_of_use"
+                                                        version='any',
+                                                        ref='eura:condition_of_use'
                                                     ),
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriod(
-                                                                id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@validity",
-                                                                version="01",
+                                                                id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@validity',
+                                                                version='01',
                                                                 usage_trigger=UsageTriggerEnumeration.PURCHASE,
                                                                 usage_end=UsageEndEnumeration.END_OF_TRIP,
                                                                 standard_duration=XmlDuration("P14D")
                                                             ),
                                                             Interchanging(
-                                                                id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@interchanging",
-                                                                version="01",
+                                                                id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@interchanging',
+                                                                version='01',
                                                                 can_interchange=True,
                                                                 can_break_journey=False
                                                             ),
@@ -3028,72 +3028,72 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg'
                                                 ),
                                                 ValidableElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg'
                                                 ),
                                             ]
                                         ),
                                         access_rights_in_product=AccessRightsInProductRelStructure(
                                             access_right_in_product_ref_or_access_right_in_product=[
                                                 AccessRightInProduct(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@outbound",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@outbound',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Outbound legs"
+                                                        value='Outbound legs'
                                                     ),
                                                     is_first_in_sequence=True,
                                                     is_last_in_sequence=False,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg'
                                                     )
                                                 ),
                                                 AccessRightInProduct(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@inbound",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return@inbound',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Inbound legs"
+                                                        value='Inbound legs'
                                                     ),
                                                     is_first_in_sequence=False,
                                                     is_last_in_sequence=True,
                                                     order=2,
                                                     validable_element_ref=ValidableElementRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     PreassignedFareProduct(
-                                        id="tlx:Trilex@Product@Trip@single",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Trip@single',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Standrd single Fare"
+                                            value='Standrd single Fare'
                                         ),
-                                        url="https://www.laenderbahn.com/downloads/trilex-files/TBB-TRILEX-Einzelfahrten-2013-08-01.pdf",
+                                        url='https://www.laenderbahn.com/downloads/trilex-files/TBB-TRILEX-Einzelfahrten-2013-08-01.pdf',
                                         validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignmentsRelStructure(
                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                 GenericParameterAssignment(
-                                                    id="tlx:Trilex@Product@Trip@single@user_profiles",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@single@user_profiles',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Available seat classes"
+                                                        value='Available seat classes'
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                        version="any",
-                                                        ref="eura:can_access"
+                                                        version='any',
+                                                        ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
-                                                                ref="eura:second"
+                                                                ref='eura:second'
                                                             ),
                                                         ]
                                                     )
@@ -3103,20 +3103,20 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
-                                                    version="01",
-                                                    ref="tlx:Trilex@Product@Trip@single@rail_leg"
+                                                    version='01',
+                                                    ref='tlx:Trilex@Product@Trip@single@rail_leg'
                                                 ),
                                             ]
                                         ),
                                         access_rights_in_product=AccessRightsInProductRelStructure(
                                             access_right_in_product_ref_or_access_right_in_product=[
                                                 AccessRightInProduct(
-                                                    id="tlx:Trilex@Product@Trip@single@outbound",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@single@outbound',
+                                                    version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Trip@single@rail_leg"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Trip@single@rail_leg'
                                                     )
                                                 ),
                                             ]
@@ -3127,46 +3127,46 @@ obj = PublicationDelivery(
                             sales_offer_packages=SalesOfferPackagesInFrameRelStructure(
                                 sales_offer_package=[
                                     SalesOfferPackage(
-                                        id="tlx:Trilex@Product@Pass@Tagesticket@period-SOP",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Pass@Tagesticket@period-SOP',
+                                        version='01',
                                         branding_ref=BrandingRef(
-                                            version="any",
-                                            ref="tlx:Trilex@brand"
+                                            version='any',
+                                            ref='tlx:Trilex@brand'
                                         ),
                                         name=MultilingualString(
-                                            value="Day Pass   - Flat rate "
+                                            value='Day Pass   - Flat rate '
                                         ),
                                         description=MultilingualString(
-                                            value="THE TRILEX DAY TICKET&#10;With the trilex day ticket you discover our home. &#10;Drive from 21  EURO  all day  between Dresden, Goerlitz and Zittau or on the L7 between Liberec, Zittau, Seifhennersdorf and Rybniste. &#10;&#10;Use the trilex day ticket even if you are traveling in groups of up to 5 people . Children up to 6 years drive free of charge and per day ticket up to 3 children between 6-14 years travel free of charge .&#10;&#10;The trilex day ticket is available in our online shop  or directly on the train at our customer service.&#10;&#10;Details about this tariff&#10;1. Prices&#10;1 person with up to 3 children (6-14 y.) 21,00  EURO &#10;2 persons with a total of up to 3 children (6-14 y.) 28,00  EURO &#10;3 persons with a total of up to 3 children (6-14 years)  EURO  35.00&#10;4 persons with a total of up to 3 children (6-14 years)  EURO  42.00&#10;5 persons with a total of up to 3 children (6-14 years) 49,00  EURO &#10;A trilex day ticket can be used by up to 5 people with up to 3 children aged 6-14 years. Children up to the age of five are free of charge. Accompanied dogs liable for pay are counted as persons in the determination of the number of persons. Further reductions can not be granted.&#10;&#10;2. Scope&#10;Valid in the trilex trains of the Deutsche Bahn GmbH DLB (TL, TLX), DB Regio (S) 2 , Städtebahnen Sachsen (SBS) 2  and ODEG (OE) 2  for any number of journeys in the 2nd class on the following routes:&#10;&#10;Dresden central station - Bischofswerda - Görlitz&#10;Dresden central station - Bischofswerda - Zittau - Liberec&#10;Zittau - Varnsdorf - Seifhennersdorf / Rybniště&#10;A transition to the 1st class is excluded.&#10;&#10;3. Period of validity&#10;The day ticket is valid on the day of validity stated on the ticket for any number of journeys within the scope of validity at the following times:&#10;&#10;Mondays to Fridays: 9:00 am to 3:00 pm following day (opening for certain trains before 9:00 am 3 )&#10;Saturdays / Sundays / public holidays: 00:00 to 03:00 the following day&#10;4th sale&#10;In  trilex trains at the train attendant&#10;trilex Agencies&#10;DB outlets (travel center, agency)&#10;DB ticket machines"
+                                            value='THE TRILEX DAY TICKET\nWith the trilex day ticket you discover our home. \nDrive from 21  EURO  all day  between Dresden, Goerlitz and Zittau or on the L7 between Liberec, Zittau, Seifhennersdorf and Rybniste. \n\nUse the trilex day ticket even if you are traveling in groups of up to 5 people . Children up to 6 years drive free of charge and per day ticket up to 3 children between 6-14 years travel free of charge .\n\nThe trilex day ticket is available in our online shop  or directly on the train at our customer service.\n\nDetails about this tariff\n1. Prices\n1 person with up to 3 children (6-14 y.) 21,00  EURO \n2 persons with a total of up to 3 children (6-14 y.) 28,00  EURO \n3 persons with a total of up to 3 children (6-14 years)  EURO  35.00\n4 persons with a total of up to 3 children (6-14 years)  EURO  42.00\n5 persons with a total of up to 3 children (6-14 years) 49,00  EURO \nA trilex day ticket can be used by up to 5 people with up to 3 children aged 6-14 years. Children up to the age of five are free of charge. Accompanied dogs liable for pay are counted as persons in the determination of the number of persons. Further reductions can not be granted.\n\n2. Scope\nValid in the trilex trains of the Deutsche Bahn GmbH DLB (TL, TLX), DB Regio (S) 2 , Städtebahnen Sachsen (SBS) 2  and ODEG (OE) 2  for any number of journeys in the 2nd class on the following routes:\n\nDresden central station - Bischofswerda - Görlitz\nDresden central station - Bischofswerda - Zittau - Liberec\nZittau - Varnsdorf - Seifhennersdorf / Rybniště\nA transition to the 1st class is excluded.\n\n3. Period of validity\nThe day ticket is valid on the day of validity stated on the ticket for any number of journeys within the scope of validity at the following times:\n\nMondays to Fridays: 9:00 am to 3:00 pm following day (opening for certain trains before 9:00 am 3 )\nSaturdays / Sundays / public holidays: 00:00 to 03:00 the following day\n4th sale\nIn  trilex trains at the train attendant\ntrilex Agencies\nDB outlets (travel center, agency)\nDB ticket machines'
                                         ),
-                                        url="https://www.laenderbahn.com/trilex/tarife/trilex-tagesticket/",
+                                        url='https://www.laenderbahn.com/trilex/tarife/trilex-tagesticket/',
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Tagesticket@period-SOP@at_counter",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Tagesticket@period-SOP@at_counter',
+                                                    version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:at_counter"
+                                                        version='01',
+                                                        ref='eura:at_counter'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Tagesticket@period-SOP@self_service_ticket_machine",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Tagesticket@period-SOP@self_service_ticket_machine',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:self_service_ticket_machine"
+                                                        version='01',
+                                                        ref='eura:self_service_ticket_machine'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Tagesticket@period-SOP@online",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Tagesticket@period-SOP@online',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:online"
+                                                        version='01',
+                                                        ref='eura:online'
                                                     )
                                                 ),
                                             ]
@@ -3174,21 +3174,21 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="tlx:Trilex@Product@Pass@Tagesticket@travel_document@pass",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Tagesticket@travel_document@pass',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="As separate pass"
+                                                        value='As separate pass'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Supported type supported by all operators"
+                                                        value='Supported type supported by all operators'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="01",
-                                                        ref="eura:printed_ticket"
+                                                        version='01',
+                                                        ref='eura:printed_ticket'
                                                     ),
                                                     choice=PreassignedFareProductRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Pass@Tagesticket"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Pass@Tagesticket'
                                                     ),
                                                     order=1
                                                 ),
@@ -3196,55 +3196,55 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     SalesOfferPackage(
-                                        id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP',
+                                        version='01',
                                         branding_ref=BrandingRef(
-                                            version="any",
-                                            ref="tlx:Trilex@brand"
+                                            version='any',
+                                            ref='tlx:Trilex@brand'
                                         ),
                                         name=MultilingualString(
-                                            value="Day Pass   - Flat rate "
+                                            value='Day Pass   - Flat rate '
                                         ),
                                         description=MultilingualString(
-                                            value="Directly to Wrocław&#10;The ideal ticket for your city trip to Wrocław. Whether you travel in family, as a group or alone, with the Dresden-Wrocław-Spezial you drive conveniently and conveniently to your destination and within 14 days."
+                                            value='Directly to Wrocław\nThe ideal ticket for your city trip to Wrocław. Whether you travel in family, as a group or alone, with the Dresden-Wrocław-Spezial you drive conveniently and conveniently to your destination and within 14 days.'
                                         ),
-                                        url="https://www.laenderbahn.com/trilex/tarife/trilex-tagesticket/",
+                                        url='https://www.laenderbahn.com/trilex/tarife/trilex-tagesticket/',
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@at_counter",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@at_counter',
+                                                    version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:at_counter"
+                                                        version='01',
+                                                        ref='eura:at_counter'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@self_service_ticket_machine",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@self_service_ticket_machine',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:self_service_ticket_machine"
+                                                        version='01',
+                                                        ref='eura:self_service_ticket_machine'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@online",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@online',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:online"
+                                                        version='01',
+                                                        ref='eura:online'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@onboard",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@onboard',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:onboard"
+                                                        version='01',
+                                                        ref='eura:onboard'
                                                     )
                                                 ),
                                             ]
@@ -3252,15 +3252,15 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@travel_document",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@travel_document',
+                                                    version='01',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="01",
-                                                        ref="eura:printed_ticket"
+                                                        version='01',
+                                                        ref='eura:printed_ticket'
                                                     ),
                                                     choice=PreassignedFareProductRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return'
                                                     ),
                                                     order=1
                                                 ),
@@ -3268,46 +3268,46 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     SalesOfferPackage(
-                                        id="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP',
+                                        version='01',
                                         branding_ref=BrandingRef(
-                                            version="any",
-                                            ref="tlx:Trilex@brand"
+                                            version='any',
+                                            ref='tlx:Trilex@brand'
                                         ),
                                         name=MultilingualString(
-                                            value="Day Pass   - Flat rate "
+                                            value='Day Pass   - Flat rate '
                                         ),
                                         description=MultilingualString(
-                                            value="Details about this tariff&#10;1. Prices&#10;The tickets are in scope&#10;&#10;Katzenspung-Ticket Dresden - Bischofswerda: 10,00  EURO &#10;Katzenspung Dresden - Bautzen: 15,00  EURO &#10;Cat show ticket Dresden - Wilthen: 15,00  EURO &#10;A short jump ticket can be used by one person with up to 3 children aged 6-14 years. Children up to the age of five are free of charge. Further reductions can not be granted.&#10;&#10;2. Scope&#10;Valid in the trilex trains of the Landbahn GmbH DLB (TL, TLX), DB Regio (S) 1 , Städtebahnen Sachsen (SBS) 1 and ODEG (OE) 1  for any number of journeys in the 2nd class on the following routes:&#10;&#10;Dresden central station - Bischofswerda&#10;Dresden central station - Bischofswerda - Bautzen&#10;Dresden central station - Bischofswerda - Wilthen&#10;A transition to the 1st class is excluded.&#10;&#10;3. Period of validity&#10;The skip-ticket is valid on the day of validity stated on the ticket for any number of trips within the scope of validity at the following times:&#10;&#10;Mondays to Fridays from 9:00 am to 3:00 pm the following day&#10;On Saturdays, Sundays and on days which are statutory public holidays in the entire Free State of Saxony, from 0.00 am until the following day at 3.00 am, breaks within the validity period are possible.&#10;4th sale&#10;of  trilex Agencies, &#10;of  trilex train attendants on the train, &#10;DB outlets (DB Travel Centers, DB Agencies) &#10;issued to DB ticket vending machines."
+                                            value='Details about this tariff\n1. Prices\nThe tickets are in scope\n\nKatzenspung-Ticket Dresden - Bischofswerda: 10,00  EURO \nKatzenspung Dresden - Bautzen: 15,00  EURO \nCat show ticket Dresden - Wilthen: 15,00  EURO \nA short jump ticket can be used by one person with up to 3 children aged 6-14 years. Children up to the age of five are free of charge. Further reductions can not be granted.\n\n2. Scope\nValid in the trilex trains of the Landbahn GmbH DLB (TL, TLX), DB Regio (S) 1 , Städtebahnen Sachsen (SBS) 1 and ODEG (OE) 1  for any number of journeys in the 2nd class on the following routes:\n\nDresden central station - Bischofswerda\nDresden central station - Bischofswerda - Bautzen\nDresden central station - Bischofswerda - Wilthen\nA transition to the 1st class is excluded.\n\n3. Period of validity\nThe skip-ticket is valid on the day of validity stated on the ticket for any number of trips within the scope of validity at the following times:\n\nMondays to Fridays from 9:00 am to 3:00 pm the following day\nOn Saturdays, Sundays and on days which are statutory public holidays in the entire Free State of Saxony, from 0.00 am until the following day at 3.00 am, breaks within the validity period are possible.\n4th sale\nof  trilex Agencies, \nof  trilex train attendants on the train, \nDB outlets (DB Travel Centers, DB Agencies) \nissued to DB ticket vending machines.'
                                         ),
-                                        url="https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/",
+                                        url='https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/',
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@at_counter",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@at_counter',
+                                                    version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:at_counter"
+                                                        version='01',
+                                                        ref='eura:at_counter'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@self_service_ticket_machine",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@self_service_ticket_machine',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:self_service_ticket_machine"
+                                                        version='01',
+                                                        ref='eura:self_service_ticket_machine'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@online",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP@online',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:online"
+                                                        version='01',
+                                                        ref='eura:online'
                                                     )
                                                 ),
                                             ]
@@ -3315,18 +3315,18 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="tlx:Trilex@Product@Pass@Katzensprungticket@travel_document@pass",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Pass@Katzensprungticket@travel_document@pass',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="As separate pass"
+                                                        value='As separate pass'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="01",
-                                                        ref="eura:printed_ticket"
+                                                        version='01',
+                                                        ref='eura:printed_ticket'
                                                     ),
                                                     choice=PreassignedFareProductRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Pass@Katzensprungticket"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Pass@Katzensprungticket'
                                                     ),
                                                     order=1
                                                 ),
@@ -3334,42 +3334,42 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     SalesOfferPackage(
-                                        id="tlx:Trilex@Product@Trip@single-SOP",
-                                        version="01",
+                                        id='tlx:Trilex@Product@Trip@single-SOP',
+                                        version='01',
                                         branding_ref=BrandingRef(
-                                            version="any",
-                                            ref="tlx:Trilex@brand"
+                                            version='any',
+                                            ref='tlx:Trilex@brand'
                                         ),
                                         name=MultilingualString(
-                                            value="Single P2P fare "
+                                            value='Single P2P fare '
                                         ),
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Trip@single-SOP@at_counter",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@single-SOP@at_counter',
+                                                    version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:at_counter"
+                                                        version='01',
+                                                        ref='eura:at_counter'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Trip@single-SOP@self_service_ticket_machine",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@single-SOP@self_service_ticket_machine',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:self_service_ticket_machine"
+                                                        version='01',
+                                                        ref='eura:self_service_ticket_machine'
                                                     )
                                                 ),
                                                 DistributionAssignment(
-                                                    id="tlx:Trilex@Product@Trip@single-SOP@onboard",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@Trip@single-SOP@onboard',
+                                                    version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
-                                                        version="01",
-                                                        ref="eura:onboard"
+                                                        version='01',
+                                                        ref='eura:onboard'
                                                     )
                                                 ),
                                             ]
@@ -3377,15 +3377,15 @@ obj = PublicationDelivery(
                                         sales_offer_package_elements=SalesOfferPackageElementsRelStructure(
                                             sales_offer_package_element_ref_or_sales_offer_package_element=[
                                                 SalesOfferPackageElement(
-                                                    id="tlx:Trilex@Product@single-SOP@travel_document",
-                                                    version="01",
+                                                    id='tlx:Trilex@Product@single-SOP@travel_document',
+                                                    version='01',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
-                                                        version="01",
-                                                        ref="eura:printed_ticket"
+                                                        version='01',
+                                                        ref='eura:printed_ticket'
                                                     ),
                                                     choice=PreassignedFareProductRef(
-                                                        version="01",
-                                                        ref="tlx:Trilex@Product@Trip@single"
+                                                        version='01',
+                                                        ref='tlx:Trilex@Product@Trip@single'
                                                     ),
                                                     order=1
                                                 ),
@@ -3396,35 +3396,35 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="tlx:Trilex@Service_Calendar",
-                            version="any",
-                            responsibility_set_ref_attribute="tlx:products@TLX",
+                            id='tlx:Trilex@Service_Calendar',
+                            version='any',
+                            responsibility_set_ref_attribute='tlx:products@TLX',
                             name=MultilingualString(
-                                value="TLX   Specific  Calendar"
+                                value='TLX   Specific  Calendar'
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
-                                    ref="tlx_data"
+                                    ref='tlx_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
-                                    version="any",
-                                    ref="tlx:example"
+                                    version='any',
+                                    ref='tlx:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="any",
-                                    ref="tlx:products@TLX"
+                                    version='any',
+                                    ref='tlx:products@TLX'
                                 )
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     FareDayType(
-                                        id="tlx::everyday",
-                                        version="any",
+                                        id='tlx::everyday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Every day"
+                                            value='Every day'
                                         ),
                                         description=MultilingualString(
-                                            value="ANy time"
+                                            value='ANy time'
                                         ),
                                         earliest_time=XmlTime(0, 0, 0, 0),
                                         day_length=XmlDuration("P1DT3H"),
@@ -3442,13 +3442,13 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareDayType(
-                                        id="tlx:working_day@off_peak",
-                                        version="any",
+                                        id='tlx:working_day@off_peak',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Working day"
+                                            value='Working day'
                                         ),
                                         description=MultilingualString(
-                                            value="After 9.00 end at 4.30 next day."
+                                            value='After 9.00 end at 4.30 next day.'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -3462,8 +3462,8 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandVersionedChildStructure(
-                                                    id="tlx:working_day@off_peak",
-                                                    version="any",
+                                                    id='tlx:working_day@off_peak',
+                                                    version='any',
                                                     start_time=XmlTime(9, 0, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlTime(15, 0, 0, 0),
@@ -3473,10 +3473,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareDayType(
-                                        id="tlx:not_working_day",
-                                        version="any",
+                                        id='tlx:not_working_day',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Non Working day"
+                                            value='Non Working day'
                                         ),
                                         earliest_time=XmlTime(0, 0, 0, 0),
                                         day_length=XmlDuration("P1DT3H"),
@@ -3494,48 +3494,48 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="tlx:Trilex@Common_Resources",
-                            version="any",
-                            responsibility_set_ref_attribute="tlx:products@TLX",
+                            id='tlx:Trilex@Common_Resources',
+                            version='any',
+                            responsibility_set_ref_attribute='tlx:products@TLX',
                             name=MultilingualString(
-                                value="Germany Specifc  code values"
+                                value='Germany Specifc  code values'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="tlx_data",
-                                        xmlns="tlx",
-                                        xmlns_url="https://www.trilex.de/",
-                                        description="Trilex  rail"
+                                        id='tlx_data',
+                                        xmlns='tlx',
+                                        xmlns_url='https://www.trilex.de/',
+                                        description='Trilex  rail'
                                     ),
                                 ]
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_locale=LocaleStructure(
-                                    time_zone="CEST",
-                                    default_language="de",
+                                    time_zone='CEST',
+                                    default_language='de',
                                     languages=LocaleStructure.Languages(
                                         language_usage=[
                                             LanguageUsageStructure(
-                                                language="de",
+                                                language='de',
                                                 language_use=[
                                                     LanguageUseEnumeration.NORMALLY_USED,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="cz",
+                                                language='cz',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="pl",
+                                                language='pl',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="en",
+                                                language='en',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
@@ -3543,64 +3543,64 @@ obj = PublicationDelivery(
                                         ]
                                     )
                                 ),
-                                default_location_system="WGS84",
+                                default_location_system='WGS84',
                                 default_system_of_units=SystemOfUnits.SI_KILOMETRES_AND_METRES,
-                                default_currency="GBP"
+                                default_currency='GBP'
                             ),
                             data_sources=DataSourcesInFrameRelStructure(
                                 data_source=[
                                     DataSource(
-                                        id="tlx:example",
-                                        version="any",
-                                        email="info@trilex.de"
+                                        id='tlx:example',
+                                        version='any',
+                                        email='info@trilex.de'
                                     ),
                                 ]
                             ),
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="tlx:products@TLX",
-                                        version="any",
+                                        id='tlx:products@TLX',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Trilex Rail Products"
+                                            value='Trilex Rail Products'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="tlx:products@TLX",
-                                                    version="any",
+                                                    id='tlx:products@TLX',
+                                                    version='any',
                                                     stakeholder_role_type=[
                                                         StakeholderRoleTypeEnumeration.OTHER,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="db:TLX"
+                                                        version='any',
+                                                        ref='db:TLX'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
-                                                        ref="tlx:de",
-                                                        version_ref="TODO"
+                                                        ref='tlx:de',
+                                                        version_ref='TODO'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="tlx-t:sales@TLX",
-                                        version="any",
+                                        id='tlx-t:sales@TLX',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Trilex Rail Products"
+                                            value='Trilex Rail Products'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="tlx-t:sales@TLX",
-                                                    version="any",
+                                                    id='tlx-t:sales@TLX',
+                                                    version='any',
                                                     stakeholder_role_type=[
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="db:TLX"
+                                                        version='any',
+                                                        ref='db:TLX'
                                                     )
                                                 ),
                                             ]
@@ -3611,40 +3611,40 @@ obj = PublicationDelivery(
                             types_of_value=TypesOfValueInFrameRelStructure(
                                 choice=[
                                     ValueSet(
-                                        id="tlx:Trilex@Branding",
-                                        version="any",
+                                        id='tlx:Trilex@Branding',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Branding"
+                                            value='Branding'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 Branding(
-                                                    id="tlx:Trilex@brand",
-                                                    version="any",
+                                                    id='tlx:Trilex@brand',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Trilex"
+                                                        value='Trilex'
                                                     ),
-                                                    url="https://www.trilex.de/logo.png"
+                                                    url='https://www.trilex.de/logo.png'
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="Branding"
+                                        class_of_values='Branding'
                                     ),
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="db:TLX",
-                                        version="any",
+                                        id='db:TLX',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="TLX"
+                                            value='TLX'
                                         ),
                                         name=MultilingualString(
-                                            value="Trilex "
+                                            value='Trilex '
                                         ),
                                         short_name=MultilingualString(
-                                            value="Trilex"
+                                            value='Trilex'
                                         ),
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.DE
@@ -3657,85 +3657,85 @@ obj = PublicationDelivery(
                 )
             ),
             CompositeFrame(
-                id="vvo:VVO",
+                id='vvo:VVO',
                 validity_conditions_or_valid_between=[
                     ValidBetween(
                         from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                         to_date=XmlDateTime(2020, 12, 31, 12, 0, 0)
                     ),
                 ],
-                version="any",
-                responsibility_set_ref_attribute="vvo:products@VVO",
+                version='any',
+                responsibility_set_ref_attribute='vvo:products@VVO',
                 name=MultilingualString(
-                    value="VVO Tariffs"
+                    value='VVO Tariffs'
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="wo_data"
+                        ref='wo_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version="any",
-                        ref="vvo:example"
+                        version='any',
+                        ref='vvo:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        version="any",
-                        ref="vvo:products@VVO"
+                        version='any',
+                        ref='vvo:products@VVO'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         FareFrame(
-                            id="vvo:VVO@Tariffs",
-                            version="01",
-                            responsibility_set_ref_attribute="vvo:products@VVO",
+                            id='vvo:VVO@Tariffs',
+                            version='01',
+                            responsibility_set_ref_attribute='vvo:products@VVO',
                             name=MultilingualString(
-                                value="This frame holds stop points and distance matrix elements referenced by other frames"
+                                value='This frame holds stop points and distance matrix elements referenced by other frames'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
-                                        ref="wo_data"
+                                        ref='wo_data'
                                     ),
                                 ]
                             ),
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="vvo:VVO@Tariff@de_de",
-                                        version="01",
+                                        id='vvo:VVO@Tariff@de_de',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="VVO Tariff"
+                                            value='VVO Tariff'
                                         ),
                                         description=MultilingualString(
-                                            value="On the section Dresden Hbf - Arnsdorf (Re1, RB60, RE2 and RB61)&#10;The Verbundraum Oberelbe (VVO) around Dresden is divided into 21 tariff zones. The trilex trains pass through Tarizonen 10 (Dresden) and 31 (Radeberg) in the section Dresden Hbf - Arnsdorf. Tariff zones 10 and 31 are highlighted in color in the trilex network (yellow or light blue). Between Langebrück and Radeberg there is a border area.&#10;&#10;The price level and validity period of the respective ticket result from the number of fare zones that are passed through. Within the validity range of the ticket, all city and regional buses, trams and commuter trains (S-Bahn, RB / RE etc.) as well as almost all ferries can be used.&#10;&#10;The following tickets are offered in the VVO tariff (selection):&#10;&#10;Single tickets&#10;&#10;Single journeys *&#10;4-Card&#10;Day tickets&#10;&#10;Day passes for individuals&#10;Family day passes&#10;Bicycle Day Tickets&#10;night ticket&#10;Small group tickets&#10;Elbe-Labe-Ticket&#10;Season tickets&#10;weekly tickets&#10;&#10;(ABO) monthly passes&#10;9 o'clock (ABO) monthly passes&#10;annual passes&#10;Bicycle monthly pass&#10;* Sections of the 4-card short-haul 1 are valid on the following sections (from / to):&#10;&#10;Dresden central station - Dresden center&#10;Dresden Mitte - Dresden central station or Dresden-Neustadt&#10;Dresden-Neustadt - Dresden center&#10;Details on tickets and fares in the VVO joint area.  s."
+                                            value="On the section Dresden Hbf - Arnsdorf (Re1, RB60, RE2 and RB61)\nThe Verbundraum Oberelbe (VVO) around Dresden is divided into 21 tariff zones. The trilex trains pass through Tarizonen 10 (Dresden) and 31 (Radeberg) in the section Dresden Hbf - Arnsdorf. Tariff zones 10 and 31 are highlighted in color in the trilex network (yellow or light blue). Between Langebrück and Radeberg there is a border area.\n\nThe price level and validity period of the respective ticket result from the number of fare zones that are passed through. Within the validity range of the ticket, all city and regional buses, trams and commuter trains (S-Bahn, RB / RE etc.) as well as almost all ferries can be used.\n\nThe following tickets are offered in the VVO tariff (selection):\n\nSingle tickets\n\nSingle journeys *\n4-Card\nDay tickets\n\nDay passes for individuals\nFamily day passes\nBicycle Day Tickets\nnight ticket\nSmall group tickets\nElbe-Labe-Ticket\nSeason tickets\nweekly tickets\n\n(ABO) monthly passes\n9 o'clock (ABO) monthly passes\nannual passes\nBicycle monthly pass\n* Sections of the 4-card short-haul 1 are valid on the following sections (from / to):\n\nDresden central station - Dresden center\nDresden Mitte - Dresden central station or Dresden-Neustadt\nDresden-Neustadt - Dresden center\nDetails on tickets and fares in the VVO joint area.  s."
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="db:VVO"
+                                            version='any',
+                                            ref='db:VVO'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="vvo:VVO@Tariff@de_de",
-                                                    version="01",
+                                                    id='vvo:VVO@Tariff@de_de',
+                                                    version='01',
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="vvo:VVO@Tariff@de_de",
-                                                        version="01",
+                                                        id='vvo:VVO@Tariff@de_de',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
-                                                                    version="01",
-                                                                    ref="dbn:Saxony@10@Dresden"
+                                                                    version='01',
+                                                                    ref='dbn:Saxony@10@Dresden'
                                                                 ),
                                                                 FareZoneRef(
-                                                                    version="01",
-                                                                    ref="dbn:Saxony@30@ZVON"
+                                                                    version='01',
+                                                                    ref='dbn:Saxony@30@ZVON'
                                                                 ),
                                                             ]
                                                         )
@@ -3746,67 +3746,67 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Arnsdorf",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6176"
+                                                    value='Dresden hbf to Arnsdorf',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6176'
                                                 ),
                                             ]
                                         )
                                     ),
                                     Tariff(
-                                        id="vvo:VVO_ZVON@Ubergangstarif@de_de",
-                                        version="01",
+                                        id='vvo:VVO_ZVON@Ubergangstarif@de_de',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="VVO / ZVON Ubergangstarif "
+                                            value='VVO / ZVON Ubergangstarif '
                                         ),
                                         description=MultilingualString(
-                                            value="Frequent drivers who regularly travel between the Oberlausitz Lower Silesia (ZVON) and Verkehrsverbund Oberelbe (VVO) transport networks and use the Dresden - Bautzen - Görlitz / Zittau railway lines can use a common time ticket service. It can be purchased from any tariff point in the ZVON to each tariff zone in the VVO a continuous ticket. This allows you to use local buses and trams as well as the Elbe ferries included in the VVO tariff in both interconnected areas within the scope of the spatial validity of your season ticket.&#10;Tobe offered:&#10;&#10;Weekly tickets (reduced and normal)&#10;Monthly passes (reduced and normal)&#10;Subscription monthly pass (reduced and normal)&#10;In conjunction with a subscription-monthly or annual ticket to the ZVON-VVO transitional tariff, the fleXX ticket from or to Arnsdorf applies to the usual fare regulations of the ZVON.&#10;Driving privilege:&#10;&#10;The respective take-off arrangements for time cards of the corresponding transport associations apply. &#10;Season tickets at the regular fare, except week tickets, entitle to carry 5 persons on weekends and public holidays within the period from 6 pm on the day before until 6 am on the following day, of which a maximum of one person may be older than 14 years. &#10;The ZVON bicycle day pass and monthly pass is valid in conjunction with the ZVON-VVO transition tariff from or to Arnsdorf. From Arnsdorf bike transport to VVO fare."
+                                            value='Frequent drivers who regularly travel between the Oberlausitz Lower Silesia (ZVON) and Verkehrsverbund Oberelbe (VVO) transport networks and use the Dresden - Bautzen - Görlitz / Zittau railway lines can use a common time ticket service. It can be purchased from any tariff point in the ZVON to each tariff zone in the VVO a continuous ticket. This allows you to use local buses and trams as well as the Elbe ferries included in the VVO tariff in both interconnected areas within the scope of the spatial validity of your season ticket.\nTobe offered:\n\nWeekly tickets (reduced and normal)\nMonthly passes (reduced and normal)\nSubscription monthly pass (reduced and normal)\nIn conjunction with a subscription-monthly or annual ticket to the ZVON-VVO transitional tariff, the fleXX ticket from or to Arnsdorf applies to the usual fare regulations of the ZVON.\nDriving privilege:\n\nThe respective take-off arrangements for time cards of the corresponding transport associations apply. \nSeason tickets at the regular fare, except week tickets, entitle to carry 5 persons on weekends and public holidays within the period from 6 pm on the day before until 6 am on the following day, of which a maximum of one person may be older than 14 years. \nThe ZVON bicycle day pass and monthly pass is valid in conjunction with the ZVON-VVO transition tariff from or to Arnsdorf. From Arnsdorf bike transport to VVO fare.'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="db:VVO"
+                                            version='any',
+                                            ref='db:VVO'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="vvo:VVO_ZVON@Ubergangstarif@de_de",
-                                                    version="01",
+                                                    id='vvo:VVO_ZVON@Ubergangstarif@de_de',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="VVO and ZVON "
+                                                        value='VVO and ZVON '
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="vvo:VVO_ZVON@Ubergangstarif@de_de",
-                                                        version="01",
+                                                        id='vvo:VVO_ZVON@Ubergangstarif@de_de',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
-                                                                    version="01",
-                                                                    ref="dbn:Saxony@31@Radeburg"
+                                                                    version='01',
+                                                                    ref='dbn:Saxony@31@Radeburg'
                                                                 ),
                                                             ]
                                                         ),
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
-                                                                    id="VVO_ZVON@Ubergangstarif@de_de",
-                                                                    version="01",
+                                                                    id='VVO_ZVON@Ubergangstarif@de_de',
+                                                                    version='01',
                                                                     order=1,
                                                                     validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         fare_zone_ref=[
                                                                             FareZoneRef(
-                                                                                version="01",
-                                                                                ref="dbn:Saxony@10@Dresden"
+                                                                                version='01',
+                                                                                ref='dbn:Saxony@10@Dresden'
                                                                             ),
                                                                             FareZoneRef(
-                                                                                version="01",
-                                                                                ref="dbn:Saxony@31@Radeburg"
+                                                                                version='01',
+                                                                                ref='dbn:Saxony@31@Radeburg'
                                                                             ),
                                                                         ]
                                                                     )
@@ -3820,69 +3820,69 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Arnsdorf",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6176"
+                                                    value='Dresden hbf to Arnsdorf',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6176'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6105"
+                                                    value='Dresden hbf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6103"
+                                                    value='Dresden hbf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56145"
+                                                    value='Dresden hbf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56715"
+                                                    value='Dresden hbf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6105"
+                                                    value='Arnsdorf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6103"
+                                                    value='Arnsdorf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56145"
+                                                    value='Arnsdorf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56715"
+                                                    value='Arnsdorf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6129"
+                                                    value='Dresden hbf to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6113"
+                                                    value='Dresden hbf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6129"
+                                                    value='Arnsdorf to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6113"
+                                                    value='Arnsdorf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6113'
                                                 ),
                                             ]
                                         )
@@ -3891,48 +3891,48 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="vvo:VVO@Common_Resources",
-                            version="any",
-                            responsibility_set_ref_attribute="vvo:products@VVO",
+                            id='vvo:VVO@Common_Resources',
+                            version='any',
+                            responsibility_set_ref_attribute='vvo:products@VVO',
                             name=MultilingualString(
-                                value="Germany Specifc  code values"
+                                value='Germany Specifc  code values'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="wo_data",
-                                        xmlns="vvo",
-                                        xmlns_url="https://www.trilex.de/",
-                                        description="Trilez  rail"
+                                        id='wo_data',
+                                        xmlns='vvo',
+                                        xmlns_url='https://www.trilex.de/',
+                                        description='Trilez  rail'
                                     ),
                                 ]
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_locale=LocaleStructure(
-                                    time_zone="CEST",
-                                    default_language="de",
+                                    time_zone='CEST',
+                                    default_language='de',
                                     languages=LocaleStructure.Languages(
                                         language_usage=[
                                             LanguageUsageStructure(
-                                                language="de",
+                                                language='de',
                                                 language_use=[
                                                     LanguageUseEnumeration.NORMALLY_USED,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="cz",
+                                                language='cz',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="pl",
+                                                language='pl',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="en",
+                                                language='en',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
@@ -3940,42 +3940,42 @@ obj = PublicationDelivery(
                                         ]
                                     )
                                 ),
-                                default_location_system="WGS84",
+                                default_location_system='WGS84',
                                 default_system_of_units=SystemOfUnits.SI_KILOMETRES_AND_METRES,
-                                default_currency="GBP"
+                                default_currency='GBP'
                             ),
                             data_sources=DataSourcesInFrameRelStructure(
                                 data_source=[
                                     DataSource(
-                                        id="vvo:example",
-                                        version="any",
-                                        email="info@vvo.de"
+                                        id='vvo:example',
+                                        version='any',
+                                        email='info@vvo.de'
                                     ),
                                 ]
                             ),
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="vvo:products@VVO",
-                                        version="any",
+                                        id='vvo:products@VVO',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Trilex Rail Products"
+                                            value='Trilex Rail Products'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="vvo:products@VVO",
-                                                    version="any",
+                                                    id='vvo:products@VVO',
+                                                    version='any',
                                                     stakeholder_role_type=[
                                                         StakeholderRoleTypeEnumeration.OTHER,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="db:VVO"
+                                                        version='any',
+                                                        ref='db:VVO'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
-                                                        ref="vvo:de",
-                                                        version_ref="TODO"
+                                                        ref='vvo:de',
+                                                        version_ref='TODO'
                                                     )
                                                 ),
                                             ]
@@ -3986,16 +3986,16 @@ obj = PublicationDelivery(
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="db:VVO",
-                                        version="any",
+                                        id='db:VVO',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="VVO"
+                                            value='VVO'
                                         ),
                                         name=MultilingualString(
-                                            value="Verkehrsverbund Oberelbe"
+                                            value='Verkehrsverbund Oberelbe'
                                         ),
                                         short_name=MultilingualString(
-                                            value="VVO"
+                                            value='VVO'
                                         ),
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.DE
@@ -4008,108 +4008,108 @@ obj = PublicationDelivery(
                 )
             ),
             CompositeFrame(
-                id="zvo:ZVON",
+                id='zvo:ZVON',
                 validity_conditions_or_valid_between=[
                     ValidBetween(
                         from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                         to_date=XmlDateTime(2020, 12, 31, 12, 0, 0)
                     ),
                 ],
-                version="any",
-                responsibility_set_ref_attribute="zvo:products@ZVON",
+                version='any',
+                responsibility_set_ref_attribute='zvo:products@ZVON',
                 name=MultilingualString(
-                    value="ZVON Tariffs"
+                    value='ZVON Tariffs'
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="zvo_data"
+                        ref='zvo_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version="any",
-                        ref="zvo:example"
+                        version='any',
+                        ref='zvo:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        version="any",
-                        ref="zvo:products@ZVON"
+                        version='any',
+                        ref='zvo:products@ZVON'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         FareFrame(
-                            id="zvo:ZVON@Tariffs",
-                            version="01",
-                            responsibility_set_ref_attribute="zvo:products@ZVON",
+                            id='zvo:ZVON@Tariffs',
+                            version='01',
+                            responsibility_set_ref_attribute='zvo:products@ZVON',
                             name=MultilingualString(
-                                value="This frame holds stop points and distance matrix elements referenced by other ZVON frames"
+                                value='This frame holds stop points and distance matrix elements referenced by other ZVON frames'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
-                                        ref="zvo_data"
+                                        ref='zvo_data'
                                     ),
                                 ]
                             ),
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="zvo:ZVON@Tariff@de_de",
-                                        version="01",
+                                        id='zvo:ZVON@Tariff@de_de',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="ZVON Tariff"
+                                            value='ZVON Tariff'
                                         ),
                                         description=MultilingualString(
-                                            value="On the lines RE1, RB60, RE2 and RB61  , only the ZVON tariff applies for journeys within the ZVON area. On line L7  you can choose to travel to the ZVON tariff or the trilex tariff. Travelers who change from and to other means of transport within the scope of the ZVON tariff are recommended to use the ZVON tariff. The sale of the tickets to the ZVON tariff takes place in the trilex trains at no extra charge.&#10;&#10;Example: If you are traveling with the trilex from Hainewalde to Zittau and transfer there to the city bus, then we recommend the ZVON tariff."
+                                            value='On the lines RE1, RB60, RE2 and RB61  , only the ZVON tariff applies for journeys within the ZVON area. On line L7  you can choose to travel to the ZVON tariff or the trilex tariff. Travelers who change from and to other means of transport within the scope of the ZVON tariff are recommended to use the ZVON tariff. The sale of the tickets to the ZVON tariff takes place in the trilex trains at no extra charge.\n\nExample: If you are traveling with the trilex from Hainewalde to Zittau and transfer there to the city bus, then we recommend the ZVON tariff.'
                                         ),
                                         choice=OperatorRef(
-                                            version="any",
-                                            ref="db:ZVON"
+                                            version='any',
+                                            ref='db:ZVON'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="zvo:ZVON@Tariff@de_de",
-                                                    version="01",
+                                                    id='zvo:ZVON@Tariff@de_de',
+                                                    version='01',
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="zvo:ZVON@Tariff@de_de",
-                                                        version="01",
+                                                        id='zvo:ZVON@Tariff@de_de',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
-                                                                    version="01",
-                                                                    ref="dbn:Saxony@31@Radeburg"
+                                                                    version='01',
+                                                                    ref='dbn:Saxony@31@Radeburg'
                                                                 ),
                                                             ]
                                                         ),
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
-                                                                    id="zvo:ZVON@Tariff@de_de@lines",
-                                                                    version="01",
+                                                                    id='zvo:ZVON@Tariff@de_de@lines',
+                                                                    version='01',
                                                                     order=1,
                                                                     validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         flexible_line_ref_or_line_ref=[
                                                                             LineRef(
-                                                                                version="01",
-                                                                                ref="db:RE1"
+                                                                                version='01',
+                                                                                ref='db:RE1'
                                                                             ),
                                                                             LineRef(
-                                                                                version="01",
-                                                                                ref="db:RE2"
+                                                                                version='01',
+                                                                                ref='db:RE2'
                                                                             ),
                                                                             LineRef(
-                                                                                version="01",
-                                                                                ref="db:RB60"
+                                                                                version='01',
+                                                                                ref='db:RB60'
                                                                             ),
                                                                             LineRef(
-                                                                                version="01",
-                                                                                ref="db:RB61"
+                                                                                version='01',
+                                                                                ref='db:RB61'
                                                                             ),
                                                                         ]
                                                                     )
@@ -4123,59 +4123,59 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6103"
+                                                    value='Grossharthau to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56145"
+                                                    value='Grossharthau to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56715"
+                                                    value='Grossharthau to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56145"
+                                                    value='Bischofswerda to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56715"
+                                                    value='Bischofswerda to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bautzen to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:56145-to-56715"
+                                                    value='Bautzen to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:56145-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6129"
+                                                    value='Grossharthau to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6113"
+                                                    value='Grossharthau to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6129"
+                                                    value='Bischofswerda to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6113"
+                                                    value='Bischofswerda to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Wilthen to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6129-to-6113"
+                                                    value='Wilthen to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6129-to-6113'
                                                 ),
                                             ]
                                         )
@@ -4184,33 +4184,33 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="zvo:ZVON@Lines",
-                            version="any",
-                            responsibility_set_ref_attribute="zvo:products@ZVON",
+                            id='zvo:ZVON@Lines',
+                            version='any',
+                            responsibility_set_ref_attribute='zvo:products@ZVON',
                             name=MultilingualString(
-                                value="ZVON   Network"
+                                value='ZVON   Network'
                             ),
                             network=Network(
-                                id="zvo:ZVON@Lines@Network",
-                                version="01",
+                                id='zvo:ZVON@Lines@Network',
+                                version='01',
                                 name=MultilingualString(
-                                    value="ZVON Rail Network"
+                                    value='ZVON Rail Network'
                                 ),
                                 transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                 authority_ref_or_operator_ref=OperatorRef(
-                                    value="DBN",
-                                    version="any",
-                                    ref="uic:0080"
+                                    value='DBN',
+                                    version='any',
+                                    ref='uic:0080'
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="zvo:L7",
-                                        version="01",
+                                        id='zvo:L7',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Seifhennersdorf - Zittau",
-                                            lang="de"
+                                            value='Seifhennersdorf - Zittau',
+                                            lang='de'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.LOCAL
@@ -4219,48 +4219,48 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="zvo:ZVON@Common_Resources",
-                            version="any",
-                            responsibility_set_ref_attribute="zvo:products@ZVON",
+                            id='zvo:ZVON@Common_Resources',
+                            version='any',
+                            responsibility_set_ref_attribute='zvo:products@ZVON',
                             name=MultilingualString(
-                                value="Germany Specifc  code values"
+                                value='Germany Specifc  code values'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="zvo_data",
-                                        xmlns="zvo",
-                                        xmlns_url="https://www.trilex.de/",
-                                        description="Trilez  rail"
+                                        id='zvo_data',
+                                        xmlns='zvo',
+                                        xmlns_url='https://www.trilex.de/',
+                                        description='Trilez  rail'
                                     ),
                                 ]
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_locale=LocaleStructure(
-                                    time_zone="CEST",
-                                    default_language="de",
+                                    time_zone='CEST',
+                                    default_language='de',
                                     languages=LocaleStructure.Languages(
                                         language_usage=[
                                             LanguageUsageStructure(
-                                                language="de",
+                                                language='de',
                                                 language_use=[
                                                     LanguageUseEnumeration.NORMALLY_USED,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="cz",
+                                                language='cz',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="pl",
+                                                language='pl',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="en",
+                                                language='en',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
@@ -4268,42 +4268,42 @@ obj = PublicationDelivery(
                                         ]
                                     )
                                 ),
-                                default_location_system="WGS84",
+                                default_location_system='WGS84',
                                 default_system_of_units=SystemOfUnits.SI_KILOMETRES_AND_METRES,
-                                default_currency="GBP"
+                                default_currency='GBP'
                             ),
                             data_sources=DataSourcesInFrameRelStructure(
                                 data_source=[
                                     DataSource(
-                                        id="zvo:example",
-                                        version="any",
-                                        email="info@zvo.de"
+                                        id='zvo:example',
+                                        version='any',
+                                        email='info@zvo.de'
                                     ),
                                 ]
                             ),
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="zvo:products@ZVON",
-                                        version="any",
+                                        id='zvo:products@ZVON',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Trilex Rail Products"
+                                            value='Trilex Rail Products'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="zvo:products@ZVON",
-                                                    version="any",
+                                                    id='zvo:products@ZVON',
+                                                    version='any',
                                                     stakeholder_role_type=[
                                                         StakeholderRoleTypeEnumeration.OTHER,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="db:ZVON"
+                                                        version='any',
+                                                        ref='db:ZVON'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
-                                                        ref="zvo:de",
-                                                        version_ref="TODO"
+                                                        ref='zvo:de',
+                                                        version_ref='TODO'
                                                     )
                                                 ),
                                             ]
@@ -4314,16 +4314,16 @@ obj = PublicationDelivery(
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="db:ZVON",
-                                        version="any",
+                                        id='db:ZVON',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="ZVON"
+                                            value='ZVON'
                                         ),
                                         name=MultilingualString(
-                                            value="Zweckverband Verkehrsverbund Oberlausitz-Niederschlesien"
+                                            value='Zweckverband Verkehrsverbund Oberlausitz-Niederschlesien'
                                         ),
                                         short_name=MultilingualString(
-                                            value="ZVON"
+                                            value='ZVON'
                                         ),
                                         country_ref=CountryRef(
                                             ref=IanaCountryTldEnumeration.DE
@@ -4336,82 +4336,82 @@ obj = PublicationDelivery(
                 )
             ),
             CompositeFrame(
-                id="dbn:DB",
+                id='dbn:DB',
                 validity_conditions_or_valid_between=[
                     ValidBetween(
                         from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                         to_date=XmlDateTime(2020, 12, 31, 12, 0, 0)
                     ),
                 ],
-                version="any",
-                responsibility_set_ref_attribute="db:products@DB",
+                version='any',
+                responsibility_set_ref_attribute='db:products@DB',
                 name=MultilingualString(
-                    value="DB  Network and Tariffss"
+                    value='DB  Network and Tariffss'
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="dbn_data"
+                        ref='dbn_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version="any",
-                        ref="dbn:example"
+                        version='any',
+                        ref='dbn:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        version="any",
-                        ref="db:products@DB"
+                        version='any',
+                        ref='db:products@DB'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         FareFrame(
-                            id="db:DB@Tariffs",
-                            version="01",
-                            responsibility_set_ref_attribute="db:products@DB",
+                            id='db:DB@Tariffs',
+                            version='01',
+                            responsibility_set_ref_attribute='db:products@DB',
                             name=MultilingualString(
-                                value="This frame holds DB Tariffs "
+                                value='This frame holds DB Tariffs '
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
-                                        ref="dbn_data"
+                                        ref='dbn_data'
                                     ),
                                 ]
                             ),
                             tariffs=TariffsInFrameRelStructure(
                                 tariff=[
                                     Tariff(
-                                        id="dbn:DB@Tariff@General@de_de",
-                                        version="01",
+                                        id='dbn:DB@Tariff@General@de_de',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="DB Domestic Tariff"
+                                            value='DB Domestic Tariff'
                                         ),
                                         description=MultilingualString(
-                                            value="P2P  based fares for  domestic germany routes"
+                                            value='P2P  based fares for  domestic germany routes'
                                         ),
                                         choice=OperatorRef(
-                                            value="DBN",
-                                            version="any",
-                                            ref="uic:0080"
+                                            value='DBN',
+                                            version='any',
+                                            ref='uic:0080'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="db:DB@Tariff@General@access@modes",
-                                                    version="01",
+                                                    id='db:DB@Tariff@General@access@modes',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Available Classes"
+                                                        value='Available Classes'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="db:DB@Tariff@General@access@modes@rail",
-                                                        version="01",
+                                                        id='db:DB@Tariff@General@access@modes@rail',
+                                                        version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:can_access"
+                                                            version='any',
+                                                            ref='eura:can_access'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
@@ -4425,23 +4425,23 @@ obj = PublicationDelivery(
                                                         includes=GenericParameterAssignmentsRelStructure(
                                                             generic_parameter_assignment_or_generic_parameter_assignment_in_context=[
                                                                 GenericParameterAssignment(
-                                                                    id="db:DB@Tariff@General@access@modes@trainType",
-                                                                    version="01",
+                                                                    id='db:DB@Tariff@General@access@modes@trainType',
+                                                                    version='01',
                                                                     order=2,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                                        version="any",
-                                                                        ref="eura:can_access"
+                                                                        version='any',
+                                                                        ref='eura:can_access'
                                                                     ),
                                                                     limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         type_of_product_category_ref=[
                                                                             TypeOfProductCategoryRef(
-                                                                                version="any",
-                                                                                ref="eura:local"
+                                                                                version='any',
+                                                                                ref='eura:local'
                                                                             ),
                                                                             TypeOfProductCategoryRef(
-                                                                                version="any",
-                                                                                ref="eura:ice"
+                                                                                version='any',
+                                                                                ref='eura:ice'
                                                                             ),
                                                                         ]
                                                                     )
@@ -4451,87 +4451,87 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="db:DB@Tariff@General@access@classes",
-                                                    version="01",
+                                                    id='db:DB@Tariff@General@access@classes',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Available Classes"
+                                                        value='Available Classes'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="db:DB@Tariff@General@access@classes",
-                                                        version="01",
+                                                        id='db:DB@Tariff@General@access@classes',
+                                                        version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:can_access"
+                                                            version='any',
+                                                            ref='eura:can_access'
                                                         ),
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
-                                                                    ref="eura:first"
+                                                                    ref='eura:first'
                                                                 ),
                                                                 ClassOfUseRef(
-                                                                    ref="eura:second"
+                                                                    ref='eura:second'
                                                                 ),
                                                             ]
                                                         )
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="db:DB@Tariff@General@eligibility",
-                                                    version="01",
+                                                    id='db:DB@Tariff@General@eligibility',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="eligible user types"
+                                                        value='eligible user types'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="db:DB@Tariff@General@eligibility",
-                                                        version="01",
+                                                        id='db:DB@Tariff@General@eligibility',
+                                                        version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:eligible"
+                                                            version='any',
+                                                            ref='eura:eligible'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfile(
-                                                                    id="db:adult",
-                                                                    version="any",
+                                                                    id='db:adult',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Adult Fare - 15 or over"
+                                                                        value='Adult Fare - 15 or over'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Adult  - if not eligible for CONCESSION"
+                                                                        value='Adult  - if not eligible for CONCESSION'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:adult"
+                                                                        version='any',
+                                                                        ref='eura:adult'
                                                                     ),
                                                                     minimum_age=16,
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="db:adult@companion@infant",
-                                                                                version="any",
+                                                                                id='db:adult@companion@infant',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="Up to 2 Infants  under 5 are free for each adult"
+                                                                                    value='Up to 2 Infants  under 5 are free for each adult'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:infant"
+                                                                                    version='any',
+                                                                                    ref='db:infant'
                                                                                 ),
                                                                                 maximum_number_of_persons=2,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
                                                                             ),
                                                                             CompanionProfile(
-                                                                                id="db:adult@companion@small_animal",
-                                                                                version="any",
+                                                                                id='db:adult@companion@small_animal',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="Small animals are free"
+                                                                                    value='Small animals are free'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:small_animal"
+                                                                                    version='any',
+                                                                                    ref='db:small_animal'
                                                                                 ),
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
                                                                             ),
@@ -4539,19 +4539,19 @@ obj = PublicationDelivery(
                                                                     )
                                                                 ),
                                                                 UserProfile(
-                                                                    id="db:infant",
-                                                                    version="any",
+                                                                    id='db:infant',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Child under 6",
-                                                                        lang="en"
+                                                                        value='Child under 6',
+                                                                        lang='en'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Children aged up to and including 5 always travel for free within Germany, and they do not need a ticket. This is also the case if they are not travelling with parents or grandparents. To ensure that your children get a place on board the train, you can purchase a seat reservation for them as well."
+                                                                        value='Children aged up to and including 5 always travel for free within Germany, and they do not need a ticket. This is also the case if they are not travelling with parents or grandparents. To ensure that your children get a place on board the train, you can purchase a seat reservation for them as well.'
                                                                     ),
-                                                                    url="https://www.bahn.de/hilfe/view/pk/en/kindermitnahme.shtml",
+                                                                    url='https://www.bahn.de/hilfe/view/pk/en/kindermitnahme.shtml',
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:infant"
+                                                                        version='any',
+                                                                        ref='eura:infant'
                                                                     ),
                                                                     minimum_age=0,
                                                                     maximum_age=5,
@@ -4559,14 +4559,14 @@ obj = PublicationDelivery(
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfile(
-                                                                                id="db:infant@companion",
-                                                                                version="any",
+                                                                                id='db:infant@companion',
+                                                                                version='any',
                                                                                 name=MultilingualString(
-                                                                                    value="Infants must have paying adult with them. No seat"
+                                                                                    value='Infants must have paying adult with them. No seat'
                                                                                 ),
                                                                                 companion_profile_ref_or_user_profile_ref=UserProfileRef(
-                                                                                    version="any",
-                                                                                    ref="db:adult"
+                                                                                    version='any',
+                                                                                    ref='db:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
                                                                                 discount_basis=DiscountBasisEnumeration.FREE
@@ -4575,105 +4575,105 @@ obj = PublicationDelivery(
                                                                     )
                                                                 ),
                                                                 UserProfile(
-                                                                    id="db:child",
-                                                                    version="any",
+                                                                    id='db:child',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Child",
-                                                                        lang="en"
+                                                                        value='Child',
+                                                                        lang='en'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Children aged 6 to 14 travel for free if accompanying their own parents or grandparents. When the adult is buying their own ticket, they must specify any children/grandchildren and write their names on the ticket."
+                                                                        value='Children aged 6 to 14 travel for free if accompanying their own parents or grandparents. When the adult is buying their own ticket, they must specify any children/grandchildren and write their names on the ticket.'
                                                                     ),
-                                                                    url="https://www.bahn.de/hilfe/view/pk/en/kindermitnahme.shtml",
+                                                                    url='https://www.bahn.de/hilfe/view/pk/en/kindermitnahme.shtml',
                                                                     limiting_rule_ref_or_discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
-                                                                        version="any",
-                                                                        ref="db:child@rate"
+                                                                        version='any',
+                                                                        ref='db:child@rate'
                                                                     ),
                                                                     prices=UsageParameterPricesRelStructure(
                                                                         usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref=[
                                                                             UsageParameterPrice(
-                                                                                id="db:child@rate",
-                                                                                version="any",
+                                                                                id='db:child@rate',
+                                                                                version='any',
                                                                                 choice_1=LimitingRule(
-                                                                                    id="db:child@rate",
-                                                                                    version="any",
-                                                                                    discount_as_percentage=Decimal("0.50"),
+                                                                                    id='db:child@rate',
+                                                                                    version='any',
+                                                                                    discount_as_percentage=Decimal('0.50'),
                                                                                     can_be_cumulative=True
                                                                                 )
                                                                             ),
                                                                         ]
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:child"
+                                                                        version='any',
+                                                                        ref='eura:child'
                                                                     ),
                                                                     minimum_age=6,
                                                                     maximum_age=14,
                                                                     discount_basis=DiscountBasisEnumeration.DISCOUNT
                                                                 ),
                                                                 UserProfile(
-                                                                    id="db:youth",
-                                                                    version="any",
+                                                                    id='db:youth',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Youth - Withc ard only"
+                                                                        value='Youth - Withc ard only'
                                                                     ),
-                                                                    url="https://www.bahn.de/p/view/bahncard/ueberblick/jugendbahncard25.shtml",
+                                                                    url='https://www.bahn.de/p/view/bahncard/ueberblick/jugendbahncard25.shtml',
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:youth"
+                                                                        version='any',
+                                                                        ref='eura:youth'
                                                                     ),
                                                                     minimum_age=15,
                                                                     maximum_age=25,
                                                                     discount_basis=DiscountBasisEnumeration.DISCOUNT
                                                                 ),
                                                                 UserProfile(
-                                                                    id="db:senior",
-                                                                    version="any",
+                                                                    id='db:senior',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Senior"
+                                                                        value='Senior'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Only with railcard"
+                                                                        value='Only with railcard'
                                                                     ),
-                                                                    url="https://www.bahn.de/p/view/bahncard/ueberblick/bahncard_senioren.shtml",
+                                                                    url='https://www.bahn.de/p/view/bahncard/ueberblick/bahncard_senioren.shtml',
                                                                     prices=UsageParameterPricesRelStructure(
                                                                         usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref=[
                                                                             UsageParameterPrice(
-                                                                                id="db:senior@25",
-                                                                                version="any",
+                                                                                id='db:senior@25',
+                                                                                version='any',
                                                                                 choice_1=DiscountingRule(
-                                                                                    id="db:senior_rate@25",
-                                                                                    version="any",
-                                                                                    discount_as_percentage=Decimal("0.25")
+                                                                                    id='db:senior_rate@25',
+                                                                                    version='any',
+                                                                                    discount_as_percentage=Decimal('0.25')
                                                                                 )
                                                                             ),
                                                                             UsageParameterPrice(
-                                                                                id="db:senior@50",
-                                                                                version="any",
+                                                                                id='db:senior@50',
+                                                                                version='any',
                                                                                 choice_1=DiscountingRule(
-                                                                                    id="db:senior_rate@50",
-                                                                                    version="any",
-                                                                                    discount_as_percentage=Decimal("0.25")
+                                                                                    id='db:senior_rate@50',
+                                                                                    version='any',
+                                                                                    discount_as_percentage=Decimal('0.25')
                                                                                 )
                                                                             ),
                                                                         ]
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:senior"
+                                                                        version='any',
+                                                                        ref='eura:senior'
                                                                     ),
                                                                     minimum_age=60,
                                                                     discount_basis=DiscountBasisEnumeration.DISCOUNT
                                                                 ),
                                                                 UserProfile(
-                                                                    id="db:small_animal",
-                                                                    version="any",
+                                                                    id='db:small_animal',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Small Animal"
+                                                                        value='Small Animal'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
-                                                                        version="any",
-                                                                        ref="eura:animal"
+                                                                        version='any',
+                                                                        ref='eura:animal'
                                                                     ),
                                                                     discount_basis=DiscountBasisEnumeration.DISCOUNT
                                                                 ),
@@ -4682,91 +4682,91 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="db:DB@Tariff@General@trip_types",
-                                                    version="01",
+                                                    id='db:DB@Tariff@General@trip_types',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Available trip types"
+                                                        value='Available trip types'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="db:DB@Tariff@Trip@trip_type",
-                                                        version="01",
+                                                        id='db:DB@Tariff@Trip@trip_type',
+                                                        version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:can_access"
+                                                            version='any',
+                                                            ref='eura:can_access'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.OR,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@single",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@single',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Single"
+                                                                        value='Single'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.SINGLE
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@return",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@return',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Single"
+                                                                        value='Single'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.RETURN
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@return@outbound",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@return@outbound',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Return  any sort - Outbound"
+                                                                        value='Return  any sort - Outbound'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.SINGLE
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@return@inbound",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@return@inbound',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Return  any sort - Inbound"
+                                                                        value='Return  any sort - Inbound'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.RETURN_ONLY
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@period_return@outbound",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@period_return@outbound',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Period Return - Outbound"
+                                                                        value='Period Return - Outbound'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.SINGLE
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@period_return@inbound",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@period_return@inbound',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Period Return - Inbound"
+                                                                        value='Period Return - Inbound'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.RETURN_ONLY
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@day_return",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@day_return',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Single"
+                                                                        value='Single'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.RETURN
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@day_return@outbound",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@day_return@outbound',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Day Return - Outbound"
+                                                                        value='Day Return - Outbound'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.SINGLE
                                                                 ),
                                                                 RoundTrip(
-                                                                    id="db:DB@Tariff@Trip@trip_type@day_return@inbound",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@trip_type@day_return@inbound',
+                                                                    version='any',
                                                                     name=MultilingualString(
-                                                                        value="Day Return - Inbound"
+                                                                        value='Day Return - Inbound'
                                                                     ),
                                                                     trip_type=RoundTripTypeEnumeration.RETURN_ONLY
                                                                 ),
@@ -4775,36 +4775,36 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 FareStructureElement(
-                                                    id="db:DB@Tariff@General@frequency@single_use",
-                                                    version="01",
+                                                    id='db:DB@Tariff@General@frequency@single_use',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Group ticket"
+                                                        value='Group ticket'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="db:DB@Tariff@Trip@frequency",
-                                                        version="01",
+                                                        id='db:DB@Tariff@Trip@frequency',
+                                                        version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
-                                                            version="any",
-                                                            ref="eura:condition_of_use"
+                                                            version='any',
+                                                            ref='eura:condition_of_use'
                                                         ),
                                                         limitation_grouping_type=BooleanOperatorEnumeration.AND,
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 Interchanging(
-                                                                    id="db:DB@Tariff@Trip@interchanging@single_no_break",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@interchanging@single_no_break',
+                                                                    version='any',
                                                                     can_interchange=True,
                                                                     can_break_journey=False
                                                                 ),
                                                                 FrequencyOfUse(
-                                                                    id="db:DB@Tariff@Trip@frequency@single_use",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@frequency@single_use',
+                                                                    version='any',
                                                                     frequency_of_use_type=FrequencyOfUseTypeEnumeration.SINGLE
                                                                 ),
                                                                 Interchanging(
-                                                                    id="db:DB@Tariff@Trip@interchanging@can_break_trip",
-                                                                    version="any",
+                                                                    id='db:DB@Tariff@Trip@interchanging@can_break_trip',
+                                                                    version='any',
                                                                     can_interchange=True,
                                                                     can_break_journey=True
                                                                 ),
@@ -4817,132 +4817,132 @@ obj = PublicationDelivery(
                                         groups_of_distance_matrix_elements=GroupsOfDistanceMatrixElementsRelStructure(
                                             group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements=[
                                                 GroupOfDistanceMatrixElements(
-                                                    id="dbn:DB@ODs@de_de",
-                                                    version="01",
+                                                    id='dbn:DB@ODs@de_de',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="OD Pairs - Germany"
+                                                        value='OD Pairs - Germany'
                                                     ),
                                                     members=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
-                                                                value="Dresden hbf to Arnsdorf",
-                                                                version="01",
-                                                                ref="dbn:6050-to-6176"
+                                                                value='Dresden hbf to Arnsdorf',
+                                                                version='01',
+                                                                ref='dbn:6050-to-6176'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Dresden hbf to Grossharthau",
-                                                                version="01",
-                                                                ref="dbn:6050-to-6105"
+                                                                value='Dresden hbf to Grossharthau',
+                                                                version='01',
+                                                                ref='dbn:6050-to-6105'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Dresden hbf to Bischofswerda",
-                                                                version="01",
-                                                                ref="dbn:6050-to-6103"
+                                                                value='Dresden hbf to Bischofswerda',
+                                                                version='01',
+                                                                ref='dbn:6050-to-6103'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Dresden hbf to Bautzen",
-                                                                version="01",
-                                                                ref="dbn:6050-to-56145"
+                                                                value='Dresden hbf to Bautzen',
+                                                                version='01',
+                                                                ref='dbn:6050-to-56145'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Dresden hbf to Goerlitz",
-                                                                version="01",
-                                                                ref="dbn:6050-to-56715"
+                                                                value='Dresden hbf to Goerlitz',
+                                                                version='01',
+                                                                ref='dbn:6050-to-56715'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Arnsdorf to Grossharthau",
-                                                                version="01",
-                                                                ref="dbn:6176-to-6105"
+                                                                value='Arnsdorf to Grossharthau',
+                                                                version='01',
+                                                                ref='dbn:6176-to-6105'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Arnsdorf to Bischofswerda",
-                                                                version="01",
-                                                                ref="dbn:6176-to-6103"
+                                                                value='Arnsdorf to Bischofswerda',
+                                                                version='01',
+                                                                ref='dbn:6176-to-6103'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Arnsdorf to Bautzen",
-                                                                version="01",
-                                                                ref="dbn:6176-to-56145"
+                                                                value='Arnsdorf to Bautzen',
+                                                                version='01',
+                                                                ref='dbn:6176-to-56145'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Arnsdorf to Goerlitz",
-                                                                version="01",
-                                                                ref="dbn:6176-to-56715"
+                                                                value='Arnsdorf to Goerlitz',
+                                                                version='01',
+                                                                ref='dbn:6176-to-56715'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Grossharthau to Bischofswerda",
-                                                                version="01",
-                                                                ref="dbn:6105-to-6103"
+                                                                value='Grossharthau to Bischofswerda',
+                                                                version='01',
+                                                                ref='dbn:6105-to-6103'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Grossharthau to Bautzen",
-                                                                version="01",
-                                                                ref="dbn:6105-to-56145"
+                                                                value='Grossharthau to Bautzen',
+                                                                version='01',
+                                                                ref='dbn:6105-to-56145'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Grossharthau to Goerlitz",
-                                                                version="01",
-                                                                ref="dbn:6105-to-56715"
+                                                                value='Grossharthau to Goerlitz',
+                                                                version='01',
+                                                                ref='dbn:6105-to-56715'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Bischofswerda to Bautzen",
-                                                                version="01",
-                                                                ref="dbn:6103-to-56145"
+                                                                value='Bischofswerda to Bautzen',
+                                                                version='01',
+                                                                ref='dbn:6103-to-56145'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Bischofswerda to Goerlitz",
-                                                                version="01",
-                                                                ref="dbn:6103-to-56715"
+                                                                value='Bischofswerda to Goerlitz',
+                                                                version='01',
+                                                                ref='dbn:6103-to-56715'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Bautzen to Goerlitz",
-                                                                version="01",
-                                                                ref="dbn:56145-to-56715"
+                                                                value='Bautzen to Goerlitz',
+                                                                version='01',
+                                                                ref='dbn:56145-to-56715'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Dresden hbf to Wilthen",
-                                                                version="01",
-                                                                ref="dbn:6050-to-6129"
+                                                                value='Dresden hbf to Wilthen',
+                                                                version='01',
+                                                                ref='dbn:6050-to-6129'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Dresden hbf to Zittau",
-                                                                version="01",
-                                                                ref="dbn:6050-to-6113"
+                                                                value='Dresden hbf to Zittau',
+                                                                version='01',
+                                                                ref='dbn:6050-to-6113'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Arnsdorf to Wilthen",
-                                                                version="01",
-                                                                ref="dbn:6176-to-6129"
+                                                                value='Arnsdorf to Wilthen',
+                                                                version='01',
+                                                                ref='dbn:6176-to-6129'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Arnsdorf to Zittau",
-                                                                version="01",
-                                                                ref="dbn:6176-to-6113"
+                                                                value='Arnsdorf to Zittau',
+                                                                version='01',
+                                                                ref='dbn:6176-to-6113'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Grossharthau to Wilthen",
-                                                                version="01",
-                                                                ref="dbn:6105-to-6129"
+                                                                value='Grossharthau to Wilthen',
+                                                                version='01',
+                                                                ref='dbn:6105-to-6129'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Grossharthau to Zittau",
-                                                                version="01",
-                                                                ref="dbn:6105-to-6113"
+                                                                value='Grossharthau to Zittau',
+                                                                version='01',
+                                                                ref='dbn:6105-to-6113'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Bischofswerda to Wilthen",
-                                                                version="01",
-                                                                ref="dbn:6103-to-6129"
+                                                                value='Bischofswerda to Wilthen',
+                                                                version='01',
+                                                                ref='dbn:6103-to-6129'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Bischofswerda to Zittau",
-                                                                version="01",
-                                                                ref="dbn:6103-to-6113"
+                                                                value='Bischofswerda to Zittau',
+                                                                version='01',
+                                                                ref='dbn:6103-to-6113'
                                                             ),
                                                             DistanceMatrixElementRef(
-                                                                value="Wilthen to Zittau",
-                                                                version="01",
-                                                                ref="dbn:6129-to-6113"
+                                                                value='Wilthen to Zittau',
+                                                                version='01',
+                                                                ref='dbn:6129-to-6113'
                                                             ),
                                                         ]
                                                     )
@@ -4951,30 +4951,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Tariff(
-                                        id="db:DB@Sachsen_Ticket@de_de",
-                                        version="01",
+                                        id='db:DB@Sachsen_Ticket@de_de',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Saxony Ticket  Tariff"
+                                            value='Saxony Ticket  Tariff'
                                         ),
                                         description=MultilingualString(
-                                            value="The Saxony ticket is a Deutsche Bahn promotion .&#10;&#10;With the Saxony ticket up to five people travelling together can use 2nd class local trains belonging to any rail company in Saxony, Saxony-Anhalt and Thuringia for the whole day.&#10;&#10;It is valid on the day indicated on the ticket (Monday to Friday) for any number of journeys between 9am and 3am the following day. On Saturdays, Sundays and any bank holiday that applies throughout Saxony, you may use the Saxony ticket to travel before 9am.&#10; &#10;1. Prices&#10;1 person 24,00  EURO  7&#10;2 persons 31,00  EURO  7&#10;3 persons 38,00  EURO  7&#10;4 persons 45,00  EURO  7&#10;5 persons 52,00  EURO  7&#10;It is valid for single travelers or groups up to 5 persons (with a corresponding purchase). If you buy a ticket for 1 or 2 people, your own children and grandchildren up to and including the age of 14 pay the first person for free. &#10;&#10;The prices apply when buying tickets at ticket vending machines or at the trilex customer service representative or in the  online shop . An acquisition of the Sachsen-Ticket at Länderbahn- and trilex- Agencies as well as at DB-sales outlets has a surcharge of 2.00  EURO .   &#10;&#10;At the start of the journey, the ticket must be labeled with the name of the passenger who covers the furthest distance with this ticket.&#10;"
+                                            value='The Saxony ticket is a Deutsche Bahn promotion .\n\nWith the Saxony ticket up to five people travelling together can use 2nd class local trains belonging to any rail company in Saxony, Saxony-Anhalt and Thuringia for the whole day.\n\nIt is valid on the day indicated on the ticket (Monday to Friday) for any number of journeys between 9am and 3am the following day. On Saturdays, Sundays and any bank holiday that applies throughout Saxony, you may use the Saxony ticket to travel before 9am.\n \n1. Prices\n1 person 24,00  EURO  7\n2 persons 31,00  EURO  7\n3 persons 38,00  EURO  7\n4 persons 45,00  EURO  7\n5 persons 52,00  EURO  7\nIt is valid for single travelers or groups up to 5 persons (with a corresponding purchase). If you buy a ticket for 1 or 2 people, your own children and grandchildren up to and including the age of 14 pay the first person for free. \n\nThe prices apply when buying tickets at ticket vending machines or at the trilex customer service representative or in the  online shop . An acquisition of the Sachsen-Ticket at Länderbahn- and trilex- Agencies as well as at DB-sales outlets has a surcharge of 2.00  EURO .   \n\nAt the start of the journey, the ticket must be labeled with the name of the passenger who covers the furthest distance with this ticket.\n'
                                         ),
                                         choice=OperatorRef(
-                                            value="DBN",
-                                            version="any",
-                                            ref="db:VVO"
+                                            value='DBN',
+                                            version='any',
+                                            ref='db:VVO'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeInterval(
-                                                    id="db:DB@Sachsen_Ticket@1day",
-                                                    version="01",
+                                                    id='db:DB@Sachsen_Ticket@1day',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="1 day"
+                                                        value='1 day'
                                                     ),
                                                     start_time=XmlTime(0, 0, 0, 0),
                                                     end_time=XmlTime(2, 30, 0, 0),
@@ -4985,21 +4985,21 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="tlx:Trilex@Tariff@Sachsen_Ticket@zones",
-                                                    version="01",
+                                                    id='tlx:Trilex@Tariff@Sachsen_Ticket@zones',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden to Goerlitz section"
+                                                        value='Dresden to Goerlitz section'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="tlx:Trilex@Tariff@Sachsen_Ticket@sections",
-                                                        version="01",
+                                                        id='tlx:Trilex@Tariff@Sachsen_Ticket@sections',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.AND,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
-                                                                    version="01",
-                                                                    ref="dbn:Saxony@all"
+                                                                    version='01',
+                                                                    ref='dbn:Saxony@all'
                                                                 ),
                                                             ]
                                                         )
@@ -5010,48 +5010,48 @@ obj = PublicationDelivery(
                                         groups_of_distance_matrix_elements=GroupsOfDistanceMatrixElementsRelStructure(
                                             group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements=[
                                                 GroupOfDistanceMatrixElementsRef(
-                                                    ref="dbn:DBN@ODs@de@saxony"
+                                                    ref='dbn:DBN@ODs@de@saxony'
                                                 ),
                                             ]
                                         )
                                     ),
                                     Tariff(
-                                        id="db:EURO-NEISSE@Tariff@de_cz",
-                                        version="01",
+                                        id='db:EURO-NEISSE@Tariff@de_cz',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="EURO-NEISSE interregional  Tariff"
+                                            value='EURO-NEISSE interregional  Tariff'
                                         ),
                                         description=MultilingualString(
-                                            value="EURO NEISSE ticket&#10;The EURO-NEISSE-Ticket is a cheap day ticket if you want to continue in the Czech Republic or in Poland with other trains, buses and / or trams. It applies to any trips up to 4:00 each day of the following day.&#10;&#10;details&#10;Prices&#10;EURO-NEISSE-day ticket (1 person): 13,00  EURO &#10;EURO-NEISSE small group card (up to 5 persons): 27,00  EURO &#10;EURO-NEISSE bicycle day ticket: 4,00  EURO  &#10;An overview of the validity of EURO-NEISSE tickets can be found here. Further information can be found at  www.zvon.de/EURO-NEISSE-Ticket ."
+                                            value='EURO NEISSE ticket\nThe EURO-NEISSE-Ticket is a cheap day ticket if you want to continue in the Czech Republic or in Poland with other trains, buses and / or trams. It applies to any trips up to 4:00 each day of the following day.\n\ndetails\nPrices\nEURO-NEISSE-day ticket (1 person): 13,00  EURO \nEURO-NEISSE small group card (up to 5 persons): 27,00  EURO \nEURO-NEISSE bicycle day ticket: 4,00  EURO  \nAn overview of the validity of EURO-NEISSE tickets can be found here. Further information can be found at  www.zvon.de/EURO-NEISSE-Ticket .'
                                         ),
                                         choice=OperatorRef(
-                                            value="DBN",
-                                            version="any",
-                                            ref="uic:0080"
+                                            value='DBN',
+                                            version='any',
+                                            ref='uic:0080'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElement(
-                                                    id="db:EURO-NEISSE@Tariff@de_cz",
-                                                    version="01",
+                                                    id='db:EURO-NEISSE@Tariff@de_cz',
+                                                    version='01',
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
-                                                        id="db:EURO-NEISSE@Tariff@de_cz@lines",
-                                                        version="01",
+                                                        id='db:EURO-NEISSE@Tariff@de_cz@lines',
+                                                        version='01',
                                                         order=1,
                                                         validity_parameter_grouping_type=BooleanOperatorEnumeration.OR,
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             flexible_line_ref_or_line_ref=[
                                                                 LineRef(
-                                                                    version="01",
-                                                                    ref="db:RE2"
+                                                                    version='01',
+                                                                    ref='db:RE2'
                                                                 ),
                                                                 LineRef(
-                                                                    version="01",
-                                                                    ref="db:RB61"
+                                                                    version='01',
+                                                                    ref='db:RB61'
                                                                 ),
                                                             ]
                                                         )
@@ -5062,82 +5062,82 @@ obj = PublicationDelivery(
                                         distance_matrix_elements=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6103"
+                                                    value='Grossharthau to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Wilthern",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6129"
+                                                    value='Grossharthau to Wilthern',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6113"
+                                                    value='Grossharthau to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6105-to-54212"
+                                                    value='Grossharthau to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6105-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Wilthern",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6129"
+                                                    value='Bischofswerda to Wilthern',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6113"
+                                                    value='Bischofswerda to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6103-to-54212"
+                                                    value='Bischofswerda to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6103-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Wilthern to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6129-to-6113"
+                                                    value='Wilthern to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6129-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Wilthern to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6129-to-54212"
+                                                    value='Wilthern to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6129-to-54212'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Zittau to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6113-to-54212"
+                                                    value='Zittau to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6113-to-54212'
                                                 ),
                                             ]
                                         )
                                     ),
                                     Tariff(
-                                        id="db:DB@International_Tariff@de_de",
-                                        version="01",
+                                        id='db:DB@International_Tariff@de_de',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="DB International Tariff"
+                                            value='DB International Tariff'
                                         ),
                                         choice=OperatorRef(
-                                            value="DB",
-                                            version="any",
-                                            ref="uic:0080"
+                                            value='DB',
+                                            version='any',
+                                            ref='uic:0080'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
-                                            version="any",
-                                            ref="eura:point_to_point"
+                                            version='any',
+                                            ref='eura:point_to_point'
                                         ),
                                         groups_of_distance_matrix_elements=GroupsOfDistanceMatrixElementsRelStructure(
                                             group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements=[
                                                 GroupOfDistanceMatrixElementsRef(
-                                                    version="01",
-                                                    ref="dbn:DBN@ODs@de_pl"
+                                                    version='01',
+                                                    ref='dbn:DBN@ODs@de_pl'
                                                 ),
                                                 GroupOfDistanceMatrixElementsRef(
-                                                    version="01",
-                                                    ref="dbn:DBN@ODs@de_cz"
+                                                    version='01',
+                                                    ref='dbn:DBN@ODs@de_cz'
                                                 ),
                                             ]
                                         )
@@ -5146,46 +5146,46 @@ obj = PublicationDelivery(
                             )
                         ),
                         FareFrame(
-                            id="dbn:DBN@ODs",
-                            version="01",
-                            responsibility_set_ref_attribute="dbn:network@DBN",
+                            id='dbn:DBN@ODs',
+                            version='01',
+                            responsibility_set_ref_attribute='dbn:network@DBN',
                             name=MultilingualString(
-                                value="This frame holds stop points and distance matrix elements referenced by other frames"
+                                value='This frame holds stop points and distance matrix elements referenced by other frames'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
-                                        ref="dbn_data"
+                                        ref='dbn_data'
                                     ),
                                 ]
                             ),
                             fare_scheduled_stop_points=FareScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point_or_fare_scheduled_stop_point=[
                                     FareScheduledStopPoint(
-                                        id="uic:6176",
+                                        id='uic:6176',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1994, 8, 10, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="ARNSDORF(DRESDEN)",
-                                            lang="de"
+                                            value='ARNSDORF(DRESDEN)',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:DED25"
+                                                    ref='uic:NUTS:DED25'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="ARNSDORF"
+                                            value='ARNSDORF'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5197,30 +5197,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:56145",
+                                        id='uic:56145',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1994, 9, 1, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="BAUTZEN",
-                                            lang="de"
+                                            value='BAUTZEN',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:199"
+                                                    ref='uic:NUTS:199'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="BAUTZEN"
+                                            value='BAUTZEN'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5232,30 +5232,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:6103",
+                                        id='uic:6103',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1993, 1, 18, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="BISCHOFSWERDA",
-                                            lang="de"
+                                            value='BISCHOFSWERDA',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:DED24"
+                                                    ref='uic:NUTS:DED24'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="BISCHOFSWERDA"
+                                            value='BISCHOFSWERDA'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5267,7 +5267,7 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:6050",
+                                        id='uic:6050',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1993, 1, 18, 0, 0, 0, 0, 0)
@@ -5277,31 +5277,31 @@ obj = PublicationDelivery(
                                             alternative_text=[
                                                 AlternativeText(
                                                     text=MultilingualString(
-                                                        value="Dresden hbf",
-                                                        lang="en",
-                                                        text_id_type="Name"
+                                                        value='Dresden hbf',
+                                                        lang='en',
+                                                        text_id_type='Name'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="Dresden hbf",
-                                            lang="de"
+                                            value='Dresden hbf',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:199"
+                                                    ref='uic:NUTS:199'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="DRESDEN"
+                                            value='DRESDEN'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5313,30 +5313,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:56715",
+                                        id='uic:56715',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1994, 9, 1, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="GOERLITZ",
-                                            lang="de"
+                                            value='GOERLITZ',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:199"
+                                                    ref='uic:NUTS:199'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="GOERLITZ"
+                                            value='GOERLITZ'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5347,30 +5347,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:6105",
+                                        id='uic:6105',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1993, 11, 19, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="GROSSHARTHAU",
-                                            lang="de"
+                                            value='GROSSHARTHAU',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:DED24"
+                                                    ref='uic:NUTS:DED24'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="GROSSHARTHAU"
+                                            value='GROSSHARTHAU'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5382,30 +5382,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:54212",
+                                        id='uic:54212',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1993, 11, 19, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0054",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0054',
                                         name=MultilingualString(
-                                            value="LIBEREC",
-                                            lang="cz"
+                                            value='LIBEREC',
+                                            lang='cz'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:CZ051"
+                                                    ref='uic:NUTS:CZ051'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="LIBEREC"
+                                            value='LIBEREC'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5416,30 +5416,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:56719",
+                                        id='uic:56719',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1993, 8, 10, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0054",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0054',
                                         name=MultilingualString(
-                                            value="RYBNISTE",
-                                            lang="de"
+                                            value='RYBNISTE',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:DED28"
+                                                    ref='uic:NUTS:DED28'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="RYBNISTE"
+                                            value='RYBNISTE'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5450,30 +5450,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:6121",
+                                        id='uic:6121',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1994, 8, 10, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="SEIFHENNERSDORF",
-                                            lang="de"
+                                            value='SEIFHENNERSDORF',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:DED28"
+                                                    ref='uic:NUTS:DED28'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="SEIFHENNERSDORF"
+                                            value='SEIFHENNERSDORF'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5484,27 +5484,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:96045",
+                                        id='uic:96045',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(2011, 11, 11, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="VARNSDORF",
-                                            lang="de"
+                                            value='VARNSDORF',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="VARNSDORF"
+                                            value='VARNSDORF'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5515,30 +5515,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:6129",
+                                        id='uic:6129',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1994, 8, 10, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="WILTHEN",
-                                            lang="de"
+                                            value='WILTHEN',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:DED24"
+                                                    ref='uic:NUTS:DED24'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="WILTHEN"
+                                            value='WILTHEN'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5549,30 +5549,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:6010",
+                                        id='uic:6010',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1993, 1, 1, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0051",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0051',
                                         name=MultilingualString(
-                                            value="WROCLAW GLOWNY",
-                                            lang="pl"
+                                            value='WROCLAW GLOWNY',
+                                            lang='pl'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:PL51"
+                                                    ref='uic:NUTS:PL51'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="WROCLAW"
+                                            value='WROCLAW'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5583,30 +5583,30 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     FareScheduledStopPoint(
-                                        id="uic:6113",
+                                        id='uic:6113',
                                         validity_conditions_or_valid_between=[
                                             ValidBetween(
                                                 from_date=XmlDateTime(1993, 1, 18, 0, 0, 0, 0, 0)
                                             ),
                                         ],
-                                        version="01",
-                                        responsibility_set_ref_attribute="uic:Station_Management@0080",
+                                        version='01',
+                                        responsibility_set_ref_attribute='uic:Station_Management@0080',
                                         name=MultilingualString(
-                                            value="ZITTAU",
-                                            lang="de"
+                                            value='ZITTAU',
+                                            lang='de'
                                         ),
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
-                                                    ref="uic:Type_of_Point@00"
+                                                    ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
-                                                    ref="uic:NUTS:DED28"
+                                                    ref='uic:NUTS:DED28'
                                                 ),
                                             ]
                                         ),
                                         short_name=MultilingualString(
-                                            value="ZITTAU"
+                                            value='ZITTAU'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -5622,235 +5622,235 @@ obj = PublicationDelivery(
                             fare_zones=FareZonesInFrameRelStructure(
                                 fare_zone=[
                                     FareZone(
-                                        id="dbn:Saxony@all",
-                                        version="01",
+                                        id='dbn:Saxony@all',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Ganz Sachsen",
-                                            lang="de"
+                                            value='Ganz Sachsen',
+                                            lang='de'
                                         )
                                     ),
                                     FareZone(
-                                        id="dbn:Saxony@Saxony",
-                                        version="01",
+                                        id='dbn:Saxony@Saxony',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Sachsen",
-                                            lang="de"
+                                            value='Sachsen',
+                                            lang='de'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Sachsen",
-                                            lang="de"
+                                            value='Sachsen',
+                                            lang='de'
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
-                                            version="01",
-                                            ref="dbn:Saxony@all"
+                                            version='01',
+                                            ref='dbn:Saxony@all'
                                         )
                                     ),
                                     FareZone(
-                                        id="dbn:Saxony@Anhalt",
-                                        version="01",
+                                        id='dbn:Saxony@Anhalt',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Sachsen-Anhalt",
-                                            lang="de"
+                                            value='Sachsen-Anhalt',
+                                            lang='de'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Sachsen-Anhalt",
-                                            lang="de"
+                                            value='Sachsen-Anhalt',
+                                            lang='de'
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
-                                            version="01",
-                                            ref="dbn:Saxony@all"
+                                            version='01',
+                                            ref='dbn:Saxony@all'
                                         )
                                     ),
                                     FareZone(
-                                        id="dbn:Saxony@Thuringia",
-                                        version="01",
+                                        id='dbn:Saxony@Thuringia',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Thüringen",
-                                            lang="de"
+                                            value='Thüringen',
+                                            lang='de'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Thüringen ",
-                                            lang="de"
+                                            value='Thüringen ',
+                                            lang='de'
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
-                                            version="01",
-                                            ref="dbn:Saxony@all"
+                                            version='01',
+                                            ref='dbn:Saxony@all'
                                         )
                                     ),
                                     FareZone(
-                                        id="dbn:Saxony@10@Dresden",
-                                        version="01",
+                                        id='dbn:Saxony@10@Dresden',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Dresden fare zone"
+                                            value='Dresden fare zone'
                                         ),
                                         short_name=MultilingualString(
-                                            value="10"
+                                            value='10'
                                         ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
-                                                    value="Dresden",
-                                                    version="01",
-                                                    ref="uic:6050"
+                                                    value='Dresden',
+                                                    version='01',
+                                                    ref='uic:6050'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Dresden MITTE",
-                                                    ref="uic:6218",
-                                                    version_ref="TODO"
+                                                    value='Dresden MITTE',
+                                                    ref='uic:6218',
+                                                    version_ref='TODO'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Dresden NEUSTADT",
-                                                    ref="uic:6216",
-                                                    version_ref="TODO"
+                                                    value='Dresden NEUSTADT',
+                                                    ref='uic:6216',
+                                                    version_ref='TODO'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Dresden INDUSTRIEGEL",
-                                                    ref="uic:6214",
-                                                    version_ref="TODO"
+                                                    value='Dresden INDUSTRIEGEL',
+                                                    ref='uic:6214',
+                                                    version_ref='TODO'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Dresden KLOTZSCHE",
-                                                    ref="uic:6213",
-                                                    version_ref="TODO"
+                                                    value='Dresden KLOTZSCHE',
+                                                    ref='uic:6213',
+                                                    version_ref='TODO'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="LANGEBRUECK(SACHS)",
-                                                    ref="uic:6212",
-                                                    version_ref="TODO"
+                                                    value='LANGEBRUECK(SACHS)',
+                                                    ref='uic:6212',
+                                                    version_ref='TODO'
                                                 ),
                                             ]
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
-                                            version="01",
-                                            ref="dbn:Saxony@all"
+                                            version='01',
+                                            ref='dbn:Saxony@all'
                                         ),
                                         zone_topology=ZoneTopologyEnumeration.TILED
                                     ),
                                     FareZone(
-                                        id="dbn:Saxony@30@ZVON",
-                                        version="01",
+                                        id='dbn:Saxony@30@ZVON',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="ZVON fare zone"
+                                            value='ZVON fare zone'
                                         ),
                                         short_name=MultilingualString(
-                                            value="30"
+                                            value='30'
                                         ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
-                                                    value="RADEBURG",
-                                                    ref="uic:6907",
-                                                    version_ref="TODO"
+                                                    value='RADEBURG',
+                                                    ref='uic:6907',
+                                                    version_ref='TODO'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Grossharthau",
-                                                    version="01",
-                                                    ref="uic:6105"
+                                                    value='Grossharthau',
+                                                    version='01',
+                                                    ref='uic:6105'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Bischofswerda",
-                                                    version="01",
-                                                    ref="uic:6103"
+                                                    value='Bischofswerda',
+                                                    version='01',
+                                                    ref='uic:6103'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Wiltern",
-                                                    version="01",
-                                                    ref="uic:6129"
+                                                    value='Wiltern',
+                                                    version='01',
+                                                    ref='uic:6129'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Zittau",
-                                                    version="01",
-                                                    ref="uic:6113"
+                                                    value='Zittau',
+                                                    version='01',
+                                                    ref='uic:6113'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Bautzen",
-                                                    version="01",
-                                                    ref="uic:56145"
+                                                    value='Bautzen',
+                                                    version='01',
+                                                    ref='uic:56145'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Goerlitz",
-                                                    version="01",
-                                                    ref="uic:56715"
+                                                    value='Goerlitz',
+                                                    version='01',
+                                                    ref='uic:56715'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Varnsdorf",
-                                                    version="01",
-                                                    ref="uic:96045"
+                                                    value='Varnsdorf',
+                                                    version='01',
+                                                    ref='uic:96045'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Seifhennersdorf",
-                                                    version="01",
-                                                    ref="uic:6121"
+                                                    value='Seifhennersdorf',
+                                                    version='01',
+                                                    ref='uic:6121'
                                                 ),
                                             ]
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
-                                            version="01",
-                                            ref="dbn:Saxony@all"
+                                            version='01',
+                                            ref='dbn:Saxony@all'
                                         ),
                                         zone_topology=ZoneTopologyEnumeration.TILED
                                     ),
                                     FareZone(
-                                        id="dbn:Saxony@31@Radeburg",
-                                        version="01",
+                                        id='dbn:Saxony@31@Radeburg',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Radeburg"
+                                            value='Radeburg'
                                         ),
                                         short_name=MultilingualString(
-                                            value="31"
+                                            value='31'
                                         ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
-                                                    value="RADEBURG",
-                                                    ref="uic:6907",
-                                                    version_ref="TODO"
+                                                    value='RADEBURG',
+                                                    ref='uic:6907',
+                                                    version_ref='TODO'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Arnsdorf",
-                                                    version="01",
-                                                    ref="uic:6176"
+                                                    value='Arnsdorf',
+                                                    version='01',
+                                                    ref='uic:6176'
                                                 ),
                                             ]
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
-                                            version="01",
-                                            ref="dbn:Saxony@all"
+                                            version='01',
+                                            ref='dbn:Saxony@all'
                                         ),
                                         zone_topology=ZoneTopologyEnumeration.TILED
                                     ),
                                     FareZone(
-                                        id="dbn:TL70",
-                                        version="01",
+                                        id='dbn:TL70',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="TL70 crossborder "
+                                            value='TL70 crossborder '
                                         ),
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 FareScheduledStopPointRef(
-                                                    value="Zittau",
-                                                    version="01",
-                                                    ref="uic:6113"
+                                                    value='Zittau',
+                                                    version='01',
+                                                    ref='uic:6113'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Varnsdorf",
-                                                    version="01",
-                                                    ref="uic:96045"
+                                                    value='Varnsdorf',
+                                                    version='01',
+                                                    ref='uic:96045'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Rybniste",
-                                                    version="01",
-                                                    ref="uic:56719"
+                                                    value='Rybniste',
+                                                    version='01',
+                                                    ref='uic:56719'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Seifhennersdorf",
-                                                    version="01",
-                                                    ref="uic:6121"
+                                                    value='Seifhennersdorf',
+                                                    version='01',
+                                                    ref='uic:6121'
                                                 ),
                                                 FareScheduledStopPointRef(
-                                                    value="Liberec",
-                                                    version="01",
-                                                    ref="uic:54212"
+                                                    value='Liberec',
+                                                    version='01',
+                                                    ref='uic:54212'
                                                 ),
                                             ]
                                         ),
@@ -5861,683 +5861,683 @@ obj = PublicationDelivery(
                             groups_of_distance_matrix_elements=GroupsOfDistanceMatrixElementsRelStructure(
                                 group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements=[
                                     GroupOfDistanceMatrixElements(
-                                        id="dbn:DBN@ODs@de_de",
-                                        version="01",
+                                        id='dbn:DBN@ODs@de_de',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="OD Pairs - Germany"
+                                            value='OD Pairs - Germany'
                                         ),
                                         members=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-6176",
-                                                    version="01",
+                                                    id='dbn:6050-to-6176',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Arnsdorf"
+                                                        value='Dresden hbf to Arnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-6105",
-                                                    version="01",
+                                                    id='dbn:6050-to-6105',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Grossharthau"
+                                                        value='Dresden hbf to Grossharthau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-6103",
-                                                    version="01",
+                                                    id='dbn:6050-to-6103',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Bischofswerda"
+                                                        value='Dresden hbf to Bischofswerda'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-56145",
-                                                    version="01",
+                                                    id='dbn:6050-to-56145',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Bautzen"
+                                                        value='Dresden hbf to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56145"
+                                                        version='01',
+                                                        ref='uic:56145'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-56715",
-                                                    version="01",
+                                                    id='dbn:6050-to-56715',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Goerlitz"
+                                                        value='Dresden hbf to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56715"
+                                                        version='01',
+                                                        ref='uic:56715'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-6105",
-                                                    version="01",
+                                                    id='dbn:6176-to-6105',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Grossharthau"
+                                                        value='Arnsdorf to Grossharthau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-6103",
-                                                    version="01",
+                                                    id='dbn:6176-to-6103',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Bischofswerda"
+                                                        value='Arnsdorf to Bischofswerda'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-56145",
-                                                    version="01",
+                                                    id='dbn:6176-to-56145',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Bautzen"
+                                                        value='Arnsdorf to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56145"
+                                                        version='01',
+                                                        ref='uic:56145'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-56715",
-                                                    version="01",
+                                                    id='dbn:6176-to-56715',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Goerlitz"
+                                                        value='Arnsdorf to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56715"
+                                                        version='01',
+                                                        ref='uic:56715'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6105-to-6103",
-                                                    version="01",
+                                                    id='dbn:6105-to-6103',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Grossharthau to Bischofswerda"
+                                                        value='Grossharthau to Bischofswerda'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6105-to-56145",
-                                                    version="01",
+                                                    id='dbn:6105-to-56145',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Grossharthau to Bautzen"
+                                                        value='Grossharthau to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56145"
+                                                        version='01',
+                                                        ref='uic:56145'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6105-to-56715",
-                                                    version="01",
+                                                    id='dbn:6105-to-56715',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Grossharthau to Goerlitz"
+                                                        value='Grossharthau to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56715"
+                                                        version='01',
+                                                        ref='uic:56715'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6103-to-56145",
-                                                    version="01",
+                                                    id='dbn:6103-to-56145',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bischofswerda to Bautzen"
+                                                        value='Bischofswerda to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56145"
+                                                        version='01',
+                                                        ref='uic:56145'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6103-to-56715",
-                                                    version="01",
+                                                    id='dbn:6103-to-56715',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bischofswerda to Goerlitz"
+                                                        value='Bischofswerda to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56715"
+                                                        version='01',
+                                                        ref='uic:56715'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:56145-to-56715",
-                                                    version="01",
+                                                    id='dbn:56145-to-56715',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bautzen to Goerlitz"
+                                                        value='Bautzen to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56145"
+                                                        version='01',
+                                                        ref='uic:56145'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56715"
+                                                        version='01',
+                                                        ref='uic:56715'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-6129",
-                                                    version="01",
+                                                    id='dbn:6050-to-6129',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Wilthen"
+                                                        value='Dresden hbf to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6129"
+                                                        version='01',
+                                                        ref='uic:6129'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-6113",
-                                                    version="01",
+                                                    id='dbn:6050-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Zittau"
+                                                        value='Dresden hbf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-6129",
-                                                    version="01",
+                                                    id='dbn:6176-to-6129',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Wilthen"
+                                                        value='Arnsdorf to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6129"
+                                                        version='01',
+                                                        ref='uic:6129'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-6113",
-                                                    version="01",
+                                                    id='dbn:6176-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Zittau"
+                                                        value='Arnsdorf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6105-to-6129",
-                                                    version="01",
+                                                    id='dbn:6105-to-6129',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Grossharthau to Wilthen"
+                                                        value='Grossharthau to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6129"
+                                                        version='01',
+                                                        ref='uic:6129'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6105-to-6113",
-                                                    version="01",
+                                                    id='dbn:6105-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Grossharthau to Zittau"
+                                                        value='Grossharthau to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6103-to-6129",
-                                                    version="01",
+                                                    id='dbn:6103-to-6129',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bischofswerda to Wilthen"
+                                                        value='Bischofswerda to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6129"
+                                                        version='01',
+                                                        ref='uic:6129'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6103-to-6113",
-                                                    version="01",
+                                                    id='dbn:6103-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bischofswerda to Zittau"
+                                                        value='Bischofswerda to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6129-to-6113",
-                                                    version="01",
+                                                    id='dbn:6129-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Wilthen to Zittau"
+                                                        value='Wilthen to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6129"
+                                                        version='01',
+                                                        ref='uic:6129'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6113-to-96045",
-                                                    version="01",
+                                                    id='dbn:6113-to-96045',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Zittau  to Varnsdorf"
+                                                        value='Zittau  to Varnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:96045"
+                                                        version='01',
+                                                        ref='uic:96045'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6113-to-6121",
-                                                    version="01",
+                                                    id='dbn:6113-to-6121',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Zittau  to Seifhennersdorf"
+                                                        value='Zittau  to Seifhennersdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6121"
+                                                        version='01',
+                                                        ref='uic:6121'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6113-to-56719",
-                                                    version="01",
+                                                    id='dbn:6113-to-56719',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Zittau  to Rybniste"
+                                                        value='Zittau  to Rybniste'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56719"
+                                                        version='01',
+                                                        ref='uic:56719'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:96045-to-6121",
-                                                    version="01",
+                                                    id='dbn:96045-to-6121',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Varnsdorf  to Seifhennersdorf"
+                                                        value='Varnsdorf  to Seifhennersdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:96045"
+                                                        version='01',
+                                                        ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6121"
+                                                        version='01',
+                                                        ref='uic:6121'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:96045-to-56719",
-                                                    version="01",
+                                                    id='dbn:96045-to-56719',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Varnsdorf  to Rybniste"
+                                                        value='Varnsdorf  to Rybniste'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:96045"
+                                                        version='01',
+                                                        ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56719"
+                                                        version='01',
+                                                        ref='uic:56719'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     GroupOfDistanceMatrixElements(
-                                        id="dbn:DBN@ODs@de@saxony",
-                                        version="01",
+                                        id='dbn:DBN@ODs@de@saxony',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="OD Pairs - Saxony"
+                                            value='OD Pairs - Saxony'
                                         ),
                                         members=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Arnsdorf",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6176"
+                                                    value='Dresden hbf to Arnsdorf',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6176'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6105"
+                                                    value='Dresden hbf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6103"
+                                                    value='Dresden hbf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56145"
+                                                    value='Dresden hbf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6050-to-56715"
+                                                    value='Dresden hbf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6050-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Grossharthau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6105"
+                                                    value='Arnsdorf to Grossharthau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6105'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6103"
+                                                    value='Arnsdorf to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56145"
+                                                    value='Arnsdorf to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6176-to-56715"
+                                                    value='Arnsdorf to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6176-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bischofswerda",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6103"
+                                                    value='Grossharthau to Bischofswerda',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6103'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56145"
+                                                    value='Grossharthau to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6105-to-56715"
+                                                    value='Grossharthau to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6105-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Bautzen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56145"
+                                                    value='Bischofswerda to Bautzen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56145'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:6103-to-56715"
+                                                    value='Bischofswerda to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:6103-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bautzen to Goerlitz",
-                                                    version="01",
-                                                    ref="dbn:56145-to-56715"
+                                                    value='Bautzen to Goerlitz',
+                                                    version='01',
+                                                    ref='dbn:56145-to-56715'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6129"
+                                                    value='Dresden hbf to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Dresden hbf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6050-to-6113"
+                                                    value='Dresden hbf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6050-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6129"
+                                                    value='Arnsdorf to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Arnsdorf to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6176-to-6113"
+                                                    value='Arnsdorf to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6176-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6129"
+                                                    value='Grossharthau to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Grossharthau to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6105-to-6113"
+                                                    value='Grossharthau to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6105-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Wilthen",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6129"
+                                                    value='Bischofswerda to Wilthen',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6129'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Bischofswerda to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6103-to-6113"
+                                                    value='Bischofswerda to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6103-to-6113'
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Wilthen to Zittau",
-                                                    version="01",
-                                                    ref="dbn:6129-to-6113"
+                                                    value='Wilthen to Zittau',
+                                                    version='01',
+                                                    ref='dbn:6129-to-6113'
                                                 ),
                                             ]
                                         )
                                     ),
                                     GroupOfDistanceMatrixElements(
-                                        id="dbn:DBN@ODs@de_cz",
-                                        version="01",
+                                        id='dbn:DBN@ODs@de_cz',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="OD Pairs"
+                                            value='OD Pairs'
                                         ),
                                         members=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-54212",
-                                                    version="01",
+                                                    id='dbn:6050-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Liberec"
+                                                        value='Dresden hbf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     ),
                                                     series_constraints=SeriesConstraintsRelStructure(
                                                         series_constraint_ref_or_series_constraint=[
                                                             SeriesConstraint(
-                                                                id="dbn:6050-to-54212",
-                                                                version="01",
+                                                                id='dbn:6050-to-54212',
+                                                                version='01',
                                                                 name=MultilingualString(
-                                                                    value="Dresden hbf to Liberec"
+                                                                    value='Dresden hbf to Liberec'
                                                                 ),
                                                                 fare_points_in_pattern=[
                                                                     FarePointsInPatternRelStructure(
                                                                         fare_point_in_pattern_ref_or_fare_point_in_pattern=[
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-54212@6050",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-54212@6050',
+                                                                                version='01',
                                                                                 order=1,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Dresden",
-                                                                                    version="01",
-                                                                                    ref="uic:6050"
+                                                                                    value='Dresden',
+                                                                                    version='01',
+                                                                                    ref='uic:6050'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-54212@6176",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-54212@6176',
+                                                                                version='01',
                                                                                 order=2,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Arnsdorf",
-                                                                                    version="01",
-                                                                                    ref="uic:6176"
+                                                                                    value='Arnsdorf',
+                                                                                    version='01',
+                                                                                    ref='uic:6176'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-54212@6105",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-54212@6105',
+                                                                                version='01',
                                                                                 order=3,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Grossharthau",
-                                                                                    version="01",
-                                                                                    ref="uic:6105"
+                                                                                    value='Grossharthau',
+                                                                                    version='01',
+                                                                                    ref='uic:6105'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-54212@6103",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-54212@6103',
+                                                                                version='01',
                                                                                 order=4,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Bischofswerda",
-                                                                                    version="01",
-                                                                                    ref="uic:6103"
+                                                                                    value='Bischofswerda',
+                                                                                    version='01',
+                                                                                    ref='uic:6103'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-54212@6129",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-54212@6129',
+                                                                                version='01',
                                                                                 order=5,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Wilthen",
-                                                                                    version="01",
-                                                                                    ref="uic:6129"
+                                                                                    value='Wilthen',
+                                                                                    version='01',
+                                                                                    ref='uic:6129'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-54212@6113",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-54212@6113',
+                                                                                version='01',
                                                                                 order=6,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Zittau",
-                                                                                    version="01",
-                                                                                    ref="uic:6113"
+                                                                                    value='Zittau',
+                                                                                    version='01',
+                                                                                    ref='uic:6113'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-54212@54212",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-54212@54212',
+                                                                                version='01',
                                                                                 order=7,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Liberec",
-                                                                                    version="01",
-                                                                                    ref="uic:54212"
+                                                                                    value='Liberec',
+                                                                                    version='01',
+                                                                                    ref='uic:54212'
                                                                                 )
                                                                             ),
                                                                         ]
@@ -6549,306 +6549,306 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-54212",
-                                                    version="01",
+                                                    id='dbn:6176-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Liberec"
+                                                        value='Arnsdorf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6105-to-54212",
-                                                    version="01",
+                                                    id='dbn:6105-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Grossharthau to Liberec"
+                                                        value='Grossharthau to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6103-to-54212",
-                                                    version="01",
+                                                    id='dbn:6103-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bischofswerda to Liberec"
+                                                        value='Bischofswerda to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6129-to-54212",
-                                                    version="01",
+                                                    id='dbn:6129-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Wilthen to Liberec"
+                                                        value='Wilthen to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6129"
+                                                        version='01',
+                                                        ref='uic:6129'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6113-to-54212",
-                                                    version="01",
+                                                    id='dbn:6113-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Zittau to Liberec"
+                                                        value='Zittau to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6121-to-96045",
-                                                    version="01",
+                                                    id='dbn:6121-to-96045',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Seifhennersdorf to Varnsdorf"
+                                                        value='Seifhennersdorf to Varnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6121"
+                                                        version='01',
+                                                        ref='uic:6121'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:96045"
+                                                        version='01',
+                                                        ref='uic:96045'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6121-to-6113",
-                                                    version="01",
+                                                    id='dbn:6121-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Seifhennersdorf to Zittau"
+                                                        value='Seifhennersdorf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6121"
+                                                        version='01',
+                                                        ref='uic:6121'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6121-to-54212",
-                                                    version="01",
+                                                    id='dbn:6121-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Seifhennersdorf to Liberec"
+                                                        value='Seifhennersdorf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6121"
+                                                        version='01',
+                                                        ref='uic:6121'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:56719-to-96045",
-                                                    version="01",
+                                                    id='dbn:56719-to-96045',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Rybniste to Varnsdorf"
+                                                        value='Rybniste to Varnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56719"
+                                                        version='01',
+                                                        ref='uic:56719'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:96045"
+                                                        version='01',
+                                                        ref='uic:96045'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:56719-to-6113",
-                                                    version="01",
+                                                    id='dbn:56719-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Rybniste to Zittau"
+                                                        value='Rybniste to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56719"
+                                                        version='01',
+                                                        ref='uic:56719'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:56719-to-54212",
-                                                    version="01",
+                                                    id='dbn:56719-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Rybniste to Liberec"
+                                                        value='Rybniste to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56719"
+                                                        version='01',
+                                                        ref='uic:56719'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:96045-to-6113",
-                                                    version="01",
+                                                    id='dbn:96045-to-6113',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Varnsdorf to Zittau"
+                                                        value='Varnsdorf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:96045"
+                                                        version='01',
+                                                        ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6113"
+                                                        version='01',
+                                                        ref='uic:6113'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:96045-to-54212",
-                                                    version="01",
+                                                    id='dbn:96045-to-54212',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Varnsdorf to Liberec"
+                                                        value='Varnsdorf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:96045"
+                                                        version='01',
+                                                        ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:54212"
+                                                        version='01',
+                                                        ref='uic:54212'
                                                     )
                                                 ),
                                                 DistanceMatrixElementRef(
-                                                    value="Zittau to Liberec",
-                                                    version="01",
-                                                    ref="dbn:6113-to-54212"
+                                                    value='Zittau to Liberec',
+                                                    version='01',
+                                                    ref='dbn:6113-to-54212'
                                                 ),
                                             ]
                                         )
                                     ),
                                     GroupOfDistanceMatrixElements(
-                                        id="dbn:DBN@ODs@de_pl",
-                                        version="01",
+                                        id='dbn:DBN@ODs@de_pl',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="OD Pairs"
+                                            value='OD Pairs'
                                         ),
                                         members=DistanceMatrixElementsRelStructure(
                                             distance_matrix_element_ref_or_distance_matrix_element=[
                                                 DistanceMatrixElement(
-                                                    id="dbn:6050-to-6010",
-                                                    version="01",
+                                                    id='dbn:6050-to-6010',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Dresden hbf to Wroclaw"
+                                                        value='Dresden hbf to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6050"
+                                                        version='01',
+                                                        ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6010"
+                                                        version='01',
+                                                        ref='uic:6010'
                                                     ),
                                                     series_constraints=SeriesConstraintsRelStructure(
                                                         series_constraint_ref_or_series_constraint=[
                                                             SeriesConstraint(
-                                                                id="dbn:6050-to-6010",
-                                                                version="01",
+                                                                id='dbn:6050-to-6010',
+                                                                version='01',
                                                                 fare_points_in_pattern=[
                                                                     FarePointsInPatternRelStructure(
                                                                         fare_point_in_pattern_ref_or_fare_point_in_pattern=[
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-6010@6050",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-6010@6050',
+                                                                                version='01',
                                                                                 order=1,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Dresden",
-                                                                                    version="01",
-                                                                                    ref="uic:6050"
+                                                                                    value='Dresden',
+                                                                                    version='01',
+                                                                                    ref='uic:6050'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-6010@6176",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-6010@6176',
+                                                                                version='01',
                                                                                 order=2,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Arnsdorf",
-                                                                                    version="01",
-                                                                                    ref="uic:6176"
+                                                                                    value='Arnsdorf',
+                                                                                    version='01',
+                                                                                    ref='uic:6176'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-6010@6105",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-6010@6105',
+                                                                                version='01',
                                                                                 order=3,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Grossharthau",
-                                                                                    version="01",
-                                                                                    ref="uic:6105"
+                                                                                    value='Grossharthau',
+                                                                                    version='01',
+                                                                                    ref='uic:6105'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-6010@6103",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-6010@6103',
+                                                                                version='01',
                                                                                 order=4,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Bischofswerda",
-                                                                                    version="01",
-                                                                                    ref="uic:6103"
+                                                                                    value='Bischofswerda',
+                                                                                    version='01',
+                                                                                    ref='uic:6103'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-6010@56145",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-6010@56145',
+                                                                                version='01',
                                                                                 order=5,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Bautzen",
-                                                                                    version="01",
-                                                                                    ref="uic:56145"
+                                                                                    value='Bautzen',
+                                                                                    version='01',
+                                                                                    ref='uic:56145'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-6010@56715",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-6010@56715',
+                                                                                version='01',
                                                                                 order=6,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Goertlitz",
-                                                                                    version="01",
-                                                                                    ref="uic:56715"
+                                                                                    value='Goertlitz',
+                                                                                    version='01',
+                                                                                    ref='uic:56715'
                                                                                 )
                                                                             ),
                                                                             FarePointInPattern(
-                                                                                id="tlx:6050-to-6010@6010",
-                                                                                version="01",
+                                                                                id='tlx:6050-to-6010@6010',
+                                                                                version='01',
                                                                                 order=7,
                                                                                 choice_1=FareScheduledStopPointRef(
-                                                                                    value="Wroclaw",
-                                                                                    version="01",
-                                                                                    ref="uic:6010"
+                                                                                    value='Wroclaw',
+                                                                                    version='01',
+                                                                                    ref='uic:6010'
                                                                                 )
                                                                             ),
                                                                         ]
@@ -6860,78 +6860,78 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6176-to-6010",
-                                                    version="01",
+                                                    id='dbn:6176-to-6010',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Arnsdorf to Wroclaw"
+                                                        value='Arnsdorf to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6176"
+                                                        version='01',
+                                                        ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6010"
+                                                        version='01',
+                                                        ref='uic:6010'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6105-to-6010",
-                                                    version="01",
+                                                    id='dbn:6105-to-6010',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Grossharthau to Wroclaw"
+                                                        value='Grossharthau to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6105"
+                                                        version='01',
+                                                        ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6010"
+                                                        version='01',
+                                                        ref='uic:6010'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:6103-to-6010",
-                                                    version="01",
+                                                    id='dbn:6103-to-6010',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bischofswerda to Wroclaw"
+                                                        value='Bischofswerda to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6103"
+                                                        version='01',
+                                                        ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6010"
+                                                        version='01',
+                                                        ref='uic:6010'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:56145-to-6010",
-                                                    version="01",
+                                                    id='dbn:56145-to-6010',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bautzen to Wroclaw"
+                                                        value='Bautzen to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56145"
+                                                        version='01',
+                                                        ref='uic:56145'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6010"
+                                                        version='01',
+                                                        ref='uic:6010'
                                                     )
                                                 ),
                                                 DistanceMatrixElement(
-                                                    id="dbn:56715-to-6010",
-                                                    version="01",
+                                                    id='dbn:56715-to-6010',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Goerlitz to Wroclaw"
+                                                        value='Goerlitz to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:56715"
+                                                        version='01',
+                                                        ref='uic:56715'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
-                                                        version="01",
-                                                        ref="uic:6010"
+                                                        version='01',
+                                                        ref='uic:6010'
                                                     )
                                                 ),
                                             ]
@@ -6941,80 +6941,80 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="dbn:DB@Lines",
-                            version="any",
-                            responsibility_set_ref_attribute="dbn:network@DB",
+                            id='dbn:DB@Lines',
+                            version='any',
+                            responsibility_set_ref_attribute='dbn:network@DB',
                             name=MultilingualString(
-                                value="Deutsche Bahn Network"
+                                value='Deutsche Bahn Network'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
-                                        ref="dbn_data"
+                                        ref='dbn_data'
                                     ),
                                 ]
                             ),
                             network=Network(
-                                id="dbn:DBN@Lines@Network",
-                                version="01",
+                                id='dbn:DBN@Lines@Network',
+                                version='01',
                                 name=MultilingualString(
-                                    value="UK Rail Network"
+                                    value='UK Rail Network'
                                 ),
                                 transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                 authority_ref_or_operator_ref=OperatorRef(
-                                    value="DBN",
-                                    version="any",
-                                    ref="uic:0080"
+                                    value='DBN',
+                                    version='any',
+                                    ref='uic:0080'
                                 )
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="db:RE1",
-                                        version="01",
+                                        id='db:RE1',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Dresden - Wroclaw",
-                                            lang="de"
+                                            value='Dresden - Wroclaw',
+                                            lang='de'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
                                     Line(
-                                        id="db:RB60",
-                                        version="01",
+                                        id='db:RB60',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Dresden - Wroclaw",
-                                            lang="de"
+                                            value='Dresden - Wroclaw',
+                                            lang='de'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.LOCAL
                                     ),
                                     Line(
-                                        id="db:RE2",
-                                        version="01",
+                                        id='db:RE2',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Dresden - Liberec",
-                                            lang="de"
+                                            value='Dresden - Liberec',
+                                            lang='de'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.EXPRESS
                                     ),
                                     Line(
-                                        id="db:RB61",
-                                        version="01",
+                                        id='db:RB61',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Dresden - Liberec",
-                                            lang="de"
+                                            value='Dresden - Liberec',
+                                            lang='de'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.LOCAL
                                     ),
                                     Line(
-                                        id="db:TL70",
-                                        version="01",
+                                        id='db:TL70',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Rybniste  - Liberec",
-                                            lang="de"
+                                            value='Rybniste  - Liberec',
+                                            lang='de'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         line_type=LineTypeEnumeration.LOCAL
@@ -7023,67 +7023,67 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="dbn:DBN@Common_Resources",
-                            version="any",
-                            responsibility_set_ref_attribute="dbn:network@DBN",
+                            id='dbn:DBN@Common_Resources',
+                            version='any',
+                            responsibility_set_ref_attribute='dbn:network@DBN',
                             name=MultilingualString(
-                                value="Germany Specifc  code values"
+                                value='Germany Specifc  code values'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="db_common",
-                                        xmlns="db",
-                                        xmlns_url="https://www.bahn.de/",
-                                        description="  common rail"
+                                        id='db_common',
+                                        xmlns='db',
+                                        xmlns_url='https://www.bahn.de/',
+                                        description='  common rail'
                                     ),
                                     Codespace(
-                                        id="dbn_data",
-                                        xmlns="dbn",
-                                        xmlns_url="https://www.bahn.de/",
-                                        description="DB network"
+                                        id='dbn_data',
+                                        xmlns='dbn',
+                                        xmlns_url='https://www.bahn.de/',
+                                        description='DB network'
                                     ),
                                     Codespace(
-                                        id="dbn:operator",
-                                        xmlns="dbn:operator",
-                                        xmlns_url="https://www.nationalrail.co.uk/",
-                                        description="Uk operators"
+                                        id='dbn:operator',
+                                        xmlns='dbn:operator',
+                                        xmlns_url='https://www.nationalrail.co.uk/',
+                                        description='Uk operators'
                                     ),
                                 ]
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
-                                    ref="dbn_data"
+                                    ref='dbn_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
-                                    version="any",
-                                    ref="dbn:example"
+                                    version='any',
+                                    ref='dbn:example'
                                 ),
                                 default_locale=LocaleStructure(
-                                    time_zone="CEST",
-                                    default_language="de",
+                                    time_zone='CEST',
+                                    default_language='de',
                                     languages=LocaleStructure.Languages(
                                         language_usage=[
                                             LanguageUsageStructure(
-                                                language="de",
+                                                language='de',
                                                 language_use=[
                                                     LanguageUseEnumeration.NORMALLY_USED,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="cz",
+                                                language='cz',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="pl",
+                                                language='pl',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
                                             ),
                                             LanguageUsageStructure(
-                                                language="en",
+                                                language='en',
                                                 language_use=[
                                                     LanguageUseEnumeration.SPOKEN,
                                                 ]
@@ -7091,73 +7091,73 @@ obj = PublicationDelivery(
                                         ]
                                     )
                                 ),
-                                default_location_system="WGS84",
+                                default_location_system='WGS84',
                                 default_system_of_units=SystemOfUnits.SI_KILOMETRES_AND_METRES,
-                                default_currency="GBP"
+                                default_currency='GBP'
                             ),
                             data_sources=DataSourcesInFrameRelStructure(
                                 data_source=[
                                     DataSource(
-                                        id="dbn:example",
-                                        version="any",
-                                        email="info@fahrweg.dbnetz.com"
+                                        id='dbn:example',
+                                        version='any',
+                                        email='info@fahrweg.dbnetz.com'
                                     ),
                                     DataSource(
-                                        id="abga:example",
-                                        version="any",
-                                        email="info@abga.eu"
+                                        id='abga:example',
+                                        version='any',
+                                        email='info@abga.eu'
                                     ),
                                 ]
                             ),
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="db:products@DB",
-                                        version="any",
+                                        id='db:products@DB',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="National Rail Products"
+                                            value='National Rail Products'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="db:products@DB",
-                                                    version="any",
+                                                    id='db:products@DB',
+                                                    version='any',
                                                     stakeholder_role_type=[
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="uic:0080"
+                                                        version='any',
+                                                        ref='uic:0080'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
-                                                        ref="dbn:de",
-                                                        version_ref="TODO"
+                                                        ref='dbn:de',
+                                                        version_ref='TODO'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="dbn:network@DB",
-                                        version="any",
+                                        id='dbn:network@DB',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="National Rail Products"
+                                            value='National Rail Products'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="dbn:network@DB",
-                                                    version="any",
+                                                    id='dbn:network@DB',
+                                                    version='any',
                                                     stakeholder_role_type=[
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="uic:0080"
+                                                        version='any',
+                                                        ref='uic:0080'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
-                                                        ref="dbn:de",
-                                                        version_ref="TODO"
+                                                        ref='dbn:de',
+                                                        version_ref='TODO'
                                                     )
                                                 ),
                                             ]
@@ -7168,37 +7168,37 @@ obj = PublicationDelivery(
                             types_of_value=TypesOfValueInFrameRelStructure(
                                 choice=[
                                     ValueSet(
-                                        id="db:Types_of_FareContract",
-                                        version="any",
+                                        id='db:Types_of_FareContract',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of Fare Contract"
+                                            value='Types of Fare Contract'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfFareContract(
-                                                    id="db:contract@pass@day",
-                                                    version="any",
+                                                    id='db:contract@pass@day',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="da Pass"
+                                                        value='da Pass'
                                                     )
                                                 ),
                                                 TypeOfFareContract(
-                                                    id="db:contract@trip",
-                                                    version="any",
+                                                    id='db:contract@trip',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Trip contract"
+                                                        value='Trip contract'
                                                     )
                                                 ),
                                                 TypeOfFareContract(
-                                                    id="db:contract@railcard",
-                                                    version="any",
+                                                    id='db:contract@railcard',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Railcard contract"
+                                                        value='Railcard contract'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfFareContract"
+                                        class_of_values='TypeOfFareContract'
                                     ),
                                 ]
                             )
@@ -7207,172 +7207,172 @@ obj = PublicationDelivery(
                 )
             ),
             CompositeFrame(
-                id="tlx-t:Trilex@Sample_Transactions",
-                data_source_ref_attribute="abga:example",
-                version="any",
-                responsibility_set_ref_attribute="tlx-t:sales@TLX",
+                id='tlx-t:Trilex@Sample_Transactions',
+                data_source_ref_attribute='abga:example',
+                version='any',
+                responsibility_set_ref_attribute='tlx-t:sales@TLX',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="tlx_transactions"
+                        ref='tlx_transactions'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version="any",
-                        ref="tlx:example"
+                        version='any',
+                        ref='tlx:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        version="any",
-                        ref="tlx-t:sales@TLX"
+                        version='any',
+                        ref='tlx-t:sales@TLX'
                     ),
-                    default_currency="EUR"
+                    default_currency='EUR'
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         SalesTransactionFrame(
-                            id="tlx-t:Trilex@Operator_Specific_Sample_Transactions",
+                            id='tlx-t:Trilex@Operator_Specific_Sample_Transactions',
                             validity_conditions_or_valid_between=[
                                 ValidBetween(
                                     from_date=XmlDateTime(2018, 7, 8, 4, 30, 0),
                                     to_date=XmlDateTime(2018, 8, 8, 4, 29, 0)
                                 ),
                             ],
-                            version="any",
-                            responsibility_set_ref_attribute="tlx-t:sales@TLX",
+                            version='any',
+                            responsibility_set_ref_attribute='tlx-t:sales@TLX',
                             name=MultilingualString(
-                                value="Sample Transactions"
+                                value='Sample Transactions'
                             ),
                             description=MultilingualString(
-                                value="Netex code example based on   Trilex de  data"
+                                value='Netex code example based on   Trilex de  data'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="tlx_transactions",
-                                        xmlns="tlx-t",
-                                        xmlns_url="https://www.trilex.de/",
-                                        description="Trilex transactions"
+                                        id='tlx_transactions',
+                                        xmlns='tlx-t',
+                                        xmlns_url='https://www.trilex.de/',
+                                        description='Trilex transactions'
                                     ),
                                 ]
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
-                                    ref="tlx_transactions"
+                                    ref='tlx_transactions'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
-                                    version="any",
-                                    ref="tlx:example"
+                                    version='any',
+                                    ref='tlx:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="any",
-                                    ref="tlx-t:sales@TLX"
+                                    version='any',
+                                    ref='tlx-t:sales@TLX'
                                 )
                             ),
                             fare_contracts=FareContractsInFrameRelStructure(
                                 fare_contract=[
                                     FareContract(
-                                        id="tlx-t:ANONYMOUS@transactions",
-                                        version="any",
+                                        id='tlx-t:ANONYMOUS@transactions',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Anonymous transactions for 2018 07"
+                                            value='Anonymous transactions for 2018 07'
                                         ),
                                         start_date=XmlDateTime(2018, 7, 8, 4, 30, 0),
                                         end_date=XmlDateTime(2018, 8, 8, 4, 29, 0),
                                         customer_ref=CustomerRef(
-                                            ref="tlx-t:ANONYMOUS",
-                                            version_ref="TODO"
+                                            ref='tlx-t:ANONYMOUS',
+                                            version_ref='TODO'
                                         ),
                                         type_of_fare_contract_ref=TypeOfFareContractRef(
-                                            version="any",
-                                            ref="db:contract@pass@day"
+                                            version='any',
+                                            ref='db:contract@pass@day'
                                         ),
                                         fare_contract_entries=FareContractEntriesRelStructure(
                                             choice=[
                                                 SalesTransaction(
-                                                    id="tlx-t:Anon001@trans001@purchase_ticket",
-                                                    version="any",
+                                                    id='tlx-t:Anon001@trans001@purchase_ticket',
+                                                    version='any',
                                                     branding_ref=BrandingRef(
-                                                        version="any",
-                                                        ref="tlx:Trilex@brand"
+                                                        version='any',
+                                                        ref='tlx:Trilex@brand'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Purchase of  Tagesticket for four passengers "
+                                                        value='Purchase of  Tagesticket for four passengers '
                                                     ),
                                                     date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
-                                                        version="any",
-                                                        ref="eura:product_purchase"
+                                                        version='any',
+                                                        ref='eura:product_purchase'
                                                     ),
-                                                    amount=Decimal("42.00"),
+                                                    amount=Decimal('42.00'),
                                                     payment_method=PaymentMethodEnumeration.CASH,
                                                     travel_specifications=TravelSpecificationsRelStructure(
                                                         choice=[
                                                             TravelSpecification1(
-                                                                id="tlx-t:Anon001@trans001@purchase_ticket",
-                                                                version="any",
+                                                                id='tlx-t:Anon001@trans001@purchase_ticket',
+                                                                version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                                 choice_1=UsageParameterPriceRef(
-                                                                    version="01",
-                                                                    ref="tlx:Trilex@Tariff@Tagesticket@4"
+                                                                    version='01',
+                                                                    ref='tlx:Trilex@Tariff@Tagesticket@4'
                                                                 ),
-                                                                amount=Decimal("42.00"),
-                                                                units=Decimal("4"),
+                                                                amount=Decimal('42.00'),
+                                                                units=Decimal('4'),
                                                                 start_of_validity=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                                 specific_parameter_assignments=SpecificParameterAssignmentsRelStructure(
                                                                     specific_parameter_assignment=[
                                                                         SpecificParameterAssignment(
-                                                                            id="tlx-t:Anon001@trans001@purchase_ticket@Tagesticket",
-                                                                            version="any",
+                                                                            id='tlx-t:Anon001@trans001@purchase_ticket@Tagesticket',
+                                                                            version='any',
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
-                                                                                version="01",
-                                                                                ref="tlx:Trilex@Product@Pass@Tagesticket@repeated_trip"
+                                                                                version='01',
+                                                                                ref='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip'
                                                                             ),
                                                                             choice=PreassignedFareProductRef(
-                                                                                version="01",
-                                                                                ref="tlx:Trilex@Product@Pass@Tagesticket"
+                                                                                version='01',
+                                                                                ref='tlx:Trilex@Product@Pass@Tagesticket'
                                                                             ),
                                                                             fare_structure_element_ref=FareStructureElementRef(
-                                                                                version="01",
-                                                                                ref="tlx:Trilex@Tariff@Tagesticket@COMPOSITION"
+                                                                                version='01',
+                                                                                ref='tlx:Trilex@Tariff@Tagesticket@COMPOSITION'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
-                                                                                version="01",
-                                                                                ref="tlx:Trilex@Product@Pass@Tagesticket@period-SOP"
+                                                                                version='01',
+                                                                                ref='tlx:Trilex@Product@Pass@Tagesticket@period-SOP'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     UserProfileRef(
-                                                                                        version="any",
-                                                                                        ref="db:adult"
+                                                                                        version='any',
+                                                                                        ref='db:adult'
                                                                                     ),
                                                                                     GroupTicketRef(
-                                                                                        version="01",
-                                                                                        ref="tlx:Trilex@Tariff@Tagesticket@group"
+                                                                                        version='01',
+                                                                                        ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                                     ),
                                                                                 ]
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 fare_section_ref=[
                                                                                     FareSectionRef(
-                                                                                        version="01",
-                                                                                        ref="tlx:Trilex@Dresden-to-Goerlitz"
+                                                                                        version='01',
+                                                                                        ref='tlx:Trilex@Dresden-to-Goerlitz'
                                                                                     ),
                                                                                 ],
                                                                                 class_of_use_ref=[
                                                                                     ClassOfUseRef(
-                                                                                        version="any",
-                                                                                        ref="eura:second"
+                                                                                        version='any',
+                                                                                        ref='eura:second'
                                                                                     ),
                                                                                 ],
                                                                                 type_of_travel_document_ref=[
                                                                                     TypeOfTravelDocumentRef(
-                                                                                        version="01",
-                                                                                        ref="eura:printed_ticket"
+                                                                                        version='01',
+                                                                                        ref='eura:printed_ticket'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
-                                                                                        version="01",
-                                                                                        ref="eura:self_service_ticket_machine"
+                                                                                        version='01',
+                                                                                        ref='eura:self_service_ticket_machine'
                                                                                     ),
                                                                                 ]
                                                                             )
@@ -7385,9 +7385,9 @@ obj = PublicationDelivery(
                                                     travel_documents=TravelDocumentsRelStructure(
                                                         travel_document_ref_or_travel_document=[
                                                             TravelDocumentRef(
-                                                                value="EXTERNAL REFERENCE",
-                                                                ref="tlx-t:Trilex-T145634010",
-                                                                version_ref="any"
+                                                                value='EXTERNAL REFERENCE',
+                                                                ref='tlx-t:Trilex-T145634010',
+                                                                version_ref='any'
                                                             ),
                                                         ]
                                                     )
@@ -7402,121 +7402,121 @@ obj = PublicationDelivery(
                 )
             ),
             CompositeFrame(
-                id="eura:EURA@Generic",
+                id='eura:EURA@Generic',
                 validity_conditions_or_valid_between=[
                     ValidBetween(
                         from_date=XmlDateTime(2017, 1, 1, 0, 0, 0),
                         to_date=XmlDateTime(2020, 12, 31, 12, 0, 0)
                     ),
                 ],
-                data_source_ref_attribute="eura:common_example",
-                version="any",
-                responsibility_set_ref_attribute="eura:code_sets",
+                data_source_ref_attribute='eura:common_example',
+                version='any',
+                responsibility_set_ref_attribute='eura:code_sets',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="eura_data"
+                        ref='eura_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
-                        version="any",
-                        ref="eura:common_example"
+                        version='any',
+                        ref='eura:common_example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        version="any",
-                        ref="eura:code_sets"
+                        version='any',
+                        ref='eura:code_sets'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ResourceFrame(
-                            id="eura:EURA@Common_Resources",
-                            version="any",
-                            responsibility_set_ref_attribute="eura:code_sets",
+                            id='eura:EURA@Common_Resources',
+                            version='any',
+                            responsibility_set_ref_attribute='eura:code_sets',
                             name=MultilingualString(
-                                value="EURA Common Country independent  code values"
+                                value='EURA Common Country independent  code values'
                             ),
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     Codespace(
-                                        id="uic",
-                                        xmlns="uic",
-                                        xmlns_url="http://www.uic.org/",
-                                        description="UIC data"
+                                        id='uic',
+                                        xmlns='uic',
+                                        xmlns_url='http://www.uic.org/',
+                                        description='UIC data'
                                     ),
                                     Codespace(
-                                        id="eura_data",
-                                        xmlns="eura",
-                                        xmlns_url="http://www.era.eu/codes",
-                                        description="European Rail Authority"
+                                        id='eura_data',
+                                        xmlns='eura',
+                                        xmlns_url='http://www.era.eu/codes',
+                                        description='European Rail Authority'
                                     ),
                                 ]
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
-                                    ref="eura_data"
+                                    ref='eura_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
-                                    version="any",
-                                    ref="eura:common_example"
+                                    version='any',
+                                    ref='eura:common_example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="any",
-                                    ref="eura:code_sets"
+                                    version='any',
+                                    ref='eura:code_sets'
                                 ),
                                 default_locale=LocaleStructure(
-                                    default_language="en"
+                                    default_language='en'
                                 ),
-                                default_location_system="WGS84",
+                                default_location_system='WGS84',
                                 default_system_of_units=SystemOfUnits.SI_KILOMETRES_AND_METRES,
-                                default_currency="EUR"
+                                default_currency='EUR'
                             ),
                             data_sources=DataSourcesInFrameRelStructure(
                                 data_source=[
                                     DataSource(
-                                        id="eura:common_example",
-                                        version="any",
-                                        email="standards@eura.eu"
+                                        id='eura:common_example',
+                                        version='any',
+                                        email='standards@eura.eu'
                                     ),
                                 ]
                             ),
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="uic:Station_Management@0080",
-                                        version="any",
+                                        id='uic:Station_Management@0080',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="National Rail Stations"
+                                            value='National Rail Stations'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="uic:Station_Management@0080",
-                                                    version="any",
+                                                    id='uic:Station_Management@0080',
+                                                    version='any',
                                                     stakeholder_role_type=[
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="uic:Station_Management@0080"
+                                                        version='any',
+                                                        ref='uic:Station_Management@0080'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
-                                                        value="TODO",
-                                                        ref="dbn:uk"
+                                                        value='TODO',
+                                                        ref='dbn:uk'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="eura:code_sets",
-                                        version="any",
+                                        id='eura:code_sets',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Common"
+                                            value='Common'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="eura:code_sets@EURA",
-                                                    version="any",
+                                                    id='eura:code_sets@EURA',
+                                                    version='any',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.CREATES,
                                                         DataRoleTypeEnumeration.DISTRIBUTES,
@@ -7525,12 +7525,12 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.DATA_REGISTRAR,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
-                                                        version="any",
-                                                        ref="eura:EURA"
+                                                        version='any',
+                                                        ref='eura:EURA'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
-                                                        value="TODO",
-                                                        ref="eura:Europe"
+                                                        value='TODO',
+                                                        ref='eura:Europe'
                                                     )
                                                 ),
                                             ]
@@ -7541,569 +7541,569 @@ obj = PublicationDelivery(
                             types_of_value=TypesOfValueInFrameRelStructure(
                                 choice=[
                                     TypeOfFrame(
-                                        id="eura:Fare",
-                                        version="any",
+                                        id='eura:Fare',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Fares Frame"
+                                            value='Fares Frame'
                                         )
                                     ),
                                     ValueSet(
-                                        id="eura:Types_of_ProductCategory",
-                                        version="any",
+                                        id='eura:Types_of_ProductCategory',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of Product Category"
+                                            value='Types of Product Category'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfProductCategory(
-                                                    id="eura:tgv",
-                                                    version="any",
+                                                    id='eura:tgv',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="High Speed Train"
+                                                        value='High Speed Train'
                                                     )
                                                 ),
                                                 TypeOfProductCategory(
-                                                    id="eura:ice",
-                                                    version="any",
+                                                    id='eura:ice',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Intercity"
+                                                        value='Intercity'
                                                     )
                                                 ),
                                                 TypeOfProductCategory(
-                                                    id="eura:local",
-                                                    version="any",
+                                                    id='eura:local',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="local train"
+                                                        value='local train'
                                                     )
                                                 ),
                                                 TypeOfProductCategory(
-                                                    id="eura:interregional",
-                                                    version="any",
+                                                    id='eura:interregional',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Inter-regional train"
+                                                        value='Inter-regional train'
                                                     )
                                                 ),
                                                 TypeOfProductCategory(
-                                                    id="eura:regional",
-                                                    version="any",
+                                                    id='eura:regional',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Regional train"
+                                                        value='Regional train'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfProductCategory"
+                                        class_of_values='TypeOfProductCategory'
                                     ),
                                     ValueSet(
-                                        id="eura:ChargingMoments",
-                                        version="any",
+                                        id='eura:ChargingMoments',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charging Moments"
+                                            value='Charging Moments'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 ChargingMoment(
-                                                    id="eura:prepaid",
-                                                    version="any",
+                                                    id='eura:prepaid',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Prepaid"
+                                                        value='Prepaid'
                                                     )
                                                 ),
                                                 ChargingMoment(
-                                                    id="eura:prepaid@pay_as_you_go",
-                                                    version="any",
+                                                    id='eura:prepaid@pay_as_you_go',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Prepaid - pay as you go"
+                                                        value='Prepaid - pay as you go'
                                                     )
                                                 ),
                                                 ChargingMoment(
-                                                    id="eura:prepaid@bundled",
-                                                    version="any",
+                                                    id='eura:prepaid@bundled',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Prepaid - paid along with a base product"
+                                                        value='Prepaid - paid along with a base product'
                                                     )
                                                 ),
                                                 ChargingMoment(
-                                                    id="eura:prepaid@free",
-                                                    version="any",
+                                                    id='eura:prepaid@free',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Prepaid - free issue"
+                                                        value='Prepaid - free issue'
                                                     )
                                                 ),
                                                 ChargingMoment(
-                                                    id="eura:post_paid",
-                                                    version="any",
+                                                    id='eura:post_paid',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Prepaid"
+                                                        value='Prepaid'
                                                     )
                                                 ),
                                                 ChargingMoment(
-                                                    id="eura:prepaid@freebie",
-                                                    version="any",
+                                                    id='eura:prepaid@freebie',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Comes with other Prepaid purchase"
+                                                        value='Comes with other Prepaid purchase'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="ChargingMoment"
+                                        class_of_values='ChargingMoment'
                                     ),
                                     ValueSet(
-                                        id="eura:Types_of_FareProduct@operator",
-                                        version="any",
+                                        id='eura:Types_of_FareProduct@operator',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types Of Fare Product  - Classify as  single of multi operator"
+                                            value='Types Of Fare Product  - Classify as  single of multi operator'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfFareProduct(
-                                                    id="eura:standard_product@single_toc",
-                                                    version="any",
+                                                    id='eura:standard_product@single_toc',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Standard Product single toc"
+                                                        value='Standard Product single toc'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="eura:standard_product@selected_tocs",
-                                                    version="any",
+                                                    id='eura:standard_product@selected_tocs',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Standard product - selected  tocs"
+                                                        value='Standard product - selected  tocs'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="eura:era:standard_product@all_tocs",
-                                                    version="any",
+                                                    id='eura:era:standard_product@all_tocs',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Standard product - all tocs"
+                                                        value='Standard product - all tocs'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="eura:special_product@single_toc",
-                                                    version="any",
+                                                    id='eura:special_product@single_toc',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Special  Product single toc"
+                                                        value='Special  Product single toc'
                                                     )
                                                 ),
                                                 TypeOfFareProduct(
-                                                    id="eura:era:special_product@selected_tocs",
-                                                    version="any",
+                                                    id='eura:era:special_product@selected_tocs',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Special product - selected  tocs"
+                                                        value='Special product - selected  tocs'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfFareProduct"
+                                        class_of_values='TypeOfFareProduct'
                                     ),
                                     ValueSet(
-                                        id="eura:Purposes_Of_Grouping@Fare Tables",
-                                        version="any",
+                                        id='eura:Purposes_Of_Grouping@Fare Tables',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Fare Table Types"
+                                            value='Fare Table Types'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 PurposeOfGrouping(
-                                                    id="eura:distance",
-                                                    version="any",
+                                                    id='eura:distance',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="H DistanceRoute Fare Price Table"
+                                                        value='H DistanceRoute Fare Price Table'
                                                     )
                                                 ),
                                                 PurposeOfGrouping(
-                                                    id="eura:route",
-                                                    version="any",
+                                                    id='eura:route',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="I Route Fare Price Table"
+                                                        value='I Route Fare Price Table'
                                                     )
                                                 ),
                                                 PurposeOfGrouping(
-                                                    id="eura:set",
-                                                    version="any",
+                                                    id='eura:set',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="J Set  Fare Price Table"
+                                                        value='J Set  Fare Price Table'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="PurposeOfGrouping"
+                                        class_of_values='PurposeOfGrouping'
                                     ),
                                     ValueSet(
-                                        id="eura:Classes_of_Use",
-                                        version="any",
+                                        id='eura:Classes_of_Use',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Classes of Use"
+                                            value='Classes of Use'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 ClassOfUse(
-                                                    id="eura:first",
-                                                    version="any",
+                                                    id='eura:first',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="First Class"
+                                                        value='First Class'
                                                     )
                                                 ),
                                                 ClassOfUse(
-                                                    id="eura:second",
-                                                    version="any",
+                                                    id='eura:second',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Second Class"
+                                                        value='Second Class'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="ClassOfUse"
+                                        class_of_values='ClassOfUse'
                                     ),
                                     ValueSet(
-                                        id="eura:Types_of_FareContractEntry",
-                                        version="any",
+                                        id='eura:Types_of_FareContractEntry',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of fare contract entry"
+                                            value='Types of fare contract entry'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfFareContractEntry(
-                                                    id="eura:product_purchase",
-                                                    version="any",
+                                                    id='eura:product_purchase',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Purchase"
+                                                        value='Purchase'
                                                     )
                                                 ),
                                                 TypeOfFareContractEntry(
-                                                    id="eura:product_refund",
-                                                    version="any",
+                                                    id='eura:product_refund',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Refund"
+                                                        value='Refund'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfFareContractEntry"
+                                        class_of_values='TypeOfFareContractEntry'
                                     ),
                                     ValueSet(
-                                        id="eura:Types_of_Concession",
-                                        version="any",
+                                        id='eura:Types_of_Concession',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of concession"
+                                            value='Types of concession'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfConcession(
-                                                    id="eura:adult",
-                                                    version="any",
+                                                    id='eura:adult',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Adult"
+                                                        value='Adult'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:infant",
-                                                    version="any",
+                                                    id='eura:infant',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Infant"
+                                                        value='Infant'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:child",
-                                                    version="any",
+                                                    id='eura:child',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Child"
+                                                        value='Child'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:youth",
-                                                    version="any",
+                                                    id='eura:youth',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Youth"
+                                                        value='Youth'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:student",
-                                                    version="any",
+                                                    id='eura:student',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Student"
+                                                        value='Student'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:young_adult",
-                                                    version="any",
+                                                    id='eura:young_adult',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Youth"
+                                                        value='Youth'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:senior",
-                                                    version="any",
+                                                    id='eura:senior',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Senior"
+                                                        value='Senior'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:animal",
-                                                    version="any",
+                                                    id='eura:animal',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Animal"
+                                                        value='Animal'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:social",
-                                                    version="any",
+                                                    id='eura:social',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Social"
+                                                        value='Social'
                                                     )
                                                 ),
                                                 TypeOfConcession(
-                                                    id="eura:statutory",
-                                                    version="any",
+                                                    id='eura:statutory',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Statutory"
+                                                        value='Statutory'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfConcession"
+                                        class_of_values='TypeOfConcession'
                                     ),
                                     ValueSet(
-                                        id="eura:Types_of_Tariff",
-                                        version="any",
+                                        id='eura:Types_of_Tariff',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of Tariff"
+                                            value='Types of Tariff'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfTariff(
-                                                    id="eura:Distance_kilometers",
-                                                    version="any",
+                                                    id='eura:Distance_kilometers',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Kilometer Distance Kilometers"
+                                                        value='Kilometer Distance Kilometers'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="eura:point_to_point",
-                                                    version="any",
+                                                    id='eura:point_to_point',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Point to point"
+                                                        value='Point to point'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="eura:zonal",
-                                                    version="any",
+                                                    id='eura:zonal',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Zonal"
+                                                        value='Zonal'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="eura:flat",
-                                                    version="any",
+                                                    id='eura:flat',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Flat"
+                                                        value='Flat'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="eura:section",
-                                                    version="any",
+                                                    id='eura:section',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Section"
+                                                        value='Section'
                                                     )
                                                 ),
                                                 TypeOfTariff(
-                                                    id="eura:banded",
-                                                    version="any",
+                                                    id='eura:banded',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Section"
+                                                        value='Section'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfTariff"
+                                        class_of_values='TypeOfTariff'
                                     ),
                                     ValueSet(
-                                        id="eura:Types_of_AccessRightAssignment",
-                                        version="any",
+                                        id='eura:Types_of_AccessRightAssignment',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Types of  Access right Assignment"
+                                            value='Types of  Access right Assignment'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:eligible",
-                                                    version="any",
+                                                    id='eura:eligible',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Eligible for  a product or discount"
+                                                        value='Eligible for  a product or discount'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_access",
-                                                    version="any",
+                                                    id='eura:can_access',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Grants access rights  to use or travel on"
+                                                        value='Grants access rights  to use or travel on'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:cannot_access",
-                                                    version="any",
+                                                    id='eura:cannot_access',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Revokes access rights  to use or travel on"
+                                                        value='Revokes access rights  to use or travel on'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:must_access",
-                                                    version="any",
+                                                    id='eura:must_access',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Requires access rights  to use or travel on"
+                                                        value='Requires access rights  to use or travel on'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_access_when",
-                                                    version="any",
+                                                    id='eura:can_access_when',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Grants access rights  to use or travel during some period"
+                                                        value='Grants access rights  to use or travel during some period'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_access_if_purchased",
-                                                    version="any",
+                                                    id='eura:can_access_if_purchased',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Right defines a property that may be Accessed if purchased"
+                                                        value='Right defines a property that may be Accessed if purchased'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_use_with_type_of_travel_document",
-                                                    version="any",
+                                                    id='eura:can_use_with_type_of_travel_document',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Right defines tyoe travel document  condition"
+                                                        value='Right defines tyoe travel document  condition'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:condition_of_use",
-                                                    version="any",
+                                                    id='eura:condition_of_use',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Defines a condition or restriction on use"
+                                                        value='Defines a condition or restriction on use'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:condition_of_sale",
-                                                    version="any",
+                                                    id='eura:condition_of_sale',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Defines a condition or restriction on purchase"
+                                                        value='Defines a condition or restriction on purchase'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_purchase",
-                                                    version="any",
+                                                    id='eura:can_purchase',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Gives right to purchase"
+                                                        value='Gives right to purchase'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_purchase_when",
-                                                    version="any",
+                                                    id='eura:can_purchase_when',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Specifies when a purchase can be made"
+                                                        value='Specifies when a purchase can be made'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_purchase_where",
-                                                    version="any",
+                                                    id='eura:can_purchase_where',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Specifies where a purchase can be made"
+                                                        value='Specifies where a purchase can be made'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:gives_entitlement",
-                                                    version="any",
+                                                    id='eura:gives_entitlement',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Gives right to other products"
+                                                        value='Gives right to other products'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:prerequisites",
-                                                    version="any",
+                                                    id='eura:prerequisites',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Requires right to other products"
+                                                        value='Requires right to other products'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:penalties",
-                                                    version="any",
+                                                    id='eura:penalties',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Penalties for misuuse"
+                                                        value='Penalties for misuuse'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:can_use_to_pay_for",
-                                                    version="any",
+                                                    id='eura:can_use_to_pay_for',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Gives ability  to purchase automatically using"
+                                                        value='Gives ability  to purchase automatically using'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:reservation_condition",
-                                                    version="any",
+                                                    id='eura:reservation_condition',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Indicates need for reservation"
+                                                        value='Indicates need for reservation'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:distribution_channel_restriction",
-                                                    version="any",
+                                                    id='eura:distribution_channel_restriction',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Constrains availability for distribution by a channel"
+                                                        value='Constrains availability for distribution by a channel'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:takes_properties_from_group",
-                                                    version="any",
+                                                    id='eura:takes_properties_from_group',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Takes properties from group package"
+                                                        value='Takes properties from group package'
                                                     )
                                                 ),
                                                 TypeOfAccessRightAssignment(
-                                                    id="eura:quota_applies",
-                                                    version="any",
+                                                    id='eura:quota_applies',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Quota applies"
+                                                        value='Quota applies'
                                                     )
                                                 ),
                                             ]
                                         ),
-                                        class_of_values="TypeOfAccessRightAssignment"
+                                        class_of_values='TypeOfAccessRightAssignment'
                                     ),
                                 ]
                             ),
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     GeneralOrganisation(
-                                        id="eura:EURA",
-                                        version="any",
+                                        id='eura:EURA',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="European Union Agency for Railways"
+                                            value='European Union Agency for Railways'
                                         ),
                                         short_name=MultilingualString(
-                                            value="EURA"
+                                            value='EURA'
                                         ),
                                         organisation_type=[
                                             OrganisationTypeEnumeration.STATUTORY_BODY,
                                         ]
                                     ),
                                     Operator(
-                                        id="uic:0051",
-                                        version="any",
+                                        id='uic:0051',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="PKP"
+                                            value='PKP'
                                         ),
                                         name=MultilingualString(
-                                            value="PKP Polskie Linie Kolejowe S.A.",
-                                            lang="pl"
+                                            value='PKP Polskie Linie Kolejowe S.A.',
+                                            lang='pl'
                                         ),
                                         short_name=MultilingualString(
-                                            value="PKP PLK S.A."
+                                            value='PKP PLK S.A.'
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
                                                     name=MultilingualString(
-                                                        value="Polish Railways.",
-                                                        lang="en"
+                                                        value='Polish Railways.',
+                                                        lang='en'
                                                     )
                                                 ),
                                             ]
@@ -8116,24 +8116,24 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Operator(
-                                        id="uic:0054",
-                                        version="any",
+                                        id='uic:0054',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="SŽDC"
+                                            value='SŽDC'
                                         ),
                                         name=MultilingualString(
-                                            value="Správa železniční dopravní cesty, s.o.",
-                                            lang="cz"
+                                            value='Správa železniční dopravní cesty, s.o.',
+                                            lang='cz'
                                         ),
                                         short_name=MultilingualString(
-                                            value="SŽDC."
+                                            value='SŽDC.'
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
                                                     name=MultilingualString(
-                                                        value="Czech Railways.",
-                                                        lang="en"
+                                                        value='Czech Railways.',
+                                                        lang='en'
                                                     )
                                                 ),
                                             ]
@@ -8155,16 +8155,16 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Operator(
-                                        id="uic:0080",
-                                        version="any",
+                                        id='uic:0080',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="DB"
+                                            value='DB'
                                         ),
                                         name=MultilingualString(
-                                            value="Deutsche Bahn "
+                                            value='Deutsche Bahn '
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bahn"
+                                            value='Bahn'
                                         ),
                                         validity_period=ValidBetweenVersionStructure(
                                             from_date=XmlDateTime(1999, 11, 29, 0, 0, 0, 0, 0)
@@ -8174,16 +8174,16 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Operator(
-                                        id="uic:Station_Management@0080",
-                                        version="any",
+                                        id='uic:Station_Management@0080',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="DBN"
+                                            value='DBN'
                                         ),
                                         name=MultilingualString(
-                                            value="DB Netz AG"
+                                            value='DB Netz AG'
                                         ),
                                         short_name=MultilingualString(
-                                            value="DB Netz AG"
+                                            value='DB Netz AG'
                                         ),
                                         validity_period=ValidBetweenVersionStructure(
                                             from_date=XmlDateTime(1999, 11, 29, 0, 0, 0, 0, 0),
@@ -8194,16 +8194,16 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Operator(
-                                        id="uic:0003",
-                                        version="any",
+                                        id='uic:0003',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="UIC"
+                                            value='UIC'
                                         ),
                                         name=MultilingualString(
-                                            value="International Union of Railways"
+                                            value='International Union of Railways'
                                         ),
                                         short_name=MultilingualString(
-                                            value="UIC"
+                                            value='UIC'
                                         ),
                                         validity_period=ValidBetweenVersionStructure(
                                             from_date=XmlDateTime(2001, 1, 1, 0, 0, 0, 0, 0),
@@ -8214,58 +8214,58 @@ obj = PublicationDelivery(
                             )
                         ),
                         FareFrame(
-                            id="eura:EURA@Common_Fare_Components",
-                            version="any",
-                            responsibility_set_ref_attribute="eura:code_sets",
+                            id='eura:EURA@Common_Fare_Components',
+                            version='any',
+                            responsibility_set_ref_attribute='eura:code_sets',
                             name=MultilingualString(
-                                value="Common Country independent  fare component"
+                                value='Common Country independent  fare component'
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
-                                    ref="eura_data"
+                                    ref='eura_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
-                                    version="any",
-                                    ref="eura:common_example"
+                                    version='any',
+                                    ref='eura:common_example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="any",
-                                    ref="eura:code_sets"
+                                    version='any',
+                                    ref='eura:code_sets'
                                 ),
-                                default_currency="EUR"
+                                default_currency='EUR'
                             ),
                             pricing_parameter_set=PricingParameterSet(
-                                id="eura:Common_Resources",
-                                version="any",
+                                id='eura:Common_Resources',
+                                version='any',
                                 price_units=PriceUnitsRelStructure(
                                     price_unit_ref_or_price_unit=[
                                         PriceUnit(
-                                            id="eura:EUR",
-                                            version="any",
+                                            id='eura:EUR',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Euro"
+                                                value='Euro'
                                             ),
                                             private_code=PrivateCode(
-                                                value="€"
+                                                value='€'
                                             ),
                                             precision=2
                                         ),
                                         PriceUnit(
-                                            id="eura:GBP",
-                                            version="any",
+                                            id='eura:GBP',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Pound Sterling"
+                                                value='Pound Sterling'
                                             ),
                                             private_code=PrivateCode(
-                                                value="£"
+                                                value='£'
                                             ),
                                             precision=2
                                         ),
                                         PriceUnit(
-                                            id="eura:SFR",
-                                            version="any",
+                                            id='eura:SFR',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Swiss Francs"
+                                                value='Swiss Francs'
                                             ),
                                             precision=2
                                         ),
@@ -8275,10 +8275,10 @@ obj = PublicationDelivery(
                             geographical_units=GeographicalUnitsRelStructure(
                                 geographical_unit_ref_or_geographical_unit=[
                                     GeographicalUnit(
-                                        id="eura:km",
-                                        version="any",
+                                        id='eura:km',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Distance Unit Kilometres"
+                                            value='Distance Unit Kilometres'
                                         )
                                     ),
                                 ]
@@ -8286,28 +8286,28 @@ obj = PublicationDelivery(
                             distribution_channels=DistributionChannelsInFrameRelStructure(
                                 distribution_channel=[
                                     DistributionChannel(
-                                        id="eura:online",
-                                        version="01",
+                                        id='eura:online',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Internet sales"
+                                            value='Internet sales'
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    id="eura:online_de",
-                                                    version="01",
+                                                    id='eura:online_de',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Internetverkauf",
-                                                        lang="de"
+                                                        value='Internetverkauf',
+                                                        lang='de'
                                                     ),
                                                     order=1
                                                 ),
                                                 AlternativeName(
-                                                    id="eura:online_fr",
-                                                    version="01",
+                                                    id='eura:online_fr',
+                                                    version='01',
                                                     name=MultilingualString(
                                                         value="A vendre par l'internet",
-                                                        lang="fr"
+                                                        lang='fr'
                                                     ),
                                                     order=1
                                                 ),
@@ -8317,53 +8317,53 @@ obj = PublicationDelivery(
                                         is_obligatory=False
                                     ),
                                     DistributionChannel(
-                                        id="eura:in_station",
-                                        version="01",
+                                        id='eura:in_station',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Instation sale by machine, counter or payg"
+                                            value='Instation sale by machine, counter or payg'
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.AT_STOP,
                                         is_obligatory=False
                                     ),
                                     DistributionChannel(
-                                        id="eura:self_service_ticket_machine",
-                                        version="01",
+                                        id='eura:self_service_ticket_machine',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Automatic Ticket Machine"
+                                            value='Automatic Ticket Machine'
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.AT_STOP
                                     ),
                                     DistributionChannel(
-                                        id="eura:pay_as_you_go_device",
-                                        version="01",
+                                        id='eura:pay_as_you_go_device',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Automatic Ticket Machine"
+                                            value='Automatic Ticket Machine'
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.AT_STOP
                                     ),
                                     DistributionChannel(
-                                        id="eura:at_counter",
-                                        version="01",
+                                        id='eura:at_counter',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Ticket counter sale"
+                                            value='Ticket counter sale'
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    id="eura:at_counter_de",
-                                                    version="01",
+                                                    id='eura:at_counter_de',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Schalter",
-                                                        lang="de"
+                                                        value='Schalter',
+                                                        lang='de'
                                                     ),
                                                     order=1
                                                 ),
                                                 AlternativeName(
-                                                    id="eura:at_counter_fr",
-                                                    version="01",
+                                                    id='eura:at_counter_fr',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="A vendre par le guichet",
-                                                        lang="fr"
+                                                        value='A vendre par le guichet',
+                                                        lang='fr'
                                                     ),
                                                     order=1
                                                 ),
@@ -8373,19 +8373,19 @@ obj = PublicationDelivery(
                                         is_obligatory=False
                                     ),
                                     DistributionChannel(
-                                        id="eura:onboard",
-                                        version="01",
+                                        id='eura:onboard',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="onboard"
+                                            value='onboard'
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    id="eura:onboard_ro",
-                                                    version="01",
+                                                    id='eura:onboard_ro',
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="in Tren",
-                                                        lang="en"
+                                                        value='in Tren',
+                                                        lang='en'
                                                     ),
                                                     order=1
                                                 ),
@@ -8395,37 +8395,37 @@ obj = PublicationDelivery(
                                         is_obligatory=False
                                     ),
                                     DistributionChannel(
-                                        id="eura:call_centre",
-                                        version="01",
+                                        id='eura:call_centre',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Call Centre"
+                                            value='Call Centre'
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.TELEPHONE,
                                         is_obligatory=False
                                     ),
                                     DistributionChannel(
-                                        id="eura:travel_agent",
-                                        version="01",
+                                        id='eura:travel_agent',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Travel Agent"
+                                            value='Travel Agent'
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.AGENCY,
                                         is_obligatory=False
                                     ),
                                     DistributionChannel(
-                                        id="eura:employee_organisation",
-                                        version="01",
+                                        id='eura:employee_organisation',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Employee Organisation"
+                                            value='Employee Organisation'
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.OTHER,
                                         is_obligatory=False
                                     ),
                                     DistributionChannel(
-                                        id="eura:statutory_organisation",
-                                        version="01",
+                                        id='eura:statutory_organisation',
+                                        version='01',
                                         short_name=MultilingualString(
-                                            value="Statutory Organisation"
+                                            value='Statutory Organisation'
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.OTHER,
                                         is_obligatory=False
@@ -8435,206 +8435,206 @@ obj = PublicationDelivery(
                             fulfilment_methods=FulfilmentMethodsInFrameRelStructure(
                                 fulfilment_method=[
                                     FulfilmentMethod(
-                                        id="eura:post",
-                                        version="01",
+                                        id='eura:post',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Send ticket by post"
+                                            value='Send ticket by post'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.POST,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:printed_ticket"
+                                                    version='01',
+                                                    ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:magstripe_printed_ticket"
+                                                    version='01',
+                                                    ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:pass"
+                                                    version='01',
+                                                    ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:smart_card"
+                                                    version='01',
+                                                    ref='eura:smart_card'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:courier",
-                                        version="01",
+                                        id='eura:courier',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Send ticket by courier"
+                                            value='Send ticket by courier'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.OTHER,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:printed_ticket"
+                                                    version='01',
+                                                    ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:magstripe_printed_ticket"
+                                                    version='01',
+                                                    ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:pass"
+                                                    version='01',
+                                                    ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:smart_card"
+                                                    version='01',
+                                                    ref='eura:smart_card'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:collect_at_counter",
-                                        version="01",
+                                        id='eura:collect_at_counter',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Collect at counter"
+                                            value='Collect at counter'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.TICKET_OFFICE,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:printed_ticket"
+                                                    version='01',
+                                                    ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:magstripe_printed_ticket"
+                                                    version='01',
+                                                    ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:pass"
+                                                    version='01',
+                                                    ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:smart_card"
+                                                    version='01',
+                                                    ref='eura:smart_card'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:hand_written_ticket"
+                                                    version='01',
+                                                    ref='eura:hand_written_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:smart_card"
+                                                    version='01',
+                                                    ref='eura:smart_card'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:collect_on_board",
-                                        version="01",
+                                        id='eura:collect_on_board',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Collect  on board"
+                                            value='Collect  on board'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.CONDUCTOR,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:printed_ticket"
+                                                    version='01',
+                                                    ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:hand_written_ticket"
+                                                    version='01',
+                                                    ref='eura:hand_written_ticket'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:collect_from_machine",
-                                        version="01",
+                                        id='eura:collect_from_machine',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Collect   from machine"
+                                            value='Collect   from machine'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.TICKET_MACHINE,
                                         requires_booking_reference=True,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:printed_ticket"
+                                                    version='01',
+                                                    ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:magstripe_printed_ticket"
+                                                    version='01',
+                                                    ref='eura:magstripe_printed_ticket'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:collect_from_agent",
-                                        version="01",
+                                        id='eura:collect_from_agent',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Travel agent issues ticket directly"
+                                            value='Travel agent issues ticket directly'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.AGENT,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:printed_ticket"
+                                                    version='01',
+                                                    ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:electronic_document"
+                                                    version='01',
+                                                    ref='eura:electronic_document'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:mobile_app",
-                                        version="01",
+                                        id='eura:mobile_app',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Mobile App"
+                                            value='Mobile App'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.MOBILE_APP,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:mobile_app_ticket"
+                                                    version='01',
+                                                    ref='eura:mobile_app_ticket'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:self_print",
-                                        version="01",
+                                        id='eura:self_print',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Self Print"
+                                            value='Self Print'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.SELFPRINT,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:self_print_ticket"
+                                                    version='01',
+                                                    ref='eura:self_print_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:electronic_document"
+                                                    version='01',
+                                                    ref='eura:electronic_document'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FulfilmentMethod(
-                                        id="eura:email",
-                                        version="01",
+                                        id='eura:email',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="EMAIL"
+                                            value='EMAIL'
                                         ),
                                         fulfilment_method_type=FulfilmentMethodTypeEnumeration.EMAIL,
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
-                                                    version="01",
-                                                    ref="eura:self_print_ticket"
+                                                    version='01',
+                                                    ref='eura:self_print_ticket'
                                                 ),
                                             ]
                                         )
@@ -8644,18 +8644,18 @@ obj = PublicationDelivery(
                             types_of_travel_documents=TypesOfTravelDocumentInFrameRelStructure(
                                 type_of_travel_document=[
                                     TypeOfTravelDocument(
-                                        id="eura:distribution_channel_dependent",
-                                        version="01",
+                                        id='eura:distribution_channel_dependent',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Depends on channel used"
+                                            value='Depends on channel used'
                                         ),
                                         media_type=MediaTypeEnumeration.OTHER
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:printed_ticket",
-                                        version="01",
+                                        id='eura:printed_ticket',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Printed Ticket"
+                                            value='Printed Ticket'
                                         ),
                                         media_type=MediaTypeEnumeration.PAPER_TICKET,
                                         machine_readable=[
@@ -8663,18 +8663,18 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:hand_written_ticket",
-                                        version="01",
+                                        id='eura:hand_written_ticket',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Hand written ticket"
+                                            value='Hand written ticket'
                                         ),
                                         media_type=MediaTypeEnumeration.PAPER_TICKET
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:magstripe_printed_ticket",
-                                        version="01",
+                                        id='eura:magstripe_printed_ticket',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Printed Ticket with magnetic Stripe"
+                                            value='Printed Ticket with magnetic Stripe'
                                         ),
                                         media_type=MediaTypeEnumeration.PAPER_TICKET,
                                         machine_readable=[
@@ -8682,40 +8682,40 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:self_print_ticket",
-                                        version="01",
+                                        id='eura:self_print_ticket',
+                                        version='01',
                                         media_type=MediaTypeEnumeration.SELF_PRINT_PAPER_TICKET,
                                         machine_readable=[
                                             MachineReadableEnumeration.OCR,
                                         ]
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:pass",
-                                        version="01",
+                                        id='eura:pass',
+                                        version='01',
                                         media_type=MediaTypeEnumeration.CARD,
                                         machine_readable=[
                                             MachineReadableEnumeration.BAR_CODE,
                                         ]
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:mobile_app_ticket",
-                                        version="01",
+                                        id='eura:mobile_app_ticket',
+                                        version='01',
                                         media_type=MediaTypeEnumeration.MOBILE_APP,
                                         machine_readable=[
                                             MachineReadableEnumeration.OCR,
                                         ]
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:smart_card",
-                                        version="01",
+                                        id='eura:smart_card',
+                                        version='01',
                                         media_type=MediaTypeEnumeration.CARD,
                                         machine_readable=[
                                             MachineReadableEnumeration.CHIP,
                                         ]
                                     ),
                                     TypeOfTravelDocument(
-                                        id="eura:electronic_document",
-                                        version="01",
+                                        id='eura:electronic_document',
+                                        version='01',
                                         media_type=MediaTypeEnumeration.NONE,
                                         machine_readable=[
                                             MachineReadableEnumeration.OCR,

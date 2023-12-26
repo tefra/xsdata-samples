@@ -99,6 +99,7 @@ class FmFeature:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FM-FEATURE"
 
@@ -109,7 +110,7 @@ class FmFeature:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["FmFeature.ShortNameFragments"] = field(
         default=None,
@@ -117,7 +118,7 @@ class FmFeature:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -125,7 +126,7 @@ class FmFeature:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -133,7 +134,7 @@ class FmFeature:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -141,7 +142,7 @@ class FmFeature:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -149,7 +150,7 @@ class FmFeature:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -157,7 +158,7 @@ class FmFeature:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["FmFeature.Annotations"] = field(
         default=None,
@@ -165,7 +166,7 @@ class FmFeature:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -173,7 +174,7 @@ class FmFeature:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     attribute_defs: Optional["FmFeature.AttributeDefs"] = field(
         default=None,
@@ -181,7 +182,7 @@ class FmFeature:
             "name": "ATTRIBUTE-DEFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     decompositions: Optional["FmFeature.Decompositions"] = field(
         default=None,
@@ -189,7 +190,7 @@ class FmFeature:
             "name": "DECOMPOSITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_intended_binding_time: Optional[BindingTimeEnum] = field(
         default=None,
@@ -197,7 +198,7 @@ class FmFeature:
             "name": "MAXIMUM-INTENDED-BINDING-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_intended_binding_time: Optional[BindingTimeEnum] = field(
         default=None,
@@ -205,7 +206,7 @@ class FmFeature:
             "name": "MINIMUM-INTENDED-BINDING-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     relations: Optional["FmFeature.Relations"] = field(
         default=None,
@@ -213,7 +214,7 @@ class FmFeature:
             "name": "RELATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     restrictions: Optional["FmFeature.Restrictions"] = field(
         default=None,
@@ -221,14 +222,14 @@ class FmFeature:
             "name": "RESTRICTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -236,14 +237,14 @@ class FmFeature:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -254,7 +255,7 @@ class FmFeature:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -265,7 +266,7 @@ class FmFeature:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,7 +277,7 @@ class FmFeature:
                 "name": "FM-ATTRIBUTE-DEF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -287,7 +288,7 @@ class FmFeature:
                 "name": "FM-FEATURE-DECOMPOSITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -298,7 +299,7 @@ class FmFeature:
                 "name": "FM-FEATURE-RELATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -309,5 +310,5 @@ class FmFeature:
                 "name": "FM-FEATURE-RESTRICTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

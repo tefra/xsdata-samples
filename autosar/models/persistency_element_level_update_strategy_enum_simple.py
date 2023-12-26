@@ -12,6 +12,7 @@ class PersistencyElementLevelUpdateStrategyEnumSimple(Enum):
     :cvar OVERWRITE: The update strategy is to overwrite the respective
         data item.
     """
+
     DELETE = "DELETE"
     KEEP_EXISTING = "KEEP-EXISTING"
     OVERWRITE = "OVERWRITE"

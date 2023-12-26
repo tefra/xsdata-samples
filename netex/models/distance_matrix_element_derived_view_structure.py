@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .derived_view_structure import DerivedViewStructure
 from .multilingual_string import MultilingualString
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
@@ -13,7 +13,9 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "DistanceMatrixElement_DerivedViewStructure"
 
-    start_stop_point_ref_or_start_tariff_zone_ref: Optional[object] = field(
+    start_stop_point_ref_or_start_tariff_zone_ref: Optional[
+        Union[ScheduledStopPointRefStructure, TariffZoneRefStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -29,7 +31,7 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     start_name: Optional[MultilingualString] = field(
         default=None,
@@ -37,9 +39,11 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
             "name": "StartName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    end_stop_point_ref_or_end_tariff_zone_ref: Optional[object] = field(
+    end_stop_point_ref_or_end_tariff_zone_ref: Optional[
+        Union[ScheduledStopPointRefStructure, TariffZoneRefStructure]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -55,7 +59,7 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     end_name: Optional[MultilingualString] = field(
         default=None,
@@ -63,5 +67,5 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
             "name": "EndName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

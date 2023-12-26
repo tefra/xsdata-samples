@@ -89,6 +89,7 @@ class LocalSupervision:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LOCAL-SUPERVISION"
 
@@ -99,15 +100,17 @@ class LocalSupervision:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["LocalSupervision.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "LocalSupervision.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +118,7 @@ class LocalSupervision:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +126,7 @@ class LocalSupervision:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +134,7 @@ class LocalSupervision:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +142,7 @@ class LocalSupervision:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +150,7 @@ class LocalSupervision:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["LocalSupervision.Annotations"] = field(
         default=None,
@@ -155,7 +158,7 @@ class LocalSupervision:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alive_supervisions: Optional["LocalSupervision.AliveSupervisions"] = field(
         default=None,
@@ -163,15 +166,17 @@ class LocalSupervision:
             "name": "ALIVE-SUPERVISIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    deadline_supervisions: Optional["LocalSupervision.DeadlineSupervisions"] = field(
+    deadline_supervisions: Optional[
+        "LocalSupervision.DeadlineSupervisions"
+    ] = field(
         default=None,
         metadata={
             "name": "DEADLINE-SUPERVISIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     failed_supervision_cycles_tolerance: Optional[PositiveInteger] = field(
         default=None,
@@ -179,15 +184,17 @@ class LocalSupervision:
             "name": "FAILED-SUPERVISION-CYCLES-TOLERANCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    logical_supervisions: Optional["LocalSupervision.LogicalSupervisions"] = field(
+    logical_supervisions: Optional[
+        "LocalSupervision.LogicalSupervisions"
+    ] = field(
         default=None,
         metadata={
             "name": "LOGICAL-SUPERVISIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transitions: Optional["LocalSupervision.Transitions"] = field(
         default=None,
@@ -195,14 +202,14 @@ class LocalSupervision:
             "name": "TRANSITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -210,14 +217,14 @@ class LocalSupervision:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -228,7 +235,7 @@ class LocalSupervision:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,7 +246,7 @@ class LocalSupervision:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,7 +257,7 @@ class LocalSupervision:
                 "name": "ALIVE-SUPERVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -261,7 +268,7 @@ class LocalSupervision:
                 "name": "DEADLINE-SUPERVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -272,7 +279,7 @@ class LocalSupervision:
                 "name": "LOGICAL-SUPERVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -283,5 +290,5 @@ class LocalSupervision:
                 "name": "CHECKPOINT-TRANSITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

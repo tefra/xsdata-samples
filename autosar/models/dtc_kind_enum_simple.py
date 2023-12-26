@@ -10,5 +10,6 @@ class DtcKindEnumSimple(Enum):
     :cvar NON_EMMISSION_RELATED_DTC: This indicates that the monitor
         reports a non-OBD-relevant malfunction.
     """
+
     EMISSION_RELATED_DTC = "EMISSION-RELATED-DTC"
     NON_EMMISSION_RELATED_DTC = "NON-EMMISSION-RELATED-DTC"

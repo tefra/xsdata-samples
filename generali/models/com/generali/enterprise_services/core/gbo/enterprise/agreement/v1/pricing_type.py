@@ -1,13 +1,27 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_deductibles import PricingTypeDeductibles
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_deductions import PricingTypeDeductions
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_extensions import PricingTypeExtensions
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_layers import PricingTypeLayers
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_limits import PricingTypeLimits
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_pricing_amounts import PricingTypePricingAmounts
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_deductibles import (
+    PricingTypeDeductibles,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_deductions import (
+    PricingTypeDeductions,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_extensions import (
+    PricingTypeExtensions,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_layers import (
+    PricingTypeLayers,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_limits import (
+    PricingTypeLimits,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.pricing_type_pricing_amounts import (
+    PricingTypePricingAmounts,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -18,7 +32,7 @@ class PricingType:
             "name": "InvolvementType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     producing_country_name: Optional[str] = field(
         default=None,
@@ -26,7 +40,7 @@ class PricingType:
             "name": "ProducingCountryName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     layers: Optional[PricingTypeLayers] = field(
         default=None,
@@ -34,7 +48,7 @@ class PricingType:
             "name": "Layers",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     deductions: Optional[PricingTypeDeductions] = field(
         default=None,
@@ -42,7 +56,7 @@ class PricingType:
             "name": "Deductions",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     extensions: Optional[PricingTypeExtensions] = field(
         default=None,
@@ -50,7 +64,7 @@ class PricingType:
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     deductibles: Optional[PricingTypeDeductibles] = field(
         default=None,
@@ -58,7 +72,7 @@ class PricingType:
             "name": "Deductibles",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     limits: Optional[PricingTypeLimits] = field(
         default=None,
@@ -66,7 +80,7 @@ class PricingType:
             "name": "Limits",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     pricing_amounts: Optional[PricingTypePricingAmounts] = field(
         default=None,
@@ -74,5 +88,5 @@ class PricingType:
             "name": "PricingAmounts",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

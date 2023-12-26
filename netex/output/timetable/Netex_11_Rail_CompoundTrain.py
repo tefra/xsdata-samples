@@ -145,25 +145,25 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="bbd:TIM_23_O",
-                                version="any",
+                                id='bbd:TIM_23_O',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            ref="bbd:TIM_23_O"
+                            ref='bbd:TIM_23_O'
                         ),
                     ]
                 ),
@@ -172,32 +172,32 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple timetable frame with two journeys and service calendar"
+        value='Example  of simple timetable frame with two journeys and service calendar'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="bbd:TIM_23_O",
+                id='bbd:TIM_23_O',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="bbd:Cnd001",
-                                version="any",
+                                id='bbd:Cnd001',
+                                version='any',
                                 description=MultilingualString(
-                                    value="Sept  to March"
+                                    value='Sept  to March'
                                 ),
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2011, 3, 31, 0, 0, 0, 0, 0),
                                 day_types=DayTypesRelStructure(
                                     choice=[
                                         DayTypeRef(
-                                            version="any",
-                                            ref="bbd:DT_01-MF-NH"
+                                            version='any',
+                                            ref='bbd:DT_01-MF-NH'
                                         ),
                                         DayTypeRef(
-                                            version="any",
-                                            ref="bbd:DT_03-WE-NH"
+                                            version='any',
+                                            ref='bbd:DT_03-WE-NH'
                                         ),
                                     ]
                                 )
@@ -205,35 +205,35 @@ obj = PublicationDelivery(
                         ]
                     ),
                 ],
-                version="1",
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="ops",
-                            xmlns="ops",
-                            xmlns_url="http://www.erail.eu/ops",
-                            description="Operations buses"
+                            id='ops',
+                            xmlns='ops',
+                            xmlns_url='http://www.erail.eu/ops',
+                            description='Operations buses'
                         ),
                         Codespace(
-                            id="bbd",
-                            xmlns="bbd",
-                            xmlns_url="http://www.borninabahn.de/",
-                            description="Train  data"
+                            id='bbd',
+                            xmlns='bbd',
+                            xmlns_url='http://www.borninabahn.de/',
+                            description='Train  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="bbd"
+                        ref='bbd'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         TimetableFrame(
-                            id="bbd:TIM_23_O",
-                            version="any",
+                            id='bbd:TIM_23_O',
+                            version='any',
                             name=MultilingualString(
-                                value="Winter timetable for route 23 Outbound"
+                                value='Winter timetable for route 23 Outbound'
                             ),
                             vehicle_modes=[
                                 VehicleModeEnumeration.RAIL,
@@ -241,163 +241,163 @@ obj = PublicationDelivery(
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
                                     ServiceJourney(
-                                        id="bbd:sj_447",
-                                        version="any",
+                                        id='bbd:sj_447',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="447 Amsterdam to Warsaw"
+                                            value='447 Amsterdam to Warsaw'
                                         ),
                                         departure_time=XmlTime(9, 0, 0, 0, 0),
                                         choice=ServiceJourneyPatternRef(
-                                            version="any",
-                                            ref="bbd:JP_447_amsterdam_warsaw"
+                                            version='any',
+                                            ref='bbd:JP_447_amsterdam_warsaw'
                                         ),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                            version="any",
-                                            ref="bbd:trn_447"
+                                            version='any',
+                                            ref='bbd:trn_447'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_447_amsterdam-warsaw"
+                                            version='any',
+                                            ref='ops:blk_447_amsterdam-warsaw'
                                         ),
                                         choice_1=LineView(
-                                            public_code="447",
+                                            public_code='447',
                                             name=MultilingualString(
-                                                value="Amsterdam to Warsaw Express"
+                                                value='Amsterdam to Warsaw Express'
                                             ),
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="myrail:RT_447"
+                                                version='any',
+                                                ref='myrail:RT_447'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="bbd:DST_warsaw"
+                                                version='any',
+                                                ref='bbd:DST_warsaw'
                                             )
                                         ),
                                         parts=JourneyPartsRelStructure(
                                             journey_part_ref_or_journey_part=[
                                                 JourneyPart(
-                                                    id="bbd:jpt_447_01",
-                                                    version="any",
+                                                    id='bbd:jpt_447_01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Amsterdam to Hannover"
+                                                        value='Amsterdam to Hannover'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_447"
+                                                        version='any',
+                                                        ref='bbd:sj_447'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_447_01"
+                                                        version='any',
+                                                        ref='bbd:jpt_447_01'
                                                     ),
                                                     journey_part_couple_ref=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_01_amsterdam-hannover"
+                                                        version='any',
+                                                        ref='bbd:jpc_01_amsterdam-hannover'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_447"
+                                                        version='any',
+                                                        ref='bbd:tn_447'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_447_01_amsterdam-hannover"
+                                                        version='any',
+                                                        ref='ops:blkpt_447_01_amsterdam-hannover'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     start_time=XmlTime(9, 0, 0, 0, 0),
                                                     end_time=XmlTime(12, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="coupling",
-                                                        ref="bbd:coupling"
+                                                        value='coupling',
+                                                        ref='bbd:coupling'
                                                     ),
                                                     order=1
                                                 ),
                                                 JourneyPart(
-                                                    id="bbd:jpt_447_02",
-                                                    version="any",
+                                                    id='bbd:jpt_447_02',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Hannover to Berlin"
+                                                        value='Hannover to Berlin'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_447"
+                                                        version='any',
+                                                        ref='bbd:sj_447'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_447_02"
+                                                        version='any',
+                                                        ref='bbd:jpt_447_02'
                                                     ),
                                                     journey_part_couple_ref=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_02_hannover-berlin"
+                                                        version='any',
+                                                        ref='bbd:jpc_02_hannover-berlin'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_447"
+                                                        version='any',
+                                                        ref='bbd:tn_447'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_447_02_hannover-berlin"
+                                                        version='any',
+                                                        ref='ops:blkpt_447_02_hannover-berlin'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     start_time=XmlTime(12, 0, 0, 0, 0),
                                                     end_time=XmlTime(15, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="coupling",
-                                                        ref="bbd:coupling"
+                                                        value='coupling',
+                                                        ref='bbd:coupling'
                                                     ),
                                                     order=2
                                                 ),
                                                 JourneyPart(
-                                                    id="bbd:jpt_447_03",
-                                                    version="any",
+                                                    id='bbd:jpt_447_03',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Berlin to Warsaw"
+                                                        value='Berlin to Warsaw'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_447"
+                                                        version='any',
+                                                        ref='bbd:sj_447'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_447_03"
+                                                        version='any',
+                                                        ref='bbd:jpt_447_03'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_447"
+                                                        version='any',
+                                                        ref='bbd:tn_447'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_447_03_berlin-warsaw"
+                                                        version='any',
+                                                        ref='ops:blkpt_447_03_berlin-warsaw'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:pl_warsaw"
+                                                        version='any',
+                                                        ref='uic:pl_warsaw'
                                                     ),
                                                     start_time=XmlTime(15, 10, 0, 0, 0),
                                                     end_time=XmlTime(19, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="coupling",
-                                                        ref="bbd:coupling"
+                                                        value='coupling',
+                                                        ref='bbd:coupling'
                                                     ),
                                                     order=3
                                                 ),
@@ -406,11 +406,11 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="bbd:sj_447_001",
-                                                    version="any",
+                                                    id='bbd:sj_447_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -422,22 +422,22 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_457_joinTo_447_dep_amsterdam"
+                                                                        version='any',
+                                                                        ref='bbd:jm_457_joinTo_447_dep_amsterdam'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Join with 457  "
+                                                                        value='Join with 457  '
                                                                     ),
                                                                     earliest_time=XmlTime(9, 0, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.JOINING
                                                                 ),
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_40447_joinTo_477_dep_amsterdam"
+                                                                        version='any',
+                                                                        ref='bbd:jm_40447_joinTo_477_dep_amsterdam'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Join with 40447"
+                                                                        value='Join with 40447'
                                                                     ),
                                                                     earliest_time=XmlTime(9, 0, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.JOINING
@@ -446,30 +446,30 @@ obj = PublicationDelivery(
                                                         ),
                                                         choice=QuayAssignmentView(
                                                             stop_place_ref=StopPlaceRef(
-                                                                version="any",
-                                                                ref="uic:nl_amsterdam"
+                                                                version='any',
+                                                                ref='uic:nl_amsterdam'
                                                             ),
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:nl_amsterdam_1"
+                                                                version='any',
+                                                                ref='uic:nl_amsterdam_1'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 1"
+                                                                value='Platform 1'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_hannover"
+                                                        version='any',
+                                                        ref='bbd:DST_hannover'
                                                     ),
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_447_002",
-                                                    version="any",
+                                                    id='bbd:sj_447_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(12, 0, 0, 0, 0),
@@ -477,40 +477,40 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_40447_splitFrom_447_arr_hannover"
+                                                                        version='any',
+                                                                        ref='bbd:jm_40447_splitFrom_447_arr_hannover'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Connection to Copenhagen "
+                                                                        value='Connection to Copenhagen '
                                                                     ),
                                                                     earliest_time=XmlTime(15, 30, 0, 0, 0),
                                                                     latest_time=XmlTime(15, 40, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.SPLITTING,
                                                                     maximum_wait_time=XmlDuration("PT5M"),
                                                                     connection_ref=ConnectionRefStructure(
-                                                                        version="any",
-                                                                        ref="uic:cx_de_hannover_01"
+                                                                        version='any',
+                                                                        ref='uic:cx_de_hannover_01'
                                                                     ),
                                                                     connecting_stop_point_ref=[
                                                                         ScheduledStopPointRefStructure(
-                                                                            version="any",
-                                                                            ref="uic:de_hannover"
+                                                                            version='any',
+                                                                            ref='uic:de_hannover'
                                                                         ),
                                                                     ],
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_40447"
+                                                                            version='any',
+                                                                            ref='bbd:sj_40447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(12, 15, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_40447_amsterdam-copenhagen"
+                                                                            version='any',
+                                                                            ref='bbd:JP_40447_amsterdam-copenhagen'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="40447"
+                                                                            value='40447'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     )
@@ -524,26 +524,26 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT5M"),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:de_hannover_5"
+                                                                version='any',
+                                                                ref='uic:de_hannover_5'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 5"
+                                                                value='Platform 5'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_warsaw"
+                                                        version='any',
+                                                        ref='bbd:DST_warsaw'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_447_003",
-                                                    version="any",
+                                                    id='bbd:sj_447_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 0, 0, 0, 0),
@@ -551,40 +551,40 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_457_splitFrom_447_arr_berlin"
+                                                                        version='any',
+                                                                        ref='bbd:jm_457_splitFrom_447_arr_berlin'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Connection at Berlin to Prague "
+                                                                        value='Connection at Berlin to Prague '
                                                                     ),
                                                                     earliest_time=XmlTime(14, 40, 0, 0, 0),
                                                                     latest_time=XmlTime(14, 50, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.SPLITTING,
                                                                     maximum_wait_time=XmlDuration("PT10M"),
                                                                     connection_ref=ConnectionRefStructure(
-                                                                        version="any",
-                                                                        ref="uic:cx_de_berlin_01"
+                                                                        version='any',
+                                                                        ref='uic:cx_de_berlin_01'
                                                                     ),
                                                                     connecting_stop_point_ref=[
                                                                         ScheduledStopPointRefStructure(
-                                                                            version="any",
-                                                                            ref="uic:de_berlin"
+                                                                            version='any',
+                                                                            ref='uic:de_berlin'
                                                                         ),
                                                                     ],
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_457"
+                                                                            version='any',
+                                                                            ref='bbd:sj_457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(14, 50, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_457_amsterdam-prague"
+                                                                            version='any',
+                                                                            ref='bbd:JP_457_amsterdam-prague'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="457"
+                                                                            value='457'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -606,36 +606,36 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT10M"),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:de_berlin_3"
+                                                                version='any',
+                                                                ref='uic:de_berlin_3'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 3"
+                                                                value='Platform 3'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_warsaw"
+                                                        version='any',
+                                                        ref='bbd:DST_warsaw'
                                                     ),
                                                     order=3
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_447_004",
-                                                    version="any",
+                                                    id='bbd:sj_447_004',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:pl_warsaw"
+                                                        version='any',
+                                                        ref='uic:pl_warsaw'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(19, 10, 0, 0, 0),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:pl_warsaw_8"
+                                                                version='any',
+                                                                ref='uic:pl_warsaw_8'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 8"
+                                                                value='Platform 8'
                                                             )
                                                         )
                                                     ),
@@ -649,128 +649,128 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_general"
+                                                    version='any',
+                                                    ref='bbd:svcfc_general'
                                                 ),
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_first"
+                                                    version='any',
+                                                    ref='bbd:svcfc_first'
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="bbd:sj_40447",
-                                        version="any",
+                                        id='bbd:sj_40447',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="40447 Amsterdam to Copenhagen"
+                                            value='40447 Amsterdam to Copenhagen'
                                         ),
                                         departure_time=XmlTime(9, 0, 0, 0, 0),
                                         choice=ServiceJourneyPatternRef(
-                                            version="any",
-                                            ref="bbd:JP_40447_amsterdam-copenhagen"
+                                            version='any',
+                                            ref='bbd:JP_40447_amsterdam-copenhagen'
                                         ),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                            version="any",
-                                            ref="bbd:trn_40447"
+                                            version='any',
+                                            ref='bbd:trn_40447'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_40447_amsterdam-copenhagen"
+                                            version='any',
+                                            ref='ops:blk_40447_amsterdam-copenhagen'
                                         ),
                                         choice_1=LineView(
-                                            public_code="40447",
+                                            public_code='40447',
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="myrail:RT_40447"
+                                                version='any',
+                                                ref='myrail:RT_40447'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="bbd:DST_copenhagen"
+                                                version='any',
+                                                ref='bbd:DST_copenhagen'
                                             )
                                         ),
                                         parts=JourneyPartsRelStructure(
                                             journey_part_ref_or_journey_part=[
                                                 JourneyPart(
-                                                    id="bbd:jpt_40447_01",
-                                                    version="any",
+                                                    id='bbd:jpt_40447_01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Amsterdam to Hannover"
+                                                        value='Amsterdam to Hannover'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_40447"
+                                                        version='any',
+                                                        ref='bbd:sj_40447'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_447_01"
+                                                        version='any',
+                                                        ref='bbd:jpt_447_01'
                                                     ),
                                                     journey_part_couple_ref=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_01_amsterdam-hannover"
+                                                        version='any',
+                                                        ref='bbd:jpc_01_amsterdam-hannover'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_447"
+                                                        version='any',
+                                                        ref='bbd:tn_447'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_447_01_amsterdam-hannover"
+                                                        version='any',
+                                                        ref='ops:blkpt_447_01_amsterdam-hannover'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     start_time=XmlTime(9, 0, 0, 0, 0),
                                                     end_time=XmlTime(12, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="coupling",
-                                                        ref="bbd:coupling"
+                                                        value='coupling',
+                                                        ref='bbd:coupling'
                                                     )
                                                 ),
                                                 JourneyPart(
-                                                    id="bbd:jpt_40447_02",
-                                                    version="any",
+                                                    id='bbd:jpt_40447_02',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Hannover to Copenhagen"
+                                                        value='Hannover to Copenhagen'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_40447"
+                                                        version='any',
+                                                        ref='bbd:sj_40447'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_40447_01"
+                                                        version='any',
+                                                        ref='bbd:jpt_40447_01'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_40447"
+                                                        version='any',
+                                                        ref='bbd:tn_40447'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_40447_02_hannover-copenhagen"
+                                                        version='any',
+                                                        ref='ops:blkpt_40447_02_hannover-copenhagen'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:dk_copenhagen"
+                                                        version='any',
+                                                        ref='uic:dk_copenhagen'
                                                     ),
                                                     start_time=XmlTime(12, 10, 0, 0, 0),
                                                     end_time=XmlTime(16, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="standalone",
-                                                        ref="bbd:standalone"
+                                                        value='standalone',
+                                                        ref='bbd:standalone'
                                                     )
                                                 ),
                                             ]
@@ -778,11 +778,11 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="bbd:sj_40447_001",
-                                                    version="any",
+                                                    id='bbd:sj_40447_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -794,11 +794,11 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_40447_joinTo_477_dep_amsterdam"
+                                                                        version='any',
+                                                                        ref='bbd:jm_40447_joinTo_477_dep_amsterdam'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Start at Amsterdam (train couples)"
+                                                                        value='Start at Amsterdam (train couples)'
                                                                     ),
                                                                     earliest_time=XmlTime(9, 0, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.JOINING,
@@ -811,30 +811,30 @@ obj = PublicationDelivery(
                                                         ),
                                                         choice=QuayAssignmentView(
                                                             stop_place_ref=StopPlaceRef(
-                                                                version="any",
-                                                                ref="uic:nl_amsterdam"
+                                                                version='any',
+                                                                ref='uic:nl_amsterdam'
                                                             ),
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:nl_amsterdam_1"
+                                                                version='any',
+                                                                ref='uic:nl_amsterdam_1'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 1"
+                                                                value='Platform 1'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_hannover"
+                                                        version='any',
+                                                        ref='bbd:DST_hannover'
                                                     ),
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_40447_002",
-                                                    version="any",
+                                                    id='bbd:sj_40447_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(12, 0, 0, 0, 0),
@@ -842,39 +842,39 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_40447_splitFrom_447_arr_hannover"
+                                                                        version='any',
+                                                                        ref='bbd:jm_40447_splitFrom_447_arr_hannover'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Split connection at Hannover to Copenhagen "
+                                                                        value='Split connection at Hannover to Copenhagen '
                                                                     ),
                                                                     earliest_time=XmlTime(15, 20, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.SPLITTING,
                                                                     maximum_wait_time=XmlDuration("PT5M"),
                                                                     connection_ref=ConnectionRefStructure(
-                                                                        version="any",
-                                                                        ref="uic:cx_de_hannover_02"
+                                                                        version='any',
+                                                                        ref='uic:cx_de_hannover_02'
                                                                     ),
                                                                     connecting_stop_point_ref=[
                                                                         ScheduledStopPointRefStructure(
-                                                                            version="any",
-                                                                            ref="uic:de_hannover"
+                                                                            version='any',
+                                                                            ref='uic:de_hannover'
                                                                         ),
                                                                     ],
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_40447"
+                                                                            version='any',
+                                                                            ref='bbd:sj_40447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(12, 15, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_40447_amsterdam-copenhagen"
+                                                                            version='any',
+                                                                            ref='bbd:JP_40447_amsterdam-copenhagen'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="40447"
+                                                                            value='40447'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -896,36 +896,36 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT5M"),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:de_hannover_5"
+                                                                version='any',
+                                                                ref='uic:de_hannover_5'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 5"
+                                                                value='Platform 5'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_copenhagen"
+                                                        version='any',
+                                                        ref='bbd:DST_copenhagen'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_40447_003",
-                                                    version="any",
+                                                    id='bbd:sj_40447_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:dk_copenhagen"
+                                                        version='any',
+                                                        ref='uic:dk_copenhagen'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 0, 0, 0, 0),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:dk_copenhagen_1"
+                                                                version='any',
+                                                                ref='uic:dk_copenhagen_1'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 1"
+                                                                value='Platform 1'
                                                             )
                                                         )
                                                     ),
@@ -939,173 +939,173 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_general"
+                                                    version='any',
+                                                    ref='bbd:svcfc_general'
                                                 ),
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_first"
+                                                    version='any',
+                                                    ref='bbd:svcfc_first'
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="bbd:sj_457",
-                                        version="any",
+                                        id='bbd:sj_457',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="457 Amsterdam to Prague"
+                                            value='457 Amsterdam to Prague'
                                         ),
                                         departure_time=XmlTime(9, 0, 0, 0, 0),
                                         choice=ServiceJourneyPatternRef(
-                                            version="any",
-                                            ref="bbd:JP_457_amsterdam-prague"
+                                            version='any',
+                                            ref='bbd:JP_457_amsterdam-prague'
                                         ),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                            version="any",
-                                            ref="bbd:trn_457"
+                                            version='any',
+                                            ref='bbd:trn_457'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_40447_amsterdam-copenhagen"
+                                            version='any',
+                                            ref='ops:blk_40447_amsterdam-copenhagen'
                                         ),
                                         choice_1=LineView(
-                                            public_code="457",
+                                            public_code='457',
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="myrail:RT_457"
+                                                version='any',
+                                                ref='myrail:RT_457'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="bbd:DST_prague"
+                                                version='any',
+                                                ref='bbd:DST_prague'
                                             )
                                         ),
                                         parts=JourneyPartsRelStructure(
                                             journey_part_ref_or_journey_part=[
                                                 JourneyPart(
-                                                    id="bbd:jpt_457_01",
-                                                    version="any",
+                                                    id='bbd:jpt_457_01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Amsterdam to Hannover"
+                                                        value='Amsterdam to Hannover'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_457"
+                                                        version='any',
+                                                        ref='bbd:sj_457'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_447_01"
+                                                        version='any',
+                                                        ref='bbd:jpt_447_01'
                                                     ),
                                                     journey_part_couple_ref=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_01_amsterdam-hannover"
+                                                        version='any',
+                                                        ref='bbd:jpc_01_amsterdam-hannover'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_447"
+                                                        version='any',
+                                                        ref='bbd:tn_447'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_447_01_amsterdam-hannover"
+                                                        version='any',
+                                                        ref='ops:blkpt_447_01_amsterdam-hannover'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     start_time=XmlTime(9, 0, 0, 0, 0),
                                                     end_time=XmlTime(12, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="coupling",
-                                                        ref="bbd:coupling"
+                                                        value='coupling',
+                                                        ref='bbd:coupling'
                                                     )
                                                 ),
                                                 JourneyPart(
-                                                    id="bbd:jpt_457_02",
-                                                    version="any",
+                                                    id='bbd:jpt_457_02',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Hannover to Berlin"
+                                                        value='Hannover to Berlin'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_457"
+                                                        version='any',
+                                                        ref='bbd:sj_457'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_447_02"
+                                                        version='any',
+                                                        ref='bbd:jpt_447_02'
                                                     ),
                                                     journey_part_couple_ref=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_02_hannover-berlin"
+                                                        version='any',
+                                                        ref='bbd:jpc_02_hannover-berlin'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_447"
+                                                        version='any',
+                                                        ref='bbd:tn_447'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_447_02_hannover-berlin"
+                                                        version='any',
+                                                        ref='ops:blkpt_447_02_hannover-berlin'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     start_time=XmlTime(12, 0, 0, 0, 0),
                                                     end_time=XmlTime(15, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="coupling",
-                                                        ref="bbd:coupling"
+                                                        value='coupling',
+                                                        ref='bbd:coupling'
                                                     )
                                                 ),
                                                 JourneyPart(
-                                                    id="bbd:jpt_457_03",
-                                                    version="any",
+                                                    id='bbd:jpt_457_03',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Berlin to Prague"
+                                                        value='Berlin to Prague'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_457"
+                                                        version='any',
+                                                        ref='bbd:sj_457'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_457_03"
+                                                        version='any',
+                                                        ref='bbd:jpt_457_03'
                                                     ),
                                                     journey_part_couple_ref=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_03_berlin-prague"
+                                                        version='any',
+                                                        ref='bbd:jpc_03_berlin-prague'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_457"
+                                                        version='any',
+                                                        ref='bbd:tn_457'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_457_03_berlin-prague"
+                                                        version='any',
+                                                        ref='ops:blkpt_457_03_berlin-prague'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:cz_prague"
+                                                        version='any',
+                                                        ref='uic:cz_prague'
                                                     ),
                                                     start_time=XmlTime(15, 20, 0, 0, 0),
                                                     end_time=XmlTime(20, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="standalone",
-                                                        ref="bbd:standalone"
+                                                        value='standalone',
+                                                        ref='bbd:standalone'
                                                     )
                                                 ),
                                             ]
@@ -1113,11 +1113,11 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="bbd:sj_457_001",
-                                                    version="any",
+                                                    id='bbd:sj_457_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -1129,11 +1129,11 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_457_joinTo_447_dep_amsterdam"
+                                                                        version='any',
+                                                                        ref='bbd:jm_457_joinTo_447_dep_amsterdam'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Start at Amsterdam (train couples)"
+                                                                        value='Start at Amsterdam (train couples)'
                                                                     ),
                                                                     earliest_time=XmlTime(9, 0, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.JOINING,
@@ -1146,30 +1146,30 @@ obj = PublicationDelivery(
                                                         ),
                                                         choice=QuayAssignmentView(
                                                             stop_place_ref=StopPlaceRef(
-                                                                version="any",
-                                                                ref="uic:nl_amsterdam"
+                                                                version='any',
+                                                                ref='uic:nl_amsterdam'
                                                             ),
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:nl_amsterdam_1"
+                                                                version='any',
+                                                                ref='uic:nl_amsterdam_1'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 1"
+                                                                value='Platform 1'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_hannover"
+                                                        version='any',
+                                                        ref='bbd:DST_hannover'
                                                     ),
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_457_002",
-                                                    version="any",
+                                                    id='bbd:sj_457_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(12, 0, 0, 0, 0),
@@ -1177,39 +1177,39 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_40447_splitFrom_447_arr_hannover"
+                                                                        version='any',
+                                                                        ref='bbd:jm_40447_splitFrom_447_arr_hannover'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Connection at Hannover to Copenhagen "
+                                                                        value='Connection at Hannover to Copenhagen '
                                                                     ),
                                                                     earliest_time=XmlTime(15, 20, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.SPLITTING,
                                                                     maximum_wait_time=XmlDuration("PT5M"),
                                                                     connection_ref=ConnectionRefStructure(
-                                                                        version="any",
-                                                                        ref="uic:cx_de_hannover_01"
+                                                                        version='any',
+                                                                        ref='uic:cx_de_hannover_01'
                                                                     ),
                                                                     connecting_stop_point_ref=[
                                                                         ScheduledStopPointRefStructure(
-                                                                            version="any",
-                                                                            ref="uic:de_hannover"
+                                                                            version='any',
+                                                                            ref='uic:de_hannover'
                                                                         ),
                                                                     ],
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_40447"
+                                                                            version='any',
+                                                                            ref='bbd:sj_40447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(12, 15, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_40447_amsterdam-copenhagen"
+                                                                            version='any',
+                                                                            ref='bbd:JP_40447_amsterdam-copenhagen'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="40447"
+                                                                            value='40447'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -1231,26 +1231,26 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT5M"),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:de_hannover_5"
+                                                                version='any',
+                                                                ref='uic:de_hannover_5'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 5"
+                                                                value='Platform 5'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_berlin"
+                                                        version='any',
+                                                        ref='bbd:DST_berlin'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_457_003",
-                                                    version="any",
+                                                    id='bbd:sj_457_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 0, 0, 0, 0),
@@ -1258,34 +1258,34 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_457_splitFrom_447_arr_berlin"
+                                                                        version='any',
+                                                                        ref='bbd:jm_457_splitFrom_447_arr_berlin'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Connection at Berlin to Warsaw on 447 (train splits)"
+                                                                        value='Connection at Berlin to Warsaw on 447 (train splits)'
                                                                     ),
                                                                     earliest_time=XmlTime(14, 40, 0, 0, 0),
                                                                     latest_time=XmlTime(14, 50, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.SPLITTING,
                                                                     maximum_wait_time=XmlDuration("PT10M"),
                                                                     connection_ref=ConnectionRefStructure(
-                                                                        version="any",
-                                                                        ref="uic:cx_de_berlin_01"
+                                                                        version='any',
+                                                                        ref='uic:cx_de_berlin_01'
                                                                     ),
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_447"
+                                                                            version='any',
+                                                                            ref='bbd:sj_447'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(14, 50, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_447_amsterdam_warsaw"
+                                                                            version='any',
+                                                                            ref='bbd:JP_447_amsterdam_warsaw'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="447"
+                                                                            value='447'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -1309,33 +1309,33 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_60457_joinTo_457_dep_berlin"
+                                                                        version='any',
+                                                                        ref='bbd:jm_60457_joinTo_457_dep_berlin'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Joining at Berlin with    60457 to Prague "
+                                                                        value='Joining at Berlin with    60457 to Prague '
                                                                     ),
                                                                     earliest_time=XmlTime(15, 20, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.JOINING,
                                                                     maximum_wait_time=XmlDuration("PT10M"),
                                                                     connection_ref=ConnectionRefStructure(
-                                                                        version="any",
-                                                                        ref="uic:cx_de_berlin_02"
+                                                                        version='any',
+                                                                        ref='uic:cx_de_berlin_02'
                                                                     ),
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_60457"
+                                                                            version='any',
+                                                                            ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_60457_berlin-prague"
+                                                                            version='any',
+                                                                            ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="60457"
+                                                                            value='60457'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -1350,26 +1350,26 @@ obj = PublicationDelivery(
                                                         ),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:de_berlin_3"
+                                                                version='any',
+                                                                ref='uic:de_berlin_3'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 3"
+                                                                value='Platform 3'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_prague"
+                                                        version='any',
+                                                        ref='bbd:DST_prague'
                                                     ),
                                                     order=3
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_457_004",
-                                                    version="any",
+                                                    id='bbd:sj_457_004',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:cz_prague"
+                                                        version='any',
+                                                        ref='uic:cz_prague'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(20, 0, 0, 0, 0),
@@ -1377,29 +1377,29 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_60457_splitFrom_457_arr_prague"
+                                                                        version='any',
+                                                                        ref='bbd:jm_60457_splitFrom_457_arr_prague'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Splitting at Prague of    60457 from 457   "
+                                                                        value='Splitting at Prague of    60457 from 457   '
                                                                     ),
                                                                     earliest_time=XmlTime(20, 0, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.SPLITTING,
                                                                     maximum_wait_time=XmlDuration("PT10M"),
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_60457"
+                                                                            version='any',
+                                                                            ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_60457_berlin-prague"
+                                                                            version='any',
+                                                                            ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="60457"
+                                                                            value='60457'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -1414,11 +1414,11 @@ obj = PublicationDelivery(
                                                         ),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:cz_prague_2"
+                                                                version='any',
+                                                                ref='uic:cz_prague_2'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 2"
+                                                                value='Platform 2'
                                                             )
                                                         )
                                                     ),
@@ -1432,12 +1432,12 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_general"
+                                                    version='any',
+                                                    ref='bbd:svcfc_general'
                                                 ),
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_first"
+                                                    version='any',
+                                                    ref='bbd:svcfc_first'
                                                 ),
                                             ]
                                         ),
@@ -1447,80 +1447,80 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="bbd:sj_60457",
-                                        version="any",
+                                        id='bbd:sj_60457',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="60457 Berlin to Prague"
+                                            value='60457 Berlin to Prague'
                                         ),
                                         departure_time=XmlTime(15, 0, 0, 0, 0),
                                         choice=ServiceJourneyPatternRef(
-                                            version="any",
-                                            ref="bbd:JP_457_amsterdam-prague"
+                                            version='any',
+                                            ref='bbd:JP_457_amsterdam-prague'
                                         ),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                            version="any",
-                                            ref="bbd:trn_457"
+                                            version='any',
+                                            ref='bbd:trn_457'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            version="any",
-                                            ref="ops:blk_457_amsterdam-prague"
+                                            version='any',
+                                            ref='ops:blk_457_amsterdam-prague'
                                         ),
                                         choice_1=LineView(
-                                            public_code="457",
+                                            public_code='457',
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="myrail:RT_60457"
+                                                version='any',
+                                                ref='myrail:RT_60457'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="bbd:DST_prague"
+                                                version='any',
+                                                ref='bbd:DST_prague'
                                             )
                                         ),
                                         parts=JourneyPartsRelStructure(
                                             journey_part_ref_or_journey_part=[
                                                 JourneyPart(
-                                                    id="bbd:jpt_60457_01",
-                                                    version="any",
+                                                    id='bbd:jpt_60457_01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Berlin to Prague"
+                                                        value='Berlin to Prague'
                                                     ),
                                                     parent_journey_ref=VehicleJourneyRefStructure(
-                                                        version="any",
-                                                        ref="bbd:sj_60457"
+                                                        version='any',
+                                                        ref='bbd:sj_60457'
                                                     ),
                                                     main_part_ref=JourneyPartCoupleRefStructure(
-                                                        version="any",
-                                                        ref="bbd:jpt_457_03"
+                                                        version='any',
+                                                        ref='bbd:jpt_457_03'
                                                     ),
                                                     journey_part_couple_ref=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_03_berlin-prague"
+                                                        version='any',
+                                                        ref='bbd:jpc_03_berlin-prague'
                                                     ),
                                                     train_number_ref=TrainNumberRef(
-                                                        version="any",
-                                                        ref="bbd:tn_457"
+                                                        version='any',
+                                                        ref='bbd:tn_457'
                                                     ),
                                                     train_block_part_ref_or_block_part_ref=TrainBlockPartRef(
-                                                        version="any",
-                                                        ref="ops:blkpt_457_03_berlin-prague"
+                                                        version='any',
+                                                        ref='ops:blkpt_457_03_berlin-prague'
                                                     ),
                                                     from_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     to_stop_point_ref=ScheduledStopPointRefStructure(
-                                                        version="any",
-                                                        ref="uic:cz_prague"
+                                                        version='any',
+                                                        ref='uic:cz_prague'
                                                     ),
                                                     start_time=XmlTime(15, 20, 0, 0, 0),
                                                     end_time=XmlTime(20, 0, 0, 0, 0),
                                                     purpose_of_journey_partition_ref=PurposeOfJourneyPartitionRef(
-                                                        value="standalone",
-                                                        ref="bbd:standalone"
+                                                        value='standalone',
+                                                        ref='bbd:standalone'
                                                     )
                                                 ),
                                             ]
@@ -1528,11 +1528,11 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="bbd:sj_60457_001",
-                                                    version="any",
+                                                    id='bbd:sj_60457_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -1545,33 +1545,33 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_60457_joinTo_457_dep_berlin"
+                                                                        version='any',
+                                                                        ref='bbd:jm_60457_joinTo_457_dep_berlin'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Joining at Berlin with    60457 to Prague "
+                                                                        value='Joining at Berlin with    60457 to Prague '
                                                                     ),
                                                                     earliest_time=XmlTime(15, 20, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.JOINING,
                                                                     maximum_wait_time=XmlDuration("PT10M"),
                                                                     connection_ref=ConnectionRefStructure(
-                                                                        version="any",
-                                                                        ref="uic:cx_de_berlin_02"
+                                                                        version='any',
+                                                                        ref='uic:cx_de_berlin_02'
                                                                     ),
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_60457"
+                                                                            version='any',
+                                                                            ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_60457_berlin-prague"
+                                                                            version='any',
+                                                                            ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="60457"
+                                                                            value='60457'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -1586,26 +1586,26 @@ obj = PublicationDelivery(
                                                         ),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:de_berlin_3"
+                                                                version='any',
+                                                                ref='uic:de_berlin_3'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 3"
+                                                                value='Platform 3'
                                                             )
                                                         )
                                                     ),
                                                     destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                        version="any",
-                                                        ref="bbd:DST_prague"
+                                                        version='any',
+                                                        ref='bbd:DST_prague'
                                                     ),
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="bbd:sj_60457_002",
-                                                    version="any",
+                                                    id='bbd:sj_60457_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:cz_prague"
+                                                        version='any',
+                                                        ref='uic:cz_prague'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(20, 0, 0, 0, 0),
@@ -1613,29 +1613,29 @@ obj = PublicationDelivery(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingView(
                                                                     journey_meeting_ref=JourneyMeetingRef(
-                                                                        version="any",
-                                                                        ref="bbd:jm_60457_splitFrom_457_arr_prague"
+                                                                        version='any',
+                                                                        ref='bbd:jm_60457_splitFrom_457_arr_prague'
                                                                     ),
                                                                     description=MultilingualString(
-                                                                        value="Splitting at Prague of    60457 from 457   "
+                                                                        value='Splitting at Prague of    60457 from 457   '
                                                                     ),
                                                                     earliest_time=XmlTime(20, 0, 0, 0, 0),
                                                                     reason=ReasonForMeetingEnumeration.SPLITTING,
                                                                     maximum_wait_time=XmlDuration("PT10M"),
                                                                     choice=ConnectingJourneyView(
                                                                         service_journey_ref=ServiceJourneyRefStructure(
-                                                                            version="any",
-                                                                            ref="bbd:sj_60457"
+                                                                            version='any',
+                                                                            ref='bbd:sj_60457'
                                                                         ),
                                                                         departure_time_or_frequency=XmlTime(15, 20, 0, 0, 0),
                                                                         choice=ServiceJourneyPatternRef(
-                                                                            version="any",
-                                                                            ref="bbd:JP_60457_berlin-prague"
+                                                                            version='any',
+                                                                            ref='bbd:JP_60457_berlin-prague'
                                                                         )
                                                                     ),
                                                                     flexible_line_ref_or_line_ref_or_connecting_line_view=LineDerivedViewStructure(
                                                                         name=MultilingualString(
-                                                                            value="60457"
+                                                                            value='60457'
                                                                         ),
                                                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                                                     ),
@@ -1650,11 +1650,11 @@ obj = PublicationDelivery(
                                                         ),
                                                         choice=QuayAssignmentView(
                                                             quay_ref=QuayRefStructure(
-                                                                version="any",
-                                                                ref="uic:cz_prague_2"
+                                                                version='any',
+                                                                ref='uic:cz_prague_2'
                                                             ),
                                                             quay_name=MultilingualString(
-                                                                value="Platform 2"
+                                                                value='Platform 2'
                                                             )
                                                         )
                                                     ),
@@ -1668,10 +1668,10 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySet(
-                                                    id="bbd:svcfc_60457",
-                                                    version="any",
+                                                    id='bbd:svcfc_60457',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Second  class facilities only"
+                                                        value='Second  class facilities only'
                                                     ),
                                                     catering_facility_list=[
                                                         CateringFacilityEnumeration.BUFFET,
@@ -1688,148 +1688,148 @@ obj = PublicationDelivery(
                             train_numbers=TrainNumbersInFrameRelStructure(
                                 train_number_or_train_number_ref=[
                                     TrainNumber(
-                                        id="bbd:tn_447",
-                                        version="any",
+                                        id='bbd:tn_447',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Amsterdam - Warsaw"
+                                            value='Amsterdam - Warsaw'
                                         ),
-                                        for_advertisement="447",
-                                        for_production="447"
+                                        for_advertisement='447',
+                                        for_production='447'
                                     ),
                                     TrainNumber(
-                                        id="bbd:tn_40447",
-                                        version="any",
+                                        id='bbd:tn_40447',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Hannover - Copenhagen"
+                                            value='Hannover - Copenhagen'
                                         ),
-                                        for_advertisement="40447",
-                                        for_production="40447"
+                                        for_advertisement='40447',
+                                        for_production='40447'
                                     ),
                                     TrainNumber(
-                                        id="bbd:tn_457",
-                                        version="any",
+                                        id='bbd:tn_457',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Berlin - Prague"
+                                            value='Berlin - Prague'
                                         ),
-                                        for_advertisement="457",
-                                        for_production="457"
+                                        for_advertisement='457',
+                                        for_production='457'
                                     ),
                                 ]
                             ),
                             journey_part_couples=JourneyPartCouplesInFrameRelStructure(
                                 journey_part_couple=[
                                     JourneyPartCouple(
-                                        id="bbd:jpc_01_amsterdam-hannover",
-                                        version="any",
+                                        id='bbd:jpc_01_amsterdam-hannover',
+                                        version='any',
                                         start_time=XmlTime(9, 0, 0, 0, 0),
                                         end_time=XmlTime(12, 0, 0, 0, 0),
                                         from_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:nl_amsterdam"
+                                            version='any',
+                                            ref='uic:nl_amsterdam'
                                         ),
                                         to_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:de_hannover"
+                                            version='any',
+                                            ref='uic:de_hannover'
                                         ),
                                         main_part_ref=JourneyPartRefStructure(
-                                            version="any",
-                                            ref="bbd:jpt_447_01"
+                                            version='any',
+                                            ref='bbd:jpt_447_01'
                                         ),
                                         journey_parts=JourneyPartRefsRelStructure(
                                             journey_part_ref=[
                                                 JourneyPartRef(
-                                                    version="any",
-                                                    ref="bbd:jpt_447_01"
+                                                    version='any',
+                                                    ref='bbd:jpt_447_01'
                                                 ),
                                                 JourneyPartRef(
-                                                    version="any",
-                                                    ref="bbd:jpt_457_01"
+                                                    version='any',
+                                                    ref='bbd:jpt_457_01'
                                                 ),
                                                 JourneyPartRef(
-                                                    version="any",
-                                                    ref="bbd:jpt_40447_01"
+                                                    version='any',
+                                                    ref='bbd:jpt_40447_01'
                                                 ),
                                             ]
                                         ),
                                         train_number_ref=TrainNumberRef(
-                                            version="any",
-                                            ref="bbd:tn_447"
+                                            version='any',
+                                            ref='bbd:tn_447'
                                         ),
                                         order=1
                                     ),
                                     JourneyPartCouple(
-                                        id="bbd:jpc_02_hannover-berlin",
-                                        version="any",
+                                        id='bbd:jpc_02_hannover-berlin',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Hannover to Berlin"
+                                            value='Hannover to Berlin'
                                         ),
                                         start_time=XmlTime(12, 5, 0, 0, 0),
                                         end_time=XmlTime(15, 0, 0, 0, 0),
                                         from_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:de_hannover"
+                                            version='any',
+                                            ref='uic:de_hannover'
                                         ),
                                         to_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:de_berlin"
+                                            version='any',
+                                            ref='uic:de_berlin'
                                         ),
                                         main_part_ref=JourneyPartRefStructure(
-                                            version="any",
-                                            ref="bbd:jpt_447_02"
+                                            version='any',
+                                            ref='bbd:jpt_447_02'
                                         ),
                                         journey_parts=JourneyPartRefsRelStructure(
                                             journey_part_ref=[
                                                 JourneyPartRef(
-                                                    version="any",
-                                                    ref="bbd:jpt_447_02"
+                                                    version='any',
+                                                    ref='bbd:jpt_447_02'
                                                 ),
                                                 JourneyPartRef(
-                                                    version="any",
-                                                    ref="bbd:jpt_457_02"
+                                                    version='any',
+                                                    ref='bbd:jpt_457_02'
                                                 ),
                                             ]
                                         ),
                                         train_number_ref=TrainNumberRef(
-                                            version="any",
-                                            ref="bbd:tn_447"
+                                            version='any',
+                                            ref='bbd:tn_447'
                                         ),
                                         order=2
                                     ),
                                     JourneyPartCouple(
-                                        id="bbd:jpc_03_berlin-prague",
-                                        version="any",
+                                        id='bbd:jpc_03_berlin-prague',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Berlin to Prague"
+                                            value='Berlin to Prague'
                                         ),
                                         start_time=XmlTime(15, 10, 0, 0, 0),
                                         end_time=XmlTime(19, 0, 0, 0, 0),
                                         from_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:de_berlin"
+                                            version='any',
+                                            ref='uic:de_berlin'
                                         ),
                                         to_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:cz_prague"
+                                            version='any',
+                                            ref='uic:cz_prague'
                                         ),
                                         main_part_ref=JourneyPartRefStructure(
-                                            version="any",
-                                            ref="bbd:jpt_457_03"
+                                            version='any',
+                                            ref='bbd:jpt_457_03'
                                         ),
                                         journey_parts=JourneyPartRefsRelStructure(
                                             journey_part_ref=[
                                                 JourneyPartRef(
-                                                    version="any",
-                                                    ref="bbd:jpt_60457_01"
+                                                    version='any',
+                                                    ref='bbd:jpt_60457_01'
                                                 ),
                                                 JourneyPartRef(
-                                                    version="any",
-                                                    ref="bbd:jpt_457_03"
+                                                    version='any',
+                                                    ref='bbd:jpt_457_03'
                                                 ),
                                             ]
                                         ),
                                         train_number_ref=TrainNumberRef(
-                                            version="any",
-                                            ref="bbd:tn_457"
+                                            version='any',
+                                            ref='bbd:tn_457'
                                         ),
                                         order=3
                                     ),
@@ -1838,74 +1838,74 @@ obj = PublicationDelivery(
                             coupled_journeys=CoupledJourneysInFrameRelStructure(
                                 coupled_journey=[
                                     CoupledJourney(
-                                        id="bbd:CoupledJourney:cj_447_01",
-                                        version="any",
+                                        id='bbd:CoupledJourney:cj_447_01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Amsterdamn to hannover"
+                                            value='Amsterdamn to hannover'
                                         ),
                                         train_block_ref=TrainBlockRef(
-                                            version="any",
-                                            ref="bbd:XX-447_amsterdam-hannover"
+                                            version='any',
+                                            ref='bbd:XX-447_amsterdam-hannover'
                                         ),
                                         journeys=VehicleJourneyRefsRelStructure(
                                             dead_run_ref_or_vehicle_journey_ref=[
                                                 VehicleJourneyRef(
-                                                    version="any",
-                                                    ref="bbd:sj_447"
+                                                    version='any',
+                                                    ref='bbd:sj_447'
                                                 ),
                                                 VehicleJourneyRef(
-                                                    version="any",
-                                                    ref="bbd:sj_40447"
+                                                    version='any',
+                                                    ref='bbd:sj_40447'
                                                 ),
                                                 VehicleJourneyRef(
-                                                    version="any",
-                                                    ref="bbd:sj_457"
+                                                    version='any',
+                                                    ref='bbd:sj_457'
                                                 ),
                                             ]
                                         )
                                     ),
                                     CoupledJourney(
-                                        id="bbd:CoupledJourney:cj_447_02",
-                                        version="any",
+                                        id='bbd:CoupledJourney:cj_447_02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Hannover - Berlin"
+                                            value='Hannover - Berlin'
                                         ),
                                         train_block_ref=TrainBlockRef(
-                                            version="any",
-                                            ref="bbd:YY-447_hannover-berlin"
+                                            version='any',
+                                            ref='bbd:YY-447_hannover-berlin'
                                         ),
                                         journeys=VehicleJourneyRefsRelStructure(
                                             dead_run_ref_or_vehicle_journey_ref=[
                                                 VehicleJourneyRef(
-                                                    version="any",
-                                                    ref="bbd:sj_447"
+                                                    version='any',
+                                                    ref='bbd:sj_447'
                                                 ),
                                                 VehicleJourneyRef(
-                                                    version="any",
-                                                    ref="bbd:sj_457"
+                                                    version='any',
+                                                    ref='bbd:sj_457'
                                                 ),
                                             ]
                                         )
                                     ),
                                     CoupledJourney(
-                                        id="bbd:CoupledJourney:sj_457_03",
-                                        version="any",
+                                        id='bbd:CoupledJourney:sj_457_03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Berlin  - Prague"
+                                            value='Berlin  - Prague'
                                         ),
                                         train_block_ref=TrainBlockRef(
-                                            version="any",
-                                            ref="bbd:cmpblk_ZZ-457_berlin-prague"
+                                            version='any',
+                                            ref='bbd:cmpblk_ZZ-457_berlin-prague'
                                         ),
                                         journeys=VehicleJourneyRefsRelStructure(
                                             dead_run_ref_or_vehicle_journey_ref=[
                                                 VehicleJourneyRef(
-                                                    version="any",
-                                                    ref="bbd:sj_60457"
+                                                    version='any',
+                                                    ref='bbd:sj_60457'
                                                 ),
                                                 VehicleJourneyRef(
-                                                    version="any",
-                                                    ref="bbd:sj_457"
+                                                    version='any',
+                                                    ref='bbd:sj_457'
                                                 ),
                                             ]
                                         )
@@ -1915,10 +1915,10 @@ obj = PublicationDelivery(
                             service_facility_sets=ServiceFacilitySetsInFrameRelStructure(
                                 service_facility_set=[
                                     ServiceFacilitySet(
-                                        id="bbd:svcfc_general",
-                                        version="any",
+                                        id='bbd:svcfc_general',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="General facilities"
+                                            value='General facilities'
                                         ),
                                         assistance_facility_list=[
                                             AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
@@ -1978,10 +1978,10 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ServiceFacilitySet(
-                                        id="bbd:svcfc_first",
-                                        version="any",
+                                        id='bbd:svcfc_first',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="First class facilities"
+                                            value='First class facilities'
                                         ),
                                         catering_facility_list=[
                                             CateringFacilityEnumeration.BREAKFAST_IN_CAR,
@@ -2002,8 +2002,8 @@ obj = PublicationDelivery(
                                         accommodations=AccommodationsRelStructure(
                                             accommodation_ref_or_accommodation=[
                                                 Accommodation(
-                                                    id="bbd:svcfc_firs@singleSleeper",
-                                                    version="any",
+                                                    id='bbd:svcfc_firs@singleSleeper',
+                                                    version='any',
                                                     fare_class=FareClassEnumeration.FIRST_CLASS,
                                                     accommodation_facility=AccommodationFacilityEnumeration.SINGLE_COUCHETTE,
                                                     berth_facility=BerthFacilityEnumeration.LOWER,
@@ -2018,8 +2018,8 @@ obj = PublicationDelivery(
                                                     ]
                                                 ),
                                                 Accommodation(
-                                                    id="bbd:svcfc_firs@doubleSleeper",
-                                                    version="any",
+                                                    id='bbd:svcfc_firs@doubleSleeper',
+                                                    version='any',
                                                     fare_class=FareClassEnumeration.FIRST_CLASS,
                                                     accommodation_facility=AccommodationFacilityEnumeration.DOUBLE_SLEEPER,
                                                     couchette_facility=CouchetteFacilityEnumeration.C2,
@@ -2030,8 +2030,8 @@ obj = PublicationDelivery(
                                                     ]
                                                 ),
                                                 Accommodation(
-                                                    id="bbd:svcfc_firs@sleeper",
-                                                    version="any",
+                                                    id='bbd:svcfc_firs@sleeper',
+                                                    version='any',
                                                     fare_class=FareClassEnumeration.SECOND_CLASS,
                                                     accommodation_facility=AccommodationFacilityEnumeration.COUCHETTE,
                                                     couchette_facility=CouchetteFacilityEnumeration.C4,
@@ -2044,15 +2044,15 @@ obj = PublicationDelivery(
                                         onboard_stays=OnboardStaysRelStructure(
                                             onboard_stay=[
                                                 OnboardStay(
-                                                    id="bbd:svcfc_firs@earlyBoardingPossibleBeforeDeparture",
-                                                    version="any",
+                                                    id='bbd:svcfc_firs@earlyBoardingPossibleBeforeDeparture',
+                                                    version='any',
                                                     fare_class=FareClassEnumeration.FIRST_CLASS,
                                                     boarding_permission=BoardingPermissionEnumeration.EARLY_BOARDING_POSSIBLE_BEFORE_DEPARTURE,
                                                     period=XmlDuration("PT1H")
                                                 ),
                                                 OnboardStay(
-                                                    id="bbd:svcfc_firs@overnightStayOnboardAllowed",
-                                                    version="any",
+                                                    id='bbd:svcfc_firs@overnightStayOnboardAllowed',
+                                                    version='any',
                                                     fare_class=FareClassEnumeration.FIRST_CLASS,
                                                     boarding_permission=BoardingPermissionEnumeration.OVERNIGHT_STAY_ONBOARD_ALLOWED,
                                                     period=XmlDuration("PT9H")
@@ -2065,124 +2065,124 @@ obj = PublicationDelivery(
                             journey_meetings=JourneyMeetingsInFrameRelStructure(
                                 journey_meeting=[
                                     JourneyMeeting(
-                                        id="bbd:jm_457_joinTo_447_dep_amsterdam",
-                                        version="any",
+                                        id='bbd:jm_457_joinTo_447_dep_amsterdam',
+                                        version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:nl_amsterdam"
+                                            version='any',
+                                            ref='uic:nl_amsterdam'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_457"
+                                            version='any',
+                                            ref='bbd:sj_457'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_447"
+                                            version='any',
+                                            ref='bbd:sj_447'
                                         ),
                                         description=MultilingualString(
-                                            value="Join 457 to 447 at Amsterdam"
+                                            value='Join 457 to 447 at Amsterdam'
                                         ),
                                         earliest_time=XmlTime(9, 0, 0, 0, 0),
                                         reason=ReasonForMeetingEnumeration.JOINING
                                     ),
                                     JourneyMeeting(
-                                        id="bbd:jm_40447_joinTo_477_dep_amsterdam",
-                                        version="any",
+                                        id='bbd:jm_40447_joinTo_477_dep_amsterdam',
+                                        version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:nl_amsterdam"
+                                            version='any',
+                                            ref='uic:nl_amsterdam'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_40447"
+                                            version='any',
+                                            ref='bbd:sj_40447'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_447"
+                                            version='any',
+                                            ref='bbd:sj_447'
                                         ),
                                         description=MultilingualString(
-                                            value="Join 40447 to 447 at Amsterdam"
+                                            value='Join 40447 to 447 at Amsterdam'
                                         ),
                                         earliest_time=XmlTime(9, 0, 0, 0, 0),
                                         reason=ReasonForMeetingEnumeration.JOINING
                                     ),
                                     JourneyMeeting(
-                                        id="bbd:jm_40447_splitFrom_447_arr_hannover",
-                                        version="any",
+                                        id='bbd:jm_40447_splitFrom_447_arr_hannover',
+                                        version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:de_hannover"
+                                            version='any',
+                                            ref='uic:de_hannover'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_40447"
+                                            version='any',
+                                            ref='bbd:sj_40447'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_447"
+                                            version='any',
+                                            ref='bbd:sj_447'
                                         ),
                                         description=MultilingualString(
-                                            value="Split  40447 from 447 at Hannover"
+                                            value='Split  40447 from 447 at Hannover'
                                         ),
                                         earliest_time=XmlTime(12, 0, 0, 0, 0),
                                         reason=ReasonForMeetingEnumeration.JOINING
                                     ),
                                     JourneyMeeting(
-                                        id="bbd:jm_457_splitFrom_447_arr_berlin",
-                                        version="any",
+                                        id='bbd:jm_457_splitFrom_447_arr_berlin',
+                                        version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:de_berlin"
+                                            version='any',
+                                            ref='uic:de_berlin'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_457"
+                                            version='any',
+                                            ref='bbd:sj_457'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_447"
+                                            version='any',
+                                            ref='bbd:sj_447'
                                         ),
                                         description=MultilingualString(
-                                            value="Split  457 from 447 at Hannover"
+                                            value='Split  457 from 447 at Hannover'
                                         ),
                                         earliest_time=XmlTime(15, 0, 0, 0, 0),
                                         reason=ReasonForMeetingEnumeration.JOINING
                                     ),
                                     JourneyMeeting(
-                                        id="bbd:jm_60457_joinTo_457_dep_berlin",
-                                        version="any",
+                                        id='bbd:jm_60457_joinTo_457_dep_berlin',
+                                        version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:de_berlin"
+                                            version='any',
+                                            ref='uic:de_berlin'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_60457"
+                                            version='any',
+                                            ref='bbd:sj_60457'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_457"
+                                            version='any',
+                                            ref='bbd:sj_457'
                                         ),
                                         description=MultilingualString(
-                                            value="Join 60457 to 457 at Berlin"
+                                            value='Join 60457 to 457 at Berlin'
                                         ),
                                         earliest_time=XmlTime(15, 10, 0, 0, 0),
                                         reason=ReasonForMeetingEnumeration.JOINING
                                     ),
                                     JourneyMeeting(
-                                        id="bbd:jm_60457_splitFrom_457_arr_prague",
-                                        version="any",
+                                        id='bbd:jm_60457_splitFrom_457_arr_prague',
+                                        version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="uic:cz_prague"
+                                            version='any',
+                                            ref='uic:cz_prague'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_60457"
+                                            version='any',
+                                            ref='bbd:sj_60457'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
-                                            version="any",
-                                            ref="bbd:sj_457"
+                                            version='any',
+                                            ref='bbd:sj_457'
                                         ),
                                         earliest_time=XmlTime(20, 10, 0, 0, 0),
                                         reason=ReasonForMeetingEnumeration.SPLITTING
@@ -2192,50 +2192,50 @@ obj = PublicationDelivery(
                             vehicle_types=VehicleTypesInFrameRelStructure(
                                 compound_train_or_train_or_vehicle_type=[
                                     CompoundTrain(
-                                        id="bbd:ctrn_XX-447",
-                                        version="any",
+                                        id='bbd:ctrn_XX-447',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="447 + 457 + 40447 Amsterdam - Hannover"
+                                            value='447 + 457 + 40447 Amsterdam - Hannover'
                                         ),
                                         description=MultilingualString(
-                                            value="E - 2 2 2 2 2 2 R 1 1 -    2  2  2  2  2  -   2  2  2  1 1 - E"
+                                            value='E - 2 2 2 2 2 2 R 1 1 -    2  2  2  2  2  -   2  2  2  1 1 - E'
                                         ),
                                         self_propelled=True,
                                         components=TrainsInCompoundTrainRelStructure(
                                             train_in_compound_train=[
                                                 TrainInCompoundTrainVersionedChildStructure(
-                                                    id="bbd:trninctrn_XX-447_40447",
-                                                    version="any",
+                                                    id='bbd:trninctrn_XX-447_40447',
+                                                    version='any',
                                                     train_ref_or_train=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_40447"
+                                                        version='any',
+                                                        ref='bbd:trn_40447'
                                                     ),
                                                     label=MultilingualString(
-                                                        value="40447"
+                                                        value='40447'
                                                     ),
                                                     order=1
                                                 ),
                                                 TrainInCompoundTrainVersionedChildStructure(
-                                                    id="bbd:trninctrn_XX-447_457",
-                                                    version="any",
+                                                    id='bbd:trninctrn_XX-447_457',
+                                                    version='any',
                                                     train_ref_or_train=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_457"
+                                                        version='any',
+                                                        ref='bbd:trn_457'
                                                     ),
                                                     label=MultilingualString(
-                                                        value="457"
+                                                        value='457'
                                                     ),
                                                     order=2
                                                 ),
                                                 TrainInCompoundTrainVersionedChildStructure(
-                                                    id="bbd:trninctrn_XX-447_447",
-                                                    version="any",
+                                                    id='bbd:trninctrn_XX-447_447',
+                                                    version='any',
                                                     train_ref_or_train=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_447"
+                                                        version='any',
+                                                        ref='bbd:trn_447'
                                                     ),
                                                     label=MultilingualString(
-                                                        value="447"
+                                                        value='447'
                                                     ),
                                                     order=3
                                                 ),
@@ -2243,38 +2243,38 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     CompoundTrain(
-                                        id="bbd:ctrn_YY-447",
-                                        version="any",
+                                        id='bbd:ctrn_YY-447',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="447 + 457  Hannover - Berlin"
+                                            value='447 + 457  Hannover - Berlin'
                                         ),
                                         description=MultilingualString(
-                                            value="E- 2 2 2 2 2 2 R 1 1 -    2  2  2  2 2 -  E"
+                                            value='E- 2 2 2 2 2 2 R 1 1 -    2  2  2  2 2 -  E'
                                         ),
                                         self_propelled=True,
                                         components=TrainsInCompoundTrainRelStructure(
                                             train_in_compound_train=[
                                                 TrainInCompoundTrainVersionedChildStructure(
-                                                    id="bbd:trninctrn_YY-447_457",
-                                                    version="any",
+                                                    id='bbd:trninctrn_YY-447_457',
+                                                    version='any',
                                                     train_ref_or_train=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_457"
+                                                        version='any',
+                                                        ref='bbd:trn_457'
                                                     ),
                                                     label=MultilingualString(
-                                                        value="457"
+                                                        value='457'
                                                     ),
                                                     order=1
                                                 ),
                                                 TrainInCompoundTrainVersionedChildStructure(
-                                                    id="bbd:trninctrn_YY-447_447",
-                                                    version="any",
+                                                    id='bbd:trninctrn_YY-447_447',
+                                                    version='any',
                                                     train_ref_or_train=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_447"
+                                                        version='any',
+                                                        ref='bbd:trn_447'
                                                     ),
                                                     label=MultilingualString(
-                                                        value="447"
+                                                        value='447'
                                                     ),
                                                     order=2
                                                 ),
@@ -2282,38 +2282,38 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     CompoundTrain(
-                                        id="bbd:ctrn_ZZ-457",
-                                        version="any",
+                                        id='bbd:ctrn_ZZ-457',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="457 + 60457  Berlin - Prague"
+                                            value='457 + 60457  Berlin - Prague'
                                         ),
                                         description=MultilingualString(
-                                            value="2  2  2  2 2  -   R  2   2   2   2  - E"
+                                            value='2  2  2  2 2  -   R  2   2   2   2  - E'
                                         ),
                                         self_propelled=True,
                                         components=TrainsInCompoundTrainRelStructure(
                                             train_in_compound_train=[
                                                 TrainInCompoundTrainVersionedChildStructure(
-                                                    id="bbd:trninctrn_ZZ-457_60457",
-                                                    version="any",
+                                                    id='bbd:trninctrn_ZZ-457_60457',
+                                                    version='any',
                                                     train_ref_or_train=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_60457"
+                                                        version='any',
+                                                        ref='bbd:trn_60457'
                                                     ),
                                                     label=MultilingualString(
-                                                        value="60457"
+                                                        value='60457'
                                                     ),
                                                     order=1
                                                 ),
                                                 TrainInCompoundTrainVersionedChildStructure(
-                                                    id="bbd:trninctrn_ZZ-457_457",
-                                                    version="any",
+                                                    id='bbd:trninctrn_ZZ-457_457',
+                                                    version='any',
                                                     train_ref_or_train=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_457"
+                                                        version='any',
+                                                        ref='bbd:trn_457'
                                                     ),
                                                     label=MultilingualString(
-                                                        value="447"
+                                                        value='447'
                                                     ),
                                                     order=2
                                                 ),
@@ -2321,41 +2321,41 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Train(
-                                        id="bbd:trn_40447",
-                                        version="any",
+                                        id='bbd:trn_40447',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="40447 Hanover - Copenhagen"
+                                            value='40447 Hanover - Copenhagen'
                                         ),
                                         description=MultilingualString(
-                                            value="2  2  2 1 1 E"
+                                            value='2  2  2 1 1 E'
                                         ),
                                         self_propelled=True,
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_general"
+                                                    version='any',
+                                                    ref='bbd:svcfc_general'
                                                 ),
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_first"
+                                                    version='any',
+                                                    ref='bbd:svcfc_first'
                                                 ),
                                             ]
                                         ),
                                         components=TrainComponentsRelStructure(
                                             train_component_ref_or_train_component=[
                                                 TrainComponent(
-                                                    id="bbd:trncmp_40447_01",
-                                                    version="any",
+                                                    id='bbd:trncmp_40447_01',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Engine "
+                                                        value='Engine '
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Engine"
+                                                        value='Engine'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_40447_01",
-                                                        version="any",
+                                                        id='bbd:trne_40447_01',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2364,17 +2364,17 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_40447_02",
-                                                    version="any",
+                                                    id='bbd:trncmp_40447_02',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage A"
+                                                        value='Carriage A'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Front Carriage 1st Class"
+                                                        value='Front Carriage 1st Class'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_40447_02",
-                                                        version="any",
+                                                        id='bbd:trne_40447_02',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2386,17 +2386,17 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_40447_03",
-                                                    version="any",
+                                                    id='bbd:trncmp_40447_03',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage B"
+                                                        value='Carriage B'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="2nd Carriage 1st CLass"
+                                                        value='2nd Carriage 1st CLass'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_40447_03",
-                                                        version="any",
+                                                        id='bbd:trne_40447_03',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2408,17 +2408,17 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_40447_04",
-                                                    version="any",
+                                                    id='bbd:trncmp_40447_04',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage B"
+                                                        value='Carriage B'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="3rd Carriage"
+                                                        value='3rd Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_40447_04",
-                                                        version="any",
+                                                        id='bbd:trne_40447_04',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2430,17 +2430,17 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_40447_05",
-                                                    version="any",
+                                                    id='bbd:trncmp_40447_05',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage D"
+                                                        value='Carriage D'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="4th Carriage"
+                                                        value='4th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_40447_05",
-                                                        version="any",
+                                                        id='bbd:trne_40447_05',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2452,17 +2452,17 @@ obj = PublicationDelivery(
                                                     order=4
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_40447_06",
-                                                    version="any",
+                                                    id='bbd:trncmp_40447_06',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage E"
+                                                        value='Carriage E'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="5th Carriage"
+                                                        value='5th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_40447_06",
-                                                        version="any",
+                                                        id='bbd:trne_40447_06',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2477,41 +2477,41 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Train(
-                                        id="bbd:trn_447",
-                                        version="any",
+                                        id='bbd:trn_447',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="447 Amsterdam - Warsaw "
+                                            value='447 Amsterdam - Warsaw '
                                         ),
                                         description=MultilingualString(
-                                            value="E 2 2 2 2 2 2 R 1 1   X"
+                                            value='E 2 2 2 2 2 2 R 1 1   X'
                                         ),
                                         self_propelled=True,
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_general"
+                                                    version='any',
+                                                    ref='bbd:svcfc_general'
                                                 ),
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_first"
+                                                    version='any',
+                                                    ref='bbd:svcfc_first'
                                                 ),
                                             ]
                                         ),
                                         components=TrainComponentsRelStructure(
                                             train_component_ref_or_train_component=[
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_01",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_01',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage K"
+                                                        value='Carriage K'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Front Carriage 1st Class"
+                                                        value='Front Carriage 1st Class'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_01",
-                                                        version="any",
+                                                        id='bbd:trne_447_01',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2523,17 +2523,17 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_02",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_02',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage L"
+                                                        value='Carriage L'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="2nd Carriage 1st CLass"
+                                                        value='2nd Carriage 1st CLass'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_02",
-                                                        version="any",
+                                                        id='bbd:trne_447_02',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2545,17 +2545,17 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_03",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_03',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage M"
+                                                        value='Carriage M'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="3rd Carriage"
+                                                        value='3rd Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_03",
-                                                        version="any",
+                                                        id='bbd:trne_447_03',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2567,17 +2567,17 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_04",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_04',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage N"
+                                                        value='Carriage N'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="4th Carriage"
+                                                        value='4th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_04",
-                                                        version="any",
+                                                        id='bbd:trne_447_04',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2589,17 +2589,17 @@ obj = PublicationDelivery(
                                                     order=4
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_05",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_05',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage O"
+                                                        value='Carriage O'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="5th Carriage"
+                                                        value='5th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_05",
-                                                        version="any",
+                                                        id='bbd:trne_447_05',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2611,17 +2611,17 @@ obj = PublicationDelivery(
                                                     order=5
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_06",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_06',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage P"
+                                                        value='Carriage P'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="6th Carriage"
+                                                        value='6th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_06",
-                                                        version="any",
+                                                        id='bbd:trne_447_06',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2633,17 +2633,17 @@ obj = PublicationDelivery(
                                                     order=6
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_07",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_07',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage Q"
+                                                        value='Carriage Q'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="7th Carriage"
+                                                        value='7th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_07",
-                                                        version="any",
+                                                        id='bbd:trne_447_07',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2655,17 +2655,17 @@ obj = PublicationDelivery(
                                                     order=7
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_08",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_08',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage R"
+                                                        value='Carriage R'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="8th Carriage"
+                                                        value='8th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_08",
-                                                        version="any",
+                                                        id='bbd:trne_447_08',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2677,17 +2677,17 @@ obj = PublicationDelivery(
                                                     order=8
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_447_09",
-                                                    version="any",
+                                                    id='bbd:trncmp_447_09',
+                                                    version='any',
                                                     label=MultilingualString(
 
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Engine"
+                                                        value='Engine'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_447_09",
-                                                        version="any",
+                                                        id='bbd:trne_447_09',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2699,37 +2699,37 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Train(
-                                        id="bbd:trn_457",
-                                        version="any",
+                                        id='bbd:trn_457',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="457  Amsterdam - Prague "
+                                            value='457  Amsterdam - Prague '
                                         ),
                                         description=MultilingualString(
-                                            value="-   2  2  2  2 2  -    "
+                                            value='-   2  2  2  2 2  -    '
                                         ),
                                         self_propelled=False,
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_general"
+                                                    version='any',
+                                                    ref='bbd:svcfc_general'
                                                 ),
                                             ]
                                         ),
                                         components=TrainComponentsRelStructure(
                                             train_component_ref_or_train_component=[
                                                 TrainComponent(
-                                                    id="bbd:trncmp_457_01",
-                                                    version="any",
+                                                    id='bbd:trncmp_457_01',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage F"
+                                                        value='Carriage F'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Front Carriage "
+                                                        value='Front Carriage '
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_457_01",
-                                                        version="any",
+                                                        id='bbd:trne_457_01',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2741,17 +2741,17 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_457_02",
-                                                    version="any",
+                                                    id='bbd:trncmp_457_02',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage G"
+                                                        value='Carriage G'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="2nd Carriage  "
+                                                        value='2nd Carriage  '
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_457_02",
-                                                        version="any",
+                                                        id='bbd:trne_457_02',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2763,17 +2763,17 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_457_03",
-                                                    version="any",
+                                                    id='bbd:trncmp_457_03',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage H"
+                                                        value='Carriage H'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="3rd Carriage"
+                                                        value='3rd Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_457_03",
-                                                        version="any",
+                                                        id='bbd:trne_457_03',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2785,17 +2785,17 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_457_04",
-                                                    version="any",
+                                                    id='bbd:trncmp_457_04',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage I"
+                                                        value='Carriage I'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="4th Carriage"
+                                                        value='4th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_457_04",
-                                                        version="any",
+                                                        id='bbd:trne_457_04',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2807,17 +2807,17 @@ obj = PublicationDelivery(
                                                     order=4
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_457_05",
-                                                    version="any",
+                                                    id='bbd:trncmp_457_05',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage J"
+                                                        value='Carriage J'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="5th Carriage"
+                                                        value='5th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_457_05",
-                                                        version="any",
+                                                        id='bbd:trne_457_05',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2832,37 +2832,37 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     Train(
-                                        id="bbd:trn_60457",
-                                        version="any",
+                                        id='bbd:trn_60457',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="60457  Berlin - Prague "
+                                            value='60457  Berlin - Prague '
                                         ),
                                         description=MultilingualString(
-                                            value="-  R  2   2   2   2  - E"
+                                            value='-  R  2   2   2   2  - E'
                                         ),
                                         self_propelled=False,
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="bbd:svcfc_general"
+                                                    version='any',
+                                                    ref='bbd:svcfc_general'
                                                 ),
                                             ]
                                         ),
                                         components=TrainComponentsRelStructure(
                                             train_component_ref_or_train_component=[
                                                 TrainComponent(
-                                                    id="bbd:trncmp_60457_01",
-                                                    version="any",
+                                                    id='bbd:trncmp_60457_01',
+                                                    version='any',
                                                     label=MultilingualString(
 
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Engine"
+                                                        value='Engine'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_60457_01",
-                                                        version="any",
+                                                        id='bbd:trne_60457_01',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2871,17 +2871,17 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_60457_02",
-                                                    version="any",
+                                                    id='bbd:trncmp_60457_02',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage AA"
+                                                        value='Carriage AA'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="Front Carriage "
+                                                        value='Front Carriage '
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_60457_02",
-                                                        version="any",
+                                                        id='bbd:trne_60457_02',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2893,17 +2893,17 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_60457_03",
-                                                    version="any",
+                                                    id='bbd:trncmp_60457_03',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage BB"
+                                                        value='Carriage BB'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="2nd Carriage  "
+                                                        value='2nd Carriage  '
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_60457_03",
-                                                        version="any",
+                                                        id='bbd:trne_60457_03',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2915,17 +2915,17 @@ obj = PublicationDelivery(
                                                     order=3
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_60457_04",
-                                                    version="any",
+                                                    id='bbd:trncmp_60457_04',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage CC"
+                                                        value='Carriage CC'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="3rd Carriage"
+                                                        value='3rd Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_60457_04",
-                                                        version="any",
+                                                        id='bbd:trne_60457_04',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2937,17 +2937,17 @@ obj = PublicationDelivery(
                                                     order=4
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_60457_05",
-                                                    version="any",
+                                                    id='bbd:trncmp_60457_05',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage DD"
+                                                        value='Carriage DD'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="4th Carriage"
+                                                        value='4th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_60457_05",
-                                                        version="any",
+                                                        id='bbd:trne_60457_05',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2959,17 +2959,17 @@ obj = PublicationDelivery(
                                                     order=5
                                                 ),
                                                 TrainComponent(
-                                                    id="bbd:trncmp_60457_06",
-                                                    version="any",
+                                                    id='bbd:trncmp_60457_06',
+                                                    version='any',
                                                     label=MultilingualString(
-                                                        value="Carriage EE"
+                                                        value='Carriage EE'
                                                     ),
                                                     description=MultilingualString(
-                                                        value="5th Carriage"
+                                                        value='5th Carriage'
                                                     ),
                                                     train_element_ref_or_train_element=TrainElement(
-                                                        id="bbd:trne_60457_06",
-                                                        version="any",
+                                                        id='bbd:trne_60457_06',
+                                                        version='any',
                                                         name=MultilingualString(
 
                                                         ),
@@ -2987,80 +2987,80 @@ obj = PublicationDelivery(
                             )
                         ),
                         VehicleScheduleFrame(
-                            id="ops:VSF_23_O",
-                            version="any",
+                            id='ops:VSF_23_O',
+                            version='any',
                             name=MultilingualString(
-                                value="BLOCKS Winter timetable for Asmterdam Example"
+                                value='BLOCKS Winter timetable for Asmterdam Example'
                             ),
                             blocks=BlocksInFrameRelStructure(
                                 block_or_compound_block_or_train_block=[
                                     TrainBlock(
-                                        id="ops:blk_447_amsterdam-warsaw",
-                                        version="any",
+                                        id='ops:blk_447_amsterdam-warsaw',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Amsterdam - Hannover - Berrlin  Warsaw"
+                                            value='Amsterdam - Hannover - Berrlin  Warsaw'
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT10H"),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                            version="any",
-                                            ref="bbd:trn_447"
+                                            version='any',
+                                            ref='bbd:trn_447'
                                         ),
                                         start_point_ref=PointRefStructure(
-                                            ref="uic:nl_amsterdam"
+                                            ref='uic:nl_amsterdam'
                                         ),
                                         end_point_ref=PointRefStructure(
-                                            ref="uic:pl_warsaw"
+                                            ref='uic:pl_warsaw'
                                         ),
                                         block_parts=BlockPartsRelStructure(
                                             choice=[
                                                 TrainBlockPart(
-                                                    id="ops:blkpt_447_01_amsterdam-hannover",
-                                                    version="any",
+                                                    id='ops:blkpt_447_01_amsterdam-hannover',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Amsterdam to Hannover (447+ 457 +40447)"
+                                                        value='Amsterdam to Hannover (447+ 457 +40447)'
                                                     ),
                                                     compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
-                                                        version="any",
-                                                        ref="bbd:ctrn_XX-447"
+                                                        version='any',
+                                                        ref='bbd:ctrn_XX-447'
                                                     ),
                                                     journey_part_couple_ref_or_journey_parts=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_01_amsterdam-hannover"
+                                                        version='any',
+                                                        ref='bbd:jpc_01_amsterdam-hannover'
                                                     ),
                                                     order=1
                                                 ),
                                                 TrainBlockPart(
-                                                    id="ops:blkpt_447_02_hannover-berlin",
-                                                    version="any",
+                                                    id='ops:blkpt_447_02_hannover-berlin',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Hannover to Berlin (447+ 457)"
+                                                        value='Hannover to Berlin (447+ 457)'
                                                     ),
                                                     compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
-                                                        version="any",
-                                                        ref="bbd:ctrn_YY-447"
+                                                        version='any',
+                                                        ref='bbd:ctrn_YY-447'
                                                     ),
                                                     journey_part_couple_ref_or_journey_parts=JourneyPartCoupleRef(
-                                                        version="any",
-                                                        ref="bbd:jpc_02_hannover-berlin"
+                                                        version='any',
+                                                        ref='bbd:jpc_02_hannover-berlin'
                                                     ),
                                                     order=2
                                                 ),
                                                 TrainBlockPart(
-                                                    id="ops:blkpt_447_03_berlin-warsaw",
-                                                    version="any",
+                                                    id='ops:blkpt_447_03_berlin-warsaw',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Berlin to Warsaw (447)"
+                                                        value='Berlin to Warsaw (447)'
                                                     ),
                                                     compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_447"
+                                                        version='any',
+                                                        ref='bbd:trn_447'
                                                     ),
                                                     journey_part_couple_ref_or_journey_parts=JourneyPartRefsRelStructure(
                                                         journey_part_ref=[
                                                             JourneyPartRef(
-                                                                version="any",
-                                                                ref="bbd:jpt_447_03"
+                                                                version='any',
+                                                                ref='bbd:jpt_447_03'
                                                             ),
                                                         ]
                                                     ),
@@ -3070,44 +3070,44 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     TrainBlock(
-                                        id="ops:blk_40447_amsterdam-copenhagen",
-                                        version="any",
+                                        id='ops:blk_40447_amsterdam-copenhagen',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Amsterdam to  Copenhagen (40447)"
+                                            value='Amsterdam to  Copenhagen (40447)'
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT7H"),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                            version="any",
-                                            ref="bbd:trn_40447"
+                                            version='any',
+                                            ref='bbd:trn_40447'
                                         ),
                                         start_point_ref=PointRefStructure(
-                                            ref="uic:de_hannover"
+                                            ref='uic:de_hannover'
                                         ),
                                         end_point_ref=PointRefStructure(
-                                            ref="uic:dk_copenhagen"
+                                            ref='uic:dk_copenhagen'
                                         ),
                                         block_parts=BlockPartsRelStructure(
                                             choice=[
                                                 TrainBlockPartRef(
-                                                    version="any",
-                                                    ref="ops:blkpt_447_01_amsterdam-hannover"
+                                                    version='any',
+                                                    ref='ops:blkpt_447_01_amsterdam-hannover'
                                                 ),
                                                 TrainBlockPart(
-                                                    id="ops:blkpt_40447_02_hannover-copenhagen",
-                                                    version="any",
+                                                    id='ops:blkpt_40447_02_hannover-copenhagen',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Hannover to  Copenhagen"
+                                                        value='Hannover to  Copenhagen'
                                                     ),
                                                     compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                                        version="any",
-                                                        ref="bbd:trn_40447"
+                                                        version='any',
+                                                        ref='bbd:trn_40447'
                                                     ),
                                                     journey_part_couple_ref_or_journey_parts=JourneyPartRefsRelStructure(
                                                         journey_part_ref=[
                                                             JourneyPartRef(
-                                                                version="any",
-                                                                ref="bbd:jpt_40447_02"
+                                                                version='any',
+                                                                ref='bbd:jpt_40447_02'
                                                             ),
                                                         ]
                                                     ),
@@ -3117,42 +3117,42 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     TrainBlock(
-                                        id="ops:blk_457_amsterdam-prague",
-                                        version="any",
+                                        id='ops:blk_457_amsterdam-prague',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Amsterdam to Prague"
+                                            value='Amsterdam to Prague'
                                         ),
                                         preparation_duration=XmlDuration("PT10M"),
                                         finishing_duration=XmlDuration("PT10H"),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=TrainRef(
-                                            version="any",
-                                            ref="bbd:trn_457"
+                                            version='any',
+                                            ref='bbd:trn_457'
                                         ),
                                         start_point_ref=PointRefStructure(
-                                            ref="uic:de_berlin"
+                                            ref='uic:de_berlin'
                                         ),
                                         end_point_ref=PointRefStructure(
-                                            ref="uic:cz_prague"
+                                            ref='uic:cz_prague'
                                         ),
                                         block_parts=BlockPartsRelStructure(
                                             choice=[
                                                 TrainBlockPartRef(
-                                                    version="any",
-                                                    ref="ops:blkpt_447_01_amsterdam-hannover"
+                                                    version='any',
+                                                    ref='ops:blkpt_447_01_amsterdam-hannover'
                                                 ),
                                                 TrainBlockPartRef(
-                                                    version="any",
-                                                    ref="ops:blkpt_447_02_hannover-berlin"
+                                                    version='any',
+                                                    ref='ops:blkpt_447_02_hannover-berlin'
                                                 ),
                                                 TrainBlockPart(
-                                                    id="ops:blkpt_457_03_berlin-prague",
-                                                    version="any",
+                                                    id='ops:blkpt_457_03_berlin-prague',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Berlin to Prague"
+                                                        value='Berlin to Prague'
                                                     ),
                                                     compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
-                                                        version="any",
-                                                        ref="bbd:ctrn_ZZ-457"
+                                                        version='any',
+                                                        ref='bbd:ctrn_ZZ-457'
                                                     ),
                                                     order=3
                                                 ),
@@ -3160,58 +3160,58 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     CompoundBlock(
-                                        id="bbd:XX-447_amsterdam-hannover",
-                                        version="any",
+                                        id='bbd:XX-447_amsterdam-hannover',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Amsterdam to Hannover"
+                                            value='Amsterdam to Hannover'
                                         ),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
-                                            version="any",
-                                            ref="bbd:ctrn_XX-447"
+                                            version='any',
+                                            ref='bbd:ctrn_XX-447'
                                         ),
                                         parts=BlockPartsRelStructure(
                                             choice=[
                                                 TrainBlockPartRef(
-                                                    version="any",
-                                                    ref="ops:blkpt_447_01_amsterdam-hannover"
+                                                    version='any',
+                                                    ref='ops:blkpt_447_01_amsterdam-hannover'
                                                 ),
                                             ]
                                         )
                                     ),
                                     CompoundBlock(
-                                        id="bbd:YY-447_hannover-berlin",
-                                        version="any",
+                                        id='bbd:YY-447_hannover-berlin',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Hannover to Berlin"
+                                            value='Hannover to Berlin'
                                         ),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
-                                            version="any",
-                                            ref="bbd:ctrn_YY-447"
+                                            version='any',
+                                            ref='bbd:ctrn_YY-447'
                                         ),
                                         parts=BlockPartsRelStructure(
                                             choice=[
                                                 TrainBlockPartRef(
-                                                    version="any",
-                                                    ref="ops:blkpt_447_02_hannover-berlin"
+                                                    version='any',
+                                                    ref='ops:blkpt_447_02_hannover-berlin'
                                                 ),
                                             ]
                                         )
                                     ),
                                     CompoundBlock(
-                                        id="bbd:cmpblk_ZZ-457_berlin-prague",
-                                        version="any",
+                                        id='bbd:cmpblk_ZZ-457_berlin-prague',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Berlin to Prague"
+                                            value='Berlin to Prague'
                                         ),
                                         compound_train_ref_or_train_ref_or_vehicle_type_ref=CompoundTrainRef(
-                                            version="any",
-                                            ref="bbd:ctrn_ZZ-457"
+                                            version='any',
+                                            ref='bbd:ctrn_ZZ-457'
                                         ),
                                         parts=BlockPartsRelStructure(
                                             choice=[
                                                 TrainBlockPartRef(
-                                                    version="any",
-                                                    ref="ops:blkpt_457_03_berlin-prague"
+                                                    version='any',
+                                                    ref='ops:blkpt_457_03_berlin-prague'
                                                 ),
                                             ]
                                         )
@@ -3220,51 +3220,51 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="myrail:svf_12",
-                            version="any",
+                            id='myrail:svf_12',
+                            version='any',
                             name=MultilingualString(
-                                value="Stops for Winter timetable for Splitting timnetable  Amsterdamn to Warsaw  "
+                                value='Stops for Winter timetable for Splitting timnetable  Amsterdamn to Warsaw  '
                             ),
                             routes=RoutesInFrameRelStructure(
                                 flexible_route_or_route=[
                                     Route(
-                                        id="myrail:RT_447",
-                                        version="any",
+                                        id='myrail:RT_447',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="amsterdam-warsaw"
+                                            value='amsterdam-warsaw'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Route 447"
+                                            value='Route 447'
                                         )
                                     ),
                                     Route(
-                                        id="myrail:RT_40447",
-                                        version="any",
+                                        id='myrail:RT_40447',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="amsterdam-copenhagen"
+                                            value='amsterdam-copenhagen'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Route 40447"
+                                            value='Route 40447'
                                         )
                                     ),
                                     Route(
-                                        id="myrail:RT_457",
-                                        version="any",
+                                        id='myrail:RT_457',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="amsterdam-prague"
+                                            value='amsterdam-prague'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Route 457"
+                                            value='Route 457'
                                         )
                                     ),
                                     Route(
-                                        id="myrail:RT_60457",
-                                        version="any",
+                                        id='myrail:RT_60457',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="berlin-prague"
+                                            value='berlin-prague'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Route 60457"
+                                            value='Route 60457'
                                         )
                                     ),
                                 ]
@@ -3272,35 +3272,35 @@ obj = PublicationDelivery(
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="myrail:LN_nl_amsterdam-cz_prague",
-                                        version="any",
+                                        id='myrail:LN_nl_amsterdam-cz_prague',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="LN_amsterdam-cz_prague"
+                                            value='LN_amsterdam-cz_prague'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 24"
+                                            value='Line 24'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
                                     Line(
-                                        id="myrail:LN_nl_amsterdam-pl_warsaw",
-                                        version="any",
+                                        id='myrail:LN_nl_amsterdam-pl_warsaw',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="LN_amsterdam-pl_warsaw"
+                                            value='LN_amsterdam-pl_warsaw'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 25"
+                                            value='Line 25'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
                                     Line(
-                                        id="myrail:LN_nl_amsterdam-dk_copenhagen",
-                                        version="any",
+                                        id='myrail:LN_nl_amsterdam-dk_copenhagen',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="LN_amsterdam-pl_warsaw"
+                                            value='LN_amsterdam-pl_warsaw'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 31"
+                                            value='Line 31'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL
                                     ),
@@ -3309,55 +3309,55 @@ obj = PublicationDelivery(
                             destination_displays=DestinationDisplaysInFrameRelStructure(
                                 destination_display=[
                                     DestinationDisplay(
-                                        id="bbd:DST_berlin",
-                                        version="any",
+                                        id='bbd:DST_berlin',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Berlin  Hochbahnhof",
-                                            lang="de"
+                                            value='Berlin  Hochbahnhof',
+                                            lang='de'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Berlin HBF"
+                                            value='Berlin HBF'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="bbd:DST_copenhagen",
-                                        version="any",
+                                        id='bbd:DST_copenhagen',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Copenhagen Main Station"
+                                            value='Copenhagen Main Station'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Hannover HBF"
+                                            value='Hannover HBF'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="bbd:DST_hannover",
-                                        version="any",
+                                        id='bbd:DST_hannover',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hannover  Hochbahnhof",
-                                            lang="de"
+                                            value='Hannover  Hochbahnhof',
+                                            lang='de'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Hannover HBF"
+                                            value='Hannover HBF'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="bbd:DST_prague",
-                                        version="any",
+                                        id='bbd:DST_prague',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Prague"
+                                            value='Prague'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Prague"
+                                            value='Prague'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="bbd:DST_warsaw",
-                                        version="any",
+                                        id='bbd:DST_warsaw',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Warsaw"
+                                            value='Warsaw'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Warsaw"
+                                            value='Warsaw'
                                         )
                                     ),
                                 ]
@@ -3365,60 +3365,60 @@ obj = PublicationDelivery(
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="uic:nl_amsterdam",
-                                        version="any",
+                                        id='uic:nl_amsterdam',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Amsterdamn"
+                                            value='Amsterdamn'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="uic:de_hannover",
-                                        version="any",
+                                        id='uic:de_hannover',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hannover"
+                                            value='Hannover'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="uic:de_berlin",
-                                        version="any",
+                                        id='uic:de_berlin',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Berlin"
+                                            value='Berlin'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="uic:cz_prague",
-                                        version="any",
+                                        id='uic:cz_prague',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Prague HBF"
+                                            value='Prague HBF'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="uic:dk_copenhagen",
-                                        version="any",
+                                        id='uic:dk_copenhagen',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Copenhagen HBF"
+                                            value='Copenhagen HBF'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="uic:pl_warsaw",
-                                        version="any",
+                                        id='uic:pl_warsaw',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Berlin"
+                                            value='Berlin'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -3429,31 +3429,31 @@ obj = PublicationDelivery(
                             connections=TransfersInFrameRelStructure(
                                 choice=[
                                     Connection(
-                                        id="uic:cx_de_hannover_01",
-                                        version="any",
+                                        id='uic:cx_de_hannover_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Connection at Hannover for berlin"
+                                            value='Connection at Hannover for berlin'
                                         )
                                     ),
                                     Connection(
-                                        id="uic:cx_de_hannover_02",
-                                        version="any",
+                                        id='uic:cx_de_hannover_02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Connection at Hannover for Copenhagen"
+                                            value='Connection at Hannover for Copenhagen'
                                         )
                                     ),
                                     Connection(
-                                        id="uic:cx_de_berlin_01",
-                                        version="any",
+                                        id='uic:cx_de_berlin_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Connection at Berlin for Warsaw"
+                                            value='Connection at Berlin for Warsaw'
                                         )
                                     ),
                                     Connection(
-                                        id="uic:cx_de_berlin_02",
-                                        version="any",
+                                        id='uic:cx_de_berlin_02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Connection at Berlin for Prague"
+                                            value='Connection at Berlin for Prague'
                                         )
                                     ),
                                 ]
@@ -3461,165 +3461,165 @@ obj = PublicationDelivery(
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     ServiceJourneyPattern(
-                                        id="bbd:JP_447_amsterdam_warsaw",
-                                        version="any",
+                                        id='bbd:JP_447_amsterdam_warsaw',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Amsterdam  to Warsaw"
+                                            value='Amsterdam  to Warsaw'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_447_amsterdam_warsaw_01",
-                                                    version="any",
+                                                    id='bbd:JP_447_amsterdam_warsaw_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_447_amsterdam_warsaw_02",
-                                                    version="any",
+                                                    id='bbd:JP_447_amsterdam_warsaw_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_447_amsterdam_warsaw_03",
-                                                    version="any",
+                                                    id='bbd:JP_447_amsterdam_warsaw_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_447_amsterdam_warsaw_04",
-                                                    version="any",
+                                                    id='bbd:JP_447_amsterdam_warsaw_04',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:pl_warsaw"
+                                                        version='any',
+                                                        ref='uic:pl_warsaw'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="bbd:JP_40447_amsterdam-copenhagen",
-                                        version="any",
+                                        id='bbd:JP_40447_amsterdam-copenhagen',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Amsterdamn to Copenhagen"
+                                            value='Amsterdamn to Copenhagen'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_40447_amsterdam_copenhagen_01",
-                                                    version="any",
+                                                    id='bbd:JP_40447_amsterdam_copenhagen_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_40447_amsterdam_copenhagen_02",
-                                                    version="any",
+                                                    id='bbd:JP_40447_amsterdam_copenhagen_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_40447_amsterdam_copenhagen_03",
-                                                    version="any",
+                                                    id='bbd:JP_40447_amsterdam_copenhagen_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:dk_copenhagen"
+                                                        version='any',
+                                                        ref='uic:dk_copenhagen'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="bbd:JP_457_amsterdam-prague",
-                                        version="any",
+                                        id='bbd:JP_457_amsterdam-prague',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Amsterdam to prague"
+                                            value='Amsterdam to prague'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_457_amsterdam_prague_01",
-                                                    version="any",
+                                                    id='bbd:JP_457_amsterdam_prague_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:nl_amsterdam"
+                                                        version='any',
+                                                        ref='uic:nl_amsterdam'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_457_amsterdam_prague_02",
-                                                    version="any",
+                                                    id='bbd:JP_457_amsterdam_prague_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_hannover"
+                                                        version='any',
+                                                        ref='uic:de_hannover'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_457_amsterdam_prague_03",
-                                                    version="any",
+                                                    id='bbd:JP_457_amsterdam_prague_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_457_amsterdam_prague_04",
-                                                    version="any",
+                                                    id='bbd:JP_457_amsterdam_prague_04',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:cz_prague"
+                                                        version='any',
+                                                        ref='uic:cz_prague'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="bbd:JP_60457_berlin-prague",
-                                        version="any",
+                                        id='bbd:JP_60457_berlin-prague',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Berlin to Prague"
+                                            value='Berlin to Prague'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_60457_berlin_prague_01",
-                                                    version="any",
+                                                    id='bbd:JP_60457_berlin_prague_01',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:de_berlin"
+                                                        version='any',
+                                                        ref='uic:de_berlin'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="bbd:JP_60457_berlin_prague_02",
-                                                    version="any",
+                                                    id='bbd:JP_60457_berlin_prague_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="uic:cz_prague"
+                                                        version='any',
+                                                        ref='uic:cz_prague'
                                                     )
                                                 ),
                                             ]
@@ -3629,149 +3629,149 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="mybus:svf_12",
-                            version="any",
+                            id='mybus:svf_12',
+                            version='any',
                             name=MultilingualString(
-                                value="Stop Places for Winter timetable for route 24 "
+                                value='Stop Places for Winter timetable for route 24 '
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="uic:nl_amsterdam",
-                                        version="any",
+                                        id='uic:nl_amsterdam',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Amsterdam"
+                                            value='Amsterdam'
                                         ),
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="uic:nl_amsterdam_1",
-                                                    version="any",
+                                                    id='uic:nl_amsterdam_1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 1"
+                                                        value='Platform 1'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     StopPlace(
-                                        id="uic:de_berlin",
-                                        version="any",
+                                        id='uic:de_berlin',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Berlin HBF"
+                                            value='Berlin HBF'
                                         ),
                                         transport_mode=VehicleModeEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="uic:de_berlin_1",
-                                                    version="any",
+                                                    id='uic:de_berlin_1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 1"
+                                                        value='Platform 1'
                                                     )
                                                 ),
                                                 Quay(
-                                                    id="uic:de_berlin_2",
-                                                    version="any",
+                                                    id='uic:de_berlin_2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 2"
+                                                        value='Platform 2'
                                                     )
                                                 ),
                                                 Quay(
-                                                    id="uic:de_berlin_3",
-                                                    version="any",
+                                                    id='uic:de_berlin_3',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 3"
+                                                        value='Platform 3'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     StopPlace(
-                                        id="uic:dk_copenhagen",
-                                        version="any",
+                                        id='uic:dk_copenhagen',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Copenhagen HBF"
+                                            value='Copenhagen HBF'
                                         ),
                                         transport_mode=VehicleModeEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="uic:dk_copenhagen_1",
-                                                    version="any",
+                                                    id='uic:dk_copenhagen_1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 1"
+                                                        value='Platform 1'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     StopPlace(
-                                        id="uic:de_hannover",
-                                        version="any",
+                                        id='uic:de_hannover',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hannover HBF"
+                                            value='Hannover HBF'
                                         ),
                                         transport_mode=VehicleModeEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="uic:de_hannover_5",
-                                                    version="any",
+                                                    id='uic:de_hannover_5',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 5"
+                                                        value='Platform 5'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     StopPlace(
-                                        id="uic:cz_prague",
-                                        version="any",
+                                        id='uic:cz_prague',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Warsaw HBF"
+                                            value='Warsaw HBF'
                                         ),
                                         transport_mode=VehicleModeEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="uic:cz_prague_1",
-                                                    version="any",
+                                                    id='uic:cz_prague_1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 1"
+                                                        value='Platform 1'
                                                     )
                                                 ),
                                                 Quay(
-                                                    id="uic:cz_prague_2",
-                                                    version="any",
+                                                    id='uic:cz_prague_2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 2"
+                                                        value='Platform 2'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     StopPlace(
-                                        id="uic:pl_warsaw",
-                                        version="any",
+                                        id='uic:pl_warsaw',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Warsaw HBF"
+                                            value='Warsaw HBF'
                                         ),
                                         transport_mode=VehicleModeEnumeration.RAIL,
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="uic:pl_warsaw_7",
-                                                    version="any",
+                                                    id='uic:pl_warsaw_7',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 1"
+                                                        value='Platform 1'
                                                     )
                                                 ),
                                                 Quay(
-                                                    id="uic:pl_warsaw_8",
-                                                    version="any",
+                                                    id='uic:pl_warsaw_8',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Platform 1"
+                                                        value='Platform 1'
                                                     )
                                                 ),
                                             ]
@@ -3781,24 +3781,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="bbd:CAL_01",
-                            version="any",
+                            id='bbd:CAL_01',
+                            version='any',
                             name=MultilingualString(
-                                value="Service Calendar Nov 2010 "
+                                value='Service Calendar Nov 2010 '
                             ),
                             service_calendar=ServiceCalendar(
-                                id="bbd:SC_01",
-                                version="any",
+                                id='bbd:SC_01',
+                                version='any',
                                 from_date=XmlDate(2010, 11, 1),
                                 to_date=XmlDate(2010, 11, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="bbd:DT_01-MF-NH",
-                                        version="any",
+                                        id='bbd:DT_01-MF-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekdays unless a holiday"
+                                            value='Weekdays unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -3818,10 +3818,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="bbd:DT_03-WE-NH",
-                                        version="any",
+                                        id='bbd:DT_03-WE-NH',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekends unless a holiday"
+                                            value='Weekends unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[

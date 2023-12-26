@@ -17,7 +17,7 @@ class StaircaseEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "ContinuousHandrail",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     without_riser: Optional[bool] = field(
         default=None,
@@ -25,7 +25,7 @@ class StaircaseEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "WithoutRiser",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     spiral_stair: Optional[bool] = field(
         default=None,
@@ -33,7 +33,7 @@ class StaircaseEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "SpiralStair",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_flights: Optional[int] = field(
         default=None,
@@ -41,12 +41,12 @@ class StaircaseEquipmentVersionStructure(StairEquipmentVersionStructure):
             "name": "NumberOfFlights",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flights: Optional[StairFlightsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

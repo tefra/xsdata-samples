@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .codespace import Codespace
 from .codespace_ref import CodespaceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -12,7 +12,7 @@ class CodespacesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "codespaces_RelStructure"
 
-    codespace_ref_or_codespace: List[object] = field(
+    codespace_ref_or_codespace: List[Union[CodespaceRef, Codespace]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +28,5 @@ class CodespacesRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

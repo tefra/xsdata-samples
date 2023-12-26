@@ -18,14 +18,14 @@ class DescendantRefType:
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
-        }
+        },
     )
     urn_ref: None | str = field(
         default=None,
         metadata={
             "name": "urnRef",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | MediaTypeEnum = field(
         default=None,
@@ -33,5 +33,5 @@ class DescendantRefType:
             "name": "type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

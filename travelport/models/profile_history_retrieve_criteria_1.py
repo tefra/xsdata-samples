@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
-from travelport.models.type_profile_component_type_1 import TypeProfileComponentType1
+from travelport.models.type_profile_component_type_1 import (
+    TypeProfileComponentType1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -37,6 +39,7 @@ class ProfileHistoryRetrieveCriteria1:
         group instance or by custom field or field group ID, also send
         FieldID or FieldGroupID.
     """
+
     class Meta:
         name = "ProfileHistoryRetrieveCriteria"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -46,40 +49,40 @@ class ProfileHistoryRetrieveCriteria1:
         metadata={
             "name": "AgentID",
             "type": "Attribute",
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-        }
+        },
     )
     field_id: None | str = field(
         default=None,
         metadata={
             "name": "FieldID",
             "type": "Attribute",
-        }
+        },
     )
     field_group_id: None | str = field(
         default=None,
         metadata={
             "name": "FieldGroupID",
             "type": "Attribute",
-        }
+        },
     )
     field_group_type: None | TypeProfileComponentType1 = field(
         default=None,
         metadata={
             "name": "FieldGroupType",
             "type": "Attribute",
-        }
+        },
     )

@@ -11,11 +11,11 @@ class InlinePropertyType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )
     owns: bool = field(
         default=False,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

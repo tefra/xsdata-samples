@@ -12,7 +12,7 @@ class CapabilitySubscriptionPolicyStructure:
             "name": "HasIncrementalUpdates",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     has_change_sensitivity: Optional[bool] = field(
         default=None,
@@ -20,5 +20,5 @@ class CapabilitySubscriptionPolicyStructure:
             "name": "HasChangeSensitivity",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

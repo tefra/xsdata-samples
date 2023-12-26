@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .allowed_line_direction import AllowedLineDirection
 from .allowed_line_direction_ref import AllowedLineDirectionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -12,7 +12,9 @@ class AllowedLineDirectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "allowedLineDirections_RelStructure"
 
-    allowed_line_direction_ref_or_allowed_line_direction: List[object] = field(
+    allowed_line_direction_ref_or_allowed_line_direction: List[
+        Union[AllowedLineDirectionRef, AllowedLineDirection]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class AllowedLineDirectionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

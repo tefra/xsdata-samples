@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
 from travelport.models.type_advisory_type_1 import TypeAdvisoryType1
-from travelport.models.type_geo_political_area_type_1 import TypeGeoPoliticalAreaType1
+from travelport.models.type_geo_political_area_type_1 import (
+    TypeGeoPoliticalAreaType1,
+)
 from travelport.models.type_key_element_1 import TypeKeyElement1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -39,6 +41,7 @@ class Advisory1(TypeKeyElement1):
     geo_political_area_code
         The location code of the geographical location.
     """
+
     class Meta:
         name = "Advisory"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -49,7 +52,7 @@ class Advisory1(TypeKeyElement1):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
@@ -57,14 +60,14 @@ class Advisory1(TypeKeyElement1):
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-        }
+        },
     )
     summary: None | str = field(
         default=None,
@@ -73,7 +76,7 @@ class Advisory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -82,7 +85,7 @@ class Advisory1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 1000,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -91,7 +94,7 @@ class Advisory1(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     geo_political_area_type: None | TypeGeoPoliticalAreaType1 = field(
         default=None,
@@ -99,7 +102,7 @@ class Advisory1(TypeKeyElement1):
             "name": "GeoPoliticalAreaType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     geo_political_area_code: None | str = field(
         default=None,
@@ -108,5 +111,5 @@ class Advisory1(TypeKeyElement1):
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )

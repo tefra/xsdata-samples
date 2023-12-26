@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import List, Optional
-from .actual_vehicle_equipment_version_structure import ActualVehicleEquipmentVersionStructure
+from .actual_vehicle_equipment_version_structure import (
+    ActualVehicleEquipmentVersionStructure,
+)
 from .assistance_needed_enumeration import AssistanceNeededEnumeration
-from .assisted_boarding_location_enumeration import AssistedBoardingLocationEnumeration
+from .assisted_boarding_location_enumeration import (
+    AssistedBoardingLocationEnumeration,
+)
 from .mobility_enumeration import MobilityEnumeration
 from .type_of_entity_version_structure import TypeOfEntityVersionStructure
 
@@ -11,7 +15,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStructure):
+class AccessVehicleEquipmentVersionStructure(
+    ActualVehicleEquipmentVersionStructure
+):
     class Meta:
         name = "AccessVehicleEquipment_VersionStructure"
 
@@ -21,7 +27,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "LowFloor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     high_floor: Optional[bool] = field(
         default=None,
@@ -29,7 +35,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "HighFloor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     hoist: Optional[bool] = field(
         default=None,
@@ -37,7 +43,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "Hoist",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     hoist_operating_radius: Optional[Decimal] = field(
         default=None,
@@ -45,7 +51,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "HoistOperatingRadius",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     ramp: Optional[bool] = field(
         default=None,
@@ -53,7 +59,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "Ramp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     ramp_bearing_capacity: Optional[Decimal] = field(
         default=None,
@@ -61,7 +67,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "RampBearingCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_steps: Optional[int] = field(
         default=None,
@@ -69,7 +75,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "NumberOfSteps",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     boarding_height: Optional[TypeOfEntityVersionStructure] = field(
         default=None,
@@ -77,7 +83,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "BoardingHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gap_to_platform: Optional[TypeOfEntityVersionStructure] = field(
         default=None,
@@ -85,7 +91,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "GapToPlatform",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     width_of_access_area: Optional[Decimal] = field(
         default=None,
@@ -93,7 +99,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "WidthOfAccessArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     height_of_access_area: Optional[Decimal] = field(
         default=None,
@@ -101,7 +107,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "HeightOfAccessArea",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     automatic_doors: Optional[bool] = field(
         default=None,
@@ -109,7 +115,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "AutomaticDoors",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     suitable_for: List[MobilityEnumeration] = field(
         default_factory=list,
@@ -118,7 +124,7 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     assistance_needed: Optional[AssistanceNeededEnumeration] = field(
         default=None,
@@ -126,15 +132,17 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "AssistanceNeeded",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    assisted_boarding_location: Optional[AssistedBoardingLocationEnumeration] = field(
+    assisted_boarding_location: Optional[
+        AssistedBoardingLocationEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "AssistedBoardingLocation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     guide_dogs_allowed: Optional[bool] = field(
         default=None,
@@ -142,5 +150,5 @@ class AccessVehicleEquipmentVersionStructure(ActualVehicleEquipmentVersionStruct
             "name": "GuideDogsAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -14,13 +14,13 @@ class Annotation:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     xref: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     class_value: List[str] = field(
         default_factory=list,
@@ -28,63 +28,63 @@ class Annotation:
             "name": "class",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     style: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     href: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     other: Optional[object] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
     cd: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     encoding: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     definition_url: Optional[str] = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
-        }
+        },
     )
     src: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -92,5 +92,5 @@ class Annotation:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

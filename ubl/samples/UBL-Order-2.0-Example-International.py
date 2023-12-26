@@ -63,142 +63,142 @@ from xsdata.models.datatype import XmlTime
 
 obj = Order(
     ublversion_id=UblversionId(
-        value="2.0"
+        value='2.0'
     ),
     customization_id=CustomizationId(
-        value="urn:oasis:names:specification:ubl:xpath:Order-2.0:samples-2.0-draft"
+        value='urn:oasis:names:specification:ubl:xpath:Order-2.0:samples-2.0-draft'
     ),
     profile_id=ProfileId(
-        value="bpid:urn:oasis:names:draft:bpss:ubl-2-sample-international-scenario"
+        value='bpid:urn:oasis:names:draft:bpss:ubl-2-sample-international-scenario'
     ),
     id=Id(
-        value="AEG012345"
+        value='AEG012345'
     ),
     copy_indicator=False,
     uuid=Uuid(
-        value="6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1"
+        value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
     ),
     issue_date=XmlDate(2005, 6, 20),
     note=[
         Note(
-            value="sample"
+            value='sample'
         ),
     ],
     buyer_customer_party=BuyerCustomerParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="XFB01"
+            value='XFB01'
         ),
         supplier_assigned_account_id=SupplierAssignedAccountId(
-            value="GT00978567"
+            value='GT00978567'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="IYT Corporation"
+                        value='IYT Corporation'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mr Fred Churchill"
+                    value='Mr Fred Churchill'
                 ),
                 telephone=Telephone(
-                    value="+44 127 2653214"
+                    value='+44 127 2653214'
                 ),
                 telefax=Telefax(
-                    value="+44 127 2653215"
+                    value='+44 127 2653215'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="fred@iytcorporation.gov.uk"
+                    value='fred@iytcorporation.gov.uk'
                 )
             )
         )
     ),
     seller_supplier_party=SellerSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="CO001"
+            value='CO001'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Consortial"
+                        value='Consortial'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Boston Road"
+                    value='Boston Road'
                 ),
                 building_name=BuildingName(
-                    value="Suite M-102"
+                    value='Suite M-102'
                 ),
                 building_number=BuildingNumber(
-                    value="630"
+                    value='630'
                 ),
                 city_name=CityName(
-                    value="Billerica"
+                    value='Billerica'
                 ),
                 postal_zone=PostalZone(
-                    value="01821"
+                    value='01821'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Massachusetts"
+                    value='Massachusetts'
                 ),
                 country_subentity_code=CountrySubentityCode(
-                    value="MA"
+                    value='MA'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="US"
+                        value='US'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mrs Bouquet"
+                    value='Mrs Bouquet'
                 ),
                 telephone=Telephone(
-                    value=" +1 158 1233714"
+                    value=' +1 158 1233714'
                 ),
                 telefax=Telefax(
-                    value="+ 1 158 1233856"
+                    value='+ 1 158 1233856'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="bouquet@fpconsortial.com"
+                    value='bouquet@fpconsortial.com'
                 )
             )
         )
@@ -208,77 +208,77 @@ obj = Order(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="The Terminus"
+                        value='The Terminus'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     registration_name=RegistrationName(
-                        value="Bridgtow District Council"
+                        value='Bridgtow District Council'
                     ),
                     company_id=CompanyId(
-                        value="12356478"
+                        value='12356478'
                     ),
                     exemption_reason=[
                         ExemptionReason(
-                            value="Local Authority"
+                            value='Local Authority'
                         ),
                     ],
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="UK VAT"
+                            value='UK VAT'
                         ),
                         tax_type_code=TaxTypeCode(
-                            value="VAT"
+                            value='VAT'
                         )
                     )
                 ),
             ],
             contact=Contact(
                 name=Name(
-                    value="S Massiah"
+                    value='S Massiah'
                 ),
                 telephone=Telephone(
-                    value="+ 44 127 98876545"
+                    value='+ 44 127 98876545'
                 ),
                 telefax=Telefax(
-                    value="+ 44 127 98876546"
+                    value='+ 44 127 98876546'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="smassiah@the-email.co.uk"
+                    value='smassiah@the-email.co.uk'
                 )
             )
         )
@@ -287,33 +287,33 @@ obj = Order(
         Delivery(
             delivery_address=DeliveryAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
@@ -328,15 +328,15 @@ obj = Order(
     delivery_terms=[
         DeliveryTerms(
             id=Id(
-                value="FOB Destination"
+                value='FOB Destination'
             ),
             delivery_location=DeliveryLocation(
                 id=Id(
-                    value="GBFXT"
+                    value='GBFXT'
                 ),
                 description=[
                     Description(
-                        value="Felixstowe"
+                        value='Felixstowe'
                     ),
                 ]
             )
@@ -345,72 +345,72 @@ obj = Order(
     transaction_conditions=TransactionConditions(
         description=[
             Description(
-                value="Please advise when transport is booked."
+                value='Please advise when transport is booked.'
             ),
         ]
     ),
     anticipated_monetary_total=AnticipatedMonetaryTotal(
         line_extension_amount=LineExtensionAmount(
-            value=Decimal("1000.00"),
-            currency_id="USD"
+            value=Decimal('1000.00'),
+            currency_id='USD'
         ),
         payable_amount=PayableAmount(
-            value=Decimal("1000.00"),
-            currency_id="USD"
+            value=Decimal('1000.00'),
+            currency_id='USD'
         )
     ),
     order_line=[
         OrderLine(
             note=[
                 Note(
-                    value="this is an illustrative order line"
+                    value='this is an illustrative order line'
                 ),
             ],
             line_item=LineItem(
                 id=Id(
-                    value="1"
+                    value='1'
                 ),
                 sales_order_id=SalesOrderId(
-                    value="A"
+                    value='A'
                 ),
                 line_status_code=LineStatusCode(
-                    value="NoStatus"
+                    value='NoStatus'
                 ),
                 quantity=Quantity(
-                    value=Decimal("100"),
-                    unit_code="KGM"
+                    value=Decimal('100'),
+                    unit_code='KGM'
                 ),
                 line_extension_amount=LineExtensionAmount(
-                    value=Decimal("1000.00"),
-                    currency_id="USD"
+                    value=Decimal('1000.00'),
+                    currency_id='USD'
                 ),
                 price=Price(
                     price_amount=PriceAmount(
-                        value=Decimal("10.00"),
-                        currency_id="USD"
+                        value=Decimal('10.00'),
+                        currency_id='USD'
                     ),
                     base_quantity=BaseQuantity(
-                        value=Decimal("1"),
-                        unit_code="KGM"
+                        value=Decimal('1'),
+                        unit_code='KGM'
                     )
                 ),
                 item=Item(
                     description=[
                         Description(
-                            value="Beeswax"
+                            value='Beeswax'
                         ),
                     ],
                     name=Name(
-                        value="Acme Beeswax"
+                        value='Acme Beeswax'
                     ),
                     buyers_item_identification=BuyersItemIdentification(
                         id=Id(
-                            value="6578489"
+                            value='6578489'
                         )
                     ),
                     sellers_item_identification=SellersItemIdentification(
                         id=Id(
-                            value="17589683"
+                            value='17589683'
                         )
                     )
                 )

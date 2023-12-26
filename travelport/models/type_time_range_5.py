@@ -9,6 +9,7 @@ class TypeTimeRange5:
     """
     Specify a range of times.
     """
+
     class Meta:
         name = "typeTimeRange"
 
@@ -18,7 +19,7 @@ class TypeTimeRange5:
             "name": "EarliestTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     latest_time: None | str = field(
         default=None,
@@ -26,5 +27,5 @@ class TypeTimeRange5:
             "name": "LatestTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

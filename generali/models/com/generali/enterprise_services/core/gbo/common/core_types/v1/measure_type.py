@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/core-types/v1"
+)
 
 
 @dataclass
@@ -34,23 +36,24 @@ class MeasureType:
         <ns1:PrimitiveType
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
+
     value: Optional[Decimal] = field(
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     unit_code: Optional[str] = field(
         default=None,
         metadata={
             "name": "unitCode",
             "type": "Attribute",
-        }
+        },
     )
     unit_code_list_version_id: Optional[str] = field(
         default=None,
         metadata={
             "name": "unitCodeListVersionID",
             "type": "Attribute",
-        }
+        },
     )

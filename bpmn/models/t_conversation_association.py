@@ -17,7 +17,7 @@ class TConversationAssociation(TBaseElement):
             "name": "innerConversationNodeRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     outer_conversation_node_ref: Optional[QName] = field(
         default=None,
@@ -25,5 +25,5 @@ class TConversationAssociation(TBaseElement):
             "name": "outerConversationNodeRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

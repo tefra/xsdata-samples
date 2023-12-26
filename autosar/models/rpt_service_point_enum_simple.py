@@ -9,5 +9,6 @@ class RptServicePointEnumSimple(Enum):
         generator.
     :cvar NONE: No Service Points are requested.
     """
+
     ENABLED = "ENABLED"
     NONE = "NONE"

@@ -16,5 +16,5 @@ class PredefinedNonOrderedLocationGroupVersionedReference(VersionedReference):
             "name": "targetClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -38,16 +38,19 @@ class EthGlobalTimeManagedCouplingPort:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETH-GLOBAL-TIME-MANAGED-COUPLING-PORT"
 
-    coupling_port_ref: Optional["EthGlobalTimeManagedCouplingPort.CouplingPortRef"] = field(
+    coupling_port_ref: Optional[
+        "EthGlobalTimeManagedCouplingPort.CouplingPortRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdelay_latency_threshold: Optional[TimeValue] = field(
         default=None,
@@ -55,7 +58,7 @@ class EthGlobalTimeManagedCouplingPort:
             "name": "PDELAY-LATENCY-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdelay_request_period: Optional[TimeValue] = field(
         default=None,
@@ -63,7 +66,7 @@ class EthGlobalTimeManagedCouplingPort:
             "name": "PDELAY-REQUEST-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdelay_resp_and_resp_follow_up_timeout: Optional[TimeValue] = field(
         default=None,
@@ -71,7 +74,7 @@ class EthGlobalTimeManagedCouplingPort:
             "name": "PDELAY-RESP-AND-RESP-FOLLOW-UP-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdelay_response_enabled: Optional[Boolean] = field(
         default=None,
@@ -79,14 +82,14 @@ class EthGlobalTimeManagedCouplingPort:
             "name": "PDELAY-RESPONSE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -94,7 +97,7 @@ class EthGlobalTimeManagedCouplingPort:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -105,5 +108,5 @@ class EthGlobalTimeManagedCouplingPort:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .fare_element_in_sequence_versioned_child_structure import FareElementInSequenceVersionedChildStructure
+from typing import Optional, Union
+from .fare_element_in_sequence_versioned_child_structure import (
+    FareElementInSequenceVersionedChildStructure,
+)
 from .fare_structure_element_ref import FareStructureElementRef
 from .generic_parameter_assignment_version_structure import (
     GenericParameterAssignment,
@@ -13,7 +15,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class FareStructureElementInSequenceVersionedChildStructure(FareElementInSequenceVersionedChildStructure):
+class FareStructureElementInSequenceVersionedChildStructure(
+    FareElementInSequenceVersionedChildStructure
+):
     class Meta:
         name = "FareStructureElementInSequence_VersionedChildStructure"
 
@@ -23,7 +27,7 @@ class FareStructureElementInSequenceVersionedChildStructure(FareElementInSequenc
             "name": "FareStructureElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     validable_element_ref: Optional[ValidableElementRef] = field(
         default=None,
@@ -31,9 +35,15 @@ class FareStructureElementInSequenceVersionedChildStructure(FareElementInSequenc
             "name": "ValidableElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[
+        Union[
+            GenericParameterAssignmentsRelStructure,
+            GenericParameterAssignment,
+            GenericParameterAssignmentInContext,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -54,5 +64,5 @@ class FareStructureElementInSequenceVersionedChildStructure(FareElementInSequenc
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

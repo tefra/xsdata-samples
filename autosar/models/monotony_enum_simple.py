@@ -22,6 +22,7 @@ class MonotonyEnumSimple(Enum):
     :cvar STRICTLY_INCREASING: This indicates that the related curve
         needs to be strictly monotony increasing.
     """
+
     DECREASING = "DECREASING"
     INCREASING = "INCREASING"
     MONOTONOUS = "MONOTONOUS"

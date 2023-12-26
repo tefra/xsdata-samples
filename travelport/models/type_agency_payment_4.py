@@ -18,6 +18,7 @@ class TypeAgencyPayment4:
     agency_billing_password
         Value of billing password
     """
+
     class Meta:
         name = "typeAgencyPayment"
 
@@ -28,7 +29,7 @@ class TypeAgencyPayment4:
             "type": "Attribute",
             "required": True,
             "max_length": 128,
-        }
+        },
     )
     agency_billing_number: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class TypeAgencyPayment4:
             "name": "AgencyBillingNumber",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )
     agency_billing_password: None | str = field(
         default=None,
@@ -44,5 +45,5 @@ class TypeAgencyPayment4:
             "name": "AgencyBillingPassword",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )

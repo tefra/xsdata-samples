@@ -9,6 +9,7 @@ class FareDetailsRef:
     """
     Reference of the Fare.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class FareDetailsRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

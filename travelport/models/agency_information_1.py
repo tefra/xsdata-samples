@@ -12,6 +12,7 @@ class AgencyInformation1:
     """
     Agency Information required for File Finishing.
     """
+
     class Meta:
         name = "AgencyInformation"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -21,7 +22,7 @@ class AgencyInformation1:
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     email: list[Email1] = field(
         default_factory=list,
@@ -29,7 +30,7 @@ class AgencyInformation1:
             "name": "Email",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -37,5 +38,5 @@ class AgencyInformation1:
             "name": "PhoneNumber",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

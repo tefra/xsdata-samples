@@ -1,19 +1,29 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .service_journey_interchange import ServiceJourneyInterchange
 from .service_journey_interchange_ref import ServiceJourneyInterchangeRef
 from .service_journey_interchange_view import ServiceJourneyInterchangeView
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class ServiceJourneyInterchangesRelStructure(StrictContainmentAggregationStructure):
+class ServiceJourneyInterchangesRelStructure(
+    StrictContainmentAggregationStructure
+):
     class Meta:
         name = "serviceJourneyInterchanges_RelStructure"
 
-    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: List[object] = field(
+    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: List[
+        Union[
+            ServiceJourneyInterchangeRef,
+            ServiceJourneyInterchange,
+            ServiceJourneyInterchangeView,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -34,5 +44,5 @@ class ServiceJourneyInterchangesRelStructure(StrictContainmentAggregationStructu
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

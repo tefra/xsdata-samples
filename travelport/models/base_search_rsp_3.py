@@ -18,5 +18,5 @@ class BaseSearchRsp3(BaseRsp3):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
             "max_occurs": 999,
-        }
+        },
     )

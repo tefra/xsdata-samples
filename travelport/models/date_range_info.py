@@ -19,6 +19,7 @@ class DateRangeInfo:
     count
         The PNR count of date range.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -28,14 +29,14 @@ class DateRangeInfo:
             "name": "DateRange",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     title: None | str = field(
         default=None,
         metadata={
             "name": "Title",
             "type": "Attribute",
-        }
+        },
     )
     count: None | int = field(
         default=None,
@@ -43,5 +44,5 @@ class DateRangeInfo:
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

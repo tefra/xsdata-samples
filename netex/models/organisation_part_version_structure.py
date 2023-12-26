@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .administrative_zone_version_structure import AdministrativeZonesRelStructure
+from typing import Optional, Union
+from .administrative_zone_version_structure import (
+    AdministrativeZonesRelStructure,
+)
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
@@ -34,7 +36,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -42,7 +44,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -50,7 +52,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[PrivateCodeStructure] = field(
         default=None,
@@ -58,7 +60,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -66,7 +68,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     contact_details: Optional[ContactStructure] = field(
         default=None,
@@ -74,7 +76,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "ContactDetails",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     location: Optional[LocationStructure2] = field(
         default=None,
@@ -82,9 +84,21 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "Location",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailConsortiumRef,
+            AuthorityRef,
+            OperatorRef,
+            GeneralOrganisationRef,
+            ManagementAgentRef,
+            ServicedOrganisationRef,
+            TravelAgentRef,
+            OtherOrganisationRef,
+            OrganisationRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -135,7 +149,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     type_of_organisation_part_ref: Optional[TypeOfOrganisationPartRef] = field(
         default=None,
@@ -143,7 +157,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfOrganisationPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     administrative_zones: Optional[AdministrativeZonesRelStructure] = field(
         default=None,
@@ -151,7 +165,7 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "administrativeZones",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     own_responsibility_sets: Optional[ResponsibilitySetsRelStructure] = field(
         default=None,
@@ -159,15 +173,17 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "ownResponsibilitySets",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    delegated_responsibility_sets: Optional[ResponsibilitySetsRelStructure] = field(
+    delegated_responsibility_sets: Optional[
+        ResponsibilitySetsRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "delegatedResponsibilitySets",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     delegated_from: Optional[OrganisationRefsRelStructure] = field(
         default=None,
@@ -175,5 +191,5 @@ class OrganisationPartVersionStructure(DataManagedObjectStructure):
             "name": "delegatedFrom",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

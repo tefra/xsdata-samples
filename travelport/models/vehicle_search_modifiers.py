@@ -9,7 +9,9 @@ from travelport.models.special_equipment_1 import SpecialEquipment1
 from travelport.models.type_rate_category import TypeRateCategory
 from travelport.models.type_rate_host_indicator import TypeRateHostIndicator
 from travelport.models.type_rate_time_period import TypeRateTimePeriod
-from travelport.models.type_vehicle_search_distance import TypeVehicleSearchDistance
+from travelport.models.type_vehicle_search_distance import (
+    TypeVehicleSearchDistance,
+)
 from travelport.models.type_vehicle_types import TypeVehicleTypes
 from travelport.models.vehicle_modifier import VehicleModifier
 from travelport.models.vendor import Vendor
@@ -64,6 +66,7 @@ class VehicleSearchModifiers:
         Set to true to return the rate details in Vendor filed currency.
         Defaults to false. Supported Providers: 1G,1V.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -72,14 +75,16 @@ class VehicleSearchModifiers:
         metadata={
             "name": "PermittedVendors",
             "type": "Element",
-        }
+        },
     )
-    prohibited_vendors: None | VehicleSearchModifiers.ProhibitedVendors = field(
-        default=None,
-        metadata={
-            "name": "ProhibitedVendors",
-            "type": "Element",
-        }
+    prohibited_vendors: None | VehicleSearchModifiers.ProhibitedVendors = (
+        field(
+            default=None,
+            metadata={
+                "name": "ProhibitedVendors",
+                "type": "Element",
+            },
+        )
     )
     vehicle_modifier: list[VehicleModifier] = field(
         default_factory=list,
@@ -87,7 +92,7 @@ class VehicleSearchModifiers:
             "name": "VehicleModifier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_type: list[TypeVehicleTypes] = field(
         default_factory=list,
@@ -95,7 +100,7 @@ class VehicleSearchModifiers:
             "name": "VehicleType",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rate_modifiers: list[RateModifiers] = field(
         default_factory=list,
@@ -103,14 +108,14 @@ class VehicleSearchModifiers:
             "name": "RateModifiers",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rate_host_indicator: None | TypeRateHostIndicator = field(
         default=None,
         metadata={
             "name": "RateHostIndicator",
             "type": "Element",
-        }
+        },
     )
     loyalty_card: list[LoyaltyCard1] = field(
         default_factory=list,
@@ -119,7 +124,7 @@ class VehicleSearchModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     reference_point: None | str = field(
         default=None,
@@ -128,7 +133,7 @@ class VehicleSearchModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_length": 30,
-        }
+        },
     )
     booking_source: None | BookingSource1 = field(
         default=None,
@@ -136,7 +141,7 @@ class VehicleSearchModifiers:
             "name": "BookingSource",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     special_equipment: list[SpecialEquipment1] = field(
         default_factory=list,
@@ -145,14 +150,14 @@ class VehicleSearchModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 5,
-        }
+        },
     )
     search_distance: None | TypeVehicleSearchDistance = field(
         default=None,
         metadata={
             "name": "SearchDistance",
             "type": "Element",
-        }
+        },
     )
     policy: list[Policy] = field(
         default_factory=list,
@@ -160,21 +165,21 @@ class VehicleSearchModifiers:
             "name": "Policy",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     driver_info: None | DriverInfo = field(
         default=None,
         metadata={
             "name": "DriverInfo",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     preferred_currency: None | str = field(
         default=None,
@@ -182,49 +187,49 @@ class VehicleSearchModifiers:
             "name": "PreferredCurrency",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     unlimited_mileage: None | bool = field(
         default=None,
         metadata={
             "name": "UnlimitedMileage",
             "type": "Attribute",
-        }
+        },
     )
     rate_category: None | TypeRateCategory = field(
         default=None,
         metadata={
             "name": "RateCategory",
             "type": "Attribute",
-        }
+        },
     )
     rate_guaranteed: bool = field(
         default=False,
         metadata={
             "name": "RateGuaranteed",
             "type": "Attribute",
-        }
+        },
     )
     rate_period: None | TypeRateTimePeriod = field(
         default=None,
         metadata={
             "name": "RatePeriod",
             "type": "Attribute",
-        }
+        },
     )
     sellable_rates_only: None | bool = field(
         default=None,
         metadata={
             "name": "SellableRatesOnly",
             "type": "Attribute",
-        }
+        },
     )
     return_source_currency: bool = field(
         default=False,
         metadata={
             "name": "ReturnSourceCurrency",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -235,6 +240,7 @@ class VehicleSearchModifiers:
         vendor
             1G/1V max 4 vendors, 1P max 99 vendors
         """
+
         vendor: list[Vendor] = field(
             default_factory=list,
             metadata={
@@ -242,7 +248,7 @@ class VehicleSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -254,5 +260,5 @@ class VehicleSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

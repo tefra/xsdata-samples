@@ -10,6 +10,7 @@ class ApprovalDate(DateT):
     The date on which a dissertation was accepted by the institution awarding the
     degree, a report was approved, or a standard was accepted.
     """
+
     class Meta:
         name = "approval_date"
         namespace = "http://www.crossref.org/schema/5.3.1"

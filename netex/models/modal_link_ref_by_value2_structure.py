@@ -17,7 +17,7 @@ class ModalLinkRefByValue2Structure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_point_ref: Optional[PointRefStructure] = field(
         default=None,
@@ -26,7 +26,7 @@ class ModalLinkRefByValue2Structure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     type_of_link_ref: Optional[TypeOfLinkRef] = field(
         default=None,
@@ -34,7 +34,7 @@ class ModalLinkRefByValue2Structure:
             "name": "TypeOfLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     vehicle_mode: Optional[AllModesEnumeration] = field(
         default=None,
@@ -42,30 +42,30 @@ class ModalLinkRefByValue2Structure:
             "name": "VehicleMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name_of_class: Optional[str] = field(
         default=None,
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
-        }
+        },
     )
     created: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     changed: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

@@ -17,5 +17,5 @@ class TypeRailReservationRsp(BaseRsp1):
             "name": "UniversalRecord",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/universal_v52_0",
-        }
+        },
     )

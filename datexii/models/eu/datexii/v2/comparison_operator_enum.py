@@ -15,6 +15,7 @@ class ComparisonOperatorEnum(Enum):
     :cvar LESS_THAN_OR_EQUAL_TO: Logical comparison operator of "less
         than or equal to".
     """
+
     EQUAL_TO = "equalTo"
     GREATER_THAN = "greaterThan"
     GREATER_THAN_OR_EQUAL_TO = "greaterThanOrEqualTo"

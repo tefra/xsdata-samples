@@ -9,12 +9,20 @@ from .annotation import (
 from .category_string import CategoryString
 from .coupling_port_details import CouplingPortDetails
 from .coupling_port_role_enum import CouplingPortRoleEnum
-from .ethernet_connection_negotiation_enum import EthernetConnectionNegotiationEnum
+from .ethernet_connection_negotiation_enum import (
+    EthernetConnectionNegotiationEnum,
+)
 from .ethernet_mac_layer_type_enum import EthernetMacLayerTypeEnum
-from .ethernet_physical_channel_subtypes_enum import EthernetPhysicalChannelSubtypesEnum
+from .ethernet_physical_channel_subtypes_enum import (
+    EthernetPhysicalChannelSubtypesEnum,
+)
 from .ethernet_physical_layer_type_enum import EthernetPhysicalLayerTypeEnum
-from .ethernet_switch_vlan_ingress_tag_enum import EthernetSwitchVlanIngressTagEnum
-from .ethernet_wakeup_sleep_on_dataline_config_subtypes_enum import EthernetWakeupSleepOnDatalineConfigSubtypesEnum
+from .ethernet_switch_vlan_ingress_tag_enum import (
+    EthernetSwitchVlanIngressTagEnum,
+)
+from .ethernet_wakeup_sleep_on_dataline_config_subtypes_enum import (
+    EthernetWakeupSleepOnDatalineConfigSubtypesEnum,
+)
 from .identifier import Identifier
 from .mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -134,6 +142,7 @@ class CouplingPort:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COUPLING-PORT"
 
@@ -144,7 +153,7 @@ class CouplingPort:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["CouplingPort.ShortNameFragments"] = field(
         default=None,
@@ -152,7 +161,7 @@ class CouplingPort:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -160,7 +169,7 @@ class CouplingPort:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -168,7 +177,7 @@ class CouplingPort:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -176,7 +185,7 @@ class CouplingPort:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -184,7 +193,7 @@ class CouplingPort:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -192,7 +201,7 @@ class CouplingPort:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CouplingPort.Annotations"] = field(
         default=None,
@@ -200,15 +209,17 @@ class CouplingPort:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    connection_negotiation_behavior: Optional[EthernetConnectionNegotiationEnum] = field(
+    connection_negotiation_behavior: Optional[
+        EthernetConnectionNegotiationEnum
+    ] = field(
         default=None,
         metadata={
             "name": "CONNECTION-NEGOTIATION-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     coupling_port_details: Optional[CouplingPortDetails] = field(
         default=None,
@@ -216,7 +227,7 @@ class CouplingPort:
             "name": "COUPLING-PORT-DETAILS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     coupling_port_role: Optional[CouplingPortRoleEnum] = field(
         default=None,
@@ -224,7 +235,7 @@ class CouplingPort:
             "name": "COUPLING-PORT-ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     coupling_port_speed: Optional[PositiveInteger] = field(
         default=None,
@@ -232,7 +243,7 @@ class CouplingPort:
             "name": "COUPLING-PORT-SPEED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_vlan_ref: Optional["CouplingPort.DefaultVlanRef"] = field(
         default=None,
@@ -240,7 +251,7 @@ class CouplingPort:
             "name": "DEFAULT-VLAN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mac_layer_type: Optional[EthernetMacLayerTypeEnum] = field(
         default=None,
@@ -248,15 +259,17 @@ class CouplingPort:
             "name": "MAC-LAYER-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mac_multicast_address_refs: Optional["CouplingPort.MacMulticastAddressRefs"] = field(
+    mac_multicast_address_refs: Optional[
+        "CouplingPort.MacMulticastAddressRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "MAC-MULTICAST-ADDRESS-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     physical_layer_type: Optional[EthernetPhysicalLayerTypeEnum] = field(
         default=None,
@@ -264,7 +277,7 @@ class CouplingPort:
             "name": "PHYSICAL-LAYER-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     plca_props: Optional[PlcaProps] = field(
         default=None,
@@ -272,7 +285,7 @@ class CouplingPort:
             "name": "PLCA-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_mapping_refs: Optional["CouplingPort.PncMappingRefs"] = field(
         default=None,
@@ -280,7 +293,7 @@ class CouplingPort:
             "name": "PNC-MAPPING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     receive_activity: Optional[EthernetSwitchVlanIngressTagEnum] = field(
         default=None,
@@ -288,7 +301,7 @@ class CouplingPort:
             "name": "RECEIVE-ACTIVITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vlan_memberships: Optional["CouplingPort.VlanMemberships"] = field(
         default=None,
@@ -296,7 +309,7 @@ class CouplingPort:
             "name": "VLAN-MEMBERSHIPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vlan_modifier_ref: Optional["CouplingPort.VlanModifierRef"] = field(
         default=None,
@@ -304,15 +317,17 @@ class CouplingPort:
             "name": "VLAN-MODIFIER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    wakeup_sleep_on_dataline_config_ref: Optional["CouplingPort.WakeupSleepOnDatalineConfigRef"] = field(
+    wakeup_sleep_on_dataline_config_ref: Optional[
+        "CouplingPort.WakeupSleepOnDatalineConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "WAKEUP-SLEEP-ON-DATALINE-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -320,14 +335,14 @@ class CouplingPort:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -335,14 +350,14 @@ class CouplingPort:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -353,7 +368,7 @@ class CouplingPort:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -364,7 +379,7 @@ class CouplingPort:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -375,18 +390,20 @@ class CouplingPort:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class MacMulticastAddressRefs:
-        mac_multicast_address_ref: List["CouplingPort.MacMulticastAddressRefs.MacMulticastAddressRef"] = field(
+        mac_multicast_address_ref: List[
+            "CouplingPort.MacMulticastAddressRefs.MacMulticastAddressRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MAC-MULTICAST-ADDRESS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -397,18 +414,20 @@ class CouplingPort:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PncMappingRefs:
-        pnc_mapping_ref: List["CouplingPort.PncMappingRefs.PncMappingRef"] = field(
+        pnc_mapping_ref: List[
+            "CouplingPort.PncMappingRefs.PncMappingRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PNC-MAPPING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -419,7 +438,7 @@ class CouplingPort:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -430,7 +449,7 @@ class CouplingPort:
                 "name": "VLAN-MEMBERSHIP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -441,16 +460,18 @@ class CouplingPort:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class WakeupSleepOnDatalineConfigRef(Ref):
-        dest: Optional[EthernetWakeupSleepOnDatalineConfigSubtypesEnum] = field(
+        dest: Optional[
+            EthernetWakeupSleepOnDatalineConfigSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

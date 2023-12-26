@@ -21,6 +21,7 @@ class ModifyTag2:
     display_order
         The display order of the tag
     """
+
     class Meta:
         name = "ModifyTag"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -31,7 +32,7 @@ class ModifyTag2:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class ModifyTag2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     label: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class ModifyTag2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -58,12 +59,12 @@ class ModifyTag2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )

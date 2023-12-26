@@ -9,6 +9,7 @@ class FareRuleLong:
     """
     Long Text Fare Rule.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -16,7 +17,7 @@ class FareRuleLong:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     category: None | int = field(
         default=None,
@@ -24,12 +25,12 @@ class FareRuleLong:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

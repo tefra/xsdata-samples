@@ -17,5 +17,5 @@ class TypeNonAirReservationRef3:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )

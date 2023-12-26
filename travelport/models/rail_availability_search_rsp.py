@@ -31,6 +31,7 @@ class RailAvailabilitySearchRsp(BaseRsp1):
         Indicates the type of information returned in
         RailShopAPIResponse(Schedules/Availability).
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -39,14 +40,14 @@ class RailAvailabilitySearchRsp(BaseRsp1):
         metadata={
             "name": "RailSegmentList",
             "type": "Element",
-        }
+        },
     )
     rail_journey_list: None | RailJourneyList = field(
         default=None,
         metadata={
             "name": "RailJourneyList",
             "type": "Element",
-        }
+        },
     )
     rail_pricing_solution: list[RailPricingSolution] = field(
         default_factory=list,
@@ -54,28 +55,28 @@ class RailAvailabilitySearchRsp(BaseRsp1):
             "name": "RailPricingSolution",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
         metadata={
             "name": "RailFareNoteList",
             "type": "Element",
-        }
+        },
     )
     rail_fare_idlist: None | RailFareIdlist = field(
         default=None,
         metadata={
             "name": "RailFareIDList",
             "type": "Element",
-        }
+        },
     )
     rail_fare_list: None | RailFareList = field(
         default=None,
         metadata={
             "name": "RailFareList",
             "type": "Element",
-        }
+        },
     )
     host_token_list: None | HostTokenList1 = field(
         default=None,
@@ -83,12 +84,12 @@ class RailAvailabilitySearchRsp(BaseRsp1):
             "name": "HostTokenList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     response_type: None | TypeResponseType = field(
         default=None,
         metadata={
             "name": "ResponseType",
             "type": "Attribute",
-        }
+        },
     )

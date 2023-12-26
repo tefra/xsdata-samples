@@ -27,6 +27,7 @@ class AgencyGroupInfo2(TypeProfileInfo2):
     name
         Name of Agency Group
     """
+
     class Meta:
         name = "AgencyGroupInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -37,7 +38,7 @@ class AgencyGroupInfo2(TypeProfileInfo2):
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone: list[Phone2] = field(
         default_factory=list,
@@ -45,7 +46,7 @@ class AgencyGroupInfo2(TypeProfileInfo2):
             "name": "Phone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     electronic_address: list[ElectronicAddress2] = field(
         default_factory=list,
@@ -53,7 +54,7 @@ class AgencyGroupInfo2(TypeProfileInfo2):
             "name": "ElectronicAddress",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier2] = field(
         default_factory=list,
@@ -61,7 +62,7 @@ class AgencyGroupInfo2(TypeProfileInfo2):
             "name": "ExternalIdentifier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -71,5 +72,5 @@ class AgencyGroupInfo2(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

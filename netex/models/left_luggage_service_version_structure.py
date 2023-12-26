@@ -18,7 +18,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "CounterService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     self_service_lockers: Optional[bool] = field(
         default=None,
@@ -26,7 +26,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "SelfServiceLockers",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fee_per_bag: Optional[bool] = field(
         default=None,
@@ -34,7 +34,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "FeePerBag",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     locker_fee: Optional[bool] = field(
         default=None,
@@ -42,7 +42,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "LockerFee",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_width: Optional[Decimal] = field(
         default=None,
@@ -50,7 +50,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "MaximumBagWidth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_height: Optional[Decimal] = field(
         default=None,
@@ -58,7 +58,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "MaximumBagHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_depth: Optional[Decimal] = field(
         default=None,
@@ -66,7 +66,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "MaximumBagDepth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_bag_weight: Optional[Decimal] = field(
         default=None,
@@ -74,7 +74,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "MaximumBagWeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_duration: Optional[XmlDuration] = field(
         default=None,
@@ -82,5 +82,5 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "MaximumDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

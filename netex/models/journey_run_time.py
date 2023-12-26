@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .journey_run_time_versioned_child_structure import JourneyRunTimeVersionedChildStructure
+from .journey_run_time_versioned_child_structure import (
+    JourneyRunTimeVersionedChildStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

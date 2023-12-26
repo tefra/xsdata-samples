@@ -10,25 +10,25 @@ from xsdata.models.datatype import XmlTime
 
 obj = TransportationStatusRequest(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="TSR_1"
+        value='TSR_1'
     ),
     issue_date=XmlDate(2011, 10, 6),
     issue_time=XmlTime(9, 29, 10, 0, 60),
     transportation_status_type_code=TransportationStatusTypeCode(
-        value="All deviations"
+        value='All deviations'
     ),
     transport_execution_plan_document_reference=TransportExecutionPlanDocumentReference(
         id=Id(
-            value="TEP_1"
+            value='TEP_1'
         )
     ),
     consignment=[
         Consignment(
             id=Id(
-                value="CON_1"
+                value='CON_1'
             )
         ),
     ]

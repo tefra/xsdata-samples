@@ -12,6 +12,7 @@ class ConferenceAcronym:
     conference or proceedings name, so it is best to include this
     element when it is available.
     """
+
     class Meta:
         name = "conference_acronym"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -21,5 +22,5 @@ class ConferenceAcronym:
         metadata={
             "min_length": 1,
             "max_length": 127,
-        }
+        },
     )

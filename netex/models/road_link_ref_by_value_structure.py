@@ -12,5 +12,5 @@ class RoadLinkRefByValueStructure(LinkRefByValueStructure):
         metadata={
             "name": "nameOfPointRefClass",
             "type": "Attribute",
-        }
+        },
     )

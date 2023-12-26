@@ -13,5 +13,5 @@ class StepFreeAccess:
         default=LimitationStatusEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

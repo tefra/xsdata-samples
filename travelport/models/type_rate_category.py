@@ -8,6 +8,7 @@ class TypeRateCategory(Enum):
     """
     The category of the rate (Best, etc)
     """
+
     ASSOCIATION = "Association"
     BUSINESS = "Business"
     CORPORATE = "Corporate"

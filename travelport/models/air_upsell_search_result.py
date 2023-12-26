@@ -11,6 +11,7 @@ class AirUpsellSearchResult:
     """
     Air upsell search criteria result having matching offer and qualifies.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,7 +22,7 @@ class AirUpsellSearchResult:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     air_upsell_offer: None | AirUpsellOffer = field(
         default=None,
@@ -29,5 +30,5 @@ class AirUpsellSearchResult:
             "name": "AirUpsellOffer",
             "type": "Element",
             "required": True,
-        }
+        },
     )

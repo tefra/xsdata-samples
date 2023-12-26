@@ -147,6 +147,7 @@ class FlexrayArTpChannel:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-AR-TP-CHANNEL"
 
@@ -156,7 +157,7 @@ class FlexrayArTpChannel:
             "name": "ACK-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cancellation: Optional[Boolean] = field(
         default=None,
@@ -164,7 +165,7 @@ class FlexrayArTpChannel:
             "name": "CANCELLATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     extended_addressing: Optional[Boolean] = field(
         default=None,
@@ -172,15 +173,17 @@ class FlexrayArTpChannel:
             "name": "EXTENDED-ADDRESSING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    flow_control_pdu_ref: Optional["FlexrayArTpChannel.FlowControlPduRef"] = field(
+    flow_control_pdu_ref: Optional[
+        "FlexrayArTpChannel.FlowControlPduRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FLOW-CONTROL-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_ar: Optional[Integer] = field(
         default=None,
@@ -188,7 +191,7 @@ class FlexrayArTpChannel:
             "name": "MAX-AR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_as: Optional[Integer] = field(
         default=None,
@@ -196,7 +199,7 @@ class FlexrayArTpChannel:
             "name": "MAX-AS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_bs: Optional[Integer] = field(
         default=None,
@@ -204,7 +207,7 @@ class FlexrayArTpChannel:
             "name": "MAX-BS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_buffer_request: Optional[Integer] = field(
         default=None,
@@ -212,7 +215,7 @@ class FlexrayArTpChannel:
             "name": "MAX-BUFFER-REQUEST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_fc_wait: Optional[PositiveInteger] = field(
         default=None,
@@ -220,7 +223,7 @@ class FlexrayArTpChannel:
             "name": "MAX-FC-WAIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_fr_if: Optional[Integer] = field(
         default=None,
@@ -228,7 +231,7 @@ class FlexrayArTpChannel:
             "name": "MAX-FR-IF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_retries: Optional[Integer] = field(
         default=None,
@@ -236,7 +239,7 @@ class FlexrayArTpChannel:
             "name": "MAX-RETRIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_message_length: Optional[MaximumMessageLengthType] = field(
         default=None,
@@ -244,7 +247,7 @@ class FlexrayArTpChannel:
             "name": "MAXIMUM-MESSAGE-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_multicast_seperation_time: Optional[TimeValue] = field(
         default=None,
@@ -252,7 +255,7 @@ class FlexrayArTpChannel:
             "name": "MINIMUM-MULTICAST-SEPERATION-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_separation_time: Optional[TimeValue] = field(
         default=None,
@@ -260,7 +263,7 @@ class FlexrayArTpChannel:
             "name": "MINIMUM-SEPARATION-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     multicast_segmentation: Optional[Boolean] = field(
         default=None,
@@ -268,7 +271,7 @@ class FlexrayArTpChannel:
             "name": "MULTICAST-SEGMENTATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     n_pdu_refs: Optional["FlexrayArTpChannel.NPduRefs"] = field(
         default=None,
@@ -276,7 +279,7 @@ class FlexrayArTpChannel:
             "name": "N-PDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_pools: Optional["FlexrayArTpChannel.PduPools"] = field(
         default=None,
@@ -284,7 +287,7 @@ class FlexrayArTpChannel:
             "name": "PDU-POOLS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_br: Optional[TimeValue] = field(
         default=None,
@@ -292,7 +295,7 @@ class FlexrayArTpChannel:
             "name": "TIME-BR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_buffer: Optional[TimeValue] = field(
         default=None,
@@ -300,7 +303,7 @@ class FlexrayArTpChannel:
             "name": "TIME-BUFFER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_cs: Optional[TimeValue] = field(
         default=None,
@@ -308,7 +311,7 @@ class FlexrayArTpChannel:
             "name": "TIME-CS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_fr_if: Optional[TimeValue] = field(
         default=None,
@@ -316,7 +319,7 @@ class FlexrayArTpChannel:
             "name": "TIME-FR-IF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_ar: Optional[TimeValue] = field(
         default=None,
@@ -324,7 +327,7 @@ class FlexrayArTpChannel:
             "name": "TIMEOUT-AR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_as: Optional[TimeValue] = field(
         default=None,
@@ -332,7 +335,7 @@ class FlexrayArTpChannel:
             "name": "TIMEOUT-AS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_bs: Optional[TimeValue] = field(
         default=None,
@@ -340,7 +343,7 @@ class FlexrayArTpChannel:
             "name": "TIMEOUT-BS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_cr: Optional[TimeValue] = field(
         default=None,
@@ -348,7 +351,7 @@ class FlexrayArTpChannel:
             "name": "TIMEOUT-CR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_connections: Optional["FlexrayArTpChannel.TpConnections"] = field(
         default=None,
@@ -356,7 +359,7 @@ class FlexrayArTpChannel:
             "name": "TP-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmit_cancellation: Optional[Boolean] = field(
         default=None,
@@ -364,7 +367,7 @@ class FlexrayArTpChannel:
             "name": "TRANSMIT-CANCELLATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -372,14 +375,14 @@ class FlexrayArTpChannel:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -387,7 +390,7 @@ class FlexrayArTpChannel:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -398,7 +401,7 @@ class FlexrayArTpChannel:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -409,7 +412,7 @@ class FlexrayArTpChannel:
                 "name": "N-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -420,7 +423,7 @@ class FlexrayArTpChannel:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -431,7 +434,7 @@ class FlexrayArTpChannel:
                 "name": "N-PDU",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -442,5 +445,5 @@ class FlexrayArTpChannel:
                 "name": "FLEXRAY-AR-TP-CONNECTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

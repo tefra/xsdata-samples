@@ -14,5 +14,5 @@ class Suggestion:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

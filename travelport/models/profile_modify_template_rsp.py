@@ -11,6 +11,7 @@ class ProfileModifyTemplateRsp(BaseRsp5):
     """
     Response with profile template data.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -20,5 +21,5 @@ class ProfileModifyTemplateRsp(BaseRsp5):
             "name": "ProfileTemplate",
             "type": "Element",
             "required": True,
-        }
+        },
     )

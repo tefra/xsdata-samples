@@ -15,6 +15,7 @@ class InlineGraphic:
     """
     <div> <h3>Inline Graphic</h3> </div>
     """
+
     class Meta:
         name = "inline-graphic"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -24,67 +25,67 @@ class InlineGraphic:
         metadata={
             "name": "alt-text",
             "type": "Element",
-        }
+        },
     )
     long_desc: List[LongDesc] = field(
         default_factory=list,
         metadata={
             "name": "long-desc",
             "type": "Element",
-        }
+        },
     )
     baseline_shift: Optional[str] = field(
         default=None,
         metadata={
             "name": "baseline-shift",
             "type": "Attribute",
-        }
+        },
     )
     content_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     hreflang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     mime_subtype: Optional[str] = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
-        }
+        },
     )
     mimetype: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     actuate: Optional[ActuateType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     href: Optional[str] = field(
         default=None,
@@ -92,7 +93,7 @@ class InlineGraphic:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "required": True,
-        }
+        },
     )
     role: Optional[str] = field(
         default=None,
@@ -100,21 +101,21 @@ class InlineGraphic:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "min_length": 1,
-        }
+        },
     )
     show: Optional[ShowType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     type_value: TypeType = field(
         init=False,
@@ -123,19 +124,19 @@ class InlineGraphic:
             "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )

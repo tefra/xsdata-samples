@@ -11,6 +11,7 @@ class HeightGradeEnum(Enum):
     :cvar AT_GRADE: At the normal road grade elevation.
     :cvar BELOW_GRADE: Below or under the normal road grade elevation.
     """
+
     ABOVE_GRADE = "aboveGrade"
     AT_GRADE = "atGrade"
     BELOW_GRADE = "belowGrade"

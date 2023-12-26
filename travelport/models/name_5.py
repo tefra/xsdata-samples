@@ -24,6 +24,7 @@ class Name5:
     traveler_profile_id
         Traveler Applied Profile ID.
     """
+
     class Meta:
         name = "Name"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -35,7 +36,7 @@ class Name5:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )
     first: None | str = field(
         default=None,
@@ -45,7 +46,7 @@ class Name5:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     middle: None | str = field(
         default=None,
@@ -54,7 +55,7 @@ class Name5:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     last: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class Name5:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     suffix: None | str = field(
         default=None,
@@ -73,12 +74,12 @@ class Name5:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     traveler_profile_id: None | int = field(
         default=None,
         metadata={
             "name": "TravelerProfileId",
             "type": "Attribute",
-        }
+        },
     )

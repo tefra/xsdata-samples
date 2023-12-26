@@ -53,6 +53,7 @@ class Ssr4:
         Unique ID of Booking Traveler's Profile that contains the Secure
         flight Detail
     """
+
     class Meta:
         name = "SSR"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -62,28 +63,28 @@ class Ssr4:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     passive_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -93,21 +94,21 @@ class Ssr4:
             "required": True,
             "min_length": 4,
             "max_length": 4,
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     free_text: None | str = field(
         default=None,
         metadata={
             "name": "FreeText",
             "type": "Attribute",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -115,7 +116,7 @@ class Ssr4:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     carrier_specific_text: None | str = field(
         default=None,
@@ -124,14 +125,14 @@ class Ssr4:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )
     provider_defined_type: None | str = field(
         default=None,
@@ -140,47 +141,47 @@ class Ssr4:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )
     ssrrule_ref: None | str = field(
         default=None,
         metadata={
             "name": "SSRRuleRef",
             "type": "Attribute",
-        }
+        },
     )
     url: None | str = field(
         default=None,
         metadata={
             "name": "URL",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus5 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     profile_id: None | str = field(
         default=None,
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-        }
+        },
     )
     profile_secure_flight_doc_key: None | str = field(
         default=None,
         metadata={
             "name": "ProfileSecureFlightDocKey",
             "type": "Attribute",
-        }
+        },
     )

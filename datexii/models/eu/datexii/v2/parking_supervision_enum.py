@@ -16,6 +16,7 @@ class ParkingSupervisionEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     REMOTE = "remote"
     ON_SITE = "onSite"
     CONTROL_CENTRE_ON_SITE = "controlCentreOnSite"

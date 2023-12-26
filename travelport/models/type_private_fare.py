@@ -11,6 +11,7 @@ class TypePrivateFare(Enum):
     Also, this enumaration list includes PrivateFare to indetify private
     fares for GDSs where we can not identify specific private fares.
     """
+
     UNKNOWN_TYPE = "UnknownType"
     PRIVATE_FARE = "PrivateFare"
     AGENCY_PRIVATE_FARE = "AgencyPrivateFare"

@@ -15,24 +15,24 @@ class Vortaro:
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     precipa_parto: Optional[PrecipaParto] = field(
         default=None,
         metadata={
             "name": "precipa-parto",
             "type": "Element",
-        }
+        },
     )
     epilogo: Optional[Epilogo] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     art: Optional[Art] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )

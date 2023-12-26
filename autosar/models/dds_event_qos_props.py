@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .ref import Ref
-from .service_event_deployment_subtypes_enum import ServiceEventDeploymentSubtypesEnum
+from .service_event_deployment_subtypes_enum import (
+    ServiceEventDeploymentSubtypesEnum,
+)
 from .string import String
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -28,6 +30,7 @@ class DdsEventQosProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DDS-EVENT-QOS-PROPS"
 
@@ -37,7 +40,7 @@ class DdsEventQosProps:
             "name": "QOS-PROFILE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_ref: Optional["DdsEventQosProps.EventRef"] = field(
         default=None,
@@ -45,14 +48,14 @@ class DdsEventQosProps:
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -60,7 +63,7 @@ class DdsEventQosProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -71,5 +74,5 @@ class DdsEventQosProps:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

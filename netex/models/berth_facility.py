@@ -14,5 +14,5 @@ class BerthFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -16,6 +16,7 @@ class Bsppayment:
     bsppassword
         Value of the BSP Direct Bill id password
     """
+
     class Meta:
         name = "BSPPayment"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -27,7 +28,7 @@ class Bsppayment:
             "type": "Attribute",
             "required": True,
             "max_length": 128,
-        }
+        },
     )
     bsppassword: None | str = field(
         default=None,
@@ -35,5 +36,5 @@ class Bsppayment:
             "name": "BSPPassword",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )

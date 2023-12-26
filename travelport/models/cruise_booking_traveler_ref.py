@@ -17,6 +17,7 @@ class CruiseBookingTravelerRef:
     waiver_indicator
         Indicates Passenger accepts/rejects waiver or insurance from vendor.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -27,19 +28,19 @@ class CruiseBookingTravelerRef:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     waiver_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "WaiverIndicator",
             "type": "Attribute",
-        }
+        },
     )

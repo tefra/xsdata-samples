@@ -10,6 +10,7 @@ class ApisrequirementsList:
     """
     The shared object list of APISRequirements.
     """
+
     class Meta:
         name = "APISRequirementsList"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -21,5 +22,5 @@ class ApisrequirementsList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

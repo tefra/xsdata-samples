@@ -16,6 +16,7 @@ class FlightInformationReq(BaseReq1):
     flight_info_criteria
         Provider: 1G,1V.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,5 +27,5 @@ class FlightInformationReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

@@ -16,6 +16,7 @@ class BaseInfo2:
     branch_base_info
         Information relating to Branch.
     """
+
     class Meta:
         name = "BaseInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -25,12 +26,12 @@ class BaseInfo2:
         metadata={
             "name": "AgencyBaseInfo",
             "type": "Element",
-        }
+        },
     )
     branch_base_info: None | BranchBaseInfo2 = field(
         default=None,
         metadata={
             "name": "BranchBaseInfo",
             "type": "Element",
-        }
+        },
     )

@@ -1,25 +1,61 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbotype import BaseGbotype
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.local_data_type import LocalDataType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_account_managers import AgreementTypeAccountManagers
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_coinsurer_involvements import AgreementTypeCoinsurerInvolvements
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_insured_involvement import AgreementTypeInsuredInvolvement
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_payout_benefits import AgreementTypePayoutBenefits
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_underwriters import AgreementTypeUnderwriters
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.business_origin_enum import BusinessOriginEnum
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.classification_code_enum import ClassificationCodeEnum
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.contacts_involvement import ContactsInvolvement
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.intermediary_involvement_type import IntermediaryInvolvementType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.layer_type_enum import LayerTypeEnum
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.line_of_business_type import LineOfBusinessType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
+    AmountType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbotype import (
+    BaseGbotype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.local_data_type import (
+    LocalDataType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_account_managers import (
+    AgreementTypeAccountManagers,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_coinsurer_involvements import (
+    AgreementTypeCoinsurerInvolvements,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_insured_involvement import (
+    AgreementTypeInsuredInvolvement,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_payout_benefits import (
+    AgreementTypePayoutBenefits,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.agreement_type_underwriters import (
+    AgreementTypeUnderwriters,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.business_origin_enum import (
+    BusinessOriginEnum,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.classification_code_enum import (
+    ClassificationCodeEnum,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.contacts_involvement import (
+    ContactsInvolvement,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.intermediary_involvement_type import (
+    IntermediaryInvolvementType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.layer_type_enum import (
+    LayerTypeEnum,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.common.v1.line_of_business_type import (
+    LineOfBusinessType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -59,6 +95,7 @@ class AgreementType(BaseGbotype):
     :ivar local_data: This element contains a key value implementation
         for local data tab.
     """
+
     expiry_date: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -66,7 +103,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     inception_date: Optional[XmlDateTime] = field(
         default=None,
@@ -75,7 +112,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     renewable: Optional[bool] = field(
         default=None,
@@ -83,7 +120,7 @@ class AgreementType(BaseGbotype):
             "name": "Renewable",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     issue_date: Optional[XmlDateTime] = field(
         default=None,
@@ -91,7 +128,7 @@ class AgreementType(BaseGbotype):
             "name": "IssueDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     layer_attachment_point: Optional[AmountType] = field(
         default=None,
@@ -99,7 +136,7 @@ class AgreementType(BaseGbotype):
             "name": "LayerAttachmentPoint",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     last_renewal_date: Optional[XmlDateTime] = field(
         default=None,
@@ -107,7 +144,7 @@ class AgreementType(BaseGbotype):
             "name": "LastRenewalDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     endorsed: Optional[bool] = field(
         default=None,
@@ -115,7 +152,7 @@ class AgreementType(BaseGbotype):
             "name": "Endorsed",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     endorsment_version: Optional[str] = field(
         default=None,
@@ -123,7 +160,7 @@ class AgreementType(BaseGbotype):
             "name": "EndorsmentVersion",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     status: Optional[str] = field(
         default=None,
@@ -132,7 +169,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     status_date: Optional[XmlDateTime] = field(
         default=None,
@@ -140,7 +177,7 @@ class AgreementType(BaseGbotype):
             "name": "StatusDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     status_notes: Optional[TextType] = field(
         default=None,
@@ -148,7 +185,7 @@ class AgreementType(BaseGbotype):
             "name": "StatusNotes",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     sum_insured: Optional[AmountType] = field(
         default=None,
@@ -156,7 +193,7 @@ class AgreementType(BaseGbotype):
             "name": "SumInsured",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     total_layers: Optional[int] = field(
         default=None,
@@ -164,7 +201,7 @@ class AgreementType(BaseGbotype):
             "name": "TotalLayers",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     renewed_from: Optional[Idtype] = field(
         default=None,
@@ -172,7 +209,7 @@ class AgreementType(BaseGbotype):
             "name": "RenewedFrom",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     underwriting_year: Optional[int] = field(
         default=None,
@@ -181,7 +218,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     version: Optional[int] = field(
         default=None,
@@ -190,7 +227,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     account_managers: Optional[AgreementTypeAccountManagers] = field(
         default=None,
@@ -198,7 +235,7 @@ class AgreementType(BaseGbotype):
             "name": "AccountManagers",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     business_origin: Optional[BusinessOriginEnum] = field(
         default=None,
@@ -206,7 +243,7 @@ class AgreementType(BaseGbotype):
             "name": "BusinessOrigin",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     classification_code: Optional[ClassificationCodeEnum] = field(
         default=None,
@@ -214,15 +251,17 @@ class AgreementType(BaseGbotype):
             "name": "ClassificationCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
-    coinsurer_involvements: Optional[AgreementTypeCoinsurerInvolvements] = field(
+    coinsurer_involvements: Optional[
+        AgreementTypeCoinsurerInvolvements
+    ] = field(
         default=None,
         metadata={
             "name": "CoinsurerInvolvements",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     contacts: Optional[ContactsInvolvement] = field(
         default=None,
@@ -230,7 +269,7 @@ class AgreementType(BaseGbotype):
             "name": "Contacts",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     insured_involvement: Optional[AgreementTypeInsuredInvolvement] = field(
         default=None,
@@ -238,7 +277,7 @@ class AgreementType(BaseGbotype):
             "name": "InsuredInvolvement",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     intermediary: List[IntermediaryInvolvementType] = field(
         default_factory=list,
@@ -246,7 +285,7 @@ class AgreementType(BaseGbotype):
             "name": "Intermediary",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     underwriters: Optional[AgreementTypeUnderwriters] = field(
         default=None,
@@ -254,7 +293,7 @@ class AgreementType(BaseGbotype):
             "name": "Underwriters",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     layer_type: Optional[LayerTypeEnum] = field(
         default=None,
@@ -263,7 +302,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     line_of_business: Optional[LineOfBusinessType] = field(
         default=None,
@@ -272,7 +311,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     payout_benefits: Optional[AgreementTypePayoutBenefits] = field(
         default=None,
@@ -280,7 +319,7 @@ class AgreementType(BaseGbotype):
             "name": "PayoutBenefits",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     local_currency: Optional[CodeType] = field(
         default=None,
@@ -289,7 +328,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     remittance_currency: Optional[CodeType] = field(
         default=None,
@@ -298,7 +337,7 @@ class AgreementType(BaseGbotype):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     local_data: Optional[LocalDataType] = field(
         default=None,
@@ -306,5 +345,5 @@ class AgreementType(BaseGbotype):
             "name": "LocalData",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

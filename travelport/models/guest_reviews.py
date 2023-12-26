@@ -9,6 +9,7 @@ class GuestReviews:
     """
     Comments and Reviews from hotel guests.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -19,7 +20,7 @@ class GuestReviews:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
 
     @dataclass
@@ -42,18 +43,19 @@ class GuestReviews:
         commenter
             Name of the comment's poster.
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
-            }
+            },
         )
         comment_id: None | str = field(
             default=None,
             metadata={
                 "name": "CommentId",
                 "type": "Attribute",
-            }
+            },
         )
         date: None | str = field(
             default=None,
@@ -61,7 +63,7 @@ class GuestReviews:
                 "name": "Date",
                 "type": "Attribute",
                 "pattern": r"[^:Z].*",
-            }
+            },
         )
         commenter_language: None | str = field(
             default=None,
@@ -69,26 +71,26 @@ class GuestReviews:
                 "name": "CommenterLanguage",
                 "type": "Attribute",
                 "length": 2,
-            }
+            },
         )
         source: None | str = field(
             default=None,
             metadata={
                 "name": "Source",
                 "type": "Attribute",
-            }
+            },
         )
         comment_source_name: None | str = field(
             default=None,
             metadata={
                 "name": "CommentSourceName",
                 "type": "Attribute",
-            }
+            },
         )
         commenter: None | str = field(
             default=None,
             metadata={
                 "name": "Commenter",
                 "type": "Attribute",
-            }
+            },
         )

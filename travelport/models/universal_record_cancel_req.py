@@ -18,6 +18,7 @@ class UniversalRecordCancelReq(BaseReq1):
         Represents a valid Universal Record locator code
     version
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -27,7 +28,7 @@ class UniversalRecordCancelReq(BaseReq1):
             "name": "FileFinishingInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     universal_record_locator_code: None | str = field(
         default=None,
@@ -37,7 +38,7 @@ class UniversalRecordCancelReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -45,5 +46,5 @@ class UniversalRecordCancelReq(BaseReq1):
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -15,19 +15,19 @@ class TError(TRootElement):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     error_code: Optional[str] = field(
         default=None,
         metadata={
             "name": "errorCode",
             "type": "Attribute",
-        }
+        },
     )
     structure_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "structureRef",
             "type": "Attribute",
-        }
+        },
     )

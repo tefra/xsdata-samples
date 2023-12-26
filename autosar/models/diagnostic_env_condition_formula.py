@@ -40,6 +40,7 @@ class DiagnosticEnvConditionFormula:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-ENV-CONDITION-FORMULA"
 
@@ -49,7 +50,7 @@ class DiagnosticEnvConditionFormula:
             "name": "NRC-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     op: Optional[DiagnosticLogicalOperatorEnum] = field(
         default=None,
@@ -57,7 +58,7 @@ class DiagnosticEnvConditionFormula:
             "name": "OP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     parts: Optional["DiagnosticEnvConditionFormula.Parts"] = field(
         default=None,
@@ -65,14 +66,14 @@ class DiagnosticEnvConditionFormula:
             "name": "PARTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -80,32 +81,38 @@ class DiagnosticEnvConditionFormula:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class Parts:
-        diagnostic_env_condition_formula: List["DiagnosticEnvConditionFormula"] = field(
+        diagnostic_env_condition_formula: List[
+            "DiagnosticEnvConditionFormula"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ENV-CONDITION-FORMULA",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        diagnostic_env_data_condition: List[DiagnosticEnvDataCondition] = field(
+        diagnostic_env_data_condition: List[
+            DiagnosticEnvDataCondition
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ENV-DATA-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        diagnostic_env_mode_condition: List[DiagnosticEnvModeCondition] = field(
+        diagnostic_env_mode_condition: List[
+            DiagnosticEnvModeCondition
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-ENV-MODE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

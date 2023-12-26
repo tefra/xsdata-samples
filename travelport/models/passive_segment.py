@@ -67,6 +67,7 @@ class PassiveSegment:
         Used for grouping 2 sets of identical passive segments with
         different remark information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/passive_v52_0"
 
@@ -75,7 +76,7 @@ class PassiveSegment:
         metadata={
             "name": "Amount",
             "type": "Element",
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -84,28 +85,28 @@ class PassiveSegment:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 20,
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     start_date: None | str = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     end_date: None | str = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -114,7 +115,7 @@ class PassiveSegment:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -123,49 +124,49 @@ class PassiveSegment:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     availability_source: None | str = field(
         default=None,
         metadata={
             "name": "AvailabilitySource",
             "type": "Attribute",
-        }
+        },
     )
     polled_availability_option: None | str = field(
         default=None,
         metadata={
             "name": "PolledAvailabilityOption",
             "type": "Attribute",
-        }
+        },
     )
     availability_display_type: None | str = field(
         default=None,
         metadata={
             "name": "AvailabilityDisplayType",
             "type": "Attribute",
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
         metadata={
             "name": "ClassOfService",
             "type": "Attribute",
-        }
+        },
     )
     number_of_items: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfItems",
             "type": "Attribute",
-        }
+        },
     )
     segment_type: None | str = field(
         default=None,
@@ -173,42 +174,42 @@ class PassiveSegment:
             "name": "SegmentType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     vehicle_type: None | str = field(
         default=None,
         metadata={
             "name": "VehicleType",
             "type": "Attribute",
-        }
+        },
     )
     passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     group: None | int = field(
         default=None,
         metadata={
             "name": "Group",
             "type": "Attribute",
-        }
+        },
     )
     travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
-        }
+        },
     )
     provider_segment_order: None | int = field(
         default=None,
@@ -216,28 +217,28 @@ class PassiveSegment:
             "name": "ProviderSegmentOrder",
             "type": "Attribute",
             "max_inclusive": 999,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     passive_group: None | str = field(
         default=None,
         metadata={
             "name": "PassiveGroup",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -247,12 +248,12 @@ class PassiveSegment:
             metadata={
                 "name": "Type",
                 "type": "Attribute",
-            }
+            },
         )
         amount_due_paid: None | str = field(
             default=None,
             metadata={
                 "name": "AmountDuePaid",
                 "type": "Attribute",
-            }
+            },
         )

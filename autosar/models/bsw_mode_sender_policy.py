@@ -3,7 +3,9 @@ from typing import Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
 from .bsw_mode_switch_ack_request import BswModeSwitchAckRequest
-from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
+from .mode_declaration_group_prototype_subtypes_enum import (
+    ModeDeclarationGroupPrototypeSubtypesEnum,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
 
@@ -40,6 +42,7 @@ class BswModeSenderPolicy:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-MODE-SENDER-POLICY"
 
@@ -49,7 +52,7 @@ class BswModeSenderPolicy:
             "name": "ACK-REQUEST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     enhanced_mode_api: Optional[Boolean] = field(
         default=None,
@@ -57,15 +60,17 @@ class BswModeSenderPolicy:
             "name": "ENHANCED-MODE-API",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    provided_mode_group_ref: Optional["BswModeSenderPolicy.ProvidedModeGroupRef"] = field(
+    provided_mode_group_ref: Optional[
+        "BswModeSenderPolicy.ProvidedModeGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROVIDED-MODE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     queue_length: Optional[PositiveInteger] = field(
         default=None,
@@ -73,7 +78,7 @@ class BswModeSenderPolicy:
             "name": "QUEUE-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -81,14 +86,14 @@ class BswModeSenderPolicy:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -96,7 +101,7 @@ class BswModeSenderPolicy:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -107,5 +112,5 @@ class BswModeSenderPolicy:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

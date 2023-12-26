@@ -15,6 +15,7 @@ class RailRefundQuoteReq(BaseReq1):
     locator_code
         The unique identifier for this rail reservation
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -26,5 +27,5 @@ class RailRefundQuoteReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )

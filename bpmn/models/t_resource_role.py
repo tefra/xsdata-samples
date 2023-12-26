@@ -19,7 +19,7 @@ class TResourceRole(TBaseElement):
             "name": "resourceRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     resource_parameter_binding: List[ResourceParameterBinding] = field(
         default_factory=list,
@@ -27,19 +27,21 @@ class TResourceRole(TBaseElement):
             "name": "resourceParameterBinding",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
-    resource_assignment_expression: Optional[ResourceAssignmentExpression] = field(
+    resource_assignment_expression: Optional[
+        ResourceAssignmentExpression
+    ] = field(
         default=None,
         metadata={
             "name": "resourceAssignmentExpression",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

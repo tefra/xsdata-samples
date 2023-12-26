@@ -16,6 +16,7 @@ class NameOverride6:
     last
         Last Name.
     """
+
     class Meta:
         name = "NameOverride"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -28,7 +29,7 @@ class NameOverride6:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     last: None | str = field(
         default=None,
@@ -38,5 +39,5 @@ class NameOverride6:
             "required": True,
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )

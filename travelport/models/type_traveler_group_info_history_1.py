@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_account_type_profile_info_1 import TypeAccountTypeProfileInfo1
+from travelport.models.type_account_type_profile_info_1 import (
+    TypeAccountTypeProfileInfo1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -17,6 +19,7 @@ class TypeTravelerGroupInfoHistory1(TypeAccountTypeProfileInfo1):
     local_language_name
         The name of the TravelerGroup in the user's local language.
     """
+
     class Meta:
         name = "typeTravelerGroupInfoHistory"
 
@@ -27,7 +30,7 @@ class TypeTravelerGroupInfoHistory1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     local_language_name: None | str = field(
         default=None,
@@ -36,5 +39,5 @@ class TypeTravelerGroupInfoHistory1(TypeAccountTypeProfileInfo1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

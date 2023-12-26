@@ -13,5 +13,5 @@ class UnknownSubscriberErrorStructure(ErrorCodeStructure):
             "name": "SubscriberRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

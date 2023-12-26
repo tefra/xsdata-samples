@@ -10,5 +10,6 @@ class ShowResourceCategoryEnumSimple(Enum):
     :cvar SHOW_CATEGORY: The category of the target is  rendered at the
         place of the reference.
     """
+
     NO_SHOW_CATEGORY = "NO-SHOW-CATEGORY"
     SHOW_CATEGORY = "SHOW-CATEGORY"

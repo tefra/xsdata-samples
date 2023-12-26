@@ -21,6 +21,7 @@ class TypeSearchPaymentDetails1:
     account_number
         Payment account number (e.g. Credit Card Number, etc.)
     """
+
     class Meta:
         name = "typeSearchPaymentDetails"
 
@@ -30,7 +31,7 @@ class TypeSearchPaymentDetails1:
             "name": "ExpirationDate",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     type_value: None | TypePaymentType1 = field(
         default=None,
@@ -38,7 +39,7 @@ class TypeSearchPaymentDetails1:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     payment_supplier: None | str = field(
         default=None,
@@ -46,7 +47,7 @@ class TypeSearchPaymentDetails1:
             "name": "PaymentSupplier",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     account_number: None | str = field(
         default=None,
@@ -55,5 +56,5 @@ class TypeSearchPaymentDetails1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

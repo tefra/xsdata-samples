@@ -8,6 +8,7 @@ class TypeCustomFieldDataFormat1(Enum):
     """
     Data Type of the field.
     """
+
     ALPHA_NUMERIC = "Alpha Numeric"
     FREEFORM_TEXT = "Freeform Text"
     TEXT = "Text"
@@ -22,5 +23,5 @@ class TypeCustomFieldDataFormat1(Enum):
     DATE_DAY_MONTH_YEAR = "Date Day Month Year"
     DATE_DAY_MONTH_YEAR_TIME = "Date Day Month Year Time"
     TIME_IN_MINUTES = "Time in Minutes"
-    TIME_IN_HOUR_MINUTE = "Time in Hour &amp; Minute"
+    TIME_IN_HOUR_MINUTE = "Time in Hour & Minute"
     TIME_IN_MILLISECONDS_WITH_TIME_ZONE = "Time in Milliseconds with Time Zone"

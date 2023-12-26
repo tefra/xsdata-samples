@@ -32,21 +32,21 @@ class AuctionResultSummary:
         metadata={
             "name": "TotalNumAuctionResults",
             "type": "Element",
-        }
+        },
     )
     total_num_winning_bids: Optional[str] = field(
         default=None,
         metadata={
             "name": "TotalNumWinningBids",
             "type": "Element",
-        }
+        },
     )
     total_num_participants: Optional[str] = field(
         default=None,
         metadata={
             "name": "TotalNumParticipants",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -204,7 +204,7 @@ class AuctionResultHeader:
         metadata={
             "name": "InitiatingParty",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -218,21 +218,23 @@ class AuctionResultHeader:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
-    auction_result_list_of_attachment: Optional[AuctionResultListOfAttachment] = field(
+    auction_result_list_of_attachment: Optional[
+        AuctionResultListOfAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "AuctionResultListOfAttachment",
             "type": "Element",
-        }
+        },
     )
     auction_result_general_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "AuctionResultGeneralNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -267,14 +269,14 @@ class Mvbvariable:
         metadata={
             "name": "MVBVariableValue",
             "type": "Element",
-        }
+        },
     )
     mvbrange: Optional[Mvbrange] = field(
         default=None,
         metadata={
             "name": "MVBRange",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -289,7 +291,7 @@ class ListOfMvbvariables:
             "name": "MVBVariable",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -307,56 +309,56 @@ class AuctionResultItem:
         metadata={
             "name": "PricingDetail",
             "type": "Element",
-        }
+        },
     )
     delivery_detail: Optional[DeliveryDetail] = field(
         default=None,
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
-        }
+        },
     )
     round_trip_information: Optional[RoundTripInformation] = field(
         default=None,
         metadata={
             "name": "RoundTripInformation",
             "type": "Element",
-        }
+        },
     )
     line_item_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
     line_item_attachments: Optional[LineItemAttachments] = field(
         default=None,
         metadata={
             "name": "LineItemAttachments",
             "type": "Element",
-        }
+        },
     )
     list_of_mvbvariables: Optional[ListOfMvbvariables] = field(
         default=None,
         metadata={
             "name": "ListOfMVBVariables",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -368,7 +370,7 @@ class ListOfAuctionResultItem:
             "name": "AuctionResultItem",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -400,14 +402,14 @@ class AuctionResultDetail:
         metadata={
             "name": "AuctionResultDates",
             "type": "Element",
-        }
+        },
     )
     auction_result_currency: Optional[AuctionResultCurrency] = field(
         default=None,
         metadata={
             "name": "AuctionResultCurrency",
             "type": "Element",
-        }
+        },
     )
     list_of_auction_result_item: ListOfAuctionResultItem = field(
         metadata={
@@ -421,14 +423,16 @@ class AuctionResultDetail:
         metadata={
             "name": "AuctionResultDetailNotes",
             "type": "Element",
-        }
+        },
     )
-    list_of_auction_result_detail_attachment: Optional[ListOfAuctionResultDetailAttachment] = field(
+    list_of_auction_result_detail_attachment: Optional[
+        ListOfAuctionResultDetailAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfAuctionResultDetailAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -440,7 +444,7 @@ class ListOfAuctionResultDetail:
             "name": "AuctionResultDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 

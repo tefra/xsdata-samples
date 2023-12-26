@@ -15,6 +15,7 @@ class GdsQueueAgentListReq(BaseReq1):
     agent_id
         The Agent ID for the applicable supplier/vendor
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -26,5 +27,5 @@ class GdsQueueAgentListReq(BaseReq1):
             "required": True,
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

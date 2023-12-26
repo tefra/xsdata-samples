@@ -44,6 +44,7 @@ class HwPinGroupContent:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "HW-PIN-GROUP-CONTENT"
 
@@ -53,7 +54,7 @@ class HwPinGroupContent:
             "name": "HW-PIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_pin_group: List["HwPinGroup"] = field(
         default_factory=list,
@@ -61,14 +62,14 @@ class HwPinGroupContent:
             "name": "HW-PIN-GROUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -76,7 +77,7 @@ class HwPinGroupContent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
 
@@ -156,6 +157,7 @@ class HwPinGroup:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "HW-PIN-GROUP"
 
@@ -166,7 +168,7 @@ class HwPinGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["HwPinGroup.ShortNameFragments"] = field(
         default=None,
@@ -174,7 +176,7 @@ class HwPinGroup:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -182,7 +184,7 @@ class HwPinGroup:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -190,7 +192,7 @@ class HwPinGroup:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -198,7 +200,7 @@ class HwPinGroup:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -206,7 +208,7 @@ class HwPinGroup:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -214,7 +216,7 @@ class HwPinGroup:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["HwPinGroup.Annotations"] = field(
         default=None,
@@ -222,7 +224,7 @@ class HwPinGroup:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_type_ref: Optional["HwPinGroup.HwTypeRef"] = field(
         default=None,
@@ -230,7 +232,7 @@ class HwPinGroup:
             "name": "HW-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_category_refs: Optional["HwPinGroup.HwCategoryRefs"] = field(
         default=None,
@@ -238,7 +240,7 @@ class HwPinGroup:
             "name": "HW-CATEGORY-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_attribute_values: Optional["HwPinGroup.HwAttributeValues"] = field(
         default=None,
@@ -246,7 +248,7 @@ class HwPinGroup:
             "name": "HW-ATTRIBUTE-VALUES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_pin_group_content: Optional[HwPinGroupContent] = field(
         default=None,
@@ -254,7 +256,7 @@ class HwPinGroup:
             "name": "HW-PIN-GROUP-CONTENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -262,14 +264,14 @@ class HwPinGroup:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -277,14 +279,14 @@ class HwPinGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -295,7 +297,7 @@ class HwPinGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -306,7 +308,7 @@ class HwPinGroup:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -317,18 +319,20 @@ class HwPinGroup:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class HwCategoryRefs:
-        hw_category_ref: List["HwPinGroup.HwCategoryRefs.HwCategoryRef"] = field(
+        hw_category_ref: List[
+            "HwPinGroup.HwCategoryRefs.HwCategoryRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "HW-CATEGORY-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -339,7 +343,7 @@ class HwPinGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -350,5 +354,5 @@ class HwPinGroup:
                 "name": "HW-ATTRIBUTE-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

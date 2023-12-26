@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import DocumentationBlock
 from .integer import Integer
-from .lin_slave_config_ident_subtypes_enum import LinSlaveConfigIdentSubtypesEnum
+from .lin_slave_config_ident_subtypes_enum import (
+    LinSlaveConfigIdentSubtypesEnum,
+)
 from .lin_slave_subtypes_enum import LinSlaveSubtypesEnum
 from .ref import Ref
 from .time_value import TimeValue
@@ -41,6 +43,7 @@ class SaveConfigurationEntry:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SAVE-CONFIGURATION-ENTRY"
 
@@ -50,7 +53,7 @@ class SaveConfigurationEntry:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     delay: Optional[TimeValue] = field(
         default=None,
@@ -58,7 +61,7 @@ class SaveConfigurationEntry:
             "name": "DELAY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     position_in_table: Optional[Integer] = field(
         default=None,
@@ -66,30 +69,34 @@ class SaveConfigurationEntry:
             "name": "POSITION-IN-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_controller_ref: Optional["SaveConfigurationEntry.AssignedControllerRef"] = field(
+    assigned_controller_ref: Optional[
+        "SaveConfigurationEntry.AssignedControllerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_lin_slave_config_ref: Optional["SaveConfigurationEntry.AssignedLinSlaveConfigRef"] = field(
+    assigned_lin_slave_config_ref: Optional[
+        "SaveConfigurationEntry.AssignedLinSlaveConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -97,7 +104,7 @@ class SaveConfigurationEntry:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -108,7 +115,7 @@ class SaveConfigurationEntry:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -119,5 +126,5 @@ class SaveConfigurationEntry:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -16,6 +16,7 @@ class QuickResponse:
         Token is returned for use in subsequent request to retrieve complete
         results.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -24,12 +25,12 @@ class QuickResponse:
         metadata={
             "name": "FastResult",
             "type": "Attribute",
-        }
+        },
     )
     more_token: None | str = field(
         default=None,
         metadata={
             "name": "MoreToken",
             "type": "Attribute",
-        }
+        },
     )

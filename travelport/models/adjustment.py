@@ -27,6 +27,7 @@ class Adjustment:
     booking_traveler_ref
         Reference to a booking traveler for which adjustment is applied.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -35,14 +36,14 @@ class Adjustment:
         metadata={
             "name": "Amount",
             "type": "Element",
-        }
+        },
     )
     percent: None | float = field(
         default=None,
         metadata={
             "name": "Percent",
             "type": "Element",
-        }
+        },
     )
     adjusted_total_price: None | str = field(
         default=None,
@@ -50,19 +51,19 @@ class Adjustment:
             "name": "AdjustedTotalPrice",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     approximate_adjusted_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateAdjustedTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

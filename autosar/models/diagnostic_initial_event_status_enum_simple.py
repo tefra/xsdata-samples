@@ -10,5 +10,6 @@ class DiagnosticInitialEventStatusEnumSimple(Enum):
     :cvar RETURN_ON_EVENT_STOPPED: This means that the ResponseOnEvent
         is initially stopped.
     """
+
     RETURN_ON_EVENT_CLEARED = "RETURN-ON-EVENT-CLEARED"
     RETURN_ON_EVENT_STOPPED = "RETURN-ON-EVENT-STOPPED"

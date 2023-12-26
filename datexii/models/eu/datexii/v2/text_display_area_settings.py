@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.vms_luminance_level_enum import VmsLuminanceLevelEnum
+from datexii.models.eu.datexii.v2.vms_luminance_level_enum import (
+    VmsLuminanceLevelEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -26,13 +28,14 @@ class TextDisplayAreaSettings:
         operator.
     :ivar text_display_area_settings_extension:
     """
+
     text_lanterns_on: Optional[bool] = field(
         default=None,
         metadata={
             "name": "textLanternsOn",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     text_luminance_override: Optional[bool] = field(
         default=None,
@@ -40,7 +43,7 @@ class TextDisplayAreaSettings:
             "name": "textLuminanceOverride",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     text_luminance_level: Optional[int] = field(
         default=None,
@@ -48,7 +51,7 @@ class TextDisplayAreaSettings:
             "name": "textLuminanceLevel",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     text_luminance_level_name: Optional[VmsLuminanceLevelEnum] = field(
         default=None,
@@ -56,7 +59,7 @@ class TextDisplayAreaSettings:
             "name": "textLuminanceLevelName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     text_display_area_settings_extension: Optional[ExtensionType] = field(
         default=None,
@@ -64,5 +67,5 @@ class TextDisplayAreaSettings:
             "name": "textDisplayAreaSettingsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

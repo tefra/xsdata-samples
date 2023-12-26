@@ -18,6 +18,7 @@ class FareGuaranteeInfo:
     guarantee_type
         Determines the status of a fare for a passenger.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,7 +27,7 @@ class FareGuaranteeInfo:
         metadata={
             "name": "GuaranteeDate",
             "type": "Attribute",
-        }
+        },
     )
     guarantee_type: None | TypeFareGuarantee = field(
         default=None,
@@ -34,5 +35,5 @@ class FareGuaranteeInfo:
             "name": "GuaranteeType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

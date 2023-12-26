@@ -17,6 +17,7 @@ class DepositAmount:
     approximate_amount
         Approximate deposit amount required for deposit/prepayment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -25,12 +26,12 @@ class DepositAmount:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     approximate_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateAmount",
             "type": "Attribute",
-        }
+        },
     )

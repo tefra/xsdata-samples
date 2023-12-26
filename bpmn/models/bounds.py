@@ -14,26 +14,26 @@ class Bounds:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     y: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     width: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     height: Optional[float] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

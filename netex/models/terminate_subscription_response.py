@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .terminate_subscription_response_structure import TerminateSubscriptionResponseStructure
+from .terminate_subscription_response_structure import (
+    TerminateSubscriptionResponseStructure,
+)
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 

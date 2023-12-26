@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.activity import Activity
-from datexii.models.eu.datexii.v2.disturbance_activity_type_enum import DisturbanceActivityTypeEnum
+from datexii.models.eu.datexii.v2.disturbance_activity_type_enum import (
+    DisturbanceActivityTypeEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -18,6 +20,7 @@ class DisturbanceActivity(Activity):
         traffic.
     :ivar disturbance_activity_extension:
     """
+
     disturbance_activity_type: Optional[DisturbanceActivityTypeEnum] = field(
         default=None,
         metadata={
@@ -25,7 +28,7 @@ class DisturbanceActivity(Activity):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     disturbance_activity_extension: Optional[ExtensionType] = field(
         default=None,
@@ -33,5 +36,5 @@ class DisturbanceActivity(Activity):
             "name": "disturbanceActivityExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -15,7 +15,7 @@ class GeneralSignStructure(SignEquipmentVersionStructure):
             "name": "Content",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     sign_content_type: Optional[SignContentEnumeration] = field(
         default=None,
@@ -23,5 +23,5 @@ class GeneralSignStructure(SignEquipmentVersionStructure):
             "name": "SignContentType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

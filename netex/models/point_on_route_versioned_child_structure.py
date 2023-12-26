@@ -1,12 +1,14 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
 from .parking_point_ref import ParkingPointRef
-from .point_in_link_sequence_versioned_child_structure import PointInLinkSequenceVersionedChildStructure
+from .point_in_link_sequence_versioned_child_structure import (
+    PointInLinkSequenceVersionedChildStructure,
+)
 from .point_ref import PointRef
 from .railway_point_ref import RailwayPointRef
 from .relief_point_ref import ReliefPointRef
@@ -23,11 +25,31 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PointOnRouteVersionedChildStructure(PointInLinkSequenceVersionedChildStructure):
+class PointOnRouteVersionedChildStructure(
+    PointInLinkSequenceVersionedChildStructure
+):
     class Meta:
         name = "PointOnRoute_VersionedChildStructure"
 
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
+            PointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -108,7 +130,7 @@ class PointOnRouteVersionedChildStructure(PointInLinkSequenceVersionedChildStruc
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     onward_route_link_ref: Optional[RouteLinkRefStructure] = field(
         default=None,
@@ -116,7 +138,7 @@ class PointOnRouteVersionedChildStructure(PointInLinkSequenceVersionedChildStruc
             "name": "OnwardRouteLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     route_instructions: Optional[RouteInstructionsRelStructure] = field(
         default=None,
@@ -124,5 +146,5 @@ class PointOnRouteVersionedChildStructure(PointInLinkSequenceVersionedChildStruc
             "name": "routeInstructions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

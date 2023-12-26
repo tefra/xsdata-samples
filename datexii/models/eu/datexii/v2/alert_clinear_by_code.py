@@ -19,6 +19,7 @@ class AlertCLinearByCode(AlertCLinear):
         a specific Alert-C location.
     :ivar alert_clinear_by_code_extension:
     """
+
     alert_cdirection: Optional[AlertCDirection] = field(
         default=None,
         metadata={
@@ -26,7 +27,7 @@ class AlertCLinearByCode(AlertCLinear):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     location_code_for_linear_location: Optional[AlertCLocation] = field(
         default=None,
@@ -35,7 +36,7 @@ class AlertCLinearByCode(AlertCLinear):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     alert_clinear_by_code_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,5 +44,5 @@ class AlertCLinearByCode(AlertCLinear):
             "name": "alertCLinearByCodeExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

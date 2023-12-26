@@ -8,6 +8,7 @@ class SeriesTitle:
     """
     Book series title in a citation.
     """
+
     class Meta:
         name = "series_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -16,5 +17,5 @@ class SeriesTitle:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

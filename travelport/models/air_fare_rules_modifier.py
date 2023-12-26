@@ -10,6 +10,7 @@ class AirFareRulesModifier:
     """
     The modifiers for Air Fare Rules.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class AirFareRulesModifier:
             "name": "AirFareRuleCategory",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

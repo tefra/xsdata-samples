@@ -10,5 +10,6 @@ class EventOccurrenceKindEnumSimple(Enum):
     :cvar SINGLE_OCCURRENCE: Specifies that an event shall occur only
         once in a given time interval.
     """
+
     MULTIPLE_OCCURRENCES = "MULTIPLE-OCCURRENCES"
     SINGLE_OCCURRENCE = "SINGLE-OCCURRENCE"

@@ -14,7 +14,7 @@ class TelephoneContactStructure:
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
             "pattern": r"[0-9 /-]{1,20}",
-        }
+        },
     )
     tel_extension_number: Optional[str] = field(
         default=None,
@@ -23,7 +23,7 @@ class TelephoneContactStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "pattern": r"[0-9]{1,6}",
-        }
+        },
     )
     tel_country_code: Optional[str] = field(
         default=None,
@@ -32,5 +32,5 @@ class TelephoneContactStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "pattern": r"[0-9]{1,3}",
-        }
+        },
     )

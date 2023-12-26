@@ -11,7 +11,9 @@ from .crypto_provider_subtypes_enum import CryptoProviderSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .port_prototype_in_executable_instance_ref import PortPrototypeInExecutableInstanceRef
+from .port_prototype_in_executable_instance_ref import (
+    PortPrototypeInExecutableInstanceRef,
+)
 from .process_subtypes_enum import ProcessSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
@@ -87,6 +89,7 @@ class CryptoProviderToPortPrototypeMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-PROVIDER-TO-PORT-PROTOTYPE-MAPPING"
 
@@ -97,15 +100,17 @@ class CryptoProviderToPortPrototypeMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CryptoProviderToPortPrototypeMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CryptoProviderToPortPrototypeMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -113,7 +118,7 @@ class CryptoProviderToPortPrototypeMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -121,7 +126,7 @@ class CryptoProviderToPortPrototypeMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -129,7 +134,7 @@ class CryptoProviderToPortPrototypeMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -137,7 +142,7 @@ class CryptoProviderToPortPrototypeMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -145,15 +150,17 @@ class CryptoProviderToPortPrototypeMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["CryptoProviderToPortPrototypeMapping.Annotations"] = field(
+    annotations: Optional[
+        "CryptoProviderToPortPrototypeMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -161,38 +168,44 @@ class CryptoProviderToPortPrototypeMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    crypto_provider_ref: Optional["CryptoProviderToPortPrototypeMapping.CryptoProviderRef"] = field(
+    crypto_provider_ref: Optional[
+        "CryptoProviderToPortPrototypeMapping.CryptoProviderRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-PROVIDER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_prototype_iref: Optional[PortPrototypeInExecutableInstanceRef] = field(
+    port_prototype_iref: Optional[
+        PortPrototypeInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    process_ref: Optional["CryptoProviderToPortPrototypeMapping.ProcessRef"] = field(
+    process_ref: Optional[
+        "CryptoProviderToPortPrototypeMapping.ProcessRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -200,14 +213,14 @@ class CryptoProviderToPortPrototypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -218,7 +231,7 @@ class CryptoProviderToPortPrototypeMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -229,7 +242,7 @@ class CryptoProviderToPortPrototypeMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -240,7 +253,7 @@ class CryptoProviderToPortPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -251,5 +264,5 @@ class CryptoProviderToPortPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

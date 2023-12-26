@@ -98,6 +98,7 @@ class Entry:
     :ivar valign: Indicates how the content of the cell shall be
         aligned. Default is inherited from row or tbody, otherwise "TOP"
     """
+
     class Meta:
         name = "ENTRY"
 
@@ -107,7 +108,7 @@ class Entry:
             "name": "BGCOLOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msr_query_p_2: List[MsrQueryP2] = field(
         default_factory=list,
@@ -115,7 +116,7 @@ class Entry:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p: List[MultiLanguageParagraph] = field(
         default_factory=list,
@@ -123,7 +124,7 @@ class Entry:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: List[MultiLanguageVerbatim] = field(
         default_factory=list,
@@ -131,7 +132,7 @@ class Entry:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     list_value: List[ListType] = field(
         default_factory=list,
@@ -139,7 +140,7 @@ class Entry:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_list: List[DefList] = field(
         default_factory=list,
@@ -147,7 +148,7 @@ class Entry:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_list: List[LabeledList] = field(
         default_factory=list,
@@ -155,7 +156,7 @@ class Entry:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: List[MlFormula] = field(
         default_factory=list,
@@ -163,7 +164,7 @@ class Entry:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     figure: List[MlFigure] = field(
         default_factory=list,
@@ -171,7 +172,7 @@ class Entry:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     note: List[Note] = field(
         default_factory=list,
@@ -179,7 +180,7 @@ class Entry:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace: List[TraceableText] = field(
         default_factory=list,
@@ -187,7 +188,7 @@ class Entry:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     structured_req: List[StructuredReq] = field(
         default_factory=list,
@@ -195,14 +196,14 @@ class Entry:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -210,28 +211,28 @@ class Entry:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     align: Optional[AlignEnumSimple] = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
-        }
+        },
     )
     bgcolor_attribute: Optional[str] = field(
         default=None,
         metadata={
             "name": "BGCOLOR",
             "type": "Attribute",
-        }
+        },
     )
     colname: Optional[str] = field(
         default=None,
         metadata={
             "name": "COLNAME",
             "type": "Attribute",
-        }
+        },
     )
     colsep: Optional[str] = field(
         default=None,
@@ -239,35 +240,35 @@ class Entry:
             "name": "COLSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )
     morerows: Optional[str] = field(
         default=None,
         metadata={
             "name": "MOREROWS",
             "type": "Attribute",
-        }
+        },
     )
     nameend: Optional[str] = field(
         default=None,
         metadata={
             "name": "NAMEEND",
             "type": "Attribute",
-        }
+        },
     )
     namest: Optional[str] = field(
         default=None,
         metadata={
             "name": "NAMEST",
             "type": "Attribute",
-        }
+        },
     )
     rotate: Optional[str] = field(
         default=None,
         metadata={
             "name": "ROTATE",
             "type": "Attribute",
-        }
+        },
     )
     rowsep: Optional[str] = field(
         default=None,
@@ -275,19 +276,19 @@ class Entry:
             "name": "ROWSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )
     spanname: Optional[str] = field(
         default=None,
         metadata={
             "name": "SPANNAME",
             "type": "Attribute",
-        }
+        },
     )
     valign: Optional[ValignEnumSimple] = field(
         default=None,
         metadata={
             "name": "VALIGN",
             "type": "Attribute",
-        }
+        },
     )

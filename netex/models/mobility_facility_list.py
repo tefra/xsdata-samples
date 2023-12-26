@@ -14,5 +14,5 @@ class MobilityFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

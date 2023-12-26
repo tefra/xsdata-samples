@@ -14,6 +14,7 @@ class ProfileRetrieveTemplateRsp(BaseRsp5):
     version then the template is not returned.  Otherwise the template
     is returned.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -22,5 +23,5 @@ class ProfileRetrieveTemplateRsp(BaseRsp5):
         metadata={
             "name": "ProfileTemplate",
             "type": "Element",
-        }
+        },
     )

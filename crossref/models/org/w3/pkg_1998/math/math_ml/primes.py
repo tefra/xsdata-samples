@@ -15,5 +15,5 @@ class Primes:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

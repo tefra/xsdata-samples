@@ -64,6 +64,7 @@ class Table:
         bottom of table rows.
     :ivar tabstyle: Indicates an external table style.
     """
+
     class Meta:
         name = "TABLE"
 
@@ -73,7 +74,7 @@ class Table:
             "name": "TABLE-CAPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tgroup: List[Tgroup] = field(
         default_factory=list,
@@ -81,7 +82,7 @@ class Table:
             "name": "TGROUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -89,14 +90,14 @@ class Table:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -104,7 +105,7 @@ class Table:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -112,7 +113,7 @@ class Table:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -120,21 +121,21 @@ class Table:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     colsep: Optional[str] = field(
         default=None,
@@ -142,42 +143,42 @@ class Table:
             "name": "COLSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )
     float_value: Optional[FloatEnumSimple] = field(
         default=None,
         metadata={
             "name": "FLOAT",
             "type": "Attribute",
-        }
+        },
     )
     frame: Optional[FrameEnumSimple] = field(
         default=None,
         metadata={
             "name": "FRAME",
             "type": "Attribute",
-        }
+        },
     )
     help_entry: Optional[str] = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
-        }
+        },
     )
     orient: Optional[OrientEnumSimple] = field(
         default=None,
         metadata={
             "name": "ORIENT",
             "type": "Attribute",
-        }
+        },
     )
     pgwide: Optional[str] = field(
         default=None,
         metadata={
             "name": "PGWIDE",
             "type": "Attribute",
-        }
+        },
     )
     rowsep: Optional[str] = field(
         default=None,
@@ -185,12 +186,12 @@ class Table:
             "name": "ROWSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )
     tabstyle: Optional[str] = field(
         default=None,
         metadata={
             "name": "TABSTYLE",
             "type": "Attribute",
-        }
+        },
     )

@@ -5,7 +5,9 @@ from travelport.models.booking_source_1 import BookingSource1
 from travelport.models.collection_address import CollectionAddress
 from travelport.models.delivery_address import DeliveryAddress
 from travelport.models.drivers_license_1 import DriversLicense1
-from travelport.models.flight_arrival_information import FlightArrivalInformation
+from travelport.models.flight_arrival_information import (
+    FlightArrivalInformation,
+)
 from travelport.models.guarantee_1 import Guarantee1
 from travelport.models.loyalty_card_1 import LoyaltyCard1
 from travelport.models.payment_information import PaymentInformation
@@ -46,6 +48,7 @@ class VehicleAdd:
         can used for other elements which are associated with
         BookngTraveler.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -56,7 +59,7 @@ class VehicleAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     drivers_license: None | DriversLicense1 = field(
         default=None,
@@ -64,7 +67,7 @@ class VehicleAdd:
             "name": "DriversLicense",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     vehicle_special_request: None | VehicleSpecialRequest = field(
         default=None,
@@ -72,7 +75,7 @@ class VehicleAdd:
             "name": "VehicleSpecialRequest",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     special_equipment: list[SpecialEquipment1] = field(
         default_factory=list,
@@ -81,7 +84,7 @@ class VehicleAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 5,
-        }
+        },
     )
     payment_information: None | PaymentInformation = field(
         default=None,
@@ -89,7 +92,7 @@ class VehicleAdd:
             "name": "PaymentInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     guarantee: None | Guarantee1 = field(
         default=None,
@@ -97,7 +100,7 @@ class VehicleAdd:
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     booking_source: None | BookingSource1 = field(
         default=None,
@@ -105,7 +108,7 @@ class VehicleAdd:
             "name": "BookingSource",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     associated_remark: list[AssociatedRemark2] = field(
         default_factory=list,
@@ -114,7 +117,7 @@ class VehicleAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     delivery_address: None | DeliveryAddress = field(
         default=None,
@@ -122,7 +125,7 @@ class VehicleAdd:
             "name": "DeliveryAddress",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     collection_address: None | CollectionAddress = field(
         default=None,
@@ -130,7 +133,7 @@ class VehicleAdd:
             "name": "CollectionAddress",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     third_party_information: None | ThirdPartyInformation1 = field(
         default=None,
@@ -138,7 +141,7 @@ class VehicleAdd:
             "name": "ThirdPartyInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     travel_compliance_data: list[TravelComplianceData1] = field(
         default_factory=list,
@@ -147,7 +150,7 @@ class VehicleAdd:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     flight_arrival_information: None | FlightArrivalInformation = field(
         default=None,
@@ -155,7 +158,7 @@ class VehicleAdd:
             "name": "FlightArrivalInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     reservation_locator_code: None | str = field(
         default=None,
@@ -165,12 +168,12 @@ class VehicleAdd:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

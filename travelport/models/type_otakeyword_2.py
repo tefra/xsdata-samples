@@ -23,6 +23,7 @@ class TypeOtakeyword2:
     description
         A brief description of the keyword
     """
+
     class Meta:
         name = "typeOTAKeyword"
 
@@ -33,7 +34,7 @@ class TypeOtakeyword2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 99,
-        }
+        },
     )
     text: list[str] = field(
         default_factory=list,
@@ -42,7 +43,7 @@ class TypeOtakeyword2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -51,19 +52,19 @@ class TypeOtakeyword2:
             "type": "Attribute",
             "required": True,
             "max_length": 6,
-        }
+        },
     )
     number: None | object = field(
         default=None,
         metadata={
             "name": "Number",
             "type": "Attribute",
-        }
+        },
     )
     description: None | object = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

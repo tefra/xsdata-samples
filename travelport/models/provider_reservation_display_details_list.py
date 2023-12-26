@@ -11,6 +11,7 @@ class ProviderReservationDisplayDetailsList:
     Response to display the addtional details of provider reservation information
     .
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -21,5 +22,5 @@ class ProviderReservationDisplayDetailsList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

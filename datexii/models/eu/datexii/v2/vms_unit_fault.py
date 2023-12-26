@@ -17,6 +17,7 @@ class VmsUnitFault(Fault):
         the VMS unit.
     :ivar vms_unit_fault_extension:
     """
+
     vms_unit_fault: Optional[VmsFaultEnum] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class VmsUnitFault(Fault):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms_unit_fault_extension: Optional[ExtensionType] = field(
         default=None,
@@ -32,5 +33,5 @@ class VmsUnitFault(Fault):
             "name": "vmsUnitFaultExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -14,6 +14,7 @@ class TypeTaxInfoWithPaymentRef(TypeTaxInfo1):
     payment_ref
         This reference elements will associate relevant payment to this tax
     """
+
     class Meta:
         name = "typeTaxInfoWithPaymentRef"
 
@@ -24,5 +25,5 @@ class TypeTaxInfoWithPaymentRef(TypeTaxInfo1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

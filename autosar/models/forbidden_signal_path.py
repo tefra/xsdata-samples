@@ -43,6 +43,7 @@ class ForbiddenSignalPath:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FORBIDDEN-SIGNAL-PATH"
 
@@ -52,7 +53,7 @@ class ForbiddenSignalPath:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -60,7 +61,7 @@ class ForbiddenSignalPath:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     operations: Optional["ForbiddenSignalPath.Operations"] = field(
         default=None,
@@ -68,15 +69,17 @@ class ForbiddenSignalPath:
             "name": "OPERATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    physical_channel_refs: Optional["ForbiddenSignalPath.PhysicalChannelRefs"] = field(
+    physical_channel_refs: Optional[
+        "ForbiddenSignalPath.PhysicalChannelRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     signals: Optional["ForbiddenSignalPath.Signals"] = field(
         default=None,
@@ -84,14 +87,14 @@ class ForbiddenSignalPath:
             "name": "SIGNALS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -99,29 +102,33 @@ class ForbiddenSignalPath:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class Operations:
-        swc_to_swc_operation_arguments: List[SwcToSwcOperationArguments] = field(
+        swc_to_swc_operation_arguments: List[
+            SwcToSwcOperationArguments
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-TO-SWC-OPERATION-ARGUMENTS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PhysicalChannelRefs:
-        physical_channel_ref: List["ForbiddenSignalPath.PhysicalChannelRefs.PhysicalChannelRef"] = field(
+        physical_channel_ref: List[
+            "ForbiddenSignalPath.PhysicalChannelRefs.PhysicalChannelRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PHYSICAL-CHANNEL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -132,7 +139,7 @@ class ForbiddenSignalPath:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -143,5 +150,5 @@ class ForbiddenSignalPath:
                 "name": "SWC-TO-SWC-SIGNAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

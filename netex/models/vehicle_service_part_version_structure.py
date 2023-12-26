@@ -19,7 +19,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     vehicle_service_ref: Optional[VehicleServiceRef] = field(
         default=None,
@@ -35,7 +35,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "name": "VehicleServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_point_ref: Optional[GaragePointRefStructure] = field(
         default=None,
@@ -43,7 +43,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "name": "StartPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_point_ref: Optional[GaragePointRefStructure] = field(
         default=None,
@@ -51,5 +51,5 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "name": "EndPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

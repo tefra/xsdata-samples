@@ -27,6 +27,7 @@ class TypeServiceFeeHistory2(TypeKeyElement2):
     priority_order
         Priority order associated with this Service Fee.
     """
+
     class Meta:
         name = "typeServiceFeeHistory"
 
@@ -35,28 +36,28 @@ class TypeServiceFeeHistory2(TypeKeyElement2):
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-        }
+        },
     )
     supplier_type: None | TypeSupplierType2 = field(
         default=None,
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -65,5 +66,5 @@ class TypeServiceFeeHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

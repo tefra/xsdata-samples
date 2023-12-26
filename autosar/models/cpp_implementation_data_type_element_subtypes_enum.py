@@ -4,4 +4,6 @@ __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
 class CppImplementationDataTypeElementSubtypesEnum(Enum):
-    CPP_IMPLEMENTATION_DATA_TYPE_ELEMENT = "CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT"
+    CPP_IMPLEMENTATION_DATA_TYPE_ELEMENT = (
+        "CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT"
+    )

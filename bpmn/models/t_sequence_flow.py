@@ -17,7 +17,7 @@ class TSequenceFlow(TFlowElement):
             "name": "conditionExpression",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     source_ref: Optional[str] = field(
         default=None,
@@ -25,7 +25,7 @@ class TSequenceFlow(TFlowElement):
             "name": "sourceRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     target_ref: Optional[str] = field(
         default=None,
@@ -33,12 +33,12 @@ class TSequenceFlow(TFlowElement):
             "name": "targetRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     is_immediate: Optional[bool] = field(
         default=None,
         metadata={
             "name": "isImmediate",
             "type": "Attribute",
-        }
+        },
     )

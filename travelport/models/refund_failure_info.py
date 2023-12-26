@@ -21,6 +21,7 @@ class RefundFailureInfo:
     code
     message
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -32,7 +33,7 @@ class RefundFailureInfo:
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     name: None | Name1 = field(
         default=None,
@@ -40,14 +41,14 @@ class RefundFailureInfo:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     tcrnumber: None | str = field(
         default=None,
         metadata={
             "name": "TCRNumber",
             "type": "Element",
-        }
+        },
     )
     booking_traveler_ref: list[str] = field(
         default_factory=list,
@@ -56,7 +57,7 @@ class RefundFailureInfo:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     code: None | int = field(
         default=None,
@@ -64,12 +65,12 @@ class RefundFailureInfo:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
             "type": "Attribute",
-        }
+        },
     )

@@ -20,6 +20,7 @@ class DangerousGoodsRegulationsEnum(Enum):
         concerning the international carriage of dangerous goods by
         rail.
     """
+
     ADR = "adr"
     IATA_ICAO = "iataIcao"
     IMO_IMDG = "imoImdg"

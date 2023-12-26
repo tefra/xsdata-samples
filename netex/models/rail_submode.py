@@ -13,5 +13,5 @@ class RailSubmode:
         default=RailSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

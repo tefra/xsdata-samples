@@ -15,6 +15,7 @@ class Mcotext1:
         The type of text. Possible values: Command Text, Agent Entry, MCO
         Modifiers, Text Message
     """
+
     class Meta:
         name = "MCOText"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -23,12 +24,12 @@ class Mcotext1:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

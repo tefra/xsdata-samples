@@ -29,16 +29,19 @@ class IpSecConfig:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IP-SEC-CONFIG"
 
-    ip_sec_config_props_ref: Optional["IpSecConfig.IpSecConfigPropsRef"] = field(
+    ip_sec_config_props_ref: Optional[
+        "IpSecConfig.IpSecConfigPropsRef"
+    ] = field(
         default=None,
         metadata={
             "name": "IP-SEC-CONFIG-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ip_sec_rules: Optional["IpSecConfig.IpSecRules"] = field(
         default=None,
@@ -46,14 +49,14 @@ class IpSecConfig:
             "name": "IP-SEC-RULES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -61,7 +64,7 @@ class IpSecConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -72,7 +75,7 @@ class IpSecConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -83,5 +86,5 @@ class IpSecConfig:
                 "name": "IP-SEC-RULE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

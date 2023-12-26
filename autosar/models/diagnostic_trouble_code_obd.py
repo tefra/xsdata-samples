@@ -8,13 +8,17 @@ from .annotation import (
 )
 from .boolean_value_variation_point import BooleanValueVariationPoint
 from .category_string import CategoryString
-from .diagnostic_trouble_code_props_subtypes_enum import DiagnosticTroubleCodePropsSubtypesEnum
+from .diagnostic_trouble_code_props_subtypes_enum import (
+    DiagnosticTroubleCodePropsSubtypesEnum,
+)
 from .event_obd_readiness_group import EventObdReadinessGroup
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .name_token_value_variation_point import NameTokenValueVariationPoint
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 
@@ -94,6 +98,7 @@ class DiagnosticTroubleCodeObd:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-OBD"
 
@@ -104,15 +109,17 @@ class DiagnosticTroubleCodeObd:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticTroubleCodeObd.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticTroubleCodeObd.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -120,7 +127,7 @@ class DiagnosticTroubleCodeObd:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -128,7 +135,7 @@ class DiagnosticTroubleCodeObd:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -136,7 +143,7 @@ class DiagnosticTroubleCodeObd:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -144,7 +151,7 @@ class DiagnosticTroubleCodeObd:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -152,7 +159,7 @@ class DiagnosticTroubleCodeObd:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticTroubleCodeObd.Annotations"] = field(
         default=None,
@@ -160,7 +167,7 @@ class DiagnosticTroubleCodeObd:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -168,7 +175,7 @@ class DiagnosticTroubleCodeObd:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     consider_pto_status: Optional[BooleanValueVariationPoint] = field(
         default=None,
@@ -176,7 +183,7 @@ class DiagnosticTroubleCodeObd:
             "name": "CONSIDER-PTO-STATUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dtc_props_ref: Optional["DiagnosticTroubleCodeObd.DtcPropsRef"] = field(
         default=None,
@@ -184,7 +191,7 @@ class DiagnosticTroubleCodeObd:
             "name": "DTC-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_obd_readiness_group: Optional[NameTokenValueVariationPoint] = field(
         default=None,
@@ -192,15 +199,17 @@ class DiagnosticTroubleCodeObd:
             "name": "EVENT-OBD-READINESS-GROUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_readiness_groups: Optional["DiagnosticTroubleCodeObd.EventReadinessGroups"] = field(
+    event_readiness_groups: Optional[
+        "DiagnosticTroubleCodeObd.EventReadinessGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-READINESS-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     obd_dtc_value: Optional[PositiveIntegerValueVariationPoint] = field(
         default=None,
@@ -208,14 +217,14 @@ class DiagnosticTroubleCodeObd:
             "name": "OBD-DTC-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -223,14 +232,14 @@ class DiagnosticTroubleCodeObd:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -241,7 +250,7 @@ class DiagnosticTroubleCodeObd:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -252,7 +261,7 @@ class DiagnosticTroubleCodeObd:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -263,7 +272,7 @@ class DiagnosticTroubleCodeObd:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -274,5 +283,5 @@ class DiagnosticTroubleCodeObd:
                 "name": "EVENT-OBD-READINESS-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

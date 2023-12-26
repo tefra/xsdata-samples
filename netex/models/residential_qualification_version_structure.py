@@ -21,7 +21,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -29,7 +29,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parent_ref: Optional[UsageParameterRefStructure] = field(
         default=None,
@@ -37,7 +37,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "ParentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     must_reside: Optional[bool] = field(
         default=None,
@@ -45,7 +45,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "MustReside",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     topographic_place_ref: Optional[TopographicPlaceRef] = field(
         default=None,
@@ -53,7 +53,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "TopographicPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     residence_type: Optional[ResidenceTypeEnumeration] = field(
         default=None,
@@ -61,7 +61,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "ResidenceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_duration: Optional[XmlDuration] = field(
         default=None,
@@ -69,5 +69,5 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "MinimumDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

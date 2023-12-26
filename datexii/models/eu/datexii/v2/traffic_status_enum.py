@@ -17,6 +17,7 @@ class TrafficStatusEnum(Enum):
     :cvar FREE_FLOW: Traffic in the specified direction is free flowing.
     :cvar UNKNOWN: Traffic conditions are unknown.
     """
+
     IMPOSSIBLE = "impossible"
     CONGESTED = "congested"
     HEAVY = "heavy"

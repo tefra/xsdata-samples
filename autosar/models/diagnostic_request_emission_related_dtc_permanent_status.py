@@ -7,8 +7,12 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_request_emission_related_dtc_permanent_status_class_subtypes_enum import DiagnosticRequestEmissionRelatedDtcPermanentStatusClassSubtypesEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_request_emission_related_dtc_permanent_status_class_subtypes_enum import (
+    DiagnosticRequestEmissionRelatedDtcPermanentStatusClassSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -88,6 +92,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-REQUEST-EMISSION-RELATED-DTC-PERMANENT-STATUS"
 
@@ -98,15 +103,17 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticRequestEmissionRelatedDtcPermanentStatus.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticRequestEmissionRelatedDtcPermanentStatus.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +121,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +129,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +137,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +145,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,15 +153,17 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticRequestEmissionRelatedDtcPermanentStatus.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticRequestEmissionRelatedDtcPermanentStatus.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -162,30 +171,34 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticRequestEmissionRelatedDtcPermanentStatus.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticRequestEmissionRelatedDtcPermanentStatus.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    request_emission_related_dtc_class_permanent_status_ref: Optional["DiagnosticRequestEmissionRelatedDtcPermanentStatus.RequestEmissionRelatedDtcClassPermanentStatusRef"] = field(
+    request_emission_related_dtc_class_permanent_status_ref: Optional[
+        "DiagnosticRequestEmissionRelatedDtcPermanentStatus.RequestEmissionRelatedDtcClassPermanentStatusRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUEST-EMISSION-RELATED-DTC-CLASS-PERMANENT-STATUS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -193,14 +206,14 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -211,7 +224,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -222,7 +235,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -233,16 +246,18 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatus:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RequestEmissionRelatedDtcClassPermanentStatusRef(Ref):
-        dest: Optional[DiagnosticRequestEmissionRelatedDtcPermanentStatusClassSubtypesEnum] = field(
+        dest: Optional[
+            DiagnosticRequestEmissionRelatedDtcPermanentStatusClassSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -22,6 +22,7 @@ class SpecialEquipment5:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "SpecialEquipment"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -31,7 +32,7 @@ class SpecialEquipment5:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -39,19 +40,19 @@ class SpecialEquipment5:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     el_stat: None | TypeElementStatus6 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_taggable_electronic_address_2 import TypeTaggableElectronicAddress2
+from travelport.models.type_taggable_electronic_address_2 import (
+    TypeTaggableElectronicAddress2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -19,6 +21,7 @@ class ElectronicAddress2(TypeTaggableElectronicAddress2):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "ElectronicAddress"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -28,12 +31,12 @@ class ElectronicAddress2(TypeTaggableElectronicAddress2):
         metadata={
             "name": "Provisioned",
             "type": "Attribute",
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

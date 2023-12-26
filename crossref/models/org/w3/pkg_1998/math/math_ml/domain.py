@@ -15,5 +15,5 @@ class Domain:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

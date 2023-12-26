@@ -13,6 +13,7 @@ class ServiceAssociations:
     applicable_segment
         Applicable air segment associated with this brand.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -23,7 +24,7 @@ class ServiceAssociations:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
 
     @dataclass
@@ -36,25 +37,26 @@ class ServiceAssociations:
         key
             Applicable air segment key
         """
+
         response_message: None | ResponseMessage1 = field(
             default=None,
             metadata={
                 "name": "ResponseMessage",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-            }
+            },
         )
         optional_service_ref: None | str = field(
             default=None,
             metadata={
                 "name": "OptionalServiceRef",
                 "type": "Element",
-            }
+            },
         )
         key: None | str = field(
             default=None,
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-            }
+            },
         )

@@ -29,6 +29,7 @@ class ProfileModifyHierarchyLevelReq(BaseReq5):
         this level. Only Group levels can be reassigned, and can only move
         up or down one location in the overall hierarchy.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -38,7 +39,7 @@ class ProfileModifyHierarchyLevelReq(BaseReq5):
             "name": "HierarchyLevelID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -46,7 +47,7 @@ class ProfileModifyHierarchyLevelReq(BaseReq5):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -55,7 +56,7 @@ class ProfileModifyHierarchyLevelReq(BaseReq5):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -64,12 +65,12 @@ class ProfileModifyHierarchyLevelReq(BaseReq5):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     parent_hierarchy_level_id: None | str = field(
         default=None,
         metadata={
             "name": "ParentHierarchyLevelID",
             "type": "Attribute",
-        }
+        },
     )

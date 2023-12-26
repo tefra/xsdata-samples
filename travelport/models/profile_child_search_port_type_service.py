@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.profile_child_search_port_type_service_input import ProfileChildSearchPortTypeServiceInput
-from travelport.models.profile_child_search_port_type_service_output import ProfileChildSearchPortTypeServiceOutput
+from travelport.models.profile_child_search_port_type_service_input import (
+    ProfileChildSearchPortTypeServiceInput,
+)
+from travelport.models.profile_child_search_port_type_service_output import (
+    ProfileChildSearchPortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

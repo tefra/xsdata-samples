@@ -14,5 +14,5 @@ class CarServiceFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

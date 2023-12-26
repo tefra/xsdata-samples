@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.errors_type import ErrorsType
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies import LocalPolicies
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import StatusValue
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.errors_type import (
+    ErrorsType,
+)
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies import (
+    LocalPolicies,
+)
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import (
+    StatusValue,
+)
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = (
+    "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+)
 
 
 @dataclass
@@ -16,7 +24,7 @@ class PolicyType:
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        }
+        },
     )
     status: Optional[StatusValue] = field(
         default=None,
@@ -24,7 +32,7 @@ class PolicyType:
             "name": "Status",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
     local_policies: Optional[LocalPolicies] = field(
         default=None,
@@ -33,7 +41,7 @@ class PolicyType:
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        }
+        },
     )
     errors: Optional[ErrorsType] = field(
         default=None,
@@ -41,5 +49,5 @@ class PolicyType:
             "name": "Errors",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )

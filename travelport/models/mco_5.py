@@ -68,6 +68,7 @@ class Mco5(Mcoinformation5):
         E-Voucher’s Expiry Date. This expiry date is specific to Rail
         product
     """
+
     class Meta:
         name = "MCO"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -78,28 +79,28 @@ class Mco5(Mcoinformation5):
             "name": "FormOfPayment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     endorsement: None | Endorsement5 = field(
         default=None,
         metadata={
             "name": "Endorsement",
             "type": "Element",
-        }
+        },
     )
     mcoexchange_info: None | McoexchangeInfo5 = field(
         default=None,
         metadata={
             "name": "MCOExchangeInfo",
             "type": "Element",
-        }
+        },
     )
     mcofee_info: None | McofeeInfo5 = field(
         default=None,
         metadata={
             "name": "MCOFeeInfo",
             "type": "Element",
-        }
+        },
     )
     mcoremark: list[Mcoremark5] = field(
         default_factory=list,
@@ -107,14 +108,14 @@ class Mco5(Mcoinformation5):
             "name": "MCORemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     mcoprice_data: None | McopriceData5 = field(
         default=None,
         metadata={
             "name": "MCOPriceData",
             "type": "Element",
-        }
+        },
     )
     stock_control: list[StockControl5] = field(
         default_factory=list,
@@ -122,7 +123,7 @@ class Mco5(Mcoinformation5):
             "name": "StockControl",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     mcotext: list[Mcotext5] = field(
         default_factory=list,
@@ -130,21 +131,21 @@ class Mco5(Mcoinformation5):
             "name": "MCOText",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ticket_type: None | str = field(
         default=None,
         metadata={
             "name": "TicketType",
             "type": "Attribute",
-        }
+        },
     )
     ticket_number: None | str = field(
         default=None,
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
-        }
+        },
     )
     mcoissued: None | bool = field(
         default=None,
@@ -152,28 +153,28 @@ class Mco5(Mcoinformation5):
             "name": "MCOIssued",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     mcoissue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "MCOIssueDate",
             "type": "Attribute",
-        }
+        },
     )
     mcodoc_num: None | str = field(
         default=None,
         metadata={
             "name": "MCODocNum",
             "type": "Attribute",
-        }
+        },
     )
     issue_reason_code: None | str = field(
         default=None,
         metadata={
             "name": "IssueReasonCode",
             "type": "Attribute",
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -181,28 +182,28 @@ class Mco5(Mcoinformation5):
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     tour_operator: None | str = field(
         default=None,
         metadata={
             "name": "TourOperator",
             "type": "Attribute",
-        }
+        },
     )
     location: None | str = field(
         default=None,
         metadata={
             "name": "Location",
             "type": "Attribute",
-        }
+        },
     )
     tour_code: None | str = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -211,7 +212,7 @@ class Mco5(Mcoinformation5):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -219,7 +220,7 @@ class Mco5(Mcoinformation5):
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -228,12 +229,12 @@ class Mco5(Mcoinformation5):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     expiry_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
             "type": "Attribute",
-        }
+        },
     )

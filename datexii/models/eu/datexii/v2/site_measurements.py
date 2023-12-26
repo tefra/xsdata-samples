@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.measurement_site_record_versioned_reference import MeasurementSiteRecordVersionedReference
-from datexii.models.eu.datexii.v2.site_measurements_index_measured_value import SiteMeasurementsIndexMeasuredValue
+from datexii.models.eu.datexii.v2.measurement_site_record_versioned_reference import (
+    MeasurementSiteRecordVersionedReference,
+)
+from datexii.models.eu.datexii.v2.site_measurements_index_measured_value import (
+    SiteMeasurementsIndexMeasuredValue,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -24,14 +28,17 @@ class SiteMeasurements:
         measurement characteristics defined for the measurement site.
     :ivar site_measurements_extension:
     """
-    measurement_site_reference: Optional[MeasurementSiteRecordVersionedReference] = field(
+
+    measurement_site_reference: Optional[
+        MeasurementSiteRecordVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "measurementSiteReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     measurement_time_default: Optional[XmlDateTime] = field(
         default=None,
@@ -40,7 +47,7 @@ class SiteMeasurements:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     measured_value: List[SiteMeasurementsIndexMeasuredValue] = field(
         default_factory=list,
@@ -48,7 +55,7 @@ class SiteMeasurements:
             "name": "measuredValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     site_measurements_extension: Optional[ExtensionType] = field(
         default=None,
@@ -56,5 +63,5 @@ class SiteMeasurements:
             "name": "siteMeasurementsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

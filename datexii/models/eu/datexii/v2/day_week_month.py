@@ -22,6 +22,7 @@ class DayWeekMonth:
         of the year" is expressed by non-inclusion of this attribute.
     :ivar day_week_month_extension:
     """
+
     applicable_day: List[DayEnum] = field(
         default_factory=list,
         metadata={
@@ -29,7 +30,7 @@ class DayWeekMonth:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_occurs": 7,
-        }
+        },
     )
     applicable_week: List[WeekOfMonthEnum] = field(
         default_factory=list,
@@ -38,7 +39,7 @@ class DayWeekMonth:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_occurs": 5,
-        }
+        },
     )
     applicable_month: List[MonthOfYearEnum] = field(
         default_factory=list,
@@ -47,7 +48,7 @@ class DayWeekMonth:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_occurs": 12,
-        }
+        },
     )
     day_week_month_extension: Optional[ExtensionType] = field(
         default=None,
@@ -55,5 +56,5 @@ class DayWeekMonth:
             "name": "dayWeekMonthExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

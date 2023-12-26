@@ -43,6 +43,7 @@ class LocationDescriptorEnum(Enum):
     :cvar WITHIN_JUNCTION: On the main carriageway within a junction
         between exit slip road and entry slip road.
     """
+
     AROUND_ABEND_IN_ROAD = "aroundABendInRoad"
     AT_MOTORWAY_INTERCHANGE = "atMotorwayInterchange"
     AT_REST_AREA = "atRestArea"

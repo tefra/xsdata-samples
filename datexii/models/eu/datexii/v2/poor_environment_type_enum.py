@@ -83,6 +83,7 @@ class PoorEnvironmentTypeEnum(Enum):
         combination with strong winds, limiting visibility to 50m or
         less.
     """
+
     BAD_WEATHER = "badWeather"
     BLIZZARD = "blizzard"
     BLOWING_DUST = "blowingDust"

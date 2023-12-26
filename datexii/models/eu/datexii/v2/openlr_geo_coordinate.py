@@ -12,6 +12,7 @@ class OpenlrGeoCoordinate:
     A geo-coordinate pair is a position in a map defined by its longitude and
     latitude coordinate values.
     """
+
     openlr_coordinate: Optional[PointCoordinates] = field(
         default=None,
         metadata={
@@ -19,7 +20,7 @@ class OpenlrGeoCoordinate:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_geo_coordinate_extension: Optional[ExtensionType] = field(
         default=None,
@@ -27,5 +28,5 @@ class OpenlrGeoCoordinate:
             "name": "openlrGeoCoordinateExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

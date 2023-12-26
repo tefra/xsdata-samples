@@ -18,6 +18,7 @@ class AgentIdoverride5:
     agent_id
         The Agent ID for the applicable supplier/vendor
     """
+
     class Meta:
         name = "AgentIDOverride"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -29,7 +30,7 @@ class AgentIdoverride5:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -39,7 +40,7 @@ class AgentIdoverride5:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     agent_id: None | str = field(
         default=None,
@@ -49,5 +50,5 @@ class AgentIdoverride5:
             "required": True,
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

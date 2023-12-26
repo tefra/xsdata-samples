@@ -15,7 +15,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from .timing_description_event_chain_subtypes_enum import TimingDescriptionEventChainSubtypesEnum
+from .timing_description_event_chain_subtypes_enum import (
+    TimingDescriptionEventChainSubtypesEnum,
+)
 from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -107,6 +109,7 @@ class LatencyTimingConstraint:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LATENCY-TIMING-CONSTRAINT"
 
@@ -117,15 +120,17 @@ class LatencyTimingConstraint:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["LatencyTimingConstraint.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "LatencyTimingConstraint.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -133,7 +138,7 @@ class LatencyTimingConstraint:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -141,7 +146,7 @@ class LatencyTimingConstraint:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -149,7 +154,7 @@ class LatencyTimingConstraint:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -157,7 +162,7 @@ class LatencyTimingConstraint:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -165,7 +170,7 @@ class LatencyTimingConstraint:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["LatencyTimingConstraint.Annotations"] = field(
         default=None,
@@ -173,7 +178,7 @@ class LatencyTimingConstraint:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["LatencyTimingConstraint.TraceRefs"] = field(
         default=None,
@@ -181,15 +186,17 @@ class LatencyTimingConstraint:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    timing_condition_ref: Optional["LatencyTimingConstraint.TimingConditionRef"] = field(
+    timing_condition_ref: Optional[
+        "LatencyTimingConstraint.TimingConditionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -197,7 +204,7 @@ class LatencyTimingConstraint:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     latency_constraint_type: Optional[LatencyConstraintTypeEnum] = field(
         default=None,
@@ -205,7 +212,7 @@ class LatencyTimingConstraint:
             "name": "LATENCY-CONSTRAINT-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     scope_ref: Optional["LatencyTimingConstraint.ScopeRef"] = field(
         default=None,
@@ -213,7 +220,7 @@ class LatencyTimingConstraint:
             "name": "SCOPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum: Optional[MultidimensionalTime] = field(
         default=None,
@@ -221,7 +228,7 @@ class LatencyTimingConstraint:
             "name": "MINIMUM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum: Optional[MultidimensionalTime] = field(
         default=None,
@@ -229,7 +236,7 @@ class LatencyTimingConstraint:
             "name": "MAXIMUM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nominal: Optional[MultidimensionalTime] = field(
         default=None,
@@ -237,14 +244,14 @@ class LatencyTimingConstraint:
             "name": "NOMINAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -252,14 +259,14 @@ class LatencyTimingConstraint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -270,7 +277,7 @@ class LatencyTimingConstraint:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -281,7 +288,7 @@ class LatencyTimingConstraint:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -292,7 +299,7 @@ class LatencyTimingConstraint:
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -303,7 +310,7 @@ class LatencyTimingConstraint:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -314,7 +321,7 @@ class LatencyTimingConstraint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -325,5 +332,5 @@ class LatencyTimingConstraint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

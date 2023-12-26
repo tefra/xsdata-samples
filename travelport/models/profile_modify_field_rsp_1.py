@@ -19,6 +19,7 @@ class ProfileModifyFieldRsp1(BaseRsp2):
     field_group
         Defines a field group.
     """
+
     class Meta:
         name = "ProfileModifyFieldRsp"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -28,12 +29,12 @@ class ProfileModifyFieldRsp1(BaseRsp2):
         metadata={
             "name": "Field",
             "type": "Element",
-        }
+        },
     )
     field_group: list[FieldGroup1] = field(
         default_factory=list,
         metadata={
             "name": "FieldGroup",
             "type": "Element",
-        }
+        },
     )

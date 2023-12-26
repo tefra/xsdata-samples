@@ -28,6 +28,7 @@ class SwImplPolicyEnumSimple(Enum):
         applies. For parameter there is no  specific implementation
         directive.
     """
+
     CONST = "CONST"
     FIXED = "FIXED"
     MEASUREMENT_POINT = "MEASUREMENT-POINT"

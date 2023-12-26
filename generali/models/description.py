@@ -13,11 +13,11 @@ class Description:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     description: Optional[object] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )

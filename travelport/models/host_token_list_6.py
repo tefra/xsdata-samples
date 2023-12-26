@@ -10,6 +10,7 @@ class HostTokenList6:
     """
     The shared object list of Host Tokens.
     """
+
     class Meta:
         name = "HostTokenList"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -21,5 +22,5 @@ class HostTokenList6:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

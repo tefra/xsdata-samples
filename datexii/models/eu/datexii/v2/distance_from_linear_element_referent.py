@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.distance_along_linear_element import DistanceAlongLinearElement
+from datexii.models.eu.datexii.v2.distance_along_linear_element import (
+    DistanceAlongLinearElement,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.referent import Referent
 
@@ -24,6 +26,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
         "towardsReferent" in ISO 19148.
     :ivar distance_from_linear_element_referent_extension:
     """
+
     distance_along: Optional[float] = field(
         default=None,
         metadata={
@@ -31,7 +34,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     from_referent: Optional[Referent] = field(
         default=None,
@@ -40,7 +43,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     towards_referent: Optional[Referent] = field(
         default=None,
@@ -48,13 +51,15 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "name": "towardsReferent",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    distance_from_linear_element_referent_extension: Optional[ExtensionType] = field(
+    distance_from_linear_element_referent_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "distanceFromLinearElementReferentExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

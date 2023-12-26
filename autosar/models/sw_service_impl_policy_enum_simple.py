@@ -17,6 +17,7 @@ class SwServiceImplPolicyEnumSimple(Enum):
     :cvar STANDARD: Standard service and default value, if nothing is
         defined.
     """
+
     INLINE = "INLINE"
     INLINE_CONDITIONAL = "INLINE-CONDITIONAL"
     MACRO = "MACRO"

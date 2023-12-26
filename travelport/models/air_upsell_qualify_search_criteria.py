@@ -11,6 +11,7 @@ class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
     """
     Search criteria for AirUpsellQualify.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,7 +21,7 @@ class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "name": "AccountCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -29,7 +30,7 @@ class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -47,5 +48,5 @@ class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

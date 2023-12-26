@@ -10,6 +10,7 @@ class ProfileDeleteTagRsp2(BaseRsp5):
     """
     Successful Response that the tag has been deleted.
     """
+
     class Meta:
         name = "ProfileDeleteTagRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"

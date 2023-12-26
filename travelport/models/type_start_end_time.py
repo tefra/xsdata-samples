@@ -23,6 +23,7 @@ class TypeStartEndTime:
     sat
     sun
     """
+
     class Meta:
         name = "typeStartEndTime"
 
@@ -32,61 +33,61 @@ class TypeStartEndTime:
             "name": "Time",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     requirement_passed: None | bool = field(
         default=None,
         metadata={
             "name": "RequirementPassed",
             "type": "Attribute",
-        }
+        },
     )
     mon: None | bool = field(
         default=None,
         metadata={
             "name": "Mon",
             "type": "Attribute",
-        }
+        },
     )
     tue: None | bool = field(
         default=None,
         metadata={
             "name": "Tue",
             "type": "Attribute",
-        }
+        },
     )
     wed: None | bool = field(
         default=None,
         metadata={
             "name": "Wed",
             "type": "Attribute",
-        }
+        },
     )
     thu: None | bool = field(
         default=None,
         metadata={
             "name": "Thu",
             "type": "Attribute",
-        }
+        },
     )
     fri: None | bool = field(
         default=None,
         metadata={
             "name": "Fri",
             "type": "Attribute",
-        }
+        },
     )
     sat: None | bool = field(
         default=None,
         metadata={
             "name": "Sat",
             "type": "Attribute",
-        }
+        },
     )
     sun: None | bool = field(
         default=None,
         metadata={
             "name": "Sun",
             "type": "Attribute",
-        }
+        },
     )

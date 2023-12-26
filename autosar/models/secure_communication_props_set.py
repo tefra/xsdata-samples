@@ -10,8 +10,12 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .secure_communication_authentication_props import SecureCommunicationAuthenticationProps
-from .secure_communication_freshness_props import SecureCommunicationFreshnessProps
+from .secure_communication_authentication_props import (
+    SecureCommunicationAuthenticationProps,
+)
+from .secure_communication_freshness_props import (
+    SecureCommunicationFreshnessProps,
+)
 from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -81,6 +85,7 @@ class SecureCommunicationPropsSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SECURE-COMMUNICATION-PROPS-SET"
 
@@ -91,15 +96,17 @@ class SecureCommunicationPropsSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SecureCommunicationPropsSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SecureCommunicationPropsSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -107,7 +114,7 @@ class SecureCommunicationPropsSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -115,7 +122,7 @@ class SecureCommunicationPropsSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -123,7 +130,7 @@ class SecureCommunicationPropsSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -131,7 +138,7 @@ class SecureCommunicationPropsSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -139,7 +146,7 @@ class SecureCommunicationPropsSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SecureCommunicationPropsSet.Annotations"] = field(
         default=None,
@@ -147,7 +154,7 @@ class SecureCommunicationPropsSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -155,30 +162,34 @@ class SecureCommunicationPropsSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    authentication_propss: Optional["SecureCommunicationPropsSet.AuthenticationPropss"] = field(
+    authentication_propss: Optional[
+        "SecureCommunicationPropsSet.AuthenticationPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    freshness_propss: Optional["SecureCommunicationPropsSet.FreshnessPropss"] = field(
+    freshness_propss: Optional[
+        "SecureCommunicationPropsSet.FreshnessPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "FRESHNESS-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -186,14 +197,14 @@ class SecureCommunicationPropsSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -204,7 +215,7 @@ class SecureCommunicationPropsSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -215,27 +226,31 @@ class SecureCommunicationPropsSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AuthenticationPropss:
-        secure_communication_authentication_props: List[SecureCommunicationAuthenticationProps] = field(
+        secure_communication_authentication_props: List[
+            SecureCommunicationAuthenticationProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SECURE-COMMUNICATION-AUTHENTICATION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FreshnessPropss:
-        secure_communication_freshness_props: List[SecureCommunicationFreshnessProps] = field(
+        secure_communication_freshness_props: List[
+            SecureCommunicationFreshnessProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SECURE-COMMUNICATION-FRESHNESS-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

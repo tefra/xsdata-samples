@@ -37,6 +37,7 @@ class EmdsummaryInfo:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "EMDSummaryInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -48,7 +49,7 @@ class EmdsummaryInfo:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     emdtraveler_info: None | EmdtravelerInfo = field(
         default=None,
@@ -56,7 +57,7 @@ class EmdsummaryInfo:
             "name": "EMDTravelerInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     payment: None | Payment1 = field(
         default=None,
@@ -64,33 +65,33 @@ class EmdsummaryInfo:
             "name": "Payment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -22,7 +22,20 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EntitlementRequired_VersionStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            EntitlementProductRef,
+            SupplementProductRef,
+            PreassignedFareProductRef,
+            AmountOfPriceUnitProductRef,
+            UsageDiscountRightRef,
+            ThirdPartyProductRef,
+            CappedDiscountRightRef,
+            SaleDiscountRightRef,
+            FareProductRef,
+            ServiceAccessRightRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -78,7 +91,7 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     minimum_qualification_period: Optional[XmlDuration] = field(
         default=None,
@@ -86,7 +99,7 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumQualificationPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     entitlement_constraint: Optional[EntitlementConstraintStructure] = field(
         default=None,
@@ -94,5 +107,5 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "name": "EntitlementConstraint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

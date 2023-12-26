@@ -10,6 +10,7 @@ class SeatAttributes2:
     """
     Identifies the seat attribute of the service.
     """
+
     class Meta:
         name = "SeatAttributes"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -20,5 +21,5 @@ class SeatAttributes2:
             "name": "SeatAttribute",
             "type": "Element",
             "max_occurs": 10,
-        }
+        },
     )

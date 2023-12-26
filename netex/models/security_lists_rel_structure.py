@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .blacklist_ref import BlacklistRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .whitelist_ref import WhitelistRef
@@ -12,7 +12,9 @@ class SecurityListsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityLists_RelStructure"
 
-    whitelist_ref_or_blacklist_ref: List[object] = field(
+    whitelist_ref_or_blacklist_ref: List[
+        Union[WhitelistRef, BlacklistRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class SecurityListsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

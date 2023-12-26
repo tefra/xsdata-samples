@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .persistency_redundancy_handling_scope_enum import PersistencyRedundancyHandlingScopeEnum
+from .persistency_redundancy_handling_scope_enum import (
+    PersistencyRedundancyHandlingScopeEnum,
+)
 from .positive_integer import PositiveInteger
 from .string import String
 
@@ -30,6 +32,7 @@ class PersistencyRedundancyCrc:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PERSISTENCY-REDUNDANCY-CRC"
 
@@ -39,7 +42,7 @@ class PersistencyRedundancyCrc:
             "name": "SCOPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     algorithm_family: Optional[String] = field(
         default=None,
@@ -47,7 +50,7 @@ class PersistencyRedundancyCrc:
             "name": "ALGORITHM-FAMILY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     length: Optional[PositiveInteger] = field(
         default=None,
@@ -55,14 +58,14 @@ class PersistencyRedundancyCrc:
             "name": "LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -70,5 +73,5 @@ class PersistencyRedundancyCrc:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

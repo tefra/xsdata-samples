@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.itinerary import Itinerary
-from datexii.models.eu.datexii.v2.predefined_itinerary_versioned_reference import PredefinedItineraryVersionedReference
+from datexii.models.eu.datexii.v2.predefined_itinerary_versioned_reference import (
+    PredefinedItineraryVersionedReference,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -19,14 +21,17 @@ class ItineraryByReference(Itinerary):
         PredefinedLocationsPublication.
     :ivar itinerary_by_reference_extension:
     """
-    predefined_itinerary_reference: Optional[PredefinedItineraryVersionedReference] = field(
+
+    predefined_itinerary_reference: Optional[
+        PredefinedItineraryVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "predefinedItineraryReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     itinerary_by_reference_extension: Optional[ExtensionType] = field(
         default=None,
@@ -34,5 +39,5 @@ class ItineraryByReference(Itinerary):
             "name": "itineraryByReferenceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

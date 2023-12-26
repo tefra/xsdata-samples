@@ -13,5 +13,5 @@ class GmlProfileSchema:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

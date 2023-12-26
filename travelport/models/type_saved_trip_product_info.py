@@ -19,6 +19,7 @@ class TypeSavedTripProductInfo:
         vendor code.
     provider_code
     """
+
     class Meta:
         name = "typeSavedTripProductInfo"
 
@@ -28,7 +29,7 @@ class TypeSavedTripProductInfo:
             "name": "ProductType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class TypeSavedTripProductInfo:
             "name": "VendorCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -44,5 +45,5 @@ class TypeSavedTripProductInfo:
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

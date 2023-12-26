@@ -13,6 +13,7 @@ class DiagnosticInhibitionMaskEnumSimple(Enum):
     :cvar TESTED_AND_FAILED: This represents the inhibition mask
         behavior "tested and failed".
     """
+
     LAST_FAILED = "LAST-FAILED"
     NOT_TESTED = "NOT-TESTED"
     TESTED = "TESTED"

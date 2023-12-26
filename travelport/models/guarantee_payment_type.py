@@ -20,6 +20,7 @@ class GuaranteePaymentType:
         Other, or None
     description
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -27,7 +28,7 @@ class GuaranteePaymentType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -35,12 +36,12 @@ class GuaranteePaymentType:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

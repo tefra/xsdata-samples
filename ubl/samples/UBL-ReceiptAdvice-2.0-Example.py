@@ -58,37 +58,37 @@ from xsdata.models.datatype import XmlTime
 
 obj = ReceiptAdvice(
     ublversion_id=UblversionId(
-        value="2.0"
+        value='2.0'
     ),
     customization_id=CustomizationId(
-        value="urn:oasis:names:specification:ubl:xpath:ReceiptAdvice-2.0:sbs-1.0-draft"
+        value='urn:oasis:names:specification:ubl:xpath:ReceiptAdvice-2.0:sbs-1.0-draft'
     ),
     profile_id=ProfileId(
-        value="bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-receipt-advice-notification-draft"
+        value='bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-receipt-advice-notification-draft'
     ),
     id=Id(
-        value="658398"
+        value='658398'
     ),
     copy_indicator=False,
     uuid=Uuid(
-        value="89F82FA6-5331-491D-83BC-7B6CA7FD047C"
+        value='89F82FA6-5331-491D-83BC-7B6CA7FD047C'
     ),
     issue_date=XmlDate(2005, 6, 21),
     note=[
         Note(
-            value="sample"
+            value='sample'
         ),
     ],
     order_reference=[
         OrderReference(
             id=Id(
-                value="AEG012345"
+                value='AEG012345'
             ),
             sales_order_id=SalesOrderId(
-                value="CON0095678"
+                value='CON0095678'
             ),
             uuid=Uuid(
-                value="6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1"
+                value='6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1'
             ),
             issue_date=XmlDate(2005, 6, 20)
         ),
@@ -96,201 +96,201 @@ obj = ReceiptAdvice(
     despatch_document_reference=[
         DespatchDocumentReference(
             id=Id(
-                value="565899"
+                value='565899'
             ),
             uuid=Uuid(
-                value="88C7280E-8F10-419F-9949-8EFFFA2842B8"
+                value='88C7280E-8F10-419F-9949-8EFFFA2842B8'
             ),
             issue_date=XmlDate(2005, 6, 20)
         ),
     ],
     delivery_customer_party=DeliveryCustomerParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="XFB01"
+            value='XFB01'
         ),
         supplier_assigned_account_id=SupplierAssignedAccountId(
-            value="GT00978567"
+            value='GT00978567'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="IYT Corporation"
+                        value='IYT Corporation'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Avon Way"
+                    value='Avon Way'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Bridgtow"
+                    value='Bridgtow'
                 ),
                 postal_zone=PostalZone(
-                    value="ZZ99 1ZZ"
+                    value='ZZ99 1ZZ'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Avon"
+                    value='Avon'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="3rd Floor, Room 5"
+                            value='3rd Floor, Room 5'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     registration_name=RegistrationName(
-                        value="Bridgtow District Council"
+                        value='Bridgtow District Council'
                     ),
                     company_id=CompanyId(
-                        value="12356478"
+                        value='12356478'
                     ),
                     exemption_reason=[
                         ExemptionReason(
-                            value="Local Authority"
+                            value='Local Authority'
                         ),
                     ],
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="UK VAT"
+                            value='UK VAT'
                         ),
                         tax_type_code=TaxTypeCode(
-                            value="VAT"
+                            value='VAT'
                         )
                     )
                 ),
             ],
             contact=Contact(
                 name=Name(
-                    value="Mr Fred Churchill"
+                    value='Mr Fred Churchill'
                 ),
                 telephone=Telephone(
-                    value="0127 2653214"
+                    value='0127 2653214'
                 ),
                 telefax=Telefax(
-                    value="0127 2653215"
+                    value='0127 2653215'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="fred@iytcorporation.gov.uk"
+                    value='fred@iytcorporation.gov.uk'
                 )
             )
         )
     ),
     despatch_supplier_party=DespatchSupplierParty(
         customer_assigned_account_id=CustomerAssignedAccountId(
-            value="CO001"
+            value='CO001'
         ),
         party=Party(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Consortial"
+                        value='Consortial'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Busy Street"
+                    value='Busy Street'
                 ),
                 building_name=BuildingName(
-                    value="Thereabouts"
+                    value='Thereabouts'
                 ),
                 building_number=BuildingNumber(
-                    value="56A"
+                    value='56A'
                 ),
                 city_name=CityName(
-                    value="Farthing"
+                    value='Farthing'
                 ),
                 postal_zone=PostalZone(
-                    value="AA99 1BB"
+                    value='AA99 1BB'
                 ),
                 country_subentity=CountrySubentity(
-                    value="Heremouthshire"
+                    value='Heremouthshire'
                 ),
                 address_line=[
                     AddressLine(
                         line=Line(
-                            value="The Roundabout"
+                            value='The Roundabout'
                         )
                     ),
                 ],
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="GB"
+                        value='GB'
                     )
                 )
             ),
             party_tax_scheme=[
                 PartyTaxScheme(
                     registration_name=RegistrationName(
-                        value="Farthing Purchasing Consortium"
+                        value='Farthing Purchasing Consortium'
                     ),
                     company_id=CompanyId(
-                        value="175 269 2355"
+                        value='175 269 2355'
                     ),
                     exemption_reason=[
                         ExemptionReason(
-                            value="N/A"
+                            value='N/A'
                         ),
                     ],
                     tax_scheme=TaxScheme(
                         id=Id(
-                            value="VAT"
+                            value='VAT'
                         ),
                         tax_type_code=TaxTypeCode(
-                            value="VAT"
+                            value='VAT'
                         )
                     )
                 ),
             ],
             contact=Contact(
                 name=Name(
-                    value="Mrs Bouquet"
+                    value='Mrs Bouquet'
                 ),
                 telephone=Telephone(
-                    value="0158 1233714"
+                    value='0158 1233714'
                 ),
                 telefax=Telefax(
-                    value="0158 1233856"
+                    value='0158 1233856'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="bouquet@fpconsortial.co.uk"
+                    value='bouquet@fpconsortial.co.uk'
                 )
             )
         )
     ),
     shipment=Shipment(
         id=Id(
-            value="1"
+            value='1'
         ),
         consignment=[
             Consignment(
                 id=Id(
-                    value="1"
+                    value='1'
                 )
             ),
         ],
         delivery=Delivery(
             id=Id(
-                value="1"
+                value='1'
             ),
             quantity=Quantity(
-                value=Decimal("90"),
-                unit_code="KGM"
+                value=Decimal('90'),
+                unit_code='KGM'
             ),
             actual_delivery_date=XmlDate(2005, 6, 20),
             actual_delivery_time=XmlTime(11, 30, 0, 0, 0),
@@ -305,46 +305,46 @@ obj = ReceiptAdvice(
     receipt_line=[
         ReceiptLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             note=[
                 Note(
-                    value="SAMPLE"
+                    value='SAMPLE'
                 ),
             ],
             received_quantity=ReceivedQuantity(
-                value=Decimal("90"),
-                unit_code="KGM"
+                value=Decimal('90'),
+                unit_code='KGM'
             ),
             short_quantity=ShortQuantity(
-                value=Decimal("10"),
-                unit_code="KGM"
+                value=Decimal('10'),
+                unit_code='KGM'
             ),
             item=[
                 Item(
                     description=[
                         Description(
-                            value="Acme beeswax"
+                            value='Acme beeswax'
                         ),
                     ],
                     name=Name(
-                        value="beeswax"
+                        value='beeswax'
                     ),
                     buyers_item_identification=BuyersItemIdentification(
                         id=Id(
-                            value="6578489"
+                            value='6578489'
                         )
                     ),
                     sellers_item_identification=SellersItemIdentification(
                         id=Id(
-                            value="17589683"
+                            value='17589683'
                         )
                     ),
                     item_instance=[
                         ItemInstance(
                             lot_identification=LotIdentification(
                                 lot_number_id=LotNumberId(
-                                    value="546378239"
+                                    value='546378239'
                                 ),
                                 expiry_date=XmlDate(2010, 1, 1)
                             )

@@ -14,6 +14,7 @@ class MerchandisingPricingModifiers:
         The account code is used to get corporate discounted pricing on paid
         seats. Provider:ACH
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -24,5 +25,5 @@ class MerchandisingPricingModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 10,
-        }
+        },
     )

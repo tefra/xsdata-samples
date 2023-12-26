@@ -31,6 +31,7 @@ class TypeDestinationCode(Enum):
     USA
         United States of America
     """
+
     MEXICO_COST_RICA_CENTRAL_AMERICA = "MexicoCostRicaCentralAmerica"
     CARIBBEAN = "Caribbean"
     SOUTH_AMERICA = "SouthAmerica"

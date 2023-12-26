@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.profile_delete_port_type_service_input import ProfileDeletePortTypeServiceInput
-from travelport.models.profile_delete_port_type_service_output import ProfileDeletePortTypeServiceOutput
+from travelport.models.profile_delete_port_type_service_input import (
+    ProfileDeletePortTypeServiceInput,
+)
+from travelport.models.profile_delete_port_type_service_output import (
+    ProfileDeletePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

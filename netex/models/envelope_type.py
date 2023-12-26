@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .direct_position_type import DirectPositionType
 from .pos import Pos
 
@@ -8,7 +8,9 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class EnvelopeType:
-    lower_corner_or_upper_corner_or_pos: List[object] = field(
+    lower_corner_or_upper_corner_or_pos: List[
+        Union[DirectPositionType, Pos]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -30,19 +32,19 @@ class EnvelopeType:
                 },
             ),
             "max_occurs": 2,
-        }
+        },
     )
     srs_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "srsName",
             "type": "Attribute",
-        }
+        },
     )
     srs_dimension: Optional[int] = field(
         default=None,
         metadata={
             "name": "srsDimension",
             "type": "Attribute",
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeResponseImageSize4(Enum):
     """
     Allowable images sizes in response.
     """
+
     T = "T"
     I = "I"
     S = "S"

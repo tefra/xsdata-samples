@@ -10,6 +10,7 @@ class FareFamilyUpdate:
     """
     Branded fare admin request element to Update a FareFamily.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,5 +20,5 @@ class FareFamilyUpdate:
             "name": "FareFamily",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -11,6 +11,7 @@ class FulFillmentType:
     the options will be one of "Ticket on Departure", "Ticketless",
     "Ticket By Email", "Travel Agency"
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -19,5 +20,5 @@ class FulFillmentType:
         metadata={
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )

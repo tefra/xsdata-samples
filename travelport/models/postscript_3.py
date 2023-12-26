@@ -10,6 +10,7 @@ class Postscript3(TypeRemark3):
     """
     Postscript Notes.
     """
+
     class Meta:
         name = "Postscript"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -19,5 +20,5 @@ class Postscript3(TypeRemark3):
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

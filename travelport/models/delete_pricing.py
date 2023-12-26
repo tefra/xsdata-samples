@@ -10,6 +10,7 @@ class DeletePricing:
     """
     Container for Pricing to be deleted.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,5 +22,5 @@ class DeletePricing:
             "namespace": "",
             "min_occurs": 1,
             "max_occurs": 8,
-        }
+        },
     )

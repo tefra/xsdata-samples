@@ -15,6 +15,7 @@ class IntegerMetreDistanceValue(DataValue):
         metres in a non negative integer format.
     :ivar integer_metre_distance_value_extension:
     """
+
     integer_metre_distance: Optional[int] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class IntegerMetreDistanceValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     integer_metre_distance_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class IntegerMetreDistanceValue(DataValue):
             "name": "integerMetreDistanceValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

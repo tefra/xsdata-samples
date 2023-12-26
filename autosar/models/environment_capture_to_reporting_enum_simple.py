@@ -13,5 +13,6 @@ class EnvironmentCaptureToReportingEnumSimple(Enum):
         immediately within the reporting function (i.e. in the context
         of the setEventStatus/reportErrorStatus function).
     """
+
     CAPTURE_ASYNCHRONOUS_TO_REPORTING = "CAPTURE-ASYNCHRONOUS-TO-REPORTING"
     CAPTURE_SYNCHRONOUS_TO_REPORTING = "CAPTURE-SYNCHRONOUS-TO-REPORTING"

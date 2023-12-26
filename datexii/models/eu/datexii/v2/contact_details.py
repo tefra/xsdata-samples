@@ -56,13 +56,14 @@ class ContactDetails(Contact):
     :ivar id:
     :ivar version:
     """
+
     contact_organisation_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "contactOrganisationName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_person_name: Optional[str] = field(
         default=None,
@@ -71,7 +72,7 @@ class ContactDetails(Contact):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     contact_person_first_name: Optional[str] = field(
         default=None,
@@ -80,7 +81,7 @@ class ContactDetails(Contact):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     contact_person_position: Optional[MultilingualString] = field(
         default=None,
@@ -88,7 +89,7 @@ class ContactDetails(Contact):
             "name": "contactPersonPosition",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_language: List[str] = field(
         default_factory=list,
@@ -96,7 +97,7 @@ class ContactDetails(Contact):
             "name": "contactDetailsLanguage",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_address: Optional[MultilingualString] = field(
         default=None,
@@ -104,7 +105,7 @@ class ContactDetails(Contact):
             "name": "contactDetailsAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_street: Optional[str] = field(
         default=None,
@@ -113,7 +114,7 @@ class ContactDetails(Contact):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     contact_details_house_number: List[str] = field(
         default_factory=list,
@@ -123,7 +124,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_occurs": 2,
             "max_length": 1024,
-        }
+        },
     )
     contact_details_postcode: Optional[str] = field(
         default=None,
@@ -132,7 +133,7 @@ class ContactDetails(Contact):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     contact_details_city: Optional[MultilingualString] = field(
         default=None,
@@ -140,14 +141,14 @@ class ContactDetails(Contact):
             "name": "contactDetailsCity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     country: Optional[CountryEnum] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_telephone_number: Optional[str] = field(
         default=None,
@@ -156,7 +157,7 @@ class ContactDetails(Contact):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     contact_details_fax: Optional[str] = field(
         default=None,
@@ -165,7 +166,7 @@ class ContactDetails(Contact):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     contact_details_email: Optional[str] = field(
         default=None,
@@ -174,7 +175,7 @@ class ContactDetails(Contact):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     url_link_address: Optional[str] = field(
         default=None,
@@ -182,7 +183,7 @@ class ContactDetails(Contact):
             "name": "urlLinkAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_logo_url: Optional[str] = field(
         default=None,
@@ -190,14 +191,14 @@ class ContactDetails(Contact):
             "name": "contactDetailsLogoUrl",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     available24hours: Optional[bool] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_responsibility: List[MultilingualString] = field(
         default_factory=list,
@@ -205,7 +206,7 @@ class ContactDetails(Contact):
             "name": "contactDetailsResponsibility",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_more_info: List[MultilingualString] = field(
         default_factory=list,
@@ -213,7 +214,7 @@ class ContactDetails(Contact):
             "name": "contactDetailsMoreInfo",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     publishing_agreement: Optional[bool] = field(
         default=None,
@@ -221,7 +222,7 @@ class ContactDetails(Contact):
             "name": "publishingAgreement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_ownership: Optional[OwnershipTypeEnum] = field(
         default=None,
@@ -229,7 +230,7 @@ class ContactDetails(Contact):
             "name": "contactDetailsOwnership",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_locations: Optional[GroupOfLocations] = field(
         default=None,
@@ -237,7 +238,7 @@ class ContactDetails(Contact):
             "name": "groupOfLocations",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     contact_details_extension: Optional[ExtensionType] = field(
         default=None,
@@ -245,19 +246,19 @@ class ContactDetails(Contact):
             "name": "contactDetailsExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

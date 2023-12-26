@@ -12,6 +12,7 @@ class AcceptedPayment:
     payment_code
         The issuer of the form of payment, such as the credit card bank.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -22,5 +23,5 @@ class AcceptedPayment:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 2,
-        }
+        },
     )

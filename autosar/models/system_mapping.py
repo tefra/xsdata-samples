@@ -6,34 +6,54 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .application_partition_to_ecu_partition_mapping import ApplicationPartitionToEcuPartitionMapping
+from .application_partition_to_ecu_partition_mapping import (
+    ApplicationPartitionToEcuPartitionMapping,
+)
 from .category_string import CategoryString
-from .client_server_to_signal_group_mapping import ClientServerToSignalGroupMapping
+from .client_server_to_signal_group_mapping import (
+    ClientServerToSignalGroupMapping,
+)
 from .client_server_to_signal_mapping import ClientServerToSignalMapping
 from .com_management_mapping import ComManagementMapping
 from .common_signal_path import CommonSignalPath
 from .component_clustering import ComponentClustering
 from .component_separation import ComponentSeparation
-from .cp_software_cluster_resource_to_application_partition_mapping import CpSoftwareClusterResourceToApplicationPartitionMapping
-from .cp_software_cluster_to_ecu_instance_mapping import CpSoftwareClusterToEcuInstanceMapping
-from .cp_software_cluster_to_resource_mapping import CpSoftwareClusterToResourceMapping
+from .cp_software_cluster_resource_to_application_partition_mapping import (
+    CpSoftwareClusterResourceToApplicationPartitionMapping,
+)
+from .cp_software_cluster_to_ecu_instance_mapping import (
+    CpSoftwareClusterToEcuInstanceMapping,
+)
+from .cp_software_cluster_to_resource_mapping import (
+    CpSoftwareClusterToResourceMapping,
+)
 from .ecu_mapping import EcuMapping
 from .ecu_resource_estimation import EcuResourceEstimation
 from .forbidden_signal_path import ForbiddenSignalPath
 from .identifier import Identifier
-from .j_1939_controller_application_to_j_1939_nm_node_mapping import J1939ControllerApplicationToJ1939NmNodeMapping
+from .j_1939_controller_application_to_j_1939_nm_node_mapping import (
+    J1939ControllerApplicationToJ1939NmNodeMapping,
+)
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .permissible_signal_path import PermissibleSignalPath
 from .pnc_mapping import PncMapping
-from .port_element_to_communication_resource_mapping import PortElementToCommunicationResourceMapping
+from .port_element_to_communication_resource_mapping import (
+    PortElementToCommunicationResourceMapping,
+)
 from .sec_oc_crypto_service_mapping import SecOcCryptoServiceMapping
-from .sender_receiver_composite_element_to_signal_mapping import SenderReceiverCompositeElementToSignalMapping
-from .sender_receiver_to_signal_group_mapping import SenderReceiverToSignalGroupMapping
+from .sender_receiver_composite_element_to_signal_mapping import (
+    SenderReceiverCompositeElementToSignalMapping,
+)
+from .sender_receiver_to_signal_group_mapping import (
+    SenderReceiverToSignalGroupMapping,
+)
 from .sender_receiver_to_signal_mapping import SenderReceiverToSignalMapping
 from .separate_signal_path import SeparateSignalPath
 from .short_name_fragment import ShortNameFragment
-from .swc_to_application_partition_mapping import SwcToApplicationPartitionMapping
+from .swc_to_application_partition_mapping import (
+    SwcToApplicationPartitionMapping,
+)
 from .swc_to_ecu_mapping import SwcToEcuMapping
 from .swc_to_ecu_mapping_constraint import SwcToEcuMappingConstraint
 from .swc_to_impl_mapping import SwcToImplMapping
@@ -172,6 +192,7 @@ class SystemMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SYSTEM-MAPPING"
 
@@ -182,7 +203,7 @@ class SystemMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["SystemMapping.ShortNameFragments"] = field(
         default=None,
@@ -190,7 +211,7 @@ class SystemMapping:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -198,7 +219,7 @@ class SystemMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -206,7 +227,7 @@ class SystemMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -214,7 +235,7 @@ class SystemMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -222,7 +243,7 @@ class SystemMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -230,7 +251,7 @@ class SystemMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SystemMapping.Annotations"] = field(
         default=None,
@@ -238,31 +259,37 @@ class SystemMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    application_partition_to_ecu_partition_mappings: Optional["SystemMapping.ApplicationPartitionToEcuPartitionMappings"] = field(
+    application_partition_to_ecu_partition_mappings: Optional[
+        "SystemMapping.ApplicationPartitionToEcuPartitionMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLICATION-PARTITION-TO-ECU-PARTITION-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    com_management_mappings: Optional["SystemMapping.ComManagementMappings"] = field(
+    com_management_mappings: Optional[
+        "SystemMapping.ComManagementMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "COM-MANAGEMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    crypto_service_mappings: Optional["SystemMapping.CryptoServiceMappings"] = field(
+    crypto_service_mappings: Optional[
+        "SystemMapping.CryptoServiceMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_mappings: Optional["SystemMapping.DataMappings"] = field(
         default=None,
@@ -270,23 +297,27 @@ class SystemMapping:
             "name": "DATA-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_resource_mappings: Optional["SystemMapping.EcuResourceMappings"] = field(
+    ecu_resource_mappings: Optional[
+        "SystemMapping.EcuResourceMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-RESOURCE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    j_1939_controller_application_to_j_1939_nm_node_mappings: Optional["SystemMapping.J1939ControllerApplicationToJ1939NmNodeMappings"] = field(
+    j_1939_controller_application_to_j_1939_nm_node_mappings: Optional[
+        "SystemMapping.J1939ControllerApplicationToJ1939NmNodeMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "J-1939-CONTROLLER-APPLICATION-TO-J-1939-NM-NODE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mapping_constraints: Optional["SystemMapping.MappingConstraints"] = field(
         default=None,
@@ -294,7 +325,7 @@ class SystemMapping:
             "name": "MAPPING-CONSTRAINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_mappings: Optional["SystemMapping.PncMappings"] = field(
         default=None,
@@ -302,47 +333,57 @@ class SystemMapping:
             "name": "PNC-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    port_element_to_com_resource_mappings: Optional["SystemMapping.PortElementToComResourceMappings"] = field(
+    port_element_to_com_resource_mappings: Optional[
+        "SystemMapping.PortElementToComResourceMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-ELEMENT-TO-COM-RESOURCE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    resource_estimations: Optional["SystemMapping.ResourceEstimations"] = field(
+    resource_estimations: Optional[
+        "SystemMapping.ResourceEstimations"
+    ] = field(
         default=None,
         metadata={
             "name": "RESOURCE-ESTIMATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    resource_to_application_partition_mappings: Optional["SystemMapping.ResourceToApplicationPartitionMappings"] = field(
+    resource_to_application_partition_mappings: Optional[
+        "SystemMapping.ResourceToApplicationPartitionMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "RESOURCE-TO-APPLICATION-PARTITION-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    signal_path_constraints: Optional["SystemMapping.SignalPathConstraints"] = field(
+    signal_path_constraints: Optional[
+        "SystemMapping.SignalPathConstraints"
+    ] = field(
         default=None,
         metadata={
             "name": "SIGNAL-PATH-CONSTRAINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    software_cluster_to_resource_mappings: Optional["SystemMapping.SoftwareClusterToResourceMappings"] = field(
+    software_cluster_to_resource_mappings: Optional[
+        "SystemMapping.SoftwareClusterToResourceMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-TO-RESOURCE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_cluster_mappings: Optional["SystemMapping.SwClusterMappings"] = field(
         default=None,
@@ -350,7 +391,7 @@ class SystemMapping:
             "name": "SW-CLUSTER-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_impl_mappings: Optional["SystemMapping.SwImplMappings"] = field(
         default=None,
@@ -358,7 +399,7 @@ class SystemMapping:
             "name": "SW-IMPL-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_mappings: Optional["SystemMapping.SwMappings"] = field(
         default=None,
@@ -366,15 +407,17 @@ class SystemMapping:
             "name": "SW-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    swc_to_application_partition_mappings: Optional["SystemMapping.SwcToApplicationPartitionMappings"] = field(
+    swc_to_application_partition_mappings: Optional[
+        "SystemMapping.SwcToApplicationPartitionMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "SWC-TO-APPLICATION-PARTITION-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -382,14 +425,14 @@ class SystemMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -397,14 +440,14 @@ class SystemMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -415,7 +458,7 @@ class SystemMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -426,18 +469,20 @@ class SystemMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ApplicationPartitionToEcuPartitionMappings:
-        application_partition_to_ecu_partition_mapping: List[ApplicationPartitionToEcuPartitionMapping] = field(
+        application_partition_to_ecu_partition_mapping: List[
+            ApplicationPartitionToEcuPartitionMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-PARTITION-TO-ECU-PARTITION-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -448,7 +493,7 @@ class SystemMapping:
                 "name": "COM-MANAGEMENT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -459,7 +504,7 @@ class SystemMapping:
                 "name": "SEC-OC-CRYPTO-SERVICE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         tls_crypto_service_mapping: List[TlsCryptoServiceMapping] = field(
             default_factory=list,
@@ -467,50 +512,60 @@ class SystemMapping:
                 "name": "TLS-CRYPTO-SERVICE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DataMappings:
-        client_server_to_signal_group_mapping: List[ClientServerToSignalGroupMapping] = field(
+        client_server_to_signal_group_mapping: List[
+            ClientServerToSignalGroupMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-TO-SIGNAL-GROUP-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        client_server_to_signal_mapping: List[ClientServerToSignalMapping] = field(
+        client_server_to_signal_mapping: List[
+            ClientServerToSignalMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-SERVER-TO-SIGNAL-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        sender_receiver_composite_element_to_signal_mapping: List[SenderReceiverCompositeElementToSignalMapping] = field(
+        sender_receiver_composite_element_to_signal_mapping: List[
+            SenderReceiverCompositeElementToSignalMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SENDER-RECEIVER-COMPOSITE-ELEMENT-TO-SIGNAL-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        sender_receiver_to_signal_group_mapping: List[SenderReceiverToSignalGroupMapping] = field(
+        sender_receiver_to_signal_group_mapping: List[
+            SenderReceiverToSignalGroupMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        sender_receiver_to_signal_mapping: List[SenderReceiverToSignalMapping] = field(
+        sender_receiver_to_signal_mapping: List[
+            SenderReceiverToSignalMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SENDER-RECEIVER-TO-SIGNAL-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         trigger_to_signal_mapping: List[TriggerToSignalMapping] = field(
             default_factory=list,
@@ -518,7 +573,7 @@ class SystemMapping:
                 "name": "TRIGGER-TO-SIGNAL-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -529,18 +584,20 @@ class SystemMapping:
                 "name": "ECU-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class J1939ControllerApplicationToJ1939NmNodeMappings:
-        j_1939_controller_application_to_j_1939_nm_node_mapping: List[J1939ControllerApplicationToJ1939NmNodeMapping] = field(
+        j_1939_controller_application_to_j_1939_nm_node_mapping: List[
+            J1939ControllerApplicationToJ1939NmNodeMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "J-1939-CONTROLLER-APPLICATION-TO-J-1939-NM-NODE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -551,7 +608,7 @@ class SystemMapping:
                 "name": "COMPONENT-CLUSTERING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         component_separation: List[ComponentSeparation] = field(
             default_factory=list,
@@ -559,7 +616,7 @@ class SystemMapping:
                 "name": "COMPONENT-SEPARATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         swc_to_ecu_mapping_constraint: List[SwcToEcuMappingConstraint] = field(
             default_factory=list,
@@ -567,7 +624,7 @@ class SystemMapping:
                 "name": "SWC-TO-ECU-MAPPING-CONSTRAINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -578,18 +635,20 @@ class SystemMapping:
                 "name": "PNC-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PortElementToComResourceMappings:
-        port_element_to_communication_resource_mapping: List[PortElementToCommunicationResourceMapping] = field(
+        port_element_to_communication_resource_mapping: List[
+            PortElementToCommunicationResourceMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PORT-ELEMENT-TO-COMMUNICATION-RESOURCE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -600,18 +659,20 @@ class SystemMapping:
                 "name": "ECU-RESOURCE-ESTIMATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ResourceToApplicationPartitionMappings:
-        cp_software_cluster_resource_to_application_partition_mapping: List[CpSoftwareClusterResourceToApplicationPartitionMapping] = field(
+        cp_software_cluster_resource_to_application_partition_mapping: List[
+            CpSoftwareClusterResourceToApplicationPartitionMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CP-SOFTWARE-CLUSTER-RESOURCE-TO-APPLICATION-PARTITION-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -622,7 +683,7 @@ class SystemMapping:
                 "name": "COMMON-SIGNAL-PATH",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         forbidden_signal_path: List[ForbiddenSignalPath] = field(
             default_factory=list,
@@ -630,7 +691,7 @@ class SystemMapping:
                 "name": "FORBIDDEN-SIGNAL-PATH",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         permissible_signal_path: List[PermissibleSignalPath] = field(
             default_factory=list,
@@ -638,7 +699,7 @@ class SystemMapping:
                 "name": "PERMISSIBLE-SIGNAL-PATH",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         separate_signal_path: List[SeparateSignalPath] = field(
             default_factory=list,
@@ -646,29 +707,33 @@ class SystemMapping:
                 "name": "SEPARATE-SIGNAL-PATH",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SoftwareClusterToResourceMappings:
-        cp_software_cluster_to_resource_mapping: List[CpSoftwareClusterToResourceMapping] = field(
+        cp_software_cluster_to_resource_mapping: List[
+            CpSoftwareClusterToResourceMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CP-SOFTWARE-CLUSTER-TO-RESOURCE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SwClusterMappings:
-        cp_software_cluster_to_ecu_instance_mapping: List[CpSoftwareClusterToEcuInstanceMapping] = field(
+        cp_software_cluster_to_ecu_instance_mapping: List[
+            CpSoftwareClusterToEcuInstanceMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CP-SOFTWARE-CLUSTER-TO-ECU-INSTANCE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -679,7 +744,7 @@ class SystemMapping:
                 "name": "SWC-TO-IMPL-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -690,16 +755,18 @@ class SystemMapping:
                 "name": "SWC-TO-ECU-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SwcToApplicationPartitionMappings:
-        swc_to_application_partition_mapping: List[SwcToApplicationPartitionMapping] = field(
+        swc_to_application_partition_mapping: List[
+            SwcToApplicationPartitionMapping
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-TO-APPLICATION-PARTITION-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

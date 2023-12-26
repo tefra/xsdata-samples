@@ -11,6 +11,7 @@ class GdsQueueAgentListRsp(BaseRsp1):
     """
     Use this request to list items stuck on the Queue.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -20,5 +21,5 @@ class GdsQueueAgentListRsp(BaseRsp1):
             "name": "QueueAgentRecord",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

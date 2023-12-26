@@ -16,7 +16,7 @@ class PlaceSignStructure(SignEquipmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     place_ref: Optional[PlaceRef] = field(
         default=None,
@@ -24,5 +24,5 @@ class PlaceSignStructure(SignEquipmentVersionStructure):
             "name": "PlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

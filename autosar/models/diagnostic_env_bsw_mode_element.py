@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .identifier import Identifier
-from .mode_in_bsw_module_description_instance_ref import ModeInBswModuleDescriptionInstanceRef
+from .mode_in_bsw_module_description_instance_ref import (
+    ModeInBswModuleDescriptionInstanceRef,
+)
 from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -32,6 +34,7 @@ class DiagnosticEnvBswModeElement:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-ENV-BSW-MODE-ELEMENT"
 
@@ -42,15 +45,17 @@ class DiagnosticEnvBswModeElement:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticEnvBswModeElement.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticEnvBswModeElement.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mode_iref: Optional[ModeInBswModuleDescriptionInstanceRef] = field(
         default=None,
@@ -58,14 +63,14 @@ class DiagnosticEnvBswModeElement:
             "name": "MODE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -73,7 +78,7 @@ class DiagnosticEnvBswModeElement:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -84,5 +89,5 @@ class DiagnosticEnvBswModeElement:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

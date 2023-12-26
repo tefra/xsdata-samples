@@ -15,7 +15,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accounting_time: Optional[XmlDuration] = field(
         default=None,
@@ -23,7 +23,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "name": "AccountingTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accounting_factor: Optional[XmlDuration] = field(
         default=None,
@@ -31,7 +31,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "name": "AccountingFactor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     preparation_duration: Optional[XmlDuration] = field(
         default=None,
@@ -39,7 +39,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "name": "PreparationDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     finishing_duration: Optional[XmlDuration] = field(
         default=None,
@@ -47,5 +47,5 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "name": "FinishingDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

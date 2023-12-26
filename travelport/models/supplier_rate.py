@@ -18,6 +18,7 @@ class SupplierRate(TypeVehicleRates):
     approximate_total
         The total sum of all mandatory, optional and conditional charges
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -26,19 +27,19 @@ class SupplierRate(TypeVehicleRates):
         metadata={
             "name": "DiscountAmount",
             "type": "Attribute",
-        }
+        },
     )
     mandatory_charge_total: None | str = field(
         default=None,
         metadata={
             "name": "MandatoryChargeTotal",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotal",
             "type": "Attribute",
-        }
+        },
     )

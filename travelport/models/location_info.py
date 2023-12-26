@@ -22,6 +22,7 @@ class LocationInfo:
     preferred_option
         Preferred Option marker for Location.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -32,7 +33,7 @@ class LocationInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 5,
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -41,7 +42,7 @@ class LocationInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 5,
-        }
+        },
     )
     operation_time: list[str] = field(
         default_factory=list,
@@ -49,14 +50,14 @@ class LocationInfo:
             "name": "OperationTime",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     shuttle_info: None | str = field(
         default=None,
         metadata={
             "name": "ShuttleInfo",
             "type": "Element",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -64,19 +65,19 @@ class LocationInfo:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     counter_location: None | str = field(
         default=None,
         metadata={
             "name": "CounterLocation",
             "type": "Attribute",
-        }
+        },
     )
     preferred_option: None | bool = field(
         default=None,
         metadata={
             "name": "PreferredOption",
             "type": "Attribute",
-        }
+        },
     )

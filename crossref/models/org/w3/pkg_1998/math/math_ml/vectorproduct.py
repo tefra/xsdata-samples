@@ -15,5 +15,5 @@ class Vectorproduct:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

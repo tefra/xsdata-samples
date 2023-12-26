@@ -15,5 +15,5 @@ class Notsubset:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

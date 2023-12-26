@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .autosar_data_prototype_subtypes_enum import (
+    AutosarDataPrototypeSubtypesEnum,
+)
 from .data_transformation_subtypes_enum import DataTransformationSubtypesEnum
 from .ref import Ref
 from .sub_element_mapping import SubElementMapping
@@ -59,63 +61,76 @@ class DataPrototypeMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DATA-PROTOTYPE-MAPPING"
 
-    first_data_prototype_ref: Optional["DataPrototypeMapping.FirstDataPrototypeRef"] = field(
+    first_data_prototype_ref: Optional[
+        "DataPrototypeMapping.FirstDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    first_to_second_data_transformation_ref: Optional["DataPrototypeMapping.FirstToSecondDataTransformationRef"] = field(
+    first_to_second_data_transformation_ref: Optional[
+        "DataPrototypeMapping.FirstToSecondDataTransformationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-TO-SECOND-DATA-TRANSFORMATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    second_data_prototype_ref: Optional["DataPrototypeMapping.SecondDataPrototypeRef"] = field(
+    second_data_prototype_ref: Optional[
+        "DataPrototypeMapping.SecondDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SECOND-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    second_to_first_data_transformation_ref: Optional["DataPrototypeMapping.SecondToFirstDataTransformationRef"] = field(
+    second_to_first_data_transformation_ref: Optional[
+        "DataPrototypeMapping.SecondToFirstDataTransformationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SECOND-TO-FIRST-DATA-TRANSFORMATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sub_element_mappings: Optional["DataPrototypeMapping.SubElementMappings"] = field(
+    sub_element_mappings: Optional[
+        "DataPrototypeMapping.SubElementMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "SUB-ELEMENT-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    text_table_mappings: Optional["DataPrototypeMapping.TextTableMappings"] = field(
+    text_table_mappings: Optional[
+        "DataPrototypeMapping.TextTableMappings"
+    ] = field(
         default=None,
         metadata={
             "name": "TEXT-TABLE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -123,7 +138,7 @@ class DataPrototypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -134,7 +149,7 @@ class DataPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -145,7 +160,7 @@ class DataPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -156,7 +171,7 @@ class DataPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -167,7 +182,7 @@ class DataPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -178,7 +193,7 @@ class DataPrototypeMapping:
                 "name": "SUB-ELEMENT-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -190,5 +205,5 @@ class DataPrototypeMapping:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 2,
-            }
+            },
         )

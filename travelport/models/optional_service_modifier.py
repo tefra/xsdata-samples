@@ -27,6 +27,7 @@ class OptionalServiceModifier:
         This allows MDS to return specific image and text corresponding to
         the ancillary name (S5 ancillary name).
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -38,7 +39,7 @@ class OptionalServiceModifier:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     secondary_type: None | str = field(
         default=None,
@@ -47,7 +48,7 @@ class OptionalServiceModifier:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -57,7 +58,7 @@ class OptionalServiceModifier:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     service_sub_code: None | str = field(
         default=None,
@@ -65,7 +66,7 @@ class OptionalServiceModifier:
             "name": "ServiceSubCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     travel_date: None | XmlDate = field(
         default=None,
@@ -73,7 +74,7 @@ class OptionalServiceModifier:
             "name": "TravelDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -81,5 +82,5 @@ class OptionalServiceModifier:
             "name": "Description",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

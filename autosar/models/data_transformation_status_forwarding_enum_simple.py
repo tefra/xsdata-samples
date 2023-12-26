@@ -10,5 +10,6 @@ class DataTransformationStatusForwardingEnumSimple(Enum):
     :cvar TRANSFORMER_STATUS_FORWARDING: The runnable is able to forward
         a transformer status.
     """
+
     NO_TRANSFORMER_STATUS_FORWARDING = "NO-TRANSFORMER-STATUS-FORWARDING"
     TRANSFORMER_STATUS_FORWARDING = "TRANSFORMER-STATUS-FORWARDING"

@@ -13,5 +13,5 @@ class SchemeAgencyName:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )

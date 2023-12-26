@@ -8,5 +8,6 @@ class SerializationTechnologyEnumSimple(Enum):
     :cvar SIGNAL_BASED: Signal-Based serializer.
     :cvar SOMEIP: SOME/IP Serializer
     """
+
     SIGNAL_BASED = "SIGNAL-BASED"
     SOMEIP = "SOMEIP"

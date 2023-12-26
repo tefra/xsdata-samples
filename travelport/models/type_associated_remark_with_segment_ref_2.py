@@ -16,6 +16,7 @@ class TypeAssociatedRemarkWithSegmentRef2(TypeAssociatedRemark2):
     segment_ref
         Reference to an Air/Passive Segment
     """
+
     class Meta:
         name = "typeAssociatedRemarkWithSegmentRef"
 
@@ -24,5 +25,5 @@ class TypeAssociatedRemarkWithSegmentRef2(TypeAssociatedRemark2):
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )

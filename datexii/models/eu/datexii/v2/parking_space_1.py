@@ -3,7 +3,9 @@ from typing import List, Optional
 from datexii.models.eu.datexii.v2.dimension import Dimension
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
-from datexii.models.eu.datexii.v2.parking_space_basics import ParkingSpaceBasics
+from datexii.models.eu.datexii.v2.parking_space_basics import (
+    ParkingSpaceBasics,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -27,6 +29,7 @@ class ParkingSpace1(ParkingSpaceBasics):
         smallest rectangle fitting inside its shape.
     :ivar parking_space_extension:
     """
+
     class Meta:
         name = "ParkingSpace"
 
@@ -37,14 +40,14 @@ class ParkingSpace1(ParkingSpaceBasics):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     location: Optional[Location] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_space_dimension: Optional[Dimension] = field(
         default=None,
@@ -52,7 +55,7 @@ class ParkingSpace1(ParkingSpaceBasics):
             "name": "parkingSpaceDimension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_space_extension: Optional[ExtensionType] = field(
         default=None,
@@ -60,5 +63,5 @@ class ParkingSpace1(ParkingSpaceBasics):
             "name": "parkingSpaceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

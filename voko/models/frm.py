@@ -13,7 +13,7 @@ class Frm:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -39,5 +39,5 @@ class Frm:
                     "type": str,
                 },
             ),
-        }
+        },
     )

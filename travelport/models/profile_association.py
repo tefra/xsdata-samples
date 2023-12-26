@@ -16,6 +16,7 @@ class ProfileAssociation:
     booking_traveler_ref
         Booking Traveler associated with Profile.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -25,7 +26,7 @@ class ProfileAssociation:
             "name": "TravelerID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -33,5 +34,5 @@ class ProfileAssociation:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

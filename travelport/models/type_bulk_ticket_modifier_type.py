@@ -17,6 +17,7 @@ class TypeBulkTicketModifierType:
         supporting documents Check the specific host system which may or may
         not support this function
     """
+
     class Meta:
         name = "typeBulkTicketModifierType"
 
@@ -25,5 +26,5 @@ class TypeBulkTicketModifierType:
         metadata={
             "name": "SuppressOnFareCalc",
             "type": "Attribute",
-        }
+        },
     )

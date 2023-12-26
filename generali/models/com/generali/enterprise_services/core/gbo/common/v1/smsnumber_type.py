@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -14,6 +16,7 @@ class SmsnumberType:
     :ivar full_number_text: <description xmlns=""> <description>The full
         SMS number.</description> </description>
     """
+
     class Meta:
         name = "SMSNumberType"
 
@@ -24,5 +27,5 @@ class SmsnumberType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )

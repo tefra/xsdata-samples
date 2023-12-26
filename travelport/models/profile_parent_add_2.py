@@ -1,7 +1,11 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.provisioning_code_profile_type_2 import ProvisioningCodeProfileType2
-from travelport.models.unique_profile_id_profile_type_2 import UniqueProfileIdProfileType2
+from travelport.models.provisioning_code_profile_type_2 import (
+    ProvisioningCodeProfileType2,
+)
+from travelport.models.unique_profile_id_profile_type_2 import (
+    UniqueProfileIdProfileType2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -23,6 +27,7 @@ class ProfileParentAdd2:
         of Profile ID. Cannot be used with ProfileParentAdd,
         ProfileParentDelete or ProfileChildSearch.
     """
+
     class Meta:
         name = "ProfileParentAdd"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -32,21 +37,21 @@ class ProfileParentAdd2:
         metadata={
             "name": "ProfileID",
             "type": "Element",
-        }
+        },
     )
     provisioning_code: None | ProfileParentAdd2.ProvisioningCode = field(
         default=None,
         metadata={
             "name": "ProvisioningCode",
             "type": "Element",
-        }
+        },
     )
     unique_profile_id: None | ProfileParentAdd2.UniqueProfileId = field(
         default=None,
         metadata={
             "name": "UniqueProfileID",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -59,13 +64,14 @@ class ProfileParentAdd2:
             Specify the Profile Type (limited to only the ones where
             ProvisioningCode is relevant)
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | ProvisioningCodeProfileType2 = field(
             default=None,
@@ -73,7 +79,7 @@ class ProfileParentAdd2:
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -91,13 +97,14 @@ class ProfileParentAdd2:
             determine 'AgencyCode' by Agent's WAB/target Branch or Agent's
             agency.
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 6,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | UniqueProfileIdProfileType2 = field(
             default=None,
@@ -105,7 +112,7 @@ class ProfileParentAdd2:
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         agency_code: None | str = field(
             default=None,
@@ -114,5 +121,5 @@ class ProfileParentAdd2:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 25,
-            }
+            },
         )

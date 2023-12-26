@@ -9,5 +9,6 @@ class SupportBufferLockingEnumSimple(Enum):
         supported.
     :cvar SUPPORTS_BUFFER_LOCKING: Buffer locking is supported.
     """
+
     DOES_NOT_SUPPORT_BUFFER_LOCKING = "DOES-NOT-SUPPORT-BUFFER-LOCKING"
     SUPPORTS_BUFFER_LOCKING = "SUPPORTS-BUFFER-LOCKING"

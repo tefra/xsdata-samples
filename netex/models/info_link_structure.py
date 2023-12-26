@@ -11,7 +11,7 @@ class InfoLinkStructure:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     type_of_info_link: List[TypeOfInfolinkEnumeration] = field(
         default_factory=list,
@@ -19,5 +19,5 @@ class InfoLinkStructure:
             "name": "typeOfInfoLink",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )

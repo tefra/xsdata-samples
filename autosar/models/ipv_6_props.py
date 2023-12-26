@@ -28,6 +28,7 @@ class Ipv6Props:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IPV-6-PROPS"
 
@@ -37,7 +38,7 @@ class Ipv6Props:
             "name": "DHCP-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fragmentation_props: Optional[Ipv6FragmentationProps] = field(
         default=None,
@@ -45,7 +46,7 @@ class Ipv6Props:
             "name": "FRAGMENTATION-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ndp_props: Optional[Ipv6NdpProps] = field(
         default=None,
@@ -53,14 +54,14 @@ class Ipv6Props:
             "name": "NDP-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -68,5 +69,5 @@ class Ipv6Props:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

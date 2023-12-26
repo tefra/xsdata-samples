@@ -51,6 +51,7 @@ class BranchInfo1(TypeProfileInfo1):
     ursync_to
         Identify if Universal Record synch is activated at Branch Level.
     """
+
     class Meta:
         name = "BranchInfo"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -60,35 +61,35 @@ class BranchInfo1(TypeProfileInfo1):
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     phone: list[Phone1] = field(
         default_factory=list,
         metadata={
             "name": "Phone",
             "type": "Element",
-        }
+        },
     )
     electronic_address: list[ElectronicAddress1] = field(
         default_factory=list,
         metadata={
             "name": "ElectronicAddress",
             "type": "Element",
-        }
+        },
     )
     provider_info: list[ProviderInfo1] = field(
         default_factory=list,
         metadata={
             "name": "ProviderInfo",
             "type": "Element",
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier1] = field(
         default_factory=list,
         metadata={
             "name": "ExternalIdentifier",
             "type": "Element",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -98,7 +99,7 @@ class BranchInfo1(TypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     geo_city_code: None | str = field(
         default=None,
@@ -107,7 +108,7 @@ class BranchInfo1(TypeProfileInfo1):
             "type": "Attribute",
             "required": True,
             "max_length": 10,
-        }
+        },
     )
     control: None | bool = field(
         default=None,
@@ -115,7 +116,7 @@ class BranchInfo1(TypeProfileInfo1):
             "name": "Control",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     branch_code: None | str = field(
         default=None,
@@ -125,7 +126,7 @@ class BranchInfo1(TypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     currency: None | str = field(
         default=None,
@@ -134,26 +135,26 @@ class BranchInfo1(TypeProfileInfo1):
             "type": "Attribute",
             "required": True,
             "length": 3,
-        }
+        },
     )
     profile_sync_to: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncTo",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_from: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncFrom",
             "type": "Attribute",
-        }
+        },
     )
     ursync_to: bool = field(
         default=False,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

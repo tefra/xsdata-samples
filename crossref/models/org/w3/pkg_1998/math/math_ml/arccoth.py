@@ -15,5 +15,5 @@ class Arccoth:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

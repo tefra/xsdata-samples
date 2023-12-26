@@ -18,7 +18,7 @@ class CommunityPrpaIn201306Uv02ResponseType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_community: Optional[NhinTargetCommunityType] = field(
         default=None,
@@ -27,7 +27,7 @@ class CommunityPrpaIn201306Uv02ResponseType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -43,12 +43,14 @@ class RespondingGatewayPrpaIn201306Uv02ResponseType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass
-class RespondingGatewayPrpaIn201306Uv02Response(RespondingGatewayPrpaIn201306Uv02ResponseType):
+class RespondingGatewayPrpaIn201306Uv02Response(
+    RespondingGatewayPrpaIn201306Uv02ResponseType
+):
     class Meta:
         name = "RespondingGateway_PRPA_IN201306UV02Response"
         namespace = "urn:hl7-org:v3"

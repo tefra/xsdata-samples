@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_1 import BaseReq1
-from travelport.models.mir_report_retrieve_req_report_format import MirReportRetrieveReqReportFormat
+from travelport.models.mir_report_retrieve_req_report_format import (
+    MirReportRetrieveReqReportFormat,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
@@ -18,6 +20,7 @@ class MirReportRetrieveReq(BaseReq1):
     report_format
         MIR report format type
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -28,12 +31,12 @@ class MirReportRetrieveReq(BaseReq1):
             "type": "Attribute",
             "required": True,
             "max_length": 8,
-        }
+        },
     )
     report_format: None | MirReportRetrieveReqReportFormat = field(
         default=None,
         metadata={
             "name": "ReportFormat",
             "type": "Attribute",
-        }
+        },
     )

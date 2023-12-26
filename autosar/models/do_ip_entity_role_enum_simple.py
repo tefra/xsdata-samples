@@ -11,6 +11,7 @@ class DoIpEntityRoleEnumSimple(Enum):
         and other networks.
     :cvar NODE: Network node is a DoIp node.
     """
+
     EDGE_NODE = "EDGE-NODE"
     GATEWAY = "GATEWAY"
     NODE = "NODE"

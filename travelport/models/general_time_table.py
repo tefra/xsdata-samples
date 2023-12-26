@@ -26,6 +26,7 @@ class GeneralTimeTable:
     include_connection
         Include or exclude connecting flights.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -34,7 +35,7 @@ class GeneralTimeTable:
         metadata={
             "name": "DaysOfOperation",
             "type": "Element",
-        }
+        },
     )
     flight_origin: None | TypeLocation1 = field(
         default=None,
@@ -42,7 +43,7 @@ class GeneralTimeTable:
             "name": "FlightOrigin",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     flight_destination: None | TypeLocation1 = field(
         default=None,
@@ -50,14 +51,14 @@ class GeneralTimeTable:
             "name": "FlightDestination",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     carrier_list: None | CarrierList = field(
         default=None,
         metadata={
             "name": "CarrierList",
             "type": "Element",
-        }
+        },
     )
     start_date: None | str = field(
         default=None,
@@ -65,33 +66,33 @@ class GeneralTimeTable:
             "name": "StartDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     end_date: None | str = field(
         default=None,
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-        }
+        },
     )
     start_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "StartTime",
             "type": "Attribute",
-        }
+        },
     )
     end_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EndTime",
             "type": "Attribute",
-        }
+        },
     )
     include_connection: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeConnection",
             "type": "Attribute",
-        }
+        },
     )

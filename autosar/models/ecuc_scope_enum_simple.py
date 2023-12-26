@@ -9,5 +9,6 @@ class EcucScopeEnumSimple(Enum):
     :cvar LOCAL: An element is only be applicable for the module it is
         defined in.
     """
+
     ECU = "ECU"
     LOCAL = "LOCAL"

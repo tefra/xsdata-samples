@@ -34,6 +34,7 @@ class Segment1:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "Segment"
 
@@ -44,7 +45,7 @@ class Segment1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -52,28 +53,28 @@ class Segment1:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )
     passive: None | bool = field(
         default=None,
         metadata={
             "name": "Passive",
             "type": "Attribute",
-        }
+        },
     )
     travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
-        }
+        },
     )
     provider_segment_order: None | int = field(
         default=None,
@@ -81,19 +82,19 @@ class Segment1:
             "name": "ProviderSegmentOrder",
             "type": "Attribute",
             "max_inclusive": 999,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class SavedTripDeleteReq(BaseReq1):
     locator_code
         Represents a valid Saved Trip locator code
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -25,5 +26,5 @@ class SavedTripDeleteReq(BaseReq1):
             "type": "Attribute",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )

@@ -13,6 +13,7 @@ class VehicleMediaLinksReq(BaseReq1):
     Used to request a list of images for a location (airport or city code) and
     vendor.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -21,7 +22,7 @@ class VehicleMediaLinksReq(BaseReq1):
         metadata={
             "name": "VehicleSearchId",
             "type": "Element",
-        }
+        },
     )
     vehicle_pickup_location: list[VehiclePickupLocation] = field(
         default_factory=list,
@@ -29,5 +30,5 @@ class VehicleMediaLinksReq(BaseReq1):
             "name": "VehiclePickupLocation",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

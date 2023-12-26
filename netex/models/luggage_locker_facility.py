@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .luggage_locker_facility_enumeration import LuggageLockerFacilityEnumeration
+from .luggage_locker_facility_enumeration import (
+    LuggageLockerFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -14,5 +16,5 @@ class LuggageLockerFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

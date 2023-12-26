@@ -17,6 +17,7 @@ class TypeSearchExternalIdentifier1:
         The Source code for External ID. This depicts the origin/source of
         the External ID.
     """
+
     class Meta:
         name = "typeSearchExternalIdentifier"
 
@@ -28,7 +29,7 @@ class TypeSearchExternalIdentifier1:
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     source: None | str = field(
         default=None,
@@ -37,5 +38,5 @@ class TypeSearchExternalIdentifier1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

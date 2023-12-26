@@ -16,6 +16,7 @@ class VehicleCancelReq(BaseReq1):
     one or more vehicle segments based on the criteria given.  If more
     than one segment matches, then all matching will be removed.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -25,7 +26,7 @@ class VehicleCancelReq(BaseReq1):
             "name": "VehicleDateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     vehicle: None | Vehicle = field(
         default=None,
@@ -33,7 +34,7 @@ class VehicleCancelReq(BaseReq1):
             "name": "Vehicle",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-        }
+        },
     )
     file_finishing_info: None | FileFinishingInfo1 = field(
         default=None,
@@ -41,21 +42,21 @@ class VehicleCancelReq(BaseReq1):
             "name": "FileFinishingInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-        }
+        },
     )
     supplier_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierLocatorCode",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -65,7 +66,7 @@ class VehicleCancelReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -74,7 +75,7 @@ class VehicleCancelReq(BaseReq1):
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -82,5 +83,5 @@ class VehicleCancelReq(BaseReq1):
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

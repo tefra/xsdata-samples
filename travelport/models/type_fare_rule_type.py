@@ -8,6 +8,7 @@ class TypeFareRuleType(Enum):
     """
     The valid rule types.
     """
+
     NONE = "none"
     SHORT = "short"
     LONG = "long"

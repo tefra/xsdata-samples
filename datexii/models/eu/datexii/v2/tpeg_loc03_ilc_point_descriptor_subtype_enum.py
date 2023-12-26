@@ -15,6 +15,7 @@ class TpegLoc03IlcPointDescriptorSubtypeEnum(Enum):
     :cvar TPEG_ILC_NAME3: The name of the second intersecting road (if
         one exists) at the junction.
     """
+
     TPEG_ILC_NAME1 = "tpegIlcName1"
     TPEG_ILC_NAME2 = "tpegIlcName2"
     TPEG_ILC_NAME3 = "tpegIlcName3"

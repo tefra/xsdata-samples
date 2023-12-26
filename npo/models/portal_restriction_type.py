@@ -14,24 +14,24 @@ class PortalRestrictionType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     portal_id: None | str = field(
         default=None,
         metadata={
             "name": "portalId",
             "type": "Attribute",
-        }
+        },
     )
     start: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     stop: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

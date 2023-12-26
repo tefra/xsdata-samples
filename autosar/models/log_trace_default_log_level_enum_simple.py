@@ -12,6 +12,7 @@ class LogTraceDefaultLogLevelEnumSimple(Enum):
     :cvar VERBOSE: Verbose debug message
     :cvar WARN: Warning if correct behavior cannot be ensured
     """
+
     DEBUG = "DEBUG"
     ERROR = "ERROR"
     FATAL = "FATAL"

@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .link_on_section_versioned_child_structure import LinkOnSectionVersionedChildStructure
+from .link_on_section_versioned_child_structure import (
+    LinkOnSectionVersionedChildStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

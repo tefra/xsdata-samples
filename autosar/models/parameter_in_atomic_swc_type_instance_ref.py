@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .application_composite_element_data_prototype_subtypes_enum import ApplicationCompositeElementDataPrototypeSubtypesEnum
+from .application_composite_element_data_prototype_subtypes_enum import (
+    ApplicationCompositeElementDataPrototypeSubtypesEnum,
+)
 from .data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .ref import Ref
@@ -33,47 +35,56 @@ class ParameterInAtomicSwcTypeInstanceRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PARAMETER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
-    port_prototype_ref: Optional["ParameterInAtomicSwcTypeInstanceRef.PortPrototypeRef"] = field(
+    port_prototype_ref: Optional[
+        "ParameterInAtomicSwcTypeInstanceRef.PortPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    root_parameter_data_prototype_ref: Optional["ParameterInAtomicSwcTypeInstanceRef.RootParameterDataPrototypeRef"] = field(
+    root_parameter_data_prototype_ref: Optional[
+        "ParameterInAtomicSwcTypeInstanceRef.RootParameterDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ROOT-PARAMETER-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    context_data_prototype_ref: List["ParameterInAtomicSwcTypeInstanceRef.ContextDataPrototypeRef"] = field(
+    context_data_prototype_ref: List[
+        "ParameterInAtomicSwcTypeInstanceRef.ContextDataPrototypeRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "CONTEXT-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    target_data_prototype_ref: Optional["ParameterInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef"] = field(
+    target_data_prototype_ref: Optional[
+        "ParameterInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -81,7 +92,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -92,7 +103,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -103,18 +114,20 @@ class ParameterInAtomicSwcTypeInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: Optional[ApplicationCompositeElementDataPrototypeSubtypesEnum] = field(
+        dest: Optional[
+            ApplicationCompositeElementDataPrototypeSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -125,5 +138,5 @@ class ParameterInAtomicSwcTypeInstanceRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -13,5 +13,5 @@ class ListName:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -19,14 +19,14 @@ class TSubConversation(TConversationNode):
             "name": "subConversation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     conversation: List[Conversation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     call_conversation: List[CallConversation] = field(
         default_factory=list,
@@ -34,7 +34,7 @@ class TSubConversation(TConversationNode):
             "name": "callConversation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     conversation_node: List[ConversationNode] = field(
         default_factory=list,
@@ -42,7 +42,7 @@ class TSubConversation(TConversationNode):
             "name": "conversationNode",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
 
 

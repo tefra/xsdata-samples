@@ -106,6 +106,7 @@ class SomeipServiceInterfaceDeployment:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-SERVICE-INTERFACE-DEPLOYMENT"
 
@@ -116,15 +117,17 @@ class SomeipServiceInterfaceDeployment:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SomeipServiceInterfaceDeployment.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SomeipServiceInterfaceDeployment.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -132,7 +135,7 @@ class SomeipServiceInterfaceDeployment:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -140,7 +143,7 @@ class SomeipServiceInterfaceDeployment:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -148,7 +151,7 @@ class SomeipServiceInterfaceDeployment:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -156,7 +159,7 @@ class SomeipServiceInterfaceDeployment:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -164,15 +167,17 @@ class SomeipServiceInterfaceDeployment:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["SomeipServiceInterfaceDeployment.Annotations"] = field(
+    annotations: Optional[
+        "SomeipServiceInterfaceDeployment.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -180,47 +185,57 @@ class SomeipServiceInterfaceDeployment:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_deployments: Optional["SomeipServiceInterfaceDeployment.EventDeployments"] = field(
+    event_deployments: Optional[
+        "SomeipServiceInterfaceDeployment.EventDeployments"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-DEPLOYMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    field_deployments: Optional["SomeipServiceInterfaceDeployment.FieldDeployments"] = field(
+    field_deployments: Optional[
+        "SomeipServiceInterfaceDeployment.FieldDeployments"
+    ] = field(
         default=None,
         metadata={
             "name": "FIELD-DEPLOYMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    method_deployments: Optional["SomeipServiceInterfaceDeployment.MethodDeployments"] = field(
+    method_deployments: Optional[
+        "SomeipServiceInterfaceDeployment.MethodDeployments"
+    ] = field(
         default=None,
         metadata={
             "name": "METHOD-DEPLOYMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_interface_ref: Optional["SomeipServiceInterfaceDeployment.ServiceInterfaceRef"] = field(
+    service_interface_ref: Optional[
+        "SomeipServiceInterfaceDeployment.ServiceInterfaceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_groups: Optional["SomeipServiceInterfaceDeployment.EventGroups"] = field(
+    event_groups: Optional[
+        "SomeipServiceInterfaceDeployment.EventGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_interface_id: Optional[PositiveInteger] = field(
         default=None,
@@ -228,7 +243,7 @@ class SomeipServiceInterfaceDeployment:
             "name": "SERVICE-INTERFACE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_interface_version: Optional[SomeipServiceVersion] = field(
         default=None,
@@ -236,14 +251,14 @@ class SomeipServiceInterfaceDeployment:
             "name": "SERVICE-INTERFACE-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -251,14 +266,14 @@ class SomeipServiceInterfaceDeployment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -269,7 +284,7 @@ class SomeipServiceInterfaceDeployment:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -280,7 +295,7 @@ class SomeipServiceInterfaceDeployment:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -291,7 +306,7 @@ class SomeipServiceInterfaceDeployment:
                 "name": "DDS-EVENT-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         someip_event_deployment: List[SomeipEventDeployment] = field(
             default_factory=list,
@@ -299,15 +314,17 @@ class SomeipServiceInterfaceDeployment:
                 "name": "SOMEIP-EVENT-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_event_deployment: List[UserDefinedEventDeployment] = field(
+        user_defined_event_deployment: List[
+            UserDefinedEventDeployment
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-EVENT-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -318,7 +335,7 @@ class SomeipServiceInterfaceDeployment:
                 "name": "DDS-FIELD-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         someip_field_deployment: List[SomeipFieldDeployment] = field(
             default_factory=list,
@@ -326,15 +343,17 @@ class SomeipServiceInterfaceDeployment:
                 "name": "SOMEIP-FIELD-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_field_deployment: List[UserDefinedFieldDeployment] = field(
+        user_defined_field_deployment: List[
+            UserDefinedFieldDeployment
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-FIELD-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -345,15 +364,17 @@ class SomeipServiceInterfaceDeployment:
                 "name": "SOMEIP-METHOD-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_method_deployment: List[UserDefinedMethodDeployment] = field(
+        user_defined_method_deployment: List[
+            UserDefinedMethodDeployment
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-METHOD-DEPLOYMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -364,7 +385,7 @@ class SomeipServiceInterfaceDeployment:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -375,5 +396,5 @@ class SomeipServiceInterfaceDeployment:
                 "name": "SOMEIP-EVENT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

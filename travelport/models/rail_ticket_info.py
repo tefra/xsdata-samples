@@ -31,6 +31,7 @@ class RailTicketInfo:
     booking_traveler_ref
         Reference to a BookingTraveler.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -40,7 +41,7 @@ class RailTicketInfo:
             "name": "RailJourneyRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     ticket_advisory: list[TicketAdvisory] = field(
         default_factory=list,
@@ -48,7 +49,7 @@ class RailTicketInfo:
             "name": "TicketAdvisory",
             "type": "Element",
             "max_occurs": 10,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class RailTicketInfo:
             "required": True,
             "min_length": 1,
             "max_length": 19,
-        }
+        },
     )
     issue_location: None | str = field(
         default=None,
@@ -67,7 +68,7 @@ class RailTicketInfo:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 128,
-        }
+        },
     )
     ticket_status: None | str = field(
         default=None,
@@ -76,7 +77,7 @@ class RailTicketInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     ticket_form_type: None | str = field(
         default=None,
@@ -85,7 +86,7 @@ class RailTicketInfo:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 255,
-        }
+        },
     )
     traffic_type: None | str = field(
         default=None,
@@ -94,14 +95,14 @@ class RailTicketInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     issued_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssuedDate",
             "type": "Attribute",
-        }
+        },
     )
     ticket_type: None | str = field(
         default=None,
@@ -110,12 +111,12 @@ class RailTicketInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

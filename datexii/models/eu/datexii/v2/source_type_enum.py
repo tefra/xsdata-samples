@@ -51,6 +51,7 @@ class SourceTypeEnum(Enum):
         the monitoring of the road network by processing video image
         information.
     """
+
     AUTOMOBILE_CLUB_PATROL = "automobileClubPatrol"
     CAMERA_OBSERVATION = "cameraObservation"
     FREIGHT_VEHICLE_OPERATOR = "freightVehicleOperator"

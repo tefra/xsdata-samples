@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_space_ref import AccessSpaceRef
 from .address_ref import AddressRef
 from .addressable_place_ref import AddressablePlaceRef
@@ -23,7 +23,9 @@ from .path_junction_ref import PathJunctionRef
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
-from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .point_of_interest_vehicle_entrance_ref import (
+    PointOfInterestVehicleEntranceRef,
+)
 from .postal_address_ref import PostalAddressRef
 from .quay_ref import QuayRef
 from .road_address_ref import RoadAddressRef
@@ -51,19 +53,59 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
             "name": "NetworkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     places: Optional["NetworkFilterByValueStructure.Places"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
     @dataclass
     class Places:
-        choice: List[object] = field(
+        choice: List[
+            Union[
+                HailAndRideAreaRef,
+                FlexibleAreaRef,
+                FlexibleQuayRef,
+                FlexibleStopPlaceRef,
+                PathJunctionRef,
+                TopographicPlaceRef,
+                EquipmentPlaceRef,
+                EquipmentPositionRef,
+                VehicleStoppingPositionRef,
+                VehicleStoppingPlaceRef,
+                BoardingPositionRef,
+                AccessSpaceRef,
+                QuayRef,
+                StopPlaceSpaceRef,
+                ParkingBayRef,
+                PointOfInterestSpaceRef,
+                StopPlaceVehicleEntranceRef,
+                StopPlaceEntranceRef,
+                ParkingEntranceForVehiclesRef,
+                ParkingPassengerEntranceRef,
+                ParkingEntranceRef,
+                PointOfInterestVehicleEntranceRef,
+                PointOfInterestEntranceRef,
+                VehicleEntranceRef,
+                EntranceRef,
+                SiteComponentRef,
+                StopPlaceRef,
+                ParkingRef,
+                PointOfInterestRef,
+                ServiceSiteRef,
+                SiteRef,
+                SiteElementRef,
+                GarageRef,
+                AddressablePlaceRef,
+                PostalAddressRef,
+                RoadAddressRef,
+                AddressRef,
+            ]
+        ] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",
@@ -254,5 +296,5 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),
-            }
+            },
         )

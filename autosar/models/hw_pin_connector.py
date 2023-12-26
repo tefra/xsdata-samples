@@ -46,6 +46,7 @@ class HwPinConnector:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "HW-PIN-CONNECTOR"
 
@@ -55,7 +56,7 @@ class HwPinConnector:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -63,7 +64,7 @@ class HwPinConnector:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -71,7 +72,7 @@ class HwPinConnector:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -79,7 +80,7 @@ class HwPinConnector:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_pin_refs: Optional["HwPinConnector.HwPinRefs"] = field(
         default=None,
@@ -87,7 +88,7 @@ class HwPinConnector:
             "name": "HW-PIN-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -95,14 +96,14 @@ class HwPinConnector:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -110,7 +111,7 @@ class HwPinConnector:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -122,7 +123,7 @@ class HwPinConnector:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 2,
-            }
+            },
         )
 
         @dataclass
@@ -133,5 +134,5 @@ class HwPinConnector:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

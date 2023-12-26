@@ -19,7 +19,7 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
             "name": "ProjectedPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     project_to_point_ref: Optional[PointRefStructure] = field(
         default=None,
@@ -27,7 +27,7 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
             "name": "ProjectToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     project_to_link_ref: Optional[LinkRefStructure] = field(
         default=None,
@@ -35,7 +35,7 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
             "name": "ProjectToLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     distance: Optional[Decimal] = field(
         default=None,
@@ -43,5 +43,5 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

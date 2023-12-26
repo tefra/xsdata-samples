@@ -10,6 +10,7 @@ class BookingRulesFareReference:
 
     Containing a text container for vendor response text.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -17,7 +18,7 @@ class BookingRulesFareReference:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -26,7 +27,7 @@ class BookingRulesFareReference:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     ticket_designator_code: None | str = field(
         default=None,
@@ -35,21 +36,21 @@ class BookingRulesFareReference:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 20,
-        }
+        },
     )
     account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
-        }
+        },
     )
     upgrage_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "UpgrageAllowed",
             "type": "Attribute",
-        }
+        },
     )
     upgrade_class_of_service: None | str = field(
         default=None,
@@ -58,5 +59,5 @@ class BookingRulesFareReference:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

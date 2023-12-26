@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .allowed_line_direction_version_structure import AllowedLineDirectionVersionStructure
+from .allowed_line_direction_version_structure import (
+    AllowedLineDirectionVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

@@ -4,7 +4,9 @@ from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.individual_charge import IndividualCharge
 from datexii.models.eu.datexii.v2.overall_period import OverallPeriod
 from datexii.models.eu.datexii.v2.parking_permit import ParkingPermit
-from datexii.models.eu.datexii.v2.parking_record_versioned_reference import ParkingRecordVersionedReference
+from datexii.models.eu.datexii.v2.parking_record_versioned_reference import (
+    ParkingRecordVersionedReference,
+)
 from datexii.models.eu.datexii.v2.vehicle import Vehicle
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -32,14 +34,17 @@ class ParkingVehicle:
     :ivar id:
     :ivar version:
     """
-    parking_record_reference: Optional[ParkingRecordVersionedReference] = field(
+
+    parking_record_reference: Optional[
+        ParkingRecordVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "parkingRecordReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_space_reference: Optional[str] = field(
         default=None,
@@ -48,7 +53,7 @@ class ParkingVehicle:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     group_of_parking_spaces_reference: List[str] = field(
         default_factory=list,
@@ -57,7 +62,7 @@ class ParkingVehicle:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     parking_permit: List[ParkingPermit] = field(
         default_factory=list,
@@ -65,7 +70,7 @@ class ParkingVehicle:
             "name": "parkingPermit",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle: Optional[Vehicle] = field(
         default=None,
@@ -73,7 +78,7 @@ class ParkingVehicle:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     individual_charge: Optional[IndividualCharge] = field(
         default=None,
@@ -81,7 +86,7 @@ class ParkingVehicle:
             "name": "individualCharge",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_period: Optional[OverallPeriod] = field(
         default=None,
@@ -89,7 +94,7 @@ class ParkingVehicle:
             "name": "parkingPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_vehicle_extension: Optional[ExtensionType] = field(
         default=None,
@@ -97,19 +102,19 @@ class ParkingVehicle:
             "name": "parkingVehicleExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

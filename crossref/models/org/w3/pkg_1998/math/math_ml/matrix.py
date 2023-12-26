@@ -15,5 +15,5 @@ class Matrix:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

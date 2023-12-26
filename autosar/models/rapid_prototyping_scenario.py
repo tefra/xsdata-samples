@@ -94,6 +94,7 @@ class RapidPrototypingScenario:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "RAPID-PROTOTYPING-SCENARIO"
 
@@ -104,15 +105,17 @@ class RapidPrototypingScenario:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["RapidPrototypingScenario.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "RapidPrototypingScenario.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -120,7 +123,7 @@ class RapidPrototypingScenario:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -128,7 +131,7 @@ class RapidPrototypingScenario:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -136,7 +139,7 @@ class RapidPrototypingScenario:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -144,7 +147,7 @@ class RapidPrototypingScenario:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -152,7 +155,7 @@ class RapidPrototypingScenario:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["RapidPrototypingScenario.Annotations"] = field(
         default=None,
@@ -160,7 +163,7 @@ class RapidPrototypingScenario:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -168,15 +171,17 @@ class RapidPrototypingScenario:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    host_system_ref: Optional["RapidPrototypingScenario.HostSystemRef"] = field(
+    host_system_ref: Optional[
+        "RapidPrototypingScenario.HostSystemRef"
+    ] = field(
         default=None,
         metadata={
             "name": "HOST-SYSTEM-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_containers: Optional["RapidPrototypingScenario.RptContainers"] = field(
         default=None,
@@ -184,7 +189,7 @@ class RapidPrototypingScenario:
             "name": "RPT-CONTAINERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_profiles: Optional["RapidPrototypingScenario.RptProfiles"] = field(
         default=None,
@@ -192,7 +197,7 @@ class RapidPrototypingScenario:
             "name": "RPT-PROFILES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rpt_system_ref: Optional["RapidPrototypingScenario.RptSystemRef"] = field(
         default=None,
@@ -200,14 +205,14 @@ class RapidPrototypingScenario:
             "name": "RPT-SYSTEM-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -215,14 +220,14 @@ class RapidPrototypingScenario:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -233,7 +238,7 @@ class RapidPrototypingScenario:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -244,7 +249,7 @@ class RapidPrototypingScenario:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -255,7 +260,7 @@ class RapidPrototypingScenario:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -266,7 +271,7 @@ class RapidPrototypingScenario:
                 "name": "RPT-CONTAINER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -277,7 +282,7 @@ class RapidPrototypingScenario:
                 "name": "RPT-PROFILE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -288,5 +293,5 @@ class RapidPrototypingScenario:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

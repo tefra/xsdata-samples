@@ -18,30 +18,30 @@ obj = PageSearchResult(
             SearchResultItem(
                 result=PageType(
                     crid=[
-                        "crid://vpro/media/vprobroadcast/WO_VPRO_2297327",
+                        'crid://vpro/media/vprobroadcast/WO_VPRO_2297327',
                     ],
                     broadcaster=[
                         BroadcasterType(
-                            id="VPRO"
+                            id='VPRO'
                         ),
                     ],
                     portal=PortalType(
-                        name="www.vprobroadcast.com",
-                        id="VPROBROADCAST",
-                        url="https://www.vprobroadcast.com"
+                        name='www.vprobroadcast.com',
+                        id='VPROBROADCAST',
+                        url='https://www.vprobroadcast.com'
                     ),
-                    title="Antibiotics",
+                    title='Antibiotics',
                     images=PageType.Images(
                         image=[
                             ImageType2(
-                                title="Antibiotica",
-                                description="Labyrint",
+                                title='Antibiotica',
+                                description='Labyrint',
                                 type_value=ImageTypeEnum.PICTURE,
-                                url="https://images.poms.omroep.nl/image/s360/665086.jpg"
+                                url='https://images.poms.omroep.nl/image/s360/665086.jpg'
                             ),
                         ]
                     ),
-                    url="https://www.vprobroadcast.com/play~WO_VPRO_2297327~antibiotics~.html",
+                    url='https://www.vprobroadcast.com/play~WO_VPRO_2297327~antibiotics~.html',
                     type_value=PageTypeEnum.VIDEO,
                     creation_date=XmlDateTime(2019, 11, 22, 14, 15, 9, 443000000, 60),
                     last_modified=XmlDateTime(2019, 11, 22, 14, 15, 9, 443000000, 60),

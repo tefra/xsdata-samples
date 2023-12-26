@@ -16,25 +16,25 @@ class TReceiveTask(TTask):
         default=TImplementationValue.WEB_SERVICE,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     instantiate: bool = field(
         default=False,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     message_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "messageRef",
             "type": "Attribute",
-        }
+        },
     )
     operation_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "operationRef",
             "type": "Attribute",
-        }
+        },
     )

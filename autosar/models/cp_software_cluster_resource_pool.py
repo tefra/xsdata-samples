@@ -7,8 +7,12 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .cp_software_cluster_communication_resource import CpSoftwareClusterCommunicationResource
-from .cp_software_cluster_service_resource import CpSoftwareClusterServiceResource
+from .cp_software_cluster_communication_resource import (
+    CpSoftwareClusterCommunicationResource,
+)
+from .cp_software_cluster_service_resource import (
+    CpSoftwareClusterServiceResource,
+)
 from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -84,6 +88,7 @@ class CpSoftwareClusterResourcePool:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-RESOURCE-POOL"
 
@@ -94,15 +99,17 @@ class CpSoftwareClusterResourcePool:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CpSoftwareClusterResourcePool.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CpSoftwareClusterResourcePool.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -110,7 +117,7 @@ class CpSoftwareClusterResourcePool:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -118,7 +125,7 @@ class CpSoftwareClusterResourcePool:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -126,7 +133,7 @@ class CpSoftwareClusterResourcePool:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -134,7 +141,7 @@ class CpSoftwareClusterResourcePool:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -142,7 +149,7 @@ class CpSoftwareClusterResourcePool:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CpSoftwareClusterResourcePool.Annotations"] = field(
         default=None,
@@ -150,7 +157,7 @@ class CpSoftwareClusterResourcePool:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -158,15 +165,17 @@ class CpSoftwareClusterResourcePool:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_scope_refs: Optional["CpSoftwareClusterResourcePool.EcuScopeRefs"] = field(
+    ecu_scope_refs: Optional[
+        "CpSoftwareClusterResourcePool.EcuScopeRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-SCOPE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     resources: Optional["CpSoftwareClusterResourcePool.Resources"] = field(
         default=None,
@@ -174,14 +183,14 @@ class CpSoftwareClusterResourcePool:
             "name": "RESOURCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -189,14 +198,14 @@ class CpSoftwareClusterResourcePool:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -207,7 +216,7 @@ class CpSoftwareClusterResourcePool:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -218,18 +227,20 @@ class CpSoftwareClusterResourcePool:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class EcuScopeRefs:
-        ecu_scope_ref: List["CpSoftwareClusterResourcePool.EcuScopeRefs.EcuScopeRef"] = field(
+        ecu_scope_ref: List[
+            "CpSoftwareClusterResourcePool.EcuScopeRefs.EcuScopeRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-SCOPE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -240,24 +251,28 @@ class CpSoftwareClusterResourcePool:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class Resources:
-        cp_software_cluster_communication_resource: List[CpSoftwareClusterCommunicationResource] = field(
+        cp_software_cluster_communication_resource: List[
+            CpSoftwareClusterCommunicationResource
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CP-SOFTWARE-CLUSTER-COMMUNICATION-RESOURCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        cp_software_cluster_service_resource: List[CpSoftwareClusterServiceResource] = field(
+        cp_software_cluster_service_resource: List[
+            CpSoftwareClusterServiceResource
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CP-SOFTWARE-CLUSTER-SERVICE-RESOURCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

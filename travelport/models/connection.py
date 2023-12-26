@@ -38,6 +38,7 @@ class Connection:
         The field determines to quote fares with or without stop overs,the
         values can be NoStopOver,StopOver and IgnoreSegment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -46,68 +47,68 @@ class Connection:
         metadata={
             "name": "FareNote",
             "type": "Element",
-        }
+        },
     )
     change_of_plane: bool = field(
         default=False,
         metadata={
             "name": "ChangeOfPlane",
             "type": "Attribute",
-        }
+        },
     )
     change_of_terminal: bool = field(
         default=False,
         metadata={
             "name": "ChangeOfTerminal",
             "type": "Attribute",
-        }
+        },
     )
     change_of_airport: bool = field(
         default=False,
         metadata={
             "name": "ChangeOfAirport",
             "type": "Attribute",
-        }
+        },
     )
     stop_over: bool = field(
         default=False,
         metadata={
             "name": "StopOver",
             "type": "Attribute",
-        }
+        },
     )
     min_connection_time: None | int = field(
         default=None,
         metadata={
             "name": "MinConnectionTime",
             "type": "Attribute",
-        }
+        },
     )
     duration: None | int = field(
         default=None,
         metadata={
             "name": "Duration",
             "type": "Attribute",
-        }
+        },
     )
     segment_index: None | int = field(
         default=None,
         metadata={
             "name": "SegmentIndex",
             "type": "Attribute",
-        }
+        },
     )
     flight_details_index: None | int = field(
         default=None,
         metadata={
             "name": "FlightDetailsIndex",
             "type": "Attribute",
-        }
+        },
     )
     include_stop_over_to_fare_quote: None | TypeIgnoreStopOver = field(
         default=None,
         metadata={
             "name": "IncludeStopOverToFareQuote",
             "type": "Attribute",
-        }
+        },
     )

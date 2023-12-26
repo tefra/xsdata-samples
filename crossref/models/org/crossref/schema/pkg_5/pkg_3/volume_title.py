@@ -8,6 +8,7 @@ class VolumeTitle:
     """
     Book volume title in a citation.
     """
+
     class Meta:
         name = "volume_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -16,5 +17,5 @@ class VolumeTitle:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

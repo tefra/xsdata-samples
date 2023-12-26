@@ -29,6 +29,7 @@ class InfrastructureServices:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "INFRASTRUCTURE-SERVICES"
 
@@ -38,7 +39,7 @@ class InfrastructureServices:
             "name": "DHCP-SERVER-CONFIGURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     do_ip_entity: Optional[DoIpEntity] = field(
         default=None,
@@ -46,7 +47,7 @@ class InfrastructureServices:
             "name": "DO-IP-ENTITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_synchronization: Optional[TimeSynchronization] = field(
         default=None,
@@ -54,14 +55,14 @@ class InfrastructureServices:
             "name": "TIME-SYNCHRONIZATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -69,5 +70,5 @@ class InfrastructureServices:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

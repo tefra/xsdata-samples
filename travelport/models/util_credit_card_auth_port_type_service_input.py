@@ -16,7 +16,7 @@ class UtilCreditCardAuthPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class UtilCreditCardAuthPortTypeServiceInput:
                 "name": "CreditCardAuthReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            }
+            },
         )

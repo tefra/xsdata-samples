@@ -19,6 +19,7 @@ class ExternalCacheAccessReq(BaseReq3):
     cache_name
         Target Cache Name
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
@@ -28,7 +29,7 @@ class ExternalCacheAccessReq(BaseReq3):
             "name": "RetrieveEntry",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     delete_entry: list[ExternalCacheAccessReq.DeleteEntry] = field(
         default_factory=list,
@@ -36,7 +37,7 @@ class ExternalCacheAccessReq(BaseReq3):
             "name": "DeleteEntry",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     cache_name: None | str = field(
         default=None,
@@ -44,7 +45,7 @@ class ExternalCacheAccessReq(BaseReq3):
             "name": "CacheName",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
 
     @dataclass
@@ -55,13 +56,14 @@ class ExternalCacheAccessReq(BaseReq3):
         key
             Cache entry key
         """
+
         key: None | str = field(
             default=None,
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -72,11 +74,12 @@ class ExternalCacheAccessReq(BaseReq3):
         key
             Cache entry key
         """
+
         key: None | str = field(
             default=None,
             metadata={
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

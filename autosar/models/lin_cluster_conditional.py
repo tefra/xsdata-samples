@@ -43,6 +43,7 @@ class LinClusterConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIN-CLUSTER-CONDITIONAL"
 
@@ -52,15 +53,17 @@ class LinClusterConditional:
             "name": "BAUDRATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    physical_channels: Optional["LinClusterConditional.PhysicalChannels"] = field(
+    physical_channels: Optional[
+        "LinClusterConditional.PhysicalChannels"
+    ] = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_name: Optional[String] = field(
         default=None,
@@ -68,7 +71,7 @@ class LinClusterConditional:
             "name": "PROTOCOL-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_version: Optional[String] = field(
         default=None,
@@ -76,7 +79,7 @@ class LinClusterConditional:
             "name": "PROTOCOL-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     speed: Optional[Integer] = field(
         default=None,
@@ -84,7 +87,7 @@ class LinClusterConditional:
             "name": "SPEED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -92,14 +95,14 @@ class LinClusterConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -107,7 +110,7 @@ class LinClusterConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -118,7 +121,7 @@ class LinClusterConditional:
                 "name": "CAN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ethernet_physical_channel: List[EthernetPhysicalChannel] = field(
             default_factory=list,
@@ -126,7 +129,7 @@ class LinClusterConditional:
                 "name": "ETHERNET-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_physical_channel: List[FlexrayPhysicalChannel] = field(
             default_factory=list,
@@ -134,7 +137,7 @@ class LinClusterConditional:
                 "name": "FLEXRAY-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_physical_channel: List[LinPhysicalChannel] = field(
             default_factory=list,
@@ -142,7 +145,7 @@ class LinClusterConditional:
                 "name": "LIN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ttcan_physical_channel: List[TtcanPhysicalChannel] = field(
             default_factory=list,
@@ -150,13 +153,15 @@ class LinClusterConditional:
                 "name": "TTCAN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_physical_channel: List[UserDefinedPhysicalChannel] = field(
+        user_defined_physical_channel: List[
+            UserDefinedPhysicalChannel
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

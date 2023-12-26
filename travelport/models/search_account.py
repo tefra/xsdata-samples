@@ -16,6 +16,7 @@ class SearchAccount:
     branch_id
         Account Branch ID.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -24,7 +25,7 @@ class SearchAccount:
         metadata={
             "name": "ClientID",
             "type": "Attribute",
-        }
+        },
     )
     branch_id: None | str = field(
         default=None,
@@ -33,5 +34,5 @@ class SearchAccount:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )

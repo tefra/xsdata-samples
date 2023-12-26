@@ -10,7 +10,7 @@ class MeasureListType:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )
     uom: Optional[str] = field(
         default=None,
@@ -18,5 +18,5 @@ class MeasureListType:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^: \n\r\t]+",
-        }
+        },
     )

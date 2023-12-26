@@ -22,7 +22,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "name": "loopCardinality",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     loop_data_input_ref: Optional[QName] = field(
         default=None,
@@ -30,7 +30,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "name": "loopDataInputRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     loop_data_output_ref: Optional[QName] = field(
         default=None,
@@ -38,7 +38,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "name": "loopDataOutputRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     input_data_item: Optional[TDataInput] = field(
         default=None,
@@ -46,7 +46,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "name": "inputDataItem",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     output_data_item: Optional[TDataOutput] = field(
         default=None,
@@ -54,7 +54,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "name": "outputDataItem",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     complex_behavior_definition: List[ComplexBehaviorDefinition] = field(
         default_factory=list,
@@ -62,7 +62,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "name": "complexBehaviorDefinition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     completion_condition: Optional[TExpression] = field(
         default=None,
@@ -70,32 +70,32 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "name": "completionCondition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     is_sequential: bool = field(
         default=False,
         metadata={
             "name": "isSequential",
             "type": "Attribute",
-        }
+        },
     )
     behavior: TMultiInstanceFlowCondition = field(
         default=TMultiInstanceFlowCondition.ALL,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     one_behavior_event_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "oneBehaviorEventRef",
             "type": "Attribute",
-        }
+        },
     )
     none_behavior_event_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "noneBehaviorEventRef",
             "type": "Attribute",
-        }
+        },
     )

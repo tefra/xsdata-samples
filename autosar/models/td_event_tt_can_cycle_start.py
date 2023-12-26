@@ -89,6 +89,7 @@ class TdEventTtCanCycleStart:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TD-EVENT-TT-CAN-CYCLE-START"
 
@@ -99,15 +100,17 @@ class TdEventTtCanCycleStart:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TdEventTtCanCycleStart.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TdEventTtCanCycleStart.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +118,7 @@ class TdEventTtCanCycleStart:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +126,7 @@ class TdEventTtCanCycleStart:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +134,7 @@ class TdEventTtCanCycleStart:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +142,7 @@ class TdEventTtCanCycleStart:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +150,7 @@ class TdEventTtCanCycleStart:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TdEventTtCanCycleStart.Annotations"] = field(
         default=None,
@@ -155,7 +158,7 @@ class TdEventTtCanCycleStart:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -163,7 +166,7 @@ class TdEventTtCanCycleStart:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
         default=None,
@@ -171,15 +174,17 @@ class TdEventTtCanCycleStart:
             "name": "OCCURRENCE-EXPRESSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_instance_ref: Optional["TdEventTtCanCycleStart.EcuInstanceRef"] = field(
+    ecu_instance_ref: Optional[
+        "TdEventTtCanCycleStart.EcuInstanceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cycle_repetition: Optional[Integer] = field(
         default=None,
@@ -187,22 +192,24 @@ class TdEventTtCanCycleStart:
             "name": "CYCLE-REPETITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tt_can_cluster_ref: Optional["TdEventTtCanCycleStart.TtCanClusterRef"] = field(
+    tt_can_cluster_ref: Optional[
+        "TdEventTtCanCycleStart.TtCanClusterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TT-CAN-CLUSTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -210,14 +217,14 @@ class TdEventTtCanCycleStart:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -228,7 +235,7 @@ class TdEventTtCanCycleStart:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,7 +246,7 @@ class TdEventTtCanCycleStart:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,7 +257,7 @@ class TdEventTtCanCycleStart:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -261,5 +268,5 @@ class TdEventTtCanCycleStart:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

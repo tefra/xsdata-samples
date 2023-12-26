@@ -34,6 +34,7 @@ class MultiGdssearchIndicator:
         AccountCodeFaresOnly attribute.  Use of this attribute requires
         specifically provisioned credentials.
     """
+
     class Meta:
         name = "MultiGDSSearchIndicator"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -43,7 +44,7 @@ class MultiGdssearchIndicator:
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -52,26 +53,26 @@ class MultiGdssearchIndicator:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     default_provider: None | bool = field(
         default=None,
         metadata={
             "name": "DefaultProvider",
             "type": "Attribute",
-        }
+        },
     )
     private_fare_code: None | str = field(
         default=None,
         metadata={
             "name": "PrivateFareCode",
             "type": "Attribute",
-        }
+        },
     )
     private_fare_code_only: None | bool = field(
         default=None,
         metadata={
             "name": "PrivateFareCodeOnly",
             "type": "Attribute",
-        }
+        },
     )

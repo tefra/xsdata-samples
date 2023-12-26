@@ -17,5 +17,5 @@ class ClassOfUseValueStructure(TypeOfValueVersionStructure):
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

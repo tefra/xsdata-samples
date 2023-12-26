@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.micrograms_concentration_value import MicrogramsConcentrationValue
+from datexii.models.eu.datexii.v2.micrograms_concentration_value import (
+    MicrogramsConcentrationValue,
+)
 from datexii.models.eu.datexii.v2.pollutant_type_enum import PollutantTypeEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -17,6 +19,7 @@ class Pollution:
         pollutant in the air.
     :ivar pollution_extension:
     """
+
     pollutant_type: Optional[PollutantTypeEnum] = field(
         default=None,
         metadata={
@@ -24,7 +27,7 @@ class Pollution:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     pollutant_concentration: Optional[MicrogramsConcentrationValue] = field(
         default=None,
@@ -32,7 +35,7 @@ class Pollution:
             "name": "pollutantConcentration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pollution_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +43,5 @@ class Pollution:
             "name": "pollutionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

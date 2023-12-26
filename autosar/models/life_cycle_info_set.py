@@ -10,7 +10,9 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .life_cycle_info import LifeCycleInfo
 from .life_cycle_period import LifeCyclePeriod
-from .life_cycle_state_definition_group_subtypes_enum import LifeCycleStateDefinitionGroupSubtypesEnum
+from .life_cycle_state_definition_group_subtypes_enum import (
+    LifeCycleStateDefinitionGroupSubtypesEnum,
+)
 from .life_cycle_state_subtypes_enum import LifeCycleStateSubtypesEnum
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -101,6 +103,7 @@ class LifeCycleInfoSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIFE-CYCLE-INFO-SET"
 
@@ -111,15 +114,17 @@ class LifeCycleInfoSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["LifeCycleInfoSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "LifeCycleInfoSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -127,7 +132,7 @@ class LifeCycleInfoSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -135,7 +140,7 @@ class LifeCycleInfoSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -143,7 +148,7 @@ class LifeCycleInfoSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -151,7 +156,7 @@ class LifeCycleInfoSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -159,7 +164,7 @@ class LifeCycleInfoSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["LifeCycleInfoSet.Annotations"] = field(
         default=None,
@@ -167,7 +172,7 @@ class LifeCycleInfoSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -175,15 +180,17 @@ class LifeCycleInfoSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    default_lc_state_ref: Optional["LifeCycleInfoSet.DefaultLcStateRef"] = field(
+    default_lc_state_ref: Optional[
+        "LifeCycleInfoSet.DefaultLcStateRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DEFAULT-LC-STATE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_period_begin: Optional[LifeCyclePeriod] = field(
         default=None,
@@ -191,7 +198,7 @@ class LifeCycleInfoSet:
             "name": "DEFAULT-PERIOD-BEGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_period_end: Optional[LifeCyclePeriod] = field(
         default=None,
@@ -199,7 +206,7 @@ class LifeCycleInfoSet:
             "name": "DEFAULT-PERIOD-END",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     life_cycle_infos: Optional["LifeCycleInfoSet.LifeCycleInfos"] = field(
         default=None,
@@ -207,22 +214,24 @@ class LifeCycleInfoSet:
             "name": "LIFE-CYCLE-INFOS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    used_life_cycle_state_definition_group_ref: Optional["LifeCycleInfoSet.UsedLifeCycleStateDefinitionGroupRef"] = field(
+    used_life_cycle_state_definition_group_ref: Optional[
+        "LifeCycleInfoSet.UsedLifeCycleStateDefinitionGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -230,14 +239,14 @@ class LifeCycleInfoSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -248,7 +257,7 @@ class LifeCycleInfoSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -259,7 +268,7 @@ class LifeCycleInfoSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -270,7 +279,7 @@ class LifeCycleInfoSet:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -281,7 +290,7 @@ class LifeCycleInfoSet:
                 "name": "LIFE-CYCLE-INFO",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -292,5 +301,5 @@ class LifeCycleInfoSet:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

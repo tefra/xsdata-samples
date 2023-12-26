@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.point_coordinates import PointCoordinates
-from datexii.models.eu.datexii.v2.tpeg_other_point_descriptor import TpegOtherPointDescriptor
+from datexii.models.eu.datexii.v2.tpeg_other_point_descriptor import (
+    TpegOtherPointDescriptor,
+)
 from datexii.models.eu.datexii.v2.tpeg_point import TpegPoint
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -20,6 +22,7 @@ class TpegNonJunctionPoint(TpegPoint):
         or 'localLinkName'.
     :ivar tpeg_non_junction_point_extension:
     """
+
     point_coordinates: Optional[PointCoordinates] = field(
         default=None,
         metadata={
@@ -27,7 +30,7 @@ class TpegNonJunctionPoint(TpegPoint):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     name: List[TpegOtherPointDescriptor] = field(
         default_factory=list,
@@ -35,7 +38,7 @@ class TpegNonJunctionPoint(TpegPoint):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     tpeg_non_junction_point_extension: Optional[ExtensionType] = field(
         default=None,
@@ -43,5 +46,5 @@ class TpegNonJunctionPoint(TpegPoint):
             "name": "tpegNonJunctionPointExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

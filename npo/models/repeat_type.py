@@ -13,7 +13,7 @@ class RepeatType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     is_rerun: None | bool = field(
         default=None,
@@ -21,5 +21,5 @@ class RepeatType:
             "name": "isRerun",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

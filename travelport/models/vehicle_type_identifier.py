@@ -30,6 +30,7 @@ class VehicleTypeIdentifier:
     fuel_type
         The fuel type of vehicle
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -39,40 +40,40 @@ class VehicleTypeIdentifier:
             "name": "AirConditioning",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     transmission_type: None | TypeVehicleTransmission = field(
         default=None,
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
-        }
+        },
     )
     vehicle_class: None | TypeVehicleClass = field(
         default=None,
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
-        }
+        },
     )
     category: None | TypeVehicleCategory = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     door_count: None | TypeDoorCount = field(
         default=None,
         metadata={
             "name": "DoorCount",
             "type": "Attribute",
-        }
+        },
     )
     fuel_type: None | TypeFuel = field(
         default=None,
         metadata={
             "name": "FuelType",
             "type": "Attribute",
-        }
+        },
     )

@@ -16,7 +16,7 @@ class HotelSuperShopperServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class HotelSuperShopperServicePortTypeServiceInput:
                 "name": "HotelSuperShopperReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            }
+            },
         )

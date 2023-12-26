@@ -15,14 +15,14 @@ class AttributedQnameType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -35,14 +35,14 @@ class AttributedUritype:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -52,14 +52,14 @@ class AttributedUnsignedLongType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -70,14 +70,14 @@ class MetadataType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -88,19 +88,21 @@ class ReferenceParametersType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 
 class RelationshipType(Enum):
-    HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY = "http://www.w3.org/2005/08/addressing/reply"
+    HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY = (
+        "http://www.w3.org/2005/08/addressing/reply"
+    )
 
 
 @dataclass
@@ -148,21 +150,21 @@ class RelatesToType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     relationship_type: Union[RelationshipType, str] = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,
         metadata={
             "name": "RelationshipType",
             "type": "Attribute",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -187,7 +189,7 @@ class EndpointReferenceType:
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
             "required": True,
-        }
+        },
     )
     reference_parameters: Optional[ReferenceParameters] = field(
         default=None,
@@ -195,7 +197,7 @@ class EndpointReferenceType:
             "name": "ReferenceParameters",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-        }
+        },
     )
     metadata: Optional[Metadata] = field(
         default=None,
@@ -203,21 +205,21 @@ class EndpointReferenceType:
             "name": "Metadata",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-        }
+        },
     )
     other_element: List[object] = field(
         default_factory=list,
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 
@@ -229,7 +231,7 @@ class ProblemActionType:
             "name": "Action",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-        }
+        },
     )
     soap_action: Optional[str] = field(
         default=None,
@@ -237,14 +239,14 @@ class ProblemActionType:
             "name": "SoapAction",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )
 
 

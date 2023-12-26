@@ -27,6 +27,7 @@ class AutoSeatAssignment:
         entered, this applies to the primary booking traveler and other
         passengers are adjacent.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -35,14 +36,14 @@ class AutoSeatAssignment:
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     smoking: bool = field(
         default=False,
         metadata={
             "name": "Smoking",
             "type": "Attribute",
-        }
+        },
     )
     seat_type: None | TypeReqSeat = field(
         default=None,
@@ -50,19 +51,19 @@ class AutoSeatAssignment:
             "name": "SeatType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     group: bool = field(
         default=False,
         metadata={
             "name": "Group",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,11 +1,17 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
-from travelport.models.air_segment_pricing_modifiers import AirSegmentPricingModifiers
+from travelport.models.air_segment_pricing_modifiers import (
+    AirSegmentPricingModifiers,
+)
 from travelport.models.fare_ticket_designator import FareTicketDesignator
 from travelport.models.fare_type import FareType
-from travelport.models.repricing_modifiers_flight_type import RepricingModifiersFlightType
-from travelport.models.type_price_class_of_service import TypePriceClassOfService
+from travelport.models.repricing_modifiers_flight_type import (
+    RepricingModifiersFlightType,
+)
+from travelport.models.type_price_class_of_service import (
+    TypePriceClassOfService,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -77,6 +83,7 @@ class RepricingModifiers:
         A value of Connection City Code is optional. Available in
         AirExchangeMultiQuoteReq only.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -86,7 +93,7 @@ class RepricingModifiers:
             "name": "PrivateFareOptions",
             "type": "Element",
             "max_length": 50,
-        }
+        },
     )
     fare_type: list[FareType] = field(
         default_factory=list,
@@ -94,21 +101,21 @@ class RepricingModifiers:
             "name": "FareType",
             "type": "Element",
             "max_occurs": 100,
-        }
+        },
     )
     fare_ticket_designator: None | FareTicketDesignator = field(
         default=None,
         metadata={
             "name": "FareTicketDesignator",
             "type": "Element",
-        }
+        },
     )
     override_currency: None | RepricingModifiers.OverrideCurrency = field(
         default=None,
         metadata={
             "name": "OverrideCurrency",
             "type": "Element",
-        }
+        },
     )
     air_segment_pricing_modifiers: list[AirSegmentPricingModifiers] = field(
         default_factory=list,
@@ -116,7 +123,7 @@ class RepricingModifiers:
             "name": "AirSegmentPricingModifiers",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     withhold_tax_code: list[str] = field(
         default_factory=list,
@@ -125,21 +132,21 @@ class RepricingModifiers:
             "type": "Element",
             "max_occurs": 4,
             "length": 2,
-        }
+        },
     )
     price_class_of_service: None | TypePriceClassOfService = field(
         default=None,
         metadata={
             "name": "PriceClassOfService",
             "type": "Attribute",
-        }
+        },
     )
     create_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-        }
+        },
     )
     reissue_loc_city_code: None | str = field(
         default=None,
@@ -147,7 +154,7 @@ class RepricingModifiers:
             "name": "ReissueLocCityCode",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     reissue_loc_country_code: None | str = field(
         default=None,
@@ -155,21 +162,21 @@ class RepricingModifiers:
             "name": "ReissueLocCountryCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     bulk_ticket: bool = field(
         default=False,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
-        }
+        },
     )
     account_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Attribute",
-        }
+        },
     )
     penalty_as_tax_code: None | str = field(
         default=None,
@@ -177,49 +184,49 @@ class RepricingModifiers:
             "name": "PenaltyAsTaxCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     air_pricing_solution_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirPricingSolutionRef",
             "type": "Attribute",
-        }
+        },
     )
     penalty_to_fare: None | bool = field(
         default=None,
         metadata={
             "name": "PenaltyToFare",
             "type": "Attribute",
-        }
+        },
     )
     price_ptconly: bool = field(
         default=False,
         metadata={
             "name": "PricePTCOnly",
             "type": "Attribute",
-        }
+        },
     )
     brand_details: bool = field(
         default=False,
         metadata={
             "name": "BrandDetails",
             "type": "Attribute",
-        }
+        },
     )
     brand_modifier: None | str = field(
         default=None,
         metadata={
             "name": "BrandModifier",
             "type": "Attribute",
-        }
+        },
     )
     jet_service_only: bool = field(
         default=False,
         metadata={
             "name": "JetServiceOnly",
             "type": "Attribute",
-        }
+        },
     )
     time_window: None | int = field(
         default=None,
@@ -228,21 +235,21 @@ class RepricingModifiers:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 12,
-        }
+        },
     )
     flight_type: RepricingModifiersFlightType = field(
         default=RepricingModifiersFlightType.DIRECT,
         metadata={
             "name": "FlightType",
             "type": "Attribute",
-        }
+        },
     )
     multi_airport_search: bool = field(
         default=True,
         metadata={
             "name": "MultiAirportSearch",
             "type": "Attribute",
-        }
+        },
     )
     connection_point: None | str = field(
         default=None,
@@ -251,7 +258,7 @@ class RepricingModifiers:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
 
     @dataclass
@@ -262,7 +269,7 @@ class RepricingModifiers:
                 "name": "CurrencyCode",
                 "type": "Attribute",
                 "length": 3,
-            }
+            },
         )
         country_code: None | str = field(
             default=None,
@@ -270,5 +277,5 @@ class RepricingModifiers:
                 "name": "CountryCode",
                 "type": "Attribute",
                 "length": 2,
-            }
+            },
         )

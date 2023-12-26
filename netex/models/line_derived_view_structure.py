@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from typing import Optional, Union
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .derived_view_structure import DerivedViewStructure
 from .flexible_line_ref import FlexibleLineRef
 from .line_ref import LineRef
@@ -17,7 +19,9 @@ class LineDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Line_DerivedViewStructure"
 
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[
+        Union[FlexibleLineRef, LineRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -33,7 +37,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -41,7 +45,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -49,7 +53,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -57,7 +61,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
@@ -65,7 +69,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_submode: Optional[TransportSubmode] = field(
         default=None,
@@ -73,7 +77,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "name": "TransportSubmode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operator_ref: Optional[OperatorRef] = field(
         default=None,
@@ -81,7 +85,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "name": "OperatorRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_line_ref: Optional[TypeOfLineRef] = field(
         default=None,
@@ -89,5 +93,5 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "name": "TypeOfLineRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

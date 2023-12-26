@@ -10,5 +10,6 @@ class RptExecutionControlEnumSimple(Enum):
     :cvar NONE: The ExecutableEntity is executed without specific rapid
         prototyping condition.
     """
+
     CONDITIONAL = "CONDITIONAL"
     NONE = "NONE"

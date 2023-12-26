@@ -51,35 +51,35 @@ class GoodsCondition:
         metadata={
             "name": "ElementIdentifierCoded",
             "type": "Element",
-        }
+        },
     )
     element_identifier_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ElementIdentifierCodedOther",
             "type": "Element",
-        }
+        },
     )
     identifying_reference: Optional[str] = field(
         default=None,
         metadata={
             "name": "IdentifyingReference",
             "type": "Element",
-        }
+        },
     )
     delivery_stage_qualifier_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "DeliveryStageQualifierCoded",
             "type": "Element",
-        }
+        },
     )
     delivery_stage_qualifier_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "DeliveryStageQualifierOther",
             "type": "Element",
-        }
+        },
     )
     goods_condition_coded: str = field(
         metadata={
@@ -93,7 +93,7 @@ class GoodsCondition:
         metadata={
             "name": "GoodsConditionCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -129,21 +129,21 @@ class GoodsReceiptOrderReference:
         metadata={
             "name": "ScheduleOrderReference",
             "type": "Element",
-        }
+        },
     )
     release_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
             "type": "Element",
-        }
+        },
     )
     change_order_sequence_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ChangeOrderSequenceNumber",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -212,14 +212,14 @@ class LineItemGoodsCondition:
         metadata={
             "name": "DiscrepancyCoded",
             "type": "Element",
-        }
+        },
     )
     discrepancy_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "DiscrepancyCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -231,7 +231,7 @@ class ListOfDestinationRef:
             "name": "DestinationRef",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -243,7 +243,7 @@ class ListOfGoodsCondition:
             "name": "GoodsCondition",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -309,56 +309,56 @@ class GoodsReceiptDeliveryDetail:
         metadata={
             "name": "ItemPackagingReference",
             "type": "Element",
-        }
+        },
     )
     list_of_destination_ref: Optional[ListOfDestinationRef] = field(
         default=None,
         metadata={
             "name": "ListOfDestinationRef",
             "type": "Element",
-        }
+        },
     )
     requested_delivery_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryDate",
             "type": "Element",
-        }
+        },
     )
     ship_by_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "ShipByDate",
             "type": "Element",
-        }
+        },
     )
     other_item_dates: Optional[OtherItemDates] = field(
         default=None,
         metadata={
             "name": "OtherItemDates",
             "type": "Element",
-        }
+        },
     )
     item_ship_to_party: Optional[ItemShipToParty] = field(
         default=None,
         metadata={
             "name": "ItemShipToParty",
             "type": "Element",
-        }
+        },
     )
     item_ship_from_party: Optional[ItemShipFromParty] = field(
         default=None,
         metadata={
             "name": "ItemShipFromParty",
             "type": "Element",
-        }
+        },
     )
     terms_of_delivery: Optional[TermsOfDelivery] = field(
         default=None,
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -376,7 +376,7 @@ class GoodsReceiptItemOrderReference:
         metadata={
             "name": "PurchaseOrderLineItemNumber",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -388,7 +388,7 @@ class ListOfGoodsReceiptOrderReference:
             "name": "GoodsReceiptOrderReference",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -400,7 +400,7 @@ class ListOfLineItemGoodsCondition:
             "name": "LineItemGoodsCondition",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -411,33 +411,37 @@ class GoodsReceiptReferences:
         metadata={
             "name": "ASNReference",
             "type": "Element",
-        }
+        },
     )
-    list_of_goods_receipt_order_reference: Optional[ListOfGoodsReceiptOrderReference] = field(
+    list_of_goods_receipt_order_reference: Optional[
+        ListOfGoodsReceiptOrderReference
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfGoodsReceiptOrderReference",
             "type": "Element",
-        }
+        },
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfGoodsReceiptItemOrderReference:
-    goods_receipt_item_order_reference: List[GoodsReceiptItemOrderReference] = field(
+    goods_receipt_item_order_reference: List[
+        GoodsReceiptItemOrderReference
+    ] = field(
         default_factory=list,
         metadata={
             "name": "GoodsReceiptItemOrderReference",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -476,28 +480,28 @@ class GoodsReceiptHeader:
         metadata={
             "name": "GoodsReceiptTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_goods_condition: Optional[ListOfGoodsCondition] = field(
         default=None,
         metadata={
             "name": "ListOfGoodsCondition",
             "type": "Element",
-        }
+        },
     )
     goods_receipt_references: Optional[GoodsReceiptReferences] = field(
         default=None,
         metadata={
             "name": "GoodsReceiptReferences",
             "type": "Element",
-        }
+        },
     )
     delivery_complete: Optional[str] = field(
         default=None,
         metadata={
             "name": "DeliveryComplete",
             "type": "Element",
-        }
+        },
     )
     goods_receipt_language: GoodsReceiptLanguage = field(
         metadata={
@@ -518,42 +522,42 @@ class GoodsReceiptHeader:
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-        }
+        },
     )
     list_of_transport_routing: Optional[ListOfTransportRouting] = field(
         default=None,
         metadata={
             "name": "ListOfTransportRouting",
             "type": "Element",
-        }
+        },
     )
     goods_receipt_header_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "GoodsReceiptHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -564,28 +568,30 @@ class GoodsReceiptLineItemReferences:
         metadata={
             "name": "ASNReference",
             "type": "Element",
-        }
+        },
     )
     asnline_item_number: Optional[str] = field(
         default=None,
         metadata={
             "name": "ASNLineItemNumber",
             "type": "Element",
-        }
+        },
     )
-    list_of_goods_receipt_item_order_reference: Optional[ListOfGoodsReceiptItemOrderReference] = field(
+    list_of_goods_receipt_item_order_reference: Optional[
+        ListOfGoodsReceiptItemOrderReference
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfGoodsReceiptItemOrderReference",
             "type": "Element",
-        }
+        },
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -638,63 +644,69 @@ class GoodsReceiptItemDetail:
         metadata={
             "name": "QuantityDifference",
             "type": "Element",
-        }
+        },
     )
-    list_of_line_item_goods_condition: Optional[ListOfLineItemGoodsCondition] = field(
+    list_of_line_item_goods_condition: Optional[
+        ListOfLineItemGoodsCondition
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfLineItemGoodsCondition",
             "type": "Element",
-        }
+        },
     )
     unacceptable_packaging: Optional[str] = field(
         default=None,
         metadata={
             "name": "UnacceptablePackaging",
             "type": "Element",
-        }
+        },
     )
-    goods_receipt_line_item_references: Optional[GoodsReceiptLineItemReferences] = field(
+    goods_receipt_line_item_references: Optional[
+        GoodsReceiptLineItemReferences
+    ] = field(
         default=None,
         metadata={
             "name": "GoodsReceiptLineItemReferences",
             "type": "Element",
-        }
+        },
     )
-    goods_receipt_delivery_detail: Optional[GoodsReceiptDeliveryDetail] = field(
+    goods_receipt_delivery_detail: Optional[
+        GoodsReceiptDeliveryDetail
+    ] = field(
         default=None,
         metadata={
             "name": "GoodsReceiptDeliveryDetail",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
     goods_receipt_detail_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "GoodsReceiptDetailNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -706,7 +718,7 @@ class ListOfGoodsReceiptItemDetail:
             "name": "GoodsReceiptItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -719,12 +731,14 @@ class GoodsReceiptDetail:
             "required": True,
         }
     )
-    list_of_goods_receipt_package_detail: Optional[ListOfGoodsReceiptPackageDetail] = field(
+    list_of_goods_receipt_package_detail: Optional[
+        ListOfGoodsReceiptPackageDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfGoodsReceiptPackageDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -742,5 +756,5 @@ class GoodsReceipt:
         metadata={
             "name": "GoodsReceiptDetail",
             "type": "Element",
-        }
+        },
     )

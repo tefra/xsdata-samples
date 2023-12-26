@@ -17,6 +17,7 @@ class EffectiveDate:
     latest_date
         Latest date of the Effective date
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -27,7 +28,7 @@ class EffectiveDate:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     latest_date: str = field(
         default="9999-12-31",
@@ -35,5 +36,5 @@ class EffectiveDate:
             "name": "LatestDate",
             "type": "Attribute",
             "pattern": r"[^:Z].*",
-        }
+        },
     )

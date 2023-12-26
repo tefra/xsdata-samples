@@ -46,6 +46,7 @@ class CruiseStay:
     cancellation_time
         The time at which the booking was cancelled.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -54,21 +55,21 @@ class CruiseStay:
         metadata={
             "name": "Package",
             "type": "Element",
-        }
+        },
     )
     cabin_info: None | CabinInfo = field(
         default=None,
         metadata={
             "name": "CabinInfo",
             "type": "Element",
-        }
+        },
     )
     dining_info: None | CruiseStay.DiningInfo = field(
         default=None,
         metadata={
             "name": "DiningInfo",
             "type": "Element",
-        }
+        },
     )
     ship_name: None | str = field(
         default=None,
@@ -77,28 +78,28 @@ class CruiseStay:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     duration_of_stay: None | int = field(
         default=None,
         metadata={
             "name": "DurationOfStay",
             "type": "Attribute",
-        }
+        },
     )
     unit_of_stay: None | str = field(
         default=None,
         metadata={
             "name": "UnitOfStay",
             "type": "Attribute",
-        }
+        },
     )
     booking_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BookingDate",
             "type": "Attribute",
-        }
+        },
     )
     booking_agent: None | str = field(
         default=None,
@@ -107,7 +108,7 @@ class CruiseStay:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 12,
-        }
+        },
     )
     booking_credit: None | str = field(
         default=None,
@@ -116,14 +117,14 @@ class CruiseStay:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     other_party_conf_nbr: None | int = field(
         default=None,
         metadata={
             "name": "OtherPartyConfNbr",
             "type": "Attribute",
-        }
+        },
     )
     passenger_origin: None | str = field(
         default=None,
@@ -132,7 +133,7 @@ class CruiseStay:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     confirmation_number: None | str = field(
         default=None,
@@ -141,7 +142,7 @@ class CruiseStay:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )
     linked_conf_number: None | str = field(
         default=None,
@@ -150,7 +151,7 @@ class CruiseStay:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )
     cancellation_number: None | str = field(
         default=None,
@@ -159,21 +160,21 @@ class CruiseStay:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )
     cancellation_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CancellationDate",
             "type": "Attribute",
-        }
+        },
     )
     cancellation_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "CancellationTime",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -190,6 +191,7 @@ class CruiseStay:
         package_identifier
             Vendor Package/Tour Identifier
         """
+
         name: None | str = field(
             default=None,
             metadata={
@@ -197,7 +199,7 @@ class CruiseStay:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 30,
-            }
+            },
         )
         identifier: None | str = field(
             default=None,
@@ -205,14 +207,14 @@ class CruiseStay:
                 "name": "Identifier",
                 "type": "Attribute",
                 "max_length": 30,
-            }
+            },
         )
         passenger_count: None | int = field(
             default=None,
             metadata={
                 "name": "PassengerCount",
                 "type": "Attribute",
-            }
+            },
         )
         package_identifier: None | str = field(
             default=None,
@@ -221,7 +223,7 @@ class CruiseStay:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 14,
-            }
+            },
         )
 
     @dataclass
@@ -237,13 +239,14 @@ class CruiseStay:
         table_size
             Size of the table in number of persons
         """
+
         seating: None | str = field(
             default=None,
             metadata={
                 "name": "Seating",
                 "type": "Attribute",
                 "length": 1,
-            }
+            },
         )
         status: None | str = field(
             default=None,
@@ -252,12 +255,12 @@ class CruiseStay:
                 "type": "Attribute",
                 "length": 2,
                 "white_space": "collapse",
-            }
+            },
         )
         table_size: None | int = field(
             default=None,
             metadata={
                 "name": "TableSize",
                 "type": "Attribute",
-            }
+            },
         )

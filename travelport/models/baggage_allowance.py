@@ -10,6 +10,7 @@ class BaggageAllowance:
     """
     Free Baggage Allowance.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,12 +19,12 @@ class BaggageAllowance:
         metadata={
             "name": "NumberOfPieces",
             "type": "Element",
-        }
+        },
     )
     max_weight: None | TypeWeight = field(
         default=None,
         metadata={
             "name": "MaxWeight",
             "type": "Element",
-        }
+        },
     )

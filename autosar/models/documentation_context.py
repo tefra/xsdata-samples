@@ -40,6 +40,7 @@ class DocumentationContext:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DOCUMENTATION-CONTEXT"
 
@@ -50,15 +51,17 @@ class DocumentationContext:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DocumentationContext.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DocumentationContext.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -66,7 +69,7 @@ class DocumentationContext:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     feature_iref: Optional[AnyInstanceRef] = field(
         default=None,
@@ -74,7 +77,7 @@ class DocumentationContext:
             "name": "FEATURE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     identifiable_ref: Optional["DocumentationContext.IdentifiableRef"] = field(
         default=None,
@@ -82,14 +85,14 @@ class DocumentationContext:
             "name": "IDENTIFIABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -97,7 +100,7 @@ class DocumentationContext:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -108,7 +111,7 @@ class DocumentationContext:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -119,5 +122,5 @@ class DocumentationContext:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

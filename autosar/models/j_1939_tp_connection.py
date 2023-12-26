@@ -77,6 +77,7 @@ class J1939TpConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "J-1939-TP-CONNECTION"
 
@@ -86,7 +87,7 @@ class J1939TpConnection:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     broadcast: Optional[Boolean] = field(
         default=None,
@@ -94,7 +95,7 @@ class J1939TpConnection:
             "name": "BROADCAST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     buffer_ratio: Optional[PositiveInteger] = field(
         default=None,
@@ -102,7 +103,7 @@ class J1939TpConnection:
             "name": "BUFFER-RATIO",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cancellation: Optional[Boolean] = field(
         default=None,
@@ -110,7 +111,7 @@ class J1939TpConnection:
             "name": "CANCELLATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_pdu_ref: Optional["J1939TpConnection.DataPduRef"] = field(
         default=None,
@@ -118,7 +119,7 @@ class J1939TpConnection:
             "name": "DATA-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     direct_pdu_ref: Optional["J1939TpConnection.DirectPduRef"] = field(
         default=None,
@@ -126,7 +127,7 @@ class J1939TpConnection:
             "name": "DIRECT-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dynamic_bs: Optional[Boolean] = field(
         default=None,
@@ -134,15 +135,17 @@ class J1939TpConnection:
             "name": "DYNAMIC-BS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    flow_control_pdu_refs: Optional["J1939TpConnection.FlowControlPduRefs"] = field(
+    flow_control_pdu_refs: Optional[
+        "J1939TpConnection.FlowControlPduRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "FLOW-CONTROL-PDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_bs: Optional[PositiveInteger] = field(
         default=None,
@@ -150,7 +153,7 @@ class J1939TpConnection:
             "name": "MAX-BS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_exp_bs: Optional[PositiveInteger] = field(
         default=None,
@@ -158,7 +161,7 @@ class J1939TpConnection:
             "name": "MAX-EXP-BS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     receiver_refs: Optional["J1939TpConnection.ReceiverRefs"] = field(
         default=None,
@@ -166,7 +169,7 @@ class J1939TpConnection:
             "name": "RECEIVER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     retry: Optional[Boolean] = field(
         default=None,
@@ -174,7 +177,7 @@ class J1939TpConnection:
             "name": "RETRY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_pgs: Optional["J1939TpConnection.TpPgs"] = field(
         default=None,
@@ -182,7 +185,7 @@ class J1939TpConnection:
             "name": "TP-PGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tp_sdu_refs: Optional["J1939TpConnection.TpSduRefs"] = field(
         default=None,
@@ -190,7 +193,7 @@ class J1939TpConnection:
             "name": "TP-SDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmitter_ref: Optional["J1939TpConnection.TransmitterRef"] = field(
         default=None,
@@ -198,7 +201,7 @@ class J1939TpConnection:
             "name": "TRANSMITTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -206,14 +209,14 @@ class J1939TpConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -221,7 +224,7 @@ class J1939TpConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -232,7 +235,7 @@ class J1939TpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -243,19 +246,21 @@ class J1939TpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class FlowControlPduRefs:
-        flow_control_pdu_ref: List["J1939TpConnection.FlowControlPduRefs.FlowControlPduRef"] = field(
+        flow_control_pdu_ref: List[
+            "J1939TpConnection.FlowControlPduRefs.FlowControlPduRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FLOW-CONTROL-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 2,
-            }
+            },
         )
 
         @dataclass
@@ -266,18 +271,20 @@ class J1939TpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: List["J1939TpConnection.ReceiverRefs.ReceiverRef"] = field(
+        receiver_ref: List[
+            "J1939TpConnection.ReceiverRefs.ReceiverRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "RECEIVER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -288,7 +295,7 @@ class J1939TpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -299,7 +306,7 @@ class J1939TpConnection:
                 "name": "J-1939-TP-PG",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -310,7 +317,7 @@ class J1939TpConnection:
                 "name": "TP-SDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -321,7 +328,7 @@ class J1939TpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -332,5 +339,5 @@ class J1939TpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

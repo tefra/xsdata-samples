@@ -5,8 +5,12 @@ from travelport.models.address_2 import Address2
 from travelport.models.advisory_2 import Advisory2
 from travelport.models.air_preference_2 import AirPreference2
 from travelport.models.alternate_contact_2 import AlternateContact2
-from travelport.models.alternate_contact_address_2 import AlternateContactAddress2
-from travelport.models.alternate_contact_electronic_address_2 import AlternateContactElectronicAddress2
+from travelport.models.alternate_contact_address_2 import (
+    AlternateContactAddress2,
+)
+from travelport.models.alternate_contact_electronic_address_2 import (
+    AlternateContactElectronicAddress2,
+)
 from travelport.models.alternate_contact_phone_2 import AlternateContactPhone2
 from travelport.models.commission_8 import Commission8
 from travelport.models.commission_reference_2 import CommissionReference2
@@ -17,7 +21,9 @@ from travelport.models.field_data_2 import FieldData2
 from travelport.models.field_group_data_2 import FieldGroupData2
 from travelport.models.form_of_payment_6 import FormOfPayment6
 from travelport.models.hotel_preference_2 import HotelPreference2
-from travelport.models.loyalty_program_enrollment_2 import LoyaltyProgramEnrollment2
+from travelport.models.loyalty_program_enrollment_2 import (
+    LoyaltyProgramEnrollment2,
+)
 from travelport.models.other_preference_2 import OtherPreference2
 from travelport.models.phone_2 import Phone2
 from travelport.models.policy_reference_2 import PolicyReference2
@@ -27,7 +33,9 @@ from travelport.models.rail_preference_2 import RailPreference2
 from travelport.models.remark_6 import Remark6
 from travelport.models.service_fee_2 import ServiceFee2
 from travelport.models.travel_document_2 import TravelDocument2
-from travelport.models.traveler_identity_information_2 import TravelerIdentityInformation2
+from travelport.models.traveler_identity_information_2 import (
+    TravelerIdentityInformation2,
+)
 from travelport.models.vehicle_preference_2 import VehiclePreference2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -84,6 +92,7 @@ class ProfileDataAdd2:
     provider_info
     proprietary_data
     """
+
     class Meta:
         name = "ProfileDataAdd"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -94,7 +103,7 @@ class ProfileDataAdd2:
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone: list[Phone2] = field(
         default_factory=list,
@@ -102,7 +111,7 @@ class ProfileDataAdd2:
             "name": "Phone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     electronic_address: list[ElectronicAddress2] = field(
         default_factory=list,
@@ -110,14 +119,14 @@ class ProfileDataAdd2:
             "name": "ElectronicAddress",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     traveler_identity_information: None | TravelerIdentityInformation2 = field(
         default=None,
         metadata={
             "name": "TravelerIdentityInformation",
             "type": "Element",
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier2] = field(
         default_factory=list,
@@ -125,7 +134,7 @@ class ProfileDataAdd2:
             "name": "ExternalIdentifier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     travel_document: list[TravelDocument2] = field(
         default_factory=list,
@@ -133,7 +142,7 @@ class ProfileDataAdd2:
             "name": "TravelDocument",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     accounting_reference: list[AccountingReference2] = field(
         default_factory=list,
@@ -141,7 +150,7 @@ class ProfileDataAdd2:
             "name": "AccountingReference",
             "type": "Element",
             "max_occurs": 20000,
-        }
+        },
     )
     policy_reference: list[PolicyReference2] = field(
         default_factory=list,
@@ -149,7 +158,7 @@ class ProfileDataAdd2:
             "name": "PolicyReference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     loyalty_program_enrollment: list[LoyaltyProgramEnrollment2] = field(
         default_factory=list,
@@ -157,7 +166,7 @@ class ProfileDataAdd2:
             "name": "LoyaltyProgramEnrollment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     commission: list[Commission8] = field(
         default_factory=list,
@@ -165,7 +174,7 @@ class ProfileDataAdd2:
             "name": "Commission",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     contract: list[Contract2] = field(
         default_factory=list,
@@ -173,7 +182,7 @@ class ProfileDataAdd2:
             "name": "Contract",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     service_fee: list[ServiceFee2] = field(
         default_factory=list,
@@ -181,7 +190,7 @@ class ProfileDataAdd2:
             "name": "ServiceFee",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     form_of_payment: list[FormOfPayment6] = field(
         default_factory=list,
@@ -189,7 +198,7 @@ class ProfileDataAdd2:
             "name": "FormOfPayment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_preference: list[AirPreference2] = field(
         default_factory=list,
@@ -197,7 +206,7 @@ class ProfileDataAdd2:
             "name": "AirPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_preference: list[HotelPreference2] = field(
         default_factory=list,
@@ -205,7 +214,7 @@ class ProfileDataAdd2:
             "name": "HotelPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     other_preference: list[OtherPreference2] = field(
         default_factory=list,
@@ -213,7 +222,7 @@ class ProfileDataAdd2:
             "name": "OtherPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     remark: list[Remark6] = field(
         default_factory=list,
@@ -221,7 +230,7 @@ class ProfileDataAdd2:
             "name": "Remark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_data: list[FieldData2] = field(
         default_factory=list,
@@ -229,7 +238,7 @@ class ProfileDataAdd2:
             "name": "FieldData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     alternate_contact: list[AlternateContact2] = field(
         default_factory=list,
@@ -237,7 +246,7 @@ class ProfileDataAdd2:
             "name": "AlternateContact",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     alternate_contact_address: list[AlternateContactAddress2] = field(
         default_factory=list,
@@ -245,7 +254,7 @@ class ProfileDataAdd2:
             "name": "AlternateContactAddress",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     alternate_contact_phone: list[AlternateContactPhone2] = field(
         default_factory=list,
@@ -253,15 +262,17 @@ class ProfileDataAdd2:
             "name": "AlternateContactPhone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
-    alternate_contact_electronic_address: list[AlternateContactElectronicAddress2] = field(
+    alternate_contact_electronic_address: list[
+        AlternateContactElectronicAddress2
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AlternateContactElectronicAddress",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_group_data: list[FieldGroupData2] = field(
         default_factory=list,
@@ -269,7 +280,7 @@ class ProfileDataAdd2:
             "name": "FieldGroupData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_preference: list[VehiclePreference2] = field(
         default_factory=list,
@@ -277,7 +288,7 @@ class ProfileDataAdd2:
             "name": "VehiclePreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     advisory: list[Advisory2] = field(
         default_factory=list,
@@ -285,7 +296,7 @@ class ProfileDataAdd2:
             "name": "Advisory",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     commission_reference: list[CommissionReference2] = field(
         default_factory=list,
@@ -293,7 +304,7 @@ class ProfileDataAdd2:
             "name": "CommissionReference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_preference: list[RailPreference2] = field(
         default_factory=list,
@@ -301,7 +312,7 @@ class ProfileDataAdd2:
             "name": "RailPreference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     provider_info: list[ProviderInfo2] = field(
         default_factory=list,
@@ -309,7 +320,7 @@ class ProfileDataAdd2:
             "name": "ProviderInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     proprietary_data: list[ProprietaryData2] = field(
         default_factory=list,
@@ -317,5 +328,5 @@ class ProfileDataAdd2:
             "name": "ProprietaryData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

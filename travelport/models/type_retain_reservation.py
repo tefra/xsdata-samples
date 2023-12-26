@@ -9,6 +9,7 @@ class TypeRetainReservation(Enum):
     Retain the Reservation (do not cancel) in the the event of a schedule or price
     change.
     """
+
     NONE = "None"
     SCHEDULE = "Schedule"
     PRICE = "Price"

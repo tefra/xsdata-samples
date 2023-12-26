@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.formatted_text_text_type_text_format_3 import FormattedTextTextTypeTextFormat3
+from travelport.models.formatted_text_text_type_text_format_3 import (
+    FormattedTextTextTypeTextFormat3,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
@@ -22,6 +24,7 @@ class FormattedTextTextType3:
         Indicates the format of text used in the description e.g.
         unformatted  or html.
     """
+
     class Meta:
         name = "FormattedTextTextType"
 
@@ -29,26 +32,26 @@ class FormattedTextTextType3:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     formatted: None | bool = field(
         default=None,
         metadata={
             "name": "Formatted",
             "type": "Attribute",
-        }
+        },
     )
     language: None | str = field(
         default=None,
         metadata={
             "name": "Language",
             "type": "Attribute",
-        }
+        },
     )
     text_format: None | FormattedTextTextTypeTextFormat3 = field(
         default=None,
         metadata={
             "name": "TextFormat",
             "type": "Attribute",
-        }
+        },
     )

@@ -15,12 +15,12 @@ class TypeWeight:
         metadata={
             "name": "Value",
             "type": "Attribute",
-        }
+        },
     )
     unit: None | TypeUnitWeight = field(
         default=None,
         metadata={
             "name": "Unit",
             "type": "Attribute",
-        }
+        },
     )

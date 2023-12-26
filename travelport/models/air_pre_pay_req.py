@@ -19,6 +19,7 @@ class AirPrePayReq(BaseReq1):
     pre_pay_retrieve
         Provider: ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,14 +28,14 @@ class AirPrePayReq(BaseReq1):
         metadata={
             "name": "ListSearch",
             "type": "Element",
-        }
+        },
     )
     pre_pay_retrieve: None | AirPrePayReq.PrePayRetrieve = field(
         default=None,
         metadata={
             "name": "PrePayRetrieve",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -52,12 +53,13 @@ class AirPrePayReq(BaseReq1):
         max_results
             Max Number of Flight Passes being requested for.
         """
+
         person_name_search: None | PersonNameSearch = field(
             default=None,
             metadata={
                 "name": "PersonNameSearch",
                 "type": "Element",
-            }
+            },
         )
         loyalty_card: list[LoyaltyCard1] = field(
             default_factory=list,
@@ -66,7 +68,7 @@ class AirPrePayReq(BaseReq1):
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "max_occurs": 999,
-            }
+            },
         )
         start_from_result: None | int = field(
             default=None,
@@ -75,7 +77,7 @@ class AirPrePayReq(BaseReq1):
                 "type": "Attribute",
                 "required": True,
                 "min_inclusive": 1,
-            }
+            },
         )
         max_results: None | int = field(
             default=None,
@@ -85,7 +87,7 @@ class AirPrePayReq(BaseReq1):
                 "required": True,
                 "min_inclusive": 1,
                 "max_inclusive": 200,
-            }
+            },
         )
 
     @dataclass
@@ -98,6 +100,7 @@ class AirPrePayReq(BaseReq1):
         type_value
             Pre pay id type,example 'FlightPass'
         """
+
         id: None | str = field(
             default=None,
             metadata={
@@ -106,12 +109,12 @@ class AirPrePayReq(BaseReq1):
                 "required": True,
                 "min_length": 1,
                 "max_length": 36,
-            }
+            },
         )
         type_value: None | str = field(
             default=None,
             metadata={
                 "name": "Type",
                 "type": "Attribute",
-            }
+            },
         )

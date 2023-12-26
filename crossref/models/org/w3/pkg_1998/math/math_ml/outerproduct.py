@@ -15,5 +15,5 @@ class Outerproduct:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

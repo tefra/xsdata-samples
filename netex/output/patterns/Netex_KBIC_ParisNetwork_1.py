@@ -112,17 +112,17 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         CompositeFrameRef(
-                            ref="spqes:Fr1234"
+                            ref='spqes:Fr1234'
                         ),
                     ]
                 ),
@@ -131,62 +131,62 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P7D"),
     description=MultilingualString(
-        value="Netex simple Paris Network Example"
+        value='Netex simple Paris Network Example'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="spqes:Fr1234",
-                version="1",
+                id='spqes:Fr1234',
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="spq",
-                            xmlns="spq",
-                            xmlns_url="http://www.spqes.eu/stuff",
-                            description="My buses"
+                            id='spq',
+                            xmlns='spq',
+                            xmlns_url='http://www.spqes.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                         Codespace(
-                            id="gis",
-                            xmlns="gis",
-                            xmlns_url="http://www.gisdata.com/data",
-                            description="Gis data "
+                            id='gis',
+                            xmlns='gis',
+                            xmlns_url='http://www.gisdata.com/data',
+                            description='Gis data '
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="spq"
+                        ref='spq'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ResourceFrame(
-                            id="spq:Fr1234",
-                            version="any",
+                            id='spq:Fr1234',
+                            version='any',
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="spq:RS_01",
+                                        id='spq:RS_01',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="2.0",
+                                        version='2.0',
                                         name=MultilingualString(
-                                            value="Responsible for STOP PLACEs"
+                                            value='Responsible for STOP PLACEs'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="spq:RS_01_01",
+                                                    id='spq:RS_01_01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="2.0",
+                                                    version='2.0',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ]
@@ -195,20 +195,20 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="spq:RS_02",
+                                        id='spq:RS_02',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="3.0",
+                                        version='3.0',
                                         name=MultilingualString(
-                                            value="Responsible for SERVICE PATTERN."
+                                            value='Responsible for SERVICE PATTERN.'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="spq:RS_02_01",
+                                                    id='spq:RS_02_01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="3.0",
+                                                    version='3.0',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ]
@@ -217,20 +217,20 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="spq:RS_03",
+                                        id='spq:RS_03',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="1.1",
+                                        version='1.1',
                                         name=MultilingualString(
-                                            value="Responsible for TIMING PATTERN."
+                                            value='Responsible for TIMING PATTERN.'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="spq:RS_03_01",
+                                                    id='spq:RS_03_01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="1.1",
+                                                    version='1.1',
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ]
@@ -242,24 +242,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="spq:Fr1234",
-                            version="any",
+                            id='spq:Fr1234',
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    ref="spq:RS_02"
+                                    ref='spq:RS_02'
                                 )
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="spq:SP1",
+                                        id='spq:SP1',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 1"
+                                            value='Stop 1'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 1 Rue de Paris"
+                                            value='Stop 1 Rue de Paris'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -268,15 +268,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP1_01",
-                                            version="any",
+                                            id='spq:Addr_SP1_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Rue de Paris"
+                                                value='Rue de Paris'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -284,21 +284,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP1",
+                                                    id='spq:SSP1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 1"
+                                                        value='Stop 1'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 1"
+                                                        value='Stop 1'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -307,11 +307,11 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP2",
+                                        id='spq:SP2',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 2"
+                                            value='Stop 2'
                                         ),
                                         short_name=MultilingualString(
                                             value="Stop 2 Eue de l'est"
@@ -323,15 +323,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP2_01",
-                                            version="any",
+                                            id='spq:Addr_SP2_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Rue de Paris"
+                                                value='Rue de Paris'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -339,21 +339,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP2",
+                                                    id='spq:SSP2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 2"
+                                                        value='Stop 2'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 2"
+                                                        value='Stop 2'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -362,14 +362,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP3",
+                                        id='spq:SP3',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 3"
+                                            value='Stop 3'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 3 Rue Galieni"
+                                            value='Stop 3 Rue Galieni'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -378,15 +378,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP3_01",
-                                            version="any",
+                                            id='spq:Addr_SP3_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Rue Thiere"
+                                                value='Rue Thiere'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -394,21 +394,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP3",
+                                                    id='spq:SSP3',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 3"
+                                                        value='Stop 3'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 3"
+                                                        value='Stop 3'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -417,14 +417,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP4",
+                                        id='spq:SP4',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 4"
+                                            value='Stop 4'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 4 Rue du Dome"
+                                            value='Stop 4 Rue du Dome'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -433,15 +433,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP4_04",
-                                            version="any",
+                                            id='spq:Addr_SP4_04',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Rue Thiere"
+                                                value='Rue Thiere'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -449,21 +449,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP4",
+                                                    id='spq:SSP4',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 4"
+                                                        value='Stop 4'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 4"
+                                                        value='Stop 4'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -472,11 +472,11 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP5",
+                                        id='spq:SP5',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 5"
+                                            value='Stop 5'
                                         ),
                                         short_name=MultilingualString(
                                             value="Stop 5 Rue d'Issy"
@@ -488,13 +488,13 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP5_01",
-                                            version="any",
+                                            id='spq:Addr_SP5_01',
+                                            version='any',
                                             road_name=MultilingualString(
                                                 value="Rue d'Issy"
                                             )
@@ -504,21 +504,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP5",
+                                                    id='spq:SSP5',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 5"
+                                                        value='Stop 5'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 5"
+                                                        value='Stop 5'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -527,14 +527,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP6",
+                                        id='spq:SP6',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 6"
+                                            value='Stop 6'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 6 Boulevard Jean Juares"
+                                            value='Stop 6 Boulevard Jean Juares'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -543,15 +543,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP6_01",
-                                            version="any",
+                                            id='spq:Addr_SP6_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Boulevard Jean Juares"
+                                                value='Boulevard Jean Juares'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -559,21 +559,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP6",
+                                                    id='spq:SSP6',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 6"
+                                                        value='Stop 6'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop6"
+                                                        value='Stop6'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -582,14 +582,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP7",
+                                        id='spq:SP7',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 7"
+                                            value='Stop 7'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 7 Boulogne Billancourt"
+                                            value='Stop 7 Boulogne Billancourt'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -598,15 +598,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP7_01",
-                                            version="any",
+                                            id='spq:Addr_SP7_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Avenue de General Leclerc"
+                                                value='Avenue de General Leclerc'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -614,21 +614,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP7",
+                                                    id='spq:SSP7',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 7"
+                                                        value='Stop 7'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 7"
+                                                        value='Stop 7'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -637,14 +637,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP8",
+                                        id='spq:SP8',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 8"
+                                            value='Stop 8'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 8"
+                                            value='Stop 8'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -653,15 +653,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP8_01",
-                                            version="any",
+                                            id='spq:Addr_SP8_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Avenue de General Leclerc"
+                                                value='Avenue de General Leclerc'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -669,21 +669,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP8",
+                                                    id='spq:SSP8',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 8"
+                                                        value='Stop 8'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 8"
+                                                        value='Stop 8'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -692,14 +692,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP9",
+                                        id='spq:SP9',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 9"
+                                            value='Stop 9'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 9 Pont de Sevres"
+                                            value='Stop 9 Pont de Sevres'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -708,15 +708,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="EPSG:9801"
+                                                    srs_name='EPSG:9801'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="spq:Addr_SP9_01",
-                                            version="any",
+                                            id='spq:Addr_SP9_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Avenue de General Leclerc"
+                                                value='Avenue de General Leclerc'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -724,21 +724,21 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="spq:SSP9",
+                                                    id='spq:SSP9',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Stop 9"
+                                                        value='Stop 9'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop 9"
+                                                        value='Stop 9'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.BUS_STOP
@@ -747,189 +747,189 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="spq:SP10",
+                                        id='spq:SP10',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop 10"
+                                            value='Stop 10'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Stop 10"
+                                            value='Stop 10'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         ServiceFrame(
-                            id="spq:Fr1234",
-                            version="any",
+                            id='spq:Fr1234',
+                            version='any',
                             route_points=RoutePointsInFrameRelStructure(
                                 route_point=[
                                     RoutePoint(
-                                        id="spq:Rtpt1",
-                                        version="any"
+                                        id='spq:Rtpt1',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt2",
-                                        version="any"
+                                        id='spq:Rtpt2',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt3",
-                                        version="any"
+                                        id='spq:Rtpt3',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt4",
-                                        version="any"
+                                        id='spq:Rtpt4',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt5",
-                                        version="any"
+                                        id='spq:Rtpt5',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt6",
-                                        version="any"
+                                        id='spq:Rtpt6',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt7",
-                                        version="any"
+                                        id='spq:Rtpt7',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt8",
-                                        version="any"
+                                        id='spq:Rtpt8',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt9",
-                                        version="any"
+                                        id='spq:Rtpt9',
+                                        version='any'
                                     ),
                                     RoutePoint(
-                                        id="spq:Rtpt10",
-                                        version="any"
+                                        id='spq:Rtpt10',
+                                        version='any'
                                     ),
                                 ]
                             ),
                             route_links=RouteLinksInFrameRelStructure(
                                 route_link=[
                                     RouteLink(
-                                        id="spq:RL_Rt001o_01to02",
-                                        version="any",
+                                        id='spq:RL_Rt001o_01to02',
+                                        version='any',
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="spq:LP_RL_Rt001o_01to02_PJ01",
-                                                    version="any",
+                                                    id='spq:LP_RL_Rt001o_01to02_PJ01',
+                                                    version='any',
                                                     type_of_projection_ref=TypeOfProjectionRefStructure(
-                                                        ref="spq:Spatial"
+                                                        ref='spq:Spatial'
                                                     ),
                                                     complex_feature_ref_or_simple_feature_ref_or_spatial_feature_ref=SpatialFeatureRef(
-                                                        version="any",
-                                                        ref="gis:St_RueDeParis_01"
+                                                        version='any',
+                                                        ref='gis:St_RueDeParis_01'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt1"
+                                            version='any',
+                                            ref='spq:Rtpt1'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt2"
+                                            version='any',
+                                            ref='spq:Rtpt2'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_02to03",
-                                        version="any",
+                                        id='spq:RL_Rt001o_02to03',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt2"
+                                            version='any',
+                                            ref='spq:Rtpt2'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt3"
+                                            version='any',
+                                            ref='spq:Rtpt3'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_03to04",
-                                        version="any",
+                                        id='spq:RL_Rt001o_03to04',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt3"
+                                            version='any',
+                                            ref='spq:Rtpt3'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt4"
+                                            version='any',
+                                            ref='spq:Rtpt4'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_04to05",
-                                        version="any",
+                                        id='spq:RL_Rt001o_04to05',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt4"
+                                            version='any',
+                                            ref='spq:Rtpt4'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt5"
+                                            version='any',
+                                            ref='spq:Rtpt5'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_05to06",
-                                        version="any",
+                                        id='spq:RL_Rt001o_05to06',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt5"
+                                            version='any',
+                                            ref='spq:Rtpt5'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt6"
+                                            version='any',
+                                            ref='spq:Rtpt6'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_06to07",
-                                        version="any",
+                                        id='spq:RL_Rt001o_06to07',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt6"
+                                            version='any',
+                                            ref='spq:Rtpt6'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt7"
+                                            version='any',
+                                            ref='spq:Rtpt7'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_07to08",
-                                        version="any",
+                                        id='spq:RL_Rt001o_07to08',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt7"
+                                            version='any',
+                                            ref='spq:Rtpt7'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt8"
+                                            version='any',
+                                            ref='spq:Rtpt8'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_08to09",
-                                        version="any",
+                                        id='spq:RL_Rt001o_08to09',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt8"
+                                            version='any',
+                                            ref='spq:Rtpt8'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt9"
+                                            version='any',
+                                            ref='spq:Rtpt9'
                                         )
                                     ),
                                     RouteLink(
-                                        id="spq:RL_Rt001o_09to10",
-                                        version="any",
+                                        id='spq:RL_Rt001o_09to10',
+                                        version='any',
                                         from_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt9"
+                                            version='any',
+                                            ref='spq:Rtpt9'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
-                                            version="any",
-                                            ref="spq:Rtpt10"
+                                            version='any',
+                                            ref='spq:Rtpt10'
                                         )
                                     ),
                                 ]
@@ -937,145 +937,145 @@ obj = PublicationDelivery(
                             routes=RoutesInFrameRelStructure(
                                 flexible_route_or_route=[
                                     Route(
-                                        id="spq:Rt001o",
+                                        id='spq:Rt001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="004",
-                                        responsibility_set_ref_attribute="spq:RS_01",
+                                        version='004',
+                                        responsibility_set_ref_attribute='spq:RS_01',
                                         name=MultilingualString(
-                                            value="Route 66b outbound"
+                                            value='Route 66b outbound'
                                         ),
                                         flexible_line_ref_or_line_ref=LineRef(
-                                            version="002",
-                                            ref="spq:LN0066"
+                                            version='002',
+                                            ref='spq:LN0066'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=PointsOnRouteRelStructure(
                                             point_on_route=[
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_001",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_001',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt1"
+                                                        version='any',
+                                                        ref='spq:Rtpt1'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_01to02"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_01to02'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_002",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_002',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt2"
+                                                        version='any',
+                                                        ref='spq:Rtpt2'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_02to03"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_02to03'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_003",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_003',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt3"
+                                                        version='any',
+                                                        ref='spq:Rtpt3'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_03to04"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_03to04'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_004",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_004',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt4"
+                                                        version='any',
+                                                        ref='spq:Rtpt4'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_04to05"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_04to05'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_005",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_005',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt5"
+                                                        version='any',
+                                                        ref='spq:Rtpt5'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_05to06"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_05to06'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_006",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_006',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt6"
+                                                        version='any',
+                                                        ref='spq:Rtpt6'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_06to07"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_06to07'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_007",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_007',
+                                                    version='any',
                                                     order=7,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt7"
+                                                        version='any',
+                                                        ref='spq:Rtpt7'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_07to08"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_07to08'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_008",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_008',
+                                                    version='any',
                                                     order=8,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt8"
+                                                        version='any',
+                                                        ref='spq:Rtpt8'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_08to09"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_08to09'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_009",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_009',
+                                                    version='any',
                                                     order=9,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt9"
+                                                        version='any',
+                                                        ref='spq:Rtpt9'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_09to10"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_09to10'
                                                     )
                                                 ),
                                                 PointOnRoute(
-                                                    id="spq:RPIS_Rt001o_010",
-                                                    version="any",
+                                                    id='spq:RPIS_Rt001o_010',
+                                                    version='any',
                                                     order=10,
                                                     choice_1=RoutePointRef(
-                                                        version="any",
-                                                        ref="spq:Rtpt10"
+                                                        version='any',
+                                                        ref='spq:Rtpt10'
                                                     )
                                                 ),
                                             ]
@@ -1086,12 +1086,12 @@ obj = PublicationDelivery(
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="spq:LN0066",
+                                        id='spq:LN0066',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="002",
+                                        version='002',
                                         name=MultilingualString(
-                                            value="Line 66"
+                                            value='Line 66'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS
                                     ),
@@ -1100,247 +1100,247 @@ obj = PublicationDelivery(
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="ssp:SSP1",
+                                        id='ssp:SSP1',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 1"
+                                            value='Stop 1'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_SSP1_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_SSP1_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR1"
+                                                        version='any',
+                                                        ref='tim:PorR1'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP2",
+                                        id='ssp:SSP2',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 2"
+                                            value='Stop 2'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="ssp:LPJ_SSP2_pj01",
-                                                    version="any",
+                                                    id='ssp:LPJ_SSP2_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_02to03"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_02to03'
                                                     ),
-                                                    distance=Decimal("50")
+                                                    distance=Decimal('50')
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP3",
+                                        id='ssp:SSP3',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 3"
+                                            value='Stop 3'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="ssp:LPJ_SSP3_pj01",
-                                                    version="any",
+                                                    id='ssp:LPJ_SSP3_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_04to05"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_04to05'
                                                     ),
-                                                    distance=Decimal("30")
+                                                    distance=Decimal('30')
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP4",
+                                        id='ssp:SSP4',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 4"
+                                            value='Stop 4'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="ssp:LPJ_SSP4_pj01",
-                                                    version="any",
+                                                    id='ssp:LPJ_SSP4_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_05to06"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_05to06'
                                                     ),
-                                                    distance=Decimal("25")
+                                                    distance=Decimal('25')
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP5",
+                                        id='ssp:SSP5',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 5"
+                                            value='Stop 5'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="ssp:LPJ_SSP5_pj01",
-                                                    version="any",
+                                                    id='ssp:LPJ_SSP5_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_07to08"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_07to08'
                                                     ),
-                                                    distance=Decimal("20")
+                                                    distance=Decimal('20')
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP6",
+                                        id='ssp:SSP6',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 6"
+                                            value='Stop 6'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="ssp:LPJ_SSP6_pj01",
-                                                    version="any",
+                                                    id='ssp:LPJ_SSP6_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_08to09"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_08to09'
                                                     ),
-                                                    distance=Decimal("20")
+                                                    distance=Decimal('20')
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP7",
+                                        id='ssp:SSP7',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 7"
+                                            value='Stop 7'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="ssp:LPJ_SSP7_pj01",
-                                                    version="any",
+                                                    id='ssp:LPJ_SSP7_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_09to10"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_09to10'
                                                     ),
-                                                    distance=Decimal("5")
+                                                    distance=Decimal('5')
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP8",
+                                        id='ssp:SSP8',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 8"
+                                            value='Stop 8'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="ssp:LPJ_SSP8_pj01",
-                                                    version="any",
+                                                    id='ssp:LPJ_SSP8_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_09to10"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_09to10'
                                                     ),
-                                                    distance=Decimal("50")
+                                                    distance=Decimal('50')
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="Towards SSSP9"
+                                            value='Towards SSSP9'
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP9",
+                                        id='ssp:SSP9',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 9"
+                                            value='Stop 9'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_SSP9_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_SSP9_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR10"
+                                                        version='any',
+                                                        ref='tim:PorR10'
                                                     )
                                                 ),
                                             ]
@@ -1350,24 +1350,24 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ScheduledStopPoint(
-                                        id="ssp:SSP10",
+                                        id='ssp:SSP10',
                                         created=XmlDateTime(2001, 6, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="Stop 10"
+                                            value='Stop 10'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("-180"),
-                                            latitude=Decimal("53")
+                                            longitude=Decimal('-180'),
+                                            latitude=Decimal('53')
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_SSP10_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_SSP10_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR10"
+                                                        version='any',
+                                                        ref='tim:PorR10'
                                                     )
                                                 ),
                                             ]
@@ -1381,385 +1381,385 @@ obj = PublicationDelivery(
                             service_links=ServiceLinksInFrameRelStructure(
                                 service_link=[
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_1to2",
+                                        id='ssp:SL_SvP001o_1to2',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="1 to 2"
+                                            value='1 to 2'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_1to2_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_1to2_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way along link SL 1-2::&gt;RL 2-3 x "
+                                                        value='Projection  mid way along link SL 1-2::>RL 2-3 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_02to03"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_02to03'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("40")
+                                                        distance_from_start=Decimal('40')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP1"
+                                            version='001',
+                                            ref='ssp:SSP1'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP2"
+                                            version='001',
+                                            ref='ssp:SSP2'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_2to3",
+                                        id='ssp:SL_SvP001o_2to3',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="2 to 3 "
+                                            value='2 to 3 '
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_2to3_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_2to3_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way along link SL 2-3::&gt;RL2-3 x "
+                                                        value='Projection  mid way along link SL 2-3::>RL2-3 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_02to03"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_02to03'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("40")
+                                                        distance_from_start=Decimal('40')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_2to3_PJ02",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_2to3_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  whole  link SL 2-3::&gt;RL 3-4 x "
+                                                        value='Projection  whole  link SL 2-3::>RL 3-4 x '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_03to04"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_03to04'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_2to3_PJ03",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_2to3_PJ03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part  link SL 2-3::&gt;RL 4-5 x "
+                                                        value='Projection  part  link SL 2-3::>RL 4-5 x '
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_04to05"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_04to05'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("35")
+                                                        distance_from_start=Decimal('35')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP2"
+                                            version='001',
+                                            ref='ssp:SSP2'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP3"
+                                            version='001',
+                                            ref='ssp:SSP3'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_3to4",
+                                        id='ssp:SL_SvP001o_3to4',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="3  to 4"
+                                            value='3  to 4'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_3to4_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_3to4_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way along link SL 3-4::&gt;RL4-5 x "
+                                                        value='Projection  mid way along link SL 3-4::>RL4-5 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_04to05"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_04to05'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("40")
+                                                        distance_from_start=Decimal('40')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_3to4_PJ02",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_3to4_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part  link SL 3-4::&gt;RL 5-6 x "
+                                                        value='Projection  part  link SL 3-4::>RL 5-6 x '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_05to06"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_05to06'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("35")
+                                                        distance_from_start=Decimal('35')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP3"
+                                            version='001',
+                                            ref='ssp:SSP3'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP4"
+                                            version='001',
+                                            ref='ssp:SSP4'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_4to5",
+                                        id='ssp:SL_SvP001o_4to5',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="4  to 5"
+                                            value='4  to 5'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_4to5_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_4to5_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way along link SL 4-5::&gt;RL5-6 x "
+                                                        value='Projection  mid way along link SL 4-5::>RL5-6 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_05to06"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_05to06'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("35")
+                                                        distance_from_start=Decimal('35')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_4to5_PJ02",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_4to5_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  whole  link SL 4-5::&gt;RL 6-7 x "
+                                                        value='Projection  whole  link SL 4-5::>RL 6-7 x '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_06to07"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_06to07'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_4to5_PJ03",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_4to5_PJ03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part  link SL 4-5::&gt;RL 7-8 x "
+                                                        value='Projection  part  link SL 4-5::>RL 7-8 x '
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_07to08"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_07to08'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("45")
+                                                        distance_from_start=Decimal('45')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP4"
+                                            version='001',
+                                            ref='ssp:SSP4'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP5"
+                                            version='001',
+                                            ref='ssp:SSP5'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_5to6",
+                                        id='ssp:SL_SvP001o_5to6',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="5  to6"
+                                            value='5  to6'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_5to6_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_5to6_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way along link SL 5-6::&gt;RL7-8 x "
+                                                        value='Projection  mid way along link SL 5-6::>RL7-8 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_07to08"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_07to08'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("45")
+                                                        distance_from_start=Decimal('45')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_5to6_PJ02",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_5to6_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part  link SL 5-6::&gt;RL 8-9 x "
+                                                        value='Projection  part  link SL 5-6::>RL 8-9 x '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_08to09"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_08to09'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("20")
+                                                        distance_from_start=Decimal('20')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP5"
+                                            version='001',
+                                            ref='ssp:SSP5'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP6"
+                                            version='001',
+                                            ref='ssp:SSP6'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_6to7",
+                                        id='ssp:SL_SvP001o_6to7',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="6  to 7"
+                                            value='6  to 7'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_6to7_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_6to7_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part along link SL 6-7::&gt;RL8-9 x "
+                                                        value='Projection  part along link SL 6-7::>RL8-9 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_08to09"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_08to09'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("20")
+                                                        distance_from_start=Decimal('20')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_6to7_PJ02",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_6to7_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part  link SL 6-7::&gt;RL 9-10 x "
+                                                        value='Projection  part  link SL 6-7::>RL 9-10 x '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_09to10"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_09to10'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("10")
+                                                        distance_from_start=Decimal('10')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP6"
+                                            version='001',
+                                            ref='ssp:SSP6'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP7"
+                                            version='001',
+                                            ref='ssp:SSP7'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_7to8",
+                                        id='ssp:SL_SvP001o_7to8',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="7  to 8"
+                                            value='7  to 8'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_7to8_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_7to8_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way   along link SL 7-8::&gt;RL9-10 x "
+                                                        value='Projection  mid way   along link SL 7-8::>RL9-10 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_09to10"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_09to10'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("10")
+                                                        distance_from_start=Decimal('10')
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("50")
+                                                        distance_from_start=Decimal('50')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP7"
+                                            version='001',
+                                            ref='ssp:SSP7'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP8"
+                                            version='001',
+                                            ref='ssp:SSP8'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ssp:SL_SvP001o_8to9",
+                                        id='ssp:SL_SvP001o_8to9',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="8 to 9"
+                                            value='8 to 9'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="ssp:LP_SL_SvP001o_8to9_PJ01",
-                                                    version="any",
+                                                    id='ssp:LP_SL_SvP001o_8to9_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way   along link SL 8-9::&gt;RL9-10 x "
+                                                        value='Projection  mid way   along link SL 8-9::>RL9-10 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_09to10"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_09to10'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("50")
+                                                        distance_from_start=Decimal('50')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP8"
+                                            version='001',
+                                            ref='ssp:SSP8'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="001",
-                                            ref="ssp:SSP9"
+                                            version='001',
+                                            ref='ssp:SSP9'
                                         )
                                     ),
                                 ]
@@ -1767,145 +1767,145 @@ obj = PublicationDelivery(
                             service_patterns=ServicePatternsInFrameRelStructure(
                                 service_pattern_or_journey_pattern_view=[
                                     ServicePattern(
-                                        id="ssp:SvP001o",
+                                        id='ssp:SvP001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         name=MultilingualString(
-                                            value="SSP1 - SSP9"
+                                            value='SSP1 - SSP9'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="004",
-                                            ref="spq:Rt001o"
+                                            version='004',
+                                            ref='spq:Rt001o'
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_01",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP1"
+                                                        version='001',
+                                                        ref='ssp:SSP1'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_1to2"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_1to2'
                                                     ),
                                                     for_alighting=False,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_02",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP2"
+                                                        version='001',
+                                                        ref='ssp:SSP2'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_2to3"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_2to3'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_03",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP3"
+                                                        version='001',
+                                                        ref='ssp:SSP3'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_3to4"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_3to4'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_04",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_04',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP4"
+                                                        version='001',
+                                                        ref='ssp:SSP4'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_4to5"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_4to5'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_05",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_05',
+                                                    version='any',
                                                     order=5,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP5"
+                                                        version='001',
+                                                        ref='ssp:SSP5'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_5to6"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_5to6'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_06",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_06',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP6"
+                                                        version='001',
+                                                        ref='ssp:SSP6'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_6to7"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_6to7'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_07",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_07',
+                                                    version='any',
                                                     order=7,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP7"
+                                                        version='001',
+                                                        ref='ssp:SSP7'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_7to8"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_7to8'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_08",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_08',
+                                                    version='any',
                                                     order=8,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP8"
+                                                        version='001',
+                                                        ref='ssp:SSP8'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
-                                                        version="001",
-                                                        ref="ssp:SL_SvP001o_8to9"
+                                                        version='001',
+                                                        ref='ssp:SL_SvP001o_8to9'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:SvPip_001o_09",
-                                                    version="any",
+                                                    id='ssp:SvPip_001o_09',
+                                                    version='any',
                                                     order=9,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP9"
+                                                        version='001',
+                                                        ref='ssp:SSP9'
                                                     ),
                                                     for_alighting=True,
                                                     for_boarding=False
@@ -1918,199 +1918,199 @@ obj = PublicationDelivery(
                             stop_assignments=StopAssignmentsInFrameRelStructure(
                                 choice=[
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_01",
-                                        version="any",
+                                        id='ssp:PSA_01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 1"
+                                            value='Bus Assignment 1'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP1"
+                                            version='001',
+                                            ref='ssp:SSP1'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP1"
+                                            version='any',
+                                            ref='spq:SP1'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP1"
+                                            version='any',
+                                            ref='spq:SSP1'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_02",
-                                        version="any",
+                                        id='ssp:PSA_02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 2"
+                                            value='Bus Assignment 2'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP2"
+                                            version='001',
+                                            ref='ssp:SSP2'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP2"
+                                            version='any',
+                                            ref='spq:SP2'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP2"
+                                            version='any',
+                                            ref='spq:SSP2'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_03",
-                                        version="any",
+                                        id='ssp:PSA_03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 3"
+                                            value='Bus Assignment 3'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP3"
+                                            version='001',
+                                            ref='ssp:SSP3'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP3"
+                                            version='any',
+                                            ref='spq:SP3'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP3"
+                                            version='any',
+                                            ref='spq:SSP3'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_04",
-                                        version="any",
+                                        id='ssp:PSA_04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 4"
+                                            value='Bus Assignment 4'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP4"
+                                            version='001',
+                                            ref='ssp:SSP4'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP4"
+                                            version='any',
+                                            ref='spq:SP4'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP4"
+                                            version='any',
+                                            ref='spq:SSP4'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_05",
-                                        version="any",
+                                        id='ssp:PSA_05',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 5"
+                                            value='Bus Assignment 5'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP5"
+                                            version='001',
+                                            ref='ssp:SSP5'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP5"
+                                            version='any',
+                                            ref='spq:SP5'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP5"
+                                            version='any',
+                                            ref='spq:SSP5'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_06",
-                                        version="any",
+                                        id='ssp:PSA_06',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 6"
+                                            value='Bus Assignment 6'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP6"
+                                            version='001',
+                                            ref='ssp:SSP6'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP6"
+                                            version='any',
+                                            ref='spq:SP6'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP6"
+                                            version='any',
+                                            ref='spq:SSP6'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_07",
-                                        version="any",
+                                        id='ssp:PSA_07',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 7"
+                                            value='Bus Assignment 7'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP7"
+                                            version='001',
+                                            ref='ssp:SSP7'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP7"
+                                            version='any',
+                                            ref='spq:SP7'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP7"
+                                            version='any',
+                                            ref='spq:SSP7'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_08",
-                                        version="any",
+                                        id='ssp:PSA_08',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 8"
+                                            value='Bus Assignment 8'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP8"
+                                            version='001',
+                                            ref='ssp:SSP8'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP8"
+                                            version='any',
+                                            ref='spq:SP8'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP8"
+                                            version='any',
+                                            ref='spq:SSP8'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_09",
-                                        version="any",
+                                        id='ssp:PSA_09',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment 9"
+                                            value='Bus Assignment 9'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP9"
+                                            version='001',
+                                            ref='ssp:SSP9'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP9"
+                                            version='any',
+                                            ref='spq:SP9'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="any",
-                                            ref="spq:SSP9"
+                                            version='any',
+                                            ref='spq:SSP9'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ssp:PSA_10",
-                                        version="any",
+                                        id='ssp:PSA_10',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Bus Assignment10"
+                                            value='Bus Assignment10'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="001",
-                                            ref="ssp:SSP10"
+                                            version='001',
+                                            ref='ssp:SSP10'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="spq:SP10"
+                                            version='any',
+                                            ref='spq:SP10'
                                         )
                                     ),
                                 ]
@@ -2118,115 +2118,115 @@ obj = PublicationDelivery(
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
                                     TimingPoint(
-                                        id="tim:TP1",
-                                        version="any",
+                                        id='tim:TP1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TIMING POINT 1"
+                                            value='TIMING POINT 1'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_TP1_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_TP1_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR1"
+                                                        version='any',
+                                                        ref='tim:PorR1'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPoint(
-                                        id="tim:TP2",
-                                        version="any",
+                                        id='tim:TP2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TIMING POINT 2"
+                                            value='TIMING POINT 2'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_TP2_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_TP2_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR2"
+                                                        version='any',
+                                                        ref='tim:PorR2'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPoint(
-                                        id="tim:TP3",
-                                        version="any",
+                                        id='tim:TP3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TIMING POINT3"
+                                            value='TIMING POINT3'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_TP3_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_TP3_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR5"
+                                                        version='any',
+                                                        ref='tim:PorR5'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPoint(
-                                        id="tim:TP4",
-                                        version="any",
+                                        id='tim:TP4',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TIMING POINT 4"
+                                            value='TIMING POINT 4'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_TP4_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_TP4_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR8"
+                                                        version='any',
+                                                        ref='tim:PorR8'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPoint(
-                                        id="tim:TP5",
-                                        version="any",
+                                        id='tim:TP5',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TIMING POINT 5"
+                                            value='TIMING POINT 5'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_TP5_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_TP5_pj01',
+                                                    version='any',
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_05to06"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_05to06'
                                                     ),
-                                                    distance=Decimal("25")
+                                                    distance=Decimal('25')
                                                 ),
                                             ]
                                         )
                                     ),
                                     TimingPoint(
-                                        id="tim:TP6",
-                                        version="any",
+                                        id='tim:TP6',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TIMING POINT 6"
+                                            value='TIMING POINT 6'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 PointProjection(
-                                                    id="tim:PPJ_TP6_pj01",
-                                                    version="any",
+                                                    id='tim:PPJ_TP6_pj01',
+                                                    version='any',
                                                     project_to_point_ref=PointRefStructure(
-                                                        version="any",
-                                                        ref="tim:PorR10"
+                                                        version='any',
+                                                        ref='tim:PorR10'
                                                     )
                                                 ),
                                             ]
@@ -2237,259 +2237,259 @@ obj = PublicationDelivery(
                             timing_links=TimingLinksInFrameRelStructure(
                                 timing_link=[
                                     TimingLink(
-                                        id="tim:TL_TP001o_TP1toTP2",
-                                        version="any",
+                                        id='tim:TL_TP001o_TP1toTP2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TP1 to TP2"
+                                            value='TP1 to TP2'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP1toTP2_PJ01",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP1toTP2_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Exact projection  of links TL  1-2 ::&gt;RL  1-2 "
+                                                        value='Exact projection  of links TL  1-2 ::>RL  1-2 '
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_01to02"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_01to02'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP1"
+                                            version='any',
+                                            ref='tim:TP1'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP2"
+                                            version='any',
+                                            ref='tim:TP2'
                                         )
                                     ),
                                     TimingLink(
-                                        id="tim:TL_TP001o_TP2toTP3",
-                                        version="any",
+                                        id='tim:TL_TP001o_TP2toTP3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TP2 to TP3"
+                                            value='TP2 to TP3'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP2toTP3_PJ01",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP2toTP3_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  whole link TL 2-3 ::&gt;RL  2-3  "
+                                                        value='Projection  whole link TL 2-3 ::>RL  2-3  '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_02to03"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_02to03'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP2toTP3_PJ02",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP2toTP3_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection whole link TL 2-3 ::&gt;RL  3-4  "
+                                                        value='Projection whole link TL 2-3 ::>RL  3-4  '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_03to04"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_03to04'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP2toTP3_PJ03",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP2toTP3_PJ03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part way along link TL2-3 ::&gt;RL 4-5 "
+                                                        value='Projection  part way along link TL2-3 ::>RL 4-5 '
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_04to05"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_04to05'
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("55")
+                                                        distance_from_start=Decimal('55')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP2"
+                                            version='any',
+                                            ref='tim:TP2'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP3"
+                                            version='any',
+                                            ref='tim:TP3'
                                         )
                                     ),
                                     TimingLink(
-                                        id="tim:TL_TP001o_TP3toTP4",
-                                        version="any",
+                                        id='tim:TL_TP001o_TP3toTP4',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TP3 to TP4"
+                                            value='TP3 to TP4'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP3toTP4_PJ01",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP3toTP4_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection part way along  along linkTL 3-4  ::&gt; RL : 4-5:"
+                                                        value='Projection part way along  along linkTL 3-4  ::> RL : 4-5:'
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_04to05"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_04to05'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("55")
+                                                        distance_from_start=Decimal('55')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP3toTP4_PJ02",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP3toTP4_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  whole link  TL 3-4::&gt;RL 5-6"
+                                                        value='Projection  whole link  TL 3-4::>RL 5-6'
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_05to06"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_05to06'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP3toTP4_PJ03",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP3toTP4_PJ03',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  whole link TL 3-4::&gt;RL 6-7 "
+                                                        value='Projection  whole link TL 3-4::>RL 6-7 '
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_06to07"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_06to07'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP3toTP4_PJ04",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP3toTP4_PJ04',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  whole link TL 3-4::&gt;RL 7-8 "
+                                                        value='Projection  whole link TL 3-4::>RL 7-8 '
                                                     ),
                                                     order=4,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_07to08"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_07to08'
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP3toTP4_PJ05",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP3toTP4_PJ05',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  part way along link TL 3-4::&gt;RL 8-9 x "
+                                                        value='Projection  part way along link TL 3-4::>RL 8-9 x '
                                                     ),
                                                     order=5,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_08to09"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_08to09'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("5")
+                                                        distance_from_start=Decimal('5')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP3"
+                                            version='any',
+                                            ref='tim:TP3'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP4"
+                                            version='any',
+                                            ref='tim:TP4'
                                         )
                                     ),
                                     TimingLink(
-                                        id="tim:TL_TP001o_TP4toTP5",
-                                        version="any",
+                                        id='tim:TL_TP001o_TP4toTP5',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TP4 to TP5"
+                                            value='TP4 to TP5'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP4toTP5_PJ01",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP4toTP5_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way along link TL 4-5::&gt;RL 8-9 x "
+                                                        value='Projection  mid way along link TL 4-5::>RL 8-9 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_08to09"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_08to09'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("5")
+                                                        distance_from_start=Decimal('5')
                                                     ),
                                                     end_point_on_link_ref_or_end_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("40")
+                                                        distance_from_start=Decimal('40')
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP4"
+                                            version='any',
+                                            ref='tim:TP4'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP5"
+                                            version='any',
+                                            ref='tim:TP5'
                                         )
                                     ),
                                     TimingLink(
-                                        id="tim:TL_TP001o_TP5toTP6",
-                                        version="any",
+                                        id='tim:TL_TP001o_TP5toTP6',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="TP5 to TP6"
+                                            value='TP5 to TP6'
                                         ),
                                         projections=ProjectionsRelStructure(
                                             choice=[
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP5toTP6_PJ01",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP5toTP6_PJ01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  mid way along link TL 5-6::&gt;RL 8-9 x "
+                                                        value='Projection  mid way along link TL 5-6::>RL 8-9 x '
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_08to09"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_08to09'
                                                     ),
                                                     start_point_on_link_ref_or_start_point_on_link_by_value=PointOnLinkByValueStructure(
-                                                        distance_from_start=Decimal("40")
+                                                        distance_from_start=Decimal('40')
                                                     )
                                                 ),
                                                 LinkProjection(
-                                                    id="tim:LP_TL_TP001o_TP5toTP6_PJ02",
-                                                    version="any",
+                                                    id='tim:LP_TL_TP001o_TP5toTP6_PJ02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Projection  whole link TL 5-6::&gt;RL 9-10 x "
+                                                        value='Projection  whole link TL 5-6::>RL 9-10 x '
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
-                                                        version="any",
-                                                        ref="spq:RL_Rt001o_09to10"
+                                                        version='any',
+                                                        ref='spq:RL_Rt001o_09to10'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP5"
+                                            version='any',
+                                            ref='tim:TP5'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="tim:TP6"
+                                            version='any',
+                                            ref='tim:TP6'
                                         )
                                     ),
                                 ]
@@ -2497,98 +2497,98 @@ obj = PublicationDelivery(
                             timing_patterns=TimingPatternsInFrameRelStructure(
                                 timing_pattern=[
                                     TimingPattern(
-                                        id="tim:TP001o",
+                                        id='tim:TP001o',
                                         created=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="tim:RS_03",
+                                        version='001',
+                                        responsibility_set_ref_attribute='tim:RS_03',
                                         route_ref=RouteRefStructure(
-                                            version="004",
-                                            ref="spq:Rt001o"
+                                            version='004',
+                                            ref='spq:Rt001o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                            version="any",
-                                            ref="tim:TDT001"
+                                            version='any',
+                                            ref='tim:TDT001'
                                         ),
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="tim:TPIJP_TP001o_01",
-                                                    version="any",
+                                                    id='tim:TPIJP_TP001o_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="tim:TL_TP001o_TP1toTP2"
+                                                        version='any',
+                                                        ref='tim:TL_TP001o_TP1toTP2'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="tim:TPIJP_TP001o_02",
-                                                    version="any",
+                                                    id='tim:TPIJP_TP001o_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="tim:TL_TP001o_TP1toTP2"
+                                                        version='any',
+                                                        ref='tim:TL_TP001o_TP1toTP2'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="tim:TPIJP_TP001o_03",
-                                                    version="any",
+                                                    id='tim:TPIJP_TP001o_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="tim:TL_TP001o_TP3toTP4"
+                                                        version='any',
+                                                        ref='tim:TL_TP001o_TP3toTP4'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="tim:TPIJP_TP001o_04",
-                                                    version="any",
+                                                    id='tim:TPIJP_TP001o_04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="tim:TL_TP001o_TP4toTP5"
+                                                        version='any',
+                                                        ref='tim:TL_TP001o_TP4toTP5'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="tim:TPIJP_TP001o_05",
-                                                    version="any",
+                                                    id='tim:TPIJP_TP001o_05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="tim:TL_TP001o_TP5toTP6"
+                                                        version='any',
+                                                        ref='tim:TL_TP001o_TP5toTP6'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="tim:TPIJP_TP001o_06",
-                                                    version="any",
+                                                    id='tim:TPIJP_TP001o_06',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     is_wait_point=True
                                                 ),
@@ -2600,41 +2600,41 @@ obj = PublicationDelivery(
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     ServiceJourneyPattern(
-                                        id="ssp:JP001o",
-                                        version="any",
+                                        id='ssp:JP001o',
+                                        version='any',
                                         route_ref_or_route_view=RouteRef(
-                                            version="004",
-                                            ref="spq:Rt001o"
+                                            version='004',
+                                            ref='spq:Rt001o'
                                         ),
                                         timing_pattern_ref=TimingPatternRef(
-                                            version="001",
-                                            ref="tim:TP001o"
+                                            version='001',
+                                            ref='tim:TP001o'
                                         ),
                                         wait_times=JourneyPatternWaitTimesRelStructure(
                                             journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                 JourneyPatternWaitTime(
-                                                    id="tim:JPRT_001",
-                                                    version="any",
+                                                    id='tim:JPRT_001',
+                                                    version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="tim:TDT001"
+                                                        version='any',
+                                                        ref='tim:TDT001'
                                                     ),
                                                     choice=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     wait_time=XmlDuration("PT5M")
                                                 ),
                                                 JourneyPatternWaitTime(
-                                                    id="tim:JPRT_002",
-                                                    version="any",
+                                                    id='tim:JPRT_002',
+                                                    version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="tim:TDT002"
+                                                        version='any',
+                                                        ref='tim:TDT002'
                                                     ),
                                                     choice=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     wait_time=XmlDuration("PT10M")
                                                 ),
@@ -2643,48 +2643,48 @@ obj = PublicationDelivery(
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0001",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0001',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP1"
+                                                        version='any',
+                                                        ref='tim:TP1'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0002",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0002',
+                                                    version='any',
                                                     projections=ProjectionsRelStructure(
                                                         choice=[
                                                             PointProjection(
-                                                                id="tim:PIP_JP001o_0002",
-                                                                version="any",
+                                                                id='tim:PIP_JP001o_0002',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Additional projection because there is a separate TimingPointIdID as well as a SSP"
+                                                                    value='Additional projection because there is a separate TimingPointIdID as well as a SSP'
                                                                 ),
                                                                 project_to_point_ref=PointRefStructure(
-                                                                    name_of_ref_class="TimingPoint",
-                                                                    version="001",
-                                                                    ref="tim:TP2"
+                                                                    name_of_ref_class='TimingPoint',
+                                                                    version='001',
+                                                                    ref='tim:TP2'
                                                                 )
                                                             ),
                                                         ]
                                                     ),
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP1"
+                                                        version='001',
+                                                        ref='ssp:SSP1'
                                                     ),
                                                     is_wait_point=False,
                                                     wait_time_or_wait_times=JourneyPatternWaitTimesRelStructure(
                                                         journey_pattern_wait_time_ref_or_journey_pattern_wait_time=[
                                                             JourneyPatternWaitTime(
-                                                                id="tim:JPRT_003",
-                                                                version="any",
+                                                                id='tim:JPRT_003',
+                                                                version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                                    version="any",
-                                                                    ref="tim:TDT001"
+                                                                    version='any',
+                                                                    ref='tim:TDT001'
                                                                 ),
                                                                 wait_time=XmlDuration("PT10M")
                                                             ),
@@ -2692,128 +2692,128 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0003",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0003',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP2"
+                                                        version='001',
+                                                        ref='ssp:SSP2'
                                                     ),
                                                     is_wait_point=False
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0004",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0004',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP3"
+                                                        version='001',
+                                                        ref='ssp:SSP3'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0005",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0005',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP3"
+                                                        version='any',
+                                                        ref='tim:TP3'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0006",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0006',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP4"
+                                                        version='001',
+                                                        ref='ssp:SSP4'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0007",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0007',
+                                                    version='any',
                                                     order=7,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP5"
+                                                        version='001',
+                                                        ref='ssp:SSP5'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0008",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0008',
+                                                    version='any',
                                                     order=8,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP4"
+                                                        version='any',
+                                                        ref='tim:TP4'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0009",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0009',
+                                                    version='any',
                                                     order=9,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP6"
+                                                        version='001',
+                                                        ref='ssp:SSP6'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0010",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0010',
+                                                    version='any',
                                                     order=10,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="tim:TP5"
+                                                        version='any',
+                                                        ref='tim:TP5'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0011",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0011',
+                                                    version='any',
                                                     order=11,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP7"
+                                                        version='001',
+                                                        ref='ssp:SSP7'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0012",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0012',
+                                                    version='any',
                                                     order=12,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP8"
+                                                        version='001',
+                                                        ref='ssp:SSP8'
                                                     ),
                                                     is_wait_point=True
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ssp:PIP_JP001o_0013",
-                                                    version="any",
+                                                    id='ssp:PIP_JP001o_0013',
+                                                    version='any',
                                                     projections=ProjectionsRelStructure(
                                                         choice=[
                                                             PointProjection(
-                                                                id="tim:PIP_JP001o_0013",
-                                                                version="any",
+                                                                id='tim:PIP_JP001o_0013',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Additional projection because there is a separate TimingPointIdID as well as a SSP"
+                                                                    value='Additional projection because there is a separate TimingPointIdID as well as a SSP'
                                                                 ),
                                                                 project_to_point_ref=PointRefStructure(
-                                                                    name_of_ref_class="TimingPoint",
-                                                                    version="001",
-                                                                    ref="tim:TP6"
+                                                                    name_of_ref_class='TimingPoint',
+                                                                    version='001',
+                                                                    ref='tim:TP6'
                                                                 )
                                                             ),
                                                         ]
                                                     ),
                                                     order=13,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="001",
-                                                        ref="ssp:SSP9"
+                                                        version='001',
+                                                        ref='ssp:SSP9'
                                                     ),
                                                     is_wait_point=True
                                                 ),
@@ -2825,201 +2825,201 @@ obj = PublicationDelivery(
                             time_demand_types=TimeDemandTypesInFrameRelStructure(
                                 time_demand_type=[
                                     TimeDemandType(
-                                        id="tim:TDT001",
-                                        version="any",
+                                        id='tim:TDT001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Time demand Peak"
+                                            value='Time demand Peak'
                                         )
                                     ),
                                     TimeDemandType(
-                                        id="tim:TDT002",
-                                        version="any",
+                                        id='tim:TDT002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Time demand  off Peak"
+                                            value='Time demand  off Peak'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         InfrastructureFrame(
-                            id="spq:InfrastructureFrame:Fr1234",
-                            version="any",
+                            id='spq:InfrastructureFrame:Fr1234',
+                            version='any',
                             spatial_features=SpatialFeaturesInFrameRelStructure(
                                 simple_feature_or_complex_feature=[
                                     ComplexFeature(
-                                        id="gis:Road_RueDeParis1",
-                                        version="any",
+                                        id='gis:Road_RueDeParis1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue de Paris"
+                                            value='Rue de Paris'
                                         ),
                                         feature_members=ComplexFeatureMembersRelStructure(
                                             complex_feature_member=[
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:Road_RueDeParis1_P001",
-                                                    version="any",
+                                                    id='gis:Road_RueDeParis1_P001',
+                                                    version='any',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueDeParis1_001"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueDeParis1_001'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:Road_RueDeParis1_P002",
+                                                    id='gis:Road_RueDeParis1_P002',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueDeParis1_002"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueDeParis1_002'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:Road_RueDeParis1_P003",
-                                                    version="any",
+                                                    id='gis:Road_RueDeParis1_P003',
+                                                    version='any',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueDeParis1_003"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueDeParis1_003'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:Road_RueDeParis1_P004",
-                                                    version="any",
+                                                    id='gis:Road_RueDeParis1_P004',
+                                                    version='any',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueDeParis1_004"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueDeParis1_004'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:Road_RueDeParis1_L001",
+                                                    id='gis:Road_RueDeParis1_L001',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadElement",
-                                                        ref="gis:RdE_RueDeParis1_002to003"
+                                                        name_of_ref_class='RoadElement',
+                                                        ref='gis:RdE_RueDeParis1_002to003'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:Road_RueDeParis1_L002",
+                                                    id='gis:Road_RueDeParis1_L002',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadElement",
-                                                        ref="gis:RdE_RueDeParis1_003to004"
+                                                        name_of_ref_class='RoadElement',
+                                                        ref='gis:RdE_RueDeParis1_003to004'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ComplexFeature(
-                                        id="gis:RdP_RouteDeLaReine1",
-                                        version="any",
+                                        id='gis:RdP_RouteDeLaReine1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Route De la Reine"
+                                            value='Route De la Reine'
                                         ),
                                         feature_members=ComplexFeatureMembersRelStructure(
                                             complex_feature_member=[
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RouteDeLaReine1_P001",
+                                                    id='gis:RdP_RouteDeLaReine1_P001',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RouteDeLaReine_021"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RouteDeLaReine_021'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RouteDeLaReine1_P002",
+                                                    id='gis:RdP_RouteDeLaReine1_P002',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RouteDeLaReine_022"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RouteDeLaReine_022'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RouteDeLaReine1_L001",
+                                                    id='gis:RdP_RouteDeLaReine1_L001',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadElement",
-                                                        ref="gis:RdE_RouteDeLaReine_004to005"
+                                                        name_of_ref_class='RoadElement',
+                                                        ref='gis:RdE_RouteDeLaReine_004to005'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ComplexFeature(
-                                        id="gis:RdP_RueThiere1",
-                                        version="any",
+                                        id='gis:RdP_RueThiere1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere"
+                                            value='Rue Thiere'
                                         ),
                                         feature_members=ComplexFeatureMembersRelStructure(
                                             complex_feature_member=[
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_P002",
+                                                    id='gis:RdP_RueThiere1_P002',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueThiere_002"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueThiere_002'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_P003",
+                                                    id='gis:RdP_RueThiere1_P003',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueThiere_003"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueThiere_003'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_P004",
+                                                    id='gis:RdP_RueThiere1_P004',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueThiere_004"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueThiere_004'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_P005",
+                                                    id='gis:RdP_RueThiere1_P005',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadJunction",
-                                                        ref="gis:RdP_RueThiere_005"
+                                                        name_of_ref_class='RoadJunction',
+                                                        ref='gis:RdP_RueThiere_005'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_L001",
+                                                    id='gis:RdP_RueThiere1_L001',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadElement",
-                                                        ref="gis:RdE_RueThiere_X022to002"
+                                                        name_of_ref_class='RoadElement',
+                                                        ref='gis:RdE_RueThiere_X022to002'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_L002",
+                                                    id='gis:RdP_RueThiere1_L002',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadElement",
-                                                        ref="gis:RdE_RueThiere_002to003"
+                                                        name_of_ref_class='RoadElement',
+                                                        ref='gis:RdE_RueThiere_002to003'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_L003",
+                                                    id='gis:RdP_RueThiere1_L003',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadElement",
-                                                        ref="gis:RdE_RueThiere_003to004"
+                                                        name_of_ref_class='RoadElement',
+                                                        ref='gis:RdE_RueThiere_003to004'
                                                     )
                                                 ),
                                                 ComplexFeatureMemberVersionedChildStructure(
-                                                    id="gis:RdP_RueThiere1_L004",
+                                                    id='gis:RdP_RueThiere1_L004',
                                                     choice=VersionOfObjectRef(
-                                                        name_of_ref_class="RoadElement",
-                                                        ref="gis:RdE_RueThiere_004to005"
+                                                        name_of_ref_class='RoadElement',
+                                                        ref='gis:RdE_RueThiere_004to005'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ComplexFeature(
-                                        id="gis:RdP_RueDuPointDuJour1",
-                                        version="any",
+                                        id='gis:RdP_RueDuPointDuJour1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue du Point du Jour"
+                                            value='Rue du Point du Jour'
                                         )
                                     ),
                                     ComplexFeature(
-                                        id="gis:RdE_BvdJeanJaures",
-                                        version="any",
+                                        id='gis:RdE_BvdJeanJaures',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Boulevard  Jean Jaures"
+                                            value='Boulevard  Jean Jaures'
                                         )
                                     ),
                                     ComplexFeature(
-                                        id="gis:RdE_AvGenLeclerc",
-                                        version="any",
+                                        id='gis:RdE_AvGenLeclerc',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Avenue General Leclerc"
+                                            value='Avenue General Leclerc'
                                         )
                                     ),
                                 ]
@@ -3027,115 +3027,115 @@ obj = PublicationDelivery(
                             junctions=InfrastructureJunctionsInFrameRelStructure(
                                 railway_junction_or_road_junction_or_wire_junction=[
                                     RoadJunction(
-                                        id="gis:RdP_RueDeParis1_001",
-                                        version="any",
+                                        id='gis:RdP_RueDeParis1_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="start at PontCLoud end&gt;"
+                                            value='start at PontCLoud end>'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RueDeParis1_002",
-                                        version="any",
+                                        id='gis:RdP_RueDeParis1_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue de Paris x  Rue de Silly"
+                                            value='Rue de Paris x  Rue de Silly'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RueDeParis1_003",
-                                        version="any",
+                                        id='gis:RdP_RueDeParis1_003',
+                                        version='any',
                                         name=MultilingualString(
                                             value="Rue de Paris x  Rue d'Agguesseau"
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RueDeParis1_004",
-                                        version="any",
+                                        id='gis:RdP_RueDeParis1_004',
+                                        version='any',
                                         name=MultilingualString(
                                             value="Rue de Paris x  Rue de L'Est"
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RouteDeLaReine_021",
-                                        version="any",
+                                        id='gis:RdP_RouteDeLaReine_021',
+                                        version='any',
                                         name=MultilingualString(
                                             value="Route De la Reine x  Rue de L'Est"
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RouteDeLaReine_022",
-                                        version="any",
+                                        id='gis:RdP_RouteDeLaReine_022',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Route De la Reine x Av Victor Hugo "
+                                            value='Route De la Reine x Av Victor Hugo '
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RueThiere_002",
-                                        version="any",
+                                        id='gis:RdP_RueThiere_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere x Rue Galieni  "
+                                            value='Rue Thiere x Rue Galieni  '
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RueThiere_003",
-                                        version="any",
+                                        id='gis:RdP_RueThiere_003',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere x Av Edouard Vaillant  "
+                                            value='Rue Thiere x Av Edouard Vaillant  '
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RueThiere_004",
-                                        version="any",
+                                        id='gis:RdP_RueThiere_004',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere x Rue Marcel Dassault"
+                                            value='Rue Thiere x Rue Marcel Dassault'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_RueThiere_005",
-                                        version="any",
+                                        id='gis:RdP_RueThiere_005',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere x Rue du Pon du Jour "
+                                            value='Rue Thiere x Rue du Pon du Jour '
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_DuPointDuJour_041",
-                                        version="any",
+                                        id='gis:RdP_DuPointDuJour_041',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Du Point du Jour x  Rue de Seine"
+                                            value='Rue Du Point du Jour x  Rue de Seine'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_BvdJeanJaures_021",
-                                        version="any",
+                                        id='gis:RdP_BvdJeanJaures_021',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Du Point du Jour x Bvd  Jean Jaures"
+                                            value='Rue Du Point du Jour x Bvd  Jean Jaures'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_BvdJeanJaures_022",
-                                        version="any",
+                                        id='gis:RdP_BvdJeanJaures_022',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bvd  Jean Jaures x Rue Du Dome"
+                                            value='Bvd  Jean Jaures x Rue Du Dome'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_AvGenLeclerc_050",
-                                        version="any",
+                                        id='gis:RdP_AvGenLeclerc_050',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Av Gen Leclerc  x Bvd  Jean Jaures"
+                                            value='Av Gen Leclerc  x Bvd  Jean Jaures'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_AvGenLeclerc_051",
-                                        version="any",
+                                        id='gis:RdP_AvGenLeclerc_051',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Av Gen Leclerc  x Rue de la ferme"
+                                            value='Av Gen Leclerc  x Rue de la ferme'
                                         )
                                     ),
                                     RoadJunction(
-                                        id="gis:RdP_AvGenLeclerc_052",
-                                        version="any",
+                                        id='gis:RdP_AvGenLeclerc_052',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Av Gen Leclerc   x Pont de Sevres"
+                                            value='Av Gen Leclerc   x Pont de Sevres'
                                         )
                                     ),
                                 ]
@@ -3143,213 +3143,213 @@ obj = PublicationDelivery(
                             elements=InfrastructureElementsInFrameRelStructure(
                                 railway_element_or_road_element_or_wire_element=[
                                     RoadElement(
-                                        id="gis:RdE_RueDeParis1_002to003",
-                                        version="any",
+                                        id='gis:RdE_RueDeParis1_002to003',
+                                        version='any',
                                         name=MultilingualString(
                                             value="Rue de Paris:  x Rue de Silly to Rue de Paris x Rue d'Agguesseau"
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueDeParis1_002"
+                                            version='any',
+                                            ref='gis:RdP_RueDeParis1_002'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueDeParis1_003"
+                                            version='any',
+                                            ref='gis:RdP_RueDeParis1_003'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RueDeParis_003to004",
-                                        version="any",
+                                        id='gis:RdE_RueDeParis_003to004',
+                                        version='any',
                                         name=MultilingualString(
                                             value="Rue de Paris:  x  Rue d'Agguesseau to Rue de Paris x Rue de l'est"
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueDeParis1_003"
+                                            version='any',
+                                            ref='gis:RdP_RueDeParis1_003'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueDeParis1_004"
+                                            version='any',
+                                            ref='gis:RdP_RueDeParis1_004'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RouteDeLaReine_004to005",
-                                        version="any",
+                                        id='gis:RdE_RouteDeLaReine_004to005',
+                                        version='any',
                                         name=MultilingualString(
                                             value="Rue de l'est : x Rue de Silly to Route De la Reine x Rue de l'est "
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueDeParis1_004"
+                                            version='any',
+                                            ref='gis:RdP_RueDeParis1_004'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RouteDeLaReine_021"
+                                            version='any',
+                                            ref='gis:RdP_RouteDeLaReine_021'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RouteDeLaReine_021to022",
-                                        version="any",
+                                        id='gis:RdE_RouteDeLaReine_021to022',
+                                        version='any',
                                         name=MultilingualString(
                                             value="Route De la Reine:  x Rue de l'est to Route De la Reine  x Av Victor Hugo   "
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RouteDeLaReine_021"
+                                            version='any',
+                                            ref='gis:RdP_RouteDeLaReine_021'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RouteDeLaReine_022"
+                                            version='any',
+                                            ref='gis:RdP_RouteDeLaReine_022'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RueThiere_X022to002",
-                                        version="any",
+                                        id='gis:RdE_RueThiere_X022to002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere: Route De la Reine  x AV Victor Hugo   to Rue Thiere x Rue Galieni "
+                                            value='Rue Thiere: Route De la Reine  x AV Victor Hugo   to Rue Thiere x Rue Galieni '
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RouteDeLaReine_022"
+                                            version='any',
+                                            ref='gis:RdP_RouteDeLaReine_022'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_002"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_002'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RueThiere_002to003",
-                                        version="any",
+                                        id='gis:RdE_RueThiere_002to003',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere : x Rue Galieni    to Rue Thiere x Av Edouard Vaillant  "
+                                            value='Rue Thiere : x Rue Galieni    to Rue Thiere x Av Edouard Vaillant  '
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_002"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_002'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_003"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_003'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RueThiere_003to004",
-                                        version="any",
+                                        id='gis:RdE_RueThiere_003to004',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere : x Av Eiouard Vaillant  to  Rue Thiere x Rue Marcel Dassault"
+                                            value='Rue Thiere : x Av Eiouard Vaillant  to  Rue Thiere x Rue Marcel Dassault'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_003"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_003'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_004"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_004'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RueThiere_004to005",
-                                        version="any",
+                                        id='gis:RdE_RueThiere_004to005',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Thiere:  x  Rue Marcel Dassault to   Rue Thiere x DuPontDuJour "
+                                            value='Rue Thiere:  x  Rue Marcel Dassault to   Rue Thiere x DuPontDuJour '
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_004"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_004'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_005"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_005'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RueDuPontDuJour_005toX041",
-                                        version="any",
+                                        id='gis:RdE_RueDuPontDuJour_005toX041',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue  Du Point du Jour: Rue Thiere x  Rue du Pont du Jourto  Rue Du Point du Jour x  Rue de Seine"
+                                            value='Rue  Du Point du Jour: Rue Thiere x  Rue du Pont du Jourto  Rue Du Point du Jour x  Rue de Seine'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_RueThiere_005"
+                                            version='any',
+                                            ref='gis:RdP_RueThiere_005'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_DuPointDuJour_041"
+                                            version='any',
+                                            ref='gis:RdP_DuPointDuJour_041'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_RueDuPointDuJour_041to042",
-                                        version="any",
+                                        id='gis:RdE_RueDuPointDuJour_041to042',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Rue Du Point du Jour : x  Rue de Seine to   Rue du Pont du Jour  x Bvd  Jean Jaures"
+                                            value='Rue Du Point du Jour : x  Rue de Seine to   Rue du Pont du Jour  x Bvd  Jean Jaures'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_DuPointDuJour_041"
+                                            version='any',
+                                            ref='gis:RdP_DuPointDuJour_041'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_BvdJeanJaures_021"
+                                            version='any',
+                                            ref='gis:RdP_BvdJeanJaures_021'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_BvdJeanJaures_021to022",
-                                        version="any",
+                                        id='gis:RdE_BvdJeanJaures_021to022',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bvd Jean Jaures:  Rue du Pont du Jour  x Bvd  Jean Jaures to  Bvd  Jean Jaures x Rue Du Dome"
+                                            value='Bvd Jean Jaures:  Rue du Pont du Jour  x Bvd  Jean Jaures to  Bvd  Jean Jaures x Rue Du Dome'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_BvdJeanJaures_021"
+                                            version='any',
+                                            ref='gis:RdP_BvdJeanJaures_021'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_BvdJeanJaures_022"
+                                            version='any',
+                                            ref='gis:RdP_BvdJeanJaures_022'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_BvdJeanJaures_022to023",
-                                        version="any",
+                                        id='gis:RdE_BvdJeanJaures_022to023',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bvd Jean Jaures:   Bvd  Jean Jaures x Rue Du Dome to    Av Gen Leclerc :   x Bvd  Jean Jaures"
+                                            value='Bvd Jean Jaures:   Bvd  Jean Jaures x Rue Du Dome to    Av Gen Leclerc :   x Bvd  Jean Jaures'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_BvdJeanJaures_022"
+                                            version='any',
+                                            ref='gis:RdP_BvdJeanJaures_022'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_AvGenLeclerc_050"
+                                            version='any',
+                                            ref='gis:RdP_AvGenLeclerc_050'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_AvGenLeclerc_050to051",
-                                        version="any",
+                                        id='gis:RdE_AvGenLeclerc_050to051',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Av Gen Leclerc :   x Bvd  Jean Jaures  to  Av Gen Leclerc x Rue de la ferme"
+                                            value='Av Gen Leclerc :   x Bvd  Jean Jaures  to  Av Gen Leclerc x Rue de la ferme'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_AvGenLeclerc_050"
+                                            version='any',
+                                            ref='gis:RdP_AvGenLeclerc_050'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_AvGenLeclerc_051"
+                                            version='any',
+                                            ref='gis:RdP_AvGenLeclerc_051'
                                         )
                                     ),
                                     RoadElement(
-                                        id="gis:RdE_AvGenLeclerc_051to052",
-                                        version="any",
+                                        id='gis:RdE_AvGenLeclerc_051to052',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Av Gen Leclerc : Av Gen Leclerc x Rue de la ferme to    Av Gen Leclerc   x Pont de Sevres"
+                                            value='Av Gen Leclerc : Av Gen Leclerc x Rue de la ferme to    Av Gen Leclerc   x Pont de Sevres'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_AvGenLeclerc_051"
+                                            version='any',
+                                            ref='gis:RdP_AvGenLeclerc_051'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
-                                            version="any",
-                                            ref="gis:RdP_AvGenLeclerc_052"
+                                            version='any',
+                                            ref='gis:RdP_AvGenLeclerc_052'
                                         )
                                     ),
                                 ]

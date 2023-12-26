@@ -17,10 +17,11 @@ class BookingBaseReq(BaseReq1):
         information of the user. User must supply this in the resquest to
         use the current session they are working on.
     """
+
     session_key: None | str = field(
         default=None,
         metadata={
             "name": "SessionKey",
             "type": "Attribute",
-        }
+        },
     )

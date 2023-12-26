@@ -18,7 +18,7 @@ class HotelDelete:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     element: None | TypeElement = field(
         default=None,
@@ -26,12 +26,12 @@ class HotelDelete:
             "name": "Element",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

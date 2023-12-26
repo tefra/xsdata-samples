@@ -14,12 +14,12 @@ class RatingRange:
         metadata={
             "name": "MinimumRating",
             "type": "Attribute",
-        }
+        },
     )
     maximum_rating: None | int = field(
         default=None,
         metadata={
             "name": "MaximumRating",
             "type": "Attribute",
-        }
+        },
     )

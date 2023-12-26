@@ -9,6 +9,7 @@ class Urlinfo:
     """
     Contains the text and URL of baggage as published by carrier.
     """
+
     class Meta:
         name = "URLInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -20,7 +21,7 @@ class Urlinfo:
             "type": "Element",
             "max_occurs": 999,
             "max_length": 250,
-        }
+        },
     )
     url: list[str] = field(
         default_factory=list,
@@ -28,5 +29,5 @@ class Urlinfo:
             "name": "URL",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

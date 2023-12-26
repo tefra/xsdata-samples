@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .any_service_instance_id import AnyServiceInstanceId
 from .any_version_string import AnyVersionString
-from .application_endpoint_ref_conditional import ApplicationEndpointRefConditional
+from .application_endpoint_ref_conditional import (
+    ApplicationEndpointRefConditional,
+)
 from .boolean import Boolean
 from .category_string import CategoryString
 from .consumed_event_group import ConsumedEventGroup
@@ -17,13 +19,19 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .pdu_activation_routing_group import PduActivationRoutingGroup
 from .positive_integer import PositiveInteger
-from .provided_service_instance_subtypes_enum import ProvidedServiceInstanceSubtypesEnum
+from .provided_service_instance_subtypes_enum import (
+    ProvidedServiceInstanceSubtypesEnum,
+)
 from .ref import Ref
 from .sd_client_config import SdClientConfig
-from .service_version_acceptance_kind_enum import ServiceVersionAcceptanceKindEnum
+from .service_version_acceptance_kind_enum import (
+    ServiceVersionAcceptanceKindEnum,
+)
 from .short_name_fragment import ShortNameFragment
 from .so_ad_routing_group_subtypes_enum import SoAdRoutingGroupSubtypesEnum
-from .someip_sd_client_service_instance_config_ref_conditional import SomeipSdClientServiceInstanceConfigRefConditional
+from .someip_sd_client_service_instance_config_ref_conditional import (
+    SomeipSdClientServiceInstanceConfigRefConditional,
+)
 from .someip_service_version import SomeipServiceVersion
 from .tag_with_optional_value import TagWithOptionalValue
 
@@ -140,6 +148,7 @@ class ConsumedServiceInstance:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONSUMED-SERVICE-INSTANCE"
 
@@ -150,15 +159,17 @@ class ConsumedServiceInstance:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ConsumedServiceInstance.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ConsumedServiceInstance.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -166,7 +177,7 @@ class ConsumedServiceInstance:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -174,7 +185,7 @@ class ConsumedServiceInstance:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -182,7 +193,7 @@ class ConsumedServiceInstance:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -190,7 +201,7 @@ class ConsumedServiceInstance:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -198,7 +209,7 @@ class ConsumedServiceInstance:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ConsumedServiceInstance.Annotations"] = field(
         default=None,
@@ -206,15 +217,17 @@ class ConsumedServiceInstance:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    capability_records: Optional["ConsumedServiceInstance.CapabilityRecords"] = field(
+    capability_records: Optional[
+        "ConsumedServiceInstance.CapabilityRecords"
+    ] = field(
         default=None,
         metadata={
             "name": "CAPABILITY-RECORDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     major_version: Optional[PositiveInteger] = field(
         default=None,
@@ -222,23 +235,27 @@ class ConsumedServiceInstance:
             "name": "MAJOR-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    method_activation_routing_groups: Optional["ConsumedServiceInstance.MethodActivationRoutingGroups"] = field(
+    method_activation_routing_groups: Optional[
+        "ConsumedServiceInstance.MethodActivationRoutingGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "METHOD-ACTIVATION-ROUTING-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    routing_group_refs: Optional["ConsumedServiceInstance.RoutingGroupRefs"] = field(
+    routing_group_refs: Optional[
+        "ConsumedServiceInstance.RoutingGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -246,7 +263,7 @@ class ConsumedServiceInstance:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auto_require: Optional[Boolean] = field(
         default=None,
@@ -254,23 +271,27 @@ class ConsumedServiceInstance:
             "name": "AUTO-REQUIRE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blacklisted_versions: Optional["ConsumedServiceInstance.BlacklistedVersions"] = field(
+    blacklisted_versions: Optional[
+        "ConsumedServiceInstance.BlacklistedVersions"
+    ] = field(
         default=None,
         metadata={
             "name": "BLACKLISTED-VERSIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    consumed_event_groups: Optional["ConsumedServiceInstance.ConsumedEventGroups"] = field(
+    consumed_event_groups: Optional[
+        "ConsumedServiceInstance.ConsumedEventGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSUMED-EVENT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     instance_identifier: Optional[AnyServiceInstanceId] = field(
         default=None,
@@ -278,15 +299,17 @@ class ConsumedServiceInstance:
             "name": "INSTANCE-IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    local_unicast_addresss: Optional["ConsumedServiceInstance.LocalUnicastAddresss"] = field(
+    local_unicast_addresss: Optional[
+        "ConsumedServiceInstance.LocalUnicastAddresss"
+    ] = field(
         default=None,
         metadata={
             "name": "LOCAL-UNICAST-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minor_version: Optional[AnyVersionString] = field(
         default=None,
@@ -294,23 +317,27 @@ class ConsumedServiceInstance:
             "name": "MINOR-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    provided_service_instance_ref: Optional["ConsumedServiceInstance.ProvidedServiceInstanceRef"] = field(
+    provided_service_instance_ref: Optional[
+        "ConsumedServiceInstance.ProvidedServiceInstanceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    remote_unicast_addresss: Optional["ConsumedServiceInstance.RemoteUnicastAddresss"] = field(
+    remote_unicast_addresss: Optional[
+        "ConsumedServiceInstance.RemoteUnicastAddresss"
+    ] = field(
         default=None,
         metadata={
             "name": "REMOTE-UNICAST-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sd_client_config: Optional[SdClientConfig] = field(
         default=None,
@@ -318,15 +345,17 @@ class ConsumedServiceInstance:
             "name": "SD-CLIENT-CONFIG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sd_client_timer_configs: Optional["ConsumedServiceInstance.SdClientTimerConfigs"] = field(
+    sd_client_timer_configs: Optional[
+        "ConsumedServiceInstance.SdClientTimerConfigs"
+    ] = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-TIMER-CONFIGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_identifier: Optional[PositiveInteger] = field(
         default=None,
@@ -334,22 +363,24 @@ class ConsumedServiceInstance:
             "name": "SERVICE-IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    version_driven_find_behavior: Optional[ServiceVersionAcceptanceKindEnum] = field(
+    version_driven_find_behavior: Optional[
+        ServiceVersionAcceptanceKindEnum
+    ] = field(
         default=None,
         metadata={
             "name": "VERSION-DRIVEN-FIND-BEHAVIOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -357,14 +388,14 @@ class ConsumedServiceInstance:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -375,7 +406,7 @@ class ConsumedServiceInstance:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -386,7 +417,7 @@ class ConsumedServiceInstance:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -397,7 +428,7 @@ class ConsumedServiceInstance:
                 "name": "TAG-WITH-OPTIONAL-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -408,18 +439,20 @@ class ConsumedServiceInstance:
                 "name": "PDU-ACTIVATION-ROUTING-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class RoutingGroupRefs:
-        routing_group_ref: List["ConsumedServiceInstance.RoutingGroupRefs.RoutingGroupRef"] = field(
+        routing_group_ref: List[
+            "ConsumedServiceInstance.RoutingGroupRefs.RoutingGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ROUTING-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -430,7 +463,7 @@ class ConsumedServiceInstance:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -441,7 +474,7 @@ class ConsumedServiceInstance:
                 "name": "SOMEIP-SERVICE-VERSION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -452,18 +485,20 @@ class ConsumedServiceInstance:
                 "name": "CONSUMED-EVENT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class LocalUnicastAddresss:
-        application_endpoint_ref_conditional: List[ApplicationEndpointRefConditional] = field(
+        application_endpoint_ref_conditional: List[
+            ApplicationEndpointRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-ENDPOINT-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -474,27 +509,31 @@ class ConsumedServiceInstance:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RemoteUnicastAddresss:
-        application_endpoint_ref_conditional: List[ApplicationEndpointRefConditional] = field(
+        application_endpoint_ref_conditional: List[
+            ApplicationEndpointRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "APPLICATION-ENDPOINT-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SdClientTimerConfigs:
-        someip_sd_client_service_instance_config_ref_conditional: List[SomeipSdClientServiceInstanceConfigRefConditional] = field(
+        someip_sd_client_service_instance_config_ref_conditional: List[
+            SomeipSdClientServiceInstanceConfigRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

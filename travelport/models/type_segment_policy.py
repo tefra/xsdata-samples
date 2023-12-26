@@ -20,6 +20,7 @@ class TypeSegmentPolicy:
         Determine if this segment is In or Out of contract. By default it is
         InContract.
     """
+
     class Meta:
         name = "typeSegmentPolicy"
 
@@ -30,7 +31,7 @@ class TypeSegmentPolicy:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/universal_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
@@ -38,19 +39,19 @@ class TypeSegmentPolicy:
             "name": "SegmentRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     in_policy: bool = field(
         default=True,
         metadata={
             "name": "InPolicy",
             "type": "Attribute",
-        }
+        },
     )
     in_contract: bool = field(
         default=True,
         metadata={
             "name": "InContract",
             "type": "Attribute",
-        }
+        },
     )

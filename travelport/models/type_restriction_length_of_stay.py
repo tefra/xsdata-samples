@@ -20,6 +20,7 @@ class TypeRestrictionLengthOfStay:
         If true, specifies that advance purchase information will be present
         in fare rules.
     """
+
     class Meta:
         name = "typeRestrictionLengthOfStay"
 
@@ -28,26 +29,26 @@ class TypeRestrictionLengthOfStay:
         metadata={
             "name": "Length",
             "type": "Attribute",
-        }
+        },
     )
     stay_unit: None | TypeStayUnit = field(
         default=None,
         metadata={
             "name": "StayUnit",
             "type": "Attribute",
-        }
+        },
     )
     stay_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StayDate",
             "type": "Attribute",
-        }
+        },
     )
     more_rules_present: None | bool = field(
         default=None,
         metadata={
             "name": "MoreRulesPresent",
             "type": "Attribute",
-        }
+        },
     )

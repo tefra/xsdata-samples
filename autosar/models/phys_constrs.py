@@ -41,6 +41,7 @@ class PhysConstrs:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PHYS-CONSTRS"
 
@@ -50,7 +51,7 @@ class PhysConstrs:
             "name": "LOWER-LIMIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upper_limit: Optional[Limit] = field(
         default=None,
@@ -58,7 +59,7 @@ class PhysConstrs:
             "name": "UPPER-LIMIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     scale_constrs: Optional["PhysConstrs.ScaleConstrs"] = field(
         default=None,
@@ -66,7 +67,7 @@ class PhysConstrs:
             "name": "SCALE-CONSTRS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_gradient: Optional[NumericalValue] = field(
         default=None,
@@ -74,7 +75,7 @@ class PhysConstrs:
             "name": "MAX-GRADIENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_diff: Optional[NumericalValue] = field(
         default=None,
@@ -82,7 +83,7 @@ class PhysConstrs:
             "name": "MAX-DIFF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     monotony: Optional[MonotonyEnum] = field(
         default=None,
@@ -90,7 +91,7 @@ class PhysConstrs:
             "name": "MONOTONY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     unit_ref: Optional["PhysConstrs.UnitRef"] = field(
         default=None,
@@ -98,14 +99,14 @@ class PhysConstrs:
             "name": "UNIT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -113,7 +114,7 @@ class PhysConstrs:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -124,7 +125,7 @@ class PhysConstrs:
                 "name": "SCALE-CONSTR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -135,5 +136,5 @@ class PhysConstrs:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

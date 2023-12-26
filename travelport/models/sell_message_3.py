@@ -11,6 +11,7 @@ class SellMessage3:
     This is applicable in response messages only, any input in request
     message will be ignored.
     """
+
     class Meta:
         name = "SellMessage"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -19,5 +20,5 @@ class SellMessage3:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

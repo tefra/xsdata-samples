@@ -21,6 +21,7 @@ class EmdtravelerInfo:
     age
         Age of the traveler
     """
+
     class Meta:
         name = "EMDTravelerInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -31,7 +32,7 @@ class EmdtravelerInfo:
             "name": "NameInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     traveler_type: None | str = field(
         default=None,
@@ -40,14 +41,14 @@ class EmdtravelerInfo:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -66,6 +67,7 @@ class EmdtravelerInfo:
         suffix
             Name suffix.
         """
+
         prefix: None | str = field(
             default=None,
             metadata={
@@ -73,7 +75,7 @@ class EmdtravelerInfo:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 20,
-            }
+            },
         )
         first: None | str = field(
             default=None,
@@ -83,7 +85,7 @@ class EmdtravelerInfo:
                 "required": True,
                 "min_length": 1,
                 "max_length": 256,
-            }
+            },
         )
         middle: None | str = field(
             default=None,
@@ -92,7 +94,7 @@ class EmdtravelerInfo:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 256,
-            }
+            },
         )
         last: None | str = field(
             default=None,
@@ -102,7 +104,7 @@ class EmdtravelerInfo:
                 "required": True,
                 "min_length": 1,
                 "max_length": 256,
-            }
+            },
         )
         suffix: None | str = field(
             default=None,
@@ -111,5 +113,5 @@ class EmdtravelerInfo:
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 256,
-            }
+            },
         )

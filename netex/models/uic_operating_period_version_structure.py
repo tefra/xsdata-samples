@@ -18,7 +18,7 @@ class UicOperatingPeriodVersionStructure(OperatingPeriodVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     days_of_week: List[DayOfWeekEnumeration] = field(
         default_factory=list,
@@ -27,5 +27,5 @@ class UicOperatingPeriodVersionStructure(OperatingPeriodVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

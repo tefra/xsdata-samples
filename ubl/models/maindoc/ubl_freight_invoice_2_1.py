@@ -59,7 +59,7 @@ class FreightInvoiceType:
             "name": "UBLExtensions",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-        }
+        },
     )
     ublversion_id: Optional[UblversionId] = field(
         default=None,
@@ -67,7 +67,7 @@ class FreightInvoiceType:
             "name": "UBLVersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     customization_id: Optional[CustomizationId] = field(
         default=None,
@@ -75,7 +75,7 @@ class FreightInvoiceType:
             "name": "CustomizationID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_id: Optional[ProfileId] = field(
         default=None,
@@ -83,7 +83,7 @@ class FreightInvoiceType:
             "name": "ProfileID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     profile_execution_id: Optional[ProfileExecutionId] = field(
         default=None,
@@ -91,7 +91,7 @@ class FreightInvoiceType:
             "name": "ProfileExecutionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     id: Optional[Id] = field(
         default=None,
@@ -100,7 +100,7 @@ class FreightInvoiceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     copy_indicator: Optional[bool] = field(
         default=None,
@@ -108,7 +108,7 @@ class FreightInvoiceType:
             "name": "CopyIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     uuid: Optional[Uuid] = field(
         default=None,
@@ -116,7 +116,7 @@ class FreightInvoiceType:
             "name": "UUID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     issue_date: Optional[XmlDate] = field(
         default=None,
@@ -125,7 +125,7 @@ class FreightInvoiceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             "required": True,
-        }
+        },
     )
     issue_time: Optional[XmlTime] = field(
         default=None,
@@ -133,7 +133,7 @@ class FreightInvoiceType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     invoice_type_code: Optional[InvoiceTypeCode] = field(
         default=None,
@@ -141,7 +141,7 @@ class FreightInvoiceType:
             "name": "InvoiceTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     note: Tuple[Note, ...] = field(
         default_factory=tuple,
@@ -149,7 +149,7 @@ class FreightInvoiceType:
             "name": "Note",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     tax_point_date: Optional[XmlDate] = field(
         default=None,
@@ -157,7 +157,7 @@ class FreightInvoiceType:
             "name": "TaxPointDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     document_currency_code: Optional[DocumentCurrencyCode] = field(
         default=None,
@@ -165,7 +165,7 @@ class FreightInvoiceType:
             "name": "DocumentCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     tax_currency_code: Optional[TaxCurrencyCode] = field(
         default=None,
@@ -173,7 +173,7 @@ class FreightInvoiceType:
             "name": "TaxCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     pricing_currency_code: Optional[PricingCurrencyCode] = field(
         default=None,
@@ -181,7 +181,7 @@ class FreightInvoiceType:
             "name": "PricingCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     payment_currency_code: Optional[PaymentCurrencyCode] = field(
         default=None,
@@ -189,15 +189,17 @@ class FreightInvoiceType:
             "name": "PaymentCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
-    payment_alternative_currency_code: Optional[PaymentAlternativeCurrencyCode] = field(
+    payment_alternative_currency_code: Optional[
+        PaymentAlternativeCurrencyCode
+    ] = field(
         default=None,
         metadata={
             "name": "PaymentAlternativeCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     accounting_cost_code: Optional[AccountingCostCode] = field(
         default=None,
@@ -205,7 +207,7 @@ class FreightInvoiceType:
             "name": "AccountingCostCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     accounting_cost: Optional[AccountingCost] = field(
         default=None,
@@ -213,7 +215,7 @@ class FreightInvoiceType:
             "name": "AccountingCost",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     line_count_numeric: Optional[LineCountNumeric] = field(
         default=None,
@@ -221,7 +223,7 @@ class FreightInvoiceType:
             "name": "LineCountNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        }
+        },
     )
     invoice_period: Tuple[InvoicePeriod, ...] = field(
         default_factory=tuple,
@@ -229,7 +231,7 @@ class FreightInvoiceType:
             "name": "InvoicePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     shipment: Tuple[Shipment, ...] = field(
         default_factory=tuple,
@@ -238,7 +240,7 @@ class FreightInvoiceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
     order_reference: Optional[OrderReference] = field(
         default=None,
@@ -246,7 +248,7 @@ class FreightInvoiceType:
             "name": "OrderReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     billing_reference: Tuple[BillingReference, ...] = field(
         default_factory=tuple,
@@ -254,7 +256,7 @@ class FreightInvoiceType:
             "name": "BillingReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     despatch_document_reference: Tuple[DespatchDocumentReference, ...] = field(
         default_factory=tuple,
@@ -262,7 +264,7 @@ class FreightInvoiceType:
             "name": "DespatchDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     receipt_document_reference: Tuple[ReceiptDocumentReference, ...] = field(
         default_factory=tuple,
@@ -270,15 +272,17 @@ class FreightInvoiceType:
             "name": "ReceiptDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    originator_document_reference: Tuple[OriginatorDocumentReference, ...] = field(
+    originator_document_reference: Tuple[
+        OriginatorDocumentReference, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "OriginatorDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     contract_document_reference: Tuple[ContractDocumentReference, ...] = field(
         default_factory=tuple,
@@ -286,15 +290,17 @@ class FreightInvoiceType:
             "name": "ContractDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    additional_document_reference: Tuple[AdditionalDocumentReference, ...] = field(
+    additional_document_reference: Tuple[
+        AdditionalDocumentReference, ...
+    ] = field(
         default_factory=tuple,
         metadata={
             "name": "AdditionalDocumentReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     signature: Tuple[Signature, ...] = field(
         default_factory=tuple,
@@ -302,7 +308,7 @@ class FreightInvoiceType:
             "name": "Signature",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     accounting_supplier_party: Optional[AccountingSupplierParty] = field(
         default=None,
@@ -311,7 +317,7 @@ class FreightInvoiceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     accounting_customer_party: Optional[AccountingCustomerParty] = field(
         default=None,
@@ -320,7 +326,7 @@ class FreightInvoiceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     payee_party: Optional[PayeeParty] = field(
         default=None,
@@ -328,7 +334,7 @@ class FreightInvoiceType:
             "name": "PayeeParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tax_representative_party: Optional[TaxRepresentativeParty] = field(
         default=None,
@@ -336,7 +342,7 @@ class FreightInvoiceType:
             "name": "TaxRepresentativeParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     payment_means: Tuple[PaymentMeans, ...] = field(
         default_factory=tuple,
@@ -344,7 +350,7 @@ class FreightInvoiceType:
             "name": "PaymentMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     payment_terms: Tuple[PaymentTerms, ...] = field(
         default_factory=tuple,
@@ -352,7 +358,7 @@ class FreightInvoiceType:
             "name": "PaymentTerms",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     prepaid_payment: Tuple[PrepaidPayment, ...] = field(
         default_factory=tuple,
@@ -360,7 +366,7 @@ class FreightInvoiceType:
             "name": "PrepaidPayment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     allowance_charge: Tuple[AllowanceCharge, ...] = field(
         default_factory=tuple,
@@ -368,7 +374,7 @@ class FreightInvoiceType:
             "name": "AllowanceCharge",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tax_exchange_rate: Optional[TaxExchangeRate] = field(
         default=None,
@@ -376,7 +382,7 @@ class FreightInvoiceType:
             "name": "TaxExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     pricing_exchange_rate: Optional[PricingExchangeRate] = field(
         default=None,
@@ -384,7 +390,7 @@ class FreightInvoiceType:
             "name": "PricingExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     payment_exchange_rate: Optional[PaymentExchangeRate] = field(
         default=None,
@@ -392,15 +398,17 @@ class FreightInvoiceType:
             "name": "PaymentExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
-    payment_alternative_exchange_rate: Optional[PaymentAlternativeExchangeRate] = field(
+    payment_alternative_exchange_rate: Optional[
+        PaymentAlternativeExchangeRate
+    ] = field(
         default=None,
         metadata={
             "name": "PaymentAlternativeExchangeRate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     tax_total: Tuple[TaxTotal, ...] = field(
         default_factory=tuple,
@@ -408,7 +416,7 @@ class FreightInvoiceType:
             "name": "TaxTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        }
+        },
     )
     legal_monetary_total: Optional[LegalMonetaryTotal] = field(
         default=None,
@@ -417,7 +425,7 @@ class FreightInvoiceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "required": True,
-        }
+        },
     )
     invoice_line: Tuple[InvoiceLine, ...] = field(
         default_factory=tuple,
@@ -426,11 +434,13 @@ class FreightInvoiceType:
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(frozen=True)
 class FreightInvoice(FreightInvoiceType):
     class Meta:
-        namespace = "urn:oasis:names:specification:ubl:schema:xsd:FreightInvoice-2"
+        namespace = (
+            "urn:oasis:names:specification:ubl:schema:xsd:FreightInvoice-2"
+        )

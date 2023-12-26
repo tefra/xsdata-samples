@@ -26,6 +26,7 @@ class SelectionModifiers:
         Reason for issuance code for which EMDs will be generated on all the
         associated services.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -35,7 +36,7 @@ class SelectionModifiers:
             "name": "AirSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     svc_segment_ref: list[str] = field(
         default_factory=list,
@@ -43,7 +44,7 @@ class SelectionModifiers:
             "name": "SvcSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class SelectionModifiers:
             "name": "SupplierCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     rfic: None | str = field(
         default=None,
@@ -59,5 +60,5 @@ class SelectionModifiers:
             "name": "RFIC",
             "type": "Attribute",
             "length": 1,
-        }
+        },
     )

@@ -21,6 +21,7 @@ class SplitTicketingSearch:
         returned in the response would be evenly distributed between the
         outbound and the inbound.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,5 +30,5 @@ class SplitTicketingSearch:
         metadata={
             "name": "RoundTrip",
             "type": "Attribute",
-        }
+        },
     )

@@ -10,7 +10,7 @@ class RelationshipRefStructure:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     name_of_class: Optional[str] = field(
         default=None,
@@ -18,5 +18,5 @@ class RelationshipRefStructure:
             "name": "nameOfClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

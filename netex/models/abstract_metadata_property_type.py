@@ -9,5 +9,5 @@ class AbstractMetadataPropertyType:
         default=False,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

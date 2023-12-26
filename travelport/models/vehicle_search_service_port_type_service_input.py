@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.vehicle_search_availability_req import VehicleSearchAvailabilityReq
+from travelport.models.vehicle_search_availability_req import (
+    VehicleSearchAvailabilityReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class VehicleSearchServicePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class VehicleSearchServicePortTypeServiceInput:
                 "name": "VehicleSearchAvailabilityReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            }
+            },
         )

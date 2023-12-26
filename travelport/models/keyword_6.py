@@ -10,6 +10,7 @@ class Keyword6(TypeKeyword6):
     """
     Detail information of keywords.
     """
+
     class Meta:
         name = "Keyword"
         namespace = "http://www.travelport.com/schema/common_v38_0"

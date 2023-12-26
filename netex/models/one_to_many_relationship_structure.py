@@ -15,5 +15,5 @@ class OneToManyRelationshipStructure(RelationshipStructure):
         metadata={
             "name": "modificationSet",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import AmountType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
+    AmountType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2"
 
@@ -20,6 +22,7 @@ class TreeBelowType:
     :ivar tree_below_sites:
     :ivar tree_below_sites_excluding_branch:
     """
+
     assigned_turnover_tree_below: Optional[AmountType] = field(
         default=None,
         metadata={
@@ -27,7 +30,7 @@ class TreeBelowType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "nillable": True,
-        }
+        },
     )
     assigned_number_of_employees_tree_below: Optional[Decimal] = field(
         default=None,
@@ -35,7 +38,7 @@ class TreeBelowType:
             "name": "AssignedNumberOfEmployeesTreeBelow",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     tree_below_sites: Optional[Decimal] = field(
         default=None,
@@ -43,7 +46,7 @@ class TreeBelowType:
             "name": "TreeBelowSites",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )
     tree_below_sites_excluding_branch: Optional[Decimal] = field(
         default=None,
@@ -51,5 +54,5 @@ class TreeBelowType:
             "name": "TreeBelowSitesExcludingBranch",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        }
+        },
     )

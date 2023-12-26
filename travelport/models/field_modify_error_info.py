@@ -21,6 +21,7 @@ class FieldModifyErrorInfo(TypeErrorInfo5):
         The number of templates using the custom field. The attribute is
         returned if there are more than 100 templates.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -31,12 +32,12 @@ class FieldModifyErrorInfo(TypeErrorInfo5):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 100,
-        }
+        },
     )
     template_count: None | int = field(
         default=None,
         metadata={
             "name": "TemplateCount",
             "type": "Attribute",
-        }
+        },
     )

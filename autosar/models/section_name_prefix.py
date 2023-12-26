@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import VariationPoint
 from .c_identifier import CIdentifier
-from .dependency_on_artifact_subtypes_enum import DependencyOnArtifactSubtypesEnum
+from .dependency_on_artifact_subtypes_enum import (
+    DependencyOnArtifactSubtypesEnum,
+)
 from .identifier import Identifier
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
@@ -42,6 +44,7 @@ class SectionNamePrefix:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SECTION-NAME-PREFIX"
 
@@ -52,15 +55,17 @@ class SectionNamePrefix:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SectionNamePrefix.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SectionNamePrefix.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol: Optional[CIdentifier] = field(
         default=None,
@@ -68,7 +73,7 @@ class SectionNamePrefix:
             "name": "SYMBOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     implemented_in_ref: Optional["SectionNamePrefix.ImplementedInRef"] = field(
         default=None,
@@ -76,7 +81,7 @@ class SectionNamePrefix:
             "name": "IMPLEMENTED-IN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -84,14 +89,14 @@ class SectionNamePrefix:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -99,7 +104,7 @@ class SectionNamePrefix:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -110,7 +115,7 @@ class SectionNamePrefix:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -121,5 +126,5 @@ class SectionNamePrefix:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

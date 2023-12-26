@@ -23,6 +23,7 @@ class TypeTaggableAddress1(TypeAddress1):
     priority_order
         Priority order associated with this Address.
     """
+
     class Meta:
         name = "typeTaggableAddress"
 
@@ -32,7 +33,7 @@ class TypeTaggableAddress1(TypeAddress1):
             "name": "TagRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
-        }
+        },
     )
     delivery_description: None | str = field(
         default=None,
@@ -41,14 +42,14 @@ class TypeTaggableAddress1(TypeAddress1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     purpose: None | TypeContactPurpose1 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -57,5 +58,5 @@ class TypeTaggableAddress1(TypeAddress1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

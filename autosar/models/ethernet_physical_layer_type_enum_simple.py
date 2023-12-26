@@ -27,6 +27,7 @@ class EthernetPhysicalLayerTypeEnumSimple(Enum):
         removed in future. Please use xMII instead. Old description:
         Media Independent Interface (MII) physical layer
     """
+
     VALUE_1000_BASE_T = "1000BASE-T"
     VALUE_1000_BASE_T1 = "1000BASE-T1"
     VALUE_100_BASE_T1 = "100BASE-T1"

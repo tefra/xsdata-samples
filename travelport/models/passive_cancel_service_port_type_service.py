@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.passive_cancel_service_port_type_service_input import PassiveCancelServicePortTypeServiceInput
-from travelport.models.passive_cancel_service_port_type_service_output import PassiveCancelServicePortTypeServiceOutput
+from travelport.models.passive_cancel_service_port_type_service_input import (
+    PassiveCancelServicePortTypeServiceInput,
+)
+from travelport.models.passive_cancel_service_port_type_service_output import (
+    PassiveCancelServicePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

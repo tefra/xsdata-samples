@@ -35,6 +35,7 @@ class TypeContact1(TypeKeyTaggedElement1):
     priority_order
         Priority order associated with this Contact.
     """
+
     class Meta:
         name = "typeContact"
 
@@ -44,7 +45,7 @@ class TypeContact1(TypeKeyTaggedElement1):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
@@ -53,7 +54,7 @@ class TypeContact1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -62,7 +63,7 @@ class TypeContact1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     other_name: None | str = field(
         default=None,
@@ -71,7 +72,7 @@ class TypeContact1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     nickname: None | str = field(
         default=None,
@@ -80,7 +81,7 @@ class TypeContact1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -89,5 +90,5 @@ class TypeContact1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

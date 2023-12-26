@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .boolean import Boolean
 from .flexray_fifo_range import FlexrayFifoRange
-from .flexray_physical_channel_subtypes_enum import FlexrayPhysicalChannelSubtypesEnum
+from .flexray_physical_channel_subtypes_enum import (
+    FlexrayPhysicalChannelSubtypesEnum,
+)
 from .integer import Integer
 from .ref import Ref
 
@@ -40,6 +42,7 @@ class FlexrayFifoConfiguration:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-FIFO-CONFIGURATION"
 
@@ -49,7 +52,7 @@ class FlexrayFifoConfiguration:
             "name": "ADMIT-WITHOUT-MESSAGE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     base_cycle: Optional[Integer] = field(
         default=None,
@@ -57,7 +60,7 @@ class FlexrayFifoConfiguration:
             "name": "BASE-CYCLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     channel_ref: Optional["FlexrayFifoConfiguration.ChannelRef"] = field(
         default=None,
@@ -65,7 +68,7 @@ class FlexrayFifoConfiguration:
             "name": "CHANNEL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     cycle_repetition: Optional[Integer] = field(
         default=None,
@@ -73,7 +76,7 @@ class FlexrayFifoConfiguration:
             "name": "CYCLE-REPETITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fifo_depth: Optional[Integer] = field(
         default=None,
@@ -81,7 +84,7 @@ class FlexrayFifoConfiguration:
             "name": "FIFO-DEPTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fifo_ranges: Optional["FlexrayFifoConfiguration.FifoRanges"] = field(
         default=None,
@@ -89,7 +92,7 @@ class FlexrayFifoConfiguration:
             "name": "FIFO-RANGES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msg_id_mask: Optional[Integer] = field(
         default=None,
@@ -97,7 +100,7 @@ class FlexrayFifoConfiguration:
             "name": "MSG-ID-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msg_id_match: Optional[Integer] = field(
         default=None,
@@ -105,14 +108,14 @@ class FlexrayFifoConfiguration:
             "name": "MSG-ID-MATCH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -120,7 +123,7 @@ class FlexrayFifoConfiguration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -131,7 +134,7 @@ class FlexrayFifoConfiguration:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -142,5 +145,5 @@ class FlexrayFifoConfiguration:
                 "name": "FLEXRAY-FIFO-RANGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

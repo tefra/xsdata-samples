@@ -11,6 +11,7 @@ class Group(GroupType):
 
     Examples: season, series, playlist and album.
     """
+
     class Meta:
         name = "group"
         namespace = "urn:vpro:media:2009"

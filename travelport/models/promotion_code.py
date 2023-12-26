@@ -14,12 +14,12 @@ class PromotionCode:
         metadata={
             "required": True,
             "max_length": 30,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

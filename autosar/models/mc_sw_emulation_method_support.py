@@ -4,7 +4,9 @@ from .annotation import VariationPoint
 from .identifier import Identifier
 from .mc_parameter_element_group import McParameterElementGroup
 from .ref import Ref
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -45,6 +47,7 @@ class McSwEmulationMethodSupport:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MC-SW-EMULATION-METHOD-SUPPORT"
 
@@ -54,7 +57,7 @@ class McSwEmulationMethodSupport:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[Identifier] = field(
         default=None,
@@ -62,31 +65,37 @@ class McSwEmulationMethodSupport:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    base_reference_ref: Optional["McSwEmulationMethodSupport.BaseReferenceRef"] = field(
+    base_reference_ref: Optional[
+        "McSwEmulationMethodSupport.BaseReferenceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "BASE-REFERENCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    element_groups: Optional["McSwEmulationMethodSupport.ElementGroups"] = field(
+    element_groups: Optional[
+        "McSwEmulationMethodSupport.ElementGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "ELEMENT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    reference_table_ref: Optional["McSwEmulationMethodSupport.ReferenceTableRef"] = field(
+    reference_table_ref: Optional[
+        "McSwEmulationMethodSupport.ReferenceTableRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REFERENCE-TABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -94,14 +103,14 @@ class McSwEmulationMethodSupport:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -109,7 +118,7 @@ class McSwEmulationMethodSupport:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -120,7 +129,7 @@ class McSwEmulationMethodSupport:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -131,7 +140,7 @@ class McSwEmulationMethodSupport:
                 "name": "MC-PARAMETER-ELEMENT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -142,5 +151,5 @@ class McSwEmulationMethodSupport:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

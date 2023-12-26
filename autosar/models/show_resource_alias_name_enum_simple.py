@@ -12,5 +12,6 @@ class ShowResourceAliasNameEnumSimple(Enum):
         referenced object shall be rendered at the place of the
         reference.
     """
+
     NO_SHOW_ALIAS_NAME = "NO-SHOW-ALIAS-NAME"
     SHOW_ALIAS_NAME = "SHOW-ALIAS-NAME"

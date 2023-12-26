@@ -29,6 +29,7 @@ class EcucDerivationSpecification:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ECUC-DERIVATION-SPECIFICATION"
 
@@ -38,7 +39,7 @@ class EcucDerivationSpecification:
             "name": "CALCULATION-FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecuc_querys: Optional["EcucDerivationSpecification.EcucQuerys"] = field(
         default=None,
@@ -46,7 +47,7 @@ class EcucDerivationSpecification:
             "name": "ECUC-QUERYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     informal_formula: Optional[MlFormula] = field(
         default=None,
@@ -54,14 +55,14 @@ class EcucDerivationSpecification:
             "name": "INFORMAL-FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -69,7 +70,7 @@ class EcucDerivationSpecification:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -80,5 +81,5 @@ class EcucDerivationSpecification:
                 "name": "ECUC-QUERY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

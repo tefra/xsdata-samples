@@ -11,6 +11,7 @@ class Segment(SegmentType):
 
     A segment is an identifiable part of a program.
     """
+
     class Meta:
         name = "segment"
         namespace = "urn:vpro:media:2009"

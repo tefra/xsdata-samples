@@ -1,11 +1,13 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .air_submode_enumeration import AirSubmodeEnumeration
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .bus_submode_enumeration import BusSubmodeEnumeration
 from .coach_submode_enumeration import CoachSubmodeEnumeration
 from .funicular_submode_enumeration import FunicularSubmodeEnumeration
-from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .group_of_entities_version_structure import (
+    GroupOfEntitiesVersionStructure,
+)
 from .metro_submode_enumeration import MetroSubmodeEnumeration
 from .polygon import Polygon
 from .rail_submode_enumeration import RailSubmodeEnumeration
@@ -28,14 +30,14 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     members: Optional[StopPlaceRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alternative_names: Optional[AlternativeNamesRelStructure] = field(
         default=None,
@@ -43,7 +45,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "name": "alternativeNames",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     centroid: Optional[SimplePointVersionStructure] = field(
         default=None,
@@ -51,7 +53,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "name": "Centroid",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     polygon: Optional[Polygon] = field(
         default=None,
@@ -59,7 +61,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "name": "Polygon",
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
-        }
+        },
     )
     transport_mode: Optional[VehicleModeEnumeration] = field(
         default=None,
@@ -67,9 +69,22 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            AirSubmodeEnumeration,
+            BusSubmodeEnumeration,
+            CoachSubmodeEnumeration,
+            FunicularSubmodeEnumeration,
+            MetroSubmodeEnumeration,
+            TramSubmodeEnumeration,
+            TelecabinSubmodeEnumeration,
+            RailSubmodeEnumeration,
+            WaterSubmodeEnumeration,
+            SnowAndIceSubmodeEnumeration,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -125,5 +140,5 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

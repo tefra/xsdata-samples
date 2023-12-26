@@ -17,7 +17,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "TactileActuators",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     energy_saving: Optional[bool] = field(
         default=None,
@@ -25,7 +25,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "EnergySaving",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     speed: Optional[Decimal] = field(
         default=None,
@@ -33,7 +33,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Speed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     length: Optional[Decimal] = field(
         default=None,
@@ -41,7 +41,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Length",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gradient: Optional[Decimal] = field(
         default=None,
@@ -49,7 +49,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "Gradient",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     integrates_an_escalator_part: Optional[bool] = field(
         default=None,
@@ -57,5 +57,5 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "IntegratesAnEscalatorPart",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

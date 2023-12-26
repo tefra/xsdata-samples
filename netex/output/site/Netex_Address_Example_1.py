@@ -69,29 +69,29 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
         choice=[
             SiteFrame(
-                id="SiteFrame:SF01",
+                id='SiteFrame:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="mysite:PP01_OpeningHours",
-                                version="any",
+                                id='mysite:PP01_OpeningHours',
+                                version='any',
                                 day_types=DayTypesRelStructure(
                                     choice=[
                                         DayType(
-                                            id="mysite:EveryDay",
-                                            version="any",
+                                            id='mysite:EveryDay',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Every day"
+                                                value='Every day'
                                             ),
                                             properties=PropertiesOfDayRelStructure(
                                                 property_of_day=[
@@ -104,15 +104,15 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
-                                            ref=""
+                                            ref=''
                                         ),
                                     ]
                                 ),
                                 timebands=TimebandsRelStructure(
                                     timeband_ref_or_timeband=[
                                         TimebandVersionedChildStructure(
-                                            id="mysite:OpeningHours",
-                                            version="any",
+                                            id='mysite:OpeningHours',
+                                            version='any',
                                             start_time=XmlTime(6, 30, 0, 0),
                                             end_time_or_day_offset_or_duration=[
                                                 XmlTime(12, 0, 0, 0),
@@ -122,15 +122,15 @@ obj = PublicationDelivery(
                                 )
                             ),
                             AvailabilityCondition(
-                                id="mysite:PP01_ExitHours",
-                                version="any",
+                                id='mysite:PP01_ExitHours',
+                                version='any',
                                 day_types=DayTypesRelStructure(
                                     choice=[
                                         DayType(
-                                            id="mysite:24HrsEveryDay",
-                                            version="any",
+                                            id='mysite:24HrsEveryDay',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Every day"
+                                                value='Every day'
                                             ),
                                             properties=PropertiesOfDayRelStructure(
                                                 property_of_day=[
@@ -143,7 +143,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
-                                            ref=""
+                                            ref=''
                                         ),
                                     ]
                                 )
@@ -151,75 +151,75 @@ obj = PublicationDelivery(
                         ]
                     ),
                 ],
-                version="any",
+                version='any',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mypark",
-                            xmlns="mypark",
-                            xmlns_url="http://www.pkgdata.co.uk/data",
-                            description="Other interchange DATA SOURCE "
+                            id='mypark',
+                            xmlns='mypark',
+                            xmlns_url='http://www.pkgdata.co.uk/data',
+                            description='Other interchange DATA SOURCE '
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mypark"
+                        ref='mypark'
                     )
                 ),
                 parkings=ParkingsInFrameRelStructure(
                     parking=[
                         Parking(
-                            id="mysite::PP01",
+                            id='mysite::PP01',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityConditionRef(
-                                            version="any",
-                                            ref="mysite:PP01_OpeningHours"
+                                            version='any',
+                                            ref='mysite:PP01_OpeningHours'
                                         ),
                                     ]
                                 ),
                             ],
-                            data_source_ref_attribute="parkopedia",
-                            version="any",
+                            data_source_ref_attribute='parkopedia',
+                            version='any',
                             name=MultilingualString(
-                                value="Barcester  CIty centre  Car Park"
+                                value='Barcester  CIty centre  Car Park'
                             ),
                             short_name=MultilingualString(
-                                value="CIty Car Park"
+                                value='CIty Car Park'
                             ),
                             description=[
                                 MultilingualString(
-                                    value="Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places "
+                                    value='Mult storey next to Sainsbury . Three storeys 220 public and 30 disabled places '
                                 ),
                             ],
                             centroid=SimplePointVersionStructure(
-                                id="xyz",
+                                id='xyz',
                                 location=LocationStructure2(
-                                    longitude=Decimal("-180"),
-                                    latitude=Decimal("-90"),
-                                    id="xyz12",
-                                    srs_name="WGS84"
+                                    longitude=Decimal('-180'),
+                                    latitude=Decimal('-90'),
+                                    id='xyz12',
+                                    srs_name='WGS84'
                                 )
                             ),
-                            url="http://www.barpark.co.uk",
-                            image="http://ww.mycarpark.com/prettypicture.jpg",
+                            url='http://www.barpark.co.uk',
+                            image='http://ww.mycarpark.com/prettypicture.jpg',
                             postal_address=PostalAddress(
-                                id="PostalAddress:PP01_01",
-                                version="any",
+                                id='PostalAddress:PP01_01',
+                                version='any',
                                 country_ref=CountryRef(
-                                    value="String",
+                                    value='String',
                                     ref=IanaCountryTldEnumeration.UK
                                 ),
-                                house_number="27",
+                                house_number='27',
                                 street=MultilingualString(
-                                    value="High Street"
+                                    value='High Street'
                                 ),
                                 town=MultilingualString(
-                                    value="Barcester"
+                                    value='Barcester'
                                 ),
-                                post_code="BXC 24P"
+                                post_code='BXC 24P'
                             ),
                             landmark=MultilingualString(
                                 value="Sainsbury's"
@@ -230,8 +230,8 @@ obj = PublicationDelivery(
                             facilities=SiteFacilitySetsRelStructure(
                                 site_facility_set_ref_or_site_facility_set=[
                                     SiteFacilitySet(
-                                        id="mysite:SSP_02456A",
-                                        version="any",
+                                        id='mysite:SSP_02456A',
+                                        version='any',
                                         accessibility_tool_list=[
                                             AccessibilityToolEnumeration.PUSHCHAIR,
                                             AccessibilityToolEnumeration.WHEELCHAIR,
@@ -244,74 +244,74 @@ obj = PublicationDelivery(
                             entrances=SiteEntrancesRelStructure(
                                 choice=[
                                     ParkingEntranceForVehicles(
-                                        id="mysite:PP_E11_Entrance",
+                                        id='mysite:PP_E11_Entrance',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        version="any",
-                                                        ref="mysite:PP01_OpeningHours"
+                                                        version='any',
+                                                        ref='mysite:PP01_OpeningHours'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Vehicle Entrance from street"
+                                            value='Main Vehicle Entrance from street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mysite::PP01"
+                                            version='any',
+                                            ref='mysite::PP01'
                                         ),
                                         label=MultilingualString(
-                                            value="IN"
+                                            value='IN'
                                         ),
                                         entrance_type=EntranceEnumeration.GATE,
                                         is_external=True,
                                         is_entry=True,
                                         is_exit=False,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                     ParkingEntranceForVehicles(
-                                        id="mysite:PP_E12_Exit",
+                                        id='mysite:PP_E12_Exit',
                                         validity_conditions_or_valid_between=[
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
-                                                        version="any",
-                                                        ref="mysite:PP01_ExitHours"
+                                                        version='any',
+                                                        ref='mysite:PP01_ExitHours'
                                                     ),
                                                 ]
                                             ),
                                         ],
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main Vehicle Exit to street"
+                                            value='Main Vehicle Exit to street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="mysite::PP01"
+                                            version='any',
+                                            ref='mysite::PP01'
                                         ),
                                         label=MultilingualString(
-                                            value="Exit"
+                                            value='Exit'
                                         ),
                                         entrance_type=EntranceEnumeration.GATE,
                                         is_external=True,
                                         is_entry=False,
                                         is_exit=True,
-                                        width=Decimal("14.0"),
-                                        height=Decimal("12.0")
+                                        width=Decimal('14.0'),
+                                        height=Decimal('12.0')
                                     ),
                                 ]
                             ),
                             accesses=AccessesRelStructure(
                                 access_ref_or_access=[
                                     Access(
-                                        id="mysite:PP_01",
-                                        version="any",
+                                        id='mysite:PP_01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Walk to Station"
+                                            value='Walk to Station'
                                         ),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT10M"),
@@ -321,13 +321,13 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
-                                                ref="napt:9100:00476"
+                                                ref='napt:9100:00476'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                             place_ref=PlaceRefStructure(
-                                                ref="mysite::PP01"
+                                                ref='mysite::PP01'
                                             )
                                         )
                                     ),
@@ -351,17 +351,17 @@ obj = PublicationDelivery(
                                 PaymentMethodEnumeration.CREDIT_CARD,
                                 PaymentMethodEnumeration.MOBILE_PHONE,
                             ],
-                            default_currency="GBP",
+                            default_currency='GBP',
                             currencies_accepted=[
-                                "GBP",
+                                'GBP',
                             ],
                             parking_reservation=ParkingReservationEnumeration.NO_RESERVATIONS,
-                            booking_url="http://www.bookmyparking.com",
+                            booking_url='http://www.bookmyparking.com',
                             parking_properties=ParkingPropertiesRelStructure(
                                 parking_properties=[
                                     ParkingProperties(
-                                        id="mysite:PP01",
-                                        version="any",
+                                        id='mysite:PP01',
+                                        version='any',
                                         parking_user_types=[
                                             ParkingUserEnumeration.ALL_USERS,
                                         ],
@@ -372,10 +372,10 @@ obj = PublicationDelivery(
                                         spaces=ParkingCapacitiesRelStructure(
                                             parking_capacity_ref_or_parking_capacity=[
                                                 ParkingCapacity(
-                                                    id="mysite:PP01_01_disabled",
-                                                    version="any",
+                                                    id='mysite:PP01_01_disabled',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        ref="mysite::PP01"
+                                                        ref='mysite::PP01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -383,10 +383,10 @@ obj = PublicationDelivery(
                                                     number_of_spaces=30
                                                 ),
                                                 ParkingCapacity(
-                                                    id="mysite:PP01_other",
-                                                    version="any",
+                                                    id='mysite:PP01_other',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        ref="mysite::PP01_01_01"
+                                                        ref='mysite::PP01_01_01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL_USERS,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -401,37 +401,37 @@ obj = PublicationDelivery(
                             vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                 parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mysite:PP_E11_Entrance"
+                                        version='any',
+                                        ref='mysite:PP_E11_Entrance'
                                     ),
                                     ParkingEntranceForVehiclesRef(
-                                        version="any",
-                                        ref="mysite:PP_E12_Exit"
+                                        version='any',
+                                        ref='mysite:PP_E12_Exit'
                                     ),
                                 ]
                             )
                         ),
                         Parking(
-                            id="mysite::PS22",
+                            id='mysite::PS22',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="mysite:ParkingChargeHours",
-                                            version="any",
+                                            id='mysite:ParkingChargeHours',
+                                            version='any',
                                             name=MultilingualString(
-                                                value="Charged Parking times"
+                                                value='Charged Parking times'
                                             ),
                                             description=MultilingualString(
-                                                value="Modnay to friday not PublicHolidays"
+                                                value='Modnay to friday not PublicHolidays'
                                             ),
                                             day_types=DayTypesRelStructure(
                                                 choice=[
                                                     DayType(
-                                                        id="mysite:WorkingDay",
-                                                        version="any",
+                                                        id='mysite:WorkingDay',
+                                                        version='any',
                                                         name=MultilingualString(
-                                                            value="Working day"
+                                                            value='Working day'
                                                         ),
                                                         properties=PropertiesOfDayRelStructure(
                                                             property_of_day=[
@@ -454,15 +454,15 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     DayTypeRef(
-                                                        ref=""
+                                                        ref=''
                                                     ),
                                                 ]
                                             ),
                                             timebands=TimebandsRelStructure(
                                                 timeband_ref_or_timeband=[
                                                     TimebandVersionedChildStructure(
-                                                        id="mysite:ParkingChargeHours",
-                                                        version="any",
+                                                        id='mysite:ParkingChargeHours',
+                                                        version='any',
                                                         start_time=XmlTime(8, 30, 0, 0),
                                                         end_time_or_day_offset_or_duration=[
                                                             XmlTime(5, 30, 0, 0),
@@ -474,23 +474,23 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            data_source_ref_attribute="parkopedia",
-                            version="any",
+                            data_source_ref_attribute='parkopedia',
+                            version='any',
                             name=MultilingualString(
-                                value="Barcester  High street Parking "
+                                value='Barcester  High street Parking '
                             ),
                             short_name=MultilingualString(
-                                value="CIty Car Park"
+                                value='CIty Car Park'
                             ),
                             description=[
                                 MultilingualString(
-                                    value="On street parking metered 8.30 to 6 pm Mondat to Friday  "
+                                    value='On street parking metered 8.30 to 6 pm Mondat to Friday  '
                                 ),
                             ],
-                            url="http://www.barpccyparkingregs.co.uk",
+                            url='http://www.barpccyparkingregs.co.uk',
                             accessibility_assessment=AccessibilityAssessment(
-                                id="mysite::PS22_01",
-                                version="any",
+                                id='mysite::PS22_01',
+                                version='any',
                                 mobility_impaired_access=LimitationStatusEnumeration.TRUE
                             ),
                             access_modes=[
@@ -502,10 +502,10 @@ obj = PublicationDelivery(
                             accesses=AccessesRelStructure(
                                 access_ref_or_access=[
                                     Access(
-                                        id="mysite:PS_s2",
-                                        version="any",
+                                        id='mysite:PS_s2',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Walk to Station"
+                                            value='Walk to Station'
                                         ),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT15M"),
@@ -515,13 +515,13 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
-                                                ref="napt:9100:00476"
+                                                ref='napt:9100:00476'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                             place_ref=PlaceRefStructure(
-                                                ref="mysite::PP01"
+                                                ref='mysite::PP01'
                                             )
                                         )
                                     ),
@@ -545,29 +545,29 @@ obj = PublicationDelivery(
                                 PaymentMethodEnumeration.CREDIT_CARD,
                                 PaymentMethodEnumeration.MOBILE_PHONE,
                             ],
-                            default_currency="GBP",
+                            default_currency='GBP',
                             currencies_accepted=[
-                                "GBP",
+                                'GBP',
                             ],
                             cards_accepted=[
-                                "diners",
-                                "mastercard",
-                                "visa",
-                                "eftpos",
+                                'diners',
+                                'mastercard',
+                                'visa',
+                                'eftpos',
                             ],
                             parking_reservation=ParkingReservationEnumeration.NO_RESERVATIONS,
-                            booking_url="http://www.bookmyparking.com",
+                            booking_url='http://www.bookmyparking.com',
                             payment_by_mobile=PaymentByMobileStructure(
-                                phone_number_to_pay="7242",
-                                support_phone_number="0202417656",
-                                payment_url="http://www.bookmyparking.com"
+                                phone_number_to_pay='7242',
+                                support_phone_number='0202417656',
+                                payment_url='http://www.bookmyparking.com'
                             ),
                             free_parking_out_of_hours=True,
                             parking_properties=ParkingPropertiesRelStructure(
                                 parking_properties=[
                                     ParkingProperties(
-                                        id="mysite:PS22",
-                                        version="any",
+                                        id='mysite:PS22',
+                                        version='any',
                                         parking_user_types=[
                                             ParkingUserEnumeration.ALL,
                                         ],
@@ -577,10 +577,10 @@ obj = PublicationDelivery(
                                         spaces=ParkingCapacitiesRelStructure(
                                             parking_capacity_ref_or_parking_capacity=[
                                                 ParkingCapacity(
-                                                    id="mysite:PS22_01_disabled",
-                                                    version="any",
+                                                    id='mysite:PS22_01_disabled',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        ref="mysite::PS22"
+                                                        ref='mysite::PS22'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,
@@ -588,10 +588,10 @@ obj = PublicationDelivery(
                                                     number_of_spaces=5
                                                 ),
                                                 ParkingCapacity(
-                                                    id="mysite:PS22_other",
-                                                    version="any",
+                                                    id='mysite:PS22_other',
+                                                    version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
-                                                        ref="mysite::PS22_01_01"
+                                                        ref='mysite::PS22_01_01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL_USERS,
                                                     parking_vehicle_type=ParkingVehicleEnumeration.PASSENGER_CAR,

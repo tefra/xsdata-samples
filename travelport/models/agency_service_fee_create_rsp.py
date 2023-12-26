@@ -11,6 +11,7 @@ class AgencyServiceFeeCreateRsp(BaseRsp1):
     """
     Agency Service Fee issued through BSP or Airline Reporting Corporation (ARC)..
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -22,5 +23,5 @@ class AgencyServiceFeeCreateRsp(BaseRsp1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

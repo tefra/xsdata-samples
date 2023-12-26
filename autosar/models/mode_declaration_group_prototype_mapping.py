@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .mode_declaration_group_prototype_subtypes_enum import ModeDeclarationGroupPrototypeSubtypesEnum
-from .mode_declaration_mapping_set_subtypes_enum import ModeDeclarationMappingSetSubtypesEnum
+from .mode_declaration_group_prototype_subtypes_enum import (
+    ModeDeclarationGroupPrototypeSubtypesEnum,
+)
+from .mode_declaration_mapping_set_subtypes_enum import (
+    ModeDeclarationMappingSetSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -33,39 +37,46 @@ class ModeDeclarationGroupPrototypeMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-MAPPING"
 
-    first_mode_group_ref: Optional["ModeDeclarationGroupPrototypeMapping.FirstModeGroupRef"] = field(
+    first_mode_group_ref: Optional[
+        "ModeDeclarationGroupPrototypeMapping.FirstModeGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-MODE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mode_declaration_mapping_set_ref: Optional["ModeDeclarationGroupPrototypeMapping.ModeDeclarationMappingSetRef"] = field(
+    mode_declaration_mapping_set_ref: Optional[
+        "ModeDeclarationGroupPrototypeMapping.ModeDeclarationMappingSetRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-MAPPING-SET-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    second_mode_group_ref: Optional["ModeDeclarationGroupPrototypeMapping.SecondModeGroupRef"] = field(
+    second_mode_group_ref: Optional[
+        "ModeDeclarationGroupPrototypeMapping.SecondModeGroupRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SECOND-MODE-GROUP-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -73,7 +84,7 @@ class ModeDeclarationGroupPrototypeMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -84,7 +95,7 @@ class ModeDeclarationGroupPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -95,7 +106,7 @@ class ModeDeclarationGroupPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -106,5 +117,5 @@ class ModeDeclarationGroupPrototypeMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

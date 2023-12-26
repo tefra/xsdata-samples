@@ -8,6 +8,7 @@ class TypeMctConnection(Enum):
     """
     Enumeration of the types of MCT exceptions (domestic or international)
     """
+
     DD = "DD"
     DI = "DI"
     ID = "ID"

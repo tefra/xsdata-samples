@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .alternative_texts_rel_structure import (
     AvailabilityCondition,
     ValidBetween,
@@ -16,7 +16,14 @@ class AvailabilityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "availabilityConditions_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            AvailabilityConditionRef,
+            AvailabilityCondition,
+            ValidDuring,
+            ValidBetween,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -42,5 +49,5 @@ class AvailabilityConditionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

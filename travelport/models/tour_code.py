@@ -9,6 +9,7 @@ class TourCode:
     """
     Tour Code Fare Basis.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class TourCode:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )

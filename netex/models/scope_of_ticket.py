@@ -13,5 +13,5 @@ class ScopeOfTicket:
         default=TicketingFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

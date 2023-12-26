@@ -1,19 +1,27 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .autosar_data_prototype_subtypes_enum import AutosarDataPrototypeSubtypesEnum
+from .autosar_data_prototype_subtypes_enum import (
+    AutosarDataPrototypeSubtypesEnum,
+)
 from .boolean_value_variation_point import BooleanValueVariationPoint
 from .composite_network_representation import CompositeNetworkRepresentation
-from .end_to_end_transformation_com_spec_props import EndToEndTransformationComSpecProps
+from .end_to_end_transformation_com_spec_props import (
+    EndToEndTransformationComSpecProps,
+)
 from .handle_out_of_range_enum import HandleOutOfRangeEnum
 from .handle_out_of_range_status_enum import HandleOutOfRangeStatusEnum
 from .positive_integer import PositiveInteger
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .receiver_intent_enum import ReceiverIntentEnum
 from .reception_com_spec_props import ReceptionComSpecProps
 from .ref import Ref
 from .sw_pointer_target_props import SwDataDefProps
 from .time_value import TimeValue
-from .user_defined_transformation_com_spec_props import UserDefinedTransformationComSpecProps
+from .user_defined_transformation_com_spec_props import (
+    UserDefinedTransformationComSpecProps,
+)
 from .variable_access import VariableAccess
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -110,16 +118,19 @@ class QueuedReceiverComSpec:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "QUEUED-RECEIVER-COM-SPEC"
 
-    composite_network_representations: Optional["QueuedReceiverComSpec.CompositeNetworkRepresentations"] = field(
+    composite_network_representations: Optional[
+        "QueuedReceiverComSpec.CompositeNetworkRepresentations"
+    ] = field(
         default=None,
         metadata={
             "name": "COMPOSITE-NETWORK-REPRESENTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_element_ref: Optional["QueuedReceiverComSpec.DataElementRef"] = field(
         default=None,
@@ -127,7 +138,7 @@ class QueuedReceiverComSpec:
             "name": "DATA-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_update_period: Optional[TimeValue] = field(
         default=None,
@@ -135,15 +146,17 @@ class QueuedReceiverComSpec:
             "name": "DATA-UPDATE-PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    external_replacement_ref: Optional["QueuedReceiverComSpec.ExternalReplacementRef"] = field(
+    external_replacement_ref: Optional[
+        "QueuedReceiverComSpec.ExternalReplacementRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EXTERNAL-REPLACEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     handle_out_of_range: Optional[HandleOutOfRangeEnum] = field(
         default=None,
@@ -151,7 +164,7 @@ class QueuedReceiverComSpec:
             "name": "HANDLE-OUT-OF-RANGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     handle_out_of_range_status: Optional[HandleOutOfRangeStatusEnum] = field(
         default=None,
@@ -159,15 +172,17 @@ class QueuedReceiverComSpec:
             "name": "HANDLE-OUT-OF-RANGE-STATUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    max_delta_counter_init: Optional[PositiveIntegerValueVariationPoint] = field(
+    max_delta_counter_init: Optional[
+        PositiveIntegerValueVariationPoint
+    ] = field(
         default=None,
         metadata={
             "name": "MAX-DELTA-COUNTER-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_no_new_or_repeated_data: Optional[PositiveInteger] = field(
         default=None,
@@ -175,7 +190,7 @@ class QueuedReceiverComSpec:
             "name": "MAX-NO-NEW-OR-REPEATED-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     network_representation: Optional[SwDataDefProps] = field(
         default=None,
@@ -183,7 +198,7 @@ class QueuedReceiverComSpec:
             "name": "NETWORK-REPRESENTATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     receiver_intent: Optional[ReceiverIntentEnum] = field(
         default=None,
@@ -191,7 +206,7 @@ class QueuedReceiverComSpec:
             "name": "RECEIVER-INTENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     reception_props: Optional[ReceptionComSpecProps] = field(
         default=None,
@@ -199,7 +214,7 @@ class QueuedReceiverComSpec:
             "name": "RECEPTION-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     replace_with: Optional[VariableAccess] = field(
         default=None,
@@ -207,7 +222,7 @@ class QueuedReceiverComSpec:
             "name": "REPLACE-WITH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_counter_init: Optional[PositiveInteger] = field(
         default=None,
@@ -215,15 +230,17 @@ class QueuedReceiverComSpec:
             "name": "SYNC-COUNTER-INIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformation_com_spec_propss: Optional["QueuedReceiverComSpec.TransformationComSpecPropss"] = field(
+    transformation_com_spec_propss: Optional[
+        "QueuedReceiverComSpec.TransformationComSpecPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-COM-SPEC-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     uses_end_to_end_protection: Optional[BooleanValueVariationPoint] = field(
         default=None,
@@ -231,7 +248,7 @@ class QueuedReceiverComSpec:
             "name": "USES-END-TO-END-PROTECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     queue_length: Optional[PositiveInteger] = field(
         default=None,
@@ -239,14 +256,14 @@ class QueuedReceiverComSpec:
             "name": "QUEUE-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -254,18 +271,20 @@ class QueuedReceiverComSpec:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class CompositeNetworkRepresentations:
-        composite_network_representation: List[CompositeNetworkRepresentation] = field(
+        composite_network_representation: List[
+            CompositeNetworkRepresentation
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COMPOSITE-NETWORK-REPRESENTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,7 +295,7 @@ class QueuedReceiverComSpec:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -287,24 +306,28 @@ class QueuedReceiverComSpec:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class TransformationComSpecPropss:
-        end_to_end_transformation_com_spec_props: List[EndToEndTransformationComSpecProps] = field(
+        end_to_end_transformation_com_spec_props: List[
+            EndToEndTransformationComSpecProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "END-TO-END-TRANSFORMATION-COM-SPEC-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_transformation_com_spec_props: List[UserDefinedTransformationComSpecProps] = field(
+        user_defined_transformation_com_spec_props: List[
+            UserDefinedTransformationComSpecProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-TRANSFORMATION-COM-SPEC-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

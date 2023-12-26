@@ -4,8 +4,12 @@ from .access_facility_enumeration import AccessFacilityEnumeration
 from .emergency_service_enumeration import EmergencyServiceEnumeration
 from .facility_set_version_structure import FacilitySetVersionStructure
 from .hire_facility_enumeration import HireFacilityEnumeration
-from .luggage_locker_facility_enumeration import LuggageLockerFacilityEnumeration
-from .luggage_service_facility_enumeration import LuggageServiceFacilityEnumeration
+from .luggage_locker_facility_enumeration import (
+    LuggageLockerFacilityEnumeration,
+)
+from .luggage_service_facility_enumeration import (
+    LuggageServiceFacilityEnumeration,
+)
 from .money_facility_enumeration import MoneyFacilityEnumeration
 from .parking_facility_enumeration import ParkingFacilityEnumeration
 from .staffing_enumeration import StaffingEnumeration
@@ -22,7 +26,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     emergency_service_list: List[EmergencyServiceEnumeration] = field(
         default_factory=list,
@@ -31,7 +35,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     hire_facility_list: List[HireFacilityEnumeration] = field(
         default_factory=list,
@@ -40,25 +44,29 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    luggage_locker_facility_list: List[LuggageLockerFacilityEnumeration] = field(
+    luggage_locker_facility_list: List[
+        LuggageLockerFacilityEnumeration
+    ] = field(
         default_factory=list,
         metadata={
             "name": "LuggageLockerFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    luggage_service_facility_list: List[LuggageServiceFacilityEnumeration] = field(
+    luggage_service_facility_list: List[
+        LuggageServiceFacilityEnumeration
+    ] = field(
         default_factory=list,
         metadata={
             "name": "LuggageServiceFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     money_facility_list: List[MoneyFacilityEnumeration] = field(
         default_factory=list,
@@ -67,7 +75,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     parking_facility_list: List[ParkingFacilityEnumeration] = field(
         default_factory=list,
@@ -76,7 +84,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     staffing: Optional[StaffingEnumeration] = field(
         default=None,
@@ -84,5 +92,5 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "name": "Staffing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

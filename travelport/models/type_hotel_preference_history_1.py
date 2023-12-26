@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
-from travelport.models.type_base_preference_history_1 import TypeBasePreferenceHistory1
+from travelport.models.type_base_preference_history_1 import (
+    TypeBasePreferenceHistory1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -33,6 +35,7 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
         Util: ReferenceDataRetrieveReq, TypeCode 'HotelMiscType', Util:
         ReferenceDataRetrieveReq, TypeCode VehicleMiscType.
     """
+
     class Meta:
         name = "typeHotelPreferenceHistory"
 
@@ -42,7 +45,7 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "BedTypeMiscTravel",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     bed_type_ref_category: None | str = field(
         default=None,
@@ -50,21 +53,21 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "BedTypeRefCategory",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )
     check_in_start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CheckInStartDate",
             "type": "Attribute",
-        }
+        },
     )
     check_in_end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CheckInEndDate",
             "type": "Attribute",
-        }
+        },
     )
     corporate_discount_number: None | str = field(
         default=None,
@@ -72,14 +75,14 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "CorporateDiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     max_room_rate_amount: None | str = field(
         default=None,
         metadata={
             "name": "MaxRoomRateAmount",
             "type": "Attribute",
-        }
+        },
     )
     multi_level_rate_code: None | str = field(
         default=None,
@@ -87,7 +90,7 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "MultiLevelRateCode",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     property_id: None | str = field(
         default=None,
@@ -95,7 +98,7 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "PropertyID",
             "type": "Attribute",
             "max_length": 20,
-        }
+        },
     )
     rate_code: None | str = field(
         default=None,
@@ -103,14 +106,14 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     smoking_room: None | bool = field(
         default=None,
         metadata={
             "name": "SmokingRoom",
             "type": "Attribute",
-        }
+        },
     )
     special_request_misc_travel: None | str = field(
         default=None,
@@ -118,7 +121,7 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "SpecialRequestMiscTravel",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     special_request_ref_category: None | str = field(
         default=None,
@@ -126,5 +129,5 @@ class TypeHotelPreferenceHistory1(TypeBasePreferenceHistory1):
             "name": "SpecialRequestRefCategory",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )

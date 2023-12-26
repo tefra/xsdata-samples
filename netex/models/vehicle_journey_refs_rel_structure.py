@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .dead_run_ref import DeadRunRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .vehicle_journey_ref import VehicleJourneyRef
@@ -12,7 +12,9 @@ class VehicleJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleJourneyRefs_RelStructure"
 
-    dead_run_ref_or_vehicle_journey_ref: List[object] = field(
+    dead_run_ref_or_vehicle_journey_ref: List[
+        Union[DeadRunRef, VehicleJourneyRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class VehicleJourneyRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

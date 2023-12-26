@@ -13,7 +13,7 @@ class PrintPresentationStructure:
             "name": "Colour",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     colour_name: Optional[str] = field(
         default=None,
@@ -21,7 +21,7 @@ class PrintPresentationStructure:
             "name": "ColourName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     colour_system: Optional[str] = field(
         default=None,
@@ -29,7 +29,7 @@ class PrintPresentationStructure:
             "name": "ColourSystem",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     background_colour: Optional[bytes] = field(
         default=None,
@@ -39,7 +39,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
             "max_length": 6,
             "format": "base16",
-        }
+        },
     )
     background_colour_name: Optional[str] = field(
         default=None,
@@ -47,7 +47,7 @@ class PrintPresentationStructure:
             "name": "BackgroundColourName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text_colour: Optional[str] = field(
         default=None,
@@ -55,7 +55,7 @@ class PrintPresentationStructure:
             "name": "TextColour",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text_colour_name: Optional[str] = field(
         default=None,
@@ -63,7 +63,7 @@ class PrintPresentationStructure:
             "name": "TextColourName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text_font: Optional[str] = field(
         default=None,
@@ -71,7 +71,7 @@ class PrintPresentationStructure:
             "name": "TextFont",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text_font_name: Optional[str] = field(
         default=None,
@@ -79,7 +79,7 @@ class PrintPresentationStructure:
             "name": "TextFontName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text_language: Optional[str] = field(
         default=None,
@@ -87,7 +87,7 @@ class PrintPresentationStructure:
             "name": "TextLanguage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     font_size: Optional[FontSizeEnumeration] = field(
         default=None,
@@ -95,5 +95,5 @@ class PrintPresentationStructure:
             "name": "FontSize",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

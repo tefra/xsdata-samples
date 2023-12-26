@@ -15,6 +15,7 @@ class FixedFieldGroupRef:
     id
         The unique ID of the reference-able fixed field group.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -24,5 +25,5 @@ class FixedFieldGroupRef:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

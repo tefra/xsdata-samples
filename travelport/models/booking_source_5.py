@@ -19,6 +19,7 @@ class BookingSource5:
         applicable in VehicleCreateReservationReq and only for 1P/1J
         providers.
     """
+
     class Meta:
         name = "BookingSource"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -30,7 +31,7 @@ class BookingSource5:
             "type": "Attribute",
             "required": True,
             "min_length": 1,
-        }
+        },
     )
     type_value: None | BookingSourceType5 = field(
         default=None,
@@ -38,5 +39,5 @@ class BookingSource5:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

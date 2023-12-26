@@ -3,7 +3,9 @@ from typing import Optional
 from .allocator_subtypes_enum import AllocatorSubtypesEnum
 from .boolean import Boolean
 from .category_string import CategoryString
-from .cpp_implementation_data_type_subtypes_enum import CppImplementationDataTypeSubtypesEnum
+from .cpp_implementation_data_type_subtypes_enum import (
+    CppImplementationDataTypeSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -39,6 +41,7 @@ class CppTemplateArgument:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CPP-TEMPLATE-ARGUMENT"
 
@@ -48,7 +51,7 @@ class CppTemplateArgument:
             "name": "ALLOCATOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -56,7 +59,7 @@ class CppTemplateArgument:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     inplace: Optional[Boolean] = field(
         default=None,
@@ -64,7 +67,7 @@ class CppTemplateArgument:
             "name": "INPLACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     template_type_ref: Optional["CppTemplateArgument.TemplateTypeRef"] = field(
         default=None,
@@ -72,14 +75,14 @@ class CppTemplateArgument:
             "name": "TEMPLATE-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -87,7 +90,7 @@ class CppTemplateArgument:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -98,7 +101,7 @@ class CppTemplateArgument:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -109,5 +112,5 @@ class CppTemplateArgument:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

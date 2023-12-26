@@ -9,6 +9,7 @@ class BrandId:
     """
     Brand ids for Merchandising details.
     """
+
     class Meta:
         name = "BrandID"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -19,5 +20,5 @@ class BrandId:
             "name": "Id",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

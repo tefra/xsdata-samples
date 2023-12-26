@@ -14,26 +14,26 @@ class FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault:
         metadata={
             "type": "Element",
             "namespace": "",
-        }
+        },
     )
     faultstring: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
-        }
+        },
     )
     faultactor: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
-        }
+        },
     )
     detail: Optional[str] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
-        }
+        },
     )

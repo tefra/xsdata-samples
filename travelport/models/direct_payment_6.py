@@ -9,6 +9,7 @@ class DirectPayment6:
     """
     Direct Payment Form of Payments.
     """
+
     class Meta:
         name = "DirectPayment"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -18,5 +19,5 @@ class DirectPayment6:
         metadata={
             "name": "Text",
             "type": "Attribute",
-        }
+        },
     )

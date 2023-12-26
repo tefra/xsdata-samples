@@ -19,7 +19,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "FromStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -27,7 +27,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "ToStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -35,7 +35,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     standard_wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -43,7 +43,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "StandardWaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -51,7 +51,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MaximumWaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_automatic_wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -59,7 +59,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MaximumAutomaticWaitTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     standard_transfer_time: Optional[XmlDuration] = field(
         default=None,
@@ -67,7 +67,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "StandardTransferTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_transfer_time: Optional[XmlDuration] = field(
         default=None,
@@ -75,7 +75,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MinimumTransferTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_transfer_time: Optional[XmlDuration] = field(
         default=None,
@@ -83,5 +83,5 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "name": "MaximumTransferTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.vms_datex_pictogram_enum import VmsDatexPictogramEnum
-from datexii.models.eu.datexii.v2.vms_supplementary_panel import VmsSupplementaryPanel
+from datexii.models.eu.datexii.v2.vms_datex_pictogram_enum import (
+    VmsDatexPictogramEnum,
+)
+from datexii.models.eu.datexii.v2.vms_supplementary_panel import (
+    VmsSupplementaryPanel,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -53,13 +57,14 @@ class VmsPictogram:
     :ivar vms_supplementary_panel:
     :ivar vms_pictogram_extension:
     """
+
     pictogram_description: List[VmsDatexPictogramEnum] = field(
         default_factory=list,
         metadata={
             "name": "pictogramDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_code: Optional[str] = field(
         default=None,
@@ -68,7 +73,7 @@ class VmsPictogram:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     pictogram_url: Optional[str] = field(
         default=None,
@@ -76,7 +81,7 @@ class VmsPictogram:
             "name": "pictogramUrl",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     additional_pictogram_description: Optional[MultilingualString] = field(
         default=None,
@@ -84,7 +89,7 @@ class VmsPictogram:
             "name": "additionalPictogramDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_flashing: Optional[bool] = field(
         default=None,
@@ -92,7 +97,7 @@ class VmsPictogram:
             "name": "pictogramFlashing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pictogram_in_inverse_colour: Optional[bool] = field(
         default=None,
@@ -100,7 +105,7 @@ class VmsPictogram:
             "name": "pictogramInInverseColour",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     presence_of_red_triangle: Optional[bool] = field(
         default=None,
@@ -109,7 +114,7 @@ class VmsPictogram:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vienna_convention_compliant: Optional[bool] = field(
         default=None,
@@ -117,7 +122,7 @@ class VmsPictogram:
             "name": "viennaConventionCompliant",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_attribute: Optional[int] = field(
         default=None,
@@ -125,7 +130,7 @@ class VmsPictogram:
             "name": "distanceAttribute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     height_attribute: Optional[float] = field(
         default=None,
@@ -133,7 +138,7 @@ class VmsPictogram:
             "name": "heightAttribute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     length_attribute: Optional[float] = field(
         default=None,
@@ -141,7 +146,7 @@ class VmsPictogram:
             "name": "lengthAttribute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     speed_attribute: Optional[float] = field(
         default=None,
@@ -149,7 +154,7 @@ class VmsPictogram:
             "name": "speedAttribute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     weight_attribute: Optional[float] = field(
         default=None,
@@ -157,7 +162,7 @@ class VmsPictogram:
             "name": "weightAttribute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     weight_per_axle_attribute: Optional[float] = field(
         default=None,
@@ -165,7 +170,7 @@ class VmsPictogram:
             "name": "weightPerAxleAttribute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     width_attribute: Optional[float] = field(
         default=None,
@@ -173,7 +178,7 @@ class VmsPictogram:
             "name": "widthAttribute",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_supplementary_panel: Optional[VmsSupplementaryPanel] = field(
         default=None,
@@ -181,7 +186,7 @@ class VmsPictogram:
             "name": "vmsSupplementaryPanel",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_pictogram_extension: Optional[ExtensionType] = field(
         default=None,
@@ -189,5 +194,5 @@ class VmsPictogram:
             "name": "vmsPictogramExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

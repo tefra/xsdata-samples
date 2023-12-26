@@ -30,6 +30,7 @@ class FaxDetails:
     invoice_number
         Invoice number.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -40,14 +41,14 @@ class FaxDetails:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     term_conditions: None | TermConditions = field(
         default=None,
         metadata={
             "name": "TermConditions",
             "type": "Element",
-        }
+        },
     )
     remark: list[Remark1] = field(
         default_factory=list,
@@ -56,40 +57,40 @@ class FaxDetails:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     include_cover_sheet: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeCoverSheet",
             "type": "Attribute",
-        }
+        },
     )
     to: None | str = field(
         default=None,
         metadata={
             "name": "To",
             "type": "Attribute",
-        }
+        },
     )
     from_value: None | str = field(
         default=None,
         metadata={
             "name": "From",
             "type": "Attribute",
-        }
+        },
     )
     dept_billing_code: None | str = field(
         default=None,
         metadata={
             "name": "DeptBillingCode",
             "type": "Attribute",
-        }
+        },
     )
     invoice_number: None | str = field(
         default=None,
         metadata={
             "name": "InvoiceNumber",
             "type": "Attribute",
-        }
+        },
     )

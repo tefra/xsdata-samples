@@ -14,11 +14,11 @@ class CheckStatusRequestStructure(RequestStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     version: str = field(
         default="2.0",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

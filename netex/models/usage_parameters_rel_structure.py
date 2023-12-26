@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .cancelling import Cancelling
 from .cancelling_ref import CancellingRef
 from .charging_policy import ChargingPolicy
@@ -44,10 +44,18 @@ from .round_trip import RoundTrip
 from .round_trip_ref import RoundTripRef
 from .routing import Routing
 from .routing_ref import RoutingRef
-from .sales_offer_package_entitlement_given import SalesOfferPackageEntitlementGiven
-from .sales_offer_package_entitlement_given_ref import SalesOfferPackageEntitlementGivenRef
-from .sales_offer_package_entitlement_required import SalesOfferPackageEntitlementRequired
-from .sales_offer_package_entitlement_required_ref import SalesOfferPackageEntitlementRequiredRef
+from .sales_offer_package_entitlement_given import (
+    SalesOfferPackageEntitlementGiven,
+)
+from .sales_offer_package_entitlement_given_ref import (
+    SalesOfferPackageEntitlementGivenRef,
+)
+from .sales_offer_package_entitlement_required import (
+    SalesOfferPackageEntitlementRequired,
+)
+from .sales_offer_package_entitlement_required_ref import (
+    SalesOfferPackageEntitlementRequiredRef,
+)
 from .step_limit import StepLimit
 from .step_limit_ref import StepLimitRef
 from .subscribing import Subscribing
@@ -69,7 +77,69 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usageParameters_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            SalesOfferPackageEntitlementGivenRef,
+            SalesOfferPackageEntitlementRequiredRef,
+            MinimumStayRef,
+            InterchangingRef,
+            FrequencyOfUseRef,
+            SuspendingRef,
+            UsageValidityPeriodRef,
+            StepLimitRef,
+            RoutingRef,
+            RoundTripRef,
+            LuggageAllowanceRef,
+            EntitlementGivenRef,
+            EntitlementRequiredRef,
+            EligibilityChangePolicyRef,
+            GroupTicketRef,
+            CommercialProfileRef,
+            CompanionProfileRef,
+            UserProfileRef,
+            ProfileParameterRef,
+            SubscribingRef,
+            PenaltyPolicyRef,
+            ChargingPolicyRef,
+            TransferabilityRef,
+            ReplacingRef,
+            RefundingRef,
+            ExchangingRef,
+            ResellingRef,
+            CancellingRef,
+            ReservingRef,
+            PurchaseWindowRef,
+            SalesOfferPackageEntitlementRequired,
+            SalesOfferPackageEntitlementGiven,
+            MinimumStay,
+            Interchanging,
+            Suspending,
+            UsageValidityPeriod,
+            FrequencyOfUse,
+            StepLimit,
+            Routing,
+            RoundTrip,
+            LuggageAllowance,
+            EntitlementRequired,
+            EntitlementGiven,
+            EligibilityChangePolicy,
+            CompanionProfile,
+            GroupTicket,
+            CommercialProfile,
+            UserProfile,
+            Subscribing,
+            PenaltyPolicy,
+            ChargingPolicy,
+            Cancelling,
+            Reserving,
+            PurchaseWindow,
+            Transferability,
+            Replacing,
+            Refunding,
+            Exchanging,
+            Reselling,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -370,5 +440,5 @@ class UsageParametersRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

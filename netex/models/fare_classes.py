@@ -14,5 +14,5 @@ class FareClasses:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

@@ -21,6 +21,7 @@ class TypeTaggableElectronicAddress2(TypeElectronicAddress2):
     priority_order
         Priority order associated with this ElectronicAddress.
     """
+
     class Meta:
         name = "typeTaggableElectronicAddress"
 
@@ -31,14 +32,14 @@ class TypeTaggableElectronicAddress2(TypeElectronicAddress2):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     purpose: None | TypeContactPurpose2 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -47,5 +48,5 @@ class TypeTaggableElectronicAddress2(TypeElectronicAddress2):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

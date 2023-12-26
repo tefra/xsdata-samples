@@ -192,6 +192,7 @@ class OptionalService1:
     display_order
         Optional service group display order.
     """
+
     class Meta:
         name = "OptionalService"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -203,7 +204,7 @@ class OptionalService1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     service_info: None | ServiceInfo1 = field(
         default=None,
@@ -211,7 +212,7 @@ class OptionalService1:
             "name": "ServiceInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     remark: list[Remark1] = field(
         default_factory=list,
@@ -220,7 +221,7 @@ class OptionalService1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TaxInfo] = field(
         default_factory=list,
@@ -228,7 +229,7 @@ class OptionalService1:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fee_info: list[FeeInfo] = field(
         default_factory=list,
@@ -236,21 +237,21 @@ class OptionalService1:
             "name": "FeeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     emd: None | Emd = field(
         default=None,
         metadata={
             "name": "EMD",
             "type": "Element",
-        }
+        },
     )
     bundled_services: None | BundledServices = field(
         default=None,
         metadata={
             "name": "BundledServices",
             "type": "Element",
-        }
+        },
     )
     additional_info: list[AdditionalInfo] = field(
         default_factory=list,
@@ -258,14 +259,14 @@ class OptionalService1:
             "name": "AdditionalInfo",
             "type": "Element",
             "max_occurs": 16,
-        }
+        },
     )
     fee_application: None | FeeApplication = field(
         default=None,
         metadata={
             "name": "FeeApplication",
             "type": "Element",
-        }
+        },
     )
     text: list[Text] = field(
         default_factory=list,
@@ -273,7 +274,7 @@ class OptionalService1:
             "name": "Text",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     price_range: list[PriceRange] = field(
         default_factory=list,
@@ -281,21 +282,21 @@ class OptionalService1:
             "name": "PriceRange",
             "type": "Element",
             "max_occurs": 5,
-        }
+        },
     )
     tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
-        }
+        },
     )
     branding_info: None | BrandingInfo = field(
         default=None,
         metadata={
             "name": "BrandingInfo",
             "type": "Element",
-        }
+        },
     )
     title: list[Title] = field(
         default_factory=list,
@@ -303,7 +304,7 @@ class OptionalService1:
             "name": "Title",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -312,7 +313,7 @@ class OptionalService1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -321,14 +322,14 @@ class OptionalService1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     optional_services_rule_ref: None | str = field(
         default=None,
         metadata={
             "name": "OptionalServicesRuleRef",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -338,91 +339,91 @@ class OptionalService1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     confirmation: None | str = field(
         default=None,
         metadata={
             "name": "Confirmation",
             "type": "Attribute",
-        }
+        },
     )
     secondary_type: None | str = field(
         default=None,
         metadata={
             "name": "SecondaryType",
             "type": "Attribute",
-        }
+        },
     )
     purchase_window: None | TypePurchaseWindow = field(
         default=None,
         metadata={
             "name": "PurchaseWindow",
             "type": "Attribute",
-        }
+        },
     )
     priority: None | int = field(
         default=None,
         metadata={
             "name": "Priority",
             "type": "Attribute",
-        }
+        },
     )
     available: None | bool = field(
         default=None,
         metadata={
             "name": "Available",
             "type": "Attribute",
-        }
+        },
     )
     entitled: None | bool = field(
         default=None,
         metadata={
             "name": "Entitled",
             "type": "Attribute",
-        }
+        },
     )
     per_traveler: bool = field(
         default=True,
         metadata={
             "name": "PerTraveler",
             "type": "Attribute",
-        }
+        },
     )
     create_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-        }
+        },
     )
     payment_ref: None | str = field(
         default=None,
         metadata={
             "name": "PaymentRef",
             "type": "Attribute",
-        }
+        },
     )
     service_status: None | str = field(
         default=None,
         metadata={
             "name": "ServiceStatus",
             "type": "Attribute",
-        }
+        },
     )
     quantity: None | int = field(
         default=None,
         metadata={
             "name": "Quantity",
             "type": "Attribute",
-        }
+        },
     )
     sequence_number: None | int = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Attribute",
-        }
+        },
     )
     service_sub_code: None | str = field(
         default=None,
@@ -430,7 +431,7 @@ class OptionalService1:
             "name": "ServiceSubCode",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )
     ssrcode: None | str = field(
         default=None,
@@ -439,7 +440,7 @@ class OptionalService1:
             "type": "Attribute",
             "min_length": 4,
             "max_length": 4,
-        }
+        },
     )
     issuance_reason: None | str = field(
         default=None,
@@ -448,7 +449,7 @@ class OptionalService1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 1,
-        }
+        },
     )
     provider_defined_type: None | str = field(
         default=None,
@@ -457,98 +458,98 @@ class OptionalService1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 16,
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     assess_indicator: None | TypeAssessIndicator = field(
         default=None,
         metadata={
             "name": "AssessIndicator",
             "type": "Attribute",
-        }
+        },
     )
     mileage: None | int = field(
         default=None,
         metadata={
             "name": "Mileage",
             "type": "Attribute",
-        }
+        },
     )
     applicable_fflevel: None | int = field(
         default=None,
@@ -557,161 +558,161 @@ class OptionalService1:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 9,
-        }
+        },
     )
     private: None | bool = field(
         default=None,
         metadata={
             "name": "Private",
             "type": "Attribute",
-        }
+        },
     )
     ssrfree_text: None | str = field(
         default=None,
         metadata={
             "name": "SSRFreeText",
             "type": "Attribute",
-        }
+        },
     )
     is_pricing_approximate: None | bool = field(
         default=None,
         metadata={
             "name": "IsPricingApproximate",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     chargeable: None | str = field(
         default=None,
         metadata={
             "name": "Chargeable",
             "type": "Attribute",
-        }
+        },
     )
     inclusive_of_tax: None | bool = field(
         default=None,
         metadata={
             "name": "InclusiveOfTax",
             "type": "Attribute",
-        }
+        },
     )
     interline_settlement_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "InterlineSettlementAllowed",
             "type": "Attribute",
-        }
+        },
     )
     geography_specification: None | str = field(
         default=None,
         metadata={
             "name": "GeographySpecification",
             "type": "Attribute",
-        }
+        },
     )
     excess_weight_rate: None | str = field(
         default=None,
         metadata={
             "name": "ExcessWeightRate",
             "type": "Attribute",
-        }
+        },
     )
     source: None | str = field(
         default=None,
         metadata={
             "name": "Source",
             "type": "Attribute",
-        }
+        },
     )
     viewable_only: None | bool = field(
         default=None,
         metadata={
             "name": "ViewableOnly",
             "type": "Attribute",
-        }
+        },
     )
     display_text: None | str = field(
         default=None,
         metadata={
             "name": "DisplayText",
             "type": "Attribute",
-        }
+        },
     )
     weight_in_excess: None | str = field(
         default=None,
         metadata={
             "name": "WeightInExcess",
             "type": "Attribute",
-        }
+        },
     )
     total_weight: None | str = field(
         default=None,
         metadata={
             "name": "TotalWeight",
             "type": "Attribute",
-        }
+        },
     )
     baggage_unit_price: None | str = field(
         default=None,
         metadata={
             "name": "BaggageUnitPrice",
             "type": "Attribute",
-        }
+        },
     )
     first_piece: None | int = field(
         default=None,
         metadata={
             "name": "FirstPiece",
             "type": "Attribute",
-        }
+        },
     )
     last_piece: None | int = field(
         default=None,
         metadata={
             "name": "LastPiece",
             "type": "Attribute",
-        }
+        },
     )
     restricted: bool = field(
         default=False,
         metadata={
             "name": "Restricted",
             "type": "Attribute",
-        }
+        },
     )
     is_reprice_required: bool = field(
         default=False,
         metadata={
             "name": "IsRepriceRequired",
             "type": "Attribute",
-        }
+        },
     )
     booked_quantity: None | str = field(
         default=None,
         metadata={
             "name": "BookedQuantity",
             "type": "Attribute",
-        }
+        },
     )
     group: None | str = field(
         default=None,
         metadata={
             "name": "Group",
             "type": "Attribute",
-        }
+        },
     )
     pseudo_city_code: None | str = field(
         default=None,
@@ -720,7 +721,7 @@ class OptionalService1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     tag: None | str = field(
         default=None,
@@ -729,7 +730,7 @@ class OptionalService1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 256,
-        }
+        },
     )
     display_order: None | int = field(
         default=None,
@@ -738,5 +739,5 @@ class OptionalService1:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 999,
-        }
+        },
     )

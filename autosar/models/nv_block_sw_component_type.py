@@ -142,6 +142,7 @@ class NvBlockSwComponentType:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "NV-BLOCK-SW-COMPONENT-TYPE"
 
@@ -152,15 +153,17 @@ class NvBlockSwComponentType:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["NvBlockSwComponentType.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "NvBlockSwComponentType.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -168,7 +171,7 @@ class NvBlockSwComponentType:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -176,7 +179,7 @@ class NvBlockSwComponentType:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -184,7 +187,7 @@ class NvBlockSwComponentType:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -192,7 +195,7 @@ class NvBlockSwComponentType:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -200,7 +203,7 @@ class NvBlockSwComponentType:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["NvBlockSwComponentType.Annotations"] = field(
         default=None,
@@ -208,7 +211,7 @@ class NvBlockSwComponentType:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -216,15 +219,17 @@ class NvBlockSwComponentType:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["NvBlockSwComponentType.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "NvBlockSwComponentType.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -232,23 +237,27 @@ class NvBlockSwComponentType:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_component_documentations: Optional["NvBlockSwComponentType.SwComponentDocumentations"] = field(
+    sw_component_documentations: Optional[
+        "NvBlockSwComponentType.SwComponentDocumentations"
+    ] = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    consistency_needss: Optional["NvBlockSwComponentType.ConsistencyNeedss"] = field(
+    consistency_needss: Optional[
+        "NvBlockSwComponentType.ConsistencyNeedss"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ports: Optional["NvBlockSwComponentType.Ports"] = field(
         default=None,
@@ -256,7 +265,7 @@ class NvBlockSwComponentType:
             "name": "PORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_groups: Optional["NvBlockSwComponentType.PortGroups"] = field(
         default=None,
@@ -264,7 +273,7 @@ class NvBlockSwComponentType:
             "name": "PORT-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     unit_group_refs: Optional["NvBlockSwComponentType.UnitGroupRefs"] = field(
         default=None,
@@ -272,15 +281,17 @@ class NvBlockSwComponentType:
             "name": "UNIT-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    internal_behaviors: Optional["NvBlockSwComponentType.InternalBehaviors"] = field(
+    internal_behaviors: Optional[
+        "NvBlockSwComponentType.InternalBehaviors"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol_props: Optional[SymbolProps] = field(
         default=None,
@@ -288,30 +299,34 @@ class NvBlockSwComponentType:
             "name": "SYMBOL-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    bulk_nv_data_descriptors: Optional["NvBlockSwComponentType.BulkNvDataDescriptors"] = field(
+    bulk_nv_data_descriptors: Optional[
+        "NvBlockSwComponentType.BulkNvDataDescriptors"
+    ] = field(
         default=None,
         metadata={
             "name": "BULK-NV-DATA-DESCRIPTORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    nv_block_descriptors: Optional["NvBlockSwComponentType.NvBlockDescriptors"] = field(
+    nv_block_descriptors: Optional[
+        "NvBlockSwComponentType.NvBlockDescriptors"
+    ] = field(
         default=None,
         metadata={
             "name": "NV-BLOCK-DESCRIPTORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -319,14 +334,14 @@ class NvBlockSwComponentType:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -337,7 +352,7 @@ class NvBlockSwComponentType:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -348,7 +363,7 @@ class NvBlockSwComponentType:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -359,15 +374,17 @@ class NvBlockSwComponentType:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -375,7 +392,7 @@ class NvBlockSwComponentType:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -386,7 +403,7 @@ class NvBlockSwComponentType:
                 "name": "SW-COMPONENT-DOCUMENTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -397,7 +414,7 @@ class NvBlockSwComponentType:
                 "name": "CONSISTENCY-NEEDS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -408,7 +425,7 @@ class NvBlockSwComponentType:
                 "name": "P-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         pr_port_prototype: List[PrPortPrototype] = field(
             default_factory=list,
@@ -416,7 +433,7 @@ class NvBlockSwComponentType:
                 "name": "PR-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         r_port_prototype: List[RPortPrototype] = field(
             default_factory=list,
@@ -424,7 +441,7 @@ class NvBlockSwComponentType:
                 "name": "R-PORT-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -435,18 +452,20 @@ class NvBlockSwComponentType:
                 "name": "PORT-GROUP",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class UnitGroupRefs:
-        unit_group_ref: List["NvBlockSwComponentType.UnitGroupRefs.UnitGroupRef"] = field(
+        unit_group_ref: List[
+            "NvBlockSwComponentType.UnitGroupRefs.UnitGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "UNIT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -457,7 +476,7 @@ class NvBlockSwComponentType:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -468,7 +487,7 @@ class NvBlockSwComponentType:
                 "name": "SWC-INTERNAL-BEHAVIOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -479,7 +498,7 @@ class NvBlockSwComponentType:
                 "name": "BULK-NV-DATA-DESCRIPTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -490,5 +509,5 @@ class NvBlockSwComponentType:
                 "name": "NV-BLOCK-DESCRIPTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

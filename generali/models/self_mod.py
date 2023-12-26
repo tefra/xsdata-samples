@@ -12,5 +12,5 @@ class Self:
         metadata={
             "type": "Element",
             "required": True,
-        }
+        },
     )

@@ -14,14 +14,14 @@ class SourcingCreateSummary:
         metadata={
             "name": "TotalNumberOfSourcingItems",
             "type": "Element",
-        }
+        },
     )
     total_number_of_participants: Optional[str] = field(
         default=None,
         metadata={
             "name": "TotalNumberOfParticipants",
             "type": "Element",
-        }
+        },
     )
     estimated_total_value: str = field(
         metadata={
@@ -45,13 +45,15 @@ class SourcingItemComponentResponse:
 
 @dataclass(kw_only=True)
 class ListOfSourcingItemComponentResponse:
-    sourcing_item_component_response: List[SourcingItemComponentResponse] = field(
+    sourcing_item_component_response: List[
+        SourcingItemComponentResponse
+    ] = field(
         default_factory=list,
         metadata={
             "name": "SourcingItemComponentResponse",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -105,7 +107,7 @@ class SourcingCreateResponseDetail:
         metadata={
             "name": "ParentItemIdentifier",
             "type": "Element",
-        }
+        },
     )
     sourcing_item_response_coded: str = field(
         metadata={
@@ -119,14 +121,16 @@ class SourcingCreateResponseDetail:
         metadata={
             "name": "SourcingItemResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
-    list_of_sourcing_item_component_response: Optional[ListOfSourcingItemComponentResponse] = field(
+    list_of_sourcing_item_component_response: Optional[
+        ListOfSourcingItemComponentResponse
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfSourcingItemComponentResponse",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -179,7 +183,7 @@ class SourcingCreateResponseHeader:
         metadata={
             "name": "SourcingResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -193,19 +197,21 @@ class SourcingCreateResponseHeader:
         metadata={
             "name": "SourcingCreateResponseNote",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfSourcingCreateResponseDetail:
-    sourcing_create_response_detail: List[SourcingCreateResponseDetail] = field(
+    sourcing_create_response_detail: List[
+        SourcingCreateResponseDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "SourcingCreateResponseDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -218,17 +224,21 @@ class SourcingCreateResponse:
             "required": True,
         }
     )
-    list_of_sourcing_create_response_detail: Optional[ListOfSourcingCreateResponseDetail] = field(
+    list_of_sourcing_create_response_detail: Optional[
+        ListOfSourcingCreateResponseDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfSourcingCreateResponseDetail",
             "type": "Element",
-        }
+        },
     )
-    sourcing_create_response_summary: Optional[SourcingCreateResponseSummary] = field(
+    sourcing_create_response_summary: Optional[
+        SourcingCreateResponseSummary
+    ] = field(
         default=None,
         metadata={
             "name": "SourcingCreateResponseSummary",
             "type": "Element",
-        }
+        },
     )

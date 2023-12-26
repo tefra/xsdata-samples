@@ -14,5 +14,5 @@ class SeriesConstraintRefStructure2(PriceableObjectRefStructure):
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

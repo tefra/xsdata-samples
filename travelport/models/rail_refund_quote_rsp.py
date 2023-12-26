@@ -11,6 +11,7 @@ class RailRefundQuoteRsp(BaseRsp1):
     """
     Returns rail refund information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -21,5 +22,5 @@ class RailRefundQuoteRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

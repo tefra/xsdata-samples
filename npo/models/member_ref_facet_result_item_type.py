@@ -17,5 +17,5 @@ class MemberRefFacetResultItemType(TermFacetResultItemType):
             "name": "type",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

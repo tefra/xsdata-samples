@@ -43,42 +43,42 @@ class InvoiceResponseDetail:
         metadata={
             "name": "InvoiceResponseCoded",
             "type": "Element",
-        }
+        },
     )
     invoice_response_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "InvoiceResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     error_info: Optional[ErrorInfo] = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -114,14 +114,14 @@ class InvoiceResponseParty:
         metadata={
             "name": "RemitToParty",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -133,7 +133,7 @@ class ListOfInvoiceResponseDetail:
             "name": "InvoiceResponseDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -158,7 +158,7 @@ class InvoiceResponseHeader:
         metadata={
             "name": "InvoiceResponseIssueDate",
             "type": "Element",
-        }
+        },
     )
     invoice_type: InvoiceType = field(
         metadata={
@@ -186,7 +186,7 @@ class InvoiceResponseHeader:
         metadata={
             "name": "InvoiceResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
     invoice_response_party: InvoiceResponseParty = field(
         metadata={
@@ -200,35 +200,35 @@ class InvoiceResponseHeader:
         metadata={
             "name": "InvoiceResponseHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     error_info: Optional[ErrorInfo] = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -241,10 +241,12 @@ class InvoiceResponse:
             "required": True,
         }
     )
-    list_of_invoice_response_detail: Optional[ListOfInvoiceResponseDetail] = field(
+    list_of_invoice_response_detail: Optional[
+        ListOfInvoiceResponseDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfInvoiceResponseDetail",
             "type": "Element",
-        }
+        },
     )

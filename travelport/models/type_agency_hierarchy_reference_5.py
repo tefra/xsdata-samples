@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_agency_profile_level_5 import TypeAgencyProfileLevel5
+from travelport.models.type_agency_profile_level_5 import (
+    TypeAgencyProfileLevel5,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
@@ -16,7 +18,7 @@ class TypeAgencyHierarchyReference5:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeAgencyProfileLevel5 = field(
         default=None,
@@ -24,5 +26,5 @@ class TypeAgencyHierarchyReference5:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -6,7 +6,9 @@ from .annotation import (
     Annotation,
     DocumentationBlock,
 )
-from .binary_manifest_item_numerical_value import BinaryManifestItemNumericalValue
+from .binary_manifest_item_numerical_value import (
+    BinaryManifestItemNumericalValue,
+)
 from .binary_manifest_item_pointer_value import BinaryManifestItemPointerValue
 from .category_string import CategoryString
 from .identifier import Identifier
@@ -90,6 +92,7 @@ class BinaryManifestItem:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BINARY-MANIFEST-ITEM"
 
@@ -100,15 +103,17 @@ class BinaryManifestItem:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["BinaryManifestItem.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "BinaryManifestItem.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +121,7 @@ class BinaryManifestItem:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +129,7 @@ class BinaryManifestItem:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +137,7 @@ class BinaryManifestItem:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +145,7 @@ class BinaryManifestItem:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +153,7 @@ class BinaryManifestItem:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["BinaryManifestItem.Annotations"] = field(
         default=None,
@@ -156,7 +161,7 @@ class BinaryManifestItem:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     address: Optional[Address] = field(
         default=None,
@@ -164,7 +169,7 @@ class BinaryManifestItem:
             "name": "ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     symbol: Optional[SymbolString] = field(
         default=None,
@@ -172,7 +177,7 @@ class BinaryManifestItem:
             "name": "SYMBOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     value: Optional["BinaryManifestItem.Value"] = field(
         default=None,
@@ -180,7 +185,7 @@ class BinaryManifestItem:
             "name": "VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_value: Optional["BinaryManifestItem.DefaultValue"] = field(
         default=None,
@@ -188,7 +193,7 @@ class BinaryManifestItem:
             "name": "DEFAULT-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auxiliary_fields: Optional["BinaryManifestItem.AuxiliaryFields"] = field(
         default=None,
@@ -196,14 +201,14 @@ class BinaryManifestItem:
             "name": "AUXILIARY-FIELDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -211,14 +216,14 @@ class BinaryManifestItem:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -229,7 +234,7 @@ class BinaryManifestItem:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -240,45 +245,53 @@ class BinaryManifestItem:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class Value:
-        binary_manifest_item_numerical_value: Optional[BinaryManifestItemNumericalValue] = field(
+        binary_manifest_item_numerical_value: Optional[
+            BinaryManifestItemNumericalValue
+        ] = field(
             default=None,
             metadata={
                 "name": "BINARY-MANIFEST-ITEM-NUMERICAL-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        binary_manifest_item_pointer_value: Optional[BinaryManifestItemPointerValue] = field(
+        binary_manifest_item_pointer_value: Optional[
+            BinaryManifestItemPointerValue
+        ] = field(
             default=None,
             metadata={
                 "name": "BINARY-MANIFEST-ITEM-POINTER-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DefaultValue:
-        binary_manifest_item_numerical_value: Optional[BinaryManifestItemNumericalValue] = field(
+        binary_manifest_item_numerical_value: Optional[
+            BinaryManifestItemNumericalValue
+        ] = field(
             default=None,
             metadata={
                 "name": "BINARY-MANIFEST-ITEM-NUMERICAL-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        binary_manifest_item_pointer_value: Optional[BinaryManifestItemPointerValue] = field(
+        binary_manifest_item_pointer_value: Optional[
+            BinaryManifestItemPointerValue
+        ] = field(
             default=None,
             metadata={
                 "name": "BINARY-MANIFEST-ITEM-POINTER-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -289,5 +302,5 @@ class BinaryManifestItem:
                 "name": "BINARY-MANIFEST-ITEM",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

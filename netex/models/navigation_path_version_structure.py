@@ -9,10 +9,14 @@ from .gated_enumeration import GatedEnumeration
 from .lighting_enumeration import LightingEnumeration
 from .navigation_type_enumeration import NavigationTypeEnumeration
 from .path_link_end_structure import PathLinkEndStructure
-from .path_links_in_sequence_rel_structure import PathLinksInSequenceRelStructure
+from .path_links_in_sequence_rel_structure import (
+    PathLinksInSequenceRelStructure,
+)
 from .places_in_sequence_rel_structure import PlacesInSequenceRelStructure
 from .public_use_enumeration import PublicUseEnumeration
-from .section_in_sequence_versioned_child_structure import LinkSequenceVersionStructure
+from .section_in_sequence_versioned_child_structure import (
+    LinkSequenceVersionStructure,
+)
 from .site_facility_sets_rel_structure import SiteFacilitySetsRelStructure
 from .transfer_duration_structure import TransferDurationStructure
 from .transfer_refs_rel_structure import TransferRefsRelStructure
@@ -31,7 +35,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "From",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to: Optional[PathLinkEndStructure] = field(
         default=None,
@@ -39,7 +43,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "To",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accessibility_assessment: Optional[AccessibilityAssessment] = field(
         default=None,
@@ -47,7 +51,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "AccessibilityAssessment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     access_modes: List[AccessModeEnumeration] = field(
         default_factory=list,
@@ -56,14 +60,14 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     summaries: Optional[AccessSummariesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transfer_duration: Optional[TransferDurationStructure] = field(
         default=None,
@@ -71,7 +75,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "TransferDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_use: Optional[PublicUseEnumeration] = field(
         default=None,
@@ -79,7 +83,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "PublicUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     covered: Optional[CoveredEnumeration] = field(
         default=None,
@@ -87,7 +91,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "Covered",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     gated: Optional[GatedEnumeration] = field(
         default=None,
@@ -95,7 +99,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "Gated",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lighting: Optional[LightingEnumeration] = field(
         default=None,
@@ -103,7 +107,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "Lighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     all_areas_wheelchair_accessible: Optional[bool] = field(
         default=None,
@@ -111,7 +115,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "AllAreasWheelchairAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     person_capacity: Optional[int] = field(
         default=None,
@@ -119,14 +123,14 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "PersonCapacity",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     facilities: Optional[SiteFacilitySetsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     access_feature_list: List[AccessFeatureEnumeration] = field(
         default_factory=list,
@@ -135,7 +139,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     navigation_type: Optional[NavigationTypeEnumeration] = field(
         default=None,
@@ -143,7 +147,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "NavigationType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     places_in_sequence: Optional[PlacesInSequenceRelStructure] = field(
         default=None,
@@ -151,7 +155,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "placesInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     path_links_in_sequence: Optional[PathLinksInSequenceRelStructure] = field(
         default=None,
@@ -159,12 +163,12 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "pathLinksInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transfers: Optional[TransferRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -12,6 +12,7 @@ class AirItinerary:
     """
     A container for an Air only travel itinerary.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,7 +23,7 @@ class AirItinerary:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -31,7 +32,7 @@ class AirItinerary:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     apisrequirements: list[Apisrequirements] = field(
         default_factory=list,
@@ -39,5 +40,5 @@ class AirItinerary:
             "name": "APISRequirements",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

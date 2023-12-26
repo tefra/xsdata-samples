@@ -9,6 +9,7 @@ class UserId:
     """
     UserId Type.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
@@ -16,5 +17,5 @@ class UserId:
         default="",
         metadata={
             "max_length": 32,
-        }
+        },
     )

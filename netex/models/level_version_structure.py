@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .accessibility_assessment_versioned_child_structure import AccessibilityAssessmentVersionedChildStructure
+from typing import Optional, Union
+from .accessibility_assessment_versioned_child_structure import (
+    AccessibilityAssessmentVersionedChildStructure,
+)
 from .alternative_texts_rel_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
 from .parking_ref import ParkingRef
@@ -23,7 +25,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -31,7 +33,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -39,7 +41,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -47,7 +49,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_use: Optional[bool] = field(
         default=None,
@@ -55,15 +57,17 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "name": "PublicUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    accessibility_assessment: Optional[AccessibilityAssessmentVersionedChildStructure] = field(
+    accessibility_assessment: Optional[
+        AccessibilityAssessmentVersionedChildStructure
+    ] = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     all_areas_wheelchair_accessible: Optional[bool] = field(
         default=None,
@@ -71,9 +75,17 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "name": "AllAreasWheelchairAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            StopPlaceRef,
+            ParkingRef,
+            PointOfInterestRef,
+            ServiceSiteRef,
+            SiteRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -104,5 +116,5 @@ class LevelVersionStructure(DataManagedObjectStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

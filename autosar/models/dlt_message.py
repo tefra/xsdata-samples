@@ -84,6 +84,7 @@ class DltMessage:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DLT-MESSAGE"
 
@@ -94,7 +95,7 @@ class DltMessage:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["DltMessage.ShortNameFragments"] = field(
         default=None,
@@ -102,7 +103,7 @@ class DltMessage:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -110,7 +111,7 @@ class DltMessage:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -118,7 +119,7 @@ class DltMessage:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -126,7 +127,7 @@ class DltMessage:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -134,7 +135,7 @@ class DltMessage:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -142,7 +143,7 @@ class DltMessage:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DltMessage.Annotations"] = field(
         default=None,
@@ -150,7 +151,7 @@ class DltMessage:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dlt_arguments: Optional["DltMessage.DltArguments"] = field(
         default=None,
@@ -158,7 +159,7 @@ class DltMessage:
             "name": "DLT-ARGUMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_id: Optional[PositiveInteger] = field(
         default=None,
@@ -166,7 +167,7 @@ class DltMessage:
             "name": "MESSAGE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_line_number: Optional[PositiveInteger] = field(
         default=None,
@@ -174,7 +175,7 @@ class DltMessage:
             "name": "MESSAGE-LINE-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_source_file: Optional[String] = field(
         default=None,
@@ -182,7 +183,7 @@ class DltMessage:
             "name": "MESSAGE-SOURCE-FILE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_type_info: Optional[String] = field(
         default=None,
@@ -190,14 +191,14 @@ class DltMessage:
             "name": "MESSAGE-TYPE-INFO",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -205,14 +206,14 @@ class DltMessage:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -223,7 +224,7 @@ class DltMessage:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -234,7 +235,7 @@ class DltMessage:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -245,5 +246,5 @@ class DltMessage:
                 "name": "DLT-ARGUMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

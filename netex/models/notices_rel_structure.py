@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .notice import Notice
 from .notice_ref import NoticeRef
@@ -12,7 +12,7 @@ class NoticesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "notices_RelStructure"
 
-    notice_ref_or_notice: List[object] = field(
+    notice_ref_or_notice: List[Union[NoticeRef, Notice]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +28,5 @@ class NoticesRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

@@ -37,7 +37,7 @@ class OrderConfirmationAction:
         metadata={
             "name": "OrderConfirmationActionCodedOther",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -62,7 +62,7 @@ class ContractAndSystemReference:
         metadata={
             "name": "SystemID",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -73,28 +73,28 @@ class OrderConfirmationParty:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-        }
+        },
     )
     seller_party: Optional[SellerParty] = field(
         default=None,
         metadata={
             "name": "SellerParty",
             "type": "Element",
-        }
+        },
     )
     ship_to_party: Optional[ShipToParty] = field(
         default=None,
         metadata={
             "name": "ShipToParty",
             "type": "Element",
-        }
+        },
     )
     list_of_party_coded: Optional[ListOfPartyCoded] = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -112,28 +112,30 @@ class OrderConfirmationDetailReferences:
         metadata={
             "name": "Category",
             "type": "Element",
-        }
+        },
     )
     catalog_reference: Optional[CatalogReference] = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
-        }
+        },
     )
-    contract_and_system_reference: Optional[ContractAndSystemReference] = field(
+    contract_and_system_reference: Optional[
+        ContractAndSystemReference
+    ] = field(
         default=None,
         metadata={
             "name": "ContractAndSystemReference",
             "type": "Element",
-        }
+        },
     )
     list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -165,70 +167,70 @@ class OrderConfirmationHeader:
         metadata={
             "name": "OrderConfirmationType",
             "type": "Element",
-        }
+        },
     )
     language: Optional[Language] = field(
         default=None,
         metadata={
             "name": "Language",
             "type": "Element",
-        }
+        },
     )
     currency: Optional[Currency] = field(
         default=None,
         metadata={
             "name": "Currency",
             "type": "Element",
-        }
+        },
     )
     order_confirmation_party: Optional[OrderConfirmationParty] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationParty",
             "type": "Element",
-        }
+        },
     )
     order_confirmation_action: Optional[OrderConfirmationAction] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationAction",
             "type": "Element",
-        }
+        },
     )
     order_confirmation_header_short_description: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationHeaderShortDescription",
             "type": "Element",
-        }
+        },
     )
     order_confirmation_header_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationHeaderNote",
             "type": "Element",
-        }
+        },
     )
     list_of_structured_note: Optional[ListOfStructuredNote] = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
-        }
+        },
     )
     list_of_name_value_set: Optional[ListOfNameValueSet] = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -246,28 +248,30 @@ class OrderConfirmationItemDetail:
         metadata={
             "name": "OrderConfirmationAction",
             "type": "Element",
-        }
+        },
     )
     order_confirmation_detail_short_description: Optional[str] = field(
         default=None,
         metadata={
             "name": "OrderConfirmationDetailShortDescription",
             "type": "Element",
-        }
+        },
     )
-    order_confirmation_detail_references: OrderConfirmationDetailReferences = field(
-        metadata={
-            "name": "OrderConfirmationDetailReferences",
-            "type": "Element",
-            "required": True,
-        }
+    order_confirmation_detail_references: OrderConfirmationDetailReferences = (
+        field(
+            metadata={
+                "name": "OrderConfirmationDetailReferences",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
     delivery_complete: Optional[str] = field(
         default=None,
         metadata={
             "name": "DeliveryComplete",
             "type": "Element",
-        }
+        },
     )
     item_detail: ItemDetail = field(
         metadata={
@@ -281,7 +285,7 @@ class OrderConfirmationItemDetail:
         metadata={
             "name": "ListOfAccountAssignment",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -293,7 +297,7 @@ class ListOfOrderConfirmationItemDetail:
             "name": "OrderConfirmationItemDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 

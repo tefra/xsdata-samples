@@ -58,6 +58,7 @@ class Brand:
     brand_maintained
         Indicates whether the brand was maintained from the original ticket.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -67,7 +68,7 @@ class Brand:
             "name": "Title",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     text: list[Text] = field(
         default_factory=list,
@@ -75,7 +76,7 @@ class Brand:
             "name": "Text",
             "type": "Element",
             "max_occurs": 5,
-        }
+        },
     )
     image_location: list[ImageLocation] = field(
         default_factory=list,
@@ -83,14 +84,14 @@ class Brand:
             "name": "ImageLocation",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
-        }
+        },
     )
     rules: list[Rules] = field(
         default_factory=list,
@@ -98,21 +99,21 @@ class Brand:
             "name": "Rules",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     service_associations: None | ServiceAssociations = field(
         default=None,
         metadata={
             "name": "ServiceAssociations",
             "type": "Element",
-        }
+        },
     )
     upsell_brand: None | UpsellBrand = field(
         default=None,
         metadata={
             "name": "UpsellBrand",
             "type": "Element",
-        }
+        },
     )
     applicable_segment: list[TypeApplicableSegment] = field(
         default_factory=list,
@@ -120,7 +121,7 @@ class Brand:
             "name": "ApplicableSegment",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     default_brand_detail: list[DefaultBrandDetail] = field(
         default_factory=list,
@@ -128,14 +129,14 @@ class Brand:
             "name": "DefaultBrandDetail",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     brand_id: None | str = field(
         default=None,
@@ -144,21 +145,21 @@ class Brand:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 19,
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )
     air_itinerary_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirItineraryDetailsRef",
             "type": "Attribute",
-        }
+        },
     )
     up_sell_brand_id: None | str = field(
         default=None,
@@ -167,28 +168,28 @@ class Brand:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 19,
-        }
+        },
     )
     brand_found: None | bool = field(
         default=None,
         metadata={
             "name": "BrandFound",
             "type": "Attribute",
-        }
+        },
     )
     up_sell_brand_found: None | bool = field(
         default=None,
         metadata={
             "name": "UpSellBrandFound",
             "type": "Attribute",
-        }
+        },
     )
     branded_details_available: None | bool = field(
         default=None,
         metadata={
             "name": "BrandedDetailsAvailable",
             "type": "Attribute",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -196,7 +197,7 @@ class Brand:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     brand_tier: None | str = field(
         default=None,
@@ -205,7 +206,7 @@ class Brand:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     brand_maintained: None | str = field(
         default=None,
@@ -214,5 +215,5 @@ class Brand:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 99,
-        }
+        },
     )

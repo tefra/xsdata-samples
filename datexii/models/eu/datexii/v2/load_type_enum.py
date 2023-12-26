@@ -54,6 +54,7 @@ class LoadTypeEnum(Enum):
     :cvar VEHICLES: Vehicles of any type which are being transported.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ABNORMAL_LOAD = "abnormalLoad"
     AMMUNITION = "ammunition"
     CHEMICALS = "chemicals"
@@ -73,7 +74,9 @@ class LoadTypeEnum(Enum):
     LIVESTOCK = "livestock"
     MATERIALS = "materials"
     MATERIALS_DANGEROUS_FOR_PEOPLE = "materialsDangerousForPeople"
-    MATERIALS_DANGEROUS_FOR_THE_ENVIRONMENT = "materialsDangerousForTheEnvironment"
+    MATERIALS_DANGEROUS_FOR_THE_ENVIRONMENT = (
+        "materialsDangerousForTheEnvironment"
+    )
     MATERIALS_DANGEROUS_FOR_WATER = "materialsDangerousForWater"
     OIL = "oil"
     ORDINARY = "ordinary"

@@ -8,5 +8,6 @@ class TypeUnitWeight(Enum):
     """
     The available units of weight.
     """
+
     KILOGRAMS = "Kilograms"
     POUNDS = "Pounds"

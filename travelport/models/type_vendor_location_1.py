@@ -23,6 +23,7 @@ class TypeVendorLocation1:
         Enter the Token when provided by hotel property, more rates exist.
         HADS/HSS  support only.
     """
+
     class Meta:
         name = "typeVendorLocation"
 
@@ -34,7 +35,7 @@ class TypeVendorLocation1:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -44,14 +45,14 @@ class TypeVendorLocation1:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     preferred_option: None | bool = field(
         default=None,
         metadata={
             "name": "PreferredOption",
             "type": "Attribute",
-        }
+        },
     )
     vendor_location_id: None | str = field(
         default=None,
@@ -60,14 +61,14 @@ class TypeVendorLocation1:
             "type": "Attribute",
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     more_rates_token: None | str = field(
         default=None,
@@ -76,5 +77,5 @@ class TypeVendorLocation1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )

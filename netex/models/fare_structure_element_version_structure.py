@@ -1,28 +1,44 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .cell_versioned_child_structure import PriceableObjectVersionStructure
 from .distance_matrix_element_ref import DistanceMatrixElementRef
-from .distance_matrix_elements_rel_structure import DistanceMatrixElementsRelStructure
+from .distance_matrix_elements_rel_structure import (
+    DistanceMatrixElementsRelStructure,
+)
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_quota_factor_ref import FareQuotaFactorRef
-from .fare_structure_element_prices_rel_structure import FareStructureElementPricesRelStructure
-from .fare_structure_elements_in_sequence_rel_structure import FareStructureElementsInSequenceRelStructure
+from .fare_structure_element_prices_rel_structure import (
+    FareStructureElementPricesRelStructure,
+)
+from .fare_structure_elements_in_sequence_rel_structure import (
+    FareStructureElementsInSequenceRelStructure,
+)
 from .generic_parameter_assignment_version_structure import (
     GenericParameterAssignment,
     GenericParameterAssignmentInContext,
     GenericParameterAssignmentsRelStructure,
 )
 from .geographical_interval_ref import GeographicalIntervalRef
-from .geographical_intervals_rel_structure import GeographicalIntervalsRelStructure
-from .geographical_structure_factors_rel_structure import GeographicalStructureFactorsRelStructure
+from .geographical_intervals_rel_structure import (
+    GeographicalIntervalsRelStructure,
+)
+from .geographical_structure_factors_rel_structure import (
+    GeographicalStructureFactorsRelStructure,
+)
 from .group_of_distance_matrix_elements import GroupOfDistanceMatrixElements
-from .group_of_distance_matrix_elements_ref import GroupOfDistanceMatrixElementsRef
+from .group_of_distance_matrix_elements_ref import (
+    GroupOfDistanceMatrixElementsRef,
+)
 from .quality_structure_factor_ref import QualityStructureFactorRef
-from .quality_structure_factors_rel_structure import QualityStructureFactorsRelStructure
+from .quality_structure_factors_rel_structure import (
+    QualityStructureFactorsRelStructure,
+)
 from .tariff_basis_enumeration import TariffBasisEnumeration
 from .time_interval_ref import TimeIntervalRef
 from .time_intervals_rel_structure import TimeIntervalsRelStructure
-from .time_structure_factors_rel_structure import TimeStructureFactorsRelStructure
+from .time_structure_factors_rel_structure import (
+    TimeStructureFactorsRelStructure,
+)
 from .type_of_fare_structure_element_ref import TypeOfFareStructureElementRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -39,17 +55,25 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "name": "TariffBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    type_of_fare_structure_element_ref: Optional[TypeOfFareStructureElementRef] = field(
+    type_of_fare_structure_element_ref: Optional[
+        TypeOfFareStructureElementRef
+    ] = field(
         default=None,
         metadata={
             "name": "TypeOfFareStructureElementRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: Optional[object] = field(
+    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: Optional[
+        Union[
+            GeographicalIntervalRef,
+            GeographicalIntervalsRelStructure,
+            GeographicalStructureFactorsRelStructure,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -70,9 +94,15 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    time_interval_ref_or_time_intervals_or_time_structure_factors: Optional[object] = field(
+    time_interval_ref_or_time_intervals_or_time_structure_factors: Optional[
+        Union[
+            TimeIntervalRef,
+            TimeIntervalsRelStructure,
+            TimeStructureFactorsRelStructure,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -93,9 +123,16 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            FareQuotaFactorRef,
+            FareDemandFactorRef,
+            QualityStructureFactorRef,
+            QualityStructureFactorsRelStructure,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -121,9 +158,16 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice_1: Optional[object] = field(
+    choice_1: Optional[
+        Union[
+            DistanceMatrixElementRef,
+            DistanceMatrixElementsRelStructure,
+            GroupOfDistanceMatrixElementsRef,
+            GroupOfDistanceMatrixElements,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -149,17 +193,25 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    fare_structure_elements_in_sequence: Optional[FareStructureElementsInSequenceRelStructure] = field(
+    fare_structure_elements_in_sequence: Optional[
+        FareStructureElementsInSequenceRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "fareStructureElementsInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[object] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[
+        Union[
+            GenericParameterAssignmentsRelStructure,
+            GenericParameterAssignment,
+            GenericParameterAssignmentInContext,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -180,19 +232,19 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     prices: Optional[FareStructureElementPricesRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name_of_class_of_unit: Optional[str] = field(
         default=None,
         metadata={
             "name": "nameOfClassOfUnit",
             "type": "Attribute",
-        }
+        },
     )

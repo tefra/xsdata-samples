@@ -25,6 +25,7 @@ class ParkingVacantSpacesEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     NO_PARKING_SPACES_AVAILABLE = "noParkingSpacesAvailable"
     EXPECT_NO_SPACES_AVAILABLE = "expectNoSpacesAvailable"
     ONLY_AFEW_SPACES_AVAILABLE = "onlyAFewSpacesAvailable"

@@ -17,5 +17,5 @@ class UsageDiscountRightVersionStructure(FareProductVersionStructure):
             "name": "ProductType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

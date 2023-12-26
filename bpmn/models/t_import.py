@@ -14,14 +14,14 @@ class TImport:
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     location: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     import_type: Optional[str] = field(
         default=None,
@@ -29,5 +29,5 @@ class TImport:
             "name": "importType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

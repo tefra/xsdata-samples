@@ -16,7 +16,7 @@ class ReportRetrievePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class ReportRetrievePortTypeServiceInput:
                 "name": "MirReportRetrieveReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            }
+            },
         )

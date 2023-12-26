@@ -27,6 +27,7 @@ class OverallPeriod:
         validity is false.
     :ivar overall_period_extension:
     """
+
     overall_start_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
@@ -34,7 +35,7 @@ class OverallPeriod:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     overall_end_time: Optional[XmlDateTime] = field(
         default=None,
@@ -42,7 +43,7 @@ class OverallPeriod:
             "name": "overallEndTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     valid_period: List[Period] = field(
         default_factory=list,
@@ -50,7 +51,7 @@ class OverallPeriod:
             "name": "validPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     exception_period: List[Period] = field(
         default_factory=list,
@@ -58,7 +59,7 @@ class OverallPeriod:
             "name": "exceptionPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     overall_period_extension: Optional[ExtensionType] = field(
         default=None,
@@ -66,5 +67,5 @@ class OverallPeriod:
             "name": "overallPeriodExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -14,5 +14,5 @@ class CateringFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

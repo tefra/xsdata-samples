@@ -21,6 +21,7 @@ class AirVoidDocumentRsp(BaseRsp1):
     void_result_info
         Provider: 1G,1V.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -30,7 +31,7 @@ class AirVoidDocumentRsp(BaseRsp1):
             "name": "ETR",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     void_result_info: list[VoidResultInfo] = field(
         default_factory=list,
@@ -39,5 +40,5 @@ class AirVoidDocumentRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

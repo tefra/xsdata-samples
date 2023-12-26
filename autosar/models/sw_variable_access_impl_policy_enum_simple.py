@@ -14,6 +14,7 @@ class SwVariableAccessImplPolicyEnumSimple(Enum):
         where these message is referenced, if access to that shall be
         OPTIMIZED or DIRECT.
     """
+
     DIRECT = "DIRECT"
     OPTIMIZED = "OPTIMIZED"
     SELECTABLE = "SELECTABLE"

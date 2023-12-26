@@ -27,6 +27,7 @@ class VmsMessageInformationTypeEnum(Enum):
         instructions.
     :cvar TRAVEL_TIME: Travel time information.
     """
+
     CAMPAIGN_MESSAGE = "campaignMessage"
     DATE_TIME = "dateTime"
     FUTURE_INFORMATION = "futureInformation"

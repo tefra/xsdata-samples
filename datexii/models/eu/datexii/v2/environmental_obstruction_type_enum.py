@@ -44,6 +44,7 @@ class EnvironmentalObstructionTypeEnum(Enum):
         places.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AVALANCHES = "avalanches"
     EARTHQUAKE_DAMAGE = "earthquakeDamage"
     FALLEN_TREES = "fallenTrees"

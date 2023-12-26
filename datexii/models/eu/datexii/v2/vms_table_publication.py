@@ -14,6 +14,7 @@ class VmsTablePublication(PayloadPublication):
     A publication containing one or more VMS Unit Tables each comprising a set of
     records which hold details of VMS units.
     """
+
     header_information: Optional[HeaderInformation] = field(
         default=None,
         metadata={
@@ -21,7 +22,7 @@ class VmsTablePublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vms_unit_table: List[VmsUnitTable] = field(
         default_factory=list,
@@ -30,7 +31,7 @@ class VmsTablePublication(PayloadPublication):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     vms_table_publication_extension: Optional[ExtensionType] = field(
         default=None,
@@ -38,5 +39,5 @@ class VmsTablePublication(PayloadPublication):
             "name": "vmsTablePublicationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

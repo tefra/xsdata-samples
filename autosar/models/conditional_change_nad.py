@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import DocumentationBlock
 from .integer import Integer
-from .lin_slave_config_ident_subtypes_enum import LinSlaveConfigIdentSubtypesEnum
+from .lin_slave_config_ident_subtypes_enum import (
+    LinSlaveConfigIdentSubtypesEnum,
+)
 from .lin_slave_subtypes_enum import LinSlaveSubtypesEnum
 from .positive_integer import PositiveInteger
 from .ref import Ref
@@ -49,6 +51,7 @@ class ConditionalChangeNad:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CONDITIONAL-CHANGE-NAD"
 
@@ -58,7 +61,7 @@ class ConditionalChangeNad:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     delay: Optional[TimeValue] = field(
         default=None,
@@ -66,7 +69,7 @@ class ConditionalChangeNad:
             "name": "DELAY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     position_in_table: Optional[Integer] = field(
         default=None,
@@ -74,23 +77,27 @@ class ConditionalChangeNad:
             "name": "POSITION-IN-TABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_controller_ref: Optional["ConditionalChangeNad.AssignedControllerRef"] = field(
+    assigned_controller_ref: Optional[
+        "ConditionalChangeNad.AssignedControllerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    assigned_lin_slave_config_ref: Optional["ConditionalChangeNad.AssignedLinSlaveConfigRef"] = field(
+    assigned_lin_slave_config_ref: Optional[
+        "ConditionalChangeNad.AssignedLinSlaveConfigRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     byte: Optional[Integer] = field(
         default=None,
@@ -98,7 +105,7 @@ class ConditionalChangeNad:
             "name": "BYTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     id: Optional[PositiveInteger] = field(
         default=None,
@@ -106,7 +113,7 @@ class ConditionalChangeNad:
             "name": "ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     invert: Optional[Integer] = field(
         default=None,
@@ -114,7 +121,7 @@ class ConditionalChangeNad:
             "name": "INVERT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mask: Optional[Integer] = field(
         default=None,
@@ -122,7 +129,7 @@ class ConditionalChangeNad:
             "name": "MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     new_nad: Optional[Integer] = field(
         default=None,
@@ -130,14 +137,14 @@ class ConditionalChangeNad:
             "name": "NEW-NAD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -145,7 +152,7 @@ class ConditionalChangeNad:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -156,7 +163,7 @@ class ConditionalChangeNad:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -167,5 +174,5 @@ class ConditionalChangeNad:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -16,6 +16,7 @@ class DependencyUsageEnumSimple(Enum):
     :cvar LINK: The object referred by the dependency is required during
         linking.
     """
+
     BUILD = "BUILD"
     CODEGENERATION = "CODEGENERATION"
     COMPILE = "COMPILE"

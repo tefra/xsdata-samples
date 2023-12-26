@@ -43,6 +43,7 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
     :ivar enum_table: This represents the assigned enumeration table.
     :ivar content:
     """
+
     class Meta:
         name = "DIAGNOSTIC-INDICATOR-TYPE-ENUM-VALUE-VARIATION-POINT"
 
@@ -51,7 +52,7 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -59,28 +60,28 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     binding_time: Optional[BindingTimeEnumSimple] = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
             "type": "Attribute",
-        }
+        },
     )
     blueprint_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
-        }
+        },
     )
     sd: Optional[str] = field(
         default=None,
         metadata={
             "name": "SD",
             "type": "Attribute",
-        }
+        },
     )
     short_label: Optional[str] = field(
         default=None,
@@ -89,7 +90,7 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
@@ -98,7 +99,7 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
             "type": "Attribute",
             "max_length": 128,
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
-        }
+        },
     )
     enum_table: Optional[str] = field(
         default=None,
@@ -106,7 +107,7 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
             "name": "ENUM-TABLE",
             "type": "Attribute",
             "pattern": r"/?[a-zA-Z][a-zA-Z0-9_]{0,127}(/[a-zA-Z][a-zA-Z0-9_]{0,127})*",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -117,16 +118,20 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
             "choices": (
                 {
                     "name": "SYSC-STRING-REF",
-                    "type": Type["DiagnosticIndicatorTypeEnumValueVariationPoint.SyscStringRef"],
+                    "type": Type[
+                        "DiagnosticIndicatorTypeEnumValueVariationPoint.SyscStringRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
                 {
                     "name": "SYSC-REF",
-                    "type": Type["DiagnosticIndicatorTypeEnumValueVariationPoint.SyscRef"],
+                    "type": Type[
+                        "DiagnosticIndicatorTypeEnumValueVariationPoint.SyscRef"
+                    ],
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -137,7 +142,7 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -148,5 +153,5 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

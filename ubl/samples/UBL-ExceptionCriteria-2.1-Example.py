@@ -60,25 +60,25 @@ from xsdata.models.datatype import XmlDate
 
 obj = ExceptionCriteria(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     customization_id=CustomizationId(
-        value="urn:oasis:names:specification:ubl:xpath:ExceptionCriteria-2.1:1.0-draft"
+        value='urn:oasis:names:specification:ubl:xpath:ExceptionCriteria-2.1:1.0-draft'
     ),
     profile_id=ProfileId(
-        value="bpid:urn:oasis:names:draft:bpss:ubl-2-cpfr-exception-criteria-draft"
+        value='bpid:urn:oasis:names:draft:bpss:ubl-2-cpfr-exception-criteria-draft'
     ),
     id=Id(
-        value="EC758494"
+        value='EC758494'
     ),
     copy_indicator=False,
     uuid=Uuid(
-        value="349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4"
+        value='349ABBAE-DF9D-40B4-849F-94C5FF9D1AF4'
     ),
     issue_date=XmlDate(2009, 12, 25),
     note=[
         Note(
-            value="sample"
+            value='sample'
         ),
     ],
     validity_period=ValidityPeriod(
@@ -89,84 +89,84 @@ obj = ExceptionCriteria(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="6903148000007"
+                    value='6903148000007'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="Consortial"
+                    value='Consortial'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Busy Street"
+                value='Busy Street'
             ),
             building_name=BuildingName(
-                value="Thereabouts"
+                value='Thereabouts'
             ),
             building_number=BuildingNumber(
-                value="56A"
+                value='56A'
             ),
             city_name=CityName(
-                value="Farthing"
+                value='Farthing'
             ),
             postal_zone=PostalZone(
-                value="AA99 1BB"
+                value='AA99 1BB'
             ),
             country_subentity=CountrySubentity(
-                value="Heremouthshire"
+                value='Heremouthshire'
             ),
             address_line=[
                 AddressLine(
                     line=Line(
-                        value="The Roundabout"
+                        value='The Roundabout'
                     )
                 ),
             ],
             country=Country(
                 identification_code=IdentificationCode(
-                    value="GB"
+                    value='GB'
                 )
             )
         ),
         party_tax_scheme=[
             PartyTaxScheme(
                 registration_name=RegistrationName(
-                    value="Farthing Purchasing Consortium"
+                    value='Farthing Purchasing Consortium'
                 ),
                 company_id=CompanyId(
-                    value="175 269 2355"
+                    value='175 269 2355'
                 ),
                 exemption_reason=[
                     ExemptionReason(
-                        value="N/A"
+                        value='N/A'
                     ),
                 ],
                 tax_scheme=TaxScheme(
                     id=Id(
-                        value="VAT"
+                        value='VAT'
                     ),
                     tax_type_code=TaxTypeCode(
-                        value="VAT"
+                        value='VAT'
                     )
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="Mrs Bouquet"
+                value='Mrs Bouquet'
             ),
             telephone=Telephone(
-                value="0158 1233714"
+                value='0158 1233714'
             ),
             telefax=Telefax(
-                value="0158 1233856"
+                value='0158 1233856'
             ),
             electronic_mail=ElectronicMail(
-                value="bouquet@fpconsortial.co.uk"
+                value='bouquet@fpconsortial.co.uk'
             )
         )
     ),
@@ -174,84 +174,84 @@ obj = ExceptionCriteria(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="2203148000007"
+                    value='2203148000007'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="IYT Corporation"
+                    value='IYT Corporation'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Avon Way"
+                value='Avon Way'
             ),
             building_name=BuildingName(
-                value="Thereabouts"
+                value='Thereabouts'
             ),
             building_number=BuildingNumber(
-                value="56A"
+                value='56A'
             ),
             city_name=CityName(
-                value="Bridgtow"
+                value='Bridgtow'
             ),
             postal_zone=PostalZone(
-                value="ZZ99 1ZZ"
+                value='ZZ99 1ZZ'
             ),
             country_subentity=CountrySubentity(
-                value="Avon"
+                value='Avon'
             ),
             address_line=[
                 AddressLine(
                     line=Line(
-                        value="3rd Floor, Room 5"
+                        value='3rd Floor, Room 5'
                     )
                 ),
             ],
             country=Country(
                 identification_code=IdentificationCode(
-                    value="GB"
+                    value='GB'
                 )
             )
         ),
         party_tax_scheme=[
             PartyTaxScheme(
                 registration_name=RegistrationName(
-                    value="Bridgtow District Council"
+                    value='Bridgtow District Council'
                 ),
                 company_id=CompanyId(
-                    value="12356478"
+                    value='12356478'
                 ),
                 exemption_reason=[
                     ExemptionReason(
-                        value="Local Authority"
+                        value='Local Authority'
                     ),
                 ],
                 tax_scheme=TaxScheme(
                     id=Id(
-                        value="UK VAT"
+                        value='UK VAT'
                     ),
                     tax_type_code=TaxTypeCode(
-                        value="VAT"
+                        value='VAT'
                     )
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="Mr Fred Churchill"
+                value='Mr Fred Churchill'
             ),
             telephone=Telephone(
-                value="0127 2653214"
+                value='0127 2653214'
             ),
             telefax=Telefax(
-                value="0127 2653215"
+                value='0127 2653215'
             ),
             electronic_mail=ElectronicMail(
-                value="fred@iytcorporation.gov.uk"
+                value='fred@iytcorporation.gov.uk'
             )
         )
     ),
@@ -260,7 +260,7 @@ obj = ExceptionCriteria(
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="2203148000007"
+                        value='2203148000007'
                     )
                 ),
             ]
@@ -271,7 +271,7 @@ obj = ExceptionCriteria(
             party_identification=[
                 PartyIdentification(
                     id=Id(
-                        value="6903148000007"
+                        value='6903148000007'
                     )
                 ),
             ]
@@ -280,23 +280,23 @@ obj = ExceptionCriteria(
     exception_criteria_line=[
         ExceptionCriteriaLine(
             id=Id(
-                value="exceptionCriteriaLineID"
+                value='exceptionCriteriaLineID'
             ),
             threshold_value_comparison_code=ThresholdValueComparisonCode(
-                value="EXCEEDS_EXCEPTION_VALUE"
+                value='EXCEEDS_EXCEPTION_VALUE'
             ),
             threshold_quantity=ThresholdQuantity(
-                value=Decimal("120000"),
-                unit_code="KGM"
+                value=Decimal('120000'),
+                unit_code='KGM'
             ),
             exception_status_code=ExceptionStatusCode(
-                value="NEW"
+                value='NEW'
             ),
             collaboration_priority_code=CollaborationPriorityCode(
-                value="HIGH"
+                value='HIGH'
             ),
             supply_chain_activity_type_code=SupplyChainActivityTypeCode(
-                value="SALES"
+                value='SALES'
             ),
             effective_period=EffectivePeriod(
                 start_date=XmlDate(2010, 3, 28),
@@ -306,25 +306,25 @@ obj = ExceptionCriteria(
                 SupplyItem(
                     description=[
                         Description(
-                            value="Acme beeswax"
+                            value='Acme beeswax'
                         ),
                     ],
                     name=Name(
-                        value="beeswax"
+                        value='beeswax'
                     ),
                     buyers_item_identification=BuyersItemIdentification(
                         id=Id(
-                            value="6578489"
+                            value='6578489'
                         )
                     ),
                     sellers_item_identification=SellersItemIdentification(
                         id=Id(
-                            value="17589683"
+                            value='17589683'
                         )
                     ),
                     standard_item_identification=StandardItemIdentification(
                         id=Id(
-                            value="00123450000584"
+                            value='00123450000584'
                         )
                     )
                 ),
@@ -332,23 +332,23 @@ obj = ExceptionCriteria(
         ),
         ExceptionCriteriaLine(
             id=Id(
-                value="exceptionCriteriaLineID"
+                value='exceptionCriteriaLineID'
             ),
             threshold_value_comparison_code=ThresholdValueComparisonCode(
-                value="EXCEEDS_EXCEPTION_VALUE"
+                value='EXCEEDS_EXCEPTION_VALUE'
             ),
             threshold_quantity=ThresholdQuantity(
-                value=Decimal("120000"),
-                unit_code="KGM"
+                value=Decimal('120000'),
+                unit_code='KGM'
             ),
             exception_status_code=ExceptionStatusCode(
-                value="NEW"
+                value='NEW'
             ),
             collaboration_priority_code=CollaborationPriorityCode(
-                value="HIGH"
+                value='HIGH'
             ),
             performance_metric_type_code=PerformanceMetricTypeCode(
-                value="SUPPLY"
+                value='SUPPLY'
             ),
             effective_period=EffectivePeriod(
                 start_date=XmlDate(2010, 3, 28),
@@ -358,7 +358,7 @@ obj = ExceptionCriteria(
                 SupplyItem(
                     standard_item_identification=StandardItemIdentification(
                         id=Id(
-                            value="00123450000581"
+                            value='00123450000581'
                         )
                     )
                 ),
@@ -366,20 +366,20 @@ obj = ExceptionCriteria(
         ),
         ExceptionCriteriaLine(
             id=Id(
-                value="exceptionCriteriaLineID"
+                value='exceptionCriteriaLineID'
             ),
             threshold_value_comparison_code=ThresholdValueComparisonCode(
-                value="EXCEEDS_EXCEPTION_VALUE"
+                value='EXCEEDS_EXCEPTION_VALUE'
             ),
             threshold_quantity=ThresholdQuantity(
-                value=Decimal("120000"),
-                unit_code="KGM"
+                value=Decimal('120000'),
+                unit_code='KGM'
             ),
             exception_status_code=ExceptionStatusCode(
-                value="NEW"
+                value='NEW'
             ),
             collaboration_priority_code=CollaborationPriorityCode(
-                value="HIGH"
+                value='HIGH'
             ),
             effective_period=EffectivePeriod(
                 start_date=XmlDate(2010, 4, 28),
@@ -389,45 +389,45 @@ obj = ExceptionCriteria(
                 SupplyItem(
                     standard_item_identification=StandardItemIdentification(
                         id=Id(
-                            value="00123450000582"
+                            value='00123450000582'
                         )
                     )
                 ),
             ],
             forecast_exception_criterion_line=ForecastExceptionCriterionLine(
                 forecast_purpose_code=ForecastPurposeCode(
-                    value="SALES_FORECAST"
+                    value='SALES_FORECAST'
                 ),
                 forecast_type_code=ForecastTypeCode(
-                    value="BASE"
+                    value='BASE'
                 ),
                 comparison_data_source_code=ComparisonDataSourceCode(
-                    value="SELLER"
+                    value='SELLER'
                 ),
                 data_source_code=DataSourceCode(
-                    value="BUYER"
+                    value='BUYER'
                 ),
                 time_delta_days_quantity=TimeDeltaDaysQuantity(
-                    value=Decimal("20")
+                    value=Decimal('20')
                 )
             )
         ),
         ExceptionCriteriaLine(
             id=Id(
-                value="exceptionCriteriaLineID"
+                value='exceptionCriteriaLineID'
             ),
             threshold_value_comparison_code=ThresholdValueComparisonCode(
-                value="EXCEEDS_EXCEPTION_VALUE"
+                value='EXCEEDS_EXCEPTION_VALUE'
             ),
             threshold_quantity=ThresholdQuantity(
-                value=Decimal("120000"),
-                unit_code="KGM"
+                value=Decimal('120000'),
+                unit_code='KGM'
             ),
             exception_status_code=ExceptionStatusCode(
-                value="NEW"
+                value='NEW'
             ),
             collaboration_priority_code=CollaborationPriorityCode(
-                value="HIGH"
+                value='HIGH'
             ),
             effective_period=EffectivePeriod(
                 start_date=XmlDate(2010, 4, 28),
@@ -437,23 +437,23 @@ obj = ExceptionCriteria(
                 SupplyItem(
                     standard_item_identification=StandardItemIdentification(
                         id=Id(
-                            value="00123450000580"
+                            value='00123450000580'
                         )
                     )
                 ),
             ],
             forecast_exception_criterion_line=ForecastExceptionCriterionLine(
                 forecast_purpose_code=ForecastPurposeCode(
-                    value="SALES_FORECAST"
+                    value='SALES_FORECAST'
                 ),
                 forecast_type_code=ForecastTypeCode(
-                    value="BASE"
+                    value='BASE'
                 ),
                 data_source_code=DataSourceCode(
-                    value="BUYER"
+                    value='BUYER'
                 ),
                 time_delta_days_quantity=TimeDeltaDaysQuantity(
-                    value=Decimal("20")
+                    value=Decimal('20')
                 )
             )
         ),

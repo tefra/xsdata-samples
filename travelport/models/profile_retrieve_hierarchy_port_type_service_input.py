@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.profile_retrieve_hierarchy_req import ProfileRetrieveHierarchyReq
+from travelport.models.profile_retrieve_hierarchy_req import (
+    ProfileRetrieveHierarchyReq,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 
@@ -16,7 +18,7 @@ class ProfileRetrieveHierarchyPortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +29,5 @@ class ProfileRetrieveHierarchyPortTypeServiceInput:
                 "name": "ProfileRetrieveHierarchyReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/uprofile_v37_0",
-            }
+            },
         )

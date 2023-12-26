@@ -8,6 +8,7 @@ class TypeCommissionType4(Enum):
     """
     Types of possible commission.
     """
+
     FLAT = "Flat"
     PERCENT_BASE = "PercentBase"
     PERCENT_TOTAL = "PercentTotal"

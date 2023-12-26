@@ -9,6 +9,7 @@ class TypePreferencePurpose1(Enum):
 
     (ie. Business, Leisure, etc)
     """
+
     BUSINESS = "Business"
     LEISURE = "Leisure"
     MEETING = "Meeting"

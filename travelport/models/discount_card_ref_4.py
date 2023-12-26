@@ -16,5 +16,5 @@ class DiscountCardRef4:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -32,16 +32,18 @@ class ListOfTradingPartnerUserDeletion:
             "name": "TradingPartnerUserDeletion",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class TradingPartnerUserDelete:
-    list_of_trading_partner_user_deletion: ListOfTradingPartnerUserDeletion = field(
-        metadata={
-            "name": "ListOfTradingPartnerUserDeletion",
-            "type": "Element",
-            "required": True,
-        }
+    list_of_trading_partner_user_deletion: ListOfTradingPartnerUserDeletion = (
+        field(
+            metadata={
+                "name": "ListOfTradingPartnerUserDeletion",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )

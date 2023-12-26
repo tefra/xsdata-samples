@@ -28,6 +28,7 @@ class OperatorActionStatusEnum(Enum):
         termination has been requested, e.g. because of a traffic jam on
         the alternative route.
     """
+
     REQUESTED = "requested"
     APPROVED = "approved"
     BEING_IMPLEMENTED = "beingImplemented"

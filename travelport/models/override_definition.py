@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_custom_field_or_group_type import TypeCustomFieldOrGroupType
+from travelport.models.type_custom_field_or_group_type import (
+    TypeCustomFieldOrGroupType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -29,6 +31,7 @@ class OverrideDefinition:
         Defines if field as editable or not.
     template_field_type
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -38,14 +41,14 @@ class OverrideDefinition:
             "name": "TemplateFieldID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     hide: bool = field(
         default=False,
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )
     label: None | str = field(
         default=None,
@@ -54,26 +57,26 @@ class OverrideDefinition:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     min_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MinOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     read_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReadOnly",
             "type": "Attribute",
-        }
+        },
     )
     template_field_type: None | TypeCustomFieldOrGroupType = field(
         default=None,
         metadata={
             "name": "TemplateFieldType",
             "type": "Attribute",
-        }
+        },
     )

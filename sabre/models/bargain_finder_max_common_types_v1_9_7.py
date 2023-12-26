@@ -9,6 +9,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 class AirTripType(Enum):
     """Identifies the trip type - one way, return, circle trip, open jaw."""
+
     ONE_WAY = "OneWay"
     RETURN = "Return"
     CIRCLE = "Circle"
@@ -21,7 +22,7 @@ class CompanyNameType:
     """
     Identifies a company by name.
 
-    Attributes
+    Attributes:
         value:
         company_short_name:
         travel_sector: Refer to OTA Code List Travel Sector (TVS).
@@ -29,11 +30,12 @@ class CompanyNameType:
         code_context: Identifies the context of the identifying code,
             such as DUNS, IATA or internal code, etc.
     """
+
     value: str = field(
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     company_short_name: None | str = field(
         default=None,
@@ -42,14 +44,14 @@ class CompanyNameType:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     travel_sector: None | str = field(
         default=None,
         metadata={
             "name": "TravelSector",
             "type": "Attribute",
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -58,7 +60,7 @@ class CompanyNameType:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     code_context: None | str = field(
         default=None,
@@ -67,7 +69,7 @@ class CompanyNameType:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )
 
 
@@ -81,16 +83,17 @@ class EquipmentType:
     """
     Specifies the aircraft equipment type.
 
-    Attributes
+    Attributes:
         value:
         air_equip_type: This is the 3 character IATA code.
         change_of_gauge: Indicates there is an equipment change.
     """
+
     value: str = field(
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     air_equip_type: None | str = field(
         default=None,
@@ -100,14 +103,14 @@ class EquipmentType:
             "required": True,
             "min_length": 3,
             "max_length": 3,
-        }
+        },
     )
     change_of_gauge: bool = field(
         default=False,
         metadata={
             "name": "ChangeofGauge",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -118,10 +121,11 @@ class FareDirectionality(Enum):
 
 class MaximumStayReturnType(Enum):
     """
-    Attributes
+    Attributes:
         C: Return travel must be Completed.
         S: Return travel must be Started.
     """
+
     C = "C"
     S = "S"
 
@@ -133,7 +137,7 @@ class OtaAirLowFareSearchRqTarget(Enum):
 
 class OtaAirLowFareSearchRqTransactionStatusCode(Enum):
     """
-    Attributes
+    Attributes:
         START: This is the first message within a transaction.
         END: This is the last message within a transaction.
         ROLLBACK: This indicates that all messages within the current
@@ -141,6 +145,7 @@ class OtaAirLowFareSearchRqTransactionStatusCode(Enum):
         IN_SERIES: This is any message that is not the first or last
             message within a transaction.
     """
+
     START = "Start"
     END = "End"
     ROLLBACK = "Rollback"
@@ -154,7 +159,7 @@ class OtaAirLowFareSearchRsTarget(Enum):
 
 class OtaAirLowFareSearchRsTransactionStatusCode(Enum):
     """
-    Attributes
+    Attributes:
         START: This is the first message within a transaction.
         END: This is the last message within a transaction.
         ROLLBACK: This indicates that all messages within the current
@@ -162,6 +167,7 @@ class OtaAirLowFareSearchRsTransactionStatusCode(Enum):
         IN_SERIES: This is any message that is not the first or last
             message within a transaction.
     """
+
     START = "Start"
     END = "End"
     ROLLBACK = "Rollback"
@@ -187,7 +193,7 @@ class StayUnitType(Enum):
     """
     Defines the 'Units' that can be applied to Stay restrictions.
 
-    Attributes
+    Attributes:
         MINUTES:
         HOURS:
         DAYS:
@@ -200,6 +206,7 @@ class StayUnitType(Enum):
         SAT: Saturday
         SUN: Sunday
     """
+
     MINUTES = "Minutes"
     HOURS = "Hours"
     DAYS = "Days"
@@ -220,7 +227,7 @@ class TravelerCountType:
     either one of: Adult, YoungDriver, YoungerDriver, or it may be a code that is
     acceptable to both Trading Partners).
 
-    Attributes
+    Attributes:
         age:
         code: Specify traveler type code.
         code_context: Identifies the source authority for the code.
@@ -228,6 +235,7 @@ class TravelerCountType:
         quantity: Used to define a quantity of an associated element or
             attribute.
     """
+
     age: None | int = field(
         default=None,
         metadata={
@@ -235,7 +243,7 @@ class TravelerCountType:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 999,
-        }
+        },
     )
     code: None | str = field(
         default=None,
@@ -244,7 +252,7 @@ class TravelerCountType:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     code_context: None | str = field(
         default=None,
@@ -253,14 +261,14 @@ class TravelerCountType:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )
     uri: None | str = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
-        }
+        },
     )
     quantity: None | int = field(
         default=None,
@@ -269,7 +277,7 @@ class TravelerCountType:
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 999,
-        }
+        },
     )
 
 
@@ -279,33 +287,34 @@ class VoluntaryChangesType:
     Specifies charges and/or penalties associated with making ticket changes after
     purchase.
 
-    Attributes
+    Attributes:
         penalty: Specifies penalty charges as either a currency amount
             or a percentage of the fare.
         vol_change_ind: Indicator used to specify whether voluntary
             change and other penalties are involved in the search or
             response.
     """
+
     penalty: None | VoluntaryChangesType.Penalty = field(
         default=None,
         metadata={
             "name": "Penalty",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-        }
+        },
     )
     vol_change_ind: None | bool = field(
         default=None,
         metadata={
             "name": "VolChangeInd",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
     class Penalty:
         """
-        Attributes
+        Attributes:
             penalty_type: Indicates the type of penalty involved in the
                 search or response.
             departure_status: Identifier used to indicate whether the
@@ -319,19 +328,20 @@ class VoluntaryChangesType:
             percent: The penalty charge conveyed as a percent of the
                 total fare.
         """
+
         penalty_type: None | str = field(
             default=None,
             metadata={
                 "name": "PenaltyType",
                 "type": "Attribute",
-            }
+            },
         )
         departure_status: None | str = field(
             default=None,
             metadata={
                 "name": "DepartureStatus",
                 "type": "Attribute",
-            }
+            },
         )
         amount: None | Decimal = field(
             default=None,
@@ -339,7 +349,7 @@ class VoluntaryChangesType:
                 "name": "Amount",
                 "type": "Attribute",
                 "fraction_digits": 3,
-            }
+            },
         )
         currency_code: None | str = field(
             default=None,
@@ -347,14 +357,14 @@ class VoluntaryChangesType:
                 "name": "CurrencyCode",
                 "type": "Attribute",
                 "pattern": r"[a-zA-Z]{3}",
-            }
+            },
         )
         decimal_places: None | int = field(
             default=None,
             metadata={
                 "name": "DecimalPlaces",
                 "type": "Attribute",
-            }
+            },
         )
         percent: None | Decimal = field(
             default=None,
@@ -363,13 +373,13 @@ class VoluntaryChangesType:
                 "type": "Attribute",
                 "min_inclusive": Decimal("0.01"),
                 "max_inclusive": Decimal("100.00"),
-            }
+            },
         )
 
 
 class VoluntaryChangesMatch(Enum):
     """
-    Attributes
+    Attributes:
         ALL: Conditions are joined by logical conjunction - fare needs
             to fulfill all the conditions to be returned in response.
         ANY: Conditions are joined by logical disjunction - fare needs
@@ -377,6 +387,7 @@ class VoluntaryChangesMatch(Enum):
             response.
         INFO: Return penalty information
     """
+
     ALL = "All"
     ANY = "Any"
     INFO = "Info"
@@ -388,7 +399,7 @@ class AdvResTicketingType:
     Container used to hold information regarding advance reservation and/or advance
     ticketing.
 
-    Attributes
+    Attributes:
         adv_reservation: Specifies constraints on date of advance
             reservations.
         adv_ticketing: Specifies advance ticketing restrictions.
@@ -399,13 +410,14 @@ class AdvResTicketingType:
             advance ticketing restrictions are involved in the request
             or response.
     """
+
     adv_reservation: None | AdvResTicketingType.AdvReservation = field(
         default=None,
         metadata={
             "name": "AdvReservation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-        }
+        },
     )
     adv_ticketing: None | AdvResTicketingType.AdvTicketing = field(
         default=None,
@@ -413,27 +425,27 @@ class AdvResTicketingType:
             "name": "AdvTicketing",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-        }
+        },
     )
     adv_res_ind: None | bool = field(
         default=None,
         metadata={
             "name": "AdvResInd",
             "type": "Attribute",
-        }
+        },
     )
     adv_ticketing_ind: None | bool = field(
         default=None,
         metadata={
             "name": "AdvTicketingInd",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
     class AdvReservation:
         """
-        Attributes
+        Attributes:
             latest_time_of_day: The time of day by which reservations
                 must be made on the last day that advance reservations
                 can be made.
@@ -443,12 +455,13 @@ class AdvResTicketingType:
             latest_unit: The unit of elapsed time or the day of the week
                 to be applied to the LatestPeriod value.
         """
+
         latest_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "LatestTimeOfDay",
                 "type": "Attribute",
-            }
+            },
         )
         latest_period: None | str = field(
             default=None,
@@ -456,20 +469,20 @@ class AdvResTicketingType:
                 "name": "LatestPeriod",
                 "type": "Attribute",
                 "pattern": r"[0-9]{1,3}",
-            }
+            },
         )
         latest_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "LatestUnit",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
     class AdvTicketing:
         """
-        Attributes
+        Attributes:
             from_res_time_of_day: The time of day after reservations are
                 made by which a ticket must be purchased.
             from_res_period: A length of time expressed as either an
@@ -489,12 +502,13 @@ class AdvResTicketingType:
                 week to be applied to the the period before departure
                 that a ticket must be purchased.
         """
+
         from_res_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "FromResTimeOfDay",
                 "type": "Attribute",
-            }
+            },
         )
         from_res_period: None | str = field(
             default=None,
@@ -502,21 +516,21 @@ class AdvResTicketingType:
                 "name": "FromResPeriod",
                 "type": "Attribute",
                 "pattern": r"[0-9]{1,3}",
-            }
+            },
         )
         from_res_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "FromResUnit",
                 "type": "Attribute",
-            }
+            },
         )
         from_depart_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "FromDepartTimeOfDay",
                 "type": "Attribute",
-            }
+            },
         )
         from_depart_period: None | str = field(
             default=None,
@@ -524,14 +538,14 @@ class AdvResTicketingType:
                 "name": "FromDepartPeriod",
                 "type": "Attribute",
                 "pattern": r"[0-9]{1,3}",
-            }
+            },
         )
         from_depart_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "FromDepartUnit",
                 "type": "Attribute",
-            }
+            },
         )
 
 
@@ -539,40 +553,41 @@ class AdvResTicketingType:
 class PassengerTypeQuantityType(TravelerCountType):
     """Specifies a PTC (Passenger Type Code) and the associated number of PTC's - for use in specifying passenger lists.
 
-    Attributes
+    Attributes:
         tpa_extensions: Additional elements and attributes to be
             included if required, per Trading Partner Agreement (TPA).
         changeable:
         index: Allows to identify which one of requested passengers this
             solution relates to.
     """
+
     tpa_extensions: None | PassengerTypeQuantityType.TpaExtensions = field(
         default=None,
         metadata={
             "name": "TPA_Extensions",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-        }
+        },
     )
     changeable: bool = field(
         default=True,
         metadata={
             "name": "Changeable",
             "type": "Attribute",
-        }
+        },
     )
     index: None | int = field(
         default=None,
         metadata={
             "name": "Index",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
     class TpaExtensions:
         """
-        Attributes
+        Attributes:
             birth_date:
             age: Exchange-specific
             state: Exchange-specific
@@ -581,13 +596,14 @@ class PassengerTypeQuantityType(TravelerCountType):
                 with voluntary changes should be included in the search
                 results.
         """
+
         birth_date: None | PassengerTypeQuantityType.TpaExtensions.BirthDate = field(
             default=None,
             metadata={
                 "name": "BirthDate",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-            }
+            },
         )
         age: None | PassengerTypeQuantityType.TpaExtensions.Age = field(
             default=None,
@@ -595,7 +611,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "name": "Age",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-            }
+            },
         )
         state: None | PassengerTypeQuantityType.TpaExtensions.State = field(
             default=None,
@@ -603,7 +619,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "name": "State",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-            }
+            },
         )
         total_number: None | PassengerTypeQuantityType.TpaExtensions.TotalNumber = field(
             default=None,
@@ -611,7 +627,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "name": "TotalNumber",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-            }
+            },
         )
         voluntary_changes: None | PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges = field(
             default=None,
@@ -619,7 +635,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 "name": "VoluntaryChanges",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-            }
+            },
         )
 
         @dataclass
@@ -629,7 +645,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                 metadata={
                     "name": "Date",
                     "type": "Attribute",
-                }
+                },
             )
 
         @dataclass
@@ -640,7 +656,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                     "name": "Years",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
         @dataclass
@@ -651,7 +667,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                     "name": "Code",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
         @dataclass
@@ -662,7 +678,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                     "name": "Value",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
         @dataclass
@@ -671,32 +687,35 @@ class PassengerTypeQuantityType(TravelerCountType):
             Specifies charges and/or penalties associated with making ticket changes after
             purchase.
 
-            Attributes
+            Attributes:
                 penalty: Specifies penalty charges as either a currency
                     amount or a percentage of the fare.
                 match: Indicates relation between conditions.
             """
-            penalty: list[PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty] = field(
+
+            penalty: list[
+                PassengerTypeQuantityType.TpaExtensions.VoluntaryChanges.Penalty
+            ] = field(
                 default_factory=list,
                 metadata={
                     "name": "Penalty",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
                     "max_occurs": 2,
-                }
+                },
             )
             match: None | VoluntaryChangesMatch = field(
                 default=None,
                 metadata={
                     "name": "Match",
                     "type": "Attribute",
-                }
+                },
             )
 
             @dataclass
             class Penalty:
                 """
-                Attributes
+                Attributes:
                     type_value: Indicates the type (Refund or Exchange)
                         of penalty involved in the search or response.
                     exclude: Indicate that specific penalty type should
@@ -711,26 +730,27 @@ class PassengerTypeQuantityType(TravelerCountType):
                         equivalent to the ISO 4217 standard "minor
                         unit".
                 """
+
                 type_value: None | PenaltyType = field(
                     default=None,
                     metadata={
                         "name": "Type",
                         "type": "Attribute",
-                    }
+                    },
                 )
                 exclude: None | bool = field(
                     default=None,
                     metadata={
                         "name": "Exclude",
                         "type": "Attribute",
-                    }
+                    },
                 )
                 application: None | PenaltyApplication = field(
                     default=None,
                     metadata={
                         "name": "Application",
                         "type": "Attribute",
-                    }
+                    },
                 )
                 amount: None | Decimal = field(
                     default=None,
@@ -738,7 +758,7 @@ class PassengerTypeQuantityType(TravelerCountType):
                         "name": "Amount",
                         "type": "Attribute",
                         "fraction_digits": 3,
-                    }
+                    },
                 )
                 currency_code: None | str = field(
                     default=None,
@@ -746,14 +766,14 @@ class PassengerTypeQuantityType(TravelerCountType):
                         "name": "CurrencyCode",
                         "type": "Attribute",
                         "pattern": r"[a-zA-Z]{3}",
-                    }
+                    },
                 )
                 decimal_places: None | int = field(
                     default=None,
                     metadata={
                         "name": "DecimalPlaces",
                         "type": "Attribute",
-                    }
+                    },
                 )
 
 
@@ -762,7 +782,7 @@ class StayRestrictionsType:
     """
     Type defining Min and Max Stay Restrictions.
 
-    Attributes
+    Attributes:
         minimum_stay: Specifies restrictions for the shortest
             length/period of time or earliest day return travel can
             commence or be completed.
@@ -772,13 +792,14 @@ class StayRestrictionsType:
         stay_restrictions_ind: True indicates that Stay Restrictions
             exist.
     """
+
     minimum_stay: None | StayRestrictionsType.MinimumStay = field(
         default=None,
         metadata={
             "name": "MinimumStay",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-        }
+        },
     )
     maximum_stay: None | StayRestrictionsType.MaximumStay = field(
         default=None,
@@ -786,20 +807,20 @@ class StayRestrictionsType:
             "name": "MaximumStay",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-        }
+        },
     )
     stay_restrictions_ind: None | bool = field(
         default=None,
         metadata={
             "name": "StayRestrictionsInd",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
     class MinimumStay:
         """
-        Attributes
+        Attributes:
             return_time_of_day: The time of day when return travel may
                 commence.
             min_stay: The amount of elapsed time or number of
@@ -810,12 +831,13 @@ class StayRestrictionsType:
             min_stay_date: The specific date for the minimum stay
                 requirement.
         """
+
         return_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "ReturnTimeOfDay",
                 "type": "Attribute",
-            }
+            },
         )
         min_stay: None | int = field(
             default=None,
@@ -824,27 +846,27 @@ class StayRestrictionsType:
                 "type": "Attribute",
                 "min_inclusive": 1,
                 "max_inclusive": 99,
-            }
+            },
         )
         stay_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "StayUnit",
                 "type": "Attribute",
-            }
+            },
         )
         min_stay_date: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "MinStayDate",
                 "type": "Attribute",
-            }
+            },
         )
 
     @dataclass
     class MaximumStay:
         """
-        Attributes
+        Attributes:
             return_type: Code indicating whether travel must commence or
                 be completed in order to satisfy the stay restriction.
             return_time_of_day: The time of day when return travel may
@@ -857,19 +879,20 @@ class StayRestrictionsType:
             max_stay_date: The specific date for the maximum stay
                 requirement.
         """
+
         return_type: None | MaximumStayReturnType = field(
             default=None,
             metadata={
                 "name": "ReturnType",
                 "type": "Attribute",
-            }
+            },
         )
         return_time_of_day: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "ReturnTimeOfDay",
                 "type": "Attribute",
-            }
+            },
         )
         max_stay: None | int = field(
             default=None,
@@ -878,19 +901,19 @@ class StayRestrictionsType:
                 "type": "Attribute",
                 "min_inclusive": 1,
                 "max_inclusive": 99,
-            }
+            },
         )
         stay_unit: None | StayUnitType = field(
             default=None,
             metadata={
                 "name": "StayUnit",
                 "type": "Attribute",
-            }
+            },
         )
         max_stay_date: None | str | XmlTime = field(
             default=None,
             metadata={
                 "name": "MaxStayDate",
                 "type": "Attribute",
-            }
+            },
         )

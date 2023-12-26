@@ -2,10 +2,14 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import VariationPoint
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
-from .data_prototype_transformation_props import DataPrototypeTransformationProps
+from .data_prototype_transformation_props import (
+    DataPrototypeTransformationProps,
+)
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
+from .transformation_technology_subtypes_enum import (
+    TransformationTechnologySubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -51,6 +55,7 @@ class EndToEndTransformationISignalPropsConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-TO-END-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL"
 
@@ -60,31 +65,37 @@ class EndToEndTransformationISignalPropsConditional:
             "name": "CS-ERROR-REACTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_prototype_transformation_propss: Optional["EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss"] = field(
+    data_prototype_transformation_propss: Optional[
+        "EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformer_ref: Optional["EndToEndTransformationISignalPropsConditional.TransformerRef"] = field(
+    transformer_ref: Optional[
+        "EndToEndTransformationISignalPropsConditional.TransformerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_ids: Optional["EndToEndTransformationISignalPropsConditional.DataIds"] = field(
+    data_ids: Optional[
+        "EndToEndTransformationISignalPropsConditional.DataIds"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-IDS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -92,7 +103,7 @@ class EndToEndTransformationISignalPropsConditional:
             "name": "DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -100,7 +111,7 @@ class EndToEndTransformationISignalPropsConditional:
             "name": "MAX-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min_data_length: Optional[PositiveInteger] = field(
         default=None,
@@ -108,7 +119,7 @@ class EndToEndTransformationISignalPropsConditional:
             "name": "MIN-DATA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     source_id: Optional[PositiveInteger] = field(
         default=None,
@@ -116,7 +127,7 @@ class EndToEndTransformationISignalPropsConditional:
             "name": "SOURCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -124,14 +135,14 @@ class EndToEndTransformationISignalPropsConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -139,18 +150,20 @@ class EndToEndTransformationISignalPropsConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class DataPrototypeTransformationPropss:
-        data_prototype_transformation_props: List[DataPrototypeTransformationProps] = field(
+        data_prototype_transformation_props: List[
+            DataPrototypeTransformationProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -161,7 +174,7 @@ class EndToEndTransformationISignalPropsConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -174,11 +187,12 @@ class EndToEndTransformationISignalPropsConditional:
             this attribute are controlled by a semantic constraint that
             depends on the category of the EndToEndProtection.
         """
+
         data_id: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-ID",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

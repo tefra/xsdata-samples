@@ -8,6 +8,7 @@ class TypeProfileType8(Enum):
     """
     A type for unique party identifiers of any party role.
     """
+
     AGENCY_GROUP = "AgencyGroup"
     AGENCY = "Agency"
     BRANCH_GROUP = "BranchGroup"

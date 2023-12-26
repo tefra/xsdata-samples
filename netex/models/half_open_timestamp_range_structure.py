@@ -14,7 +14,7 @@ class HalfOpenTimestampRangeStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     end_time: Optional[XmlDateTime] = field(
         default=None,
@@ -22,5 +22,5 @@ class HalfOpenTimestampRangeStructure:
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

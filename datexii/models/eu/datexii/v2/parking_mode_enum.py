@@ -18,6 +18,7 @@ class ParkingModeEnum(Enum):
         other side of the road.
     :cvar OTHER: Other.
     """
+
     PERPENDICULAR_PARKING = "perpendicularParking"
     PARALLEL_PARKING = "parallelParking"
     ECHELON_PARKING = "echelonParking"

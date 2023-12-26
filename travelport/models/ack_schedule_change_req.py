@@ -10,6 +10,7 @@ class AckScheduleChangeReq(BaseReq1):
     """
     Request to acknowledge you have received the schedule change notification.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -19,7 +20,7 @@ class AckScheduleChangeReq(BaseReq1):
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -28,7 +29,7 @@ class AckScheduleChangeReq(BaseReq1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -36,14 +37,14 @@ class AckScheduleChangeReq(BaseReq1):
             "name": "ProviderLocatorCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     reservation_locator_code: None | str = field(
         default=None,
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -51,5 +52,5 @@ class AckScheduleChangeReq(BaseReq1):
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

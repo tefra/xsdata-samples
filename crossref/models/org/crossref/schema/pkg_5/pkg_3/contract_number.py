@@ -8,6 +8,7 @@ class ContractNumber:
     """
     The contract number under which a report or paper was written.
     """
+
     class Meta:
         name = "contract_number"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class ContractNumber:
         metadata={
             "min_length": 2,
             "max_length": 255,
-        }
+        },
     )

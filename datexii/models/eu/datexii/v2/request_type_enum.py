@@ -16,6 +16,7 @@ class RequestTypeEnum(Enum):
     :cvar SUBSCRIPTION: A request for a client's subscription as
         currently held by a supplier.
     """
+
     CATALOGUE = "catalogue"
     FILTER = "filter"
     REQUEST_DATA = "requestData"

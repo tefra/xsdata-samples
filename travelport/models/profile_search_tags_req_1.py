@@ -15,6 +15,7 @@ class ProfileSearchTagsReq1(BaseReq2):
     agency_id
         The ID of the agency that the tags belong to.
     """
+
     class Meta:
         name = "ProfileSearchTagsReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -25,5 +26,5 @@ class ProfileSearchTagsReq1(BaseReq2):
             "name": "AgencyID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

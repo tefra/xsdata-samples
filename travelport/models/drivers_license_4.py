@@ -24,6 +24,7 @@ class DriversLicense4:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "DriversLicense"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -33,7 +34,7 @@ class DriversLicense4:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     license_number: None | str = field(
         default=None,
@@ -41,19 +42,19 @@ class DriversLicense4:
             "name": "LicenseNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     el_stat: None | TypeElementStatus5 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

@@ -16,6 +16,7 @@ class IncludedItem:
     description
         Description of included item.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -25,7 +26,7 @@ class IncludedItem:
             "name": "Code",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -33,5 +34,5 @@ class IncludedItem:
             "name": "Description",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

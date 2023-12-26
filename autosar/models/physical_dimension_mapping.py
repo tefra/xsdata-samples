@@ -26,31 +26,36 @@ class PhysicalDimensionMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PHYSICAL-DIMENSION-MAPPING"
 
-    first_physical_dimension_ref: Optional["PhysicalDimensionMapping.FirstPhysicalDimensionRef"] = field(
+    first_physical_dimension_ref: Optional[
+        "PhysicalDimensionMapping.FirstPhysicalDimensionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-PHYSICAL-DIMENSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    second_physical_dimension_ref: Optional["PhysicalDimensionMapping.SecondPhysicalDimensionRef"] = field(
+    second_physical_dimension_ref: Optional[
+        "PhysicalDimensionMapping.SecondPhysicalDimensionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SECOND-PHYSICAL-DIMENSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,7 +63,7 @@ class PhysicalDimensionMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -69,7 +74,7 @@ class PhysicalDimensionMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -80,5 +85,5 @@ class PhysicalDimensionMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

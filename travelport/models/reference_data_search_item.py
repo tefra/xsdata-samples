@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.reference_data_search_item_type import ReferenceDataSearchItemType
+from travelport.models.reference_data_search_item_type import (
+    ReferenceDataSearchItemType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
@@ -23,6 +25,7 @@ class ReferenceDataSearchItem:
     type_value
         Reference data type
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -33,7 +36,7 @@ class ReferenceDataSearchItem:
             "type": "Element",
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -42,7 +45,7 @@ class ReferenceDataSearchItem:
             "type": "Element",
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     type_value: None | ReferenceDataSearchItemType = field(
         default=None,
@@ -50,5 +53,5 @@ class ReferenceDataSearchItem:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

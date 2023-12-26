@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .consumer_request_endpoint_structure import ConsumerRequestEndpointStructure
+from .consumer_request_endpoint_structure import (
+    ConsumerRequestEndpointStructure,
+)
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
@@ -13,7 +15,7 @@ class DataSupplyRequestStructure(ConsumerRequestEndpointStructure):
             "name": "NotificationRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     all_data: Optional[bool] = field(
         default=None,
@@ -21,5 +23,5 @@ class DataSupplyRequestStructure(ConsumerRequestEndpointStructure):
             "name": "AllData",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

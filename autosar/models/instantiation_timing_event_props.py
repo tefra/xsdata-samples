@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
 from .identifier import Identifier
-from .instance_event_in_composition_instance_ref import InstanceEventInCompositionInstanceRef
+from .instance_event_in_composition_instance_ref import (
+    InstanceEventInCompositionInstanceRef,
+)
 from .time_value import TimeValue
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -35,16 +37,19 @@ class InstantiationTimingEventProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "INSTANTIATION-TIMING-EVENT-PROPS"
 
-    refined_event_iref: Optional[InstanceEventInCompositionInstanceRef] = field(
+    refined_event_iref: Optional[
+        InstanceEventInCompositionInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "REFINED-EVENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_label: Optional[Identifier] = field(
         default=None,
@@ -52,7 +57,7 @@ class InstantiationTimingEventProps:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -60,7 +65,7 @@ class InstantiationTimingEventProps:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     period: Optional[TimeValue] = field(
         default=None,
@@ -68,14 +73,14 @@ class InstantiationTimingEventProps:
             "name": "PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -83,5 +88,5 @@ class InstantiationTimingEventProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

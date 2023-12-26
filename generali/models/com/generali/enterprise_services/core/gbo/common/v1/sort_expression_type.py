@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.collation_algorithm_code_type import CollationAlgorithmCodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sort_order_code_type import SortOrderCodeType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.collation_algorithm_code_type import (
+    CollationAlgorithmCodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sort_order_code_type import (
+    SortOrderCodeType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -18,6 +22,7 @@ class SortExpressionType:
     :ivar collation_algorithm_code: The collation (sort) algorithm to
         use in the sorting to the result set
     """
+
     path_text: List[str] = field(
         default_factory=list,
         metadata={
@@ -25,19 +30,19 @@ class SortExpressionType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "min_occurs": 1,
-        }
+        },
     )
     sort_order_code: Optional[SortOrderCodeType] = field(
         default=None,
         metadata={
             "name": "sortOrderCode",
             "type": "Attribute",
-        }
+        },
     )
     collation_algorithm_code: Optional[CollationAlgorithmCodeType] = field(
         default=None,
         metadata={
             "name": "collationAlgorithmCode",
             "type": "Attribute",
-        }
+        },
     )

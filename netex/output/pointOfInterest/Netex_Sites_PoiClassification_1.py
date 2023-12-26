@@ -21,136 +21,136 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
         choice=[
             SiteFrame(
-                id="poix:POI_Classifications",
-                version="any",
+                id='poix:POI_Classifications',
+                version='any',
                 name=MultilingualString(
-                    value="Poi Classifications"
+                    value='Poi Classifications'
                 ),
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="poix",
-                            xmlns="poix",
-                            xmlns_url="http://www.poininfo.eu/stuff",
-                            description="Point of Inteset data"
+                            id='poix',
+                            xmlns='poix',
+                            xmlns_url='http://www.poininfo.eu/stuff',
+                            description='Point of Inteset data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="poix"
+                        ref='poix'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        value="EXTERNAL",
-                        ref="poix:001"
+                        value='EXTERNAL',
+                        ref='poix:001'
                     )
                 ),
                 point_of_interest_classifications=PointOfInterestClassificationsInFrameRelStructure(
                     point_of_interest_classification=[
                         PointOfInterestClassification(
-                            id="poix:Cl000",
-                            version="any",
+                            id='poix:Cl000',
+                            version='any',
                             name=MultilingualString(
-                                value="All"
+                                value='All'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl001",
-                            version="any",
+                            id='poix:Cl001',
+                            version='any',
                             name=MultilingualString(
-                                value="Tourist Attraction"
+                                value='Tourist Attraction'
                             ),
                             short_name=MultilingualString(
-                                value="Attraction"
+                                value='Attraction'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl002",
-                            version="any",
+                            id='poix:Cl002',
+                            version='any',
                             name=MultilingualString(
-                                value="Museum"
+                                value='Museum'
                             ),
                             short_name=MultilingualString(
-                                value="Museum"
+                                value='Museum'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl003",
-                            version="any",
+                            id='poix:Cl003',
+                            version='any',
                             name=MultilingualString(
-                                value="Art Galleriy"
+                                value='Art Galleriy'
                             ),
                             short_name=MultilingualString(
-                                value="Gallery"
+                                value='Gallery'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl004",
-                            version="any",
+                            id='poix:Cl004',
+                            version='any',
                             name=MultilingualString(
-                                value="Sports Facility"
+                                value='Sports Facility'
                             ),
                             short_name=MultilingualString(
-                                value="Sports Facility"
+                                value='Sports Facility'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl005",
-                            version="any",
+                            id='poix:Cl005',
+                            version='any',
                             name=MultilingualString(
-                                value="Football Stadium"
+                                value='Football Stadium'
                             ),
                             short_name=MultilingualString(
-                                value="Football"
+                                value='Football'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl006",
-                            version="any",
+                            id='poix:Cl006',
+                            version='any',
                             name=MultilingualString(
-                                value="Rugby Stadium"
+                                value='Rugby Stadium'
                             ),
                             short_name=MultilingualString(
-                                value="Rugby"
+                                value='Rugby'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl007",
-                            version="any",
+                            id='poix:Cl007',
+                            version='any',
                             name=MultilingualString(
-                                value="Ice Rink"
+                                value='Ice Rink'
                             ),
                             short_name=MultilingualString(
-                                value="Ice Rink"
+                                value='Ice Rink'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl008",
-                            version="any",
+                            id='poix:Cl008',
+                            version='any',
                             name=MultilingualString(
-                                value="Stadium"
+                                value='Stadium'
                             ),
                             short_name=MultilingualString(
-                                value="Stadium"
+                                value='Stadium'
                             )
                         ),
                         PointOfInterestClassification(
-                            id="poix:Cl009",
-                            version="any",
+                            id='poix:Cl009',
+                            version='any',
                             name=MultilingualString(
-                                value="Icerink"
+                                value='Icerink'
                             ),
                             short_name=MultilingualString(
-                                value="Icerink"
+                                value='Icerink'
                             )
                         ),
                     ]
@@ -158,143 +158,143 @@ obj = PublicationDelivery(
                 point_of_interest_classification_hierarchies=PointOfInterestClassificationHierarchiesInFrameRelStructure(
                     point_of_interest_classification_hierarchy=[
                         PointOfInterestClassificationHierarchy(
-                            id="poix:hm_1",
-                            version="any",
+                            id='poix:hm_1',
+                            version='any',
                             name=MultilingualString(
-                                value="Main Hierarchy"
+                                value='Main Hierarchy'
                             ),
                             members=PointOfInterestClassificationHierarchyMembersRelStructure(
                                 classification_hierarchy_member=[
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_00",
+                                        id='poix:hm_1_00',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl000"
+                                            version='any',
+                                            ref='poix:Cl000'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl001"
+                                            version='any',
+                                            ref='poix:Cl001'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_01",
+                                        id='poix:hm_1_01',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl001"
+                                            version='any',
+                                            ref='poix:Cl001'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl002"
+                                            version='any',
+                                            ref='poix:Cl002'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_02",
+                                        id='poix:hm_1_02',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl001"
+                                            version='any',
+                                            ref='poix:Cl001'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl003"
+                                            version='any',
+                                            ref='poix:Cl003'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_00",
+                                        id='poix:hm_1_00',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl000"
+                                            version='any',
+                                            ref='poix:Cl000'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl004"
+                                            version='any',
+                                            ref='poix:Cl004'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_03",
+                                        id='poix:hm_1_03',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl004"
+                                            version='any',
+                                            ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl008"
+                                            version='any',
+                                            ref='poix:Cl008'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_04",
+                                        id='poix:hm_1_04',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl008"
+                                            version='any',
+                                            ref='poix:Cl008'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl005"
+                                            version='any',
+                                            ref='poix:Cl005'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_05",
+                                        id='poix:hm_1_05',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl008"
+                                            version='any',
+                                            ref='poix:Cl008'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl006"
+                                            version='any',
+                                            ref='poix:Cl006'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_1_06",
+                                        id='poix:hm_1_06',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl004"
+                                            version='any',
+                                            ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl009"
+                                            version='any',
+                                            ref='poix:Cl009'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         PointOfInterestClassificationHierarchy(
-                            id="poix:hm_2",
-                            version="any",
+                            id='poix:hm_2',
+                            version='any',
                             name=MultilingualString(
-                                value="Sports Hierarchy"
+                                value='Sports Hierarchy'
                             ),
                             members=PointOfInterestClassificationHierarchyMembersRelStructure(
                                 classification_hierarchy_member=[
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_2_01",
+                                        id='poix:hm_2_01',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl004"
+                                            version='any',
+                                            ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl005"
+                                            version='any',
+                                            ref='poix:Cl005'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_2_02",
+                                        id='poix:hm_2_02',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl004"
+                                            version='any',
+                                            ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl006"
+                                            version='any',
+                                            ref='poix:Cl006'
                                         )
                                     ),
                                     PointOfInterestClassificationHierarchyMemberStructure(
-                                        id="poix:hm_2_03",
+                                        id='poix:hm_2_03',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl004"
+                                            version='any',
+                                            ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
-                                            version="any",
-                                            ref="poix:Cl009"
+                                            version='any',
+                                            ref='poix:Cl009'
                                         )
                                     ),
                                 ]

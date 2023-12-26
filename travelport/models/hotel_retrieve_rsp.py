@@ -18,5 +18,5 @@ class HotelRetrieveRsp(BaseRsp1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

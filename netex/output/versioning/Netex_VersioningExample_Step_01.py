@@ -24,18 +24,18 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         ServiceFrameRef(
-                            value="REQUEST",
-                            ref="mybus:ntwkf001"
+                            value='REQUEST',
+                            ref='mybus:ntwkf001'
                         ),
                     ]
                 ),
@@ -44,41 +44,41 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P7D"),
     description=MultilingualString(
-        value="Netex basic Versioning Example Step 01"
+        value='Netex basic Versioning Example Step 01'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="mybus:ntwkf001",
-                version="001",
+                id='mybus:ntwkf001',
+                version='001',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                        value="EXTERNAL",
-                        ref="mybus:RS_10"
+                        value='EXTERNAL',
+                        ref='mybus:RS_10'
                     )
                 ),
                 versions=VersionsRelStructure(
                     version_ref_or_version=[
                         Version(
-                            id="mybus:ntwkf001",
+                            id='mybus:ntwkf001',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                            version="002",
+                            version='002',
                             status=VersionStatusEnumeration.VERSIONED,
                             description=MultilingualString(
-                                value="Version 1 of Composite Frame "
+                                value='Version 1 of Composite Frame '
                             ),
                             version_type=VersionTypeEnumeration.BASELINE
                         ),
@@ -87,32 +87,32 @@ obj = PublicationDelivery(
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="mybus:ntwkf001@service",
+                            id='mybus:ntwkf001@service',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                            version="001",
-                            responsibility_set_ref_attribute="mybus:RS_10",
+                            version='001',
+                            responsibility_set_ref_attribute='mybus:RS_10',
                             name=MultilingualString(
-                                value="My Network  (V1) "
+                                value='My Network  (V1) '
                             ),
                             versions=VersionsRelStructure(
                                 version_ref_or_version=[
                                     Version(
-                                        id="mybus:ntwkf001@service",
+                                        id='mybus:ntwkf001@service',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         status=VersionStatusEnumeration.VERSIONED,
                                         description=MultilingualString(
-                                            value="Version 1 of Service Frame "
+                                            value='Version 1 of Service Frame '
                                         ),
                                         version_type=VersionTypeEnumeration.BASELINE
                                     ),
                                     Version(
-                                        id="mybus:SSP0001A",
+                                        id='mybus:SSP0001A',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                        version="001",
+                                        version='001',
                                         status=VersionStatusEnumeration.VERSIONED,
                                         description=MultilingualString(
-                                            value="Version 1 of StopPoint SSP001A "
+                                            value='Version 1 of StopPoint SSP001A '
                                         )
                                     ),
                                 ]
@@ -120,15 +120,15 @@ obj = PublicationDelivery(
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP0001A",
+                                        id='mybus:SSP0001A',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                        version="001",
-                                        responsibility_set_ref_attribute="mybus:RS_10",
+                                        version='001',
+                                        responsibility_set_ref_attribute='mybus:RS_10',
                                         name=MultilingualString(
-                                            value="Haltstelle A"
+                                            value='Haltstelle A'
                                         ),
                                         description=MultilingualString(
-                                            value="Version one of stop A"
+                                            value='Version one of stop A'
                                         )
                                     ),
                                 ]

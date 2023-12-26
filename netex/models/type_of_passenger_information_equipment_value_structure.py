@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TypeOfPassengerInformationEquipmentValueStructure(TypeOfEntityVersionStructure):
+class TypeOfPassengerInformationEquipmentValueStructure(
+    TypeOfEntityVersionStructure
+):
     class Meta:
         name = "TypeOfPassengerInformationEquipment_ValueStructure"
 
@@ -17,5 +19,5 @@ class TypeOfPassengerInformationEquipmentValueStructure(TypeOfEntityVersionStruc
             "name": "BroadType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

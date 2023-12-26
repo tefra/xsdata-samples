@@ -40,6 +40,7 @@ class TcpIpIcmpv6Props:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TCP-IP-ICMPV-6-PROPS"
 
@@ -49,7 +50,7 @@ class TcpIpIcmpv6Props:
             "name": "TCP-IP-ICMP-V-6-ECHO-REPLY-AVOID-FRAGMENTATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_icmp_v_6_echo_reply_enabled: Optional[Boolean] = field(
         default=None,
@@ -57,7 +58,7 @@ class TcpIpIcmpv6Props:
             "name": "TCP-IP-ICMP-V-6-ECHO-REPLY-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_icmp_v_6_hop_limit: Optional[PositiveInteger] = field(
         default=None,
@@ -65,15 +66,17 @@ class TcpIpIcmpv6Props:
             "name": "TCP-IP-ICMP-V-6-HOP-LIMIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    tcp_ip_icmp_v_6_msg_destination_unreachable_enabled: Optional[Boolean] = field(
+    tcp_ip_icmp_v_6_msg_destination_unreachable_enabled: Optional[
+        Boolean
+    ] = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-V-6-MSG-DESTINATION-UNREACHABLE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_ip_icmp_v_6_msg_parameter_problem_enabled: Optional[Boolean] = field(
         default=None,
@@ -81,14 +84,14 @@ class TcpIpIcmpv6Props:
             "name": "TCP-IP-ICMP-V-6-MSG-PARAMETER-PROBLEM-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -96,5 +99,5 @@ class TcpIpIcmpv6Props:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

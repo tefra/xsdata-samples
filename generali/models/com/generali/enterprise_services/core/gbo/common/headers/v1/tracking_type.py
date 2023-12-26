@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.base_header_type import BaseHeaderType
+from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.base_header_type import (
+    BaseHeaderType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+)
 
 
 @dataclass
@@ -20,6 +24,7 @@ class TrackingType(BaseHeaderType):
         process instance. This ID may not exceed a process
         boundary.</description>
     """
+
     tracking_id: Optional[str] = field(
         default=None,
         metadata={
@@ -27,7 +32,7 @@ class TrackingType(BaseHeaderType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        }
+        },
     )
     conversation_id: Optional[str] = field(
         default=None,
@@ -36,5 +41,5 @@ class TrackingType(BaseHeaderType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        }
+        },
     )

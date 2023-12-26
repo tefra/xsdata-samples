@@ -75,13 +75,18 @@ class RoadOrCarriagewayOrLaneManagementTypeEnum(Enum):
         operation.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     CAR_POOL_LANE_IN_OPERATION = "carPoolLaneInOperation"
     CARRIAGEWAY_CLOSURES = "carriagewayClosures"
     CLEAR_ALANE_FOR_EMERGENCY_VEHICLES = "clearALaneForEmergencyVehicles"
-    CLEAR_ALANE_FOR_SNOWPLOUGHS_AND_GRITTING_VEHICLES = "clearALaneForSnowploughsAndGrittingVehicles"
+    CLEAR_ALANE_FOR_SNOWPLOUGHS_AND_GRITTING_VEHICLES = (
+        "clearALaneForSnowploughsAndGrittingVehicles"
+    )
     CLOSED_PERMANENTLY_FOR_THE_WINTER = "closedPermanentlyForTheWinter"
     CONTRAFLOW = "contraflow"
-    DO_NOT_USE_SPECIFIED_LANES_OR_CARRIAGEWAYS = "doNotUseSpecifiedLanesOrCarriageways"
+    DO_NOT_USE_SPECIFIED_LANES_OR_CARRIAGEWAYS = (
+        "doNotUseSpecifiedLanesOrCarriageways"
+    )
     HARD_SHOULDER_RUNNING_IN_OPERATION = "hardShoulderRunningInOperation"
     HEIGHT_RESTRICTION_IN_OPERATION = "heightRestrictionInOperation"
     INTERMITTENT_SHORT_TERM_CLOSURES = "intermittentShortTermClosures"
@@ -99,7 +104,9 @@ class RoadOrCarriagewayOrLaneManagementTypeEnum(Enum):
     SINGLE_ALTERNATE_LINE_TRAFFIC = "singleAlternateLineTraffic"
     TIDAL_FLOW_LANE_IN_OPERATION = "tidalFlowLaneInOperation"
     TURN_AROUND_IN_OPERATION = "turnAroundInOperation"
-    USE_OF_SPECIFIED_LANES_OR_CARRIAGEWAYS_ALLOWED = "useOfSpecifiedLanesOrCarriagewaysAllowed"
+    USE_OF_SPECIFIED_LANES_OR_CARRIAGEWAYS_ALLOWED = (
+        "useOfSpecifiedLanesOrCarriagewaysAllowed"
+    )
     USE_SPECIFIED_LANES_OR_CARRIAGEWAYS = "useSpecifiedLanesOrCarriageways"
     VEHICLE_STORAGE_IN_OPERATION = "vehicleStorageInOperation"
     WEIGHT_RESTRICTION_IN_OPERATION = "weightRestrictionInOperation"

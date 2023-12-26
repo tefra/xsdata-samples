@@ -38,6 +38,7 @@ class SpecialDayTypeEnum(Enum):
     :cvar UNKNOWN: Unknown.
     :cvar OTHER: Other.
     """
+
     BICYCLE_RACE_DAY = "bicycleRaceDay"
     BULL_FIGHT_DAY = "bullFightDay"
     CARNIVAL_DAY = "carnivalDay"

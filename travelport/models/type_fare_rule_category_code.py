@@ -81,6 +81,7 @@ class TypeFareRuleCategoryCode(Enum):
     OTH
         Other
     """
+
     APP = "APP"
     WHO = "WHO"
     DAY = "DAY"

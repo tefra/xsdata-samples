@@ -3,7 +3,9 @@ from typing import Optional
 from datexii.models.eu.datexii.v2.electric_charging import ElectricCharging
 from datexii.models.eu.datexii.v2.equipment_type_enum import EquipmentTypeEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.parking_equipment_or_service_facility import ParkingEquipmentOrServiceFacility
+from datexii.models.eu.datexii.v2.parking_equipment_or_service_facility import (
+    ParkingEquipmentOrServiceFacility,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -18,6 +20,7 @@ class Equipment(ParkingEquipmentOrServiceFacility):
     :ivar electric_charging:
     :ivar equipment_extension:
     """
+
     equipment_type: Optional[EquipmentTypeEnum] = field(
         default=None,
         metadata={
@@ -25,7 +28,7 @@ class Equipment(ParkingEquipmentOrServiceFacility):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     electric_charging: Optional[ElectricCharging] = field(
         default=None,
@@ -33,7 +36,7 @@ class Equipment(ParkingEquipmentOrServiceFacility):
             "name": "electricCharging",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     equipment_extension: Optional[ExtensionType] = field(
         default=None,
@@ -41,5 +44,5 @@ class Equipment(ParkingEquipmentOrServiceFacility):
             "name": "equipmentExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

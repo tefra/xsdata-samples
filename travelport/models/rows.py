@@ -19,6 +19,7 @@ class Rows:
         Specifies the AirSegment the seat map is for. Providers: ACH, 1G,
         1V, 1P
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,12 +29,12 @@ class Rows:
             "name": "Row",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,8 +1,12 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
-from travelport.models.search_ticketing_reservation_status_2 import SearchTicketingReservationStatus2
-from travelport.models.search_ticketing_ticket_status_2 import SearchTicketingTicketStatus2
+from travelport.models.search_ticketing_reservation_status_2 import (
+    SearchTicketingReservationStatus2,
+)
+from travelport.models.search_ticketing_ticket_status_2 import (
+    SearchTicketingTicketStatus2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
@@ -23,6 +27,7 @@ class SearchTicketing2:
         Identifies when this reservation was ticketed, or when it should be
         ticketed by (in the event of a TTL)
     """
+
     class Meta:
         name = "SearchTicketing"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -32,19 +37,19 @@ class SearchTicketing2:
         metadata={
             "name": "TicketStatus",
             "type": "Attribute",
-        }
+        },
     )
     reservation_status: SearchTicketingReservationStatus2 = field(
         default=SearchTicketingReservationStatus2.BOTH,
         metadata={
             "name": "ReservationStatus",
             "type": "Attribute",
-        }
+        },
     )
     ticket_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TicketDate",
             "type": "Attribute",
-        }
+        },
     )

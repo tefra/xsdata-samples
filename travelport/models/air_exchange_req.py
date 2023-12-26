@@ -58,6 +58,7 @@ class AirExchangeReq(BaseReq1):
     return_reservation
         Provider: ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -69,7 +70,7 @@ class AirExchangeReq(BaseReq1):
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     ticket_number: list[str] = field(
         default_factory=list,
@@ -80,7 +81,7 @@ class AirExchangeReq(BaseReq1):
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     specific_seat_assignment: list[SpecificSeatAssignment] = field(
         default_factory=list,
@@ -88,7 +89,7 @@ class AirExchangeReq(BaseReq1):
             "name": "SpecificSeatAssignment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -97,21 +98,21 @@ class AirExchangeReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     air_exchange_modifiers: None | AirExchangeModifiers = field(
         default=None,
         metadata={
             "name": "AirExchangeModifiers",
             "type": "Element",
-        }
+        },
     )
     air_exchange_bundle_total: None | AirExchangeBundleTotal = field(
         default=None,
         metadata={
             "name": "AirExchangeBundleTotal",
             "type": "Element",
-        }
+        },
     )
     air_exchange_bundle: list[AirExchangeBundle] = field(
         default_factory=list,
@@ -119,7 +120,7 @@ class AirExchangeReq(BaseReq1):
             "name": "AirExchangeBundle",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -128,14 +129,14 @@ class AirExchangeReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
-        }
+        },
     )
     form_of_payment: None | FormOfPayment1 = field(
         default=None,
@@ -143,7 +144,7 @@ class AirExchangeReq(BaseReq1):
             "name": "FormOfPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     form_of_payment_ref: None | FormOfPaymentRef1 = field(
         default=None,
@@ -151,7 +152,7 @@ class AirExchangeReq(BaseReq1):
             "name": "FormOfPaymentRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     ssrinfo: list[Ssrinfo1] = field(
         default_factory=list,
@@ -160,7 +161,7 @@ class AirExchangeReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     add_svc: None | AddSvc = field(
         default=None,
@@ -168,12 +169,12 @@ class AirExchangeReq(BaseReq1):
             "name": "AddSvc",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     return_reservation: bool = field(
         default=False,
         metadata={
             "name": "ReturnReservation",
             "type": "Attribute",
-        }
+        },
     )

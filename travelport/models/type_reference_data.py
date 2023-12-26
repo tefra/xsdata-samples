@@ -19,6 +19,7 @@ class TypeReferenceData:
     deprecated_date
         Used to set deprecated date
     """
+
     class Meta:
         name = "typeReferenceData"
 
@@ -30,7 +31,7 @@ class TypeReferenceData:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -39,7 +40,7 @@ class TypeReferenceData:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -48,12 +49,12 @@ class TypeReferenceData:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     deprecated_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DeprecatedDate",
             "type": "Attribute",
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .other_error import OtherError
 from .service_not_available_error import ServiceNotAvailableError
@@ -15,7 +15,7 @@ class CheckStatusResponseBodyStructure:
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     data_ready: Optional[bool] = field(
         default=None,
@@ -23,15 +23,17 @@ class CheckStatusResponseBodyStructure:
             "name": "DataReady",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
-    error_condition: Optional["CheckStatusResponseBodyStructure.ErrorCondition"] = field(
+    error_condition: Optional[
+        "CheckStatusResponseBodyStructure.ErrorCondition"
+    ] = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     valid_until: Optional[XmlDateTime] = field(
         default=None,
@@ -39,7 +41,7 @@ class CheckStatusResponseBodyStructure:
             "name": "ValidUntil",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     shortest_possible_cycle: Optional[XmlDuration] = field(
         default=None,
@@ -47,7 +49,7 @@ class CheckStatusResponseBodyStructure:
             "name": "ShortestPossibleCycle",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     service_started_time: Optional[XmlDateTime] = field(
         default=None,
@@ -55,12 +57,14 @@ class CheckStatusResponseBodyStructure:
             "name": "ServiceStartedTime",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
 
     @dataclass
     class ErrorCondition:
-        service_not_available_error_or_other_error: Optional[object] = field(
+        service_not_available_error_or_other_error: Optional[
+            Union[ServiceNotAvailableError, OtherError]
+        ] = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -76,7 +80,7 @@ class CheckStatusResponseBodyStructure:
                         "namespace": "http://www.siri.org.uk/siri",
                     },
                 ),
-            }
+            },
         )
         description: Optional[str] = field(
             default=None,
@@ -84,5 +88,5 @@ class CheckStatusResponseBodyStructure:
                 "name": "Description",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-            }
+            },
         )

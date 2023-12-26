@@ -13,5 +13,5 @@ class SrsName1:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

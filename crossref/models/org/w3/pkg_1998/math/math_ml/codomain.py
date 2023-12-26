@@ -15,5 +15,5 @@ class Codomain:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

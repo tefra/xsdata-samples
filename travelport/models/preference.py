@@ -10,6 +10,7 @@ class Preference:
     """
     Preferences of the segment related to the profile (Agent, Branch, etc.).
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -19,5 +20,5 @@ class Preference:
             "name": "Owner",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

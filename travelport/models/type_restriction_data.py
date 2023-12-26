@@ -25,6 +25,7 @@ class TypeRestrictionData:
         Possible value for restriction value "After Departure","Anytime" and
         "Before Departure"
     """
+
     class Meta:
         name = "typeRestrictionData"
 
@@ -34,7 +35,7 @@ class TypeRestrictionData:
             "name": "Amount",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     percentage: None | str = field(
         default=None,
@@ -43,19 +44,19 @@ class TypeRestrictionData:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     name: None | object = field(
         default=None,
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )
     value: None | object = field(
         default=None,
         metadata={
             "name": "Value",
             "type": "Attribute",
-        }
+        },
     )

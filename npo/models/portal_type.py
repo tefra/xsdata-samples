@@ -16,26 +16,26 @@ class PortalType:
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
             "required": True,
-        }
+        },
     )
     section: None | SectionType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     url: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

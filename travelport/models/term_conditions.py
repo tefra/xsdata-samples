@@ -16,6 +16,7 @@ class TermConditions:
     include_term_conditions
         Specifies whether Term and Conditions included in the Fax or not .
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -25,7 +26,7 @@ class TermConditions:
             "name": "LanguageOption",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     include_term_conditions: None | bool = field(
         default=None,
@@ -33,5 +34,5 @@ class TermConditions:
             "name": "IncludeTermConditions",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

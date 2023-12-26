@@ -12,5 +12,5 @@ class RequestorRef:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

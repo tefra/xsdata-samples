@@ -13,5 +13,5 @@ class SchemeName:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )

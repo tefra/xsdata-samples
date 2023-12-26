@@ -18,7 +18,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "HouseNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     building_name: Optional[MultilingualString] = field(
         default=None,
@@ -26,7 +26,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "BuildingName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     address_line1: Optional[MultilingualString] = field(
         default=None,
@@ -34,7 +34,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "AddressLine1",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     address_line2: Optional[MultilingualString] = field(
         default=None,
@@ -42,7 +42,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "AddressLine2",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     street: Optional[MultilingualString] = field(
         default=None,
@@ -50,7 +50,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "Street",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     town: Optional[MultilingualString] = field(
         default=None,
@@ -58,7 +58,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "Town",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     suburb: Optional[MultilingualString] = field(
         default=None,
@@ -66,7 +66,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "Suburb",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     post_code: Optional[str] = field(
         default=None,
@@ -74,7 +74,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "PostCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     post_code_extension: Optional[str] = field(
         default=None,
@@ -82,7 +82,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "PostCodeExtension",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     postal_region: Optional[str] = field(
         default=None,
@@ -90,7 +90,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "PostalRegion",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     province: Optional[MultilingualString] = field(
         default=None,
@@ -98,7 +98,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "Province",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     road_address_ref: Optional[AddressRefStructure] = field(
         default=None,
@@ -106,5 +106,5 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "name": "RoadAddressRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class TrafficTrendTypeEnum(Enum):
     :cvar TRAFFIC_STABLE: Traffic conditions are currently stable.
     :cvar UNKNOWN: The trend of traffic conditions is currently unknown.
     """
+
     TRAFFIC_BUILDING_UP = "trafficBuildingUp"
     TRAFFIC_EASING = "trafficEasing"
     TRAFFIC_STABLE = "trafficStable"

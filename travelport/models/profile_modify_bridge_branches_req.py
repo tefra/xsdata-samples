@@ -22,6 +22,7 @@ class ProfileModifyBridgeBranchesReq(BaseReq5):
     bridge_branch_cmd
         Command to add or remove a Bridge Branch assignment
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -30,7 +31,7 @@ class ProfileModifyBridgeBranchesReq(BaseReq5):
         metadata={
             "name": "AgentID",
             "type": "Element",
-        }
+        },
     )
     user_name: None | str = field(
         default=None,
@@ -39,7 +40,7 @@ class ProfileModifyBridgeBranchesReq(BaseReq5):
             "type": "Element",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     bridge_branch_cmd: list[BridgeBranchCmd] = field(
         default_factory=list,
@@ -48,5 +49,5 @@ class ProfileModifyBridgeBranchesReq(BaseReq5):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

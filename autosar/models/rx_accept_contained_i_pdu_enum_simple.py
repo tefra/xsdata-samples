@@ -14,5 +14,6 @@ class RxAcceptContainedIPduEnumSimple(Enum):
         containedIPdu is received within this ContainerIPdu this
         containedIPdu is discarded.
     """
+
     ACCEPT_ALL = "ACCEPT-ALL"
     ACCEPT_CONFIGURED = "ACCEPT-CONFIGURED"

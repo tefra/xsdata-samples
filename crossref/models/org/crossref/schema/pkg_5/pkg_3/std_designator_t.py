@@ -17,7 +17,7 @@ class StdDesignatorT:
             "required": True,
             "min_length": 2,
             "max_length": 150,
-        }
+        },
     )
     std_alt_script: List[str] = field(
         default_factory=list,
@@ -26,7 +26,7 @@ class StdDesignatorT:
             "namespace": "http://www.crossref.org/schema/5.3.1",
             "min_length": 2,
             "max_length": 150,
-        }
+        },
     )
     std_variant_form: List[str] = field(
         default_factory=list,
@@ -35,5 +35,5 @@ class StdDesignatorT:
             "namespace": "http://www.crossref.org/schema/5.3.1",
             "min_length": 2,
             "max_length": 150,
-        }
+        },
     )

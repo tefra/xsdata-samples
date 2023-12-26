@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from .communication_controller_subtypes_enum import (
+    CommunicationControllerSubtypesEnum,
+)
 from .eth_ip_props_subtypes_enum import EthIpPropsSubtypesEnum
 from .frame_port import FramePort
 from .i_pdu_port import IPduPort
@@ -131,6 +133,7 @@ class EthernetCommunicationConnector:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETHERNET-COMMUNICATION-CONNECTOR"
 
@@ -141,15 +144,17 @@ class EthernetCommunicationConnector:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["EthernetCommunicationConnector.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "EthernetCommunicationConnector.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -157,7 +162,7 @@ class EthernetCommunicationConnector:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -165,7 +170,7 @@ class EthernetCommunicationConnector:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -173,7 +178,7 @@ class EthernetCommunicationConnector:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -181,7 +186,7 @@ class EthernetCommunicationConnector:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -189,23 +194,27 @@ class EthernetCommunicationConnector:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["EthernetCommunicationConnector.Annotations"] = field(
+    annotations: Optional[
+        "EthernetCommunicationConnector.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    comm_controller_ref: Optional["EthernetCommunicationConnector.CommControllerRef"] = field(
+    comm_controller_ref: Optional[
+        "EthernetCommunicationConnector.CommControllerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     create_ecu_wakeup_source: Optional[Boolean] = field(
         default=None,
@@ -213,7 +222,7 @@ class EthernetCommunicationConnector:
             "name": "CREATE-ECU-WAKEUP-SOURCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dynamic_pnc_to_channel_mapping_enabled: Optional[Boolean] = field(
         default=None,
@@ -221,15 +230,17 @@ class EthernetCommunicationConnector:
             "name": "DYNAMIC-PNC-TO-CHANNEL-MAPPING-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_comm_port_instances: Optional["EthernetCommunicationConnector.EcuCommPortInstances"] = field(
+    ecu_comm_port_instances: Optional[
+        "EthernetCommunicationConnector.EcuCommPortInstances"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_gateway_type: Optional[PncGatewayTypeEnum] = field(
         default=None,
@@ -237,7 +248,7 @@ class EthernetCommunicationConnector:
             "name": "PNC-GATEWAY-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -245,15 +256,17 @@ class EthernetCommunicationConnector:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    eth_ip_props_ref: Optional["EthernetCommunicationConnector.EthIpPropsRef"] = field(
+    eth_ip_props_ref: Optional[
+        "EthernetCommunicationConnector.EthIpPropsRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ETH-IP-PROPS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ip_v_6_path_mtu_enabled: Optional[Boolean] = field(
         default=None,
@@ -261,7 +274,7 @@ class EthernetCommunicationConnector:
             "name": "IP-V-6-PATH-MTU-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ip_v_6_path_mtu_timeout: Optional[TimeValue] = field(
         default=None,
@@ -269,7 +282,7 @@ class EthernetCommunicationConnector:
             "name": "IP-V-6-PATH-MTU-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_transmission_unit: Optional[PositiveInteger] = field(
         default=None,
@@ -277,7 +290,7 @@ class EthernetCommunicationConnector:
             "name": "MAXIMUM-TRANSMISSION-UNIT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     neighbor_cache_size: Optional[PositiveInteger] = field(
         default=None,
@@ -285,15 +298,17 @@ class EthernetCommunicationConnector:
             "name": "NEIGHBOR-CACHE-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    network_endpoint_refs: Optional["EthernetCommunicationConnector.NetworkEndpointRefs"] = field(
+    network_endpoint_refs: Optional[
+        "EthernetCommunicationConnector.NetworkEndpointRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     path_mtu_enabled: Optional[Boolean] = field(
         default=None,
@@ -301,7 +316,7 @@ class EthernetCommunicationConnector:
             "name": "PATH-MTU-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     path_mtu_timeout: Optional[TimeValue] = field(
         default=None,
@@ -309,7 +324,7 @@ class EthernetCommunicationConnector:
             "name": "PATH-MTU-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_filter_data_mask: Optional[PositiveUnlimitedInteger] = field(
         default=None,
@@ -317,22 +332,24 @@ class EthernetCommunicationConnector:
             "name": "PNC-FILTER-DATA-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    unicast_network_endpoint_ref: Optional["EthernetCommunicationConnector.UnicastNetworkEndpointRef"] = field(
+    unicast_network_endpoint_ref: Optional[
+        "EthernetCommunicationConnector.UnicastNetworkEndpointRef"
+    ] = field(
         default=None,
         metadata={
             "name": "UNICAST-NETWORK-ENDPOINT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -340,14 +357,14 @@ class EthernetCommunicationConnector:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -358,7 +375,7 @@ class EthernetCommunicationConnector:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -369,7 +386,7 @@ class EthernetCommunicationConnector:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -380,7 +397,7 @@ class EthernetCommunicationConnector:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -391,7 +408,7 @@ class EthernetCommunicationConnector:
                 "name": "FRAME-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         i_pdu_port: List[IPduPort] = field(
             default_factory=list,
@@ -399,7 +416,7 @@ class EthernetCommunicationConnector:
                 "name": "I-PDU-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         i_signal_port: List[ISignalPort] = field(
             default_factory=list,
@@ -407,7 +424,7 @@ class EthernetCommunicationConnector:
                 "name": "I-SIGNAL-PORT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -418,18 +435,20 @@ class EthernetCommunicationConnector:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class NetworkEndpointRefs:
-        network_endpoint_ref: List["EthernetCommunicationConnector.NetworkEndpointRefs.NetworkEndpointRef"] = field(
+        network_endpoint_ref: List[
+            "EthernetCommunicationConnector.NetworkEndpointRefs.NetworkEndpointRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "NETWORK-ENDPOINT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -440,7 +459,7 @@ class EthernetCommunicationConnector:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -451,5 +470,5 @@ class EthernetCommunicationConnector:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -18,7 +18,7 @@ class ConnectionVersionStructure(TransferVersionStructure):
             "name": "ExternalConnectionLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     from_value: Optional[ConnectionEndStructure] = field(
         default=None,
@@ -26,7 +26,7 @@ class ConnectionVersionStructure(TransferVersionStructure):
             "name": "From",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to: Optional[ConnectionEndStructure] = field(
         default=None,
@@ -34,7 +34,7 @@ class ConnectionVersionStructure(TransferVersionStructure):
             "name": "To",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transfer_only: Optional[bool] = field(
         default=None,
@@ -42,5 +42,5 @@ class ConnectionVersionStructure(TransferVersionStructure):
             "name": "TransferOnly",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

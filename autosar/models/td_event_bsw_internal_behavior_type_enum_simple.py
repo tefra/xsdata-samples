@@ -15,6 +15,7 @@ class TdEventBswInternalBehaviorTypeEnumSimple(Enum):
         associated BswModuleEntity has terminated and entered the state
         "suspended"
     """
+
     BSW_MODULE_ENTITY_ACTIVATED = "BSW-MODULE-ENTITY-ACTIVATED"
     BSW_MODULE_ENTITY_STARTED = "BSW-MODULE-ENTITY-STARTED"
     BSW_MODULE_ENTITY_TERMINATED = "BSW-MODULE-ENTITY-TERMINATED"

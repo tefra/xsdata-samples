@@ -83,25 +83,25 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            ref="hde:TimetableFrameTIM_23_O"
+                            ref='hde:TimetableFrameTIM_23_O'
                         ),
                     ]
                 ),
@@ -110,76 +110,76 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple timetable frame with two journeys and service calendar"
+        value='Example  of simple timetable frame with two journeys and service calendar'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="hde:CAL_02",
-                version="any",
+                id='hde:CAL_02',
+                version='any',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                         Codespace(
-                            id="myrail",
-                            xmlns="myrail",
-                            xmlns_url="http://www.myrail.eu/stuff",
-                            description="My rail data"
+                            id='myrail',
+                            xmlns='myrail',
+                            xmlns_url='http://www.myrail.eu/stuff',
+                            description='My rail data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="mybus:svf_12",
-                            version="any",
+                            id='mybus:svf_12',
+                            version='any',
                             name=MultilingualString(
-                                value="Logical Display assignments for Bravo "
+                                value='Logical Display assignments for Bravo '
                             ),
                             directions=DirectionsInFrameRelStructure(
                                 direction=[
                                     Direction(
-                                        id="mybus:DR_Westbound",
-                                        version="any",
+                                        id='mybus:DR_Westbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Westbound"
+                                            value='Westbound'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Eastbound",
-                                        version="any",
+                                        id='mybus:DR_Eastbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eastbound"
+                                            value='Eastbound'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Southbound",
-                                        version="any",
+                                        id='mybus:DR_Southbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Southbound"
+                                            value='Southbound'
                                         )
                                     ),
                                     Direction(
-                                        id="mybus:DR_Northbound",
-                                        version="any",
+                                        id='mybus:DR_Northbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Northbound"
+                                            value='Northbound'
                                         )
                                     ),
                                 ]
@@ -187,103 +187,103 @@ obj = PublicationDelivery(
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="mybus:LN_24",
-                                        version="any",
+                                        id='mybus:LN_24',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 24 Alpha to Charley Green"
+                                            value='Line 24 Alpha to Charley Green'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 24"
+                                            value='Line 24'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
-                                        public_code="24"
+                                        public_code='24'
                                     ),
                                     Line(
-                                        id="mybus:LN_46",
-                                        version="any",
+                                        id='mybus:LN_46',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 46 Foxtrot to Tango"
+                                            value='Line 46 Foxtrot to Tango'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 46"
+                                            value='Line 46'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="46"
+                                        public_code='46'
                                     ),
                                     Line(
-                                        id="mybus:LN_68",
-                                        version="any",
+                                        id='mybus:LN_68',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 68 Bravo to Kilo"
+                                            value='Line 68 Bravo to Kilo'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 68"
+                                            value='Line 68'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="46"
+                                        public_code='46'
                                     ),
                                 ]
                             ),
                             destination_displays=DestinationDisplaysInFrameRelStructure(
                                 destination_display=[
                                     DestinationDisplay(
-                                        id="mybus:DST_Alpha",
-                                        version="any",
+                                        id='mybus:DST_Alpha',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha Avenue"
+                                            value='Alpha Avenue'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Alpha Av"
+                                            value='Alpha Av'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Bravo",
-                                        version="any",
+                                        id='mybus:DST_Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Charley",
-                                        version="any",
+                                        id='mybus:DST_Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Green"
+                                            value='Charley Green'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Charley G"
+                                            value='Charley G'
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Foxtrot",
-                                        version="any",
+                                        id='mybus:DST_Foxtrot',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Foxtrot Avenue"
+                                            value='Foxtrot Avenue'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Foxtrot "
+                                            value='Foxtrot '
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Kilo",
-                                        version="any",
+                                        id='mybus:DST_Kilo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Kilo Street"
+                                            value='Kilo Street'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Kilo "
+                                            value='Kilo '
                                         )
                                     ),
                                     DestinationDisplay(
-                                        id="mybus:DST_Tango",
-                                        version="any",
+                                        id='mybus:DST_Tango',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Tango Green"
+                                            value='Tango Green'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Tango G"
+                                            value='Tango G'
                                         )
                                     ),
                                 ]
@@ -291,20 +291,20 @@ obj = PublicationDelivery(
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_001",
-                                        version="any",
+                                        id='mybus:SSP_001',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha &amp; Castle"
+                                            value='Alpha & Castle'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         short_name=MultilingualString(
-                                            value="Alpha"
+                                            value='Alpha'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="ALPH"
+                                            value='ALPH'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_TRAM,
                                         vehicle_modes=[
@@ -312,20 +312,20 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_002",
-                                        version="any",
+                                        id='mybus:SSP_002',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch ( Tram)"
+                                            value='Bravo Arch ( Tram)'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="BRAV"
+                                            value='BRAV'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_TRAM,
                                         vehicle_modes=[
@@ -334,20 +334,20 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_077",
-                                        version="any",
+                                        id='mybus:SSP_077',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Green"
+                                            value='Charley Green'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         short_name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="CHAS"
+                                            value='CHAS'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_TRAM,
                                         vehicle_modes=[
@@ -355,20 +355,20 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_031",
-                                        version="any",
+                                        id='mybus:SSP_031',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Foxtrot Lane"
+                                            value='Foxtrot Lane'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         short_name=MultilingualString(
-                                            value="Foxtrot Lane"
+                                            value='Foxtrot Lane'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="Foxtrot"
+                                            value='Foxtrot'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -377,20 +377,20 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_032",
-                                        version="any",
+                                        id='mybus:SSP_032',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch Bus"
+                                            value='Bravo Arch Bus'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="BRAV"
+                                            value='BRAV'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -398,21 +398,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_033",
-                                        version="any",
+                                        id='mybus:SSP_033',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Tango Lane"
+                                            value='Tango Lane'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Tango Lane"
+                                            value='Tango Lane'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="Tango"
+                                            value='Tango'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -420,20 +420,20 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_035",
-                                        version="any",
+                                        id='mybus:SSP_035',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Juliet Park"
+                                            value='Juliet Park'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.35000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.35000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         short_name=MultilingualString(
-                                            value="Juliet Lane"
+                                            value='Juliet Lane'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="Juliet"
+                                            value='Juliet'
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -441,20 +441,20 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="mybus:SSP_036",
-                                        version="any",
+                                        id='mybus:SSP_036',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Kilo Street"
+                                            value='Kilo Street'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.34000"),
-                                            latitude=Decimal("0.34000")
+                                            longitude=Decimal('53.34000'),
+                                            latitude=Decimal('0.34000')
                                         ),
                                         short_name=MultilingualString(
-                                            value="Kilo  Lane"
+                                            value='Kilo  Lane'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="Kilo "
+                                            value='Kilo '
                                         ),
                                         stop_type=StopTypeEnumeration.ONSTREET_BUS,
                                         vehicle_modes=[
@@ -462,21 +462,21 @@ obj = PublicationDelivery(
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="myrail:SSP_042",
-                                        version="any",
+                                        id='myrail:SSP_042',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch (Rail)"
+                                            value='Bravo Arch (Rail)'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT,
                                         short_name=MultilingualString(
-                                            value="Bravo Arch"
+                                            value='Bravo Arch'
                                         ),
                                         public_code=PrivateCodeStructure(
-                                            value="BRAV"
+                                            value='BRAV'
                                         ),
                                         stop_type=StopTypeEnumeration.RAIL_STATION,
                                         vehicle_modes=[
@@ -488,68 +488,68 @@ obj = PublicationDelivery(
                             connections=TransfersInFrameRelStructure(
                                 choice=[
                                     Connection(
-                                        id="mybus:CX_SSP_002_to_SSP_032",
-                                        version="any",
+                                        id='mybus:CX_SSP_002_to_SSP_032',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch : Tram / Bus  Connection  "
+                                            value='Bravo Arch : Tram / Bus  Connection  '
                                         ),
                                         both_ways=True,
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_002"
+                                                version='any',
+                                                ref='mybus:SSP_002'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_032"
+                                                version='any',
+                                                ref='mybus:SSP_032'
                                             )
                                         )
                                     ),
                                     Connection(
-                                        id="mybus:CX_SSP_002_to_SSP_042",
-                                        version="any",
+                                        id='mybus:CX_SSP_002_to_SSP_042',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch : Tram / Rail  Connection  "
+                                            value='Bravo Arch : Tram / Rail  Connection  '
                                         ),
                                         both_ways=True,
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_002"
+                                                version='any',
+                                                ref='mybus:SSP_002'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="myrail:SSP_042"
+                                                version='any',
+                                                ref='myrail:SSP_042'
                                             )
                                         )
                                     ),
                                     Connection(
-                                        id="mybus:CX_SSP_042_to_SSP_032",
-                                        version="any",
+                                        id='mybus:CX_SSP_042_to_SSP_032',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Arch : Rail / bus  Connection  "
+                                            value='Bravo Arch : Rail / bus  Connection  '
                                         ),
                                         both_ways=True,
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="myrail:SSP_042"
+                                                version='any',
+                                                ref='myrail:SSP_042'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="any",
-                                                ref="mybus:SSP_032"
+                                                version='any',
+                                                ref='mybus:SSP_032'
                                             )
                                         )
                                     ),
@@ -558,54 +558,54 @@ obj = PublicationDelivery(
                             stop_assignments=StopAssignmentsInFrameRelStructure(
                                 choice=[
                                     PassengerStopAssignment(
-                                        id="hde:psa_SSP_002_to_SP002B",
-                                        version="any",
+                                        id='hde:psa_SSP_002_to_SP002B',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Assigns   Bravo tram  to physical stop - ",
-                                            lang="en"
+                                            value='Assigns   Bravo tram  to physical stop - ',
+                                            lang='en'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="any",
-                                            ref="mybus:SSP_002"
+                                            version='any',
+                                            ref='mybus:SSP_002'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:psa_SSP_032_to_SP002B",
-                                        version="any",
+                                        id='hde:psa_SSP_032_to_SP002B',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Assigns  Bravo bus to physical stop ",
-                                            lang="en"
+                                            value='Assigns  Bravo bus to physical stop ',
+                                            lang='en'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="any",
-                                            ref="mybus:SSP_032"
+                                            version='any',
+                                            ref='mybus:SSP_032'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="hde:psa_SSP_042_to_SP002B",
-                                        version="any",
+                                        id='hde:psa_SSP_042_to_SP002B',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Assigns  Bravo  rail to physical stop ",
-                                            lang="en"
+                                            value='Assigns  Bravo  rail to physical stop ',
+                                            lang='en'
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="any",
-                                            ref="myrail:SSP_042"
+                                            version='any',
+                                            ref='myrail:SSP_042'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         )
                                     ),
                                 ]
@@ -613,306 +613,306 @@ obj = PublicationDelivery(
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     ServiceJourneyPattern(
-                                        id="hde:jp_24o",
-                                        version="any",
+                                        id='hde:jp_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Charley Green"
+                                            value='Alpha to Charley Green'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_24o"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_24o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         direction_ref_or_direction_view=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Westbound"
+                                            version='any',
+                                            ref='mybus:DR_Westbound'
                                         ),
                                         destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                            version="any",
-                                            ref="mybus:DST_Charley"
+                                            version='any',
+                                            ref='mybus:DST_Charley'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24o_01",
-                                                    version="any",
+                                                    id='hde:pijp_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24o_02",
-                                                    version="any",
+                                                    id='hde:pijp_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_24o_03",
-                                                    version="any",
+                                                    id='hde:pijp_24o_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:jp_24i",
-                                        version="any",
+                                        id='hde:jp_24i',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley Green to Alpha"
+                                            value='Charley Green to Alpha'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_24i"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_24i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.INBOUND,
                                         direction_ref_or_direction_view=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Eastbound"
+                                            version='any',
+                                            ref='mybus:DR_Eastbound'
                                         ),
                                         destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                            version="any",
-                                            ref="mybus:DST_Alpha"
+                                            version='any',
+                                            ref='mybus:DST_Alpha'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24i_01",
-                                                    version="any",
+                                                    id='hde:jp_24i_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_077"
+                                                        version='any',
+                                                        ref='mybus:SSP_077'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24i_02",
-                                                    version="any",
+                                                    id='hde:jp_24i_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:jp_24i_03",
-                                                    version="any",
+                                                    id='hde:jp_24i_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_001"
+                                                        version='any',
+                                                        ref='mybus:SSP_001'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:jp_46o",
-                                        version="any",
+                                        id='hde:jp_46o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Foxtrot to  Tango   "
+                                            value='Foxtrot to  Tango   '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_46o"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_46o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         direction_ref_or_direction_view=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Southbound"
+                                            version='any',
+                                            ref='mybus:DR_Southbound'
                                         ),
                                         destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                            version="any",
-                                            ref="mybus:DST_Tango"
+                                            version='any',
+                                            ref='mybus:DST_Tango'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_46o_01",
-                                                    version="any",
+                                                    id='hde:pijp_46o_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_031"
+                                                        version='any',
+                                                        ref='mybus:SSP_031'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_46o_02",
-                                                    version="any",
+                                                    id='hde:pijp_46o_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_46o_03",
-                                                    version="any",
+                                                    id='hde:pijp_46o_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_033"
+                                                        version='any',
+                                                        ref='mybus:SSP_033'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:jp_46i",
-                                        version="any",
+                                        id='hde:jp_46i',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Tango  to  Foxtrot   "
+                                            value='Tango  to  Foxtrot   '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_46i"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_46i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         direction_ref_or_direction_view=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Northbound"
+                                            version='any',
+                                            ref='mybus:DR_Northbound'
                                         ),
                                         destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                            version="any",
-                                            ref="mybus:DST_Foxtrot"
+                                            version='any',
+                                            ref='mybus:DST_Foxtrot'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_46i_01",
-                                                    version="any",
+                                                    id='hde:pijp_46i_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_033"
+                                                        version='any',
+                                                        ref='mybus:SSP_033'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_46i_02",
-                                                    version="any",
+                                                    id='hde:pijp_46i_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_46i_03",
-                                                    version="any",
+                                                    id='hde:pijp_46i_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_031"
+                                                        version='any',
+                                                        ref='mybus:SSP_031'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:jp_68o",
-                                        version="any",
+                                        id='hde:jp_68o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo to  Kilo   "
+                                            value='Bravo to  Kilo   '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_68o"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_68o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         direction_ref_or_direction_view=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Southbound"
+                                            version='any',
+                                            ref='mybus:DR_Southbound'
                                         ),
                                         destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                            version="any",
-                                            ref="mybus:DST_Tango"
+                                            version='any',
+                                            ref='mybus:DST_Tango'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_68o_01",
-                                                    version="any",
+                                                    id='hde:pijp_68o_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_68o_02",
-                                                    version="any",
+                                                    id='hde:pijp_68o_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_035"
+                                                        version='any',
+                                                        ref='mybus:SSP_035'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_68o_03",
-                                                    version="any",
+                                                    id='hde:pijp_68o_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_036"
+                                                        version='any',
+                                                        ref='mybus:SSP_036'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ServiceJourneyPattern(
-                                        id="hde:jp_68i",
-                                        version="any",
+                                        id='hde:jp_68i',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Kilo to  Bravo   "
+                                            value='Kilo to  Bravo   '
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            value="EXTERNAL",
-                                            ref="mybus:RT_68i"
+                                            value='EXTERNAL',
+                                            ref='mybus:RT_68i'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         direction_ref_or_direction_view=DirectionRef(
-                                            version="any",
-                                            ref="mybus:DR_Northbound"
+                                            version='any',
+                                            ref='mybus:DR_Northbound'
                                         ),
                                         destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                            version="any",
-                                            ref="mybus:DST_Foxtrot"
+                                            version='any',
+                                            ref='mybus:DST_Foxtrot'
                                         ),
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_68i_01",
-                                                    version="any",
+                                                    id='hde:pijp_68i_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_036"
+                                                        version='any',
+                                                        ref='mybus:SSP_036'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_68i_02",
-                                                    version="any",
+                                                    id='hde:pijp_68i_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_035"
+                                                        version='any',
+                                                        ref='mybus:SSP_035'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="hde:pijp_68i_03",
-                                                    version="any",
+                                                    id='hde:pijp_68i_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     )
                                                 ),
                                             ]
@@ -923,65 +923,65 @@ obj = PublicationDelivery(
                             logical_displays=LogicalDisplaysInFrameRelStructure(
                                 logical_display=[
                                     LogicalDisplay(
-                                        id="mybus:LD001_TramBus_Q1_EastboundSouthbound",
-                                        version="any",
+                                        id='mybus:LD001_TramBus_Q1_EastboundSouthbound',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Departures Display for use on  Bravo Bus/Tram Quay 1 Outbound"
+                                            value='Departures Display for use on  Bravo Bus/Tram Quay 1 Outbound'
                                         ),
                                         display_assignments=DisplayAssignmentsRelStructure(
                                             display_assignment_ref_or_display_assignment=[
                                                 DisplayAssignment(
-                                                    id="mybus:LD001_TramBus_Q1_EastboundSouthbound",
-                                                    version="any",
+                                                    id='mybus:LD001_TramBus_Q1_EastboundSouthbound',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign  ScheduledStopPoint 002 (Bravo) route 24 Eastbound Departures to Display LD001 "
+                                                        value='Assign  ScheduledStopPoint 002 (Bravo) route 24 Eastbound Departures to Display LD001 '
                                                     ),
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     choice=ServiceJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:jp_24o"
+                                                        version='any',
+                                                        ref='hde:jp_24o'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES,
                                                     number_of_journeys_to_show=2,
                                                     display_priority=1
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD001_TramBus_Q1_EastboundSouthbound",
-                                                    version="any",
+                                                    id='mybus:LD001_TramBus_Q1_EastboundSouthbound',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 032 (Bravo) route 46 Southbound Departures to Display LD001  "
+                                                        value='Assign ScheduledStopPoint 032 (Bravo) route 46 Southbound Departures to Display LD001  '
                                                     ),
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     ),
                                                     choice=ServiceJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:jp_46o"
+                                                        version='any',
+                                                        ref='hde:jp_46o'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES,
                                                     number_of_journeys_to_show=2,
                                                     display_priority=1
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD001_TramBus_Q1_EastboundSouthbound",
-                                                    version="any",
+                                                    id='mybus:LD001_TramBus_Q1_EastboundSouthbound',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign   ScheduledStopPoint 032 (Bravo)  route 68 Eastbound Departures to Display LD001  "
+                                                        value='Assign   ScheduledStopPoint 032 (Bravo)  route 68 Eastbound Departures to Display LD001  '
                                                     ),
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     ),
                                                     choice=ServiceJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:jp_68o"
+                                                        version='any',
+                                                        ref='hde:jp_68o'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES,
                                                     number_of_journeys_to_show=2,
@@ -991,65 +991,65 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     LogicalDisplay(
-                                        id="mybus:LD002_TramBus_Q2_WestboundNorthbound",
-                                        version="any",
+                                        id='mybus:LD002_TramBus_Q2_WestboundNorthbound',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Departures Display for use on  Bravo Bus/Tram Quay 2"
+                                            value='Departures Display for use on  Bravo Bus/Tram Quay 2'
                                         ),
                                         display_assignments=DisplayAssignmentsRelStructure(
                                             display_assignment_ref_or_display_assignment=[
                                                 DisplayAssignment(
-                                                    id="mybus:LD002_TramBus_Q2_WestboundNorthbound",
-                                                    version="any",
+                                                    id='mybus:LD002_TramBus_Q2_WestboundNorthbound',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 002 (Bravo)  LINE 24 Westbound Departures to Display LD002 "
+                                                        value='Assign ScheduledStopPoint 002 (Bravo)  LINE 24 Westbound Departures to Display LD002 '
                                                     ),
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     choice=ServiceJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:jp_24i"
+                                                        version='any',
+                                                        ref='hde:jp_24i'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES,
                                                     number_of_journeys_to_show=2,
                                                     display_priority=1
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD002_TramBus_Q2_WestboundNorthbound",
-                                                    version="any",
+                                                    id='mybus:LD002_TramBus_Q2_WestboundNorthbound',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 0032  (Bravo)  LINE 46 Northbound Departures to Display LD002 "
+                                                        value='Assign ScheduledStopPoint 0032  (Bravo)  LINE 46 Northbound Departures to Display LD002 '
                                                     ),
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     ),
                                                     choice=ServiceJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:jp_46i"
+                                                        version='any',
+                                                        ref='hde:jp_46i'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES,
                                                     number_of_journeys_to_show=2,
                                                     display_priority=2
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD002_TramBus_Q2_WestboundNorthbound",
-                                                    version="any",
+                                                    id='mybus:LD002_TramBus_Q2_WestboundNorthbound',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 0032  (Bravo)  LINE 68  Northbound  Departuresto Display LD002 - Arrivals"
+                                                        value='Assign ScheduledStopPoint 0032  (Bravo)  LINE 68  Northbound  Departuresto Display LD002 - Arrivals'
                                                     ),
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     ),
                                                     choice=ServiceJourneyPatternRef(
-                                                        version="any",
-                                                        ref="hde:jp_68i"
+                                                        version='any',
+                                                        ref='hde:jp_68i'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.ARRIVALS,
                                                     number_of_journeys_to_show=3,
@@ -1059,51 +1059,51 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     LogicalDisplay(
-                                        id="mybus:LD010_TicketHall_arrivals",
-                                        version="any",
+                                        id='mybus:LD010_TicketHall_arrivals',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="All Arrivals Display for use in Rail Ticket Hall"
+                                            value='All Arrivals Display for use in Rail Ticket Hall'
                                         ),
                                         display_assignments=DisplayAssignmentsRelStructure(
                                             display_assignment_ref_or_display_assignment=[
                                                 DisplayAssignment(
-                                                    id="mybus:LD010_TicketHall_arrivals",
-                                                    version="any",
+                                                    id='mybus:LD010_TicketHall_arrivals',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 002 tram arrivals  all routes for Bravo to Display LD010 "
+                                                        value='Assign ScheduledStopPoint 002 tram arrivals  all routes for Bravo to Display LD010 '
                                                     ),
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     vehicle_mode=AllModesEnumeration.TRAM,
                                                     display_priority=1
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD010_TicketHall_arrivals",
-                                                    version="any",
+                                                    id='mybus:LD010_TicketHall_arrivals',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 032 bus arivals  all  routes for Bravo to Display LD010  "
+                                                        value='Assign ScheduledStopPoint 032 bus arivals  all  routes for Bravo to Display LD010  '
                                                     ),
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     ),
                                                     vehicle_mode=AllModesEnumeration.BUS,
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.ARRIVALS
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD010_TicketHall_arrivals",
-                                                    version="any",
+                                                    id='mybus:LD010_TicketHall_arrivals',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 042 rail  arrivals all routes for Bravo to Display LD010  "
+                                                        value='Assign ScheduledStopPoint 042 rail  arrivals all routes for Bravo to Display LD010  '
                                                     ),
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     ),
                                                     vehicle_mode=AllModesEnumeration.RAIL,
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.ARRIVALS
@@ -1112,49 +1112,49 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     LogicalDisplay(
-                                        id="mybus:LD011_TicketHall_departures",
-                                        version="any",
+                                        id='mybus:LD011_TicketHall_departures',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Departures Display in Ticket Hall"
+                                            value='Departures Display in Ticket Hall'
                                         ),
                                         display_assignments=DisplayAssignmentsRelStructure(
                                             display_assignment_ref_or_display_assignment=[
                                                 DisplayAssignment(
-                                                    id="mybus:LD011_TicketHall_departures",
-                                                    version="any",
+                                                    id='mybus:LD011_TicketHall_departures',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 002 tram all routes for Bravo to Display LD011 "
+                                                        value='Assign ScheduledStopPoint 002 tram all routes for Bravo to Display LD011 '
                                                     ),
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_002"
+                                                        version='any',
+                                                        ref='mybus:SSP_002'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD011_TicketHall_departures",
-                                                    version="any",
+                                                    id='mybus:LD011_TicketHall_departures',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 032 bus all routes for Bravo to Display LD011 "
+                                                        value='Assign ScheduledStopPoint 032 bus all routes for Bravo to Display LD011 '
                                                     ),
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="mybus:SSP_032"
+                                                        version='any',
+                                                        ref='mybus:SSP_032'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES
                                                 ),
                                                 DisplayAssignment(
-                                                    id="mybus:LD011_TicketHall_departures",
-                                                    version="any",
+                                                    id='mybus:LD011_TicketHall_departures',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 042 rail all routes for Bravo to Display LD011 "
+                                                        value='Assign ScheduledStopPoint 042 rail all routes for Bravo to Display LD011 '
                                                     ),
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="myrail:SSP_042"
+                                                        version='any',
+                                                        ref='myrail:SSP_042'
                                                     ),
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.DEPARTURES
                                                 ),
@@ -1162,23 +1162,23 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     LogicalDisplay(
-                                        id="mybus:LD003_Rail_Q1_all",
-                                        version="any",
+                                        id='mybus:LD003_Rail_Q1_all',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Arrivals and Departures Display for use on  on rail Platform 3"
+                                            value='Arrivals and Departures Display for use on  on rail Platform 3'
                                         ),
                                         display_assignments=DisplayAssignmentsRelStructure(
                                             display_assignment_ref_or_display_assignment=[
                                                 DisplayAssignment(
-                                                    id="mybus:LD003_Rail_Q1_all",
-                                                    version="any",
+                                                    id='mybus:LD003_Rail_Q1_all',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assign ScheduledStopPoint 042 rail  all routes for Bravo   "
+                                                        value='Assign ScheduledStopPoint 042 rail  all routes for Bravo   '
                                                     ),
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="myrail:SSP_042"
+                                                        version='any',
+                                                        ref='myrail:SSP_042'
                                                     ),
                                                     vehicle_mode=AllModesEnumeration.RAIL,
                                                     display_assignment_type=DisplayAssignmentTypeEnumeration.ALL
@@ -1191,169 +1191,169 @@ obj = PublicationDelivery(
                             passenger_information_equipments=PassengerInformationEquipmentsInFrameRelStructure(
                                 passenger_information_equipment=[
                                     PassengerInformationEquipment(
-                                        id="mybus:pif_SP002B_TramBus_Q1",
-                                        version="any",
+                                        id='mybus:pif_SP002B_TramBus_Q1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Display on Bravo Tram bus    departures  Platform 1 "
+                                            value='Display on Bravo Tram bus    departures  Platform 1 '
                                         ),
                                         logical_display_ref=LogicalDisplayRef(
-                                            version="any",
-                                            ref="mybus:LD001_TramBus_Q1_EastboundSouthbound"
+                                            version='any',
+                                            ref='mybus:LD001_TramBus_Q1_EastboundSouthbound'
                                         ),
                                         stop_place_ref=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         choice=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002B_1"
+                                            version='any',
+                                            ref='mybus:Q_SP002B_1'
                                         ),
                                         type_of_passenger_information_equipment_ref=TypeOfPassengerInformationEquipmentRef(
-                                            version="any",
-                                            ref="mybus:PlatDisp"
+                                            version='any',
+                                            ref='mybus:PlatDisp'
                                         )
                                     ),
                                     PassengerInformationEquipment(
-                                        id="mybus:pif_SP002B_TramBus_Q2",
-                                        version="any",
+                                        id='mybus:pif_SP002B_TramBus_Q2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Display on Bravo   Tram bus     departures  Platform 2 "
+                                            value='Display on Bravo   Tram bus     departures  Platform 2 '
                                         ),
                                         logical_display_ref=LogicalDisplayRef(
-                                            version="any",
-                                            ref="mybus:LD002_TramBus_Q2_WestboundNorthbound"
+                                            version='any',
+                                            ref='mybus:LD002_TramBus_Q2_WestboundNorthbound'
                                         ),
                                         stop_place_ref=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         choice=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002B_2"
+                                            version='any',
+                                            ref='mybus:Q_SP002B_2'
                                         ),
                                         type_of_passenger_information_equipment_ref=TypeOfPassengerInformationEquipmentRef(
-                                            version="any",
-                                            ref="mybus:PlatDisp"
+                                            version='any',
+                                            ref='mybus:PlatDisp'
                                         )
                                     ),
                                     PassengerInformationEquipment(
-                                        id="mybus:pif_SP002B_TicketHall_arrivals",
-                                        version="any",
+                                        id='mybus:pif_SP002B_TicketHall_arrivals',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Display of all Arrivals all modes in Bravo  Ticket  Hall"
+                                            value='Display of all Arrivals all modes in Bravo  Ticket  Hall'
                                         ),
                                         logical_display_ref=LogicalDisplayRef(
-                                            version="any",
-                                            ref="mybus:LD010_TicketHall_arrivals"
+                                            version='any',
+                                            ref='mybus:LD010_TicketHall_arrivals'
                                         ),
                                         stop_place_ref=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         choice=AccessSpaceRef(
-                                            version="any",
-                                            ref="mybus:as_SP002B_01"
+                                            version='any',
+                                            ref='mybus:as_SP002B_01'
                                         ),
                                         type_of_passenger_information_equipment_ref=TypeOfPassengerInformationEquipmentRef(
-                                            version="any",
-                                            ref="mybus:LargeBoard"
+                                            version='any',
+                                            ref='mybus:LargeBoard'
                                         )
                                     ),
                                     PassengerInformationEquipment(
-                                        id="mybus:pif_SP002B_TicketHall_departures",
-                                        version="any",
+                                        id='mybus:pif_SP002B_TicketHall_departures',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Display of all Departures all modes  in Bravo  Ticket  Hall"
+                                            value='Display of all Departures all modes  in Bravo  Ticket  Hall'
                                         ),
                                         logical_display_ref=LogicalDisplayRef(
-                                            version="any",
-                                            ref="mybus:LD011_TicketHall_departures"
+                                            version='any',
+                                            ref='mybus:LD011_TicketHall_departures'
                                         ),
                                         stop_place_ref=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         choice=AccessSpaceRef(
-                                            version="any",
-                                            ref="mybus:as_SP002B_01"
+                                            version='any',
+                                            ref='mybus:as_SP002B_01'
                                         ),
                                         type_of_passenger_information_equipment_ref=TypeOfPassengerInformationEquipmentRef(
-                                            version="any",
-                                            ref="mybus:LargeBoard"
+                                            version='any',
+                                            ref='mybus:LargeBoard'
                                         )
                                     ),
                                     PassengerInformationEquipment(
-                                        id="mybus:pif_SP002B_Rail_01",
-                                        version="any",
+                                        id='mybus:pif_SP002B_Rail_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Display 1 on Bravo Rail Rail Platform 3"
+                                            value='Display 1 on Bravo Rail Rail Platform 3'
                                         ),
                                         logical_display_ref=LogicalDisplayRef(
-                                            version="any",
-                                            ref="mybus:LD003_Rail_Q1_all"
+                                            version='any',
+                                            ref='mybus:LD003_Rail_Q1_all'
                                         ),
                                         stop_place_ref=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         choice=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002B_3"
+                                            version='any',
+                                            ref='mybus:Q_SP002B_3'
                                         ),
                                         type_of_passenger_information_equipment_ref=TypeOfPassengerInformationEquipmentRef(
-                                            version="any",
-                                            ref="mybus:PlatDisp"
+                                            version='any',
+                                            ref='mybus:PlatDisp'
                                         )
                                     ),
                                     PassengerInformationEquipment(
-                                        id="mybus:pif_SP002B_Rail_02",
-                                        version="any",
+                                        id='mybus:pif_SP002B_Rail_02',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Display 2 on Bravo Rail Rail Platform 3"
+                                            value='Display 2 on Bravo Rail Rail Platform 3'
                                         ),
                                         logical_display_ref=LogicalDisplayRef(
-                                            version="any",
-                                            ref="mybus:LD003_Rail_Q1_all"
+                                            version='any',
+                                            ref='mybus:LD003_Rail_Q1_all'
                                         ),
                                         stop_place_ref=StopPlaceRef(
-                                            version="any",
-                                            ref="mybus:SP002B"
+                                            version='any',
+                                            ref='mybus:SP002B'
                                         ),
                                         choice=QuayRef(
-                                            version="any",
-                                            ref="mybus:Q_SP002B_3"
+                                            version='any',
+                                            ref='mybus:Q_SP002B_3'
                                         ),
                                         type_of_passenger_information_equipment_ref=TypeOfPassengerInformationEquipmentRef(
-                                            version="any",
-                                            ref="mybus:PlatDisp"
+                                            version='any',
+                                            ref='mybus:PlatDisp'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         SiteFrame(
-                            id="mybus:infraf002",
+                            id='mybus:infraf002',
                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                             changed=XmlDateTime(2010, 5, 22, 10, 30, 51, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="024",
-                            derived_from_version_ref_attribute="0023",
+                            version='024',
+                            derived_from_version_ref_attribute='0023',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    value="EXTERNAL",
-                                    ref="mybus:RS_10"
+                                    value='EXTERNAL',
+                                    ref='mybus:RS_10'
                                 )
                             ),
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="mybus:SP001A",
-                                        version="any",
+                                        id='mybus:SP001A',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha   Castle"
+                                            value='Alpha   Castle'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Alpha Place A "
+                                            value='Alpha Place A '
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -1362,7 +1362,7 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
@@ -1371,28 +1371,28 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP001A_1",
+                                                    id='mybus:Q_SP001A_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="PlaceA"
+                                                        value='PlaceA'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop A is termiuis serves both directions"
+                                                            value='Stop A is termiuis serves both directions'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.INDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop A"
+                                                        value='Stop A'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.TRAM_STOP
                                                 ),
@@ -1400,13 +1400,13 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="mybus:SP002B",
-                                        version="any",
+                                        id='mybus:SP002B',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo Road (SW19)"
+                                            value='Bravo Road (SW19)'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -1415,84 +1415,84 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="mybus:RAd_SP002B_01",
-                                            version="any",
+                                            id='mybus:RAd_SP002B_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Bravo Road"
+                                                value='Bravo Road'
                                             )
                                         ),
                                         stop_place_type=StopTypeEnumeration.TRAM_STATION,
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP002B_1",
-                                                    version="any",
+                                                    id='mybus:Q_SP002B_1',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bravo, Northbound"
+                                                        value='Bravo, Northbound'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop Ba  is paired with Stop Bb  "
+                                                            value='Stop Ba  is paired with Stop Bb  '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop B1"
+                                                        value='Stop B1'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.S,
                                                     quay_type=QuayTypeEnumeration.TRAM_PLATFORM
                                                 ),
                                                 Quay(
-                                                    id="mybus:Q_SP002B_2",
-                                                    version="any",
+                                                    id='mybus:Q_SP002B_2',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bravo SOuthbound"
+                                                        value='Bravo SOuthbound'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop Ba  is paired with Stop Bb  "
+                                                            value='Stop Ba  is paired with Stop Bb  '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop B2"
+                                                        value='Stop B2'
                                                     ),
-                                                    public_code="1-3457 ",
+                                                    public_code='1-3457 ',
                                                     compass_octant=CompassBearing8Enumeration.N,
                                                     quay_type=QuayTypeEnumeration.TRAM_PLATFORM
                                                 ),
                                                 Quay(
-                                                    id="mybus:Q_SP002B_3",
-                                                    version="any",
+                                                    id='mybus:Q_SP002B_3',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bravo Rail Platform 1"
+                                                        value='Bravo Rail Platform 1'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.INDOORS,
                                                     label=MultilingualString(
-                                                        value="Platform 1"
+                                                        value='Platform 1'
                                                     ),
                                                     compass_octant=CompassBearing8Enumeration.N,
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
@@ -1502,14 +1502,14 @@ obj = PublicationDelivery(
                                         access_spaces=AccessSpacesRelStructure(
                                             access_space_ref_or_access_space=[
                                                 AccessSpace(
-                                                    id="mybus:as_SP002B_01",
-                                                    version="any",
+                                                    id='mybus:as_SP002B_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Bravo Ticket Hall "
+                                                        value='Bravo Ticket Hall '
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Ticket Hall at Bravo"
+                                                            value='Ticket Hall at Bravo'
                                                         ),
                                                     ],
                                                     covered=CoveredEnumeration.INDOORS,
@@ -1519,13 +1519,13 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="mybus:SP003C",
-                                        version="any",
+                                        id='mybus:SP003C',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Stop Place C"
+                                            value='Stop Place C'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Place C"
+                                            value='Place C'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -1534,15 +1534,15 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="UKOS"
+                                                    srs_name='UKOS'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="mybus:RAd_SP003C_01",
-                                            version="any",
+                                            id='mybus:RAd_SP003C_01',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Foo Road"
+                                                value='Foo Road'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -1550,54 +1550,54 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="mybus:Q_SP003C_1",
+                                                    id='mybus:Q_SP003C_1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Place C"
+                                                        value='Place C'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="StopCa  is paired with Stop Cb  "
+                                                            value='StopCa  is paired with Stop Cb  '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop Ca"
+                                                        value='Stop Ca'
                                                     ),
-                                                    public_code="1-3454 ",
+                                                    public_code='1-3454 ',
                                                     compass_octant=CompassBearing8Enumeration.NE,
                                                     quay_type=QuayTypeEnumeration.TRAM_STOP
                                                 ),
                                                 Quay(
-                                                    id="mybus:Q_SP003C_2",
+                                                    id='mybus:Q_SP003C_2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Place C"
+                                                        value='Place C'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop Cb  is paired with Stop Ca "
+                                                            value='Stop Cb  is paired with Stop Ca '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2071397147"),
-                                                            latitude=Decimal("51.4217482061")
+                                                            longitude=Decimal('-0.2071397147'),
+                                                            latitude=Decimal('51.4217482061')
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     label=MultilingualString(
-                                                        value="Stop Cb"
+                                                        value='Stop Cb'
                                                     ),
-                                                    public_code="1-3455 ",
+                                                    public_code='1-3455 ',
                                                     compass_octant=CompassBearing8Enumeration.SE,
                                                     quay_type=QuayTypeEnumeration.TRAM_STOP
                                                 ),
@@ -1608,30 +1608,30 @@ obj = PublicationDelivery(
                             )
                         ),
                         ResourceFrame(
-                            id="tbd:SVC01",
-                            version="any",
+                            id='tbd:SVC01',
+                            version='any',
                             types_of_value=TypesOfValueInFrameRelStructure(
                                 choice=[
                                     ValueSet(
-                                        id="napt:PassengerInformationEquipmentTypes",
-                                        version="any",
+                                        id='napt:PassengerInformationEquipmentTypes',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="PASSENGER INFORMATION EQUIPMENT  Types"
+                                            value='PASSENGER INFORMATION EQUIPMENT  Types'
                                         ),
                                         values=TypesOfValueStructure(
                                             choice=[
                                                 TypeOfPassengerInformationEquipment(
-                                                    id="mybus:PlatDisp",
-                                                    version="any",
+                                                    id='mybus:PlatDisp',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="ON Platforom Small display "
+                                                        value='ON Platforom Small display '
                                                     )
                                                 ),
                                                 TypeOfPassengerInformationEquipment(
-                                                    id="mybus:LargeBoard",
-                                                    version="any",
+                                                    id='mybus:LargeBoard',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Large Display "
+                                                        value='Large Display '
                                                     )
                                                 ),
                                             ]

@@ -13,7 +13,7 @@ class ProblemActionType:
             "name": "Action",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-        }
+        },
     )
     soap_action: Optional[str] = field(
         default=None,
@@ -21,12 +21,12 @@ class ProblemActionType:
             "name": "SoapAction",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )

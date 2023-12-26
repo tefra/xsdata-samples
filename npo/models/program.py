@@ -13,6 +13,7 @@ class Program(ProgramType):
     represent a standalone entity which a consumer can view or listen
     to.
     """
+
     class Meta:
         name = "program"
         namespace = "urn:vpro:media:2009"

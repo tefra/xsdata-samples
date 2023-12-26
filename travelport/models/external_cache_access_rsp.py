@@ -10,6 +10,7 @@ class ExternalCacheAccessRsp(BaseRsp3):
     """
     The response to the CurrencyConversionReq.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
@@ -19,7 +20,7 @@ class ExternalCacheAccessRsp(BaseRsp3):
             "name": "CacheEntry",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
 
     @dataclass
@@ -31,11 +32,12 @@ class ExternalCacheAccessRsp(BaseRsp3):
         key
             Cache entry key
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
-            }
+            },
         )
         key: None | str = field(
             default=None,
@@ -43,5 +45,5 @@ class ExternalCacheAccessRsp(BaseRsp3):
                 "name": "Key",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

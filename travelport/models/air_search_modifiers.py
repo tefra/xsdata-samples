@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.air_search_modifiers_order_by import AirSearchModifiersOrderBy
+from travelport.models.air_search_modifiers_order_by import (
+    AirSearchModifiersOrderBy,
+)
 from travelport.models.alliance import Alliance
 from travelport.models.booking_code import BookingCode
 from travelport.models.carrier_1 import Carrier1
@@ -14,7 +16,9 @@ from travelport.models.preferred_carriers import PreferredCarriers
 from travelport.models.prohibited_carriers import ProhibitedCarriers
 from travelport.models.provider_1 import Provider1
 from travelport.models.type_distance import TypeDistance
-from travelport.models.type_native_search_modifier import TypeNativeSearchModifier
+from travelport.models.type_native_search_modifier import (
+    TypeNativeSearchModifier,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -98,211 +102,216 @@ class AirSearchModifiers:
     jet_service_only
         Restricts results to Jet service flights only.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    disfavored_providers: None | AirSearchModifiers.DisfavoredProviders = field(
-        default=None,
-        metadata={
-            "name": "DisfavoredProviders",
-            "type": "Element",
-        }
+    disfavored_providers: None | AirSearchModifiers.DisfavoredProviders = (
+        field(
+            default=None,
+            metadata={
+                "name": "DisfavoredProviders",
+                "type": "Element",
+            },
+        )
     )
     preferred_providers: None | AirSearchModifiers.PreferredProviders = field(
         default=None,
         metadata={
             "name": "PreferredProviders",
             "type": "Element",
-        }
+        },
     )
     disfavored_carriers: None | AirSearchModifiers.DisfavoredCarriers = field(
         default=None,
         metadata={
             "name": "DisfavoredCarriers",
             "type": "Element",
-        }
+        },
     )
     permitted_carriers: None | PermittedCarriers = field(
         default=None,
         metadata={
             "name": "PermittedCarriers",
             "type": "Element",
-        }
+        },
     )
     prohibited_carriers: None | ProhibitedCarriers = field(
         default=None,
         metadata={
             "name": "ProhibitedCarriers",
             "type": "Element",
-        }
+        },
     )
     preferred_carriers: None | PreferredCarriers = field(
         default=None,
         metadata={
             "name": "PreferredCarriers",
             "type": "Element",
-        }
+        },
     )
     permitted_cabins: None | PermittedCabins = field(
         default=None,
         metadata={
             "name": "PermittedCabins",
             "type": "Element",
-        }
+        },
     )
     preferred_cabins: None | PreferredCabins = field(
         default=None,
         metadata={
             "name": "PreferredCabins",
             "type": "Element",
-        }
+        },
     )
     preferred_alliances: None | AirSearchModifiers.PreferredAlliances = field(
         default=None,
         metadata={
             "name": "PreferredAlliances",
             "type": "Element",
-        }
+        },
     )
-    disfavored_alliances: None | AirSearchModifiers.DisfavoredAlliances = field(
-        default=None,
-        metadata={
-            "name": "DisfavoredAlliances",
-            "type": "Element",
-        }
+    disfavored_alliances: None | AirSearchModifiers.DisfavoredAlliances = (
+        field(
+            default=None,
+            metadata={
+                "name": "DisfavoredAlliances",
+                "type": "Element",
+            },
+        )
     )
     permitted_booking_codes: None | AirSearchModifiers.PermittedBookingCodes = field(
         default=None,
         metadata={
             "name": "PermittedBookingCodes",
             "type": "Element",
-        }
+        },
     )
     preferred_booking_codes: None | PreferredBookingCodes = field(
         default=None,
         metadata={
             "name": "PreferredBookingCodes",
             "type": "Element",
-        }
+        },
     )
     prohibited_booking_codes: None | AirSearchModifiers.ProhibitedBookingCodes = field(
         default=None,
         metadata={
             "name": "ProhibitedBookingCodes",
             "type": "Element",
-        }
+        },
     )
     flight_type: None | FlightType = field(
         default=None,
         metadata={
             "name": "FlightType",
             "type": "Element",
-        }
+        },
     )
     max_layover_duration: None | MaxLayoverDurationType = field(
         default=None,
         metadata={
             "name": "MaxLayoverDuration",
             "type": "Element",
-        }
+        },
     )
     native_search_modifier: None | TypeNativeSearchModifier = field(
         default=None,
         metadata={
             "name": "NativeSearchModifier",
             "type": "Element",
-        }
+        },
     )
     distance_type: TypeDistance = field(
         default=TypeDistance.MI,
         metadata={
             "name": "DistanceType",
             "type": "Attribute",
-        }
+        },
     )
     include_flight_details: bool = field(
         default=True,
         metadata={
             "name": "IncludeFlightDetails",
             "type": "Attribute",
-        }
+        },
     )
     allow_change_of_airport: bool = field(
         default=True,
         metadata={
             "name": "AllowChangeOfAirport",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_overnight_layovers: bool = field(
         default=False,
         metadata={
             "name": "ProhibitOvernightLayovers",
             "type": "Attribute",
-        }
+        },
     )
     max_solutions: None | int = field(
         default=None,
         metadata={
             "name": "MaxSolutions",
             "type": "Attribute",
-        }
+        },
     )
     max_connection_time: None | int = field(
         default=None,
         metadata={
             "name": "MaxConnectionTime",
             "type": "Attribute",
-        }
+        },
     )
     search_weekends: None | bool = field(
         default=None,
         metadata={
             "name": "SearchWeekends",
             "type": "Attribute",
-        }
+        },
     )
     include_extra_solutions: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeExtraSolutions",
             "type": "Attribute",
-        }
+        },
     )
     prohibit_multi_airport_connection: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitMultiAirportConnection",
             "type": "Attribute",
-        }
+        },
     )
     prefer_non_stop: bool = field(
         default=False,
         metadata={
             "name": "PreferNonStop",
             "type": "Attribute",
-        }
+        },
     )
     order_by: None | AirSearchModifiersOrderBy = field(
         default=None,
         metadata={
             "name": "OrderBy",
             "type": "Attribute",
-        }
+        },
     )
     exclude_open_jaw_airport: bool = field(
         default=False,
         metadata={
             "name": "ExcludeOpenJawAirport",
             "type": "Attribute",
-        }
+        },
     )
     exclude_ground_transportation: bool = field(
         default=False,
         metadata={
             "name": "ExcludeGroundTransportation",
             "type": "Attribute",
-        }
+        },
     )
     max_journey_time: None | int = field(
         default=None,
@@ -311,14 +320,14 @@ class AirSearchModifiers:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 99,
-        }
+        },
     )
     jet_service_only: None | bool = field(
         default=None,
         metadata={
             "name": "JetServiceOnly",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -331,7 +340,7 @@ class AirSearchModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -344,7 +353,7 @@ class AirSearchModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -357,7 +366,7 @@ class AirSearchModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -369,7 +378,7 @@ class AirSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -381,7 +390,7 @@ class AirSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -393,7 +402,7 @@ class AirSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -405,5 +414,5 @@ class AirSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

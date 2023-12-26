@@ -15,5 +15,5 @@ class Arccos:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

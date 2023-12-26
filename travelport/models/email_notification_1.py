@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.email_notification_recipients_1 import EmailNotificationRecipients1
+from travelport.models.email_notification_recipients_1 import (
+    EmailNotificationRecipients1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
@@ -22,6 +24,7 @@ class EmailNotification1:
         Booking Traveler Specific = Send Email to specific address Referred
         in EmailRef.
     """
+
     class Meta:
         name = "EmailNotification"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -32,7 +35,7 @@ class EmailNotification1:
             "name": "EmailRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     recipients: None | EmailNotificationRecipients1 = field(
         default=None,
@@ -40,5 +43,5 @@ class EmailNotification1:
             "name": "Recipients",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -11,6 +11,7 @@ class CalculateTaxReq(BaseReq1):
     """
     Request to calculate US taxes based on a series of segments.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,5 +21,5 @@ class CalculateTaxReq(BaseReq1):
             "name": "TaxCalcInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .trains_in_compound_train_rel_structure import TrainsInCompoundTrainRelStructure
+from .trains_in_compound_train_rel_structure import (
+    TrainsInCompoundTrainRelStructure,
+)
 from .vehicle_type_version_structure import VehicleTypeVersionStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -16,5 +18,5 @@ class CompoundTrainVersionStructure(VehicleTypeVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

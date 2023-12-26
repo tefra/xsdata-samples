@@ -21,6 +21,7 @@ class FlightOption:
     destination
         The IATA location code for this destination of this entity.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -31,14 +32,14 @@ class FlightOption:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     leg_ref: None | str = field(
         default=None,
         metadata={
             "name": "LegRef",
             "type": "Attribute",
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class FlightOption:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -58,5 +59,5 @@ class FlightOption:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import TextType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import BaseComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.text_type import (
+    TextType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_component_type import (
+    BaseComponentType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1"
+)
 
 
 @dataclass
@@ -38,13 +46,14 @@ class IndividualActorNameType(BaseComponentType):
     :ivar preferred_given_name_text: <description xmlns="">Name by which
         the person prefers to be addressed</description>
     """
+
     title_code: Optional[CodeType] = field(
         default=None,
         metadata={
             "name": "TitleCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     first_name_text: Optional[TextType] = field(
         default=None,
@@ -52,7 +61,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "FirstNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     middle_name_text: Optional[TextType] = field(
         default=None,
@@ -60,7 +69,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "MiddleNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     middle_initial_text: Optional[TextType] = field(
         default=None,
@@ -68,7 +77,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "MiddleInitialText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     family_name_text: Optional[TextType] = field(
         default=None,
@@ -76,7 +85,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "FamilyNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     prefix_code: Optional[CodeType] = field(
         default=None,
@@ -84,7 +93,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "PrefixCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     suffix_code: Optional[CodeType] = field(
         default=None,
@@ -92,7 +101,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "SuffixCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     salutation_text: Optional[TextType] = field(
         default=None,
@@ -100,7 +109,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "SalutationText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     formatted_name_text: Optional[TextType] = field(
         default=None,
@@ -108,7 +117,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "FormattedNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     aristocratic_title_code: Optional[CodeType] = field(
         default=None,
@@ -116,7 +125,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "AristocraticTitleCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     legal_name_text: Optional[TextType] = field(
         default=None,
@@ -124,7 +133,7 @@ class IndividualActorNameType(BaseComponentType):
             "name": "LegalNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )
     preferred_given_name_text: Optional[TextType] = field(
         default=None,
@@ -132,5 +141,5 @@ class IndividualActorNameType(BaseComponentType):
             "name": "PreferredGivenNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        }
+        },
     )

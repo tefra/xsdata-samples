@@ -17,6 +17,7 @@ class TypeProfileInfo1:
         Additional identifier managed by an external system.
     description
     """
+
     class Meta:
         name = "typeProfileInfo"
 
@@ -27,7 +28,7 @@ class TypeProfileInfo1:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/sharedUprofile_v20_0",
             "max_occurs": 99,
-        }
+        },
     )
     additional_identifier: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class TypeProfileInfo1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -45,5 +46,5 @@ class TypeProfileInfo1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

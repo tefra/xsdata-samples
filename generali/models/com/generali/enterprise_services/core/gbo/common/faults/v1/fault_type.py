@@ -1,12 +1,24 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.fault_type_failures import FaultTypeFailures
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristics_type import CharacteristicsType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.fault_category_code_type import FaultCategoryCodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.fault_severity_code_type import FaultSeverityCodeType
-from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type import BaseFaultType
+from generali.models.com.generali.enterprise_services.core.gbo.common.faults.v1.fault_type_failures import (
+    FaultTypeFailures,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristics_type import (
+    CharacteristicsType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.fault_category_code_type import (
+    FaultCategoryCodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.fault_severity_code_type import (
+    FaultSeverityCodeType,
+)
+from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type import (
+    BaseFaultType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/faults/v1"
+)
 
 
 @dataclass
@@ -49,13 +61,14 @@ class FaultType(BaseFaultType):
         etc.</description>
     :ivar failures:
     """
+
     name_text: Optional[str] = field(
         default=None,
         metadata={
             "name": "NameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )
     severity_code: Optional[FaultSeverityCodeType] = field(
         default=None,
@@ -63,7 +76,7 @@ class FaultType(BaseFaultType):
             "name": "SeverityCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )
     category_code: Optional[FaultCategoryCodeType] = field(
         default=None,
@@ -71,7 +84,7 @@ class FaultType(BaseFaultType):
             "name": "CategoryCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )
     reason_code: Optional[str] = field(
         default=None,
@@ -79,7 +92,7 @@ class FaultType(BaseFaultType):
             "name": "ReasonCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )
     message_text: Optional[str] = field(
         default=None,
@@ -87,7 +100,7 @@ class FaultType(BaseFaultType):
             "name": "MessageText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )
     characteristics: Optional[CharacteristicsType] = field(
         default=None,
@@ -95,7 +108,7 @@ class FaultType(BaseFaultType):
             "name": "Characteristics",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )
     failures: Optional[FaultTypeFailures] = field(
         default=None,
@@ -103,5 +116,5 @@ class FaultType(BaseFaultType):
             "name": "Failures",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-        }
+        },
     )

@@ -7,8 +7,12 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .crypto_key_slot_allowed_modification import CryptoKeySlotAllowedModification
-from .crypto_key_slot_content_allowed_usage import CryptoKeySlotContentAllowedUsage
+from .crypto_key_slot_allowed_modification import (
+    CryptoKeySlotAllowedModification,
+)
+from .crypto_key_slot_content_allowed_usage import (
+    CryptoKeySlotContentAllowedUsage,
+)
 from .crypto_key_slot_type_enum import CryptoKeySlotTypeEnum
 from .crypto_object_type_enum import CryptoObjectTypeEnum
 from .identifier import Identifier
@@ -110,6 +114,7 @@ class CryptoKeySlot:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-KEY-SLOT"
 
@@ -120,7 +125,7 @@ class CryptoKeySlot:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["CryptoKeySlot.ShortNameFragments"] = field(
         default=None,
@@ -128,7 +133,7 @@ class CryptoKeySlot:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -136,7 +141,7 @@ class CryptoKeySlot:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -144,7 +149,7 @@ class CryptoKeySlot:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -152,7 +157,7 @@ class CryptoKeySlot:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -160,7 +165,7 @@ class CryptoKeySlot:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -168,7 +173,7 @@ class CryptoKeySlot:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CryptoKeySlot.Annotations"] = field(
         default=None,
@@ -176,7 +181,7 @@ class CryptoKeySlot:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     allocate_shadow_copy: Optional[Boolean] = field(
         default=None,
@@ -184,7 +189,7 @@ class CryptoKeySlot:
             "name": "ALLOCATE-SHADOW-COPY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crypto_alg_id: Optional[String] = field(
         default=None,
@@ -192,7 +197,7 @@ class CryptoKeySlot:
             "name": "CRYPTO-ALG-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crypto_object_type: Optional[CryptoObjectTypeEnum] = field(
         default=None,
@@ -200,23 +205,27 @@ class CryptoKeySlot:
             "name": "CRYPTO-OBJECT-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    key_slot_allowed_modification: Optional[CryptoKeySlotAllowedModification] = field(
+    key_slot_allowed_modification: Optional[
+        CryptoKeySlotAllowedModification
+    ] = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-ALLOWED-MODIFICATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    key_slot_content_allowed_usages: Optional["CryptoKeySlot.KeySlotContentAllowedUsages"] = field(
+    key_slot_content_allowed_usages: Optional[
+        "CryptoKeySlot.KeySlotContentAllowedUsages"
+    ] = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-CONTENT-ALLOWED-USAGES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     slot_capacity: Optional[PositiveInteger] = field(
         default=None,
@@ -224,7 +233,7 @@ class CryptoKeySlot:
             "name": "SLOT-CAPACITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     slot_type: Optional[CryptoKeySlotTypeEnum] = field(
         default=None,
@@ -232,14 +241,14 @@ class CryptoKeySlot:
             "name": "SLOT-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -247,14 +256,14 @@ class CryptoKeySlot:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -265,7 +274,7 @@ class CryptoKeySlot:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,16 +285,18 @@ class CryptoKeySlot:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class KeySlotContentAllowedUsages:
-        crypto_key_slot_content_allowed_usage: List[CryptoKeySlotContentAllowedUsage] = field(
+        crypto_key_slot_content_allowed_usage: List[
+            CryptoKeySlotContentAllowedUsage
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-KEY-SLOT-CONTENT-ALLOWED-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

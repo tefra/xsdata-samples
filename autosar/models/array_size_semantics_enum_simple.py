@@ -12,5 +12,6 @@ class ArraySizeSemanticsEnumSimple(Enum):
         value of arraySize represents the maximum number of elements in
         the array.
     """
+
     FIXED_SIZE = "FIXED-SIZE"
     VARIABLE_SIZE = "VARIABLE-SIZE"

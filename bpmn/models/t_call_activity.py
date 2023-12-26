@@ -16,5 +16,5 @@ class TCallActivity(TActivity):
         metadata={
             "name": "calledElement",
             "type": "Attribute",
-        }
+        },
     )

@@ -10,5 +10,6 @@ class AirReservation(TypeBaseAirReservation):
     """
     The parent container for all booking data.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

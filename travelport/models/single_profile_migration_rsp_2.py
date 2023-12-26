@@ -21,6 +21,7 @@ class SingleProfileMigrationRsp2(BaseRsp5):
     profile_type
         The type of the migrated Profile e.g-Account,Traveler
     """
+
     class Meta:
         name = "SingleProfileMigrationRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -30,7 +31,7 @@ class SingleProfileMigrationRsp2(BaseRsp5):
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -39,12 +40,12 @@ class SingleProfileMigrationRsp2(BaseRsp5):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     profile_type: None | TypeProfileType6 = field(
         default=None,
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-        }
+        },
     )

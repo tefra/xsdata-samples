@@ -10,5 +10,6 @@ class TypeProfileEntityStatus1(Enum):
     Any profile with a status other than Active cannot perform most
     transactions.
     """
+
     ACTIVE = "Active"
     INACTIVE = "Inactive"

@@ -13,6 +13,7 @@ class GroupedOption:
         Reference to a optionalService which is paired with other optional
         services in the parent PairedOptions element.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,5 +23,5 @@ class GroupedOption:
             "name": "OptionalServiceRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

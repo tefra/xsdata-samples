@@ -12,6 +12,7 @@ class BookingTerminalRsp(BookingBaseRsp):
     Returns the terminal response and UR with the changes based on the Terminal
     Req.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -20,5 +21,5 @@ class BookingTerminalRsp(BookingBaseRsp):
         metadata={
             "name": "CommandResponse",
             "type": "Element",
-        }
+        },
     )

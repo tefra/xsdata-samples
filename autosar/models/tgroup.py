@@ -40,6 +40,7 @@ class Tgroup:
     :ivar rowsep: Indicates if by default a line shall be drawn at the
         bottom of the rows in this table group.
     """
+
     class Meta:
         name = "TGROUP"
 
@@ -49,7 +50,7 @@ class Tgroup:
             "name": "COLSPEC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     thead: Optional[Tbody] = field(
         default=None,
@@ -57,7 +58,7 @@ class Tgroup:
             "name": "THEAD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tfoot: Optional[Tbody] = field(
         default=None,
@@ -65,7 +66,7 @@ class Tgroup:
             "name": "TFOOT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tbody: Optional[Tbody] = field(
         default=None,
@@ -73,14 +74,14 @@ class Tgroup:
             "name": "TBODY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -88,14 +89,14 @@ class Tgroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     align: Optional[AlignEnumSimple] = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
-        }
+        },
     )
     cols: Optional[str] = field(
         default=None,
@@ -103,7 +104,7 @@ class Tgroup:
             "name": "COLS",
             "type": "Attribute",
             "pattern": r"0|[\+\-]?[1-9][0-9]*|0[xX][0-9a-fA-F]+|0[bB][0-1]+|0[0-7]+",
-        }
+        },
     )
     colsep: Optional[str] = field(
         default=None,
@@ -111,7 +112,7 @@ class Tgroup:
             "name": "COLSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )
     rowsep: Optional[str] = field(
         default=None,
@@ -119,5 +120,5 @@ class Tgroup:
             "name": "ROWSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )

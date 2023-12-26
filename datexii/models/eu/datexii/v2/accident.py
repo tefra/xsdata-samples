@@ -3,8 +3,12 @@ from typing import List, Optional
 from datexii.models.eu.datexii.v2.accident_cause_enum import AccidentCauseEnum
 from datexii.models.eu.datexii.v2.accident_type_enum import AccidentTypeEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.group_of_people_involved import GroupOfPeopleInvolved
-from datexii.models.eu.datexii.v2.group_of_vehicles_involved import GroupOfVehiclesInvolved
+from datexii.models.eu.datexii.v2.group_of_people_involved import (
+    GroupOfPeopleInvolved,
+)
+from datexii.models.eu.datexii.v2.group_of_vehicles_involved import (
+    GroupOfVehiclesInvolved,
+)
 from datexii.models.eu.datexii.v2.traffic_element import TrafficElement
 from datexii.models.eu.datexii.v2.vehicle import Vehicle
 
@@ -32,13 +36,14 @@ class Accident(TrafficElement):
     :ivar group_of_people_involved:
     :ivar accident_extension:
     """
+
     accident_cause: Optional[AccidentCauseEnum] = field(
         default=None,
         metadata={
             "name": "accidentCause",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accident_type: List[AccidentTypeEnum] = field(
         default_factory=list,
@@ -47,7 +52,7 @@ class Accident(TrafficElement):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     total_number_of_people_involved: Optional[int] = field(
         default=None,
@@ -55,7 +60,7 @@ class Accident(TrafficElement):
             "name": "totalNumberOfPeopleInvolved",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     total_number_of_vehicles_involved: Optional[int] = field(
         default=None,
@@ -63,7 +68,7 @@ class Accident(TrafficElement):
             "name": "totalNumberOfVehiclesInvolved",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_involved: List[Vehicle] = field(
         default_factory=list,
@@ -71,7 +76,7 @@ class Accident(TrafficElement):
             "name": "vehicleInvolved",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_vehicles_involved: List[GroupOfVehiclesInvolved] = field(
         default_factory=list,
@@ -79,7 +84,7 @@ class Accident(TrafficElement):
             "name": "groupOfVehiclesInvolved",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_people_involved: List[GroupOfPeopleInvolved] = field(
         default_factory=list,
@@ -87,7 +92,7 @@ class Accident(TrafficElement):
             "name": "groupOfPeopleInvolved",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accident_extension: Optional[ExtensionType] = field(
         default=None,
@@ -95,5 +100,5 @@ class Accident(TrafficElement):
             "name": "accidentExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

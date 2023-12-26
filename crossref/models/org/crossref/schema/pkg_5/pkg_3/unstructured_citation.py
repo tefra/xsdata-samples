@@ -26,6 +26,7 @@ class UnstructuredCitation:
     'unstructured_citation' supports deposit of references for which no
     structural information is available.
     """
+
     class Meta:
         name = "unstructured_citation"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -87,5 +88,5 @@ class UnstructuredCitation:
                     "namespace": "http://www.w3.org/1998/Math/MathML",
                 },
             ),
-        }
+        },
     )

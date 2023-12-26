@@ -14,5 +14,5 @@ class TypeKeyElement1:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

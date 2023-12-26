@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .interchange_rule_timing import InterchangeRuleTiming
 from .interchange_rule_timing_ref import InterchangeRuleTimingRef
@@ -12,7 +12,9 @@ class InterchangeRuleTimingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "interchangeRuleTimings_RelStructure"
 
-    interchange_rule_timing_ref_or_interchange_rule_timing: List[object] = field(
+    interchange_rule_timing_ref_or_interchange_rule_timing: List[
+        Union[InterchangeRuleTimingRef, InterchangeRuleTiming]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class InterchangeRuleTimingsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

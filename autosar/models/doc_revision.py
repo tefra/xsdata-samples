@@ -44,6 +44,7 @@ class DocRevision:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DOC-REVISION"
 
@@ -53,7 +54,7 @@ class DocRevision:
             "name": "REVISION-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     revision_label_p_1: Optional[RevisionLabelString] = field(
         default=None,
@@ -61,7 +62,7 @@ class DocRevision:
             "name": "REVISION-LABEL-P-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     revision_label_p_2: Optional[RevisionLabelString] = field(
         default=None,
@@ -69,7 +70,7 @@ class DocRevision:
             "name": "REVISION-LABEL-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     state: Optional[NmtokenString] = field(
         default=None,
@@ -77,7 +78,7 @@ class DocRevision:
             "name": "STATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     issued_by: Optional[String] = field(
         default=None,
@@ -85,7 +86,7 @@ class DocRevision:
             "name": "ISSUED-BY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     date: Optional[Date] = field(
         default=None,
@@ -93,7 +94,7 @@ class DocRevision:
             "name": "DATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     modifications: Optional["DocRevision.Modifications"] = field(
         default=None,
@@ -101,14 +102,14 @@ class DocRevision:
             "name": "MODIFICATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -116,7 +117,7 @@ class DocRevision:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -127,5 +128,5 @@ class DocRevision:
                 "name": "MODIFICATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

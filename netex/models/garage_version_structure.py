@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .addressable_place_version_structure import AddressablePlaceVersionStructure
+from typing import Optional, Union
+from .addressable_place_version_structure import (
+    AddressablePlaceVersionStructure,
+)
 from .authority_ref import AuthorityRef
 from .contact_structure import ContactStructure
 from .crew_base_refs_rel_structure import CrewBaseRefsRelStructure
@@ -12,7 +14,9 @@ from .organisation_ref import OrganisationRef
 from .other_organisation_ref import OtherOrganisationRef
 from .retail_consortium_ref import RetailConsortiumRef
 from .serviced_organisation_ref import ServicedOrganisationRef
-from .transport_organisation_refs_rel_structure import TransportOrganisationRefsRelStructure
+from .transport_organisation_refs_rel_structure import (
+    TransportOrganisationRefsRelStructure,
+)
 from .travel_agent_ref import TravelAgentRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -29,9 +33,21 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             "name": "ContactDetails",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            RetailConsortiumRef,
+            AuthorityRef,
+            OperatorRef,
+            GeneralOrganisationRef,
+            ManagementAgentRef,
+            ServicedOrganisationRef,
+            TravelAgentRef,
+            OtherOrganisationRef,
+            OrganisationRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -82,14 +98,14 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     operators: Optional[TransportOrganisationRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     garage_points: Optional[GaragePointsRelStructure] = field(
         default=None,
@@ -97,7 +113,7 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             "name": "garagePoints",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     crew_bases: Optional[CrewBaseRefsRelStructure] = field(
         default=None,
@@ -105,5 +121,5 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             "name": "crewBases",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

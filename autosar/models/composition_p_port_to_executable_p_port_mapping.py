@@ -10,8 +10,12 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .p_port_prototype_in_executable_instance_ref import PPortPrototypeInExecutableInstanceRef
-from .p_port_prototype_in_software_cluster_design_instance_ref import PPortPrototypeInSoftwareClusterDesignInstanceRef
+from .p_port_prototype_in_executable_instance_ref import (
+    PPortPrototypeInExecutableInstanceRef,
+)
+from .p_port_prototype_in_software_cluster_design_instance_ref import (
+    PPortPrototypeInSoftwareClusterDesignInstanceRef,
+)
 from .process_design_subtypes_enum import ProcessDesignSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
@@ -90,6 +94,7 @@ class CompositionPPortToExecutablePPortMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COMPOSITION-P-PORT-TO-EXECUTABLE-P-PORT-MAPPING"
 
@@ -100,15 +105,17 @@ class CompositionPPortToExecutablePPortMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CompositionPPortToExecutablePPortMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CompositionPPortToExecutablePPortMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +123,7 @@ class CompositionPPortToExecutablePPortMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +131,7 @@ class CompositionPPortToExecutablePPortMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +139,7 @@ class CompositionPPortToExecutablePPortMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +147,7 @@ class CompositionPPortToExecutablePPortMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,15 +155,17 @@ class CompositionPPortToExecutablePPortMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["CompositionPPortToExecutablePPortMapping.Annotations"] = field(
+    annotations: Optional[
+        "CompositionPPortToExecutablePPortMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -164,38 +173,44 @@ class CompositionPPortToExecutablePPortMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    process_design_ref: Optional["CompositionPPortToExecutablePPortMapping.ProcessDesignRef"] = field(
+    process_design_ref: Optional[
+        "CompositionPPortToExecutablePPortMapping.ProcessDesignRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    executable_provided_port_iref: Optional[PPortPrototypeInExecutableInstanceRef] = field(
+    executable_provided_port_iref: Optional[
+        PPortPrototypeInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-PROVIDED-PORT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sw_cluster_design_provided_port_iref: Optional[PPortPrototypeInSoftwareClusterDesignInstanceRef] = field(
+    sw_cluster_design_provided_port_iref: Optional[
+        PPortPrototypeInSoftwareClusterDesignInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "SW-CLUSTER-DESIGN-PROVIDED-PORT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +218,14 @@ class CompositionPPortToExecutablePPortMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +236,7 @@ class CompositionPPortToExecutablePPortMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,7 +247,7 @@ class CompositionPPortToExecutablePPortMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,5 +258,5 @@ class CompositionPPortToExecutablePPortMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

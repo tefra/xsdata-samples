@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_fare_rule_category_code import TypeFareRuleCategoryCode
+from travelport.models.type_fare_rule_category_code import (
+    TypeFareRuleCategoryCode,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -16,6 +18,7 @@ class AirFareRuleCategory:
         The Category Code for Air Fare Rule.
     fare_info_ref
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,12 +29,12 @@ class AirFareRuleCategory:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 10,
-        }
+        },
     )
     fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
-        }
+        },
     )

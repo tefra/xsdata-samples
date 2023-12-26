@@ -11,6 +11,7 @@ class GdsQueueCountRsp(BaseRsp1):
     """
     The response from the host for a queue count.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -20,5 +21,5 @@ class GdsQueueCountRsp(BaseRsp1):
             "name": "QueueInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

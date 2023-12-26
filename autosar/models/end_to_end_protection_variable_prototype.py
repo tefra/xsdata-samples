@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import VariationPoint
 from .identifier import Identifier
-from .variable_data_prototype_in_system_instance_ref import VariableDataPrototypeInSystemInstanceRef
+from .variable_data_prototype_in_system_instance_ref import (
+    VariableDataPrototypeInSystemInstanceRef,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -34,16 +36,19 @@ class EndToEndProtectionVariablePrototype:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "END-TO-END-PROTECTION-VARIABLE-PROTOTYPE"
 
-    receiver_irefs: Optional["EndToEndProtectionVariablePrototype.ReceiverIrefs"] = field(
+    receiver_irefs: Optional[
+        "EndToEndProtectionVariablePrototype.ReceiverIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "RECEIVER-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sender_iref: Optional[VariableDataPrototypeInSystemInstanceRef] = field(
         default=None,
@@ -51,7 +56,7 @@ class EndToEndProtectionVariablePrototype:
             "name": "SENDER-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_label: Optional[Identifier] = field(
         default=None,
@@ -59,7 +64,7 @@ class EndToEndProtectionVariablePrototype:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -67,14 +72,14 @@ class EndToEndProtectionVariablePrototype:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -82,7 +87,7 @@ class EndToEndProtectionVariablePrototype:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -93,5 +98,5 @@ class EndToEndProtectionVariablePrototype:
                 "name": "RECEIVER-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

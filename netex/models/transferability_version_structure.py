@@ -17,7 +17,7 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
             "name": "CanTransfer",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_named_transferees: Optional[int] = field(
         default=None,
@@ -25,7 +25,7 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberOfNamedTransferees",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_transfer_fee: Optional[bool] = field(
         default=None,
@@ -33,7 +33,7 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
             "name": "HasTransferFee",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     shared_usage: Optional[SharedUsageEnumeration] = field(
         default=None,
@@ -41,5 +41,5 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
             "name": "SharedUsage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

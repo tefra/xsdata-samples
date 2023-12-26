@@ -20,7 +20,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -28,7 +28,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text: Optional[MultilingualString] = field(
         default=None,
@@ -36,7 +36,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "Text",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -44,7 +44,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_code: Optional[str] = field(
         default=None,
@@ -52,7 +52,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "ShortCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -60,7 +60,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     type_of_notice_ref: Optional[TypeOfNoticeRef] = field(
         default=None,
@@ -68,7 +68,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "TypeOfNoticeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     can_be_advertised: Optional[bool] = field(
         default=None,
@@ -76,7 +76,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "CanBeAdvertised",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     driver_display_text: Optional[MultilingualString] = field(
         default=None,
@@ -84,12 +84,12 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "name": "DriverDisplayText",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     variants: Optional[DeliveryVariantsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

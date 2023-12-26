@@ -10,6 +10,7 @@ class ProfileModifyTagsRsp1(BaseRsp2):
     """
     Response with the modified tags.
     """
+
     class Meta:
         name = "ProfileModifyTagsRsp"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -21,7 +22,7 @@ class ProfileModifyTagsRsp1(BaseRsp2):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 15,
-        }
+        },
     )
 
     @dataclass
@@ -42,6 +43,7 @@ class ProfileModifyTagsRsp1(BaseRsp2):
         agency_id
             The agency that owns the tag
         """
+
         name: None | str = field(
             default=None,
             metadata={
@@ -50,7 +52,7 @@ class ProfileModifyTagsRsp1(BaseRsp2):
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
         label: None | str = field(
             default=None,
@@ -59,7 +61,7 @@ class ProfileModifyTagsRsp1(BaseRsp2):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
         description: None | str = field(
             default=None,
@@ -68,14 +70,14 @@ class ProfileModifyTagsRsp1(BaseRsp2):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 255,
-            }
+            },
         )
         display_order: None | int = field(
             default=None,
             metadata={
                 "name": "DisplayOrder",
                 "type": "Attribute",
-            }
+            },
         )
         id: None | str = field(
             default=None,
@@ -83,7 +85,7 @@ class ProfileModifyTagsRsp1(BaseRsp2):
                 "name": "ID",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         agency_id: None | int = field(
             default=None,
@@ -91,5 +93,5 @@ class ProfileModifyTagsRsp1(BaseRsp2):
                 "name": "AgencyID",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -14,5 +14,5 @@ class BookingProcessFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

@@ -17,5 +17,5 @@ class CancellingVersionStructure(UsageParameterVersionStructure):
             "name": "BookingArrangements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

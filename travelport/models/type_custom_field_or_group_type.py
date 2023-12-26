@@ -10,5 +10,6 @@ class TypeCustomFieldOrGroupType(Enum):
     If the element is not passed then the  TemplateFieldID value passed
     will be considered a Fixed Field or a Fixed Field Group..
     """
+
     CUSTOM_FIELD = "CustomField"
     CUSTOM_FIELD_GROUP = "CustomFieldGroup"

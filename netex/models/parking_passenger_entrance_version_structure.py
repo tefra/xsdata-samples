@@ -16,5 +16,5 @@ class ParkingPassengerEntranceVersionStructure(SiteEntranceVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

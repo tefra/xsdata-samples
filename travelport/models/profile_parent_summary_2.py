@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_entity_status_2 import TypeProfileEntityStatus2
+from travelport.models.type_profile_entity_status_2 import (
+    TypeProfileEntityStatus2,
+)
 from travelport.models.type_profile_type_7 import TypeProfileType7
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -33,6 +35,7 @@ class ProfileParentSummary2:
         Profile status (Active, Inactive, Pending, Disabled).
     description
     """
+
     class Meta:
         name = "ProfileParentSummary"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -42,7 +45,7 @@ class ProfileParentSummary2:
         metadata={
             "name": "ProfileParentSummary",
             "type": "Element",
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -50,7 +53,7 @@ class ProfileParentSummary2:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -58,7 +61,7 @@ class ProfileParentSummary2:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provisioning_code: None | str = field(
         default=None,
@@ -67,7 +70,7 @@ class ProfileParentSummary2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -77,7 +80,7 @@ class ProfileParentSummary2:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -86,14 +89,14 @@ class ProfileParentSummary2:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     hierarchy_level_id: None | str = field(
         default=None,
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-        }
+        },
     )
     status: None | TypeProfileEntityStatus2 = field(
         default=None,
@@ -101,7 +104,7 @@ class ProfileParentSummary2:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -110,5 +113,5 @@ class ProfileParentSummary2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

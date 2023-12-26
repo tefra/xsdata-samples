@@ -11,6 +11,7 @@ class VehicleUpsellSearchResult:
     """
     Vehicle upsell search criteria result having matching offer and qualifies.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,7 +22,7 @@ class VehicleUpsellSearchResult:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_upsell_offer: None | VehicleUpsellOffer = field(
         default=None,
@@ -29,5 +30,5 @@ class VehicleUpsellSearchResult:
             "name": "VehicleUpsellOffer",
             "type": "Element",
             "required": True,
-        }
+        },
     )

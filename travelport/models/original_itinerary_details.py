@@ -32,6 +32,7 @@ class OriginalItineraryDetails:
     ticketing_date
         The date the repriced itinerary was ticketed
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -40,14 +41,14 @@ class OriginalItineraryDetails:
         metadata={
             "name": "ItineraryType",
             "type": "Attribute",
-        }
+        },
     )
     bulk_ticket: bool = field(
         default=False,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
-        }
+        },
     )
     ticketing_pcc: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class OriginalItineraryDetails:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 10,
-        }
+        },
     )
     ticketing_iata: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class OriginalItineraryDetails:
             "name": "TicketingIATA",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
     ticketing_country: None | str = field(
         default=None,
@@ -72,7 +73,7 @@ class OriginalItineraryDetails:
             "name": "TicketingCountry",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     tour_code: None | str = field(
         default=None,
@@ -80,12 +81,12 @@ class OriginalItineraryDetails:
             "name": "TourCode",
             "type": "Attribute",
             "max_length": 15,
-        }
+        },
     )
     ticketing_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "TicketingDate",
             "type": "Attribute",
-        }
+        },
     )

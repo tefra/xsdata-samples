@@ -18,5 +18,5 @@ class BaseSearchReq6(BaseReq6):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "max_occurs": 999,
-        }
+        },
     )

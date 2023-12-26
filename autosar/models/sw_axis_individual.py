@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
+from .application_primitive_data_type_subtypes_enum import (
+    ApplicationPrimitiveDataTypeSubtypesEnum,
+)
 from .autosar_variable_ref import AutosarVariableRef
 from .compu_method_subtypes_enum import CompuMethodSubtypesEnum
 from .data_constr_subtypes_enum import DataConstrSubtypesEnum
@@ -76,6 +78,7 @@ class SwAxisIndividual:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-AXIS-INDIVIDUAL"
 
@@ -85,7 +88,7 @@ class SwAxisIndividual:
             "name": "MAX-GRADIENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     monotony: Optional[MonotonyEnum] = field(
         default=None,
@@ -93,15 +96,17 @@ class SwAxisIndividual:
             "name": "MONOTONY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    input_variable_type_ref: Optional["SwAxisIndividual.InputVariableTypeRef"] = field(
+    input_variable_type_ref: Optional[
+        "SwAxisIndividual.InputVariableTypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "INPUT-VARIABLE-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_variable_refs: Optional["SwAxisIndividual.SwVariableRefs"] = field(
         default=None,
@@ -109,7 +114,7 @@ class SwAxisIndividual:
             "name": "SW-VARIABLE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     compu_method_ref: Optional["SwAxisIndividual.CompuMethodRef"] = field(
         default=None,
@@ -117,7 +122,7 @@ class SwAxisIndividual:
             "name": "COMPU-METHOD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     unit_ref: Optional["SwAxisIndividual.UnitRef"] = field(
         default=None,
@@ -125,7 +130,7 @@ class SwAxisIndividual:
             "name": "UNIT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_max_axis_points: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -133,7 +138,7 @@ class SwAxisIndividual:
             "name": "SW-MAX-AXIS-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_min_axis_points: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -141,7 +146,7 @@ class SwAxisIndividual:
             "name": "SW-MIN-AXIS-POINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_constr_ref: Optional["SwAxisIndividual.DataConstrRef"] = field(
         default=None,
@@ -149,7 +154,7 @@ class SwAxisIndividual:
             "name": "DATA-CONSTR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_axis_generic: Optional[SwAxisGeneric] = field(
         default=None,
@@ -157,14 +162,14 @@ class SwAxisIndividual:
             "name": "SW-AXIS-GENERIC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -172,7 +177,7 @@ class SwAxisIndividual:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -183,7 +188,7 @@ class SwAxisIndividual:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -199,6 +204,7 @@ class SwAxisIndividual:
             McDataInstance. The referenced mcDataInstance shall be
             originated from a VariableDataPrototype.
         """
+
         autosar_variable: List[AutosarVariableRef] = field(
             default_factory=list,
             metadata={
@@ -206,16 +212,18 @@ class SwAxisIndividual:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "sequence": 1,
-            }
+            },
         )
-        mc_data_instance_var_ref: List["SwAxisIndividual.SwVariableRefs.McDataInstanceVarRef"] = field(
+        mc_data_instance_var_ref: List[
+            "SwAxisIndividual.SwVariableRefs.McDataInstanceVarRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MC-DATA-INSTANCE-VAR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "sequence": 1,
-            }
+            },
         )
 
         @dataclass
@@ -226,7 +234,7 @@ class SwAxisIndividual:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -237,7 +245,7 @@ class SwAxisIndividual:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -248,7 +256,7 @@ class SwAxisIndividual:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -259,5 +267,5 @@ class SwAxisIndividual:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

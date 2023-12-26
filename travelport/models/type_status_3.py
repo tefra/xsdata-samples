@@ -17,6 +17,7 @@ class TypeStatus3(Enum):
     ISSUE_LATER
         The service fee can be issued later.
     """
+
     ISSUED = "Issued"
     READY_TO_ISSUE = "ReadyToIssue"
     ISSUE_LATER = "IssueLater"

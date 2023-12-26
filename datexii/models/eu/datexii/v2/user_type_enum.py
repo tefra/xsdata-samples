@@ -46,6 +46,7 @@ class UserTypeEnum(Enum):
     :cvar OTHER: Other.
     :cvar UNKNOWN: Unknown.
     """
+
     ALL_USERS = "allUsers"
     SHOPPERS = "shoppers"
     HOTEL_GUESTS = "hotelGuests"

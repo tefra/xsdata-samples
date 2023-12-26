@@ -22,7 +22,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parent_ref: Optional[ParkingPropertiesRefStructure] = field(
         default=None,
@@ -30,7 +30,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "ParentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parking_properties_ref: Optional[ParkingPropertiesRef] = field(
         default=None,
@@ -38,7 +38,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "ParkingPropertiesRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parking_user_type: Optional[ParkingUserEnumeration] = field(
         default=None,
@@ -46,7 +46,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "ParkingUserType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parking_vehicle_type: Optional[ParkingVehicleEnumeration] = field(
         default=None,
@@ -54,7 +54,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "ParkingVehicleType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     parking_stay_type: Optional[ParkingStayEnumeration] = field(
         default=None,
@@ -62,7 +62,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "ParkingStayType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_spaces: Optional[int] = field(
         default=None,
@@ -70,7 +70,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "NumberOfSpaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_spaces_with_recharge_point: Optional[int] = field(
         default=None,
@@ -78,5 +78,5 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "name": "NumberOfSpacesWithRechargePoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

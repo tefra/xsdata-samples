@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .infrastructure_link_version_structure import InfrastructureLinkVersionStructure
+from .infrastructure_link_version_structure import (
+    InfrastructureLinkVersionStructure,
+)
 from .road_point_ref_structure import RoadPointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -18,7 +20,7 @@ class RoadElementVersionStructure(InfrastructureLinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_point_ref: Optional[RoadPointRefStructure] = field(
         default=None,
@@ -27,5 +29,5 @@ class RoadElementVersionStructure(InfrastructureLinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

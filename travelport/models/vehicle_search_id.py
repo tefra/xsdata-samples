@@ -15,6 +15,7 @@ class VehicleSearchId:
         The search id  from VehicleSearchAvailabilityRsp to be used to
         retrieve the media links.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -24,5 +25,5 @@ class VehicleSearchId:
             "name": "MediaLinksSearchId",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

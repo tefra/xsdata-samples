@@ -11,8 +11,12 @@ from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
 from .blueprint_policy_single import BlueprintPolicySingle
 from .boolean import Boolean
 from .category_string import CategoryString
-from .crypto_key_slot_allowed_modification import CryptoKeySlotAllowedModification
-from .crypto_key_slot_content_allowed_usage import CryptoKeySlotContentAllowedUsage
+from .crypto_key_slot_allowed_modification import (
+    CryptoKeySlotAllowedModification,
+)
+from .crypto_key_slot_content_allowed_usage import (
+    CryptoKeySlotContentAllowedUsage,
+)
 from .crypto_key_slot_type_enum import CryptoKeySlotTypeEnum
 from .crypto_object_type_enum import CryptoObjectTypeEnum
 from .identifier import Identifier
@@ -142,6 +146,7 @@ class CryptoKeySlotInterface:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-KEY-SLOT-INTERFACE"
 
@@ -152,15 +157,17 @@ class CryptoKeySlotInterface:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CryptoKeySlotInterface.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CryptoKeySlotInterface.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -168,7 +175,7 @@ class CryptoKeySlotInterface:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -176,7 +183,7 @@ class CryptoKeySlotInterface:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -184,7 +191,7 @@ class CryptoKeySlotInterface:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -192,7 +199,7 @@ class CryptoKeySlotInterface:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -200,7 +207,7 @@ class CryptoKeySlotInterface:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CryptoKeySlotInterface.Annotations"] = field(
         default=None,
@@ -208,7 +215,7 @@ class CryptoKeySlotInterface:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -216,15 +223,17 @@ class CryptoKeySlotInterface:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    blueprint_policys: Optional["CryptoKeySlotInterface.BlueprintPolicys"] = field(
+    blueprint_policys: Optional[
+        "CryptoKeySlotInterface.BlueprintPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -232,7 +241,7 @@ class CryptoKeySlotInterface:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_service: Optional[Boolean] = field(
         default=None,
@@ -240,7 +249,7 @@ class CryptoKeySlotInterface:
             "name": "IS-SERVICE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     namespaces: Optional["CryptoKeySlotInterface.Namespaces"] = field(
         default=None,
@@ -248,7 +257,7 @@ class CryptoKeySlotInterface:
             "name": "NAMESPACES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_kind: Optional[ServiceProviderEnum] = field(
         default=None,
@@ -256,7 +265,7 @@ class CryptoKeySlotInterface:
             "name": "SERVICE-KIND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     allocate_shadow_copy: Optional[Boolean] = field(
         default=None,
@@ -264,7 +273,7 @@ class CryptoKeySlotInterface:
             "name": "ALLOCATE-SHADOW-COPY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crypto_alg_id: Optional[String] = field(
         default=None,
@@ -272,7 +281,7 @@ class CryptoKeySlotInterface:
             "name": "CRYPTO-ALG-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     crypto_object_type: Optional[CryptoObjectTypeEnum] = field(
         default=None,
@@ -280,23 +289,27 @@ class CryptoKeySlotInterface:
             "name": "CRYPTO-OBJECT-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    key_slot_allowed_modification: Optional[CryptoKeySlotAllowedModification] = field(
+    key_slot_allowed_modification: Optional[
+        CryptoKeySlotAllowedModification
+    ] = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-ALLOWED-MODIFICATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    key_slot_content_allowed_usages: Optional["CryptoKeySlotInterface.KeySlotContentAllowedUsages"] = field(
+    key_slot_content_allowed_usages: Optional[
+        "CryptoKeySlotInterface.KeySlotContentAllowedUsages"
+    ] = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-CONTENT-ALLOWED-USAGES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     slot_capacity: Optional[PositiveInteger] = field(
         default=None,
@@ -304,7 +317,7 @@ class CryptoKeySlotInterface:
             "name": "SLOT-CAPACITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     slot_type: Optional[CryptoKeySlotTypeEnum] = field(
         default=None,
@@ -312,14 +325,14 @@ class CryptoKeySlotInterface:
             "name": "SLOT-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -327,14 +340,14 @@ class CryptoKeySlotInterface:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -345,7 +358,7 @@ class CryptoKeySlotInterface:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -356,7 +369,7 @@ class CryptoKeySlotInterface:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -367,15 +380,17 @@ class CryptoKeySlotInterface:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -383,7 +398,7 @@ class CryptoKeySlotInterface:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -394,16 +409,18 @@ class CryptoKeySlotInterface:
                 "name": "SYMBOL-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class KeySlotContentAllowedUsages:
-        crypto_key_slot_content_allowed_usage: List[CryptoKeySlotContentAllowedUsage] = field(
+        crypto_key_slot_content_allowed_usage: List[
+            CryptoKeySlotContentAllowedUsage
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CRYPTO-KEY-SLOT-CONTENT-ALLOWED-USAGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

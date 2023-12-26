@@ -15,5 +15,5 @@ class Leq:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

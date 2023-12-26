@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .communication_service_ref_structure import CommunicationServiceRefStructure
+from .communication_service_ref_structure import (
+    CommunicationServiceRefStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

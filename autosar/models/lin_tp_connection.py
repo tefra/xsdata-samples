@@ -92,6 +92,7 @@ class LinTpConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIN-TP-CONNECTION"
 
@@ -101,7 +102,7 @@ class LinTpConnection:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_pdu_ref: Optional["LinTpConnection.DataPduRef"] = field(
         default=None,
@@ -109,7 +110,7 @@ class LinTpConnection:
             "name": "DATA-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     drop_not_requested_nad: Optional[Boolean] = field(
         default=None,
@@ -117,7 +118,7 @@ class LinTpConnection:
             "name": "DROP-NOT-REQUESTED-NAD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     flow_control_ref: Optional["LinTpConnection.FlowControlRef"] = field(
         default=None,
@@ -125,7 +126,7 @@ class LinTpConnection:
             "name": "FLOW-CONTROL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lin_tp_n_sdu_ref: Optional["LinTpConnection.LinTpNSduRef"] = field(
         default=None,
@@ -133,7 +134,7 @@ class LinTpConnection:
             "name": "LIN-TP-N-SDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_number_of_resp_pending_frames: Optional[PositiveInteger] = field(
         default=None,
@@ -141,7 +142,7 @@ class LinTpConnection:
             "name": "MAX-NUMBER-OF-RESP-PENDING-FRAMES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     multicast_ref: Optional["LinTpConnection.MulticastRef"] = field(
         default=None,
@@ -149,7 +150,7 @@ class LinTpConnection:
             "name": "MULTICAST-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p_2_max: Optional[TimeValue] = field(
         default=None,
@@ -157,7 +158,7 @@ class LinTpConnection:
             "name": "P-2-MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p_2_timing: Optional[TimeValue] = field(
         default=None,
@@ -165,7 +166,7 @@ class LinTpConnection:
             "name": "P-2-TIMING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     receiver_refs: Optional["LinTpConnection.ReceiverRefs"] = field(
         default=None,
@@ -173,7 +174,7 @@ class LinTpConnection:
             "name": "RECEIVER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_as: Optional[TimeValue] = field(
         default=None,
@@ -181,7 +182,7 @@ class LinTpConnection:
             "name": "TIMEOUT-AS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_cr: Optional[TimeValue] = field(
         default=None,
@@ -189,7 +190,7 @@ class LinTpConnection:
             "name": "TIMEOUT-CR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     timeout_cs: Optional[TimeValue] = field(
         default=None,
@@ -197,7 +198,7 @@ class LinTpConnection:
             "name": "TIMEOUT-CS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmitter_ref: Optional["LinTpConnection.TransmitterRef"] = field(
         default=None,
@@ -205,7 +206,7 @@ class LinTpConnection:
             "name": "TRANSMITTER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -213,14 +214,14 @@ class LinTpConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -228,7 +229,7 @@ class LinTpConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -239,7 +240,7 @@ class LinTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -250,7 +251,7 @@ class LinTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -261,7 +262,7 @@ class LinTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -272,7 +273,7 @@ class LinTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -283,7 +284,7 @@ class LinTpConnection:
                 "name": "RECEIVER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -294,7 +295,7 @@ class LinTpConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -305,5 +306,5 @@ class LinTpConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

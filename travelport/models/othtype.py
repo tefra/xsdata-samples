@@ -119,6 +119,7 @@ class Othtype:
         Missing rules.  True if rules are missing.  False if rules are not
         missing.
     """
+
     class Meta:
         name = "OTHType"
 
@@ -127,250 +128,250 @@ class Othtype:
         metadata={
             "name": "Cat0",
             "type": "Attribute",
-        }
+        },
     )
     cat1: None | bool = field(
         default=None,
         metadata={
             "name": "Cat1",
             "type": "Attribute",
-        }
+        },
     )
     cat2: None | bool = field(
         default=None,
         metadata={
             "name": "Cat2",
             "type": "Attribute",
-        }
+        },
     )
     cat3: None | bool = field(
         default=None,
         metadata={
             "name": "Cat3",
             "type": "Attribute",
-        }
+        },
     )
     cat4: None | bool = field(
         default=None,
         metadata={
             "name": "Cat4",
             "type": "Attribute",
-        }
+        },
     )
     cat5: None | bool = field(
         default=None,
         metadata={
             "name": "Cat5",
             "type": "Attribute",
-        }
+        },
     )
     cat6: None | bool = field(
         default=None,
         metadata={
             "name": "Cat6",
             "type": "Attribute",
-        }
+        },
     )
     cat7: None | bool = field(
         default=None,
         metadata={
             "name": "Cat7",
             "type": "Attribute",
-        }
+        },
     )
     cat8: None | bool = field(
         default=None,
         metadata={
             "name": "Cat8",
             "type": "Attribute",
-        }
+        },
     )
     cat9: None | bool = field(
         default=None,
         metadata={
             "name": "Cat9",
             "type": "Attribute",
-        }
+        },
     )
     cat10: None | bool = field(
         default=None,
         metadata={
             "name": "Cat10",
             "type": "Attribute",
-        }
+        },
     )
     cat11: None | bool = field(
         default=None,
         metadata={
             "name": "Cat11",
             "type": "Attribute",
-        }
+        },
     )
     cat12: None | bool = field(
         default=None,
         metadata={
             "name": "Cat12",
             "type": "Attribute",
-        }
+        },
     )
     cat13: None | bool = field(
         default=None,
         metadata={
             "name": "Cat13",
             "type": "Attribute",
-        }
+        },
     )
     cat14: None | bool = field(
         default=None,
         metadata={
             "name": "Cat14",
             "type": "Attribute",
-        }
+        },
     )
     cat15: None | bool = field(
         default=None,
         metadata={
             "name": "Cat15",
             "type": "Attribute",
-        }
+        },
     )
     cat16: None | bool = field(
         default=None,
         metadata={
             "name": "Cat16",
             "type": "Attribute",
-        }
+        },
     )
     cat17: None | bool = field(
         default=None,
         metadata={
             "name": "Cat17",
             "type": "Attribute",
-        }
+        },
     )
     cat18: None | bool = field(
         default=None,
         metadata={
             "name": "Cat18",
             "type": "Attribute",
-        }
+        },
     )
     cat19: None | bool = field(
         default=None,
         metadata={
             "name": "Cat19",
             "type": "Attribute",
-        }
+        },
     )
     cat20: None | bool = field(
         default=None,
         metadata={
             "name": "Cat20",
             "type": "Attribute",
-        }
+        },
     )
     cat21: None | bool = field(
         default=None,
         metadata={
             "name": "Cat21",
             "type": "Attribute",
-        }
+        },
     )
     cat22: None | bool = field(
         default=None,
         metadata={
             "name": "Cat22",
             "type": "Attribute",
-        }
+        },
     )
     cat23: None | bool = field(
         default=None,
         metadata={
             "name": "Cat23",
             "type": "Attribute",
-        }
+        },
     )
     cat24: None | bool = field(
         default=None,
         metadata={
             "name": "Cat24",
             "type": "Attribute",
-        }
+        },
     )
     cat25: None | bool = field(
         default=None,
         metadata={
             "name": "Cat25",
             "type": "Attribute",
-        }
+        },
     )
     cat26: None | bool = field(
         default=None,
         metadata={
             "name": "Cat26",
             "type": "Attribute",
-        }
+        },
     )
     cat27: None | bool = field(
         default=None,
         metadata={
             "name": "Cat27",
             "type": "Attribute",
-        }
+        },
     )
     cat28: None | bool = field(
         default=None,
         metadata={
             "name": "Cat28",
             "type": "Attribute",
-        }
+        },
     )
     cat29: None | bool = field(
         default=None,
         metadata={
             "name": "Cat29",
             "type": "Attribute",
-        }
+        },
     )
     cat30: None | bool = field(
         default=None,
         metadata={
             "name": "Cat30",
             "type": "Attribute",
-        }
+        },
     )
     cat31: None | bool = field(
         default=None,
         metadata={
             "name": "Cat31",
             "type": "Attribute",
-        }
+        },
     )
     restrictive_dt: None | XmlDate = field(
         default=None,
         metadata={
             "name": "RestrictiveDt",
             "type": "Attribute",
-        }
+        },
     )
     surcharge_amt: None | Decimal = field(
         default=None,
         metadata={
             "name": "SurchargeAmt",
             "type": "Attribute",
-        }
+        },
     )
     not_usacity: None | bool = field(
         default=None,
         metadata={
             "name": "NotUSACity",
             "type": "Attribute",
-        }
+        },
     )
     missing_rules: None | bool = field(
         default=None,
         metadata={
             "name": "MissingRules",
             "type": "Attribute",
-        }
+        },
     )

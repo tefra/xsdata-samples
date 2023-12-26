@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = (
+    "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+)
 
 
 @dataclass
@@ -12,6 +14,7 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
         Insured CED - Cedant REI - Reinsurer BRK - Broker INC - Insurer
     :ivar party_guns:
     """
+
     class Meta:
         global_type = False
 
@@ -19,14 +22,14 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     party_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "PartyType",
             "type": "Attribute",
-        }
+        },
     )
     party_guns: Optional[str] = field(
         default=None,
@@ -34,5 +37,5 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
             "name": "PartyGUNS",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -14,5 +14,5 @@ class BaseFaultTypeFaultCause:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )

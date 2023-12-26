@@ -15,6 +15,7 @@ class TypeProfileInfo2:
         Additional identifier managed by an external system.
     description
     """
+
     class Meta:
         name = "typeProfileInfo"
 
@@ -25,7 +26,7 @@ class TypeProfileInfo2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class TypeProfileInfo2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

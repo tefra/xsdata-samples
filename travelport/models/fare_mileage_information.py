@@ -9,6 +9,7 @@ class FareMileageInformation:
     """
     Contains Fare/Tariff Display Mileage Information.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -16,5 +17,5 @@ class FareMileageInformation:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

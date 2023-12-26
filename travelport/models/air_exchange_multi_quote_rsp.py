@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.air_exchange_mulit_quote_list import AirExchangeMulitQuoteList
+from travelport.models.air_exchange_mulit_quote_list import (
+    AirExchangeMulitQuoteList,
+)
 from travelport.models.air_segment_list import AirSegmentList
 from travelport.models.base_rsp_1 import BaseRsp1
 from travelport.models.brand_list import BrandList
@@ -19,7 +21,7 @@ class AirExchangeMultiQuoteRsp(BaseRsp1):
             "name": "AirSegmentList",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     brand_list: list[BrandList] = field(
         default_factory=list,
@@ -27,7 +29,7 @@ class AirExchangeMultiQuoteRsp(BaseRsp1):
             "name": "BrandList",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_exchange_mulit_quote_list: list[AirExchangeMulitQuoteList] = field(
         default_factory=list,
@@ -35,5 +37,5 @@ class AirExchangeMultiQuoteRsp(BaseRsp1):
             "name": "AirExchangeMulitQuoteList",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

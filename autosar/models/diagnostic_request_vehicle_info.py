@@ -7,9 +7,13 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
 from .diagnostic_info_type_subtypes_enum import DiagnosticInfoTypeSubtypesEnum
-from .diagnostic_request_vehicle_info_class_subtypes_enum import DiagnosticRequestVehicleInfoClassSubtypesEnum
+from .diagnostic_request_vehicle_info_class_subtypes_enum import (
+    DiagnosticRequestVehicleInfoClassSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -90,6 +94,7 @@ class DiagnosticRequestVehicleInfo:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-REQUEST-VEHICLE-INFO"
 
@@ -100,15 +105,17 @@ class DiagnosticRequestVehicleInfo:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticRequestVehicleInfo.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticRequestVehicleInfo.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +123,7 @@ class DiagnosticRequestVehicleInfo:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +131,7 @@ class DiagnosticRequestVehicleInfo:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +139,7 @@ class DiagnosticRequestVehicleInfo:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +147,7 @@ class DiagnosticRequestVehicleInfo:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +155,7 @@ class DiagnosticRequestVehicleInfo:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticRequestVehicleInfo.Annotations"] = field(
         default=None,
@@ -156,7 +163,7 @@ class DiagnosticRequestVehicleInfo:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -164,38 +171,44 @@ class DiagnosticRequestVehicleInfo:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticRequestVehicleInfo.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticRequestVehicleInfo.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    info_type_ref: Optional["DiagnosticRequestVehicleInfo.InfoTypeRef"] = field(
+    info_type_ref: Optional[
+        "DiagnosticRequestVehicleInfo.InfoTypeRef"
+    ] = field(
         default=None,
         metadata={
             "name": "INFO-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    request_vehicle_information_class_ref: Optional["DiagnosticRequestVehicleInfo.RequestVehicleInformationClassRef"] = field(
+    request_vehicle_information_class_ref: Optional[
+        "DiagnosticRequestVehicleInfo.RequestVehicleInformationClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUEST-VEHICLE-INFORMATION-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +216,14 @@ class DiagnosticRequestVehicleInfo:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +234,7 @@ class DiagnosticRequestVehicleInfo:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,7 +245,7 @@ class DiagnosticRequestVehicleInfo:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,7 +256,7 @@ class DiagnosticRequestVehicleInfo:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -254,7 +267,7 @@ class DiagnosticRequestVehicleInfo:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -265,5 +278,5 @@ class DiagnosticRequestVehicleInfo:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

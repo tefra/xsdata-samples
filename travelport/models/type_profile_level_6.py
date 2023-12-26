@@ -8,6 +8,7 @@ class TypeProfileLevel6(Enum):
     """
     The type of the profile or profile template.
     """
+
     AGENCY = "Agency"
     BRANCH = "Branch"
     BRANCH_GROUP = "BranchGroup"

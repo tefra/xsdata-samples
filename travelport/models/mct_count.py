@@ -10,6 +10,7 @@ class MctCount:
     """
     The count of MCT exceptions for the given search criteria.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class MctCount:
             "name": "Connection",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -27,7 +28,7 @@ class MctCount:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     count: None | int = field(
         default=None,
@@ -35,5 +36,5 @@ class MctCount:
             "name": "Count",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

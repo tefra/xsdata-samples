@@ -14,6 +14,7 @@ class ColourEnum(Enum):
     :cvar WHITE: The colour white.
     :cvar WHITE_YELLOW: The colour white-yellow.
     """
+
     AMBER = "amber"
     BLUE = "blue"
     GREEN = "green"

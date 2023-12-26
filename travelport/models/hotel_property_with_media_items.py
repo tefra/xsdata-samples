@@ -19,6 +19,7 @@ class HotelPropertyWithMediaItems:
         Errors, Warnings and informational messages for the property
         referenced above.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -28,7 +29,7 @@ class HotelPropertyWithMediaItems:
             "name": "HotelProperty",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     media_item: list[MediaItem1] = field(
         default_factory=list,
@@ -37,7 +38,7 @@ class HotelPropertyWithMediaItems:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     media_result_message: list[TypeResultMessage1] = field(
         default_factory=list,
@@ -45,5 +46,5 @@ class HotelPropertyWithMediaItems:
             "name": "MediaResultMessage",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

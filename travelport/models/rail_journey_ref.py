@@ -9,6 +9,7 @@ class RailJourneyRef:
     """
     Reference to a RailJourney.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -18,5 +19,5 @@ class RailJourneyRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

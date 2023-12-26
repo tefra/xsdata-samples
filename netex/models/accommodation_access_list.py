@@ -14,5 +14,5 @@ class AccommodationAccessList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

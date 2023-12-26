@@ -28,7 +28,7 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -36,7 +36,7 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -44,7 +44,7 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -52,28 +52,28 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     location: Optional[CoctMt710000Uv01Place] = field(
         default=None,
@@ -81,23 +81,25 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    service_provider_organization: Optional[CoctMt150003Uv03Organization] = field(
+    service_provider_organization: Optional[
+        CoctMt150003Uv03Organization
+    ] = field(
         default=None,
         metadata={
             "name": "serviceProviderOrganization",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: Optional[RoleClassServiceDeliveryLocation] = field(
         default=None,
@@ -105,5 +107,5 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "name": "classCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -15,5 +15,5 @@ class TrueType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

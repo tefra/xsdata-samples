@@ -19,7 +19,7 @@ class Plane(Node):
             "name": "BPMNShape",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/DI",
-        }
+        },
     )
     bpmnedge: List[Bpmnedge] = field(
         default_factory=list,
@@ -27,12 +27,12 @@ class Plane(Node):
             "name": "BPMNEdge",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/DI",
-        }
+        },
     )
     diagram_element: List[DiagramElement] = field(
         default_factory=list,
         metadata={
             "name": "DiagramElement",
             "type": "Element",
-        }
+        },
     )

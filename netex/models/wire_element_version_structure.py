@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .infrastructure_link_version_structure import InfrastructureLinkVersionStructure
+from .infrastructure_link_version_structure import (
+    InfrastructureLinkVersionStructure,
+)
 from .wire_point_ref_structure import WirePointRefStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -18,7 +20,7 @@ class WireElementVersionStructure(InfrastructureLinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_point_ref: Optional[WirePointRefStructure] = field(
         default=None,
@@ -27,5 +29,5 @@ class WireElementVersionStructure(InfrastructureLinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

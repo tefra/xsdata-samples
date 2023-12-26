@@ -20,6 +20,7 @@ class TypeSearchElectronicAddress1:
         A code for categorizing a contact mechanism based on purpose or use.
         Examples include business, persona., etc.
     """
+
     class Meta:
         name = "typeSearchElectronicAddress"
 
@@ -28,7 +29,7 @@ class TypeSearchElectronicAddress1:
         metadata={
             "name": "Address",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -37,12 +38,12 @@ class TypeSearchElectronicAddress1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     purpose: None | TypeContactPurpose1 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )

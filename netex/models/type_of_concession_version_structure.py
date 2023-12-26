@@ -17,5 +17,5 @@ class TypeOfConcessionVersionStructure(TypeOfValueVersionStructure):
             "name": "alternativeNames",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

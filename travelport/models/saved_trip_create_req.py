@@ -11,6 +11,7 @@ class SavedTripCreateReq(BaseReq1):
     """
     Request to create a SavedTrip.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -19,5 +20,5 @@ class SavedTripCreateReq(BaseReq1):
         metadata={
             "name": "SavedTrip",
             "type": "Element",
-        }
+        },
     )

@@ -21,7 +21,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "PurchaseAction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     purchase_when: Optional[PurchaseWhenEnumeration] = field(
         default=None,
@@ -29,7 +29,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "PurchaseWhen",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     latest_time: Optional[XmlTime] = field(
         default=None,
@@ -37,7 +37,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "LatestTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_period_before_departure: Optional[XmlDuration] = field(
         default=None,
@@ -45,7 +45,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumPeriodBeforeDeparture",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_period_interval_ref: Optional[TimeIntervalRefStructure] = field(
         default=None,
@@ -53,7 +53,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumPeriodIntervalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_period_before_departure: Optional[XmlDuration] = field(
         default=None,
@@ -61,7 +61,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumPeriodBeforeDeparture",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_period_interval_ref: Optional[TimeIntervalRefStructure] = field(
         default=None,
@@ -69,7 +69,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumPeriodIntervalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     purchase_moment: List[PurchaseMomentEnumeration] = field(
         default_factory=list,
@@ -78,5 +78,5 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

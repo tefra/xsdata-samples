@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_entity_status_2 import TypeProfileEntityStatus2
+from travelport.models.type_profile_entity_status_2 import (
+    TypeProfileEntityStatus2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -15,6 +17,7 @@ class TypeProfileStatusHistory2:
     status
         The updated status.
     """
+
     class Meta:
         name = "typeProfileStatusHistory"
 
@@ -23,5 +26,5 @@ class TypeProfileStatusHistory2:
         metadata={
             "name": "Status",
             "type": "Attribute",
-        }
+        },
     )

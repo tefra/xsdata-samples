@@ -10,5 +10,6 @@ class TpegLoc01AreaLocationSubtypeEnum(Enum):
     :cvar LARGE_AREA: A geographic or geometric large area.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     LARGE_AREA = "largeArea"
     OTHER = "other"

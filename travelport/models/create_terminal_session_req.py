@@ -18,6 +18,7 @@ class CreateTerminalSessionReq(BaseReq4):
     session_timeout
         Applicable to 1G/1V. Specify Session Timeout value in Milliseconds.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
@@ -28,12 +29,12 @@ class CreateTerminalSessionReq(BaseReq4):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     session_timeout: None | int = field(
         default=None,
         metadata={
             "name": "SessionTimeout",
             "type": "Attribute",
-        }
+        },
     )

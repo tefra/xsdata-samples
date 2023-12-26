@@ -16,6 +16,7 @@ class GdsQueuePlaceRsp(BaseRsp1):
     universal_record
         The Queue Place Response will return the UR Record
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -25,5 +26,5 @@ class GdsQueuePlaceRsp(BaseRsp1):
             "name": "UniversalRecord",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/universal_v52_0",
-        }
+        },
     )

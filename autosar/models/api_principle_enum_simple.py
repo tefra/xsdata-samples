@@ -10,5 +10,6 @@ class ApiPrincipleEnumSimple(Enum):
     :cvar PER_EXECUTABLE: The Rte or SchM API is provided for a specific
         ExecutableEntity of a software component / BSW Module
     """
+
     COMMON = "COMMON"
     PER_EXECUTABLE = "PER-EXECUTABLE"

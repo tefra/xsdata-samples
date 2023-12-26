@@ -18,6 +18,7 @@ class MetaData2:
         This attribute will capture which view (say, Agency or Traveler) is
         called for.
     """
+
     class Meta:
         name = "MetaData"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -29,7 +30,7 @@ class MetaData2:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     user_type: None | str = field(
         default=None,
@@ -39,5 +40,5 @@ class MetaData2:
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )

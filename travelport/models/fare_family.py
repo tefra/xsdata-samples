@@ -21,6 +21,7 @@ class FareFamily:
     key
     version
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -29,7 +30,7 @@ class FareFamily:
         metadata={
             "name": "FlightSpec",
             "type": "Element",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -38,7 +39,7 @@ class FareFamily:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     label: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class FareFamily:
             "required": True,
             "min_length": 0,
             "max_length": 32,
-        }
+        },
     )
     fare_basis: None | str = field(
         default=None,
@@ -57,14 +58,14 @@ class FareFamily:
             "type": "Attribute",
             "required": True,
             "max_length": 20,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -72,5 +73,5 @@ class FareFamily:
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

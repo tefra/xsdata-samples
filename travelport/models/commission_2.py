@@ -28,6 +28,7 @@ class Commission2:
         The approximate commission on surcharges in the agency’s provisioned
         or requested currency.
     """
+
     class Meta:
         name = "Commission"
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
@@ -37,40 +38,40 @@ class Commission2:
         metadata={
             "name": "Indicator",
             "type": "Attribute",
-        }
+        },
     )
     percent: None | str = field(
         default=None,
         metadata={
             "name": "Percent",
             "type": "Attribute",
-        }
+        },
     )
     commission_amount: None | str = field(
         default=None,
         metadata={
             "name": "CommissionAmount",
             "type": "Attribute",
-        }
+        },
     )
     approx_commission_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproxCommissionAmount",
             "type": "Attribute",
-        }
+        },
     )
     commission_on_surcharges: None | str = field(
         default=None,
         metadata={
             "name": "CommissionOnSurcharges",
             "type": "Attribute",
-        }
+        },
     )
     approx_commission_on_surcharges: None | str = field(
         default=None,
         metadata={
             "name": "ApproxCommissionOnSurcharges",
             "type": "Attribute",
-        }
+        },
     )

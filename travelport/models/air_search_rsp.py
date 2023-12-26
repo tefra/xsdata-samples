@@ -2,9 +2,13 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.air_price_point_list import AirPricePointList
 from travelport.models.air_pricing_solution import AirPricingSolution
-from travelport.models.alternate_location_distance_list import AlternateLocationDistanceList
+from travelport.models.alternate_location_distance_list import (
+    AlternateLocationDistanceList,
+)
 from travelport.models.alternate_route_list import AlternateRouteList
-from travelport.models.base_availability_search_rsp import BaseAvailabilitySearchRsp
+from travelport.models.base_availability_search_rsp import (
+    BaseAvailabilitySearchRsp,
+)
 from travelport.models.expert_solution_list import ExpertSolutionList
 from travelport.models.fare_info_message import FareInfoMessage
 from travelport.models.fare_note_list import FareNoteList
@@ -24,13 +28,14 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
     """
     Base Response for Air Search.
     """
+
     fare_note_list: None | FareNoteList = field(
         default=None,
         metadata={
             "name": "FareNoteList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     expert_solution_list: None | ExpertSolutionList = field(
         default=None,
@@ -38,7 +43,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "ExpertSolutionList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     route_list: None | RouteList = field(
         default=None,
@@ -46,7 +51,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "RouteList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     alternate_route_list: None | AlternateRouteList = field(
         default=None,
@@ -54,15 +59,17 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "AlternateRouteList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
-    alternate_location_distance_list: None | AlternateLocationDistanceList = field(
-        default=None,
-        metadata={
-            "name": "AlternateLocationDistanceList",
-            "type": "Element",
-            "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+    alternate_location_distance_list: None | AlternateLocationDistanceList = (
+        field(
+            default=None,
+            metadata={
+                "name": "AlternateLocationDistanceList",
+                "type": "Element",
+                "namespace": "http://www.travelport.com/schema/air_v52_0",
+            },
+        )
     )
     fare_info_message: list[FareInfoMessage] = field(
         default_factory=list,
@@ -71,7 +78,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -80,7 +87,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     air_price_point_list: None | AirPricePointList = field(
         default=None,
@@ -88,7 +95,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "AirPricePointList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     rail_segment_list: None | RailSegmentList = field(
         default=None,
@@ -96,7 +103,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "RailSegmentList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
-        }
+        },
     )
     rail_journey_list: None | RailJourneyList = field(
         default=None,
@@ -104,7 +111,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "RailJourneyList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
-        }
+        },
     )
     rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
@@ -112,7 +119,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "RailFareNoteList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
-        }
+        },
     )
     rail_fare_idlist: None | RailFareIdlist = field(
         default=None,
@@ -120,7 +127,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "RailFareIDList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
-        }
+        },
     )
     rail_fare_list: None | RailFareList = field(
         default=None,
@@ -128,7 +135,7 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "name": "RailFareList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
-        }
+        },
     )
     rail_pricing_solution: list[RailPricingSolution] = field(
         default_factory=list,
@@ -137,5 +144,5 @@ class AirSearchRsp(BaseAvailabilitySearchRsp):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

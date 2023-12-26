@@ -7,8 +7,12 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_session_control_class_subtypes_enum import DiagnosticSessionControlClassSubtypesEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_session_control_class_subtypes_enum import (
+    DiagnosticSessionControlClassSubtypesEnum,
+)
 from .diagnostic_session_subtypes_enum import DiagnosticSessionSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -89,6 +93,7 @@ class DiagnosticSessionControl:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-SESSION-CONTROL"
 
@@ -99,15 +104,17 @@ class DiagnosticSessionControl:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticSessionControl.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticSessionControl.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +122,7 @@ class DiagnosticSessionControl:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +130,7 @@ class DiagnosticSessionControl:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +138,7 @@ class DiagnosticSessionControl:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +146,7 @@ class DiagnosticSessionControl:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +154,7 @@ class DiagnosticSessionControl:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticSessionControl.Annotations"] = field(
         default=None,
@@ -155,7 +162,7 @@ class DiagnosticSessionControl:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -163,38 +170,44 @@ class DiagnosticSessionControl:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticSessionControl.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticSessionControl.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    diagnostic_session_ref: Optional["DiagnosticSessionControl.DiagnosticSessionRef"] = field(
+    diagnostic_session_ref: Optional[
+        "DiagnosticSessionControl.DiagnosticSessionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-SESSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    session_control_class_ref: Optional["DiagnosticSessionControl.SessionControlClassRef"] = field(
+    session_control_class_ref: Optional[
+        "DiagnosticSessionControl.SessionControlClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SESSION-CONTROL-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -202,14 +215,14 @@ class DiagnosticSessionControl:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -220,7 +233,7 @@ class DiagnosticSessionControl:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -231,7 +244,7 @@ class DiagnosticSessionControl:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -242,7 +255,7 @@ class DiagnosticSessionControl:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -253,7 +266,7 @@ class DiagnosticSessionControl:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -264,5 +277,5 @@ class DiagnosticSessionControl:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

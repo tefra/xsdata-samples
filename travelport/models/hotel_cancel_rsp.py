@@ -16,5 +16,5 @@ class HotelCancelRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-        }
+        },
     )

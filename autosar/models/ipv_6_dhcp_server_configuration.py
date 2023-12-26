@@ -54,6 +54,7 @@ class Ipv6DhcpServerConfiguration:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IPV-6-DHCP-SERVER-CONFIGURATION"
 
@@ -63,7 +64,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -71,7 +72,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -79,7 +80,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -87,7 +88,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     address_range_lower_bound: Optional[Ip6AddressString] = field(
         default=None,
@@ -95,7 +96,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "ADDRESS-RANGE-LOWER-BOUND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     address_range_upper_bound: Optional[Ip6AddressString] = field(
         default=None,
@@ -103,7 +104,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "ADDRESS-RANGE-UPPER-BOUND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_gateway: Optional[Ip6AddressString] = field(
         default=None,
@@ -111,7 +112,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "DEFAULT-GATEWAY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     default_lease_time: Optional[TimeValue] = field(
         default=None,
@@ -119,15 +120,17 @@ class Ipv6DhcpServerConfiguration:
             "name": "DEFAULT-LEASE-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    dns_server_addresses: Optional["Ipv6DhcpServerConfiguration.DnsServerAddresses"] = field(
+    dns_server_addresses: Optional[
+        "Ipv6DhcpServerConfiguration.DnsServerAddresses"
+    ] = field(
         default=None,
         metadata={
             "name": "DNS-SERVER-ADDRESSES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     network_mask: Optional[Ip6AddressString] = field(
         default=None,
@@ -135,14 +138,14 @@ class Ipv6DhcpServerConfiguration:
             "name": "NETWORK-MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -150,7 +153,7 @@ class Ipv6DhcpServerConfiguration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -159,11 +162,12 @@ class Ipv6DhcpServerConfiguration:
         :ivar dns_server_address: IP addresses of preconfigured DNS
             servers. Notation: FFFF:...:FFFF.
         """
+
         dns_server_address: List[Ip6AddressString] = field(
             default_factory=list,
             metadata={
                 "name": "DNS-SERVER-ADDRESS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

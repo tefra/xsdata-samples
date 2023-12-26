@@ -22,6 +22,7 @@ class RailSearchModifiers:
     max_solutions
         The maximum number of solutions to return. Decreasing this number
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -30,7 +31,7 @@ class RailSearchModifiers:
         metadata={
             "name": "PreferredSuppliers",
             "type": "Element",
-        }
+        },
     )
     max_changes: int = field(
         default=2,
@@ -39,28 +40,28 @@ class RailSearchModifiers:
             "type": "Attribute",
             "min_inclusive": 0,
             "max_inclusive": 3,
-        }
+        },
     )
     direction: None | TypeRailDirection = field(
         default=None,
         metadata={
             "name": "Direction",
             "type": "Attribute",
-        }
+        },
     )
     class_value: None | str = field(
         default=None,
         metadata={
             "name": "Class",
             "type": "Attribute",
-        }
+        },
     )
     max_solutions: int = field(
         default=300,
         metadata={
             "name": "MaxSolutions",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -72,5 +73,5 @@ class RailSearchModifiers:
                 "type": "Element",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

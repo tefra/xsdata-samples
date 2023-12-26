@@ -40,6 +40,7 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typePhoneHistory"
 
@@ -48,7 +49,7 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
             "name": "Country",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     area_code: None | str = field(
         default=None,
@@ -64,7 +65,7 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
             "name": "AreaCode",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     local_number: None | str = field(
         default=None,
@@ -72,7 +73,7 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
             "name": "LocalNumber",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     extension: None | str = field(
         default=None,
@@ -80,7 +81,7 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
             "name": "Extension",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -88,7 +89,7 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
             "name": "Location",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -97,21 +98,21 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     purpose: None | TypeContactPurpose1 = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-        }
+        },
     )
     provisioned: None | bool = field(
         default=None,
         metadata={
             "name": "Provisioned",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -120,12 +121,12 @@ class TypePhoneHistory1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

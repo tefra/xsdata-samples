@@ -1,6 +1,9 @@
-
-from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.agreement_interface_notify_agreement_input import AgreementInterfaceNotifyAgreementInput
-from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.agreement_interface_notify_agreement_output import AgreementInterfaceNotifyAgreementOutput
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.agreement_interface_notify_agreement_input import (
+    AgreementInterfaceNotifyAgreementInput,
+)
+from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.agreement_interface_notify_agreement_output import (
+    AgreementInterfaceNotifyAgreementOutput,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbs/enterprise/organisation/v1"
 

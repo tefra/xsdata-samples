@@ -18,7 +18,7 @@ class MctLookupRsp(BaseRsp1):
             "name": "MctStandard",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     mct_exception: list[MctException] = field(
         default_factory=list,
@@ -26,5 +26,5 @@ class MctLookupRsp(BaseRsp1):
             "name": "MctException",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

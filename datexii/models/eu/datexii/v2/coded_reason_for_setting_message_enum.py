@@ -21,6 +21,7 @@ class CodedReasonForSettingMessageEnum(Enum):
     :cvar DEFAULT: VMS is currently selected to display default
         information (e.g. time, date, temperature).
     """
+
     SITUATION = "situation"
     OPERATOR_CREATED = "operatorCreated"
     TRAFFIC_MANAGEMENT = "trafficManagement"

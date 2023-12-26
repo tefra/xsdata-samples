@@ -20,6 +20,7 @@ class BrandInfo:
     fare_info_ref
         A reference to a FareInfo. Providers: ACH, 1G, 1V, 1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,7 +29,7 @@ class BrandInfo:
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     brand_id: None | str = field(
         default=None,
@@ -38,19 +39,19 @@ class BrandInfo:
             "required": True,
             "min_length": 1,
             "max_length": 19,
-        }
+        },
     )
     air_pricing_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirPricingInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     fare_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
-        }
+        },
     )

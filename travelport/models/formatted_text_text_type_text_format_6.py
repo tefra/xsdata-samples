@@ -13,5 +13,6 @@ class FormattedTextTextTypeTextFormat6(Enum):
     HTML
         HTML formatted text.
     """
+
     PLAIN_TEXT = "PlainText"
     HTML = "HTML"

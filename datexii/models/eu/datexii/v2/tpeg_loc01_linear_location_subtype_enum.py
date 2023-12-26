@@ -10,4 +10,5 @@ class TpegLoc01LinearLocationSubtypeEnum(Enum):
     :cvar SEGMENT: A segment (or link) of the road network corresponding
         to the way in which the road operator has segmented the network.
     """
+
     SEGMENT = "segment"

@@ -12,6 +12,7 @@ class SavedTripRetrieveRsp(BaseRsp1):
 
     Contains the SavedTrip successfully Retrieved.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,5 +21,5 @@ class SavedTripRetrieveRsp(BaseRsp1):
         metadata={
             "name": "SavedTrip",
             "type": "Element",
-        }
+        },
     )

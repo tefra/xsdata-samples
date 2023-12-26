@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_fare_penalty_penalty_applies import TypeFarePenaltyPenaltyApplies
+from travelport.models.type_fare_penalty_penalty_applies import (
+    TypeFarePenaltyPenaltyApplies,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -23,6 +25,7 @@ class TypeFarePenalty:
     no_show
         The No Show penalty (if any) to change/cancel the fare.
     """
+
     class Meta:
         name = "typeFarePenalty"
 
@@ -32,7 +35,7 @@ class TypeFarePenalty:
             "name": "Amount",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     percentage: None | str = field(
         default=None,
@@ -41,19 +44,19 @@ class TypeFarePenalty:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
-        }
+        },
     )
     penalty_applies: None | TypeFarePenaltyPenaltyApplies = field(
         default=None,
         metadata={
             "name": "PenaltyApplies",
             "type": "Attribute",
-        }
+        },
     )
     no_show: None | bool = field(
         default=None,
         metadata={
             "name": "NoShow",
             "type": "Attribute",
-        }
+        },
     )

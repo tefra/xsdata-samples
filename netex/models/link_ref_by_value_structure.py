@@ -12,25 +12,25 @@ class LinkRefByValueStructure:
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
-        }
+        },
     )
     created: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     changed: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     from_point_ref: Optional[str] = field(
         default=None,
@@ -38,7 +38,7 @@ class LinkRefByValueStructure:
             "name": "fromPointRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     to_point_ref: Optional[str] = field(
         default=None,
@@ -46,19 +46,19 @@ class LinkRefByValueStructure:
             "name": "toPointRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name_of_point_ref_class: Optional[str] = field(
         default=None,
         metadata={
             "name": "nameOfPointRefClass",
             "type": "Attribute",
-        }
+        },
     )
     type_of_link_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "typeOfLinkRef",
             "type": "Attribute",
-        }
+        },
     )

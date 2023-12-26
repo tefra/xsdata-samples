@@ -12,6 +12,7 @@ class ParkingRouteTypeEnum(Enum):
     :cvar LORRY: A parking route for lorries.
     :cvar OTHER: Another type of parking route.
     """
+
     PEDESTRIAN = "pedestrian"
     BICYCLE = "bicycle"
     LORRY = "lorry"

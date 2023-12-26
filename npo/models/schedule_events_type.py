@@ -16,5 +16,5 @@ class ScheduleEventsType:
             "name": "scheduleEvent",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )

@@ -15,5 +15,5 @@ class Plus:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

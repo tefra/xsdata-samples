@@ -28,6 +28,7 @@ class Apisrequirements:
         Nationality of the traveler is required for booking for some
         suppliers.
     """
+
     class Meta:
         name = "APISRequirements"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -38,47 +39,47 @@ class Apisrequirements:
             "name": "Document",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | object = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     level: None | str = field(
         default=None,
         metadata={
             "name": "Level",
             "type": "Attribute",
-        }
+        },
     )
     gender_required: None | bool = field(
         default=None,
         metadata={
             "name": "GenderRequired",
             "type": "Attribute",
-        }
+        },
     )
     date_of_birth_required: None | bool = field(
         default=None,
         metadata={
             "name": "DateOfBirthRequired",
             "type": "Attribute",
-        }
+        },
     )
     required_documents: None | str = field(
         default=None,
         metadata={
             "name": "RequiredDocuments",
             "type": "Attribute",
-        }
+        },
     )
     nationality_required: None | bool = field(
         default=None,
         metadata={
             "name": "NationalityRequired",
             "type": "Attribute",
-        }
+        },
     )

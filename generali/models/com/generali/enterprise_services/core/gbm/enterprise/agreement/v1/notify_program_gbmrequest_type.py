@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmheader_type import BaseGbmheaderType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype import ProgramGbotype
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_gbmheader_type import (
+    BaseGbmheaderType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.program_gbotype import (
+    ProgramGbotype,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -15,6 +21,7 @@ class NotifyProgramGbmrequestType(BaseGbmheaderType):
     :ivar program_gbo: <description xmlns="">The business object to
         retrieve</description>
     """
+
     class Meta:
         name = "NotifyProgramGBMRequestType"
 
@@ -25,5 +32,5 @@ class NotifyProgramGbmrequestType(BaseGbmheaderType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )

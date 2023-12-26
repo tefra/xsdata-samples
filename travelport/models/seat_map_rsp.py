@@ -44,6 +44,7 @@ class SeatMapRsp(BaseRsp1):
         Provider: 1G,1V-Seat price for the all passengers traveling together
         only when supplier provides group flat fee.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -54,7 +55,7 @@ class SeatMapRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     cabin_class: None | CabinClass1 = field(
         default=None,
@@ -62,7 +63,7 @@ class SeatMapRsp(BaseRsp1):
             "name": "CabinClass",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     air_segment: list[AirSegment] = field(
         default_factory=list,
@@ -70,7 +71,7 @@ class SeatMapRsp(BaseRsp1):
             "name": "AirSegment",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     search_traveler: list[SearchTraveler] = field(
         default_factory=list,
@@ -78,14 +79,14 @@ class SeatMapRsp(BaseRsp1):
             "name": "SearchTraveler",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
         metadata={
             "name": "OptionalServices",
             "type": "Element",
-        }
+        },
     )
     remark: None | Remark1 = field(
         default=None,
@@ -93,7 +94,7 @@ class SeatMapRsp(BaseRsp1):
             "name": "Remark",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     rows: list[Rows] = field(
         default_factory=list,
@@ -101,7 +102,7 @@ class SeatMapRsp(BaseRsp1):
             "name": "Rows",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     payment_restriction: list[PaymentRestriction1] = field(
         default_factory=list,
@@ -110,7 +111,7 @@ class SeatMapRsp(BaseRsp1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     seat_information: list[SeatInformation] = field(
         default_factory=list,
@@ -118,19 +119,19 @@ class SeatMapRsp(BaseRsp1):
             "name": "SeatInformation",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     copyright: None | str = field(
         default=None,
         metadata={
             "name": "Copyright",
             "type": "Element",
-        }
+        },
     )
     group_seat_price: None | str = field(
         default=None,
         metadata={
             "name": "GroupSeatPrice",
             "type": "Attribute",
-        }
+        },
     )

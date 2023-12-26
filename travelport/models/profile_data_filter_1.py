@@ -1,7 +1,11 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.geo_political_area_filter_1 import GeoPoliticalAreaFilter1
-from travelport.models.type_profile_data_category_1 import TypeProfileDataCategory1
+from travelport.models.geo_political_area_filter_1 import (
+    GeoPoliticalAreaFilter1,
+)
+from travelport.models.type_profile_data_category_1 import (
+    TypeProfileDataCategory1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -14,6 +18,7 @@ class ProfileDataFilter1:
     response.  If no filter is specified then "General Information" is
     defaulted.  If duplicate categories are specifed they are ignored.
     """
+
     class Meta:
         name = "ProfileDataFilter"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -24,12 +29,12 @@ class ProfileDataFilter1:
             "name": "ProfileDataCategory",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
     geo_political_area_filter: list[GeoPoliticalAreaFilter1] = field(
         default_factory=list,
         metadata={
             "name": "GeoPoliticalAreaFilter",
             "type": "Element",
-        }
+        },
     )

@@ -1,12 +1,16 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .direction_type_enumeration import DirectionTypeEnumeration
 from .route_ref_structure import RouteRefStructure
-from .section_in_sequence_versioned_child_structure import LinkSequenceVersionStructure
+from .section_in_sequence_versioned_child_structure import (
+    LinkSequenceVersionStructure,
+)
 from .time_demand_type_ref import TimeDemandTypeRef
 from .timeband_ref import TimebandRef
 from .timing_links_rel_structure import TimingLinksRelStructure
-from .timing_points_in_journey_pattern_rel_structure import TimingPointsInJourneyPatternRelStructure
+from .timing_points_in_journey_pattern_rel_structure import (
+    TimingPointsInJourneyPatternRelStructure,
+)
 from .timing_points_rel_structure import TimingPointsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -23,7 +27,7 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             "name": "RouteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
         default=None,
@@ -31,9 +35,11 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             "name": "DirectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    time_demand_type_ref_or_timeband_ref: Optional[object] = field(
+    time_demand_type_ref_or_timeband_ref: Optional[
+        Union[TimeDemandTypeRef, TimebandRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,27 +55,29 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    points_in_sequence: Optional[TimingPointsInJourneyPatternRelStructure] = field(
+    points_in_sequence: Optional[
+        TimingPointsInJourneyPatternRelStructure
+    ] = field(
         default=None,
         metadata={
             "name": "pointsInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     points: Optional[TimingPointsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     links: Optional[TimingLinksRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

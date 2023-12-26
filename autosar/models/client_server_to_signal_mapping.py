@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .abstract_service_instance_subtypes_enum import AbstractServiceInstanceSubtypesEnum
+from .abstract_service_instance_subtypes_enum import (
+    AbstractServiceInstanceSubtypesEnum,
+)
 from .annotation import (
     DocumentationBlock,
     VariationPoint,
@@ -11,7 +13,9 @@ from .event_handler_subtypes_enum import EventHandlerSubtypesEnum
 from .operation_in_system_instance_ref import OperationInSystemInstanceRef
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .serialization_technology_subtypes_enum import SerializationTechnologySubtypesEnum
+from .serialization_technology_subtypes_enum import (
+    SerializationTechnologySubtypesEnum,
+)
 from .system_signal_subtypes_enum import SystemSignalSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -68,6 +72,7 @@ class ClientServerToSignalMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-TO-SIGNAL-MAPPING"
 
@@ -77,23 +82,27 @@ class ClientServerToSignalMapping:
             "name": "COMMUNICATION-DIRECTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_group_refs: Optional["ClientServerToSignalMapping.EventGroupRefs"] = field(
+    event_group_refs: Optional[
+        "ClientServerToSignalMapping.EventGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_handler_refs: Optional["ClientServerToSignalMapping.EventHandlerRefs"] = field(
+    event_handler_refs: Optional[
+        "ClientServerToSignalMapping.EventHandlerRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-HANDLER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -101,15 +110,17 @@ class ClientServerToSignalMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_instance_refs: Optional["ClientServerToSignalMapping.ServiceInstanceRefs"] = field(
+    service_instance_refs: Optional[
+        "ClientServerToSignalMapping.ServiceInstanceRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -117,23 +128,27 @@ class ClientServerToSignalMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    call_signal_ref: Optional["ClientServerToSignalMapping.CallSignalRef"] = field(
+    call_signal_ref: Optional[
+        "ClientServerToSignalMapping.CallSignalRef"
+    ] = field(
         default=None,
         metadata={
             "name": "CALL-SIGNAL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    client_server_operation_iref: Optional[OperationInSystemInstanceRef] = field(
+    client_server_operation_iref: Optional[
+        OperationInSystemInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-OPERATION-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     length_client_id: Optional[PositiveInteger] = field(
         default=None,
@@ -141,7 +156,7 @@ class ClientServerToSignalMapping:
             "name": "LENGTH-CLIENT-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     length_sequence_counter: Optional[PositiveInteger] = field(
         default=None,
@@ -149,30 +164,34 @@ class ClientServerToSignalMapping:
             "name": "LENGTH-SEQUENCE-COUNTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    return_signal_ref: Optional["ClientServerToSignalMapping.ReturnSignalRef"] = field(
+    return_signal_ref: Optional[
+        "ClientServerToSignalMapping.ReturnSignalRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RETURN-SIGNAL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    serializer_ref: Optional["ClientServerToSignalMapping.SerializerRef"] = field(
+    serializer_ref: Optional[
+        "ClientServerToSignalMapping.SerializerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SERIALIZER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -180,18 +199,20 @@ class ClientServerToSignalMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class EventGroupRefs:
-        event_group_ref: List["ClientServerToSignalMapping.EventGroupRefs.EventGroupRef"] = field(
+        event_group_ref: List[
+            "ClientServerToSignalMapping.EventGroupRefs.EventGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EVENT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -202,18 +223,20 @@ class ClientServerToSignalMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class EventHandlerRefs:
-        event_handler_ref: List["ClientServerToSignalMapping.EventHandlerRefs.EventHandlerRef"] = field(
+        event_handler_ref: List[
+            "ClientServerToSignalMapping.EventHandlerRefs.EventHandlerRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EVENT-HANDLER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -224,18 +247,20 @@ class ClientServerToSignalMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List["ClientServerToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef"] = field(
+        service_instance_ref: List[
+            "ClientServerToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -246,7 +271,7 @@ class ClientServerToSignalMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -257,7 +282,7 @@ class ClientServerToSignalMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -268,7 +293,7 @@ class ClientServerToSignalMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -279,5 +304,5 @@ class ClientServerToSignalMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

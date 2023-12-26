@@ -10,6 +10,7 @@ class FmFeatureSelectionStateSimple(Enum):
     :cvar UNDECIDED: It is not yet decided whether the feature shall be
         included into or excluded from the selection.
     """
+
     DESELECTED = "DESELECTED"
     SELECTED = "SELECTED"
     UNDECIDED = "UNDECIDED"

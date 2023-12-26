@@ -15,6 +15,7 @@ class DayEnum(Enum):
     :cvar SATURDAY: Saturday.
     :cvar SUNDAY: Sunday.
     """
+
     MONDAY = "monday"
     TUESDAY = "tuesday"
     WEDNESDAY = "wednesday"

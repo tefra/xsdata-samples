@@ -9,6 +9,7 @@ class AirItinerarySolutionRef:
     """
     Reference to a complete AirItinerarySolution from a shared list.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class AirItinerarySolutionRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

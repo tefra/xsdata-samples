@@ -36,6 +36,7 @@ class DataFilter:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DATA-FILTER"
 
@@ -45,7 +46,7 @@ class DataFilter:
             "name": "DATA-FILTER-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mask: Optional[UnlimitedInteger] = field(
         default=None,
@@ -53,7 +54,7 @@ class DataFilter:
             "name": "MASK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max: Optional[UnlimitedInteger] = field(
         default=None,
@@ -61,7 +62,7 @@ class DataFilter:
             "name": "MAX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     min: Optional[UnlimitedInteger] = field(
         default=None,
@@ -69,7 +70,7 @@ class DataFilter:
             "name": "MIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     offset: Optional[PositiveInteger] = field(
         default=None,
@@ -77,7 +78,7 @@ class DataFilter:
             "name": "OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     period: Optional[PositiveInteger] = field(
         default=None,
@@ -85,7 +86,7 @@ class DataFilter:
             "name": "PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     x: Optional[UnlimitedInteger] = field(
         default=None,
@@ -93,14 +94,14 @@ class DataFilter:
             "name": "X",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -108,5 +109,5 @@ class DataFilter:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

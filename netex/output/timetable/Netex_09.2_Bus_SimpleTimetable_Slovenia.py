@@ -136,26 +136,26 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="ao:CAL_02",
-                                version="any",
+                                id='ao:CAL_02',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            value="REQUEST",
-                            ref="ao:TimetableFrameTIM_23_O"
+                            value='REQUEST',
+                            ref='ao:TimetableFrameTIM_23_O'
                         ),
                     ]
                 ),
@@ -164,56 +164,56 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple timetable frame with two journeys and service calendar, with detailed timings"
+        value='Example  of simple timetable frame with two journeys and service calendar, with detailed timings'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="ao:CAL_02",
-                version="1",
+                id='ao:CAL_02',
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceFrame(
-                            id="ao:svf_12",
-                            version="1",
+                            id='ao:svf_12',
+                            version='1',
                             name=MultilingualString(
-                                value="Stops for Winter timetable for route 24 "
+                                value='Stops for Winter timetable for route 24 '
                             ),
                             directions=DirectionsInFrameRelStructure(
                                 direction=[
                                     Direction(
-                                        id="ao:DR_Westbound",
-                                        version="any",
+                                        id='ao:DR_Westbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Westbound"
+                                            value='Westbound'
                                         )
                                     ),
                                     Direction(
-                                        id="ao:DR_Southbound",
-                                        version="any",
+                                        id='ao:DR_Southbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eastbound"
+                                            value='Eastbound'
                                         )
                                     ),
                                 ]
@@ -221,15 +221,15 @@ obj = PublicationDelivery(
                             routes=RoutesInFrameRelStructure(
                                 flexible_route_or_route=[
                                     Route(
-                                        id="ao:RT_24o",
-                                        version="any",
+                                        id='ao:RT_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 24 Alpha to Charley  (Details not GIVEN)"
+                                            value='Line 24 Alpha to Charley  (Details not GIVEN)'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         direction_ref=DirectionRef(
-                                            version="any",
-                                            ref="ao:DR_Westbound"
+                                            version='any',
+                                            ref='ao:DR_Westbound'
                                         )
                                     ),
                                 ]
@@ -237,20 +237,20 @@ obj = PublicationDelivery(
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     Line(
-                                        id="ao:K66",
-                                        version="any",
+                                        id='ao:K66',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Kocevje - Petrina"
+                                            value='Kocevje - Petrina'
                                         ),
                                         short_name=MultilingualString(
-                                            value="K66"
+                                            value='K66'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
-                                        public_code="K66",
+                                        public_code='K66',
                                         routes=RouteRefsRelStructure(
                                             route_ref=[
                                                 RouteRef(
-                                                    ref="ao:RT_24o"
+                                                    ref='ao:RT_24o'
                                                 ),
                                             ]
                                         )
@@ -260,110 +260,110 @@ obj = PublicationDelivery(
                             destination_displays=DestinationDisplaysInFrameRelStructure(
                                 destination_display=[
                                     DestinationDisplay(
-                                        id="ao:DST_Bravo",
-                                        version="any",
+                                        id='ao:DST_Bravo',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bravo"
+                                            value='Bravo'
                                         ),
-                                        public_code="Bravo"
+                                        public_code='Bravo'
                                     ),
                                     DestinationDisplay(
-                                        id="ao:DST_Charley",
-                                        version="any",
+                                        id='ao:DST_Charley',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Charley"
+                                            value='Charley'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Charley G"
+                                            value='Charley G'
                                         ),
-                                        public_code="Charley"
+                                        public_code='Charley'
                                     ),
                                 ]
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="ao:Briga-p",
-                                        version="any",
+                                        id='ao:Briga-p',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Briga smer Petrina"
+                                            value='Briga smer Petrina'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="ao:Briga-k",
-                                        version="any",
+                                        id='ao:Briga-k',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Briga smer  Kocevje"
+                                            value='Briga smer  Kocevje'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.0000"),
-                                            latitude=Decimal("0.1000")
+                                            longitude=Decimal('53.0000'),
+                                            latitude=Decimal('0.1000')
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="ao:Banjaloka-p",
-                                        version="any",
+                                        id='ao:Banjaloka-p',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BANJALOKA smer Petrina"
+                                            value='BANJALOKA smer Petrina'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="ao:Banjaloka-k",
-                                        version="any",
+                                        id='ao:Banjaloka-k',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BANJALOKA smer Kocevje"
+                                            value='BANJALOKA smer Kocevje'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="ao:NovaSela-p",
-                                        version="any",
+                                        id='ao:NovaSela-p',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="NOVA SELA  smer Kocevje"
+                                            value='NOVA SELA  smer Kocevje'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
                                         ]
                                     ),
                                     ScheduledStopPoint(
-                                        id="ao:NovaSela-k",
-                                        version="any",
+                                        id='ao:NovaSela-k',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="NOVA SELA smer Petrina"
+                                            value='NOVA SELA smer Petrina'
                                         ),
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
@@ -374,51 +374,51 @@ obj = PublicationDelivery(
                             service_links=ServiceLinksInFrameRelStructure(
                                 service_link=[
                                     ServiceLink(
-                                        id="ao:Briga-p_to_Banjaloka-p",
-                                        version="any",
+                                        id='ao:Briga-p_to_Banjaloka-p',
+                                        version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Briga-p"
+                                            version='any',
+                                            ref='ao:Briga-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p"
+                                            version='any',
+                                            ref='ao:Banjaloka-p'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ao:Banjaloka-p_to_NovaSela-p",
-                                        version="any",
+                                        id='ao:Banjaloka-p_to_NovaSela-p',
+                                        version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p"
+                                            version='any',
+                                            ref='ao:Banjaloka-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:NovaSela-p"
+                                            version='any',
+                                            ref='ao:NovaSela-p'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ao:NovaSela-p_to_Banjaloka-p",
-                                        version="any",
+                                        id='ao:NovaSela-p_to_Banjaloka-p',
+                                        version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:NovaSela-p"
+                                            version='any',
+                                            ref='ao:NovaSela-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p"
+                                            version='any',
+                                            ref='ao:Banjaloka-p'
                                         )
                                     ),
                                     ServiceLink(
-                                        id="ao:Banjaloka-p_to_Briga-p",
-                                        version="any",
+                                        id='ao:Banjaloka-p_to_Briga-p',
+                                        version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p"
+                                            version='any',
+                                            ref='ao:Banjaloka-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Briga-p"
+                                            version='any',
+                                            ref='ao:Briga-p'
                                         )
                                     ),
                                 ]
@@ -426,48 +426,48 @@ obj = PublicationDelivery(
                             service_patterns=ServicePatternsInFrameRelStructure(
                                 service_pattern_or_journey_pattern_view=[
                                     ServicePattern(
-                                        id="ao:K66_outbound",
-                                        version="any",
+                                        id='ao:K66_outbound',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Kocevje - Petrina"
+                                            value='Kocevje - Petrina'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         journey_patterns=JourneyPatternRefsRelStructure(
                                             choice=[
                                                 ServiceJourneyPatternRef(
-                                                    version="any",
-                                                    ref="ao:sjp_24o"
+                                                    version='any',
+                                                    ref='ao:sjp_24o'
                                                 ),
                                             ]
                                         ),
                                         points_in_sequence=StopPointsInJourneyPatternRelStructure(
                                             stop_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="ao:K66_outbound_24o_01",
-                                                    version="any",
+                                                    id='ao:K66_outbound_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p'
                                                     ),
                                                     for_alighting=False
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ao:K66_outbound_24o_02",
-                                                    version="any",
+                                                    id='ao:K66_outbound_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ao:K66_outbound_24o_03",
-                                                    version="any",
+                                                    id='ao:K66_outbound_24o_03',
+                                                    version='any',
                                                     order=3,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:NovaSela-p'
                                                     ),
                                                     for_boarding=False
                                                 ),
@@ -479,29 +479,29 @@ obj = PublicationDelivery(
                             timing_points=TimingPointsInFrameRelStructure(
                                 timing_point=[
                                     TimingPoint(
-                                        id="ao:Briga-p_t1",
-                                        version="any",
+                                        id='ao:Briga-p_t1',
+                                        version='any',
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.2000"),
-                                            latitude=Decimal("0.2000")
+                                            longitude=Decimal('53.2000'),
+                                            latitude=Decimal('0.2000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
                                     TimingPoint(
-                                        id="ao:Briga-p_t2",
-                                        version="any",
+                                        id='ao:Briga-p_t2',
+                                        version='any',
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.3000"),
-                                            latitude=Decimal("0.3000")
+                                            longitude=Decimal('53.3000'),
+                                            latitude=Decimal('0.3000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
                                     TimingPoint(
-                                        id="ao:Banjaloka-p_t3",
-                                        version="any",
+                                        id='ao:Banjaloka-p_t3',
+                                        version='any',
                                         location=LocationStructure2(
-                                            longitude=Decimal("53.4000"),
-                                            latitude=Decimal("0.4000")
+                                            longitude=Decimal('53.4000'),
+                                            latitude=Decimal('0.4000')
                                         ),
                                         timing_point_status=TimingPointStatusEnumeration.TIMING_POINT
                                     ),
@@ -510,93 +510,93 @@ obj = PublicationDelivery(
                             timing_links=TimingLinksInFrameRelStructure(
                                 timing_link=[
                                     TimingLink(
-                                        id="ao:Briga-p_to_NovaSela-p",
-                                        version="any",
+                                        id='ao:Briga-p_to_NovaSela-p',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Overall timing Alpha  to  Charley reen"
+                                            value='Overall timing Alpha  to  Charley reen'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Briga-p"
+                                            version='any',
+                                            ref='ao:Briga-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:NovaSela-p"
+                                            version='any',
+                                            ref='ao:NovaSela-p'
                                         )
                                     ),
                                     TimingLink(
-                                        id="ao:Briga-p_to_Briga-p_t1",
-                                        version="any",
+                                        id='ao:Briga-p_to_Briga-p_t1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Alpha   t1"
+                                            value='After Alpha   t1'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Briga-p"
+                                            version='any',
+                                            ref='ao:Briga-p'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="ao:Briga-p_t1"
+                                            version='any',
+                                            ref='ao:Briga-p_t1'
                                         )
                                     ),
                                     TimingLink(
-                                        id="ao:Briga-p_t1_to_Briga-p_t2",
-                                        version="any",
+                                        id='ao:Briga-p_t1_to_Briga-p_t2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Alpha   t1 to After Alpha  t2"
+                                            value='After Alpha   t1 to After Alpha  t2'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="ao:Briga-p_t1"
+                                            version='any',
+                                            ref='ao:Briga-p_t1'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p_t3"
+                                            version='any',
+                                            ref='ao:Banjaloka-p_t3'
                                         )
                                     ),
                                     TimingLink(
-                                        id="ao:Briga-p_t2_to_Banjaloka-p",
-                                        version="any",
+                                        id='ao:Briga-p_t2_to_Banjaloka-p',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Alpha  t2 to Bravo"
+                                            value='After Alpha  t2 to Bravo'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="ao:Briga-p_t2"
+                                            version='any',
+                                            ref='ao:Briga-p_t2'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p"
+                                            version='any',
+                                            ref='ao:Banjaloka-p'
                                         )
                                     ),
                                     TimingLink(
-                                        id="ao:Banjaloka-p_to_Banjaloka-p_t3",
-                                        version="any",
+                                        id='ao:Banjaloka-p_to_Banjaloka-p_t3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Bravo to After Bravo t1"
+                                            value='Bravo to After Bravo t1'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p"
+                                            version='any',
+                                            ref='ao:Banjaloka-p'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p_t3"
+                                            version='any',
+                                            ref='ao:Banjaloka-p_t3'
                                         )
                                     ),
                                     TimingLink(
-                                        id="ao:Banjaloka-p_t3_to_NovaSela-p",
-                                        version="any",
+                                        id='ao:Banjaloka-p_t3_to_NovaSela-p',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="After Bravo t1 to Charley"
+                                            value='After Bravo t1 to Charley'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
-                                            version="any",
-                                            ref="ao:Banjaloka-p_t3"
+                                            version='any',
+                                            ref='ao:Banjaloka-p_t3'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
-                                            version="any",
-                                            ref="ao:NovaSela-p"
+                                            version='any',
+                                            ref='ao:NovaSela-p'
                                         )
                                     ),
                                 ]
@@ -604,94 +604,94 @@ obj = PublicationDelivery(
                             timing_patterns=TimingPatternsInFrameRelStructure(
                                 timing_pattern=[
                                     TimingPattern(
-                                        id="ao:tp_24o",
-                                        version="any",
+                                        id='ao:tp_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Route 24"
+                                            value='Route 24'
                                         ),
                                         route_ref=RouteRefStructure(
-                                            version="any",
-                                            ref="ao:RT_24o"
+                                            version='any',
+                                            ref='ao:RT_24o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         points_in_sequence=TimingPointsInJourneyPatternRelStructure(
                                             timing_point_in_journey_pattern=[
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:tpijp_24o_01",
-                                                    version="any",
+                                                    id='ao:tpijp_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     choice_1=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}TimingPointRef",
+                                                        qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
-                                                            version="any",
-                                                            ref="ao:Briga-p"
+                                                            version='any',
+                                                            ref='ao:Briga-p'
                                                         ),
-                                                        type="{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure"
+                                                        type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_Briga-p_t1"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_Briga-p_t1'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:tpijp_24o_02",
-                                                    version="any",
+                                                    id='ao:tpijp_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t1"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t1_to_Briga-p_t2"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t1_to_Briga-p_t2'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:tpijp_24o_03",
-                                                    version="any",
+                                                    id='ao:tpijp_24o_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t2"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t2'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t2_to_Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t2_to_Banjaloka-p'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:tpijp_24o_04",
-                                                    version="any",
+                                                    id='ao:tpijp_24o_04',
+                                                    version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_to_Banjaloka-p_t3"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:tpijp_24o_05",
-                                                    version="any",
+                                                    id='ao:tpijp_24o_05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_t3"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_t3'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_t3_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_t3_to_NovaSela-p'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:tpijp_24o_06",
-                                                    version="any",
+                                                    id='ao:tpijp_24o_06',
+                                                    version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:NovaSela-p'
                                                     )
                                                 ),
                                             ]
@@ -702,28 +702,28 @@ obj = PublicationDelivery(
                             journey_patterns=JourneyPatternsInFrameRelStructure(
                                 choice=[
                                     ServiceJourneyPattern(
-                                        id="ao:sjp_24o",
-                                        version="any",
+                                        id='ao:sjp_24o',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Alpha to Charley - All POINTs"
+                                            value='Alpha to Charley - All POINTs'
                                         ),
                                         route_ref_or_route_view=RouteRef(
-                                            version="any",
-                                            ref="ao:RT_24o"
+                                            version='any',
+                                            ref='ao:RT_24o'
                                         ),
                                         direction_type=DirectionTypeEnumeration.OUTBOUND,
                                         run_times=JourneyPatternRunTimesRelStructure(
                                             journey_pattern_run_time_ref_or_journey_pattern_run_time=[
                                                 JourneyPatternRunTime(
-                                                    id="ao:jprt_24o1_Briga-p_to_NovaSela-p",
-                                                    version="any",
+                                                    id='ao:jprt_24o1_Briga-p_to_NovaSela-p',
+                                                    version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="ao:tdt_01"
+                                                        version='any',
+                                                        ref='ao:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_NovaSela-p'
                                                     ),
                                                     run_time=XmlDuration("PT70M")
                                                 ),
@@ -732,57 +732,57 @@ obj = PublicationDelivery(
                                         points_in_sequence=PointsInJourneyPatternRelStructure(
                                             point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern=[
                                                 StopPointInJourneyPattern(
-                                                    id="ao:pijp_24o_01",
-                                                    version="any",
+                                                    id='ao:pijp_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:pijp_24o_02",
-                                                    version="any",
+                                                    id='ao:pijp_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t1"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t1'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:pijp_24o_03",
-                                                    version="any",
+                                                    id='ao:pijp_24o_03',
+                                                    version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t2"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t2'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ao:pijp_24o_04",
-                                                    version="any",
+                                                    id='ao:pijp_24o_04',
+                                                    version='any',
                                                     order=4,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p'
                                                     )
                                                 ),
                                                 TimingPointInJourneyPattern(
-                                                    id="ao:tpip_24o_05",
-                                                    version="any",
+                                                    id='ao:tpip_24o_05',
+                                                    version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_t3"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_t3'
                                                     )
                                                 ),
                                                 StopPointInJourneyPattern(
-                                                    id="ao:tpip_24o_06",
-                                                    version="any",
+                                                    id='ao:tpip_24o_06',
+                                                    version='any',
                                                     order=6,
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:NovaSela-p'
                                                     )
                                                 ),
                                             ]
@@ -790,21 +790,21 @@ obj = PublicationDelivery(
                                         links_in_sequence=LinksInJourneyPatternRelStructure(
                                             service_link_in_journey_pattern_or_timing_link_in_journey_pattern=[
                                                 ServiceLinkInJourneyPattern(
-                                                    id="ao:lijp_24o_01",
-                                                    version="any",
+                                                    id='ao:lijp_24o_01',
+                                                    version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_Banjaloka-p'
                                                     )
                                                 ),
                                                 ServiceLinkInJourneyPattern(
-                                                    id="ao:lijp_24o_02",
-                                                    version="any",
+                                                    id='ao:lijp_24o_02',
+                                                    version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_to_NovaSela-p'
                                                     )
                                                 ),
                                             ]
@@ -815,55 +815,55 @@ obj = PublicationDelivery(
                             time_demand_types=TimeDemandTypesInFrameRelStructure(
                                 time_demand_type=[
                                     TimeDemandType(
-                                        id="ao:tdt_01",
-                                        version="any",
+                                        id='ao:tdt_01',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Normal Day"
+                                            value='Normal Day'
                                         ),
                                         run_times=JourneyRunTimesRelStructure(
                                             journey_run_time=[
                                                 JourneyRunTime(
-                                                    id="ao:tdtr_TD01_Briga-p_to_Briga-p_t1",
-                                                    version="any",
+                                                    id='ao:tdtr_TD01_Briga-p_to_Briga-p_t1',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_Briga-p_t1"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_Briga-p_t1'
                                                     ),
                                                     run_time=XmlDuration("PT10M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="ao:tdtr_TD01_Briga-p_t1_to_Briga-p_t2",
-                                                    version="any",
+                                                    id='ao:tdtr_TD01_Briga-p_t1_to_Briga-p_t2',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t1_to_Briga-p_t2"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t1_to_Briga-p_t2'
                                                     ),
                                                     run_time=XmlDuration("PT10M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="ao:tdtr_TD01_Briga-p_t2_to_Banjaloka-p",
-                                                    version="any",
+                                                    id='ao:tdtr_TD01_Briga-p_t2_to_Banjaloka-p',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_t2_to_Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_t2_to_Banjaloka-p'
                                                     ),
                                                     run_time=XmlDuration("PT10M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="ao:tdtr_TD01_Banjaloka-p_to_Banjaloka-p_t3",
-                                                    version="any",
+                                                    id='ao:tdtr_TD01_Banjaloka-p_to_Banjaloka-p_t3',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_to_Banjaloka-p_t3"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                     ),
                                                     run_time=XmlDuration("PT18M")
                                                 ),
                                                 JourneyRunTime(
-                                                    id="ao:tdtr_TD01_Banjaloka-p_t3_to_NovaSela-p",
-                                                    version="any",
+                                                    id='ao:tdtr_TD01_Banjaloka-p_t3_to_NovaSela-p',
+                                                    version='any',
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_t3_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_t3_to_NovaSela-p'
                                                     ),
                                                     run_time=XmlDuration("PT20M")
                                                 ),
@@ -872,14 +872,14 @@ obj = PublicationDelivery(
                                         wait_times=JourneyWaitTimesRelStructure(
                                             journey_wait_time=[
                                                 JourneyWaitTime(
-                                                    id="ao:tdwt_24o1_Banjaloka-p",
-                                                    version="any",
+                                                    id='ao:tdwt_24o1_Banjaloka-p',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wait at Stop B"
+                                                        value='Wait at Stop B'
                                                     ),
                                                     choice=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p'
                                                     ),
                                                     wait_time=XmlDuration("PT2M")
                                                 ),
@@ -891,19 +891,19 @@ obj = PublicationDelivery(
                             time_demand_type_assignments=TimeDemandTypeAssignmentsInFrameRelStructure(
                                 time_demand_type_assignment=[
                                     TimeDemandTypeAssignment(
-                                        id="ao:TA_001",
-                                        version="any",
+                                        id='ao:TA_001',
+                                        version='any',
                                         order=1,
                                         time_demand_type_ref=TimeDemandTypeRef(
-                                            version="any",
-                                            ref="ao:tdt_01"
+                                            version='any',
+                                            ref='ao:tdt_01'
                                         ),
                                         timeband_ref=TimebandRef(
-                                            ref="ao:tdt_01"
+                                            ref='ao:tdt_01'
                                         ),
                                         group_of_timing_links_ref=GroupOfTimingLinksRef(
-                                            version="any",
-                                            ref="ao:Bogus"
+                                            version='any',
+                                            ref='ao:Bogus'
                                         )
                                     ),
                                 ]
@@ -911,20 +911,20 @@ obj = PublicationDelivery(
                             timing_link_groups=GroupOfLinksInFrameRelStructure(
                                 group_of_links=[
                                     GroupOfLinks(
-                                        id="ao:Bogus",
-                                        version="any",
+                                        id='ao:Bogus',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="bogus group"
+                                            value='bogus group'
                                         ),
                                         members=LinkRefsRelStructure(
                                             choice=[
                                                 TimingLinkRef(
-                                                    version="any",
-                                                    ref="ao:Briga-p_t2_to_Banjaloka-p"
+                                                    version='any',
+                                                    ref='ao:Briga-p_t2_to_Banjaloka-p'
                                                 ),
                                                 TimingLinkRef(
-                                                    version="any",
-                                                    ref="ao:Banjaloka-p_to_Banjaloka-p_t3"
+                                                    version='any',
+                                                    ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                 ),
                                             ]
                                         )
@@ -933,15 +933,15 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="ao:TIM_23_O",
+                            id='ao:TIM_23_O',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="ao:Cnd001",
-                                            version="any",
+                                            id='ao:Cnd001',
+                                            version='any',
                                             description=MultilingualString(
-                                                value="Sept  to April"
+                                                value='Sept  to April'
                                             ),
                                             from_date=XmlDateTime(2009, 1, 1, 0, 0, 0, 0, 0),
                                             to_date=XmlDateTime(2009, 12, 31, 0, 0, 0, 0, 0)
@@ -949,9 +949,9 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            version="1",
+                            version='1',
                             name=MultilingualString(
-                                value="Winter timetable for route 66 outbound"
+                                value='Winter timetable for route 66 outbound'
                             ),
                             vehicle_modes=[
                                 VehicleModeEnumeration.BUS,
@@ -959,90 +959,90 @@ obj = PublicationDelivery(
                             vehicle_journeys=JourneysInFrameRelStructure(
                                 choice=[
                                     ServiceJourney(
-                                        id="ao:K66_outbound_01",
-                                        version="any",
+                                        id='ao:K66_outbound_01',
+                                        version='any',
                                         departure_time=XmlTime(14, 20, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_02-Everyday-NotHoliday"
+                                                    version='any',
+                                                    ref='ao:DT_02-Everyday-NotHoliday'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_ChristmasEve"
+                                                    version='any',
+                                                    ref='ao:DT_ChristmasEve'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_ChristmasDay"
+                                                    version='any',
+                                                    ref='ao:DT_ChristmasDay'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_ChristmasDayDisplacement"
+                                                    version='any',
+                                                    ref='ao:DT_ChristmasDayDisplacement'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_NewYearsEve"
+                                                    version='any',
+                                                    ref='ao:DT_NewYearsEve'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_NewYearsDay"
+                                                    version='any',
+                                                    ref='ao:DT_NewYearsDay'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_2ndJanuary"
+                                                    version='any',
+                                                    ref='ao:DT_2ndJanuary'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_GoodFriday"
+                                                    version='any',
+                                                    ref='ao:DT_GoodFriday'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_EasterSunday"
+                                                    version='any',
+                                                    ref='ao:DT_EasterSunday'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_EasterMonday"
+                                                    version='any',
+                                                    ref='ao:DT_EasterMonday'
                                                 ),
                                             ]
                                         ),
                                         choice=ServicePatternRef(
-                                            version="any",
-                                            ref="ao:K66_outbound"
+                                            version='any',
+                                            ref='ao:K66_outbound'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="ao:tdt_01"
+                                            version='any',
+                                            ref='ao:tdt_01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            value="EXTERNAL",
-                                            ref="ao:BLK_24o5"
+                                            value='EXTERNAL',
+                                            ref='ao:BLK_24o5'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="ao:RT_24o"
+                                                version='any',
+                                                ref='ao:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="ao:DST_Charley"
+                                                version='any',
+                                                ref='ao:DST_Charley'
                                             )
                                         ),
                                         run_times=VehicleJourneyRunTimesRelStructure(
                                             vehicle_journey_run_time=[
                                                 VehicleJourneyRunTime(
-                                                    id="ao:vjrt_sj_24o_01",
+                                                    id='ao:vjrt_sj_24o_01',
                                                     name=MultilingualString(
-                                                        value="Overall run time"
+                                                        value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="ao:tdt_01"
+                                                        version='any',
+                                                        ref='ao:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_NovaSela-p'
                                                     ),
                                                     run_time=XmlDuration("PT70M")
                                                 ),
@@ -1051,25 +1051,25 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="ao:K66_outbound_01_001",
-                                                    version="any",
+                                                    id='ao:K66_outbound_01_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
-                                                            version="any",
-                                                            ref="ao:Briga-p_to_Briga-p_t1"
+                                                            version='any',
+                                                            ref='ao:Briga-p_to_Briga-p_t1'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
-                                                            version="any",
-                                                            ref="ao:Briga-p_t1"
+                                                            version='any',
+                                                            ref='ao:Briga-p_t1'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_Banjaloka-p'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -1080,25 +1080,25 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="ao:K66_outbound_01_002",
-                                                    version="any",
+                                                    id='ao:K66_outbound_01_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
-                                                            version="any",
-                                                            ref="ao:Banjaloka-p_to_Banjaloka-p_t3"
+                                                            version='any',
+                                                            ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
-                                                            version="any",
-                                                            ref="ao:Banjaloka-p_t3"
+                                                            version='any',
+                                                            ref='ao:Banjaloka-p_t3'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_to_NovaSela-p'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(14, 30, 0, 0, 0)
@@ -1108,16 +1108,16 @@ obj = PublicationDelivery(
                                                         wait_time=XmlDuration("PT2M")
                                                     ),
                                                     note=MultilingualString(
-                                                        value="Arrival at Terminus"
+                                                        value='Arrival at Terminus'
                                                     ),
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="ao:K66_outbound_01_003",
-                                                    version="any",
+                                                    id='ao:K66_outbound_01_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:NovaSela-p'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 10, 0, 0, 0)
@@ -1131,50 +1131,50 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     ServiceJourney(
-                                        id="ao:K66_inbound_02",
-                                        version="any",
+                                        id='ao:K66_inbound_02',
+                                        version='any',
                                         departure_time=XmlTime(15, 20, 0, 0, 0),
                                         day_types=DayTypeRefsRelStructure(
                                             fare_day_type_ref_or_day_type_ref=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="ao:DT_01-MF-NotHoliday"
+                                                    version='any',
+                                                    ref='ao:DT_01-MF-NotHoliday'
                                                 ),
                                             ]
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
-                                            version="any",
-                                            ref="ao:tdt_01"
+                                            version='any',
+                                            ref='ao:tdt_01'
                                         ),
                                         train_block_ref_or_block_ref=BlockRef(
-                                            value="EXTERNAL",
-                                            ref="ao:BLK_24o8"
+                                            value='EXTERNAL',
+                                            ref='ao:BLK_24o8'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
-                                                version="any",
-                                                ref="ao:RT_24o"
+                                                version='any',
+                                                ref='ao:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.INBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
-                                                version="any",
-                                                ref="ao:DST_Charley"
+                                                version='any',
+                                                ref='ao:DST_Charley'
                                             )
                                         ),
                                         run_times=VehicleJourneyRunTimesRelStructure(
                                             vehicle_journey_run_time=[
                                                 VehicleJourneyRunTime(
-                                                    id="ao:vjrt_sj_24o_02",
+                                                    id='ao:vjrt_sj_24o_02',
                                                     name=MultilingualString(
-                                                        value="Overall run time"
+                                                        value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
-                                                        version="any",
-                                                        ref="ao:tdt_01"
+                                                        version='any',
+                                                        ref='ao:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_NovaSela-p'
                                                     ),
                                                     run_time=XmlDuration("PT70M")
                                                 ),
@@ -1183,25 +1183,25 @@ obj = PublicationDelivery(
                                         calls=CallsRelStructure(
                                             choice=[
                                                 Call(
-                                                    id="ao:K66_inbound_02_001",
-                                                    version="any",
+                                                    id='ao:K66_inbound_02_001',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Briga-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
-                                                            version="any",
-                                                            ref="ao:Briga-p_to_Briga-p_t1"
+                                                            version='any',
+                                                            ref='ao:Briga-p_to_Briga-p_t1'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
-                                                            version="any",
-                                                            ref="ao:Briga-p_t1"
+                                                            version='any',
+                                                            ref='ao:Briga-p_t1'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Briga-p_to_Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Briga-p_to_Banjaloka-p'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         for_alighting=False
@@ -1213,8 +1213,8 @@ obj = PublicationDelivery(
                                                         none_or_via=[
                                                             ViaVersionedChildStructure(
                                                                 destination_display_ref_or_destination_display_view_or_name=DestinationDisplayRef(
-                                                                    version="any",
-                                                                    ref="ao:DST_Bravo"
+                                                                    version='any',
+                                                                    ref='ao:DST_Bravo'
                                                                 )
                                                             ),
                                                         ]
@@ -1223,25 +1223,25 @@ obj = PublicationDelivery(
                                                     order=1
                                                 ),
                                                 Call(
-                                                    id="ao:K66_inbound_02_002",
-                                                    version="any",
+                                                    id='ao:K66_inbound_02_002',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
-                                                            version="any",
-                                                            ref="ao:Banjaloka-p_to_Banjaloka-p_t3"
+                                                            version='any',
+                                                            ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
-                                                            version="any",
-                                                            ref="ao:Banjaloka-p_t3"
+                                                            version='any',
+                                                            ref='ao:Banjaloka-p_t3'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
-                                                        version="any",
-                                                        ref="ao:Banjaloka-p_to_NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:Banjaloka-p_to_NovaSela-p'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(15, 30, 0, 0, 0)
@@ -1253,11 +1253,11 @@ obj = PublicationDelivery(
                                                     order=2
                                                 ),
                                                 Call(
-                                                    id="ao:K66_inbound_02_003",
-                                                    version="any",
+                                                    id='ao:K66_inbound_02_003',
+                                                    version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
-                                                        version="any",
-                                                        ref="ao:NovaSela-p"
+                                                        version='any',
+                                                        ref='ao:NovaSela-p'
                                                     ),
                                                     arrival=ArrivalStructure(
                                                         time=XmlTime(16, 10, 0, 0, 0)
@@ -1272,8 +1272,8 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
-                                                    version="any",
-                                                    ref="ao:sfs_24o_01"
+                                                    version='any',
+                                                    ref='ao:sfs_24o_01'
                                                 ),
                                             ]
                                         )
@@ -1283,11 +1283,11 @@ obj = PublicationDelivery(
                             service_facility_sets=ServiceFacilitySetsInFrameRelStructure(
                                 service_facility_set=[
                                     ServiceFacilitySet(
-                                        id="ao:sfs_24o_01",
-                                        version="any",
+                                        id='ao:sfs_24o_01',
+                                        version='any',
                                         provided_by_ref=OrganisationRefStructure(
-                                            value="EXTERNAL",
-                                            ref="xyz:4567"
+                                            value='EXTERNAL',
+                                            ref='xyz:4567'
                                         ),
                                         assistance_facility_list=[
                                             AssistanceFacilityEnumeration.BOARDING_ASSISTANCE,
@@ -1320,24 +1320,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="ao:CAL_02",
-                            version="1",
+                            id='ao:CAL_02',
+                            version='1',
                             name=MultilingualString(
-                                value="Service Calendar Nov to April 2010  (Compact Coding) "
+                                value='Service Calendar Nov to April 2010  (Compact Coding) '
                             ),
                             service_calendar=ServiceCalendar(
-                                id="ao:CAL_02",
-                                version="any",
+                                id='ao:CAL_02',
+                                version='any',
                                 from_date=XmlDate(2010, 11, 1),
                                 to_date=XmlDate(2010, 11, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="ao:DT_01-MF-NotHoliday",
-                                        version="any",
+                                        id='ao:DT_01-MF-NotHoliday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekdays unless a holiday"
+                                            value='Weekdays unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1357,10 +1357,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_02-Everyday-NotHoliday",
-                                        version="any",
+                                        id='ao:DT_02-Everyday-NotHoliday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Everyday unless a holiday"
+                                            value='Everyday unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1376,10 +1376,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_03-WE-NotHoliday",
-                                        version="any",
+                                        id='ao:DT_03-WE-NotHoliday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekends unless a holiday"
+                                            value='Weekends unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1396,10 +1396,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_04-AA-NotHoliday",
-                                        version="any",
+                                        id='ao:DT_04-AA-NotHoliday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Holidays"
+                                            value='Holidays'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1415,16 +1415,16 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_ChristmasEve",
-                                        version="any",
+                                        id='ao:DT_ChristmasEve',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Christmas Ev e  "
+                                            value='Christmas Ev e  '
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}DayOfYear",
+                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
                                                         value=XmlPeriod("--12-24")
                                                     ),
                                                     holiday_types=[
@@ -1435,16 +1435,16 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_ChristmasDay",
-                                        version="any",
+                                        id='ao:DT_ChristmasDay',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Christmas Day  "
+                                            value='Christmas Day  '
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}DayOfYear",
+                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
                                                         value=XmlPeriod("--12-25")
                                                     ),
                                                     holiday_types=[
@@ -1455,10 +1455,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_ChristmasDayDisplacement",
-                                        version="any",
+                                        id='ao:DT_ChristmasDayDisplacement',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Christmas Day Displacement holidday "
+                                            value='Christmas Day Displacement holidday '
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1478,8 +1478,8 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_NewYearsEve",
-                                        version="any",
+                                        id='ao:DT_NewYearsEve',
+                                        version='any',
                                         name=MultilingualString(
                                             value="NewYear's Eve  "
                                         ),
@@ -1487,7 +1487,7 @@ obj = PublicationDelivery(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}DayOfYear",
+                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
                                                         value=XmlPeriod("--12-31")
                                                     ),
                                                     holiday_types=[
@@ -1498,8 +1498,8 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_NewYearsDay",
-                                        version="any",
+                                        id='ao:DT_NewYearsDay',
+                                        version='any',
                                         name=MultilingualString(
                                             value="NewYear's  Day  "
                                         ),
@@ -1507,7 +1507,7 @@ obj = PublicationDelivery(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}DayOfYear",
+                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
                                                         value=XmlPeriod("--01-01")
                                                     ),
                                                     holiday_types=[
@@ -1518,16 +1518,16 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_2ndJanuary",
-                                        version="any",
+                                        id='ao:DT_2ndJanuary',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="2nd January Holiday (Scotland)  "
+                                            value='2nd January Holiday (Scotland)  '
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     month_of_year_or_day_of_month_or_day_of_year=DerivedElement(
-                                                        qname="{http://www.netex.org.uk/netex}DayOfYear",
+                                                        qname='{http://www.netex.org.uk/netex}DayOfYear',
                                                         value=XmlPeriod("--02-01")
                                                     ),
                                                     holiday_types=[
@@ -1538,8 +1538,8 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_NewYearsDayDisplacement",
-                                        version="any",
+                                        id='ao:DT_NewYearsDayDisplacement',
+                                        version='any',
                                         name=MultilingualString(
                                             value="NewYear's  Day Displacement holiday "
                                         ),
@@ -1561,10 +1561,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_GoodFriday",
-                                        version="any",
+                                        id='ao:DT_GoodFriday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Good Friday "
+                                            value='Good Friday '
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1580,10 +1580,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_EasterSunday",
-                                        version="any",
+                                        id='ao:DT_EasterSunday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Easter Sunday  "
+                                            value='Easter Sunday  '
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1599,10 +1599,10 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="ao:DT_EasterMonday",
-                                        version="any",
+                                        id='ao:DT_EasterMonday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Easter Monday"
+                                            value='Easter Monday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
@@ -1622,21 +1622,21 @@ obj = PublicationDelivery(
                             operating_days=OperatingDaysInFrameRelStructure(
                                 operating_day=[
                                     OperatingDay(
-                                        id="ao:OD_2010-11-01",
-                                        version="any",
+                                        id='ao:OD_2010-11-01',
+                                        version='any',
                                         calendar_date=XmlDate(2010, 11, 1),
                                         name=MultilingualString(
-                                            value="Monday 2010-11-01"
+                                            value='Monday 2010-11-01'
                                         ),
                                         earliest_time=XmlTime(2, 0, 0, 0),
                                         day_length=XmlDuration("PT24H")
                                     ),
                                     OperatingDay(
-                                        id="ao:OD_2011-04-30",
-                                        version="any",
+                                        id='ao:OD_2011-04-30',
+                                        version='any',
                                         calendar_date=XmlDate(2011, 4, 30),
                                         name=MultilingualString(
-                                            value="Saturday 2011-04-30"
+                                            value='Saturday 2011-04-30'
                                         ),
                                         earliest_time=XmlTime(2, 0, 0, 0),
                                         day_length=XmlDuration("PT24H")
@@ -1646,18 +1646,18 @@ obj = PublicationDelivery(
                             operating_periods=OperatingPeriodsInFrameRelStructure(
                                 operating_period_or_uic_operating_period=[
                                     OperatingPeriod(
-                                        id="ao:op_010",
-                                        version="any",
+                                        id='ao:op_010',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="WInter 2011"
+                                            value='WInter 2011'
                                         ),
                                         from_operating_day_ref_or_from_date=OperatingDayRefStructure(
-                                            version="any",
-                                            ref="ao:OD_2010-11-01"
+                                            version='any',
+                                            ref='ao:OD_2010-11-01'
                                         ),
                                         to_operating_day_ref_or_to_date=OperatingDayRefStructure(
-                                            version="any",
-                                            ref="ao:OD_2011-04-30"
+                                            version='any',
+                                            ref='ao:OD_2011-04-30'
                                         ),
                                         holiday_type=[
                                             HolidayTypeEnumeration.NOT_HOLIDAY,
@@ -1671,334 +1671,334 @@ obj = PublicationDelivery(
                             day_type_assignments=DayTypeAssignmentsInFrameRelStructure(
                                 day_type_assignment=[
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-01",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2010-11-01"
+                                            value='Monday 2010-11-01'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                            version="any",
-                                            ref="ao:OD_2010-11-01"
+                                            version='any',
+                                            ref='ao:OD_2010-11-01'
                                         ),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-02",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-02',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Tuesday 2010-11-02"
+                                            value='Tuesday 2010-11-02'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 2),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-03",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Wednesday 2010-11-03"
+                                            value='Wednesday 2010-11-03'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 3),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-04",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-04',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Thusday 2010-11-04"
+                                            value='Thusday 2010-11-04'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 4),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-05",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-05',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="MFriday 2010-11-05"
+                                            value='MFriday 2010-11-05'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 5),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-06",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-06',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2010-11-06"
+                                            value='Saturday 2010-11-06'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 6),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_03-WE-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_03-WE-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-07",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-07',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2010-11-07"
+                                            value='Sunday 2010-11-07'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 7),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_03-WE-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_03-WE-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-08",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-08',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2010-11-08"
+                                            value='Monday 2010-11-08'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 8),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-09",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-09',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Tuesday 2010-11-09"
+                                            value='Tuesday 2010-11-09'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 9),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-10",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-10',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Wednesday 2010-11-10"
+                                            value='Wednesday 2010-11-10'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 10),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-11",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-11',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Thusday 2010-11-11"
+                                            value='Thusday 2010-11-11'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 11),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-12",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-12',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="MFriday 2010-11-12"
+                                            value='MFriday 2010-11-12'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 12),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-13",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-13',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2010-11-13"
+                                            value='Saturday 2010-11-13'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 13),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_03-WE-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_03-WE-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-11-14",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-11-14',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2010-11-14"
+                                            value='Sunday 2010-11-14'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 11, 14),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_03-WE-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_03-WE-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-12-24",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-12-24',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2010-12-24"
+                                            value='Sunday 2010-12-24'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 31),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_ChristmasEve"
+                                            version='any',
+                                            ref='ao:DT_ChristmasEve'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-12-25",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-12-25',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2010-12-25 Christams Day"
+                                            value='Saturday 2010-12-25 Christams Day'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 25),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_ChristmasDay"
+                                            version='any',
+                                            ref='ao:DT_ChristmasDay'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-12-27",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-12-27',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2010-12-27 (Christjmas Day displacement holiday)"
+                                            value='Monday 2010-12-27 (Christjmas Day displacement holiday)'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 27),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_ChristmasDayDisplacement"
+                                            version='any',
+                                            ref='ao:DT_ChristmasDayDisplacement'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2010-12-31",
-                                        version="any",
+                                        id='ao:DayAsgn_2010-12-31',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Friday 2010-12-31  New Years eve"
+                                            value='Friday 2010-12-31  New Years eve'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2010, 12, 31),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_NewYearsEve"
+                                            version='any',
+                                            ref='ao:DT_NewYearsEve'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2011-01-01",
-                                        version="any",
+                                        id='ao:DayAsgn_2011-01-01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday  2011-01-01 New Years day"
+                                            value='Saturday  2011-01-01 New Years day'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 1),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_NewYearsDay"
+                                            version='any',
+                                            ref='ao:DT_NewYearsDay'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2011-01-03",
-                                        version="any",
+                                        id='ao:DayAsgn_2011-01-03',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Satuurday  2011-01-03 New Years day displacement"
+                                            value='Satuurday  2011-01-03 New Years day displacement'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 1, 3),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_NewYearsDayDisplacement"
+                                            version='any',
+                                            ref='ao:DT_NewYearsDayDisplacement'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_&gt;2011-04-22",
-                                        version="any",
+                                        id='ao:DayAsgn_>2011-04-22',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Friday 2011-04-22 Good Friday"
+                                            value='Friday 2011-04-22 Good Friday'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 22),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_GoodFriday"
+                                            version='any',
+                                            ref='ao:DT_GoodFriday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_&gt;2011-04-24",
-                                        version="any",
+                                        id='ao:DayAsgn_>2011-04-24',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Sunday 2011-04-24 Easter Sunday"
+                                            value='Sunday 2011-04-24 Easter Sunday'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 24),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_EasterSunday"
+                                            version='any',
+                                            ref='ao:DT_EasterSunday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_&gt;2011-04-25",
-                                        version="any",
+                                        id='ao:DayAsgn_>2011-04-25',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Monday 2011-04-25 Easter Monday"
+                                            value='Monday 2011-04-25 Easter Monday'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 25),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_EasterMonday"
+                                            version='any',
+                                            ref='ao:DT_EasterMonday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2011-04-29",
-                                        version="any",
+                                        id='ao:DayAsgn_2011-04-29',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Friday2011-04-29"
+                                            value='Friday2011-04-29'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=XmlDate(2011, 4, 29),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_01-MF-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_01-MF-NotHoliday'
                                         )
                                     ),
                                     DayTypeAssignment(
-                                        id="ao:DayAsgn_2011-04-30",
-                                        version="any",
+                                        id='ao:DayAsgn_2011-04-30',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Saturday 2011-04-30"
+                                            value='Saturday 2011-04-30'
                                         ),
                                         order=1,
                                         operating_period_ref_or_operating_day_ref_or_date=OperatingDayRef(
-                                            version="any",
-                                            ref="ao:OD_2011-04-30"
+                                            version='any',
+                                            ref='ao:OD_2011-04-30'
                                         ),
                                         fare_day_type_ref_or_day_type_ref=DayTypeRef(
-                                            version="any",
-                                            ref="ao:DT_03-WE-NotHoliday"
+                                            version='any',
+                                            ref='ao:DT_03-WE-NotHoliday'
                                         )
                                     ),
                                 ]

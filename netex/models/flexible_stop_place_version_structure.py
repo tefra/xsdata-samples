@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .flexible_area import FlexibleArea
 from .flexible_area_ref import FlexibleAreaRef
@@ -24,7 +24,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "name": "NameSuffix",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     alternative_names: Optional[AlternativeNamesRelStructure] = field(
         default=None,
@@ -32,7 +32,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "name": "alternativeNames",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_mode: Optional[VehicleModeEnumeration] = field(
         default=None,
@@ -40,7 +40,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -48,26 +48,33 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     areas: Optional["FlexibleStopPlaceVersionStructure.Areas"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     lines: Optional[LineRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
     @dataclass
     class Areas:
-        choice: List[object] = field(
+        choice: List[
+            Union[
+                FlexibleArea,
+                FlexibleAreaRef,
+                HailAndRideArea,
+                HailAndRideAreaRef,
+            ]
+        ] = field(
             default_factory=list,
             metadata={
                 "type": "Elements",
@@ -93,5 +100,5 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
                         "namespace": "http://www.netex.org.uk/netex",
                     },
                 ),
-            }
+            },
         )

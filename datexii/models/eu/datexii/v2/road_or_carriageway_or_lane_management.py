@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.network_management import NetworkManagement
-from datexii.models.eu.datexii.v2.road_or_carriageway_or_lane_management_type_enum import RoadOrCarriagewayOrLaneManagementTypeEnum
+from datexii.models.eu.datexii.v2.road_or_carriageway_or_lane_management_type_enum import (
+    RoadOrCarriagewayOrLaneManagementTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,14 +22,17 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
         specified road section.
     :ivar road_or_carriageway_or_lane_management_extension:
     """
-    road_or_carriageway_or_lane_management_type: Optional[RoadOrCarriagewayOrLaneManagementTypeEnum] = field(
+
+    road_or_carriageway_or_lane_management_type: Optional[
+        RoadOrCarriagewayOrLaneManagementTypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "roadOrCarriagewayOrLaneManagementType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     minimum_car_occupancy: Optional[int] = field(
         default=None,
@@ -35,13 +40,15 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
             "name": "minimumCarOccupancy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    road_or_carriageway_or_lane_management_extension: Optional[ExtensionType] = field(
+    road_or_carriageway_or_lane_management_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "roadOrCarriagewayOrLaneManagementExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -50,6 +50,7 @@ class SwComponentDocumentation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-COMPONENT-DOCUMENTATION"
 
@@ -59,7 +60,7 @@ class SwComponentDocumentation:
             "name": "SW-FEATURE-DEF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_feature_desc: Optional[Chapter] = field(
         default=None,
@@ -67,7 +68,7 @@ class SwComponentDocumentation:
             "name": "SW-FEATURE-DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_test_desc: Optional[Chapter] = field(
         default=None,
@@ -75,7 +76,7 @@ class SwComponentDocumentation:
             "name": "SW-TEST-DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_calibration_notes: Optional[Chapter] = field(
         default=None,
@@ -83,7 +84,7 @@ class SwComponentDocumentation:
             "name": "SW-CALIBRATION-NOTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_maintenance_notes: Optional[Chapter] = field(
         default=None,
@@ -91,7 +92,7 @@ class SwComponentDocumentation:
             "name": "SW-MAINTENANCE-NOTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_diagnostics_notes: Optional[Chapter] = field(
         default=None,
@@ -99,7 +100,7 @@ class SwComponentDocumentation:
             "name": "SW-DIAGNOSTICS-NOTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_carb_doc: Optional[Chapter] = field(
         default=None,
@@ -107,7 +108,7 @@ class SwComponentDocumentation:
             "name": "SW-CARB-DOC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     chapter: List[Chapter] = field(
         default_factory=list,
@@ -115,7 +116,7 @@ class SwComponentDocumentation:
             "name": "CHAPTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -123,14 +124,14 @@ class SwComponentDocumentation:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -138,5 +139,5 @@ class SwComponentDocumentation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

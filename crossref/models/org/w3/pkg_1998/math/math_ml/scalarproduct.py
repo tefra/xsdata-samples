@@ -15,5 +15,5 @@ class Scalarproduct:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

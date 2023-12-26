@@ -1,12 +1,22 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_plans_type import InstalmentPlansType
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.total_premium_type_premiums import TotalPremiumTypePremiums
-from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.warranty_enum import WarrantyEnum
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.instalment_plans_type import (
+    InstalmentPlansType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.total_premium_type_premiums import (
+    TotalPremiumTypePremiums,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.warranty_enum import (
+    WarrantyEnum,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -18,7 +28,7 @@ class TotalPremiumType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     ppwbasis: Optional[WarrantyEnum] = field(
         default=None,
@@ -26,7 +36,7 @@ class TotalPremiumType:
             "name": "PPWBasis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     instalment_plans: Optional[InstalmentPlansType] = field(
         default=None,
@@ -34,7 +44,7 @@ class TotalPremiumType:
             "name": "InstalmentPlans",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     currency: Optional[CodeType] = field(
         default=None,
@@ -43,7 +53,7 @@ class TotalPremiumType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
             "required": True,
-        }
+        },
     )
     premiums: Optional[TotalPremiumTypePremiums] = field(
         default=None,
@@ -51,5 +61,5 @@ class TotalPremiumType:
             "name": "Premiums",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

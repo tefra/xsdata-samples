@@ -30,13 +30,14 @@ class ParkingStatusValidity:
         (exception periods overriding valid periods).
     :ivar parking_status_validity_extension:
     """
+
     parking_status_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "parkingStatusTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_status_time_offset_to_origin: Optional[float] = field(
         default=None,
@@ -44,7 +45,7 @@ class ParkingStatusValidity:
             "name": "parkingStatusTimeOffsetToOrigin",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     validity_time_specification: Optional[OverallPeriod] = field(
         default=None,
@@ -52,7 +53,7 @@ class ParkingStatusValidity:
             "name": "validityTimeSpecification",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_status_validity_extension: Optional[ExtensionType] = field(
         default=None,
@@ -60,5 +61,5 @@ class ParkingStatusValidity:
             "name": "parkingStatusValidityExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

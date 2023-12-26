@@ -11,6 +11,7 @@ class VehicleUpsellRule:
     """
     Binds an VehicleUpsellQualify and VehicleUpsellOffer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,12 +20,12 @@ class VehicleUpsellRule:
         metadata={
             "name": "VehicleUpsellQualify",
             "type": "Element",
-        }
+        },
     )
     vehicle_upsell_offer: None | VehicleUpsellOffer = field(
         default=None,
         metadata={
             "name": "VehicleUpsellOffer",
             "type": "Element",
-        }
+        },
     )

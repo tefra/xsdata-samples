@@ -19,6 +19,7 @@ class ProfileModifyTemplateReq(BaseReq5):
     version
         Version number of the template. Required with every modify request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -29,7 +30,7 @@ class ProfileModifyTemplateReq(BaseReq5):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     id: None | int = field(
         default=None,
@@ -37,7 +38,7 @@ class ProfileModifyTemplateReq(BaseReq5):
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -46,5 +47,5 @@ class ProfileModifyTemplateReq(BaseReq5):
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )

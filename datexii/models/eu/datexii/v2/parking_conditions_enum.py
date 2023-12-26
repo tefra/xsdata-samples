@@ -16,6 +16,7 @@ class ParkingConditionsEnum(Enum):
         parking site.
     :cvar OTHER: Other.
     """
+
     NORMAL_PARKING_CONDITIONS_SUSPENDED = "normalParkingConditionsSuspended"
     SPECIAL_PARKING_CONDITIONS_IN_FORCE = "specialParkingConditionsInForce"
     OTHER = "other"

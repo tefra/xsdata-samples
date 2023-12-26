@@ -13,6 +13,7 @@ class AdditionalInfo:
         The category code is the code the AdditionalInfo text came from,
         e.g. S5 or S7.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,5 +23,5 @@ class AdditionalInfo:
             "name": "Category",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

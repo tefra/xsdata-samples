@@ -3,7 +3,9 @@ from typing import Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
 from .ref import Ref
-from .variable_data_prototype_subtypes_enum import VariableDataPrototypeSubtypesEnum
+from .variable_data_prototype_subtypes_enum import (
+    VariableDataPrototypeSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -30,6 +32,7 @@ class BswPerInstanceMemoryPolicy:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-PER-INSTANCE-MEMORY-POLICY"
 
@@ -39,15 +42,17 @@ class BswPerInstanceMemoryPolicy:
             "name": "ENABLE-TAKE-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ar_typed_per_instance_memory_ref: Optional["BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef"] = field(
+    ar_typed_per_instance_memory_ref: Optional[
+        "BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef"
+    ] = field(
         default=None,
         metadata={
             "name": "AR-TYPED-PER-INSTANCE-MEMORY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -55,14 +60,14 @@ class BswPerInstanceMemoryPolicy:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -70,7 +75,7 @@ class BswPerInstanceMemoryPolicy:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -81,5 +86,5 @@ class BswPerInstanceMemoryPolicy:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

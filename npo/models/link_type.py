@@ -15,19 +15,19 @@ class LinkType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     page_ref: None | str = field(
         default=None,
         metadata={
             "name": "pageRef",
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | LinkTypeEnum = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )

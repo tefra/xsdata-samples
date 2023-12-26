@@ -51,6 +51,7 @@ class BaseTypeDirectDefinition:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BASE-TYPE-DIRECT-DEFINITION"
 
@@ -60,7 +61,7 @@ class BaseTypeDirectDefinition:
             "name": "BASE-TYPE-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_base_type_size: Optional[PositiveInteger] = field(
         default=None,
@@ -68,7 +69,7 @@ class BaseTypeDirectDefinition:
             "name": "MAX-BASE-TYPE-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     base_type_encoding: Optional[BaseTypeEncodingString] = field(
         default=None,
@@ -76,7 +77,7 @@ class BaseTypeDirectDefinition:
             "name": "BASE-TYPE-ENCODING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mem_alignment: Optional[PositiveInteger] = field(
         default=None,
@@ -84,7 +85,7 @@ class BaseTypeDirectDefinition:
             "name": "MEM-ALIGNMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     byte_order: Optional[ByteOrderEnum] = field(
         default=None,
@@ -92,7 +93,7 @@ class BaseTypeDirectDefinition:
             "name": "BYTE-ORDER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     native_declaration: Optional[NativeDeclarationString] = field(
         default=None,
@@ -100,14 +101,14 @@ class BaseTypeDirectDefinition:
             "name": "NATIVE-DECLARATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -115,5 +116,5 @@ class BaseTypeDirectDefinition:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.country_gbotype import CountryGbotype
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.country_gbotype import (
+    CountryGbotype,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -14,7 +16,7 @@ class AddressType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )
     address_line2: Optional[str] = field(
         default=None,
@@ -22,7 +24,7 @@ class AddressType:
             "name": "AddressLine2",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     state: Optional[str] = field(
         default=None,
@@ -30,7 +32,7 @@ class AddressType:
             "name": "State",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     city: Optional[str] = field(
         default=None,
@@ -38,7 +40,7 @@ class AddressType:
             "name": "City",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     zip_code: Optional[str] = field(
         default=None,
@@ -46,7 +48,7 @@ class AddressType:
             "name": "ZipCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     country: Optional[CountryGbotype] = field(
         default=None,
@@ -55,5 +57,5 @@ class AddressType:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "required": True,
-        }
+        },
     )

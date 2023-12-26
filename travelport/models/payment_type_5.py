@@ -24,6 +24,7 @@ class PaymentType5(Enum):
     TICKET_FEE
         Deprecated
     """
+
     AIRLINE_FEE = "AirlineFee"
     DELIVERY_FEE = "DeliveryFee"
     ITINERARY = "Itinerary"

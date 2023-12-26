@@ -8,5 +8,6 @@ class TypeDistance(Enum):
     """
     2 Letter distance unit code.
     """
+
     MI = "MI"
     KM = "KM"

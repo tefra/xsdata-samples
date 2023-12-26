@@ -8,6 +8,7 @@ class TypeAreaInfo(Enum):
     """
     The type of area category, such as AirportMain, AirportSecondary.
     """
+
     AIRPORT_MAIN = "AirportMain"
     AIRPORT_SECONDARY = "AirportSecondary"
     CITY_CENTER_DOWNTOWN = "CityCenterDowntown"

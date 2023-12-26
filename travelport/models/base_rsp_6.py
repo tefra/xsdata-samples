@@ -26,6 +26,7 @@ class BaseRsp6:
         the request that generated this response. Must be enabled on the
         system.
     """
+
     class Meta:
         name = "BaseRsp"
 
@@ -36,33 +37,33 @@ class BaseRsp6:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
             "max_occurs": 999,
-        }
+        },
     )
     trace_id: None | str = field(
         default=None,
         metadata={
             "name": "TraceId",
             "type": "Attribute",
-        }
+        },
     )
     transaction_id: None | str = field(
         default=None,
         metadata={
             "name": "TransactionId",
             "type": "Attribute",
-        }
+        },
     )
     response_time: None | int = field(
         default=None,
         metadata={
             "name": "ResponseTime",
             "type": "Attribute",
-        }
+        },
     )
     command_history: None | str = field(
         default=None,
         metadata={
             "name": "CommandHistory",
             "type": "Attribute",
-        }
+        },
     )

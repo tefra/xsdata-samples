@@ -13,5 +13,5 @@ class Style:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

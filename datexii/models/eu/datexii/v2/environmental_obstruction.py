@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.environmental_obstruction_type_enum import EnvironmentalObstructionTypeEnum
+from datexii.models.eu.datexii.v2.environmental_obstruction_type_enum import (
+    EnvironmentalObstructionTypeEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.obstruction import Obstruction
 
@@ -17,21 +19,24 @@ class EnvironmentalObstruction(Obstruction):
         obstruction on the road resulting from an environmental cause.
     :ivar environmental_obstruction_extension:
     """
+
     depth: Optional[float] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    environmental_obstruction_type: Optional[EnvironmentalObstructionTypeEnum] = field(
+    environmental_obstruction_type: Optional[
+        EnvironmentalObstructionTypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "environmentalObstructionType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     environmental_obstruction_extension: Optional[ExtensionType] = field(
         default=None,
@@ -39,5 +44,5 @@ class EnvironmentalObstruction(Obstruction):
             "name": "environmentalObstructionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

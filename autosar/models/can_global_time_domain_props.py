@@ -28,6 +28,7 @@ class CanGlobalTimeDomainProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-GLOBAL-TIME-DOMAIN-PROPS"
 
@@ -37,46 +38,54 @@ class CanGlobalTimeDomainProps:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    fup_data_id_lists: Optional["CanGlobalTimeDomainProps.FupDataIdLists"] = field(
+    fup_data_id_lists: Optional[
+        "CanGlobalTimeDomainProps.FupDataIdLists"
+    ] = field(
         default=None,
         metadata={
             "name": "FUP-DATA-ID-LISTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ofns_data_id_lists: Optional["CanGlobalTimeDomainProps.OfnsDataIdLists"] = field(
+    ofns_data_id_lists: Optional[
+        "CanGlobalTimeDomainProps.OfnsDataIdLists"
+    ] = field(
         default=None,
         metadata={
             "name": "OFNS-DATA-ID-LISTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ofs_data_id_lists: Optional["CanGlobalTimeDomainProps.OfsDataIdLists"] = field(
+    ofs_data_id_lists: Optional[
+        "CanGlobalTimeDomainProps.OfsDataIdLists"
+    ] = field(
         default=None,
         metadata={
             "name": "OFS-DATA-ID-LISTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sync_data_id_lists: Optional["CanGlobalTimeDomainProps.SyncDataIdLists"] = field(
+    sync_data_id_lists: Optional[
+        "CanGlobalTimeDomainProps.SyncDataIdLists"
+    ] = field(
         default=None,
         metadata={
             "name": "SYNC-DATA-ID-LISTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -84,7 +93,7 @@ class CanGlobalTimeDomainProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -93,6 +102,7 @@ class CanGlobalTimeDomainProps:
         :ivar fup_data_id_list: The DataIDList for FUP messages to
             calculate CRC.
         """
+
         fup_data_id_list: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
@@ -100,7 +110,7 @@ class CanGlobalTimeDomainProps:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 16,
-            }
+            },
         )
 
     @dataclass
@@ -109,6 +119,7 @@ class CanGlobalTimeDomainProps:
         :ivar ofns_data_id_list: The DataIDList for OFNS messages to
             calculate CRC.
         """
+
         ofns_data_id_list: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
@@ -116,7 +127,7 @@ class CanGlobalTimeDomainProps:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 16,
-            }
+            },
         )
 
     @dataclass
@@ -125,6 +136,7 @@ class CanGlobalTimeDomainProps:
         :ivar ofs_data_id_list: The DataIDList for OFS messages to
             calculate CRC.
         """
+
         ofs_data_id_list: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
@@ -132,7 +144,7 @@ class CanGlobalTimeDomainProps:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 16,
-            }
+            },
         )
 
     @dataclass
@@ -141,6 +153,7 @@ class CanGlobalTimeDomainProps:
         :ivar sync_data_id_list: The DataIDList for SYNC messages to
             calculate CRC.
         """
+
         sync_data_id_list: List[PositiveInteger] = field(
             default_factory=list,
             metadata={
@@ -148,5 +161,5 @@ class CanGlobalTimeDomainProps:
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 16,
-            }
+            },
         )

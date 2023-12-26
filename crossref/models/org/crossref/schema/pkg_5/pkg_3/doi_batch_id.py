@@ -8,6 +8,7 @@ class DoiBatchId:
     """
     Publisher generated ID that uniquely identifies the DOI submission batch.
     """
+
     class Meta:
         name = "doi_batch_id"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class DoiBatchId:
         metadata={
             "min_length": 4,
             "max_length": 100,
-        }
+        },
     )

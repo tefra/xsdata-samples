@@ -11,5 +11,6 @@ class CouplingPortRatePolicyActionEnumSimple(Enum):
     :cvar DROP_FRAME: If the rate policy is violated the frame shall be
         dropped.
     """
+
     BLOCK_SOURCE = "BLOCK-SOURCE"
     DROP_FRAME = "DROP-FRAME"

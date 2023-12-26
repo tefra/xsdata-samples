@@ -14,12 +14,12 @@ class TypeTax6:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
             "type": "Attribute",
-        }
+        },
     )

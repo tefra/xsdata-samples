@@ -15,5 +15,5 @@ class Matrixrow:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

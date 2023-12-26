@@ -29,6 +29,7 @@ class HotelRulesModifiers:
         Number of guests for the room.  Supported Providers: 1P
     key
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -38,14 +39,14 @@ class HotelRulesModifiers:
             "name": "PermittedProviders",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     number_of_children: None | NumberOfChildren = field(
         default=None,
         metadata={
             "name": "NumberOfChildren",
             "type": "Element",
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -53,14 +54,14 @@ class HotelRulesModifiers:
             "name": "HotelBedding",
             "type": "Element",
             "max_occurs": 4,
-        }
+        },
     )
     rate_category: None | int = field(
         default=None,
         metadata={
             "name": "RateCategory",
             "type": "Element",
-        }
+        },
     )
     corporate_discount_id: list[CorporateDiscountId1] = field(
         default_factory=list,
@@ -69,33 +70,33 @@ class HotelRulesModifiers:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 2,
-        }
+        },
     )
     number_of_adults: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfAdults",
             "type": "Attribute",
-        }
+        },
     )
     number_of_rooms: int = field(
         default=1,
         metadata={
             "name": "NumberOfRooms",
             "type": "Attribute",
-        }
+        },
     )
     total_occupants: None | int = field(
         default=None,
         metadata={
             "name": "TotalOccupants",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

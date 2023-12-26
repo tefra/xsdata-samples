@@ -22,6 +22,7 @@ class NoteTypeEnumSimple(Enum):
         know. It is similar to a hint, but focuses more to good practice
         than to better understanding.
     """
+
     CAUTION = "CAUTION"
     EXAMPLE = "EXAMPLE"
     EXERCISE = "EXERCISE"

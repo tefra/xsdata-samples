@@ -10,6 +10,7 @@ class FareNoteList:
     """
     The shared object list of Notes.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -19,5 +20,5 @@ class FareNoteList:
             "name": "FareNote",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

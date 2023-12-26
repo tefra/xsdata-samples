@@ -15,11 +15,11 @@ class PageSortType:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     order: None | OrderTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

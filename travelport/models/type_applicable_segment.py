@@ -14,6 +14,7 @@ class TypeApplicableSegment:
     booking_counts
         Classes of service and their counts.
     """
+
     class Meta:
         name = "typeApplicableSegment"
 
@@ -23,19 +24,19 @@ class TypeApplicableSegment:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     air_itinerary_details_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirItineraryDetailsRef",
             "type": "Attribute",
-        }
+        },
     )
     booking_counts: None | str = field(
         default=None,
         metadata={
             "name": "BookingCounts",
             "type": "Attribute",
-        }
+        },
     )

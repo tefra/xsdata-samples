@@ -13,5 +13,5 @@ class TicketingFacility:
         default=TicketingFacilityEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

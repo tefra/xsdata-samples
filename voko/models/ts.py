@@ -20,5 +20,5 @@ class Ts:
                     "type": Tld,
                 },
             ),
-        }
+        },
     )

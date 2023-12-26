@@ -10,6 +10,7 @@ class ErrorInfo6(TypeErrorInfo6):
     """
     Container for error data when there is an application error.
     """
+
     class Meta:
         name = "ErrorInfo"
         namespace = "http://www.travelport.com/schema/common_v34_0"

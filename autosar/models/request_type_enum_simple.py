@@ -10,5 +10,6 @@ class RequestTypeEnumSimple(Enum):
     :cvar PHYSICAL: This enum literal defines a PHYSICAL
         DiagnosticMessage request.
     """
+
     FUNCTIONAL = "FUNCTIONAL"
     PHYSICAL = "PHYSICAL"

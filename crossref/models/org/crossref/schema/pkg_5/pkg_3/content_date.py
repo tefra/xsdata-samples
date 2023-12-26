@@ -9,6 +9,7 @@ class ContentDate(DateT):
     """
     The date a piece of content was created.
     """
+
     class Meta:
         name = "content_date"
         namespace = "http://www.crossref.org/schema/5.3.1"

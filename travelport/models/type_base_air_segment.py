@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate
 from travelport.models.air_avail_info import AirAvailInfo
-from travelport.models.alternate_location_distance_ref import AlternateLocationDistanceRef
+from travelport.models.alternate_location_distance_ref import (
+    AlternateLocationDistanceRef,
+)
 from travelport.models.codeshare_info import CodeshareInfo
 from travelport.models.connection import Connection
 from travelport.models.flight_details import FlightDetails
@@ -136,6 +138,7 @@ class TypeBaseAirSegment(Segment1):
         Branding.  The Brand Indicator is only returned in the availability
         search response.  Provider: 1G, 1V, 1P, ACH
     """
+
     class Meta:
         name = "typeBaseAirSegment"
 
@@ -145,7 +148,7 @@ class TypeBaseAirSegment(Segment1):
             "name": "SponsoredFltInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     codeshare_info: None | CodeshareInfo = field(
         default=None,
@@ -153,7 +156,7 @@ class TypeBaseAirSegment(Segment1):
             "name": "CodeshareInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_avail_info: list[AirAvailInfo] = field(
         default_factory=list,
@@ -162,7 +165,7 @@ class TypeBaseAirSegment(Segment1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     flight_details: list[FlightDetails] = field(
         default_factory=list,
@@ -171,7 +174,7 @@ class TypeBaseAirSegment(Segment1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     flight_details_ref: list[FlightDetailsRef] = field(
         default_factory=list,
@@ -180,16 +183,18 @@ class TypeBaseAirSegment(Segment1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
-    alternate_location_distance_ref: list[AlternateLocationDistanceRef] = field(
+    alternate_location_distance_ref: list[
+        AlternateLocationDistanceRef
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AlternateLocationDistanceRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     connection: None | Connection = field(
         default=None,
@@ -197,7 +202,7 @@ class TypeBaseAirSegment(Segment1):
             "name": "Connection",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     sell_message: list[str] = field(
         default_factory=list,
@@ -206,7 +211,7 @@ class TypeBaseAirSegment(Segment1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rail_coach_details: list[RailCoachDetails] = field(
         default_factory=list,
@@ -215,14 +220,14 @@ class TypeBaseAirSegment(Segment1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     open_segment: None | bool = field(
         default=None,
         metadata={
             "name": "OpenSegment",
             "type": "Attribute",
-        }
+        },
     )
     group: None | int = field(
         default=None,
@@ -230,7 +235,7 @@ class TypeBaseAirSegment(Segment1):
             "name": "Group",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -238,14 +243,14 @@ class TypeBaseAirSegment(Segment1):
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -253,7 +258,7 @@ class TypeBaseAirSegment(Segment1):
             "name": "FlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -263,7 +268,7 @@ class TypeBaseAirSegment(Segment1):
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -273,42 +278,42 @@ class TypeBaseAirSegment(Segment1):
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )
     flight_time: None | int = field(
         default=None,
         metadata={
             "name": "FlightTime",
             "type": "Attribute",
-        }
+        },
     )
     travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
-        }
+        },
     )
     distance: None | int = field(
         default=None,
         metadata={
             "name": "Distance",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -317,7 +322,7 @@ class TypeBaseAirSegment(Segment1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -326,35 +331,35 @@ class TypeBaseAirSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     participant_level: None | str = field(
         default=None,
         metadata={
             "name": "ParticipantLevel",
             "type": "Attribute",
-        }
+        },
     )
     link_availability: None | bool = field(
         default=None,
         metadata={
             "name": "LinkAvailability",
             "type": "Attribute",
-        }
+        },
     )
     polled_availability_option: None | str = field(
         default=None,
         metadata={
             "name": "PolledAvailabilityOption",
             "type": "Attribute",
-        }
+        },
     )
     availability_display_type: None | str = field(
         default=None,
         metadata={
             "name": "AvailabilityDisplayType",
             "type": "Attribute",
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -363,14 +368,14 @@ class TypeBaseAirSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
-        }
+        },
     )
     equipment: None | str = field(
         default=None,
@@ -378,70 +383,70 @@ class TypeBaseAirSegment(Segment1):
             "name": "Equipment",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     marriage_group: None | int = field(
         default=None,
         metadata={
             "name": "MarriageGroup",
             "type": "Attribute",
-        }
+        },
     )
     number_of_stops: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfStops",
             "type": "Attribute",
-        }
+        },
     )
     seamless: None | bool = field(
         default=None,
         metadata={
             "name": "Seamless",
             "type": "Attribute",
-        }
+        },
     )
     change_of_plane: bool = field(
         default=False,
         metadata={
             "name": "ChangeOfPlane",
             "type": "Attribute",
-        }
+        },
     )
     guaranteed_payment_carrier: None | str = field(
         default=None,
         metadata={
             "name": "GuaranteedPaymentCarrier",
             "type": "Attribute",
-        }
+        },
     )
     host_token_ref: None | str = field(
         default=None,
         metadata={
             "name": "HostTokenRef",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     optional_services_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "OptionalServicesIndicator",
             "type": "Attribute",
-        }
+        },
     )
     availability_source: None | str = field(
         default=None,
@@ -449,28 +454,28 @@ class TypeBaseAirSegment(Segment1):
             "name": "AvailabilitySource",
             "type": "Attribute",
             "max_length": 1,
-        }
+        },
     )
     apisrequirements_ref: None | str = field(
         default=None,
         metadata={
             "name": "APISRequirementsRef",
             "type": "Attribute",
-        }
+        },
     )
     black_listed: None | bool = field(
         default=None,
         metadata={
             "name": "BlackListed",
             "type": "Attribute",
-        }
+        },
     )
     operational_status: None | str = field(
         default=None,
         metadata={
             "name": "OperationalStatus",
             "type": "Attribute",
-        }
+        },
     )
     number_in_party: None | int = field(
         default=None,
@@ -479,7 +484,7 @@ class TypeBaseAirSegment(Segment1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
     rail_coach_number: None | str = field(
         default=None,
@@ -487,33 +492,33 @@ class TypeBaseAirSegment(Segment1):
             "name": "RailCoachNumber",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )
     booking_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BookingDate",
             "type": "Attribute",
-        }
+        },
     )
     flown_segment: bool = field(
         default=False,
         metadata={
             "name": "FlownSegment",
             "type": "Attribute",
-        }
+        },
     )
     schedule_change: bool = field(
         default=False,
         metadata={
             "name": "ScheduleChange",
             "type": "Attribute",
-        }
+        },
     )
     brand_indicator: None | str = field(
         default=None,
         metadata={
             "name": "BrandIndicator",
             "type": "Attribute",
-        }
+        },
     )

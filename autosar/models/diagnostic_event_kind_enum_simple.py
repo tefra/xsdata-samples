@@ -8,5 +8,6 @@ class DiagnosticEventKindEnumSimple(Enum):
     :cvar BSW: The event is assigned to a BSW module.
     :cvar SWC: The event is assigned to a SWC.
     """
+
     BSW = "BSW"
     SWC = "SWC"

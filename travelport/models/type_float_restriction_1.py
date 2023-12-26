@@ -18,6 +18,7 @@ class TypeFloatRestriction1:
     max_value
         The maximum value permitted.
     """
+
     class Meta:
         name = "typeFloatRestriction"
 
@@ -27,7 +28,7 @@ class TypeFloatRestriction1:
             "name": "MinValue",
             "type": "Attribute",
             "max_inclusive": 9999999.0,
-        }
+        },
     )
     max_value: None | float = field(
         default=None,
@@ -35,5 +36,5 @@ class TypeFloatRestriction1:
             "name": "MaxValue",
             "type": "Attribute",
             "max_inclusive": 9999999.0,
-        }
+        },
     )

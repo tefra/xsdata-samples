@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .autosar_operation_argument_instance import AutosarOperationArgumentInstance
+from .autosar_operation_argument_instance import (
+    AutosarOperationArgumentInstance,
+)
 from .autosar_variable_instance import AutosarVariableInstance
-from .td_event_occurrence_expression_formula import TdEventOccurrenceExpressionFormula
+from .td_event_occurrence_expression_formula import (
+    TdEventOccurrenceExpressionFormula,
+)
 from .timing_mode_instance import TimingModeInstance
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -44,6 +48,7 @@ class TdEventOccurrenceExpression:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TD-EVENT-OCCURRENCE-EXPRESSION"
 
@@ -53,7 +58,7 @@ class TdEventOccurrenceExpression:
             "name": "ARGUMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: Optional[TdEventOccurrenceExpressionFormula] = field(
         default=None,
@@ -61,7 +66,7 @@ class TdEventOccurrenceExpression:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     modes: Optional["TdEventOccurrenceExpression.Modes"] = field(
         default=None,
@@ -69,7 +74,7 @@ class TdEventOccurrenceExpression:
             "name": "MODES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variables: Optional["TdEventOccurrenceExpression.Variables"] = field(
         default=None,
@@ -77,14 +82,14 @@ class TdEventOccurrenceExpression:
             "name": "VARIABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -92,18 +97,20 @@ class TdEventOccurrenceExpression:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class Arguments:
-        autosar_operation_argument_instance: List[AutosarOperationArgumentInstance] = field(
+        autosar_operation_argument_instance: List[
+            AutosarOperationArgumentInstance
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "AUTOSAR-OPERATION-ARGUMENT-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -114,7 +121,7 @@ class TdEventOccurrenceExpression:
                 "name": "TIMING-MODE-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -125,5 +132,5 @@ class TdEventOccurrenceExpression:
                 "name": "AUTOSAR-VARIABLE-INSTANCE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -29,6 +29,7 @@ class SoftwarePackageStoring:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOFTWARE-PACKAGE-STORING"
 
@@ -38,7 +39,7 @@ class SoftwarePackageStoring:
             "name": "STORING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transfer_refs: Optional["SoftwarePackageStoring.TransferRefs"] = field(
         default=None,
@@ -46,14 +47,14 @@ class SoftwarePackageStoring:
             "name": "TRANSFER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -61,18 +62,20 @@ class SoftwarePackageStoring:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class TransferRefs:
-        transfer_ref: List["SoftwarePackageStoring.TransferRefs.TransferRef"] = field(
+        transfer_ref: List[
+            "SoftwarePackageStoring.TransferRefs.TransferRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TRANSFER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -83,5 +86,5 @@ class SoftwarePackageStoring:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

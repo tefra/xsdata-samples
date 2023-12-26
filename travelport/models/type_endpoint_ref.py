@@ -14,6 +14,7 @@ class TypeEndpointRef:
     id
         Reference to an Endpoint
     """
+
     class Meta:
         name = "typeEndpointRef"
 
@@ -23,5 +24,5 @@ class TypeEndpointRef:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.vehicle_characteristics import VehicleCharacteristics
+from datexii.models.eu.datexii.v2.vehicle_characteristics import (
+    VehicleCharacteristics,
+)
 from datexii.models.eu.datexii.v2.vehicle_flow_value import VehicleFlowValue
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -26,13 +28,14 @@ class VehicleRate:
     :ivar measured_vehicles:
     :ivar vehicle_rate_extension:
     """
+
     measurement_or_calculation_time: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "name": "measurementOrCalculationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     fill_rate: Optional[VehicleFlowValue] = field(
         default=None,
@@ -40,7 +43,7 @@ class VehicleRate:
             "name": "fillRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     exit_rate: Optional[VehicleFlowValue] = field(
         default=None,
@@ -48,7 +51,7 @@ class VehicleRate:
             "name": "exitRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_flow_rate: Optional[VehicleFlowValue] = field(
         default=None,
@@ -56,7 +59,7 @@ class VehicleRate:
             "name": "vehicleFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     measured_vehicles: Optional[VehicleCharacteristics] = field(
         default=None,
@@ -64,7 +67,7 @@ class VehicleRate:
             "name": "measuredVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_rate_extension: Optional[ExtensionType] = field(
         default=None,
@@ -72,5 +75,5 @@ class VehicleRate:
             "name": "vehicleRateExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

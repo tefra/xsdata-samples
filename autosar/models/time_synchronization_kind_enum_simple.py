@@ -10,5 +10,6 @@ class TimeSynchronizationKindEnumSimple(Enum):
     :cvar SYNCHRONIZED: Defines that the requested time base shall be a
         synchronized time based.
     """
+
     OFFSET = "OFFSET"
     SYNCHRONIZED = "SYNCHRONIZED"

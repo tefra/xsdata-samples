@@ -12,6 +12,7 @@ class CreditCardAuthReq(BaseReq1):
     Performs a credit card authorization to validate a credit card for use during
     booking.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -22,7 +23,7 @@ class CreditCardAuthReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_length": 1,
-        }
+        },
     )
     credit_card_payment_auth: list[CreditCardPaymentAuth] = field(
         default_factory=list,
@@ -31,7 +32,7 @@ class CreditCardAuthReq(BaseReq1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -40,5 +41,5 @@ class CreditCardAuthReq(BaseReq1):
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )

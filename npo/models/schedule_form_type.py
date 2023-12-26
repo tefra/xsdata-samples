@@ -15,11 +15,11 @@ class ScheduleFormType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     highlight: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

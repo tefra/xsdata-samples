@@ -19,6 +19,7 @@ class TypeTimeSpec2:
         Specifies a time that would be preferred within the time range
         specified.
     """
+
     class Meta:
         name = "typeTimeSpec"
 
@@ -28,7 +29,7 @@ class TypeTimeSpec2:
             "name": "TimeRange",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-        }
+        },
     )
     specific_time: None | TypeSpecificTime2 = field(
         default=None,
@@ -36,12 +37,12 @@ class TypeTimeSpec2:
             "name": "SpecificTime",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-        }
+        },
     )
     preferred_time: None | str = field(
         default=None,
         metadata={
             "name": "PreferredTime",
             "type": "Attribute",
-        }
+        },
     )

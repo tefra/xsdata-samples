@@ -9,6 +9,7 @@ class FareFamilyCriteria:
     """
     It is a branded Fare for a carrier and given fare basis code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class FareFamilyCriteria:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     label: None | str = field(
         default=None,
@@ -28,7 +29,7 @@ class FareFamilyCriteria:
             "type": "Attribute",
             "min_length": 0,
             "max_length": 32,
-        }
+        },
     )
     fare_basis: None | str = field(
         default=None,
@@ -36,5 +37,5 @@ class FareFamilyCriteria:
             "name": "FareBasis",
             "type": "Attribute",
             "max_length": 20,
-        }
+        },
     )

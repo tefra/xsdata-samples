@@ -21,31 +21,32 @@ class QueueSelectorType:
     surname
         Surname as in queue ,supports alpha characters only.
     """
+
     queue: None | str = field(
         default=None,
         metadata={
             "name": "Queue",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     date_range: None | str = field(
         default=None,
         metadata={
             "name": "DateRange",
             "type": "Attribute",
-        }
+        },
     )
     surname: None | str = field(
         default=None,
         metadata={
             "name": "Surname",
             "type": "Attribute",
-        }
+        },
     )

@@ -14,11 +14,12 @@ class OpenlrAreaLocationReference:
     necessarily need to. It is represente according to the OpenLR
     standard for Area Locations
     """
+
     openlr_area_location_reference_extension: Optional[ExtensionType] = field(
         default=None,
         metadata={
             "name": "openlrAreaLocationReferenceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

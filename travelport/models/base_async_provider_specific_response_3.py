@@ -18,6 +18,7 @@ class BaseAsyncProviderSpecificResponse3:
         Identifies whether more results are available for specific host or
         not.
     """
+
     class Meta:
         name = "BaseAsyncProviderSpecificResponse"
 
@@ -29,7 +30,7 @@ class BaseAsyncProviderSpecificResponse3:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     more_results: None | bool = field(
         default=None,
@@ -37,5 +38,5 @@ class BaseAsyncProviderSpecificResponse3:
             "name": "MoreResults",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

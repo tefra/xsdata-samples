@@ -27,6 +27,7 @@ class FareNote:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -34,7 +35,7 @@ class FareNote:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -42,40 +43,40 @@ class FareNote:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     precedence: None | int = field(
         default=None,
         metadata={
             "name": "Precedence",
             "type": "Attribute",
-        }
+        },
     )
     note_name: None | str = field(
         default=None,
         metadata={
             "name": "NoteName",
             "type": "Attribute",
-        }
+        },
     )
     fare_info_message_ref: None | str = field(
         default=None,
         metadata={
             "name": "FareInfoMessageRef",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

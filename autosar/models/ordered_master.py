@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .time_sync_server_configuration_subtypes_enum import TimeSyncServerConfigurationSubtypesEnum
+from .time_sync_server_configuration_subtypes_enum import (
+    TimeSyncServerConfigurationSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -27,6 +29,7 @@ class OrderedMaster:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ORDERED-MASTER"
 
@@ -36,7 +39,7 @@ class OrderedMaster:
             "name": "INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_sync_server_ref: Optional["OrderedMaster.TimeSyncServerRef"] = field(
         default=None,
@@ -44,14 +47,14 @@ class OrderedMaster:
             "name": "TIME-SYNC-SERVER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -59,7 +62,7 @@ class OrderedMaster:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -70,5 +73,5 @@ class OrderedMaster:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

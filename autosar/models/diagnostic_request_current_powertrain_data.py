@@ -7,9 +7,15 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_parameter_identifier_subtypes_enum import DiagnosticParameterIdentifierSubtypesEnum
-from .diagnostic_request_current_powertrain_data_class_subtypes_enum import DiagnosticRequestCurrentPowertrainDataClassSubtypesEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_parameter_identifier_subtypes_enum import (
+    DiagnosticParameterIdentifierSubtypesEnum,
+)
+from .diagnostic_request_current_powertrain_data_class_subtypes_enum import (
+    DiagnosticRequestCurrentPowertrainDataClassSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -91,6 +97,7 @@ class DiagnosticRequestCurrentPowertrainData:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-REQUEST-CURRENT-POWERTRAIN-DATA"
 
@@ -101,15 +108,17 @@ class DiagnosticRequestCurrentPowertrainData:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticRequestCurrentPowertrainData.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticRequestCurrentPowertrainData.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +126,7 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +134,7 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +142,7 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +150,7 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,15 +158,17 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticRequestCurrentPowertrainData.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticRequestCurrentPowertrainData.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -165,15 +176,17 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticRequestCurrentPowertrainData.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticRequestCurrentPowertrainData.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pid_ref: Optional["DiagnosticRequestCurrentPowertrainData.PidRef"] = field(
         default=None,
@@ -181,22 +194,24 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "PID-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    request_current_powertrain_diagnostic_data_class_ref: Optional["DiagnosticRequestCurrentPowertrainData.RequestCurrentPowertrainDiagnosticDataClassRef"] = field(
+    request_current_powertrain_diagnostic_data_class_ref: Optional[
+        "DiagnosticRequestCurrentPowertrainData.RequestCurrentPowertrainDiagnosticDataClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUEST-CURRENT-POWERTRAIN-DIAGNOSTIC-DATA-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -204,14 +219,14 @@ class DiagnosticRequestCurrentPowertrainData:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -222,7 +237,7 @@ class DiagnosticRequestCurrentPowertrainData:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -233,7 +248,7 @@ class DiagnosticRequestCurrentPowertrainData:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -244,7 +259,7 @@ class DiagnosticRequestCurrentPowertrainData:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -255,16 +270,18 @@ class DiagnosticRequestCurrentPowertrainData:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RequestCurrentPowertrainDiagnosticDataClassRef(Ref):
-        dest: Optional[DiagnosticRequestCurrentPowertrainDataClassSubtypesEnum] = field(
+        dest: Optional[
+            DiagnosticRequestCurrentPowertrainDataClassSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

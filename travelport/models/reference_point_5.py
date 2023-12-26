@@ -15,5 +15,5 @@ class ReferencePoint5:
         metadata={
             "required": True,
             "max_length": 30,
-        }
+        },
     )

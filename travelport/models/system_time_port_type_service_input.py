@@ -16,7 +16,7 @@ class SystemTimePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class SystemTimePortTypeServiceInput:
                 "name": "TimeReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/system_v32_0",
-            }
+            },
         )

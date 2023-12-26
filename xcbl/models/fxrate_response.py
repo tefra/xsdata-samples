@@ -32,42 +32,42 @@ class CurrencyAvailabilityCheckList:
         metadata={
             "name": "FundsTransferIndicator",
             "type": "Element",
-        }
+        },
     )
     remote_check_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "RemoteCheckIndicator",
             "type": "Element",
-        }
+        },
     )
     onsite_check_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "OnsiteCheckIndicator",
             "type": "Element",
-        }
+        },
     )
     achindicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "ACHIndicator",
             "type": "Element",
-        }
+        },
     )
     remit_currency_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "RemitCurrencyIndicator",
             "type": "Element",
-        }
+        },
     )
     other_payment_service_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "OtherPaymentServiceNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -81,7 +81,7 @@ class FxrateRequestSummary:
         metadata={
             "name": "NumberOfFXRateRequest",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -95,7 +95,7 @@ class Fxamounts:
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
-        }
+        },
     )
     debit_amount: DebitAmount = field(
         metadata={
@@ -109,7 +109,7 @@ class Fxamounts:
         metadata={
             "name": "CreditAmount",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -123,28 +123,28 @@ class Fxdates:
         metadata={
             "name": "FXValueDate",
             "type": "Element",
-        }
+        },
     )
     remittance_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "RemittanceDate",
             "type": "Element",
-        }
+        },
     )
     quote_expiration_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "QuoteExpirationDate",
             "type": "Element",
-        }
+        },
     )
     list_of_date_coded: Optional[ListOfDateCoded] = field(
         default=None,
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -153,26 +153,28 @@ class FxidentificationData:
     class Meta:
         name = "FXIdentificationData"
 
-    originating_financial_institution: Optional[OriginatingFinancialInstitution] = field(
+    originating_financial_institution: Optional[
+        OriginatingFinancialInstitution
+    ] = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
-        }
+        },
     )
     card_info: Optional[CardInfo] = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
-        }
+        },
     )
     payee_party: Optional[PayeeParty] = field(
         default=None,
         metadata={
             "name": "PayeeParty",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -250,28 +252,30 @@ class IndicativeRateDetail:
         metadata={
             "name": "CurrencyDecimalPlaces",
             "type": "Element",
-        }
+        },
     )
-    currency_availability_check_list: Optional[CurrencyAvailabilityCheckList] = field(
+    currency_availability_check_list: Optional[
+        CurrencyAvailabilityCheckList
+    ] = field(
         default=None,
         metadata={
             "name": "CurrencyAvailabilityCheckList",
             "type": "Element",
-        }
+        },
     )
     indicative_rate_retrieved_date: Optional[str] = field(
         default=None,
         metadata={
             "name": "IndicativeRateRetrievedDate",
             "type": "Element",
-        }
+        },
     )
     current_date_time: Optional[str] = field(
         default=None,
         metadata={
             "name": "CurrentDateTime",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -338,7 +342,7 @@ class FxrateResponseHeader:
         metadata={
             "name": "SendingParty",
             "type": "Element",
-        }
+        },
     )
     indicative_indicator: str = field(
         metadata={
@@ -352,7 +356,7 @@ class FxrateResponseHeader:
         metadata={
             "name": "GeneralNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -363,14 +367,14 @@ class Fee:
         metadata={
             "name": "FeeType",
             "type": "Element",
-        }
+        },
     )
     fee_value: Optional[FeeValue] = field(
         default=None,
         metadata={
             "name": "FeeValue",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -382,7 +386,7 @@ class ListOfFee:
             "name": "Fee",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -407,21 +411,21 @@ class SpotRateDetail:
         metadata={
             "name": "FXIdentificationData",
             "type": "Element",
-        }
+        },
     )
     target_currency: Optional[TargetCurrency] = field(
         default=None,
         metadata={
             "name": "TargetCurrency",
             "type": "Element",
-        }
+        },
     )
     fxreference_number: Optional[FxreferenceNumber] = field(
         default=None,
         metadata={
             "name": "FXReferenceNumber",
             "type": "Element",
-        }
+        },
     )
     fxamounts: Fxamounts = field(
         metadata={
@@ -435,42 +439,42 @@ class SpotRateDetail:
         metadata={
             "name": "ListOfFee",
             "type": "Element",
-        }
+        },
     )
     fxtransaction_type_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXTransactionTypeCoded",
             "type": "Element",
-        }
+        },
     )
     fxtransaction_type_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXTransactionTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     fxquote_type_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCoded",
             "type": "Element",
-        }
+        },
     )
     fxquote_type_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     fxdates: Optional[Fxdates] = field(
         default=None,
         metadata={
             "name": "FXDates",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -484,7 +488,7 @@ class FxrateResponseDetail:
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
-        }
+        },
     )
     reference_currency: ReferenceCurrency = field(
         metadata={
@@ -498,14 +502,14 @@ class FxrateResponseDetail:
         metadata={
             "name": "ComputationalMethodCoded",
             "type": "Element",
-        }
+        },
     )
     computational_method_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCodedOther",
             "type": "Element",
-        }
+        },
     )
     fxrate: str = field(
         metadata={
@@ -519,63 +523,63 @@ class FxrateResponseDetail:
         metadata={
             "name": "InverseFXRate",
             "type": "Element",
-        }
+        },
     )
     payer_party: Optional[PayerParty] = field(
         default=None,
         metadata={
             "name": "PayerParty",
             "type": "Element",
-        }
+        },
     )
     indicative_rate_detail: Optional[IndicativeRateDetail] = field(
         default=None,
         metadata={
             "name": "IndicativeRateDetail",
             "type": "Element",
-        }
+        },
     )
     spot_rate_detail: Optional[SpotRateDetail] = field(
         default=None,
         metadata={
             "name": "SpotRateDetail",
             "type": "Element",
-        }
+        },
     )
     list_of_payment_reference: Optional[ListOfPaymentReference] = field(
         default=None,
         metadata={
             "name": "ListOfPaymentReference",
             "type": "Element",
-        }
+        },
     )
     list_of_other_payment_info: Optional[ListOfOtherPaymentInfo] = field(
         default=None,
         metadata={
             "name": "ListOfOtherPaymentInfo",
             "type": "Element",
-        }
+        },
     )
     list_of_payment_exception: Optional[ListOfPaymentException] = field(
         default=None,
         metadata={
             "name": "ListOfPaymentException",
             "type": "Element",
-        }
+        },
     )
     certificate_authority: Optional[str] = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
             "type": "Element",
-        }
+        },
     )
     fxrate_response_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "FXRateResponseNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -590,7 +594,7 @@ class ListOfFxrateResponseDetail:
             "name": "FXRateResponseDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -618,5 +622,5 @@ class FxrateResponse:
         metadata={
             "name": "FXRateResponseSummary",
             "type": "Element",
-        }
+        },
     )

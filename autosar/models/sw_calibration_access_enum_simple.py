@@ -12,6 +12,7 @@ class SwCalibrationAccessEnumSimple(Enum):
     :cvar READ_WRITE: The element will appear in the ASAP file with both
         read and write access.
     """
+
     NOT_ACCESSIBLE = "NOT-ACCESSIBLE"
     READ_ONLY = "READ-ONLY"
     READ_WRITE = "READ-WRITE"

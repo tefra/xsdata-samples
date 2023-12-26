@@ -14,7 +14,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .process_design_subtypes_enum import ProcessDesignSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .swc_service_dependency_in_executable_instance_ref import SwcServiceDependencyInExecutableInstanceRef
+from .swc_service_dependency_in_executable_instance_ref import (
+    SwcServiceDependencyInExecutableInstanceRef,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -88,6 +90,7 @@ class DiagnosticIndicatorPortMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-INDICATOR-PORT-MAPPING"
 
@@ -98,15 +101,17 @@ class DiagnosticIndicatorPortMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticIndicatorPortMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticIndicatorPortMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +119,7 @@ class DiagnosticIndicatorPortMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +127,7 @@ class DiagnosticIndicatorPortMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +135,7 @@ class DiagnosticIndicatorPortMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +143,7 @@ class DiagnosticIndicatorPortMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,15 +151,17 @@ class DiagnosticIndicatorPortMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticIndicatorPortMapping.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticIndicatorPortMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -162,15 +169,17 @@ class DiagnosticIndicatorPortMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    indicator_ref: Optional["DiagnosticIndicatorPortMapping.IndicatorRef"] = field(
+    indicator_ref: Optional[
+        "DiagnosticIndicatorPortMapping.IndicatorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "INDICATOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     process_ref: Optional["DiagnosticIndicatorPortMapping.ProcessRef"] = field(
         default=None,
@@ -178,22 +187,24 @@ class DiagnosticIndicatorPortMapping:
             "name": "PROCESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    swc_service_dependency_in_executable_iref: Optional[SwcServiceDependencyInExecutableInstanceRef] = field(
+    swc_service_dependency_in_executable_iref: Optional[
+        SwcServiceDependencyInExecutableInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -201,14 +212,14 @@ class DiagnosticIndicatorPortMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -219,7 +230,7 @@ class DiagnosticIndicatorPortMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -230,7 +241,7 @@ class DiagnosticIndicatorPortMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,7 +252,7 @@ class DiagnosticIndicatorPortMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -252,5 +263,5 @@ class DiagnosticIndicatorPortMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

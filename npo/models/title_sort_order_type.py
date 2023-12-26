@@ -17,11 +17,11 @@ class TitleSortOrderType(MediaSortType):
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

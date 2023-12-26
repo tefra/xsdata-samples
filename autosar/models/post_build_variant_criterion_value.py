@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import Annotation
 from .integer_value_variation_point import IntegerValueVariationPoint
-from .post_build_variant_criterion_subtypes_enum import PostBuildVariantCriterionSubtypesEnum
+from .post_build_variant_criterion_subtypes_enum import (
+    PostBuildVariantCriterionSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -33,16 +35,19 @@ class PostBuildVariantCriterionValue:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "POST-BUILD-VARIANT-CRITERION-VALUE"
 
-    variant_criterion_ref: Optional["PostBuildVariantCriterionValue.VariantCriterionRef"] = field(
+    variant_criterion_ref: Optional[
+        "PostBuildVariantCriterionValue.VariantCriterionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "VARIANT-CRITERION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     value: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -50,22 +55,24 @@ class PostBuildVariantCriterionValue:
             "name": "VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["PostBuildVariantCriterionValue.Annotations"] = field(
+    annotations: Optional[
+        "PostBuildVariantCriterionValue.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -73,7 +80,7 @@ class PostBuildVariantCriterionValue:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -84,7 +91,7 @@ class PostBuildVariantCriterionValue:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -95,5 +102,5 @@ class PostBuildVariantCriterionValue:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

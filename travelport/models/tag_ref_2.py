@@ -14,6 +14,7 @@ class TagRef2:
     id
         The Tag ID.
     """
+
     class Meta:
         name = "TagRef"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -24,5 +25,5 @@ class TagRef2:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

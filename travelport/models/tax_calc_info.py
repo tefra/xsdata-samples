@@ -9,6 +9,7 @@ class TaxCalcInfo:
     """
     Container for a single segment for tax calculation purposes.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,7 +21,7 @@ class TaxCalcInfo:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -30,7 +31,7 @@ class TaxCalcInfo:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     base_fare: None | str = field(
         default=None,
@@ -38,26 +39,26 @@ class TaxCalcInfo:
             "name": "BaseFare",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     qsurcharge: None | str = field(
         default=None,
         metadata={
             "name": "QSurcharge",
             "type": "Attribute",
-        }
+        },
     )
     stop_over_fee: None | str = field(
         default=None,
         metadata={
             "name": "StopOverFee",
             "type": "Attribute",
-        }
+        },
     )
     tax: None | str = field(
         default=None,
         metadata={
             "name": "Tax",
             "type": "Attribute",
-        }
+        },
     )

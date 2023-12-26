@@ -10,6 +10,7 @@ class HotelUpsellDelete:
     Delete command for deleting HotelUpsellQualify,HotelUpsellOffer using there
     persisted keys.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -18,12 +19,12 @@ class HotelUpsellDelete:
         metadata={
             "name": "QualifyRef",
             "type": "Attribute",
-        }
+        },
     )
     offer_ref: None | str = field(
         default=None,
         metadata={
             "name": "OfferRef",
             "type": "Attribute",
-        }
+        },
     )

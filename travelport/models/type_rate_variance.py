@@ -19,6 +19,7 @@ class TypeRateVariance:
     apply
         Variance to response amount;  'high', 'low' or 'both. 1P.
     """
+
     class Meta:
         name = "typeRateVariance"
 
@@ -28,7 +29,7 @@ class TypeRateVariance:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     value: None | Decimal = field(
         default=None,
@@ -36,7 +37,7 @@ class TypeRateVariance:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     apply: None | str = field(
         default=None,
@@ -44,5 +45,5 @@ class TypeRateVariance:
             "name": "Apply",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

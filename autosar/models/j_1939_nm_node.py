@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .communication_controller_subtypes_enum import CommunicationControllerSubtypesEnum
+from .communication_controller_subtypes_enum import (
+    CommunicationControllerSubtypesEnum,
+)
 from .identifier import Identifier
 from .integer import Integer
 from .j_1939_node_name import J1939NodeName
@@ -103,6 +105,7 @@ class J1939NmNode:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "J-1939-NM-NODE"
 
@@ -113,7 +116,7 @@ class J1939NmNode:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["J1939NmNode.ShortNameFragments"] = field(
         default=None,
@@ -121,7 +124,7 @@ class J1939NmNode:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -129,7 +132,7 @@ class J1939NmNode:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -137,7 +140,7 @@ class J1939NmNode:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -145,7 +148,7 @@ class J1939NmNode:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -153,7 +156,7 @@ class J1939NmNode:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -161,7 +164,7 @@ class J1939NmNode:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["J1939NmNode.Annotations"] = field(
         default=None,
@@ -169,7 +172,7 @@ class J1939NmNode:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     controller_ref: Optional["J1939NmNode.ControllerRef"] = field(
         default=None,
@@ -177,7 +180,7 @@ class J1939NmNode:
             "name": "CONTROLLER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     machine_ref: Optional["J1939NmNode.MachineRef"] = field(
         default=None,
@@ -185,7 +188,7 @@ class J1939NmNode:
             "name": "MACHINE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_coord_cluster: Optional[PositiveInteger] = field(
         default=None,
@@ -193,7 +196,7 @@ class J1939NmNode:
             "name": "NM-COORD-CLUSTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_coordinator_role: Optional[NmCoordinatorRoleEnum] = field(
         default=None,
@@ -201,7 +204,7 @@ class J1939NmNode:
             "name": "NM-COORDINATOR-ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_if_ecu_ref: Optional["J1939NmNode.NmIfEcuRef"] = field(
         default=None,
@@ -209,7 +212,7 @@ class J1939NmNode:
             "name": "NM-IF-ECU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_node_id: Optional[Integer] = field(
         default=None,
@@ -217,7 +220,7 @@ class J1939NmNode:
             "name": "NM-NODE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     nm_passive_mode_enabled: Optional[Boolean] = field(
         default=None,
@@ -225,7 +228,7 @@ class J1939NmNode:
             "name": "NM-PASSIVE-MODE-ENABLED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rx_nm_pdu_refs: Optional["J1939NmNode.RxNmPduRefs"] = field(
         default=None,
@@ -233,7 +236,7 @@ class J1939NmNode:
             "name": "RX-NM-PDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tx_nm_pdu_refs: Optional["J1939NmNode.TxNmPduRefs"] = field(
         default=None,
@@ -241,7 +244,7 @@ class J1939NmNode:
             "name": "TX-NM-PDU-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -249,7 +252,7 @@ class J1939NmNode:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     node_name: Optional[J1939NodeName] = field(
         default=None,
@@ -257,14 +260,14 @@ class J1939NmNode:
             "name": "NODE-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -272,14 +275,14 @@ class J1939NmNode:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -290,7 +293,7 @@ class J1939NmNode:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -301,7 +304,7 @@ class J1939NmNode:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -312,7 +315,7 @@ class J1939NmNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -323,7 +326,7 @@ class J1939NmNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -334,7 +337,7 @@ class J1939NmNode:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -345,7 +348,7 @@ class J1939NmNode:
                 "name": "RX-NM-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -356,7 +359,7 @@ class J1939NmNode:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -367,7 +370,7 @@ class J1939NmNode:
                 "name": "TX-NM-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -378,5 +381,5 @@ class J1939NmNode:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

@@ -33,6 +33,7 @@ class Mintype:
         Number of min occurances. This field is used in conjunction with the
         Day of Week.
     """
+
     class Meta:
         name = "MINType"
 
@@ -41,54 +42,54 @@ class Mintype:
         metadata={
             "name": "HoursMin",
             "type": "Attribute",
-        }
+        },
     )
     days_min: None | bool = field(
         default=None,
         metadata={
             "name": "DaysMin",
             "type": "Attribute",
-        }
+        },
     )
     months_min: None | bool = field(
         default=None,
         metadata={
             "name": "MonthsMin",
             "type": "Attribute",
-        }
+        },
     )
     occur_ind_min: None | bool = field(
         default=None,
         metadata={
             "name": "OccurIndMin",
             "type": "Attribute",
-        }
+        },
     )
     same_day_min: None | bool = field(
         default=None,
         metadata={
             "name": "SameDayMin",
             "type": "Attribute",
-        }
+        },
     )
     tm_dowmin: None | int = field(
         default=None,
         metadata={
             "name": "TmDOWMin",
             "type": "Attribute",
-        }
+        },
     )
     fare_component: None | int = field(
         default=None,
         metadata={
             "name": "FareComponent",
             "type": "Attribute",
-        }
+        },
     )
     num_occur_min: None | int = field(
         default=None,
         metadata={
             "name": "NumOccurMin",
             "type": "Attribute",
-        }
+        },
     )

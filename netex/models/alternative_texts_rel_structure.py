@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional, Type
+from typing import List, Optional, Type, Union
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 from .availability_condition_ref import AvailabilityConditionRef
 from .branding_ref import BrandingRef
@@ -19,7 +19,9 @@ from .relative_operator_enumeration import RelativeOperatorEnumeration
 from .service_calendar_ref import ServiceCalendarRef
 from .serviced_organisation_ref import ServicedOrganisationRef
 from .status_enumeration import StatusEnumeration
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 from .timeband_ref import TimebandRef
 from .validity_condition_ref import ValidityConditionRef
 from .validity_condition_ref_structure import ValidityConditionRefStructure
@@ -42,7 +44,7 @@ class AlternativeTextsRelStructure(StrictContainmentAggregationStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -51,7 +53,15 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypes_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            FareDayTypeRef,
+            DayTypeRef,
+            "FareDayType",
+            "OrganisationDayType",
+            "DayType",
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -82,7 +92,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
 
 
@@ -91,7 +101,9 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingDays_RelStructure"
 
-    operating_day_ref_or_operating_day: List[object] = field(
+    operating_day_ref_or_operating_day: List[
+        Union[OperatingDayRef, "OperatingDay"]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -107,7 +119,7 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
 
 
@@ -116,7 +128,9 @@ class TimebandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timebands_RelStructure"
 
-    timeband_ref_or_timeband: List[object] = field(
+    timeband_ref_or_timeband: List[
+        Union[TimebandRef, "TimebandVersionedChildStructure"]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -132,7 +146,7 @@ class TimebandsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
 
 
@@ -141,7 +155,21 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            AvailabilityConditionRef,
+            ValidityRuleParameterRef,
+            ValidityTriggerRef,
+            ValidityConditionRef,
+            "ValidBetween",
+            "SimpleAvailabilityCondition",
+            "ValidDuring",
+            "AvailabilityCondition",
+            "ValidityRuleParameter",
+            "ValidityTrigger",
+            "ValidityCondition",
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -202,13 +230,15 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
 
 
 @dataclass
 class EntityInVersionStructure(EntityStructure):
-    validity_conditions_or_valid_between: List[object] = field(
+    validity_conditions_or_valid_between: List[
+        Union[ValidityConditionsRelStructure, "ValidBetween"]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -224,7 +254,7 @@ class EntityInVersionStructure(EntityStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     alternative_texts: Optional[AlternativeTextsRelStructure] = field(
         default=None,
@@ -232,66 +262,66 @@ class EntityInVersionStructure(EntityStructure):
             "name": "alternativeTexts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     data_source_ref_attribute: Optional[str] = field(
         default=None,
         metadata={
             "name": "dataSourceRef",
             "type": "Attribute",
-        }
+        },
     )
     created: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     changed: Optional[XmlDateTime] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     modification: ModificationEnumeration = field(
         default=ModificationEnumeration.NEW,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     status_attribute: StatusEnumeration = field(
         default=StatusEnumeration.ACTIVE,
         metadata={
             "name": "status",
             "type": "Attribute",
-        }
+        },
     )
     derived_from_version_ref_attribute: Optional[str] = field(
         default=None,
         metadata={
             "name": "derivedFromVersionRef",
             "type": "Attribute",
-        }
+        },
     )
     compatible_with_version_frame_version_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "compatibleWithVersionFrameVersionRef",
             "type": "Attribute",
-        }
+        },
     )
     derived_from_object_ref: Optional[str] = field(
         default=None,
         metadata={
             "name": "derivedFromObjectRef",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -303,7 +333,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "name": "keyList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     extensions: Optional[Extensions2] = field(
         default=None,
@@ -311,7 +341,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     branding_ref: Optional[BrandingRef] = field(
         default=None,
@@ -319,14 +349,14 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "name": "BrandingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     responsibility_set_ref_attribute: Optional[str] = field(
         default=None,
         metadata={
             "name": "responsibilitySetRef",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -338,7 +368,7 @@ class VersionedChildStructure(EntityInVersionStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -353,7 +383,7 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "name": "DataManagedObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     text: Optional[MultilingualString] = field(
         default=None,
@@ -362,27 +392,27 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     attribute_name: Optional[str] = field(
         default=None,
         metadata={
             "name": "attributeName",
             "type": "Attribute",
-        }
+        },
     )
     use_for_language: Optional[str] = field(
         default=None,
         metadata={
             "name": "useForLanguage",
             "type": "Attribute",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -397,7 +427,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -405,7 +435,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -413,7 +443,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -421,7 +451,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     earliest_time: Optional[XmlTime] = field(
         default=None,
@@ -429,7 +459,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "name": "EarliestTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_length: Optional[XmlDuration] = field(
         default=None,
@@ -437,21 +467,21 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "name": "DayLength",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     properties: Optional[PropertiesOfDayRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     timebands: Optional[TimebandsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -467,7 +497,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     service_calendar_ref: Optional[ServiceCalendarRef] = field(
         default=None,
@@ -475,7 +505,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "ServiceCalendarRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -483,7 +513,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -491,7 +521,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_number: Optional[int] = field(
         default=None,
@@ -499,7 +529,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "DayNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -507,7 +537,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     earliest_time: Optional[XmlTime] = field(
         default=None,
@@ -515,7 +545,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "EarliestTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_length: Optional[XmlDuration] = field(
         default=None,
@@ -523,7 +553,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "DayLength",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -538,7 +568,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_time: Optional[XmlTime] = field(
         default=None,
@@ -547,9 +577,11 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
-    end_time_or_day_offset_or_duration: List[object] = field(
+    end_time_or_day_offset_or_duration: List[
+        Union[XmlTime, int, XmlDuration]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -571,7 +603,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
                 },
             ),
             "max_occurs": 2,
-        }
+        },
     )
 
 
@@ -586,7 +618,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -594,7 +626,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     conditioned_object_ref: Optional[VersionOfObjectRefStructure] = field(
         default=None,
@@ -602,7 +634,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "name": "ConditionedObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     with_condition_ref: Optional[ValidityConditionRefStructure] = field(
         default=None,
@@ -610,7 +642,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "name": "WithConditionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -649,7 +681,7 @@ class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
             "name": "IsServiceDay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     serviced_organisation_ref: Optional[ServicedOrganisationRef] = field(
         default=None,
@@ -657,7 +689,7 @@ class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
             "name": "ServicedOrganisationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -672,7 +704,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
             "name": "FromDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_date: Optional[XmlDateTime] = field(
         default=None,
@@ -680,7 +712,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
             "name": "ToDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -701,9 +733,11 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "name": "RuleObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: List[object] = field(
+    choice: List[
+        Union[str, RelativeOperatorEnumeration, object, bool]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -735,7 +769,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
                 },
             ),
             "max_occurs": 3,
-        }
+        },
     )
 
 
@@ -750,7 +784,7 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
             "name": "TriggerObjectRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     private_code: Optional[PrivateCode] = field(
         default=None,
@@ -758,7 +792,7 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -773,7 +807,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "name": "IsAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     day_types: Optional[DayTypesRelStructure] = field(
         default=None,
@@ -781,7 +815,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "name": "dayTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     valid_day_bits: Optional[str] = field(
         default=None,
@@ -789,14 +823,14 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "name": "ValidDayBits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     timebands: Optional[TimebandsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     operating_days: Optional[OperatingDaysRelStructure] = field(
         default=None,
@@ -804,7 +838,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "name": "operatingDays",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -831,7 +865,9 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[FareDayTypeRef, DayTypeRef, DayOfWeekEnumeration, str]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -862,14 +898,14 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
                     "pattern": r"([Y | N])*",
                 },
             ),
-        }
+        },
     )
     timebands: Optional[TimebandsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 

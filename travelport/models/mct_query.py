@@ -10,6 +10,7 @@ class MctQuery:
     """
     Lookup the particular MCT time between two segments.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -21,5 +22,5 @@ class MctQuery:
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_occurs": 2,
             "max_occurs": 2,
-        }
+        },
     )

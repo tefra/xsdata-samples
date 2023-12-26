@@ -11,6 +11,7 @@ class SearchEvent6(TypeTimeRange6):
     """
     Search for various reservation events.
     """
+
     class Meta:
         name = "SearchEvent"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -20,5 +21,5 @@ class SearchEvent6(TypeTimeRange6):
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )

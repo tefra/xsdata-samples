@@ -12,6 +12,7 @@ class BaggageAllowances:
     """
     Details of Baggage allowance.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,7 +23,7 @@ class BaggageAllowances:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     carry_on_allowance_info: list[CarryOnAllowanceInfo] = field(
         default_factory=list,
@@ -30,7 +31,7 @@ class BaggageAllowances:
             "name": "CarryOnAllowanceInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     embargo_info: list[EmbargoInfo] = field(
         default_factory=list,
@@ -38,5 +39,5 @@ class BaggageAllowances:
             "name": "EmbargoInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

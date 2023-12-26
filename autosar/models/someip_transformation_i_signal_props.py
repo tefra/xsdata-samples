@@ -6,7 +6,9 @@ from .annotation import (
 )
 from .category_string import CategoryString
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
-from .someip_transformation_i_signal_props_conditional import SomeipTransformationISignalPropsConditional
+from .someip_transformation_i_signal_props_conditional import (
+    SomeipTransformationISignalPropsConditional,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -44,6 +46,7 @@ class SomeipTransformationISignalProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS"
 
@@ -53,7 +56,7 @@ class SomeipTransformationISignalProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -61,7 +64,7 @@ class SomeipTransformationISignalProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -69,7 +72,7 @@ class SomeipTransformationISignalProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -77,22 +80,24 @@ class SomeipTransformationISignalProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    someip_transformation_i_signal_props_variants: Optional["SomeipTransformationISignalProps.SomeipTransformationISignalPropsVariants"] = field(
+    someip_transformation_i_signal_props_variants: Optional[
+        "SomeipTransformationISignalProps.SomeipTransformationISignalPropsVariants"
+    ] = field(
         default=None,
         metadata={
             "name": "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -100,16 +105,18 @@ class SomeipTransformationISignalProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class SomeipTransformationISignalPropsVariants:
-        someip_transformation_i_signal_props_conditional: List[SomeipTransformationISignalPropsConditional] = field(
+        someip_transformation_i_signal_props_conditional: List[
+            SomeipTransformationISignalPropsConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

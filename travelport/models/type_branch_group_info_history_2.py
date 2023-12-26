@@ -20,6 +20,7 @@ class TypeBranchGroupInfoHistory2(TypeProfileInfo2):
         Identify if Universal Record synch is activated at Branch Group
         Level.
     """
+
     class Meta:
         name = "typeBranchGroupInfoHistory"
 
@@ -30,7 +31,7 @@ class TypeBranchGroupInfoHistory2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     branch_group_code: None | str = field(
         default=None,
@@ -39,12 +40,12 @@ class TypeBranchGroupInfoHistory2(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     ursync_to: None | bool = field(
         default=None,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

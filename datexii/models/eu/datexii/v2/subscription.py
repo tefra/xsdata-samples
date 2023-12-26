@@ -5,7 +5,9 @@ from datexii.models.eu.datexii.v2.catalogue_reference import CatalogueReference
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.filter_reference import FilterReference
 from datexii.models.eu.datexii.v2.operating_mode_enum import OperatingModeEnum
-from datexii.models.eu.datexii.v2.subscription_state_enum import SubscriptionStateEnum
+from datexii.models.eu.datexii.v2.subscription_state_enum import (
+    SubscriptionStateEnum,
+)
 from datexii.models.eu.datexii.v2.target import Target
 from datexii.models.eu.datexii.v2.update_method_enum import UpdateMethodEnum
 
@@ -35,13 +37,14 @@ class Subscription:
     :ivar catalogue_reference:
     :ivar subscription_extension:
     """
+
     delete_subscription: Optional[bool] = field(
         default=None,
         metadata={
             "name": "deleteSubscription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     delivery_interval: Optional[float] = field(
         default=None,
@@ -49,7 +52,7 @@ class Subscription:
             "name": "deliveryInterval",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     operating_mode: Optional[OperatingModeEnum] = field(
         default=None,
@@ -58,7 +61,7 @@ class Subscription:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     subscription_start_time: Optional[XmlDateTime] = field(
         default=None,
@@ -67,7 +70,7 @@ class Subscription:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     subscription_state: Optional[SubscriptionStateEnum] = field(
         default=None,
@@ -76,7 +79,7 @@ class Subscription:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     subscription_stop_time: Optional[XmlDateTime] = field(
         default=None,
@@ -84,7 +87,7 @@ class Subscription:
             "name": "subscriptionStopTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     update_method: Optional[UpdateMethodEnum] = field(
         default=None,
@@ -93,7 +96,7 @@ class Subscription:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     target: List[Target] = field(
         default_factory=list,
@@ -101,7 +104,7 @@ class Subscription:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     filter_reference: Optional[FilterReference] = field(
         default=None,
@@ -109,7 +112,7 @@ class Subscription:
             "name": "filterReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     catalogue_reference: Optional[CatalogueReference] = field(
         default=None,
@@ -117,7 +120,7 @@ class Subscription:
             "name": "catalogueReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     subscription_extension: Optional[ExtensionType] = field(
         default=None,
@@ -125,5 +128,5 @@ class Subscription:
             "name": "subscriptionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

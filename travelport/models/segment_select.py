@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_non_air_reservation_ref_2 import TypeNonAirReservationRef2
+from travelport.models.type_non_air_reservation_ref_2 import (
+    TypeNonAirReservationRef2,
+)
 from travelport.models.type_segment_ref_2 import TypeSegmentRef2
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
@@ -40,6 +42,7 @@ class SegmentSelect:
         Set to true to consider all Passive segments as Auxiliary segment
         and false to discard passive segments
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -49,7 +52,7 @@ class SegmentSelect:
             "name": "AirSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_reservation_ref: list[TypeNonAirReservationRef2] = field(
         default_factory=list,
@@ -57,7 +60,7 @@ class SegmentSelect:
             "name": "HotelReservationRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_reservation_ref: list[TypeNonAirReservationRef2] = field(
         default_factory=list,
@@ -65,7 +68,7 @@ class SegmentSelect:
             "name": "VehicleReservationRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     passive_segment_ref: list[TypeSegmentRef2] = field(
         default_factory=list,
@@ -73,40 +76,40 @@ class SegmentSelect:
             "name": "PassiveSegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     all_confirmed_air: None | bool = field(
         default=None,
         metadata={
             "name": "AllConfirmedAir",
             "type": "Attribute",
-        }
+        },
     )
     all_waitlisted_air: None | bool = field(
         default=None,
         metadata={
             "name": "AllWaitlistedAir",
             "type": "Attribute",
-        }
+        },
     )
     all_hotel: None | bool = field(
         default=None,
         metadata={
             "name": "AllHotel",
             "type": "Attribute",
-        }
+        },
     )
     all_vehicle: None | bool = field(
         default=None,
         metadata={
             "name": "AllVehicle",
             "type": "Attribute",
-        }
+        },
     )
     all_passive: None | bool = field(
         default=None,
         metadata={
             "name": "AllPassive",
             "type": "Attribute",
-        }
+        },
     )

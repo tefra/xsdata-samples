@@ -10,12 +10,12 @@ class CodespaceRefStructure:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     ref: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

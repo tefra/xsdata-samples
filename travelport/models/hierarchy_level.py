@@ -34,6 +34,7 @@ class HierarchyLevel:
     template_version
         The current version number of the template.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -43,7 +44,7 @@ class HierarchyLevel:
             "name": "DefaultTemplate",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     hierarchy_level_id: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class HierarchyLevel:
             "name": "HierarchyLevelID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -59,7 +60,7 @@ class HierarchyLevel:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -69,7 +70,7 @@ class HierarchyLevel:
             "required": True,
             "min_length": 1,
             "max_length": 64,
-        }
+        },
     )
     level_number: None | int = field(
         default=None,
@@ -77,7 +78,7 @@ class HierarchyLevel:
             "name": "LevelNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -86,14 +87,14 @@ class HierarchyLevel:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     template_id: None | int = field(
         default=None,
         metadata={
             "name": "TemplateID",
             "type": "Attribute",
-        }
+        },
     )
     template_version: None | int = field(
         default=None,
@@ -101,5 +102,5 @@ class HierarchyLevel:
             "name": "TemplateVersion",
             "type": "Attribute",
             "min_inclusive": 0,
-        }
+        },
     )

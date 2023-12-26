@@ -39,6 +39,7 @@ class CurrencyEnum(Enum):
     :cvar USD: US Dollar
     :cvar OTHER: Another currency.
     """
+
     EUR = "eur"
     ALL = "all"
     AMD = "amd"

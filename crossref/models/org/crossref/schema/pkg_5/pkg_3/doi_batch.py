@@ -13,6 +13,7 @@ class DoiBatch:
     This element indicates the start and end of the XML file. The
     version number is fixed to the version of the schema.
     """
+
     class Meta:
         name = "doi_batch"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -22,19 +23,19 @@ class DoiBatch:
         metadata={
             "type": "Element",
             "required": True,
-        }
+        },
     )
     body: Optional[Body] = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
-        }
+        },
     )
     version: str = field(
         init=False,
         default="5.3.1",
         metadata={
             "type": "Attribute",
-        }
+        },
     )

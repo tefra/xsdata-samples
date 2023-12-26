@@ -1,14 +1,18 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .boolean_operator_enumeration import BooleanOperatorEnumeration
 from .containment_aggregation_structure import ContainmentAggregationStructure
-from .validity_parameter_assignment_version_structure import ValidityParameterAssignmentVersionStructure
+from .validity_parameter_assignment_version_structure import (
+    ValidityParameterAssignmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GenericParameterAssignmentVersionStructure(ValidityParameterAssignmentVersionStructure):
+class GenericParameterAssignmentVersionStructure(
+    ValidityParameterAssignmentVersionStructure
+):
     class Meta:
         name = "GenericParameterAssignment_VersionStructure"
 
@@ -18,14 +22,14 @@ class GenericParameterAssignmentVersionStructure(ValidityParameterAssignmentVers
             "name": "IncludesGroupingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     includes: Optional["GenericParameterAssignmentsRelStructure"] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
 
 
@@ -36,7 +40,9 @@ class GenericParameterAssignment(GenericParameterAssignmentVersionStructure):
 
 
 @dataclass
-class GenericParameterAssignmentInContext(GenericParameterAssignmentVersionStructure):
+class GenericParameterAssignmentInContext(
+    GenericParameterAssignmentVersionStructure
+):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
@@ -46,7 +52,9 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "genericParameterAssignments_RelStructure"
 
-    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[object] = field(
+    generic_parameter_assignment_or_generic_parameter_assignment_in_context: List[
+        Union[GenericParameterAssignment, GenericParameterAssignmentInContext]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -62,5 +70,5 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

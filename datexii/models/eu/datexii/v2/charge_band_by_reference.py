@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.charge_band_versioned_reference import ChargeBandVersionedReference
+from datexii.models.eu.datexii.v2.charge_band_versioned_reference import (
+    ChargeBandVersionedReference,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -14,6 +16,7 @@ class ChargeBandByReference:
     :ivar charge_band_reference: A reference to a charge band.
     :ivar charge_band_by_reference_extension:
     """
+
     charge_band_reference: Optional[ChargeBandVersionedReference] = field(
         default=None,
         metadata={
@@ -21,7 +24,7 @@ class ChargeBandByReference:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     charge_band_by_reference_extension: Optional[ExtensionType] = field(
         default=None,
@@ -29,5 +32,5 @@ class ChargeBandByReference:
             "name": "chargeBandByReferenceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

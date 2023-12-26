@@ -1,7 +1,11 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.content_provider_agency_credentials import ContentProviderAgencyCredentials
-from travelport.models.type_provider_supplier_capability_type import TypeProviderSupplierCapabilityType
+from travelport.models.content_provider_agency_credentials import (
+    ContentProviderAgencyCredentials,
+)
+from travelport.models.type_provider_supplier_capability_type import (
+    TypeProviderSupplierCapabilityType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/util_v52_0"
 
@@ -61,6 +65,7 @@ class ContentProvider:
     seat_map
         Indication if a Provider and/or Supplier has SeatMap capability.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -70,14 +75,14 @@ class ContentProvider:
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-        }
+        },
     )
     agency_credentials: None | ContentProviderAgencyCredentials = field(
         default=None,
@@ -85,7 +90,7 @@ class ContentProvider:
             "name": "AgencyCredentials",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     active: None | bool = field(
         default=None,
@@ -93,7 +98,7 @@ class ContentProvider:
             "name": "Active",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provisionable: None | bool = field(
         default=None,
@@ -101,82 +106,82 @@ class ContentProvider:
             "name": "Provisionable",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     merchandising_achadapter: None | str = field(
         default=None,
         metadata={
             "name": "MerchandisingACHAdapter",
             "type": "Attribute",
-        }
+        },
     )
     static_data_carrier: bool = field(
         default=False,
         metadata={
             "name": "StaticDataCarrier",
             "type": "Attribute",
-        }
+        },
     )
     merchandising_achcarrier: bool = field(
         default=False,
         metadata={
             "name": "MerchandisingACHCarrier",
             "type": "Attribute",
-        }
+        },
     )
     merchandising_hub_carrier: bool = field(
         default=False,
         metadata={
             "name": "MerchandisingHubCarrier",
             "type": "Attribute",
-        }
+        },
     )
     booking_retrieve: TypeProviderSupplierCapabilityType = field(
         default=TypeProviderSupplierCapabilityType.YES,
         metadata={
             "name": "BookingRetrieve",
             "type": "Attribute",
-        }
+        },
     )
     segment_modify: TypeProviderSupplierCapabilityType = field(
         default=TypeProviderSupplierCapabilityType.YES,
         metadata={
             "name": "SegmentModify",
             "type": "Attribute",
-        }
+        },
     )
     optional_services_modify: TypeProviderSupplierCapabilityType = field(
         default=TypeProviderSupplierCapabilityType.YES,
         metadata={
             "name": "OptionalServicesModify",
             "type": "Attribute",
-        }
+        },
     )
     traveler_info_modify: TypeProviderSupplierCapabilityType = field(
         default=TypeProviderSupplierCapabilityType.YES,
         metadata={
             "name": "TravelerInfoModify",
             "type": "Attribute",
-        }
+        },
     )
     additional_payment: TypeProviderSupplierCapabilityType = field(
         default=TypeProviderSupplierCapabilityType.YES,
         metadata={
             "name": "AdditionalPayment",
             "type": "Attribute",
-        }
+        },
     )
     booking_cancel: TypeProviderSupplierCapabilityType = field(
         default=TypeProviderSupplierCapabilityType.YES,
         metadata={
             "name": "BookingCancel",
             "type": "Attribute",
-        }
+        },
     )
     seat_map: TypeProviderSupplierCapabilityType = field(
         default=TypeProviderSupplierCapabilityType.YES,
         metadata={
             "name": "SeatMap",
             "type": "Attribute",
-        }
+        },
     )

@@ -37,10 +37,10 @@ from xsdata.models.datatype import XmlDate
 
 obj = ProductActivity(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="ID0113"
+        value='ID0113'
     ),
     copy_indicator=False,
     issue_date=XmlDate(2010, 4, 8),
@@ -56,44 +56,44 @@ obj = ProductActivity(
         party_name=[
             PartyName(
                 name=Name(
-                    value="Beta Shop"
+                    value='Beta Shop'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Via Emilia"
+                value='Via Emilia'
             ),
             building_number=BuildingNumber(
-                value="1"
+                value='1'
             ),
             city_name=CityName(
-                value="Modena"
+                value='Modena'
             ),
             postal_zone=PostalZone(
-                value="41121"
+                value='41121'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="IT"
+                    value='IT'
                 ),
                 name=Name(
-                    value="Italy"
+                    value='Italy'
                 )
             )
         ),
         contact=Contact(
             name=Name(
-                value="Mr Delta"
+                value='Mr Delta'
             ),
             telephone=Telephone(
-                value="0039 059 33000000"
+                value='0039 059 33000000'
             ),
             telefax=Telefax(
-                value="0039 059 33000055"
+                value='0039 059 33000055'
             ),
             electronic_mail=ElectronicMail(
-                value="delta@betashop.it"
+                value='delta@betashop.it'
             )
         )
     ),
@@ -101,89 +101,89 @@ obj = ProductActivity(
         party_name=[
             PartyName(
                 name=Name(
-                    value="Arancio Forniture spa"
+                    value='Arancio Forniture spa'
                 )
             ),
         ],
         postal_address=PostalAddress(
             floor=Floor(
-                value="5"
+                value='5'
             ),
             room=Room(
-                value="29"
+                value='29'
             ),
             street_name=StreetName(
                 value="Via Dell'Arcoveggio"
             ),
             building_number=BuildingNumber(
-                value="403"
+                value='403'
             ),
             department=Department(
-                value="Marketing Office"
+                value='Marketing Office'
             ),
             city_name=CityName(
-                value="Bologna"
+                value='Bologna'
             ),
             postal_zone=PostalZone(
-                value="40129"
+                value='40129'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="IT"
+                    value='IT'
                 ),
                 name=Name(
-                    value="Italy"
+                    value='Italy'
                 )
             )
         ),
         contact=Contact(
             name=Name(
-                value="Mr Rossi"
+                value='Mr Rossi'
             ),
             telephone=Telephone(
-                value="0039 051 23000000"
+                value='0039 051 23000000'
             ),
             telefax=Telefax(
-                value="0039 051 23000023"
+                value='0039 051 23000023'
             ),
             electronic_mail=ElectronicMail(
-                value="rossi@arancioforniture.it"
+                value='rossi@arancioforniture.it'
             )
         )
     ),
     supply_chain_activity_data_line=[
         SupplyChainActivityDataLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             supply_chain_activity_type_code=SupplyChainActivityTypeCode(
-                value="SALES"
+                value='SALES'
             ),
             activity_origin_location=ActivityOriginLocation(
                 description=[
                     Description(
-                        value="Shop in the city center"
+                        value='Shop in the city center'
                     ),
                 ],
                 address=Address(
                     street_name=StreetName(
-                        value="Via Rizzoli"
+                        value='Via Rizzoli'
                     ),
                     building_number=BuildingNumber(
-                        value="208"
+                        value='208'
                     ),
                     city_name=CityName(
-                        value="Bologna"
+                        value='Bologna'
                     ),
                     postal_zone=PostalZone(
-                        value="40121"
+                        value='40121'
                     ),
                     country=Country(
                         identification_code=IdentificationCode(
-                            value="IT"
+                            value='IT'
                         ),
                         name=Name(
-                            value="Italy"
+                            value='Italy'
                         )
                     )
                 )
@@ -191,46 +191,46 @@ obj = ProductActivity(
             sales_item=[
                 SalesItem(
                     quantity=Quantity(
-                        value=Decimal("8"),
-                        unit_code="NAR"
+                        value=Decimal('8'),
+                        unit_code='NAR'
                     ),
                     item=Item(
                         description=[
                             Description(
-                                value="shirt"
+                                value='shirt'
                             ),
                         ],
                         buyers_item_identification=BuyersItemIdentification(
                             id=Id(
-                                value="SH009"
+                                value='SH009'
                             )
                         ),
                         sellers_item_identification=SellersItemIdentification(
                             id=Id(
-                                value="DD88"
+                                value='DD88'
                             )
                         )
                     )
                 ),
                 SalesItem(
                     quantity=Quantity(
-                        value=Decimal("3"),
-                        unit_code="NAR"
+                        value=Decimal('3'),
+                        unit_code='NAR'
                     ),
                     item=Item(
                         description=[
                             Description(
-                                value="trousers"
+                                value='trousers'
                             ),
                         ],
                         buyers_item_identification=BuyersItemIdentification(
                             id=Id(
-                                value="TH009"
+                                value='TH009'
                             )
                         ),
                         sellers_item_identification=SellersItemIdentification(
                             id=Id(
-                                value="DA008"
+                                value='DA008'
                             )
                         )
                     )

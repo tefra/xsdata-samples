@@ -10,6 +10,7 @@ class HotelCommission:
 
     Provider supoorted 1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -17,5 +18,5 @@ class HotelCommission:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

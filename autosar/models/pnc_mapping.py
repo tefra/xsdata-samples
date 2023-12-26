@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .adaptive_platform_service_instance_subtypes_enum import AdaptivePlatformServiceInstanceSubtypesEnum
+from .adaptive_platform_service_instance_subtypes_enum import (
+    AdaptivePlatformServiceInstanceSubtypesEnum,
+)
 from .annotation import (
     AdminData,
     DocumentationBlock,
@@ -8,7 +10,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .consumed_provided_service_instance_group_ref_conditional import ConsumedProvidedServiceInstanceGroupRefConditional
+from .consumed_provided_service_instance_group_ref_conditional import (
+    ConsumedProvidedServiceInstanceGroupRefConditional,
+)
 from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
 from .frame_triggering_subtypes_enum import FrameTriggeringSubtypesEnum
 from .i_signal_i_pdu_group_subtypes_enum import ISignalIPduGroupSubtypesEnum
@@ -109,6 +113,7 @@ class PncMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PNC-MAPPING"
 
@@ -118,7 +123,7 @@ class PncMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -126,7 +131,7 @@ class PncMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -134,7 +139,7 @@ class PncMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -142,15 +147,17 @@ class PncMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    dynamic_pnc_mapping_pdu_group_refs: Optional["PncMapping.DynamicPncMappingPduGroupRefs"] = field(
+    dynamic_pnc_mapping_pdu_group_refs: Optional[
+        "PncMapping.DynamicPncMappingPduGroupRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PNC-MAPPING-PDU-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ident: Optional[PncMappingIdent] = field(
         default=None,
@@ -158,7 +165,7 @@ class PncMapping:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     physical_channel_refs: Optional["PncMapping.PhysicalChannelRefs"] = field(
         default=None,
@@ -166,15 +173,17 @@ class PncMapping:
             "name": "PHYSICAL-CHANNEL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    pnc_consumed_provided_service_instance_groups: Optional["PncMapping.PncConsumedProvidedServiceInstanceGroups"] = field(
+    pnc_consumed_provided_service_instance_groups: Optional[
+        "PncMapping.PncConsumedProvidedServiceInstanceGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "PNC-CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_group_refs: Optional["PncMapping.PncGroupRefs"] = field(
         default=None,
@@ -182,7 +191,7 @@ class PncMapping:
             "name": "PNC-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_identifier: Optional[PositiveInteger] = field(
         default=None,
@@ -190,7 +199,7 @@ class PncMapping:
             "name": "PNC-IDENTIFIER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_pdur_group_refs: Optional["PncMapping.PncPdurGroupRefs"] = field(
         default=None,
@@ -198,7 +207,7 @@ class PncMapping:
             "name": "PNC-PDUR-GROUP-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_wakeup_enable: Optional[Boolean] = field(
         default=None,
@@ -206,15 +215,17 @@ class PncMapping:
             "name": "PNC-WAKEUP-ENABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    relevant_for_dynamic_pnc_mapping_refs: Optional["PncMapping.RelevantForDynamicPncMappingRefs"] = field(
+    relevant_for_dynamic_pnc_mapping_refs: Optional[
+        "PncMapping.RelevantForDynamicPncMappingRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "RELEVANT-FOR-DYNAMIC-PNC-MAPPING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     service_instance_refs: Optional["PncMapping.ServiceInstanceRefs"] = field(
         default=None,
@@ -222,7 +233,7 @@ class PncMapping:
             "name": "SERVICE-INSTANCE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_label: Optional[Identifier] = field(
         default=None,
@@ -230,7 +241,7 @@ class PncMapping:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vfc_irefs: Optional["PncMapping.VfcIrefs"] = field(
         default=None,
@@ -238,7 +249,7 @@ class PncMapping:
             "name": "VFC-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     wakeup_frame_refs: Optional["PncMapping.WakeupFrameRefs"] = field(
         default=None,
@@ -246,7 +257,7 @@ class PncMapping:
             "name": "WAKEUP-FRAME-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -254,14 +265,14 @@ class PncMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -269,18 +280,20 @@ class PncMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class DynamicPncMappingPduGroupRefs:
-        dynamic_pnc_mapping_pdu_group_ref: List["PncMapping.DynamicPncMappingPduGroupRefs.DynamicPncMappingPduGroupRef"] = field(
+        dynamic_pnc_mapping_pdu_group_ref: List[
+            "PncMapping.DynamicPncMappingPduGroupRefs.DynamicPncMappingPduGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DYNAMIC-PNC-MAPPING-PDU-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -291,18 +304,20 @@ class PncMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PhysicalChannelRefs:
-        physical_channel_ref: List["PncMapping.PhysicalChannelRefs.PhysicalChannelRef"] = field(
+        physical_channel_ref: List[
+            "PncMapping.PhysicalChannelRefs.PhysicalChannelRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PHYSICAL-CHANNEL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -313,18 +328,20 @@ class PncMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PncConsumedProvidedServiceInstanceGroups:
-        consumed_provided_service_instance_group_ref_conditional: List[ConsumedProvidedServiceInstanceGroupRefConditional] = field(
+        consumed_provided_service_instance_group_ref_conditional: List[
+            ConsumedProvidedServiceInstanceGroupRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -335,7 +352,7 @@ class PncMapping:
                 "name": "PNC-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -346,18 +363,20 @@ class PncMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PncPdurGroupRefs:
-        pnc_pdur_group_ref: List["PncMapping.PncPdurGroupRefs.PncPdurGroupRef"] = field(
+        pnc_pdur_group_ref: List[
+            "PncMapping.PncPdurGroupRefs.PncPdurGroupRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PNC-PDUR-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -368,18 +387,20 @@ class PncMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class RelevantForDynamicPncMappingRefs:
-        relevant_for_dynamic_pnc_mapping_ref: List["PncMapping.RelevantForDynamicPncMappingRefs.RelevantForDynamicPncMappingRef"] = field(
+        relevant_for_dynamic_pnc_mapping_ref: List[
+            "PncMapping.RelevantForDynamicPncMappingRefs.RelevantForDynamicPncMappingRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "RELEVANT-FOR-DYNAMIC-PNC-MAPPING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -390,29 +411,33 @@ class PncMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class ServiceInstanceRefs:
-        service_instance_ref: List["PncMapping.ServiceInstanceRefs.ServiceInstanceRef"] = field(
+        service_instance_ref: List[
+            "PncMapping.ServiceInstanceRefs.ServiceInstanceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SERVICE-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: Optional[AdaptivePlatformServiceInstanceSubtypesEnum] = field(
+            dest: Optional[
+                AdaptivePlatformServiceInstanceSubtypesEnum
+            ] = field(
                 default=None,
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -423,18 +448,20 @@ class PncMapping:
                 "name": "VFC-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class WakeupFrameRefs:
-        wakeup_frame_ref: List["PncMapping.WakeupFrameRefs.WakeupFrameRef"] = field(
+        wakeup_frame_ref: List[
+            "PncMapping.WakeupFrameRefs.WakeupFrameRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "WAKEUP-FRAME-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -445,5 +472,5 @@ class PncMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

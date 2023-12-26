@@ -11,6 +11,7 @@ class MerchandisingDetails:
     """
     Rich Content and Branding for a fare brand.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,7 +22,7 @@ class MerchandisingDetails:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     account_code: list[AccountCode1] = field(
         default_factory=list,
@@ -30,5 +31,5 @@ class MerchandisingDetails:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 10,
-        }
+        },
     )

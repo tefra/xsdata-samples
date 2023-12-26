@@ -13,5 +13,5 @@ class GuideDogAccess:
         default=LimitationStatusEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

@@ -19,7 +19,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "name": "CreditPolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     expire_after_period: Optional[XmlDuration] = field(
         default=None,
@@ -27,7 +27,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "name": "ExpireAfterPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_grace_period: Optional[XmlDuration] = field(
         default=None,
@@ -35,7 +35,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "name": "PaymentGracePeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     billing_policy: Optional[TravelBillingPolicyEnumeration] = field(
         default=None,
@@ -43,5 +43,5 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "name": "BillingPolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

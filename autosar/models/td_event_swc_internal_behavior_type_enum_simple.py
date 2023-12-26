@@ -17,6 +17,7 @@ class TdEventSwcInternalBehaviorTypeEnumSimple(Enum):
     :cvar RUNNABLE_ENTITY_VARIABLE_ACCESS: A point in time where the
         associated variable is accessed.
     """
+
     RUNNABLE_ENTITY_ACTIVATED = "RUNNABLE-ENTITY-ACTIVATED"
     RUNNABLE_ENTITY_STARTED = "RUNNABLE-ENTITY-STARTED"
     RUNNABLE_ENTITY_TERMINATED = "RUNNABLE-ENTITY-TERMINATED"

@@ -27,6 +27,7 @@ class TypeCommissionModifier6(Enum):
     SUPPLEMENTARY_AMOUNT
         Supplementary commission amount which is applied to the fare
     """
+
     FARE_PERCENT = "FarePercent"
     FARE_AMOUNT = "FareAmount"
     COMMISSION_AMOUNT = "CommissionAmount"

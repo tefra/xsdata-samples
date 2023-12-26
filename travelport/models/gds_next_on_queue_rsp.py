@@ -20,6 +20,7 @@ class GdsNextOnQueueRsp(BaseRsp1):
     queue_session_token
         Queue Session Token to hold session token for multiple queue
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/gdsQueue_v52_0"
 
@@ -29,12 +30,12 @@ class GdsNextOnQueueRsp(BaseRsp1):
             "name": "UniversalRecord",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/universal_v52_0",
-        }
+        },
     )
     queue_session_token: None | str = field(
         default=None,
         metadata={
             "name": "QueueSessionToken",
             "type": "Attribute",
-        }
+        },
     )

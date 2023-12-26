@@ -1,7 +1,11 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_guarantee_information_history_agency_type_2 import TypeGuaranteeInformationHistoryAgencyType2
-from travelport.models.type_guarantee_information_history_type_2 import TypeGuaranteeInformationHistoryType2
+from travelport.models.type_guarantee_information_history_agency_type_2 import (
+    TypeGuaranteeInformationHistoryAgencyType2,
+)
+from travelport.models.type_guarantee_information_history_type_2 import (
+    TypeGuaranteeInformationHistoryType2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -20,6 +24,7 @@ class TypeGuaranteeInformationHistory2:
     iatanumber
         Payment IATA number. (ie. IATA of Agency or Other Agency)
     """
+
     class Meta:
         name = "typeGuaranteeInformationHistory"
 
@@ -28,14 +33,14 @@ class TypeGuaranteeInformationHistory2:
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     agency_type: None | TypeGuaranteeInformationHistoryAgencyType2 = field(
         default=None,
         metadata={
             "name": "AgencyType",
             "type": "Attribute",
-        }
+        },
     )
     iatanumber: None | str = field(
         default=None,
@@ -44,5 +49,5 @@ class TypeGuaranteeInformationHistory2:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

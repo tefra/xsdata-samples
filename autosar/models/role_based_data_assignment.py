@@ -61,6 +61,7 @@ class RoleBasedDataAssignment:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ROLE-BASED-DATA-ASSIGNMENT"
 
@@ -70,7 +71,7 @@ class RoleBasedDataAssignment:
             "name": "ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     used_data_element: Optional[AutosarVariableRef] = field(
         default=None,
@@ -78,7 +79,7 @@ class RoleBasedDataAssignment:
             "name": "USED-DATA-ELEMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     used_parameter_element: Optional[AutosarParameterRef] = field(
         default=None,
@@ -86,7 +87,7 @@ class RoleBasedDataAssignment:
             "name": "USED-PARAMETER-ELEMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     used_pim_ref: Optional["RoleBasedDataAssignment.UsedPimRef"] = field(
         default=None,
@@ -94,7 +95,7 @@ class RoleBasedDataAssignment:
             "name": "USED-PIM-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -102,14 +103,14 @@ class RoleBasedDataAssignment:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -117,7 +118,7 @@ class RoleBasedDataAssignment:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -128,5 +129,5 @@ class RoleBasedDataAssignment:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .flexray_absolutely_scheduled_timing import FlexrayAbsolutelyScheduledTiming
+from .flexray_absolutely_scheduled_timing import (
+    FlexrayAbsolutelyScheduledTiming,
+)
 from .frame_port_subtypes_enum import FramePortSubtypesEnum
 from .frame_subtypes_enum import FrameSubtypesEnum
 from .identifier import Identifier
@@ -106,6 +108,7 @@ class FlexrayFrameTriggering:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLEXRAY-FRAME-TRIGGERING"
 
@@ -116,15 +119,17 @@ class FlexrayFrameTriggering:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["FlexrayFrameTriggering.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "FlexrayFrameTriggering.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -132,7 +137,7 @@ class FlexrayFrameTriggering:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -140,7 +145,7 @@ class FlexrayFrameTriggering:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -148,7 +153,7 @@ class FlexrayFrameTriggering:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -156,7 +161,7 @@ class FlexrayFrameTriggering:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -164,7 +169,7 @@ class FlexrayFrameTriggering:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["FlexrayFrameTriggering.Annotations"] = field(
         default=None,
@@ -172,7 +177,7 @@ class FlexrayFrameTriggering:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     frame_port_refs: Optional["FlexrayFrameTriggering.FramePortRefs"] = field(
         default=None,
@@ -180,7 +185,7 @@ class FlexrayFrameTriggering:
             "name": "FRAME-PORT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     frame_ref: Optional["FlexrayFrameTriggering.FrameRef"] = field(
         default=None,
@@ -188,7 +193,7 @@ class FlexrayFrameTriggering:
             "name": "FRAME-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_triggerings: Optional["FlexrayFrameTriggering.PduTriggerings"] = field(
         default=None,
@@ -196,7 +201,7 @@ class FlexrayFrameTriggering:
             "name": "PDU-TRIGGERINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -204,15 +209,17 @@ class FlexrayFrameTriggering:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    absolutely_scheduled_timings: Optional["FlexrayFrameTriggering.AbsolutelyScheduledTimings"] = field(
+    absolutely_scheduled_timings: Optional[
+        "FlexrayFrameTriggering.AbsolutelyScheduledTimings"
+    ] = field(
         default=None,
         metadata={
             "name": "ABSOLUTELY-SCHEDULED-TIMINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     allow_dynamic_l_sdu_length: Optional[Boolean] = field(
         default=None,
@@ -220,7 +227,7 @@ class FlexrayFrameTriggering:
             "name": "ALLOW-DYNAMIC-L-SDU-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_id: Optional[PositiveInteger] = field(
         default=None,
@@ -228,7 +235,7 @@ class FlexrayFrameTriggering:
             "name": "MESSAGE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     payload_preamble_indicator: Optional[Boolean] = field(
         default=None,
@@ -236,14 +243,14 @@ class FlexrayFrameTriggering:
             "name": "PAYLOAD-PREAMBLE-INDICATOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -251,14 +258,14 @@ class FlexrayFrameTriggering:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -269,7 +276,7 @@ class FlexrayFrameTriggering:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -280,18 +287,20 @@ class FlexrayFrameTriggering:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FramePortRefs:
-        frame_port_ref: List["FlexrayFrameTriggering.FramePortRefs.FramePortRef"] = field(
+        frame_port_ref: List[
+            "FlexrayFrameTriggering.FramePortRefs.FramePortRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FRAME-PORT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -302,7 +311,7 @@ class FlexrayFrameTriggering:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -313,27 +322,31 @@ class FlexrayFrameTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class PduTriggerings:
-        pdu_triggering_ref_conditional: List[PduTriggeringRefConditional] = field(
+        pdu_triggering_ref_conditional: List[
+            PduTriggeringRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PDU-TRIGGERING-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class AbsolutelyScheduledTimings:
-        flexray_absolutely_scheduled_timing: List[FlexrayAbsolutelyScheduledTiming] = field(
+        flexray_absolutely_scheduled_timing: List[
+            FlexrayAbsolutelyScheduledTiming
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FLEXRAY-ABSOLUTELY-SCHEDULED-TIMING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

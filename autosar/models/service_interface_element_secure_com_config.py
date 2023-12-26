@@ -11,9 +11,15 @@ from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .positive_integer import PositiveInteger
 from .ref import Ref
-from .service_event_deployment_subtypes_enum import ServiceEventDeploymentSubtypesEnum
-from .service_field_deployment_subtypes_enum import ServiceFieldDeploymentSubtypesEnum
-from .service_method_deployment_subtypes_enum import ServiceMethodDeploymentSubtypesEnum
+from .service_event_deployment_subtypes_enum import (
+    ServiceEventDeploymentSubtypesEnum,
+)
+from .service_field_deployment_subtypes_enum import (
+    ServiceFieldDeploymentSubtypesEnum,
+)
+from .service_method_deployment_subtypes_enum import (
+    ServiceMethodDeploymentSubtypesEnum,
+)
 from .short_name_fragment import ShortNameFragment
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -98,6 +104,7 @@ class ServiceInterfaceElementSecureComConfig:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SERVICE-INTERFACE-ELEMENT-SECURE-COM-CONFIG"
 
@@ -108,15 +115,17 @@ class ServiceInterfaceElementSecureComConfig:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ServiceInterfaceElementSecureComConfig.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ServiceInterfaceElementSecureComConfig.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +133,7 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +141,7 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +149,7 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +157,7 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,15 +165,17 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["ServiceInterfaceElementSecureComConfig.Annotations"] = field(
+    annotations: Optional[
+        "ServiceInterfaceElementSecureComConfig.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_id: Optional[PositiveInteger] = field(
         default=None,
@@ -172,23 +183,27 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "DATA-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    event_ref: Optional["ServiceInterfaceElementSecureComConfig.EventRef"] = field(
+    event_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.EventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    field_notifier_ref: Optional["ServiceInterfaceElementSecureComConfig.FieldNotifierRef"] = field(
+    field_notifier_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.FieldNotifierRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIELD-NOTIFIER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_value_id: Optional[PositiveInteger] = field(
         default=None,
@@ -196,62 +211,74 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "FRESHNESS-VALUE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    getter_call_ref: Optional["ServiceInterfaceElementSecureComConfig.GetterCallRef"] = field(
+    getter_call_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.GetterCallRef"
+    ] = field(
         default=None,
         metadata={
             "name": "GETTER-CALL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    getter_return_ref: Optional["ServiceInterfaceElementSecureComConfig.GetterReturnRef"] = field(
+    getter_return_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.GetterReturnRef"
+    ] = field(
         default=None,
         metadata={
             "name": "GETTER-RETURN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    method_call_ref: Optional["ServiceInterfaceElementSecureComConfig.MethodCallRef"] = field(
+    method_call_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.MethodCallRef"
+    ] = field(
         default=None,
         metadata={
             "name": "METHOD-CALL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    method_return_ref: Optional["ServiceInterfaceElementSecureComConfig.MethodReturnRef"] = field(
+    method_return_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.MethodReturnRef"
+    ] = field(
         default=None,
         metadata={
             "name": "METHOD-RETURN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    setter_call_ref: Optional["ServiceInterfaceElementSecureComConfig.SetterCallRef"] = field(
+    setter_call_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.SetterCallRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SETTER-CALL-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    setter_return_ref: Optional["ServiceInterfaceElementSecureComConfig.SetterReturnRef"] = field(
+    setter_return_ref: Optional[
+        "ServiceInterfaceElementSecureComConfig.SetterReturnRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SETTER-RETURN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -259,14 +286,14 @@ class ServiceInterfaceElementSecureComConfig:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -277,7 +304,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -288,7 +315,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -299,7 +326,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -310,7 +337,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -321,7 +348,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -332,7 +359,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -343,7 +370,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -354,7 +381,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -365,7 +392,7 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -376,5 +403,5 @@ class ServiceInterfaceElementSecureComConfig:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

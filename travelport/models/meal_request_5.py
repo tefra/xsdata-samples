@@ -9,6 +9,7 @@ class MealRequest5:
     """
     Special meal requests like Vegetarian.
     """
+
     class Meta:
         name = "MealRequest"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -20,5 +21,5 @@ class MealRequest5:
             "type": "Attribute",
             "required": True,
             "length": 4,
-        }
+        },
     )

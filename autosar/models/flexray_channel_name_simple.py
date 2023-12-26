@@ -8,5 +8,6 @@ class FlexrayChannelNameSimple(Enum):
     :cvar CHANNEL_A: Channel A
     :cvar CHANNEL_B: Channel B
     """
+
     CHANNEL_A = "CHANNEL-A"
     CHANNEL_B = "CHANNEL-B"

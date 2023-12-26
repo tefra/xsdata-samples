@@ -9,6 +9,7 @@ class PostedDate(DateT):
     """
     The date a pre-print was posted to a repository.
     """
+
     class Meta:
         name = "posted_date"
         namespace = "http://www.crossref.org/schema/5.3.1"

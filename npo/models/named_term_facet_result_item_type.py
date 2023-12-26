@@ -15,11 +15,11 @@ class NamedTermFacetResultItemType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

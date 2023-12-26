@@ -8,6 +8,7 @@ class LastPage:
     """
     Last page number of an item.
     """
+
     class Meta:
         name = "last_page"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class LastPage:
         metadata={
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

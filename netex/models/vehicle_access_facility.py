@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .vehicle_access_facility_enumeration import VehicleAccessFacilityEnumeration
+from .vehicle_access_facility_enumeration import (
+    VehicleAccessFacilityEnumeration,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -14,5 +16,5 @@ class VehicleAccessFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

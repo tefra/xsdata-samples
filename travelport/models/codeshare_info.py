@@ -19,6 +19,7 @@ class CodeshareInfo:
         The actual flight number of the carrier that is operating the
         flight.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,7 +27,7 @@ class CodeshareInfo:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     operating_carrier: None | str = field(
         default=None,
@@ -34,7 +35,7 @@ class CodeshareInfo:
             "name": "OperatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     operating_flight_number: None | str = field(
         default=None,
@@ -42,5 +43,5 @@ class CodeshareInfo:
             "name": "OperatingFlightNumber",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )

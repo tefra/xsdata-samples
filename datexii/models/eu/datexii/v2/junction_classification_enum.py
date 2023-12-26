@@ -24,6 +24,7 @@ class JunctionClassificationEnum(Enum):
         operational services.
     :cvar OTHER: Other.
     """
+
     THREE_WAY_INTERCHANGE = "threeWayInterchange"
     INTERCHANGE = "interchange"
     MOTORWAY_CONNECTION = "motorwayConnection"

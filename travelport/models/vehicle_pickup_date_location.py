@@ -24,6 +24,7 @@ class VehiclePickupDateLocation:
     pickup_location_number
         Providers: 1p
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -32,7 +33,7 @@ class VehiclePickupDateLocation:
         metadata={
             "name": "PickupDateTime",
             "type": "Attribute",
-        }
+        },
     )
     pickup_location: None | str = field(
         default=None,
@@ -41,19 +42,19 @@ class VehiclePickupDateLocation:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     pickup_location_type: None | TypeVehicleLocation = field(
         default=None,
         metadata={
             "name": "PickupLocationType",
             "type": "Attribute",
-        }
+        },
     )
     pickup_location_number: None | str = field(
         default=None,
         metadata={
             "name": "PickupLocationNumber",
             "type": "Attribute",
-        }
+        },
     )

@@ -45,6 +45,7 @@ class FlightInfoDetail:
         “True” indicates that the flight allows automated check-in. The
         default is “False”.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -53,7 +54,7 @@ class FlightInfoDetail:
         metadata={
             "name": "CodeshareInfo",
             "type": "Element",
-        }
+        },
     )
     meals: list[TypeMealService] = field(
         default_factory=list,
@@ -61,7 +62,7 @@ class FlightInfoDetail:
             "name": "Meals",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     in_flight_services: list[str] = field(
         default_factory=list,
@@ -69,7 +70,7 @@ class FlightInfoDetail:
             "name": "InFlightServices",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     variance: list[Variance] = field(
         default_factory=list,
@@ -77,7 +78,7 @@ class FlightInfoDetail:
             "name": "Variance",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -87,7 +88,7 @@ class FlightInfoDetail:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -97,35 +98,35 @@ class FlightInfoDetail:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     scheduled_departure_time: None | str = field(
         default=None,
         metadata={
             "name": "ScheduledDepartureTime",
             "type": "Attribute",
-        }
+        },
     )
     scheduled_arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ScheduledArrivalTime",
             "type": "Attribute",
-        }
+        },
     )
     travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
-        }
+        },
     )
     eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
-        }
+        },
     )
     equipment: None | str = field(
         default=None,
@@ -133,14 +134,14 @@ class FlightInfoDetail:
             "name": "Equipment",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     origin_terminal: None | str = field(
         default=None,
         metadata={
             "name": "OriginTerminal",
             "type": "Attribute",
-        }
+        },
     )
     origin_gate: None | str = field(
         default=None,
@@ -148,14 +149,14 @@ class FlightInfoDetail:
             "name": "OriginGate",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     destination_terminal: None | str = field(
         default=None,
         metadata={
             "name": "DestinationTerminal",
             "type": "Attribute",
-        }
+        },
     )
     destination_gate: None | str = field(
         default=None,
@@ -163,12 +164,12 @@ class FlightInfoDetail:
             "name": "DestinationGate",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     automated_checkin: bool = field(
         default=False,
         metadata={
             "name": "AutomatedCheckin",
             "type": "Attribute",
-        }
+        },
     )

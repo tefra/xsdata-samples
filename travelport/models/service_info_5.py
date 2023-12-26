@@ -15,6 +15,7 @@ class ServiceInfo5:
         more media items.
     media_item
     """
+
     class Meta:
         name = "ServiceInfo"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -26,7 +27,7 @@ class ServiceInfo5:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     media_item: list[MediaItem5] = field(
         default_factory=list,
@@ -34,5 +35,5 @@ class ServiceInfo5:
             "name": "MediaItem",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )

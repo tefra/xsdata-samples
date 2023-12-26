@@ -7,7 +7,9 @@ from travelport.models.booking_traveler_ref_1 import BookingTravelerRef1
 from travelport.models.collection_address import CollectionAddress
 from travelport.models.delivery_address import DeliveryAddress
 from travelport.models.email_1 import Email1
-from travelport.models.flight_arrival_information import FlightArrivalInformation
+from travelport.models.flight_arrival_information import (
+    FlightArrivalInformation,
+)
 from travelport.models.guarantee_1 import Guarantee1
 from travelport.models.payment_information import PaymentInformation
 from travelport.models.phone_number_1 import PhoneNumber1
@@ -64,6 +66,7 @@ class VehicleReservation(BaseReservation1):
         To identify the appropriate travel sequence for Air/Car/Hotel/Rail
         segments/reservations in the provider reservation.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -74,7 +77,7 @@ class VehicleReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     reservation_name: None | ReservationName1 = field(
         default=None,
@@ -82,7 +85,7 @@ class VehicleReservation(BaseReservation1):
             "name": "ReservationName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     email: list[Email1] = field(
         default_factory=list,
@@ -91,7 +94,7 @@ class VehicleReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -100,7 +103,7 @@ class VehicleReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     vehicle_date_location: None | VehicleDateLocation = field(
         default=None,
@@ -108,7 +111,7 @@ class VehicleReservation(BaseReservation1):
             "name": "VehicleDateLocation",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     vehicle: None | Vehicle = field(
         default=None,
@@ -116,7 +119,7 @@ class VehicleReservation(BaseReservation1):
             "name": "Vehicle",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     special_equipment: list[SpecialEquipment1] = field(
         default_factory=list,
@@ -125,42 +128,42 @@ class VehicleReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 5,
-        }
+        },
     )
     vehicle_special_request: None | VehicleSpecialRequest = field(
         default=None,
         metadata={
             "name": "VehicleSpecialRequest",
             "type": "Element",
-        }
+        },
     )
     payment_information: None | PaymentInformation = field(
         default=None,
         metadata={
             "name": "PaymentInformation",
             "type": "Element",
-        }
+        },
     )
     delivery_address: None | DeliveryAddress = field(
         default=None,
         metadata={
             "name": "DeliveryAddress",
             "type": "Element",
-        }
+        },
     )
     collection_address: None | CollectionAddress = field(
         default=None,
         metadata={
             "name": "CollectionAddress",
             "type": "Element",
-        }
+        },
     )
     flight_arrival_information: None | FlightArrivalInformation = field(
         default=None,
         metadata={
             "name": "FlightArrivalInformation",
             "type": "Element",
-        }
+        },
     )
     guarantee: None | Guarantee1 = field(
         default=None,
@@ -168,7 +171,7 @@ class VehicleReservation(BaseReservation1):
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     associated_remark: list[AssociatedRemark2] = field(
         default_factory=list,
@@ -176,7 +179,7 @@ class VehicleReservation(BaseReservation1):
             "name": "AssociatedRemark",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     booking_source: None | BookingSource1 = field(
         default=None,
@@ -184,7 +187,7 @@ class VehicleReservation(BaseReservation1):
             "name": "BookingSource",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     third_party_information: None | ThirdPartyInformation1 = field(
         default=None,
@@ -192,7 +195,7 @@ class VehicleReservation(BaseReservation1):
             "name": "ThirdPartyInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     sell_message: list[str] = field(
         default_factory=list,
@@ -201,7 +204,7 @@ class VehicleReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -209,14 +212,14 @@ class VehicleReservation(BaseReservation1):
             "name": "SupplierCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     booking_confirmation: None | str = field(
         default=None,
         metadata={
             "name": "BookingConfirmation",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -224,28 +227,28 @@ class VehicleReservation(BaseReservation1):
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     passive_provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "PassiveProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     travel_order: None | int = field(
         default=None,
         metadata={
             "name": "TravelOrder",
             "type": "Attribute",
-        }
+        },
     )
     provider_segment_order: None | int = field(
         default=None,
@@ -253,5 +256,5 @@ class VehicleReservation(BaseReservation1):
             "name": "ProviderSegmentOrder",
             "type": "Attribute",
             "max_inclusive": 999,
-        }
+        },
     )

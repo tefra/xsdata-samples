@@ -9,6 +9,7 @@ class TicketNumber2:
     """
     The identifying number for the actual ticket.
     """
+
     class Meta:
         name = "TicketNumber"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
@@ -19,5 +20,5 @@ class TicketNumber2:
             "required": True,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )

@@ -13,7 +13,7 @@ class OpenTimeRangeStructure:
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_time: Optional[XmlTime] = field(
         default=None,
@@ -21,5 +21,5 @@ class OpenTimeRangeStructure:
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

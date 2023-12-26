@@ -1,7 +1,9 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from xsdata.models.datatype import XmlDate, XmlDateTime
-from travelport.models.booking_traveler_information_6 import BookingTravelerInformation6
+from travelport.models.booking_traveler_information_6 import (
+    BookingTravelerInformation6,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
@@ -22,6 +24,7 @@ class InvoiceData6:
     provider_reservation_info_ref
         Provider reservation reference key.
     """
+
     class Meta:
         name = "InvoiceData"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -33,14 +36,14 @@ class InvoiceData6:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     invoice_number: None | str = field(
         default=None,
@@ -48,14 +51,14 @@ class InvoiceData6:
             "name": "InvoiceNumber",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssueDate",
             "type": "Attribute",
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
@@ -63,5 +66,5 @@ class InvoiceData6:
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

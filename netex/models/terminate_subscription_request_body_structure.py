@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .empty_type_1 import EmptyType1
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
@@ -13,9 +13,9 @@ class TerminateSubscriptionRequestBodyStructure:
             "name": "SubscriberRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
-    all_or_subscription_ref: List[object] = field(
+    all_or_subscription_ref: List[Union[EmptyType1, str]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -31,5 +31,5 @@ class TerminateSubscriptionRequestBodyStructure:
                     "namespace": "http://www.siri.org.uk/siri",
                 },
             ),
-        }
+        },
     )

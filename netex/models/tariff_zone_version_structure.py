@@ -18,7 +18,7 @@ class TariffZoneVersionStructure(ZoneVersionStructure):
             "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     printed_presentation: Optional[PrintPresentationStructure] = field(
         default=None,
@@ -26,5 +26,5 @@ class TariffZoneVersionStructure(ZoneVersionStructure):
             "name": "PrintedPresentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

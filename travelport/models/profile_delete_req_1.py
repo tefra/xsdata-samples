@@ -1,8 +1,12 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_2 import BaseReq2
-from travelport.models.provisioning_code_profile_type_1 import ProvisioningCodeProfileType1
-from travelport.models.unique_profile_id_profile_type_1 import UniqueProfileIdProfileType1
+from travelport.models.provisioning_code_profile_type_1 import (
+    ProvisioningCodeProfileType1,
+)
+from travelport.models.unique_profile_id_profile_type_1 import (
+    UniqueProfileIdProfileType1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -28,6 +32,7 @@ class ProfileDeleteReq1(BaseReq2):
         profile specified and any children below that profile will be
         deleted.
     """
+
     class Meta:
         name = "ProfileDeleteReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -37,28 +42,28 @@ class ProfileDeleteReq1(BaseReq2):
         metadata={
             "name": "ProfileID",
             "type": "Element",
-        }
+        },
     )
     provisioning_code: None | ProfileDeleteReq1.ProvisioningCode = field(
         default=None,
         metadata={
             "name": "ProvisioningCode",
             "type": "Element",
-        }
+        },
     )
     unique_profile_id: None | ProfileDeleteReq1.UniqueProfileId = field(
         default=None,
         metadata={
             "name": "UniqueProfileID",
             "type": "Element",
-        }
+        },
     )
     force: bool = field(
         default=False,
         metadata={
             "name": "Force",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -71,13 +76,14 @@ class ProfileDeleteReq1(BaseReq2):
             Specify the Profile Type (limited to only the ones where
             ProvisioningCode is relevant)
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 1,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | ProvisioningCodeProfileType1 = field(
             default=None,
@@ -85,7 +91,7 @@ class ProfileDeleteReq1(BaseReq2):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -103,13 +109,14 @@ class ProfileDeleteReq1(BaseReq2):
             determine 'AgencyCode' by Agent's WAB/target Branch or Agent's
             agency.
         """
+
         value: str = field(
             default="",
             metadata={
                 "required": True,
                 "min_length": 6,
                 "max_length": 128,
-            }
+            },
         )
         profile_type: None | UniqueProfileIdProfileType1 = field(
             default=None,
@@ -117,7 +124,7 @@ class ProfileDeleteReq1(BaseReq2):
                 "name": "ProfileType",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
         agency_code: None | str = field(
             default=None,
@@ -126,5 +133,5 @@ class ProfileDeleteReq1(BaseReq2):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 25,
-            }
+            },
         )

@@ -12,7 +12,7 @@ class DataSupplyRequestBodyStructure:
             "name": "NotificationRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     all_data: Optional[bool] = field(
         default=None,
@@ -20,5 +20,5 @@ class DataSupplyRequestBodyStructure:
             "name": "AllData",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

@@ -18,12 +18,12 @@ class TCallChoreography(TChoreographyActivity):
             "name": "participantAssociation",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     called_choreography_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "calledChoreographyRef",
             "type": "Attribute",
-        }
+        },
     )

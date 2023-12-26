@@ -41,6 +41,7 @@ class AirSegmentDetails:
     flight_number
         Flight Number for the Search Leg Detail.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -51,7 +52,7 @@ class AirSegmentDetails:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     brand_id: list[BrandId] = field(
         default_factory=list,
@@ -59,14 +60,14 @@ class AirSegmentDetails:
             "name": "BrandID",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     booking_code_list: None | str = field(
         default=None,
         metadata={
             "name": "BookingCodeList",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -74,7 +75,7 @@ class AirSegmentDetails:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -84,7 +85,7 @@ class AirSegmentDetails:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -93,7 +94,7 @@ class AirSegmentDetails:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -103,7 +104,7 @@ class AirSegmentDetails:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -113,7 +114,7 @@ class AirSegmentDetails:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | XmlDateTime = field(
         default=None,
@@ -121,7 +122,7 @@ class AirSegmentDetails:
             "name": "DepartureTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     arrival_time: None | XmlDateTime = field(
         default=None,
@@ -129,7 +130,7 @@ class AirSegmentDetails:
             "name": "ArrivalTime",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     equipment: None | str = field(
         default=None,
@@ -137,7 +138,7 @@ class AirSegmentDetails:
             "name": "Equipment",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -146,14 +147,14 @@ class AirSegmentDetails:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     cabin_class: None | str = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
-        }
+        },
     )
     operating_carrier: None | str = field(
         default=None,
@@ -161,7 +162,7 @@ class AirSegmentDetails:
             "name": "OperatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     flight_number: None | str = field(
         default=None,
@@ -170,5 +171,5 @@ class AirSegmentDetails:
             "type": "Attribute",
             "required": True,
             "max_length": 5,
-        }
+        },
     )

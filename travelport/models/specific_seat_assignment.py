@@ -24,6 +24,7 @@ class SpecificSeatAssignment:
     rail_coach_number
         Coach number for which rail seatmap/coachmap is returned.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -33,7 +34,7 @@ class SpecificSeatAssignment:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     segment_ref: None | str = field(
         default=None,
@@ -41,14 +42,14 @@ class SpecificSeatAssignment:
             "name": "SegmentRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     flight_detail_ref: None | str = field(
         default=None,
         metadata={
             "name": "FlightDetailRef",
             "type": "Attribute",
-        }
+        },
     )
     seat_id: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class SpecificSeatAssignment:
             "name": "SeatId",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     rail_coach_number: None | str = field(
         default=None,
@@ -64,5 +65,5 @@ class SpecificSeatAssignment:
             "name": "RailCoachNumber",
             "type": "Attribute",
             "max_length": 4,
-        }
+        },
     )

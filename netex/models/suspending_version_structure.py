@@ -20,7 +20,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     qualification_period: Optional[XmlDuration] = field(
         default=None,
@@ -28,7 +28,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "name": "QualificationPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     qualification_percent: Optional[Decimal] = field(
         default=None,
@@ -36,7 +36,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "name": "QualificationPercent",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_suspension_period: Optional[XmlDuration] = field(
         default=None,
@@ -44,7 +44,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumSuspensionPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_suspension_period: Optional[XmlDuration] = field(
         default=None,
@@ -52,7 +52,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumSuspensionPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_suspensions_per_term: Optional[int] = field(
         default=None,
@@ -60,5 +60,5 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberOfSuspensionsPerTerm",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

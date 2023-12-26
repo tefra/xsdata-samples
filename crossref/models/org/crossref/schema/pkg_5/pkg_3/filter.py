@@ -14,6 +14,7 @@ class Filter:
     system distinguish between ALPSP publications on the ingentaconnect
     host and other publications on the same host.
     """
+
     class Meta:
         name = "filter"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -22,5 +23,5 @@ class Filter:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

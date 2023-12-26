@@ -15,6 +15,7 @@ class UrlLinkTypeEnum(Enum):
     :cvar VOICE_STREAM: URL link to a voice stream.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     DOCUMENT_PDF = "documentPdf"
     HTML = "html"
     IMAGE = "image"

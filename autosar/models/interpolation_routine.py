@@ -36,6 +36,7 @@ class InterpolationRoutine:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "INTERPOLATION-ROUTINE"
 
@@ -45,7 +46,7 @@ class InterpolationRoutine:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_default: Optional[Boolean] = field(
         default=None,
@@ -53,22 +54,24 @@ class InterpolationRoutine:
             "name": "IS-DEFAULT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    interpolation_routine_ref: Optional["InterpolationRoutine.InterpolationRoutineRef"] = field(
+    interpolation_routine_ref: Optional[
+        "InterpolationRoutine.InterpolationRoutineRef"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -76,7 +79,7 @@ class InterpolationRoutine:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -87,5 +90,5 @@ class InterpolationRoutine:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

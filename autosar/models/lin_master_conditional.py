@@ -47,6 +47,7 @@ class LinMasterConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "LIN-MASTER-CONDITIONAL"
 
@@ -56,7 +57,7 @@ class LinMasterConditional:
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_version: Optional[String] = field(
         default=None,
@@ -64,7 +65,7 @@ class LinMasterConditional:
             "name": "PROTOCOL-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     lin_slaves: Optional["LinMasterConditional.LinSlaves"] = field(
         default=None,
@@ -72,7 +73,7 @@ class LinMasterConditional:
             "name": "LIN-SLAVES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_base: Optional[TimeValue] = field(
         default=None,
@@ -80,7 +81,7 @@ class LinMasterConditional:
             "name": "TIME-BASE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_base_jitter: Optional[TimeValue] = field(
         default=None,
@@ -88,7 +89,7 @@ class LinMasterConditional:
             "name": "TIME-BASE-JITTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -96,14 +97,14 @@ class LinMasterConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -111,7 +112,7 @@ class LinMasterConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -122,5 +123,5 @@ class LinMasterConditional:
                 "name": "LIN-SLAVE-CONFIG",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

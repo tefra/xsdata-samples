@@ -10,7 +10,9 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .persistency_collection_level_update_strategy_enum import PersistencyCollectionLevelUpdateStrategyEnum
+from .persistency_collection_level_update_strategy_enum import (
+    PersistencyCollectionLevelUpdateStrategyEnum,
+)
 from .persistency_key_value_pair import PersistencyKeyValuePair
 from .persistency_redundancy_crc import PersistencyRedundancyCrc
 from .persistency_redundancy_hash import PersistencyRedundancyHash
@@ -99,6 +101,7 @@ class PersistencyKeyValueStorage:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PERSISTENCY-KEY-VALUE-STORAGE"
 
@@ -109,15 +112,17 @@ class PersistencyKeyValueStorage:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["PersistencyKeyValueStorage.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "PersistencyKeyValueStorage.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -125,7 +130,7 @@ class PersistencyKeyValueStorage:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -133,7 +138,7 @@ class PersistencyKeyValueStorage:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -141,7 +146,7 @@ class PersistencyKeyValueStorage:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -149,7 +154,7 @@ class PersistencyKeyValueStorage:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -157,7 +162,7 @@ class PersistencyKeyValueStorage:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["PersistencyKeyValueStorage.Annotations"] = field(
         default=None,
@@ -165,7 +170,7 @@ class PersistencyKeyValueStorage:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -173,7 +178,7 @@ class PersistencyKeyValueStorage:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_allowed_size: Optional[PositiveUnlimitedInteger] = field(
         default=None,
@@ -181,7 +186,7 @@ class PersistencyKeyValueStorage:
             "name": "MAXIMUM-ALLOWED-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_sustained_size: Optional[PositiveInteger] = field(
         default=None,
@@ -189,31 +194,37 @@ class PersistencyKeyValueStorage:
             "name": "MINIMUM-SUSTAINED-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    redundancy_handlings: Optional["PersistencyKeyValueStorage.RedundancyHandlings"] = field(
+    redundancy_handlings: Optional[
+        "PersistencyKeyValueStorage.RedundancyHandlings"
+    ] = field(
         default=None,
         metadata={
             "name": "REDUNDANCY-HANDLINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = field(
+    update_strategy: Optional[
+        PersistencyCollectionLevelUpdateStrategyEnum
+    ] = field(
         default=None,
         metadata={
             "name": "UPDATE-STRATEGY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    key_value_pairs: Optional["PersistencyKeyValueStorage.KeyValuePairs"] = field(
+    key_value_pairs: Optional[
+        "PersistencyKeyValueStorage.KeyValuePairs"
+    ] = field(
         default=None,
         metadata={
             "name": "KEY-VALUE-PAIRS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     uri: Optional[UriString] = field(
         default=None,
@@ -221,14 +232,14 @@ class PersistencyKeyValueStorage:
             "name": "URI",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -236,14 +247,14 @@ class PersistencyKeyValueStorage:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -254,7 +265,7 @@ class PersistencyKeyValueStorage:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -265,7 +276,7 @@ class PersistencyKeyValueStorage:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -276,7 +287,7 @@ class PersistencyKeyValueStorage:
                 "name": "PERSISTENCY-REDUNDANCY-CRC",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         persistency_redundancy_hash: List[PersistencyRedundancyHash] = field(
             default_factory=list,
@@ -284,15 +295,17 @@ class PersistencyKeyValueStorage:
                 "name": "PERSISTENCY-REDUNDANCY-HASH",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        persistency_redundancy_m_out_of_n: List[PersistencyRedundancyMOutOfN] = field(
+        persistency_redundancy_m_out_of_n: List[
+            PersistencyRedundancyMOutOfN
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PERSISTENCY-REDUNDANCY-M-OUT-OF-N",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -303,5 +316,5 @@ class PersistencyKeyValueStorage:
                 "name": "PERSISTENCY-KEY-VALUE-PAIR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

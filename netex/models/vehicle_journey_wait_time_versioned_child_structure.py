@@ -1,18 +1,24 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .dead_run_ref import DeadRunRef
-from .journey_wait_time_versioned_child_structure import JourneyWaitTimeVersionedChildStructure
+from .journey_wait_time_versioned_child_structure import (
+    JourneyWaitTimeVersionedChildStructure,
+)
 from .vehicle_journey_ref import VehicleJourneyRef
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class VehicleJourneyWaitTimeVersionedChildStructure(JourneyWaitTimeVersionedChildStructure):
+class VehicleJourneyWaitTimeVersionedChildStructure(
+    JourneyWaitTimeVersionedChildStructure
+):
     class Meta:
         name = "VehicleJourneyWaitTime_VersionedChildStructure"
 
-    dead_run_ref_or_vehicle_journey_ref: Optional[object] = field(
+    dead_run_ref_or_vehicle_journey_ref: Optional[
+        Union[DeadRunRef, VehicleJourneyRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -28,5 +34,5 @@ class VehicleJourneyWaitTimeVersionedChildStructure(JourneyWaitTimeVersionedChil
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

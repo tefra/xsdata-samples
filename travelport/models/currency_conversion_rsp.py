@@ -11,6 +11,7 @@ class CurrencyConversionRsp(BaseRsp1):
     """
     The response to the CurrencyConversionReq.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,5 +21,5 @@ class CurrencyConversionRsp(BaseRsp1):
             "name": "CurrencyConversion",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

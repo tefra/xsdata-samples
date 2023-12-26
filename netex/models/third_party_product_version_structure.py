@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .fare_product_version_structure import FareProductVersionStructure
 from .general_group_of_entities import GeneralGroupOfEntities
 from .general_group_of_entities_ref import GeneralGroupOfEntitiesRef
@@ -12,7 +12,9 @@ class ThirdPartyProductVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "ThirdPartyProduct_VersionStructure"
 
-    general_group_of_entities_ref_or_general_group_of_entities: Optional[object] = field(
+    general_group_of_entities_ref_or_general_group_of_entities: Optional[
+        Union[GeneralGroupOfEntitiesRef, GeneralGroupOfEntities]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class ThirdPartyProductVersionStructure(FareProductVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

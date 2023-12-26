@@ -15,5 +15,5 @@ class In:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

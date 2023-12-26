@@ -17,12 +17,12 @@ class BaseReq1(BaseCoreReq1):
             "name": "OverridePCC",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     retrieve_provider_reservation_details: bool = field(
         default=False,
         metadata={
             "name": "RetrieveProviderReservationDetails",
             "type": "Attribute",
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeEndpointDataType(Enum):
     """
     Specify the Data type for an Endpoint (ex, Boolean, Integer, String, etc)
     """
+
     STRING = "String"
     FLOAT = "Float"
     DATE = "Date"

@@ -83,6 +83,7 @@ class ProcessDesignToMachineDesignMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PROCESS-DESIGN-TO-MACHINE-DESIGN-MAPPING"
 
@@ -93,15 +94,17 @@ class ProcessDesignToMachineDesignMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ProcessDesignToMachineDesignMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ProcessDesignToMachineDesignMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -109,7 +112,7 @@ class ProcessDesignToMachineDesignMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -117,7 +120,7 @@ class ProcessDesignToMachineDesignMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -125,7 +128,7 @@ class ProcessDesignToMachineDesignMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -133,7 +136,7 @@ class ProcessDesignToMachineDesignMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -141,38 +144,44 @@ class ProcessDesignToMachineDesignMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["ProcessDesignToMachineDesignMapping.Annotations"] = field(
+    annotations: Optional[
+        "ProcessDesignToMachineDesignMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    machine_design_ref: Optional["ProcessDesignToMachineDesignMapping.MachineDesignRef"] = field(
+    machine_design_ref: Optional[
+        "ProcessDesignToMachineDesignMapping.MachineDesignRef"
+    ] = field(
         default=None,
         metadata={
             "name": "MACHINE-DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    process_design_ref: Optional["ProcessDesignToMachineDesignMapping.ProcessDesignRef"] = field(
+    process_design_ref: Optional[
+        "ProcessDesignToMachineDesignMapping.ProcessDesignRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -180,14 +189,14 @@ class ProcessDesignToMachineDesignMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -198,7 +207,7 @@ class ProcessDesignToMachineDesignMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -209,7 +218,7 @@ class ProcessDesignToMachineDesignMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -220,7 +229,7 @@ class ProcessDesignToMachineDesignMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -231,5 +240,5 @@ class ProcessDesignToMachineDesignMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

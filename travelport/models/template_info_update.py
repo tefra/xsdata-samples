@@ -16,6 +16,7 @@ class TemplateInfoUpdate:
     description
         Description of the template.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -25,12 +26,12 @@ class TemplateInfoUpdate:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | object = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

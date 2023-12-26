@@ -17,7 +17,7 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "NumberOfSpaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     cycle_storage_type: Optional[CycleStorageEnumeration] = field(
         default=None,
@@ -25,7 +25,7 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "CycleStorageType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     cage: Optional[bool] = field(
         default=None,
@@ -33,7 +33,7 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "Cage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     covered: Optional[bool] = field(
         default=None,
@@ -41,5 +41,5 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "Covered",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -15,13 +15,15 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "OnwardServiceLink_DerivedViewStructure"
 
-    service_link_in_journey_pattern: Optional[ServiceLinkInJourneyPattern] = field(
+    service_link_in_journey_pattern: Optional[
+        ServiceLinkInJourneyPattern
+    ] = field(
         default=None,
         metadata={
             "name": "ServiceLinkInJourneyPattern",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     service_link_ref: Optional[ServiceLinkRef] = field(
         default=None,
@@ -29,7 +31,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             "name": "ServiceLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
         default=None,
@@ -37,7 +39,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     distance: Optional[Decimal] = field(
         default=None,
@@ -45,7 +47,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     run_time: Optional[XmlDuration] = field(
         default=None,
@@ -53,5 +55,5 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             "name": "RunTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -20,7 +20,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     start_point_ref: Optional[TimingPointRefStructure] = field(
         default=None,
@@ -28,7 +28,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "name": "StartPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     end_point_ref: Optional[TimingPointRefStructure] = field(
         default=None,
@@ -36,7 +36,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "name": "EndPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accounting_time: Optional[XmlDuration] = field(
         default=None,
@@ -44,7 +44,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "name": "AccountingTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accounting_factor: Optional[XmlDuration] = field(
         default=None,
@@ -52,7 +52,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "name": "AccountingFactor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     trip_times: Optional[DriverTripTimesRelStructure] = field(
         default=None,
@@ -60,5 +60,5 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "name": "tripTimes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

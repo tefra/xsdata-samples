@@ -35,6 +35,7 @@ class GlobalTimeCorrectionProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "GLOBAL-TIME-CORRECTION-PROPS"
 
@@ -44,7 +45,7 @@ class GlobalTimeCorrectionProps:
             "name": "OFFSET-CORRECTION-ADAPTION-INTERVAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     offset_correction_jump_threshold: Optional[TimeValue] = field(
         default=None,
@@ -52,7 +53,7 @@ class GlobalTimeCorrectionProps:
             "name": "OFFSET-CORRECTION-JUMP-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rate_correction_measurement_duration: Optional[TimeValue] = field(
         default=None,
@@ -60,22 +61,24 @@ class GlobalTimeCorrectionProps:
             "name": "RATE-CORRECTION-MEASUREMENT-DURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    rate_corrections_per_measurement_duration: Optional[PositiveInteger] = field(
+    rate_corrections_per_measurement_duration: Optional[
+        PositiveInteger
+    ] = field(
         default=None,
         metadata={
             "name": "RATE-CORRECTIONS-PER-MEASUREMENT-DURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -83,5 +86,5 @@ class GlobalTimeCorrectionProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

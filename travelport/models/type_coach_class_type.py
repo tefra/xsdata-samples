@@ -8,6 +8,7 @@ class TypeCoachClassType(Enum):
     """
     Values for accommodation class.
     """
+
     FIRST_CLASS = "First Class"
     STANDARD_CLASS = "Standard Class"
     FIRST_AND_STANDARD_CLASS = "First and Standard Class"

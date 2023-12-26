@@ -17,33 +17,33 @@ class EmbedType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     group: None | Group = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     program: None | Program = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )
     segment: None | Segment = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-        }
+        },
     )

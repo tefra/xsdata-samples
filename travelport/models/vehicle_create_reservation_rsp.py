@@ -16,5 +16,5 @@ class VehicleCreateReservationRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-        }
+        },
     )

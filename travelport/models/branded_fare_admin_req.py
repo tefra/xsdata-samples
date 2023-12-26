@@ -13,6 +13,7 @@ class BrandedFareAdminReq(BaseReq1):
     """
     Admin request to add/update or delete Branded fare.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -22,7 +23,7 @@ class BrandedFareAdminReq(BaseReq1):
             "name": "FareFamilyAdd",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_family_update: list[FareFamilyUpdate] = field(
         default_factory=list,
@@ -30,7 +31,7 @@ class BrandedFareAdminReq(BaseReq1):
             "name": "FareFamilyUpdate",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_family_delete: list[FareFamilyDelete] = field(
         default_factory=list,
@@ -38,5 +39,5 @@ class BrandedFareAdminReq(BaseReq1):
             "name": "FareFamilyDelete",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

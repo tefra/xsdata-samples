@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.polygon_area_index_point_coordinates import PolygonAreaIndexPointCoordinates
+from datexii.models.eu.datexii.v2.polygon_area_index_point_coordinates import (
+    PolygonAreaIndexPointCoordinates,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,13 +19,14 @@ class PolygonArea:
     :ivar point_coordinates:
     :ivar polygon_area_extension:
     """
+
     section_name: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "sectionName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     point_coordinates: List[PolygonAreaIndexPointCoordinates] = field(
         default_factory=list,
@@ -31,7 +34,7 @@ class PolygonArea:
             "name": "pointCoordinates",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     polygon_area_extension: Optional[ExtensionType] = field(
         default=None,
@@ -39,5 +42,5 @@ class PolygonArea:
             "name": "polygonAreaExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

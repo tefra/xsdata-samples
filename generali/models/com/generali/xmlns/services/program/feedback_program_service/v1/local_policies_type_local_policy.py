@@ -1,12 +1,22 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_party_ids import LocalPoliciesTypeLocalPolicyPartyIds
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_reinsurance_agreements import LocalPoliciesTypeLocalPolicyReinsuranceAgreements
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_risks import LocalPoliciesTypeLocalPolicyRisks
-from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import StatusValue
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_party_ids import (
+    LocalPoliciesTypeLocalPolicyPartyIds,
+)
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_reinsurance_agreements import (
+    LocalPoliciesTypeLocalPolicyReinsuranceAgreements,
+)
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.local_policies_type_local_policy_risks import (
+    LocalPoliciesTypeLocalPolicyRisks,
+)
+from generali.models.com.generali.xmlns.services.program.feedback_program_service.v1.status_value import (
+    StatusValue,
+)
 
-__NAMESPACE__ = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+__NAMESPACE__ = (
+    "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
+)
 
 
 @dataclass
@@ -29,6 +39,7 @@ class LocalPoliciesTypeLocalPolicy:
     :ivar issuance_date:
     :ivar expiry_date:
     """
+
     class Meta:
         global_type = False
 
@@ -38,7 +49,7 @@ class LocalPoliciesTypeLocalPolicy:
             "name": "LocalPolicyID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
     local_policy_reference: Optional[str] = field(
         default=None,
@@ -46,7 +57,7 @@ class LocalPoliciesTypeLocalPolicy:
             "name": "LocalPolicyReference",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
     producing_office_ref: Optional[str] = field(
         default=None,
@@ -54,7 +65,7 @@ class LocalPoliciesTypeLocalPolicy:
             "name": "ProducingOfficeRef",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
     reinsurance_policy_ref: Optional[str] = field(
         default=None,
@@ -62,7 +73,7 @@ class LocalPoliciesTypeLocalPolicy:
             "name": "ReinsurancePolicyRef",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
     status: Optional[StatusValue] = field(
         default=None,
@@ -71,7 +82,7 @@ class LocalPoliciesTypeLocalPolicy:
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "required": True,
-        }
+        },
     )
     party_ids: Optional[LocalPoliciesTypeLocalPolicyPartyIds] = field(
         default=None,
@@ -79,7 +90,7 @@ class LocalPoliciesTypeLocalPolicy:
             "name": "PartyIDs",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
     risks: Optional[LocalPoliciesTypeLocalPolicyRisks] = field(
         default=None,
@@ -87,15 +98,17 @@ class LocalPoliciesTypeLocalPolicy:
             "name": "Risks",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
-    reinsurance_agreements: Optional[LocalPoliciesTypeLocalPolicyReinsuranceAgreements] = field(
+    reinsurance_agreements: Optional[
+        LocalPoliciesTypeLocalPolicyReinsuranceAgreements
+    ] = field(
         default=None,
         metadata={
             "name": "ReinsuranceAgreements",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-        }
+        },
     )
     inception_date: Optional[XmlDateTime] = field(
         default=None,
@@ -104,7 +117,7 @@ class LocalPoliciesTypeLocalPolicy:
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "nillable": True,
-        }
+        },
     )
     issuance_date: Optional[XmlDateTime] = field(
         default=None,
@@ -113,7 +126,7 @@ class LocalPoliciesTypeLocalPolicy:
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "nillable": True,
-        }
+        },
     )
     expiry_date: Optional[XmlDateTime] = field(
         default=None,
@@ -122,5 +135,5 @@ class LocalPoliciesTypeLocalPolicy:
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
             "nillable": True,
-        }
+        },
     )

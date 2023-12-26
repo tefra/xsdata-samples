@@ -14,12 +14,12 @@ class TagType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )

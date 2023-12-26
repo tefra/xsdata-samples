@@ -38,6 +38,7 @@ class ProfileHistory2:
     last_modified_date
         The date that the profile was last modified
     """
+
     class Meta:
         name = "ProfileHistory"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -48,7 +49,7 @@ class ProfileHistory2:
             "name": "HistoryElement",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -56,7 +57,7 @@ class ProfileHistory2:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -64,7 +65,7 @@ class ProfileHistory2:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_name: None | object = field(
         default=None,
@@ -72,14 +73,14 @@ class ProfileHistory2:
             "name": "ProfileName",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     created_by_agent_id: None | int = field(
         default=None,
         metadata={
             "name": "CreatedByAgentID",
             "type": "Attribute",
-        }
+        },
     )
     created_by_agent_user_name: None | str = field(
         default=None,
@@ -87,21 +88,21 @@ class ProfileHistory2:
             "name": "CreatedByAgentUserName",
             "type": "Attribute",
             "pattern": r"[a-zA-Z0-9\-_\.@ ]{1,128}",
-        }
+        },
     )
     created_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CreatedDate",
             "type": "Attribute",
-        }
+        },
     )
     last_modified_by_agent_id: None | int = field(
         default=None,
         metadata={
             "name": "LastModifiedByAgentID",
             "type": "Attribute",
-        }
+        },
     )
     last_modified_by_agent_user_name: None | str = field(
         default=None,
@@ -109,12 +110,12 @@ class ProfileHistory2:
             "name": "LastModifiedByAgentUserName",
             "type": "Attribute",
             "pattern": r"[a-zA-Z0-9\-_\.@ ]{1,128}",
-        }
+        },
     )
     last_modified_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LastModifiedDate",
             "type": "Attribute",
-        }
+        },
     )

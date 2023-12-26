@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
-from .diagnostic_service_table_subtypes_enum import DiagnosticServiceTableSubtypesEnum
+from .diagnostic_service_table_subtypes_enum import (
+    DiagnosticServiceTableSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -26,16 +28,19 @@ class DiagnosticServiceTableRefConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-SERVICE-TABLE-REF-CONDITIONAL"
 
-    diagnostic_service_table_ref: Optional["DiagnosticServiceTableRefConditional.DiagnosticServiceTableRef"] = field(
+    diagnostic_service_table_ref: Optional[
+        "DiagnosticServiceTableRefConditional.DiagnosticServiceTableRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-SERVICE-TABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -43,14 +48,14 @@ class DiagnosticServiceTableRefConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,7 +63,7 @@ class DiagnosticServiceTableRefConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -69,5 +74,5 @@ class DiagnosticServiceTableRefConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

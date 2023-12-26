@@ -18,6 +18,7 @@ class OffsetDistance:
         Distance is towards the other point.
     :ivar offset_distance_extension:
     """
+
     offset_distance: Optional[int] = field(
         default=None,
         metadata={
@@ -25,7 +26,7 @@ class OffsetDistance:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     offset_distance_extension: Optional[ExtensionType] = field(
         default=None,
@@ -33,5 +34,5 @@ class OffsetDistance:
             "name": "offsetDistanceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

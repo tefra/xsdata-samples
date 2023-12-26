@@ -15,5 +15,5 @@ class Intersect:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

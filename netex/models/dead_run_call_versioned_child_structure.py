@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .activation_point_ref import ActivationPointRef
 from .alternative_texts_rel_structure import VersionedChildStructure
 from .beacon_point_ref import BeaconPointRef
@@ -15,7 +15,9 @@ from .garage_point_ref import GaragePointRef
 from .multilingual_string import MultilingualString
 from .notice_assignments_rel_structure import NoticeAssignmentsRelStructure
 from .parking_point_ref import ParkingPointRef
-from .point_in_journey_pattern_ref_structure import PointInJourneyPatternRefStructure
+from .point_in_journey_pattern_ref_structure import (
+    PointInJourneyPatternRefStructure,
+)
 from .point_ref import PointRef
 from .railway_point_ref import RailwayPointRef
 from .relief_point_ref import ReliefPointRef
@@ -38,7 +40,26 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "DeadRunCall_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+            RoutePointRef,
+            WirePointRef,
+            RoadPointRef,
+            RailwayPointRef,
+            TrafficControlPointRef,
+            BeaconPointRef,
+            ActivationPointRef,
+            PointRef,
+            ScheduledStopPointView,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -124,15 +145,17 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    point_in_journey_pattern_ref: Optional[PointInJourneyPatternRefStructure] = field(
+    point_in_journey_pattern_ref: Optional[
+        PointInJourneyPatternRefStructure
+    ] = field(
         default=None,
         metadata={
             "name": "PointInJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     arrival: Optional[DeadRunCallPartStructure] = field(
         default=None,
@@ -140,7 +163,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "Arrival",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     departure: Optional[DeadRunCallPartStructure] = field(
         default=None,
@@ -148,9 +171,11 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "Departure",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    destination_display_ref_or_destination_display_view: Optional[object] = field(
+    destination_display_ref_or_destination_display_view: Optional[
+        Union[DestinationDisplayRef, DestinationDisplayView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -166,14 +191,14 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     vias: Optional[ViasRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     flexible_point_properties: Optional[FlexiblePointProperties] = field(
         default=None,
@@ -181,7 +206,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "FlexiblePointProperties",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     change_of_destination_display: Optional[bool] = field(
         default=None,
@@ -189,7 +214,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "ChangeOfDestinationDisplay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     change_of_service_requirements: Optional[bool] = field(
         default=None,
@@ -197,7 +222,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "ChangeOfServiceRequirements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
         default=None,
@@ -205,7 +230,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "noticeAssignments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     request_stop: Optional[bool] = field(
         default=None,
@@ -213,7 +238,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "RequestStop",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     request_method: Optional[RequestMethodTypeEnumeration] = field(
         default=None,
@@ -221,7 +246,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "RequestMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_use: Optional[StopUseEnumeration] = field(
         default=None,
@@ -229,7 +254,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "StopUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_arrangements: Optional[BookingArrangementsStructure] = field(
         default=None,
@@ -237,7 +262,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "BookingArrangements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     print: Optional[bool] = field(
         default=None,
@@ -245,7 +270,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "Print",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     dynamic: Optional[DynamicAdvertisementEnumeration] = field(
         default=None,
@@ -253,7 +278,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "Dynamic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     note: Optional[MultilingualString] = field(
         default=None,
@@ -261,11 +286,11 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "Note",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

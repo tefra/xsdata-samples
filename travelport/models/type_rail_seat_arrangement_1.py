@@ -8,6 +8,7 @@ class TypeRailSeatArrangement1(Enum):
     """
     The type of Rail Seat Arrangement.
     """
+
     POWER_PLUG = "Power Plug"
     SUITABLE_FOR_PETS = "Suitable for Pets"
     WITH_MOBILE_PHONE = "With Mobile Phone"

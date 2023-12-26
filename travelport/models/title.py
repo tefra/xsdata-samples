@@ -11,5 +11,6 @@ class Title(TypeTextElement):
 
     Providers: ACH, RCH, 1G, 1V, 1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

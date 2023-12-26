@@ -10,6 +10,7 @@ class EthernetCouplingPortSchedulerEnumSimple(Enum):
     :cvar WEIGHTED_ROUND_ROBIN: Schedule algorithm "weighted round
         robin"
     """
+
     DEFICIT_ROUND_ROBIN = "DEFICIT-ROUND-ROBIN"
     STRICT_PRIORITY = "STRICT-PRIORITY"
     WEIGHTED_ROUND_ROBIN = "WEIGHTED-ROUND-ROBIN"

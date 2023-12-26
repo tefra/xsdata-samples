@@ -11,5 +11,6 @@ class FloatEnumSimple(Enum):
     :cvar NO_FLOAT: This indicates that a page formatter is not allowed
         to float the object to optimize the pagination.
     """
+
     FLOAT = "FLOAT"
     NO_FLOAT = "NO-FLOAT"

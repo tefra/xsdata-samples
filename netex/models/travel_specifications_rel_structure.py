@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .offered_travel_specification import OfferedTravelSpecification
 from .offered_travel_specification_ref import OfferedTravelSpecificationRef
@@ -17,7 +17,17 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "travelSpecifications_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            OfferedTravelSpecificationRef,
+            RequestedTravelSpecificationRef,
+            TravelSpecificationRef,
+            OfferedTravelSpecification,
+            RequestedTravelSpecification,
+            TravelSpecification1,
+            TravelSpecification2,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -58,5 +68,5 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

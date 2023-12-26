@@ -8,7 +8,9 @@ from .annotation import (
 )
 from .can_frame_triggering import CanFrameTriggering
 from .category_string import CategoryString
-from .communication_connector_ref_conditional import CommunicationConnectorRefConditional
+from .communication_connector_ref_conditional import (
+    CommunicationConnectorRefConditional,
+)
 from .ethernet_frame_triggering import EthernetFrameTriggering
 from .flexray_frame_triggering import FlexrayFrameTriggering
 from .i_signal_triggering import ISignalTriggering
@@ -108,6 +110,7 @@ class EthernetPhysicalChannel:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETHERNET-PHYSICAL-CHANNEL"
 
@@ -118,15 +121,17 @@ class EthernetPhysicalChannel:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["EthernetPhysicalChannel.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "EthernetPhysicalChannel.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -134,7 +139,7 @@ class EthernetPhysicalChannel:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -142,7 +147,7 @@ class EthernetPhysicalChannel:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -150,7 +155,7 @@ class EthernetPhysicalChannel:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -158,7 +163,7 @@ class EthernetPhysicalChannel:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -166,7 +171,7 @@ class EthernetPhysicalChannel:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EthernetPhysicalChannel.Annotations"] = field(
         default=None,
@@ -174,47 +179,57 @@ class EthernetPhysicalChannel:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    comm_connectors: Optional["EthernetPhysicalChannel.CommConnectors"] = field(
+    comm_connectors: Optional[
+        "EthernetPhysicalChannel.CommConnectors"
+    ] = field(
         default=None,
         metadata={
             "name": "COMM-CONNECTORS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    frame_triggerings: Optional["EthernetPhysicalChannel.FrameTriggerings"] = field(
+    frame_triggerings: Optional[
+        "EthernetPhysicalChannel.FrameTriggerings"
+    ] = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_signal_triggerings: Optional["EthernetPhysicalChannel.ISignalTriggerings"] = field(
+    i_signal_triggerings: Optional[
+        "EthernetPhysicalChannel.ISignalTriggerings"
+    ] = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    managed_physical_channel_refs: Optional["EthernetPhysicalChannel.ManagedPhysicalChannelRefs"] = field(
+    managed_physical_channel_refs: Optional[
+        "EthernetPhysicalChannel.ManagedPhysicalChannelRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "MANAGED-PHYSICAL-CHANNEL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    pdu_triggerings: Optional["EthernetPhysicalChannel.PduTriggerings"] = field(
+    pdu_triggerings: Optional[
+        "EthernetPhysicalChannel.PduTriggerings"
+    ] = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -222,15 +237,17 @@ class EthernetPhysicalChannel:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    network_endpoints: Optional["EthernetPhysicalChannel.NetworkEndpoints"] = field(
+    network_endpoints: Optional[
+        "EthernetPhysicalChannel.NetworkEndpoints"
+    ] = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     so_ad_config: Optional[SoAdConfig] = field(
         default=None,
@@ -238,7 +255,7 @@ class EthernetPhysicalChannel:
             "name": "SO-AD-CONFIG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vlan: Optional[VlanConfig] = field(
         default=None,
@@ -246,14 +263,14 @@ class EthernetPhysicalChannel:
             "name": "VLAN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -261,14 +278,14 @@ class EthernetPhysicalChannel:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -279,7 +296,7 @@ class EthernetPhysicalChannel:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -290,18 +307,20 @@ class EthernetPhysicalChannel:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CommConnectors:
-        communication_connector_ref_conditional: List[CommunicationConnectorRefConditional] = field(
+        communication_connector_ref_conditional: List[
+            CommunicationConnectorRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COMMUNICATION-CONNECTOR-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -312,7 +331,7 @@ class EthernetPhysicalChannel:
                 "name": "CAN-FRAME-TRIGGERING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ethernet_frame_triggering: List[EthernetFrameTriggering] = field(
             default_factory=list,
@@ -320,7 +339,7 @@ class EthernetPhysicalChannel:
                 "name": "ETHERNET-FRAME-TRIGGERING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_frame_triggering: List[FlexrayFrameTriggering] = field(
             default_factory=list,
@@ -328,7 +347,7 @@ class EthernetPhysicalChannel:
                 "name": "FLEXRAY-FRAME-TRIGGERING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_frame_triggering: List[LinFrameTriggering] = field(
             default_factory=list,
@@ -336,7 +355,7 @@ class EthernetPhysicalChannel:
                 "name": "LIN-FRAME-TRIGGERING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -347,18 +366,20 @@ class EthernetPhysicalChannel:
                 "name": "I-SIGNAL-TRIGGERING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ManagedPhysicalChannelRefs:
-        managed_physical_channel_ref: List["EthernetPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef"] = field(
+        managed_physical_channel_ref: List[
+            "EthernetPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MANAGED-PHYSICAL-CHANNEL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -369,7 +390,7 @@ class EthernetPhysicalChannel:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -380,7 +401,7 @@ class EthernetPhysicalChannel:
                 "name": "PDU-TRIGGERING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -391,5 +412,5 @@ class EthernetPhysicalChannel:
                 "name": "NETWORK-ENDPOINT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

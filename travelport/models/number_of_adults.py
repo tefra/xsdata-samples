@@ -20,6 +20,7 @@ class NumberOfAdults:
     content
         Additional information.  Providers 1p
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -27,26 +28,26 @@ class NumberOfAdults:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     extra_adults: None | int = field(
         default=None,
         metadata={
             "name": "ExtraAdults",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     content: None | str = field(
         default=None,
         metadata={
             "name": "Content",
             "type": "Attribute",
-        }
+        },
     )

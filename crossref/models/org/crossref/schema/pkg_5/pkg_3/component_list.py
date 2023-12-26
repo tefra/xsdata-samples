@@ -10,6 +10,7 @@ class ComponentList:
     """
     Container for a group of components.
     """
+
     class Meta:
         name = "component_list"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -18,5 +19,5 @@ class ComponentList:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )

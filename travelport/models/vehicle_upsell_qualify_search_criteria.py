@@ -14,6 +14,7 @@ class VehicleUpsellQualifySearchCriteria(UpsellSearchCriteria):
     """
     Search criteria for VehicleUpsellQualify.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -25,42 +26,42 @@ class VehicleUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     vehicle_class: None | TypeVehicleClass = field(
         default=None,
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
-        }
+        },
     )
     category: None | TypeVehicleCategory = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     air_conditioning: None | bool = field(
         default=None,
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
-        }
+        },
     )
     transmission_type: None | TypeVehicleTransmission = field(
         default=None,
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
-        }
+        },
     )
     door_count: None | TypeDoorCount = field(
         default=None,
         metadata={
             "name": "DoorCount",
             "type": "Attribute",
-        }
+        },
     )
     rate_code: None | str = field(
         default=None,
@@ -68,7 +69,7 @@ class VehicleUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "name": "RateCode",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     discount_number: None | str = field(
         default=None,
@@ -76,5 +77,5 @@ class VehicleUpsellQualifySearchCriteria(UpsellSearchCriteria):
             "name": "DiscountNumber",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )

@@ -87,6 +87,7 @@ class WorstCaseHeapUsage:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "WORST-CASE-HEAP-USAGE"
 
@@ -97,15 +98,17 @@ class WorstCaseHeapUsage:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["WorstCaseHeapUsage.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "WorstCaseHeapUsage.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -113,7 +116,7 @@ class WorstCaseHeapUsage:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -121,7 +124,7 @@ class WorstCaseHeapUsage:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -129,7 +132,7 @@ class WorstCaseHeapUsage:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -137,7 +140,7 @@ class WorstCaseHeapUsage:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -145,7 +148,7 @@ class WorstCaseHeapUsage:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["WorstCaseHeapUsage.Annotations"] = field(
         default=None,
@@ -153,7 +156,7 @@ class WorstCaseHeapUsage:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hardware_configuration: Optional[HardwareConfiguration] = field(
         default=None,
@@ -161,7 +164,7 @@ class WorstCaseHeapUsage:
             "name": "HARDWARE-CONFIGURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_element_ref: Optional["WorstCaseHeapUsage.HwElementRef"] = field(
         default=None,
@@ -169,7 +172,7 @@ class WorstCaseHeapUsage:
             "name": "HW-ELEMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     software_context: Optional[SoftwareContext] = field(
         default=None,
@@ -177,7 +180,7 @@ class WorstCaseHeapUsage:
             "name": "SOFTWARE-CONTEXT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -185,7 +188,7 @@ class WorstCaseHeapUsage:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     memory_consumption: Optional[PositiveInteger] = field(
         default=None,
@@ -193,14 +196,14 @@ class WorstCaseHeapUsage:
             "name": "MEMORY-CONSUMPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -208,14 +211,14 @@ class WorstCaseHeapUsage:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -226,7 +229,7 @@ class WorstCaseHeapUsage:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -237,7 +240,7 @@ class WorstCaseHeapUsage:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -248,5 +251,5 @@ class WorstCaseHeapUsage:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

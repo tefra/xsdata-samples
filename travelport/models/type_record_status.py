@@ -9,6 +9,7 @@ class TypeRecordStatus(Enum):
     Information on whether the Universal Record is Current, Past , Cancelled or Any
     status.
     """
+
     ALL = "All"
     PAST = "Past"
     CURRENT = "Current"

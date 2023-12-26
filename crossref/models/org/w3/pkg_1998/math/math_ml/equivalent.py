@@ -15,5 +15,5 @@ class Equivalent:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

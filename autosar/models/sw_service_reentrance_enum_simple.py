@@ -8,4 +8,5 @@ class SwServiceReentranceEnumSimple(Enum):
     :cvar REENTRANCE: If this element is not defined the service cannot
         be invoked when it is executing.
     """
+
     REENTRANCE = "REENTRANCE"

@@ -10,6 +10,7 @@ class FareFamilyDelete:
     Branded fare admin request element to delete a FareFamily for the given
     FareFamilyRef.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -19,7 +20,7 @@ class FareFamilyDelete:
             "name": "FareFamilyRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -27,5 +28,5 @@ class FareFamilyDelete:
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

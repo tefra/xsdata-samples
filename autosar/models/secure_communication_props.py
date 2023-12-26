@@ -94,6 +94,7 @@ class SecureCommunicationProps:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SECURE-COMMUNICATION-PROPS"
 
@@ -103,7 +104,7 @@ class SecureCommunicationProps:
             "name": "AUTH-ALGORITHM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auth_data_freshness_length: Optional[PositiveInteger] = field(
         default=None,
@@ -111,7 +112,7 @@ class SecureCommunicationProps:
             "name": "AUTH-DATA-FRESHNESS-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auth_data_freshness_start_position: Optional[PositiveInteger] = field(
         default=None,
@@ -119,7 +120,7 @@ class SecureCommunicationProps:
             "name": "AUTH-DATA-FRESHNESS-START-POSITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auth_info_tx_length: Optional[PositiveInteger] = field(
         default=None,
@@ -127,7 +128,7 @@ class SecureCommunicationProps:
             "name": "AUTH-INFO-TX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     authentication_build_attempts: Optional[PositiveInteger] = field(
         default=None,
@@ -135,7 +136,7 @@ class SecureCommunicationProps:
             "name": "AUTHENTICATION-BUILD-ATTEMPTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     authentication_retries: Optional[PositiveInteger] = field(
         default=None,
@@ -143,7 +144,7 @@ class SecureCommunicationProps:
             "name": "AUTHENTICATION-RETRIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_id: Optional[PositiveInteger] = field(
         default=None,
@@ -151,7 +152,7 @@ class SecureCommunicationProps:
             "name": "DATA-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_counter_sync_attempts: Optional[PositiveInteger] = field(
         default=None,
@@ -159,7 +160,7 @@ class SecureCommunicationProps:
             "name": "FRESHNESS-COUNTER-SYNC-ATTEMPTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_timestamp_time_period_factor: Optional[PositiveInteger] = field(
         default=None,
@@ -167,7 +168,7 @@ class SecureCommunicationProps:
             "name": "FRESHNESS-TIMESTAMP-TIME-PERIOD-FACTOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_value_id: Optional[PositiveInteger] = field(
         default=None,
@@ -175,7 +176,7 @@ class SecureCommunicationProps:
             "name": "FRESHNESS-VALUE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_value_length: Optional[PositiveInteger] = field(
         default=None,
@@ -183,7 +184,7 @@ class SecureCommunicationProps:
             "name": "FRESHNESS-VALUE-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_value_tx_length: Optional[PositiveInteger] = field(
         default=None,
@@ -191,7 +192,7 @@ class SecureCommunicationProps:
             "name": "FRESHNESS-VALUE-TX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_link_length: Optional[PositiveInteger] = field(
         default=None,
@@ -199,7 +200,7 @@ class SecureCommunicationProps:
             "name": "MESSAGE-LINK-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     message_link_position: Optional[PositiveInteger] = field(
         default=None,
@@ -207,7 +208,7 @@ class SecureCommunicationProps:
             "name": "MESSAGE-LINK-POSITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     secondary_freshness_value_id: Optional[PositiveInteger] = field(
         default=None,
@@ -215,7 +216,7 @@ class SecureCommunicationProps:
             "name": "SECONDARY-FRESHNESS-VALUE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     secured_area_length: Optional[PositiveInteger] = field(
         default=None,
@@ -223,7 +224,7 @@ class SecureCommunicationProps:
             "name": "SECURED-AREA-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     secured_area_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -231,7 +232,7 @@ class SecureCommunicationProps:
             "name": "SECURED-AREA-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_freshness_timestamp: Optional[Boolean] = field(
         default=None,
@@ -239,14 +240,14 @@ class SecureCommunicationProps:
             "name": "USE-FRESHNESS-TIMESTAMP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -254,5 +255,5 @@ class SecureCommunicationProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

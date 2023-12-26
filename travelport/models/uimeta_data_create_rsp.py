@@ -32,6 +32,7 @@ class UimetaDataCreateRsp(BaseRsp2):
         This optional attribute is for any description if the user wants to
         pass.
     """
+
     class Meta:
         name = "UIMetaDataCreateRsp"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -43,7 +44,7 @@ class UimetaDataCreateRsp(BaseRsp2):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -51,7 +52,7 @@ class UimetaDataCreateRsp(BaseRsp2):
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -59,7 +60,7 @@ class UimetaDataCreateRsp(BaseRsp2):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     meta_data_version: None | int = field(
         default=None,
@@ -68,7 +69,7 @@ class UimetaDataCreateRsp(BaseRsp2):
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -77,5 +78,5 @@ class UimetaDataCreateRsp(BaseRsp2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

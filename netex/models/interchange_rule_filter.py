@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .interchange_rule_parameter_structure import InterchangeRuleParameterStructure
+from .interchange_rule_parameter_structure import (
+    InterchangeRuleParameterStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

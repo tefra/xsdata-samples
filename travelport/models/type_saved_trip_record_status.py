@@ -8,6 +8,7 @@ class TypeSavedTripRecordStatus(Enum):
     """
     Specifies the status of the Saved Trip record.
     """
+
     ALL = "All"
     PAST = "Past"
     CURRENT = "Current"

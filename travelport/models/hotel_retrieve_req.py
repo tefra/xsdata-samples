@@ -11,6 +11,7 @@ class HotelRetrieveReq(BaseReq1):
 
     Given a provider code and a provider locator code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -22,7 +23,7 @@ class HotelRetrieveReq(BaseReq1):
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -31,5 +32,5 @@ class HotelRetrieveReq(BaseReq1):
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )

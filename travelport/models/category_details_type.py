@@ -14,6 +14,7 @@ class CategoryDetailsType:
         For each category Details of Structured Fare Rules
     value
     """
+
     category_details: list[ValueDetails] = field(
         default_factory=list,
         metadata={
@@ -21,7 +22,7 @@ class CategoryDetailsType:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -29,5 +30,5 @@ class CategoryDetailsType:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -98,6 +98,7 @@ class DiagEventDebounceCounterBased:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAG-EVENT-DEBOUNCE-COUNTER-BASED"
 
@@ -108,15 +109,17 @@ class DiagEventDebounceCounterBased:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagEventDebounceCounterBased.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagEventDebounceCounterBased.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -124,7 +127,7 @@ class DiagEventDebounceCounterBased:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -132,7 +135,7 @@ class DiagEventDebounceCounterBased:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -140,7 +143,7 @@ class DiagEventDebounceCounterBased:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -148,7 +151,7 @@ class DiagEventDebounceCounterBased:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -156,7 +159,7 @@ class DiagEventDebounceCounterBased:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagEventDebounceCounterBased.Annotations"] = field(
         default=None,
@@ -164,7 +167,7 @@ class DiagEventDebounceCounterBased:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_based_fdc_threshold_storage_value: Optional[Integer] = field(
         default=None,
@@ -172,7 +175,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-BASED-FDC-THRESHOLD-STORAGE-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_decrement_step_size: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -180,7 +183,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-DECREMENT-STEP-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_failed_threshold: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -188,7 +191,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-FAILED-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_increment_step_size: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -196,7 +199,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-INCREMENT-STEP-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_jump_down: Optional[BooleanValueVariationPoint] = field(
         default=None,
@@ -204,7 +207,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-JUMP-DOWN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_jump_down_value: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -212,7 +215,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-JUMP-DOWN-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_jump_up: Optional[BooleanValueVariationPoint] = field(
         default=None,
@@ -220,7 +223,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-JUMP-UP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_jump_up_value: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -228,7 +231,7 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-JUMP-UP-VALUE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     counter_passed_threshold: Optional[IntegerValueVariationPoint] = field(
         default=None,
@@ -236,14 +239,14 @@ class DiagEventDebounceCounterBased:
             "name": "COUNTER-PASSED-THRESHOLD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -251,14 +254,14 @@ class DiagEventDebounceCounterBased:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -269,7 +272,7 @@ class DiagEventDebounceCounterBased:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -280,5 +283,5 @@ class DiagEventDebounceCounterBased:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

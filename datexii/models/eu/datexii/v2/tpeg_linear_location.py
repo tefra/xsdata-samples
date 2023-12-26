@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.direction_enum import DirectionEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.tpeg_loc01_linear_location_subtype_enum import TpegLoc01LinearLocationSubtypeEnum
+from datexii.models.eu.datexii.v2.tpeg_loc01_linear_location_subtype_enum import (
+    TpegLoc01LinearLocationSubtypeEnum,
+)
 from datexii.models.eu.datexii.v2.tpeg_point import TpegPoint
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -22,6 +24,7 @@ class TpegLinearLocation:
         section of road.
     :ivar tpeg_linear_location_extension:
     """
+
     tpeg_direction: Optional[DirectionEnum] = field(
         default=None,
         metadata={
@@ -29,16 +32,18 @@ class TpegLinearLocation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
-    tpeg_linear_location_type: Optional[TpegLoc01LinearLocationSubtypeEnum] = field(
+    tpeg_linear_location_type: Optional[
+        TpegLoc01LinearLocationSubtypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "tpegLinearLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     to: Optional[TpegPoint] = field(
         default=None,
@@ -46,7 +51,7 @@ class TpegLinearLocation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     from_value: Optional[TpegPoint] = field(
         default=None,
@@ -55,7 +60,7 @@ class TpegLinearLocation:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     tpeg_linear_location_extension: Optional[ExtensionType] = field(
         default=None,
@@ -63,5 +68,5 @@ class TpegLinearLocation:
             "name": "tpegLinearLocationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

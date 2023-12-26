@@ -2,9 +2,13 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from .annotation import VariationPoint
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
-from .data_prototype_transformation_props import DataPrototypeTransformationProps
+from .data_prototype_transformation_props import (
+    DataPrototypeTransformationProps,
+)
 from .ref import Ref
-from .transformation_technology_subtypes_enum import TransformationTechnologySubtypesEnum
+from .transformation_technology_subtypes_enum import (
+    TransformationTechnologySubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -36,6 +40,7 @@ class UserDefinedTransformationISignalPropsConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "USER-DEFINED-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL"
 
@@ -45,23 +50,27 @@ class UserDefinedTransformationISignalPropsConditional:
             "name": "CS-ERROR-REACTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_prototype_transformation_propss: Optional["UserDefinedTransformationISignalPropsConditional.DataPrototypeTransformationPropss"] = field(
+    data_prototype_transformation_propss: Optional[
+        "UserDefinedTransformationISignalPropsConditional.DataPrototypeTransformationPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformer_ref: Optional["UserDefinedTransformationISignalPropsConditional.TransformerRef"] = field(
+    transformer_ref: Optional[
+        "UserDefinedTransformationISignalPropsConditional.TransformerRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -69,14 +78,14 @@ class UserDefinedTransformationISignalPropsConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -84,18 +93,20 @@ class UserDefinedTransformationISignalPropsConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class DataPrototypeTransformationPropss:
-        data_prototype_transformation_props: List[DataPrototypeTransformationProps] = field(
+        data_prototype_transformation_props: List[
+            DataPrototypeTransformationProps
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -106,5 +117,5 @@ class UserDefinedTransformationISignalPropsConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

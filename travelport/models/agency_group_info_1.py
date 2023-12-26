@@ -27,6 +27,7 @@ class AgencyGroupInfo1(TypeProfileInfo1):
     name
         Name of Agency Group
     """
+
     class Meta:
         name = "AgencyGroupInfo"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -36,28 +37,28 @@ class AgencyGroupInfo1(TypeProfileInfo1):
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     phone: list[Phone1] = field(
         default_factory=list,
         metadata={
             "name": "Phone",
             "type": "Element",
-        }
+        },
     )
     electronic_address: list[ElectronicAddress1] = field(
         default_factory=list,
         metadata={
             "name": "ElectronicAddress",
             "type": "Element",
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier1] = field(
         default_factory=list,
         metadata={
             "name": "ExternalIdentifier",
             "type": "Element",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -67,5 +68,5 @@ class AgencyGroupInfo1(TypeProfileInfo1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .abstract_ring_type import AbstractRingType
 from .point_property import PointProperty
 from .pos import Pos
@@ -10,7 +10,9 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class LinearRingType(AbstractRingType):
-    pos_or_point_property_or_pos_list: List[object] = field(
+    pos_or_point_property_or_pos_list: List[
+        Union[Pos, PointProperty, PosList]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -31,5 +33,5 @@ class LinearRingType(AbstractRingType):
                     "namespace": "http://www.opengis.net/gml/3.2",
                 },
             ),
-        }
+        },
     )

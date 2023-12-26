@@ -18,6 +18,7 @@ class CreateTerminalSessionRsp(BaseRsp4):
         The host token associated with the session to use on subsequent
         calls to TerminalReq
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
@@ -28,5 +29,5 @@ class CreateTerminalSessionRsp(BaseRsp4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "required": True,
-        }
+        },
     )

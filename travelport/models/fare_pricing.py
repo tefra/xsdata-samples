@@ -32,6 +32,7 @@ class FarePricing:
         Contains the Reference id which is generated when the request was
         ReturnMM=”true”.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -42,61 +43,61 @@ class FarePricing:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     total_fare_amount: None | str = field(
         default=None,
         metadata={
             "name": "TotalFareAmount",
             "type": "Attribute",
-        }
+        },
     )
     private_fare: None | bool = field(
         default=None,
         metadata={
             "name": "PrivateFare",
             "type": "Attribute",
-        }
+        },
     )
     negotiated_fare: None | bool = field(
         default=None,
         metadata={
             "name": "NegotiatedFare",
             "type": "Attribute",
-        }
+        },
     )
     auto_priceable: None | bool = field(
         default=None,
         metadata={
             "name": "AutoPriceable",
             "type": "Attribute",
-        }
+        },
     )
     total_net_fare_amount: None | str = field(
         default=None,
         metadata={
             "name": "TotalNetFareAmount",
             "type": "Attribute",
-        }
+        },
     )
     base_fare: None | str = field(
         default=None,
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     mmid: None | str = field(
         default=None,
         metadata={
             "name": "MMid",
             "type": "Attribute",
-        }
+        },
     )

@@ -17,5 +17,5 @@ class LostPropertyServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "PropertyKeptForDuration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

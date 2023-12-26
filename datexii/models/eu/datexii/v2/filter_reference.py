@@ -18,13 +18,14 @@ class FilterReference:
         applied filter.
     :ivar filter_reference_extension:
     """
+
     delete_filter: Optional[bool] = field(
         default=None,
         metadata={
             "name": "deleteFilter",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     filter_operation_approved: Optional[bool] = field(
         default=None,
@@ -32,7 +33,7 @@ class FilterReference:
             "name": "filterOperationApproved",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     key_filter_reference: Optional[str] = field(
         default=None,
@@ -42,7 +43,7 @@ class FilterReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     filter_reference_extension: Optional[ExtensionType] = field(
         default=None,
@@ -50,5 +51,5 @@ class FilterReference:
             "name": "filterReferenceExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

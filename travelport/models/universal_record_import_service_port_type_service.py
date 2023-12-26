@@ -1,6 +1,10 @@
 from __future__ import annotations
-from travelport.models.universal_record_import_service_port_type_service_input import UniversalRecordImportServicePortTypeServiceInput
-from travelport.models.universal_record_import_service_port_type_service_output import UniversalRecordImportServicePortTypeServiceOutput
+from travelport.models.universal_record_import_service_port_type_service_input import (
+    UniversalRecordImportServicePortTypeServiceInput,
+)
+from travelport.models.universal_record_import_service_port_type_service_output import (
+    UniversalRecordImportServicePortTypeServiceOutput,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/service/air_v52_0"
 

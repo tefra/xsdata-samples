@@ -22,6 +22,7 @@ class RailFareId:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "RailFareID"
         namespace = "http://www.travelport.com/schema/rail_v52_0"
@@ -30,7 +31,7 @@ class RailFareId:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -38,26 +39,26 @@ class RailFareId:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

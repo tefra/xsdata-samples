@@ -9,6 +9,7 @@ class AirSearchAsynchModifiers:
     """
     Controls and switches for the Air Search request for Asynch Request.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -17,7 +18,7 @@ class AirSearchAsynchModifiers:
         metadata={
             "name": "InitialAsynchResult",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -28,10 +29,11 @@ class AirSearchAsynchModifiers:
         max_wait
             Max wait time in seconds.
         """
+
         max_wait: None | int = field(
             default=None,
             metadata={
                 "name": "MaxWait",
                 "type": "Attribute",
-            }
+            },
         )

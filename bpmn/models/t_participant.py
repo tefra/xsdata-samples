@@ -18,7 +18,7 @@ class TParticipant(TBaseElement):
             "name": "interfaceRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     end_point_ref: List[QName] = field(
         default_factory=list,
@@ -26,7 +26,7 @@ class TParticipant(TBaseElement):
             "name": "endPointRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     participant_multiplicity: Optional[ParticipantMultiplicity] = field(
         default=None,
@@ -34,18 +34,18 @@ class TParticipant(TBaseElement):
             "name": "participantMultiplicity",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     process_ref: Optional[QName] = field(
         default=None,
         metadata={
             "name": "processRef",
             "type": "Attribute",
-        }
+        },
     )

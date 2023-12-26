@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.void_document_info_document_type import VoidDocumentInfoDocumentType
+from travelport.models.void_document_info_document_type import (
+    VoidDocumentInfoDocumentType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,6 +20,7 @@ class VoidDocumentInfo:
         Identifies the document type to be voided, Document Type can have
         four values like Service Fee, Paper Ticket , MCO and E-Ticket.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -28,12 +31,12 @@ class VoidDocumentInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     document_type: None | VoidDocumentInfoDocumentType = field(
         default=None,
         metadata={
             "name": "DocumentType",
             "type": "Attribute",
-        }
+        },
     )

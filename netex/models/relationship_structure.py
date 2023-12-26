@@ -13,5 +13,5 @@ class RelationshipStructure:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

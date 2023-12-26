@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.traffic_status_value import TrafficStatusValue
-from datexii.models.eu.datexii.v2.traffic_trend_type_enum import TrafficTrendTypeEnum
+from datexii.models.eu.datexii.v2.traffic_status_value import (
+    TrafficStatusValue,
+)
+from datexii.models.eu.datexii.v2.traffic_trend_type_enum import (
+    TrafficTrendTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,13 +24,14 @@ class TrafficStatus(BasicData):
         section of road in the specified direction.
     :ivar traffic_status_extension:
     """
+
     traffic_trend_type: Optional[TrafficTrendTypeEnum] = field(
         default=None,
         metadata={
             "name": "trafficTrendType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_status: Optional[TrafficStatusValue] = field(
         default=None,
@@ -34,7 +39,7 @@ class TrafficStatus(BasicData):
             "name": "trafficStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_status_extension: Optional[ExtensionType] = field(
         default=None,
@@ -42,5 +47,5 @@ class TrafficStatus(BasicData):
             "name": "trafficStatusExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

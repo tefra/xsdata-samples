@@ -15,5 +15,5 @@ class Sin:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

@@ -29,6 +29,7 @@ class CruiseSegment(Segment1):
         The date and time at which this cruise segment arrives at the
         destination.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -38,7 +39,7 @@ class CruiseSegment(Segment1):
             "name": "CruiseStay",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     vendor: None | str = field(
         default=None,
@@ -47,7 +48,7 @@ class CruiseSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 3,
-        }
+        },
     )
     vendor_name: None | str = field(
         default=None,
@@ -56,7 +57,7 @@ class CruiseSegment(Segment1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -66,7 +67,7 @@ class CruiseSegment(Segment1):
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -76,19 +77,19 @@ class CruiseSegment(Segment1):
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )

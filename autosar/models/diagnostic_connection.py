@@ -87,6 +87,7 @@ class DiagnosticConnection:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-CONNECTION"
 
@@ -97,15 +98,17 @@ class DiagnosticConnection:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticConnection.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticConnection.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -113,7 +116,7 @@ class DiagnosticConnection:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -121,7 +124,7 @@ class DiagnosticConnection:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -129,7 +132,7 @@ class DiagnosticConnection:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -137,7 +140,7 @@ class DiagnosticConnection:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -145,7 +148,7 @@ class DiagnosticConnection:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticConnection.Annotations"] = field(
         default=None,
@@ -153,7 +156,7 @@ class DiagnosticConnection:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -161,39 +164,47 @@ class DiagnosticConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    functional_request_refs: Optional["DiagnosticConnection.FunctionalRequestRefs"] = field(
+    functional_request_refs: Optional[
+        "DiagnosticConnection.FunctionalRequestRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "FUNCTIONAL-REQUEST-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    periodic_response_uudt_refs: Optional["DiagnosticConnection.PeriodicResponseUudtRefs"] = field(
+    periodic_response_uudt_refs: Optional[
+        "DiagnosticConnection.PeriodicResponseUudtRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "PERIODIC-RESPONSE-UUDT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    physical_request_ref: Optional["DiagnosticConnection.PhysicalRequestRef"] = field(
+    physical_request_ref: Optional[
+        "DiagnosticConnection.PhysicalRequestRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PHYSICAL-REQUEST-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    response_on_event_ref: Optional["DiagnosticConnection.ResponseOnEventRef"] = field(
+    response_on_event_ref: Optional[
+        "DiagnosticConnection.ResponseOnEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "RESPONSE-ON-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     response_ref: Optional["DiagnosticConnection.ResponseRef"] = field(
         default=None,
@@ -201,14 +212,14 @@ class DiagnosticConnection:
             "name": "RESPONSE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -216,14 +227,14 @@ class DiagnosticConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -234,7 +245,7 @@ class DiagnosticConnection:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -245,18 +256,20 @@ class DiagnosticConnection:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class FunctionalRequestRefs:
-        functional_request_ref: List["DiagnosticConnection.FunctionalRequestRefs.FunctionalRequestRef"] = field(
+        functional_request_ref: List[
+            "DiagnosticConnection.FunctionalRequestRefs.FunctionalRequestRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FUNCTIONAL-REQUEST-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -267,18 +280,20 @@ class DiagnosticConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class PeriodicResponseUudtRefs:
-        periodic_response_uudt_ref: List["DiagnosticConnection.PeriodicResponseUudtRefs.PeriodicResponseUudtRef"] = field(
+        periodic_response_uudt_ref: List[
+            "DiagnosticConnection.PeriodicResponseUudtRefs.PeriodicResponseUudtRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PERIODIC-RESPONSE-UUDT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -289,7 +304,7 @@ class DiagnosticConnection:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -300,7 +315,7 @@ class DiagnosticConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -311,7 +326,7 @@ class DiagnosticConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -322,5 +337,5 @@ class DiagnosticConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

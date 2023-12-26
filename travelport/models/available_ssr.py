@@ -19,6 +19,7 @@ class AvailableSsr:
         Holds the rules for selecting the SSR in the itinerary
     industry_standard_ssr
     """
+
     class Meta:
         name = "AvailableSSR"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -30,7 +31,7 @@ class AvailableSsr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     ssrrules: list[ServiceRuleType1] = field(
         default_factory=list,
@@ -38,7 +39,7 @@ class AvailableSsr:
             "name": "SSRRules",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     industry_standard_ssr: list[IndustryStandardSsr1] = field(
         default_factory=list,
@@ -47,5 +48,5 @@ class AvailableSsr:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

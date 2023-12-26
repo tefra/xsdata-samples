@@ -17,6 +17,7 @@ class AirPricePointList:
         options for each search leg requested will be returned and one
         option for each search leg can be selected.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,5 +27,5 @@ class AirPricePointList:
             "name": "AirPricePoint",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

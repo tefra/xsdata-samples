@@ -35,6 +35,7 @@ class Baseline:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BASELINE"
 
@@ -44,15 +45,17 @@ class Baseline:
             "name": "STANDARD-REVISIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    custom_specification_refs: Optional["Baseline.CustomSpecificationRefs"] = field(
+    custom_specification_refs: Optional[
+        "Baseline.CustomSpecificationRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CUSTOM-SPECIFICATION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     custom_sdg_def_refs: Optional["Baseline.CustomSdgDefRefs"] = field(
         default=None,
@@ -60,14 +63,14 @@ class Baseline:
             "name": "CUSTOM-SDG-DEF-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -75,7 +78,7 @@ class Baseline:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -88,24 +91,27 @@ class Baseline:
             of Data Exchange Point have to be part of specifications
             that belong to the defined AUTOSAR standards.
         """
+
         standard_revision: List[String] = field(
             default_factory=list,
             metadata={
                 "name": "STANDARD-REVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class CustomSpecificationRefs:
-        custom_specification_ref: List["Baseline.CustomSpecificationRefs.CustomSpecificationRef"] = field(
+        custom_specification_ref: List[
+            "Baseline.CustomSpecificationRefs.CustomSpecificationRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CUSTOM-SPECIFICATION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -116,18 +122,20 @@ class Baseline:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class CustomSdgDefRefs:
-        custom_sdg_def_ref: List["Baseline.CustomSdgDefRefs.CustomSdgDefRef"] = field(
+        custom_sdg_def_ref: List[
+            "Baseline.CustomSdgDefRefs.CustomSdgDefRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CUSTOM-SDG-DEF-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -138,5 +146,5 @@ class Baseline:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

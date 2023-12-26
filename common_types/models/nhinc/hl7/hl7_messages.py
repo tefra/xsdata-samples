@@ -5,9 +5,15 @@ from ...hl7_v3.ne2008.multi_cache.mcci_in000002_uv01 import McciIn000002Uv01
 from ...hl7_v3.ne2008.multi_cache.prpa_in201304_uv02 import PrpaIn201304Uv02
 from ...hl7_v3.ne2008.multi_cache.prpa_in201309_uv02 import PrpaIn201309Uv02
 from ...hl7_v3.ne2008.multi_cache.prpa_in201310_uv02 import PrpaIn201310Uv02
-from ...hl7_v3.ne2008.multi_cache.prpa_mt201301_uv02 import PrpaMt201301Uv02Patient
-from ...hl7_v3.ne2008.multi_cache.prpa_mt201307_uv02 import PrpaMt201307Uv02QueryByParameter
-from ...hl7_v3.ne2008.multi_cache.prpa_mt201310_uv02 import PrpaMt201310Uv02Patient
+from ...hl7_v3.ne2008.multi_cache.prpa_mt201301_uv02 import (
+    PrpaMt201301Uv02Patient,
+)
+from ...hl7_v3.ne2008.multi_cache.prpa_mt201307_uv02 import (
+    PrpaMt201307Uv02QueryByParameter,
+)
+from ...hl7_v3.ne2008.multi_cache.prpa_mt201310_uv02 import (
+    PrpaMt201310Uv02Patient,
+)
 from ..common.nhinc_common import (
     AssertionType,
     NhinTargetCommunitiesType,
@@ -25,7 +31,7 @@ class CreateFault201310RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     receiver_oid: Optional[str] = field(
         default=None,
@@ -34,7 +40,7 @@ class CreateFault201310RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -46,7 +52,7 @@ class Create201302RequestType:
             "name": "PRPA201310Patient",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     prpa201301_patient: Optional[PrpaMt201301Uv02Patient] = field(
         default=None,
@@ -54,7 +60,7 @@ class Create201302RequestType:
             "name": "PRPA201301Patient",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     remote_patient_id: Optional[str] = field(
         default=None,
@@ -63,7 +69,7 @@ class Create201302RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     remote_device_id: Optional[str] = field(
         default=None,
@@ -72,7 +78,7 @@ class Create201302RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     sender_oid: Optional[str] = field(
         default=None,
@@ -81,7 +87,7 @@ class Create201302RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     receiver_oid: Optional[str] = field(
         default=None,
@@ -90,7 +96,7 @@ class Create201302RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -103,7 +109,7 @@ class Create201305RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     local_device_id: Optional[str] = field(
         default=None,
@@ -112,7 +118,7 @@ class Create201305RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     sender_oid: Optional[str] = field(
         default=None,
@@ -121,7 +127,7 @@ class Create201305RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     receiver_oid: Optional[str] = field(
         default=None,
@@ -130,7 +136,7 @@ class Create201305RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -143,7 +149,7 @@ class Create201310RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     pseudo_assigning_authority_id: Optional[str] = field(
         default=None,
@@ -152,7 +158,7 @@ class Create201310RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     local_device_id: Optional[str] = field(
         default=None,
@@ -161,7 +167,7 @@ class Create201310RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     sender_oid: Optional[str] = field(
         default=None,
@@ -170,7 +176,7 @@ class Create201310RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     receiver_oid: Optional[str] = field(
         default=None,
@@ -179,16 +185,18 @@ class Create201310RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
-    prpa201307_query_by_parameter: Optional[PrpaMt201307Uv02QueryByParameter] = field(
+    prpa201307_query_by_parameter: Optional[
+        PrpaMt201307Uv02QueryByParameter
+    ] = field(
         default=None,
         metadata={
             "name": "PRPA201307QueryByParameter",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -201,7 +209,7 @@ class CreateAckMsgRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     orig_msg_id: Optional[Ii] = field(
         default=None,
@@ -210,7 +218,7 @@ class CreateAckMsgRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     msg_text: Optional[str] = field(
         default=None,
@@ -219,7 +227,7 @@ class CreateAckMsgRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     sender_oid: Optional[str] = field(
         default=None,
@@ -228,7 +236,7 @@ class CreateAckMsgRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     receiver_oid: Optional[str] = field(
         default=None,
@@ -237,7 +245,7 @@ class CreateAckMsgRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -259,7 +267,7 @@ class PixconsumerMcciIn000002Uv01RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -267,7 +275,7 @@ class PixconsumerMcciIn000002Uv01RequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -283,7 +291,7 @@ class PixconsumerPrpaIn201304UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -291,7 +299,7 @@ class PixconsumerPrpaIn201304UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -299,7 +307,7 @@ class PixconsumerPrpaIn201304UvrequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -315,7 +323,7 @@ class PixconsumerPrpaIn201304UvsecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -323,7 +331,7 @@ class PixconsumerPrpaIn201304UvsecuredRequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -339,7 +347,7 @@ class PixconsumerPrpaIn201309UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -347,7 +355,7 @@ class PixconsumerPrpaIn201309UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -355,7 +363,7 @@ class PixconsumerPrpaIn201309UvrequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -371,7 +379,7 @@ class PixconsumerPrpaIn201309UvresponseType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -387,7 +395,7 @@ class PixconsumerPrpaIn201309UvsecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
         default=None,
@@ -395,7 +403,7 @@ class PixconsumerPrpaIn201309UvsecuredRequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
 
 
@@ -411,7 +419,7 @@ class PixconsumerPrpaIn201310UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
     assertion: Optional[AssertionType] = field(
         default=None,
@@ -419,7 +427,7 @@ class PixconsumerPrpaIn201310UvrequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -435,7 +443,7 @@ class PixconsumerPrpaIn201310UvsecuredRequestType:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "required": True,
-        }
+        },
     )
 
 
@@ -464,7 +472,9 @@ class CreateAckMsgRequest(CreateAckMsgRequestType):
 
 
 @dataclass
-class PixconsumerMcciIn000002Uv01Request(PixconsumerMcciIn000002Uv01RequestType):
+class PixconsumerMcciIn000002Uv01Request(
+    PixconsumerMcciIn000002Uv01RequestType
+):
     class Meta:
         name = "PIXConsumer_MCCI_IN000002UV01Request"
         namespace = "urn:hl7-org:v3"
@@ -478,7 +488,9 @@ class PixconsumerPrpaIn201304Uvrequest(PixconsumerPrpaIn201304UvrequestType):
 
 
 @dataclass
-class PixconsumerPrpaIn201304UvsecuredRequest(PixconsumerPrpaIn201304UvsecuredRequestType):
+class PixconsumerPrpaIn201304UvsecuredRequest(
+    PixconsumerPrpaIn201304UvsecuredRequestType
+):
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVSecuredRequest"
         namespace = "urn:hl7-org:v3"
@@ -499,7 +511,9 @@ class PixconsumerPrpaIn201309Uvresponse(PixconsumerPrpaIn201309UvresponseType):
 
 
 @dataclass
-class PixconsumerPrpaIn201309UvsecuredRequest(PixconsumerPrpaIn201309UvsecuredRequestType):
+class PixconsumerPrpaIn201309UvsecuredRequest(
+    PixconsumerPrpaIn201309UvsecuredRequestType
+):
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVSecuredRequest"
         namespace = "urn:hl7-org:v3"
@@ -513,7 +527,9 @@ class PixconsumerPrpaIn201310Uvrequest(PixconsumerPrpaIn201310UvrequestType):
 
 
 @dataclass
-class PixconsumerPrpaIn201310UvsecuredRequest(PixconsumerPrpaIn201310UvsecuredRequestType):
+class PixconsumerPrpaIn201310UvsecuredRequest(
+    PixconsumerPrpaIn201310UvsecuredRequestType
+):
     class Meta:
         name = "PIXConsumer_PRPA_IN201310UVSecuredRequest"
         namespace = "urn:hl7-org:v3"

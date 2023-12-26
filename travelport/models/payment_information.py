@@ -10,6 +10,7 @@ class PaymentInformation(TypePaymentInformation):
     """
     The payment information for a vehicle reservation.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -18,5 +19,5 @@ class PaymentInformation(TypePaymentInformation):
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

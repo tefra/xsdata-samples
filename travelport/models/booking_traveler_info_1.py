@@ -39,6 +39,7 @@ class BookingTravelerInfo1:
     traveler_type
     gender
     """
+
     class Meta:
         name = "BookingTravelerInfo"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -48,91 +49,91 @@ class BookingTravelerInfo1:
         metadata={
             "name": "BookingTravelerName",
             "type": "Element",
-        }
+        },
     )
     name_remark: None | NameRemark1 = field(
         default=None,
         metadata={
             "name": "NameRemark",
             "type": "Element",
-        }
+        },
     )
     dob: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DOB",
             "type": "Element",
-        }
+        },
     )
     travel_info: None | TravelInfo1 = field(
         default=None,
         metadata={
             "name": "TravelInfo",
             "type": "Element",
-        }
+        },
     )
     email: None | Email1 = field(
         default=None,
         metadata={
             "name": "Email",
             "type": "Element",
-        }
+        },
     )
     phone_number: None | PhoneNumber1 = field(
         default=None,
         metadata={
             "name": "PhoneNumber",
             "type": "Element",
-        }
+        },
     )
     address: None | TypeStructuredAddress1 = field(
         default=None,
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     emergency_info: None | str = field(
         default=None,
         metadata={
             "name": "EmergencyInfo",
             "type": "Element",
-        }
+        },
     )
     delivery_info: None | DeliveryInfo1 = field(
         default=None,
         metadata={
             "name": "DeliveryInfo",
             "type": "Element",
-        }
+        },
     )
     age: None | int = field(
         default=None,
         metadata={
             "name": "Age",
             "type": "Element",
-        }
+        },
     )
     customized_name_data: None | CustomizedNameData1 = field(
         default=None,
         metadata={
             "name": "CustomizedNameData",
             "type": "Element",
-        }
+        },
     )
     applied_profile: None | AppliedProfile1 = field(
         default=None,
         metadata={
             "name": "AppliedProfile",
             "type": "Element",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     traveler_type: None | str = field(
         default=None,
@@ -141,7 +142,7 @@ class BookingTravelerInfo1:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     gender: None | str = field(
         default=None,
@@ -150,5 +151,5 @@ class BookingTravelerInfo1:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )

@@ -14,17 +14,17 @@ class PrecipaParto:
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     sekcio: Optional[Sekcio] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )
     art: Optional[Art] = field(
         default=None,
         metadata={
             "type": "Element",
-        }
+        },
     )

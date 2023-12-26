@@ -10,6 +10,7 @@ class Remark7:
 
     (max 512 chars)
     """
+
     class Meta:
         name = "Remark"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -18,12 +19,12 @@ class Remark7:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

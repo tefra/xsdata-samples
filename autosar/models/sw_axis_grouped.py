@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .application_primitive_data_type_subtypes_enum import ApplicationPrimitiveDataTypeSubtypesEnum
+from .application_primitive_data_type_subtypes_enum import (
+    ApplicationPrimitiveDataTypeSubtypesEnum,
+)
 from .autosar_parameter_ref import AutosarParameterRef
 from .axis_index_type import AxisIndexType
 from .float_mod import Float
@@ -56,6 +58,7 @@ class SwAxisGrouped:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-AXIS-GROUPED"
 
@@ -65,7 +68,7 @@ class SwAxisGrouped:
             "name": "MAX-GRADIENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     monotony: Optional[MonotonyEnum] = field(
         default=None,
@@ -73,7 +76,7 @@ class SwAxisGrouped:
             "name": "MONOTONY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     shared_axis_type_ref: Optional["SwAxisGrouped.SharedAxisTypeRef"] = field(
         default=None,
@@ -81,7 +84,7 @@ class SwAxisGrouped:
             "name": "SHARED-AXIS-TYPE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_axis_index: Optional[AxisIndexType] = field(
         default=None,
@@ -89,7 +92,7 @@ class SwAxisGrouped:
             "name": "SW-AXIS-INDEX",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ar_parameter: Optional[AutosarParameterRef] = field(
         default=None,
@@ -97,7 +100,7 @@ class SwAxisGrouped:
             "name": "AR-PARAMETER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mc_data_instance_ref: Optional["SwAxisGrouped.McDataInstanceRef"] = field(
         default=None,
@@ -105,14 +108,14 @@ class SwAxisGrouped:
             "name": "MC-DATA-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -120,7 +123,7 @@ class SwAxisGrouped:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -131,7 +134,7 @@ class SwAxisGrouped:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -142,5 +145,5 @@ class SwAxisGrouped:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

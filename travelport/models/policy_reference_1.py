@@ -26,6 +26,7 @@ class PolicyReference1(TypeKeyElement1):
     priority_order
         Priority order associated with this PolicyReference.
     """
+
     class Meta:
         name = "PolicyReference"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -38,7 +39,7 @@ class PolicyReference1(TypeKeyElement1):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class PolicyReference1(TypeKeyElement1):
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     desc: None | str = field(
         default=None,
@@ -57,14 +58,14 @@ class PolicyReference1(TypeKeyElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     controlling_policy_id: None | int = field(
         default=None,
         metadata={
             "name": "ControllingPolicyID",
             "type": "Attribute",
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -73,5 +74,5 @@ class PolicyReference1(TypeKeyElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

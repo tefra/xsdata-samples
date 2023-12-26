@@ -25,6 +25,7 @@ class ProfileRetrieveTemplateReq(BaseReq5):
         of override plus default template.If passed true, only override
         fields will be returned.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -36,7 +37,7 @@ class ProfileRetrieveTemplateReq(BaseReq5):
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     id: None | int = field(
         default=None,
@@ -44,7 +45,7 @@ class ProfileRetrieveTemplateReq(BaseReq5):
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -52,12 +53,12 @@ class ProfileRetrieveTemplateReq(BaseReq5):
             "name": "Version",
             "type": "Attribute",
             "min_inclusive": 0,
-        }
+        },
     )
     return_override_fields_only: bool = field(
         default=False,
         metadata={
             "name": "ReturnOverrideFieldsOnly",
             "type": "Attribute",
-        }
+        },
     )

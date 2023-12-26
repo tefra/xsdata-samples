@@ -3,7 +3,9 @@ from dataclasses import dataclass, field
 from travelport.models.coordinate_location_1 import CoordinateLocation1
 from travelport.models.distance_1 import Distance1
 from travelport.models.hotel_location import HotelLocation
-from travelport.models.type_hotel_reference_point import TypeHotelReferencePoint
+from travelport.models.type_hotel_reference_point import (
+    TypeHotelReferencePoint,
+)
 from travelport.models.type_structured_address_1 import TypeStructuredAddress1
 from travelport.models.vendor_location_1 import VendorLocation1
 
@@ -31,6 +33,7 @@ class HotelSearchLocation:
         Not applicable for HotelSuperShopper
     distance
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -39,7 +42,7 @@ class HotelSearchLocation:
         metadata={
             "name": "HotelLocation",
             "type": "Element",
-        }
+        },
     )
     vendor_location: list[VendorLocation1] = field(
         default_factory=list,
@@ -48,21 +51,21 @@ class HotelSearchLocation:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 99,
-        }
+        },
     )
     hotel_address: None | TypeStructuredAddress1 = field(
         default=None,
         metadata={
             "name": "HotelAddress",
             "type": "Element",
-        }
+        },
     )
     reference_point: None | TypeHotelReferencePoint = field(
         default=None,
         metadata={
             "name": "ReferencePoint",
             "type": "Element",
-        }
+        },
     )
     coordinate_location: None | CoordinateLocation1 = field(
         default=None,
@@ -70,7 +73,7 @@ class HotelSearchLocation:
             "name": "CoordinateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     distance: None | Distance1 = field(
         default=None,
@@ -78,5 +81,5 @@ class HotelSearchLocation:
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

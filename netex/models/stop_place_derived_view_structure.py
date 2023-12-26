@@ -21,7 +21,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "StopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -29,7 +29,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     place_types: Optional[TypeOfPlaceRefsRelStructure] = field(
         default=None,
@@ -37,7 +37,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "placeTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     short_name: Optional[MultilingualString] = field(
         default=None,
@@ -45,7 +45,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "ShortName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     public_code: Optional[str] = field(
         default=None,
@@ -53,7 +53,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "PublicCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_place_type: Optional[StopTypeEnumeration] = field(
         default=None,
@@ -61,7 +61,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "StopPlaceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     transport_mode: Optional[VehicleModeEnumeration] = field(
         default=None,
@@ -69,5 +69,5 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

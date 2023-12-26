@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_account_type_profile_search_criteria_2 import TypeAccountTypeProfileSearchCriteria2
+from travelport.models.type_account_type_profile_search_criteria_2 import (
+    TypeAccountTypeProfileSearchCriteria2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -15,6 +17,7 @@ class AccountCriteria2(TypeAccountTypeProfileSearchCriteria2):
     name
         Account name wild card
     """
+
     class Meta:
         name = "AccountCriteria"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -24,5 +27,5 @@ class AccountCriteria2(TypeAccountTypeProfileSearchCriteria2):
         metadata={
             "name": "Name",
             "type": "Attribute",
-        }
+        },
     )

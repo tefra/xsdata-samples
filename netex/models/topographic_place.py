@@ -1,5 +1,7 @@
 from dataclasses import dataclass
-from .topographic_place_version_structure import TopographicPlaceVersionStructure
+from .topographic_place_version_structure import (
+    TopographicPlaceVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 

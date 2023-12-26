@@ -88,6 +88,7 @@ class SecOcSecureComProps:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SEC-OC-SECURE-COM-PROPS"
 
@@ -98,15 +99,17 @@ class SecOcSecureComProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SecOcSecureComProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SecOcSecureComProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +117,7 @@ class SecOcSecureComProps:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +125,7 @@ class SecOcSecureComProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +133,7 @@ class SecOcSecureComProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +141,7 @@ class SecOcSecureComProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,7 +149,7 @@ class SecOcSecureComProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SecOcSecureComProps.Annotations"] = field(
         default=None,
@@ -154,7 +157,7 @@ class SecOcSecureComProps:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auth_algorithm: Optional[String] = field(
         default=None,
@@ -162,7 +165,7 @@ class SecOcSecureComProps:
             "name": "AUTH-ALGORITHM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     auth_info_tx_length: Optional[PositiveInteger] = field(
         default=None,
@@ -170,7 +173,7 @@ class SecOcSecureComProps:
             "name": "AUTH-INFO-TX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_value_length: Optional[PositiveInteger] = field(
         default=None,
@@ -178,7 +181,7 @@ class SecOcSecureComProps:
             "name": "FRESHNESS-VALUE-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     freshness_value_tx_length: Optional[PositiveInteger] = field(
         default=None,
@@ -186,7 +189,7 @@ class SecOcSecureComProps:
             "name": "FRESHNESS-VALUE-TX-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     job_requirements: Optional["SecOcSecureComProps.JobRequirements"] = field(
         default=None,
@@ -194,14 +197,14 @@ class SecOcSecureComProps:
             "name": "JOB-REQUIREMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -209,14 +212,14 @@ class SecOcSecureComProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -227,7 +230,7 @@ class SecOcSecureComProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -238,7 +241,7 @@ class SecOcSecureComProps:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -249,5 +252,5 @@ class SecOcSecureComProps:
                 "name": "SEC-OC-JOB-REQUIREMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

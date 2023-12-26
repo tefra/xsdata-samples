@@ -14,7 +14,7 @@ class ClosedTimeRangeStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     end_time: Optional[XmlTime] = field(
         default=None,
@@ -23,5 +23,5 @@ class ClosedTimeRangeStructure:
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

@@ -27,6 +27,7 @@ class Xmlremark3:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "XMLRemark"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -35,14 +36,14 @@ class Xmlremark3:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
@@ -50,19 +51,19 @@ class Xmlremark3:
             "name": "Category",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     el_stat: None | TypeElementStatus4 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

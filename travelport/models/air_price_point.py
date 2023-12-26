@@ -57,6 +57,7 @@ class AirPricePoint:
         present in the AirPricePoint structure or not. If set to true means
         AirPricePoint contains the result for full requested itinerary.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -66,7 +67,7 @@ class AirPricePoint:
             "name": "AirPricingInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_result_message: list[TypeResultMessage1] = field(
         default_factory=list,
@@ -74,7 +75,7 @@ class AirPricePoint:
             "name": "AirPricingResultMessage",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fee_info: list[FeeInfo] = field(
         default_factory=list,
@@ -82,7 +83,7 @@ class AirPricePoint:
             "name": "FeeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_note: list[FareNote] = field(
         default_factory=list,
@@ -90,7 +91,7 @@ class AirPricePoint:
             "name": "FareNote",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     tax_info: list[TaxInfo] = field(
         default_factory=list,
@@ -98,7 +99,7 @@ class AirPricePoint:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -106,82 +107,82 @@ class AirPricePoint:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )
     complete_itinerary: bool = field(
         default=True,
         metadata={
             "name": "CompleteItinerary",
             "type": "Attribute",
-        }
+        },
     )

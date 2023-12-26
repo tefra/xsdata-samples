@@ -11,5 +11,6 @@ class TerminalCommandResponse(TypeTextBlock2):
 
     Usually pre-formatted.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"

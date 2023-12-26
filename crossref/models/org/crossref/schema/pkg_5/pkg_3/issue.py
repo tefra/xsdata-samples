@@ -11,6 +11,7 @@ class Issue:
     if an issue has only a seasonal name, then the season should be
     listed in issue.
     """
+
     class Meta:
         name = "issue"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -20,5 +21,5 @@ class Issue:
         metadata={
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )

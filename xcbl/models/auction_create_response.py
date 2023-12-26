@@ -63,14 +63,14 @@ class AuctionCreateSummary:
         metadata={
             "name": "TotalNumberOfAuctionItems",
             "type": "Element",
-        }
+        },
     )
     total_number_of_participants: Optional[str] = field(
         default=None,
         metadata={
             "name": "TotalNumberOfParticipants",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -92,28 +92,28 @@ class AuctionSpecifications:
         metadata={
             "name": "AuctionCreateName",
             "type": "Element",
-        }
+        },
     )
     auction_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "AuctionType",
             "type": "Element",
-        }
+        },
     )
     auction_status: Optional[str] = field(
         default=None,
         metadata={
             "name": "AuctionStatus",
             "type": "Element",
-        }
+        },
     )
     partial_bid_indicator: Optional[str] = field(
         default=None,
         metadata={
             "name": "PartialBidIndicator",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -131,7 +131,7 @@ class Rule:
         metadata={
             "name": "RuleDescription",
             "type": "Element",
-        }
+        },
     )
     rule_value: str = field(
         metadata={
@@ -145,7 +145,7 @@ class Rule:
         metadata={
             "name": "RuleFormula",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -218,7 +218,7 @@ class AuctionItemAttribute:
         metadata={
             "name": "AuctionAttributeDescription",
             "type": "Element",
-        }
+        },
     )
     auction_attribute_data_type_coded: str = field(
         metadata={
@@ -232,21 +232,21 @@ class AuctionItemAttribute:
         metadata={
             "name": "AuctionAttributeDataTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     list_of_values: Optional[ListOfValues] = field(
         default=None,
         metadata={
             "name": "ListOfValues",
             "type": "Element",
-        }
+        },
     )
     auction_attribute_field_size: Optional[str] = field(
         default=None,
         metadata={
             "name": "AuctionAttributeFieldSize",
             "type": "Element",
-        }
+        },
     )
     required_indicator: str = field(
         metadata={
@@ -260,7 +260,7 @@ class AuctionItemAttribute:
         metadata={
             "name": "AuctionAttributeDefaultValue",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -289,56 +289,56 @@ class AuctionPartners:
         metadata={
             "name": "ListOfIdentifier",
             "type": "Element",
-        }
+        },
     )
     mdfbusiness: Optional[str] = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
             "type": "Element",
-        }
+        },
     )
     name_address: Optional[NameAddress] = field(
         default=None,
         metadata={
             "name": "NameAddress",
             "type": "Element",
-        }
+        },
     )
     order_contact: Optional[OrderContact] = field(
         default=None,
         metadata={
             "name": "OrderContact",
             "type": "Element",
-        }
+        },
     )
     receiving_contact: Optional[ReceivingContact] = field(
         default=None,
         metadata={
             "name": "ReceivingContact",
             "type": "Element",
-        }
+        },
     )
     shipping_contact: Optional[ShippingContact] = field(
         default=None,
         metadata={
             "name": "ShippingContact",
             "type": "Element",
-        }
+        },
     )
     other_contacts: Optional[OtherContacts] = field(
         default=None,
         metadata={
             "name": "OtherContacts",
             "type": "Element",
-        }
+        },
     )
     correspondence_language: Optional[CorrespondenceLanguage] = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
             "type": "Element",
-        }
+        },
     )
     group_indicator: str = field(
         metadata={
@@ -352,7 +352,7 @@ class AuctionPartners:
         metadata={
             "name": "ListOfKeyVal",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -370,21 +370,21 @@ class AuctionPricingDetail:
         metadata={
             "name": "ReservePrice",
             "type": "Element",
-        }
+        },
     )
     bid_increment: Optional[str] = field(
         default=None,
         metadata={
             "name": "BidIncrement",
             "type": "Element",
-        }
+        },
     )
     list_of_price: Optional[ListOfPrice] = field(
         default=None,
         metadata={
             "name": "ListOfPrice",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -428,19 +428,21 @@ class ListOfAuctionCategory:
         metadata={
             "name": "AuctionCategory",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfAuctionItemComponentResponse:
-    auction_item_component_response: List[AuctionItemComponentResponse] = field(
+    auction_item_component_response: List[
+        AuctionItemComponentResponse
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AuctionItemComponentResponse",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -452,7 +454,7 @@ class ListOfRules:
             "name": "Rule",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -464,7 +466,7 @@ class ListOfAuctionItemAttribute:
             "name": "AuctionItemAttribute",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -476,7 +478,7 @@ class ListOfAuctionPartners:
             "name": "AuctionPartners",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -494,14 +496,14 @@ class RulesProfile:
         metadata={
             "name": "BidRuleCodedOther",
             "type": "Element",
-        }
+        },
     )
     mvbtemplate: Optional[str] = field(
         default=None,
         metadata={
             "name": "MVBTemplate",
             "type": "Element",
-        }
+        },
     )
     win_rule_coded: str = field(
         metadata={
@@ -515,21 +517,21 @@ class RulesProfile:
         metadata={
             "name": "WinRuleCodedOther",
             "type": "Element",
-        }
+        },
     )
     visibility_rules: Optional[VisibilityRules] = field(
         default=None,
         metadata={
             "name": "VisibilityRules",
             "type": "Element",
-        }
+        },
     )
     list_of_rules: Optional[ListOfRules] = field(
         default=None,
         metadata={
             "name": "ListOfRules",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -547,7 +549,7 @@ class ValidBidCurrency:
         metadata={
             "name": "RateOfExchangeDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -572,7 +574,7 @@ class AuctionItem:
         metadata={
             "name": "AuctionItemDescription",
             "type": "Element",
-        }
+        },
     )
     list_of_auction_category: ListOfAuctionCategory = field(
         metadata={
@@ -581,12 +583,14 @@ class AuctionItem:
             "required": True,
         }
     )
-    list_of_auction_item_attribute: Optional[ListOfAuctionItemAttribute] = field(
+    list_of_auction_item_attribute: Optional[
+        ListOfAuctionItemAttribute
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfAuctionItemAttribute",
             "type": "Element",
-        }
+        },
     )
     auction_item_hierarchy_level: str = field(
         metadata={
@@ -600,7 +604,7 @@ class AuctionItem:
         metadata={
             "name": "AuctionLineItemNum",
             "type": "Element",
-        }
+        },
     )
     auction_quantity: AuctionQuantity = field(
         metadata={
@@ -614,14 +618,14 @@ class AuctionItem:
         metadata={
             "name": "PartialBidIndicator",
             "type": "Element",
-        }
+        },
     )
     part_numbers: Optional[PartNumbers] = field(
         default=None,
         metadata={
             "name": "PartNumbers",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -639,14 +643,14 @@ class AuctionParticipants:
         metadata={
             "name": "CommunityID",
             "type": "Element",
-        }
+        },
     )
     list_to_inform: Optional[ListToInform] = field(
         default=None,
         metadata={
             "name": "ListToInform",
             "type": "Element",
-        }
+        },
     )
     list_of_auction_partners: ListOfAuctionPartners = field(
         metadata={
@@ -665,7 +669,7 @@ class ListOfValidBidCurrency:
             "name": "ValidBidCurrency",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -683,7 +687,7 @@ class AuctionCurrency:
         metadata={
             "name": "ListOfValidBidCurrency",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -701,35 +705,35 @@ class AuctionDetail:
         metadata={
             "name": "ListOfMVBVariables",
             "type": "Element",
-        }
+        },
     )
     auction_pricing_detail: Optional[AuctionPricingDetail] = field(
         default=None,
         metadata={
             "name": "AuctionPricingDetail",
             "type": "Element",
-        }
+        },
     )
     auction_item_dates: Optional[AuctionItemDates] = field(
         default=None,
         metadata={
             "name": "AuctionItemDates",
             "type": "Element",
-        }
+        },
     )
     auction_delivery_detail: Optional[AuctionDeliveryDetail] = field(
         default=None,
         metadata={
             "name": "AuctionDeliveryDetail",
             "type": "Element",
-        }
+        },
     )
     list_of_attachment: Optional[ListOfAttachment] = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-        }
+        },
     )
     component_auction_indicator: str = field(
         metadata={
@@ -782,7 +786,7 @@ class AuctionCreateHeader:
         metadata={
             "name": "DecisionDate",
             "type": "Element",
-        }
+        },
     )
     rules_profile: RulesProfile = field(
         metadata={
@@ -796,7 +800,7 @@ class AuctionCreateHeader:
         metadata={
             "name": "AuctionCurrency",
             "type": "Element",
-        }
+        },
     )
     auction_participants: AuctionParticipants = field(
         metadata={
@@ -810,7 +814,7 @@ class AuctionCreateHeader:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -824,21 +828,23 @@ class AuctionCreateHeader:
         metadata={
             "name": "AuctionCreateGeneralNotes",
             "type": "Element",
-        }
+        },
     )
-    auction_creat_list_of_attachment: Optional[AuctionCreatListOfAttachment] = field(
+    auction_creat_list_of_attachment: Optional[
+        AuctionCreatListOfAttachment
+    ] = field(
         default=None,
         metadata={
             "name": "AuctionCreatListOfAttachment",
             "type": "Element",
-        }
+        },
     )
     auction_specifications: Optional[AuctionSpecifications] = field(
         default=None,
         metadata={
             "name": "AuctionSpecifications",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -874,7 +880,7 @@ class AuctionCreateResponseDetail:
         metadata={
             "name": "AuctionItemDescription",
             "type": "Element",
-        }
+        },
     )
     auction_item_hierarchy_level: str = field(
         metadata={
@@ -888,7 +894,7 @@ class AuctionCreateResponseDetail:
         metadata={
             "name": "AuctionLineItemNum",
             "type": "Element",
-        }
+        },
     )
     auction_item_response_coded: str = field(
         metadata={
@@ -902,21 +908,25 @@ class AuctionCreateResponseDetail:
         metadata={
             "name": "AuctionItemResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
-    changed_auction_create_detail: Optional[ChangedAuctionCreateDetail] = field(
+    changed_auction_create_detail: Optional[
+        ChangedAuctionCreateDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ChangedAuctionCreateDetail",
             "type": "Element",
-        }
+        },
     )
-    list_of_auction_item_component_response: Optional[ListOfAuctionItemComponentResponse] = field(
+    list_of_auction_item_component_response: Optional[
+        ListOfAuctionItemComponentResponse
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfAuctionItemComponentResponse",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -973,14 +983,16 @@ class AuctionCreateResponseHeader:
         metadata={
             "name": "AuctionResponseCodedOther",
             "type": "Element",
-        }
+        },
     )
-    changed_auction_create_header: Optional[ChangedAuctionCreateHeader] = field(
+    changed_auction_create_header: Optional[
+        ChangedAuctionCreateHeader
+    ] = field(
         default=None,
         metadata={
             "name": "ChangedAuctionCreateHeader",
             "type": "Element",
-        }
+        },
     )
     language: Language = field(
         metadata={
@@ -994,7 +1006,7 @@ class AuctionCreateResponseHeader:
         metadata={
             "name": "AuctionCreateResponseNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1006,7 +1018,7 @@ class ListOfAuctionCreateResponseDetail:
             "name": "AuctionCreateResponseDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1019,12 +1031,14 @@ class AuctionCreateResponse:
             "required": True,
         }
     )
-    list_of_auction_create_response_detail: Optional[ListOfAuctionCreateResponseDetail] = field(
+    list_of_auction_create_response_detail: Optional[
+        ListOfAuctionCreateResponseDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfAuctionCreateResponseDetail",
             "type": "Element",
-        }
+        },
     )
     auction_create_response_summary: AuctionCreateResponseSummary = field(
         metadata={

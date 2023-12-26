@@ -33,6 +33,7 @@ class FareRulesFilter:
     oth
         Other
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -41,49 +42,49 @@ class FareRulesFilter:
         metadata={
             "name": "Refundability",
             "type": "Element",
-        }
+        },
     )
     latest_ticketing_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LatestTicketingTime",
             "type": "Element",
-        }
+        },
     )
     chg: None | Chgtype = field(
         default=None,
         metadata={
             "name": "CHG",
             "type": "Element",
-        }
+        },
     )
     min: None | Mintype = field(
         default=None,
         metadata={
             "name": "MIN",
             "type": "Element",
-        }
+        },
     )
     max: None | Maxtype = field(
         default=None,
         metadata={
             "name": "MAX",
             "type": "Element",
-        }
+        },
     )
     adv: None | Advtype = field(
         default=None,
         metadata={
             "name": "ADV",
             "type": "Element",
-        }
+        },
     )
     oth: None | Othtype = field(
         default=None,
         metadata={
             "name": "OTH",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -96,11 +97,12 @@ class FareRulesFilter:
             RefundableWithPenalty (1G,1V), Refundable (1P),  NonRefundable
             (1G,1V,1P).Refundable.
         """
+
         value: None | str = field(
             default=None,
             metadata={
                 "name": "Value",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

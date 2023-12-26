@@ -18,15 +18,17 @@ class FareContractEntryVersionStructure(LogEntryVersionStructure):
             "name": "IsValid",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    type_of_fare_contract_entry_ref: Optional[TypeOfFareContractEntryRef] = field(
+    type_of_fare_contract_entry_ref: Optional[
+        TypeOfFareContractEntryRef
+    ] = field(
         default=None,
         metadata={
             "name": "TypeOfFareContractEntryRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fare_contract_ref: Optional[FareContractRef] = field(
         default=None,
@@ -34,5 +36,5 @@ class FareContractEntryVersionStructure(LogEntryVersionStructure):
             "name": "FareContractRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

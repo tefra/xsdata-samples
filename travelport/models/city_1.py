@@ -10,6 +10,7 @@ class City1(Location1):
     """
     City identifier.
     """
+
     class Meta:
         name = "City"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -22,5 +23,5 @@ class City1(Location1):
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )

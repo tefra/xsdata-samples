@@ -9,5 +9,6 @@ class Location5:
     """
     Used during search to specify an origin or destination location.
     """
+
     class Meta:
         name = "Location"

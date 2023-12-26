@@ -27,6 +27,7 @@ class TypeTicketStatus(Enum):
     S
         Code="S" Description="Used"
     """
+
     U = "U"
     T = "T"
     V = "V"

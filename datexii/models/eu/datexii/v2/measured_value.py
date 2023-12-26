@@ -2,8 +2,12 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.location_characteristics_override import LocationCharacteristicsOverride
-from datexii.models.eu.datexii.v2.measurement_equipment_fault import MeasurementEquipmentFault
+from datexii.models.eu.datexii.v2.location_characteristics_override import (
+    LocationCharacteristicsOverride,
+)
+from datexii.models.eu.datexii.v2.measurement_equipment_fault import (
+    MeasurementEquipmentFault,
+)
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -27,21 +31,24 @@ class MeasuredValue:
     :ivar basic_data:
     :ivar measured_value_extension:
     """
+
     measurement_equipment_type_used: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "measurementEquipmentTypeUsed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    location_characteristics_override: Optional[LocationCharacteristicsOverride] = field(
+    location_characteristics_override: Optional[
+        LocationCharacteristicsOverride
+    ] = field(
         default=None,
         metadata={
             "name": "locationCharacteristicsOverride",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     measurement_equipment_fault: List[MeasurementEquipmentFault] = field(
         default_factory=list,
@@ -49,7 +56,7 @@ class MeasuredValue:
             "name": "measurementEquipmentFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     basic_data: Optional[BasicData] = field(
         default=None,
@@ -57,7 +64,7 @@ class MeasuredValue:
             "name": "basicData",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     measured_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -65,5 +72,5 @@ class MeasuredValue:
             "name": "measuredValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

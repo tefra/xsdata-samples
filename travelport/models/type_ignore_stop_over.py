@@ -17,6 +17,7 @@ class TypeIgnoreStopOver(Enum):
     IGNORE_SEGMENT
         Segment Ignored.
     """
+
     NO_STOP_OVER = "NoStopOver"
     STOP_OVER = "StopOver"
     IGNORE_SEGMENT = "IgnoreSegment"

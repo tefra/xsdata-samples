@@ -16,6 +16,7 @@ class OpenlrFunctionalRoadClassEnum(Enum):
     :cvar FRC6: Sixth class road
     :cvar FRC7: Other class road, lowest importance
     """
+
     FRC0 = "FRC0"
     FRC1 = "FRC1"
     FRC2 = "FRC2"

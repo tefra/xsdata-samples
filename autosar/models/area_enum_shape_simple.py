@@ -11,6 +11,7 @@ class AreaEnumShapeSimple(Enum):
     :cvar POLY: The area is specified as polygon.
     :cvar RECT: The shape is specified as rectangle.
     """
+
     CIRCLE = "CIRCLE"
     DEFAULT = "DEFAULT"
     POLY = "POLY"

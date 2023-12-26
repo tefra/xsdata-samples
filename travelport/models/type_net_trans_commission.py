@@ -11,6 +11,7 @@ class TypeNetTransCommission(Enum):
     for Good. C stands for Poor. P stands for Payment Bureau X stands
     for Unknown. To support any other value than A,B,C and P.
     """
+
     A = "A"
     B = "B"
     C = "C"

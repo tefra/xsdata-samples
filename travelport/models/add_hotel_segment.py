@@ -27,6 +27,7 @@ class AddHotelSegment:
         Used to specify promotional code include in the booking
     guarantee
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -37,7 +38,7 @@ class AddHotelSegment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     hotel_property: None | HotelProperty = field(
         default=None,
@@ -46,7 +47,7 @@ class AddHotelSegment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -55,7 +56,7 @@ class AddHotelSegment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -64,7 +65,7 @@ class AddHotelSegment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 4,
-        }
+        },
     )
     guest_information: None | GuestInformation = field(
         default=None,
@@ -72,7 +73,7 @@ class AddHotelSegment:
             "name": "GuestInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     promotion_code: None | PromotionCode = field(
         default=None,
@@ -80,7 +81,7 @@ class AddHotelSegment:
             "name": "PromotionCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     guarantee: None | Guarantee1 = field(
         default=None,
@@ -88,5 +89,5 @@ class AddHotelSegment:
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

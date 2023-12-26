@@ -10,5 +10,6 @@ class ChapterEnumBreakSimple(Enum):
     :cvar NO_BREAK: This indicates that there is no need to force a page
         break before this block.
     """
+
     BREAK = "BREAK"
     NO_BREAK = "NO-BREAK"

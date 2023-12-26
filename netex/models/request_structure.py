@@ -13,7 +13,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     requestor_ref: Optional[str] = field(
         default=None,
@@ -22,7 +22,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     message_identifier: Optional[str] = field(
         default=None,
@@ -30,7 +30,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "name": "MessageIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -38,7 +38,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -46,5 +46,5 @@ class RequestStructure(AuthenticatedRequestStructure):
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

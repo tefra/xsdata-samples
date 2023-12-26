@@ -48,6 +48,7 @@ class CanClusterConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-CLUSTER-CONDITIONAL"
 
@@ -57,15 +58,17 @@ class CanClusterConditional:
             "name": "BAUDRATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    physical_channels: Optional["CanClusterConditional.PhysicalChannels"] = field(
+    physical_channels: Optional[
+        "CanClusterConditional.PhysicalChannels"
+    ] = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_name: Optional[String] = field(
         default=None,
@@ -73,7 +76,7 @@ class CanClusterConditional:
             "name": "PROTOCOL-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     protocol_version: Optional[String] = field(
         default=None,
@@ -81,7 +84,7 @@ class CanClusterConditional:
             "name": "PROTOCOL-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     speed: Optional[Integer] = field(
         default=None,
@@ -89,7 +92,7 @@ class CanClusterConditional:
             "name": "SPEED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bus_off_recovery: Optional[CanClusterBusOffRecovery] = field(
         default=None,
@@ -97,7 +100,7 @@ class CanClusterConditional:
             "name": "BUS-OFF-RECOVERY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     can_fd_baudrate: Optional[PositiveUnlimitedInteger] = field(
         default=None,
@@ -105,7 +108,7 @@ class CanClusterConditional:
             "name": "CAN-FD-BAUDRATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -113,14 +116,14 @@ class CanClusterConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -128,7 +131,7 @@ class CanClusterConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -139,7 +142,7 @@ class CanClusterConditional:
                 "name": "CAN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ethernet_physical_channel: List[EthernetPhysicalChannel] = field(
             default_factory=list,
@@ -147,7 +150,7 @@ class CanClusterConditional:
                 "name": "ETHERNET-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         flexray_physical_channel: List[FlexrayPhysicalChannel] = field(
             default_factory=list,
@@ -155,7 +158,7 @@ class CanClusterConditional:
                 "name": "FLEXRAY-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         lin_physical_channel: List[LinPhysicalChannel] = field(
             default_factory=list,
@@ -163,7 +166,7 @@ class CanClusterConditional:
                 "name": "LIN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         ttcan_physical_channel: List[TtcanPhysicalChannel] = field(
             default_factory=list,
@@ -171,13 +174,15 @@ class CanClusterConditional:
                 "name": "TTCAN-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        user_defined_physical_channel: List[UserDefinedPhysicalChannel] = field(
+        user_defined_physical_channel: List[
+            UserDefinedPhysicalChannel
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "USER-DEFINED-PHYSICAL-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

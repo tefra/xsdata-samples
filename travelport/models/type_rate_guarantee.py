@@ -8,6 +8,7 @@ class TypeRateGuarantee(Enum):
     """
     The guarantee for this rate.
     """
+
     RATE_GUARANTEED = "Rate Guaranteed"
     RATE_QUOTED = "Rate Quoted"
     AGENT_ENTERED = "Agent Entered"

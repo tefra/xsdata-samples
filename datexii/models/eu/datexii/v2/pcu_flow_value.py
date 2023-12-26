@@ -15,6 +15,7 @@ class PcuFlowValue(DataValue):
         expressed in passenger car units per hour.
     :ivar pcu_flow_value_extension:
     """
+
     pcu_flow_rate: Optional[int] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class PcuFlowValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     pcu_flow_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class PcuFlowValue(DataValue):
             "name": "pcuFlowValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

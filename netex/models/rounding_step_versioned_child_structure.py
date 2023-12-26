@@ -18,7 +18,7 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "name": "RoundingStepRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     round_if_greater_than: Optional[Decimal] = field(
         default=None,
@@ -27,7 +27,7 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     round_to: Optional[Decimal] = field(
         default=None,
@@ -36,5 +36,5 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

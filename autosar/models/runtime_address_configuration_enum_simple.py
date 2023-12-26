@@ -10,5 +10,6 @@ class RuntimeAddressConfigurationEnumSimple(Enum):
     :cvar SD: AUTOSAR Service Discovery is used to obtain the address
         information.
     """
+
     NONE = "NONE"
     SD = "SD"

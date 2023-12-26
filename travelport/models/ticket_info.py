@@ -31,6 +31,7 @@ class TicketInfo:
     air_pricing_info_ref
         A reference to a AirPricing.Applicable Providers 1G and 1V.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -41,7 +42,7 @@ class TicketInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     conjuncted_ticket_info: list[ConjunctedTicketInfo] = field(
         default_factory=list,
@@ -49,7 +50,7 @@ class TicketInfo:
             "name": "ConjunctedTicketInfo",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     exchanged_ticket_info: list[ExchangedTicketInfo] = field(
         default_factory=list,
@@ -57,7 +58,7 @@ class TicketInfo:
             "name": "ExchangedTicketInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -65,7 +66,7 @@ class TicketInfo:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     iatanumber: None | str = field(
         default=None,
@@ -73,14 +74,14 @@ class TicketInfo:
             "name": "IATANumber",
             "type": "Attribute",
             "max_length": 8,
-        }
+        },
     )
     ticket_issue_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "TicketIssueDate",
             "type": "Attribute",
-        }
+        },
     )
     ticketing_agent_sign_on: None | str = field(
         default=None,
@@ -88,7 +89,7 @@ class TicketInfo:
             "name": "TicketingAgentSignOn",
             "type": "Attribute",
             "max_length": 9,
-        }
+        },
     )
     country_code: None | str = field(
         default=None,
@@ -96,7 +97,7 @@ class TicketInfo:
             "name": "CountryCode",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     status: None | TypeTicketStatus = field(
         default=None,
@@ -104,14 +105,14 @@ class TicketInfo:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     bulk_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
@@ -119,12 +120,12 @@ class TicketInfo:
             "name": "BookingTravelerRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     air_pricing_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirPricingInfoRef",
             "type": "Attribute",
-        }
+        },
     )

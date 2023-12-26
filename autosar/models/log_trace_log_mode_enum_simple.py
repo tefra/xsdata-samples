@@ -12,6 +12,7 @@ class LogTraceLogModeEnumSimple(Enum):
     :cvar NETWORK: Log message will be transmitted over the
         communication bus.
     """
+
     CONSOLE = "CONSOLE"
     FILE = "FILE"
     NETWORK = "NETWORK"

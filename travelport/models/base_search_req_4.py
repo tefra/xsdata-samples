@@ -18,5 +18,5 @@ class BaseSearchReq4(BaseReq4):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
             "max_occurs": 999,
-        }
+        },
     )

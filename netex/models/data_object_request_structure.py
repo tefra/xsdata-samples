@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .abstract_functional_service_request_structure import AbstractFunctionalServiceRequestStructure
+from .abstract_functional_service_request_structure import (
+    AbstractFunctionalServiceRequestStructure,
+)
 from .extensions_1 import Extensions1
-from .network_frame_request_policy_structure import NetworkFrameRequestPolicyStructure
+from .network_frame_request_policy_structure import (
+    NetworkFrameRequestPolicyStructure,
+)
 from .network_frame_topic import NetworkFrameTopic
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -16,7 +20,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     policy: Optional[NetworkFrameRequestPolicyStructure] = field(
         default=None,
@@ -24,7 +28,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
             "name": "Policy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     extensions: Optional[Extensions1] = field(
         default=None,
@@ -32,7 +36,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
             "name": "Extensions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
 
     @dataclass
@@ -44,5 +48,5 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
                 "required": True,
-            }
+            },
         )

@@ -17,5 +17,5 @@ class BrandingVersionStructure(TypeOfValueVersionStructure):
             "name": "Presentation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

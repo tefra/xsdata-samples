@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from .mode_driven_transmission_mode_condition import ModeDrivenTransmissionModeCondition
+from .mode_driven_transmission_mode_condition import (
+    ModeDrivenTransmissionModeCondition,
+)
 from .transmission_mode_condition import TransmissionModeCondition
 from .transmission_mode_timing import TransmissionModeTiming
 
@@ -58,32 +60,39 @@ class TransmissionModeDeclaration:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TRANSMISSION-MODE-DECLARATION"
 
-    mode_driven_false_conditions: Optional["TransmissionModeDeclaration.ModeDrivenFalseConditions"] = field(
+    mode_driven_false_conditions: Optional[
+        "TransmissionModeDeclaration.ModeDrivenFalseConditions"
+    ] = field(
         default=None,
         metadata={
             "name": "MODE-DRIVEN-FALSE-CONDITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    mode_driven_true_conditions: Optional["TransmissionModeDeclaration.ModeDrivenTrueConditions"] = field(
+    mode_driven_true_conditions: Optional[
+        "TransmissionModeDeclaration.ModeDrivenTrueConditions"
+    ] = field(
         default=None,
         metadata={
             "name": "MODE-DRIVEN-TRUE-CONDITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transmission_mode_conditions: Optional["TransmissionModeDeclaration.TransmissionModeConditions"] = field(
+    transmission_mode_conditions: Optional[
+        "TransmissionModeDeclaration.TransmissionModeConditions"
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE-CONDITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmission_mode_false_timing: Optional[TransmissionModeTiming] = field(
         default=None,
@@ -91,7 +100,7 @@ class TransmissionModeDeclaration:
             "name": "TRANSMISSION-MODE-FALSE-TIMING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     transmission_mode_true_timing: Optional[TransmissionModeTiming] = field(
         default=None,
@@ -99,14 +108,14 @@ class TransmissionModeDeclaration:
             "name": "TRANSMISSION-MODE-TRUE-TIMING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -114,29 +123,33 @@ class TransmissionModeDeclaration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class ModeDrivenFalseConditions:
-        mode_driven_transmission_mode_condition: List[ModeDrivenTransmissionModeCondition] = field(
+        mode_driven_transmission_mode_condition: List[
+            ModeDrivenTransmissionModeCondition
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-DRIVEN-TRANSMISSION-MODE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ModeDrivenTrueConditions:
-        mode_driven_transmission_mode_condition: List[ModeDrivenTransmissionModeCondition] = field(
+        mode_driven_transmission_mode_condition: List[
+            ModeDrivenTransmissionModeCondition
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "MODE-DRIVEN-TRANSMISSION-MODE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -147,5 +160,5 @@ class TransmissionModeDeclaration:
                 "name": "TRANSMISSION-MODE-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

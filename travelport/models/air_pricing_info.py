@@ -3,7 +3,9 @@ from dataclasses import dataclass, field
 from travelport.models.action_details import ActionDetails
 from travelport.models.adjustment import Adjustment
 from travelport.models.air_pricing_modifiers import AirPricingModifiers
-from travelport.models.air_segment_pricing_modifiers import AirSegmentPricingModifiers
+from travelport.models.air_segment_pricing_modifiers import (
+    AirSegmentPricingModifiers,
+)
 from travelport.models.baggage_allowances import BaggageAllowances
 from travelport.models.booking_info import BookingInfo
 from travelport.models.booking_traveler_ref_1 import BookingTravelerRef1
@@ -23,7 +25,9 @@ from travelport.models.ticketing_modifiers_ref import TicketingModifiersRef
 from travelport.models.type_element_status_1 import TypeElementStatus1
 from travelport.models.type_eticketability import TypeEticketability
 from travelport.models.type_fare_penalty import TypeFarePenalty
-from travelport.models.type_most_restrictive_penalties import TypeMostRestrictivePenalties
+from travelport.models.type_most_restrictive_penalties import (
+    TypeMostRestrictivePenalties,
+)
 from travelport.models.type_pricing_method import TypePricingMethod
 from travelport.models.waiver_code import WaiverCode
 from travelport.models.yield_mod import Yield
@@ -181,6 +185,7 @@ class AirPricingInfo:
         A true value indicates that the fare has a Cat35 rule. A false valud
         indicates that the fare does not have a Cat35 rule
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -190,14 +195,14 @@ class AirPricingInfo:
             "name": "FareInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_status: None | FareStatus = field(
         default=None,
         metadata={
             "name": "FareStatus",
             "type": "Element",
-        }
+        },
     )
     fare_info_ref: list[FareInfoRef] = field(
         default_factory=list,
@@ -205,7 +210,7 @@ class AirPricingInfo:
             "name": "FareInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     booking_info: list[BookingInfo] = field(
         default_factory=list,
@@ -213,7 +218,7 @@ class AirPricingInfo:
             "name": "BookingInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tax_info: list[TaxInfo] = field(
         default_factory=list,
@@ -221,14 +226,14 @@ class AirPricingInfo:
             "name": "TaxInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     fare_calc: None | str = field(
         default=None,
         metadata={
             "name": "FareCalc",
             "type": "Element",
-        }
+        },
     )
     passenger_type: list[PassengerType] = field(
         default_factory=list,
@@ -236,7 +241,7 @@ class AirPricingInfo:
             "name": "PassengerType",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -245,14 +250,14 @@ class AirPricingInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     waiver_code: None | WaiverCode = field(
         default=None,
         metadata={
             "name": "WaiverCode",
             "type": "Element",
-        }
+        },
     )
     payment_ref: list[PaymentRef2] = field(
         default_factory=list,
@@ -260,7 +265,7 @@ class AirPricingInfo:
             "name": "PaymentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     change_penalty: list[TypeFarePenalty] = field(
         default_factory=list,
@@ -268,7 +273,7 @@ class AirPricingInfo:
             "name": "ChangePenalty",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     cancel_penalty: list[TypeFarePenalty] = field(
         default_factory=list,
@@ -276,7 +281,7 @@ class AirPricingInfo:
             "name": "CancelPenalty",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     no_show_penalty: list[TypeFarePenalty] = field(
         default_factory=list,
@@ -284,14 +289,14 @@ class AirPricingInfo:
             "name": "NoShowPenalty",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     most_restrictive_penalties: None | TypeMostRestrictivePenalties = field(
         default=None,
         metadata={
             "name": "MostRestrictivePenalties",
             "type": "Element",
-        }
+        },
     )
     fee_info: list[FeeInfo] = field(
         default_factory=list,
@@ -299,7 +304,7 @@ class AirPricingInfo:
             "name": "FeeInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     adjustment: list[Adjustment] = field(
         default_factory=list,
@@ -307,7 +312,7 @@ class AirPricingInfo:
             "name": "Adjustment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     yield_value: list[Yield] = field(
         default_factory=list,
@@ -315,14 +320,14 @@ class AirPricingInfo:
             "name": "Yield",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_pricing_modifiers: None | AirPricingModifiers = field(
         default=None,
         metadata={
             "name": "AirPricingModifiers",
             "type": "Element",
-        }
+        },
     )
     ticketing_modifiers_ref: list[TicketingModifiersRef] = field(
         default_factory=list,
@@ -330,7 +335,7 @@ class AirPricingInfo:
             "name": "TicketingModifiersRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     air_segment_pricing_modifiers: list[AirSegmentPricingModifiers] = field(
         default_factory=list,
@@ -338,35 +343,35 @@ class AirPricingInfo:
             "name": "AirSegmentPricingModifiers",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     flight_options_list: None | FlightOptionsList = field(
         default=None,
         metadata={
             "name": "FlightOptionsList",
             "type": "Element",
-        }
+        },
     )
     baggage_allowances: None | BaggageAllowances = field(
         default=None,
         metadata={
             "name": "BaggageAllowances",
             "type": "Element",
-        }
+        },
     )
     fare_rules_filter: None | FareRulesFilter = field(
         default=None,
         metadata={
             "name": "FareRulesFilter",
             "type": "Element",
-        }
+        },
     )
     policy_codes_list: None | PolicyCodesList = field(
         default=None,
         metadata={
             "name": "PolicyCodesList",
             "type": "Element",
-        }
+        },
     )
     price_change: list[PriceChangeType] = field(
         default_factory=list,
@@ -374,14 +379,14 @@ class AirPricingInfo:
             "name": "PriceChange",
             "type": "Element",
             "max_occurs": 99,
-        }
+        },
     )
     action_details: None | ActionDetails = field(
         default=None,
         metadata={
             "name": "ActionDetails",
             "type": "Element",
-        }
+        },
     )
     commission: list[Commission1] = field(
         default_factory=list,
@@ -390,7 +395,7 @@ class AirPricingInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -399,7 +404,7 @@ class AirPricingInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -408,7 +413,7 @@ class AirPricingInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -416,7 +421,7 @@ class AirPricingInfo:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     command_key: None | str = field(
         default=None,
@@ -424,77 +429,77 @@ class AirPricingInfo:
             "name": "CommandKey",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     total_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     base_price: None | str = field(
         default=None,
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_total_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTotalPrice",
             "type": "Attribute",
-        }
+        },
     )
     approximate_base_price: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     equivalent_base_price: None | str = field(
         default=None,
         metadata={
             "name": "EquivalentBasePrice",
             "type": "Attribute",
-        }
+        },
     )
     taxes: None | str = field(
         default=None,
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-        }
+        },
     )
     fees: None | str = field(
         default=None,
         metadata={
             "name": "Fees",
             "type": "Attribute",
-        }
+        },
     )
     services: None | str = field(
         default=None,
         metadata={
             "name": "Services",
             "type": "Attribute",
-        }
+        },
     )
     approximate_taxes: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateTaxes",
             "type": "Attribute",
-        }
+        },
     )
     approximate_fees: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateFees",
             "type": "Attribute",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -503,7 +508,7 @@ class AirPricingInfo:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -512,7 +517,7 @@ class AirPricingInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     amount_type: None | str = field(
         default=None,
@@ -521,49 +526,49 @@ class AirPricingInfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 32,
-        }
+        },
     )
     includes_vat: None | bool = field(
         default=None,
         metadata={
             "name": "IncludesVAT",
             "type": "Attribute",
-        }
+        },
     )
     exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
-        }
+        },
     )
     forfeit_amount: None | str = field(
         default=None,
         metadata={
             "name": "ForfeitAmount",
             "type": "Attribute",
-        }
+        },
     )
     refundable: None | bool = field(
         default=None,
         metadata={
             "name": "Refundable",
             "type": "Attribute",
-        }
+        },
     )
     exchangeable: None | bool = field(
         default=None,
         metadata={
             "name": "Exchangeable",
             "type": "Attribute",
-        }
+        },
     )
     latest_ticketing_time: None | str = field(
         default=None,
         metadata={
             "name": "LatestTicketingTime",
             "type": "Attribute",
-        }
+        },
     )
     pricing_method: None | TypePricingMethod = field(
         default=None,
@@ -571,21 +576,21 @@ class AirPricingInfo:
             "name": "PricingMethod",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     checksum: None | str = field(
         default=None,
         metadata={
             "name": "Checksum",
             "type": "Attribute",
-        }
+        },
     )
     eticketability: None | TypeEticketability = field(
         default=None,
         metadata={
             "name": "ETicketability",
             "type": "Attribute",
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -593,35 +598,35 @@ class AirPricingInfo:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     air_pricing_info_group: None | int = field(
         default=None,
         metadata={
             "name": "AirPricingInfoGroup",
             "type": "Attribute",
-        }
+        },
     )
     total_net_price: None | str = field(
         default=None,
         metadata={
             "name": "TotalNetPrice",
             "type": "Attribute",
-        }
+        },
     )
     ticketed: None | bool = field(
         default=None,
         metadata={
             "name": "Ticketed",
             "type": "Attribute",
-        }
+        },
     )
     pricing_type: None | str = field(
         default=None,
@@ -629,42 +634,42 @@ class AirPricingInfo:
             "name": "PricingType",
             "type": "Attribute",
             "max_length": 25,
-        }
+        },
     )
     true_last_date_to_ticket: None | str = field(
         default=None,
         metadata={
             "name": "TrueLastDateToTicket",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
     in_policy: None | bool = field(
         default=None,
         metadata={
             "name": "InPolicy",
             "type": "Attribute",
-        }
+        },
     )
     preferred_option: None | bool = field(
         default=None,
         metadata={
             "name": "PreferredOption",
             "type": "Attribute",
-        }
+        },
     )
     fare_calculation_ind: None | str = field(
         default=None,
@@ -672,12 +677,12 @@ class AirPricingInfo:
             "name": "FareCalculationInd",
             "type": "Attribute",
             "length": 1,
-        }
+        },
     )
     cat35_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "Cat35Indicator",
             "type": "Attribute",
-        }
+        },
     )

@@ -7,17 +7,27 @@ from travelport.models.document_select import DocumentSelect
 from travelport.models.exempt_obfee import ExemptObfee
 from travelport.models.land_charges import LandCharges
 from travelport.models.language_option import LanguageOption
-from travelport.models.print_blank_form_itinerary import PrintBlankFormItinerary
+from travelport.models.print_blank_form_itinerary import (
+    PrintBlankFormItinerary,
+)
 from travelport.models.segment_modifiers import SegmentModifiers
 from travelport.models.segment_select import SegmentSelect
 from travelport.models.supplier_locator_1 import SupplierLocator1
 from travelport.models.ticket_endorsement import TicketEndorsement
 from travelport.models.tour_code import TourCode
-from travelport.models.type_bulk_ticket_modifier_type import TypeBulkTicketModifierType
+from travelport.models.type_bulk_ticket_modifier_type import (
+    TypeBulkTicketModifierType,
+)
 from travelport.models.type_element_status_1 import TypeElementStatus1
-from travelport.models.type_ticket_modifier_accounting_type import TypeTicketModifierAccountingType
-from travelport.models.type_ticket_modifier_amount_type import TypeTicketModifierAmountType
-from travelport.models.type_ticket_modifier_value_type import TypeTicketModifierValueType
+from travelport.models.type_ticket_modifier_accounting_type import (
+    TypeTicketModifierAccountingType,
+)
+from travelport.models.type_ticket_modifier_amount_type import (
+    TypeTicketModifierAmountType,
+)
+from travelport.models.type_ticket_modifier_value_type import (
+    TypeTicketModifierValueType,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
@@ -117,6 +127,7 @@ class TicketingModifiers:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -126,63 +137,63 @@ class TicketingModifiers:
             "name": "BookingTravelerRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     net_remit: None | TypeTicketModifierAmountType = field(
         default=None,
         metadata={
             "name": "NetRemit",
             "type": "Element",
-        }
+        },
     )
     net_fare: None | TypeTicketModifierAmountType = field(
         default=None,
         metadata={
             "name": "NetFare",
             "type": "Element",
-        }
+        },
     )
     actual_selling_fare: None | TypeTicketModifierAmountType = field(
         default=None,
         metadata={
             "name": "ActualSellingFare",
             "type": "Element",
-        }
+        },
     )
     invoice_fare: None | TypeTicketModifierAccountingType = field(
         default=None,
         metadata={
             "name": "InvoiceFare",
             "type": "Element",
-        }
+        },
     )
     corporate_discount: None | TypeTicketModifierAccountingType = field(
         default=None,
         metadata={
             "name": "CorporateDiscount",
             "type": "Element",
-        }
+        },
     )
     accounting_info: None | TypeTicketModifierAccountingType = field(
         default=None,
         metadata={
             "name": "AccountingInfo",
             "type": "Element",
-        }
+        },
     )
     bulk_ticket: None | TicketingModifiers.BulkTicket = field(
         default=None,
         metadata={
             "name": "BulkTicket",
             "type": "Element",
-        }
+        },
     )
     group_tour: None | TypeBulkTicketModifierType = field(
         default=None,
         metadata={
             "name": "GroupTour",
             "type": "Element",
-        }
+        },
     )
     commission: None | Commission1 = field(
         default=None,
@@ -190,14 +201,14 @@ class TicketingModifiers:
             "name": "Commission",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     tour_code: None | TourCode = field(
         default=None,
         metadata={
             "name": "TourCode",
             "type": "Element",
-        }
+        },
     )
     ticket_endorsement: list[TicketEndorsement] = field(
         default_factory=list,
@@ -205,35 +216,35 @@ class TicketingModifiers:
             "name": "TicketEndorsement",
             "type": "Element",
             "max_occurs": 3,
-        }
+        },
     )
     value_modifier: None | TypeTicketModifierValueType = field(
         default=None,
         metadata={
             "name": "ValueModifier",
             "type": "Element",
-        }
+        },
     )
     document_select: None | DocumentSelect = field(
         default=None,
         metadata={
             "name": "DocumentSelect",
             "type": "Element",
-        }
+        },
     )
     document_options: None | DocumentOptions = field(
         default=None,
         metadata={
             "name": "DocumentOptions",
             "type": "Element",
-        }
+        },
     )
     segment_select: None | SegmentSelect = field(
         default=None,
         metadata={
             "name": "SegmentSelect",
             "type": "Element",
-        }
+        },
     )
     segment_modifiers: list[SegmentModifiers] = field(
         default_factory=list,
@@ -241,7 +252,7 @@ class TicketingModifiers:
             "name": "SegmentModifiers",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     supplier_locator: None | SupplierLocator1 = field(
         default=None,
@@ -249,14 +260,14 @@ class TicketingModifiers:
             "name": "SupplierLocator",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     destination_purpose_code: None | DestinationPurposeCode = field(
         default=None,
         metadata={
             "name": "DestinationPurposeCode",
             "type": "Element",
-        }
+        },
     )
     language_option: list[LanguageOption] = field(
         default_factory=list,
@@ -264,42 +275,42 @@ class TicketingModifiers:
             "name": "LanguageOption",
             "type": "Element",
             "max_occurs": 2,
-        }
+        },
     )
     land_charges: None | LandCharges = field(
         default=None,
         metadata={
             "name": "LandCharges",
             "type": "Element",
-        }
+        },
     )
     print_blank_form_itinerary: None | PrintBlankFormItinerary = field(
         default=None,
         metadata={
             "name": "PrintBlankFormItinerary",
             "type": "Element",
-        }
+        },
     )
     exempt_obfee: None | ExemptObfee = field(
         default=None,
         metadata={
             "name": "ExemptOBFee",
             "type": "Element",
-        }
+        },
     )
     is_primary_di: bool = field(
         default=False,
         metadata={
             "name": "IsPrimaryDI",
             "type": "Attribute",
-        }
+        },
     )
     document_instruction_number: None | str = field(
         default=None,
         metadata={
             "name": "DocumentInstructionNumber",
             "type": "Attribute",
-        }
+        },
     )
     reference: None | str = field(
         default=None,
@@ -308,7 +319,7 @@ class TicketingModifiers:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 30,
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -316,7 +327,7 @@ class TicketingModifiers:
             "name": "Status",
             "type": "Attribute",
             "max_length": 30,
-        }
+        },
     )
     free_text: None | str = field(
         default=None,
@@ -324,21 +335,21 @@ class TicketingModifiers:
             "name": "FreeText",
             "type": "Attribute",
             "max_length": 756,
-        }
+        },
     )
     name_number: None | str = field(
         default=None,
         metadata={
             "name": "NameNumber",
             "type": "Attribute",
-        }
+        },
     )
     ticket_record: None | str = field(
         default=None,
         metadata={
             "name": "TicketRecord",
             "type": "Attribute",
-        }
+        },
     )
     plating_carrier: None | str = field(
         default=None,
@@ -346,28 +357,28 @@ class TicketingModifiers:
             "name": "PlatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     exempt_vat: None | bool = field(
         default=None,
         metadata={
             "name": "ExemptVAT",
             "type": "Attribute",
-        }
+        },
     )
     net_remit_applied: None | bool = field(
         default=None,
         metadata={
             "name": "NetRemitApplied",
             "type": "Attribute",
-        }
+        },
     )
     free_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "FreeTicket",
             "type": "Attribute",
-        }
+        },
     )
     currency_override_code: None | str = field(
         default=None,
@@ -375,28 +386,28 @@ class TicketingModifiers:
             "name": "CurrencyOverrideCode",
             "type": "Attribute",
             "length": 1,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -407,10 +418,11 @@ class TicketingModifiers:
         non_refundable
             Indicates bulk ticket being non-refundable
         """
+
         non_refundable: None | bool = field(
             default=None,
             metadata={
                 "name": "NonRefundable",
                 "type": "Attribute",
-            }
+            },
         )

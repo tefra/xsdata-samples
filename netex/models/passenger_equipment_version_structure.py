@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .installed_equipment_version_structure import InstalledEquipmentVersionStructure
+from .installed_equipment_version_structure import (
+    InstalledEquipmentVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -16,5 +18,5 @@ class PassengerEquipmentVersionStructure(InstalledEquipmentVersionStructure):
             "name": "Fixed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

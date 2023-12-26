@@ -18,7 +18,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "name": "CheckConstraintRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     period: Optional[XmlDuration] = field(
         default=None,
@@ -26,7 +26,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "name": "Period",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_passengers: Optional[int] = field(
         default=None,
@@ -34,7 +34,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "name": "MaximumPassengers",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     average_passengers: Optional[int] = field(
         default=None,
@@ -42,7 +42,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "name": "AveragePassengers",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     wheelchair_passengers: Optional[int] = field(
         default=None,
@@ -50,5 +50,5 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "name": "WheelchairPassengers",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

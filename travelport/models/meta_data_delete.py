@@ -15,6 +15,7 @@ class MetaDataDelete:
         The identifier of the element that will be deleted from this
         profile.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -24,5 +25,5 @@ class MetaDataDelete:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

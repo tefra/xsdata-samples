@@ -23,6 +23,7 @@ class RailExchangeInfo:
         Amount retained by a rail vendor for future use at the vendor’s
         site.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -31,47 +32,47 @@ class RailExchangeInfo:
         metadata={
             "name": "RefundAmount",
             "type": "Attribute",
-        }
+        },
     )
     cancellation_fee: None | str = field(
         default=None,
         metadata={
             "name": "CancellationFee",
             "type": "Attribute",
-        }
+        },
     )
     exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
-        }
+        },
     )
     approximate_refund_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateRefundAmount",
             "type": "Attribute",
-        }
+        },
     )
     approximate_cancellation_fee: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateCancellationFee",
             "type": "Attribute",
-        }
+        },
     )
     approximate_exchange_amount: None | str = field(
         default=None,
         metadata={
             "name": "ApproximateExchangeAmount",
             "type": "Attribute",
-        }
+        },
     )
     retain_amount: None | str = field(
         default=None,
         metadata={
             "name": "RetainAmount",
             "type": "Attribute",
-        }
+        },
     )

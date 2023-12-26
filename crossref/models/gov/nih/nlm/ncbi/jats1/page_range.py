@@ -10,6 +10,7 @@ class PageRange:
     """
     <div> <h3>Page Ranges</h3> </div>
     """
+
     class Meta:
         name = "page-range"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -19,34 +20,34 @@ class PageRange:
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -54,5 +55,5 @@ class PageRange:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

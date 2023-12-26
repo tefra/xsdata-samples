@@ -39,6 +39,7 @@ class Prms:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "PRMS"
 
@@ -48,7 +49,7 @@ class Prms:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     prm: List[GeneralParameter] = field(
         default_factory=list,
@@ -56,14 +57,14 @@ class Prms:
             "name": "PRM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -71,7 +72,7 @@ class Prms:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -79,7 +80,7 @@ class Prms:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -87,19 +88,19 @@ class Prms:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )

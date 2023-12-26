@@ -1,6 +1,8 @@
 from enum import Enum
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+)
 
 
 class CacheOptions(Enum):
@@ -12,6 +14,7 @@ class CacheOptions(Enum):
     :cvar DEFAULT: <description xmlns="">The service can decide whether
         or not to use a cache</description>
     """
+
     YES = "yes"
     NO = "no"
     DEFAULT = "default"

@@ -19,6 +19,7 @@ class AlertCPoint:
         an ALERT-C table reference.
     :ivar alert_cpoint_extension:
     """
+
     alert_clocation_country_code: Optional[str] = field(
         default=None,
         metadata={
@@ -27,7 +28,7 @@ class AlertCPoint:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     alert_clocation_table_number: Optional[str] = field(
         default=None,
@@ -37,7 +38,7 @@ class AlertCPoint:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     alert_clocation_table_version: Optional[str] = field(
         default=None,
@@ -47,7 +48,7 @@ class AlertCPoint:
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
             "max_length": 1024,
-        }
+        },
     )
     alert_cpoint_extension: Optional[ExtensionType] = field(
         default=None,
@@ -55,5 +56,5 @@ class AlertCPoint:
             "name": "alertCPointExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -12,6 +12,7 @@ class IntervalTypeEnumSimple(Enum):
     :cvar OPEN: The area is limited by the value given. The value itself
         is not included.
     """
+
     CLOSED = "CLOSED"
     INFINITE = "INFINITE"
     OPEN = "OPEN"

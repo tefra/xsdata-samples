@@ -23,6 +23,7 @@ class Url:
     :ivar mime_type: this denotes the mime type of the resource located
         by the url.
     """
+
     class Meta:
         name = "URL"
 
@@ -30,14 +31,14 @@ class Url:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -45,12 +46,12 @@ class Url:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     mime_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "MIME-TYPE",
             "type": "Attribute",
-        }
+        },
     )

@@ -13,5 +13,5 @@ class AssociationName:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

@@ -41,16 +41,19 @@ class SwRecordLayoutGroupContent:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SW-RECORD-LAYOUT-GROUP-CONTENT"
 
-    sw_record_layout_ref: List["SwRecordLayoutGroupContent.SwRecordLayoutRef"] = field(
+    sw_record_layout_ref: List[
+        "SwRecordLayoutGroupContent.SwRecordLayoutRef"
+    ] = field(
         default_factory=list,
         metadata={
             "name": "SW-RECORD-LAYOUT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_v: List[SwRecordLayoutV] = field(
         default_factory=list,
@@ -58,7 +61,7 @@ class SwRecordLayoutGroupContent:
             "name": "SW-RECORD-LAYOUT-V",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_record_layout_group: List[SwRecordLayoutGroup] = field(
         default_factory=list,
@@ -66,14 +69,14 @@ class SwRecordLayoutGroupContent:
             "name": "SW-RECORD-LAYOUT-GROUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -81,7 +84,7 @@ class SwRecordLayoutGroupContent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -92,5 +95,5 @@ class SwRecordLayoutGroupContent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

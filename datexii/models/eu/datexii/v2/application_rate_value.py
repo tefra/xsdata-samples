@@ -15,6 +15,7 @@ class ApplicationRateValue(DataValue):
         substance expressed in kilogrammes per square metre.
     :ivar application_rate_value_extension:
     """
+
     application_rate: Optional[float] = field(
         default=None,
         metadata={
@@ -22,7 +23,7 @@ class ApplicationRateValue(DataValue):
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     application_rate_value_extension: Optional[ExtensionType] = field(
         default=None,
@@ -30,5 +31,5 @@ class ApplicationRateValue(DataValue):
             "name": "applicationRateValueExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

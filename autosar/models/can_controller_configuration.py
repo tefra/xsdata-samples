@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .can_controller_fd_configuration import CanControllerFdConfiguration
-from .can_controller_fd_configuration_requirements import CanControllerFdConfigurationRequirements
+from .can_controller_fd_configuration_requirements import (
+    CanControllerFdConfigurationRequirements,
+)
 from .integer import Integer
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -44,24 +46,29 @@ class CanControllerConfiguration:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-CONTROLLER-CONFIGURATION"
 
-    can_controller_fd_attributes: Optional[CanControllerFdConfiguration] = field(
+    can_controller_fd_attributes: Optional[
+        CanControllerFdConfiguration
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-ATTRIBUTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    can_controller_fd_requirements: Optional[CanControllerFdConfigurationRequirements] = field(
+    can_controller_fd_requirements: Optional[
+        CanControllerFdConfigurationRequirements
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-REQUIREMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     prop_seg: Optional[Integer] = field(
         default=None,
@@ -69,7 +76,7 @@ class CanControllerConfiguration:
             "name": "PROP-SEG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sync_jump_width: Optional[Integer] = field(
         default=None,
@@ -77,7 +84,7 @@ class CanControllerConfiguration:
             "name": "SYNC-JUMP-WIDTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_seg_1: Optional[Integer] = field(
         default=None,
@@ -85,7 +92,7 @@ class CanControllerConfiguration:
             "name": "TIME-SEG-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_seg_2: Optional[Integer] = field(
         default=None,
@@ -93,14 +100,14 @@ class CanControllerConfiguration:
             "name": "TIME-SEG-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -108,5 +115,5 @@ class CanControllerConfiguration:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

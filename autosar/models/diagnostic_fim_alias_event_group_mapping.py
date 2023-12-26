@@ -7,8 +7,12 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_fim_alias_event_group_subtypes_enum import DiagnosticFimAliasEventGroupSubtypesEnum
-from .diagnostic_fim_event_group_subtypes_enum import DiagnosticFimEventGroupSubtypesEnum
+from .diagnostic_fim_alias_event_group_subtypes_enum import (
+    DiagnosticFimAliasEventGroupSubtypesEnum,
+)
+from .diagnostic_fim_event_group_subtypes_enum import (
+    DiagnosticFimEventGroupSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -85,6 +89,7 @@ class DiagnosticFimAliasEventGroupMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-FIM-ALIAS-EVENT-GROUP-MAPPING"
 
@@ -95,15 +100,17 @@ class DiagnosticFimAliasEventGroupMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticFimAliasEventGroupMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticFimAliasEventGroupMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -111,7 +118,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -119,7 +126,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -127,7 +134,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -135,7 +142,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -143,15 +150,17 @@ class DiagnosticFimAliasEventGroupMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticFimAliasEventGroupMapping.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticFimAliasEventGroupMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -159,30 +168,34 @@ class DiagnosticFimAliasEventGroupMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    actual_event_ref: Optional["DiagnosticFimAliasEventGroupMapping.ActualEventRef"] = field(
+    actual_event_ref: Optional[
+        "DiagnosticFimAliasEventGroupMapping.ActualEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACTUAL-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    alias_event_ref: Optional["DiagnosticFimAliasEventGroupMapping.AliasEventRef"] = field(
+    alias_event_ref: Optional[
+        "DiagnosticFimAliasEventGroupMapping.AliasEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ALIAS-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -190,14 +203,14 @@ class DiagnosticFimAliasEventGroupMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -208,7 +221,7 @@ class DiagnosticFimAliasEventGroupMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -219,7 +232,7 @@ class DiagnosticFimAliasEventGroupMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -230,7 +243,7 @@ class DiagnosticFimAliasEventGroupMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -241,5 +254,5 @@ class DiagnosticFimAliasEventGroupMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

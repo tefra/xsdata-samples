@@ -17,5 +17,5 @@ class TypeOfServiceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "TypeOfServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

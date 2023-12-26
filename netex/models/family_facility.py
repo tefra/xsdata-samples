@@ -13,5 +13,5 @@ class FamilyFacility:
         default=FamilyFacilityEnumeration.NONE,
         metadata={
             "required": True,
-        }
+        },
     )

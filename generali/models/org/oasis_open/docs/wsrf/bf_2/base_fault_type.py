@@ -1,9 +1,15 @@
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_error_code import BaseFaultTypeErrorCode
-from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_fault_cause import BaseFaultTypeFaultCause
-from generali.models.org.w3.pkg_2005.pkg_08.addressing.endpoint_reference_type import EndpointReferenceType
+from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_error_code import (
+    BaseFaultTypeErrorCode,
+)
+from generali.models.org.oasis_open.docs.wsrf.bf_2.base_fault_type_fault_cause import (
+    BaseFaultTypeFaultCause,
+)
+from generali.models.org.w3.pkg_2005.pkg_08.addressing.endpoint_reference_type import (
+    EndpointReferenceType,
+)
 
 __NAMESPACE__ = "http://docs.oasis-open.org/wsrf/bf-2"
 
@@ -15,7 +21,7 @@ class BaseFaultType:
         metadata={
             "type": "Wildcard",
             "namespace": "##other",
-        }
+        },
     )
     timestamp: Optional[XmlDateTime] = field(
         default=None,
@@ -24,7 +30,7 @@ class BaseFaultType:
             "type": "Element",
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
             "required": True,
-        }
+        },
     )
     originator: Optional[EndpointReferenceType] = field(
         default=None,
@@ -32,7 +38,7 @@ class BaseFaultType:
             "name": "Originator",
             "type": "Element",
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
-        }
+        },
     )
     error_code: Optional[BaseFaultTypeErrorCode] = field(
         default=None,
@@ -40,7 +46,7 @@ class BaseFaultType:
             "name": "ErrorCode",
             "type": "Element",
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
-        }
+        },
     )
     description: List[str] = field(
         default_factory=list,
@@ -48,7 +54,7 @@ class BaseFaultType:
             "name": "Description",
             "type": "Element",
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
-        }
+        },
     )
     fault_cause: Optional[BaseFaultTypeFaultCause] = field(
         default=None,
@@ -56,12 +62,12 @@ class BaseFaultType:
             "name": "FaultCause",
             "type": "Element",
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )

@@ -36,6 +36,7 @@ class ThirdPartyInformation1:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "ThirdPartyInformation"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -46,7 +47,7 @@ class ThirdPartyInformation1:
             "name": "SegmentRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     third_party_code: None | str = field(
         default=None,
@@ -55,7 +56,7 @@ class ThirdPartyInformation1:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     third_party_locator_code: None | str = field(
         default=None,
@@ -63,7 +64,7 @@ class ThirdPartyInformation1:
             "name": "ThirdPartyLocatorCode",
             "type": "Attribute",
             "max_length": 36,
-        }
+        },
     )
     third_party_name: None | str = field(
         default=None,
@@ -71,33 +72,33 @@ class ThirdPartyInformation1:
             "name": "ThirdPartyName",
             "type": "Attribute",
             "max_length": 64,
-        }
+        },
     )
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

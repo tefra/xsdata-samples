@@ -7,9 +7,13 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .crypto_certificate_algorithm_family_enum import CryptoCertificateAlgorithmFamilyEnum
+from .crypto_certificate_algorithm_family_enum import (
+    CryptoCertificateAlgorithmFamilyEnum,
+)
 from .crypto_certificate_format_enum import CryptoCertificateFormatEnum
-from .crypto_service_certificate_subtypes_enum import CryptoServiceCertificateSubtypesEnum
+from .crypto_service_certificate_subtypes_enum import (
+    CryptoServiceCertificateSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -89,6 +93,7 @@ class CryptoServiceCertificate:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CRYPTO-SERVICE-CERTIFICATE"
 
@@ -99,15 +104,17 @@ class CryptoServiceCertificate:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CryptoServiceCertificate.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CryptoServiceCertificate.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -115,7 +122,7 @@ class CryptoServiceCertificate:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -123,7 +130,7 @@ class CryptoServiceCertificate:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -131,7 +138,7 @@ class CryptoServiceCertificate:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -139,7 +146,7 @@ class CryptoServiceCertificate:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -147,7 +154,7 @@ class CryptoServiceCertificate:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["CryptoServiceCertificate.Annotations"] = field(
         default=None,
@@ -155,7 +162,7 @@ class CryptoServiceCertificate:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -163,7 +170,7 @@ class CryptoServiceCertificate:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     algorithm_family: Optional[CryptoCertificateAlgorithmFamilyEnum] = field(
         default=None,
@@ -171,7 +178,7 @@ class CryptoServiceCertificate:
             "name": "ALGORITHM-FAMILY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     format: Optional[CryptoCertificateFormatEnum] = field(
         default=None,
@@ -179,7 +186,7 @@ class CryptoServiceCertificate:
             "name": "FORMAT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_length: Optional[PositiveInteger] = field(
         default=None,
@@ -187,22 +194,24 @@ class CryptoServiceCertificate:
             "name": "MAXIMUM-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    next_higher_certificate_ref: Optional["CryptoServiceCertificate.NextHigherCertificateRef"] = field(
+    next_higher_certificate_ref: Optional[
+        "CryptoServiceCertificate.NextHigherCertificateRef"
+    ] = field(
         default=None,
         metadata={
             "name": "NEXT-HIGHER-CERTIFICATE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -210,14 +219,14 @@ class CryptoServiceCertificate:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -228,7 +237,7 @@ class CryptoServiceCertificate:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,7 +248,7 @@ class CryptoServiceCertificate:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -250,5 +259,5 @@ class CryptoServiceCertificate:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

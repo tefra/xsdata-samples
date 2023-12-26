@@ -9,5 +9,6 @@ class AdditionalBindingTimeEnumSimple(Enum):
         created from a blueprint.
     :cvar POST_BUILD: After the executable has been built.
     """
+
     BLUEPRINT_DERIVATION_TIME = "BLUEPRINT-DERIVATION-TIME"
     POST_BUILD = "POST-BUILD"

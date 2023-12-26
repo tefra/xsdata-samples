@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .flexible_area_ref import FlexibleAreaRef
 from .flexible_quay_ref import FlexibleQuayRef
 from .flexible_stop_place_ref import FlexibleStopPlaceRef
@@ -21,9 +21,11 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
-    hail_and_ride_area_ref_or_flexible_area_ref_or_flexible_quay_ref: Optional[object] = field(
+    hail_and_ride_area_ref_or_flexible_area_ref_or_flexible_quay_ref: Optional[
+        Union[HailAndRideAreaRef, FlexibleAreaRef, FlexibleQuayRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -44,5 +46,5 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

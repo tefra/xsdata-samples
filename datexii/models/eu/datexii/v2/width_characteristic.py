@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from datexii.models.eu.datexii.v2.comparison_operator_enum import ComparisonOperatorEnum
+from datexii.models.eu.datexii.v2.comparison_operator_enum import (
+    ComparisonOperatorEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -17,6 +19,7 @@ class WidthCharacteristic:
         metres.
     :ivar width_characteristic_extension:
     """
+
     comparison_operator: Optional[ComparisonOperatorEnum] = field(
         default=None,
         metadata={
@@ -24,7 +27,7 @@ class WidthCharacteristic:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     vehicle_width: Optional[float] = field(
         default=None,
@@ -33,7 +36,7 @@ class WidthCharacteristic:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     width_characteristic_extension: Optional[ExtensionType] = field(
         default=None,
@@ -41,5 +44,5 @@ class WidthCharacteristic:
             "name": "widthCharacteristicExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

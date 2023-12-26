@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List, Optional, Union
 from .access_space_ref import AccessSpaceRef
-from .accessibility_info_facility_enumeration import AccessibilityInfoFacilityEnumeration
+from .accessibility_info_facility_enumeration import (
+    AccessibilityInfoFacilityEnumeration,
+)
 from .boarding_position_ref import BoardingPositionRef
 from .entrance_ref import EntranceRef
 from .logical_display_ref import LogicalDisplayRef
@@ -9,18 +11,26 @@ from .parking_bay_ref import ParkingBayRef
 from .parking_entrance_for_vehicles_ref import ParkingEntranceForVehiclesRef
 from .parking_entrance_ref import ParkingEntranceRef
 from .parking_passenger_entrance_ref import ParkingPassengerEntranceRef
-from .passenger_equipment_version_structure import PassengerEquipmentVersionStructure
-from .passenger_information_facility_enumeration import PassengerInformationFacilityEnumeration
+from .passenger_equipment_version_structure import (
+    PassengerEquipmentVersionStructure,
+)
+from .passenger_information_facility_enumeration import (
+    PassengerInformationFacilityEnumeration,
+)
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
-from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .point_of_interest_vehicle_entrance_ref import (
+    PointOfInterestVehicleEntranceRef,
+)
 from .quay_ref import QuayRef
 from .site_component_ref import SiteComponentRef
 from .stop_place_entrance_ref import StopPlaceEntranceRef
 from .stop_place_ref import StopPlaceRef
 from .stop_place_space_ref import StopPlaceSpaceRef
 from .stop_place_vehicle_entrance_ref import StopPlaceVehicleEntranceRef
-from .type_of_passenger_information_equipment_ref import TypeOfPassengerInformationEquipmentRef
+from .type_of_passenger_information_equipment_ref import (
+    TypeOfPassengerInformationEquipmentRef,
+)
 from .vehicle_entrance_ref import VehicleEntranceRef
 from .vehicle_stopping_place_ref import VehicleStoppingPlaceRef
 from .vehicle_stopping_position_ref import VehicleStoppingPositionRef
@@ -29,7 +39,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStructure):
+class PassengerInformationEquipmentVersionStructure(
+    PassengerEquipmentVersionStructure
+):
     class Meta:
         name = "PassengerInformationEquipment_VersionStructure"
 
@@ -39,7 +51,7 @@ class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStr
             "name": "LogicalDisplayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     stop_place_ref: Optional[StopPlaceRef] = field(
         default=None,
@@ -47,9 +59,30 @@ class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStr
             "name": "StopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            VehicleStoppingPositionRef,
+            VehicleStoppingPlaceRef,
+            BoardingPositionRef,
+            AccessSpaceRef,
+            QuayRef,
+            StopPlaceSpaceRef,
+            ParkingBayRef,
+            PointOfInterestSpaceRef,
+            StopPlaceVehicleEntranceRef,
+            StopPlaceEntranceRef,
+            ParkingEntranceForVehiclesRef,
+            ParkingPassengerEntranceRef,
+            ParkingEntranceRef,
+            PointOfInterestVehicleEntranceRef,
+            PointOfInterestEntranceRef,
+            VehicleEntranceRef,
+            EntranceRef,
+            SiteComponentRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -145,31 +178,37 @@ class PassengerInformationEquipmentVersionStructure(PassengerEquipmentVersionStr
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    type_of_passenger_information_equipment_ref: Optional[TypeOfPassengerInformationEquipmentRef] = field(
+    type_of_passenger_information_equipment_ref: Optional[
+        TypeOfPassengerInformationEquipmentRef
+    ] = field(
         default=None,
         metadata={
             "name": "TypeOfPassengerInformationEquipmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    passenger_information_facility_list: List[PassengerInformationFacilityEnumeration] = field(
+    passenger_information_facility_list: List[
+        PassengerInformationFacilityEnumeration
+    ] = field(
         default_factory=list,
         metadata={
             "name": "PassengerInformationFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    accessibility_info_facility_list: List[AccessibilityInfoFacilityEnumeration] = field(
+    accessibility_info_facility_list: List[
+        AccessibilityInfoFacilityEnumeration
+    ] = field(
         default_factory=list,
         metadata={
             "name": "AccessibilityInfoFacilityList",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

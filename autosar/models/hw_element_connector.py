@@ -62,6 +62,7 @@ class HwElementConnector:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "HW-ELEMENT-CONNECTOR"
 
@@ -71,7 +72,7 @@ class HwElementConnector:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -79,7 +80,7 @@ class HwElementConnector:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -87,7 +88,7 @@ class HwElementConnector:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -95,7 +96,7 @@ class HwElementConnector:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     hw_element_refs: Optional["HwElementConnector.HwElementRefs"] = field(
         default=None,
@@ -103,23 +104,27 @@ class HwElementConnector:
             "name": "HW-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    hw_pin_group_connections: Optional["HwElementConnector.HwPinGroupConnections"] = field(
+    hw_pin_group_connections: Optional[
+        "HwElementConnector.HwPinGroupConnections"
+    ] = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    hw_pin_connections: Optional["HwElementConnector.HwPinConnections"] = field(
+    hw_pin_connections: Optional[
+        "HwElementConnector.HwPinConnections"
+    ] = field(
         default=None,
         metadata={
             "name": "HW-PIN-CONNECTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -127,14 +132,14 @@ class HwElementConnector:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -142,19 +147,21 @@ class HwElementConnector:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class HwElementRefs:
-        hw_element_ref: List["HwElementConnector.HwElementRefs.HwElementRef"] = field(
+        hw_element_ref: List[
+            "HwElementConnector.HwElementRefs.HwElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "HW-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
                 "max_occurs": 2,
-            }
+            },
         )
 
         @dataclass
@@ -165,7 +172,7 @@ class HwElementConnector:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -176,7 +183,7 @@ class HwElementConnector:
                 "name": "HW-PIN-GROUP-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -187,5 +194,5 @@ class HwElementConnector:
                 "name": "HW-PIN-CONNECTOR",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

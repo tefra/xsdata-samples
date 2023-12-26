@@ -18,6 +18,7 @@ class Coach:
     coach_number
         Coach number for which seat map/coach map is returned.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -26,7 +27,7 @@ class Coach:
         metadata={
             "name": "Characteristic",
             "type": "Element",
-        }
+        },
     )
     remark: list[Remark1] = field(
         default_factory=list,
@@ -35,12 +36,12 @@ class Coach:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     coach_number: None | str = field(
         default=None,
         metadata={
             "name": "CoachNumber",
             "type": "Attribute",
-        }
+        },
     )

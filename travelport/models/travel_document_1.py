@@ -2,12 +2,22 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 from xsdata.models.datatype import XmlDate
-from travelport.models.travel_document_height_unit_1 import TravelDocumentHeightUnit1
-from travelport.models.travel_document_weight_unit_1 import TravelDocumentWeightUnit1
-from travelport.models.type_geo_political_area_type_1 import TypeGeoPoliticalAreaType1
+from travelport.models.travel_document_height_unit_1 import (
+    TravelDocumentHeightUnit1,
+)
+from travelport.models.travel_document_weight_unit_1 import (
+    TravelDocumentWeightUnit1,
+)
+from travelport.models.type_geo_political_area_type_1 import (
+    TypeGeoPoliticalAreaType1,
+)
 from travelport.models.type_key_tagged_element_1 import TypeKeyTaggedElement1
-from travelport.models.type_travel_document_address_1 import TypeTravelDocumentAddress1
-from travelport.models.type_travel_document_type_1 import TypeTravelDocumentType1
+from travelport.models.type_travel_document_address_1 import (
+    TypeTravelDocumentAddress1,
+)
+from travelport.models.type_travel_document_type_1 import (
+    TypeTravelDocumentType1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
@@ -83,6 +93,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
     issued_for_geo_political_area_code
         The location code of the geographical location.
     """
+
     class Meta:
         name = "TravelDocument"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -92,7 +103,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     type_value: None | TypeTravelDocumentType1 = field(
         default=None,
@@ -100,7 +111,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     document_number: None | str = field(
         default=None,
@@ -109,21 +120,21 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     issued_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "IssuedDate",
             "type": "Attribute",
-        }
+        },
     )
     expiration_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
-        }
+        },
     )
     location_issued_description: None | str = field(
         default=None,
@@ -132,7 +143,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     given_name: None | str = field(
         default=None,
@@ -141,7 +152,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     middle_name: None | str = field(
         default=None,
@@ -150,7 +161,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     surname: None | str = field(
         default=None,
@@ -159,7 +170,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     gender: None | str = field(
         default=None,
@@ -168,7 +179,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     national_identifier: None | str = field(
         default=None,
@@ -177,14 +188,14 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     birth_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "BirthDate",
             "type": "Attribute",
-        }
+        },
     )
     place_of_birth: None | str = field(
         default=None,
@@ -193,7 +204,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     nationality: None | str = field(
         default=None,
@@ -201,7 +212,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "name": "Nationality",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     citizenship: None | str = field(
         default=None,
@@ -209,7 +220,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "name": "Citizenship",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     issued_by_country: None | str = field(
         default=None,
@@ -217,7 +228,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "name": "IssuedByCountry",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     issued_by_other_country_name: None | str = field(
         default=None,
@@ -226,7 +237,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     height: None | Decimal = field(
         default=None,
@@ -235,14 +246,14 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "total_digits": 12,
             "fraction_digits": 2,
-        }
+        },
     )
     height_unit: None | TravelDocumentHeightUnit1 = field(
         default=None,
         metadata={
             "name": "HeightUnit",
             "type": "Attribute",
-        }
+        },
     )
     weight: None | Decimal = field(
         default=None,
@@ -251,14 +262,14 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "total_digits": 12,
             "fraction_digits": 2,
-        }
+        },
     )
     weight_unit: None | TravelDocumentWeightUnit1 = field(
         default=None,
         metadata={
             "name": "WeightUnit",
             "type": "Attribute",
-        }
+        },
     )
     residence: None | str = field(
         default=None,
@@ -267,7 +278,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     eye_color: None | str = field(
         default=None,
@@ -276,7 +287,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     military_status: None | str = field(
         default=None,
@@ -285,7 +296,7 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -294,14 +305,16 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )
-    issued_for_geo_political_area_type: None | TypeGeoPoliticalAreaType1 = field(
-        default=None,
-        metadata={
-            "name": "IssuedForGeoPoliticalAreaType",
-            "type": "Attribute",
-        }
+    issued_for_geo_political_area_type: None | TypeGeoPoliticalAreaType1 = (
+        field(
+            default=None,
+            metadata={
+                "name": "IssuedForGeoPoliticalAreaType",
+                "type": "Attribute",
+            },
+        )
     )
     issued_for_geo_political_area_code: None | str = field(
         default=None,
@@ -309,5 +322,5 @@ class TravelDocument1(TypeKeyTaggedElement1):
             "name": "IssuedForGeoPoliticalAreaCode",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )

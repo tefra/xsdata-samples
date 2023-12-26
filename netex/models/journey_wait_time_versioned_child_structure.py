@@ -1,10 +1,12 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from xsdata.models.datatype import XmlDuration
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .garage_point_ref import GaragePointRef
-from .journey_timing_versioned_child_structure import JourneyTimingVersionedChildStructure
+from .journey_timing_versioned_child_structure import (
+    JourneyTimingVersionedChildStructure,
+)
 from .parking_point_ref import ParkingPointRef
 from .relief_point_ref import ReliefPointRef
 from .scheduled_stop_point_ref import ScheduledStopPointRef
@@ -14,11 +16,23 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class JourneyWaitTimeVersionedChildStructure(JourneyTimingVersionedChildStructure):
+class JourneyWaitTimeVersionedChildStructure(
+    JourneyTimingVersionedChildStructure
+):
     class Meta:
         name = "JourneyWaitTime_VersionedChildStructure"
 
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            BorderPointRef,
+            FareScheduledStopPointRef,
+            ScheduledStopPointRef,
+            GaragePointRef,
+            ParkingPointRef,
+            ReliefPointRef,
+            TimingPointRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -59,7 +73,7 @@ class JourneyWaitTimeVersionedChildStructure(JourneyTimingVersionedChildStructur
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     wait_time: Optional[XmlDuration] = field(
         default=None,
@@ -68,5 +82,5 @@ class JourneyWaitTimeVersionedChildStructure(JourneyTimingVersionedChildStructur
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

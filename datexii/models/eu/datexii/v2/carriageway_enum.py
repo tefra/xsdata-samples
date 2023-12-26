@@ -27,6 +27,7 @@ class CarriagewayEnum(Enum):
     :cvar UNDERPASS: On the underpass, i.e. the section of road passing
         under another.
     """
+
     CONNECTING_CARRIAGEWAY = "connectingCarriageway"
     ENTRY_SLIP_ROAD = "entrySlipRoad"
     EXIT_SLIP_ROAD = "exitSlipRoad"

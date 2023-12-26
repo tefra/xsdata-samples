@@ -6,7 +6,9 @@ from .chapter_enum_break_simple import ChapterEnumBreakSimple
 from .condition_by_formula import ConditionByFormula
 from .date import Date
 from .doc_revision import DocRevision
-from .ecuc_definition_element_subtypes_enum import EcucDefinitionElementSubtypesEnum
+from .ecuc_definition_element_subtypes_enum import (
+    EcucDefinitionElementSubtypesEnum,
+)
 from .ecuc_query_subtypes_enum import EcucQuerySubtypesEnum
 from .float_enum_simple import FloatEnumSimple
 from .frame_enum_simple import FrameEnumSimple
@@ -63,6 +65,7 @@ class Annotation:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ANNOTATION"
 
@@ -72,7 +75,7 @@ class Annotation:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_origin: Optional[String] = field(
         default=None,
@@ -80,7 +83,7 @@ class Annotation:
             "name": "ANNOTATION-ORIGIN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotation_text: Optional["DocumentationBlock"] = field(
         default=None,
@@ -88,14 +91,14 @@ class Annotation:
             "name": "ANNOTATION-TEXT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -103,7 +106,7 @@ class Annotation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
 
@@ -150,6 +153,7 @@ class DefItem:
         defined by the applied help system respectively help system
         generator.
     """
+
     class Meta:
         name = "DEF-ITEM"
 
@@ -160,7 +164,7 @@ class DefItem:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["DefItem.ShortNameFragments"] = field(
         default=None,
@@ -168,7 +172,7 @@ class DefItem:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -176,7 +180,7 @@ class DefItem:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_value: Optional["DocumentationBlock"] = field(
         default=None,
@@ -184,7 +188,7 @@ class DefItem:
             "name": "DEF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -192,14 +196,14 @@ class DefItem:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -207,7 +211,7 @@ class DefItem:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -215,7 +219,7 @@ class DefItem:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -223,28 +227,28 @@ class DefItem:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     help_entry: Optional[str] = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -255,7 +259,7 @@ class DefItem:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -279,6 +283,7 @@ class MsrQueryP2:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MSR-QUERY-P-2"
 
@@ -288,7 +293,7 @@ class MsrQueryP2:
             "name": "MSR-QUERY-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msr_query_result_p_2: Optional["DocumentationBlock"] = field(
         default=None,
@@ -296,14 +301,14 @@ class MsrQueryP2:
             "name": "MSR-QUERY-RESULT-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -311,7 +316,7 @@ class MsrQueryP2:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
 
@@ -351,6 +356,7 @@ class MultiLanguageParagraph:
         defined by the applied help system respectively help system
         generator.
     """
+
     class Meta:
         name = "MULTI-LANGUAGE-PARAGRAPH"
 
@@ -360,7 +366,7 @@ class MultiLanguageParagraph:
             "name": "L-1",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -368,14 +374,14 @@ class MultiLanguageParagraph:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -383,7 +389,7 @@ class MultiLanguageParagraph:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -391,7 +397,7 @@ class MultiLanguageParagraph:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -399,28 +405,28 @@ class MultiLanguageParagraph:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     help_entry: Optional[str] = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -469,6 +475,7 @@ class MultiLanguageVerbatim:
         complete page width (value = "pgwide") or not (value =
         "noPgwide").
     """
+
     class Meta:
         name = "MULTI-LANGUAGE-VERBATIM"
 
@@ -478,7 +485,7 @@ class MultiLanguageVerbatim:
             "name": "L-5",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -486,14 +493,14 @@ class MultiLanguageVerbatim:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -501,7 +508,7 @@ class MultiLanguageVerbatim:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -509,7 +516,7 @@ class MultiLanguageVerbatim:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -517,49 +524,49 @@ class MultiLanguageVerbatim:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     allow_break: Optional[str] = field(
         default=None,
         metadata={
             "name": "ALLOW-BREAK",
             "type": "Attribute",
-        }
+        },
     )
     float_value: Optional[FloatEnumSimple] = field(
         default=None,
         metadata={
             "name": "FLOAT",
             "type": "Attribute",
-        }
+        },
     )
     help_entry: Optional[str] = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
-        }
+        },
     )
     pgwide: Optional[PgwideEnumSimple] = field(
         default=None,
         metadata={
             "name": "PGWIDE",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -582,6 +589,7 @@ class BlueprintFormula:
         AUTOSAR tools to manage the timestamp.
     :ivar content:
     """
+
     class Meta:
         name = "BLUEPRINT-FORMULA"
 
@@ -590,7 +598,7 @@ class BlueprintFormula:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -598,7 +606,7 @@ class BlueprintFormula:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -633,7 +641,7 @@ class BlueprintFormula:
                     "namespace": "http://autosar.org/schema/r4.0",
                 },
             ),
-        }
+        },
     )
 
     @dataclass
@@ -644,7 +652,7 @@ class BlueprintFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -655,7 +663,7 @@ class BlueprintFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -666,7 +674,7 @@ class BlueprintFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -677,7 +685,7 @@ class BlueprintFormula:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
 
@@ -716,6 +724,7 @@ class DefList:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "DEF-LIST"
 
@@ -725,7 +734,7 @@ class DefList:
             "name": "DEF-ITEM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -733,14 +742,14 @@ class DefList:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -748,7 +757,7 @@ class DefList:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -756,7 +765,7 @@ class DefList:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -764,21 +773,21 @@ class DefList:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -833,6 +842,7 @@ class MlFigure:
         complete page width (value = "pgwide") or not (value =
         "noPgwide").
     """
+
     class Meta:
         name = "ML-FIGURE"
 
@@ -842,7 +852,7 @@ class MlFigure:
             "name": "FIGURE-CAPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     l_graphic: List[LGraphic] = field(
         default_factory=list,
@@ -850,7 +860,7 @@ class MlFigure:
             "name": "L-GRAPHIC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: Optional[MultiLanguageVerbatim] = field(
         default=None,
@@ -858,7 +868,7 @@ class MlFigure:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -866,14 +876,14 @@ class MlFigure:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -881,7 +891,7 @@ class MlFigure:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -889,7 +899,7 @@ class MlFigure:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -897,42 +907,42 @@ class MlFigure:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     frame: Optional[FrameEnumSimple] = field(
         default=None,
         metadata={
             "name": "FRAME",
             "type": "Attribute",
-        }
+        },
     )
     help_entry: Optional[str] = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
-        }
+        },
     )
     pgwide: Optional[PgwideEnumSimple] = field(
         default=None,
         metadata={
             "name": "PGWIDE",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -981,6 +991,7 @@ class MlFormula:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "ML-FORMULA"
 
@@ -990,7 +1001,7 @@ class MlFormula:
             "name": "FORMULA-CAPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     l_graphic: List[LGraphic] = field(
         default_factory=list,
@@ -998,7 +1009,7 @@ class MlFormula:
             "name": "L-GRAPHIC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: Optional[MultiLanguageVerbatim] = field(
         default=None,
@@ -1006,7 +1017,7 @@ class MlFormula:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tex_math: Optional[MultiLanguagePlainText] = field(
         default=None,
@@ -1014,7 +1025,7 @@ class MlFormula:
             "name": "TEX-MATH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     generic_math: Optional[MultiLanguagePlainText] = field(
         default=None,
@@ -1022,7 +1033,7 @@ class MlFormula:
             "name": "GENERIC-MATH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -1030,14 +1041,14 @@ class MlFormula:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -1045,7 +1056,7 @@ class MlFormula:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -1053,7 +1064,7 @@ class MlFormula:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -1061,21 +1072,21 @@ class MlFormula:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -1186,6 +1197,7 @@ class StructuredReq:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "STRUCTURED-REQ"
 
@@ -1196,7 +1208,7 @@ class StructuredReq:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["StructuredReq.ShortNameFragments"] = field(
         default=None,
@@ -1204,7 +1216,7 @@ class StructuredReq:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -1212,7 +1224,7 @@ class StructuredReq:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -1220,7 +1232,7 @@ class StructuredReq:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -1228,7 +1240,7 @@ class StructuredReq:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional["AdminData"] = field(
         default=None,
@@ -1236,7 +1248,7 @@ class StructuredReq:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1244,7 +1256,7 @@ class StructuredReq:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["StructuredReq.Annotations"] = field(
         default=None,
@@ -1252,7 +1264,7 @@ class StructuredReq:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["StructuredReq.TraceRefs"] = field(
         default=None,
@@ -1260,7 +1272,7 @@ class StructuredReq:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     date: Optional[Date] = field(
         default=None,
@@ -1268,7 +1280,7 @@ class StructuredReq:
             "name": "DATE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     issued_by: Optional[String] = field(
         default=None,
@@ -1276,7 +1288,7 @@ class StructuredReq:
             "name": "ISSUED-BY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     type_value: Optional[String] = field(
         default=None,
@@ -1284,7 +1296,7 @@ class StructuredReq:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     importance: Optional[String] = field(
         default=None,
@@ -1292,7 +1304,7 @@ class StructuredReq:
             "name": "IMPORTANCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     description: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1300,7 +1312,7 @@ class StructuredReq:
             "name": "DESCRIPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rationale: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1308,15 +1320,17 @@ class StructuredReq:
             "name": "RATIONALE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    applies_to_dependencies: Optional["StructuredReq.AppliesToDependencies"] = field(
+    applies_to_dependencies: Optional[
+        "StructuredReq.AppliesToDependencies"
+    ] = field(
         default=None,
         metadata={
             "name": "APPLIES-TO-DEPENDENCIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     dependencies: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1324,7 +1338,7 @@ class StructuredReq:
             "name": "DEPENDENCIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     use_case: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1332,7 +1346,7 @@ class StructuredReq:
             "name": "USE-CASE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     conflicts: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1340,7 +1354,7 @@ class StructuredReq:
             "name": "CONFLICTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     supporting_material: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1348,7 +1362,7 @@ class StructuredReq:
             "name": "SUPPORTING-MATERIAL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remark: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1356,7 +1370,7 @@ class StructuredReq:
             "name": "REMARK",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tested_item_refs: Optional["StructuredReq.TestedItemRefs"] = field(
         default=None,
@@ -1364,7 +1378,7 @@ class StructuredReq:
             "name": "TESTED-ITEM-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -1372,14 +1386,14 @@ class StructuredReq:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -1387,14 +1401,14 @@ class StructuredReq:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -1402,7 +1416,7 @@ class StructuredReq:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -1410,21 +1424,21 @@ class StructuredReq:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1435,7 +1449,7 @@ class StructuredReq:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1446,7 +1460,7 @@ class StructuredReq:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1457,7 +1471,7 @@ class StructuredReq:
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -1468,7 +1482,7 @@ class StructuredReq:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -1477,24 +1491,27 @@ class StructuredReq:
         :ivar applies_to: This attribute represents the platform the
             requirement is assigned to.
         """
+
         applies_to: List[StandardNameEnum] = field(
             default_factory=list,
             metadata={
                 "name": "APPLIES-TO",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TestedItemRefs:
-        tested_item_ref: List["StructuredReq.TestedItemRefs.TestedItemRef"] = field(
+        tested_item_ref: List[
+            "StructuredReq.TestedItemRefs.TestedItemRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TESTED-ITEM-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -1505,7 +1522,7 @@ class StructuredReq:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
 
@@ -1629,6 +1646,7 @@ class TraceableText:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "TRACEABLE-TEXT"
 
@@ -1639,7 +1657,7 @@ class TraceableText:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["TraceableText.ShortNameFragments"] = field(
         default=None,
@@ -1647,7 +1665,7 @@ class TraceableText:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -1655,7 +1673,7 @@ class TraceableText:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -1663,7 +1681,7 @@ class TraceableText:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -1671,7 +1689,7 @@ class TraceableText:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional["AdminData"] = field(
         default=None,
@@ -1679,7 +1697,7 @@ class TraceableText:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional["DocumentationBlock"] = field(
         default=None,
@@ -1687,7 +1705,7 @@ class TraceableText:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TraceableText.Annotations"] = field(
         default=None,
@@ -1695,7 +1713,7 @@ class TraceableText:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["TraceableText.TraceRefs"] = field(
         default=None,
@@ -1703,7 +1721,7 @@ class TraceableText:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msr_query_p_2: List[MsrQueryP2] = field(
         default_factory=list,
@@ -1711,7 +1729,7 @@ class TraceableText:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p: List[MultiLanguageParagraph] = field(
         default_factory=list,
@@ -1719,7 +1737,7 @@ class TraceableText:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: List[MultiLanguageVerbatim] = field(
         default_factory=list,
@@ -1727,7 +1745,7 @@ class TraceableText:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     list_value: List["ListType"] = field(
         default_factory=list,
@@ -1735,7 +1753,7 @@ class TraceableText:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_list: List[DefList] = field(
         default_factory=list,
@@ -1743,7 +1761,7 @@ class TraceableText:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_list: List["LabeledList"] = field(
         default_factory=list,
@@ -1751,7 +1769,7 @@ class TraceableText:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: List[MlFormula] = field(
         default_factory=list,
@@ -1759,7 +1777,7 @@ class TraceableText:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     figure: List[MlFigure] = field(
         default_factory=list,
@@ -1767,7 +1785,7 @@ class TraceableText:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     note: List["Note"] = field(
         default_factory=list,
@@ -1775,7 +1793,7 @@ class TraceableText:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace: List["TraceableText"] = field(
         default_factory=list,
@@ -1783,7 +1801,7 @@ class TraceableText:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     structured_req: List[StructuredReq] = field(
         default_factory=list,
@@ -1791,7 +1809,7 @@ class TraceableText:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -1799,14 +1817,14 @@ class TraceableText:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -1814,14 +1832,14 @@ class TraceableText:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -1829,7 +1847,7 @@ class TraceableText:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -1837,21 +1855,21 @@ class TraceableText:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -1862,7 +1880,7 @@ class TraceableText:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1873,7 +1891,7 @@ class TraceableText:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -1884,7 +1902,7 @@ class TraceableText:
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -1895,7 +1913,7 @@ class TraceableText:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
 
@@ -1976,6 +1994,7 @@ class Note:
         shall be kept together with the previous block.
     :ivar note_type: Type of the Note. Default is "HINT"
     """
+
     class Meta:
         name = "NOTE"
 
@@ -1985,7 +2004,7 @@ class Note:
             "name": "LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msr_query_p_2: List[MsrQueryP2] = field(
         default_factory=list,
@@ -1993,7 +2012,7 @@ class Note:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p: List[MultiLanguageParagraph] = field(
         default_factory=list,
@@ -2001,7 +2020,7 @@ class Note:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: List[MultiLanguageVerbatim] = field(
         default_factory=list,
@@ -2009,7 +2028,7 @@ class Note:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     list_value: List["ListType"] = field(
         default_factory=list,
@@ -2017,7 +2036,7 @@ class Note:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_list: List[DefList] = field(
         default_factory=list,
@@ -2025,7 +2044,7 @@ class Note:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_list: List["LabeledList"] = field(
         default_factory=list,
@@ -2033,7 +2052,7 @@ class Note:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: List[MlFormula] = field(
         default_factory=list,
@@ -2041,7 +2060,7 @@ class Note:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     figure: List[MlFigure] = field(
         default_factory=list,
@@ -2049,7 +2068,7 @@ class Note:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     note: List["Note"] = field(
         default_factory=list,
@@ -2057,7 +2076,7 @@ class Note:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace: List[TraceableText] = field(
         default_factory=list,
@@ -2065,7 +2084,7 @@ class Note:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     structured_req: List[StructuredReq] = field(
         default_factory=list,
@@ -2073,7 +2092,7 @@ class Note:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -2081,14 +2100,14 @@ class Note:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -2096,7 +2115,7 @@ class Note:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -2104,7 +2123,7 @@ class Note:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -2112,28 +2131,28 @@ class Note:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     note_type: Optional[NoteTypeEnumSimple] = field(
         default=None,
         metadata={
             "name": "NOTE-TYPE",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2211,6 +2230,7 @@ class LabeledItem:
         defined by the applied help system respectively help system
         generator.
     """
+
     class Meta:
         name = "LABELED-ITEM"
 
@@ -2220,7 +2240,7 @@ class LabeledItem:
             "name": "ITEM-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     msr_query_p_2: List[MsrQueryP2] = field(
         default_factory=list,
@@ -2228,7 +2248,7 @@ class LabeledItem:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p: List[MultiLanguageParagraph] = field(
         default_factory=list,
@@ -2236,7 +2256,7 @@ class LabeledItem:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: List[MultiLanguageVerbatim] = field(
         default_factory=list,
@@ -2244,7 +2264,7 @@ class LabeledItem:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     list_value: List["ListType"] = field(
         default_factory=list,
@@ -2252,7 +2272,7 @@ class LabeledItem:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_list: List[DefList] = field(
         default_factory=list,
@@ -2260,7 +2280,7 @@ class LabeledItem:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_list: List["LabeledList"] = field(
         default_factory=list,
@@ -2268,7 +2288,7 @@ class LabeledItem:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: List[MlFormula] = field(
         default_factory=list,
@@ -2276,7 +2296,7 @@ class LabeledItem:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     figure: List[MlFigure] = field(
         default_factory=list,
@@ -2284,7 +2304,7 @@ class LabeledItem:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     note: List[Note] = field(
         default_factory=list,
@@ -2292,7 +2312,7 @@ class LabeledItem:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace: List[TraceableText] = field(
         default_factory=list,
@@ -2300,7 +2320,7 @@ class LabeledItem:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     structured_req: List[StructuredReq] = field(
         default_factory=list,
@@ -2308,7 +2328,7 @@ class LabeledItem:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -2316,14 +2336,14 @@ class LabeledItem:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -2331,7 +2351,7 @@ class LabeledItem:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -2339,7 +2359,7 @@ class LabeledItem:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -2347,28 +2367,28 @@ class LabeledItem:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     help_entry: Optional[str] = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2413,6 +2433,7 @@ class LabeledList:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "LABELED-LIST"
 
@@ -2422,7 +2443,7 @@ class LabeledList:
             "name": "INDENT-SAMPLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_item: List[LabeledItem] = field(
         default_factory=list,
@@ -2430,7 +2451,7 @@ class LabeledList:
             "name": "LABELED-ITEM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -2438,14 +2459,14 @@ class LabeledList:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -2453,7 +2474,7 @@ class LabeledList:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -2461,7 +2482,7 @@ class LabeledList:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -2469,21 +2490,21 @@ class LabeledList:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2556,6 +2577,7 @@ class Item:
         policy. In particular it defines if the containing text block
         shall be kept together with the previous block.
     """
+
     class Meta:
         name = "ITEM"
 
@@ -2565,7 +2587,7 @@ class Item:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p: List[MultiLanguageParagraph] = field(
         default_factory=list,
@@ -2573,7 +2595,7 @@ class Item:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: List[MultiLanguageVerbatim] = field(
         default_factory=list,
@@ -2581,7 +2603,7 @@ class Item:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     list_value: List["ListType"] = field(
         default_factory=list,
@@ -2589,7 +2611,7 @@ class Item:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_list: List[DefList] = field(
         default_factory=list,
@@ -2597,7 +2619,7 @@ class Item:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_list: List[LabeledList] = field(
         default_factory=list,
@@ -2605,7 +2627,7 @@ class Item:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: List[MlFormula] = field(
         default_factory=list,
@@ -2613,7 +2635,7 @@ class Item:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     figure: List[MlFigure] = field(
         default_factory=list,
@@ -2621,7 +2643,7 @@ class Item:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     note: List[Note] = field(
         default_factory=list,
@@ -2629,7 +2651,7 @@ class Item:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace: List[TraceableText] = field(
         default_factory=list,
@@ -2637,7 +2659,7 @@ class Item:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     structured_req: List[StructuredReq] = field(
         default_factory=list,
@@ -2645,7 +2667,7 @@ class Item:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -2653,14 +2675,14 @@ class Item:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -2668,7 +2690,7 @@ class Item:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -2676,7 +2698,7 @@ class Item:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -2684,21 +2706,21 @@ class Item:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2740,6 +2762,7 @@ class ListType:
         shall be kept together with the previous block.
     :ivar type_value: The type of the list. Default is "UNNUMBER"
     """
+
     class Meta:
         name = "LIST"
 
@@ -2749,7 +2772,7 @@ class ListType:
             "name": "ITEM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional["VariationPoint"] = field(
         default=None,
@@ -2757,14 +2780,14 @@ class ListType:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -2772,7 +2795,7 @@ class ListType:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     si: List[str] = field(
         default_factory=list,
@@ -2780,7 +2803,7 @@ class ListType:
             "name": "SI",
             "type": "Attribute",
             "tokens": True,
-        }
+        },
     )
     view: Optional[str] = field(
         default=None,
@@ -2788,28 +2811,28 @@ class ListType:
             "name": "VIEW",
             "type": "Attribute",
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        }
+        },
     )
     break_value: Optional[ChapterEnumBreakSimple] = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
-        }
+        },
     )
     keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
-        }
+        },
     )
     type_value: Optional[ListEnumSimple] = field(
         default=None,
         metadata={
             "name": "TYPE",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -2870,6 +2893,7 @@ class DocumentationBlock:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DOCUMENTATION-BLOCK"
 
@@ -2879,7 +2903,7 @@ class DocumentationBlock:
             "name": "MSR-QUERY-P-2",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     p: List[MultiLanguageParagraph] = field(
         default_factory=list,
@@ -2887,7 +2911,7 @@ class DocumentationBlock:
             "name": "P",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     verbatim: List[MultiLanguageVerbatim] = field(
         default_factory=list,
@@ -2895,7 +2919,7 @@ class DocumentationBlock:
             "name": "VERBATIM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     list_value: List[ListType] = field(
         default_factory=list,
@@ -2903,7 +2927,7 @@ class DocumentationBlock:
             "name": "LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     def_list: List[DefList] = field(
         default_factory=list,
@@ -2911,7 +2935,7 @@ class DocumentationBlock:
             "name": "DEF-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     labeled_list: List[LabeledList] = field(
         default_factory=list,
@@ -2919,7 +2943,7 @@ class DocumentationBlock:
             "name": "LABELED-LIST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formula: List[MlFormula] = field(
         default_factory=list,
@@ -2927,7 +2951,7 @@ class DocumentationBlock:
             "name": "FORMULA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     figure: List[MlFigure] = field(
         default_factory=list,
@@ -2935,7 +2959,7 @@ class DocumentationBlock:
             "name": "FIGURE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     note: List[Note] = field(
         default_factory=list,
@@ -2943,7 +2967,7 @@ class DocumentationBlock:
             "name": "NOTE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace: List[TraceableText] = field(
         default_factory=list,
@@ -2951,7 +2975,7 @@ class DocumentationBlock:
             "name": "TRACE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     structured_req: List[StructuredReq] = field(
         default_factory=list,
@@ -2959,14 +2983,14 @@ class DocumentationBlock:
             "name": "STRUCTURED-REQ",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -2974,7 +2998,7 @@ class DocumentationBlock:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
 
@@ -3000,6 +3024,7 @@ class BlueprintGenerator:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BLUEPRINT-GENERATOR"
 
@@ -3009,7 +3034,7 @@ class BlueprintGenerator:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     expression: Optional[VerbatimString] = field(
         default=None,
@@ -3017,14 +3042,14 @@ class BlueprintGenerator:
             "name": "EXPRESSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -3032,7 +3057,7 @@ class BlueprintGenerator:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
 
@@ -3088,6 +3113,7 @@ class VariationPoint:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "VARIATION-POINT"
 
@@ -3097,7 +3123,7 @@ class VariationPoint:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -3105,7 +3131,7 @@ class VariationPoint:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_condition: Optional[DocumentationBlock] = field(
         default=None,
@@ -3113,7 +3139,7 @@ class VariationPoint:
             "name": "BLUEPRINT-CONDITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formal_blueprint_condition: Optional[BlueprintFormula] = field(
         default=None,
@@ -3121,7 +3147,7 @@ class VariationPoint:
             "name": "FORMAL-BLUEPRINT-CONDITION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     formal_blueprint_generator: Optional[BlueprintGenerator] = field(
         default=None,
@@ -3129,7 +3155,7 @@ class VariationPoint:
             "name": "FORMAL-BLUEPRINT-GENERATOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_syscond: Optional[ConditionByFormula] = field(
         default=None,
@@ -3137,15 +3163,17 @@ class VariationPoint:
             "name": "SW-SYSCOND",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    post_build_variant_conditions: Optional["VariationPoint.PostBuildVariantConditions"] = field(
+    post_build_variant_conditions: Optional[
+        "VariationPoint.PostBuildVariantConditions"
+    ] = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CONDITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdg: Optional["Sdg"] = field(
         default=None,
@@ -3153,14 +3181,14 @@ class VariationPoint:
             "name": "SDG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -3168,7 +3196,7 @@ class VariationPoint:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -3179,7 +3207,7 @@ class VariationPoint:
                 "name": "POST-BUILD-VARIANT-CONDITION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
 
@@ -3202,6 +3230,7 @@ class ReferrableRefConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "REFERRABLE-REF-CONDITIONAL"
 
@@ -3211,7 +3240,7 @@ class ReferrableRefConditional:
             "name": "REFERRABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -3219,14 +3248,14 @@ class ReferrableRefConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -3234,7 +3263,7 @@ class ReferrableRefConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -3245,7 +3274,7 @@ class ReferrableRefConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
 
@@ -3294,6 +3323,7 @@ class Sdg:
         in XML. The role of this attribute is the same as the name of an
         XML - element.
     """
+
     class Meta:
         name = "SDG"
 
@@ -3303,7 +3333,7 @@ class Sdg:
             "name": "SDG-CAPTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdg_caption_ref: Optional["Sdg.SdgCaptionRef"] = field(
         default=None,
@@ -3311,7 +3341,7 @@ class Sdg:
             "name": "SDG-CAPTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdx_ref: List["Sdg.SdxRef"] = field(
         default_factory=list,
@@ -3319,7 +3349,7 @@ class Sdg:
             "name": "SDX-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdxf: List[ReferrableRefConditional] = field(
         default_factory=list,
@@ -3327,7 +3357,7 @@ class Sdg:
             "name": "SDXF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sd: List[Sd] = field(
         default_factory=list,
@@ -3335,7 +3365,7 @@ class Sdg:
             "name": "SD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdg: List["Sdg"] = field(
         default_factory=list,
@@ -3343,7 +3373,7 @@ class Sdg:
             "name": "SDG",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdf: List[Sdf] = field(
         default_factory=list,
@@ -3351,7 +3381,7 @@ class Sdg:
             "name": "SDF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -3359,14 +3389,14 @@ class Sdg:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -3374,14 +3404,14 @@ class Sdg:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     gid: Optional[str] = field(
         default=None,
         metadata={
             "name": "GID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -3392,7 +3422,7 @@ class Sdg:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -3403,7 +3433,7 @@ class Sdg:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
 
@@ -3450,6 +3480,7 @@ class AdminData:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ADMIN-DATA"
 
@@ -3459,7 +3490,7 @@ class AdminData:
             "name": "LANGUAGE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     used_languages: Optional[MultiLanguagePlainText] = field(
         default=None,
@@ -3467,7 +3498,7 @@ class AdminData:
             "name": "USED-LANGUAGES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     doc_revisions: Optional["AdminData.DocRevisions"] = field(
         default=None,
@@ -3475,7 +3506,7 @@ class AdminData:
             "name": "DOC-REVISIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sdgs: Optional["AdminData.Sdgs"] = field(
         default=None,
@@ -3483,14 +3514,14 @@ class AdminData:
             "name": "SDGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -3498,7 +3529,7 @@ class AdminData:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -3509,7 +3540,7 @@ class AdminData:
                 "name": "DOC-REVISION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -3520,5 +3551,5 @@ class AdminData:
                 "name": "SDG",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

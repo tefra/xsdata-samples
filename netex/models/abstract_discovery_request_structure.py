@@ -13,7 +13,7 @@ class AbstractDiscoveryRequestStructure(AuthenticatedRequestStructure):
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     requestor_ref: Optional[str] = field(
         default=None,
@@ -22,7 +22,7 @@ class AbstractDiscoveryRequestStructure(AuthenticatedRequestStructure):
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
             "required": True,
-        }
+        },
     )
     message_identifier: Optional[str] = field(
         default=None,
@@ -30,5 +30,5 @@ class AbstractDiscoveryRequestStructure(AuthenticatedRequestStructure):
             "name": "MessageIdentifier",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

@@ -13,5 +13,5 @@ class BusSubmode:
         default=BusSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

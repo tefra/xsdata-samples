@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .version import Version
 from .version_ref import VersionRef
@@ -12,7 +12,7 @@ class VersionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "versions_RelStructure"
 
-    version_ref_or_version: List[object] = field(
+    version_ref_or_version: List[Union[VersionRef, Version]] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +28,5 @@ class VersionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

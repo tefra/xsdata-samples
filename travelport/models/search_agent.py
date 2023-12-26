@@ -19,6 +19,7 @@ class SearchAgent:
     ticketed_by_agent
         The Agent ID that ticketed a PNR.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -28,26 +29,26 @@ class SearchAgent:
             "name": "BranchId",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     created_by_agent: None | str = field(
         default=None,
         metadata={
             "name": "CreatedByAgent",
             "type": "Attribute",
-        }
+        },
     )
     modified_by_agent: None | str = field(
         default=None,
         metadata={
             "name": "ModifiedByAgent",
             "type": "Attribute",
-        }
+        },
     )
     ticketed_by_agent: None | str = field(
         default=None,
         metadata={
             "name": "TicketedByAgent",
             "type": "Attribute",
-        }
+        },
     )

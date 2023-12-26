@@ -11,6 +11,7 @@ class AgencyContactInfo4:
 
     It must contain  at least one phone number to be used by an agency
     """
+
     class Meta:
         name = "AgencyContactInfo"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -22,12 +23,12 @@ class AgencyContactInfo4:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

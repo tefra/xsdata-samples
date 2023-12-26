@@ -1,12 +1,16 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.base_create_with_form_of_payment_req_1 import BaseCreateWithFormOfPaymentReq1
+from travelport.models.base_create_with_form_of_payment_req_1 import (
+    BaseCreateWithFormOfPaymentReq1,
+)
 from travelport.models.host_token_list_1 import HostTokenList1
 from travelport.models.payment_1 import Payment1
 from travelport.models.rail_auto_seat_assignment import RailAutoSeatAssignment
 from travelport.models.rail_fare_note_list import RailFareNoteList
 from travelport.models.rail_pricing_solution import RailPricingSolution
-from travelport.models.rail_specific_seat_assignment import RailSpecificSeatAssignment
+from travelport.models.rail_specific_seat_assignment import (
+    RailSpecificSeatAssignment,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -32,6 +36,7 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
         existing booking) Initiate (used for a provisional booking, default
         if no FOP is included)
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -42,7 +47,7 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "required": True,
-        }
+        },
     )
     payment: None | Payment1 = field(
         default=None,
@@ -50,7 +55,7 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "Payment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
@@ -58,7 +63,7 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "RailFareNoteList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
-        }
+        },
     )
     host_token_list: None | HostTokenList1 = field(
         default=None,
@@ -66,7 +71,7 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "HostTokenList",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     rail_auto_seat_assignment: list[RailAutoSeatAssignment] = field(
         default_factory=list,
@@ -75,7 +80,7 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rail_specific_seat_assignment: list[RailSpecificSeatAssignment] = field(
         default_factory=list,
@@ -84,7 +89,7 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     booking_action_type: None | str = field(
         default=None,
@@ -92,5 +97,5 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "BookingActionType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

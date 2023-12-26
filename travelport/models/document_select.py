@@ -23,6 +23,7 @@ class DocumentSelect:
     fax_indicator
         Set to true for providing fax details.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -31,33 +32,33 @@ class DocumentSelect:
         metadata={
             "name": "BackOfficeHandOff",
             "type": "Element",
-        }
+        },
     )
     itinerary: None | Itinerary = field(
         default=None,
         metadata={
             "name": "Itinerary",
             "type": "Element",
-        }
+        },
     )
     issue_ticket_only: None | bool = field(
         default=None,
         metadata={
             "name": "IssueTicketOnly",
             "type": "Attribute",
-        }
+        },
     )
     issue_electronic_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "IssueElectronicTicket",
             "type": "Attribute",
-        }
+        },
     )
     fax_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "FaxIndicator",
             "type": "Attribute",
-        }
+        },
     )

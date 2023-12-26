@@ -90,6 +90,7 @@ class SomeipTransformationProps:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOMEIP-TRANSFORMATION-PROPS"
 
@@ -100,15 +101,17 @@ class SomeipTransformationProps:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SomeipTransformationProps.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SomeipTransformationProps.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +119,7 @@ class SomeipTransformationProps:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +127,7 @@ class SomeipTransformationProps:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +135,7 @@ class SomeipTransformationProps:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +143,7 @@ class SomeipTransformationProps:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +151,7 @@ class SomeipTransformationProps:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SomeipTransformationProps.Annotations"] = field(
         default=None,
@@ -156,7 +159,7 @@ class SomeipTransformationProps:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     alignment: Optional[PositiveInteger] = field(
         default=None,
@@ -164,7 +167,7 @@ class SomeipTransformationProps:
             "name": "ALIGNMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_array_length_field: Optional[PositiveInteger] = field(
         default=None,
@@ -172,7 +175,7 @@ class SomeipTransformationProps:
             "name": "SIZE-OF-ARRAY-LENGTH-FIELD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_string_length_field: Optional[PositiveInteger] = field(
         default=None,
@@ -180,7 +183,7 @@ class SomeipTransformationProps:
             "name": "SIZE-OF-STRING-LENGTH-FIELD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_struct_length_field: Optional[PositiveInteger] = field(
         default=None,
@@ -188,7 +191,7 @@ class SomeipTransformationProps:
             "name": "SIZE-OF-STRUCT-LENGTH-FIELD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size_of_union_length_field: Optional[PositiveInteger] = field(
         default=None,
@@ -196,14 +199,14 @@ class SomeipTransformationProps:
             "name": "SIZE-OF-UNION-LENGTH-FIELD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -211,14 +214,14 @@ class SomeipTransformationProps:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -229,7 +232,7 @@ class SomeipTransformationProps:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -240,5 +243,5 @@ class SomeipTransformationProps:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

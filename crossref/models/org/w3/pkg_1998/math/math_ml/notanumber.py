@@ -15,5 +15,5 @@ class Notanumber:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

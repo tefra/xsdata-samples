@@ -19,7 +19,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "name": "GisFeatureRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     road_number: Optional[str] = field(
         default=None,
@@ -27,7 +27,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "name": "RoadNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     road_name: Optional[MultilingualString] = field(
         default=None,
@@ -35,7 +35,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "name": "RoadName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     bearing_compass: Optional[CompassBearing16Enumeration] = field(
         default=None,
@@ -43,7 +43,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "name": "BearingCompass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     bearing_degrees: Optional[int] = field(
         default=None,
@@ -51,7 +51,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "name": "BearingDegrees",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     odd_number_range: Optional[RoadNumberRangeStructure] = field(
         default=None,
@@ -59,7 +59,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "name": "OddNumberRange",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     even_number_range: Optional[RoadNumberRangeStructure] = field(
         default=None,
@@ -67,5 +67,5 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "name": "EvenNumberRange",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

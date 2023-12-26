@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.provider_reservation_info_ref_1 import ProviderReservationInfoRef1
+from travelport.models.provider_reservation_info_ref_1 import (
+    ProviderReservationInfoRef1,
+)
 from travelport.models.type_element_status_1 import TypeElementStatus1
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
@@ -30,6 +32,7 @@ class NameRemark1:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "NameRemark"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -40,7 +43,7 @@ class NameRemark1:
             "name": "RemarkData",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     provider_reservation_info_ref: list[ProviderReservationInfoRef1] = field(
         default_factory=list,
@@ -48,33 +51,33 @@ class NameRemark1:
             "name": "ProviderReservationInfoRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     category: None | str = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

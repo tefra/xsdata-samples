@@ -38,6 +38,7 @@ class AirUpsellQualify:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -46,21 +47,21 @@ class AirUpsellQualify:
         metadata={
             "name": "DepartureTime",
             "type": "Element",
-        }
+        },
     )
     flight_spec: None | FlightSpec = field(
         default=None,
         metadata={
             "name": "FlightSpec",
             "type": "Element",
-        }
+        },
     )
     operating_flight_spec: None | OperatingFlightSpec = field(
         default=None,
         metadata={
             "name": "OperatingFlightSpec",
             "type": "Element",
-        }
+        },
     )
     account_code: None | AccountCode1 = field(
         default=None,
@@ -68,7 +69,7 @@ class AirUpsellQualify:
             "name": "AccountCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -77,7 +78,7 @@ class AirUpsellQualify:
             "type": "Attribute",
             "required": True,
             "length": 2,
-        }
+        },
     )
     effective_date: None | str = field(
         default=None,
@@ -86,7 +87,7 @@ class AirUpsellQualify:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     expiration_date: None | str = field(
         default=None,
@@ -95,7 +96,7 @@ class AirUpsellQualify:
             "type": "Attribute",
             "required": True,
             "pattern": r"[^:Z].*",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -104,7 +105,7 @@ class AirUpsellQualify:
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -113,7 +114,7 @@ class AirUpsellQualify:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -122,7 +123,7 @@ class AirUpsellQualify:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     class_of_service: None | str = field(
         default=None,
@@ -131,7 +132,7 @@ class AirUpsellQualify:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 2,
-        }
+        },
     )
     operating_carrier: None | str = field(
         default=None,
@@ -139,21 +140,21 @@ class AirUpsellQualify:
             "name": "OperatingCarrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     offer_ref: None | str = field(
         default=None,
         metadata={
             "name": "OfferRef",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     fare_basis: None | str = field(
         default=None,
@@ -161,19 +162,19 @@ class AirUpsellQualify:
             "name": "FareBasis",
             "type": "Attribute",
             "max_length": 20,
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

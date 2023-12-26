@@ -19,6 +19,7 @@ class BookingCodeInfo:
     booking_counts
         Lists class of service and their counts for specific cabin class
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,12 +28,12 @@ class BookingCodeInfo:
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
-        }
+        },
     )
     booking_counts: None | str = field(
         default=None,
         metadata={
             "name": "BookingCounts",
             "type": "Attribute",
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypePolicy1(Enum):
     """
     Available product types.
     """
+
     AIR = "Air"
     VEHICLE = "Vehicle"
     HOTEL = "Hotel"

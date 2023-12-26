@@ -53,6 +53,7 @@ class AgencyInfo6(TypeProfileInfo2):
     ursync_to
         Identify if Universal Record synch is activated at Agency Level.
     """
+
     class Meta:
         name = "AgencyInfo"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -63,7 +64,7 @@ class AgencyInfo6(TypeProfileInfo2):
             "name": "Advisory",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     address: list[Address2] = field(
         default_factory=list,
@@ -71,7 +72,7 @@ class AgencyInfo6(TypeProfileInfo2):
             "name": "Address",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     phone: list[Phone2] = field(
         default_factory=list,
@@ -79,7 +80,7 @@ class AgencyInfo6(TypeProfileInfo2):
             "name": "Phone",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     electronic_address: list[ElectronicAddress2] = field(
         default_factory=list,
@@ -87,7 +88,7 @@ class AgencyInfo6(TypeProfileInfo2):
             "name": "ElectronicAddress",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     external_identifier: list[ExternalIdentifier2] = field(
         default_factory=list,
@@ -95,7 +96,7 @@ class AgencyInfo6(TypeProfileInfo2):
             "name": "ExternalIdentifier",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -105,7 +106,7 @@ class AgencyInfo6(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     iata_number: None | str = field(
         default=None,
@@ -114,7 +115,7 @@ class AgencyInfo6(TypeProfileInfo2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 8,
-        }
+        },
     )
     agency_code: None | str = field(
         default=None,
@@ -124,40 +125,40 @@ class AgencyInfo6(TypeProfileInfo2):
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     uses_template: bool = field(
         default=False,
         metadata={
             "name": "UsesTemplate",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_to: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncTo",
             "type": "Attribute",
-        }
+        },
     )
     profile_sync_from: None | bool = field(
         default=None,
         metadata={
             "name": "ProfileSyncFrom",
             "type": "Attribute",
-        }
+        },
     )
     ursync_data: AgencyInfoUrsyncData2 = field(
         default=AgencyInfoUrsyncData2.MASKED,
         metadata={
             "name": "URSyncData",
             "type": "Attribute",
-        }
+        },
     )
     ursync_to: bool = field(
         default=False,
         metadata={
             "name": "URSyncTo",
             "type": "Attribute",
-        }
+        },
     )

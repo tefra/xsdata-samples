@@ -58,26 +58,26 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
                     choice=NetworkFrameTopicStructure.SelectionValidityConditions(
                         choice=[
                             AvailabilityCondition(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDateTime(2010, 11, 1, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                     choice_1=[
                         TimetableFrameRef(
-                            value="REQUEST",
-                            ref="hde:TimetableFrameTIM_23_O"
+                            value='REQUEST',
+                            ref='hde:TimetableFrameTIM_23_O'
                         ),
                     ]
                 ),
@@ -86,56 +86,56 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P1M"),
     description=MultilingualString(
-        value="Example  of simple flexible timetable  , zones only  &#10;&#9;&#10;1. OVERVIEW&#10;============&#10;&#10;   The servIce has two zones     Sigma   and  Tau&#10; &#10;&#9; SIgma has a single area,  Tau is made up of  two areas &#10;&#9; &#10;&#9;There are on demand services between specified start and end time&#10;&#9;&#10;&#9;   9 to 5 Monday to Friday.&#10;&#9;   Booking starts 8 to 12: 1 to 4:30&#10; &#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#10; day&#10;&#10;==================================&#10;2. DETAILS&#10;&#10;  FLEXIBLE LINE  mybus:FL_24&#10;&#9;&#9;has booking  and references two  two flexible stop places &#10;&#10;FLEXIBLE STOP PLACES defines the geometry of the XOnes&#10;&#9;    A)    FLEXIBLE STOP PLAcE:  mybus:fsp_Sigma   &#10;&#9;&#9;&#9;&#9;&#9; with a single FLEXIBLE STOP AREA:fsp_Sigma:  &#9;&#9;&#9;&#9;&#9;&#9; &#10;&#9;&#9;B)   FLEXIBLE STOP PLAcE: mybus:fsp_Tau&#9;&#9;&#9;&#9;&#9; &#10;&#9;&#9;&#9;&#9; with a two FLEXIBLE STOP AREAs     &#9;&#10;&#9;&#9;&#9;&#9;&#9; :mybus:fa_Tau_01&#10;&#9;&#9;&#9; &#9; :mybus:fa_Tau_02&#10; &#10; A SERVICE CALENDAR FRAME is used to contain the DAY TYPEs etc &#10;&#10; This has FLEXIBLE BOOKING TIMES with avalabiliuty conbditiosn for the booking and service &#10;   &#10;A COMPOSITE FRAME is used to group the component FRAMEs&#10;  &#10;&#9;&#9;A SITE   FRAME is used to contain the FLEXIBLE STOP PLACEs , etc&#10;&#9;&#9;A SERVICE  FRAME is used to contain the     LINEs, etc&#10;&#9;&#9;A TIMETABLE FRAME is used to define the Servce AVAILABILITY and the  the Booking times     &#10;&#9;&#9;&#9;&#10;The Calendar is shown coded as&#10;      Compact : OPERATING DAYs are assumed for each calendar date within the period of the calendar &#10;&#9;&#10;&#9;"
+        value='Example  of simple flexible timetable  , zones only  \n\t\n1. OVERVIEW\n============\n\n   The servIce has two zones     Sigma   and  Tau\n \n\t SIgma has a single area,  Tau is made up of  two areas \n\t \n\tThere are on demand services between specified start and end time\n\t\n\t   9 to 5 Monday to Friday.\n\t   Booking starts 8 to 12: 1 to 4:30\n \t\t\t\t\t\t\t\t\t\t\n day\n\n==================================\n2. DETAILS\n\n  FLEXIBLE LINE  mybus:FL_24\n\t\thas booking  and references two  two flexible stop places \n\nFLEXIBLE STOP PLACES defines the geometry of the XOnes\n\t    A)    FLEXIBLE STOP PLAcE:  mybus:fsp_Sigma   \n\t\t\t\t\t with a single FLEXIBLE STOP AREA:fsp_Sigma:  \t\t\t\t\t\t \n\t\tB)   FLEXIBLE STOP PLAcE: mybus:fsp_Tau\t\t\t\t\t \n\t\t\t\t with a two FLEXIBLE STOP AREAs     \t\n\t\t\t\t\t :mybus:fa_Tau_01\n\t\t\t \t :mybus:fa_Tau_02\n \n A SERVICE CALENDAR FRAME is used to contain the DAY TYPEs etc \n\n This has FLEXIBLE BOOKING TIMES with avalabiliuty conbditiosn for the booking and service \n   \nA COMPOSITE FRAME is used to group the component FRAMEs\n  \n\t\tA SITE   FRAME is used to contain the FLEXIBLE STOP PLACEs , etc\n\t\tA SERVICE  FRAME is used to contain the     LINEs, etc\n\t\tA TIMETABLE FRAME is used to define the Servce AVAILABILITY and the  the Booking times     \n\t\t\t\nThe Calendar is shown coded as\n      Compact : OPERATING DAYs are assumed for each calendar date within the period of the calendar \n\t\n\t'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="hde:CAL_02",
-                version="1",
+                id='hde:CAL_02',
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="mybus",
-                            xmlns="mybus",
-                            xmlns_url="http://www.mybuses.eu/stuff",
-                            description="My buses"
+                            id='mybus',
+                            xmlns='mybus',
+                            xmlns_url='http://www.mybuses.eu/stuff',
+                            description='My buses'
                         ),
                         Codespace(
-                            id="hde",
-                            xmlns="hde",
-                            xmlns_url="http://www.halt.de/",
-                            description="Stop data  data"
+                            id='hde',
+                            xmlns='hde',
+                            xmlns_url='http://www.halt.de/',
+                            description='Stop data  data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="mybus"
+                        ref='mybus'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         SiteFrame(
-                            id="mybus:svf_24",
-                            version="1",
+                            id='mybus:svf_24',
+                            version='1',
                             name=MultilingualString(
-                                value="Geometry of Zones  for Winter timetable for Flexible Route 24 "
+                                value='Geometry of Zones  for Winter timetable for Flexible Route 24 '
                             ),
                             flexible_stop_places=FlexibleStopPlacesInFrameRelStructure(
                                 flexible_stop_place=[
                                     FlexibleStopPlace(
-                                        id="mybus:fsp_Sigma",
-                                        version="any",
+                                        id='mybus:fsp_Sigma',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Flexible Zone Sigma"
+                                            value='Flexible Zone Sigma'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Sigma"
+                                            value='Sigma'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Area around Alphavilee"
+                                                value='Area around Alphavilee'
                                             ),
                                         ],
                                         centroid=SimplePointVersionStructure(
@@ -151,13 +151,13 @@ obj = PublicationDelivery(
                                         areas=FlexibleStopPlaceVersionStructure.Areas(
                                             choice=[
                                                 FlexibleArea(
-                                                    id="mybus:fa_Sigma",
-                                                    version="any",
+                                                    id='mybus:fa_Sigma',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="ZONE Sigma  Area - corresponds to whole of Zone S"
+                                                        value='ZONE Sigma  Area - corresponds to whole of Zone S'
                                                     ),
                                                     short_name=MultilingualString(
-                                                        value="Sigma"
+                                                        value='Sigma'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -166,12 +166,12 @@ obj = PublicationDelivery(
                                                                     12345.76,
                                                                 ]
                                                             ),
-                                                            precision=Decimal("12")
+                                                            precision=Decimal('12')
                                                         )
                                                     ),
                                                     polygon=Polygon(
-                                                        id="a1234",
-                                                        srs_name="wgs84",
+                                                        id='a1234',
+                                                        srs_name='wgs84',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
                                                                 pos_or_point_property_or_pos_list=[
@@ -212,42 +212,42 @@ obj = PublicationDelivery(
                                         lines=LineRefsRelStructure(
                                             flexible_line_ref_or_line_ref=[
                                                 FlexibleLineRef(
-                                                    version="any",
-                                                    ref="mybus:FL_24"
+                                                    version='any',
+                                                    ref='mybus:FL_24'
                                                 ),
                                             ]
                                         )
                                     ),
                                     FlexibleStopPlace(
-                                        id="mybus:fsp_Tau",
-                                        version="any",
+                                        id='mybus:fsp_Tau',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Flexible Zone Tau"
+                                            value='Flexible Zone Tau'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Tau"
+                                            value='Tau'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Area around Beta ville"
+                                                value='Area around Beta ville'
                                             ),
                                         ],
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("53.0000"),
-                                                latitude=Decimal("0.1000")
+                                                longitude=Decimal('53.0000'),
+                                                latitude=Decimal('0.1000')
                                             )
                                         ),
                                         areas=FlexibleStopPlaceVersionStructure.Areas(
                                             choice=[
                                                 FlexibleArea(
-                                                    id="mybus:fa_Tau_01",
-                                                    version="any",
+                                                    id='mybus:fa_Tau_01',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="ZONE Tau    Area 1 -   "
+                                                        value='ZONE Tau    Area 1 -   '
                                                     ),
                                                     short_name=MultilingualString(
-                                                        value="Sigma 1"
+                                                        value='Sigma 1'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -257,12 +257,12 @@ obj = PublicationDelivery(
                                                                     2344.2,
                                                                 ]
                                                             ),
-                                                            precision=Decimal("12")
+                                                            precision=Decimal('12')
                                                         )
                                                     ),
                                                     polygon=Polygon(
-                                                        id="b1234",
-                                                        srs_name="wgs84",
+                                                        id='b1234',
+                                                        srs_name='wgs84',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
                                                                 pos_or_point_property_or_pos_list=[
@@ -299,13 +299,13 @@ obj = PublicationDelivery(
                                                     alighting_use=True
                                                 ),
                                                 FlexibleArea(
-                                                    id="mybus:fa_Tau_02",
-                                                    version="any",
+                                                    id='mybus:fa_Tau_02',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="ZONE Tau    Area 2 -   "
+                                                        value='ZONE Tau    Area 2 -   '
                                                     ),
                                                     short_name=MultilingualString(
-                                                        value="Sigma 2"
+                                                        value='Sigma 2'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -314,12 +314,12 @@ obj = PublicationDelivery(
                                                                     12345.76,
                                                                 ]
                                                             ),
-                                                            precision=Decimal("12")
+                                                            precision=Decimal('12')
                                                         )
                                                     ),
                                                     polygon=Polygon(
-                                                        id="c1234",
-                                                        srs_name="wgs84",
+                                                        id='c1234',
+                                                        srs_name='wgs84',
                                                         exterior=Exterior(
                                                             linear_ring=LinearRing(
                                                                 pos_or_point_property_or_pos_list=[
@@ -366,8 +366,8 @@ obj = PublicationDelivery(
                                         lines=LineRefsRelStructure(
                                             flexible_line_ref_or_line_ref=[
                                                 FlexibleLineRef(
-                                                    version="any",
-                                                    ref="mybus:FL_24"
+                                                    version='any',
+                                                    ref='mybus:FL_24'
                                                 ),
                                             ]
                                         )
@@ -376,27 +376,27 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="mybus:svf_24",
-                            version="1",
+                            id='mybus:svf_24',
+                            version='1',
                             name=MultilingualString(
-                                value="Lines for Winter timetable for route 24 "
+                                value='Lines for Winter timetable for route 24 '
                             ),
                             lines=LinesInFrameRelStructure(
                                 flexible_line_or_line=[
                                     FlexibleLine(
-                                        id="mybus:FL_24",
-                                        version="any",
+                                        id='mybus:FL_24',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Line 24 Sigma  to Tau FLEXIBLE SERVICE "
+                                            value='Line 24 Sigma  to Tau FLEXIBLE SERVICE '
                                         ),
                                         short_name=MultilingualString(
-                                            value="Line 24"
+                                            value='Line 24'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         transport_submode=TransportSubmode(
                                             choice=BusSubmodeEnumeration.DEMAND_AND_RESPONSE_BUS
                                         ),
-                                        public_code="24",
+                                        public_code='24',
                                         flexible_line_type=FlexibleLineTypeEnumeration.FLEXIBLE_AREAS_ONLY,
                                         booking_access=BookingAccessEnumeration.PUBLIC,
                                         latest_booking_time=XmlTime(16, 30, 0, 0),
@@ -406,30 +406,30 @@ obj = PublicationDelivery(
                             )
                         ),
                         TimetableFrame(
-                            id="hde:TIM_02",
+                            id='hde:TIM_02',
                             validity_conditions_or_valid_between=[
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityCondition(
-                                            id="hde:AC_runs_02",
-                                            version="any",
+                                            id='hde:AC_runs_02',
+                                            version='any',
                                             description=MultilingualString(
-                                                value="Operating  times for DRT service 24"
+                                                value='Operating  times for DRT service 24'
                                             ),
                                             is_available=True,
                                             day_types=DayTypesRelStructure(
                                                 choice=[
                                                     DayTypeRef(
-                                                        version="any",
-                                                        ref="hde:DT_01-MF-NotHoliday"
+                                                        version='any',
+                                                        ref='hde:DT_01-MF-NotHoliday'
                                                     ),
                                                 ]
                                             ),
                                             timebands=TimebandsRelStructure(
                                                 timeband_ref_or_timeband=[
                                                     TimebandVersionedChildStructure(
-                                                        id="hde:AC_runs_01",
-                                                        version="any",
+                                                        id='hde:AC_runs_01',
+                                                        version='any',
                                                         start_time=XmlTime(9, 0, 0, 0),
                                                         end_time_or_day_offset_or_duration=[
                                                             XmlTime(17, 0, 0, 0),
@@ -441,49 +441,49 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                             ],
-                            version="1",
+                            version='1',
                             name=MultilingualString(
-                                value="TimetableNov to Jan 2011   "
+                                value='TimetableNov to Jan 2011   '
                             ),
                             vehicle_modes=[
                                 VehicleModeEnumeration.BUS,
                             ],
                             line_view=LineView(
                                 flexible_line_ref_or_line_ref=FlexibleLineRef(
-                                    version="any",
-                                    ref="mybus:FL_24"
+                                    version='any',
+                                    ref='mybus:FL_24'
                                 )
                             ),
                             booking_times=ContainedAvailabilityConditionsRelStructure(
                                 availability_condition=[
                                     AvailabilityCondition(
-                                        id="hde:AC_booking_01",
-                                        version="any",
+                                        id='hde:AC_booking_01',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Booking times for service"
+                                            value='Booking times for service'
                                         ),
                                         is_available=True,
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="hde:DT_01-MF-NotHoliday"
+                                                    version='any',
+                                                    ref='hde:DT_01-MF-NotHoliday'
                                                 ),
                                             ]
                                         ),
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandVersionedChildStructure(
-                                                    id="hde:AC_booking_01",
-                                                    version="any",
+                                                    id='hde:AC_booking_01',
+                                                    version='any',
                                                     start_time=XmlTime(8, 30, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlTime(12, 0, 0, 0),
                                                     ]
                                                 ),
                                                 TimebandVersionedChildStructure(
-                                                    id="hde:AC_booking_02",
-                                                    version="any",
+                                                    id='hde:AC_booking_02',
+                                                    version='any',
                                                     start_time=XmlTime(13, 0, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlTime(16, 30, 0, 0),
@@ -496,24 +496,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceCalendarFrame(
-                            id="hde:CAL_02",
-                            version="1",
+                            id='hde:CAL_02',
+                            version='1',
                             name=MultilingualString(
-                                value="Service Calendar Nov to Jan 2011   "
+                                value='Service Calendar Nov to Jan 2011   '
                             ),
                             service_calendar=ServiceCalendar(
-                                id="hde:CAL_02",
-                                version="any",
+                                id='hde:CAL_02',
+                                version='any',
                                 from_date=XmlDate(2010, 11, 1),
                                 to_date=XmlDate(2011, 1, 14)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="hde:DT_01-MF-NotHoliday",
-                                        version="any",
+                                        id='hde:DT_01-MF-NotHoliday',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weekdays unless a holiday"
+                                            value='Weekdays unless a holiday'
                                         ),
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[

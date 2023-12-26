@@ -13,12 +13,12 @@ class LanguageType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"(\w){2,4}",
-        }
+        },
     )

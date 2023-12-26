@@ -30,6 +30,7 @@ class Endpoint:
     end_point_code
         End Point Code description.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -39,7 +40,7 @@ class Endpoint:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class Endpoint:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     description: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class Endpoint:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     data_type: None | TypeEndpointDataType = field(
         default=None,
@@ -66,21 +67,21 @@ class Endpoint:
             "name": "DataType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     min_occurs: int = field(
         default=0,
         metadata={
             "name": "MinOccurs",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccurs",
             "type": "Attribute",
-        }
+        },
     )
     end_point_code: None | str = field(
         default=None,
@@ -88,5 +89,5 @@ class Endpoint:
             "name": "EndPointCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_height import TpegHeight
-from datexii.models.eu.datexii.v2.tpeg_loc01_area_location_subtype_enum import TpegLoc01AreaLocationSubtypeEnum
+from datexii.models.eu.datexii.v2.tpeg_loc01_area_location_subtype_enum import (
+    TpegLoc01AreaLocationSubtypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -17,14 +19,17 @@ class TpegAreaLocation:
     :ivar tpeg_height:
     :ivar tpeg_area_location_extension:
     """
-    tpeg_area_location_type: Optional[TpegLoc01AreaLocationSubtypeEnum] = field(
+
+    tpeg_area_location_type: Optional[
+        TpegLoc01AreaLocationSubtypeEnum
+    ] = field(
         default=None,
         metadata={
             "name": "tpegAreaLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     tpeg_height: Optional[TpegHeight] = field(
         default=None,
@@ -32,7 +37,7 @@ class TpegAreaLocation:
             "name": "tpegHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     tpeg_area_location_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +45,5 @@ class TpegAreaLocation:
             "name": "tpegAreaLocationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

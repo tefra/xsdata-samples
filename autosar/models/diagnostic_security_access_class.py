@@ -8,8 +8,12 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_access_permission_validity_enum import DiagnosticAccessPermissionValidityEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_access_permission_validity_enum import (
+    DiagnosticAccessPermissionValidityEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -90,6 +94,7 @@ class DiagnosticSecurityAccessClass:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-SECURITY-ACCESS-CLASS"
 
@@ -100,15 +105,17 @@ class DiagnosticSecurityAccessClass:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticSecurityAccessClass.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticSecurityAccessClass.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -116,7 +123,7 @@ class DiagnosticSecurityAccessClass:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -124,7 +131,7 @@ class DiagnosticSecurityAccessClass:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -132,7 +139,7 @@ class DiagnosticSecurityAccessClass:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -140,7 +147,7 @@ class DiagnosticSecurityAccessClass:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -148,7 +155,7 @@ class DiagnosticSecurityAccessClass:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticSecurityAccessClass.Annotations"] = field(
         default=None,
@@ -156,7 +163,7 @@ class DiagnosticSecurityAccessClass:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -164,23 +171,27 @@ class DiagnosticSecurityAccessClass:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticSecurityAccessClass.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticSecurityAccessClass.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_validity: Optional[DiagnosticAccessPermissionValidityEnum] = field(
+    access_permission_validity: Optional[
+        DiagnosticAccessPermissionValidityEnum
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     shared_timer: Optional[Boolean] = field(
         default=None,
@@ -188,14 +199,14 @@ class DiagnosticSecurityAccessClass:
             "name": "SHARED-TIMER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -203,14 +214,14 @@ class DiagnosticSecurityAccessClass:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -221,7 +232,7 @@ class DiagnosticSecurityAccessClass:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,7 +243,7 @@ class DiagnosticSecurityAccessClass:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -243,5 +254,5 @@ class DiagnosticSecurityAccessClass:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

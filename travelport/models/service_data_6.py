@@ -40,6 +40,7 @@ class ServiceData6:
         Reference to the corresponding EMD coupon issued. Supported
         providers are 1G/1V/1P/1J
     """
+
     class Meta:
         name = "ServiceData"
         namespace = "http://www.travelport.com/schema/common_v38_0"
@@ -49,14 +50,14 @@ class ServiceData6:
         metadata={
             "name": "SeatAttributes",
             "type": "Element",
-        }
+        },
     )
     cabin_class: None | CabinClass6 = field(
         default=None,
         metadata={
             "name": "CabinClass",
             "type": "Element",
-        }
+        },
     )
     ssrref: list[TypeKeyBasedReference6] = field(
         default_factory=list,
@@ -64,35 +65,35 @@ class ServiceData6:
             "name": "SSRRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     data: None | str = field(
         default=None,
         metadata={
             "name": "Data",
             "type": "Attribute",
-        }
+        },
     )
     air_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "AirSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     booking_traveler_ref: None | str = field(
         default=None,
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-        }
+        },
     )
     stop_over: bool = field(
         default=False,
         metadata={
             "name": "StopOver",
             "type": "Attribute",
-        }
+        },
     )
     traveler_type: None | str = field(
         default=None,
@@ -101,19 +102,19 @@ class ServiceData6:
             "type": "Attribute",
             "min_length": 3,
             "max_length": 5,
-        }
+        },
     )
     emdsummary_ref: None | str = field(
         default=None,
         metadata={
             "name": "EMDSummaryRef",
             "type": "Attribute",
-        }
+        },
     )
     emdcoupon_ref: None | str = field(
         default=None,
         metadata={
             "name": "EMDCouponRef",
             "type": "Attribute",
-        }
+        },
     )

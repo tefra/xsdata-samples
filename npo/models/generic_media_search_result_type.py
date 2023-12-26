@@ -16,7 +16,7 @@ class GenericMediaSearchResultType(SearchResultType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     selected_facets: None | MediaFacetsResultType = field(
         default=None,
@@ -24,5 +24,5 @@ class GenericMediaSearchResultType(SearchResultType):
             "name": "selectedFacets",
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

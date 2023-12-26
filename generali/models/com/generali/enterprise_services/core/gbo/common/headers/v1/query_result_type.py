@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.base_header_type import BaseHeaderType
+from generali.models.com.generali.enterprise_services.core.gbo.common.headers.v1.base_header_type import (
+    BaseHeaderType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
+)
 
 
 @dataclass
@@ -15,6 +19,7 @@ class QueryResultType(BaseHeaderType):
         matched in the query and possibly returned in the payload of the
         response message.</description>
     """
+
     total_count: Optional[int] = field(
         default=None,
         metadata={
@@ -22,5 +27,5 @@ class QueryResultType(BaseHeaderType):
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
             "required": True,
-        }
+        },
     )

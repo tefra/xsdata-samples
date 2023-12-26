@@ -18,7 +18,7 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
             "name": "TypeOfActivationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     from_point_ref: Optional[ActivationPointRefStructure] = field(
         default=None,
@@ -27,7 +27,7 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     to_point_ref: Optional[ActivationPointRefStructure] = field(
         default=None,
@@ -36,5 +36,5 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )

@@ -17,6 +17,7 @@ class BookingRetrieveDocumentReq(BookingBaseReq):
     ticket_number
         Provider: 1G,1V,1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -28,7 +29,7 @@ class BookingRetrieveDocumentReq(BookingBaseReq):
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     ticket_number: list[str] = field(
         default_factory=list,
@@ -39,5 +40,5 @@ class BookingRetrieveDocumentReq(BookingBaseReq):
             "max_occurs": 99,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )

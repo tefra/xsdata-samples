@@ -13,6 +13,7 @@ class DiagnosticEventClearAllowedEnumSimple(Enum):
         this by defining appropriate ServiceNeeds (i.e.
         DiagnosticEventNeeds).
     """
+
     ALWAYS = "ALWAYS"
     NEVER = "NEVER"
     REQUIRES_CALLBACK_EXECUTION = "REQUIRES-CALLBACK-EXECUTION"

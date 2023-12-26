@@ -13,6 +13,7 @@ class DenyReasonEnum(Enum):
     :cvar WRONG_ORDER: Wrong order specified.
     :cvar WRONG_PARTNER: Wrong partner specified.
     """
+
     UNKNOWN_REASON = "unknownReason"
     WRONG_CATALOGUE = "wrongCatalogue"
     WRONG_FILTER = "wrongFilter"

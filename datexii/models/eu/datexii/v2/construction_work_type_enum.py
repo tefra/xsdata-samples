@@ -19,6 +19,7 @@ class ConstructionWorkTypeEnum(Enum):
     :cvar ROAD_WIDENING_WORK: Road widening work at the specified
         location.
     """
+
     BLASTING_WORK = "blastingWork"
     CONSTRUCTION_WORK = "constructionWork"
     DEMOLITION_WORK = "demolitionWork"

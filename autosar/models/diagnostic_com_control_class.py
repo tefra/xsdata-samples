@@ -7,11 +7,21 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .communication_cluster_subtypes_enum import CommunicationClusterSubtypesEnum
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_access_permission_validity_enum import DiagnosticAccessPermissionValidityEnum
-from .diagnostic_com_control_specific_channel import DiagnosticComControlSpecificChannel
-from .diagnostic_com_control_sub_node_channel import DiagnosticComControlSubNodeChannel
+from .communication_cluster_subtypes_enum import (
+    CommunicationClusterSubtypesEnum,
+)
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_access_permission_validity_enum import (
+    DiagnosticAccessPermissionValidityEnum,
+)
+from .diagnostic_com_control_specific_channel import (
+    DiagnosticComControlSpecificChannel,
+)
+from .diagnostic_com_control_sub_node_channel import (
+    DiagnosticComControlSubNodeChannel,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -102,6 +112,7 @@ class DiagnosticComControlClass:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-COM-CONTROL-CLASS"
 
@@ -112,15 +123,17 @@ class DiagnosticComControlClass:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticComControlClass.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticComControlClass.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -128,7 +141,7 @@ class DiagnosticComControlClass:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -136,7 +149,7 @@ class DiagnosticComControlClass:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -144,7 +157,7 @@ class DiagnosticComControlClass:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -152,7 +165,7 @@ class DiagnosticComControlClass:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -160,7 +173,7 @@ class DiagnosticComControlClass:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticComControlClass.Annotations"] = field(
         default=None,
@@ -168,7 +181,7 @@ class DiagnosticComControlClass:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -176,54 +189,64 @@ class DiagnosticComControlClass:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticComControlClass.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticComControlClass.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_validity: Optional[DiagnosticAccessPermissionValidityEnum] = field(
+    access_permission_validity: Optional[
+        DiagnosticAccessPermissionValidityEnum
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    all_channels_refs: Optional["DiagnosticComControlClass.AllChannelsRefs"] = field(
+    all_channels_refs: Optional[
+        "DiagnosticComControlClass.AllChannelsRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ALL-CHANNELS-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    specific_channels: Optional["DiagnosticComControlClass.SpecificChannels"] = field(
+    specific_channels: Optional[
+        "DiagnosticComControlClass.SpecificChannels"
+    ] = field(
         default=None,
         metadata={
             "name": "SPECIFIC-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    sub_node_channels: Optional["DiagnosticComControlClass.SubNodeChannels"] = field(
+    sub_node_channels: Optional[
+        "DiagnosticComControlClass.SubNodeChannels"
+    ] = field(
         default=None,
         metadata={
             "name": "SUB-NODE-CHANNELS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -231,14 +254,14 @@ class DiagnosticComControlClass:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -249,7 +272,7 @@ class DiagnosticComControlClass:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -260,7 +283,7 @@ class DiagnosticComControlClass:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -271,18 +294,20 @@ class DiagnosticComControlClass:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class AllChannelsRefs:
-        all_channels_ref: List["DiagnosticComControlClass.AllChannelsRefs.AllChannelsRef"] = field(
+        all_channels_ref: List[
+            "DiagnosticComControlClass.AllChannelsRefs.AllChannelsRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ALL-CHANNELS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -293,27 +318,31 @@ class DiagnosticComControlClass:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class SpecificChannels:
-        diagnostic_com_control_specific_channel: List[DiagnosticComControlSpecificChannel] = field(
+        diagnostic_com_control_specific_channel: List[
+            DiagnosticComControlSpecificChannel
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-COM-CONTROL-SPECIFIC-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SubNodeChannels:
-        diagnostic_com_control_sub_node_channel: List[DiagnosticComControlSubNodeChannel] = field(
+        diagnostic_com_control_sub_node_channel: List[
+            DiagnosticComControlSubNodeChannel
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-COM-CONTROL-SUB-NODE-CHANNEL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

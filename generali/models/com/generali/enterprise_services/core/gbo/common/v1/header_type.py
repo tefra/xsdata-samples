@@ -1,8 +1,12 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_properties import HeaderTypeProperties
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_target_systems import HeaderTypeTargetSystems
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_properties import (
+    HeaderTypeProperties,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.header_type_target_systems import (
+    HeaderTypeTargetSystems,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -32,13 +36,14 @@ class HeaderType:
         generated.
     :ivar event:
     """
+
     source_system: Optional[str] = field(
         default=None,
         metadata={
             "name": "SourceSystem",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     target_systems: Optional[HeaderTypeTargetSystems] = field(
         default=None,
@@ -46,7 +51,7 @@ class HeaderType:
             "name": "TargetSystems",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     conversation_id: Optional[str] = field(
         default=None,
@@ -54,7 +59,7 @@ class HeaderType:
             "name": "ConversationID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     message_id: Optional[str] = field(
         default=None,
@@ -62,7 +67,7 @@ class HeaderType:
             "name": "MessageID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     properties: Optional[HeaderTypeProperties] = field(
         default=None,
@@ -70,7 +75,7 @@ class HeaderType:
             "name": "Properties",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     creation_date_time: Optional[XmlDateTime] = field(
         default=None,
@@ -78,7 +83,7 @@ class HeaderType:
             "name": "CreationDateTime",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     event: Optional[str] = field(
         default=None,
@@ -86,5 +91,5 @@ class HeaderType:
             "name": "Event",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

@@ -16,7 +16,7 @@ class TBoundaryEvent(TCatchEvent):
         metadata={
             "name": "cancelActivity",
             "type": "Attribute",
-        }
+        },
     )
     attached_to_ref: Optional[QName] = field(
         default=None,
@@ -24,5 +24,5 @@ class TBoundaryEvent(TCatchEvent):
             "name": "attachedToRef",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List
 from .previous_call import PreviousCall
-from .strict_containment_aggregation_structure import StrictContainmentAggregationStructure
+from .strict_containment_aggregation_structure import (
+    StrictContainmentAggregationStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -17,5 +19,5 @@ class PreviousCallsRelStructure(StrictContainmentAggregationStructure):
             "name": "PreviousCall",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

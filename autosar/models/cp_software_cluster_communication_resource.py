@@ -92,6 +92,7 @@ class CpSoftwareClusterCommunicationResource:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-COMMUNICATION-RESOURCE"
 
@@ -102,15 +103,17 @@ class CpSoftwareClusterCommunicationResource:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CpSoftwareClusterCommunicationResource.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CpSoftwareClusterCommunicationResource.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -118,7 +121,7 @@ class CpSoftwareClusterCommunicationResource:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -126,7 +129,7 @@ class CpSoftwareClusterCommunicationResource:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -134,7 +137,7 @@ class CpSoftwareClusterCommunicationResource:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -142,7 +145,7 @@ class CpSoftwareClusterCommunicationResource:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -150,23 +153,27 @@ class CpSoftwareClusterCommunicationResource:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["CpSoftwareClusterCommunicationResource.Annotations"] = field(
+    annotations: Optional[
+        "CpSoftwareClusterCommunicationResource.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    dependent_resources: Optional["CpSoftwareClusterCommunicationResource.DependentResources"] = field(
+    dependent_resources: Optional[
+        "CpSoftwareClusterCommunicationResource.DependentResources"
+    ] = field(
         default=None,
         metadata={
             "name": "DEPENDENT-RESOURCES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     global_resource_id: Optional[PositiveInteger] = field(
         default=None,
@@ -174,7 +181,7 @@ class CpSoftwareClusterCommunicationResource:
             "name": "GLOBAL-RESOURCE-ID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     is_mandatory: Optional[Boolean] = field(
         default=None,
@@ -182,7 +189,7 @@ class CpSoftwareClusterCommunicationResource:
             "name": "IS-MANDATORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     com_props: Optional[DataComProps] = field(
         default=None,
@@ -190,14 +197,14 @@ class CpSoftwareClusterCommunicationResource:
             "name": "COM-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -205,14 +212,14 @@ class CpSoftwareClusterCommunicationResource:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -223,7 +230,7 @@ class CpSoftwareClusterCommunicationResource:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -234,16 +241,18 @@ class CpSoftwareClusterCommunicationResource:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DependentResources:
-        role_based_resource_dependency: List[RoleBasedResourceDependency] = field(
+        role_based_resource_dependency: List[
+            RoleBasedResourceDependency
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ROLE-BASED-RESOURCE-DEPENDENCY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

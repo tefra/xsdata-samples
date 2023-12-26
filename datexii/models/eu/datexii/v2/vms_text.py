@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.vms_text_line_index_vms_text_line import VmsTextLineIndexVmsTextLine
+from datexii.models.eu.datexii.v2.vms_text_line_index_vms_text_line import (
+    VmsTextLineIndexVmsTextLine,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -21,6 +23,7 @@ class VmsText:
     :ivar vms_text_line:
     :ivar vms_text_extension:
     """
+
     vms_legend_code: Optional[str] = field(
         default=None,
         metadata={
@@ -28,7 +31,7 @@ class VmsText:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     vms_text_image_url: Optional[str] = field(
         default=None,
@@ -36,7 +39,7 @@ class VmsText:
             "name": "vmsTextImageUrl",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_text_line: List[VmsTextLineIndexVmsTextLine] = field(
         default_factory=list,
@@ -44,7 +47,7 @@ class VmsText:
             "name": "vmsTextLine",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_text_extension: Optional[ExtensionType] = field(
         default=None,
@@ -52,5 +55,5 @@ class VmsText:
             "name": "vmsTextExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

@@ -8,5 +8,6 @@ class DiagnosticLogicalOperatorEnumSimple(Enum):
     :cvar LOGICAL_AND: Logical AND
     :cvar LOGICAL_OR: Logical OR
     """
+
     LOGICAL_AND = "LOGICAL-AND"
     LOGICAL_OR = "LOGICAL-OR"

@@ -16,12 +16,12 @@ class RedirectList:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     last_update: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastUpdate",
             "type": "Attribute",
-        }
+        },
     )

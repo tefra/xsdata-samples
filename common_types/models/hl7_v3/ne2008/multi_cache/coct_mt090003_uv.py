@@ -34,7 +34,7 @@ class CoctMt090003UvDevice:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -42,7 +42,7 @@ class CoctMt090003UvDevice:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -50,14 +50,14 @@ class CoctMt090003UvDevice:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     manufacturer_model_name: Optional[Sc] = field(
         default=None,
@@ -65,7 +65,7 @@ class CoctMt090003UvDevice:
             "name": "manufacturerModelName",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     software_name: Optional[Sc] = field(
         default=None,
@@ -73,21 +73,21 @@ class CoctMt090003UvDevice:
             "name": "softwareName",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClassDevice = field(
         default=EntityClassDevice.DEV,
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -95,7 +95,7 @@ class CoctMt090003UvDevice:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -110,7 +110,7 @@ class CoctMt090003UvNonPersonLivingSubject:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -118,7 +118,7 @@ class CoctMt090003UvNonPersonLivingSubject:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -126,42 +126,42 @@ class CoctMt090003UvNonPersonLivingSubject:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClassNonPersonLivingSubject = field(
         default=EntityClassNonPersonLivingSubject.NLIV,
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -169,7 +169,7 @@ class CoctMt090003UvNonPersonLivingSubject:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -184,7 +184,7 @@ class CoctMt090003UvOrganization:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -192,7 +192,7 @@ class CoctMt090003UvOrganization:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -200,7 +200,7 @@ class CoctMt090003UvOrganization:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
@@ -208,21 +208,21 @@ class CoctMt090003UvOrganization:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClassOrganization = field(
         default=EntityClassOrganization.ORG,
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -230,7 +230,7 @@ class CoctMt090003UvOrganization:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -245,7 +245,7 @@ class CoctMt090003UvPerson:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -253,7 +253,7 @@ class CoctMt090003UvPerson:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -261,7 +261,7 @@ class CoctMt090003UvPerson:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     name: List[EnExplicit] = field(
         default_factory=list,
@@ -269,14 +269,14 @@ class CoctMt090003UvPerson:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: EntityClass = field(
         init=False,
@@ -284,7 +284,7 @@ class CoctMt090003UvPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )
     determiner_code: EntityDeterminer = field(
         init=False,
@@ -292,7 +292,7 @@ class CoctMt090003UvPerson:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-        }
+        },
     )
 
 
@@ -307,7 +307,7 @@ class CoctMt090003UvAssignedEntity:
             "name": "realmCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     type_id: Optional[Ii] = field(
         default=None,
@@ -315,7 +315,7 @@ class CoctMt090003UvAssignedEntity:
             "name": "typeId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     template_id: List[Ii] = field(
         default_factory=list,
@@ -323,7 +323,7 @@ class CoctMt090003UvAssignedEntity:
             "name": "templateId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     id: List[Ii] = field(
         default_factory=list,
@@ -331,28 +331,28 @@ class CoctMt090003UvAssignedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "min_occurs": 1,
-        }
+        },
     )
     code: Optional[Ce] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     addr: List[AdExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     telecom: List[TelExplicit] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-        }
+        },
     )
     assigned_organization: Optional[CoctMt090003UvOrganization] = field(
         default=None,
@@ -361,7 +361,7 @@ class CoctMt090003UvAssignedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     assigned_person: Optional[CoctMt090003UvPerson] = field(
         default=None,
@@ -370,7 +370,7 @@ class CoctMt090003UvAssignedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     assigned_device: Optional[CoctMt090003UvDevice] = field(
         default=None,
@@ -379,16 +379,18 @@ class CoctMt090003UvAssignedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
-    assigned_non_person_living_subject: Optional[CoctMt090003UvNonPersonLivingSubject] = field(
+    assigned_non_person_living_subject: Optional[
+        CoctMt090003UvNonPersonLivingSubject
+    ] = field(
         default=None,
         metadata={
             "name": "assignedNonPersonLivingSubject",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     represented_organization: Optional[CoctMt150003Uv03Organization] = field(
         default=None,
@@ -397,19 +399,19 @@ class CoctMt090003UvAssignedEntity:
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
             "nillable": True,
-        }
+        },
     )
     null_flavor: Optional[NullFlavor] = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
-        }
+        },
     )
     class_code: RoleClassAssignedEntity = field(
         default=RoleClassAssignedEntity.ASSIGNED,
         metadata={
             "name": "classCode",
             "type": "Attribute",
-        }
+        },
     )

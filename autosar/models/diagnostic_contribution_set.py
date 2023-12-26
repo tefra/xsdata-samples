@@ -7,9 +7,13 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_common_element_ref_conditional import DiagnosticCommonElementRefConditional
+from .diagnostic_common_element_ref_conditional import (
+    DiagnosticCommonElementRefConditional,
+)
 from .diagnostic_common_props import DiagnosticCommonProps
-from .diagnostic_service_table_ref_conditional import DiagnosticServiceTableRefConditional
+from .diagnostic_service_table_ref_conditional import (
+    DiagnosticServiceTableRefConditional,
+)
 from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -96,6 +100,7 @@ class DiagnosticContributionSet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-CONTRIBUTION-SET"
 
@@ -106,15 +111,17 @@ class DiagnosticContributionSet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticContributionSet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticContributionSet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -122,7 +129,7 @@ class DiagnosticContributionSet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -130,7 +137,7 @@ class DiagnosticContributionSet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -138,7 +145,7 @@ class DiagnosticContributionSet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -146,7 +153,7 @@ class DiagnosticContributionSet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -154,7 +161,7 @@ class DiagnosticContributionSet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticContributionSet.Annotations"] = field(
         default=None,
@@ -162,7 +169,7 @@ class DiagnosticContributionSet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -170,7 +177,7 @@ class DiagnosticContributionSet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     common_properties: Optional[DiagnosticCommonProps] = field(
         default=None,
@@ -178,15 +185,17 @@ class DiagnosticContributionSet:
             "name": "COMMON-PROPERTIES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_instance_refs: Optional["DiagnosticContributionSet.EcuInstanceRefs"] = field(
+    ecu_instance_refs: Optional[
+        "DiagnosticContributionSet.EcuInstanceRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     elements: Optional["DiagnosticContributionSet.Elements"] = field(
         default=None,
@@ -194,22 +203,24 @@ class DiagnosticContributionSet:
             "name": "ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_tables: Optional["DiagnosticContributionSet.ServiceTables"] = field(
+    service_tables: Optional[
+        "DiagnosticContributionSet.ServiceTables"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-TABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -217,14 +228,14 @@ class DiagnosticContributionSet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -235,7 +246,7 @@ class DiagnosticContributionSet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -246,18 +257,20 @@ class DiagnosticContributionSet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class EcuInstanceRefs:
-        ecu_instance_ref: List["DiagnosticContributionSet.EcuInstanceRefs.EcuInstanceRef"] = field(
+        ecu_instance_ref: List[
+            "DiagnosticContributionSet.EcuInstanceRefs.EcuInstanceRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ECU-INSTANCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -268,27 +281,31 @@ class DiagnosticContributionSet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class Elements:
-        diagnostic_common_element_ref_conditional: List[DiagnosticCommonElementRefConditional] = field(
+        diagnostic_common_element_ref_conditional: List[
+            DiagnosticCommonElementRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ServiceTables:
-        diagnostic_service_table_ref_conditional: List[DiagnosticServiceTableRefConditional] = field(
+        diagnostic_service_table_ref_conditional: List[
+            DiagnosticServiceTableRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIAGNOSTIC-SERVICE-TABLE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

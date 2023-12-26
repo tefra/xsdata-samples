@@ -17,6 +17,7 @@ class CorporateDiscountId3:
         negotiated rate code. Otherwise, this data is a Corporate Discount
         ID rate.
     """
+
     class Meta:
         name = "CorporateDiscountID"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -25,12 +26,12 @@ class CorporateDiscountId3:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     negotiated_rate_code: None | bool = field(
         default=None,
         metadata={
             "name": "NegotiatedRateCode",
             "type": "Attribute",
-        }
+        },
     )

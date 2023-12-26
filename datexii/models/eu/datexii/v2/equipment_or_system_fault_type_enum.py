@@ -14,6 +14,7 @@ class EquipmentOrSystemFaultTypeEnum(Enum):
     :cvar WORKING_INCORRECTLY: Working incorrectly.
     :cvar WORKING_INTERMITTENTLY: Working intermittently.
     """
+
     NOT_WORKING = "notWorking"
     OUT_OF_SERVICE = "outOfService"
     WORKING_INCORRECTLY = "workingIncorrectly"

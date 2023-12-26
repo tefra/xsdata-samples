@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 from .response_structure import ResponseStructure
-from .service_delivery_error_condition_structure import ServiceDeliveryErrorConditionStructure
+from .service_delivery_error_condition_structure import (
+    ServiceDeliveryErrorConditionStructure,
+)
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
@@ -15,7 +17,7 @@ class AbstractDiscoveryDeliveryStructure(ResponseStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     error_condition: Optional[ServiceDeliveryErrorConditionStructure] = field(
         default=None,
@@ -23,7 +25,7 @@ class AbstractDiscoveryDeliveryStructure(ResponseStructure):
             "name": "ErrorCondition",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     valid_until: Optional[XmlDateTime] = field(
         default=None,
@@ -31,7 +33,7 @@ class AbstractDiscoveryDeliveryStructure(ResponseStructure):
             "name": "ValidUntil",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     shortest_possible_cycle: Optional[XmlDuration] = field(
         default=None,
@@ -39,5 +41,5 @@ class AbstractDiscoveryDeliveryStructure(ResponseStructure):
             "name": "ShortestPossibleCycle",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

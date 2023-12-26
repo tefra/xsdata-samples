@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_fare_product import TypeOfFareProduct
 from .type_of_fare_product_ref import TypeOfFareProductRef
@@ -12,7 +12,9 @@ class TypeOfFareProductsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfFareProducts_RelStructure"
 
-    type_of_fare_product_ref_or_type_of_fare_product: List[object] = field(
+    type_of_fare_product_ref_or_type_of_fare_product: List[
+        Union[TypeOfFareProductRef, TypeOfFareProduct]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class TypeOfFareProductsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

@@ -15,6 +15,7 @@ class DefaultValueApplicationStrategyEnumSimple(Enum):
         value  before further validation or processing.
     :cvar NO_DEFAULT: do not apply the AUTOSAR defined default value
     """
+
     DEFAULT_IF_REVISION_UPDATE = "DEFAULT-IF-REVISION-UPDATE"
     DEFAULT_IF_UNDEFINED = "DEFAULT-IF-UNDEFINED"
     NO_DEFAULT = "NO-DEFAULT"

@@ -18,6 +18,7 @@ class TicketAgency:
     pseudo_city_code
         The PCC of the host system.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,7 +28,7 @@ class TicketAgency:
             "name": "ProviderCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     pseudo_city_code: None | object = field(
         default=None,
@@ -35,5 +36,5 @@ class TicketAgency:
             "name": "PseudoCityCode",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

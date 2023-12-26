@@ -30,6 +30,7 @@ class RailReservation(BaseReservation1):
     booking_status
         The Current Status of the rail booking.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -41,7 +42,7 @@ class RailReservation(BaseReservation1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )
     rail_journey: list[RailJourney] = field(
         default_factory=list,
@@ -50,7 +51,7 @@ class RailReservation(BaseReservation1):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     rail_pricing_info: list[RailPricingInfo] = field(
         default_factory=list,
@@ -58,7 +59,7 @@ class RailReservation(BaseReservation1):
             "name": "RailPricingInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     payment: list[Payment1] = field(
         default_factory=list,
@@ -67,7 +68,7 @@ class RailReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     rail_ticket_info: list[RailTicketInfo] = field(
         default_factory=list,
@@ -75,14 +76,14 @@ class RailReservation(BaseReservation1):
             "name": "RailTicketInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     rail_fare_note_list: None | RailFareNoteList = field(
         default=None,
         metadata={
             "name": "RailFareNoteList",
             "type": "Element",
-        }
+        },
     )
     supplier_locator: list[SupplierLocator1] = field(
         default_factory=list,
@@ -91,7 +92,7 @@ class RailReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     booking_status: None | str = field(
         default=None,
@@ -99,5 +100,5 @@ class RailReservation(BaseReservation1):
             "name": "BookingStatus",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

@@ -3,7 +3,9 @@ from typing import List, Optional
 from xsdata.models.datatype import XmlDuration
 from .booking_arrangements_structure import BookingArrangementsStructure
 from .per_basis_enumeration import PerBasisEnumeration
-from .reservation_charge_type_enumeration import ReservationChargeTypeEnumeration
+from .reservation_charge_type_enumeration import (
+    ReservationChargeTypeEnumeration,
+)
 from .reservation_enumeration import ReservationEnumeration
 from .seat_allocation_method_enumeration import SeatAllocationMethodEnumeration
 from .usage_parameter_version_structure import UsageParameterVersionStructure
@@ -23,7 +25,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     minimum_number_to_reserve: Optional[int] = field(
         default=None,
@@ -31,7 +33,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumNumberToReserve",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_to_reserve: Optional[int] = field(
         default=None,
@@ -39,7 +41,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberToReserve",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     must_reserve_whole_compartment: Optional[bool] = field(
         default=None,
@@ -47,15 +49,17 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "MustReserveWholeCompartment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    reservation_charge_type: Optional[ReservationChargeTypeEnumeration] = field(
+    reservation_charge_type: Optional[
+        ReservationChargeTypeEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "ReservationChargeType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     fee_basis: Optional[PerBasisEnumeration] = field(
         default=None,
@@ -63,7 +67,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "FeeBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     has_free_connecting_reservations: Optional[bool] = field(
         default=None,
@@ -71,7 +75,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "HasFreeConnectingReservations",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     number_of_free_connecting_reservations: Optional[int] = field(
         default=None,
@@ -79,7 +83,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "NumberOfFreeConnectingReservations",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_fee_refundable: Optional[bool] = field(
         default=None,
@@ -87,7 +91,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "IsFeeRefundable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     booking_arrangements: Optional[BookingArrangementsStructure] = field(
         default=None,
@@ -95,7 +99,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "BookingArrangements",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     seat_allocation_method: Optional[SeatAllocationMethodEnumeration] = field(
         default=None,
@@ -103,7 +107,7 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "SeatAllocationMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     reservation_expiry_period: Optional[XmlDuration] = field(
         default=None,
@@ -111,5 +115,5 @@ class ReservingVersionStructure(UsageParameterVersionStructure):
             "name": "ReservationExpiryPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

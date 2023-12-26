@@ -53,6 +53,7 @@ class CountryEnum(Enum):
     :cvar VA: Vatican City State
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     AT = "at"
     BE = "be"
     BG = "bg"

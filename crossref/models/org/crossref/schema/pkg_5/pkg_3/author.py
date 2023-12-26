@@ -8,6 +8,7 @@ class Author:
     """
     First author in a citation.
     """
+
     class Meta:
         name = "author"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -16,5 +17,5 @@ class Author:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

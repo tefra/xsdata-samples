@@ -1,10 +1,18 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.parking_occupancy_enum import ParkingOccupancyEnum
-from datexii.models.eu.datexii.v2.parking_occupancy_trend_enum import ParkingOccupancyTrendEnum
-from datexii.models.eu.datexii.v2.parking_vacant_spaces_enum import ParkingVacantSpacesEnum
-from datexii.models.eu.datexii.v2.vehicle_count_and_rate import VehicleCountAndRate
+from datexii.models.eu.datexii.v2.parking_occupancy_enum import (
+    ParkingOccupancyEnum,
+)
+from datexii.models.eu.datexii.v2.parking_occupancy_trend_enum import (
+    ParkingOccupancyTrendEnum,
+)
+from datexii.models.eu.datexii.v2.parking_vacant_spaces_enum import (
+    ParkingVacantSpacesEnum,
+)
+from datexii.models.eu.datexii.v2.vehicle_count_and_rate import (
+    VehicleCountAndRate,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -49,13 +57,14 @@ class ParkingOccupancy:
     :ivar vehicle_count_and_rate:
     :ivar parking_occupancy_extension:
     """
+
     parking_number_of_spaces_override: Optional[int] = field(
         default=None,
         metadata={
             "name": "parkingNumberOfSpacesOverride",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_number_of_vacant_spaces: Optional[int] = field(
         default=None,
@@ -63,7 +72,7 @@ class ParkingOccupancy:
             "name": "parkingNumberOfVacantSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_number_of_vacant_spaces_lower_than: Optional[int] = field(
         default=None,
@@ -71,7 +80,7 @@ class ParkingOccupancy:
             "name": "parkingNumberOfVacantSpacesLowerThan",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_number_of_vacant_spaces_higher_than: Optional[int] = field(
         default=None,
@@ -79,15 +88,17 @@ class ParkingOccupancy:
             "name": "parkingNumberOfVacantSpacesHigherThan",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_number_of_vacant_spaces_graded: Optional[ParkingVacantSpacesEnum] = field(
+    parking_number_of_vacant_spaces_graded: Optional[
+        ParkingVacantSpacesEnum
+    ] = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpacesGraded",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_number_of_occupied_spaces: Optional[int] = field(
         default=None,
@@ -95,7 +106,7 @@ class ParkingOccupancy:
             "name": "parkingNumberOfOccupiedSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_number_of_vehicles: Optional[int] = field(
         default=None,
@@ -103,7 +114,7 @@ class ParkingOccupancy:
             "name": "parkingNumberOfVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_occupancy: Optional[float] = field(
         default=None,
@@ -111,7 +122,7 @@ class ParkingOccupancy:
             "name": "parkingOccupancy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_occupancy_graded: Optional[ParkingOccupancyEnum] = field(
         default=None,
@@ -119,7 +130,7 @@ class ParkingOccupancy:
             "name": "parkingOccupancyGraded",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_occupancy_trend: Optional[ParkingOccupancyTrendEnum] = field(
         default=None,
@@ -127,7 +138,7 @@ class ParkingOccupancy:
             "name": "parkingOccupancyTrend",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_not_allowed: Optional[bool] = field(
         default=None,
@@ -135,7 +146,7 @@ class ParkingOccupancy:
             "name": "parkingNotAllowed",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_count_and_rate: List[VehicleCountAndRate] = field(
         default_factory=list,
@@ -143,7 +154,7 @@ class ParkingOccupancy:
             "name": "vehicleCountAndRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     parking_occupancy_extension: Optional[ExtensionType] = field(
         default=None,
@@ -151,5 +162,5 @@ class ParkingOccupancy:
             "name": "parkingOccupancyExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

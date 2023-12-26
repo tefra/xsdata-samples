@@ -120,6 +120,7 @@ class FlatInstanceDescriptor:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "FLAT-INSTANCE-DESCRIPTOR"
 
@@ -130,15 +131,17 @@ class FlatInstanceDescriptor:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["FlatInstanceDescriptor.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "FlatInstanceDescriptor.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -146,7 +149,7 @@ class FlatInstanceDescriptor:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -154,7 +157,7 @@ class FlatInstanceDescriptor:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -162,7 +165,7 @@ class FlatInstanceDescriptor:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -170,7 +173,7 @@ class FlatInstanceDescriptor:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -178,7 +181,7 @@ class FlatInstanceDescriptor:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["FlatInstanceDescriptor.Annotations"] = field(
         default=None,
@@ -186,7 +189,7 @@ class FlatInstanceDescriptor:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     role: Optional[Identifier] = field(
         default=None,
@@ -194,7 +197,7 @@ class FlatInstanceDescriptor:
             "name": "ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     rte_plugin_props: Optional[RtePluginProps] = field(
         default=None,
@@ -202,7 +205,7 @@ class FlatInstanceDescriptor:
             "name": "RTE-PLUGIN-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_data_def_props: Optional[SwDataDefProps] = field(
         default=None,
@@ -210,7 +213,7 @@ class FlatInstanceDescriptor:
             "name": "SW-DATA-DEF-PROPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     upstream_reference_iref: Optional[AnyInstanceRef] = field(
         default=None,
@@ -218,7 +221,7 @@ class FlatInstanceDescriptor:
             "name": "UPSTREAM-REFERENCE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_extract_reference_iref: Optional[AnyInstanceRef] = field(
         default=None,
@@ -226,7 +229,7 @@ class FlatInstanceDescriptor:
             "name": "ECU-EXTRACT-REFERENCE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -234,14 +237,14 @@ class FlatInstanceDescriptor:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -249,14 +252,14 @@ class FlatInstanceDescriptor:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -267,7 +270,7 @@ class FlatInstanceDescriptor:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -278,5 +281,5 @@ class FlatInstanceDescriptor:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

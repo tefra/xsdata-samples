@@ -22,6 +22,7 @@ class VehicleUsageEnum(Enum):
     :cvar ROAD_OPERATOR: Vehicle used by the road operator.
     :cvar TAXI: Vehicle used to provide an authorised taxi service.
     """
+
     AGRICULTURAL = "agricultural"
     COMMERCIAL = "commercial"
     EMERGENCY_SERVICES = "emergencyServices"

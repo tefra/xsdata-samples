@@ -17,6 +17,7 @@ class StockControl4:
     number
         Stock control number.
     """
+
     class Meta:
         name = "StockControl"
         namespace = "http://www.travelport.com/schema/common_v37_0"
@@ -26,12 +27,12 @@ class StockControl4:
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
     number: None | str = field(
         default=None,
         metadata={
             "name": "Number",
             "type": "Attribute",
-        }
+        },
     )

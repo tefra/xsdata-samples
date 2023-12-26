@@ -13,6 +13,7 @@ class BookingTravelerReq(BookingBaseReq):
     """
     Used to add update delete booking traveler and its contents.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
@@ -21,19 +22,19 @@ class BookingTravelerReq(BookingBaseReq):
         metadata={
             "name": "AddTraveler",
             "type": "Element",
-        }
+        },
     )
     update_traveler: None | UpdateTraveler = field(
         default=None,
         metadata={
             "name": "UpdateTraveler",
             "type": "Element",
-        }
+        },
     )
     delete_traveler: None | DeleteTraveler = field(
         default=None,
         metadata={
             "name": "DeleteTraveler",
             "type": "Element",
-        }
+        },
     )

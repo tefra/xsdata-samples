@@ -6,11 +6,15 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .asynchronous_server_call_returns_event import AsynchronousServerCallReturnsEvent
+from .asynchronous_server_call_returns_event import (
+    AsynchronousServerCallReturnsEvent,
+)
 from .background_event import BackgroundEvent
 from .boolean import Boolean
 from .category_string import CategoryString
-from .constant_specification_mapping_set_subtypes_enum import ConstantSpecificationMappingSetSubtypesEnum
+from .constant_specification_mapping_set_subtypes_enum import (
+    ConstantSpecificationMappingSetSubtypesEnum,
+)
 from .data_receive_error_event import DataReceiveErrorEvent
 from .data_received_event import DataReceivedEvent
 from .data_send_completed_event import DataSendCompletedEvent
@@ -19,10 +23,14 @@ from .data_write_completed_event import DataWriteCompletedEvent
 from .exclusive_area import ExclusiveArea
 from .exclusive_area_nesting_order import ExclusiveAreaNestingOrder
 from .external_trigger_occurred_event import ExternalTriggerOccurredEvent
-from .handle_termination_and_restart_enum import HandleTerminationAndRestartEnum
+from .handle_termination_and_restart_enum import (
+    HandleTerminationAndRestartEnum,
+)
 from .identifier import Identifier
 from .included_data_type_set import IncludedDataTypeSet
-from .included_mode_declaration_group_set import IncludedModeDeclarationGroupSet
+from .included_mode_declaration_group_set import (
+    IncludedModeDeclarationGroupSet,
+)
 from .init_event import InitEvent
 from .instantiation_data_def_props import InstantiationDataDefProps
 from .internal_trigger_occurred_event import InternalTriggerOccurredEvent
@@ -280,6 +288,7 @@ class SwcInternalBehavior:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SWC-INTERNAL-BEHAVIOR"
 
@@ -290,15 +299,17 @@ class SwcInternalBehavior:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SwcInternalBehavior.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SwcInternalBehavior.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -306,7 +317,7 @@ class SwcInternalBehavior:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -314,7 +325,7 @@ class SwcInternalBehavior:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -322,7 +333,7 @@ class SwcInternalBehavior:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -330,7 +341,7 @@ class SwcInternalBehavior:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -338,7 +349,7 @@ class SwcInternalBehavior:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SwcInternalBehavior.Annotations"] = field(
         default=None,
@@ -346,7 +357,7 @@ class SwcInternalBehavior:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     constant_memorys: Optional["SwcInternalBehavior.ConstantMemorys"] = field(
         default=None,
@@ -354,23 +365,27 @@ class SwcInternalBehavior:
             "name": "CONSTANT-MEMORYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    constant_value_mapping_refs: Optional["SwcInternalBehavior.ConstantValueMappingRefs"] = field(
+    constant_value_mapping_refs: Optional[
+        "SwcInternalBehavior.ConstantValueMappingRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    data_type_mapping_refs: Optional["SwcInternalBehavior.DataTypeMappingRefs"] = field(
+    data_type_mapping_refs: Optional[
+        "SwcInternalBehavior.DataTypeMappingRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     exclusive_areas: Optional["SwcInternalBehavior.ExclusiveAreas"] = field(
         default=None,
@@ -378,15 +393,17 @@ class SwcInternalBehavior:
             "name": "EXCLUSIVE-AREAS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exclusive_area_nesting_orders: Optional["SwcInternalBehavior.ExclusiveAreaNestingOrders"] = field(
+    exclusive_area_nesting_orders: Optional[
+        "SwcInternalBehavior.ExclusiveAreaNestingOrders"
+    ] = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     static_memorys: Optional["SwcInternalBehavior.StaticMemorys"] = field(
         default=None,
@@ -394,15 +411,17 @@ class SwcInternalBehavior:
             "name": "STATIC-MEMORYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ar_typed_per_instance_memorys: Optional["SwcInternalBehavior.ArTypedPerInstanceMemorys"] = field(
+    ar_typed_per_instance_memorys: Optional[
+        "SwcInternalBehavior.ArTypedPerInstanceMemorys"
+    ] = field(
         default=None,
         metadata={
             "name": "AR-TYPED-PER-INSTANCE-MEMORYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     events: Optional["SwcInternalBehavior.Events"] = field(
         default=None,
@@ -410,79 +429,97 @@ class SwcInternalBehavior:
             "name": "EVENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    exclusive_area_policys: Optional["SwcInternalBehavior.ExclusiveAreaPolicys"] = field(
+    exclusive_area_policys: Optional[
+        "SwcInternalBehavior.ExclusiveAreaPolicys"
+    ] = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    explicit_inter_runnable_variables: Optional["SwcInternalBehavior.ExplicitInterRunnableVariables"] = field(
+    explicit_inter_runnable_variables: Optional[
+        "SwcInternalBehavior.ExplicitInterRunnableVariables"
+    ] = field(
         default=None,
         metadata={
             "name": "EXPLICIT-INTER-RUNNABLE-VARIABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    handle_termination_and_restart: Optional[HandleTerminationAndRestartEnum] = field(
+    handle_termination_and_restart: Optional[
+        HandleTerminationAndRestartEnum
+    ] = field(
         default=None,
         metadata={
             "name": "HANDLE-TERMINATION-AND-RESTART",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    implicit_inter_runnable_variables: Optional["SwcInternalBehavior.ImplicitInterRunnableVariables"] = field(
+    implicit_inter_runnable_variables: Optional[
+        "SwcInternalBehavior.ImplicitInterRunnableVariables"
+    ] = field(
         default=None,
         metadata={
             "name": "IMPLICIT-INTER-RUNNABLE-VARIABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    included_data_type_sets: Optional["SwcInternalBehavior.IncludedDataTypeSets"] = field(
+    included_data_type_sets: Optional[
+        "SwcInternalBehavior.IncludedDataTypeSets"
+    ] = field(
         default=None,
         metadata={
             "name": "INCLUDED-DATA-TYPE-SETS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    included_mode_declaration_group_sets: Optional["SwcInternalBehavior.IncludedModeDeclarationGroupSets"] = field(
+    included_mode_declaration_group_sets: Optional[
+        "SwcInternalBehavior.IncludedModeDeclarationGroupSets"
+    ] = field(
         default=None,
         metadata={
             "name": "INCLUDED-MODE-DECLARATION-GROUP-SETS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    instantiation_data_def_propss: Optional["SwcInternalBehavior.InstantiationDataDefPropss"] = field(
+    instantiation_data_def_propss: Optional[
+        "SwcInternalBehavior.InstantiationDataDefPropss"
+    ] = field(
         default=None,
         metadata={
             "name": "INSTANTIATION-DATA-DEF-PROPSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    per_instance_memorys: Optional["SwcInternalBehavior.PerInstanceMemorys"] = field(
+    per_instance_memorys: Optional[
+        "SwcInternalBehavior.PerInstanceMemorys"
+    ] = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-MEMORYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    per_instance_parameters: Optional["SwcInternalBehavior.PerInstanceParameters"] = field(
+    per_instance_parameters: Optional[
+        "SwcInternalBehavior.PerInstanceParameters"
+    ] = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-PARAMETERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_api_options: Optional["SwcInternalBehavior.PortApiOptions"] = field(
         default=None,
@@ -490,7 +527,7 @@ class SwcInternalBehavior:
             "name": "PORT-API-OPTIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     runnables: Optional["SwcInternalBehavior.Runnables"] = field(
         default=None,
@@ -498,23 +535,27 @@ class SwcInternalBehavior:
             "name": "RUNNABLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_dependencys: Optional["SwcInternalBehavior.ServiceDependencys"] = field(
+    service_dependencys: Optional[
+        "SwcInternalBehavior.ServiceDependencys"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-DEPENDENCYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    shared_parameters: Optional["SwcInternalBehavior.SharedParameters"] = field(
+    shared_parameters: Optional[
+        "SwcInternalBehavior.SharedParameters"
+    ] = field(
         default=None,
         metadata={
             "name": "SHARED-PARAMETERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     supports_multiple_instantiation: Optional[Boolean] = field(
         default=None,
@@ -522,15 +563,17 @@ class SwcInternalBehavior:
             "name": "SUPPORTS-MULTIPLE-INSTANTIATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    variation_point_proxys: Optional["SwcInternalBehavior.VariationPointProxys"] = field(
+    variation_point_proxys: Optional[
+        "SwcInternalBehavior.VariationPointProxys"
+    ] = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT-PROXYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -538,14 +581,14 @@ class SwcInternalBehavior:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -553,14 +596,14 @@ class SwcInternalBehavior:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -571,7 +614,7 @@ class SwcInternalBehavior:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -582,7 +625,7 @@ class SwcInternalBehavior:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -593,40 +636,46 @@ class SwcInternalBehavior:
                 "name": "PARAMETER-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ConstantValueMappingRefs:
-        constant_value_mapping_ref: List["SwcInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef"] = field(
+        constant_value_mapping_ref: List[
+            "SwcInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CONSTANT-VALUE-MAPPING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = field(
+            dest: Optional[
+                ConstantSpecificationMappingSetSubtypesEnum
+            ] = field(
                 default=None,
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class DataTypeMappingRefs:
-        data_type_mapping_ref: List["SwcInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef"] = field(
+        data_type_mapping_ref: List[
+            "SwcInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DATA-TYPE-MAPPING-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -637,7 +686,7 @@ class SwcInternalBehavior:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -648,7 +697,7 @@ class SwcInternalBehavior:
                 "name": "EXCLUSIVE-AREA",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -659,7 +708,7 @@ class SwcInternalBehavior:
                 "name": "EXCLUSIVE-AREA-NESTING-ORDER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -670,7 +719,7 @@ class SwcInternalBehavior:
                 "name": "VARIABLE-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -681,18 +730,20 @@ class SwcInternalBehavior:
                 "name": "VARIABLE-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class Events:
-        asynchronous_server_call_returns_event: List[AsynchronousServerCallReturnsEvent] = field(
+        asynchronous_server_call_returns_event: List[
+            AsynchronousServerCallReturnsEvent
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ASYNCHRONOUS-SERVER-CALL-RETURNS-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         background_event: List[BackgroundEvent] = field(
             default_factory=list,
@@ -700,7 +751,7 @@ class SwcInternalBehavior:
                 "name": "BACKGROUND-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         data_receive_error_event: List[DataReceiveErrorEvent] = field(
             default_factory=list,
@@ -708,7 +759,7 @@ class SwcInternalBehavior:
                 "name": "DATA-RECEIVE-ERROR-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         data_received_event: List[DataReceivedEvent] = field(
             default_factory=list,
@@ -716,7 +767,7 @@ class SwcInternalBehavior:
                 "name": "DATA-RECEIVED-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         data_send_completed_event: List[DataSendCompletedEvent] = field(
             default_factory=list,
@@ -724,7 +775,7 @@ class SwcInternalBehavior:
                 "name": "DATA-SEND-COMPLETED-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         data_write_completed_event: List[DataWriteCompletedEvent] = field(
             default_factory=list,
@@ -732,15 +783,17 @@ class SwcInternalBehavior:
                 "name": "DATA-WRITE-COMPLETED-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        external_trigger_occurred_event: List[ExternalTriggerOccurredEvent] = field(
+        external_trigger_occurred_event: List[
+            ExternalTriggerOccurredEvent
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "EXTERNAL-TRIGGER-OCCURRED-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         init_event: List[InitEvent] = field(
             default_factory=list,
@@ -748,15 +801,17 @@ class SwcInternalBehavior:
                 "name": "INIT-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        internal_trigger_occurred_event: List[InternalTriggerOccurredEvent] = field(
+        internal_trigger_occurred_event: List[
+            InternalTriggerOccurredEvent
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INTERNAL-TRIGGER-OCCURRED-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         mode_switched_ack_event: List[ModeSwitchedAckEvent] = field(
             default_factory=list,
@@ -764,7 +819,7 @@ class SwcInternalBehavior:
                 "name": "MODE-SWITCHED-ACK-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         operation_invoked_event: List[OperationInvokedEvent] = field(
             default_factory=list,
@@ -772,7 +827,7 @@ class SwcInternalBehavior:
                 "name": "OPERATION-INVOKED-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         os_task_execution_event: List[OsTaskExecutionEvent] = field(
             default_factory=list,
@@ -780,7 +835,7 @@ class SwcInternalBehavior:
                 "name": "OS-TASK-EXECUTION-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         swc_mode_manager_error_event: List[SwcModeManagerErrorEvent] = field(
             default_factory=list,
@@ -788,7 +843,7 @@ class SwcInternalBehavior:
                 "name": "SWC-MODE-MANAGER-ERROR-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         swc_mode_switch_event: List[SwcModeSwitchEvent] = field(
             default_factory=list,
@@ -796,7 +851,7 @@ class SwcInternalBehavior:
                 "name": "SWC-MODE-SWITCH-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         timing_event: List[TimingEvent] = field(
             default_factory=list,
@@ -804,7 +859,7 @@ class SwcInternalBehavior:
                 "name": "TIMING-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         transformer_hard_error_event: List[TransformerHardErrorEvent] = field(
             default_factory=list,
@@ -812,7 +867,7 @@ class SwcInternalBehavior:
                 "name": "TRANSFORMER-HARD-ERROR-EVENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -823,7 +878,7 @@ class SwcInternalBehavior:
                 "name": "SWC-EXCLUSIVE-AREA-POLICY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -834,7 +889,7 @@ class SwcInternalBehavior:
                 "name": "VARIABLE-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -845,7 +900,7 @@ class SwcInternalBehavior:
                 "name": "VARIABLE-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -856,18 +911,20 @@ class SwcInternalBehavior:
                 "name": "INCLUDED-DATA-TYPE-SET",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class IncludedModeDeclarationGroupSets:
-        included_mode_declaration_group_set: List[IncludedModeDeclarationGroupSet] = field(
+        included_mode_declaration_group_set: List[
+            IncludedModeDeclarationGroupSet
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INCLUDED-MODE-DECLARATION-GROUP-SET",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -878,7 +935,7 @@ class SwcInternalBehavior:
                 "name": "INSTANTIATION-DATA-DEF-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -889,7 +946,7 @@ class SwcInternalBehavior:
                 "name": "PER-INSTANCE-MEMORY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -900,7 +957,7 @@ class SwcInternalBehavior:
                 "name": "PARAMETER-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -911,7 +968,7 @@ class SwcInternalBehavior:
                 "name": "PORT-API-OPTION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -922,7 +979,7 @@ class SwcInternalBehavior:
                 "name": "RUNNABLE-ENTITY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -933,7 +990,7 @@ class SwcInternalBehavior:
                 "name": "SWC-SERVICE-DEPENDENCY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -944,7 +1001,7 @@ class SwcInternalBehavior:
                 "name": "PARAMETER-DATA-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -955,5 +1012,5 @@ class SwcInternalBehavior:
                 "name": "VARIATION-POINT-PROXY",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

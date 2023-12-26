@@ -9,6 +9,7 @@ class Provider5:
     """
     Provider identifier.
     """
+
     class Meta:
         name = "Provider"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -21,5 +22,5 @@ class Provider5:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )

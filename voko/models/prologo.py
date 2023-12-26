@@ -28,5 +28,5 @@ class Prologo:
                     "type": Alineo,
                 },
             ),
-        }
+        },
     )

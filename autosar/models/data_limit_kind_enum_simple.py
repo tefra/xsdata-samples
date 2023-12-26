@@ -9,6 +9,7 @@ class DataLimitKindEnumSimple(Enum):
     :cvar MIN: Limitation to minimum value
     :cvar NONE: No limitation applicable
     """
+
     MAX = "MAX"
     MIN = "MIN"
     NONE = "NONE"

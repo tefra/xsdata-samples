@@ -11,6 +11,7 @@ class AccountInformation5:
     """
     Account Information required for File Finishing.
     """
+
     class Meta:
         name = "AccountInformation"
         namespace = "http://www.travelport.com/schema/common_v34_0"
@@ -20,7 +21,7 @@ class AccountInformation5:
         metadata={
             "name": "Address",
             "type": "Element",
-        }
+        },
     )
     phone_number: list[PhoneNumber6] = field(
         default_factory=list,
@@ -28,12 +29,12 @@ class AccountInformation5:
             "name": "PhoneNumber",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     account_name: None | str = field(
         default=None,
         metadata={
             "name": "AccountName",
             "type": "Attribute",
-        }
+        },
     )

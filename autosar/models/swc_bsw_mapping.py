@@ -6,7 +6,9 @@ from .annotation import (
     DocumentationBlock,
     VariationPoint,
 )
-from .bsw_internal_behavior_subtypes_enum import BswInternalBehaviorSubtypesEnum
+from .bsw_internal_behavior_subtypes_enum import (
+    BswInternalBehaviorSubtypesEnum,
+)
 from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -14,9 +16,13 @@ from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .swc_bsw_runnable_mapping import SwcBswRunnableMapping
-from .swc_bsw_synchronized_mode_group_prototype import SwcBswSynchronizedModeGroupPrototype
+from .swc_bsw_synchronized_mode_group_prototype import (
+    SwcBswSynchronizedModeGroupPrototype,
+)
 from .swc_bsw_synchronized_trigger import SwcBswSynchronizedTrigger
-from .swc_internal_behavior_subtypes_enum import SwcInternalBehaviorSubtypesEnum
+from .swc_internal_behavior_subtypes_enum import (
+    SwcInternalBehaviorSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -99,6 +105,7 @@ class SwcBswMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SWC-BSW-MAPPING"
 
@@ -109,7 +116,7 @@ class SwcBswMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["SwcBswMapping.ShortNameFragments"] = field(
         default=None,
@@ -117,7 +124,7 @@ class SwcBswMapping:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -125,7 +132,7 @@ class SwcBswMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -133,7 +140,7 @@ class SwcBswMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -141,7 +148,7 @@ class SwcBswMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -149,7 +156,7 @@ class SwcBswMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -157,7 +164,7 @@ class SwcBswMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SwcBswMapping.Annotations"] = field(
         default=None,
@@ -165,7 +172,7 @@ class SwcBswMapping:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -173,7 +180,7 @@ class SwcBswMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     bsw_behavior_ref: Optional["SwcBswMapping.BswBehaviorRef"] = field(
         default=None,
@@ -181,7 +188,7 @@ class SwcBswMapping:
             "name": "BSW-BEHAVIOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     runnable_mappings: Optional["SwcBswMapping.RunnableMappings"] = field(
         default=None,
@@ -189,7 +196,7 @@ class SwcBswMapping:
             "name": "RUNNABLE-MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     swc_behavior_ref: Optional["SwcBswMapping.SwcBehaviorRef"] = field(
         default=None,
@@ -197,30 +204,34 @@ class SwcBswMapping:
             "name": "SWC-BEHAVIOR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    synchronized_mode_groups: Optional["SwcBswMapping.SynchronizedModeGroups"] = field(
+    synchronized_mode_groups: Optional[
+        "SwcBswMapping.SynchronizedModeGroups"
+    ] = field(
         default=None,
         metadata={
             "name": "SYNCHRONIZED-MODE-GROUPS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    synchronized_triggers: Optional["SwcBswMapping.SynchronizedTriggers"] = field(
+    synchronized_triggers: Optional[
+        "SwcBswMapping.SynchronizedTriggers"
+    ] = field(
         default=None,
         metadata={
             "name": "SYNCHRONIZED-TRIGGERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -228,14 +239,14 @@ class SwcBswMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -246,7 +257,7 @@ class SwcBswMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -257,7 +268,7 @@ class SwcBswMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -268,7 +279,7 @@ class SwcBswMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -279,7 +290,7 @@ class SwcBswMapping:
                 "name": "SWC-BSW-RUNNABLE-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -290,18 +301,20 @@ class SwcBswMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class SynchronizedModeGroups:
-        swc_bsw_synchronized_mode_group_prototype: List[SwcBswSynchronizedModeGroupPrototype] = field(
+        swc_bsw_synchronized_mode_group_prototype: List[
+            SwcBswSynchronizedModeGroupPrototype
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SWC-BSW-SYNCHRONIZED-MODE-GROUP-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -312,5 +325,5 @@ class SwcBswMapping:
                 "name": "SWC-BSW-SYNCHRONIZED-TRIGGER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -22,6 +22,7 @@ class Conference:
     """
     <div> <h3>Conference Information</h3> </div>
     """
+
     class Meta:
         name = "conference"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -32,89 +33,89 @@ class Conference:
             "name": "conf-date",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     conf_name: List[ConfName] = field(
         default_factory=list,
         metadata={
             "name": "conf-name",
             "type": "Element",
-        }
+        },
     )
     conf_acronym: List[ConfAcronym] = field(
         default_factory=list,
         metadata={
             "name": "conf-acronym",
             "type": "Element",
-        }
+        },
     )
     conf_num: Optional[ConfNum] = field(
         default=None,
         metadata={
             "name": "conf-num",
             "type": "Element",
-        }
+        },
     )
     conf_loc: Optional[ConfLoc] = field(
         default=None,
         metadata={
             "name": "conf-loc",
             "type": "Element",
-        }
+        },
     )
     conf_sponsor: List[ConfSponsor] = field(
         default_factory=list,
         metadata={
             "name": "conf-sponsor",
             "type": "Element",
-        }
+        },
     )
     conf_theme: Optional[ConfTheme] = field(
         default=None,
         metadata={
             "name": "conf-theme",
             "type": "Element",
-        }
+        },
     )
     content_type: Optional[str] = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     hreflang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     actuate: Optional[ActuateType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     href: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     role: Optional[str] = field(
         default=None,
@@ -122,21 +123,21 @@ class Conference:
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
             "min_length": 1,
-        }
+        },
     )
     show: Optional[ShowType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     title: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     type_value: TypeType = field(
         init=False,
@@ -145,19 +146,19 @@ class Conference:
             "name": "type",
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )

@@ -10,5 +10,6 @@ class ObdRatioConnectionKindEnumSimple(Enum):
     :cvar OBSERVER: The IUMPR service (of the Dem) uses no API but
         "observes"  the associated diagnostic event.
     """
+
     API_USE = "API-USE"
     OBSERVER = "OBSERVER"

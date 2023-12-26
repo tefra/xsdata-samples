@@ -17,6 +17,7 @@ class LowFareSearchReq(BaseLowFareSearchReq):
         would be used to link to a ‘Policy Group’ in a policy engine
         external to UAPI.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,5 +28,5 @@ class LowFareSearchReq(BaseLowFareSearchReq):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )

@@ -8,6 +8,7 @@ class TypeTransportMode(Enum):
     """
     Enumeration of all Train Transport Modes.
     """
+
     BICYCLE = "Bicycle"
     BOAT = "Boat"
     BUS = "Bus"

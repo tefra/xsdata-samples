@@ -11,7 +11,9 @@ from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .short_name_fragment import ShortNameFragment
-from .so_con_i_pdu_identifier_ref_conditional import SoConIPduIdentifierRefConditional
+from .so_con_i_pdu_identifier_ref_conditional import (
+    SoConIPduIdentifierRefConditional,
+)
 from .socket_address_ref_conditional import SocketAddressRefConditional
 from .tcp_role_enum import TcpRoleEnum
 
@@ -88,6 +90,7 @@ class StaticSocketConnection:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "STATIC-SOCKET-CONNECTION"
 
@@ -98,15 +101,17 @@ class StaticSocketConnection:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["StaticSocketConnection.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "StaticSocketConnection.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -114,7 +119,7 @@ class StaticSocketConnection:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -122,7 +127,7 @@ class StaticSocketConnection:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -130,7 +135,7 @@ class StaticSocketConnection:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -138,7 +143,7 @@ class StaticSocketConnection:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -146,7 +151,7 @@ class StaticSocketConnection:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["StaticSocketConnection.Annotations"] = field(
         default=None,
@@ -154,15 +159,17 @@ class StaticSocketConnection:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    i_pdu_identifiers: Optional["StaticSocketConnection.IPduIdentifiers"] = field(
+    i_pdu_identifiers: Optional[
+        "StaticSocketConnection.IPduIdentifiers"
+    ] = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remote_addresss: Optional["StaticSocketConnection.RemoteAddresss"] = field(
         default=None,
@@ -170,7 +177,7 @@ class StaticSocketConnection:
             "name": "REMOTE-ADDRESSS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     tcp_role: Optional[TcpRoleEnum] = field(
         default=None,
@@ -178,7 +185,7 @@ class StaticSocketConnection:
             "name": "TCP-ROLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -186,14 +193,14 @@ class StaticSocketConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -201,14 +208,14 @@ class StaticSocketConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -219,7 +226,7 @@ class StaticSocketConnection:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -230,27 +237,31 @@ class StaticSocketConnection:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class IPduIdentifiers:
-        so_con_i_pdu_identifier_ref_conditional: List[SoConIPduIdentifierRefConditional] = field(
+        so_con_i_pdu_identifier_ref_conditional: List[
+            SoConIPduIdentifierRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SO-CON-I-PDU-IDENTIFIER-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class RemoteAddresss:
-        socket_address_ref_conditional: List[SocketAddressRefConditional] = field(
+        socket_address_ref_conditional: List[
+            SocketAddressRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-ADDRESS-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

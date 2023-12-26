@@ -18,7 +18,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "name": "ParkingPaymentCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -26,7 +26,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_length: Optional[Decimal] = field(
         default=None,
@@ -34,7 +34,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "name": "MaximumLength",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_width: Optional[Decimal] = field(
         default=None,
@@ -42,7 +42,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "name": "MaximumWidth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_height: Optional[Decimal] = field(
         default=None,
@@ -50,7 +50,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "name": "MaximumHeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_weight: Optional[Decimal] = field(
         default=None,
@@ -58,5 +58,5 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "name": "MaximumWeight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -10,6 +10,7 @@ class MetaData3:
 
     This data is primarily informative and is not persisted.
     """
+
     class Meta:
         name = "MetaData"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -22,7 +23,7 @@ class MetaData3:
             "required": True,
             "min_length": 1,
             "max_length": 10,
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -32,5 +33,5 @@ class MetaData3:
             "required": True,
             "min_length": 1,
             "max_length": 50,
-        }
+        },
     )

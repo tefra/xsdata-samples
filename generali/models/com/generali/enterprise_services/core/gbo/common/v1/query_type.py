@@ -1,8 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_criteria_type import QueryCriteriaType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sort_expression_type import SortExpressionType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.query_criteria_type import (
+    QueryCriteriaType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.sort_expression_type import (
+    SortExpressionType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -28,13 +34,14 @@ class QueryType:
         specific VBS then it should not be present. If present and
         different from the VBO then it must be ignored.</description>
     """
+
     identification: Optional[BaseIdentifiedComponentType] = field(
         default=None,
         metadata={
             "name": "Identification",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     criteria: Optional[QueryCriteriaType] = field(
         default=None,
@@ -42,7 +49,7 @@ class QueryType:
             "name": "Criteria",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     sort_expression: Optional[SortExpressionType] = field(
         default=None,
@@ -50,12 +57,12 @@ class QueryType:
             "name": "SortExpression",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     business_object: Optional[str] = field(
         default=None,
         metadata={
             "name": "businessObject",
             "type": "Attribute",
-        }
+        },
     )

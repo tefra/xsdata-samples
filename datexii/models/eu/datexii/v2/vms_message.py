@@ -1,13 +1,19 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from xsdata.models.datatype import XmlDateTime
-from datexii.models.eu.datexii.v2.coded_reason_for_setting_message_enum import CodedReasonForSettingMessageEnum
+from datexii.models.eu.datexii.v2.coded_reason_for_setting_message_enum import (
+    CodedReasonForSettingMessageEnum,
+)
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.text_page import TextPage
 from datexii.models.eu.datexii.v2.versioned_reference import VersionedReference
-from datexii.models.eu.datexii.v2.vms_message_information_type_enum import VmsMessageInformationTypeEnum
-from datexii.models.eu.datexii.v2.vms_message_pictogram_display_area_index_vms_pictogram_display_area import VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea
+from datexii.models.eu.datexii.v2.vms_message_information_type_enum import (
+    VmsMessageInformationTypeEnum,
+)
+from datexii.models.eu.datexii.v2.vms_message_pictogram_display_area_index_vms_pictogram_display_area import (
+    VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -61,6 +67,7 @@ class VmsMessage:
     :ivar vms_pictogram_display_area:
     :ivar vms_message_extension:
     """
+
     associated_management_or_diversion_plan: Optional[str] = field(
         default=None,
         metadata={
@@ -68,7 +75,7 @@ class VmsMessage:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     message_set_by: Optional[MultilingualString] = field(
         default=None,
@@ -76,7 +83,7 @@ class VmsMessage:
             "name": "messageSetBy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     set_by_system: Optional[bool] = field(
         default=None,
@@ -84,7 +91,7 @@ class VmsMessage:
             "name": "setBySystem",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     reason_for_setting: Optional[MultilingualString] = field(
         default=None,
@@ -92,15 +99,17 @@ class VmsMessage:
             "name": "reasonForSetting",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    coded_reason_for_setting: Optional[CodedReasonForSettingMessageEnum] = field(
+    coded_reason_for_setting: Optional[
+        CodedReasonForSettingMessageEnum
+    ] = field(
         default=None,
         metadata={
             "name": "codedReasonForSetting",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_message_information_type: List[VmsMessageInformationTypeEnum] = field(
         default_factory=list,
@@ -108,7 +117,7 @@ class VmsMessage:
             "name": "vmsMessageInformationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     primary_setting: Optional[bool] = field(
         default=None,
@@ -116,7 +125,7 @@ class VmsMessage:
             "name": "primarySetting",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     mare_nostrum_compliant: Optional[bool] = field(
         default=None,
@@ -124,7 +133,7 @@ class VmsMessage:
             "name": "mareNostrumCompliant",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     time_last_set: Optional[XmlDateTime] = field(
         default=None,
@@ -133,7 +142,7 @@ class VmsMessage:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     requested_by: Optional[MultilingualString] = field(
         default=None,
@@ -141,23 +150,27 @@ class VmsMessage:
             "name": "requestedBy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    situation_to_which_message_is_related: Optional[VersionedReference] = field(
+    situation_to_which_message_is_related: Optional[
+        VersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "situationToWhichMessageIsRelated",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    situation_record_to_which_message_is_related: Optional[VersionedReference] = field(
+    situation_record_to_which_message_is_related: Optional[
+        VersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "situationRecordToWhichMessageIsRelated",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     distance_from_situation_record: Optional[float] = field(
         default=None,
@@ -165,7 +178,7 @@ class VmsMessage:
             "name": "distanceFromSituationRecord",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     text_pictogram_sequencing_interval: Optional[float] = field(
         default=None,
@@ -173,7 +186,7 @@ class VmsMessage:
             "name": "textPictogramSequencingInterval",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     text_page: List[TextPage] = field(
         default_factory=list,
@@ -181,15 +194,17 @@ class VmsMessage:
             "name": "textPage",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    vms_pictogram_display_area: List[VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea] = field(
+    vms_pictogram_display_area: List[
+        VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea
+    ] = field(
         default_factory=list,
         metadata={
             "name": "vmsPictogramDisplayArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vms_message_extension: Optional[ExtensionType] = field(
         default=None,
@@ -197,5 +212,5 @@ class VmsMessage:
             "name": "vmsMessageExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

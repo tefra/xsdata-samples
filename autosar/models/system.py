@@ -8,11 +8,17 @@ from .annotation import (
 )
 from .byte_order_enum import ByteOrderEnum
 from .category_string import CategoryString
-from .client_id_definition_set_subtypes_enum import ClientIdDefinitionSetSubtypesEnum
-from .cp_software_cluster_ref_conditional import CpSoftwareClusterRefConditional
+from .client_id_definition_set_subtypes_enum import (
+    ClientIdDefinitionSetSubtypesEnum,
+)
+from .cp_software_cluster_ref_conditional import (
+    CpSoftwareClusterRefConditional,
+)
 from .fibex_element_ref_conditional import FibexElementRefConditional
 from .identifier import Identifier
-from .interpolation_routine_mapping_set_subtypes_enum import InterpolationRoutineMappingSetSubtypesEnum
+from .interpolation_routine_mapping_set_subtypes_enum import (
+    InterpolationRoutineMappingSetSubtypesEnum,
+)
 from .j_1939_shared_address_cluster import J1939SharedAddressCluster
 from .msr_query_result_chapter import Chapter
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -131,6 +137,7 @@ class System:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SYSTEM"
 
@@ -141,7 +148,7 @@ class System:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["System.ShortNameFragments"] = field(
         default=None,
@@ -149,7 +156,7 @@ class System:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -157,7 +164,7 @@ class System:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -165,7 +172,7 @@ class System:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -173,7 +180,7 @@ class System:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -181,7 +188,7 @@ class System:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -189,7 +196,7 @@ class System:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["System.Annotations"] = field(
         default=None,
@@ -197,7 +204,7 @@ class System:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -205,7 +212,7 @@ class System:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     system_documentations: Optional["System.SystemDocumentations"] = field(
         default=None,
@@ -213,15 +220,17 @@ class System:
             "name": "SYSTEM-DOCUMENTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    client_id_definition_set_refs: Optional["System.ClientIdDefinitionSetRefs"] = field(
+    client_id_definition_set_refs: Optional[
+        "System.ClientIdDefinitionSetRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "CLIENT-ID-DEFINITION-SET-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     container_i_pdu_header_byte_order: Optional[ByteOrderEnum] = field(
         default=None,
@@ -229,7 +238,7 @@ class System:
             "name": "CONTAINER-I-PDU-HEADER-BYTE-ORDER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_extract_version: Optional[RevisionLabelString] = field(
         default=None,
@@ -237,7 +246,7 @@ class System:
             "name": "ECU-EXTRACT-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     fibex_elements: Optional["System.FibexElements"] = field(
         default=None,
@@ -245,23 +254,27 @@ class System:
             "name": "FIBEX-ELEMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    interpolation_routine_mapping_set_refs: Optional["System.InterpolationRoutineMappingSetRefs"] = field(
+    interpolation_routine_mapping_set_refs: Optional[
+        "System.InterpolationRoutineMappingSetRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINE-MAPPING-SET-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    j_1939_shared_address_clusters: Optional["System.J1939SharedAddressClusters"] = field(
+    j_1939_shared_address_clusters: Optional[
+        "System.J1939SharedAddressClusters"
+    ] = field(
         default=None,
         metadata={
             "name": "J-1939-SHARED-ADDRESS-CLUSTERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     mappings: Optional["System.Mappings"] = field(
         default=None,
@@ -269,7 +282,7 @@ class System:
             "name": "MAPPINGS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_vector_length: Optional[PositiveInteger] = field(
         default=None,
@@ -277,7 +290,7 @@ class System:
             "name": "PNC-VECTOR-LENGTH",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pnc_vector_offset: Optional[PositiveInteger] = field(
         default=None,
@@ -285,15 +298,17 @@ class System:
             "name": "PNC-VECTOR-OFFSET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    root_software_compositions: Optional["System.RootSoftwareCompositions"] = field(
+    root_software_compositions: Optional[
+        "System.RootSoftwareCompositions"
+    ] = field(
         default=None,
         metadata={
             "name": "ROOT-SOFTWARE-COMPOSITIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     sw_clusters: Optional["System.SwClusters"] = field(
         default=None,
@@ -301,7 +316,7 @@ class System:
             "name": "SW-CLUSTERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     system_version: Optional[RevisionLabelString] = field(
         default=None,
@@ -309,14 +324,14 @@ class System:
             "name": "SYSTEM-VERSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -324,14 +339,14 @@ class System:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -342,7 +357,7 @@ class System:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -353,7 +368,7 @@ class System:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -364,18 +379,20 @@ class System:
                 "name": "CHAPTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ClientIdDefinitionSetRefs:
-        client_id_definition_set_ref: List["System.ClientIdDefinitionSetRefs.ClientIdDefinitionSetRef"] = field(
+        client_id_definition_set_ref: List[
+            "System.ClientIdDefinitionSetRefs.ClientIdDefinitionSetRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CLIENT-ID-DEFINITION-SET-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -386,29 +403,33 @@ class System:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class FibexElements:
-        fibex_element_ref_conditional: List[FibexElementRefConditional] = field(
+        fibex_element_ref_conditional: List[
+            FibexElementRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FIBEX-ELEMENT-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class InterpolationRoutineMappingSetRefs:
-        interpolation_routine_mapping_set_ref: List["System.InterpolationRoutineMappingSetRefs.InterpolationRoutineMappingSetRef"] = field(
+        interpolation_routine_mapping_set_ref: List[
+            "System.InterpolationRoutineMappingSetRefs.InterpolationRoutineMappingSetRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "INTERPOLATION-ROUTINE-MAPPING-SET-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -419,7 +440,7 @@ class System:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -430,7 +451,7 @@ class System:
                 "name": "J-1939-SHARED-ADDRESS-CLUSTER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -441,27 +462,31 @@ class System:
                 "name": "SYSTEM-MAPPING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class RootSoftwareCompositions:
-        root_sw_composition_prototype: List[RootSwCompositionPrototype] = field(
+        root_sw_composition_prototype: List[
+            RootSwCompositionPrototype
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "ROOT-SW-COMPOSITION-PROTOTYPE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class SwClusters:
-        cp_software_cluster_ref_conditional: List[CpSoftwareClusterRefConditional] = field(
+        cp_software_cluster_ref_conditional: List[
+            CpSoftwareClusterRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "CP-SOFTWARE-CLUSTER-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

@@ -12,12 +12,16 @@ from travelport.models.contract_2 import Contract2
 from travelport.models.field_data_2 import FieldData2
 from travelport.models.field_group_data_2 import FieldGroupData2
 from travelport.models.form_of_payment_6 import FormOfPayment6
-from travelport.models.loyalty_program_enrollment_2 import LoyaltyProgramEnrollment2
+from travelport.models.loyalty_program_enrollment_2 import (
+    LoyaltyProgramEnrollment2,
+)
 from travelport.models.policy_reference_2 import PolicyReference2
 from travelport.models.travel_document_2 import TravelDocument2
 from travelport.models.traveler_group_info_2 import TravelerGroupInfo2
 from travelport.models.traveler_info_2 import TravelerInfo2
-from travelport.models.type_profile_entity_status_2 import TypeProfileEntityStatus2
+from travelport.models.type_profile_entity_status_2 import (
+    TypeProfileEntityStatus2,
+)
 from travelport.models.type_profile_type_7 import TypeProfileType7
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -72,6 +76,7 @@ class ProfileSummary2:
     version
         Version number of the profile.
     """
+
     class Meta:
         name = "ProfileSummary"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -81,64 +86,66 @@ class ProfileSummary2:
         metadata={
             "name": "AgencyGroupInfo",
             "type": "Element",
-        }
+        },
     )
     agency_info: None | AgencyInfo6 = field(
         default=None,
         metadata={
             "name": "AgencyInfo",
             "type": "Element",
-        }
+        },
     )
     branch_group_info: None | BranchGroupInfo2 = field(
         default=None,
         metadata={
             "name": "BranchGroupInfo",
             "type": "Element",
-        }
+        },
     )
     branch_info: None | BranchInfo2 = field(
         default=None,
         metadata={
             "name": "BranchInfo",
             "type": "Element",
-        }
+        },
     )
     agent_info: None | AgentInfo2 = field(
         default=None,
         metadata={
             "name": "AgentInfo",
             "type": "Element",
-        }
+        },
     )
     account_info: None | AccountInfo2 = field(
         default=None,
         metadata={
             "name": "AccountInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_group_info: None | TravelerGroupInfo2 = field(
         default=None,
         metadata={
             "name": "TravelerGroupInfo",
             "type": "Element",
-        }
+        },
     )
     traveler_info: None | TravelerInfo2 = field(
         default=None,
         metadata={
             "name": "TravelerInfo",
             "type": "Element",
-        }
+        },
     )
-    immediate_parent_profile: list[ProfileSummary2.ImmediateParentProfile] = field(
+    immediate_parent_profile: list[
+        ProfileSummary2.ImmediateParentProfile
+    ] = field(
         default_factory=list,
         metadata={
             "name": "ImmediateParentProfile",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     contract: list[Contract2] = field(
         default_factory=list,
@@ -146,7 +153,7 @@ class ProfileSummary2:
             "name": "Contract",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     alternate_contact: list[AlternateContact2] = field(
         default_factory=list,
@@ -154,7 +161,7 @@ class ProfileSummary2:
             "name": "AlternateContact",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     travel_document: list[TravelDocument2] = field(
         default_factory=list,
@@ -162,7 +169,7 @@ class ProfileSummary2:
             "name": "TravelDocument",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     accounting_reference: list[AccountingReference2] = field(
         default_factory=list,
@@ -170,7 +177,7 @@ class ProfileSummary2:
             "name": "AccountingReference",
             "type": "Element",
             "max_occurs": 20000,
-        }
+        },
     )
     policy_reference: list[PolicyReference2] = field(
         default_factory=list,
@@ -178,7 +185,7 @@ class ProfileSummary2:
             "name": "PolicyReference",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     loyalty_program_enrollment: list[LoyaltyProgramEnrollment2] = field(
         default_factory=list,
@@ -186,7 +193,7 @@ class ProfileSummary2:
             "name": "LoyaltyProgramEnrollment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     form_of_payment: list[FormOfPayment6] = field(
         default_factory=list,
@@ -194,7 +201,7 @@ class ProfileSummary2:
             "name": "FormOfPayment",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_data: list[FieldData2] = field(
         default_factory=list,
@@ -202,7 +209,7 @@ class ProfileSummary2:
             "name": "FieldData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     field_group_data: list[FieldGroupData2] = field(
         default_factory=list,
@@ -210,7 +217,7 @@ class ProfileSummary2:
             "name": "FieldGroupData",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -218,7 +225,7 @@ class ProfileSummary2:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType7 = field(
         default=None,
@@ -226,7 +233,7 @@ class ProfileSummary2:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | TypeProfileEntityStatus2 = field(
         default=None,
@@ -234,14 +241,14 @@ class ProfileSummary2:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     hierarchy_level_id: None | str = field(
         default=None,
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -250,7 +257,7 @@ class ProfileSummary2:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )
 
     @dataclass
@@ -264,17 +271,18 @@ class ProfileSummary2:
             If immediate parent is a control branch, it will be true other
             wise doesn't show this attribute.
         """
+
         immediate_parent_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ImmediateParentRef",
                 "type": "Attribute",
-            }
+            },
         )
         control_branch: None | bool = field(
             default=None,
             metadata={
                 "name": "ControlBranch",
                 "type": "Attribute",
-            }
+            },
         )

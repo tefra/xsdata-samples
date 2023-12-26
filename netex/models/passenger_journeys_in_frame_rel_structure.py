@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dated_service_journey import DatedServiceJourney
 from .service_journey import ServiceJourney
@@ -14,7 +14,14 @@ class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerJourneysInFrame_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            DatedServiceJourney,
+            ServiceJourney,
+            SpecialService,
+            TemplateServiceJourney,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -40,5 +47,5 @@ class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

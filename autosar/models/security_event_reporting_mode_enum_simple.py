@@ -19,6 +19,7 @@ class SecurityEventReportingModeEnumSimple(Enum):
     :cvar OFF: The reported security event is not further processed by
         the IdsM and therefore discarded.
     """
+
     BRIEF = "BRIEF"
     BRIEF_BYPASSING_FILTERS = "BRIEF-BYPASSING-FILTERS"
     DETAILED = "DETAILED"

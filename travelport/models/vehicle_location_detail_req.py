@@ -21,6 +21,7 @@ class VehicleLocationDetailReq(BaseReq1):
         would be used to link to a ‘Policy Group’ in a policy engine
         external to UAPI.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -30,7 +31,7 @@ class VehicleLocationDetailReq(BaseReq1):
             "name": "Vendor",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     vehicle_date_location: None | VehicleDateLocation = field(
         default=None,
@@ -38,7 +39,7 @@ class VehicleLocationDetailReq(BaseReq1):
             "name": "VehicleDateLocation",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,
@@ -46,7 +47,7 @@ class VehicleLocationDetailReq(BaseReq1):
             "name": "PointOfSale",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     policy_reference: None | str = field(
         default=None,
@@ -55,5 +56,5 @@ class VehicleLocationDetailReq(BaseReq1):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 20,
-        }
+        },
     )

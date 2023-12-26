@@ -12,5 +12,6 @@ class AirPriceReq(BaseAirPriceReq):
     Pricing commands can be specified globally, or specifically per
     command.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"

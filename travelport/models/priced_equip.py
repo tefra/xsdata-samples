@@ -11,6 +11,7 @@ class PricedEquip:
     """
     Special Equipment detail and charge for rental.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
@@ -19,12 +20,12 @@ class PricedEquip:
         metadata={
             "name": "Equipment",
             "type": "Element",
-        }
+        },
     )
     charge: None | Charge = field(
         default=None,
         metadata={
             "name": "Charge",
             "type": "Element",
-        }
+        },
     )

@@ -49,25 +49,39 @@ class FormatMimeType(Enum):
     APPLICATION_SGML_OPEN_CATALOG = "application/sgml-open-catalog"
     APPLICATION_RC = "application/rc"
     APPLICATION_XML = "application/xml"
-    APPLICATION_XML_EXTERNAL_PARSED_ENTITY = "application/xml-external-parsed-entity"
+    APPLICATION_XML_EXTERNAL_PARSED_ENTITY = (
+        "application/xml-external-parsed-entity"
+    )
     APPLICATION_XML_DTD = "application/xml-dtd"
     APPLICATION_BATCH_SMTP = "application/batch-SMTP"
     APPLICATION_IPP = "application/ipp"
     APPLICATION_OCSP_REQUEST = "application/ocsp-request"
     APPLICATION_OCSP_RESPONSE = "application/ocsp-response"
     APPLICATION_VND_WOLFRAM_MATHEMATICA = "application/vnd.wolfram.mathematica"
-    APPLICATION_VND_WOLFRAM_MATHEMATICA_PACKAGE = "application/vnd.wolfram.mathematica.package"
+    APPLICATION_VND_WOLFRAM_MATHEMATICA_PACKAGE = (
+        "application/vnd.wolfram.mathematica.package"
+    )
     APPLICATION_VND_WOLFRAM_PLAYER = "application/vnd.wolfram.player"
-    APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT = "application/vnd.oasis.opendocument.text"
-    APPLICATION_VND_OASIS_OPENDOCUMENT_PRESENTATION = "application/vnd.oasis.opendocument.presentation"
-    APPLICATION_VND_OASIS_OPENDOCUMENT_SPREADSHEET = "application/vnd.oasis.opendocument.spreadsheet"
+    APPLICATION_VND_OASIS_OPENDOCUMENT_TEXT = (
+        "application/vnd.oasis.opendocument.text"
+    )
+    APPLICATION_VND_OASIS_OPENDOCUMENT_PRESENTATION = (
+        "application/vnd.oasis.opendocument.presentation"
+    )
+    APPLICATION_VND_OASIS_OPENDOCUMENT_SPREADSHEET = (
+        "application/vnd.oasis.opendocument.spreadsheet"
+    )
     APPLICATION_VND_MS_ASF = "application/vnd.ms-asf"
     APPLICATION_VND_MS_EXCEL = "application/vnd.ms-excel"
     APPLICATION_VND_MS_POWERPOINT = "application/vnd.ms-powerpoint"
     APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_PRESENTATIONML_PRESENTATION = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-    APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_SPREADSHEETML_SHEET = (
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
     APPLICATION_VND_OPENXMLFORMATS_OFFICEDOCUMENT_WORDPROCESSINGML_DOCUMENT = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-    APPLICATION_REGEX_CLINICAL_TRIAL_NUMBER = "application/regex.clinical-trial-number"
+    APPLICATION_REGEX_CLINICAL_TRIAL_NUMBER = (
+        "application/regex.clinical-trial-number"
+    )
     IMAGE_FITS = "image/fits"
     IMAGE_JPEG = "image/jpeg"
     IMAGE_GIF = "image/gif"

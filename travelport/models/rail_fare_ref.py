@@ -9,6 +9,7 @@ class RailFareRef:
     """
     Reference to a complete FareInfo from a shared list.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -18,5 +19,5 @@ class RailFareRef:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

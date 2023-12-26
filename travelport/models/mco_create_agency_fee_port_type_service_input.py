@@ -16,7 +16,7 @@ class McoCreateAgencyFeePortTypeServiceInput:
         metadata={
             "name": "Body",
             "type": "Element",
-        }
+        },
     )
 
     @dataclass
@@ -27,5 +27,5 @@ class McoCreateAgencyFeePortTypeServiceInput:
                 "name": "CreateAgencyFeeMcoReq",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/util_v52_0",
-            }
+            },
         )

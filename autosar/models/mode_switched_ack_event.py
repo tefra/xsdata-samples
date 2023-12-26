@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
+from .executable_entity_activation_reason_subtypes_enum import (
+    ExecutableEntityActivationReasonSubtypesEnum,
+)
 from .identifier import Identifier
 from .mode_switch_point_subtypes_enum import ModeSwitchPointSubtypesEnum
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -92,6 +94,7 @@ class ModeSwitchedAckEvent:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "MODE-SWITCHED-ACK-EVENT"
 
@@ -102,15 +105,17 @@ class ModeSwitchedAckEvent:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["ModeSwitchedAckEvent.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "ModeSwitchedAckEvent.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -118,7 +123,7 @@ class ModeSwitchedAckEvent:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -126,7 +131,7 @@ class ModeSwitchedAckEvent:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -134,7 +139,7 @@ class ModeSwitchedAckEvent:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -142,7 +147,7 @@ class ModeSwitchedAckEvent:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -150,7 +155,7 @@ class ModeSwitchedAckEvent:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["ModeSwitchedAckEvent.Annotations"] = field(
         default=None,
@@ -158,31 +163,37 @@ class ModeSwitchedAckEvent:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    activation_reason_representation_ref: Optional["ModeSwitchedAckEvent.ActivationReasonRepresentationRef"] = field(
+    activation_reason_representation_ref: Optional[
+        "ModeSwitchedAckEvent.ActivationReasonRepresentationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    disabled_mode_irefs: Optional["ModeSwitchedAckEvent.DisabledModeIrefs"] = field(
+    disabled_mode_irefs: Optional[
+        "ModeSwitchedAckEvent.DisabledModeIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    start_on_event_ref: Optional["ModeSwitchedAckEvent.StartOnEventRef"] = field(
+    start_on_event_ref: Optional[
+        "ModeSwitchedAckEvent.StartOnEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -190,7 +201,7 @@ class ModeSwitchedAckEvent:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_source_ref: Optional["ModeSwitchedAckEvent.EventSourceRef"] = field(
         default=None,
@@ -198,14 +209,14 @@ class ModeSwitchedAckEvent:
             "name": "EVENT-SOURCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -213,14 +224,14 @@ class ModeSwitchedAckEvent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -231,7 +242,7 @@ class ModeSwitchedAckEvent:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -242,7 +253,7 @@ class ModeSwitchedAckEvent:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -253,7 +264,7 @@ class ModeSwitchedAckEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -264,7 +275,7 @@ class ModeSwitchedAckEvent:
                 "name": "DISABLED-MODE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -275,7 +286,7 @@ class ModeSwitchedAckEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -286,5 +297,5 @@ class ModeSwitchedAckEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -15,5 +15,5 @@ class TypeOfCongestion(TypeOfCongestionValueStructure):
         metadata={
             "name": "nameOfClassifiedEntityClass",
             "type": "Attribute",
-        }
+        },
     )

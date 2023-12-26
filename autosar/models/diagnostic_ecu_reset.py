@@ -7,9 +7,15 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_ecu_reset_class_subtypes_enum import DiagnosticEcuResetClassSubtypesEnum
-from .diagnostic_response_to_ecu_reset_enum import DiagnosticResponseToEcuResetEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_ecu_reset_class_subtypes_enum import (
+    DiagnosticEcuResetClassSubtypesEnum,
+)
+from .diagnostic_response_to_ecu_reset_enum import (
+    DiagnosticResponseToEcuResetEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -94,6 +100,7 @@ class DiagnosticEcuReset:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-ECU-RESET"
 
@@ -104,15 +111,17 @@ class DiagnosticEcuReset:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticEcuReset.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticEcuReset.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -120,7 +129,7 @@ class DiagnosticEcuReset:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -128,7 +137,7 @@ class DiagnosticEcuReset:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -136,7 +145,7 @@ class DiagnosticEcuReset:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -144,7 +153,7 @@ class DiagnosticEcuReset:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -152,7 +161,7 @@ class DiagnosticEcuReset:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DiagnosticEcuReset.Annotations"] = field(
         default=None,
@@ -160,7 +169,7 @@ class DiagnosticEcuReset:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -168,15 +177,17 @@ class DiagnosticEcuReset:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticEcuReset.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticEcuReset.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     custom_sub_function_number: Optional[PositiveInteger] = field(
         default=None,
@@ -184,15 +195,17 @@ class DiagnosticEcuReset:
             "name": "CUSTOM-SUB-FUNCTION-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    ecu_reset_class_ref: Optional["DiagnosticEcuReset.EcuResetClassRef"] = field(
+    ecu_reset_class_ref: Optional[
+        "DiagnosticEcuReset.EcuResetClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ECU-RESET-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     respond_to_reset: Optional[DiagnosticResponseToEcuResetEnum] = field(
         default=None,
@@ -200,14 +213,14 @@ class DiagnosticEcuReset:
             "name": "RESPOND-TO-RESET",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -215,14 +228,14 @@ class DiagnosticEcuReset:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -233,7 +246,7 @@ class DiagnosticEcuReset:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -244,7 +257,7 @@ class DiagnosticEcuReset:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -255,7 +268,7 @@ class DiagnosticEcuReset:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -266,5 +279,5 @@ class DiagnosticEcuReset:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

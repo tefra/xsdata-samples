@@ -12,6 +12,7 @@ class MediaInformation(MediaTableType):
 
     E.g. when distributing to cable companies.
     """
+
     class Meta:
         name = "mediaInformation"
         namespace = "urn:vpro:media:2009"

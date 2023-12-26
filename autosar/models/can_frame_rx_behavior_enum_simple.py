@@ -14,6 +14,7 @@ class CanFrameRxBehaviorEnumSimple(Enum):
         case the CAN frame is received as CAN 2.0 it is discarded during
         reception.
     """
+
     ANY = "ANY"
     CAN_20 = "CAN-20"
     CAN_FD = "CAN-FD"

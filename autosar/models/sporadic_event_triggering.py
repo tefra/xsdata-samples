@@ -14,7 +14,9 @@ from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
 from .timing_condition_subtypes_enum import TimingConditionSubtypesEnum
-from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .timing_description_event_subtypes_enum import (
+    TimingDescriptionEventSubtypesEnum,
+)
 from .traceable_subtypes_enum import TraceableSubtypesEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -96,6 +98,7 @@ class SporadicEventTriggering:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SPORADIC-EVENT-TRIGGERING"
 
@@ -106,15 +109,17 @@ class SporadicEventTriggering:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["SporadicEventTriggering.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "SporadicEventTriggering.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -122,7 +127,7 @@ class SporadicEventTriggering:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -130,7 +135,7 @@ class SporadicEventTriggering:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -138,7 +143,7 @@ class SporadicEventTriggering:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -146,7 +151,7 @@ class SporadicEventTriggering:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -154,7 +159,7 @@ class SporadicEventTriggering:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["SporadicEventTriggering.Annotations"] = field(
         default=None,
@@ -162,7 +167,7 @@ class SporadicEventTriggering:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     trace_refs: Optional["SporadicEventTriggering.TraceRefs"] = field(
         default=None,
@@ -170,15 +175,17 @@ class SporadicEventTriggering:
             "name": "TRACE-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    timing_condition_ref: Optional["SporadicEventTriggering.TimingConditionRef"] = field(
+    timing_condition_ref: Optional[
+        "SporadicEventTriggering.TimingConditionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -186,7 +193,7 @@ class SporadicEventTriggering:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     event_ref: Optional["SporadicEventTriggering.EventRef"] = field(
         default=None,
@@ -194,7 +201,7 @@ class SporadicEventTriggering:
             "name": "EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     minimum_inter_arrival_time: Optional[MultidimensionalTime] = field(
         default=None,
@@ -202,7 +209,7 @@ class SporadicEventTriggering:
             "name": "MINIMUM-INTER-ARRIVAL-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     maximum_inter_arrival_time: Optional[MultidimensionalTime] = field(
         default=None,
@@ -210,7 +217,7 @@ class SporadicEventTriggering:
             "name": "MAXIMUM-INTER-ARRIVAL-TIME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     jitter: Optional[MultidimensionalTime] = field(
         default=None,
@@ -218,7 +225,7 @@ class SporadicEventTriggering:
             "name": "JITTER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     period: Optional[MultidimensionalTime] = field(
         default=None,
@@ -226,14 +233,14 @@ class SporadicEventTriggering:
             "name": "PERIOD",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -241,14 +248,14 @@ class SporadicEventTriggering:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -259,7 +266,7 @@ class SporadicEventTriggering:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -270,7 +277,7 @@ class SporadicEventTriggering:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -281,7 +288,7 @@ class SporadicEventTriggering:
                 "name": "TRACE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -292,7 +299,7 @@ class SporadicEventTriggering:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -303,7 +310,7 @@ class SporadicEventTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -314,5 +321,5 @@ class SporadicEventTriggering:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

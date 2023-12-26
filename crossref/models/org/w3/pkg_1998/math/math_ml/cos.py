@@ -15,5 +15,5 @@ class Cos:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

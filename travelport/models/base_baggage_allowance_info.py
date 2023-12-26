@@ -23,6 +23,7 @@ class BaseBaggageAllowanceInfo:
     destination
     carrier
     """
+
     urlinfo: list[Urlinfo] = field(
         default_factory=list,
         metadata={
@@ -30,7 +31,7 @@ class BaseBaggageAllowanceInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     text_info: list[TextInfo] = field(
         default_factory=list,
@@ -39,7 +40,7 @@ class BaseBaggageAllowanceInfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -48,7 +49,7 @@ class BaseBaggageAllowanceInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -57,7 +58,7 @@ class BaseBaggageAllowanceInfo:
             "type": "Attribute",
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     carrier: None | str = field(
         default=None,
@@ -65,5 +66,5 @@ class BaseBaggageAllowanceInfo:
             "name": "Carrier",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )

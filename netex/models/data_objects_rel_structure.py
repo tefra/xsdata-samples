@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .driver_schedule_frame import DriverScheduleFrame
 from .entities_in_version_rel_structure import (
     CompositeFrame,
@@ -23,7 +23,22 @@ class DataObjectsRelStructure:
     class Meta:
         name = "dataObjects_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            CompositeFrame,
+            SalesTransactionFrame,
+            FareFrame,
+            DriverScheduleFrame,
+            VehicleScheduleFrame,
+            ServiceFrame,
+            TimetableFrame,
+            SiteFrame,
+            InfrastructureFrame,
+            GeneralFrame,
+            ResourceFrame,
+            ServiceCalendarFrame,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -89,5 +104,5 @@ class DataObjectsRelStructure:
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

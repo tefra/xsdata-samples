@@ -10,6 +10,7 @@ class UimetaDataDeleteRsp(BaseRsp2):
     """
     Service for Response to delete any settings by user in Profile Settings.
     """
+
     class Meta:
         name = "UIMetaDataDeleteRsp"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"

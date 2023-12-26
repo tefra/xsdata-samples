@@ -15,6 +15,7 @@ class PenaltyFareInformation:
     prohibit_penalty_fares
         Indicates whether user wants penalty fares to be returned.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -23,7 +24,7 @@ class PenaltyFareInformation:
         metadata={
             "name": "PenaltyInfo",
             "type": "Element",
-        }
+        },
     )
     prohibit_penalty_fares: None | bool = field(
         default=None,
@@ -31,5 +32,5 @@ class PenaltyFareInformation:
             "name": "ProhibitPenaltyFares",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

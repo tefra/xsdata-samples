@@ -14,5 +14,5 @@ class ParkingFacility:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

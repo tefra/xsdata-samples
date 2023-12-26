@@ -7,7 +7,9 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class GroupsOfDistanceMatrixElementsInFrameRelStructure(FrameContainmentStructure):
+class GroupsOfDistanceMatrixElementsInFrameRelStructure(
+    FrameContainmentStructure
+):
     class Meta:
         name = "groupsOfDistanceMatrixElementsInFrame_RelStructure"
 
@@ -18,5 +20,5 @@ class GroupsOfDistanceMatrixElementsInFrameRelStructure(FrameContainmentStructur
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "min_occurs": 1,
-        }
+        },
     )

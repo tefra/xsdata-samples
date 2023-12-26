@@ -8,6 +8,7 @@ class ElocationId:
     """
     Article identifier or e-location id of the item.
     """
+
     class Meta:
         name = "elocation_id"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -16,5 +17,5 @@ class ElocationId:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

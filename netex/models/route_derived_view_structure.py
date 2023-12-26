@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Optional
-from .all_vehicle_modes_of_transport_enumeration import AllVehicleModesOfTransportEnumeration
+from typing import Optional, Union
+from .all_vehicle_modes_of_transport_enumeration import (
+    AllVehicleModesOfTransportEnumeration,
+)
 from .derived_view_structure import DerivedViewStructure
 from .direction_view import DirectionView
 from .flexible_line_ref import FlexibleLineRef
@@ -24,7 +26,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "name": "RouteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     vehicle_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
         default=None,
@@ -32,7 +34,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "name": "VehicleMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     name: Optional[MultilingualString] = field(
         default=None,
@@ -40,9 +42,11 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
-    flexible_line_ref_or_line_ref_or_line_view: Optional[object] = field(
+    flexible_line_ref_or_line_ref_or_line_view: Optional[
+        Union[FlexibleLineRef, LineRef, LineView]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -63,7 +67,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     direction_view: Optional[DirectionView] = field(
         default=None,
@@ -71,7 +75,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "name": "DirectionView",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     link_sequence_projection_ref: Optional[LinkSequenceProjectionRef] = field(
         default=None,
@@ -79,5 +83,5 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "name": "LinkSequenceProjectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

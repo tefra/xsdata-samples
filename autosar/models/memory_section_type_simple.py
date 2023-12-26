@@ -61,6 +61,7 @@ class MemorySectionTypeSimple(Enum):
         sectionInitializationPolicy, memoryAllocationKeywordPolicy and
         option.
     """
+
     CALIBRATION_OFFLINE = "CALIBRATION-OFFLINE"
     CALIBRATION_ONLINE = "CALIBRATION-ONLINE"
     CALIBRATION_VARIABLES = "CALIBRATION-VARIABLES"

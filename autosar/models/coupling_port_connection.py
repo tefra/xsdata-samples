@@ -40,6 +40,7 @@ class CouplingPortConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "COUPLING-PORT-CONNECTION"
 
@@ -49,7 +50,7 @@ class CouplingPortConnection:
             "name": "FIRST-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     node_ports: Optional["CouplingPortConnection.NodePorts"] = field(
         default=None,
@@ -57,7 +58,7 @@ class CouplingPortConnection:
             "name": "NODE-PORTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     plca_local_node_count: Optional[PositiveInteger] = field(
         default=None,
@@ -65,7 +66,7 @@ class CouplingPortConnection:
             "name": "PLCA-LOCAL-NODE-COUNT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     plca_transmit_opportunity_timer: Optional[PositiveInteger] = field(
         default=None,
@@ -73,7 +74,7 @@ class CouplingPortConnection:
             "name": "PLCA-TRANSMIT-OPPORTUNITY-TIMER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     second_port_ref: Optional["CouplingPortConnection.SecondPortRef"] = field(
         default=None,
@@ -81,7 +82,7 @@ class CouplingPortConnection:
             "name": "SECOND-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -89,14 +90,14 @@ class CouplingPortConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -104,7 +105,7 @@ class CouplingPortConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -115,18 +116,20 @@ class CouplingPortConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class NodePorts:
-        coupling_port_ref_conditional: List[CouplingPortRefConditional] = field(
+        coupling_port_ref_conditional: List[
+            CouplingPortRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "COUPLING-PORT-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -137,5 +140,5 @@ class CouplingPortConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

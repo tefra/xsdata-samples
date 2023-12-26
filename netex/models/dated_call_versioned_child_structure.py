@@ -18,7 +18,7 @@ class DatedCallVersionedChildStructure(CallVersionedChildStructure):
             "name": "DriverRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     arrival_date: Optional[XmlDate] = field(
         default=None,
@@ -26,7 +26,7 @@ class DatedCallVersionedChildStructure(CallVersionedChildStructure):
             "name": "ArrivalDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     departure_date: Optional[XmlDate] = field(
         default=None,
@@ -34,5 +34,5 @@ class DatedCallVersionedChildStructure(CallVersionedChildStructure):
             "name": "DepartureDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

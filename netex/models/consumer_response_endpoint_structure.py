@@ -13,7 +13,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "name": "ConsumerRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     request_message_ref: Optional[str] = field(
         default=None,
@@ -21,7 +21,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "name": "RequestMessageRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_address: Optional[str] = field(
         default=None,
@@ -29,7 +29,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "name": "DelegatorAddress",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )
     delegator_ref: Optional[str] = field(
         default=None,
@@ -37,5 +37,5 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "name": "DelegatorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-        }
+        },
     )

@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import List
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristic_value_type import CharacteristicValueType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.characteristic_value_type import (
+    CharacteristicValueType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -11,6 +13,7 @@ class CharacteristicTypeValues:
     :ivar value: <description xmlns="">A value of the
         characteristic.</description>
     """
+
     class Meta:
         global_type = False
 
@@ -21,5 +24,5 @@ class CharacteristicTypeValues:
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
             "min_occurs": 1,
-        }
+        },
     )

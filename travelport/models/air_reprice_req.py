@@ -12,6 +12,7 @@ class AirRepriceReq(AirBaseReq):
     """
     Request to reprice a solution.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -22,7 +23,7 @@ class AirRepriceReq(AirBaseReq):
             "type": "Element",
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )
     air_pricing_solution: None | AirPricingSolution = field(
         default=None,
@@ -30,19 +31,19 @@ class AirRepriceReq(AirBaseReq):
             "name": "AirPricingSolution",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     fare_rule_type: TypeFareRuleType = field(
         default=TypeFareRuleType.NONE,
         metadata={
             "name": "FareRuleType",
             "type": "Attribute",
-        }
+        },
     )
     ignore_availability: bool = field(
         default=False,
         metadata={
             "name": "IgnoreAvailability",
             "type": "Attribute",
-        }
+        },
     )

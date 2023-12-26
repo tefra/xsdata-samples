@@ -12,6 +12,7 @@ class MctLookupReq(BaseReq1):
     """
     Search for MCT time values.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -20,12 +21,12 @@ class MctLookupReq(BaseReq1):
         metadata={
             "name": "MctSearch",
             "type": "Element",
-        }
+        },
     )
     mct_query: None | MctQuery = field(
         default=None,
         metadata={
             "name": "MctQuery",
             "type": "Element",
-        }
+        },
     )

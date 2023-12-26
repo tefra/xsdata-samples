@@ -14,5 +14,5 @@ class CarrierCode:
         metadata={
             "required": True,
             "length": 2,
-        }
+        },
     )

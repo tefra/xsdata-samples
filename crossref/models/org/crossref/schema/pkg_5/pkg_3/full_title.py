@@ -8,6 +8,7 @@ class FullTitle:
     """
     The full title by which a journal is commonly known or cited.
     """
+
     class Meta:
         name = "full_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -17,5 +18,5 @@ class FullTitle:
         metadata={
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )

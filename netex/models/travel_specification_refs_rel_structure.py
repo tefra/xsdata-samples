@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .offered_travel_specification_ref import OfferedTravelSpecificationRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .requested_travel_specification_ref import RequestedTravelSpecificationRef
@@ -13,7 +13,13 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "travelSpecificationRefs_RelStructure"
 
-    offered_travel_specification_ref_or_requested_travel_specification_ref_or_travel_specification_ref: List[object] = field(
+    offered_travel_specification_ref_or_requested_travel_specification_ref_or_travel_specification_ref: List[
+        Union[
+            OfferedTravelSpecificationRef,
+            RequestedTravelSpecificationRef,
+            TravelSpecificationRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -34,5 +40,5 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

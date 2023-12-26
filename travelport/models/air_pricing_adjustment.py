@@ -17,6 +17,7 @@ class AirPricingAdjustment:
     key
         Key of AirPricingInfo from booking.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -26,7 +27,7 @@ class AirPricingAdjustment:
             "name": "Adjustment",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -34,5 +35,5 @@ class AirPricingAdjustment:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

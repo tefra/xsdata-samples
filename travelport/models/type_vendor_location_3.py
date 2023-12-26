@@ -18,6 +18,7 @@ class TypeVendorLocation3:
     key
         Key which maps vendor location with vehicles
     """
+
     class Meta:
         name = "typeVendorLocation"
 
@@ -29,7 +30,7 @@ class TypeVendorLocation3:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     vendor_code: None | str = field(
         default=None,
@@ -39,7 +40,7 @@ class TypeVendorLocation3:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     vendor_location_id: None | str = field(
         default=None,
@@ -48,12 +49,12 @@ class TypeVendorLocation3:
             "type": "Attribute",
             "min_length": 1,
             "white_space": "collapse",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

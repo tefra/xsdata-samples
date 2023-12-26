@@ -15,5 +15,5 @@ class Arccosh:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

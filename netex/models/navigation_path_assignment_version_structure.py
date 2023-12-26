@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .connection_ref import ConnectionRef
 from .default_connection_ref import DefaultConnectionRef
 from .navigation_path_ref import NavigationPathRef
@@ -19,7 +19,9 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "NavigationPathAssignment_VersionStructure"
 
-    default_connection_ref_or_site_connection_ref_or_connection_ref: Optional[object] = field(
+    default_connection_ref_or_site_connection_ref_or_connection_ref: Optional[
+        Union[DefaultConnectionRef, SiteConnectionRef, ConnectionRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -40,9 +42,17 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
-    choice: Optional[object] = field(
+    choice: Optional[
+        Union[
+            StopPlaceRef,
+            ParkingRef,
+            PointOfInterestRef,
+            ServiceSiteRef,
+            SiteRef,
+        ]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,7 +83,7 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     navigation_path_ref: Optional[NavigationPathRef] = field(
         default=None,
@@ -81,5 +91,5 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
             "name": "NavigationPathRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

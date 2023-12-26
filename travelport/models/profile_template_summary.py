@@ -18,6 +18,7 @@ class ProfileTemplateSummary:
     version
         Current version number of the template
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -27,7 +28,7 @@ class ProfileTemplateSummary:
             "name": "ID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | object = field(
         default=None,
@@ -35,7 +36,7 @@ class ProfileTemplateSummary:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | object = field(
         default=None,
@@ -43,5 +44,5 @@ class ProfileTemplateSummary:
             "name": "Version",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

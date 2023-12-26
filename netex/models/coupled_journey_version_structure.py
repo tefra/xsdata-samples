@@ -19,7 +19,7 @@ class CoupledJourneyVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -27,7 +27,7 @@ class CoupledJourneyVersionStructure(DataManagedObjectStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     train_block_ref: Optional[TrainBlockRef] = field(
         default=None,
@@ -35,12 +35,12 @@ class CoupledJourneyVersionStructure(DataManagedObjectStructure):
             "name": "TrainBlockRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     journeys: Optional[VehicleJourneyRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

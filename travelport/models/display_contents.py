@@ -9,6 +9,7 @@ class DisplayContents:
     """
     Display the contents in GDS format.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -16,5 +17,5 @@ class DisplayContents:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

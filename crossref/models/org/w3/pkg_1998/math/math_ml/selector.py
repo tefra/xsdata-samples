@@ -15,5 +15,5 @@ class Selector:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

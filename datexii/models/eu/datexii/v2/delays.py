@@ -24,13 +24,14 @@ class Delays:
         "normal conditions", given in seconds.
     :ivar delays_extension:
     """
+
     delay_band: Optional[DelayBandEnum] = field(
         default=None,
         metadata={
             "name": "delayBand",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     delays_type: Optional[DelaysTypeEnum] = field(
         default=None,
@@ -38,7 +39,7 @@ class Delays:
             "name": "delaysType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     delay_time_value: Optional[float] = field(
         default=None,
@@ -46,7 +47,7 @@ class Delays:
             "name": "delayTimeValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     delays_extension: Optional[ExtensionType] = field(
         default=None,
@@ -54,5 +55,5 @@ class Delays:
             "name": "delaysExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

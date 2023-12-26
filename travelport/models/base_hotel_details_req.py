@@ -13,6 +13,7 @@ class BaseHotelDetailsReq(BaseReq1):
     """
     Base request for all hotel details search request..
     """
+
     hotel_property: None | HotelProperty = field(
         default=None,
         metadata={
@@ -20,7 +21,7 @@ class BaseHotelDetailsReq(BaseReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     hotel_details_modifiers: None | HotelDetailsModifiers = field(
         default=None,
@@ -28,7 +29,7 @@ class BaseHotelDetailsReq(BaseReq1):
             "name": "HotelDetailsModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,
@@ -36,5 +37,5 @@ class BaseHotelDetailsReq(BaseReq1):
             "name": "PointOfSale",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )

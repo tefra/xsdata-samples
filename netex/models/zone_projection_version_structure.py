@@ -20,7 +20,7 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "required": True,
-        }
+        },
     )
     project_to_zone_ref: Optional[ZoneRefStructure] = field(
         default=None,
@@ -28,7 +28,7 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
             "name": "ProjectToZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     project_to_point_ref: Optional[PointRefStructure] = field(
         default=None,
@@ -36,12 +36,12 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
             "name": "ProjectToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     points: Optional[PointRefsRelStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

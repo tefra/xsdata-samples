@@ -18,6 +18,7 @@ class AirExchangeEligibilityReq(BaseReq1):
     type_value
         Type choices are "Detail" or "Summary"  Default will be Summary
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,14 +28,14 @@ class AirExchangeEligibilityReq(BaseReq1):
             "name": "ProviderReservationInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -47,6 +48,7 @@ class AirExchangeEligibilityReq(BaseReq1):
         supplier_code
             Represents Carrier Code for ACH PNR Retrieve.
         """
+
         provider_code: None | str = field(
             default=None,
             metadata={
@@ -55,7 +57,7 @@ class AirExchangeEligibilityReq(BaseReq1):
                 "required": True,
                 "min_length": 2,
                 "max_length": 5,
-            }
+            },
         )
         provider_locator_code: None | str = field(
             default=None,
@@ -64,7 +66,7 @@ class AirExchangeEligibilityReq(BaseReq1):
                 "type": "Attribute",
                 "required": True,
                 "max_length": 15,
-            }
+            },
         )
         supplier_code: None | str = field(
             default=None,
@@ -73,5 +75,5 @@ class AirExchangeEligibilityReq(BaseReq1):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 5,
-            }
+            },
         )

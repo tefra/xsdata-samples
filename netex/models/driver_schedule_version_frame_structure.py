@@ -18,7 +18,7 @@ class DriverScheduleVersionFrameStructure(CommonVersionFrameStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     duty_parts: Optional[DutyPartsInFrameRelStructure] = field(
         default=None,
@@ -26,7 +26,7 @@ class DriverScheduleVersionFrameStructure(CommonVersionFrameStructure):
             "name": "dutyParts",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     driver_trips: Optional[DriverTripsInFrameRelStructure] = field(
         default=None,
@@ -34,5 +34,5 @@ class DriverScheduleVersionFrameStructure(CommonVersionFrameStructure):
             "name": "driverTrips",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -36,6 +36,7 @@ class J1939NodeName:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "J-1939-NODE-NAME"
 
@@ -45,7 +46,7 @@ class J1939NodeName:
             "name": "ARBITRARY-ADDRESS-CAPABLE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_instance: Optional[Integer] = field(
         default=None,
@@ -53,7 +54,7 @@ class J1939NodeName:
             "name": "ECU-INSTANCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     function: Optional[Integer] = field(
         default=None,
@@ -61,7 +62,7 @@ class J1939NodeName:
             "name": "FUNCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     function_instance: Optional[Integer] = field(
         default=None,
@@ -69,7 +70,7 @@ class J1939NodeName:
             "name": "FUNCTION-INSTANCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     identitiy_number: Optional[Integer] = field(
         default=None,
@@ -77,7 +78,7 @@ class J1939NodeName:
             "name": "IDENTITIY-NUMBER",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     industry_group: Optional[Integer] = field(
         default=None,
@@ -85,7 +86,7 @@ class J1939NodeName:
             "name": "INDUSTRY-GROUP",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     manufacturer_code: Optional[Integer] = field(
         default=None,
@@ -93,7 +94,7 @@ class J1939NodeName:
             "name": "MANUFACTURER-CODE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vehicle_system: Optional[Integer] = field(
         default=None,
@@ -101,7 +102,7 @@ class J1939NodeName:
             "name": "VEHICLE-SYSTEM",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vehicle_system_instance: Optional[Integer] = field(
         default=None,
@@ -109,14 +110,14 @@ class J1939NodeName:
             "name": "VEHICLE-SYSTEM-INSTANCE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -124,5 +125,5 @@ class J1939NodeName:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

@@ -15,6 +15,7 @@ class CarParkConfigurationEnum(Enum):
     :cvar UNDERGROUND: Parking is on one or more floors below ground
         level.
     """
+
     MULTI_STOREY = "multiStorey"
     PARK_AND_RIDE = "parkAndRide"
     SINGLE_LEVEL = "singleLevel"

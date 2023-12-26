@@ -13,5 +13,5 @@ class DirectionType:
         default=DirectionTypeEnumeration.OUTBOUND,
         metadata={
             "required": True,
-        }
+        },
     )

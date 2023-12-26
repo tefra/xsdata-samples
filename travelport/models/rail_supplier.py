@@ -12,6 +12,7 @@ class RailSupplier:
     code
         2 character Rail distributor code.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -23,5 +24,5 @@ class RailSupplier:
             "required": True,
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )

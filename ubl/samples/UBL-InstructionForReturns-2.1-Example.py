@@ -37,16 +37,16 @@ from xsdata.models.datatype import XmlDate
 
 obj = InstructionForReturns(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="AB011"
+        value='AB011'
     ),
     copy_indicator=False,
     issue_date=XmlDate(2010, 4, 10),
     note=[
         Note(
-            value="Instruction to return goods that are badly sent to you."
+            value='Instruction to return goods that are badly sent to you.'
         ),
     ],
     seller_supplier_party=SellerSupplierParty(
@@ -54,7 +54,7 @@ obj = InstructionForReturns(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Arancio Forniture spa"
+                        value='Arancio Forniture spa'
                     )
                 ),
             ],
@@ -63,35 +63,35 @@ obj = InstructionForReturns(
                     value="Via Dell'Arcoveggio"
                 ),
                 building_number=BuildingNumber(
-                    value="403"
+                    value='403'
                 ),
                 city_name=CityName(
-                    value="Bologna"
+                    value='Bologna'
                 ),
                 postal_zone=PostalZone(
-                    value="40129"
+                    value='40129'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="IT"
+                        value='IT'
                     ),
                     name=Name(
-                        value="Italy"
+                        value='Italy'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mr Rossi"
+                    value='Mr Rossi'
                 ),
                 telephone=Telephone(
-                    value="0039 051 23000000"
+                    value='0039 051 23000000'
                 ),
                 telefax=Telefax(
-                    value="0039 051 23000023"
+                    value='0039 051 23000023'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="rossi@arancioforniture.it"
+                    value='rossi@arancioforniture.it'
                 )
             )
         )
@@ -101,44 +101,44 @@ obj = InstructionForReturns(
             party_name=[
                 PartyName(
                     name=Name(
-                        value="Beta Shop"
+                        value='Beta Shop'
                     )
                 ),
             ],
             postal_address=PostalAddress(
                 street_name=StreetName(
-                    value="Via Emilia"
+                    value='Via Emilia'
                 ),
                 building_number=BuildingNumber(
-                    value="1"
+                    value='1'
                 ),
                 city_name=CityName(
-                    value="Modena"
+                    value='Modena'
                 ),
                 postal_zone=PostalZone(
-                    value="41121"
+                    value='41121'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="IT"
+                        value='IT'
                     ),
                     name=Name(
-                        value="Italy"
+                        value='Italy'
                     )
                 )
             ),
             contact=Contact(
                 name=Name(
-                    value="Mr Delta"
+                    value='Mr Delta'
                 ),
                 telephone=Telephone(
-                    value="0039 059 33000000"
+                    value='0039 059 33000000'
                 ),
                 telefax=Telefax(
-                    value="0039 059 33000055"
+                    value='0039 059 33000055'
                 ),
                 electronic_mail=ElectronicMail(
-                    value="delta@betashop.it"
+                    value='delta@betashop.it'
                 )
             )
         )
@@ -147,55 +147,55 @@ obj = InstructionForReturns(
         party_name=[
             PartyName(
                 name=Name(
-                    value="AZ Outsourcing srl"
+                    value='AZ Outsourcing srl'
                 )
             ),
         ],
         postal_address=PostalAddress(
             street_name=StreetName(
-                value="Via Bolognese"
+                value='Via Bolognese'
             ),
             building_number=BuildingNumber(
-                value="199"
+                value='199'
             ),
             city_name=CityName(
-                value="Bologna"
+                value='Bologna'
             ),
             postal_zone=PostalZone(
-                value="40129"
+                value='40129'
             ),
             country=Country(
                 identification_code=IdentificationCode(
-                    value="IT"
+                    value='IT'
                 ),
                 name=Name(
-                    value="Italy"
+                    value='Italy'
                 )
             )
         ),
         contact=Contact(
             name=Name(
-                value="Mr Verdi"
+                value='Mr Verdi'
             ),
             telephone=Telephone(
-                value="0039 051 25400000"
+                value='0039 051 25400000'
             ),
             telefax=Telefax(
-                value="0039 051 25400023"
+                value='0039 051 25400023'
             ),
             electronic_mail=ElectronicMail(
-                value="verdi@azoutsourcing.it"
+                value='verdi@azoutsourcing.it'
             )
         )
     ),
     shipment=Shipment(
         id=Id(
-            value="51022"
+            value='51022'
         ),
         consignment=[
             Consignment(
                 id=Id(
-                    value="510"
+                    value='510'
                 )
             ),
         ],
@@ -205,43 +205,43 @@ obj = InstructionForReturns(
                     value="Via Dell'Arcoveggio"
                 ),
                 building_number=BuildingNumber(
-                    value="403"
+                    value='403'
                 ),
                 city_name=CityName(
-                    value="Bologna"
+                    value='Bologna'
                 ),
                 postal_zone=PostalZone(
-                    value="40129"
+                    value='40129'
                 ),
                 country=Country(
                     identification_code=IdentificationCode(
-                        value="IT"
+                        value='IT'
                     ),
                     name=Name(
-                        value="Italy"
+                        value='Italy'
                     )
                 )
             ),
             despatch=Despatch(
                 despatch_address=DespatchAddress(
                     street_name=StreetName(
-                        value="Via Emilia"
+                        value='Via Emilia'
                     ),
                     building_number=BuildingNumber(
-                        value="1"
+                        value='1'
                     ),
                     city_name=CityName(
-                        value="Modena"
+                        value='Modena'
                     ),
                     postal_zone=PostalZone(
-                        value="41121"
+                        value='41121'
                     ),
                     country=Country(
                         identification_code=IdentificationCode(
-                            value="IT"
+                            value='IT'
                         ),
                         name=Name(
-                            value="Italy"
+                            value='Italy'
                         )
                     )
                 )
@@ -251,58 +251,58 @@ obj = InstructionForReturns(
     instruction_for_returns_line=[
         InstructionForReturnsLine(
             id=Id(
-                value="1"
+                value='1'
             ),
             quantity=Quantity(
-                value=Decimal("20"),
-                unit_code="NAR"
+                value=Decimal('20'),
+                unit_code='NAR'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="Denim Jeans Jacket"
+                        value='Denim Jeans Jacket'
                     ),
                 ],
                 name=Name(
-                    value="Jeans Jacket man"
+                    value='Jeans Jacket man'
                 ),
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="AA109"
+                        value='AA109'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="YX401"
+                        value='YX401'
                     )
                 )
             )
         ),
         InstructionForReturnsLine(
             id=Id(
-                value="2"
+                value='2'
             ),
             quantity=Quantity(
-                value=Decimal("5"),
-                unit_code="NAR"
+                value=Decimal('5'),
+                unit_code='NAR'
             ),
             item=Item(
                 description=[
                     Description(
-                        value="Leather Jacket"
+                        value='Leather Jacket'
                     ),
                 ],
                 name=Name(
-                    value="Leather Jacket man"
+                    value='Leather Jacket man'
                 ),
                 buyers_item_identification=BuyersItemIdentification(
                     id=Id(
-                        value="AA128"
+                        value='AA128'
                     )
                 ),
                 sellers_item_identification=SellersItemIdentification(
                     id=Id(
-                        value="YX233"
+                        value='YX233'
                     )
                 )
             )

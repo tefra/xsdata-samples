@@ -3,7 +3,9 @@ from typing import Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
 from .can_controller_configuration import CanControllerConfiguration
-from .can_controller_configuration_requirements import CanControllerConfigurationRequirements
+from .can_controller_configuration_requirements import (
+    CanControllerConfigurationRequirements,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -32,6 +34,7 @@ class CanCommunicationControllerConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CAN-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
@@ -41,15 +44,17 @@ class CanCommunicationControllerConditional:
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    can_controller_attributes: Optional["CanCommunicationControllerConditional.CanControllerAttributes"] = field(
+    can_controller_attributes: Optional[
+        "CanCommunicationControllerConditional.CanControllerAttributes"
+    ] = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-ATTRIBUTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -57,14 +62,14 @@ class CanCommunicationControllerConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -72,24 +77,28 @@ class CanCommunicationControllerConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
     class CanControllerAttributes:
-        can_controller_configuration: Optional[CanControllerConfiguration] = field(
+        can_controller_configuration: Optional[
+            CanControllerConfiguration
+        ] = field(
             default=None,
             metadata={
                 "name": "CAN-CONTROLLER-CONFIGURATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        can_controller_configuration_requirements: Optional[CanControllerConfigurationRequirements] = field(
+        can_controller_configuration_requirements: Optional[
+            CanControllerConfigurationRequirements
+        ] = field(
             default=None,
             metadata={
                 "name": "CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

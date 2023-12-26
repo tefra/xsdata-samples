@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from .accessibility_tool_enumeration import AccessibilityToolEnumeration
-from .assistance_availability_enumeration import AssistanceAvailabilityEnumeration
+from .assistance_availability_enumeration import (
+    AssistanceAvailabilityEnumeration,
+)
 from .assistance_facility_enumeration import AssistanceFacilityEnumeration
 from .emergency_service_enumeration import EmergencyServiceEnumeration
 from .local_service_version_structure import LocalServiceVersionStructure
@@ -23,15 +25,17 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
-    assistance_availability: Optional[AssistanceAvailabilityEnumeration] = field(
+    assistance_availability: Optional[
+        AssistanceAvailabilityEnumeration
+    ] = field(
         default=None,
         metadata={
             "name": "AssistanceAvailability",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     staffing: Optional[StaffingEnumeration] = field(
         default=None,
@@ -39,7 +43,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "name": "Staffing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     accessibility_tool_list: List[AccessibilityToolEnumeration] = field(
         default_factory=list,
@@ -48,7 +52,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     languages: List[str] = field(
         default_factory=list,
@@ -57,7 +61,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     accessibility_trained_staff: Optional[bool] = field(
         default=None,
@@ -65,7 +69,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "name": "AccessibilityTrainedStaff",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     emergency_service_list: List[EmergencyServiceEnumeration] = field(
         default_factory=list,
@@ -74,7 +78,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     safety_facility_list: List[SafetyFacilityEnumeration] = field(
         default_factory=list,
@@ -83,5 +87,5 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

@@ -6,7 +6,9 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.annotation import (
 )
 from crossref.models.gov.nih.nlm.ncbi.jats1.contrib_id import ContribId
 from crossref.models.gov.nih.nlm.ncbi.jats1.name import Name
-from crossref.models.gov.nih.nlm.ncbi.jats1.name_alternatives import NameAlternatives
+from crossref.models.gov.nih.nlm.ncbi.jats1.name_alternatives import (
+    NameAlternatives,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.string_name import StringName
 from crossref.models.xml.lang_value import LangValue
 
@@ -18,6 +20,7 @@ class PrincipalAwardRecipient:
     """
     <div> <h3>Principal Award Recipient</h3> </div>
     """
+
     class Meta:
         name = "principal-award-recipient"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -26,28 +29,28 @@ class PrincipalAwardRecipient:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -81,5 +84,5 @@ class PrincipalAwardRecipient:
                     "type": StringName,
                 },
             ),
-        }
+        },
     )

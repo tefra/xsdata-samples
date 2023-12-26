@@ -13,7 +13,7 @@ class Uzo:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -27,5 +27,5 @@ class Uzo:
                     "type": Tld,
                 },
             ),
-        }
+        },
     )

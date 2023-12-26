@@ -17,6 +17,7 @@ class Distance1:
     direction
         Directions: S, N, E, W, SE, NW, ...
     """
+
     class Meta:
         name = "Distance"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -27,7 +28,7 @@ class Distance1:
             "name": "Units",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     value: None | int = field(
         default=None,
@@ -35,7 +36,7 @@ class Distance1:
             "name": "Value",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     direction: None | str = field(
         default=None,
@@ -43,5 +44,5 @@ class Distance1:
             "name": "Direction",
             "type": "Attribute",
             "max_length": 2,
-        }
+        },
     )

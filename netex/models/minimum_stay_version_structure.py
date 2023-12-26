@@ -18,7 +18,7 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumStayType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     requires_nights_away: List[DayOfWeekEnumeration] = field(
         default_factory=list,
@@ -27,7 +27,7 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     minimum_number_of_nights_away: Optional[int] = field(
         default=None,
@@ -35,7 +35,7 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
             "name": "MinimumNumberOfNightsAway",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_number_of_nights_away: Optional[int] = field(
         default=None,
@@ -43,5 +43,5 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
             "name": "MaximumNumberOfNightsAway",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

@@ -7,12 +7,16 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .executable_entity_activation_reason_subtypes_enum import ExecutableEntityActivationReasonSubtypesEnum
+from .executable_entity_activation_reason_subtypes_enum import (
+    ExecutableEntityActivationReasonSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .r_mode_in_atomic_swc_instance_ref import RModeInAtomicSwcInstanceRef
-from .r_variable_in_atomic_swc_instance_ref import RVariableInAtomicSwcInstanceRef
+from .r_variable_in_atomic_swc_instance_ref import (
+    RVariableInAtomicSwcInstanceRef,
+)
 from .ref import Ref
 from .runnable_entity_subtypes_enum import RunnableEntitySubtypesEnum
 from .short_name_fragment import ShortNameFragment
@@ -91,6 +95,7 @@ class DataReceivedEvent:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DATA-RECEIVED-EVENT"
 
@@ -101,15 +106,17 @@ class DataReceivedEvent:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DataReceivedEvent.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DataReceivedEvent.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -117,7 +124,7 @@ class DataReceivedEvent:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -125,7 +132,7 @@ class DataReceivedEvent:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -133,7 +140,7 @@ class DataReceivedEvent:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -141,7 +148,7 @@ class DataReceivedEvent:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -149,7 +156,7 @@ class DataReceivedEvent:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DataReceivedEvent.Annotations"] = field(
         default=None,
@@ -157,23 +164,27 @@ class DataReceivedEvent:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    activation_reason_representation_ref: Optional["DataReceivedEvent.ActivationReasonRepresentationRef"] = field(
+    activation_reason_representation_ref: Optional[
+        "DataReceivedEvent.ActivationReasonRepresentationRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    disabled_mode_irefs: Optional["DataReceivedEvent.DisabledModeIrefs"] = field(
+    disabled_mode_irefs: Optional[
+        "DataReceivedEvent.DisabledModeIrefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     start_on_event_ref: Optional["DataReceivedEvent.StartOnEventRef"] = field(
         default=None,
@@ -181,7 +192,7 @@ class DataReceivedEvent:
             "name": "START-ON-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -189,7 +200,7 @@ class DataReceivedEvent:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     data_iref: Optional[RVariableInAtomicSwcInstanceRef] = field(
         default=None,
@@ -197,14 +208,14 @@ class DataReceivedEvent:
             "name": "DATA-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -212,14 +223,14 @@ class DataReceivedEvent:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -230,7 +241,7 @@ class DataReceivedEvent:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -241,7 +252,7 @@ class DataReceivedEvent:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -252,7 +263,7 @@ class DataReceivedEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -263,7 +274,7 @@ class DataReceivedEvent:
                 "name": "DISABLED-MODE-IREF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -274,5 +285,5 @@ class DataReceivedEvent:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -13,5 +13,5 @@ class CurrencyId:
             "name": "type",
             "type": "Element",
             "required": True,
-        }
+        },
     )

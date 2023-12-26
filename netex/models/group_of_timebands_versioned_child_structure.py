@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .group_of_entities_version_structure import GroupOfEntitiesVersionStructure
+from .group_of_entities_version_structure import (
+    GroupOfEntitiesVersionStructure,
+)
 from .timeband_refs_rel_structure import TimebandRefsRelStructure
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -16,5 +18,5 @@ class GroupOfTimebandsVersionedChildStructure(GroupOfEntitiesVersionStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

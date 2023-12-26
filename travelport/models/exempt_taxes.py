@@ -25,6 +25,7 @@ class ExemptTaxes:
         The federal government body name must be provided in this element.
         This field is required by AC
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -35,7 +36,7 @@ class ExemptTaxes:
             "type": "Element",
             "max_occurs": 999,
             "length": 2,
-        }
+        },
     )
     tax_category: list[str] = field(
         default_factory=list,
@@ -43,14 +44,14 @@ class ExemptTaxes:
             "name": "TaxCategory",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     all_taxes: None | bool = field(
         default=None,
         metadata={
             "name": "AllTaxes",
             "type": "Attribute",
-        }
+        },
     )
     tax_territory: None | str = field(
         default=None,
@@ -58,7 +59,7 @@ class ExemptTaxes:
             "name": "TaxTerritory",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     company_name: None | str = field(
         default=None,
@@ -67,5 +68,5 @@ class ExemptTaxes:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 24,
-        }
+        },
     )

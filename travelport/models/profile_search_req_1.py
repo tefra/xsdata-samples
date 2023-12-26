@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.base_req_2 import BaseReq2
 from travelport.models.profile_search_1 import ProfileSearch1
-from travelport.models.profile_search_modifiers_1 import ProfileSearchModifiers1
+from travelport.models.profile_search_modifiers_1 import (
+    ProfileSearchModifiers1,
+)
 from travelport.models.profile_type_search_1 import ProfileTypeSearch1
 from travelport.models.type_profile_type_3 import TypeProfileType3
 
@@ -36,6 +38,7 @@ class ProfileSearchReq1(BaseReq2):
     search_token
         Search token to retrieve search result from cache, if present.
     """
+
     class Meta:
         name = "ProfileSearchReq"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -45,21 +48,21 @@ class ProfileSearchReq1(BaseReq2):
         metadata={
             "name": "ProfileTypeSearch",
             "type": "Element",
-        }
+        },
     )
     profile_search: None | ProfileSearch1 = field(
         default=None,
         metadata={
             "name": "ProfileSearch",
             "type": "Element",
-        }
+        },
     )
     profile_search_modifiers: None | ProfileSearchModifiers1 = field(
         default=None,
         metadata={
             "name": "ProfileSearchModifiers",
             "type": "Element",
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -67,21 +70,21 @@ class ProfileSearchReq1(BaseReq2):
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_parent_id: None | object = field(
         default=None,
         metadata={
             "name": "ProfileParentID",
             "type": "Attribute",
-        }
+        },
     )
     return_parent_summary: bool = field(
         default=False,
         metadata={
             "name": "ReturnParentSummary",
             "type": "Attribute",
-        }
+        },
     )
     search_token: None | str = field(
         default=None,
@@ -90,5 +93,5 @@ class ProfileSearchReq1(BaseReq2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

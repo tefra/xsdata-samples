@@ -12,5 +12,6 @@ class ContainerIPduTriggerEnumSimple(Enum):
         ContainerIPdu shall be requested right after the first
         ContainedIPdu was put into the ContainerIPdu.
     """
+
     DEFAULT_TRIGGER = "DEFAULT-TRIGGER"
     FIRST_CONTAINED_TRIGGER = "FIRST-CONTAINED-TRIGGER"

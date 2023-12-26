@@ -9,9 +9,8 @@ class SystemTime:
     """
     Identifies the time of the system.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/system_v32_0"
 
-    value: str = field(
-        default=""
-    )
+    value: str = field(default="")

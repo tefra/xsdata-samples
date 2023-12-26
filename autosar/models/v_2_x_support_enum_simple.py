@@ -11,5 +11,6 @@ class V2XSupportEnumSimple(Enum):
     :cvar V_2_X_NOT_SUPPORTED: This EcuInstance does not support V2X
         communication
     """
+
     V_2_X_ACTIVE_SUPPORTED = "V-2-X-ACTIVE-SUPPORTED"
     V_2_X_NOT_SUPPORTED = "V-2-X-NOT-SUPPORTED"

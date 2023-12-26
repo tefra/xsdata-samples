@@ -9,9 +9,13 @@ from .category_string import CategoryString
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
-from .platform_module_ethernet_endpoint_configuration_subtypes_enum import PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+from .platform_module_ethernet_endpoint_configuration_subtypes_enum import (
+    PlatformModuleEthernetEndpointConfigurationSubtypesEnum,
+)
 from .ref import Ref
-from .security_event_mapping_subtypes_enum import SecurityEventMappingSubtypesEnum
+from .security_event_mapping_subtypes_enum import (
+    SecurityEventMappingSubtypesEnum,
+)
 from .short_name_fragment import ShortNameFragment
 from .time_base_resource_ref_conditional import TimeBaseResourceRefConditional
 
@@ -85,6 +89,7 @@ class IdsmModuleInstantiation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "IDSM-MODULE-INSTANTIATION"
 
@@ -95,15 +100,17 @@ class IdsmModuleInstantiation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["IdsmModuleInstantiation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "IdsmModuleInstantiation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -111,7 +118,7 @@ class IdsmModuleInstantiation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -119,7 +126,7 @@ class IdsmModuleInstantiation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -127,7 +134,7 @@ class IdsmModuleInstantiation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -135,7 +142,7 @@ class IdsmModuleInstantiation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -143,7 +150,7 @@ class IdsmModuleInstantiation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["IdsmModuleInstantiation.Annotations"] = field(
         default=None,
@@ -151,15 +158,17 @@ class IdsmModuleInstantiation:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    network_interface_ref: Optional["IdsmModuleInstantiation.NetworkInterfaceRef"] = field(
+    network_interface_ref: Optional[
+        "IdsmModuleInstantiation.NetworkInterfaceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "NETWORK-INTERFACE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     time_bases: Optional["IdsmModuleInstantiation.TimeBases"] = field(
         default=None,
@@ -167,22 +176,24 @@ class IdsmModuleInstantiation:
             "name": "TIME-BASES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    reportable_security_event_refs: Optional["IdsmModuleInstantiation.ReportableSecurityEventRefs"] = field(
+    reportable_security_event_refs: Optional[
+        "IdsmModuleInstantiation.ReportableSecurityEventRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "REPORTABLE-SECURITY-EVENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -190,14 +201,14 @@ class IdsmModuleInstantiation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -208,7 +219,7 @@ class IdsmModuleInstantiation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -219,40 +230,46 @@ class IdsmModuleInstantiation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class NetworkInterfaceRef(Ref):
-        dest: Optional[PlatformModuleEthernetEndpointConfigurationSubtypesEnum] = field(
+        dest: Optional[
+            PlatformModuleEthernetEndpointConfigurationSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class TimeBases:
-        time_base_resource_ref_conditional: List[TimeBaseResourceRefConditional] = field(
+        time_base_resource_ref_conditional: List[
+            TimeBaseResourceRefConditional
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TIME-BASE-RESOURCE-REF-CONDITIONAL",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class ReportableSecurityEventRefs:
-        reportable_security_event_ref: List["IdsmModuleInstantiation.ReportableSecurityEventRefs.ReportableSecurityEventRef"] = field(
+        reportable_security_event_ref: List[
+            "IdsmModuleInstantiation.ReportableSecurityEventRefs.ReportableSecurityEventRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "REPORTABLE-SECURITY-EVENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -263,5 +280,5 @@ class IdsmModuleInstantiation:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

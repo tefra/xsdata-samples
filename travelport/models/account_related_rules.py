@@ -17,12 +17,12 @@ class AccountRelatedRules:
             "name": "BookingRules",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     routing_rules: None | RoutingRules = field(
         default=None,
         metadata={
             "name": "RoutingRules",
             "type": "Element",
-        }
+        },
     )

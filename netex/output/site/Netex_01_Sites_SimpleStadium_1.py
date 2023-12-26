@@ -104,74 +104,74 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002"
+        participant_ref='SYS002'
     ),
     publication_refresh_interval=XmlDuration("PT5M0S"),
     data_objects=DataObjectsRelStructure(
         choice=[
             SiteFrame(
-                id="oda:SF01",
+                id='oda:SF01',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="oda:SF01",
-                                version="any",
+                                id='oda:SF01',
+                                version='any',
                                 from_date=XmlDateTime(2012, 7, 26, 0, 0, 0, 0, 0),
                                 to_date=XmlDateTime(2012, 8, 12, 0, 0, 0, 0, 0)
                             ),
                         ]
                     ),
                 ],
-                version="any",
+                version='any',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="naptStop_data",
-                            xmlns="naptStop",
-                            xmlns_url="http://www.naptan.org.uk/naptan",
-                            description="UK NaPTAN Stop Place codes"
+                            id='naptStop_data',
+                            xmlns='naptStop',
+                            xmlns_url='http://www.naptan.org.uk/naptan',
+                            description='UK NaPTAN Stop Place codes'
                         ),
                         Codespace(
-                            id="nptg_metadata",
-                            xmlns="nptg",
-                            xmlns_url="http://www.naptan.org.uk/naptan",
-                            description="NPTG  metadta &amp;  Admin codes "
+                            id='nptg_metadata',
+                            xmlns='nptg',
+                            xmlns_url='http://www.naptan.org.uk/naptan',
+                            description='NPTG  metadta &  Admin codes '
                         ),
                         Codespace(
-                            id="nptgLocality_data",
-                            xmlns="nptgLocality",
-                            xmlns_url="http://www.nptg.org.uk/loclaities",
-                            description="NPTG TopographicPlace &amp;  Admin codes "
+                            id='nptgLocality_data',
+                            xmlns='nptgLocality',
+                            xmlns_url='http://www.nptg.org.uk/loclaities',
+                            description='NPTG TopographicPlace &  Admin codes '
                         ),
                         Codespace(
-                            id="tbd",
-                            xmlns="tbd",
-                            xmlns_url="http://www.intdata.co.uk/data",
-                            description="Other interchange DATA SOURCE "
+                            id='tbd',
+                            xmlns='tbd',
+                            xmlns_url='http://www.intdata.co.uk/data',
+                            description='Other interchange DATA SOURCE '
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="tbd"
+                        ref='tbd'
                     )
                 ),
                 topographic_places=TopographicPlacesInFrameRelStructure(
                     topographic_place=[
                         TopographicPlace(
-                            id="nptgLocality:TP_0032A",
-                            version="any",
-                            responsibility_set_ref_attribute="nptg:GZ_01",
+                            id='nptgLocality:TP_0032A',
+                            version='any',
+                            responsibility_set_ref_attribute='nptg:GZ_01',
                             name=MultilingualString(
-                                value="Frampton"
+                                value='Frampton'
                             ),
                             descriptor=TopographicPlaceDescriptorVersionedChildStructure(
                                 name=MultilingualString(
-                                    value="Frampton"
+                                    value='Frampton'
                                 )
                             )
                         ),
@@ -180,49 +180,49 @@ obj = PublicationDelivery(
                 points_of_interest=PointsOfInterestInFrameRelStructure(
                     point_of_interest=[
                         PointOfInterest(
-                            id="tbd:POI_23",
-                            version="any",
-                            responsibility_set_ref_attribute="tbd:LRS_01",
+                            id='tbd:POI_23',
+                            version='any',
+                            responsibility_set_ref_attribute='tbd:LRS_01',
                             name=MultilingualString(
-                                value="Frampton Football Stadium"
+                                value='Frampton Football Stadium'
                             ),
                             short_name=MultilingualString(
-                                value="Frampton FC"
+                                value='Frampton FC'
                             ),
                             description=[
                                 MultilingualString(
-                                    value="Frampton FC Football Stadium"
+                                    value='Frampton FC Football Stadium'
                                 ),
                             ],
                             centroid=SimplePointVersionStructure(
                                 location=LocationStructure2(
-                                    longitude=Decimal("-180"),
-                                    latitude=Decimal("-90"),
-                                    altitude=Decimal("-1000")
+                                    longitude=Decimal('-180'),
+                                    latitude=Decimal('-90'),
+                                    altitude=Decimal('-1000')
                                 )
                             ),
-                            image="http://www.amy.com/stad.gif",
+                            image='http://www.amy.com/stad.gif',
                             postal_address=PostalAddress(
-                                id="tbd:POI_23@address",
-                                version="any",
+                                id='tbd:POI_23@address',
+                                version='any',
                                 building_name=MultilingualString(
-                                    value="The Stadium"
+                                    value='The Stadium'
                                 ),
                                 address_line1=MultilingualString(
-                                    value="23 Foo St"
+                                    value='23 Foo St'
                                 ),
                                 town=MultilingualString(
-                                    value="Frampton"
+                                    value='Frampton'
                                 ),
-                                post_code="FGR 1JS"
+                                post_code='FGR 1JS'
                             ),
                             accessibility_assessment=AccessibilityAssessment(
-                                id="tbd:POI_23",
-                                version="any",
+                                id='tbd:POI_23',
+                                version='any',
                                 mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                 limitations=AccessibilityLimitationsRelStructure(
                                     accessibility_limitation=AccessibilityLimitation(
-                                        id="tbd:POI_23",
+                                        id='tbd:POI_23',
                                         wheelchair_access=LimitationStatusEnumeration.TRUE,
                                         step_free_access=LimitationStatusEnumeration.TRUE,
                                         escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -234,7 +234,7 @@ obj = PublicationDelivery(
                                 AccessModeEnumeration.FOOT,
                             ],
                             cross_road=MultilingualString(
-                                value="Foo St"
+                                value='Foo St'
                             ),
                             public_use=PublicUseEnumeration.ALL,
                             covered=CoveredEnumeration.INDOORS,
@@ -242,67 +242,67 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.WELL_LIT,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                 topographic_place_ref=TopographicPlaceRef(
-                                    version="any",
-                                    ref="nptgLocality:TP_0032A"
+                                    version='any',
+                                    ref='nptgLocality:TP_0032A'
                                 )
                             ),
                             levels=LevelsRelStructure(
                                 level_ref_or_level=[
                                     Level(
-                                        id="tbd:POI_23_Lvl_01_lower",
-                                        version="any",
+                                        id='tbd:POI_23_Lvl_01_lower',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Ground"
+                                            value='Ground'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Ground"
+                                            value='Ground'
                                         ),
-                                        public_code="G"
+                                        public_code='G'
                                     ),
                                     Level(
-                                        id="tbd:POI_23_Lvl_02_upper",
-                                        version="any",
+                                        id='tbd:POI_23_Lvl_02_upper',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Upper Terrace"
+                                            value='Upper Terrace'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Upper"
+                                            value='Upper'
                                         ),
-                                        public_code="T1"
+                                        public_code='T1'
                                     ),
                                 ]
                             ),
                             entrances=SiteEntrancesRelStructure(
                                 choice=[
                                     PointOfInterestEntrance(
-                                        id="tbd:POI_23_A1-E1",
-                                        version="any",
+                                        id='tbd:POI_23_A1-E1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Foo St Entrance A"
+                                            value='Foo St Entrance A'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Entrance A "
+                                                value='Entrance A '
                                             ),
                                         ],
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90"),
-                                                altitude=Decimal("-1000")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90'),
+                                                altitude=Decimal('-1000')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_A1-E1",
-                                            version="any",
+                                            id='tbd:POI_23_A1-E1',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.FALSE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_A1-E1",
+                                                    id='tbd:POI_23_A1-E1',
                                                     wheelchair_access=LimitationStatusEnumeration.UNKNOWN,
                                                     step_free_access=LimitationStatusEnumeration.FALSE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -312,7 +312,7 @@ obj = PublicationDelivery(
                                             suitabilities=SuitabilitiesRelStructure(
                                                 suitability=[
                                                     Suitability(
-                                                        id="tbd:POI_23_A1-E1_Suit1",
+                                                        id='tbd:POI_23_A1-E1_Suit1',
                                                         choice=MobilityEnumeration.MOTORIZED_WHEELCHAIR,
                                                         suitable=SuitableEnumeration.NOT_SUITABLE
                                                     ),
@@ -321,18 +321,18 @@ obj = PublicationDelivery(
                                         ),
                                         public_use=PublicUseEnumeration.ALL,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         ),
                                         check_constraints=CheckConstraintsRelStructure(
                                             check_constraint_ref_or_check_constraint=[
                                                 CheckConstraint(
-                                                    id="tbd:POI_23_A1-E1_C1",
-                                                    version="any",
+                                                    id='tbd:POI_23_A1-E1_C1',
+                                                    version='any',
                                                     order=1,
                                                     check_direction=CheckDirectionEnumeration.FORWARDS,
                                                     check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -341,8 +341,8 @@ obj = PublicationDelivery(
                                                     delays=CheckConstraintDelaysRelStructure(
                                                         check_constraint_delay_ref_or_check_constraint_delay=[
                                                             CheckConstraintDelay(
-                                                                id="tbd:POI_23_A1-E1_C1 ",
-                                                                version="any",
+                                                                id='tbd:POI_23_A1-E1_C1 ',
+                                                                version='any',
                                                                 order=1,
                                                                 minimum_likely_delay=XmlDuration("PT5M"),
                                                                 average_delay=XmlDuration("PT10M"),
@@ -356,47 +356,47 @@ obj = PublicationDelivery(
                                         equipment_places=EquipmentPlacesRelStructure(
                                             equipment_place_ref_or_equipment_place=[
                                                 EquipmentPlace(
-                                                    id="tbd:POI_23_A1-E1_Eq1plcs",
-                                                    version="any",
+                                                    id='tbd:POI_23_A1-E1_Eq1plcs',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Validator locator"
+                                                        value='Validator locator'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="normalizedString"
+                                                            value='normalizedString'
                                                         ),
                                                     ],
                                                     equipment_positions=EquipmentPositionsRelStructure(
                                                         equipment_position=[
                                                             EquipmentPosition(
-                                                                id="tbd:POI_23_A1-E1_Eq1pos",
-                                                                version="any",
+                                                                id='tbd:POI_23_A1-E1_Eq1pos',
+                                                                version='any',
                                                                 choice=EquipmentRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_A1-E1_Eq2@validator"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_A1-E1_Eq2@validator'
                                                                 ),
                                                                 location=LocationStructure2(
-                                                                    longitude=Decimal("-180"),
-                                                                    latitude=Decimal("-90"),
-                                                                    altitude=Decimal("-1000"),
-                                                                    precision=Decimal("0.0")
+                                                                    longitude=Decimal('-180'),
+                                                                    latitude=Decimal('-90'),
+                                                                    altitude=Decimal('-1000'),
+                                                                    precision=Decimal('0.0')
                                                                 ),
-                                                                xoffset=Decimal("50"),
-                                                                yoffset=Decimal("10.0")
+                                                                xoffset=Decimal('50'),
+                                                                yoffset=Decimal('10.0')
                                                             ),
                                                         ]
                                                     ),
                                                     place_equipments=EquipmentsRelStructure(
                                                         choice=[
                                                             TicketValidatorEquipment(
-                                                                id="tbd:POI_23_A1-E1_Eq2@validator",
-                                                                version="any",
+                                                                id='tbd:POI_23_A1-E1_Eq2@validator',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Ticket validator"
+                                                                    value='Ticket validator'
                                                                 ),
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
-                                                                    value="validator",
-                                                                    ref="tvd:eq01"
+                                                                    value='validator',
+                                                                    ref='tvd:eq01'
                                                                 ),
                                                                 ticket_validator_type=[
                                                                     TicketValidatorEnumeration.PAPER_STAMP,
@@ -410,10 +410,10 @@ obj = PublicationDelivery(
                                         place_equipments=PlaceEquipmentsRelStructure(
                                             choice=[
                                                 EntranceEquipment(
-                                                    id="tbd:POI_23_A1-E1_Eq2@entrance",
-                                                    version="any",
+                                                    id='tbd:POI_23_A1-E1_Eq2@entrance',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="gates"
+                                                        value='gates'
                                                     ),
                                                     direction_of_use=DirectionOfUseEnumeration.BOTH,
                                                     number_of_gates=10
@@ -421,44 +421,44 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="A"
+                                            value='A'
                                         ),
                                         entrance_type=EntranceEnumeration.SWING_DOOR,
                                         is_external=True,
                                         is_entry=True,
                                         is_exit=True,
-                                        width=Decimal("2"),
-                                        height=Decimal("2")
+                                        width=Decimal('2'),
+                                        height=Decimal('2')
                                     ),
                                     PointOfInterestEntrance(
-                                        id="tbd:POI_23_B1-E1",
-                                        version="any",
+                                        id='tbd:POI_23_B1-E1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Foo St Entrance B"
+                                            value='Foo St Entrance B'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Entrance B"
+                                                value='Entrance B'
                                             ),
                                         ],
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90"),
-                                                altitude=Decimal("-1000")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90'),
+                                                altitude=Decimal('-1000')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_B1-E1",
-                                            version="any",
+                                            id='tbd:POI_23_B1-E1',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_B1-E1",
+                                                    id='tbd:POI_23_B1-E1',
                                                     wheelchair_access=LimitationStatusEnumeration.UNKNOWN,
                                                     step_free_access=LimitationStatusEnumeration.FALSE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -468,7 +468,7 @@ obj = PublicationDelivery(
                                             suitabilities=SuitabilitiesRelStructure(
                                                 suitability=[
                                                     Suitability(
-                                                        id="tbd:POI_23_A1-E1_Suit2",
+                                                        id='tbd:POI_23_A1-E1_Suit2',
                                                         choice=MobilityEnumeration.MOTORIZED_WHEELCHAIR,
                                                         suitable=SuitableEnumeration.NOT_SUITABLE
                                                     ),
@@ -477,18 +477,18 @@ obj = PublicationDelivery(
                                         ),
                                         public_use=PublicUseEnumeration.ALL,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         ),
                                         check_constraints=CheckConstraintsRelStructure(
                                             check_constraint_ref_or_check_constraint=[
                                                 CheckConstraint(
-                                                    id="tbd:POI_23_A1_E2_C1",
-                                                    version="any",
+                                                    id='tbd:POI_23_A1_E2_C1',
+                                                    version='any',
                                                     order=1,
                                                     check_direction=CheckDirectionEnumeration.FORWARDS,
                                                     check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -497,8 +497,8 @@ obj = PublicationDelivery(
                                                     delays=CheckConstraintDelaysRelStructure(
                                                         check_constraint_delay_ref_or_check_constraint_delay=[
                                                             CheckConstraintDelay(
-                                                                id="tbd:POI_23_A1_E2_C1_D1",
-                                                                version="any",
+                                                                id='tbd:POI_23_A1_E2_C1_D1',
+                                                                version='any',
                                                                 order=1,
                                                                 minimum_likely_delay=XmlDuration("PT10M"),
                                                                 average_delay=XmlDuration("PT12M"),
@@ -512,47 +512,47 @@ obj = PublicationDelivery(
                                         equipment_places=EquipmentPlacesRelStructure(
                                             equipment_place_ref_or_equipment_place=[
                                                 EquipmentPlace(
-                                                    id="tbd:POI_23_A1-E1_Eq1plcsVLD",
-                                                    version="any",
+                                                    id='tbd:POI_23_A1-E1_Eq1plcsVLD',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Validator locator"
+                                                        value='Validator locator'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="normalizedString"
+                                                            value='normalizedString'
                                                         ),
                                                     ],
                                                     equipment_positions=EquipmentPositionsRelStructure(
                                                         equipment_position=[
                                                             EquipmentPosition(
-                                                                id="tbd:POI_23_A1-E1_Eq1pos _2",
-                                                                version="any",
+                                                                id='tbd:POI_23_A1-E1_Eq1pos _2',
+                                                                version='any',
                                                                 choice=EquipmentRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_A1-E1_Eq1"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_A1-E1_Eq1'
                                                                 ),
                                                                 location=LocationStructure2(
-                                                                    longitude=Decimal("-180"),
-                                                                    latitude=Decimal("-90"),
-                                                                    altitude=Decimal("-1000"),
-                                                                    precision=Decimal("0.0")
+                                                                    longitude=Decimal('-180'),
+                                                                    latitude=Decimal('-90'),
+                                                                    altitude=Decimal('-1000'),
+                                                                    precision=Decimal('0.0')
                                                                 ),
-                                                                xoffset=Decimal("50"),
-                                                                yoffset=Decimal("10.0")
+                                                                xoffset=Decimal('50'),
+                                                                yoffset=Decimal('10.0')
                                                             ),
                                                         ]
                                                     ),
                                                     place_equipments=EquipmentsRelStructure(
                                                         choice=[
                                                             TicketValidatorEquipment(
-                                                                id="tbd:POI_23_A1-E1_Eq1",
-                                                                version="any",
+                                                                id='tbd:POI_23_A1-E1_Eq1',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Ticket validator"
+                                                                    value='Ticket validator'
                                                                 ),
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
-                                                                    value="validator",
-                                                                    ref=""
+                                                                    value='validator',
+                                                                    ref=''
                                                                 ),
                                                                 ticket_validator_type=[
                                                                     TicketValidatorEnumeration.PAPER_STAMP,
@@ -566,10 +566,10 @@ obj = PublicationDelivery(
                                         place_equipments=PlaceEquipmentsRelStructure(
                                             choice=[
                                                 EntranceEquipment(
-                                                    id="tbd:POI_23_A1-E1_Eq2b",
-                                                    version="any",
+                                                    id='tbd:POI_23_A1-E1_Eq2b',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="gates"
+                                                        value='gates'
                                                     ),
                                                     direction_of_use=DirectionOfUseEnumeration.BOTH,
                                                     number_of_gates=10
@@ -579,61 +579,61 @@ obj = PublicationDelivery(
                                         local_services=LocalServicesRelStructure(
                                             choice=[
                                                 AssistanceService(
-                                                    id="tbd:POI_23_A1-E1_Eq3",
-                                                    version="any",
+                                                    id='tbd:POI_23_A1-E1_Eq3',
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Assistance available"
+                                                        value='Assistance available'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         label=MultilingualString(
-                                            value="A"
+                                            value='A'
                                         ),
                                         entrance_type=EntranceEnumeration.SWING_DOOR,
                                         is_external=True,
                                         is_entry=True,
                                         is_exit=True,
-                                        width=Decimal("2"),
-                                        height=Decimal("2")
+                                        width=Decimal('2'),
+                                        height=Decimal('2')
                                     ),
                                 ]
                             ),
                             classifications=PointOfInterestClassificationsViewsRelStructure(
                                 point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                     PointOfInterestClassificationRef(
-                                        value="EXTERNAL",
-                                        ref="tbd:Class_476"
+                                        value='EXTERNAL',
+                                        ref='tbd:Class_476'
                                     ),
                                 ]
                             ),
                             spaces=PointOfInterestSpacesRelStructure(
                                 point_of_interest_space_ref_or_point_of_interest_space=[
                                     PointOfInterestSpace(
-                                        id="tbd:POI_23_A1",
-                                        version="any",
+                                        id='tbd:POI_23_A1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main concourse for Gate A"
+                                            value='Main concourse for Gate A'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90"),
-                                                altitude=Decimal("-1000"),
-                                                precision=Decimal("0.0")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90'),
+                                                altitude=Decimal('-1000'),
+                                                precision=Decimal('0.0')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_A1",
-                                            version="any",
+                                            id='tbd:POI_23_A1',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_A1",
+                                                    id='tbd:POI_23_A1',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -646,39 +646,39 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     PointOfInterestSpace(
-                                        id="tbd:POI_23_A2",
-                                        version="any",
+                                        id='tbd:POI_23_A2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lower Terrace A "
+                                            value='Lower Terrace A '
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90"),
-                                                altitude=Decimal("-1000"),
-                                                precision=Decimal("0.0")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90'),
+                                                altitude=Decimal('-1000'),
+                                                precision=Decimal('0.0')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_A2",
-                                            version="any",
+                                            id='tbd:POI_23_A2',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_A2",
+                                                    id='tbd:POI_23_A2',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -691,39 +691,39 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     PointOfInterestSpace(
-                                        id="tbd:POI_23_A3",
-                                        version="any",
+                                        id='tbd:POI_23_A3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Upper Terrace A "
+                                            value='Upper Terrace A '
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90"),
-                                                altitude=Decimal("-1000"),
-                                                precision=Decimal("0.0")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90'),
+                                                altitude=Decimal('-1000'),
+                                                precision=Decimal('0.0')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_A3",
-                                            version="any",
+                                            id='tbd:POI_23_A3',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.FALSE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_A3",
+                                                    id='tbd:POI_23_A3',
                                                     step_free_access=LimitationStatusEnumeration.FALSE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
                                                     lift_free_access=LimitationStatusEnumeration.TRUE
@@ -735,39 +735,39 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_02_upper"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_02_upper'
                                         )
                                     ),
                                     PointOfInterestSpace(
-                                        id="tbd:POI_23_B1",
-                                        version="any",
+                                        id='tbd:POI_23_B1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main concourse for Gate B"
+                                            value='Main concourse for Gate B'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90"),
-                                                altitude=Decimal("-1000"),
-                                                precision=Decimal("0.0")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90'),
+                                                altitude=Decimal('-1000'),
+                                                precision=Decimal('0.0')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_B1",
-                                            version="any",
+                                            id='tbd:POI_23_B1',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_B1",
+                                                    id='tbd:POI_23_B1',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -780,39 +780,39 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     PointOfInterestSpace(
-                                        id="tbd:POI_23_B2",
-                                        version="any",
+                                        id='tbd:POI_23_B2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Main concourse for Gate B"
+                                            value='Main concourse for Gate B'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90"),
-                                                altitude=Decimal("-1000"),
-                                                precision=Decimal("0.0")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90'),
+                                                altitude=Decimal('-1000'),
+                                                precision=Decimal('0.0')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_B2",
-                                            version="any",
+                                            id='tbd:POI_23_B2',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_A1-E1g_lim1",
+                                                    id='tbd:POI_23_A1-E1g_lim1',
                                                     wheelchair_access=LimitationStatusEnumeration.UNKNOWN,
                                                     step_free_access=LimitationStatusEnumeration.UNKNOWN,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -825,37 +825,37 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     PointOfInterestSpace(
-                                        id="tbd:POI_23_B3",
-                                        version="any",
+                                        id='tbd:POI_23_B3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lower Terrace B"
+                                            value='Lower Terrace B'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
-                                                longitude=Decimal("-180"),
-                                                latitude=Decimal("-90")
+                                                longitude=Decimal('-180'),
+                                                latitude=Decimal('-90')
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_B3",
-                                            version="any",
+                                            id='tbd:POI_23_B3',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_B3",
+                                                    id='tbd:POI_23_B3',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -868,12 +868,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_02_upper"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_02_upper'
                                         )
                                     ),
                                 ]
@@ -881,43 +881,43 @@ obj = PublicationDelivery(
                             path_links=SitePathLinksRelStructure(
                                 path_link_ref_or_site_path_link=[
                                     SitePathLink(
-                                        id="tbd:POI_23_pl_A1-E1_to_A1-J1",
-                                        version="any",
+                                        id='tbd:POI_23_pl_A1-E1_to_A1-J1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="From entrance A to main concourse J1"
+                                            value='From entrance A to main concourse J1'
                                         ),
-                                        distance=Decimal("20"),
+                                        distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PointOfInterestRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23"
+                                                version='any',
+                                                ref='tbd:POI_23'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_A1-E1"
+                                                version='any',
+                                                ref='tbd:POI_23_A1-E1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_A1-J1"
+                                                version='any',
+                                                ref='tbd:POI_23_A1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_pl_A1-E1_to_A1-J1",
-                                            version="any",
+                                            id='tbd:POI_23_pl_A1-E1_to_A1-J1',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_pl_A1-E1_to_A1-J1",
+                                                    id='tbd:POI_23_pl_A1-E1_to_A1-J1',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -928,7 +928,7 @@ obj = PublicationDelivery(
                                         public_use=PublicUseEnumeration.ALL,
                                         covered=CoveredEnumeration.INDOORS,
                                         towards=MultilingualString(
-                                            value="Lower terrace"
+                                            value='Lower terrace'
                                         ),
                                         number_of_steps=1,
                                         allowed_use=PathDirectionEnumeration.TWO_WAY,
@@ -940,48 +940,48 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     SitePathLink(
-                                        id="tbd:POI_23_pl_A1-J1_to_A2",
-                                        version="any",
+                                        id='tbd:POI_23_pl_A1-J1_to_A2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="from concourse J1 to lower terrace "
+                                            value='from concourse J1 to lower terrace '
                                         ),
-                                        distance=Decimal("20"),
+                                        distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_A1-J1"
+                                                version='any',
+                                                ref='tbd:POI_23_A1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_A2"
+                                                version='any',
+                                                ref='tbd:POI_23_A2'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_pl_A1-J1_to_A2",
-                                            version="any",
+                                            id='tbd:POI_23_pl_A1-J1_to_A2',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_pl_A1-J1_to_A2",
+                                                    id='tbd:POI_23_pl_A1-J1_to_A2',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -992,7 +992,7 @@ obj = PublicationDelivery(
                                         public_use=PublicUseEnumeration.ALL,
                                         covered=CoveredEnumeration.INDOORS,
                                         towards=MultilingualString(
-                                            value="along"
+                                            value='along'
                                         ),
                                         number_of_steps=1,
                                         allowed_use=PathDirectionEnumeration.TWO_WAY,
@@ -1004,48 +1004,48 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     SitePathLink(
-                                        id="tbd:POI_23_pl_A1-J1_to_A3",
-                                        version="any",
+                                        id='tbd:POI_23_pl_A1-J1_to_A3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="from entrance concourse J1 to upper terrace A"
+                                            value='from entrance concourse J1 to upper terrace A'
                                         ),
-                                        distance=Decimal("20"),
+                                        distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_A1-J1"
+                                                version='any',
+                                                ref='tbd:POI_23_A1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_A3"
+                                                version='any',
+                                                ref='tbd:POI_23_A3'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_02_upper"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_02_upper'
                                             )
                                         ),
                                         accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_pl_A1-J1_to_A3",
-                                            version="any",
+                                            id='tbd:POI_23_pl_A1-J1_to_A3',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_pl_A1-J1_to_A3",
+                                                    id='tbd:POI_23_pl_A1-J1_to_A3',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -1056,7 +1056,7 @@ obj = PublicationDelivery(
                                         public_use=PublicUseEnumeration.ALL,
                                         covered=CoveredEnumeration.INDOORS,
                                         towards=MultilingualString(
-                                            value="Terrace "
+                                            value='Terrace '
                                         ),
                                         number_of_steps=20,
                                         allowed_use=PathDirectionEnumeration.TWO_WAY,
@@ -1067,48 +1067,48 @@ obj = PublicationDelivery(
                                             default_duration=XmlDuration("PT2M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         )
                                     ),
                                     SitePathLink(
-                                        id="tbd:POI_23_pl_B1-E1_to_B1-J1",
-                                        version="any",
+                                        id='tbd:POI_23_pl_B1-E1_to_B1-J1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="From entrance A to main concourse J1"
+                                            value='From entrance A to main concourse J1'
                                         ),
-                                        distance=Decimal("20"),
+                                        distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PointOfInterestRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23"
+                                                version='any',
+                                                ref='tbd:POI_23'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_B1-E1"
+                                                version='any',
+                                                ref='tbd:POI_23_B1-E1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_B1-J1"
+                                                version='any',
+                                                ref='tbd:POI_23_B1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_pl_B1-E1_to_B1-J1",
-                                            version="any",
+                                            id='tbd:POI_23_pl_B1-E1_to_B1-J1',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_pl_B1-E1_to_B1-J1",
+                                                    id='tbd:POI_23_pl_B1-E1_to_B1-J1',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -1119,7 +1119,7 @@ obj = PublicationDelivery(
                                         public_use=PublicUseEnumeration.ALL,
                                         covered=CoveredEnumeration.INDOORS,
                                         towards=MultilingualString(
-                                            value="Lower terrace"
+                                            value='Lower terrace'
                                         ),
                                         number_of_steps=1,
                                         allowed_use=PathDirectionEnumeration.TWO_WAY,
@@ -1131,48 +1131,48 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     SitePathLink(
-                                        id="tbd:POI_23_pl_B1-J1_to_B2",
-                                        version="any",
+                                        id='tbd:POI_23_pl_B1-J1_to_B2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="from concourse J1 to lower terrace "
+                                            value='from concourse J1 to lower terrace '
                                         ),
-                                        distance=Decimal("20"),
+                                        distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_B1-J1"
+                                                version='any',
+                                                ref='tbd:POI_23_B1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_B2"
+                                                version='any',
+                                                ref='tbd:POI_23_B2'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_pl_B1-J1_to_B2",
-                                            version="any",
+                                            id='tbd:POI_23_pl_B1-J1_to_B2',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_pl_B1-J1_to_B2",
+                                                    id='tbd:POI_23_pl_B1-J1_to_B2',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -1183,7 +1183,7 @@ obj = PublicationDelivery(
                                         public_use=PublicUseEnumeration.ALL,
                                         covered=CoveredEnumeration.INDOORS,
                                         towards=MultilingualString(
-                                            value="along"
+                                            value='along'
                                         ),
                                         number_of_steps=1,
                                         allowed_use=PathDirectionEnumeration.TWO_WAY,
@@ -1195,48 +1195,48 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
-                                            version="any",
-                                            ref="tbd:POI_23_Lvl_01_lower"
+                                            version='any',
+                                            ref='tbd:POI_23_Lvl_01_lower'
                                         )
                                     ),
                                     SitePathLink(
-                                        id="tbd:POI_23_pl_B1-J1_to_B3",
-                                        version="any",
+                                        id='tbd:POI_23_pl_B1-J1_to_B3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="from entrance concourse J1 to upper terrace A"
+                                            value='from entrance concourse J1 to upper terrace A'
                                         ),
-                                        distance=Decimal("20"),
+                                        distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_B1-J1"
+                                                version='any',
+                                                ref='tbd:POI_23_B1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_01_lower"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_B3"
+                                                version='any',
+                                                ref='tbd:POI_23_B3'
                                             ),
                                             level_ref=LevelRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23_Lvl_02_upper"
+                                                version='any',
+                                                ref='tbd:POI_23_Lvl_02_upper'
                                             )
                                         ),
                                         accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_pl_B1-J1_to_B3",
-                                            version="any",
+                                            id='tbd:POI_23_pl_B1-J1_to_B3',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_pl_B1-J1_to_B3",
+                                                    id='tbd:POI_23_pl_B1-J1_to_B3',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -1247,7 +1247,7 @@ obj = PublicationDelivery(
                                         public_use=PublicUseEnumeration.ALL,
                                         covered=CoveredEnumeration.INDOORS,
                                         towards=MultilingualString(
-                                            value="Terrace "
+                                            value='Terrace '
                                         ),
                                         number_of_steps=20,
                                         allowed_use=PathDirectionEnumeration.TWO_WAY,
@@ -1258,8 +1258,8 @@ obj = PublicationDelivery(
                                             default_duration=XmlDuration("PT2M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23"
+                                            version='any',
+                                            ref='tbd:POI_23'
                                         )
                                     ),
                                 ]
@@ -1267,25 +1267,25 @@ obj = PublicationDelivery(
                             path_junctions=PathJunctionsRelStructure(
                                 path_junction_ref_or_path_junction=[
                                     PathJunction(
-                                        id="tbd:POI_23_A1-J1",
-                                        version="any",
+                                        id='tbd:POI_23_A1-J1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Branch in Entrance Hall A"
+                                            value='Branch in Entrance Hall A'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23_A1"
+                                            version='any',
+                                            ref='tbd:POI_23_A1'
                                         )
                                     ),
                                     PathJunction(
-                                        id="tbd:POI_23_B1-J1",
-                                        version="any",
+                                        id='tbd:POI_23_B1-J1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Branch in Entrance Hall B"
+                                            value='Branch in Entrance Hall B'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
-                                            version="any",
-                                            ref="tbd:POI_23_B1"
+                                            version='any',
+                                            ref='tbd:POI_23_B1'
                                         )
                                     ),
                                 ]
@@ -1293,12 +1293,12 @@ obj = PublicationDelivery(
                             accesses=AccessesRelStructure(
                                 access_ref_or_access=[
                                     Access(
-                                        id="tbd:Access:POI_23_N1",
-                                        version="any",
+                                        id='tbd:Access:POI_23_N1',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Access to stadium from Framton metro"
+                                            value='Access to stadium from Framton metro'
                                         ),
-                                        distance=Decimal("0.0"),
+                                        distance=Decimal('0.0'),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT5M"),
                                             frequent_traveller_duration=XmlDuration("PT3M"),
@@ -1309,13 +1309,13 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             place_ref=StopPlaceRefStructure(
-                                                ref="naptStop:470012345"
+                                                ref='naptStop:470012345'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             place_ref=PointOfInterestRefStructure(
-                                                version="any",
-                                                ref="tbd:POI_23"
+                                                version='any',
+                                                ref='tbd:POI_23'
                                             )
                                         )
                                     ),
@@ -1324,18 +1324,18 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsRelStructure(
                                 navigation_path_ref_or_navigation_path=[
                                     NavigationPath(
-                                        id="tbd:POI_23_N1_A1-E1_to_A2",
-                                        version="any",
+                                        id='tbd:POI_23_N1_A1-E1_to_A2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="From entrance A to lower terrace A2"
+                                            value='From entrance A to lower terrace A2'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_N1_A1-E1_to_A2",
-                                            version="any",
+                                            id='tbd:POI_23_N1_A1-E1_to_A2',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_N1_A1-E1_to_A2",
+                                                    id='tbd:POI_23_N1_A1-E1_to_A2',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1349,8 +1349,8 @@ obj = PublicationDelivery(
                                         summaries=AccessSummariesRelStructure(
                                             access_summary=[
                                                 AccessSummary(
-                                                    id="tbd:POI_23_N1_A1-E1_to_A2_01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_A1-E1_to_A2_01',
+                                                    version='any',
                                                     access_feature_type=AccessFeatureEnumeration.CONCOURSE,
                                                     count=1,
                                                     transition=TransitionEnumeration.LEVEL
@@ -1367,30 +1367,30 @@ obj = PublicationDelivery(
                                         places_in_sequence=PlacesInSequenceRelStructure(
                                             place_in_sequence=[
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N1_A1-E1_to_A2_p01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_A1-E1_to_A2_p01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Entrance A"
+                                                        value='Entrance A'
                                                     ),
                                                     order=1,
                                                     place_ref=PointOfInterestEntranceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_A1-E1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_A1-E1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:PLIS_POI_23_A1-E1_to_A1_01",
-                                                                version="any",
+                                                                id='tbd:PLIS_POI_23_A1-E1_to_A1_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Entrance A"
+                                                                        value='Entrance A'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_pl_A1-E1_to_A1-J1"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1400,30 +1400,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N1_A1-E1_to_A2_p02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_A1-E1_to_A2_p02',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Branch {pomit in  concours A"
+                                                        value='Branch {pomit in  concours A'
                                                     ),
                                                     order=2,
                                                     place_ref=PlaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_A1-J1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_A1-J1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:PLIS_POI_23_A1-E1_to_A1_02",
-                                                                version="any",
+                                                                id='tbd:PLIS_POI_23_A1-E1_to_A1_02',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="normalizedString"
+                                                                        value='normalizedString'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_pl_A1-J1_to_A2"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_pl_A1-J1_to_A2'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1433,15 +1433,15 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N1_A1-E1_to_A2_p03",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_A1-E1_to_A2_p03',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="lower terrace"
+                                                        value='lower terrace'
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_A2"
+                                                        version='any',
+                                                        ref='tbd:POI_23_A2'
                                                     )
                                                 ),
                                             ]
@@ -1449,34 +1449,34 @@ obj = PublicationDelivery(
                                         path_links_in_sequence=PathLinksInSequenceRelStructure(
                                             path_link_in_sequence=[
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N1_A1-E1_to_A2_l01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_A1-E1_to_A2_l01',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 1"
+                                                            value='Link 1'
                                                         ),
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_A1-E1_to_A1-J1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                     ),
                                                     reverse=True,
                                                     heading=PathHeadingEnumeration.FORWARD,
                                                     transition=TransitionEnumeration.LEVEL
                                                 ),
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N1_A1-E1_to_A2_l02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_A1-E1_to_A2_l02',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 1"
+                                                            value='Link 1'
                                                         ),
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_A1-J1_to_A2"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_A1-J1_to_A2'
                                                     ),
                                                     reverse=True,
                                                     heading=PathHeadingEnumeration.FORWARD,
@@ -1486,18 +1486,18 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="tbd:POI_23_N2_A1-E1_to_A3",
-                                        version="any",
+                                        id='tbd:POI_23_N2_A1-E1_to_A3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="From entrance A to upper terrace"
+                                            value='From entrance A to upper terrace'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_N2_A1-E1_to_A3",
-                                            version="any",
+                                            id='tbd:POI_23_N2_A1-E1_to_A3',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.FALSE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3',
                                                     step_free_access=LimitationStatusEnumeration.FALSE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
                                                     lift_free_access=LimitationStatusEnumeration.TRUE
@@ -1510,15 +1510,15 @@ obj = PublicationDelivery(
                                         summaries=AccessSummariesRelStructure(
                                             access_summary=[
                                                 AccessSummary(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3_01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3_01',
+                                                    version='any',
                                                     access_feature_type=AccessFeatureEnumeration.STAIRS,
                                                     count=1,
                                                     transition=TransitionEnumeration.UP
                                                 ),
                                                 AccessSummary(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3_02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3_02',
+                                                    version='any',
                                                     access_feature_type=AccessFeatureEnumeration.CONCOURSE,
                                                     count=1,
                                                     transition=TransitionEnumeration.LEVEL
@@ -1532,34 +1532,34 @@ obj = PublicationDelivery(
                                         places_in_sequence=PlacesInSequenceRelStructure(
                                             place_in_sequence=[
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3_p01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3_p01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="entrance A"
+                                                        value='entrance A'
                                                     ),
                                                     order=1,
                                                     place_ref=PlaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_A1-E1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_A1-E1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:POI_23_N2_A1-E1_to_A3_p01_01",
-                                                                version="any",
+                                                                id='tbd:POI_23_N2_A1-E1_to_A3_p01_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Entrance A"
+                                                                        value='Entrance A'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="tbd:POI_23_pl_A1-E1_to_A1-J1"
+                                                                        version='any',
+                                                                        ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1569,30 +1569,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3_p02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3_p02',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="entrance concours A"
+                                                        value='entrance concours A'
                                                     ),
                                                     order=2,
                                                     place_ref=PointOfInterestSpaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_A1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_A1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:POI_23_N2_A1-E1_to_A3_p02_01",
-                                                                version="any",
+                                                                id='tbd:POI_23_N2_A1-E1_to_A3_p02_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="normalizedString"
+                                                                        value='normalizedString'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_pl_A1-J1_to_A3"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_pl_A1-J1_to_A3'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1602,15 +1602,15 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3_p03",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3_p03',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="upperterrace"
+                                                        value='upperterrace'
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_A3"
+                                                        version='any',
+                                                        ref='tbd:POI_23_A3'
                                                     )
                                                 ),
                                             ]
@@ -1618,34 +1618,34 @@ obj = PublicationDelivery(
                                         path_links_in_sequence=PathLinksInSequenceRelStructure(
                                             path_link_in_sequence=[
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3_l01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3_l01',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 1 into concourse"
+                                                            value='Link 1 into concourse'
                                                         ),
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_A1-E1_to_A1-J1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                     ),
                                                     reverse=False,
                                                     heading=PathHeadingEnumeration.FORWARD,
                                                     transition=TransitionEnumeration.LEVEL
                                                 ),
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N2_A1-E1_to_A3_l02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_A1-E1_to_A3_l02',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 2 up stairs"
+                                                            value='Link 2 up stairs'
                                                         ),
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_A1-J1_to_A3"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_A1-J1_to_A3'
                                                     ),
                                                     reverse=False,
                                                     heading=PathHeadingEnumeration.FORWARD,
@@ -1655,18 +1655,18 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="tbd:POI_23_N1_B1-E1_to_B2",
-                                        version="any",
+                                        id='tbd:POI_23_N1_B1-E1_to_B2',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="From entrance A to lower terrace B2"
+                                            value='From entrance A to lower terrace B2'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_N1_B1-E1_to_B2",
-                                            version="any",
+                                            id='tbd:POI_23_N1_B1-E1_to_B2',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_N1_B1-E1_to_B2",
+                                                    id='tbd:POI_23_N1_B1-E1_to_B2',
                                                     wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                     step_free_access=LimitationStatusEnumeration.TRUE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1680,8 +1680,8 @@ obj = PublicationDelivery(
                                         summaries=AccessSummariesRelStructure(
                                             access_summary=[
                                                 AccessSummary(
-                                                    id="tbd:POI_23_N1_B1-E1_to_B2_01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_B1-E1_to_B2_01',
+                                                    version='any',
                                                     access_feature_type=AccessFeatureEnumeration.CONCOURSE,
                                                     count=1,
                                                     transition=TransitionEnumeration.LEVEL
@@ -1698,30 +1698,30 @@ obj = PublicationDelivery(
                                         places_in_sequence=PlacesInSequenceRelStructure(
                                             place_in_sequence=[
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N1_B1-E1_to_B2_p01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_B1-E1_to_B2_p01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Entrance A"
+                                                        value='Entrance A'
                                                     ),
                                                     order=1,
                                                     place_ref=PointOfInterestEntranceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_B1-E1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_B1-E1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:PLIS_POI_23_B1-E1_to_B1_01",
-                                                                version="any",
+                                                                id='tbd:PLIS_POI_23_B1-E1_to_B1_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Entrance A"
+                                                                        value='Entrance A'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_pl_B1-E1_to_B1-J1"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1731,30 +1731,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N1_B1-E1_to_B2_p02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_B1-E1_to_B2_p02',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="Branch {pomit in  concours A"
+                                                        value='Branch {pomit in  concours A'
                                                     ),
                                                     order=2,
                                                     place_ref=PlaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_B1-J1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_B1-J1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:PLIS_POI_23_B1-E1_to_B1_02",
-                                                                version="any",
+                                                                id='tbd:PLIS_POI_23_B1-E1_to_B1_02',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="normalizedString"
+                                                                        value='normalizedString'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_pl_B1-J1_to_B2"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_pl_B1-J1_to_B2'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1764,15 +1764,15 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N1_B1-E1_to_B2_p03",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_B1-E1_to_B2_p03',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="lower terrace"
+                                                        value='lower terrace'
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_B2"
+                                                        version='any',
+                                                        ref='tbd:POI_23_B2'
                                                     )
                                                 ),
                                             ]
@@ -1780,34 +1780,34 @@ obj = PublicationDelivery(
                                         path_links_in_sequence=PathLinksInSequenceRelStructure(
                                             path_link_in_sequence=[
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N1_B1-E1_to_B2_l01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_B1-E1_to_B2_l01',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 1"
+                                                            value='Link 1'
                                                         ),
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_B1-E1_to_B1-J1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                     ),
                                                     reverse=True,
                                                     heading=PathHeadingEnumeration.FORWARD,
                                                     transition=TransitionEnumeration.LEVEL
                                                 ),
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N1_B1-E1_to_B2_l02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N1_B1-E1_to_B2_l02',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 1"
+                                                            value='Link 1'
                                                         ),
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_B1-J1_to_B2"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_B1-J1_to_B2'
                                                     ),
                                                     reverse=True,
                                                     heading=PathHeadingEnumeration.FORWARD,
@@ -1817,18 +1817,18 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="tbd:POI_23_N2_B1-E1_to_B3",
-                                        version="any",
+                                        id='tbd:POI_23_N2_B1-E1_to_B3',
+                                        version='any',
                                         name=MultilingualString(
-                                            value="From entrance A to upper terrace"
+                                            value='From entrance A to upper terrace'
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="tbd:POI_23_N2_B1-E1_to_B3",
-                                            version="any",
+                                            id='tbd:POI_23_N2_B1-E1_to_B3',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.FALSE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3',
                                                     step_free_access=LimitationStatusEnumeration.FALSE,
                                                     escalator_free_access=LimitationStatusEnumeration.TRUE,
                                                     lift_free_access=LimitationStatusEnumeration.TRUE
@@ -1841,15 +1841,15 @@ obj = PublicationDelivery(
                                         summaries=AccessSummariesRelStructure(
                                             access_summary=[
                                                 AccessSummary(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3_01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3_01',
+                                                    version='any',
                                                     access_feature_type=AccessFeatureEnumeration.STAIRS,
                                                     count=1,
                                                     transition=TransitionEnumeration.UP
                                                 ),
                                                 AccessSummary(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3_02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3_02',
+                                                    version='any',
                                                     access_feature_type=AccessFeatureEnumeration.CONCOURSE,
                                                     count=1,
                                                     transition=TransitionEnumeration.LEVEL
@@ -1863,34 +1863,34 @@ obj = PublicationDelivery(
                                         places_in_sequence=PlacesInSequenceRelStructure(
                                             place_in_sequence=[
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3_p01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3_p01',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="entrance A"
+                                                        value='entrance A'
                                                     ),
                                                     order=1,
                                                     place_ref=PointOfInterestEntranceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_B1-E1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_B1-E1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:POI_23_N2_B1-E1_to_B3_p01_01",
-                                                                version="any",
+                                                                id='tbd:POI_23_N2_B1-E1_to_B3_p01_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Entrance A"
+                                                                        value='Entrance A'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=DerivedElement(
-                                                                    qname="{http://www.netex.org.uk/netex}PathLinkRef",
+                                                                    qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
-                                                                        version="any",
-                                                                        ref="tbd:POI_23_pl_B1-E1_to_B1-J1"
+                                                                        version='any',
+                                                                        ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                                     ),
-                                                                    type="{http://www.netex.org.uk/netex}SitePathLinkRefStructure"
+                                                                    type='{http://www.netex.org.uk/netex}SitePathLinkRefStructure'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1900,30 +1900,30 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3_p02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3_p02',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="entrance concours A"
+                                                        value='entrance concours A'
                                                     ),
                                                     order=2,
                                                     place_ref=PointOfInterestSpaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_B1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_B1'
                                                     ),
                                                     onward_links=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="tbd:POI_23_N2_B1-E1_to_B3_p02_01",
-                                                                version="any",
+                                                                id='tbd:POI_23_N2_B1-E1_to_B3_p02_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="normalizedString"
+                                                                        value='normalizedString'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="tbd:POI_23_pl_B1-J1_to_B3"
+                                                                    version='any',
+                                                                    ref='tbd:POI_23_pl_B1-J1_to_B3'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1933,15 +1933,15 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 PlaceInSequence(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3_p03",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3_p03',
+                                                    version='any',
                                                     description=MultilingualString(
-                                                        value="upperterrace"
+                                                        value='upperterrace'
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
-                                                        version="any",
-                                                        ref="tbd:POI_23_B3"
+                                                        version='any',
+                                                        ref='tbd:POI_23_B3'
                                                     )
                                                 ),
                                             ]
@@ -1949,34 +1949,34 @@ obj = PublicationDelivery(
                                         path_links_in_sequence=PathLinksInSequenceRelStructure(
                                             path_link_in_sequence=[
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3_l01",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3_l01',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 1 into concourse"
+                                                            value='Link 1 into concourse'
                                                         ),
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_B1-E1_to_B1-J1"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                     ),
                                                     reverse=False,
                                                     heading=PathHeadingEnumeration.FORWARD,
                                                     transition=TransitionEnumeration.LEVEL
                                                 ),
                                                 PathLinkInSequence(
-                                                    id="tbd:POI_23_N2_B1-E1_to_B3_l02",
-                                                    version="any",
+                                                    id='tbd:POI_23_N2_B1-E1_to_B3_l02',
+                                                    version='any',
                                                     description=[
                                                         MultilingualString(
-                                                            value="Link 2 up stairs"
+                                                            value='Link 2 up stairs'
                                                         ),
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
-                                                        version="any",
-                                                        ref="tbd:POI_23_pl_B1-J1_to_B3"
+                                                        version='any',
+                                                        ref='tbd:POI_23_pl_B1-J1_to_B3'
                                                     ),
                                                     reverse=False,
                                                     heading=PathHeadingEnumeration.FORWARD,

@@ -25,6 +25,7 @@ class McoSearchResult:
     locator_code
         The locator code that the MCO is linked to
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -34,7 +35,7 @@ class McoSearchResult:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     create_date: None | XmlDateTime = field(
         default=None,
@@ -42,7 +43,7 @@ class McoSearchResult:
             "name": "CreateDate",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     number: None | str = field(
         default=None,
@@ -50,7 +51,7 @@ class McoSearchResult:
             "name": "Number",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | TypeMcostatus = field(
         default=None,
@@ -58,7 +59,7 @@ class McoSearchResult:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     type_value: None | TypeMcotype = field(
         default=None,
@@ -66,12 +67,12 @@ class McoSearchResult:
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     locator_code: None | str = field(
         default=None,
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-        }
+        },
     )

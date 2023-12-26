@@ -10,6 +10,7 @@ class ExpertSolutionList:
     """
     Identifies the Expert Solutions retrieved from the Knowledge Base.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -20,5 +21,5 @@ class ExpertSolutionList:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

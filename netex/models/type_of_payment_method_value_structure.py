@@ -17,7 +17,7 @@ class TypeOfPaymentMethodValueStructure(TypeOfValueVersionStructure):
             "name": "PaymentMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     automated_use: Optional[bool] = field(
         default=None,
@@ -25,5 +25,5 @@ class TypeOfPaymentMethodValueStructure(TypeOfValueVersionStructure):
             "name": "AutomatedUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

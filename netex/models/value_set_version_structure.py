@@ -18,19 +18,19 @@ class ValueSetVersionStructure(DataManagedObjectStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     values: Optional[TypesOfValueStructure] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_values: Optional[str] = field(
         default=None,
         metadata={
             "name": "classOfValues",
             "type": "Attribute",
-        }
+        },
     )

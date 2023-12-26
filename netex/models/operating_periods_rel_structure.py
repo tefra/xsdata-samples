@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .operating_period import OperatingPeriod
 from .operating_period_ref import OperatingPeriodRef
@@ -13,7 +13,9 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingPeriods_RelStructure"
 
-    operating_period_ref_or_operating_period_or_uic_operating_period: List[object] = field(
+    operating_period_ref_or_operating_period_or_uic_operating_period: List[
+        Union[OperatingPeriodRef, OperatingPeriod, UicOperatingPeriod]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -34,5 +36,5 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

@@ -17,19 +17,19 @@ class TStandardLoopCharacteristics(TLoopCharacteristics):
             "name": "loopCondition",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     test_before: bool = field(
         default=False,
         metadata={
             "name": "testBefore",
             "type": "Attribute",
-        }
+        },
     )
     loop_maximum: Optional[int] = field(
         default=None,
         metadata={
             "name": "loopMaximum",
             "type": "Attribute",
-        }
+        },
     )

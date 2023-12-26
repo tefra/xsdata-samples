@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_common_editable_field_2 import TypeCommonEditableField2
+from travelport.models.type_common_editable_field_2 import (
+    TypeCommonEditableField2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -21,6 +23,7 @@ class TypeEditableCustomField2(TypeCommonEditableField2):
     search_option_display_order
         The display order for search option.
     """
+
     class Meta:
         name = "typeEditableCustomField"
 
@@ -29,19 +32,19 @@ class TypeEditableCustomField2(TypeCommonEditableField2):
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )
     search_option: bool = field(
         default=False,
         metadata={
             "name": "SearchOption",
             "type": "Attribute",
-        }
+        },
     )
     search_option_display_order: None | int = field(
         default=None,
         metadata={
             "name": "SearchOptionDisplayOrder",
             "type": "Attribute",
-        }
+        },
     )

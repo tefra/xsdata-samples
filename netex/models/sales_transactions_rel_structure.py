@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .sales_transaction import SalesTransaction
 from .sales_transaction_ref import SalesTransactionRef
@@ -12,7 +12,9 @@ class SalesTransactionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "salesTransactions_RelStructure"
 
-    sales_transaction_ref_or_sales_transaction: List[object] = field(
+    sales_transaction_ref_or_sales_transaction: List[
+        Union[SalesTransactionRef, SalesTransaction]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class SalesTransactionsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

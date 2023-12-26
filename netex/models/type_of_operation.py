@@ -15,5 +15,5 @@ class TypeOfOperation(TypeOfOperationValueStructure):
         metadata={
             "name": "nameOfClassifiedEntityClass",
             "type": "Attribute",
-        }
+        },
     )

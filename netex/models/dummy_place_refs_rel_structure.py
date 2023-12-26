@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .access_space_ref import AccessSpaceRef
 from .address_ref import AddressRef
 from .addressable_place_ref import AddressablePlaceRef
@@ -22,7 +22,9 @@ from .path_junction_ref import PathJunctionRef
 from .point_of_interest_entrance_ref import PointOfInterestEntranceRef
 from .point_of_interest_ref import PointOfInterestRef
 from .point_of_interest_space_ref import PointOfInterestSpaceRef
-from .point_of_interest_vehicle_entrance_ref import PointOfInterestVehicleEntranceRef
+from .point_of_interest_vehicle_entrance_ref import (
+    PointOfInterestVehicleEntranceRef,
+)
 from .postal_address_ref import PostalAddressRef
 from .quay_ref import QuayRef
 from .road_address_ref import RoadAddressRef
@@ -47,7 +49,47 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dummyPlaceRefs_RelStructure"
 
-    choice: List[object] = field(
+    choice: List[
+        Union[
+            HailAndRideAreaRef,
+            FlexibleAreaRef,
+            FlexibleQuayRef,
+            FlexibleStopPlaceRef,
+            PathJunctionRef,
+            TopographicPlaceRef,
+            EquipmentPlaceRef,
+            EquipmentPositionRef,
+            VehicleStoppingPositionRef,
+            VehicleStoppingPlaceRef,
+            BoardingPositionRef,
+            AccessSpaceRef,
+            QuayRef,
+            StopPlaceSpaceRef,
+            ParkingBayRef,
+            PointOfInterestSpaceRef,
+            StopPlaceVehicleEntranceRef,
+            StopPlaceEntranceRef,
+            ParkingEntranceForVehiclesRef,
+            ParkingPassengerEntranceRef,
+            ParkingEntranceRef,
+            PointOfInterestVehicleEntranceRef,
+            PointOfInterestEntranceRef,
+            VehicleEntranceRef,
+            EntranceRef,
+            SiteComponentRef,
+            StopPlaceRef,
+            ParkingRef,
+            PointOfInterestRef,
+            ServiceSiteRef,
+            SiteRef,
+            SiteElementRef,
+            GarageRef,
+            AddressablePlaceRef,
+            PostalAddressRef,
+            RoadAddressRef,
+            AddressRef,
+        ]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -238,5 +280,5 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

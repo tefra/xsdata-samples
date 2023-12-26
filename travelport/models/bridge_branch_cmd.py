@@ -11,6 +11,7 @@ class BridgeBranchCmd:
     """
     Command to add or remove a Bridge Branch assignment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -19,12 +20,12 @@ class BridgeBranchCmd:
         metadata={
             "name": "BridgeBranchAdd",
             "type": "Element",
-        }
+        },
     )
     bridge_branch_delete: None | BridgeBranchDelete = field(
         default=None,
         metadata={
             "name": "BridgeBranchDelete",
             "type": "Element",
-        }
+        },
     )

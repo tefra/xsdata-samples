@@ -8,7 +8,9 @@ from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 from datexii.models.eu.datexii.v2.opening_times import OpeningTimes
 from datexii.models.eu.datexii.v2.tariffs_and_payment import TariffsAndPayment
 from datexii.models.eu.datexii.v2.user_type_enum import UserTypeEnum
-from datexii.models.eu.datexii.v2.vehicle_characteristics import VehicleCharacteristics
+from datexii.models.eu.datexii.v2.vehicle_characteristics import (
+    VehicleCharacteristics,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -53,6 +55,7 @@ class ParkingEquipmentOrServiceFacility:
     :ivar applicable_for_vehicles:
     :ivar parking_equipment_or_service_facility_extension:
     """
+
     equipment_or_service_facility_identifier: List[str] = field(
         default_factory=list,
         metadata={
@@ -60,14 +63,14 @@ class ParkingEquipmentOrServiceFacility:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     availability: Optional[AvailabilityEnum] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     number_of_equipment_or_service_facility: Optional[int] = field(
         default=None,
@@ -75,7 +78,7 @@ class ParkingEquipmentOrServiceFacility:
             "name": "numberOfEquipmentOrServiceFacility",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     additional_description: Optional[MultilingualString] = field(
         default=None,
@@ -83,7 +86,7 @@ class ParkingEquipmentOrServiceFacility:
             "name": "additionalDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     other_equipment_or_service_facility: Optional[MultilingualString] = field(
         default=None,
@@ -91,14 +94,14 @@ class ParkingEquipmentOrServiceFacility:
             "name": "otherEquipmentOrServiceFacility",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     accessibility: List[AccessibilityEnum] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     name_or_brand: Optional[MultilingualString] = field(
         default=None,
@@ -106,14 +109,14 @@ class ParkingEquipmentOrServiceFacility:
             "name": "nameOrBrand",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     comment: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     photo_url: Optional[str] = field(
         default=None,
@@ -121,7 +124,7 @@ class ParkingEquipmentOrServiceFacility:
             "name": "photoUrl",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     applicable_for_user: List[UserTypeEnum] = field(
         default_factory=list,
@@ -129,7 +132,7 @@ class ParkingEquipmentOrServiceFacility:
             "name": "applicableForUser",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     availability_and_opening_times: Optional[OpeningTimes] = field(
         default=None,
@@ -137,7 +140,7 @@ class ParkingEquipmentOrServiceFacility:
             "name": "availabilityAndOpeningTimes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     tariffs_and_payment: Optional[TariffsAndPayment] = field(
         default=None,
@@ -145,7 +148,7 @@ class ParkingEquipmentOrServiceFacility:
             "name": "tariffsAndPayment",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     group_of_locations: Optional[GroupOfLocations] = field(
         default=None,
@@ -153,7 +156,7 @@ class ParkingEquipmentOrServiceFacility:
             "name": "groupOfLocations",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     applicable_for_vehicles: List[VehicleCharacteristics] = field(
         default_factory=list,
@@ -161,13 +164,15 @@ class ParkingEquipmentOrServiceFacility:
             "name": "applicableForVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
-    parking_equipment_or_service_facility_extension: Optional[ExtensionType] = field(
+    parking_equipment_or_service_facility_extension: Optional[
+        ExtensionType
+    ] = field(
         default=None,
         metadata={
             "name": "parkingEquipmentOrServiceFacilityExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

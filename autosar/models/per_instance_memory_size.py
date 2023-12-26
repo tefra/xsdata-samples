@@ -3,7 +3,9 @@ from typing import Optional
 from .annotation import VariationPoint
 from .per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
 from .positive_integer import PositiveInteger
-from .positive_integer_value_variation_point import PositiveIntegerValueVariationPoint
+from .positive_integer_value_variation_point import (
+    PositiveIntegerValueVariationPoint,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -39,6 +41,7 @@ class PerInstanceMemorySize:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PER-INSTANCE-MEMORY-SIZE"
 
@@ -48,15 +51,17 @@ class PerInstanceMemorySize:
             "name": "ALIGNMENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    per_instance_memory_ref: Optional["PerInstanceMemorySize.PerInstanceMemoryRef"] = field(
+    per_instance_memory_ref: Optional[
+        "PerInstanceMemorySize.PerInstanceMemoryRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-MEMORY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     size: Optional[PositiveIntegerValueVariationPoint] = field(
         default=None,
@@ -64,7 +69,7 @@ class PerInstanceMemorySize:
             "name": "SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -72,14 +77,14 @@ class PerInstanceMemorySize:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -87,7 +92,7 @@ class PerInstanceMemorySize:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -98,5 +103,5 @@ class PerInstanceMemorySize:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

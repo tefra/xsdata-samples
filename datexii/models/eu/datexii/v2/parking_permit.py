@@ -17,6 +17,7 @@ class ParkingPermit:
         parking.
     :ivar parking_permit_extension:
     """
+
     parking_permit_type: Optional[PermitTypeEnum] = field(
         default=None,
         metadata={
@@ -24,7 +25,7 @@ class ParkingPermit:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     parking_permit_scheme: Optional[str] = field(
         default=None,
@@ -33,7 +34,7 @@ class ParkingPermit:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     parking_permit_identifier: Optional[str] = field(
         default=None,
@@ -42,7 +43,7 @@ class ParkingPermit:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     parking_permit_extension: Optional[ExtensionType] = field(
         default=None,
@@ -50,5 +51,5 @@ class ParkingPermit:
             "name": "parkingPermitExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

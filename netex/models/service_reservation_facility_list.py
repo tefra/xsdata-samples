@@ -14,5 +14,5 @@ class ServiceReservationFacilityList:
         default_factory=list,
         metadata={
             "tokens": True,
-        }
+        },
     )

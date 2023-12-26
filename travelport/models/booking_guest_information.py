@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_guest_room_information import TypeGuestRoomInformation
+from travelport.models.type_guest_room_information import (
+    TypeGuestRoomInformation,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -17,6 +19,7 @@ class BookingGuestInformation:
         the request. Maximum number of rooms may vary by supplier or
         aggregator.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
@@ -27,5 +30,5 @@ class BookingGuestInformation:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 9,
-        }
+        },
     )

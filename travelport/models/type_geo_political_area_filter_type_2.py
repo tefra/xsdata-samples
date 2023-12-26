@@ -17,6 +17,7 @@ class TypeGeoPoliticalAreaFilterType2(Enum):
     OTHER
         Filter type applied on Advisory and Other Preference
     """
+
     ARRIVAL = "Arrival"
     DEPARTURE = "Departure"
     CONNECTION = "Connection"

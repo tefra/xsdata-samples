@@ -16,6 +16,7 @@ class ContinuityOverrideRemark:
     category
         This is remark category is always MCT. 'Minimum Connect Time'
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -23,7 +24,7 @@ class ContinuityOverrideRemark:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     category: str = field(
         default="MCT",
@@ -31,5 +32,5 @@ class ContinuityOverrideRemark:
             "name": "Category",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )

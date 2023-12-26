@@ -7,7 +7,9 @@ from travelport.models.cruise_pricing_info import CruisePricingInfo
 from travelport.models.cruise_segment import CruiseSegment
 from travelport.models.optional_service_2 import OptionalService2
 from travelport.models.payment_1 import Payment1
-from travelport.models.provider_reservation_info_ref_1 import ProviderReservationInfoRef1
+from travelport.models.provider_reservation_info_ref_1 import (
+    ProviderReservationInfoRef1,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -29,6 +31,7 @@ class CruiseReservation(BaseReservation1):
     provider_reservation_info_ref
     payment
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/cruise_v52_0"
 
@@ -37,7 +40,7 @@ class CruiseReservation(BaseReservation1):
         metadata={
             "name": "CruiseSegment",
             "type": "Element",
-        }
+        },
     )
     cruise_itinerary: list[CruiseItinerary] = field(
         default_factory=list,
@@ -45,14 +48,14 @@ class CruiseReservation(BaseReservation1):
             "name": "CruiseItinerary",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     cruise_pricing_info: None | CruisePricingInfo = field(
         default=None,
         metadata={
             "name": "CruisePricingInfo",
             "type": "Element",
-        }
+        },
     )
     optional_service: list[OptionalService2] = field(
         default_factory=list,
@@ -60,7 +63,7 @@ class CruiseReservation(BaseReservation1):
             "name": "OptionalService",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(
         default_factory=list,
@@ -70,7 +73,7 @@ class CruiseReservation(BaseReservation1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     provider_reservation_info_ref: None | ProviderReservationInfoRef1 = field(
         default=None,
@@ -78,7 +81,7 @@ class CruiseReservation(BaseReservation1):
             "name": "ProviderReservationInfoRef",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     payment: list[Payment1] = field(
         default_factory=list,
@@ -87,5 +90,5 @@ class CruiseReservation(BaseReservation1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )

@@ -2,7 +2,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from travelport.models.action_status_1 import ActionStatus1
 from travelport.models.associated_remark_3 import AssociatedRemark3
-from travelport.models.base_create_with_form_of_payment_req_1 import BaseCreateWithFormOfPaymentReq1
+from travelport.models.base_create_with_form_of_payment_req_1 import (
+    BaseCreateWithFormOfPaymentReq1,
+)
 from travelport.models.booking_source_1 import BookingSource1
 from travelport.models.email_1 import Email1
 from travelport.models.guarantee_1 import Guarantee1
@@ -71,6 +73,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
         Hotel Booking Confirmation Number for passive hotel segment.
         Supported Providers:1P.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -81,7 +84,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     phone_number: list[PhoneNumber1] = field(
         default_factory=list,
@@ -90,7 +93,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
         default_factory=list,
@@ -100,7 +103,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "min_occurs": 1,
             "max_occurs": 99,
-        }
+        },
     )
     hotel_property: None | HotelProperty = field(
         default=None,
@@ -109,7 +112,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     third_party_information: None | ThirdPartyInformation1 = field(
         default=None,
@@ -117,7 +120,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "ThirdPartyInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_stay: None | HotelStay = field(
         default=None,
@@ -126,7 +129,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "required": True,
-        }
+        },
     )
     guarantee: None | Guarantee1 = field(
         default=None,
@@ -134,7 +137,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "Guarantee",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_special_request: None | str = field(
         default=None,
@@ -143,7 +146,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_length": 250,
-        }
+        },
     )
     point_of_sale: None | PointOfSale1 = field(
         default=None,
@@ -151,7 +154,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "PointOfSale",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     promotion_code: None | PromotionCode = field(
         default=None,
@@ -159,7 +162,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "PromotionCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     booking_source: None | BookingSource1 = field(
         default=None,
@@ -167,7 +170,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "BookingSource",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     hotel_bedding: list[HotelBedding] = field(
         default_factory=list,
@@ -176,7 +179,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 4,
-        }
+        },
     )
     guest_information: None | GuestInformation = field(
         default=None,
@@ -184,7 +187,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "GuestInformation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     associated_remark: list[AssociatedRemark3] = field(
         default_factory=list,
@@ -193,7 +196,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
             "max_occurs": 9999,
-        }
+        },
     )
     reservation_name: None | ReservationName1 = field(
         default=None,
@@ -201,7 +204,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "ReservationName",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     action_status: None | ActionStatus1 = field(
         default=None,
@@ -209,7 +212,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "ActionStatus",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     host_token: None | HostToken1 = field(
         default=None,
@@ -217,7 +220,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "HostToken",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     review_booking: list[ReviewBooking1] = field(
         default_factory=list,
@@ -226,7 +229,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 9999,
-        }
+        },
     )
     hotel_commission: None | str = field(
         default=None,
@@ -234,21 +237,21 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "HotelCommission",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-        }
+        },
     )
     user_acceptance: bool = field(
         default=False,
         metadata={
             "name": "UserAcceptance",
             "type": "Attribute",
-        }
+        },
     )
     mandatory_rate_match: bool = field(
         default=False,
         metadata={
             "name": "MandatoryRateMatch",
             "type": "Attribute",
-        }
+        },
     )
     status_code: None | str = field(
         default=None,
@@ -257,7 +260,7 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "type": "Attribute",
             "length": 2,
             "white_space": "collapse",
-        }
+        },
     )
     booking_confirmation: None | str = field(
         default=None,
@@ -265,5 +268,5 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "BookingConfirmation",
             "type": "Attribute",
             "max_length": 32,
-        }
+        },
     )

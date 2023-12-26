@@ -25,6 +25,7 @@ class TypeFieldDataHistory2(TypeKeyElement2):
         Id of the profile who owns the Traveler's proprietary data.Should be
         the immediate parent id of the traveler.
     """
+
     class Meta:
         name = "typeFieldDataHistory"
 
@@ -33,7 +34,7 @@ class TypeFieldDataHistory2(TypeKeyElement2):
         metadata={
             "name": "DisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     value: None | str = field(
         default=None,
@@ -42,14 +43,14 @@ class TypeFieldDataHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     field_id: None | str = field(
         default=None,
         metadata={
             "name": "FieldID",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -58,12 +59,12 @@ class TypeFieldDataHistory2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     owner_id: None | int = field(
         default=None,
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-        }
+        },
     )

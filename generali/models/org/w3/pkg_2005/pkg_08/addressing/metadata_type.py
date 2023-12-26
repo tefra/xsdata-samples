@@ -11,12 +11,12 @@ class MetadataType:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )
     other_attributes: Dict[str, str] = field(
         default_factory=dict,
         metadata={
             "type": "Attributes",
             "namespace": "##other",
-        }
+        },
     )

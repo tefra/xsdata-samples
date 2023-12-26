@@ -20,6 +20,7 @@ class AirUpsellSearchReq(AirBaseReq):
         Provider: 1G,1V,1P,ACH-Result of AirPrice request. Upsell uses this
         to search for new offer.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class AirUpsellSearchReq(AirBaseReq):
             "name": "AirItinerary",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     air_price_result: list[AirPriceResult] = field(
         default_factory=list,
@@ -38,5 +39,5 @@ class AirUpsellSearchReq(AirBaseReq):
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 16,
-        }
+        },
     )

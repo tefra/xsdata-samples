@@ -13,5 +13,5 @@ class CoachSubmode:
         default=CoachSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

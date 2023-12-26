@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .cp_software_cluster_service_resource_subtypes_enum import CpSoftwareClusterServiceResourceSubtypesEnum
+from .cp_software_cluster_service_resource_subtypes_enum import (
+    CpSoftwareClusterServiceResourceSubtypesEnum,
+)
 from .cp_software_cluster_subtypes_enum import CpSoftwareClusterSubtypesEnum
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -84,6 +86,7 @@ class CpSoftwareClusterToResourceMapping:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-TO-RESOURCE-MAPPING"
 
@@ -94,15 +97,17 @@ class CpSoftwareClusterToResourceMapping:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["CpSoftwareClusterToResourceMapping.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "CpSoftwareClusterToResourceMapping.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -110,7 +115,7 @@ class CpSoftwareClusterToResourceMapping:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -118,7 +123,7 @@ class CpSoftwareClusterToResourceMapping:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -126,7 +131,7 @@ class CpSoftwareClusterToResourceMapping:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -134,7 +139,7 @@ class CpSoftwareClusterToResourceMapping:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -142,39 +147,47 @@ class CpSoftwareClusterToResourceMapping:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["CpSoftwareClusterToResourceMapping.Annotations"] = field(
+    annotations: Optional[
+        "CpSoftwareClusterToResourceMapping.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    provider_ref: Optional["CpSoftwareClusterToResourceMapping.ProviderRef"] = field(
+    provider_ref: Optional[
+        "CpSoftwareClusterToResourceMapping.ProviderRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PROVIDER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    requester_refs: Optional["CpSoftwareClusterToResourceMapping.RequesterRefs"] = field(
+    requester_refs: Optional[
+        "CpSoftwareClusterToResourceMapping.RequesterRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUESTER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    service_resource_ref: Optional["CpSoftwareClusterToResourceMapping.ServiceResourceRef"] = field(
+    service_resource_ref: Optional[
+        "CpSoftwareClusterToResourceMapping.ServiceResourceRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SERVICE-RESOURCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -182,14 +195,14 @@ class CpSoftwareClusterToResourceMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -197,14 +210,14 @@ class CpSoftwareClusterToResourceMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -215,7 +228,7 @@ class CpSoftwareClusterToResourceMapping:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -226,7 +239,7 @@ class CpSoftwareClusterToResourceMapping:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -237,18 +250,20 @@ class CpSoftwareClusterToResourceMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RequesterRefs:
-        requester_ref: List["CpSoftwareClusterToResourceMapping.RequesterRefs.RequesterRef"] = field(
+        requester_ref: List[
+            "CpSoftwareClusterToResourceMapping.RequesterRefs.RequesterRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "REQUESTER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -259,7 +274,7 @@ class CpSoftwareClusterToResourceMapping:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -270,5 +285,5 @@ class CpSoftwareClusterToResourceMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -13,6 +13,7 @@ class DiagnosticRecordTriggerEnumSimple(Enum):
     :cvar TEST_FAILED_THIS_OPERATION_CYCLE: Test Failed This Operation
         Cycle.
     """
+
     CONFIRMED = "CONFIRMED"
     CUSTOM = "CUSTOM"
     FDC_THRESHOLD = "FDC-THRESHOLD"

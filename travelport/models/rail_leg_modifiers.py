@@ -15,21 +15,21 @@ class RailLegModifiers:
         metadata={
             "name": "PermittedConnectionPoints",
             "type": "Element",
-        }
+        },
     )
     prohibited_connection_points: None | RailLegModifiers.ProhibitedConnectionPoints = field(
         default=None,
         metadata={
             "name": "ProhibitedConnectionPoints",
             "type": "Element",
-        }
+        },
     )
     class_value: None | str = field(
         default=None,
         metadata={
             "name": "Class",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -42,7 +42,7 @@ class RailLegModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )
 
     @dataclass
@@ -55,5 +55,5 @@ class RailLegModifiers:
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
                 "min_occurs": 1,
                 "max_occurs": 999,
-            }
+            },
         )

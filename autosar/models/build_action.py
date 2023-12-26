@@ -10,7 +10,9 @@ from .autosar_engineering_object import AutosarEngineeringObject
 from .blueprint_policy_list import BlueprintPolicyList
 from .blueprint_policy_not_modifiable import BlueprintPolicyNotModifiable
 from .blueprint_policy_single import BlueprintPolicySingle
-from .build_action_environment_subtypes_enum import BuildActionEnvironmentSubtypesEnum
+from .build_action_environment_subtypes_enum import (
+    BuildActionEnvironmentSubtypesEnum,
+)
 from .build_action_invocator import BuildActionInvocator
 from .build_action_io_element import BuildActionIoElement
 from .build_action_subtypes_enum import BuildActionSubtypesEnum
@@ -114,6 +116,7 @@ class BuildAction:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BUILD-ACTION"
 
@@ -124,7 +127,7 @@ class BuildAction:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
     short_name_fragments: Optional["BuildAction.ShortNameFragments"] = field(
         default=None,
@@ -132,7 +135,7 @@ class BuildAction:
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -140,7 +143,7 @@ class BuildAction:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -148,7 +151,7 @@ class BuildAction:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -156,7 +159,7 @@ class BuildAction:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -164,7 +167,7 @@ class BuildAction:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -172,7 +175,7 @@ class BuildAction:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["BuildAction.Annotations"] = field(
         default=None,
@@ -180,7 +183,7 @@ class BuildAction:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     blueprint_policys: Optional["BuildAction.BlueprintPolicys"] = field(
         default=None,
@@ -188,7 +191,7 @@ class BuildAction:
             "name": "BLUEPRINT-POLICYS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_name_pattern: Optional[String] = field(
         default=None,
@@ -196,7 +199,7 @@ class BuildAction:
             "name": "SHORT-NAME-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     delivery_artifacts: Optional["BuildAction.DeliveryArtifacts"] = field(
         default=None,
@@ -204,7 +207,7 @@ class BuildAction:
             "name": "DELIVERY-ARTIFACTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     invocation: Optional[BuildActionInvocator] = field(
         default=None,
@@ -212,15 +215,17 @@ class BuildAction:
             "name": "INVOCATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    predecessor_action_refs: Optional["BuildAction.PredecessorActionRefs"] = field(
+    predecessor_action_refs: Optional[
+        "BuildAction.PredecessorActionRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "PREDECESSOR-ACTION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     follow_up_action_refs: Optional["BuildAction.FollowUpActionRefs"] = field(
         default=None,
@@ -228,7 +233,7 @@ class BuildAction:
             "name": "FOLLOW-UP-ACTION-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     created_datas: Optional["BuildAction.CreatedDatas"] = field(
         default=None,
@@ -236,7 +241,7 @@ class BuildAction:
             "name": "CREATED-DATAS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     input_datas: Optional["BuildAction.InputDatas"] = field(
         default=None,
@@ -244,7 +249,7 @@ class BuildAction:
             "name": "INPUT-DATAS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     modified_datas: Optional["BuildAction.ModifiedDatas"] = field(
         default=None,
@@ -252,15 +257,17 @@ class BuildAction:
             "name": "MODIFIED-DATAS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    required_environment_ref: Optional["BuildAction.RequiredEnvironmentRef"] = field(
+    required_environment_ref: Optional[
+        "BuildAction.RequiredEnvironmentRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUIRED-ENVIRONMENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -268,14 +275,14 @@ class BuildAction:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -283,14 +290,14 @@ class BuildAction:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -301,7 +308,7 @@ class BuildAction:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -312,7 +319,7 @@ class BuildAction:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -323,15 +330,17 @@ class BuildAction:
                 "name": "BLUEPRINT-POLICY-LIST",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
-        blueprint_policy_not_modifiable: List[BlueprintPolicyNotModifiable] = field(
+        blueprint_policy_not_modifiable: List[
+            BlueprintPolicyNotModifiable
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "BLUEPRINT-POLICY-NOT-MODIFIABLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
         blueprint_policy_single: List[BlueprintPolicySingle] = field(
             default_factory=list,
@@ -339,7 +348,7 @@ class BuildAction:
                 "name": "BLUEPRINT-POLICY-SINGLE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -350,18 +359,20 @@ class BuildAction:
                 "name": "AUTOSAR-ENGINEERING-OBJECT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class PredecessorActionRefs:
-        predecessor_action_ref: List["BuildAction.PredecessorActionRefs.PredecessorActionRef"] = field(
+        predecessor_action_ref: List[
+            "BuildAction.PredecessorActionRefs.PredecessorActionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "PREDECESSOR-ACTION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -372,18 +383,20 @@ class BuildAction:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class FollowUpActionRefs:
-        follow_up_action_ref: List["BuildAction.FollowUpActionRefs.FollowUpActionRef"] = field(
+        follow_up_action_ref: List[
+            "BuildAction.FollowUpActionRefs.FollowUpActionRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "FOLLOW-UP-ACTION-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -394,7 +407,7 @@ class BuildAction:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -405,7 +418,7 @@ class BuildAction:
                 "name": "BUILD-ACTION-IO-ELEMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -416,7 +429,7 @@ class BuildAction:
                 "name": "BUILD-ACTION-IO-ELEMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -427,7 +440,7 @@ class BuildAction:
                 "name": "BUILD-ACTION-IO-ELEMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -438,5 +451,5 @@ class BuildAction:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

@@ -13,6 +13,7 @@ class SecuredPduHeaderEnumSimple(Enum):
     :cvar SECURED_PDU_HEADER_32_BIT: 32 Bit Secured I-PDU Header
         included in the Secured I-PDU.
     """
+
     NO_HEADER = "NO-HEADER"
     SECURED_PDU_HEADER_08_BIT = "SECURED-PDU-HEADER-08-BIT"
     SECURED_PDU_HEADER_16_BIT = "SECURED-PDU-HEADER-16-BIT"

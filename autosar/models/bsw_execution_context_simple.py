@@ -11,6 +11,7 @@ class BswExecutionContextSimple(Enum):
     :cvar TASK: Task context always
     :cvar UNSPECIFIED: The execution context is not specified by the API
     """
+
     HOOK = "HOOK"
     INTERRUPT_CAT_1 = "INTERRUPT-CAT-1"
     INTERRUPT_CAT_2 = "INTERRUPT-CAT-2"

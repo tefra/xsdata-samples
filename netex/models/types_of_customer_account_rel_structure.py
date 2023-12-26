@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .type_of_customer_account import TypeOfCustomerAccount
 from .type_of_customer_account_ref import TypeOfCustomerAccountRef
@@ -12,7 +12,9 @@ class TypesOfCustomerAccountRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfCustomerAccount_RelStructure"
 
-    type_of_customer_account_ref_or_type_of_customer_account: List[object] = field(
+    type_of_customer_account_ref_or_type_of_customer_account: List[
+        Union[TypeOfCustomerAccountRef, TypeOfCustomerAccount]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class TypesOfCustomerAccountRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

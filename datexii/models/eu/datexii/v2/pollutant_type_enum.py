@@ -27,6 +27,7 @@ class PollutantTypeEnum(Enum):
     :cvar TOTAL_HYDROCARBONS: Total hydrocarbons, i.e. including methane
         and non-methane.
     """
+
     BENZENE_TOLUENE_XYLENE = "benzeneTolueneXylene"
     CARBON_MONOXIDE = "carbonMonoxide"
     LEAD = "lead"

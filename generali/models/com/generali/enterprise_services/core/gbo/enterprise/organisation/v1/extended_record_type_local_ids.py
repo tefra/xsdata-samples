@@ -15,5 +15,5 @@ class ExtendedRecordTypeLocalIds:
             "name": "LocalId",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-        }
+        },
     )

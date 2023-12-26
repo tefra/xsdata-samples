@@ -17,5 +17,5 @@ class PermittedProviders5:
             "name": "Provider",
             "type": "Element",
             "required": True,
-        }
+        },
     )

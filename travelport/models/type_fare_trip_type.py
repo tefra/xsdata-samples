@@ -18,6 +18,7 @@ class TypeFareTripType(Enum):
     CircleTrip -- circle trip fare
     RoundTheWorld -- round the world fare
     """
+
     ONE_WAY = "OneWay"
     ONE_WAY_ONLY = "OneWayOnly"
     RETURN = "Return"

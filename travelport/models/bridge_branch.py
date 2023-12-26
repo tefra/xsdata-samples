@@ -21,6 +21,7 @@ class BridgeBranch:
         Indicates that this branch is the default branch. The default is
         false.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -30,7 +31,7 @@ class BridgeBranch:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     branch_code: None | str = field(
         default=None,
@@ -40,7 +41,7 @@ class BridgeBranch:
             "required": True,
             "min_length": 1,
             "max_length": 25,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -50,12 +51,12 @@ class BridgeBranch:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     default: bool = field(
         default=False,
         metadata={
             "name": "Default",
             "type": "Attribute",
-        }
+        },
     )

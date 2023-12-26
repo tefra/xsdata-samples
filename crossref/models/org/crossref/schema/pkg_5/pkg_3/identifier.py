@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.identifier_id_type import IdentifierIdType
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.identifier_id_type import (
+    IdentifierIdType,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -11,6 +13,7 @@ class Identifier:
     A public standard identifier that can be used to uniquely identify the item
     being registered.
     """
+
     class Meta:
         name = "identifier"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -21,12 +24,12 @@ class Identifier:
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     id_type: Optional[IdentifierIdType] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

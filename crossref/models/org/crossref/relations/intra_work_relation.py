@@ -1,7 +1,11 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
-from crossref.models.org.crossref.relations.intra_work_relation_identifier_type import IntraWorkRelationIdentifierType
-from crossref.models.org.crossref.relations.intra_work_relation_relationship_type import IntraWorkRelationRelationshipType
+from crossref.models.org.crossref.relations.intra_work_relation_identifier_type import (
+    IntraWorkRelationIdentifierType,
+)
+from crossref.models.org.crossref.relations.intra_work_relation_relationship_type import (
+    IntraWorkRelationRelationshipType,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
@@ -21,6 +25,7 @@ class IntraWorkRelation:
         uniqueness.
     :ivar content:
     """
+
     class Meta:
         name = "intra_work_relation"
         namespace = "http://www.crossref.org/relations.xsd"
@@ -31,7 +36,7 @@ class IntraWorkRelation:
             "name": "relationship-type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     identifier_type: Optional[IntraWorkRelationIdentifierType] = field(
         default=None,
@@ -39,7 +44,7 @@ class IntraWorkRelation:
             "name": "identifier-type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     namespace: Optional[str] = field(
         default=None,
@@ -47,7 +52,7 @@ class IntraWorkRelation:
             "type": "Attribute",
             "min_length": 4,
             "max_length": 1024,
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -55,5 +60,5 @@ class IntraWorkRelation:
             "type": "Wildcard",
             "namespace": "##any",
             "mixed": True,
-        }
+        },
     )

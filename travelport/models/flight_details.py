@@ -57,6 +57,7 @@ class FlightDetails:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -65,7 +66,7 @@ class FlightDetails:
         metadata={
             "name": "Connection",
             "type": "Element",
-        }
+        },
     )
     meals: list[TypeMealService] = field(
         default_factory=list,
@@ -73,7 +74,7 @@ class FlightDetails:
             "name": "Meals",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     in_flight_services: list[str] = field(
         default_factory=list,
@@ -81,7 +82,7 @@ class FlightDetails:
             "name": "InFlightServices",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
@@ -89,7 +90,7 @@ class FlightDetails:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     origin: None | str = field(
         default=None,
@@ -99,7 +100,7 @@ class FlightDetails:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     destination: None | str = field(
         default=None,
@@ -109,42 +110,42 @@ class FlightDetails:
             "required": True,
             "length": 3,
             "white_space": "collapse",
-        }
+        },
     )
     departure_time: None | str = field(
         default=None,
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-        }
+        },
     )
     arrival_time: None | str = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-        }
+        },
     )
     flight_time: None | int = field(
         default=None,
         metadata={
             "name": "FlightTime",
             "type": "Attribute",
-        }
+        },
     )
     travel_time: None | int = field(
         default=None,
         metadata={
             "name": "TravelTime",
             "type": "Attribute",
-        }
+        },
     )
     distance: None | int = field(
         default=None,
         metadata={
             "name": "Distance",
             "type": "Attribute",
-        }
+        },
     )
     equipment: None | str = field(
         default=None,
@@ -152,54 +153,54 @@ class FlightDetails:
             "name": "Equipment",
             "type": "Attribute",
             "length": 3,
-        }
+        },
     )
     on_time_performance: None | int = field(
         default=None,
         metadata={
             "name": "OnTimePerformance",
             "type": "Attribute",
-        }
+        },
     )
     origin_terminal: None | str = field(
         default=None,
         metadata={
             "name": "OriginTerminal",
             "type": "Attribute",
-        }
+        },
     )
     destination_terminal: None | str = field(
         default=None,
         metadata={
             "name": "DestinationTerminal",
             "type": "Attribute",
-        }
+        },
     )
     ground_time: None | int = field(
         default=None,
         metadata={
             "name": "GroundTime",
             "type": "Attribute",
-        }
+        },
     )
     automated_checkin: bool = field(
         default=False,
         metadata={
             "name": "AutomatedCheckin",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

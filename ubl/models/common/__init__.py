@@ -2390,7 +2390,9 @@ from ubl.models.common.ubl_common_signature_components_2_1 import (
     UbldocumentSignatures,
     UbldocumentSignaturesType,
 )
-from ubl.models.common.ubl_extension_content_data_type_2_1 import ExtensionContentType
+from ubl.models.common.ubl_extension_content_data_type_2_1 import (
+    ExtensionContentType,
+)
 from ubl.models.common.ubl_signature_aggregate_components_2_1 import (
     SignatureInformation,
     SignatureInformationType,

@@ -15,5 +15,5 @@ class Lcm:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

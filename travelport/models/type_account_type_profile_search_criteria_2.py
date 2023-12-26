@@ -1,6 +1,8 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
-from travelport.models.type_profile_search_criteria_2 import TypeProfileSearchCriteria2
+from travelport.models.type_profile_search_criteria_2 import (
+    TypeProfileSearchCriteria2,
+)
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -15,6 +17,7 @@ class TypeAccountTypeProfileSearchCriteria2(TypeProfileSearchCriteria2):
     mid_office_id
         Mid Office ID managed by an external system.
     """
+
     class Meta:
         name = "typeAccountTypeProfileSearchCriteria"
 
@@ -23,5 +26,5 @@ class TypeAccountTypeProfileSearchCriteria2(TypeProfileSearchCriteria2):
         metadata={
             "name": "MidOfficeID",
             "type": "Attribute",
-        }
+        },
     )

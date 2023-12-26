@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from xsdata.models.datatype import XmlDateTime
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.international_identifier import InternationalIdentifier
+from datexii.models.eu.datexii.v2.international_identifier import (
+    InternationalIdentifier,
+)
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -27,13 +29,14 @@ class PayloadPublication:
     :ivar lang: The default language used throughout the payload
         publication.
     """
+
     feed_description: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "name": "feedDescription",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     feed_type: Optional[str] = field(
         default=None,
@@ -42,7 +45,7 @@ class PayloadPublication:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     publication_time: Optional[XmlDateTime] = field(
         default=None,
@@ -51,7 +54,7 @@ class PayloadPublication:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     publication_creator: Optional[InternationalIdentifier] = field(
         default=None,
@@ -60,7 +63,7 @@ class PayloadPublication:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     payload_publication_extension: Optional[ExtensionType] = field(
         default=None,
@@ -68,12 +71,12 @@ class PayloadPublication:
             "name": "payloadPublicationExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     lang: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

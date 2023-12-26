@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
-from .parameter_data_prototype_subtypes_enum import ParameterDataPrototypeSubtypesEnum
+from .parameter_data_prototype_subtypes_enum import (
+    ParameterDataPrototypeSubtypesEnum,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -30,6 +32,7 @@ class BswParameterPolicy:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "BSW-PARAMETER-POLICY"
 
@@ -39,15 +42,17 @@ class BswParameterPolicy:
             "name": "ENABLE-TAKE-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    per_instance_parameter_ref: Optional["BswParameterPolicy.PerInstanceParameterRef"] = field(
+    per_instance_parameter_ref: Optional[
+        "BswParameterPolicy.PerInstanceParameterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-PARAMETER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -55,14 +60,14 @@ class BswParameterPolicy:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -70,7 +75,7 @@ class BswParameterPolicy:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -81,5 +86,5 @@ class BswParameterPolicy:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

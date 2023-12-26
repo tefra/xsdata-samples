@@ -3,7 +3,9 @@ from typing import List, Optional
 from .local_service_version_structure import LocalServiceVersionStructure
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .ticket_type_enumeration import TicketTypeEnumeration
-from .ticketing_service_facility_enumeration import TicketingServiceFacilityEnumeration
+from .ticketing_service_facility_enumeration import (
+    TicketingServiceFacilityEnumeration,
+)
 from .vehicle_mode_enumeration import VehicleModeEnumeration
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
@@ -21,7 +23,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     ticketing_service_list: List[TicketingServiceFacilityEnumeration] = field(
         default_factory=list,
@@ -30,7 +32,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     ticket_type_list: List[List[TicketTypeEnumeration]] = field(
         default_factory=list,
@@ -39,7 +41,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )
     ticket_counter_service: Optional[bool] = field(
         default=None,
@@ -47,7 +49,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "TicketCounterService",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     online_purchase_for_collection: Optional[bool] = field(
         default=None,
@@ -55,7 +57,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "OnlinePurchaseForCollection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     online_purchase_for_eticket: Optional[bool] = field(
         default=None,
@@ -63,7 +65,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "OnlinePurchaseForETicket",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     online_purchase_for_self_print_ticket: Optional[bool] = field(
         default=None,
@@ -71,7 +73,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "OnlinePurchaseForSelfPrintTicket",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     mobile_device_tickets: Optional[bool] = field(
         default=None,
@@ -79,7 +81,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "MobileDeviceTickets",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     payment_methods: List[PaymentMethodEnumeration] = field(
         default_factory=list,
@@ -88,5 +90,5 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
             "tokens": True,
-        }
+        },
     )

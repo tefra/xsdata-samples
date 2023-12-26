@@ -1,12 +1,14 @@
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Union
 from .direction_ref import DirectionRef
 from .direction_type_enumeration import DirectionTypeEnumeration
 from .flexible_line_ref import FlexibleLineRef
 from .line_ref import LineRef
 from .points_on_route_rel_structure import PointsOnRouteRelStructure
 from .route_ref_structure import RouteRefStructure
-from .section_in_sequence_versioned_child_structure import LinkSequenceVersionStructure
+from .section_in_sequence_versioned_child_structure import (
+    LinkSequenceVersionStructure,
+)
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
@@ -16,7 +18,9 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Route_VersionStructure"
 
-    flexible_line_ref_or_line_ref: Optional[object] = field(
+    flexible_line_ref_or_line_ref: Optional[
+        Union[FlexibleLineRef, LineRef]
+    ] = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -32,7 +36,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )
     direction_type: Optional[DirectionTypeEnumeration] = field(
         default=None,
@@ -40,7 +44,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             "name": "DirectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     direction_ref: Optional[DirectionRef] = field(
         default=None,
@@ -48,7 +52,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             "name": "DirectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     points_in_sequence: Optional[PointsOnRouteRelStructure] = field(
         default=None,
@@ -56,7 +60,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             "name": "pointsInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     inverse_route_ref: Optional[RouteRefStructure] = field(
         default=None,
@@ -64,5 +68,5 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             "name": "InverseRouteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

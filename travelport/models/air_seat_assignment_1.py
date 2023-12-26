@@ -10,6 +10,7 @@ class AirSeatAssignment1(SeatAssignment1):
     """
     Identifies the seat assignment for a passenger.
     """
+
     class Meta:
         name = "AirSeatAssignment"
         namespace = "http://www.travelport.com/schema/common_v52_0"

@@ -23,6 +23,7 @@ class PaymentPhone2:
         The IATA airport/city code that corresponds to the location of the
         phone number.
     """
+
     class Meta:
         name = "PaymentPhone"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -33,7 +34,7 @@ class PaymentPhone2:
             "name": "Country",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     area_code: None | str = field(
         default=None,
@@ -41,7 +42,7 @@ class PaymentPhone2:
             "name": "AreaCode",
             "type": "Attribute",
             "max_length": 5,
-        }
+        },
     )
     local_number: None | str = field(
         default=None,
@@ -49,7 +50,7 @@ class PaymentPhone2:
             "name": "LocalNumber",
             "type": "Attribute",
             "max_length": 50,
-        }
+        },
     )
     extension: None | str = field(
         default=None,
@@ -57,7 +58,7 @@ class PaymentPhone2:
             "name": "Extension",
             "type": "Attribute",
             "max_length": 10,
-        }
+        },
     )
     location: None | str = field(
         default=None,
@@ -65,5 +66,5 @@ class PaymentPhone2:
             "name": "Location",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )

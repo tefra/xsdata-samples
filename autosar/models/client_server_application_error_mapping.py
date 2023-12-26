@@ -29,31 +29,36 @@ class ClientServerApplicationErrorMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "CLIENT-SERVER-APPLICATION-ERROR-MAPPING"
 
-    first_application_error_ref: Optional["ClientServerApplicationErrorMapping.FirstApplicationErrorRef"] = field(
+    first_application_error_ref: Optional[
+        "ClientServerApplicationErrorMapping.FirstApplicationErrorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "FIRST-APPLICATION-ERROR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    second_application_error_ref: Optional["ClientServerApplicationErrorMapping.SecondApplicationErrorRef"] = field(
+    second_application_error_ref: Optional[
+        "ClientServerApplicationErrorMapping.SecondApplicationErrorRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SECOND-APPLICATION-ERROR-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -61,7 +66,7 @@ class ClientServerApplicationErrorMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -72,7 +77,7 @@ class ClientServerApplicationErrorMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -83,5 +88,5 @@ class ClientServerApplicationErrorMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

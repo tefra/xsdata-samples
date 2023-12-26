@@ -10,6 +10,7 @@ class AirFareDiscount:
     """
     Fare Discounts.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,19 +19,19 @@ class AirFareDiscount:
         metadata={
             "name": "Percentage",
             "type": "Attribute",
-        }
+        },
     )
     amount: None | str = field(
         default=None,
         metadata={
             "name": "Amount",
             "type": "Attribute",
-        }
+        },
     )
     discount_method: None | TypeFareDiscount = field(
         default=None,
         metadata={
             "name": "DiscountMethod",
             "type": "Attribute",
-        }
+        },
     )

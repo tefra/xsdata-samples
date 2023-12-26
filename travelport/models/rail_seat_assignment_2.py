@@ -28,6 +28,7 @@ class RailSeatAssignment2:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "RailSeatAssignment"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -38,14 +39,14 @@ class RailSeatAssignment2:
             "name": "Characteristic",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     status: None | str = field(
         default=None,
@@ -55,7 +56,7 @@ class RailSeatAssignment2:
             "required": True,
             "length": 2,
             "white_space": "collapse",
-        }
+        },
     )
     seat: None | str = field(
         default=None,
@@ -63,33 +64,33 @@ class RailSeatAssignment2:
             "name": "Seat",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     rail_segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "RailSegmentRef",
             "type": "Attribute",
-        }
+        },
     )
     coach_number: None | str = field(
         default=None,
         metadata={
             "name": "CoachNumber",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus3 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

@@ -15,5 +15,5 @@ class Sinh:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

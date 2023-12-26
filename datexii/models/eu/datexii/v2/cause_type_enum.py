@@ -41,6 +41,7 @@ class CauseTypeEnum(Enum):
     :cvar VANDALISM: A vandalism incident.
     :cvar OTHER: Other than as defined in this enumeration.
     """
+
     ACCIDENT = "accident"
     CONGESTION = "congestion"
     EARLIER_ACCIDENT = "earlierAccident"

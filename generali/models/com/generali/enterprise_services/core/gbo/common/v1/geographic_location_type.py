@@ -1,9 +1,17 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import CodeType
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import Idtype
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.measure_type import MeasureType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_simple_component_type import BaseSimpleComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
+    CodeType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
+    Idtype,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.measure_type import (
+    MeasureType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_simple_component_type import (
+    BaseSimpleComponentType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -39,13 +47,14 @@ class GeographicLocationType(BaseSimpleComponentType):
         system used for measuring a geographical coordinate other than
         Global Positioning System</description>
     """
+
     altitude_measure: Optional[MeasureType] = field(
         default=None,
         metadata={
             "name": "AltitudeMeasure",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     latitude_measure: Optional[MeasureType] = field(
         default=None,
@@ -53,7 +62,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "name": "LatitudeMeasure",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     longitude_measure: Optional[MeasureType] = field(
         default=None,
@@ -61,7 +70,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "name": "LongitudeMeasure",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     latitude_direction_code: Optional[CodeType] = field(
         default=None,
@@ -69,7 +78,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "name": "LatitudeDirectionCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     longitude_direction_code: Optional[CodeType] = field(
         default=None,
@@ -77,7 +86,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "name": "LongitudeDirectionCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     system_id: Optional[Idtype] = field(
         default=None,
@@ -85,5 +94,5 @@ class GeographicLocationType(BaseSimpleComponentType):
             "name": "SystemID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

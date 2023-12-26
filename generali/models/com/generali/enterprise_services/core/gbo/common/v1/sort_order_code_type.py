@@ -7,5 +7,6 @@ class SortOrderCodeType(Enum):
     """
     The direction by which to sort a set of values.
     """
+
     ASC = "ASC"
     DSC = "DSC"

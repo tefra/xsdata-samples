@@ -16,7 +16,7 @@ class TOutputSet(TBaseElement):
             "name": "dataOutputRefs",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     optional_output_refs: List[str] = field(
         default_factory=list,
@@ -24,7 +24,7 @@ class TOutputSet(TBaseElement):
             "name": "optionalOutputRefs",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     while_executing_output_refs: List[str] = field(
         default_factory=list,
@@ -32,7 +32,7 @@ class TOutputSet(TBaseElement):
             "name": "whileExecutingOutputRefs",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     input_set_refs: List[str] = field(
         default_factory=list,
@@ -40,11 +40,11 @@ class TOutputSet(TBaseElement):
             "name": "inputSetRefs",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-        }
+        },
     )
     name: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

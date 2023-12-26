@@ -10,5 +10,6 @@ class HotelSearchAvailabilityRsp(BaseHotelSearchRsp):
     """
     Hotel availablity search response.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"

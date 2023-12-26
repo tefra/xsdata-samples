@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from crossref.models.org.crossref.schema.pkg_5.pkg_3.format_mime_type import FormatMimeType
+from crossref.models.org.crossref.schema.pkg_5.pkg_3.format_mime_type import (
+    FormatMimeType,
+)
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
@@ -10,6 +12,7 @@ class Format:
     """
     A narrative description of a component's file format and/or file extension.
     """
+
     class Meta:
         name = "format"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -20,11 +23,11 @@ class Format:
             "required": True,
             "min_length": 0,
             "max_length": 130,
-        }
+        },
     )
     mime_type: Optional[FormatMimeType] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

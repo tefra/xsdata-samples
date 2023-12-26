@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.predefined_location_versioned_reference import PredefinedLocationVersionedReference
+from datexii.models.eu.datexii.v2.predefined_location_versioned_reference import (
+    PredefinedLocationVersionedReference,
+)
 from datexii.models.eu.datexii.v2.traffic_view_record import TrafficViewRecord
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
@@ -20,14 +22,17 @@ class LinearTrafficView:
     :ivar linear_traffic_view_extension:
     :ivar id:
     """
-    linear_predefined_location_reference: Optional[PredefinedLocationVersionedReference] = field(
+
+    linear_predefined_location_reference: Optional[
+        PredefinedLocationVersionedReference
+    ] = field(
         default=None,
         metadata={
             "name": "linearPredefinedLocationReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     traffic_view_record: List[TrafficViewRecord] = field(
         default_factory=list,
@@ -36,7 +41,7 @@ class LinearTrafficView:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     linear_traffic_view_extension: Optional[ExtensionType] = field(
         default=None,
@@ -44,12 +49,12 @@ class LinearTrafficView:
             "name": "linearTrafficViewExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

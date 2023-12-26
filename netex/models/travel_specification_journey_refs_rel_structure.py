@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .service_journey_ref import ServiceJourneyRef
 from .template_service_journey_ref import TemplateServiceJourneyRef
@@ -9,11 +9,15 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
 @dataclass
-class TravelSpecificationJourneyRefsRelStructure(OneToManyRelationshipStructure):
+class TravelSpecificationJourneyRefsRelStructure(
+    OneToManyRelationshipStructure
+):
     class Meta:
         name = "travelSpecificationJourneyRefs_RelStructure"
 
-    template_service_journey_ref_or_service_journey_ref_or_train_number_ref: List[object] = field(
+    template_service_journey_ref_or_service_journey_ref_or_train_number_ref: List[
+        Union[TemplateServiceJourneyRef, ServiceJourneyRef, TrainNumberRef]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -34,5 +38,5 @@ class TravelSpecificationJourneyRefsRelStructure(OneToManyRelationshipStructure)
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

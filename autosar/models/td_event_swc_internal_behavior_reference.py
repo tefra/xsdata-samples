@@ -7,7 +7,9 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .component_in_composition_instance_ref import ComponentInCompositionInstanceRef
+from .component_in_composition_instance_ref import (
+    ComponentInCompositionInstanceRef,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -86,6 +88,7 @@ class TdEventSwcInternalBehaviorReference:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TD-EVENT-SWC-INTERNAL-BEHAVIOR-REFERENCE"
 
@@ -96,15 +99,17 @@ class TdEventSwcInternalBehaviorReference:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TdEventSwcInternalBehaviorReference.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TdEventSwcInternalBehaviorReference.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -112,7 +117,7 @@ class TdEventSwcInternalBehaviorReference:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -120,7 +125,7 @@ class TdEventSwcInternalBehaviorReference:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -128,7 +133,7 @@ class TdEventSwcInternalBehaviorReference:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -136,7 +141,7 @@ class TdEventSwcInternalBehaviorReference:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -144,15 +149,17 @@ class TdEventSwcInternalBehaviorReference:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["TdEventSwcInternalBehaviorReference.Annotations"] = field(
+    annotations: Optional[
+        "TdEventSwcInternalBehaviorReference.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -160,7 +167,7 @@ class TdEventSwcInternalBehaviorReference:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
         default=None,
@@ -168,7 +175,7 @@ class TdEventSwcInternalBehaviorReference:
             "name": "OCCURRENCE-EXPRESSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     component_iref: Optional[ComponentInCompositionInstanceRef] = field(
         default=None,
@@ -176,22 +183,24 @@ class TdEventSwcInternalBehaviorReference:
             "name": "COMPONENT-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    referenced_td_event_swc_ref: Optional["TdEventSwcInternalBehaviorReference.ReferencedTdEventSwcRef"] = field(
+    referenced_td_event_swc_ref: Optional[
+        "TdEventSwcInternalBehaviorReference.ReferencedTdEventSwcRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REFERENCED-TD-EVENT-SWC-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -199,14 +208,14 @@ class TdEventSwcInternalBehaviorReference:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -217,7 +226,7 @@ class TdEventSwcInternalBehaviorReference:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -228,7 +237,7 @@ class TdEventSwcInternalBehaviorReference:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -239,5 +248,5 @@ class TdEventSwcInternalBehaviorReference:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

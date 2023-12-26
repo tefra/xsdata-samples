@@ -7,8 +7,12 @@ from .annotation import (
     VariationPoint,
 )
 from .category_string import CategoryString
-from .diagnostic_access_permission_subtypes_enum import DiagnosticAccessPermissionSubtypesEnum
-from .diagnostic_request_emission_related_dtc_class_subtypes_enum import DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum
+from .diagnostic_access_permission_subtypes_enum import (
+    DiagnosticAccessPermissionSubtypesEnum,
+)
+from .diagnostic_request_emission_related_dtc_class_subtypes_enum import (
+    DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum,
+)
 from .identifier import Identifier
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
@@ -87,6 +91,7 @@ class DiagnosticRequestEmissionRelatedDtc:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-REQUEST-EMISSION-RELATED-DTC"
 
@@ -97,15 +102,17 @@ class DiagnosticRequestEmissionRelatedDtc:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DiagnosticRequestEmissionRelatedDtc.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DiagnosticRequestEmissionRelatedDtc.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -113,7 +120,7 @@ class DiagnosticRequestEmissionRelatedDtc:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -121,7 +128,7 @@ class DiagnosticRequestEmissionRelatedDtc:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -129,7 +136,7 @@ class DiagnosticRequestEmissionRelatedDtc:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -137,7 +144,7 @@ class DiagnosticRequestEmissionRelatedDtc:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -145,15 +152,17 @@ class DiagnosticRequestEmissionRelatedDtc:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    annotations: Optional["DiagnosticRequestEmissionRelatedDtc.Annotations"] = field(
+    annotations: Optional[
+        "DiagnosticRequestEmissionRelatedDtc.Annotations"
+    ] = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -161,30 +170,34 @@ class DiagnosticRequestEmissionRelatedDtc:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    access_permission_ref: Optional["DiagnosticRequestEmissionRelatedDtc.AccessPermissionRef"] = field(
+    access_permission_ref: Optional[
+        "DiagnosticRequestEmissionRelatedDtc.AccessPermissionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    request_emission_related_dtc_class_ref: Optional["DiagnosticRequestEmissionRelatedDtc.RequestEmissionRelatedDtcClassRef"] = field(
+    request_emission_related_dtc_class_ref: Optional[
+        "DiagnosticRequestEmissionRelatedDtc.RequestEmissionRelatedDtcClassRef"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUEST-EMISSION-RELATED-DTC-CLASS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -192,14 +205,14 @@ class DiagnosticRequestEmissionRelatedDtc:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -210,7 +223,7 @@ class DiagnosticRequestEmissionRelatedDtc:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -221,7 +234,7 @@ class DiagnosticRequestEmissionRelatedDtc:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -232,16 +245,18 @@ class DiagnosticRequestEmissionRelatedDtc:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class RequestEmissionRelatedDtcClassRef(Ref):
-        dest: Optional[DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum] = field(
+        dest: Optional[
+            DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum
+        ] = field(
             default=None,
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

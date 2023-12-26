@@ -108,6 +108,7 @@ class DoIpInstantiation:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DO-IP-INSTANTIATION"
 
@@ -118,15 +119,17 @@ class DoIpInstantiation:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["DoIpInstantiation.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "DoIpInstantiation.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -134,7 +137,7 @@ class DoIpInstantiation:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -142,7 +145,7 @@ class DoIpInstantiation:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -150,7 +153,7 @@ class DoIpInstantiation:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -158,7 +161,7 @@ class DoIpInstantiation:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -166,7 +169,7 @@ class DoIpInstantiation:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["DoIpInstantiation.Annotations"] = field(
         default=None,
@@ -174,7 +177,7 @@ class DoIpInstantiation:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     eid: Optional[PositiveUnlimitedInteger] = field(
         default=None,
@@ -182,7 +185,7 @@ class DoIpInstantiation:
             "name": "EID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     entity_status_max_byte_field_use: Optional[Boolean] = field(
         default=None,
@@ -190,7 +193,7 @@ class DoIpInstantiation:
             "name": "ENTITY-STATUS-MAX-BYTE-FIELD-USE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     gid: Optional[PositiveUnlimitedInteger] = field(
         default=None,
@@ -198,7 +201,7 @@ class DoIpInstantiation:
             "name": "GID",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     gid_invalidity_pattern: Optional[PositiveInteger] = field(
         default=None,
@@ -206,7 +209,7 @@ class DoIpInstantiation:
             "name": "GID-INVALIDITY-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     logical_address: Optional[PositiveInteger] = field(
         default=None,
@@ -214,7 +217,7 @@ class DoIpInstantiation:
             "name": "LOGICAL-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_request_bytes: Optional[PositiveInteger] = field(
         default=None,
@@ -222,23 +225,27 @@ class DoIpInstantiation:
             "name": "MAX-REQUEST-BYTES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    network_interfaces: Optional["DoIpInstantiation.NetworkInterfaces"] = field(
+    network_interfaces: Optional[
+        "DoIpInstantiation.NetworkInterfaces"
+    ] = field(
         default=None,
         metadata={
             "name": "NETWORK-INTERFACES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    request_configurations: Optional["DoIpInstantiation.RequestConfigurations"] = field(
+    request_configurations: Optional[
+        "DoIpInstantiation.RequestConfigurations"
+    ] = field(
         default=None,
         metadata={
             "name": "REQUEST-CONFIGURATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     vin_invalidity_pattern: Optional[PositiveInteger] = field(
         default=None,
@@ -246,14 +253,14 @@ class DoIpInstantiation:
             "name": "VIN-INVALIDITY-PATTERN",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -261,14 +268,14 @@ class DoIpInstantiation:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -279,7 +286,7 @@ class DoIpInstantiation:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -290,7 +297,7 @@ class DoIpInstantiation:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -301,7 +308,7 @@ class DoIpInstantiation:
                 "name": "DO-IP-NETWORK-CONFIGURATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -312,5 +319,5 @@ class DoIpInstantiation:
                 "name": "DO-IP-REQUEST-CONFIGURATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

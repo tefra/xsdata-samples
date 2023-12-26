@@ -30,10 +30,14 @@ from crossref.models.gov.nih.nlm.ncbi.jats1.conf_date import ConfDate
 from crossref.models.gov.nih.nlm.ncbi.jats1.conf_name import ConfName
 from crossref.models.gov.nih.nlm.ncbi.jats1.conf_num import ConfNum
 from crossref.models.gov.nih.nlm.ncbi.jats1.conf_theme import ConfTheme
-from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import IndexTermRangeEnd
+from crossref.models.gov.nih.nlm.ncbi.jats1.index_term_range_end import (
+    IndexTermRangeEnd,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.inline_graphic import InlineGraphic
 from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_end import MilestoneEnd
-from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import MilestoneStart
+from crossref.models.gov.nih.nlm.ncbi.jats1.milestone_start import (
+    MilestoneStart,
+)
 from crossref.models.gov.nih.nlm.ncbi.jats1.private_char import PrivateChar
 from crossref.models.xml.lang_value import LangValue
 
@@ -45,6 +49,7 @@ class StringConf:
     """
     <div> <h3>String Conference Name</h3> </div>
     """
+
     class Meta:
         name = "string-conf"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
@@ -54,34 +59,34 @@ class StringConf:
         metadata={
             "name": "content-type",
             "type": "Attribute",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     specific_use: Optional[str] = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
-        }
+        },
     )
     base: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     lang: Optional[Union[str, LangValue]] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
-        }
+        },
     )
     content: List[object] = field(
         default_factory=list,
@@ -227,5 +232,5 @@ class StringConf:
                     "type": Type["StringConf"],
                 },
             ),
-        }
+        },
     )

@@ -11,6 +11,7 @@ class CitationList:
     A list of articles, books, and other content cited by the item being
     registered.
     """
+
     class Meta:
         name = "citation_list"
         namespace = "http://www.crossref.org/schema/5.3.1"
@@ -19,5 +20,5 @@ class CitationList:
         default_factory=list,
         metadata={
             "type": "Element",
-        }
+        },
     )

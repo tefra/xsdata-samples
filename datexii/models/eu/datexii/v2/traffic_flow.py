@@ -29,13 +29,14 @@ class TrafficFlow(TrafficData):
         measurement site.
     :ivar traffic_flow_extension:
     """
+
     axle_flow: Optional[AxleFlowValue] = field(
         default=None,
         metadata={
             "name": "axleFlow",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     pcu_flow: Optional[PcuFlowValue] = field(
         default=None,
@@ -43,7 +44,7 @@ class TrafficFlow(TrafficData):
             "name": "pcuFlow",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     percentage_long_vehicles: Optional[PercentageValue] = field(
         default=None,
@@ -51,7 +52,7 @@ class TrafficFlow(TrafficData):
             "name": "percentageLongVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     vehicle_flow: Optional[VehicleFlowValue] = field(
         default=None,
@@ -59,7 +60,7 @@ class TrafficFlow(TrafficData):
             "name": "vehicleFlow",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_flow_extension: Optional[ExtensionType] = field(
         default=None,
@@ -67,5 +68,5 @@ class TrafficFlow(TrafficData):
             "name": "trafficFlowExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

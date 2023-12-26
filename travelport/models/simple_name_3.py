@@ -9,6 +9,7 @@ class SimpleName3:
     """
     Free text name.
     """
+
     class Meta:
         name = "SimpleName"
         namespace = "http://www.travelport.com/schema/common_v33_0"
@@ -17,5 +18,5 @@ class SimpleName3:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

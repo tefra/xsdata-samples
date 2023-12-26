@@ -19,6 +19,7 @@ class CreditCard1(TypeCreditCardType1):
         The Key assigned to the payment details value from the specified
         profile.
     """
+
     class Meta:
         name = "CreditCard"
         namespace = "http://www.travelport.com/schema/common_v52_0"
@@ -28,12 +29,12 @@ class CreditCard1(TypeCreditCardType1):
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )

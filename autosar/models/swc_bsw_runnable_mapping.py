@@ -33,6 +33,7 @@ class SwcBswRunnableMapping:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SWC-BSW-RUNNABLE-MAPPING"
 
@@ -42,7 +43,7 @@ class SwcBswRunnableMapping:
             "name": "BSW-ENTITY-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     swc_runnable_ref: Optional["SwcBswRunnableMapping.SwcRunnableRef"] = field(
         default=None,
@@ -50,7 +51,7 @@ class SwcBswRunnableMapping:
             "name": "SWC-RUNNABLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -58,14 +59,14 @@ class SwcBswRunnableMapping:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -73,7 +74,7 @@ class SwcBswRunnableMapping:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -84,7 +85,7 @@ class SwcBswRunnableMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -95,5 +96,5 @@ class SwcBswRunnableMapping:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

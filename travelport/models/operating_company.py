@@ -18,6 +18,7 @@ class OperatingCompany:
     name
         Name Identifying the Train Service other than BN orTL
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
@@ -25,14 +26,14 @@ class OperatingCompany:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
             "type": "Attribute",
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -40,5 +41,5 @@ class OperatingCompany:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

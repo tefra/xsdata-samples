@@ -20,6 +20,7 @@ class AirRefundRsp(BaseRsp1):
     refund_failure_info
         Provider: ACH.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -29,7 +30,7 @@ class AirRefundRsp(BaseRsp1):
             "name": "ETR",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     tcr: list[Tcr] = field(
         default_factory=list,
@@ -37,7 +38,7 @@ class AirRefundRsp(BaseRsp1):
             "name": "TCR",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     refund_failure_info: list[TypeTicketFailureInfo] = field(
         default_factory=list,
@@ -45,5 +46,5 @@ class AirRefundRsp(BaseRsp1):
             "name": "RefundFailureInfo",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

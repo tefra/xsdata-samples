@@ -14,8 +14,12 @@ from .multilanguage_long_name import MultilanguageLongName
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .socket_connection_bundle_subtypes_enum import SocketConnectionBundleSubtypesEnum
-from .static_socket_connection_subtypes_enum import StaticSocketConnectionSubtypesEnum
+from .socket_connection_bundle_subtypes_enum import (
+    SocketConnectionBundleSubtypesEnum,
+)
+from .static_socket_connection_subtypes_enum import (
+    StaticSocketConnectionSubtypesEnum,
+)
 from .td_event_frame_ethernet_type_enum import TdEventFrameEthernetTypeEnum
 from .td_event_occurrence_expression import TdEventOccurrenceExpression
 from .td_header_id_range import TdHeaderIdRange
@@ -104,6 +108,7 @@ class TdEventFrameEthernet:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "TD-EVENT-FRAME-ETHERNET"
 
@@ -114,15 +119,17 @@ class TdEventFrameEthernet:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["TdEventFrameEthernet.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "TdEventFrameEthernet.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -130,7 +137,7 @@ class TdEventFrameEthernet:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -138,7 +145,7 @@ class TdEventFrameEthernet:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -146,7 +153,7 @@ class TdEventFrameEthernet:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -154,7 +161,7 @@ class TdEventFrameEthernet:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -162,7 +169,7 @@ class TdEventFrameEthernet:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["TdEventFrameEthernet.Annotations"] = field(
         default=None,
@@ -170,7 +177,7 @@ class TdEventFrameEthernet:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -178,7 +185,7 @@ class TdEventFrameEthernet:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
         default=None,
@@ -186,7 +193,7 @@ class TdEventFrameEthernet:
             "name": "OCCURRENCE-EXPRESSION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ecu_instance_ref: Optional["TdEventFrameEthernet.EcuInstanceRef"] = field(
         default=None,
@@ -194,23 +201,27 @@ class TdEventFrameEthernet:
             "name": "ECU-INSTANCE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    socket_connection_bundle_ref: Optional["TdEventFrameEthernet.SocketConnectionBundleRef"] = field(
+    socket_connection_bundle_ref: Optional[
+        "TdEventFrameEthernet.SocketConnectionBundleRef"
+    ] = field(
         default=None,
         metadata={
             "name": "SOCKET-CONNECTION-BUNDLE-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    static_socket_connection_ref: Optional["TdEventFrameEthernet.StaticSocketConnectionRef"] = field(
+    static_socket_connection_ref: Optional[
+        "TdEventFrameEthernet.StaticSocketConnectionRef"
+    ] = field(
         default=None,
         metadata={
             "name": "STATIC-SOCKET-CONNECTION-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     td_event_type: Optional[TdEventFrameEthernetTypeEnum] = field(
         default=None,
@@ -218,30 +229,34 @@ class TdEventFrameEthernet:
             "name": "TD-EVENT-TYPE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    td_header_id_filters: Optional["TdEventFrameEthernet.TdHeaderIdFilters"] = field(
+    td_header_id_filters: Optional[
+        "TdEventFrameEthernet.TdHeaderIdFilters"
+    ] = field(
         default=None,
         metadata={
             "name": "TD-HEADER-ID-FILTERS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    td_pdu_triggering_filter_refs: Optional["TdEventFrameEthernet.TdPduTriggeringFilterRefs"] = field(
+    td_pdu_triggering_filter_refs: Optional[
+        "TdEventFrameEthernet.TdPduTriggeringFilterRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "TD-PDU-TRIGGERING-FILTER-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -249,14 +264,14 @@ class TdEventFrameEthernet:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -267,7 +282,7 @@ class TdEventFrameEthernet:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -278,7 +293,7 @@ class TdEventFrameEthernet:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -289,7 +304,7 @@ class TdEventFrameEthernet:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -300,7 +315,7 @@ class TdEventFrameEthernet:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -311,7 +326,7 @@ class TdEventFrameEthernet:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -322,18 +337,20 @@ class TdEventFrameEthernet:
                 "name": "TD-HEADER-ID-RANGE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class TdPduTriggeringFilterRefs:
-        td_pdu_triggering_filter_ref: List["TdEventFrameEthernet.TdPduTriggeringFilterRefs.TdPduTriggeringFilterRef"] = field(
+        td_pdu_triggering_filter_ref: List[
+            "TdEventFrameEthernet.TdPduTriggeringFilterRefs.TdPduTriggeringFilterRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "TD-PDU-TRIGGERING-FILTER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -344,5 +361,5 @@ class TdEventFrameEthernet:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )

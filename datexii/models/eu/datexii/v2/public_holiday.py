@@ -3,7 +3,9 @@ from typing import Optional
 from datexii.models.eu.datexii.v2.country_enum import CountryEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
-from datexii.models.eu.datexii.v2.public_holiday_type_enum import PublicHolidayTypeEnum
+from datexii.models.eu.datexii.v2.public_holiday_type_enum import (
+    PublicHolidayTypeEnum,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -26,13 +28,14 @@ class PublicHoliday:
         enumeration values do not fit.
     :ivar public_holiday_extension:
     """
+
     country: Optional[CountryEnum] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     country_subdivision: Optional[str] = field(
         default=None,
@@ -41,14 +44,14 @@ class PublicHoliday:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     region: Optional[MultilingualString] = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     public_holiday_type: Optional[PublicHolidayTypeEnum] = field(
         default=None,
@@ -57,7 +60,7 @@ class PublicHoliday:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     public_holiday_name: Optional[MultilingualString] = field(
         default=None,
@@ -65,7 +68,7 @@ class PublicHoliday:
             "name": "publicHolidayName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     public_holiday_extension: Optional[ExtensionType] = field(
         default=None,
@@ -73,5 +76,5 @@ class PublicHoliday:
             "name": "publicHolidayExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

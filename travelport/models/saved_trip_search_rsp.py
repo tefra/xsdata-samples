@@ -11,6 +11,7 @@ class SavedTripSearchRsp(BaseRsp1):
     """
     Response containing summary information of savedTrip.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
@@ -20,5 +21,5 @@ class SavedTripSearchRsp(BaseRsp1):
             "name": "SavedTripSearchResult",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )

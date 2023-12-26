@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Union
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .train_stop_assignment import TrainStopAssignment
 from .train_stop_assignment_ref import TrainStopAssignmentRef
@@ -12,7 +12,9 @@ class TrainStopAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trainStopAssignments_RelStructure"
 
-    train_stop_assignment_ref_or_train_stop_assignment: List[object] = field(
+    train_stop_assignment_ref_or_train_stop_assignment: List[
+        Union[TrainStopAssignmentRef, TrainStopAssignment]
+    ] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -28,5 +30,5 @@ class TrainStopAssignmentsRelStructure(ContainmentAggregationStructure):
                     "namespace": "http://www.netex.org.uk/netex",
                 },
             ),
-        }
+        },
     )

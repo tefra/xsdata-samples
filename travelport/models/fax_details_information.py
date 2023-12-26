@@ -17,6 +17,7 @@ class FaxDetailsInformation:
         Returns related air pricing infos.
     fax_details
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,7 +28,7 @@ class FaxDetailsInformation:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     fax_details: None | FaxDetails = field(
         default=None,
@@ -35,5 +36,5 @@ class FaxDetailsInformation:
             "name": "FaxDetails",
             "type": "Element",
             "required": True,
-        }
+        },
     )

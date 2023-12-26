@@ -40,6 +40,7 @@ class Remark2(TypeKeyTaggedElement1):
     priority_order
         Priority order associated with this Remark.
     """
+
     class Meta:
         name = "Remark"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -52,7 +53,7 @@ class Remark2(TypeKeyTaggedElement1):
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     type_value: None | TypeRemarkType1 = field(
         default=None,
@@ -60,14 +61,14 @@ class Remark2(TypeKeyTaggedElement1):
             "name": "Type",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     accounting_remark_type: None | str = field(
         default=None,
         metadata={
             "name": "AccountingRemarkType",
             "type": "Attribute",
-        }
+        },
     )
     provider: None | str = field(
         default=None,
@@ -76,14 +77,14 @@ class Remark2(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     general_remark_type: None | TypeGeneralRemarkType1 = field(
         default=None,
         metadata={
             "name": "GeneralRemarkType",
             "type": "Attribute",
-        }
+        },
     )
     category_type: None | str = field(
         default=None,
@@ -91,14 +92,14 @@ class Remark2(TypeKeyTaggedElement1):
             "name": "CategoryType",
             "type": "Attribute",
             "max_length": 3,
-        }
+        },
     )
     supplier_type: None | TypeSupplierType1 = field(
         default=None,
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-        }
+        },
     )
     supplier: None | str = field(
         default=None,
@@ -106,7 +107,7 @@ class Remark2(TypeKeyTaggedElement1):
             "name": "Supplier",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     priority_order: None | int = field(
         default=None,
@@ -115,5 +116,5 @@ class Remark2(TypeKeyTaggedElement1):
             "type": "Attribute",
             "min_inclusive": 1,
             "max_inclusive": 99,
-        }
+        },
     )

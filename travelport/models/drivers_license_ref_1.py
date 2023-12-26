@@ -16,5 +16,5 @@ class DriversLicenseRef1:
             "name": "Key",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

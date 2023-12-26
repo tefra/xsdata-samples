@@ -9,5 +9,6 @@ class PduCollectionTriggerEnumSimple(Enum):
     :cvar NEVER: Pdu will be buffered and will not trigger the
         transmission of the data.
     """
+
     ALWAYS = "ALWAYS"
     NEVER = "NEVER"

@@ -19,6 +19,7 @@ class ExternalIdentifier2(TypeKeyElement2):
         the External ID. If the Source is a host provider i.e, 1G, 1V etc.,
         the ExtID and Source data may not be updated.
     """
+
     class Meta:
         name = "ExternalIdentifier"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -31,7 +32,7 @@ class ExternalIdentifier2(TypeKeyElement2):
             "required": True,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     source: None | str = field(
         default=None,
@@ -40,5 +41,5 @@ class ExternalIdentifier2(TypeKeyElement2):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

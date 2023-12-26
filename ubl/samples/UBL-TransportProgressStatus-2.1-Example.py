@@ -36,10 +36,10 @@ from xsdata.models.datatype import XmlTime
 
 obj = TransportProgressStatus(
     ublversion_id=UblversionId(
-        value="2.1"
+        value='2.1'
     ),
     id=Id(
-        value="TPSR_1"
+        value='TPSR_1'
     ),
     issue_date=XmlDate(2011, 10, 3),
     issue_time=XmlTime(14, 30, 10, 0, 60),
@@ -48,28 +48,28 @@ obj = TransportProgressStatus(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673821325",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673821325',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="ARRIVA"
+                    value='ARRIVA'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+49450557888"
+                value='+49450557888'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@arriva.de"
+                value='SomeName@arriva.de'
             )
         )
     ),
@@ -77,28 +77,28 @@ obj = TransportProgressStatus(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673827641",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673827641',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="NECOSS"
+                    value='NECOSS'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+49450557000"
+                value='+49450557000'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@necoss.de"
+                value='SomeName@necoss.de'
             )
         )
     ),
@@ -106,80 +106,80 @@ obj = TransportProgressStatus(
         party_identification=[
             PartyIdentification(
                 id=Id(
-                    value="4058673821325",
-                    scheme_name="GLN",
-                    scheme_agency_name="GS1"
+                    value='4058673821325',
+                    scheme_name='GLN',
+                    scheme_agency_name='GS1'
                 )
             ),
         ],
         party_name=[
             PartyName(
                 name=Name(
-                    value="ARRIVA"
+                    value='ARRIVA'
                 )
             ),
         ],
         contact=Contact(
             name=Name(
-                value="SomeName"
+                value='SomeName'
             ),
             telephone=Telephone(
-                value="+49450557888"
+                value='+49450557888'
             ),
             electronic_mail=ElectronicMail(
-                value="SomeName@arriva.de"
+                value='SomeName@arriva.de'
             )
         )
     ),
     transport_progress_status_request_document_reference=TransportProgressStatusRequestDocumentReference(
         id=Id(
-            value="TPS_1",
-            scheme_name="MovementReferenceNumber"
+            value='TPS_1',
+            scheme_name='MovementReferenceNumber'
         )
     ),
     transport_means=TransportMeans(
         journey_id=JourneyId(
-            value="RHamBrem"
+            value='RHamBrem'
         ),
         registration_nationality_id=RegistrationNationalityId(
-            value="DE"
+            value='DE'
         ),
         transport_means_type_code=TransportMeansTypeCode(
-            value="230"
+            value='230'
         ),
         rail_transport=RailTransport(
             train_id=TrainId(
-                value="RID01235"
+                value='RID01235'
             )
         )
     ),
     transport_schedule=[
         TransportSchedule(
             sequence_numeric=SequenceNumeric(
-                value=Decimal("1")
+                value=Decimal('1')
             ),
             reliability_percent=ReliabilityPercent(
-                value=Decimal("80")
+                value=Decimal('80')
             ),
             status_location=StatusLocation(
                 location_type_code=LocationTypeCode(
-                    value="13"
+                    value='13'
                 ),
                 address=Address(
                     id=Id(
-                        value="4568763527610",
-                        scheme_name="GLN",
-                        scheme_agency_name="GS1"
+                        value='4568763527610',
+                        scheme_name='GLN',
+                        scheme_agency_name='GS1'
                     ),
                     street_name=StreetName(
-                        value="Ludwig-Erhard-Str. 15"
+                        value='Ludwig-Erhard-Str. 15'
                     ),
                     city_name=CityName(
-                        value="Bremen"
+                        value='Bremen'
                     ),
                     country=Country(
                         identification_code=IdentificationCode(
-                            value="DE"
+                            value='DE'
                         )
                     )
                 )

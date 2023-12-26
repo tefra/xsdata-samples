@@ -2,7 +2,9 @@ from dataclasses import dataclass, field
 from typing import Optional
 from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.vehicle_characteristics import VehicleCharacteristics
+from datexii.models.eu.datexii.v2.vehicle_characteristics import (
+    VehicleCharacteristics,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -20,13 +22,16 @@ class TrafficData(BasicData):
         characteristics defined for the measurement site.
     :ivar traffic_data_extension:
     """
-    for_vehicles_with_characteristics_of: Optional[VehicleCharacteristics] = field(
+
+    for_vehicles_with_characteristics_of: Optional[
+        VehicleCharacteristics
+    ] = field(
         default=None,
         metadata={
             "name": "forVehiclesWithCharacteristicsOf",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     traffic_data_extension: Optional[ExtensionType] = field(
         default=None,
@@ -34,5 +39,5 @@ class TrafficData(BasicData):
             "name": "trafficDataExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

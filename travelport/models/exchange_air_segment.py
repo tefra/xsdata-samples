@@ -18,6 +18,7 @@ class ExchangeAirSegment:
     fare_basis_code
         The fare basis code to be used for exchange of this segment.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -27,7 +28,7 @@ class ExchangeAirSegment:
             "name": "AirSegment",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     cabin_class: None | CabinClass1 = field(
         default=None,
@@ -36,12 +37,12 @@ class ExchangeAirSegment:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "required": True,
-        }
+        },
     )
     fare_basis_code: None | str = field(
         default=None,
         metadata={
             "name": "FareBasisCode",
             "type": "Attribute",
-        }
+        },
     )

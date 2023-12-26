@@ -6,15 +6,21 @@ from .annotation import (
     DocumentationBlock,
 )
 from .category_string import CategoryString
-from .eoc_executable_entity_ref_abstract_subtypes_enum import EocExecutableEntityRefAbstractSubtypesEnum
+from .eoc_executable_entity_ref_abstract_subtypes_enum import (
+    EocExecutableEntityRefAbstractSubtypesEnum,
+)
 from .identifier import Identifier
 from .integer import Integer
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
 from .multilanguage_long_name import MultilanguageLongName
 from .ref import Ref
 from .short_name_fragment import ShortNameFragment
-from .timing_description_event_chain_subtypes_enum import TimingDescriptionEventChainSubtypesEnum
-from .timing_description_event_subtypes_enum import TimingDescriptionEventSubtypesEnum
+from .timing_description_event_chain_subtypes_enum import (
+    TimingDescriptionEventChainSubtypesEnum,
+)
+from .timing_description_event_subtypes_enum import (
+    TimingDescriptionEventSubtypesEnum,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -97,6 +103,7 @@ class EocExecutableEntityRefGroup:
         attribute has no semantic meaning for an AUTOSAR model and there
         is no requirement for AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "EOC-EXECUTABLE-ENTITY-REF-GROUP"
 
@@ -107,15 +114,17 @@ class EocExecutableEntityRefGroup:
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
             "required": True,
-        }
+        },
     )
-    short_name_fragments: Optional["EocExecutableEntityRefGroup.ShortNameFragments"] = field(
+    short_name_fragments: Optional[
+        "EocExecutableEntityRefGroup.ShortNameFragments"
+    ] = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     long_name: Optional[MultilanguageLongName] = field(
         default=None,
@@ -123,7 +132,7 @@ class EocExecutableEntityRefGroup:
             "name": "LONG-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     desc: Optional[MultiLanguageOverviewParagraph] = field(
         default=None,
@@ -131,7 +140,7 @@ class EocExecutableEntityRefGroup:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -139,7 +148,7 @@ class EocExecutableEntityRefGroup:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -147,7 +156,7 @@ class EocExecutableEntityRefGroup:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -155,7 +164,7 @@ class EocExecutableEntityRefGroup:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     annotations: Optional["EocExecutableEntityRefGroup.Annotations"] = field(
         default=None,
@@ -163,23 +172,27 @@ class EocExecutableEntityRefGroup:
             "name": "ANNOTATIONS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    direct_successor_refs: Optional["EocExecutableEntityRefGroup.DirectSuccessorRefs"] = field(
+    direct_successor_refs: Optional[
+        "EocExecutableEntityRefGroup.DirectSuccessorRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "DIRECT-SUCCESSOR-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    let_interval_refs: Optional["EocExecutableEntityRefGroup.LetIntervalRefs"] = field(
+    let_interval_refs: Optional[
+        "EocExecutableEntityRefGroup.LetIntervalRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "LET-INTERVAL-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_cycles: Optional[Integer] = field(
         default=None,
@@ -187,7 +200,7 @@ class EocExecutableEntityRefGroup:
             "name": "MAX-CYCLES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     max_slots: Optional[Integer] = field(
         default=None,
@@ -195,38 +208,44 @@ class EocExecutableEntityRefGroup:
             "name": "MAX-SLOTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    nested_element_refs: Optional["EocExecutableEntityRefGroup.NestedElementRefs"] = field(
+    nested_element_refs: Optional[
+        "EocExecutableEntityRefGroup.NestedElementRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "NESTED-ELEMENT-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    successor_refs: Optional["EocExecutableEntityRefGroup.SuccessorRefs"] = field(
+    successor_refs: Optional[
+        "EocExecutableEntityRefGroup.SuccessorRefs"
+    ] = field(
         default=None,
         metadata={
             "name": "SUCCESSOR-REFS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    triggering_event_ref: Optional["EocExecutableEntityRefGroup.TriggeringEventRef"] = field(
+    triggering_event_ref: Optional[
+        "EocExecutableEntityRefGroup.TriggeringEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "TRIGGERING-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -234,14 +253,14 @@ class EocExecutableEntityRefGroup:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     uuid: Optional[str] = field(
         default=None,
         metadata={
             "name": "UUID",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -252,7 +271,7 @@ class EocExecutableEntityRefGroup:
                 "name": "SHORT-NAME-FRAGMENT",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -263,18 +282,20 @@ class EocExecutableEntityRefGroup:
                 "name": "ANNOTATION",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
     class DirectSuccessorRefs:
-        direct_successor_ref: List["EocExecutableEntityRefGroup.DirectSuccessorRefs.DirectSuccessorRef"] = field(
+        direct_successor_ref: List[
+            "EocExecutableEntityRefGroup.DirectSuccessorRefs.DirectSuccessorRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "DIRECT-SUCCESSOR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -285,18 +306,20 @@ class EocExecutableEntityRefGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class LetIntervalRefs:
-        let_interval_ref: List["EocExecutableEntityRefGroup.LetIntervalRefs.LetIntervalRef"] = field(
+        let_interval_ref: List[
+            "EocExecutableEntityRefGroup.LetIntervalRefs.LetIntervalRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "LET-INTERVAL-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -307,18 +330,20 @@ class EocExecutableEntityRefGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class NestedElementRefs:
-        nested_element_ref: List["EocExecutableEntityRefGroup.NestedElementRefs.NestedElementRef"] = field(
+        nested_element_ref: List[
+            "EocExecutableEntityRefGroup.NestedElementRefs.NestedElementRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "NESTED-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -329,18 +354,20 @@ class EocExecutableEntityRefGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
     class SuccessorRefs:
-        successor_ref: List["EocExecutableEntityRefGroup.SuccessorRefs.SuccessorRef"] = field(
+        successor_ref: List[
+            "EocExecutableEntityRefGroup.SuccessorRefs.SuccessorRef"
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SUCCESSOR-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
         @dataclass
@@ -351,7 +378,7 @@ class EocExecutableEntityRefGroup:
                     "name": "DEST",
                     "type": "Attribute",
                     "required": True,
-                }
+                },
             )
 
     @dataclass
@@ -362,5 +389,5 @@ class EocExecutableEntityRefGroup:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

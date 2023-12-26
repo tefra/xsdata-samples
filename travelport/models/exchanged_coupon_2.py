@@ -16,6 +16,7 @@ class ExchangedCoupon2:
     coupon_number
         Coupon numbers that were exchanged specific to this ticket
     """
+
     class Meta:
         name = "ExchangedCoupon"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -27,12 +28,12 @@ class ExchangedCoupon2:
             "type": "Attribute",
             "required": True,
             "length": 13,
-        }
+        },
     )
     coupon_number: None | str = field(
         default=None,
         metadata={
             "name": "CouponNumber",
             "type": "Attribute",
-        }
+        },
     )

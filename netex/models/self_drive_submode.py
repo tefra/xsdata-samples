@@ -13,5 +13,5 @@ class SelfDriveSubmode:
         default=SelfDriveSubmodeEnumeration.UNKNOWN,
         metadata={
             "required": True,
-        }
+        },
     )

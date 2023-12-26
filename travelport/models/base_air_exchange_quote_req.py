@@ -6,7 +6,9 @@ from travelport.models.base_core_req_1 import BaseCoreReq1
 from travelport.models.form_of_payment_1 import FormOfPayment1
 from travelport.models.host_token_1 import HostToken1
 from travelport.models.optional_services import OptionalServices
-from travelport.models.original_itinerary_details import OriginalItineraryDetails
+from travelport.models.original_itinerary_details import (
+    OriginalItineraryDetails,
+)
 from travelport.models.pcc import Pcc
 from travelport.models.repricing_modifiers import RepricingModifiers
 from travelport.models.type_fare_rule_type import TypeFareRuleType
@@ -39,6 +41,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
     fare_rule_type
         Provider: ACH.
     """
+
     ticket_number: list[str] = field(
         default_factory=list,
         metadata={
@@ -48,7 +51,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 13,
-        }
+        },
     )
     provider_reservation_info: None | BaseAirExchangeQuoteReq.ProviderReservationInfo = field(
         default=None,
@@ -56,7 +59,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "name": "ProviderReservationInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     air_pricing_solution: list[AirPricingSolution] = field(
         default_factory=list,
@@ -65,7 +68,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
             "max_occurs": 2,
-        }
+        },
     )
     air_exchange_modifiers: None | AirExchangeModifiers = field(
         default=None,
@@ -73,7 +76,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "name": "AirExchangeModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     host_token: list[HostToken1] = field(
         default_factory=list,
@@ -82,7 +85,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     optional_services: None | OptionalServices = field(
         default=None,
@@ -90,7 +93,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "name": "OptionalServices",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     form_of_payment: list[FormOfPayment1] = field(
         default_factory=list,
@@ -99,7 +102,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     repricing_modifiers: None | RepricingModifiers = field(
         default=None,
@@ -107,7 +110,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "name": "RepricingModifiers",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     original_itinerary_details: None | OriginalItineraryDetails = field(
         default=None,
@@ -115,7 +118,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "name": "OriginalItineraryDetails",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     pcc: None | Pcc = field(
         default=None,
@@ -123,14 +126,14 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
             "name": "PCC",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-        }
+        },
     )
     fare_rule_type: TypeFareRuleType = field(
         default=TypeFareRuleType.NONE,
         metadata={
             "name": "FareRuleType",
             "type": "Attribute",
-        }
+        },
     )
 
     @dataclass
@@ -143,6 +146,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
         supplier_code
             Represents Carrier Code for ACH PNR Retrieve.
         """
+
         provider_code: None | str = field(
             default=None,
             metadata={
@@ -151,7 +155,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
                 "required": True,
                 "min_length": 2,
                 "max_length": 5,
-            }
+            },
         )
         provider_locator_code: None | str = field(
             default=None,
@@ -160,7 +164,7 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
                 "type": "Attribute",
                 "required": True,
                 "max_length": 15,
-            }
+            },
         )
         supplier_code: None | str = field(
             default=None,
@@ -169,5 +173,5 @@ class BaseAirExchangeQuoteReq(BaseCoreReq1):
                 "type": "Attribute",
                 "min_length": 1,
                 "max_length": 5,
-            }
+            },
         )

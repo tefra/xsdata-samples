@@ -15,5 +15,5 @@ class Arccot:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

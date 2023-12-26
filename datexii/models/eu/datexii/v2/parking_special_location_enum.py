@@ -42,6 +42,7 @@ class ParkingSpecialLocationEnum(Enum):
     :cvar OTHER: The parking site is associated with some other
         location. Use "parkingOtherSpecialLocation" to specify details.
     """
+
     AIRPORT_TERMINAL = "airportTerminal"
     EXHIBITON_CENTRE = "exhibitonCentre"
     SHOPPING_CENTRE = "shoppingCentre"

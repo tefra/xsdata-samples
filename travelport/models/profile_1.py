@@ -3,7 +3,9 @@ from dataclasses import dataclass, field
 from travelport.models.profile_data_1 import ProfileData1
 from travelport.models.profile_link_1 import ProfileLink1
 from travelport.models.profile_parent_summary_1 import ProfileParentSummary1
-from travelport.models.type_profile_entity_status_with_delete_1 import TypeProfileEntityStatusWithDelete1
+from travelport.models.type_profile_entity_status_with_delete_1 import (
+    TypeProfileEntityStatusWithDelete1,
+)
 from travelport.models.type_profile_parent_with_data_1 import ProfileParent1
 from travelport.models.type_profile_type_3 import TypeProfileType3
 
@@ -43,6 +45,7 @@ class Profile1:
     version
         Version number of the profile.
     """
+
     class Meta:
         name = "Profile"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -52,28 +55,28 @@ class Profile1:
         metadata={
             "name": "ProfileData",
             "type": "Element",
-        }
+        },
     )
     profile_link: list[ProfileLink1] = field(
         default_factory=list,
         metadata={
             "name": "ProfileLink",
             "type": "Element",
-        }
+        },
     )
     profile_parent: None | ProfileParent1 = field(
         default=None,
         metadata={
             "name": "ProfileParent",
             "type": "Element",
-        }
+        },
     )
     profile_parent_summary: list[ProfileParentSummary1] = field(
         default_factory=list,
         metadata={
             "name": "ProfileParentSummary",
             "type": "Element",
-        }
+        },
     )
     profile_id: None | int = field(
         default=None,
@@ -81,7 +84,7 @@ class Profile1:
             "name": "ProfileID",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     profile_type: None | TypeProfileType3 = field(
         default=None,
@@ -89,7 +92,7 @@ class Profile1:
             "name": "ProfileType",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     name: None | str = field(
         default=None,
@@ -97,7 +100,7 @@ class Profile1:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     status: None | TypeProfileEntityStatusWithDelete1 = field(
         default=None,
@@ -105,7 +108,7 @@ class Profile1:
             "name": "Status",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: None | int = field(
         default=None,
@@ -114,5 +117,5 @@ class Profile1:
             "type": "Attribute",
             "required": True,
             "min_inclusive": 0,
-        }
+        },
     )

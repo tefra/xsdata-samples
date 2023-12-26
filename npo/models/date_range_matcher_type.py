@@ -16,12 +16,12 @@ class DateRangeMatcherType(RangeMatcherType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )
     end: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-        }
+        },
     )

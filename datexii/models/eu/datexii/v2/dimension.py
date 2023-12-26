@@ -20,13 +20,14 @@ class Dimension:
         that is available for some specific purpose.
     :ivar dimension_extension:
     """
+
     dimension_length: Optional[float] = field(
         default=None,
         metadata={
             "name": "dimensionLength",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dimension_width: Optional[float] = field(
         default=None,
@@ -34,7 +35,7 @@ class Dimension:
             "name": "dimensionWidth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dimension_height: Optional[float] = field(
         default=None,
@@ -42,7 +43,7 @@ class Dimension:
             "name": "dimensionHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dimension_usable_area: Optional[int] = field(
         default=None,
@@ -50,7 +51,7 @@ class Dimension:
             "name": "dimensionUsableArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     dimension_extension: Optional[ExtensionType] = field(
         default=None,
@@ -58,5 +59,5 @@ class Dimension:
             "name": "dimensionExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

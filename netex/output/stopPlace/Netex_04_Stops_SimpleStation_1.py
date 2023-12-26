@@ -154,21 +154,21 @@ from xsdata.models.datatype import XmlTime
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-    participant_ref="SYS001",
+    participant_ref='SYS001',
     publication_request=PublicationRequestStructure(
         request_timestamp=XmlDateTime(2001, 12, 17, 9, 30, 47, 0, 0),
-        participant_ref="SYS002",
+        participant_ref='SYS002',
         topics=PublicationRequestStructure.Topics(
             network_frame_topic=[
                 NetworkFrameTopicStructure(
-                    choice="",
+                    choice='',
                     choice_1=[
                         NetworkFilterByValueStructure(
                             places=NetworkFilterByValueStructure.Places(
                                 choice=[
                                     TopographicPlaceRef(
-                                        value="REQUEST",
-                                        ref="topat:E0034695"
+                                        value='REQUEST',
+                                        ref='topat:E0034695'
                                     ),
                                 ]
                             )
@@ -180,68 +180,68 @@ obj = PublicationDelivery(
     ),
     publication_refresh_interval=XmlDuration("P3M"),
     description=MultilingualString(
-        value="Simple Stop pair On street example"
+        value='Simple Stop pair On street example'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="zbt:CF001",
+                id='zbt:CF001',
                 validity_conditions_or_valid_between=[
                     ValidityConditionsRelStructure(
                         choice=[
                             AvailabilityCondition(
-                                id="zbt:CF0021",
-                                version="any",
+                                id='zbt:CF0021',
+                                version='any',
                                 from_date=XmlDateTime(2010, 12, 17, 9, 30, 47, 0, 0),
                                 to_date=XmlDateTime(2011, 12, 17, 9, 30, 47, 0, 0)
                             ),
                         ]
                     ),
                 ],
-                version="1",
+                version='1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="zbt",
-                            xmlns="zbt",
-                            xmlns_url="http://www.zillerthalerbahn.at/",
-                            description="ZillerthalerBahn namesapce"
+                            id='zbt',
+                            xmlns='zbt',
+                            xmlns_url='http://www.zillerthalerbahn.at/',
+                            description='ZillerthalerBahn namesapce'
                         ),
                         Codespace(
-                            id="topat",
-                            xmlns="topat",
-                            xmlns_url="http://www.osos.at",
-                            description="Austrian locality data"
+                            id='topat',
+                            xmlns='topat',
+                            xmlns_url='http://www.osos.at',
+                            description='Austrian locality data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="zbt"
+                        ref='zbt'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         ServiceCalendarFrame(
-                            id="zbt:SFC0021",
-                            version="any",
+                            id='zbt:SFC0021',
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="01",
-                                    ref="zbt:Resp01"
+                                    version='01',
+                                    ref='zbt:Resp01'
                                 )
                             ),
                             service_calendar=ServiceCalendar(
-                                id="zbt:SFC0021",
-                                version="any",
+                                id='zbt:SFC0021',
+                                version='any',
                                 from_date=XmlDate(2010, 12, 17),
                                 to_date=XmlDate(2011, 12, 17)
                             ),
                             day_types=DayTypesInFrameRelStructure(
                                 fare_day_type_or_organisation_day_type_or_day_type=[
                                     DayType(
-                                        id="zbt:DT001Open_MF",
-                                        version="any",
+                                        id='zbt:DT001Open_MF',
+                                        version='any',
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
@@ -261,8 +261,8 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandVersionedChildStructure(
-                                                    id="zbt:DT001Open_MF@TMB01",
-                                                    version="any",
+                                                    id='zbt:DT001Open_MF@TMB01',
+                                                    version='any',
                                                     start_time=XmlTime(5, 0, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlDuration("PT19H30M"),
@@ -272,8 +272,8 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="zbt:DT002Open_Sat",
-                                        version="any",
+                                        id='zbt:DT002Open_Sat',
+                                        version='any',
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
@@ -289,8 +289,8 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandVersionedChildStructure(
-                                                    id="zbt:DT002Open_Sat@TMB01",
-                                                    version="any",
+                                                    id='zbt:DT002Open_Sat@TMB01',
+                                                    version='any',
                                                     start_time=XmlTime(6, 0, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlDuration("PT18H30M"),
@@ -300,8 +300,8 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="zbt:DT003Open_Sun",
-                                        version="any",
+                                        id='zbt:DT003Open_Sun',
+                                        version='any',
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
@@ -314,8 +314,8 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandVersionedChildStructure(
-                                                    id="zbt:DT003Open_Sun@TMB01",
-                                                    version="any",
+                                                    id='zbt:DT003Open_Sun@TMB01',
+                                                    version='any',
                                                     start_time=XmlTime(8, 0, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlDuration("PT17H30M"),
@@ -325,8 +325,8 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="zbt:DT004Open_MFS",
-                                        version="any",
+                                        id='zbt:DT004Open_MFS',
+                                        version='any',
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
@@ -347,8 +347,8 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandVersionedChildStructure(
-                                                    id="zbt:DT004Open_MFS",
-                                                    version="any",
+                                                    id='zbt:DT004Open_MFS',
+                                                    version='any',
                                                     start_time=XmlTime(8, 30, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlTime(20, 0, 0, 0),
@@ -358,8 +358,8 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     DayType(
-                                        id="zbt:DT005Open_Sun",
-                                        version="any",
+                                        id='zbt:DT005Open_Sun',
+                                        version='any',
                                         properties=PropertiesOfDayRelStructure(
                                             property_of_day=[
                                                 PropertyOfDay(
@@ -372,8 +372,8 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandVersionedChildStructure(
-                                                    id="zbt:DT005Open_Sun",
-                                                    version="any",
+                                                    id='zbt:DT005Open_Sun',
+                                                    version='any',
                                                     start_time=XmlTime(10, 30, 0, 0),
                                                     end_time_or_day_offset_or_duration=[
                                                         XmlTime(18, 0, 0, 0),
@@ -386,48 +386,48 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="zbt:SF0023",
-                            version="any",
+                            id='zbt:SF0023',
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="01",
-                                    ref="zbt:Resp02"
+                                    version='01',
+                                    ref='zbt:Resp02'
                                 )
                             ),
                             content_validity_conditions=ValidityConditionsRelStructure(
                                 choice=[
                                     AvailabilityCondition(
-                                        id="zbt:AC_02_CC_Opening",
-                                        version="01",
+                                        id='zbt:AC_02_CC_Opening',
+                                        version='01',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="zbt:DT004Open_MFS"
+                                                    version='any',
+                                                    ref='zbt:DT004Open_MFS'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="zbt:DT005Open_Sun"
+                                                    version='any',
+                                                    ref='zbt:DT005Open_Sun'
                                                 ),
                                             ]
                                         )
                                     ),
                                     AvailabilityCondition(
-                                        id="zbt:AC_01_Main_Opening",
-                                        version="01",
+                                        id='zbt:AC_01_Main_Opening',
+                                        version='01',
                                         day_types=DayTypesRelStructure(
                                             choice=[
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="zbt:DT001Open_MF"
+                                                    version='any',
+                                                    ref='zbt:DT001Open_MF'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="zbt:DT002Open_Sat"
+                                                    version='any',
+                                                    ref='zbt:DT002Open_Sat'
                                                 ),
                                                 DayTypeRef(
-                                                    version="any",
-                                                    ref="zbt:DT003Open_Sun"
+                                                    version='any',
+                                                    ref='zbt:DT003Open_Sun'
                                                 ),
                                             ]
                                         )
@@ -437,34 +437,34 @@ obj = PublicationDelivery(
                             topographic_places=TopographicPlacesInFrameRelStructure(
                                 topographic_place=[
                                     TopographicPlace(
-                                        id="topat:E0034695",
-                                        version="01",
+                                        id='topat:E0034695',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Reid Im Zillerthal"
+                                            value='Reid Im Zillerthal'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Reid"
+                                                value='Reid'
                                             ),
                                         ],
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
-                                            id="topat:E0034695",
-                                            version="01",
+                                            id='topat:E0034695',
+                                            version='01',
                                             name=MultilingualString(
-                                                value="Reid im Zillerthal",
-                                                lang="de"
+                                                value='Reid im Zillerthal',
+                                                lang='de'
                                             ),
                                             short_name=MultilingualString(
-                                                value="Reid",
-                                                lang="de"
+                                                value='Reid',
+                                                lang='de'
                                             ),
                                             qualify=TopographicPlaceDescriptorVersionedChildStructure.Qualify(
                                                 qualifier_name=MultilingualString(
-                                                    value="Tyrol"
+                                                    value='Tyrol'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
-                                                    version="01",
-                                                    ref="topat:E0034"
+                                                    version='01',
+                                                    ref='topat:E0034'
                                                 )
                                             )
                                         ),
@@ -474,22 +474,22 @@ obj = PublicationDelivery(
                                             ref=IanaCountryTldEnumeration.AT
                                         ),
                                         parent_topographic_place_ref=TopographicPlaceRefStructure(
-                                            version="01",
-                                            ref="topat:E0034"
+                                            version='01',
+                                            ref='topat:E0034'
                                         )
                                     ),
                                     TopographicPlace(
-                                        id="topat:E0034",
-                                        version="01",
+                                        id='topat:E0034',
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Tyrol"
+                                            value='Tyrol'
                                         ),
                                         descriptor=TopographicPlaceDescriptorVersionedChildStructure(
-                                            id="topat:E0034",
-                                            version="01",
+                                            id='topat:E0034',
+                                            version='01',
                                             name=MultilingualString(
-                                                value="Tyrol",
-                                                lang="de"
+                                                value='Tyrol',
+                                                lang='de'
                                             )
                                         ),
                                         topographic_place_type=TopographicPlaceTypeEnumeration.PROVINCE,
@@ -503,15 +503,15 @@ obj = PublicationDelivery(
                             stop_places=StopPlacesInFrameRelStructure(
                                 stop_place=[
                                     StopPlace(
-                                        id="ztb:bh0023",
+                                        id='ztb:bh0023',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="01",
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Bahnhof Ried"
+                                            value='Bahnhof Ried'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Ried"
+                                            value='Ried'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -520,21 +520,21 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="ATGRID"
+                                                    srs_name='ATGRID'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="ztb:bh0023@RdAddr_01",
+                                            id='ztb:bh0023@RdAddr_01',
                                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                            version="01",
+                                            version='01',
                                             road_name=MultilingualString(
-                                                value="Kleiried"
+                                                value='Kleiried'
                                             )
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="ztb:bh0023",
-                                            version="any",
+                                            id='ztb:bh0023',
+                                            version='any',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                             limitations=AccessibilityLimitationsRelStructure(
                                                 accessibility_limitation=AccessibilityLimitation(
@@ -553,36 +553,36 @@ obj = PublicationDelivery(
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    id="ztb:bh0023@n01",
+                                                    id='ztb:bh0023@n01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
-                                                    type_of_name="label",
+                                                    version='01',
+                                                    type_of_name='label',
                                                     name=MultilingualString(
-                                                        value="Ried im Zillertal"
+                                                        value='Ried im Zillertal'
                                                     ),
                                                     short_name=MultilingualString(
-                                                        value="Ried",
-                                                        lang="de"
+                                                        value='Ried',
+                                                        lang='de'
                                                     ),
                                                     qualifier_name=MultilingualString(
-                                                        value="Tyrol",
-                                                        lang="de"
+                                                        value='Tyrol',
+                                                        lang='de'
                                                     )
                                                 ),
                                                 AlternativeName(
-                                                    id="ztb:bh0023@n02",
+                                                    id='ztb:bh0023@n02',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
-                                                    lang="en",
+                                                    version='01',
+                                                    lang='en',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
-                                                    type_of_name="label",
+                                                    type_of_name='label',
                                                     name=MultilingualString(
-                                                        value="Rail Station Ried im Zillertal",
-                                                        lang="en"
+                                                        value='Rail Station Ried im Zillertal',
+                                                        lang='en'
                                                     ),
                                                     qualifier_name=MultilingualString(
-                                                        value="Tyrol",
-                                                        lang="en"
+                                                        value='Tyrol',
+                                                        lang='en'
                                                     )
                                                 ),
                                             ]
@@ -590,73 +590,73 @@ obj = PublicationDelivery(
                                         covered=CoveredEnumeration.MIXED,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
-                                                version="01",
-                                                ref="topat:E0034695"
+                                                version='01',
+                                                ref='topat:E0034695'
                                             )
                                         ),
                                         contained_in_place_ref=TopographicPlaceRefStructure(
-                                            version="01",
-                                            ref="topat:E0034695"
+                                            version='01',
+                                            ref='topat:E0034695'
                                         ),
                                         levels=LevelsRelStructure(
                                             level_ref_or_level=[
                                                 Level(
-                                                    id="ztb:bh0023@Lvl_0",
+                                                    id='ztb:bh0023@Lvl_0',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Erde "
+                                                        value='Erde '
                                                     ),
-                                                    public_code="E"
+                                                    public_code='E'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 StopPlaceEntrance(
-                                                    id="ztb:bh0023@A1-E1",
+                                                    id='ztb:bh0023@A1-E1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
-                                                                    version="01",
-                                                                    ref="zbt:AC_01_Main_Opening"
+                                                                    version='01',
+                                                                    ref='zbt:AC_01_Main_Opening'
                                                                 ),
                                                             ]
                                                         ),
                                                     ],
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Main Entrance from street"
+                                                        value='Main Entrance from street'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="External Entrance to  Ticket Hall from forecourt",
-                                                            lang="en"
+                                                            value='External Entrance to  Ticket Hall from forecourt',
+                                                            lang='en'
                                                         ),
                                                     ],
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="01",
-                                                        ref="ztb:bh0023@A1"
+                                                        version='01',
+                                                        ref='ztb:bh0023@A1'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             RampEquipment(
-                                                                id="ztb:bh0023@A1-E1@ramp",
-                                                                version="any",
+                                                                id='ztb:bh0023@A1-E1@ramp',
+                                                                version='any',
                                                                 direction_of_use=DirectionOfUseEnumeration.BOTH,
                                                                 gradient=22,
                                                                 gradient_type=GradientEnumeration.STEEP,
                                                                 visual_guidance_bands=True
                                                             ),
                                                             EntranceEquipment(
-                                                                id="ztb:bh0023@A1-E1@entrance",
-                                                                version="any",
+                                                                id='ztb:bh0023@A1-E1@entrance',
+                                                                version='any',
                                                                 door=True,
                                                                 kept_open=True,
                                                                 wheelchair_passable=True
@@ -664,52 +664,52 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     label=MultilingualString(
-                                                        value="Eingang",
-                                                        lang="de"
+                                                        value='Eingang',
+                                                        lang='de'
                                                     ),
                                                     entrance_type=EntranceEnumeration.OPEN_DOOR,
                                                     is_external=True,
                                                     is_entry=True,
                                                     is_exit=True,
-                                                    width=Decimal("1.0"),
-                                                    height=Decimal("2.0")
+                                                    width=Decimal('1.0'),
+                                                    height=Decimal('2.0')
                                                 ),
                                                 StopPlaceEntrance(
-                                                    id="ztb:bh0023@A1-E2",
+                                                    id='ztb:bh0023@A1-E2',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
-                                                                    version="01",
-                                                                    ref="zbt:AC_02_CC_Opening"
+                                                                    version='01',
+                                                                    ref='zbt:AC_02_CC_Opening'
                                                                 ),
                                                             ]
                                                         ),
                                                     ],
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Entrance to platform 1 from Ticket hall "
+                                                        value='Entrance to platform 1 from Ticket hall '
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value=" Entrance to  Ticket Hall from platform 1",
-                                                            lang="en"
+                                                            value=' Entrance to  Ticket Hall from platform 1',
+                                                            lang='en'
                                                         ),
                                                     ],
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="01",
-                                                        ref="ztb:bh0023@A1"
+                                                        version='01',
+                                                        ref='ztb:bh0023@A1'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             EntranceEquipment(
-                                                                id="ztb:bh0023@A1-E2",
-                                                                version="any",
+                                                                id='ztb:bh0023@A1-E2',
+                                                                version='any',
                                                                 door=True,
                                                                 kept_open=True,
                                                                 wheelchair_passable=True
@@ -717,49 +717,49 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     label=MultilingualString(
-                                                        value="Ausgang",
-                                                        lang="de"
+                                                        value='Ausgang',
+                                                        lang='de'
                                                     ),
                                                     entrance_type=EntranceEnumeration.OPEN_DOOR,
                                                     is_external=True,
                                                     is_entry=True,
                                                     is_exit=True,
-                                                    width=Decimal("1.0"),
-                                                    height=Decimal("2.0")
+                                                    width=Decimal('1.0'),
+                                                    height=Decimal('2.0')
                                                 ),
                                                 StopPlaceEntrance(
-                                                    id="ztb:bh0023@Rail@Q1-E1tr",
+                                                    id='ztb:bh0023@Rail@Q1-E1tr',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Entrance to track  crossing from platorm  l "
+                                                        value='Entrance to track  crossing from platorm  l '
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="platform 1 Entrance to crossing over tracks to platform 2",
-                                                            lang="en"
+                                                            value='platform 1 Entrance to crossing over tracks to platform 2',
+                                                            lang='en'
                                                         ),
                                                     ],
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Rail@Q1"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Rail@Q1'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             RampEquipment(
-                                                                id="ztb:bh0023@Rail@Q1-E1tr@ramp",
-                                                                version="any",
+                                                                id='ztb:bh0023@Rail@Q1-E1tr@ramp',
+                                                                version='any',
                                                                 direction_of_use=DirectionOfUseEnumeration.BOTH,
                                                                 gradient=22,
                                                                 visual_guidance_bands=True
                                                             ),
                                                             EntranceEquipment(
-                                                                id="ztb:bh0023@Rail@Q1-E1tr@entrance",
-                                                                version="any",
+                                                                id='ztb:bh0023@Rail@Q1-E1tr@entrance',
+                                                                version='any',
                                                                 door=False,
                                                                 kept_open=True,
                                                                 wheelchair_passable=True
@@ -770,34 +770,34 @@ obj = PublicationDelivery(
                                                     is_external=True,
                                                     is_entry=True,
                                                     is_exit=True,
-                                                    width=Decimal("2.0")
+                                                    width=Decimal('2.0')
                                                 ),
                                                 StopPlaceEntrance(
-                                                    id="ztb:bh0023@Rail@Q2-E1tr",
+                                                    id='ztb:bh0023@Rail@Q2-E1tr',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="platform 2 Entrance to track  crossing from platorm  l "
+                                                        value='platform 2 Entrance to track  crossing from platorm  l '
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value=" Entrance to crossing over tracks from platform2",
-                                                            lang="en"
+                                                            value=' Entrance to crossing over tracks from platform2',
+                                                            lang='en'
                                                         ),
                                                     ],
                                                     parent_zone_ref=ZoneRefStructure(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Rail@Q2"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Rail@Q2'
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             RampEquipment(
-                                                                id="ztb:bh0023@Rail@Q2-E1tr@ramp",
-                                                                version="any",
+                                                                id='ztb:bh0023@Rail@Q2-E1tr@ramp',
+                                                                version='any',
                                                                 direction_of_use=DirectionOfUseEnumeration.BOTH,
                                                                 gradient=22,
                                                                 visual_guidance_bands=True
@@ -808,33 +808,33 @@ obj = PublicationDelivery(
                                                     is_external=True,
                                                     is_entry=True,
                                                     is_exit=True,
-                                                    width=Decimal("2.0")
+                                                    width=Decimal('2.0')
                                                 ),
                                             ]
                                         ),
-                                        public_code="1564",
+                                        public_code='1564',
                                         transport_mode=VehicleModeEnumeration.RAIL,
                                         stop_place_type=StopTypeEnumeration.RAIL_STATION,
                                         served_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
                                                 TopographicPlaceRefStructure(
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    ref="topat:E0034695"
+                                                    ref='topat:E0034695'
                                                 ),
                                             ]
                                         ),
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="ztb:bh0023@Rail@Q1",
+                                                    id='ztb:bh0023@Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bahnsteig 1"
+                                                        value='Bahnsteig 1'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Bahnsteig 1  adjacent to ticket hall"
+                                                            value='Bahnsteig 1  adjacent to ticket hall'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
@@ -844,78 +844,78 @@ obj = PublicationDelivery(
                                                                     471800.0,
                                                                     115210.0,
                                                                 ],
-                                                                srs_name="ATGRID"
+                                                                srs_name='ATGRID'
                                                             )
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     equipment_places=EquipmentPlacesRelStructure(
                                                         equipment_place_ref_or_equipment_place=[
                                                             EquipmentPlace(
-                                                                id="ztb:bh0023@Rail@Q1@Sign1",
+                                                                id='ztb:bh0023@Rail@Q1@Sign1',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="001",
+                                                                version='001',
                                                                 equipment_positions=EquipmentPositionsRelStructure(
                                                                     equipment_position=[
                                                                         EquipmentPosition(
-                                                                            id="ztb:bh0023@Rail@Q1@Sign1",
-                                                                            version="any",
+                                                                            id='ztb:bh0023@Rail@Q1@Sign1',
+                                                                            version='any',
                                                                             choice=EquipmentRef(
-                                                                                version="any",
-                                                                                ref="ztb:bh0023@Rail@Q1@Sign_01"
+                                                                                version='any',
+                                                                                ref='ztb:bh0023@Rail@Q1@Sign_01'
                                                                             ),
                                                                             description=MultilingualString(
-                                                                                value="Station name Sign on Platform 1,   10 metres from platform entrance"
+                                                                                value='Station name Sign on Platform 1,   10 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
-                                                                                ref="tbd:bh0023@A1-E2@Sign_01"
+                                                                                ref='tbd:bh0023@A1-E2@Sign_01'
                                                                             ),
-                                                                            xoffset=Decimal("10"),
-                                                                            yoffset=Decimal("1")
+                                                                            xoffset=Decimal('10'),
+                                                                            yoffset=Decimal('1')
                                                                         ),
                                                                         EquipmentPosition(
-                                                                            id="ztb:bh0023@Rail@Q1@Sign_02",
-                                                                            version="any",
+                                                                            id='ztb:bh0023@Rail@Q1@Sign_02',
+                                                                            version='any',
                                                                             choice=EquipmentRef(
-                                                                                version="any",
-                                                                                ref="ztb:bh0023@Rail@Q1@Sign_02"
+                                                                                version='any',
+                                                                                ref='ztb:bh0023@Rail@Q1@Sign_02'
                                                                             ),
                                                                             description=MultilingualString(
-                                                                                value="ExitSigtn  on Platform 1,  5 metres from platform entrance"
+                                                                                value='ExitSigtn  on Platform 1,  5 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
-                                                                                version="any",
-                                                                                ref="tbd:bh0023@A1-E2@Sign_011"
+                                                                                version='any',
+                                                                                ref='tbd:bh0023@A1-E2@Sign_011'
                                                                             ),
-                                                                            xoffset=Decimal("5"),
-                                                                            yoffset=Decimal("0")
+                                                                            xoffset=Decimal('5'),
+                                                                            yoffset=Decimal('0')
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 place_equipments=EquipmentsRelStructure(
                                                                     choice=[
                                                                         PlaceSign(
-                                                                            id="ztb:bh0023@Rail@Q1@Sign_01",
-                                                                            version="any",
-                                                                            height=Decimal("1"),
-                                                                            width=Decimal("2"),
-                                                                            height_from_floor=Decimal("1.5"),
+                                                                            id='ztb:bh0023@Rail@Q1@Sign_01',
+                                                                            version='any',
+                                                                            height=Decimal('1'),
+                                                                            width=Decimal('2'),
+                                                                            height_from_floor=Decimal('1.5'),
                                                                             place_name=MultilingualString(
-                                                                                value="Reid"
+                                                                                value='Reid'
                                                                             )
                                                                         ),
                                                                         GeneralSign(
-                                                                            id="ztb:bh0023@Rail@Q1@Sign_02",
-                                                                            version="any",
-                                                                            height=Decimal("1"),
-                                                                            width=Decimal("2"),
-                                                                            height_from_floor=Decimal("1.5"),
+                                                                            id='ztb:bh0023@Rail@Q1@Sign_02',
+                                                                            version='any',
+                                                                            height=Decimal('1'),
+                                                                            width=Decimal('2'),
+                                                                            height_from_floor=Decimal('1.5'),
                                                                             content=MultilingualString(
-                                                                                value="Ausgang"
+                                                                                value='Ausgang'
                                                                             )
                                                                         ),
                                                                     ]
@@ -924,20 +924,20 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     label=MultilingualString(
-                                                        value="1"
+                                                        value='1'
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
                                                 ),
                                                 Quay(
-                                                    id="ztb:bh0023@Rail@Q2",
+                                                    id='ztb:bh0023@Rail@Q2',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Platform 2"
+                                                        value='Platform 2'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Platform 2, reached by crossing tracks from platform 1"
+                                                            value='Platform 2, reached by crossing tracks from platform 1'
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
@@ -947,52 +947,52 @@ obj = PublicationDelivery(
                                                                     471801.0,
                                                                     115211.0,
                                                                 ],
-                                                                srs_name="ATGRID"
+                                                                srs_name='ATGRID'
                                                             )
                                                         )
                                                     ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     equipment_places=EquipmentPlacesRelStructure(
                                                         equipment_place_ref_or_equipment_place=[
                                                             EquipmentPlace(
-                                                                id="ztb:bh0023@Rail@Q2@Sign1",
+                                                                id='ztb:bh0023@Rail@Q2@Sign1',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="001",
+                                                                version='001',
                                                                 equipment_positions=EquipmentPositionsRelStructure(
                                                                     equipment_position=[
                                                                         EquipmentPosition(
-                                                                            id="ztb:bh0023@Rail@Q2@Sign1",
-                                                                            version="any",
+                                                                            id='ztb:bh0023@Rail@Q2@Sign1',
+                                                                            version='any',
                                                                             choice=EquipmentRef(
-                                                                                version="any",
-                                                                                ref="ztb:bh0023@Rail@Q2@Sign1"
+                                                                                version='any',
+                                                                                ref='ztb:bh0023@Rail@Q2@Sign1'
                                                                             ),
                                                                             description=MultilingualString(
                                                                                 value='Station name Sign on Platform 1  "10 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
-                                                                                version="any",
-                                                                                ref="tbd:bh0023@Q2-E2"
+                                                                                version='any',
+                                                                                ref='tbd:bh0023@Q2-E2'
                                                                             ),
-                                                                            xoffset=Decimal("10"),
-                                                                            yoffset=Decimal("1")
+                                                                            xoffset=Decimal('10'),
+                                                                            yoffset=Decimal('1')
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 place_equipments=EquipmentsRelStructure(
                                                                     choice=[
                                                                         PlaceSign(
-                                                                            id="ztb:bh0023@Rail@Q2@Sign1",
-                                                                            version="any",
-                                                                            height=Decimal("1"),
-                                                                            width=Decimal("2"),
-                                                                            height_from_floor=Decimal("1.5"),
+                                                                            id='ztb:bh0023@Rail@Q2@Sign1',
+                                                                            version='any',
+                                                                            height=Decimal('1'),
+                                                                            width=Decimal('2'),
+                                                                            height_from_floor=Decimal('1.5'),
                                                                             place_name=MultilingualString(
-                                                                                value="Reid"
+                                                                                value='Reid'
                                                                             )
                                                                         ),
                                                                     ]
@@ -1001,7 +1001,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     label=MultilingualString(
-                                                        value="2"
+                                                        value='2'
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM
                                                 ),
@@ -1010,26 +1010,26 @@ obj = PublicationDelivery(
                                         access_spaces=AccessSpacesRelStructure(
                                             access_space_ref_or_access_space=[
                                                 AccessSpace(
-                                                    id="ztb:bh0023@A1",
+                                                    id='ztb:bh0023@A1',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Ticket Hall"
+                                                        value='Ticket Hall'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Main Ticket hall with with Entrance from forecourt"
+                                                            value='Main Ticket hall with with Entrance from forecourt'
                                                         ),
                                                     ],
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@A1",
+                                                        id='ztb:bh0023@A1',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                        version="01",
+                                                        version='01',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="01",
+                                                                version='01',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.TRUE,
                                                                 escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1041,19 +1041,19 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.INDOORS,
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     equipment_places=EquipmentPlacesRelStructure(
                                                         equipment_place_ref_or_equipment_place=[
                                                             EquipmentPlace(
-                                                                id="ztb:bh0023@A1@EqP01",
-                                                                version="any",
+                                                                id='ztb:bh0023@A1@EqP01',
+                                                                version='any',
                                                                 place_equipments=EquipmentsRelStructure(
                                                                     choice=[
                                                                         TicketingEquipment(
-                                                                            id="ztb:bh0023@A1@EqP01_01",
-                                                                            version="any",
+                                                                            id='ztb:bh0023@A1@EqP01_01',
+                                                                            version='any',
                                                                             vehicle_modes=[
                                                                                 VehicleModeEnumeration.RAIL,
                                                                             ],
@@ -1076,38 +1076,38 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         choice=[
                                                             EntranceRef(
-                                                                version="01",
-                                                                ref="ztb:bh0023@A1-E1"
+                                                                version='01',
+                                                                ref='ztb:bh0023@A1-E1'
                                                             ),
                                                             EntranceRef(
-                                                                version="01",
-                                                                ref="ztb:bh0023@A1-E2"
+                                                                version='01',
+                                                                ref='ztb:bh0023@A1-E2'
                                                             ),
                                                         ]
                                                     ),
                                                     access_space_type=AccessSpaceTypeEnumeration.BOOKING_HALL
                                                 ),
                                                 AccessSpace(
-                                                    id="ztb:bh0023@A2",
+                                                    id='ztb:bh0023@A2',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Area in front  outside of station  "
+                                                        value='Area in front  outside of station  '
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Areas in front of station"
+                                                            value='Areas in front of station'
                                                         ),
                                                     ],
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@A2",
+                                                        id='ztb:bh0023@A2',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                        version="01",
+                                                        version='01',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="01",
+                                                                version='01',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.TRUE,
                                                                 escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1119,32 +1119,32 @@ obj = PublicationDelivery(
                                                     gated=GatedEnumeration.OPEN_AREA,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     access_space_type=AccessSpaceTypeEnumeration.FORECOURT
                                                 ),
                                                 AccessSpace(
-                                                    id="ztb:bh0023@AX3",
+                                                    id='ztb:bh0023@AX3',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Barrow Crossing   over tracks"
+                                                        value='Barrow Crossing   over tracks'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Crossing over tracks"
+                                                            value='Crossing over tracks'
                                                         ),
                                                     ],
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@AX3",
+                                                        id='ztb:bh0023@AX3',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                        version="01",
+                                                        version='01',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="01",
+                                                                version='01',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.TRUE,
                                                                 escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1157,16 +1157,16 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     gated=GatedEnumeration.OPEN_AREA,
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     ),
                                                     place_equipments=PlaceEquipmentsRelStructure(
                                                         choice=[
                                                             CrossingEquipment(
-                                                                id="ztb:bh0023@AX3",
-                                                                version="any",
+                                                                id='ztb:bh0023@AX3',
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Barrow crossing"
+                                                                    value='Barrow crossing'
                                                                 ),
                                                                 crossing_type=CrossingTypeEnumeration.BARROW_CROSSING
                                                             ),
@@ -1175,12 +1175,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         choice=[
                                                             EntranceRef(
-                                                                version="01",
-                                                                ref="ztb:bh0023@Rail@Q1-E1tr"
+                                                                version='01',
+                                                                ref='ztb:bh0023@Rail@Q1-E1tr'
                                                             ),
                                                             EntranceRef(
-                                                                version="01",
-                                                                ref="ztb:bh0023@Rail@Q2-E1tr"
+                                                                version='01',
+                                                                ref='ztb:bh0023@Rail@Q2-E1tr'
                                                             ),
                                                         ]
                                                     ),
@@ -1191,47 +1191,47 @@ obj = PublicationDelivery(
                                         path_links=SitePathLinksRelStructure(
                                             path_link_ref_or_site_path_link=[
                                                 SitePathLink(
-                                                    id="ztb:bh0023@lnk_A1-E1+Bus-Q1",
+                                                    id='ztb:bh0023@lnk_A1-E1+Bus-Q1',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Main entrance to bus stop to"
+                                                        value='Main entrance to bus stop to'
                                                     ),
-                                                    distance=Decimal("10"),
+                                                    distance=Decimal('10'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1-E1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1-E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0024_Rail@Q1"
+                                                            version='01',
+                                                            ref='ztb:bh0024_Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         )
                                                     ),
                                                     accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@lnk_A1-E2+Bus-Q1",
+                                                        id='ztb:bh0023@lnk_A1-E2+Bus-Q1',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                        version="01",
+                                                        version='01',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                id="ztb:bh0023@lnk_A1-E2+Bus-Q1",
+                                                                id='ztb:bh0023@lnk_A1-E2+Bus-Q1',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="01",
+                                                                version='01',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.TRUE,
                                                                 escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1251,56 +1251,56 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT3M")
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="ztb:bh0023@lnk_A1-E1+A1-E2",
+                                                    id='ztb:bh0023@lnk_A1-E1+A1-E2',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Tthrough hall to platform1 "
+                                                        value='Tthrough hall to platform1 '
                                                     ),
-                                                    distance=Decimal("5"),
+                                                    distance=Decimal('5'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1-E1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1-E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1-E2"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1-E2'
                                                         )
                                                     ),
                                                     accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@lnk_A1-E1+A1-E2",
+                                                        id='ztb:bh0023@lnk_A1-E1+A1-E2',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                        version="01",
+                                                        version='01',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                id="ztb:bh0023@lnk_A1-E1+A1-E2",
+                                                                id='ztb:bh0023@lnk_A1-E1+A1-E2',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="01",
+                                                                version='01',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.TRUE,
                                                                 escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1323,15 +1323,15 @@ obj = PublicationDelivery(
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="ztb:bh0023@lnk_A1-E1+A1-E2",
-                                                                version="any",
+                                                                id='ztb:bh0023@lnk_A1-E1+A1-E2',
+                                                                version='any',
                                                                 check_process=CheckProcessTypeEnumeration.TICKET_PURCHASE,
                                                                 congestion=CongestionEnumeration.QUEUE,
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="ztb:bh0023@lnk_A1-E1+A1-E2_01",
-                                                                            version="any",
+                                                                            id='ztb:bh0023@lnk_A1-E1+A1-E2_01',
+                                                                            version='any',
                                                                             minimum_likely_delay=XmlDuration("PT5M"),
                                                                             average_delay=XmlDuration("PT2M"),
                                                                             maximum_likely_delay=XmlDuration("PT10M")
@@ -1343,51 +1343,51 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr",
+                                                    id='ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Along platform1 to barrow crossing entrance"
+                                                        value='Along platform1 to barrow crossing entrance'
                                                     ),
-                                                    distance=Decimal("5"),
+                                                    distance=Decimal('5'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@A1-E2"
+                                                            version='01',
+                                                            ref='ztb:bh0023@A1-E2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Rail@Q1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Rail@Q1-E1tr"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Rail@Q1-E1tr'
                                                         )
                                                     ),
                                                     accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@lnk_A1-E2+Rail@Q1-E2tr",
+                                                        id='ztb:bh0023@lnk_A1-E2+Rail@Q1-E2tr',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                        version="01",
+                                                        version='01',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                id="ztb:bh0023@lnk_A1-E2+Rail@Q1-E2tr",
+                                                                id='ztb:bh0023@lnk_A1-E2+Rail@Q1-E2tr',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="01",
+                                                                version='01',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.TRUE,
                                                                 escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1410,15 +1410,15 @@ obj = PublicationDelivery(
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="ztb:bh0023@lnk_A1-E2+Rail@Q1-E2t",
-                                                                version="any",
+                                                                id='ztb:bh0023@lnk_A1-E2+Rail@Q1-E2t',
+                                                                version='any',
                                                                 check_process=CheckProcessTypeEnumeration.TICKET_PURCHASE,
                                                                 congestion=CongestionEnumeration.QUEUE,
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="ztb:bh0023@lnk_A1-E2+Rail@Q1-E2_01",
-                                                                            version="any",
+                                                                            id='ztb:bh0023@lnk_A1-E2+Rail@Q1-E2_01',
+                                                                            version='any',
                                                                             minimum_likely_delay=XmlDuration("PT5M"),
                                                                             average_delay=XmlDuration("PT2M"),
                                                                             maximum_likely_delay=XmlDuration("PT10M")
@@ -1430,51 +1430,51 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 SitePathLink(
-                                                    id="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr",
+                                                    id='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Crossing over tracks from platform 1 to platform 2"
+                                                        value='Crossing over tracks from platform 1 to platform 2'
                                                     ),
-                                                    distance=Decimal("10"),
+                                                    distance=Decimal('10'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Rail@Q1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Rail@Q1-E1tr"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Rail@Q1-E1tr'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Rail@Q1"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Lvl_0"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
-                                                            version="01",
-                                                            ref="ztb:bh0023@Rail@Q2-E1tr"
+                                                            version='01',
+                                                            ref='ztb:bh0023@Rail@Q2-E1tr'
                                                         )
                                                     ),
                                                     accessibility_assessment_ref_or_accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr",
+                                                        id='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr',
                                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                        version="01",
+                                                        version='01',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                id="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E2tr",
+                                                                id='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E2tr',
                                                                 created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                                version="01",
+                                                                version='01',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.TRUE,
                                                                 escalator_free_access=LimitationStatusEnumeration.TRUE,
@@ -1495,8 +1495,8 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT3M")
                                                     ),
                                                     level_ref=LevelRef(
-                                                        version="01",
-                                                        ref="ztb:bh0023@Lvl_0"
+                                                        version='01',
+                                                        ref='ztb:bh0023@Lvl_0'
                                                     )
                                                 ),
                                             ]
@@ -1504,22 +1504,22 @@ obj = PublicationDelivery(
                                         navigation_paths=NavigationPathsRelStructure(
                                             navigation_path_ref_or_navigation_path=[
                                                 NavigationPath(
-                                                    id="ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2tr",
+                                                    id='ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2tr',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Bus Stop 1 to Rail Tick Hall "
+                                                        value='Bus Stop 1 to Rail Tick Hall '
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2trr",
-                                                        version="any",
+                                                        id='ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2trr',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     summaries=AccessSummariesRelStructure(
                                                         access_summary=[
                                                             AccessSummary(
-                                                                id="ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2tr",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@Bus-Q1+Rail@Q2-E2tr',
+                                                                version='any',
                                                                 access_feature_type=AccessFeatureEnumeration.CROSSING,
                                                                 count=1,
                                                                 transition=TransitionEnumeration.DOWN_AND_UP
@@ -1534,17 +1534,17 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:bh0023@Bus-Q1+Rail@Q2-E2tr-01",
-                                                                version="any",
+                                                                id='ztb:bh0023@Bus-Q1+Rail@Q2-E2tr-01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Bus stop to entrance (Reverse use of Link)"
+                                                                        value='Bus stop to entrance (Reverse use of Link)'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E1+Bus-Q1"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E1+Bus-Q1'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.LEFT,
@@ -1554,22 +1554,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="ztb:NP_bh0023@A1+Bus-Q1",
+                                                    id='ztb:NP_bh0023@A1+Bus-Q1',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Rail Ticket Hall to bus Stop 1"
+                                                        value='Rail Ticket Hall to bus Stop 1'
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:NP_bh0023@A1+Bus-Q1",
-                                                        version="any",
+                                                        id='ztb:NP_bh0023@A1+Bus-Q1',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     summaries=AccessSummariesRelStructure(
                                                         access_summary=[
                                                             AccessSummary(
-                                                                id="ztb:NP_bh0023@A1+Bus-Q1",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@A1+Bus-Q1',
+                                                                version='any',
                                                                 access_feature_type=AccessFeatureEnumeration.CROSSING,
                                                                 count=1,
                                                                 transition=TransitionEnumeration.LEVEL
@@ -1584,17 +1584,17 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@A1+Bus-Q-01",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@A1+Bus-Q-01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Bus stop to entrance (Forwards use of Link)"
+                                                                        value='Bus stop to entrance (Forwards use of Link)'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E1+Bus-Q1"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E1+Bus-Q1'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.LEFT,
@@ -1604,15 +1604,15 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="ztb:NP_bh0023@A1+Rail@Q1",
+                                                    id='ztb:NP_bh0023@A1+Rail@Q1',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Rail Ticket Hall to Platform 1"
+                                                        value='Rail Ticket Hall to Platform 1'
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:NP_bh0023@A1+Rail@Q2",
-                                                        version="any",
+                                                        id='ztb:NP_bh0023@A1+Rail@Q2',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -1623,17 +1623,17 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@A1+Rail@Q1",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@A1+Rail@Q1',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="From  ticket hall to platform 1"
+                                                                        value='From  ticket hall to platform 1'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E1+A1-E2"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1643,15 +1643,15 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="ztb:NP_bh0023@Rail@Q1+A1",
+                                                    id='ztb:NP_bh0023@Rail@Q1+A1',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Platform 1 to Rail Ticket Hall"
+                                                        value='Platform 1 to Rail Ticket Hall'
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:NP_bh0023@Rail@Q1+A1",
-                                                        version="any",
+                                                        id='ztb:NP_bh0023@Rail@Q1+A1',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     transfer_duration=TransferDurationStructure(
@@ -1662,17 +1662,17 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@Rail@Q1+A1",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@Rail@Q1+A1',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Reverse use: platform 1 to From  ticket hall "
+                                                                        value='Reverse use: platform 1 to From  ticket hall '
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E1+A1-E2"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1682,22 +1682,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="ztb:NP_bh0023@A1+Rail@Q2",
+                                                    id='ztb:NP_bh0023@A1+Rail@Q2',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Rail Ticket Hall to Platform 2"
+                                                        value='Rail Ticket Hall to Platform 2'
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:NP_bh0023@A1+Rail@Q2-E1tr",
-                                                        version="any",
+                                                        id='ztb:NP_bh0023@A1+Rail@Q2-E1tr',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     summaries=AccessSummariesRelStructure(
                                                         access_summary=[
                                                             AccessSummary(
-                                                                id="ztb:NP_bh0023@A1+Rail@Q2-E1tr",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@A1+Rail@Q2-E1tr',
+                                                                version='any',
                                                                 access_feature_type=AccessFeatureEnumeration.CROSSING,
                                                                 count=1,
                                                                 transition=TransitionEnumeration.DOWN_AND_UP
@@ -1712,51 +1712,51 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@A1+Rail@Q2-02",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@A1+Rail@Q2-02',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Across ticket hall"
+                                                                        value='Across ticket hall'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E1+A1-E2"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@A1+Rail@Q2-03",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@A1+Rail@Q2-03',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Along platform 1 to crossing"
+                                                                        value='Along platform 1 to crossing'
                                                                     ),
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.RIGHT,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@A1+Rail@Q2-04",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@A1+Rail@Q2-04',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Crossing from platform 1 to platform 2"
+                                                                        value='Crossing from platform 1 to platform 2'
                                                                     ),
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1766,22 +1766,22 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="ztb:NP_bh0023@Rail@Q2+A1",
+                                                    id='ztb:NP_bh0023@Rail@Q2+A1',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Platform 2 to Rail Ticket Hall "
+                                                        value='Platform 2 to Rail Ticket Hall '
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:NP_bh0023@Rail@Q2+A1",
-                                                        version="any",
+                                                        id='ztb:NP_bh0023@Rail@Q2+A1',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     summaries=AccessSummariesRelStructure(
                                                         access_summary=[
                                                             AccessSummary(
-                                                                id="ztb:NP_bh0023@Rail@Q2+A1",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@Rail@Q2+A1',
+                                                                version='any',
                                                                 access_feature_type=AccessFeatureEnumeration.CROSSING,
                                                                 count=1,
                                                                 transition=TransitionEnumeration.DOWN_AND_UP
@@ -1796,51 +1796,51 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@Rail@Q2+A1-01",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@Rail@Q2+A1-01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Crossing from platform 1 to platform 2"
+                                                                        value='Crossing from platform 1 to platform 2'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
                                                                 transition=TransitionEnumeration.DOWN_AND_UP
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@Rail@Q2+A1-02",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@Rail@Q2+A1-02',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Along platform 1 to crossing"
+                                                                        value='Along platform 1 to crossing'
                                                                     ),
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.RIGHT,
                                                                 transition=TransitionEnumeration.LEVEL
                                                             ),
                                                             PathLinkInSequence(
-                                                                id="ztb:NP_bh0023@Rail@Q2+A1-03",
-                                                                version="any",
+                                                                id='ztb:NP_bh0023@Rail@Q2+A1-03',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Across ticket hall"
+                                                                        value='Across ticket hall'
                                                                     ),
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_A1-E1+A1-E2"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1850,19 +1850,19 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="ztb:bh0023@Rail@Q1+Rail@Q2",
+                                                    id='ztb:bh0023@Rail@Q1+Rail@Q2',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Platform1 to Platform2"
+                                                        value='Platform1 to Platform2'
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@Rail@Q1+Rail@Q2",
-                                                        version="any",
+                                                        id='ztb:bh0023@Rail@Q1+Rail@Q2',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                id="ztb:bh0023@lnk_Rail@Q1+Rail@Q2",
+                                                                id='ztb:bh0023@lnk_Rail@Q1+Rail@Q2',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.UNKNOWN,
                                                                 escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -1875,8 +1875,8 @@ obj = PublicationDelivery(
                                                     summaries=AccessSummariesRelStructure(
                                                         access_summary=[
                                                             AccessSummary(
-                                                                id="ztb:bh0023@Rail@Q1+Rail@Q2",
-                                                                version="any",
+                                                                id='ztb:bh0023@Rail@Q1+Rail@Q2',
+                                                                version='any',
                                                                 access_feature_type=AccessFeatureEnumeration.CROSSING,
                                                                 count=1,
                                                                 transition=TransitionEnumeration.DOWN_AND_UP
@@ -1891,17 +1891,17 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:bh0023@Rail@Q1+Rail@Q2_01",
-                                                                version="any",
+                                                                id='ztb:bh0023@Rail@Q1+Rail@Q2_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Crossing  from platform 1 to platform 2"
+                                                                        value='Crossing  from platform 1 to platform 2'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
                                                                 reverse=False,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1911,19 +1911,19 @@ obj = PublicationDelivery(
                                                     )
                                                 ),
                                                 NavigationPath(
-                                                    id="ztb:bh0023@Rail@Q2+Rail@Q1",
+                                                    id='ztb:bh0023@Rail@Q2+Rail@Q1',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Platform 2 to Platform1"
+                                                        value='Platform 2 to Platform1'
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0023@Rail@Q2+Rail@Q1",
-                                                        version="any",
+                                                        id='ztb:bh0023@Rail@Q2+Rail@Q1',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE,
                                                         limitations=AccessibilityLimitationsRelStructure(
                                                             accessibility_limitation=AccessibilityLimitation(
-                                                                id="ztb:bh0023@lnk_Rail@Q2+Rail@Q1",
+                                                                id='ztb:bh0023@lnk_Rail@Q2+Rail@Q1',
                                                                 wheelchair_access=LimitationStatusEnumeration.TRUE,
                                                                 step_free_access=LimitationStatusEnumeration.UNKNOWN,
                                                                 escalator_free_access=LimitationStatusEnumeration.UNKNOWN,
@@ -1936,8 +1936,8 @@ obj = PublicationDelivery(
                                                     summaries=AccessSummariesRelStructure(
                                                         access_summary=[
                                                             AccessSummary(
-                                                                id="ztb:bh0023@Rail@Q2+Rail@Q1",
-                                                                version="any",
+                                                                id='ztb:bh0023@Rail@Q2+Rail@Q1',
+                                                                version='any',
                                                                 access_feature_type=AccessFeatureEnumeration.CROSSING,
                                                                 count=1,
                                                                 transition=TransitionEnumeration.DOWN_AND_UP
@@ -1952,17 +1952,17 @@ obj = PublicationDelivery(
                                                     path_links_in_sequence=PathLinksInSequenceRelStructure(
                                                         path_link_in_sequence=[
                                                             PathLinkInSequence(
-                                                                id="ztb:bh0023@Rail@Q2+Rail@Q1_01",
-                                                                version="any",
+                                                                id='ztb:bh0023@Rail@Q2+Rail@Q1_01',
+                                                                version='any',
                                                                 description=[
                                                                     MultilingualString(
-                                                                        value="Crossing  from platform 2 to platform 1 (Reverse use of Link"
+                                                                        value='Crossing  from platform 2 to platform 1 (Reverse use of Link'
                                                                     ),
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
-                                                                    version="any",
-                                                                    ref="ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr"
+                                                                    version='any',
+                                                                    ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
                                                                 reverse=True,
                                                                 heading=PathHeadingEnumeration.FORWARD,
@@ -1975,14 +1975,14 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     StopPlace(
-                                        id="ztb:bh0024",
+                                        id='ztb:bh0024',
                                         created=XmlDateTime(2006, 9, 11, 15, 42, 0),
-                                        version="01",
+                                        version='01',
                                         name=MultilingualString(
-                                            value="Bahnhof Ried"
+                                            value='Bahnhof Ried'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Bahnhof"
+                                            value='Bahnhof'
                                         ),
                                         centroid=SimplePointVersionStructure(
                                             location=LocationStructure2(
@@ -1991,27 +1991,27 @@ obj = PublicationDelivery(
                                                         524811.0,
                                                         170666.0,
                                                     ],
-                                                    srs_name="ATGRID"
+                                                    srs_name='ATGRID'
                                                 )
                                             )
                                         ),
                                         road_address=RoadAddress(
-                                            id="zbt:LRd_Addr_02",
-                                            version="any",
+                                            id='zbt:LRd_Addr_02',
+                                            version='any',
                                             road_name=MultilingualString(
-                                                value="Kleiner Ried"
+                                                value='Kleiner Ried'
                                             )
                                         ),
                                         accessibility_assessment=AccessibilityAssessment(
-                                            id="ztb:bh0024",
+                                            id='ztb:bh0024',
                                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                            version="01",
+                                            version='01',
                                             mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
-                                                version="01",
-                                                ref="topat:E0034695"
+                                                version='01',
+                                                ref='topat:E0034695'
                                             )
                                         ),
                                         transport_mode=VehicleModeEnumeration.BUS,
@@ -2019,48 +2019,48 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             quay_ref_or_quay=[
                                                 Quay(
-                                                    id="ztb:bh0024_Rail@Q1",
+                                                    id='ztb:bh0024_Rail@Q1',
                                                     created=XmlDateTime(2010, 4, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     name=MultilingualString(
-                                                        value="Ried, Bahnhof  Bus"
+                                                        value='Ried, Bahnhof  Bus'
                                                     ),
                                                     description=[
                                                         MultilingualString(
-                                                            value="Stop outside the station "
+                                                            value='Stop outside the station '
                                                         ),
                                                     ],
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
-                                                            longitude=Decimal("-0.2068758371"),
-                                                            latitude=Decimal("51.4207729447")
+                                                            longitude=Decimal('-0.2068758371'),
+                                                            latitude=Decimal('51.4207729447')
                                                         )
                                                     ),
                                                     road_address=RoadAddress(
-                                                        id="ztb:Rd_Addr_03",
-                                                        version="any",
+                                                        id='ztb:Rd_Addr_03',
+                                                        version='any',
                                                         road_name=MultilingualString(
-                                                            value="Kleiner Ried"
+                                                            value='Kleiner Ried'
                                                         ),
                                                         bearing_compass=CompassBearing16Enumeration.W
                                                     ),
                                                     accessibility_assessment=AccessibilityAssessment(
-                                                        id="ztb:bh0024_Rail@Q1",
-                                                        version="any",
+                                                        id='ztb:bh0024_Rail@Q1',
+                                                        version='any',
                                                         mobility_impaired_access=LimitationStatusEnumeration.TRUE
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     boarding_use=True,
                                                     alighting_use=True,
                                                     label=MultilingualString(
-                                                        value="Halt A"
+                                                        value='Halt A'
                                                     ),
-                                                    public_code="1-2345",
+                                                    public_code='1-2345',
                                                     destinations=DestinationDisplayViewsRelStructure(
                                                         destination_display_ref_or_destination_display_view=[
                                                             DestinationDisplayView(
                                                                 name=MultilingualString(
-                                                                    value="normalizedString"
+                                                                    value='normalizedString'
                                                                 )
                                                             ),
                                                         ]
@@ -2075,24 +2075,24 @@ obj = PublicationDelivery(
                             )
                         ),
                         ServiceFrame(
-                            id="zbt:SF0023b",
-                            version="any",
+                            id='zbt:SF0023b',
+                            version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
-                                    version="01",
-                                    ref="zbt:Resp02"
+                                    version='01',
+                                    ref='zbt:Resp02'
                                 )
                             ),
                             scheduled_stop_points=ScheduledStopPointsInFrameRelStructure(
                                 scheduled_stop_point=[
                                     ScheduledStopPoint(
-                                        id="ztb:ssa_bh0023",
+                                        id='ztb:ssa_bh0023',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="032",
+                                        version='032',
                                         name=MultilingualString(
-                                            value="Bahnhof Ried",
-                                            lang="de"
+                                            value='Bahnhof Ried',
+                                            lang='de'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.RAIL,
@@ -2101,13 +2101,13 @@ obj = PublicationDelivery(
                                         for_boarding=True
                                     ),
                                     ScheduledStopPoint(
-                                        id="ztb:ssa_bh0026",
+                                        id='ztb:ssa_bh0026',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="002",
+                                        version='002',
                                         name=MultilingualString(
-                                            value="Bahnhof Ried Haltstelle",
-                                            lang="de"
+                                            value='Bahnhof Ried Haltstelle',
+                                            lang='de'
                                         ),
                                         vehicle_modes=[
                                             VehicleModeEnumeration.BUS,
@@ -2120,12 +2120,12 @@ obj = PublicationDelivery(
                             connections=TransfersInFrameRelStructure(
                                 choice=[
                                     Connection(
-                                        id="ztb:ssa_bh0023",
+                                        id='ztb:ssa_bh0023',
                                         created=XmlDateTime(2000, 12, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2002, 12, 17, 9, 30, 47, 0, 0),
-                                        version="032",
+                                        version='032',
                                         name=MultilingualString(
-                                            value="Bahnhof Ried Bus to Train"
+                                            value='Bahnhof Ried Bus to Train'
                                         ),
                                         transfer_duration=TransferDurationStructure(
                                             default_duration=XmlDuration("PT3M")
@@ -2134,15 +2134,15 @@ obj = PublicationDelivery(
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="002",
-                                                ref="ztb:ssa_bh0026"
+                                                version='002',
+                                                ref='ztb:ssa_bh0026'
                                             )
                                         ),
                                         to=ConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             scheduled_stop_point_ref=ScheduledStopPointRefStructure(
-                                                version="032",
-                                                ref="ztb:ssa_bh0023"
+                                                version='032',
+                                                ref='ztb:ssa_bh0023'
                                             )
                                         )
                                     ),
@@ -2151,125 +2151,125 @@ obj = PublicationDelivery(
                             stop_assignments=StopAssignmentsInFrameRelStructure(
                                 choice=[
                                     PassengerStopAssignment(
-                                        id="ztb:psa_bh0023",
-                                        version="any",
+                                        id='ztb:psa_bh0023',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Rail Assignment regardless of Platform "
+                                            value='Rail Assignment regardless of Platform '
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="ztb:ssa_bh0023"
+                                            version='032',
+                                            ref='ztb:ssa_bh0023'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="01",
-                                            ref="ztb:bh0023"
+                                            version='01',
+                                            ref='ztb:bh0023'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ztb:psa_bh0023@Rail@Q1",
-                                        version="any",
+                                        id='ztb:psa_bh0023@Rail@Q1',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Rail Assignment Platform 1"
+                                            value='Rail Assignment Platform 1'
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="ztb:ssa_bh0023"
+                                            version='032',
+                                            ref='ztb:ssa_bh0023'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="01",
-                                            ref="ztb:bh0023"
+                                            version='01',
+                                            ref='ztb:bh0023'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="01",
-                                            ref="ztb:bh0023@Rail@Q1"
+                                            version='01',
+                                            ref='ztb:bh0023@Rail@Q1'
                                         )
                                     ),
                                     PassengerStopAssignment(
-                                        id="ztb:psa_bh0023@Rail@Q2",
-                                        version="any",
+                                        id='ztb:psa_bh0023@Rail@Q2',
+                                        version='any',
                                         description=MultilingualString(
-                                            value="Rail Assignment Platform 2 "
+                                            value='Rail Assignment Platform 2 '
                                         ),
                                         order=3,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
-                                            version="032",
-                                            ref="ztb:ssa_bh0023"
+                                            version='032',
+                                            ref='ztb:ssa_bh0023'
                                         ),
                                         stop_place_ref_or_stop_place=StopPlaceRef(
-                                            version="01",
-                                            ref="ztb:bh0023"
+                                            version='01',
+                                            ref='ztb:bh0023'
                                         ),
                                         quay_ref_or_quay=QuayRef(
-                                            version="01",
-                                            ref="ztb:bh0023@Rail@Q2"
+                                            version='01',
+                                            ref='ztb:bh0023@Rail@Q2'
                                         )
                                     ),
                                 ]
                             )
                         ),
                         ResourceFrame(
-                            id="zbt:Resp01",
-                            version="any",
-                            responsibility_set_ref_attribute="zbt:Resp01",
+                            id='zbt:Resp01',
+                            version='any',
+                            responsibility_set_ref_attribute='zbt:Resp01',
                             responsibility_sets=ResponsibilitySetsInFrameRelStructure(
                                 responsibility_set=[
                                     ResponsibilitySet(
-                                        id="zbt:Resp01",
+                                        id='zbt:Resp01',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="01",
-                                        responsibility_set_ref_attribute="zbt:Resp01",
+                                        version='01',
+                                        responsibility_set_ref_attribute='zbt:Resp01',
                                         name=MultilingualString(
-                                            value="Responsibility for Stop Data"
+                                            value='Responsibility for Stop Data'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="mybus:Resp01",
+                                                    id='mybus:Resp01',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     description=MultilingualString(
-                                                        value="Zall Zillertal transport - Managed centrally"
+                                                        value='Zall Zillertal transport - Managed centrally'
                                                     ),
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.ALL,
                                                     ],
                                                     responsible_organisation_ref=OperatorRefStructure(
-                                                        version="any",
-                                                        ref="zbt:Org_ZTLB"
+                                                        version='any',
+                                                        ref='zbt:Org_ZTLB'
                                                     )
                                                 ),
                                             ]
                                         )
                                     ),
                                     ResponsibilitySet(
-                                        id="zbt:Resp02",
+                                        id='zbt:Resp02',
                                         created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="01",
-                                        responsibility_set_ref_attribute="zbt:Resp01",
+                                        version='01',
+                                        responsibility_set_ref_attribute='zbt:Resp01',
                                         name=MultilingualString(
-                                            value="Responsibility for timetables"
+                                            value='Responsibility for timetables'
                                         ),
                                         roles=ResponsibilityRoleAssignmentsRelStructure(
                                             responsibility_role_assignment=[
                                                 ResponsibilityRoleAssignment(
-                                                    id="mybus:Resp02",
+                                                    id='mybus:Resp02',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
-                                                    version="01",
+                                                    version='01',
                                                     description=MultilingualString(
-                                                        value="Zall Zillertal transport - Managed centrally"
+                                                        value='Zall Zillertal transport - Managed centrally'
                                                     ),
                                                     data_role_type=[
                                                         DataRoleTypeEnumeration.ALL,
                                                     ],
                                                     responsible_organisation_ref=OperatorRefStructure(
-                                                        version="any",
-                                                        ref="zbt:Org_ZTLB"
+                                                        version='any',
+                                                        ref='zbt:Org_ZTLB'
                                                     )
                                                 ),
                                             ]
@@ -2280,22 +2280,22 @@ obj = PublicationDelivery(
                             organisations=OrganisationsInFrameRelStructure(
                                 choice=[
                                     Operator(
-                                        id="zbt:Org_ZTLB",
-                                        version="any",
+                                        id='zbt:Org_ZTLB',
+                                        version='any',
                                         public_code=PrivateCodeStructure(
-                                            value="ZTB"
+                                            value='ZTB'
                                         ),
                                         name=MultilingualString(
-                                            value="Zillerthalerbahn"
+                                            value='Zillerthalerbahn'
                                         ),
                                         short_name=MultilingualString(
-                                            value="Z-Bahn "
+                                            value='Z-Bahn '
                                         ),
                                         trading_name=MultilingualString(
-                                            value="Zillerthalerbahn GMBh"
+                                            value='Zillerthalerbahn GMBh'
                                         ),
                                         description=MultilingualString(
-                                            value="Responsible for Underground"
+                                            value='Responsible for Underground'
                                         ),
                                         organisation_type=[
                                             OrganisationTypeEnumeration.OPERATOR,

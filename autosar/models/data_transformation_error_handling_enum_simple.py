@@ -10,5 +10,6 @@ class DataTransformationErrorHandlingEnumSimple(Enum):
     :cvar TRANSFORMER_ERROR_HANDLING: The runnable implements the
         handling of transformer errors.
     """
+
     NO_TRANSFORMER_ERROR_HANDLING = "NO-TRANSFORMER-ERROR-HANDLING"
     TRANSFORMER_ERROR_HANDLING = "TRANSFORMER-ERROR-HANDLING"

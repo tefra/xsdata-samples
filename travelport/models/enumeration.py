@@ -11,6 +11,7 @@ class Enumeration:
     Provides the capability to group the results into differnt trip type and
     diversification strategies.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -21,5 +22,5 @@ class Enumeration:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

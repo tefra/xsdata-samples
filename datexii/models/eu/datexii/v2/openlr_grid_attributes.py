@@ -16,6 +16,7 @@ class OpenlrGridAttributes:
         multiplied in the north direction
     :ivar openlr_grid_attributes_extension:
     """
+
     openlr_num_columns: Optional[int] = field(
         default=None,
         metadata={
@@ -23,7 +24,7 @@ class OpenlrGridAttributes:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_num_rows: Optional[int] = field(
         default=None,
@@ -32,7 +33,7 @@ class OpenlrGridAttributes:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "required": True,
-        }
+        },
     )
     openlr_grid_attributes_extension: Optional[ExtensionType] = field(
         default=None,
@@ -40,5 +41,5 @@ class OpenlrGridAttributes:
             "name": "openlrGridAttributesExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )

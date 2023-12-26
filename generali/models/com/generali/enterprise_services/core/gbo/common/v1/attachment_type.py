@@ -1,8 +1,14 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.binary_object_type import BinaryObjectType
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.attachment_type_size_measure import AttachmentTypeSizeMeasure
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.binary_object_type import (
+    BinaryObjectType,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.attachment_type_size_measure import (
+    AttachmentTypeSizeMeasure,
+)
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
@@ -25,13 +31,14 @@ class AttachmentType(BaseIdentifiedComponentType):
     :ivar reference_uri: <description xmlns="">A URI reference to an
         external document.</description>
     """
+
     size_measure: Optional[AttachmentTypeSizeMeasure] = field(
         default=None,
         metadata={
             "name": "SizeMeasure",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     binary_object: Optional[BinaryObjectType] = field(
         default=None,
@@ -39,7 +46,7 @@ class AttachmentType(BaseIdentifiedComponentType):
             "name": "BinaryObject",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )
     reference_uri: Optional[str] = field(
         default=None,
@@ -47,5 +54,5 @@ class AttachmentType(BaseIdentifiedComponentType):
             "name": "ReferenceURI",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-        }
+        },
     )

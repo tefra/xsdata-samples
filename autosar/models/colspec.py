@@ -35,6 +35,7 @@ class Colspec:
     :ivar rowsep: Indicates whether a line should be displayed at the
         bottom end of the cells of the column defined in the Colspec.
     """
+
     class Meta:
         name = "COLSPEC"
 
@@ -43,7 +44,7 @@ class Colspec:
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -51,28 +52,28 @@ class Colspec:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
     align: Optional[AlignEnumSimple] = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
-        }
+        },
     )
     colname: Optional[str] = field(
         default=None,
         metadata={
             "name": "COLNAME",
             "type": "Attribute",
-        }
+        },
     )
     colnum: Optional[str] = field(
         default=None,
         metadata={
             "name": "COLNUM",
             "type": "Attribute",
-        }
+        },
     )
     colsep: Optional[str] = field(
         default=None,
@@ -80,14 +81,14 @@ class Colspec:
             "name": "COLSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )
     colwidth: Optional[str] = field(
         default=None,
         metadata={
             "name": "COLWIDTH",
             "type": "Attribute",
-        }
+        },
     )
     rowsep: Optional[str] = field(
         default=None,
@@ -95,5 +96,5 @@ class Colspec:
             "name": "ROWSEP",
             "type": "Attribute",
             "pattern": r"[0-1]",
-        }
+        },
     )

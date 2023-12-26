@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import Optional
 from .data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
-from .parameter_in_atomic_swc_type_instance_ref import ParameterInAtomicSwcTypeInstanceRef
+from .parameter_in_atomic_swc_type_instance_ref import (
+    ParameterInAtomicSwcTypeInstanceRef,
+)
 from .ref import Ref
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
@@ -46,31 +48,36 @@ class AutosarParameterRef:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "AUTOSAR-PARAMETER-REF"
 
-    autosar_parameter_iref: Optional[ParameterInAtomicSwcTypeInstanceRef] = field(
+    autosar_parameter_iref: Optional[
+        ParameterInAtomicSwcTypeInstanceRef
+    ] = field(
         default=None,
         metadata={
             "name": "AUTOSAR-PARAMETER-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    local_parameter_ref: Optional["AutosarParameterRef.LocalParameterRef"] = field(
+    local_parameter_ref: Optional[
+        "AutosarParameterRef.LocalParameterRef"
+    ] = field(
         default=None,
         metadata={
             "name": "LOCAL-PARAMETER-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -78,7 +85,7 @@ class AutosarParameterRef:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -89,5 +96,5 @@ class AutosarParameterRef:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

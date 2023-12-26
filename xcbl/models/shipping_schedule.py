@@ -37,7 +37,9 @@ class PackageDocDocumentTypeCoded(Enum):
     WEIGHT_CERTIFICATE = "WeightCertificate"
     WEIGHT_LIST = "WeightList"
     CERTIFICATE = "Certificate"
-    COMBINED_CERTIFICATE_OF_VALUE_AND_ORIGIN = "CombinedCertificateOfValueAndOrigin"
+    COMBINED_CERTIFICATE_OF_VALUE_AND_ORIGIN = (
+        "CombinedCertificateOfValueAndOrigin"
+    )
     MOVEMENT_CERTIFICATE_ATR1 = "MovementCertificateATr1"
     CERTIFICATE_OF_QUANTITY = "CertificateOfQuantity"
     QUALITY_DATA_MESSAGE = "QualityDataMessage"
@@ -46,14 +48,26 @@ class PackageDocDocumentTypeCoded(Enum):
     STATUS_INFORMATION = "StatusInformation"
     RESTOW = "Restow"
     CONTAINER_DISCHARGE_LIST = "ContainerDischargeList"
-    CORPORATE_SUPERANNUATION_CONTRIBUTIONS_ADVICE = "CorporateSuperannuationContributionsAdvice"
-    INDUSTRY_SUPERANNUATION_CONTRIBUTIONS_ADVICE = "IndustrySuperannuationContributionsAdvice"
-    CORPORATE_SUPERANNUATION_MEMBER_MAINTENANCE_MESSAGE = "CorporateSuperannuationMemberMaintenanceMessage"
-    INDUSTRY_SUPERANNUATION_MEMBER_MAINTENANCE_MESSAGE = "IndustrySuperannuationMemberMaintenanceMessage"
-    LIFE_INSURANCE_PAYROLL_DEDUCTIONS_ADVICE = "LifeInsurancePayrollDeductionsAdvice"
+    CORPORATE_SUPERANNUATION_CONTRIBUTIONS_ADVICE = (
+        "CorporateSuperannuationContributionsAdvice"
+    )
+    INDUSTRY_SUPERANNUATION_CONTRIBUTIONS_ADVICE = (
+        "IndustrySuperannuationContributionsAdvice"
+    )
+    CORPORATE_SUPERANNUATION_MEMBER_MAINTENANCE_MESSAGE = (
+        "CorporateSuperannuationMemberMaintenanceMessage"
+    )
+    INDUSTRY_SUPERANNUATION_MEMBER_MAINTENANCE_MESSAGE = (
+        "IndustrySuperannuationMemberMaintenanceMessage"
+    )
+    LIFE_INSURANCE_PAYROLL_DEDUCTIONS_ADVICE = (
+        "LifeInsurancePayrollDeductionsAdvice"
+    )
     UNDERBOND_REQUEST = "UnderbondRequest"
     UNDERBOND_APPROVAL = "UnderbondApproval"
-    CERTIFICATE_OF_SEALING_OF_EXPORT_MEAT_LOCKERS = "CertificateOfSealingOfExportMeatLockers"
+    CERTIFICATE_OF_SEALING_OF_EXPORT_MEAT_LOCKERS = (
+        "CertificateOfSealingOfExportMeatLockers"
+    )
     CARGO_STATUS = "CargoStatus"
     INVENTORY_REPORT = "InventoryReport"
     IDENTITY_CARD = "IdentityCard"
@@ -67,8 +81,12 @@ class PackageDocDocumentTypeCoded(Enum):
     TRANSPORT_STATUS_REPORT = "TransportStatusReport"
     TRANSPORT_STATUS_REQUEST = "TransportStatusRequest"
     BANKING_STATUS = "BankingStatus"
-    EXTRA_COMMUNITY_TRADE_STATISTICAL_DECLARATION = "Extra-CommunityTradeStatisticalDeclaration"
-    WRITTEN_INSTRUCTIONS_IN_CONFORMANCE_WITH_ADR_ARTICLE_NUMBER = "WrittenInstructionsInConformanceWithAdrArticleNumber"
+    EXTRA_COMMUNITY_TRADE_STATISTICAL_DECLARATION = (
+        "Extra-CommunityTradeStatisticalDeclaration"
+    )
+    WRITTEN_INSTRUCTIONS_IN_CONFORMANCE_WITH_ADR_ARTICLE_NUMBER = (
+        "WrittenInstructionsInConformanceWithAdrArticleNumber"
+    )
     DAMAGE_CERTIFICATION = "DamageCertification"
     VALIDATED_PRICED_TENDER = "ValidatedPricedTender"
     PRICE_SALES_CATALOGUE_RESPONSE = "PriceSalesCatalogueResponse"
@@ -100,17 +118,29 @@ class PackageDocDocumentTypeCoded(Enum):
     CONSIGNMENT_STATUS_REPORT = "ConsignmentStatusReport"
     INVENTORY_MOVEMENT_ADVICE = "InventoryMovementAdvice"
     INVENTORY_STATUS_ADVICE = "InventoryStatusAdvice"
-    DEBIT_NOTE_RELATED_TO_GOODS_OR_SERVICES = "DebitNoteRelatedToGoodsOrServices"
-    CREDIT_NOTE_RELATED_TO_GOODS_OR_SERVICES = "CreditNoteRelatedToGoodsOrServices"
+    DEBIT_NOTE_RELATED_TO_GOODS_OR_SERVICES = (
+        "DebitNoteRelatedToGoodsOrServices"
+    )
+    CREDIT_NOTE_RELATED_TO_GOODS_OR_SERVICES = (
+        "CreditNoteRelatedToGoodsOrServices"
+    )
     METERED_SERVICES_INVOICE = "MeteredServicesInvoice"
-    CREDIT_NOTE_RELATED_TO_FINANCIAL_ADJUSTMENTS = "CreditNoteRelatedToFinancialAdjustments"
-    DEBIT_NOTE_RELATED_TO_FINANCIAL_ADJUSTMENTS = "DebitNoteRelatedToFinancialAdjustments"
+    CREDIT_NOTE_RELATED_TO_FINANCIAL_ADJUSTMENTS = (
+        "CreditNoteRelatedToFinancialAdjustments"
+    )
+    DEBIT_NOTE_RELATED_TO_FINANCIAL_ADJUSTMENTS = (
+        "DebitNoteRelatedToFinancialAdjustments"
+    )
     CUSTOMS_MANIFEST = "CustomsManifest"
     VESSEL_UNPACK_REPORT = "VesselUnpackReport"
     GENERAL_CARGO_SUMMARY_MANIFEST_REPORT = "GeneralCargoSummaryManifestReport"
     CONSIGNMENT_UNPACK_REPORT = "ConsignmentUnpackReport"
-    MEAT_AND_MEAT_BY_PRODUCTS_SANITARY_CERTIFICATE = "MeatAndMeatBy-ProductsSanitaryCertificate"
-    MEAT_FOOD_PRODUCTS_SANITARY_CERTIFICATE = "MeatFoodProductsSanitaryCertificate"
+    MEAT_AND_MEAT_BY_PRODUCTS_SANITARY_CERTIFICATE = (
+        "MeatAndMeatBy-ProductsSanitaryCertificate"
+    )
+    MEAT_FOOD_PRODUCTS_SANITARY_CERTIFICATE = (
+        "MeatFoodProductsSanitaryCertificate"
+    )
     POULTRY_SANITARY_CERTIFICATE = "PoultrySanitaryCertificate"
     HORSEMEAT_SANITARY_CERTIFICATE = "HorsemeatSanitaryCertificate"
     CASING_SANITARY_CERTIFICATE = "CasingSanitaryCertificate"
@@ -123,19 +153,33 @@ class PackageDocDocumentTypeCoded(Enum):
     EXCISE_CERTIFICATE = "ExciseCertificate"
     REGISTRATION_DOCUMENT = "RegistrationDocument"
     TAX_NOTIFICATION = "TaxNotification"
-    TRANSPORT_EQUIPMENT_DIRECT_INTERCHANGE_REPORT = "TransportEquipmentDirectInterchangeReport"
-    TRANSPORT_EQUIPMENT_IMPENDING_ARRIVAL_ADVICE = "TransportEquipmentImpendingArrivalAdvice"
+    TRANSPORT_EQUIPMENT_DIRECT_INTERCHANGE_REPORT = (
+        "TransportEquipmentDirectInterchangeReport"
+    )
+    TRANSPORT_EQUIPMENT_IMPENDING_ARRIVAL_ADVICE = (
+        "TransportEquipmentImpendingArrivalAdvice"
+    )
     PURCHASE_ORDER = "PurchaseOrder"
     TRANSPORT_EQUIPMENT_DAMAGE_REPORT = "TransportEquipmentDamageReport"
-    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_WORK_ESTIMATE_ADVICE = "TransportEquipmentMaintenanceAndRepairWorkEstimateAdvice"
-    TRANSPORT_EQUIPMENT_EMPTY_RELEASE_INSTRUCTION = "TransportEquipmentEmptyReleaseInstruction"
+    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_WORK_ESTIMATE_ADVICE = (
+        "TransportEquipmentMaintenanceAndRepairWorkEstimateAdvice"
+    )
+    TRANSPORT_EQUIPMENT_EMPTY_RELEASE_INSTRUCTION = (
+        "TransportEquipmentEmptyReleaseInstruction"
+    )
     TRANSPORT_MOVEMENT_GATE_IN_REPORT = "TransportMovementGateInReport"
     MANUFACTURING_INSTRUCTIONS = "ManufacturingInstructions"
     TRANSPORT_MOVEMENT_GATE_OUT_REPORT = "TransportMovementGateOutReport"
-    TRANSPORT_EQUIPMENT_UNPACKING_INSTRUCTION = "TransportEquipmentUnpackingInstruction"
+    TRANSPORT_EQUIPMENT_UNPACKING_INSTRUCTION = (
+        "TransportEquipmentUnpackingInstruction"
+    )
     TRANSPORT_EQUIPMENT_UNPACKING_REPORT = "TransportEquipmentUnpackingReport"
-    TRANSPORT_EQUIPMENT_PICK_UP_AVAILABILITY_REQUEST = "TransportEquipmentPick-UpAvailabilityRequest"
-    TRANSPORT_EQUIPMENT_PICK_UP_AVAILABILITY_CONFIRMATION = "TransportEquipmentPick-UpAvailabilityConfirmation"
+    TRANSPORT_EQUIPMENT_PICK_UP_AVAILABILITY_REQUEST = (
+        "TransportEquipmentPick-UpAvailabilityRequest"
+    )
+    TRANSPORT_EQUIPMENT_PICK_UP_AVAILABILITY_CONFIRMATION = (
+        "TransportEquipmentPick-UpAvailabilityConfirmation"
+    )
     TRANSPORT_EQUIPMENT_PICK_UP_REPORT = "TransportEquipmentPick-UpReport"
     TRANSPORT_EQUIPMENT_SHIFT_REPORT = "TransportEquipmentShiftReport"
     TRANSPORT_DISCHARGE_INSTRUCTION = "TransportDischargeInstruction"
@@ -143,27 +187,41 @@ class PackageDocDocumentTypeCoded(Enum):
     STORES_REQUISITION = "StoresRequisition"
     TRANSPORT_LOADING_INSTRUCTION = "TransportLoadingInstruction"
     TRANSPORT_LOADING_REPORT = "TransportLoadingReport"
-    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_WORK = "TransportEquipmentMaintenanceAndRepairWork"
+    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_WORK = (
+        "TransportEquipmentMaintenanceAndRepairWork"
+    )
     TRANSPORT_DEPARTURE_REPORT = "TransportDepartureReport"
     TRANSPORT_EMPTY_EQUIPMENT_ADVICE = "TransportEmptyEquipmentAdvice"
     TRANSPORT_EQUIPMENT_ACCEPTANCE_ORDER = "TransportEquipmentAcceptanceOrder"
-    TRANSPORT_EQUIPMENT_SPECIAL_SERVICE_INSTRUCTION = "TransportEquipmentSpecialServiceInstruction"
+    TRANSPORT_EQUIPMENT_SPECIAL_SERVICE_INSTRUCTION = (
+        "TransportEquipmentSpecialServiceInstruction"
+    )
     TRANSPORT_EQUIPMENT_STOCK_REPORT = "TransportEquipmentStockReport"
     TRANSPORT_CARGO_RELEASE_ORDER = "TransportCargoReleaseOrder"
     INVOICING_DATA_SHEET = "InvoicingDataSheet"
-    TRANSPORT_EQUIPMENT_PACKING_INSTRUCTION = "TransportEquipmentPackingInstruction"
+    TRANSPORT_EQUIPMENT_PACKING_INSTRUCTION = (
+        "TransportEquipmentPackingInstruction"
+    )
     CUSTOMS_CLEARANCE_NOTICE = "CustomsClearanceNotice"
     CUSTOMS_DOCUMENTS_EXPIRATION_NOTICE = "CustomsDocumentsExpirationNotice"
     TRANSPORT_EQUIPMENT_ON_HIRE_REQUEST = "TransportEquipmentOn-HireRequest"
     TRANSPORT_EQUIPMENT_ON_HIRE_ORDER = "TransportEquipmentOn-HireOrder"
     TRANSPORT_EQUIPMENT_OFF_HIRE_REQUEST = "TransportEquipmentOff-HireRequest"
     TRANSPORT_EQUIPMENT_SURVEY_ORDER = "TransportEquipmentSurveyOrder"
-    TRANSPORT_EQUIPMENT_SURVEY_ORDER_RESPONSE = "TransportEquipmentSurveyOrderResponse"
+    TRANSPORT_EQUIPMENT_SURVEY_ORDER_RESPONSE = (
+        "TransportEquipmentSurveyOrderResponse"
+    )
     TRANSPORT_EQUIPMENT_SURVEY_REPORT = "TransportEquipmentSurveyReport"
     PACKING_INSTRUCTIONS = "PackingInstructions"
-    ADVISING_ITEMS_TO_BE_BOOKED_TO_AFINANCIAL_ACCOUNT = "AdvisingItemsToBeBookedToAFinancialAccount"
-    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_WORK_ESTIMATE_ORDER = "TransportEquipmentMaintenanceAndRepairWorkEstimateOrder"
-    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_NOTICE = "TransportEquipmentMaintenanceAndRepairNotice"
+    ADVISING_ITEMS_TO_BE_BOOKED_TO_AFINANCIAL_ACCOUNT = (
+        "AdvisingItemsToBeBookedToAFinancialAccount"
+    )
+    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_WORK_ESTIMATE_ORDER = (
+        "TransportEquipmentMaintenanceAndRepairWorkEstimateOrder"
+    )
+    TRANSPORT_EQUIPMENT_MAINTENANCE_AND_REPAIR_NOTICE = (
+        "TransportEquipmentMaintenanceAndRepairNotice"
+    )
     EMPTY_CONTAINER_DISPOSITION_ORDER = "EmptyContainerDispositionOrder"
     CARGO_VESSEL_DISCHARGE_ORDER = "CargoVesselDischargeOrder"
     CARGO_VESSEL_LOADING_ORDER = "CargoVesselLoadingOrder"
@@ -172,8 +230,12 @@ class PackageDocDocumentTypeCoded(Enum):
     BASIC_AGREEMENT = "BasicAgreement"
     INTERNAL_TRANSPORT_ORDER = "InternalTransportOrder"
     GRANT = "Grant"
-    INDEFINITE_DELIVERY_INDEFINITE_QUANTITY_CONTRACT = "IndefiniteDeliveryIndefiniteQuantityContract"
-    INDEFINITE_DELIVERY_DEFINITE_QUANTITY_CONTRACT = "IndefiniteDeliveryDefiniteQuantityContract"
+    INDEFINITE_DELIVERY_INDEFINITE_QUANTITY_CONTRACT = (
+        "IndefiniteDeliveryIndefiniteQuantityContract"
+    )
+    INDEFINITE_DELIVERY_DEFINITE_QUANTITY_CONTRACT = (
+        "IndefiniteDeliveryDefiniteQuantityContract"
+    )
     REQUIREMENTS_CONTRACT = "RequirementsContract"
     TASK_ORDER = "TaskOrder"
     MAKE_OR_BUY_PLAN = "MakeOrBuyPlan"
@@ -183,16 +245,22 @@ class PackageDocDocumentTypeCoded(Enum):
     WAGE_DETERMINATION = "WageDetermination"
     CONTRACT_FUNDS_STATUS_REPORT_CFSR = "ContractFundsStatusReportCfsr"
     CERTIFIED_INSPECTION_AND_TEST_RESULTS = "CertifiedInspectionAndTestResults"
-    MATERIAL_INSPECTION_AND_RECEIVING_REPORT = "MaterialInspectionAndReceivingReport"
+    MATERIAL_INSPECTION_AND_RECEIVING_REPORT = (
+        "MaterialInspectionAndReceivingReport"
+    )
     PURCHASING_SPECIFICATION = "PurchasingSpecification"
     PAYMENT_OR_PERFORMANCE_BOND = "PaymentOrPerformanceBond"
-    CONTRACT_SECURITY_CLASSIFICATION_SPECIFICATION = "ContractSecurityClassificationSpecification"
+    CONTRACT_SECURITY_CLASSIFICATION_SPECIFICATION = (
+        "ContractSecurityClassificationSpecification"
+    )
     MANUFACTURING_SPECIFICATION = "ManufacturingSpecification"
     BUY_AMERICA_CERTIFICATE_OF_COMPLIANCE = "BuyAmericaCertificateOfCompliance"
     CONTAINER_OFF_HIRE_NOTICE = "ContainerOff-HireNotice"
     CARGO_ACCEPTANCE_ORDER = "CargoAcceptanceOrder"
     PICK_UP_NOTICE = "Pick-UpNotice"
-    AUTHORISATION_TO_PLAN_AND_SUGGEST_ORDERS = "AuthorisationToPlanAndSuggestOrders"
+    AUTHORISATION_TO_PLAN_AND_SUGGEST_ORDERS = (
+        "AuthorisationToPlanAndSuggestOrders"
+    )
     AUTHORISATION_TO_PLAN_AND_SHIP_ORDERS = "AuthorisationToPlanAndShipOrders"
     DRAWING = "Drawing"
     COST_PERFORMANCE_REPORT_CPR_FORMAT2 = "CostPerformanceReportCprFormat2"
@@ -210,17 +278,33 @@ class PackageDocDocumentTypeCoded(Enum):
     CONVEYANCE_DECLARATION_COMBINED = "ConveyanceDeclarationCombined"
     PROJECT_RECOVERY_PLAN = "ProjectRecoveryPlan"
     PROJECT_PRODUCTION_PLAN = "ProjectProductionPlan"
-    STATISTICAL_AND_OTHER_ADMINISTRATIVE_INTERNAL_DOCUMENTS = "StatisticalAndOtherAdministrativeInternalDocuments"
+    STATISTICAL_AND_OTHER_ADMINISTRATIVE_INTERNAL_DOCUMENTS = (
+        "StatisticalAndOtherAdministrativeInternalDocuments"
+    )
     PROJECT_MASTER_SCHEDULE = "ProjectMasterSchedule"
-    PRICED_ALTERNATE_TENDER_BILL_OF_QUANTITY = "PricedAlternateTenderBillOfQuantity"
+    PRICED_ALTERNATE_TENDER_BILL_OF_QUANTITY = (
+        "PricedAlternateTenderBillOfQuantity"
+    )
     ESTIMATED_PRICED_BILL_OF_QUANTITY = "EstimatedPricedBillOfQuantity"
     DRAFT_BILL_OF_QUANTITY = "DraftBillOfQuantity"
-    DOCUMENTARY_CREDIT_COLLECTION_INSTRUCTION = "DocumentaryCreditCollectionInstruction"
-    REQUEST_FOR_AN_AMENDMENT_OF_ADOCUMENTARY_CREDIT = "RequestForAnAmendmentOfADocumentaryCredit"
-    DOCUMENTARY_CREDIT_AMENDMENT_INFORMATION = "DocumentaryCreditAmendmentInformation"
-    ADVICE_OF_AN_AMENDMENT_OF_ADOCUMENTARY_CREDIT = "AdviceOfAnAmendmentOfADocumentaryCredit"
-    RESPONSE_TO_AN_AMENDMENT_OF_ADOCUMENTARY_CREDIT = "ResponseToAnAmendmentOfADocumentaryCredit"
-    DOCUMENTARY_CREDIT_ISSUANCE_INFORMATION = "DocumentaryCreditIssuanceInformation"
+    DOCUMENTARY_CREDIT_COLLECTION_INSTRUCTION = (
+        "DocumentaryCreditCollectionInstruction"
+    )
+    REQUEST_FOR_AN_AMENDMENT_OF_ADOCUMENTARY_CREDIT = (
+        "RequestForAnAmendmentOfADocumentaryCredit"
+    )
+    DOCUMENTARY_CREDIT_AMENDMENT_INFORMATION = (
+        "DocumentaryCreditAmendmentInformation"
+    )
+    ADVICE_OF_AN_AMENDMENT_OF_ADOCUMENTARY_CREDIT = (
+        "AdviceOfAnAmendmentOfADocumentaryCredit"
+    )
+    RESPONSE_TO_AN_AMENDMENT_OF_ADOCUMENTARY_CREDIT = (
+        "ResponseToAnAmendmentOfADocumentaryCredit"
+    )
+    DOCUMENTARY_CREDIT_ISSUANCE_INFORMATION = (
+        "DocumentaryCreditIssuanceInformation"
+    )
     DIRECT_PAYMENT_VALUATION_REQUEST = "DirectPaymentValuationRequest"
     DIRECT_PAYMENT_VALUATION = "DirectPaymentValuation"
     PROVISIONAL_PAYMENT_VALUATION = "ProvisionalPaymentValuation"
@@ -237,8 +321,12 @@ class PackageDocDocumentTypeCoded(Enum):
     PRE_AUTHORISED_DIRECT_DEBITS = "Pre-AuthorisedDirectDebits"
     LETTER_OF_INTENT = "LetterOfIntent"
     APPROVED_UNPRICED_BILL_OF_QUANTITY = "ApprovedUnpricedBillOfQuantity"
-    PAYMENT_VALUATION_FOR_UNSCHEDULED_ITEMS = "PaymentValuationForUnscheduledItems"
-    FINAL_PAYMENT_REQUEST_BASED_ON_COMPLETION_OF_WORK = "FinalPaymentRequestBasedOnCompletionOfWork"
+    PAYMENT_VALUATION_FOR_UNSCHEDULED_ITEMS = (
+        "PaymentValuationForUnscheduledItems"
+    )
+    FINAL_PAYMENT_REQUEST_BASED_ON_COMPLETION_OF_WORK = (
+        "FinalPaymentRequestBasedOnCompletionOfWork"
+    )
     PAYMENT_REQUEST_FOR_COMPLETED_UNITS = "PaymentRequestForCompletedUnits"
     ORDER = "Order"
     BLANKET_ORDER = "BlanketOrder"
@@ -264,7 +352,9 @@ class PackageDocDocumentTypeCoded(Enum):
     DELIVERY_SCHEDULE = "DeliverySchedule"
     DELIVERY_JUST_IN_TIME = "DeliveryJust-In-Time"
     PRE_AUTHORISED_DIRECT_DEBIT_REQUESTS = "Pre-AuthorisedDirectDebitRequests"
-    NON_PRE_AUTHORISED_DIRECT_DEBIT_REQUESTS = "Non-Pre-AuthorisedDirectDebitRequests"
+    NON_PRE_AUTHORISED_DIRECT_DEBIT_REQUESTS = (
+        "Non-Pre-AuthorisedDirectDebitRequests"
+    )
     DELIVERY_RELEASE = "DeliveryRelease"
     SETTLEMENT_OF_ALETTER_OF_CREDIT = "SettlementOfALetterOfCredit"
     BANK_TO_BANK_FUNDS_TRANSFER = "BankToBankFundsTransfer"
@@ -272,7 +362,9 @@ class PackageDocDocumentTypeCoded(Enum):
     LOW_VALUE_PAYMENT_ORDERS = "LowValuePaymentOrders"
     CREW_LIST_DECLARATION = "CrewListDeclaration"
     INQUIRY = "Inquiry"
-    RESPONSE_TO_PREVIOUS_BANKING_STATUS_MESSAGE = "ResponseToPreviousBankingStatusMessage"
+    RESPONSE_TO_PREVIOUS_BANKING_STATUS_MESSAGE = (
+        "ResponseToPreviousBankingStatusMessage"
+    )
     PROJECT_MASTER_PLAN = "ProjectMasterPlan"
     PROJECT_PLAN = "ProjectPlan"
     PROJECT_SCHEDULE = "ProjectSchedule"
@@ -282,11 +374,17 @@ class PackageDocDocumentTypeCoded(Enum):
     CARGO_MOVEMENT_EVENT_LOG = "CargoMovementEventLog"
     CARGO_ANALYSIS_VOYAGE_REPORT = "CargoAnalysisVoyageReport"
     SELF_BILLED_CREDIT_NOTE = "SelfBilledCreditNote"
-    CONSOLIDATED_CREDIT_NOTE_GOODS_AND_SERVICES = "ConsolidatedCreditNote-GoodsAndServices"
+    CONSOLIDATED_CREDIT_NOTE_GOODS_AND_SERVICES = (
+        "ConsolidatedCreditNote-GoodsAndServices"
+    )
     INVENTORY_ADJUSTMENT_STATUS_REPORT = "InventoryAdjustmentStatusReport"
-    TRANSPORT_EQUIPMENT_MOVEMENT_INSTRUCTION = "TransportEquipmentMovementInstruction"
+    TRANSPORT_EQUIPMENT_MOVEMENT_INSTRUCTION = (
+        "TransportEquipmentMovementInstruction"
+    )
     TRANSPORT_EQUIPMENT_MOVEMENT_REPORT = "TransportEquipmentMovementReport"
-    TRANSPORT_EQUIPMENT_STATUS_CHANGE_REPORT = "TransportEquipmentStatusChangeReport"
+    TRANSPORT_EQUIPMENT_STATUS_CHANGE_REPORT = (
+        "TransportEquipmentStatusChangeReport"
+    )
     FUMIGATION_CERTIFICATE = "FumigationCertificate"
     WINE_CERTIFICATE = "WineCertificate"
     WOOL_HEALTH_CERTIFICATE = "WoolHealthCertificate"
@@ -305,7 +403,9 @@ class PackageDocDocumentTypeCoded(Enum):
     MODIFICATION_OF_EXISTING_MESSAGE = "ModificationOfExistingMessage"
     TRACKING_NUMBER_ASSIGNMENT_REPORT = "TrackingNumberAssignmentReport"
     USER_DIRECTORY_DEFINITION = "UserDirectoryDefinition"
-    UNITED_NATIONS_STANDARD_MESSAGE_REQUEST = "UnitedNationsStandardMessageRequest"
+    UNITED_NATIONS_STANDARD_MESSAGE_REQUEST = (
+        "UnitedNationsStandardMessageRequest"
+    )
     SERVICE_DIRECTORY_DEFINITION = "ServiceDirectoryDefinition"
     STATUS_REPORT = "StatusReport"
     KANBAN_SCHEDULE = "KanbanSchedule"
@@ -314,7 +414,9 @@ class PackageDocDocumentTypeCoded(Enum):
     DELIVERY_SCHEDULE_RESPONSE = "DeliveryScheduleResponse"
     INSPECTION_REQUEST = "InspectionRequest"
     INSPECTION_REPORT = "InspectionReport"
-    APPLICATION_ACKNOWLEDGEMENT_AND_ERROR_REPORT = "ApplicationAcknowledgementAndErrorReport"
+    APPLICATION_ACKNOWLEDGEMENT_AND_ERROR_REPORT = (
+        "ApplicationAcknowledgementAndErrorReport"
+    )
     PRICE_VARIATION_INVOICE = "PriceVariationInvoice"
     CREDIT_NOTE_FOR_PRICE_VARIATION = "CreditNoteForPriceVariation"
     INSTRUCTION_TO_COLLECT = "InstructionToCollect"
@@ -325,7 +427,9 @@ class PackageDocDocumentTypeCoded(Enum):
     IMPLEMENTATION_GUIDELINE = "ImplementationGuideline"
     REQUEST_FOR_TRANSFER = "RequestForTransfer"
     COST_PERFORMANCE_REPORT = "CostPerformanceReport"
-    APPLICATION_ERROR_AND_ACKNOWLEDGEMENT = "ApplicationErrorAndAcknowledgement"
+    APPLICATION_ERROR_AND_ACKNOWLEDGEMENT = (
+        "ApplicationErrorAndAcknowledgement"
+    )
     CASH_POOL_FINANCIAL_STATEMENT = "CashPoolFinancialStatement"
     SEQUENCED_DELIVERY_SCHEDULE = "SequencedDeliverySchedule"
     DELCREDERE_CREDIT_NOTE = "DelcredereCreditNote"
@@ -335,12 +439,20 @@ class PackageDocDocumentTypeCoded(Enum):
     APPLICATION_ERROR_MESSAGE = "ApplicationErrorMessage"
     CARGO_MOVEMENT_VOYAGE_SUMMARY = "CargoMovementVoyageSummary"
     CONTRACT = "Contract"
-    APPLICATION_FOR_USAGE_OF_BERTH_OR_MOORING_FACILITIES = "ApplicationForUsageOfBerthOrMooringFacilities"
-    APPLICATION_FOR_DESIGNATION_OF_BERTHING_PLACES = "ApplicationForDesignationOfBerthingPlaces"
-    APPLICATION_FOR_SHIFTING_FROM_THE_DESIGNATED_PLACE_IN_PORT = "ApplicationForShiftingFromTheDesignatedPlaceInPort"
+    APPLICATION_FOR_USAGE_OF_BERTH_OR_MOORING_FACILITIES = (
+        "ApplicationForUsageOfBerthOrMooringFacilities"
+    )
+    APPLICATION_FOR_DESIGNATION_OF_BERTHING_PLACES = (
+        "ApplicationForDesignationOfBerthingPlaces"
+    )
+    APPLICATION_FOR_SHIFTING_FROM_THE_DESIGNATED_PLACE_IN_PORT = (
+        "ApplicationForShiftingFromTheDesignatedPlaceInPort"
+    )
     SUPPLEMENTARY_DOCUMENT_FOR_APPLICATION_FOR_CARGO_OPERATION_OF_DANGEROUS_GOODS = "SupplementaryDocumentForApplicationForCargoOperationOfDangerousGoods"
     ACKNOWLEDGEMENT_OF_ORDER = "AcknowledgementOfOrder"
-    SUPPLEMENTARY_DOCUMENT_FOR_APPLICATION_FOR_TRANSPORT_OF_DANGEROUS_GOODS = "SupplementaryDocumentForApplicationForTransportOfDangerousGoods"
+    SUPPLEMENTARY_DOCUMENT_FOR_APPLICATION_FOR_TRANSPORT_OF_DANGEROUS_GOODS = (
+        "SupplementaryDocumentForApplicationForTransportOfDangerousGoods"
+    )
     OPTICAL_CHARACTER_READING_OCR_PAYMENT = "OpticalCharacterReadingOcrPayment"
     PRELIMINARY_SALES_REPORT = "PreliminarySalesReport"
     TRANSPORT_EMERGENCY_CARD = "TransportEmergencyCard"
@@ -350,31 +462,57 @@ class PackageDocDocumentTypeCoded(Enum):
     NAME_PRODUCT_PLATE = "NameProductPlate"
     CO_INSURANCE_CEDING_BORDEREAU = "Co-InsuranceCedingBordereau"
     REQUEST_FOR_DELIVERY_INSTRUCTIONS = "RequestForDeliveryInstructions"
-    COMMERCIAL_INVOICE_WHICH_INCLUDES_APACKING_LIST = "CommercialInvoiceWhichIncludesAPackingList"
+    COMMERCIAL_INVOICE_WHICH_INCLUDES_APACKING_LIST = (
+        "CommercialInvoiceWhichIncludesAPackingList"
+    )
     TRADE_DATA = "TradeData"
-    CUSTOMS_DECLARATION_FOR_CARGO_EXAMINATION = "CustomsDeclarationForCargoExamination"
-    CUSTOMS_DECLARATION_FOR_CARGO_EXAMINATION_ALTERNATE = "CustomsDeclarationForCargoExaminationAlternate"
+    CUSTOMS_DECLARATION_FOR_CARGO_EXAMINATION = (
+        "CustomsDeclarationForCargoExamination"
+    )
+    CUSTOMS_DECLARATION_FOR_CARGO_EXAMINATION_ALTERNATE = (
+        "CustomsDeclarationForCargoExaminationAlternate"
+    )
     BOOKING_REQUEST = "BookingRequest"
     CUSTOMS_CREW_AND_CONVEYANCE = "CustomsCrewAndConveyance"
-    CUSTOMS_SUMMARY_DECLARATION_WITH_COMMERCIAL_DETAIL_ALTERNATE = "CustomsSummaryDeclarationWithCommercialDetailAlternate"
-    ITEMS_BOOKED_TO_AFINANCIAL_ACCOUNT_REPORT = "ItemsBookedToAFinancialAccountReport"
-    REPORT_OF_TRANSACTIONS_WHICH_NEED_FURTHER_INFORMATION_FROM_THE_RECEIVER = "ReportOfTransactionsWhichNeedFurtherInformationFromTheReceiver"
+    CUSTOMS_SUMMARY_DECLARATION_WITH_COMMERCIAL_DETAIL_ALTERNATE = (
+        "CustomsSummaryDeclarationWithCommercialDetailAlternate"
+    )
+    ITEMS_BOOKED_TO_AFINANCIAL_ACCOUNT_REPORT = (
+        "ItemsBookedToAFinancialAccountReport"
+    )
+    REPORT_OF_TRANSACTIONS_WHICH_NEED_FURTHER_INFORMATION_FROM_THE_RECEIVER = (
+        "ReportOfTransactionsWhichNeedFurtherInformationFromTheReceiver"
+    )
     SHIPPING_INSTRUCTIONS = "ShippingInstructions"
     SHIPPERS_LETTER_OF_INSTRUCTIONS_AIR = "ShippersLetterOfInstructionsAir"
-    REPORT_OF_TRANSACTIONS_FOR_INFORMATION_ONLY = "ReportOfTransactionsForInformationOnly"
+    REPORT_OF_TRANSACTIONS_FOR_INFORMATION_ONLY = (
+        "ReportOfTransactionsForInformationOnly"
+    )
     CARTAGE_ORDER_LOCAL_TRANSPORT = "CartageOrderLocalTransport"
-    EDI_ASSOCIATED_OBJECT_ADMINISTRATION_MESSAGE = "EdiAssociatedObjectAdministrationMessage"
+    EDI_ASSOCIATED_OBJECT_ADMINISTRATION_MESSAGE = (
+        "EdiAssociatedObjectAdministrationMessage"
+    )
     READY_FOR_DESPATCH_ADVICE = "ReadyForDespatchAdvice"
     SUMMARY_SALES_REPORT = "SummarySalesReport"
     ORDER_STATUS_ENQUIRY = "OrderStatusEnquiry"
     ORDER_STATUS_REPORT = "OrderStatusReport"
-    DECLARATION_REGARDING_THE_INWARD_AND_OUTWARD_MOVEMENT_OF_VESSEL = "DeclarationRegardingTheInwardAndOutwardMovementOfVessel"
+    DECLARATION_REGARDING_THE_INWARD_AND_OUTWARD_MOVEMENT_OF_VESSEL = (
+        "DeclarationRegardingTheInwardAndOutwardMovementOfVessel"
+    )
     DESPATCH_ORDER = "DespatchOrder"
     DESPATCH_ADVICE = "DespatchAdvice"
-    NOTIFICATION_OF_USAGE_OF_BERTH_OR_MOORING_FACILITIES = "NotificationOfUsageOfBerthOrMooringFacilities"
-    APPLICATION_FOR_VESSELS_ENTERING_INTO_PORT_AREA_IN_NIGHT_TIME = "ApplicationForVesselsEnteringIntoPortAreaInNight-Time"
-    NOTIFICATION_OF_EMERGENCY_SHIFTING_FROM_THE_DESIGNATED_PLACE_IN_PORT = "NotificationOfEmergencyShiftingFromTheDesignatedPlaceInPort"
-    CUSTOMS_SUMMARY_DECLARATION_WITHOUT_COMMERCIAL_DETAIL_ALTERNATE = "CustomsSummaryDeclarationWithoutCommercialDetailAlternate"
+    NOTIFICATION_OF_USAGE_OF_BERTH_OR_MOORING_FACILITIES = (
+        "NotificationOfUsageOfBerthOrMooringFacilities"
+    )
+    APPLICATION_FOR_VESSELS_ENTERING_INTO_PORT_AREA_IN_NIGHT_TIME = (
+        "ApplicationForVesselsEnteringIntoPortAreaInNight-Time"
+    )
+    NOTIFICATION_OF_EMERGENCY_SHIFTING_FROM_THE_DESIGNATED_PLACE_IN_PORT = (
+        "NotificationOfEmergencyShiftingFromTheDesignatedPlaceInPort"
+    )
+    CUSTOMS_SUMMARY_DECLARATION_WITHOUT_COMMERCIAL_DETAIL_ALTERNATE = (
+        "CustomsSummaryDeclarationWithoutCommercialDetailAlternate"
+    )
     PERFORMANCE_BOND = "PerformanceBond"
     PAYMENT_BOND = "PaymentBond"
     ADVICE_OF_DISTRIBUTION_OF_DOCUMENTS = "AdviceOfDistributionOfDocuments"
@@ -399,18 +537,26 @@ class PackageDocDocumentTypeCoded(Enum):
     EXCEPTIONAL_ORDER = "ExceptionalOrder"
     TRANSSHIPMENT_ORDER = "TransshipmentOrder"
     CROSS_DOCKING_ORDER = "CrossDockingOrder"
-    MEANS_OF_TRANSPORTATION_AVAILABILITY_INFORMATION = "MeansOfTransportationAvailabilityInformation"
-    MEANS_OF_TRANSPORTATION_SCHEDULE_INFORMATION = "MeansOfTransportationScheduleInformation"
+    MEANS_OF_TRANSPORTATION_AVAILABILITY_INFORMATION = (
+        "MeansOfTransportationAvailabilityInformation"
+    )
+    MEANS_OF_TRANSPORTATION_SCHEDULE_INFORMATION = (
+        "MeansOfTransportationScheduleInformation"
+    )
     TRANSPORT_EQUIPMENT_DELIVERY_NOTICE = "TransportEquipmentDeliveryNotice"
     INSTRUCTIONS_FOR_BANK_TRANSFER = "InstructionsForBankTransfer"
     APPLICATION_FOR_BANKERS_DRAFT = "ApplicationForBankersDraft"
     COLLECTION_PAYMENT_ADVICE = "CollectionPaymentAdvice"
     DOCUMENTARY_CREDIT_PAYMENT_ADVICE = "DocumentaryCreditPaymentAdvice"
     DOCUMENTARY_CREDIT_ACCEPTANCE_ADVICE = "DocumentaryCreditAcceptanceAdvice"
-    DOCUMENTARY_CREDIT_NEGOTIATION_ADVICE = "DocumentaryCreditNegotiationAdvice"
+    DOCUMENTARY_CREDIT_NEGOTIATION_ADVICE = (
+        "DocumentaryCreditNegotiationAdvice"
+    )
     APPLICATION_FOR_BANKERS_GUARANTEE = "ApplicationForBankersGuarantee"
     BANKERS_GUARANTEE = "BankersGuarantee"
-    DOCUMENTARY_CREDIT_LETTER_OF_INDEMNITY = "DocumentaryCreditLetterOfIndemnity"
+    DOCUMENTARY_CREDIT_LETTER_OF_INDEMNITY = (
+        "DocumentaryCreditLetterOfIndemnity"
+    )
     PREADVICE_OF_ACREDIT = "PreadviceOfACredit"
     COLLECTION_ORDER = "CollectionOrder"
     DOCUMENTS_PRESENTATION_FORM = "DocumentsPresentationForm"
@@ -426,7 +572,9 @@ class PackageDocDocumentTypeCoded(Enum):
     DOCUMENTARY_CREDIT = "DocumentaryCredit"
     DOCUMENTARY_CREDIT_NOTIFICATION = "DocumentaryCreditNotification"
     DOCUMENTARY_CREDIT_TRANSFER_ADVICE = "DocumentaryCreditTransferAdvice"
-    DOCUMENTARY_CREDIT_AMENDMENT_NOTIFICATION = "DocumentaryCreditAmendmentNotification"
+    DOCUMENTARY_CREDIT_AMENDMENT_NOTIFICATION = (
+        "DocumentaryCreditAmendmentNotification"
+    )
     DOCUMENTARY_CREDIT_AMENDMENT = "DocumentaryCreditAmendment"
     REMITTANCE_ADVICE = "RemittanceAdvice"
     BANKERS_DRAFT = "BankersDraft"
@@ -436,7 +584,9 @@ class PackageDocDocumentTypeCoded(Enum):
     STATEMENT_OF_ACCOUNT_MESSAGE = "StatementOfAccountMessage"
     INSURANCE_CERTIFICATE = "InsuranceCertificate"
     INSURANCE_POLICY = "InsurancePolicy"
-    INSURANCE_DECLARATION_SHEET_BORDEREAU = "InsuranceDeclarationSheetBordereau"
+    INSURANCE_DECLARATION_SHEET_BORDEREAU = (
+        "InsuranceDeclarationSheetBordereau"
+    )
     INSURERS_INVOICE = "InsurersInvoice"
     COVER_NOTE = "CoverNote"
     FORWARDING_INSTRUCTIONS = "ForwardingInstructions"
@@ -453,7 +603,9 @@ class PackageDocDocumentTypeCoded(Enum):
     HANDLING_ORDER = "HandlingOrder"
     GATE_PASS = "GatePass"
     WAYBILL = "Waybill"
-    UNIVERSAL_MULTIPURPOSE_TRANSPORT_DOCUMENT = "UniversalMultipurposeTransportDocument"
+    UNIVERSAL_MULTIPURPOSE_TRANSPORT_DOCUMENT = (
+        "UniversalMultipurposeTransportDocument"
+    )
     GOODS_RECEIPT_CARRIAGE = "GoodsReceiptCarriage"
     HOUSE_WAYBILL = "HouseWaybill"
     MASTER_BILL_OF_LADING = "MasterBillOfLading"
@@ -464,10 +616,14 @@ class PackageDocDocumentTypeCoded(Enum):
     TANKER_BILL_OF_LADING = "TankerBillOfLading"
     SEA_WAYBILL = "SeaWaybill"
     INLAND_WATERWAY_BILL_OF_LADING = "InlandWaterwayBillOfLading"
-    NON_NEGOTIABLE_MARITIME_TRANSPORT_DOCUMENT_GENERIC = "Non-NegotiableMaritimeTransportDocumentGeneric"
+    NON_NEGOTIABLE_MARITIME_TRANSPORT_DOCUMENT_GENERIC = (
+        "Non-NegotiableMaritimeTransportDocumentGeneric"
+    )
     MATES_RECEIPT = "MatesReceipt"
     HOUSE_BILL_OF_LADING = "HouseBillOfLading"
-    LETTER_OF_INDEMNITY_FOR_NON_SURRENDER_OF_BILL_OF_LADING = "LetterOfIndemnityForNon-SurrenderOfBillOfLading"
+    LETTER_OF_INDEMNITY_FOR_NON_SURRENDER_OF_BILL_OF_LADING = (
+        "LetterOfIndemnityForNon-SurrenderOfBillOfLading"
+    )
     FORWARDERS_BILL_OF_LADING = "ForwardersBillOfLading"
     RAIL_CONSIGNMENT_NOTE_GENERIC_TERM = "RailConsignmentNoteGenericTerm"
     ROAD_LIST_SMGS = "RoadList-Smgs"
@@ -481,18 +637,28 @@ class PackageDocDocumentTypeCoded(Enum):
     PASSENGER_LIST = "PassengerList"
     DELIVERY_NOTICE_RAIL_TRANSPORT = "DeliveryNoticeRailTransport"
     DESPATCH_NOTE_POST_PARCELS = "DespatchNotePostParcels"
-    MULTIMODAL_COMBINED_TRANSPORT_DOCUMENT_GENERIC = "MultimodalCombinedTransportDocumentGeneric"
+    MULTIMODAL_COMBINED_TRANSPORT_DOCUMENT_GENERIC = (
+        "MultimodalCombinedTransportDocumentGeneric"
+    )
     THROUGH_BILL_OF_LADING = "ThroughBillOfLading"
     FORWARDERS_CERTIFICATE_OF_TRANSPORT = "ForwardersCertificateOfTransport"
     COMBINED_TRANSPORT_DOCUMENT_GENERIC = "CombinedTransportDocumentGeneric"
-    MULTIMODAL_TRANSPORT_DOCUMENT_GENERIC = "MultimodalTransportDocumentGeneric"
-    COMBINED_TRANSPORT_BILL_OF_LADING_MULTIMODAL_BILL_OF_LADING = "CombinedTransportBillOfLadingMultimodalBillOfLading"
+    MULTIMODAL_TRANSPORT_DOCUMENT_GENERIC = (
+        "MultimodalTransportDocumentGeneric"
+    )
+    COMBINED_TRANSPORT_BILL_OF_LADING_MULTIMODAL_BILL_OF_LADING = (
+        "CombinedTransportBillOfLadingMultimodalBillOfLading"
+    )
     BOOKING_CONFIRMATION = "BookingConfirmation"
     CALLING_FORWARD_NOTICE = "CallingForwardNotice"
     FREIGHT_INVOICE = "FreightInvoice"
     ARRIVAL_NOTICE_GOODS = "ArrivalNoticeGoods"
-    NOTICE_OF_CIRCUMSTANCES_PREVENTING_DELIVERY_GOODS = "NoticeOfCircumstancesPreventingDeliveryGoods"
-    NOTICE_OF_CIRCUMSTANCES_PREVENTING_TRANSPORT_GOODS = "NoticeOfCircumstancesPreventingTransportGoods"
+    NOTICE_OF_CIRCUMSTANCES_PREVENTING_DELIVERY_GOODS = (
+        "NoticeOfCircumstancesPreventingDeliveryGoods"
+    )
+    NOTICE_OF_CIRCUMSTANCES_PREVENTING_TRANSPORT_GOODS = (
+        "NoticeOfCircumstancesPreventingTransportGoods"
+    )
     DELIVERY_NOTICE_GOODS = "DeliveryNoticeGoods"
     CARGO_MANIFEST = "CargoManifest"
     FREIGHT_MANIFEST = "FreightManifest"
@@ -520,13 +686,19 @@ class PackageDocDocumentTypeCoded(Enum):
     DESPATCH_NOTE_MODEL_T2_L = "DespatchNoteModelT2L"
     GOODS_DECLARATION_FOR_EXPORTATION = "GoodsDeclarationForExportation"
     CARGO_DECLARATION_DEPARTURE = "CargoDeclarationDeparture"
-    APPLICATION_FOR_GOODS_CONTROL_CERTIFICATE = "ApplicationForGoodsControlCertificate"
+    APPLICATION_FOR_GOODS_CONTROL_CERTIFICATE = (
+        "ApplicationForGoodsControlCertificate"
+    )
     GOODS_CONTROL_CERTIFICATE = "GoodsControlCertificate"
-    APPLICATION_FOR_PHYTOSANITARY_CERTIFICATE = "ApplicationForPhytosanitaryCertificate"
+    APPLICATION_FOR_PHYTOSANITARY_CERTIFICATE = (
+        "ApplicationForPhytosanitaryCertificate"
+    )
     PHYTOSANITARY_CERTIFICATE = "PhytosanitaryCertificate"
     SANITARY_CERTIFICATE = "SanitaryCertificate"
     VETERINARY_CERTIFICATE = "VeterinaryCertificate"
-    APPLICATION_FOR_INSPECTION_CERTIFICATE = "ApplicationForInspectionCertificate"
+    APPLICATION_FOR_INSPECTION_CERTIFICATE = (
+        "ApplicationForInspectionCertificate"
+    )
     INSPECTION_CERTIFICATE = "InspectionCertificate"
     CERTIFICATE_OF_ORIGIN_APPLICATION_FOR = "CertificateOfOriginApplicationFor"
     CERTIFICATE_OF_ORIGIN = "CertificateOfOrigin"
@@ -541,9 +713,15 @@ class PackageDocDocumentTypeCoded(Enum):
     DELIVERY_VERIFICATION_CERTIFICATE = "DeliveryVerificationCertificate"
     IMPORT_LICENCE_APPLICATION_FOR = "ImportLicenceApplicationFor"
     IMPORT_LICENCE = "ImportLicence"
-    CUSTOMS_DECLARATION_WITHOUT_COMMERCIAL_DETAIL = "CustomsDeclarationWithoutCommercialDetail"
-    CUSTOMS_DECLARATION_WITH_COMMERCIAL_AND_ITEM_DETAIL = "CustomsDeclarationWithCommercialAndItemDetail"
-    CUSTOMS_DECLARATION_WITHOUT_ITEM_DETAIL = "CustomsDeclarationWithoutItemDetail"
+    CUSTOMS_DECLARATION_WITHOUT_COMMERCIAL_DETAIL = (
+        "CustomsDeclarationWithoutCommercialDetail"
+    )
+    CUSTOMS_DECLARATION_WITH_COMMERCIAL_AND_ITEM_DETAIL = (
+        "CustomsDeclarationWithCommercialAndItemDetail"
+    )
+    CUSTOMS_DECLARATION_WITHOUT_ITEM_DETAIL = (
+        "CustomsDeclarationWithoutItemDetail"
+    )
     RELATED_DOCUMENT = "RelatedDocument"
     RECEIPT_CUSTOMS = "ReceiptCustoms"
     APPLICATION_FOR_EXCHANGE_ALLOCATION = "ApplicationForExchangeAllocation"
@@ -551,7 +729,9 @@ class PackageDocDocumentTypeCoded(Enum):
     EXCHANGE_CONTROL_DECLARATION_IMPORT = "ExchangeControlDeclarationImport"
     GOODS_DECLARATION_FOR_IMPORTATION = "GoodsDeclarationForImportation"
     GOODS_DECLARATION_FOR_HOME_USE = "GoodsDeclarationForHomeUse"
-    CUSTOMS_IMMEDIATE_RELEASE_DECLARATION = "CustomsImmediateReleaseDeclaration"
+    CUSTOMS_IMMEDIATE_RELEASE_DECLARATION = (
+        "CustomsImmediateReleaseDeclaration"
+    )
     CUSTOMS_DELIVERY_NOTE = "CustomsDeliveryNote"
     CARGO_DECLARATION_ARRIVAL = "CargoDeclarationArrival"
     VALUE_DECLARATION = "ValueDeclaration"
@@ -572,7 +752,9 @@ class PackageDocDocumentTypeCoded(Enum):
     DOCUMENT_RESPONSE_CUSTOMS = "DocumentResponseCustoms"
     ERROR_RESPONSE_CUSTOMS = "ErrorResponseCustoms"
     PACKAGE_RESPONSE_CUSTOMS = "PackageResponseCustoms"
-    TAX_CALCULATION_CONFIRMATION_RESPONSE_CUSTOMS = "TaxCalculationConfirmationResponseCustoms"
+    TAX_CALCULATION_CONFIRMATION_RESPONSE_CUSTOMS = (
+        "TaxCalculationConfirmationResponseCustoms"
+    )
     QUOTA_PRIOR_ALLOCATION_CERTIFICATE = "QuotaPriorAllocationCertificate"
     END_USE_AUTHORIZATION = "EndUseAuthorization"
     GOVERNMENT_CONTRACT = "GovernmentContract"
@@ -595,14 +777,14 @@ class PackageIdentifier:
         metadata={
             "name": "PackageIdentifierCodedOther",
             "type": "Element",
-        }
+        },
     )
     package_identifier_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "PackageIdentifierValue",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -620,14 +802,14 @@ class PackageMark:
         metadata={
             "name": "PackageMarkCodedOther",
             "type": "Element",
-        }
+        },
     )
     package_mark_value: Optional[str] = field(
         default=None,
         metadata={
             "name": "PackageMarkValue",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -645,14 +827,14 @@ class SpecialHandling:
         metadata={
             "name": "SpecialHandlingCodedOther",
             "type": "Element",
-        }
+        },
     )
     special_handling_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "SpecialHandlingNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -680,25 +862,29 @@ class HazardousPackaging:
 
 @dataclass(kw_only=True)
 class ListOfLocationGroupedShippingDetail:
-    location_grouped_shipping_detail: List[LocationGroupedShippingDetail] = field(
+    location_grouped_shipping_detail: List[
+        LocationGroupedShippingDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "LocationGroupedShippingDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ListOfMaterialGroupedShippingDetail:
-    material_grouped_shipping_detail: List[MaterialGroupedShippingDetail] = field(
+    material_grouped_shipping_detail: List[
+        MaterialGroupedShippingDetail
+    ] = field(
         default_factory=list,
         metadata={
             "name": "MaterialGroupedShippingDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -710,7 +896,7 @@ class ListOfPackageIdentifier:
             "name": "PackageIdentifier",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -722,7 +908,7 @@ class ListOfPackageMark:
             "name": "PackageMark",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -762,14 +948,14 @@ class PackageDoc:
         metadata={
             "name": "DocumentTypeCodedOther",
             "type": "Attribute",
-        }
+        },
     )
     document_title: Optional[str] = field(
         default=None,
         metadata={
             "name": "DocumentTitle",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -835,28 +1021,28 @@ class OrderReferences:
         metadata={
             "name": "AccountCode",
             "type": "Element",
-        }
+        },
     )
     contract_references: Optional[ContractReferences] = field(
         default=None,
         metadata={
             "name": "ContractReferences",
             "type": "Element",
-        }
+        },
     )
     quote_reference: Optional[QuoteReference] = field(
         default=None,
         metadata={
             "name": "QuoteReference",
             "type": "Element",
-        }
+        },
     )
     other_order_references: Optional[OtherOrderReferences] = field(
         default=None,
         metadata={
             "name": "OtherOrderReferences",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -874,14 +1060,16 @@ class PackageCharacteristic:
         metadata={
             "name": "PackageCharacteristicCodedOther",
             "type": "Element",
-        }
+        },
     )
-    package_characteristic_description: PackageCharacteristicDescription = field(
-        metadata={
-            "name": "PackageCharacteristicDescription",
-            "type": "Element",
-            "required": True,
-        }
+    package_characteristic_description: PackageCharacteristicDescription = (
+        field(
+            metadata={
+                "name": "PackageCharacteristicDescription",
+                "type": "Element",
+                "required": True,
+            }
+        )
     )
 
 
@@ -892,21 +1080,21 @@ class PackageDescription:
         metadata={
             "name": "ListOfPackageIdentifier",
             "type": "Element",
-        }
+        },
     )
     container_counter: Optional[str] = field(
         default=None,
         metadata={
             "name": "ContainerCounter",
             "type": "Element",
-        }
+        },
     )
     load_order_counter: Optional[str] = field(
         default=None,
         metadata={
             "name": "LoadOrderCounter",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -924,60 +1112,62 @@ class PackageType:
         metadata={
             "name": "PackageTypeCodedOther",
             "type": "Element",
-        }
+        },
     )
     package_type_description: Optional[PackageTypeDescription] = field(
         default=None,
         metadata={
             "name": "PackageTypeDescription",
             "type": "Element",
-        }
+        },
     )
 
 
 @dataclass(kw_only=True)
 class ReturnableContainerInfo:
-    returnable_container_part_number: Optional[ReturnableContainerPartNumber] = field(
+    returnable_container_part_number: Optional[
+        ReturnableContainerPartNumber
+    ] = field(
         default=None,
         metadata={
             "name": "ReturnableContainerPartNumber",
             "type": "Element",
-        }
+        },
     )
     payment_responsibility_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentResponsibilityCoded",
             "type": "Element",
-        }
+        },
     )
     payment_responsibility_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "PaymentResponsibilityCodedOther",
             "type": "Element",
-        }
+        },
     )
     return_load_coded: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReturnLoadCoded",
             "type": "Element",
-        }
+        },
     )
     return_load_coded_other: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReturnLoadCodedOther",
             "type": "Element",
-        }
+        },
     )
     return_note: Optional[str] = field(
         default=None,
         metadata={
             "name": "ReturnNote",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -989,7 +1179,7 @@ class ListOfDocumentAttached:
             "name": "DocumentAttached",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1001,7 +1191,7 @@ class ListOfDocumentLoose:
             "name": "DocumentLoose",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1013,7 +1203,7 @@ class ListOfOrderReferences:
             "name": "OrderReferences",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1025,7 +1215,7 @@ class ListOfPackageCharacteristic:
             "name": "PackageCharacteristic",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1037,7 +1227,7 @@ class ListOfPackageDescription:
             "name": "PackageDescription",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1048,14 +1238,14 @@ class AssociatedDocuments:
         metadata={
             "name": "ListOfDocumentLoose",
             "type": "Element",
-        }
+        },
     )
     list_of_document_attached: Optional[ListOfDocumentAttached] = field(
         default=None,
         metadata={
             "name": "ListOfDocumentAttached",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1084,84 +1274,86 @@ class Package:
         metadata={
             "name": "ListOfItemReference",
             "type": "Element",
-        }
+        },
     )
     list_of_package_mark: Optional[ListOfPackageMark] = field(
         default=None,
         metadata={
             "name": "ListOfPackageMark",
             "type": "Element",
-        }
+        },
     )
-    list_of_package_characteristic: Optional[ListOfPackageCharacteristic] = field(
+    list_of_package_characteristic: Optional[
+        ListOfPackageCharacteristic
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfPackageCharacteristic",
             "type": "Element",
-        }
+        },
     )
     list_of_dimension: Optional[ListOfDimension] = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-        }
+        },
     )
     list_of_package_description: Optional[ListOfPackageDescription] = field(
         default=None,
         metadata={
             "name": "ListOfPackageDescription",
             "type": "Element",
-        }
+        },
     )
     transport_reference: Optional[str] = field(
         default=None,
         metadata={
             "name": "TransportReference",
             "type": "Element",
-        }
+        },
     )
     special_handling: Optional[SpecialHandling] = field(
         default=None,
         metadata={
             "name": "SpecialHandling",
             "type": "Element",
-        }
+        },
     )
     hazardous_packaging: Optional[HazardousPackaging] = field(
         default=None,
         metadata={
             "name": "HazardousPackaging",
             "type": "Element",
-        }
+        },
     )
     associated_documents: Optional[AssociatedDocuments] = field(
         default=None,
         metadata={
             "name": "AssociatedDocuments",
             "type": "Element",
-        }
+        },
     )
     shipping_instructions: Optional[str] = field(
         default=None,
         metadata={
             "name": "ShippingInstructions",
             "type": "Element",
-        }
+        },
     )
     returnable_container_info: Optional[ReturnableContainerInfo] = field(
         default=None,
         metadata={
             "name": "ReturnableContainerInfo",
             "type": "Element",
-        }
+        },
     )
     package_detail: List["PackageDetail"] = field(
         default_factory=list,
         metadata={
             "name": "PackageDetail",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1173,7 +1365,7 @@ class ListOfPackage:
             "name": "Package",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1198,7 +1390,7 @@ class PackageDetail:
         metadata={
             "name": "ListOfPackage",
             "type": "Element",
-        }
+        },
     )
 
 
@@ -1210,7 +1402,7 @@ class ListOfPackageDetail:
             "name": "PackageDetail",
             "type": "Element",
             "min_occurs": 1,
-        }
+        },
     )
 
 
@@ -1223,31 +1415,35 @@ class ShippingSchedule:
             "required": True,
         }
     )
-    list_of_location_grouped_shipping_detail: Optional[ListOfLocationGroupedShippingDetail] = field(
+    list_of_location_grouped_shipping_detail: Optional[
+        ListOfLocationGroupedShippingDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfLocationGroupedShippingDetail",
             "type": "Element",
-        }
+        },
     )
-    list_of_material_grouped_shipping_detail: Optional[ListOfMaterialGroupedShippingDetail] = field(
+    list_of_material_grouped_shipping_detail: Optional[
+        ListOfMaterialGroupedShippingDetail
+    ] = field(
         default=None,
         metadata={
             "name": "ListOfMaterialGroupedShippingDetail",
             "type": "Element",
-        }
+        },
     )
     list_of_package_detail: Optional[ListOfPackageDetail] = field(
         default=None,
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
-        }
+        },
     )
     shipping_schedule_summary: Optional[ShippingScheduleSummary] = field(
         default=None,
         metadata={
             "name": "ShippingScheduleSummary",
             "type": "Element",
-        }
+        },
     )

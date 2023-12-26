@@ -50,83 +50,83 @@ from xsdata.models.datatype import XmlDuration
 
 obj = PublicationDelivery(
     publication_timestamp=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
-    participant_ref="ODAtransport_TDM",
+    participant_ref='ODAtransport_TDM',
     description=MultilingualString(
-        value="Olympic Venue Definitions"
+        value='Olympic Venue Definitions'
     ),
     data_objects=DataObjectsRelStructure(
         choice=[
             CompositeFrame(
-                id="oda:OPK_all",
-                version="1.1",
+                id='oda:OPK_all',
+                version='1.1',
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         Codespace(
-                            id="napt_metadata",
-                            xmlns="napt",
-                            xmlns_url="http://www.naptan.org.uk/naptan",
-                            description="UK NaPTAN Stop Place codes"
+                            id='napt_metadata',
+                            xmlns='napt',
+                            xmlns_url='http://www.naptan.org.uk/naptan',
+                            description='UK NaPTAN Stop Place codes'
                         ),
                         Codespace(
-                            id="naptPoi_data",
-                            xmlns="naptPoi",
-                            xmlns_url="http://www.naptan.org.uk/pois",
-                            description="UK NaPTAN POI codes"
+                            id='naptPoi_data',
+                            xmlns='naptPoi',
+                            xmlns_url='http://www.naptan.org.uk/pois',
+                            description='UK NaPTAN POI codes'
                         ),
                         Codespace(
-                            id="naptStop_data",
-                            xmlns="naptStopi",
-                            xmlns_url="http://www.naptan.org.uk/stops",
-                            description="UK NaPTAN stop  codes"
+                            id='naptStop_data',
+                            xmlns='naptStopi',
+                            xmlns_url='http://www.naptan.org.uk/stops',
+                            description='UK NaPTAN stop  codes'
                         ),
                         Codespace(
-                            id="oda",
-                            xmlns="iso3166-2",
-                            xmlns_url="http://www.oda.org.uk/data/",
-                            description="data from Olympica Developmnet Authority"
+                            id='oda',
+                            xmlns='iso3166-2',
+                            xmlns_url='http://www.oda.org.uk/data/',
+                            description='data from Olympica Developmnet Authority'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
-                        ref="oda"
+                        ref='oda'
                     )
                 ),
                 frames=FramesRelStructure(
                     choice=[
                         SiteFrame(
-                            id="oda:OPK",
+                            id='oda:OPK',
                             created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Olympic Park"
+                                value='Olympic Park'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100OPK",
+                                        id='naptPoi:8100OPK',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Olympic Park"
+                                            value='Olympic Park'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Olympic Park"
+                                                value='Olympic Park'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Park"
+                                            ref='Park'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -143,19 +143,19 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Park",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Park',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Parc Olympique",
-                                                        lang="fr"
+                                                        value='Parc Olympique',
+                                                        lang='fr'
                                                     )
                                                 ),
                                             ]
@@ -163,13 +163,13 @@ obj = PublicationDelivery(
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPKgN",
+                                                    id='naptPoi:8100OPKgN',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Northern Spectator Gate"
+                                                        value='Northern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -184,8 +184,8 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
@@ -193,36 +193,36 @@ obj = PublicationDelivery(
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgN@SecQ",
+                                                                id='oda:8100OPKgN@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Northern Gate Security Queue"
+                                                                    value='Olympic Park Northern Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
                                                                 congestion=CongestionEnumeration.QUEUE,
                                                                 facility_ref=FacilityRef(
-                                                                    ref="12345"
+                                                                    ref='12345'
                                                                 ),
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgN@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100OPKgN@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgN@ExitQ",
+                                                                id='oda:8100OPKgN@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Northern Gate Congestion"
+                                                                    value='Olympic Park Northern Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -230,9 +230,9 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgN@ExitQ",
+                                                                            id='oda:8100OPKgN@ExitQ',
                                                                             created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                            version="any",
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -243,13 +243,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPKgE",
+                                                    id='naptPoi:8100OPKgE',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Eastern (Stratford) Spectator Gate"
+                                                        value='Eastern (Stratford) Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -264,21 +264,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgE@SecQ",
+                                                                id='oda:8100OPKgE@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Eastern Gate Security Queue"
+                                                                    value='Olympic Park Eastern Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -286,19 +286,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgE@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100OPKgE@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgE@ExitQ",
+                                                                id='oda:8100OPKgE@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Eastern Gate Congestion"
+                                                                    value='Olympic Park Eastern Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -306,8 +306,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgE@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100OPKgE@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -318,13 +318,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPKgS",
+                                                    id='naptPoi:8100OPKgS',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Southern Spectator Gate"
+                                                        value='Southern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -339,21 +339,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgS@SecQ",
+                                                                id='oda:8100OPKgS@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Southern Gate Security Queue"
+                                                                    value='Olympic Park Southern Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -361,19 +361,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgS@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100OPKgS@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgS@ExitQ",
+                                                                id='oda:8100OPKgS@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Southern Gate Congestion"
+                                                                    value='Olympic Park Southern Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -381,8 +381,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgS@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100OPKgS@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -393,13 +393,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100OPKgW",
+                                                    id='naptPoi:8100OPKgW',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Western Spectator Gate"
+                                                        value='Western Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -414,21 +414,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgW@SecQ",
+                                                                id='oda:8100OPKgW@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Western Gate Security Queue"
+                                                                    value='Olympic Park Western Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -436,19 +436,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgW@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100OPKgW@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100OPKgW@ExitQ",
+                                                                id='oda:8100OPKgW@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Olympic Park Western Gate Congestion"
+                                                                    value='Olympic Park Western Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -456,8 +456,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100OPKgW@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100OPKgW@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -471,27 +471,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100AQC",
+                                        id='naptPoi:8100AQC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Aquatics Centre"
+                                            value='Aquatics Centre'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Aquatics Centre"
+                                                value='Aquatics Centre'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -508,49 +508,49 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Centre aquatique"
+                                                        value='Centre aquatique'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100STA",
+                                        id='naptPoi:8100STA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Olympic Stadium"
+                                            value='Olympic Stadium'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Olympic Stadium"
+                                                value='Olympic Stadium'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -567,49 +567,49 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Stade olympique"
+                                                        value='Stade olympique'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100VEL",
+                                        id='naptPoi:8100VEL',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 7, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Velodrome"
+                                            value='Velodrome'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Velodrome"
+                                                value='Velodrome'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -626,49 +626,49 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Vélodrome"
+                                                        value='Vélodrome'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100BBA",
+                                        id='naptPoi:8100BBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Basketball Arena"
+                                            value='Basketball Arena'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Basketball Arena"
+                                                value='Basketball Arena'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -685,49 +685,49 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Pavillon de basketball"
+                                                        value='Pavillon de basketball'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100HOC",
+                                        id='naptPoi:8100HOC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 4, 28, 12, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hockey Centre"
+                                            value='Hockey Centre'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Hockey Centre"
+                                                value='Hockey Centre'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -744,49 +744,49 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Centre de Hockey"
+                                                        value='Centre de Hockey'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100AWP",
+                                        id='naptPoi:8100AWP',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Water Polo Arena"
+                                            value='Water Polo Arena'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Water Polo Arena"
+                                                value='Water Polo Arena'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -803,49 +803,49 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Pavillon de water-polo"
+                                                        value='Pavillon de water-polo'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100HBA",
+                                        id='naptPoi:8100HBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Handball Arena"
+                                            value='Handball Arena'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Handball Arena"
+                                                value='Handball Arena'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -862,49 +862,49 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Pavillon de handball"
+                                                        value='Pavillon de handball'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100BMX",
+                                        id='naptPoi:8100BMX',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 19, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BMX Track"
+                                            value='BMX Track'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="BMX Track"
+                                                value='BMX Track'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -921,47 +921,47 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         alternative_names=AlternativeNamesRelStructure(
                                             alternative_name=[
                                                 AlternativeName(
-                                                    lang="fr",
+                                                    lang='fr',
                                                     name_type=NameTypeEnumeration.TRANSLATION,
                                                     name=MultilingualString(
-                                                        value="Piste de BMX"
+                                                        value='Piste de BMX'
                                                     )
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100ETM",
+                                        id='naptPoi:8100ETM',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Manor"
+                                            value='Eton Manor'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Eton Manor (Paralympics only)"
+                                                value='Eton Manor (Paralympics only)'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -978,14 +978,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100OPK"
+                                            version='any',
+                                            ref='naptPoi:8100OPK'
                                         )
                                     ),
                                 ]
@@ -993,29 +993,29 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100OPKgE_HOC",
+                                        id='oda:8100OPKgE_HOC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Hockey Centre"
+                                            value='OPK East Entrance to Hockey Centre'
                                         ),
-                                        distance=Decimal("1562"),
+                                        distance=Decimal('1562'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1023,29 +1023,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HOC_OPKgE",
+                                        id='oda:8100OPK_HOC_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hockey Centre to OPK East Entrance"
+                                            value='Hockey Centre to OPK East Entrance'
                                         ),
-                                        distance=Decimal("1562"),
+                                        distance=Decimal('1562'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1053,27 +1053,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_HBA",
+                                        id='oda:8100OPKgE_HBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Handball Arena"
+                                            value='OPK East Entrance to Handball Arena'
                                         ),
-                                        distance=Decimal("1033"),
+                                        distance=Decimal('1033'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1081,29 +1081,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HBA_OPKgE",
+                                        id='oda:8100OPK_HBA_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Handball Arena to OPK East Entrance"
+                                            value='Handball Arena to OPK East Entrance'
                                         ),
-                                        distance=Decimal("1033"),
+                                        distance=Decimal('1033'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1111,27 +1111,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_STA",
+                                        id='oda:8100OPKgE_STA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Olympic Stadium"
+                                            value='OPK East Entrance to Olympic Stadium'
                                         ),
-                                        distance=Decimal("442"),
+                                        distance=Decimal('442'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1139,29 +1139,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_STA_OPKgE",
+                                        id='oda:8100OPK_STA_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Olympic Stadium to OPK East Entrance"
+                                            value='Olympic Stadium to OPK East Entrance'
                                         ),
-                                        distance=Decimal("442"),
+                                        distance=Decimal('442'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1169,29 +1169,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_BBA",
+                                        id='oda:8100OPKgE_BBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Basketball Arena"
+                                            value='OPK East Entrance to Basketball Arena'
                                         ),
-                                        distance=Decimal("1707"),
+                                        distance=Decimal('1707'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1199,29 +1199,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BBA_OPKgE",
+                                        id='oda:8100OPK_BBA_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Basketball Arena to OPK East Entrance"
+                                            value='Basketball Arena to OPK East Entrance'
                                         ),
-                                        distance=Decimal("1707"),
+                                        distance=Decimal('1707'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1229,27 +1229,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_AWP",
+                                        id='oda:8100OPKgE_AWP',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Water Polo Arena"
+                                            value='OPK East Entrance to Water Polo Arena'
                                         ),
-                                        distance=Decimal("566"),
+                                        distance=Decimal('566'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1257,29 +1257,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AWP_OPKgE",
+                                        id='oda:8100OPK_AWP_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Water Polo Arena to OPK East Entrance"
+                                            value='Water Polo Arena to OPK East Entrance'
                                         ),
-                                        distance=Decimal("566"),
+                                        distance=Decimal('566'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1287,27 +1287,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_AQC",
+                                        id='oda:8100OPKgE_AQC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Aquatics Centre"
+                                            value='OPK East Entrance to Aquatics Centre'
                                         ),
-                                        distance=Decimal("631"),
+                                        distance=Decimal('631'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1315,29 +1315,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AQC_OPKgE",
+                                        id='oda:8100OPK_AQC_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Aquatics Centre to OPK East Entrance"
+                                            value='Aquatics Centre to OPK East Entrance'
                                         ),
-                                        distance=Decimal("631"),
+                                        distance=Decimal('631'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1345,29 +1345,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_VEL",
+                                        id='oda:8100OPKgE_VEL',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Velodrome"
+                                            value='OPK East Entrance to Velodrome'
                                         ),
-                                        distance=Decimal("1826"),
+                                        distance=Decimal('1826'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1375,29 +1375,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_VEL_OPKgE",
+                                        id='oda:8100OPK_VEL_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Velodrome to OPK East Entrance"
+                                            value='Velodrome to OPK East Entrance'
                                         ),
-                                        distance=Decimal("1826"),
+                                        distance=Decimal('1826'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1405,29 +1405,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_ETM",
+                                        id='oda:8100OPKgE_ETM',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to Eton Manor"
+                                            value='OPK East Entrance to Eton Manor'
                                         ),
-                                        distance=Decimal("2086"),
+                                        distance=Decimal('2086'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1435,29 +1435,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_ETM_OPKgE",
+                                        id='oda:8100OPK_ETM_OPKgE',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Manor to OPK East Entrance"
+                                            value='Eton Manor to OPK East Entrance'
                                         ),
-                                        distance=Decimal("2086"),
+                                        distance=Decimal('2086'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1465,29 +1465,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_BMX",
+                                        id='oda:8100OPKgE_BMX',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to BMX Circuit"
+                                            value='OPK East Entrance to BMX Circuit'
                                         ),
-                                        distance=Decimal("2076"),
+                                        distance=Decimal('2076'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1495,29 +1495,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BMX_OPKgE",
+                                        id='oda:8100OPK_BMX_OPKgE',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BMX Circuit to OPK East Entrance"
+                                            value='BMX Circuit to OPK East Entrance'
                                         ),
-                                        distance=Decimal("2076"),
+                                        distance=Decimal('2076'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1525,29 +1525,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgE_OPK",
+                                        id='oda:8100OPKgE_OPK',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK East Entrance to centre of Olympic Park"
+                                            value='OPK East Entrance to centre of Olympic Park'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1555,29 +1555,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_OPK_OPKgE",
+                                        id='oda:8100OPK_OPK_OPKgE',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="centre of Olympic Park to OPK East Entrance"
+                                            value='centre of Olympic Park to OPK East Entrance'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgE"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1585,29 +1585,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_HOC",
+                                        id='oda:8100OPKgS_HOC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Hockey Centre"
+                                            value='OPK South Entrance to Hockey Centre'
                                         ),
-                                        distance=Decimal("1627"),
+                                        distance=Decimal('1627'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1615,29 +1615,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HOC_OPKgS",
+                                        id='oda:8100OPK_HOC_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hockey Centre to OPK South Entrance"
+                                            value='Hockey Centre to OPK South Entrance'
                                         ),
-                                        distance=Decimal("1627"),
+                                        distance=Decimal('1627'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1645,29 +1645,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_HBA",
+                                        id='oda:8100OPKgS_HBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Handball Arena"
+                                            value='OPK South Entrance to Handball Arena'
                                         ),
-                                        distance=Decimal("1243"),
+                                        distance=Decimal('1243'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1675,29 +1675,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HBA_OPKgS",
+                                        id='oda:8100OPK_HBA_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Handball Arena to OPK South Entrance"
+                                            value='Handball Arena to OPK South Entrance'
                                         ),
-                                        distance=Decimal("1243"),
+                                        distance=Decimal('1243'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1705,27 +1705,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_STA",
+                                        id='oda:8100OPKgS_STA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Olympic Stadium"
+                                            value='OPK South Entrance to Olympic Stadium'
                                         ),
-                                        distance=Decimal("387"),
+                                        distance=Decimal('387'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1733,29 +1733,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_STA_OPKgS",
+                                        id='oda:8100OPK_STA_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Olympic Stadium to OPK South Entrance"
+                                            value='Olympic Stadium to OPK South Entrance'
                                         ),
-                                        distance=Decimal("387"),
+                                        distance=Decimal('387'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1763,29 +1763,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_BBA",
+                                        id='oda:8100OPKgS_BBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Basketball Arena"
+                                            value='OPK South Entrance to Basketball Arena'
                                         ),
-                                        distance=Decimal("1852"),
+                                        distance=Decimal('1852'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1793,29 +1793,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BBA_OPKgS",
+                                        id='oda:8100OPK_BBA_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Basketball Arena to OPK South Entrance"
+                                            value='Basketball Arena to OPK South Entrance'
                                         ),
-                                        distance=Decimal("1852"),
+                                        distance=Decimal('1852'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1823,27 +1823,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_AWP",
+                                        id='oda:8100OPKgS_AWP',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Water Polo Arena"
+                                            value='OPK South Entrance to Water Polo Arena'
                                         ),
-                                        distance=Decimal("774"),
+                                        distance=Decimal('774'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1851,29 +1851,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AWP_OPKgS",
+                                        id='oda:8100OPK_AWP_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Water Polo Arena to OPK South Entrance"
+                                            value='Water Polo Arena to OPK South Entrance'
                                         ),
-                                        distance=Decimal("774"),
+                                        distance=Decimal('774'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1881,27 +1881,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_AQC",
+                                        id='oda:8100OPKgS_AQC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Aquatics Centre"
+                                            value='OPK South Entrance to Aquatics Centre'
                                         ),
-                                        distance=Decimal("470"),
+                                        distance=Decimal('470'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1909,29 +1909,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AQC_OPKgS",
+                                        id='oda:8100OPK_AQC_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Aquatics Centre to OPK South Entrance"
+                                            value='Aquatics Centre to OPK South Entrance'
                                         ),
-                                        distance=Decimal("470"),
+                                        distance=Decimal('470'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1939,29 +1939,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_VEL",
+                                        id='oda:8100OPKgS_VEL',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Velodrome"
+                                            value='OPK South Entrance to Velodrome'
                                         ),
-                                        distance=Decimal("2036"),
+                                        distance=Decimal('2036'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1969,29 +1969,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_VEL_OPKgS",
+                                        id='oda:8100OPK_VEL_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Velodrome to OPK South Entrance"
+                                            value='Velodrome to OPK South Entrance'
                                         ),
-                                        distance=Decimal("2036"),
+                                        distance=Decimal('2036'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -1999,29 +1999,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_ETM",
+                                        id='oda:8100OPKgS_ETM',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to Eton Manor"
+                                            value='OPK South Entrance to Eton Manor'
                                         ),
-                                        distance=Decimal("2296"),
+                                        distance=Decimal('2296'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2029,29 +2029,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_ETM_OPKgS",
+                                        id='oda:8100OPK_ETM_OPKgS',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Manor to OPK South Entrance"
+                                            value='Eton Manor to OPK South Entrance'
                                         ),
-                                        distance=Decimal("2296"),
+                                        distance=Decimal('2296'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2059,29 +2059,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_BMX",
+                                        id='oda:8100OPKgS_BMX',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to BMX Circuit"
+                                            value='OPK South Entrance to BMX Circuit'
                                         ),
-                                        distance=Decimal("2286"),
+                                        distance=Decimal('2286'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2089,29 +2089,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BMX_OPKgS",
+                                        id='oda:8100OPK_BMX_OPKgS',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BMX Circuit to OPK South Entrance"
+                                            value='BMX Circuit to OPK South Entrance'
                                         ),
-                                        distance=Decimal("2286"),
+                                        distance=Decimal('2286'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2119,29 +2119,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgS_OPK",
+                                        id='oda:8100OPKgS_OPK',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK South Entrance to centre of Olympic Park"
+                                            value='OPK South Entrance to centre of Olympic Park'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2149,29 +2149,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_OPK_OPKgS",
+                                        id='oda:8100OPK_OPK_OPKgS',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="centre of Olympic Park to OPK South Entrance"
+                                            value='centre of Olympic Park to OPK South Entrance'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgS"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2179,29 +2179,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_ETM",
+                                        id='oda:8100OPKgN_ETM',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Eton Manor"
+                                            value='OPK North Entrance to Eton Manor'
                                         ),
-                                        distance=Decimal("148"),
+                                        distance=Decimal('148'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2209,29 +2209,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_ETM_OPKgN",
+                                        id='oda:8100OPK_ETM_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Manor to OPK North Entrance"
+                                            value='Eton Manor to OPK North Entrance'
                                         ),
-                                        distance=Decimal("148"),
+                                        distance=Decimal('148'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2239,27 +2239,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_VEL",
+                                        id='oda:8100OPKgN_VEL',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Velodrome"
+                                            value='OPK North Entrance to Velodrome'
                                         ),
-                                        distance=Decimal("407"),
+                                        distance=Decimal('407'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2267,29 +2267,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_VEL_OPKgN",
+                                        id='oda:8100OPK_VEL_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Velodrome to OPK North Entrance"
+                                            value='Velodrome to OPK North Entrance'
                                         ),
-                                        distance=Decimal("407"),
+                                        distance=Decimal('407'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2297,27 +2297,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_BBA",
+                                        id='oda:8100OPKgN_BBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Basketball Arena"
+                                            value='OPK North Entrance to Basketball Arena'
                                         ),
-                                        distance=Decimal("620"),
+                                        distance=Decimal('620'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2325,29 +2325,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BBA_OPKgN",
+                                        id='oda:8100OPK_BBA_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Basketball Arena to OPK North Entrance"
+                                            value='Basketball Arena to OPK North Entrance'
                                         ),
-                                        distance=Decimal("620"),
+                                        distance=Decimal('620'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2355,27 +2355,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_HOC",
+                                        id='oda:8100OPKgN_HOC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Hockey Centre"
+                                            value='OPK North Entrance to Hockey Centre'
                                         ),
-                                        distance=Decimal("808"),
+                                        distance=Decimal('808'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2383,29 +2383,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HOC_OPKgN",
+                                        id='oda:8100OPK_HOC_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hockey Centre to OPK North Entrance"
+                                            value='Hockey Centre to OPK North Entrance'
                                         ),
-                                        distance=Decimal("808"),
+                                        distance=Decimal('808'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2413,29 +2413,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_HBA",
+                                        id='oda:8100OPKgN_HBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Handball Arena"
+                                            value='OPK North Entrance to Handball Arena'
                                         ),
-                                        distance=Decimal("1211"),
+                                        distance=Decimal('1211'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2443,29 +2443,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HBA_OPKgN",
+                                        id='oda:8100OPK_HBA_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Handball Arena to OPK North Entrance"
+                                            value='Handball Arena to OPK North Entrance'
                                         ),
-                                        distance=Decimal("1211"),
+                                        distance=Decimal('1211'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2473,29 +2473,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_STA",
+                                        id='oda:8100OPKgN_STA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Olympic Stadium"
+                                            value='OPK North Entrance to Olympic Stadium'
                                         ),
-                                        distance=Decimal("1528"),
+                                        distance=Decimal('1528'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2503,29 +2503,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_STA_OPKgN",
+                                        id='oda:8100OPK_STA_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Olympic Stadium to OPK North Entrance"
+                                            value='Olympic Stadium to OPK North Entrance'
                                         ),
-                                        distance=Decimal("1528"),
+                                        distance=Decimal('1528'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2533,29 +2533,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_AWP",
+                                        id='oda:8100OPKgN_AWP',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Water Polo Arena"
+                                            value='OPK North Entrance to Water Polo Arena'
                                         ),
-                                        distance=Decimal("1664"),
+                                        distance=Decimal('1664'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2563,29 +2563,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AWP_OPKgN",
+                                        id='oda:8100OPK_AWP_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Water Polo Arena to OPK North Entrance"
+                                            value='Water Polo Arena to OPK North Entrance'
                                         ),
-                                        distance=Decimal("1664"),
+                                        distance=Decimal('1664'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2593,29 +2593,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_AQC",
+                                        id='oda:8100OPKgN_AQC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to Aquatics Centre"
+                                            value='OPK North Entrance to Aquatics Centre'
                                         ),
-                                        distance=Decimal("2054"),
+                                        distance=Decimal('2054'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2623,29 +2623,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AQC_OPKgN",
+                                        id='oda:8100OPK_AQC_OPKgN',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Aquatics Centre to OPK North Entrance"
+                                            value='Aquatics Centre to OPK North Entrance'
                                         ),
-                                        distance=Decimal("2054"),
+                                        distance=Decimal('2054'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2653,29 +2653,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_BMX",
+                                        id='oda:8100OPKgN_BMX',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 2, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to BMX Circuit"
+                                            value='OPK North Entrance to BMX Circuit'
                                         ),
-                                        distance=Decimal("657"),
+                                        distance=Decimal('657'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2683,29 +2683,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BMX_OPKgN",
+                                        id='oda:8100OPK_BMX_OPKgN',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BMX Circuit to OPK North Entrance"
+                                            value='BMX Circuit to OPK North Entrance'
                                         ),
-                                        distance=Decimal("657"),
+                                        distance=Decimal('657'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2713,29 +2713,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgN_OPK",
+                                        id='oda:8100OPKgN_OPK',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK North Entrance to centre of Olympic Park"
+                                            value='OPK North Entrance to centre of Olympic Park'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2743,29 +2743,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_OPK_OPKgN",
+                                        id='oda:8100OPK_OPK_OPKgN',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="centre of Olympic Park to OPK North Entrance"
+                                            value='centre of Olympic Park to OPK North Entrance'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgN"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2773,29 +2773,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_HOC",
+                                        id='oda:8100OPKgW_HOC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Hockey Centre"
+                                            value='OPK West Entrance to Hockey Centre'
                                         ),
-                                        distance=Decimal("1313"),
+                                        distance=Decimal('1313'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2803,29 +2803,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HOC_OPKgW",
+                                        id='oda:8100OPK_HOC_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hockey Centre to OPK West Entrance"
+                                            value='Hockey Centre to OPK West Entrance'
                                         ),
-                                        distance=Decimal("1313"),
+                                        distance=Decimal('1313'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HOC"
+                                                version='any',
+                                                ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2833,29 +2833,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_BBA",
+                                        id='oda:8100OPKgW_BBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Basketball Arena"
+                                            value='OPK West Entrance to Basketball Arena'
                                         ),
-                                        distance=Decimal("1380"),
+                                        distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2863,29 +2863,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BBA_OPKgW",
+                                        id='oda:8100OPK_BBA_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Basketball Arena to OPK West Entrance"
+                                            value='Basketball Arena to OPK West Entrance'
                                         ),
-                                        distance=Decimal("1380"),
+                                        distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BBA"
+                                                version='any',
+                                                ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2893,27 +2893,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_HBA",
+                                        id='oda:8100OPKgW_HBA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Handball Arena"
+                                            value='OPK West Entrance to Handball Arena'
                                         ),
-                                        distance=Decimal("792"),
+                                        distance=Decimal('792'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2921,29 +2921,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_HBA_OPKgW",
+                                        id='oda:8100OPK_HBA_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Handball Arena to OPK West Entrance"
+                                            value='Handball Arena to OPK West Entrance'
                                         ),
-                                        distance=Decimal("792"),
+                                        distance=Decimal('792'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HBA"
+                                                version='any',
+                                                ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2951,27 +2951,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_AWP",
+                                        id='oda:8100OPKgW_AWP',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Water Polo Arena"
+                                            value='OPK West Entrance to Water Polo Arena'
                                         ),
-                                        distance=Decimal("733"),
+                                        distance=Decimal('733'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -2979,29 +2979,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AWP_OPKgW",
+                                        id='oda:8100OPK_AWP_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Water Polo Arena to OPK West Entrance"
+                                            value='Water Polo Arena to OPK West Entrance'
                                         ),
-                                        distance=Decimal("733"),
+                                        distance=Decimal('733'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AWP"
+                                                version='any',
+                                                ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3009,29 +3009,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_AQC",
+                                        id='oda:8100OPKgW_AQC',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Aquatics Centre"
+                                            value='OPK West Entrance to Aquatics Centre'
                                         ),
-                                        distance=Decimal("1123"),
+                                        distance=Decimal('1123'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3039,29 +3039,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_AQC_OPKgW",
+                                        id='oda:8100OPK_AQC_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Aquatics Centre to OPK West Entrance"
+                                            value='Aquatics Centre to OPK West Entrance'
                                         ),
-                                        distance=Decimal("1123"),
+                                        distance=Decimal('1123'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100AQC"
+                                                version='any',
+                                                ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3069,29 +3069,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_STA",
+                                        id='oda:8100OPKgW_STA',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Olympic Stadium"
+                                            value='OPK West Entrance to Olympic Stadium'
                                         ),
-                                        distance=Decimal("180"),
+                                        distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3099,29 +3099,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_STA_OPKgW",
+                                        id='oda:8100OPK_STA_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Olympic Stadium to OPK West Entrance"
+                                            value='Olympic Stadium to OPK West Entrance'
                                         ),
-                                        distance=Decimal("180"),
+                                        distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100STA"
+                                                version='any',
+                                                ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3129,29 +3129,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_VEL",
+                                        id='oda:8100OPKgW_VEL',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Velodrome"
+                                            value='OPK West Entrance to Velodrome'
                                         ),
-                                        distance=Decimal("1560"),
+                                        distance=Decimal('1560'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3159,29 +3159,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_VEL_OPKgW",
+                                        id='oda:8100OPK_VEL_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Velodrome to OPK West Entrance"
+                                            value='Velodrome to OPK West Entrance'
                                         ),
-                                        distance=Decimal("1560"),
+                                        distance=Decimal('1560'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100VEL"
+                                                version='any',
+                                                ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3189,29 +3189,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_ETM",
+                                        id='oda:8100OPKgW_ETM',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to Eton Manor"
+                                            value='OPK West Entrance to Eton Manor'
                                         ),
-                                        distance=Decimal("1830"),
+                                        distance=Decimal('1830'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3219,29 +3219,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_ETM_OPKgW",
+                                        id='oda:8100OPK_ETM_OPKgW',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Manor to OPK West Entrance"
+                                            value='Eton Manor to OPK West Entrance'
                                         ),
-                                        distance=Decimal("1830"),
+                                        distance=Decimal('1830'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETM"
+                                                version='any',
+                                                ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3249,29 +3249,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_BMX",
+                                        id='oda:8100OPKgW_BMX',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to BMX Circuit"
+                                            value='OPK West Entrance to BMX Circuit'
                                         ),
-                                        distance=Decimal("1810"),
+                                        distance=Decimal('1810'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3279,29 +3279,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_BMX_OPKgW",
+                                        id='oda:8100OPK_BMX_OPKgW',
                                         created=XmlDateTime(2011, 2, 11, 9, 35, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="BMX Circuit to OPK West Entrance"
+                                            value='BMX Circuit to OPK West Entrance'
                                         ),
-                                        distance=Decimal("1810"),
+                                        distance=Decimal('1810'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100BMX"
+                                                version='any',
+                                                ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3309,29 +3309,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPKgW_OPK",
+                                        id='oda:8100OPKgW_OPK',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="OPK West Entrance to centre of Olympic Park"
+                                            value='OPK West Entrance to centre of Olympic Park'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3339,29 +3339,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100OPK_OPK_OPKgW",
+                                        id='oda:8100OPK_OPK_OPKgW',
                                         created=XmlDateTime(2011, 2, 11, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 20, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="centre of Olympic Park to OPK West Entrance"
+                                            value='centre of Olympic Park to OPK West Entrance'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPK"
+                                                version='any',
+                                                ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100OPKgW"
+                                                version='any',
+                                                ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3372,38 +3372,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:EXL",
+                            id='oda:EXL',
                             created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 6, 6, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="ExCeL"
+                                value='ExCeL'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100EXL",
+                                        id='naptPoi:8100EXL',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL"
+                                            value='ExCeL'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="ExCeL"
+                                                value='ExCeL'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Park"
+                                            ref='Park'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -3420,21 +3420,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100EXL@gEntr",
+                                                    id='naptPoi:8100EXL@gEntr',
                                                     created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="ExCeL Spectator Entrance"
+                                                        value='ExCeL Spectator Entrance'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -3449,21 +3449,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100EXL@gEntr@SecQ",
+                                                                id='oda:8100EXL@gEntr@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="ExCeL Entrance Security Queue"
+                                                                    value='ExCeL Entrance Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -3471,8 +3471,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100EXL@gEntr@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100EXL@gEntr@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
@@ -3483,11 +3483,11 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100EXL@gExit",
+                                                    id='naptPoi:8100EXL@gExit',
                                                     created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="ExCeL Spectator Exit"
+                                                        value='ExCeL Spectator Exit'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -3502,19 +3502,19 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100EXL@gExit@ExitQ",
+                                                                id='oda:8100EXL@gExit@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="ExCeL Exit Congestion"
+                                                                    value='ExCeL Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -3522,8 +3522,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100EXL@gExit@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100EXL@gExit@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -3537,25 +3537,25 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100EXLN1",
+                                        id='naptPoi:8100EXLN1',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Excel North Sports Hall 1"
+                                            value='Excel North Sports Hall 1'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Excel North Sports Hall 1"
+                                                value='Excel North Sports Hall 1'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -3572,36 +3572,36 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100EXL"
+                                            version='any',
+                                            ref='naptPoi:8100EXL'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100EXLN2",
+                                        id='naptPoi:8100EXLN2',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Excel North Sports Hall 2"
+                                            value='Excel North Sports Hall 2'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Excel North Sports Hall 2"
+                                                value='Excel North Sports Hall 2'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -3618,36 +3618,36 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100EXL"
+                                            version='any',
+                                            ref='naptPoi:8100EXL'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100EXLS1",
+                                        id='naptPoi:8100EXLS1',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Excel South Sports Hall 1"
+                                            value='Excel South Sports Hall 1'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Excel South Sports Hall 1"
+                                                value='Excel South Sports Hall 1'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -3664,36 +3664,36 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100EXL"
+                                            version='any',
+                                            ref='naptPoi:8100EXL'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100EXLS2",
+                                        id='naptPoi:8100EXLS2',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Excel South Sports Hall 2"
+                                            value='Excel South Sports Hall 2'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Excel South Sports Hall 2"
+                                                value='Excel South Sports Hall 2'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -3710,36 +3710,36 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100EXL"
+                                            version='any',
+                                            ref='naptPoi:8100EXL'
                                         )
                                     ),
                                     PointOfInterest(
-                                        id="naptPoi:8100EXLS3",
+                                        id='naptPoi:8100EXLS3',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Excel South Sports Hall 3"
+                                            value='Excel South Sports Hall 3'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Excel South Sports Hall 3"
+                                                value='Excel South Sports Hall 3'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -3756,14 +3756,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
-                                            version="any",
-                                            ref="naptPoi:8100EXL"
+                                            version='any',
+                                            ref='naptPoi:8100EXL'
                                         )
                                     ),
                                 ]
@@ -3771,27 +3771,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100EXL_8100EXL@gEntr+8100EXLN1",
+                                        id='oda:8100EXL_8100EXL@gEntr+8100EXLN1',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL Entrance to North Sports Hall 1"
+                                            value='ExCeL Entrance to North Sports Hall 1'
                                         ),
-                                        distance=Decimal("150"),
+                                        distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLN1"
+                                                version='any',
+                                                ref='naptPoi:8100EXLN1'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3799,27 +3799,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXL_8100EXL@gEntr+8100EXLN2",
+                                        id='oda:8100EXL_8100EXL@gEntr+8100EXLN2',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL Entrance to North Sports Hall 2"
+                                            value='ExCeL Entrance to North Sports Hall 2'
                                         ),
-                                        distance=Decimal("400"),
+                                        distance=Decimal('400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLN2"
+                                                version='any',
+                                                ref='naptPoi:8100EXLN2'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3827,27 +3827,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXL_8100EXL@gEntr+8100EXLS1",
+                                        id='oda:8100EXL_8100EXL@gEntr+8100EXLS1',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL Entrance to South Sports Hall 1"
+                                            value='ExCeL Entrance to South Sports Hall 1'
                                         ),
-                                        distance=Decimal("150"),
+                                        distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLS1"
+                                                version='any',
+                                                ref='naptPoi:8100EXLS1'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3855,27 +3855,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXL_8100EXL@gEntr+8100EXLS2",
+                                        id='oda:8100EXL_8100EXL@gEntr+8100EXLS2',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL Entrance to South Sports Hall 2"
+                                            value='ExCeL Entrance to South Sports Hall 2'
                                         ),
-                                        distance=Decimal("400"),
+                                        distance=Decimal('400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLS2"
+                                                version='any',
+                                                ref='naptPoi:8100EXLS2'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3883,27 +3883,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXL_8100EXL@gEntr+8100EXLS3",
+                                        id='oda:8100EXL_8100EXL@gEntr+8100EXLS3',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL Entrance to South Sports Hall 3"
+                                            value='ExCeL Entrance to South Sports Hall 3'
                                         ),
-                                        distance=Decimal("600"),
+                                        distance=Decimal('600'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLS3"
+                                                version='any',
+                                                ref='naptPoi:8100EXLS3'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3911,27 +3911,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXL_8100EXL@gEntr+8100EXL",
+                                        id='oda:8100EXL_8100EXL@gEntr+8100EXL',
                                         created=XmlDateTime(2011, 6, 6, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL Entrance to Excel (nominal venue point)"
+                                            value='ExCeL Entrance to Excel (nominal venue point)'
                                         ),
-                                        distance=Decimal("400"),
+                                        distance=Decimal('400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3939,27 +3939,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXLN1+8100EXL_8100EXL@gExit",
+                                        id='oda:8100EXLN1+8100EXL_8100EXL@gExit',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL North Sports Hall 1 to Exit"
+                                            value='ExCeL North Sports Hall 1 to Exit'
                                         ),
-                                        distance=Decimal("550"),
+                                        distance=Decimal('550'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLN1"
+                                                version='any',
+                                                ref='naptPoi:8100EXLN1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3967,27 +3967,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXLN2+8100EXL_8100EXL@gExit",
+                                        id='oda:8100EXLN2+8100EXL_8100EXL@gExit',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL North Sports Hall 2 to Exit"
+                                            value='ExCeL North Sports Hall 2 to Exit'
                                         ),
-                                        distance=Decimal("300"),
+                                        distance=Decimal('300'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLN2"
+                                                version='any',
+                                                ref='naptPoi:8100EXLN2'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -3995,27 +3995,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXLS1+8100EXL_8100EXL@gExit",
+                                        id='oda:8100EXLS1+8100EXL_8100EXL@gExit',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL South Sports Hall 1 to Exit"
+                                            value='ExCeL South Sports Hall 1 to Exit'
                                         ),
-                                        distance=Decimal("550"),
+                                        distance=Decimal('550'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLS1"
+                                                version='any',
+                                                ref='naptPoi:8100EXLS1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4023,27 +4023,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXLS2+8100EXL_8100EXL@gExit",
+                                        id='oda:8100EXLS2+8100EXL_8100EXL@gExit',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL South Sports Hall 2 to Exit"
+                                            value='ExCeL South Sports Hall 2 to Exit'
                                         ),
-                                        distance=Decimal("300"),
+                                        distance=Decimal('300'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLS2"
+                                                version='any',
+                                                ref='naptPoi:8100EXLS2'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4051,27 +4051,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXLS3+8100EXL_8100EXL@gExit",
+                                        id='oda:8100EXLS3+8100EXL_8100EXL@gExit',
                                         created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL South Sports Hall 3 to Exit"
+                                            value='ExCeL South Sports Hall 3 to Exit'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXLS3"
+                                                version='any',
+                                                ref='naptPoi:8100EXLS3'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4079,27 +4079,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EXL+8100EXL_8100EXL@gExit",
+                                        id='oda:8100EXL+8100EXL_8100EXL@gExit',
                                         created=XmlDateTime(2011, 6, 6, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="ExCeL (nominal venue point) to Exit"
+                                            value='ExCeL (nominal venue point) to Exit'
                                         ),
-                                        distance=Decimal("300"),
+                                        distance=Decimal('300'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL"
+                                                version='any',
+                                                ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EXL@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100EXL@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4110,38 +4110,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:GRP",
+                            id='oda:GRP',
                             created=XmlDateTime(2011, 2, 22, 16, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Greenwich Park"
+                                value='Greenwich Park'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100GRP",
+                                        id='naptPoi:8100GRP',
                                         created=XmlDateTime(2011, 2, 22, 16, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Greenwich Park"
+                                            value='Greenwich Park'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Greenwich Park"
+                                                value='Greenwich Park'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -4158,21 +4158,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100GRP@gGNW",
+                                                    id='naptPoi:8100GRP@gGNW',
                                                     created=XmlDateTime(2011, 2, 22, 16, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Greenwich Spectator Gate"
+                                                        value='Greenwich Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -4187,21 +4187,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100GRP@gGNW@SecQ",
+                                                                id='oda:8100GRP@gGNW@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Greenwich Park Greenwich Gate Security Queue"
+                                                                    value='Greenwich Park Greenwich Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -4209,21 +4209,21 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100GRP@gGNW@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100GRP@gGNW@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100GRP@gGNW@ExitQ",
+                                                                id='oda:8100GRP@gGNW@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 7, 15, 17, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Greenwich Park Greenwich Gate Congestion"
+                                                                    value='Greenwich Park Greenwich Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -4231,8 +4231,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100GRP@gGNW@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100GRP@gGNW@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT20M0S")
                                                                         ),
                                                                     ]
@@ -4243,13 +4243,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100GRP@gBKH1",
+                                                    id='naptPoi:8100GRP@gBKH1',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityCondition(
-                                                                    id="naptPoi:8100GRP@gBKH1",
-                                                                    version="any",
+                                                                    id='naptPoi:8100GRP@gBKH1',
+                                                                    version='any',
                                                                     from_date=XmlDateTime(2012, 7, 28, 0, 0, 0, 0, 0),
                                                                     to_date=XmlDateTime(2012, 7, 31, 23, 59, 0, 0, 0)
                                                                 ),
@@ -4259,9 +4259,9 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2011, 2, 22, 16, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Blackheath Spectator Gate (Days 1-4)"
+                                                        value='Blackheath Spectator Gate (Days 1-4)'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -4276,21 +4276,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100GRP@gBKH1@SecQ",
+                                                                id='oda:8100GRP@gBKH1@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Greemwich Park Blackheath Gate (Days 1-4) Security Queue"
+                                                                    value='Greemwich Park Blackheath Gate (Days 1-4) Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -4298,21 +4298,21 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100GRP@gBKH1@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100GRP@gBKH1@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100GRP@gBKH1@ExitQ",
+                                                                id='oda:8100GRP@gBKH1@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 7, 15, 17, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Greenwich Park Blackheath Gate (Days 1-4) Congestion"
+                                                                    value='Greenwich Park Blackheath Gate (Days 1-4) Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -4320,8 +4320,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100GRP@gBKH1@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100GRP@gBKH1@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT20M0S")
                                                                         ),
                                                                     ]
@@ -4332,13 +4332,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100GRP@gBKH6",
+                                                    id='naptPoi:8100GRP@gBKH6',
                                                     validity_conditions_or_valid_between=[
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityCondition(
-                                                                    id="naptPoi:8100GRP@gBKH6",
-                                                                    version="any",
+                                                                    id='naptPoi:8100GRP@gBKH6',
+                                                                    version='any',
                                                                     from_date=XmlDateTime(2012, 8, 2, 0, 0, 0, 0, 0),
                                                                     to_date=XmlDateTime(2012, 8, 12, 23, 59, 0, 0, 0)
                                                                 ),
@@ -4348,9 +4348,9 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2011, 2, 22, 16, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Blackheath Spectator Gate (Days 6-16)"
+                                                        value='Blackheath Spectator Gate (Days 6-16)'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -4365,21 +4365,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100GRP@gBKH6@SecQ",
+                                                                id='oda:8100GRP@gBKH6@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Greenwich Park Blackheath Gate (Days 6-16) Security Queue"
+                                                                    value='Greenwich Park Blackheath Gate (Days 6-16) Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -4387,21 +4387,21 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100GRP@gBKH6@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100GRP@gBKH6@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100GRP@gBKH6@ExitQ",
+                                                                id='oda:8100GRP@gBKH6@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 7, 15, 17, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Greenwich Park Blackheath Gate (Days 6-16) Congestion"
+                                                                    value='Greenwich Park Blackheath Gate (Days 6-16) Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -4409,8 +4409,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100GRP@gBKH6@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100GRP@gBKH6@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT20M0S")
                                                                         ),
                                                                     ]
@@ -4428,27 +4428,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100GRP_8100GRP@gGNW+8100GRP",
+                                        id='oda:8100GRP_8100GRP@gGNW+8100GRP',
                                         created=XmlDateTime(2011, 2, 23, 9, 30, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Greenwich Park Greenwich Entrance to Venue"
+                                            value='Greenwich Park Greenwich Entrance to Venue'
                                         ),
-                                        distance=Decimal("180"),
+                                        distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP@gGNW"
+                                                version='any',
+                                                ref='naptPoi:8100GRP@gGNW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4456,29 +4456,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100GRP+8100GRP_8100GRP@gGNW",
+                                        id='oda:8100GRP+8100GRP_8100GRP@gGNW',
                                         created=XmlDateTime(2011, 2, 23, 9, 30, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Greenwich Park Venue to Greenwich Entrance"
+                                            value='Greenwich Park Venue to Greenwich Entrance'
                                         ),
-                                        distance=Decimal("180"),
+                                        distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP@gGNW"
+                                                version='any',
+                                                ref='naptPoi:8100GRP@gGNW'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4486,27 +4486,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100GRP_8100GRP@gBKH1+8100GRP",
+                                        id='oda:8100GRP_8100GRP@gBKH1+8100GRP',
                                         created=XmlDateTime(2011, 2, 23, 9, 30, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Greenwich Park Blackheath Entrance (Days 1-4) to Venue"
+                                            value='Greenwich Park Blackheath Entrance (Days 1-4) to Venue'
                                         ),
-                                        distance=Decimal("940"),
+                                        distance=Decimal('940'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP@gBKH1"
+                                                version='any',
+                                                ref='naptPoi:8100GRP@gBKH1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4514,29 +4514,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100GRP+8100GRP_8100GRP@gBKH1",
+                                        id='oda:8100GRP+8100GRP_8100GRP@gBKH1',
                                         created=XmlDateTime(2011, 2, 23, 9, 30, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Greenwich Park Venue to Blackheath Entrance (Days 1-4)"
+                                            value='Greenwich Park Venue to Blackheath Entrance (Days 1-4)'
                                         ),
-                                        distance=Decimal("940"),
+                                        distance=Decimal('940'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP@gBKH1"
+                                                version='any',
+                                                ref='naptPoi:8100GRP@gBKH1'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4544,27 +4544,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100GRP_8100GRP@gBKH6+8100GRP",
+                                        id='oda:8100GRP_8100GRP@gBKH6+8100GRP',
                                         created=XmlDateTime(2011, 2, 23, 9, 30, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Greenwich Park Blackheath Entrance (Days 6-16) to Venue"
+                                            value='Greenwich Park Blackheath Entrance (Days 6-16) to Venue'
                                         ),
-                                        distance=Decimal("490"),
+                                        distance=Decimal('490'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP@gBKH6"
+                                                version='any',
+                                                ref='naptPoi:8100GRP@gBKH6'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4572,29 +4572,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100GRP+8100GRP_8100GRP@gBKH6",
+                                        id='oda:8100GRP+8100GRP_8100GRP@gBKH6',
                                         created=XmlDateTime(2011, 2, 23, 9, 30, 0, 0, 0),
                                         changed=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Greenwich Park Venue to Blackheath Entrance (Days 6-16)"
+                                            value='Greenwich Park Venue to Blackheath Entrance (Days 6-16)'
                                         ),
-                                        distance=Decimal("490"),
+                                        distance=Decimal('490'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP"
+                                                version='any',
+                                                ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100GRP@gBKH6"
+                                                version='any',
+                                                ref='naptPoi:8100GRP@gBKH6'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4605,38 +4605,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:NGA",
+                            id='oda:NGA',
                             created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="North Greenwich Arena"
+                                value='North Greenwich Arena'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100NGA",
+                                        id='naptPoi:8100NGA',
                                         created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="North Greenwich Arena"
+                                            value='North Greenwich Arena'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="North Greenwich Arena"
+                                                value='North Greenwich Arena'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -4653,21 +4653,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100NGA@gEntr",
+                                                    id='naptPoi:8100NGA@gEntr',
                                                     created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="North Greenwich Arena Spectator Entrance"
+                                                        value='North Greenwich Arena Spectator Entrance'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -4682,21 +4682,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100NGA@gEntr@SecQ",
+                                                                id='oda:8100NGA@gEntr@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="North Greenwich Arena Entrance Security Queue"
+                                                                    value='North Greenwich Arena Entrance Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -4704,8 +4704,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100NGA@gEntr@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100NGA@gEntr@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
@@ -4716,11 +4716,11 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100NGA@gExit",
+                                                    id='naptPoi:8100NGA@gExit',
                                                     created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="North Greenwich Arena Spectator Exit"
+                                                        value='North Greenwich Arena Spectator Exit'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -4735,19 +4735,19 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="naptPoi:8100NGA@gExit@ExitQ",
+                                                                id='naptPoi:8100NGA@gExit@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="North Greenwich Arena Exit Congestion"
+                                                                    value='North Greenwich Arena Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -4755,8 +4755,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="naptPoi:8100NGA@gExit@ExitQ",
-                                                                            version="any",
+                                                                            id='naptPoi:8100NGA@gExit@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -4774,27 +4774,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100NGA_8100NGA@gEntr@NGA+8100NGA",
+                                        id='oda:8100NGA_8100NGA@gEntr@NGA+8100NGA',
                                         created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="NGA Entrance to Venue"
+                                            value='NGA Entrance to Venue'
                                         ),
-                                        distance=Decimal("500"),
+                                        distance=Decimal('500'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100NGA"
+                                                version='any',
+                                                ref='naptPoi:8100NGA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100NGA@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100NGA@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100NGA"
+                                                version='any',
+                                                ref='naptPoi:8100NGA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4802,27 +4802,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100NGA+8100NGA_8100NGA@gExit",
+                                        id='oda:8100NGA+8100NGA_8100NGA@gExit',
                                         created=XmlDateTime(2011, 2, 23, 10, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="NGA Venue to Exit"
+                                            value='NGA Venue to Exit'
                                         ),
-                                        distance=Decimal("330"),
+                                        distance=Decimal('330'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100NGA"
+                                                version='any',
+                                                ref='naptPoi:8100NGA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100NGA"
+                                                version='any',
+                                                ref='naptPoi:8100NGA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100NGA@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100NGA@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -4833,38 +4833,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:RAB",
+                            id='oda:RAB',
                             created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="The Royal Artillery Barracks"
+                                value='The Royal Artillery Barracks'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100RAB",
+                                        id='naptPoi:8100RAB',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Royal Artillery Barracks"
+                                            value='The Royal Artillery Barracks'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="The Royal Artillery Barracks"
+                                                value='The Royal Artillery Barracks'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -4881,21 +4881,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100RAB@g0",
+                                                    id='naptPoi:8100RAB@g0',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="The Royal Artillery Barracks Northern Spectator Gate"
+                                                        value='The Royal Artillery Barracks Northern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -4910,21 +4910,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100RAB@g0@EntrQ",
+                                                                id='oda:8100RAB@g0@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Royal Artillery Barracks Northern Spectator Gate Secturity Queue"
+                                                                    value='The Royal Artillery Barracks Northern Spectator Gate Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -4932,21 +4932,21 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100RAB@g0@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100RAB@g0@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100RAB@g0@ExitQ",
+                                                                id='oda:8100RAB@g0@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Royal Artillery Barracks Northern Spectator Gate Exit Congestion"
+                                                                    value='The Royal Artillery Barracks Northern Spectator Gate Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -4954,8 +4954,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100RAB@g0@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100RAB@g0@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -4966,13 +4966,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100RAB@g1",
+                                                    id='naptPoi:8100RAB@g1',
                                                     created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="The Royal Artillery Barracks Southern Spectator Gate"
+                                                        value='The Royal Artillery Barracks Southern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -4987,21 +4987,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100RAB@g1@EntrQ",
+                                                                id='oda:8100RAB@g1@EntrQ',
                                                                 created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Royal Artillery Barracks Southern Spectator Gate Secturity Queue"
+                                                                    value='The Royal Artillery Barracks Southern Spectator Gate Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -5009,21 +5009,21 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100RAB@g1@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100RAB@g1@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100RAB@g1@ExitQ",
+                                                                id='oda:8100RAB@g1@ExitQ',
                                                                 created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Royal Artillery Barracks Southern Spectator Gate Exit Congestion"
+                                                                    value='The Royal Artillery Barracks Southern Spectator Gate Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -5031,8 +5031,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100RAB@g1@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100RAB@g1@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -5050,29 +5050,29 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100RAB_8100RAB@g0+8100RAB",
+                                        id='oda:8100RAB_8100RAB@g0+8100RAB',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Royal Artillery Barracks Northern Spectator Gate (Entry) to Spectator Area"
+                                            value='The Royal Artillery Barracks Northern Spectator Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("260"),
+                                        distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB@g0"
+                                                version='any',
+                                                ref='naptPoi:8100RAB@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5080,29 +5080,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100RAB+8100RAB_8100RAB@g0",
+                                        id='oda:8100RAB+8100RAB_8100RAB@g0',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Royal Artillery Barracks Spectator Area to Northern Spectator Gate (Exit)"
+                                            value='The Royal Artillery Barracks Spectator Area to Northern Spectator Gate (Exit)'
                                         ),
-                                        distance=Decimal("260"),
+                                        distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB@g0"
+                                                version='any',
+                                                ref='naptPoi:8100RAB@g0'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5110,29 +5110,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100RAB_8100RAB@g1+8100RAB",
+                                        id='oda:8100RAB_8100RAB@g1+8100RAB',
                                         created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Royal Artillery Barracks Southern Spectator Gate (Entry) to Spectator Area"
+                                            value='The Royal Artillery Barracks Southern Spectator Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("260"),
+                                        distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB@g1"
+                                                version='any',
+                                                ref='naptPoi:8100RAB@g1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5140,29 +5140,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100RAB+8100RAB_8100RAB@g1",
+                                        id='oda:8100RAB+8100RAB_8100RAB@g1',
                                         created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Royal Artillery Barracks Spectator Area to Southern Spectator Gate (Exit)"
+                                            value='The Royal Artillery Barracks Spectator Area to Southern Spectator Gate (Exit)'
                                         ),
-                                        distance=Decimal("260"),
+                                        distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB"
+                                                version='any',
+                                                ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100RAB@g1"
+                                                version='any',
+                                                ref='naptPoi:8100RAB@g1'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5173,38 +5173,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:EAR",
+                            id='oda:EAR',
                             created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Earls Court"
+                                value='Earls Court'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100EAR",
+                                        id='naptPoi:8100EAR',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Earls Court"
+                                            value='Earls Court'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Earls Court"
+                                                value='Earls Court'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -5221,21 +5221,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100EAR@gEntr",
+                                                    id='naptPoi:8100EAR@gEntr',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Earls Court Spectator Entrance"
+                                                        value='Earls Court Spectator Entrance'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -5250,21 +5250,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100EAR@gEntr@SecQ",
+                                                                id='oda:8100EAR@gEntr@SecQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Earls Court Entrance Security Queue"
+                                                                    value='Earls Court Entrance Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -5272,8 +5272,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100EAR@gEntr@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100EAR@gEntr@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
@@ -5284,11 +5284,11 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100EAR@gExit",
+                                                    id='naptPoi:8100EAR@gExit',
                                                     created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Earls Court Spectator Exit"
+                                                        value='Earls Court Spectator Exit'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -5303,19 +5303,19 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100EAR@gExit@ExitQ",
+                                                                id='oda:8100EAR@gExit@ExitQ',
                                                                 created=XmlDateTime(2011, 3, 1, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Earls Court Exit Congestion"
+                                                                    value='Earls Court Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -5323,8 +5323,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100EAR@gExit@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100EAR@gExit@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -5342,27 +5342,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100EAR@gEntr@EAR",
+                                        id='oda:8100EAR@gEntr@EAR',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Earls Court Spectator Entrance to Venue"
+                                            value='Earls Court Spectator Entrance to Venue'
                                         ),
-                                        distance=Decimal("1380"),
+                                        distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EAR"
+                                                version='any',
+                                                ref='naptPoi:8100EAR'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EAR@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100EAR@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EAR"
+                                                version='any',
+                                                ref='naptPoi:8100EAR'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5370,29 +5370,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100EAR+8100EAR_8100EAR@gExit",
+                                        id='oda:8100EAR+8100EAR_8100EAR@gExit',
                                         created=XmlDateTime(2011, 2, 10, 22, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 2, 23, 9, 30, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Earls Court Venue to Spectator Exit"
+                                            value='Earls Court Venue to Spectator Exit'
                                         ),
-                                        distance=Decimal("1380"),
+                                        distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EAR"
+                                                version='any',
+                                                ref='naptPoi:8100EAR'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EAR"
+                                                version='any',
+                                                ref='naptPoi:8100EAR'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100EAR@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100EAR@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5403,38 +5403,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:LCG",
+                            id='oda:LCG',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Lords Cricket Ground"
+                                value='Lords Cricket Ground'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100LCG",
+                                        id='naptPoi:8100LCG',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lords Cricket Ground"
+                                            value='Lords Cricket Ground'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Lords Cricket Ground"
+                                                value='Lords Cricket Ground'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -5451,21 +5451,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100LCG@g0",
+                                                    id='naptPoi:8100LCG@g0',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Lords Cricket Ground Western Spectator Gate"
+                                                        value='Lords Cricket Ground Western Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -5480,21 +5480,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100LCG@g0@EntrQ",
+                                                                id='oda:8100LCG@g0@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Lords Cricket Ground Western Spectator Gate Secturity Queue"
+                                                                    value='Lords Cricket Ground Western Spectator Gate Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -5502,21 +5502,21 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100LCG@g0@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100LCG@g0@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100LCG@g0@ExitQ",
+                                                                id='oda:8100LCG@g0@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Lords Cricket Ground Western Spectator Gate Exit Congestion"
+                                                                    value='Lords Cricket Ground Western Spectator Gate Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -5524,8 +5524,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100LCG@g0@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100LCG@g0@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -5536,13 +5536,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100LCG@g1",
+                                                    id='naptPoi:8100LCG@g1',
                                                     created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Lords Cricket Ground Eastern Spectator Gate"
+                                                        value='Lords Cricket Ground Eastern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -5557,21 +5557,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100LCG@g1@EntrQ",
+                                                                id='oda:8100LCG@g1@EntrQ',
                                                                 created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Lords Cricket Ground Eastern Spectator Gate Secturity Queue"
+                                                                    value='Lords Cricket Ground Eastern Spectator Gate Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -5579,21 +5579,21 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100LCG@g1@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100LCG@g1@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100LCG@g1@ExitQ",
+                                                                id='oda:8100LCG@g1@ExitQ',
                                                                 created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Lords Cricket Ground Eastern Spectator Gate Exit Congestion"
+                                                                    value='Lords Cricket Ground Eastern Spectator Gate Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -5601,8 +5601,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100LCG@g1@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100LCG@g1@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -5620,29 +5620,29 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100LCG_8100LCG@g0+8100LCG",
+                                        id='oda:8100LCG_8100LCG@g0+8100LCG',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lords Cricket Ground Western Gate (Entry) to Spectator Area"
+                                            value='Lords Cricket Ground Western Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("175"),
+                                        distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG@g0"
+                                                version='any',
+                                                ref='naptPoi:8100LCG@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5650,29 +5650,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100LCG+8100LCG_8100LCG@g0",
+                                        id='oda:8100LCG+8100LCG_8100LCG@g0',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lords Cricket Ground Spectator Area to Western Gate (Exit)"
+                                            value='Lords Cricket Ground Spectator Area to Western Gate (Exit)'
                                         ),
-                                        distance=Decimal("175"),
+                                        distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG@g0"
+                                                version='any',
+                                                ref='naptPoi:8100LCG@g0'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5680,29 +5680,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100LCG_8100LCG@g1+8100LCG",
+                                        id='oda:8100LCG_8100LCG@g1+8100LCG',
                                         created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lords Cricket Ground Eastern Gate (Entry) to Spectator Area"
+                                            value='Lords Cricket Ground Eastern Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("250"),
+                                        distance=Decimal('250'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG@g1"
+                                                version='any',
+                                                ref='naptPoi:8100LCG@g1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5710,29 +5710,29 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100LCG+8100LCG_8100LCG@g1",
+                                        id='oda:8100LCG+8100LCG_8100LCG@g1',
                                         created=XmlDateTime(2011, 6, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lords Cricket Ground Spectator Area to Eastern Gate (Exit)"
+                                            value='Lords Cricket Ground Spectator Area to Eastern Gate (Exit)'
                                         ),
-                                        distance=Decimal("250"),
+                                        distance=Decimal('250'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG"
+                                                version='any',
+                                                ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LCG@g1"
+                                                version='any',
+                                                ref='naptPoi:8100LCG@g1'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -5743,38 +5743,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:WIM",
+                            id='oda:WIM',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Wimbledon"
+                                value='Wimbledon'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100WIM",
+                                        id='naptPoi:8100WIM',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wimbledon"
+                                            value='Wimbledon'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Wimbledon"
+                                                value='Wimbledon'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -5791,21 +5791,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100WIM@gN",
+                                                    id='naptPoi:8100WIM@gN',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wimbledon Northern Spectator Gate"
+                                                        value='Wimbledon Northern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -5820,21 +5820,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100WIM@gN@EntrQ",
+                                                                id='oda:8100WIM@gN@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wimbledon Northern Spectator Gate Security Queue"
+                                                                    value='Wimbledon Northern Spectator Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -5842,19 +5842,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WIM@gN@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100WIM@gN@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100WIM@gN@ExitQ",
+                                                                id='oda:8100WIM@gN@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wimbledon Northern Spectator Gate Congestion"
+                                                                    value='Wimbledon Northern Spectator Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -5862,8 +5862,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WIM@gN@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100WIM@gN@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -5874,13 +5874,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100WIM@gC",
+                                                    id='naptPoi:8100WIM@gC',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wimbledon Central Spectator Gate"
+                                                        value='Wimbledon Central Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -5895,21 +5895,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100LCG@gC@EntrQ",
+                                                                id='oda:8100LCG@gC@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wimbledon Central Spectator Gate Security Queue"
+                                                                    value='Wimbledon Central Spectator Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -5917,19 +5917,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100LCG@gC@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100LCG@gC@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100WIM@gC@ExitQ",
+                                                                id='oda:8100WIM@gC@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wimbledon Central Spectator Gate Congestion"
+                                                                    value='Wimbledon Central Spectator Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -5937,8 +5937,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WIM@gC@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100WIM@gC@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -5949,13 +5949,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100WIM@gS",
+                                                    id='naptPoi:8100WIM@gS',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wimbledon Southern Spectator Gate"
+                                                        value='Wimbledon Southern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -5970,21 +5970,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100WIM@gS@EntrQ",
+                                                                id='oda:8100WIM@gS@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wimbledon Southern Spectator Gate Security Queue"
+                                                                    value='Wimbledon Southern Spectator Gate Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -5992,19 +5992,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WIM@gS@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100WIM@gS@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100WIM@gS@ExitQ",
+                                                                id='oda:8100WIM@gS@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wimbledon Southern Spectator Gate Congestion"
+                                                                    value='Wimbledon Southern Spectator Gate Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -6012,8 +6012,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WIM@gS@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100WIM@gS@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -6031,27 +6031,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100WIM_8100WIM@gN+8100WIM",
+                                        id='oda:8100WIM_8100WIM@gN+8100WIM',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wimbledon Northern Spectator Gate (Entry) to Spectator Area"
+                                            value='Wimbledon Northern Spectator Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("236"),
+                                        distance=Decimal('236'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM@gN"
+                                                version='any',
+                                                ref='naptPoi:8100WIM@gN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6059,27 +6059,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WIM+8100WIM_100WIM@gN",
+                                        id='oda:8100WIM+8100WIM_100WIM@gN',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wimbledon Spectator Area to Northern Gate (Exit)"
+                                            value='Wimbledon Spectator Area to Northern Gate (Exit)'
                                         ),
-                                        distance=Decimal("236"),
+                                        distance=Decimal('236'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM@gN"
+                                                version='any',
+                                                ref='naptPoi:8100WIM@gN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6087,27 +6087,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WIM_8100WIM@gC+8100WIM",
+                                        id='oda:8100WIM_8100WIM@gC+8100WIM',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wimbledon Central Spectator Gate (Entry) to Spectator Area"
+                                            value='Wimbledon Central Spectator Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("156"),
+                                        distance=Decimal('156'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM@gC"
+                                                version='any',
+                                                ref='naptPoi:8100WIM@gC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6115,27 +6115,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WIM+8100WIM_8100WIM@gC",
+                                        id='oda:8100WIM+8100WIM_8100WIM@gC',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wimbledon Spectator Area to Central Gate (Exit)"
+                                            value='Wimbledon Spectator Area to Central Gate (Exit)'
                                         ),
-                                        distance=Decimal("156"),
+                                        distance=Decimal('156'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM@gC"
+                                                version='any',
+                                                ref='naptPoi:8100WIM@gC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6143,27 +6143,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WIM_8100WIM@gS+8100WIM",
+                                        id='oda:8100WIM_8100WIM@gS+8100WIM',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wimbledon Southern Spectator Gate (Entry) to Spectator Area"
+                                            value='Wimbledon Southern Spectator Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("333"),
+                                        distance=Decimal('333'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM@gS"
+                                                version='any',
+                                                ref='naptPoi:8100WIM@gS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6171,27 +6171,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WIM+8100WIM_8100WIM@gS",
+                                        id='oda:8100WIM+8100WIM_8100WIM@gS',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wimbledon Spectator Area to Southern Gate (Exit)"
+                                            value='Wimbledon Spectator Area to Southern Gate (Exit)'
                                         ),
-                                        distance=Decimal("333"),
+                                        distance=Decimal('333'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM"
+                                                version='any',
+                                                ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WIM@gS"
+                                                version='any',
+                                                ref='naptPoi:8100WIM@gS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6202,38 +6202,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:HGP",
+                            id='oda:HGP',
                             created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Horse Guards Parade"
+                                value='Horse Guards Parade'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100HGP",
+                                        id='naptPoi:8100HGP',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Horse Guards Parade"
+                                            value='Horse Guards Parade'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Horse Guards Parade"
+                                                value='Horse Guards Parade'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -6250,21 +6250,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100HGP@gInN",
+                                                    id='naptPoi:8100HGP@gInN',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Horse Guards Parade Northern Spectator Entrance"
+                                                        value='Horse Guards Parade Northern Spectator Entrance'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -6279,21 +6279,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100HGP@gInN@SecQ",
+                                                                id='oda:8100HGP@gInN@SecQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Horse Guards Parade Northern Entrance Security Queue"
+                                                                    value='Horse Guards Parade Northern Entrance Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -6301,8 +6301,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HGP@gInN@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100HGP@gInN@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
@@ -6313,11 +6313,11 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100HGP@gOutN",
+                                                    id='naptPoi:8100HGP@gOutN',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Horse Guards Parade Northern Spectator Exit"
+                                                        value='Horse Guards Parade Northern Spectator Exit'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -6332,19 +6332,19 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100HGP@gOutN@ExitQ",
+                                                                id='oda:8100HGP@gOutN@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Horse Guards Parade Northern Exit Congestion"
+                                                                    value='Horse Guards Parade Northern Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -6352,8 +6352,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HGP@gOutN@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100HGP@gOutN@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT10M0S")
                                                                         ),
                                                                     ]
@@ -6364,13 +6364,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100HGP@gInS",
+                                                    id='naptPoi:8100HGP@gInS',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Horse Guards Parade Southern Spectator Entrance"
+                                                        value='Horse Guards Parade Southern Spectator Entrance'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -6385,21 +6385,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100HGP@gInS@SecQ",
+                                                                id='oda:8100HGP@gInS@SecQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Horse Guards Parade Southern Entrance Security Queue"
+                                                                    value='Horse Guards Parade Southern Entrance Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -6407,8 +6407,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HGP@gInS@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100HGP@gInS@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
@@ -6419,11 +6419,11 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100HGP@gOutS",
+                                                    id='naptPoi:8100HGP@gOutS',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Horse Guards Parade Southern Spectator Exit"
+                                                        value='Horse Guards Parade Southern Spectator Exit'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -6438,19 +6438,19 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100HGP@gOutS@ExitQ",
+                                                                id='oda:8100HGP@gOutS@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Horse Guards Parade Southern Exit Congestion"
+                                                                    value='Horse Guards Parade Southern Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -6458,8 +6458,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HGP@gOutS@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100HGP@gOutS@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT10M0S")
                                                                         ),
                                                                     ]
@@ -6477,27 +6477,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100HGP_8100HGP@gInN+800HGP",
+                                        id='oda:8100HGP_8100HGP@gInN+800HGP',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Horse Guards Parade Northern Spectator Entrance to Venue"
+                                            value='Horse Guards Parade Northern Spectator Entrance to Venue'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP@gInN"
+                                                version='any',
+                                                ref='naptPoi:8100HGP@gInN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6505,27 +6505,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100HGP+800HGP_800HGP@gOutN",
+                                        id='oda:8100HGP+800HGP_800HGP@gOutN',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Horse Guards Parade Venue to Northern Spectator Exit"
+                                            value='Horse Guards Parade Venue to Northern Spectator Exit'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP@gOutN"
+                                                version='any',
+                                                ref='naptPoi:8100HGP@gOutN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6533,27 +6533,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100HGP_8100HGP@gInS@gInS+800HGP",
+                                        id='oda:8100HGP_8100HGP@gInS@gInS+800HGP',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Horse Guards Parade Southern Spectator Entrance to Venue"
+                                            value='Horse Guards Parade Southern Spectator Entrance to Venue'
                                         ),
-                                        distance=Decimal("320"),
+                                        distance=Decimal('320'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP@gInS"
+                                                version='any',
+                                                ref='naptPoi:8100HGP@gInS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6561,27 +6561,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100HGP_800HGP_800HGP@gOutS",
+                                        id='oda:8100HGP_800HGP_800HGP@gOutS',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Horse Guards Parade Venue to Southern Spectator Exit"
+                                            value='Horse Guards Parade Venue to Southern Spectator Exit'
                                         ),
-                                        distance=Decimal("360"),
+                                        distance=Decimal('360'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP"
+                                                version='any',
+                                                ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HGP@gOutS"
+                                                version='any',
+                                                ref='naptPoi:8100HGP@gOutS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6592,38 +6592,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:MAL",
+                            id='oda:MAL',
                             created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="The Mall"
+                                value='The Mall'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100MAL",
+                                        id='naptPoi:8100MAL',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Mall"
+                                            value='The Mall'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="The Mall"
+                                                value='The Mall'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -6640,21 +6640,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100MAL@gN",
+                                                    id='naptPoi:8100MAL@gN',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="The Mall Northern Spectator Gate"
+                                                        value='The Mall Northern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -6669,21 +6669,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100MAL@gN@SecQ",
+                                                                id='oda:8100MAL@gN@SecQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Mall Northern Gate (Entry) Security Queue"
+                                                                    value='The Mall Northern Gate (Entry) Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -6691,19 +6691,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100MAL@gN@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100MAL@gN@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100MAL@gN@ExitQ",
+                                                                id='oda:8100MAL@gN@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Mall Northern Gate (Exit) Congestion"
+                                                                    value='The Mall Northern Gate (Exit) Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -6711,8 +6711,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100MAL@gN@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100MAL@gN@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT10M0S")
                                                                         ),
                                                                     ]
@@ -6723,13 +6723,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100MAL@gS",
+                                                    id='naptPoi:8100MAL@gS',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="The Mall Southern Spectator Gate"
+                                                        value='The Mall Southern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -6744,21 +6744,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100MAL@gS@SecQ",
+                                                                id='oda:8100MAL@gS@SecQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Mall Southern Gate (Entry) Security Queue"
+                                                                    value='The Mall Southern Gate (Entry) Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -6766,19 +6766,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100MAL@gS@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100MAL@gS@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100MAL@gS@ExitQ",
+                                                                id='oda:8100MAL@gS@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="The Mall Southern Gate (Exit) Congestion"
+                                                                    value='The Mall Southern Gate (Exit) Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -6786,8 +6786,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100MAL@gS@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100MAL@gS@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT10M0S")
                                                                         ),
                                                                     ]
@@ -6805,27 +6805,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100MAL_8100MAL@gN+8100MAL",
+                                        id='oda:8100MAL_8100MAL@gN+8100MAL',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Mall Northern Spectator Gate to Venue"
+                                            value='The Mall Northern Spectator Gate to Venue'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL@gN"
+                                                version='any',
+                                                ref='naptPoi:8100MAL@gN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6833,27 +6833,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100MAL+8100MAL_8100MAL@gN",
+                                        id='oda:8100MAL+8100MAL_8100MAL@gN',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Mall Venue to Northern Spectator Gate"
+                                            value='The Mall Venue to Northern Spectator Gate'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL@gN"
+                                                version='any',
+                                                ref='naptPoi:8100MAL@gN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6861,27 +6861,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100MAL_8100MAL@gS+8100MAL",
+                                        id='oda:8100MAL_8100MAL@gS+8100MAL',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Mall Southern Spectator Gate to Venue"
+                                            value='The Mall Southern Spectator Gate to Venue'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL@gS"
+                                                version='any',
+                                                ref='naptPoi:8100MAL@gS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6889,27 +6889,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100MAL+8100MAL_8100MAL@gS",
+                                        id='oda:8100MAL+8100MAL_8100MAL@gS',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="The Mall Venue to Southern Spectator Gate"
+                                            value='The Mall Venue to Southern Spectator Gate'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL"
+                                                version='any',
+                                                ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100MAL@gS"
+                                                version='any',
+                                                ref='naptPoi:8100MAL@gS'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -6920,38 +6920,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:HYD",
+                            id='oda:HYD',
                             created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Hyde Park"
+                                value='Hyde Park'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100HYD",
+                                        id='naptPoi:8100HYD',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hyde Park"
+                                            value='Hyde Park'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Hyde Park"
+                                                value='Hyde Park'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -6968,21 +6968,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100HYD@g0",
+                                                    id='naptPoi:8100HYD@g0',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Hyde Park Spectator Gate"
+                                                        value='Hyde Park Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -6997,21 +6997,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100HYD@g0@EntrQ",
+                                                                id='oda:8100HYD@g0@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Hyde Park Entrance Secturity Queue"
+                                                                    value='Hyde Park Entrance Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -7019,19 +7019,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HYD@g0@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100HYD@g0@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100HYD@g0@ExitQ",
+                                                                id='oda:8100HYD@g0@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Hyde Park Exit Congestion"
+                                                                    value='Hyde Park Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -7039,8 +7039,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HYD@g0@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100HYD@g0@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -7058,27 +7058,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100HYD_8100HYD@g0+8100HYD",
+                                        id='oda:8100HYD_8100HYD@g0+8100HYD',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hyde Park Gate (Entry) to Spectator Area"
+                                            value='Hyde Park Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("200"),
+                                        distance=Decimal('200'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HYD"
+                                                version='any',
+                                                ref='naptPoi:8100HYD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HYD@g0"
+                                                version='any',
+                                                ref='naptPoi:8100HYD@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HYD"
+                                                version='any',
+                                                ref='naptPoi:8100HYD'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7086,27 +7086,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100HYD+8100HYD_8100HYD@g0",
+                                        id='oda:8100HYD+8100HYD_8100HYD@g0',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hyde Park Spectator Area to Gate (Exit)"
+                                            value='Hyde Park Spectator Area to Gate (Exit)'
                                         ),
-                                        distance=Decimal("200"),
+                                        distance=Decimal('200'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HYD"
+                                                version='any',
+                                                ref='naptPoi:8100HYD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HYD"
+                                                version='any',
+                                                ref='naptPoi:8100HYD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HYD@g0"
+                                                version='any',
+                                                ref='naptPoi:8100HYD@g0'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7117,38 +7117,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:WEA",
+                            id='oda:WEA',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Wembley Arena"
+                                value='Wembley Arena'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100WEA",
+                                        id='naptPoi:8100WEA',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wembley Arena"
+                                            value='Wembley Arena'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Wembley Arena"
+                                                value='Wembley Arena'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -7165,21 +7165,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100WEA@gEntr",
+                                                    id='naptPoi:8100WEA@gEntr',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wembley Arena Spectator Entrance"
+                                                        value='Wembley Arena Spectator Entrance'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -7194,21 +7194,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100WEA@gEntr@SecQ",
+                                                                id='oda:8100WEA@gEntr@SecQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wembley Arena Entrance Security Queue"
+                                                                    value='Wembley Arena Entrance Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -7216,8 +7216,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WEA@gEntr@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100WEA@gEntr@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
@@ -7228,11 +7228,11 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100WEA@gExit",
+                                                    id='naptPoi:8100WEA@gExit',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wembley Arena Spectator Exit"
+                                                        value='Wembley Arena Spectator Exit'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -7247,19 +7247,19 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100WEA@gExit@ExitQ",
+                                                                id='oda:8100WEA@gExit@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wembley Arena Exit Congestion"
+                                                                    value='Wembley Arena Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -7267,8 +7267,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WEA@gExit@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100WEA@gExit@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -7286,27 +7286,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100WEA_8100WEA@gEntr+8100WEA",
+                                        id='oda:8100WEA_8100WEA@gEntr+8100WEA',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wembley Arena Spectator Entrance to Venue"
+                                            value='Wembley Arena Spectator Entrance to Venue'
                                         ),
-                                        distance=Decimal("172"),
+                                        distance=Decimal('172'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEA"
+                                                version='any',
+                                                ref='naptPoi:8100WEA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEA@gEntr"
+                                                version='any',
+                                                ref='naptPoi:8100WEA@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEA"
+                                                version='any',
+                                                ref='naptPoi:8100WEA'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7314,27 +7314,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WEA+8100WEAWEA_8100WEA@gExit",
+                                        id='oda:8100WEA+8100WEAWEA_8100WEA@gExit',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wembley Arena Venue to Spectator Exit"
+                                            value='Wembley Arena Venue to Spectator Exit'
                                         ),
-                                        distance=Decimal("100"),
+                                        distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEA"
+                                                version='any',
+                                                ref='naptPoi:8100WEA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEA"
+                                                version='any',
+                                                ref='naptPoi:8100WEA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEA@gExit"
+                                                version='any',
+                                                ref='naptPoi:8100WEA@gExit'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7345,38 +7345,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:LVC",
+                            id='oda:LVC',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Lee Valley Centre"
+                                value='Lee Valley Centre'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100LVC",
+                                        id='naptPoi:8100LVC',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lee Valley Centre"
+                                            value='Lee Valley Centre'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Lee Valley White Water Centre"
+                                                value='Lee Valley White Water Centre'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -7393,21 +7393,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100LVC@g0",
+                                                    id='naptPoi:8100LVC@g0',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Lee Valley Centre Spectator Gate"
+                                                        value='Lee Valley Centre Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -7422,21 +7422,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100LVC@g0@EntrQ",
+                                                                id='oda:8100LVC@g0@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Lee Valley Centre Entrance Secturity Queue"
+                                                                    value='Lee Valley Centre Entrance Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -7444,19 +7444,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100LVC@g0@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100LVC@g0@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100LVC@g0@ExitQ",
+                                                                id='oda:8100LVC@g0@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Lee Valley Centre Exit Congestion"
+                                                                    value='Lee Valley Centre Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -7464,8 +7464,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100LVC@g0@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100LVC@g0@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -7483,27 +7483,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100LVC_8100LVC_LVC@g0+8100LVC",
+                                        id='oda:8100LVC_8100LVC_LVC@g0+8100LVC',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lee Valley Gate (Entry) to Spectator Area"
+                                            value='Lee Valley Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("303"),
+                                        distance=Decimal('303'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LVC"
+                                                version='any',
+                                                ref='naptPoi:8100LVC'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LVC@g0"
+                                                version='any',
+                                                ref='naptPoi:8100LVC@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LVC"
+                                                version='any',
+                                                ref='naptPoi:8100LVC'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7511,27 +7511,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100LVC+8100LVC_8100LVC@g0",
+                                        id='oda:8100LVC+8100LVC_8100LVC@g0',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Lee Valley Spectator Area to Gate (Exit)"
+                                            value='Lee Valley Spectator Area to Gate (Exit)'
                                         ),
-                                        distance=Decimal("303"),
+                                        distance=Decimal('303'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LVC"
+                                                version='any',
+                                                ref='naptPoi:8100LVC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LVC"
+                                                version='any',
+                                                ref='naptPoi:8100LVC'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100LVC@g0"
+                                                version='any',
+                                                ref='naptPoi:8100LVC@g0'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7542,38 +7542,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:HAD",
+                            id='oda:HAD',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Hadleigh Farm"
+                                value='Hadleigh Farm'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100HAD",
+                                        id='naptPoi:8100HAD',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hadleigh Farm"
+                                            value='Hadleigh Farm'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Hadleigh Farm"
+                                                value='Hadleigh Farm'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -7590,21 +7590,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100HAD@g0",
+                                                    id='naptPoi:8100HAD@g0',
                                                     created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Hadleigh Farm Spectator Gate"
+                                                        value='Hadleigh Farm Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -7619,21 +7619,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100HAD@g0@EntrQ",
+                                                                id='oda:8100HAD@g0@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Hadleigh Farm Entrance Secturity Queue"
+                                                                    value='Hadleigh Farm Entrance Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -7641,19 +7641,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HAD@g0@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100HAD@g0@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100HAD@g0@ExitQ",
+                                                                id='oda:8100HAD@g0@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Hadleigh Farm Exit Congestion"
+                                                                    value='Hadleigh Farm Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -7661,8 +7661,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100HAD@g0@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100HAD@g0@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -7680,27 +7680,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100HAD_8100HAD@g0+8100HAD",
+                                        id='oda:8100HAD_8100HAD@g0+8100HAD',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hadleigh Farm Gate (Entry) to Spectator Area"
+                                            value='Hadleigh Farm Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("500"),
+                                        distance=Decimal('500'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HAD"
+                                                version='any',
+                                                ref='naptPoi:8100HAD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HAD@g0"
+                                                version='any',
+                                                ref='naptPoi:8100HAD@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HAD"
+                                                version='any',
+                                                ref='naptPoi:8100HAD'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7708,27 +7708,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100HAD+8100HAD_8100HAD@g0",
+                                        id='oda:8100HAD+8100HAD_8100HAD@g0',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hadleigh Farm Spectator Area to Gate (Exit)"
+                                            value='Hadleigh Farm Spectator Area to Gate (Exit)'
                                         ),
-                                        distance=Decimal("500"),
+                                        distance=Decimal('500'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HAD"
+                                                version='any',
+                                                ref='naptPoi:8100HAD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HAD"
+                                                version='any',
+                                                ref='naptPoi:8100HAD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100HAD@g0"
+                                                version='any',
+                                                ref='naptPoi:8100HAD@g0'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7739,38 +7739,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:ETD",
+                            id='oda:ETD',
                             created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Eton Dorney"
+                                value='Eton Dorney'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100ETD",
+                                        id='naptPoi:8100ETD',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Dorney"
+                                            value='Eton Dorney'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Eton Dorney"
+                                                value='Eton Dorney'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -7787,21 +7787,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100ETD@gTHub",
+                                                    id='naptPoi:8100ETD@gTHub',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Eton Dorney Transport Hub Gate"
+                                                        value='Eton Dorney Transport Hub Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -7816,21 +7816,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100ETD@gTHub@SecQ",
+                                                                id='oda:8100ETD@gTHub@SecQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Eton Dorney Transport Hub Gate (Entry) Security Queue"
+                                                                    value='Eton Dorney Transport Hub Gate (Entry) Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -7838,19 +7838,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100ETD@gTHub@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100ETD@gTHub@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100ETD@gTHub@ExitQ",
+                                                                id='oda:8100ETD@gTHub@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Eton Dorney Transport Hub Gate (Exit) Congestion"
+                                                                    value='Eton Dorney Transport Hub Gate (Exit) Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -7858,8 +7858,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100ETD@gTHub@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100ETD@gTHub@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT10M0S")
                                                                         ),
                                                                     ]
@@ -7870,13 +7870,13 @@ obj = PublicationDelivery(
                                                     entrance_type=EntranceEnumeration.GATE
                                                 ),
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100ETD@gN",
+                                                    id='naptPoi:8100ETD@gN',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Eton Dorney Northern Spectator Gate"
+                                                        value='Eton Dorney Northern Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -7891,21 +7891,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100ETD@gN@SecQ",
+                                                                id='oda:8100ETD@gN@SecQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Eton Dorney Northern Gate (Entry) Security Queue"
+                                                                    value='Eton Dorney Northern Gate (Entry) Security Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -7913,19 +7913,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100ETD@gN@SecQ",
-                                                                            version="any",
+                                                                            id='oda:8100ETD@gN@SecQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100ETD@gN@ExitQ",
+                                                                id='oda:8100ETD@gN@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Eton Dorney Northern Gate (Exit) Congestion"
+                                                                    value='Eton Dorney Northern Gate (Exit) Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -7933,8 +7933,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100ETD@gN@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100ETD@gN@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT10M0S")
                                                                         ),
                                                                     ]
@@ -7952,27 +7952,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100ETD_8100ETD@gN+8100ETD",
+                                        id='oda:8100ETD_8100ETD@gN+8100ETD',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Dorney Northern Spectator Gate to Venue"
+                                            value='Eton Dorney Northern Spectator Gate to Venue'
                                         ),
-                                        distance=Decimal("750"),
+                                        distance=Decimal('750'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD@gN"
+                                                version='any',
+                                                ref='naptPoi:8100ETD@gN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -7980,27 +7980,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100ETD+8100TD_8100ETD@gN",
+                                        id='oda:8100ETD+8100TD_8100ETD@gN',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Dorney Venue to Northern Spectator Gate"
+                                            value='Eton Dorney Venue to Northern Spectator Gate'
                                         ),
-                                        distance=Decimal("750"),
+                                        distance=Decimal('750'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD@gN"
+                                                version='any',
+                                                ref='naptPoi:8100ETD@gN'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -8008,27 +8008,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100ETD_8100ETD@gTHub+8100ETD",
+                                        id='oda:8100ETD_8100ETD@gTHub+8100ETD',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Dorney Transport Hub Spectator Gate to Venue"
+                                            value='Eton Dorney Transport Hub Spectator Gate to Venue'
                                         ),
-                                        distance=Decimal("1400"),
+                                        distance=Decimal('1400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD@gTHub"
+                                                version='any',
+                                                ref='naptPoi:8100ETD@gTHub'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -8036,27 +8036,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100ETD+8100ETD_8100ETD@gTHub",
+                                        id='oda:8100ETD+8100ETD_8100ETD@gTHub',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Eton Dorney Venue to Transport Hub Spectator Gate"
+                                            value='Eton Dorney Venue to Transport Hub Spectator Gate'
                                         ),
-                                        distance=Decimal("1400"),
+                                        distance=Decimal('1400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD"
+                                                version='any',
+                                                ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100ETD@gTHub"
+                                                version='any',
+                                                ref='naptPoi:8100ETD@gTHub'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -8067,38 +8067,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:WAP",
+                            id='oda:WAP',
                             created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Weymouth and Portland"
+                                value='Weymouth and Portland'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100WAP",
+                                        id='naptPoi:8100WAP',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weymouth and Portland"
+                                            value='Weymouth and Portland'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Weymouth and Portland - The Nothe"
+                                                value='Weymouth and Portland - The Nothe'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -8115,21 +8115,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100WAP@g0",
+                                                    id='naptPoi:8100WAP@g0',
                                                     created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                     changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                     modification=ModificationEnumeration.REVISE,
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Weymouth and Portland Spectator Gate"
+                                                        value='Weymouth and Portland Spectator Gate'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -8144,21 +8144,21 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100WAP@g0@EntrQ",
+                                                                id='oda:8100WAP@g0@EntrQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
                                                                 changed=XmlDateTime(2011, 5, 27, 17, 0, 0, 0, 0),
                                                                 modification=ModificationEnumeration.REVISE,
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Weymouth and Portland Entrance Secturity Queue"
+                                                                    value='Weymouth and Portland Entrance Secturity Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -8166,19 +8166,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WAP@g0@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100WAP@g0@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT60M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100WAP@g0@ExitQ",
+                                                                id='oda:8100WAP@g0@ExitQ',
                                                                 created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Weymouth and Portland Exit Congestion"
+                                                                    value='Weymouth and Portland Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -8186,8 +8186,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WAP@g0@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100WAP@g0@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT30M0S")
                                                                         ),
                                                                     ]
@@ -8205,27 +8205,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100WAP_8100WAP@g0+8100WAP",
+                                        id='oda:8100WAP_8100WAP@g0+8100WAP',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weymouth and Portland Gate (Entry) to Spectator Area"
+                                            value='Weymouth and Portland Gate (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("150"),
+                                        distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WAP"
+                                                version='any',
+                                                ref='naptPoi:8100WAP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WAP@g0"
+                                                version='any',
+                                                ref='naptPoi:8100WAP@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WAP"
+                                                version='any',
+                                                ref='naptPoi:8100WAP'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -8233,27 +8233,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WAP_8100WAP+8100WAP@g0",
+                                        id='oda:8100WAP_8100WAP+8100WAP@g0',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Weymouth and Portland Spectator Area to Gate (Exit)"
+                                            value='Weymouth and Portland Spectator Area to Gate (Exit)'
                                         ),
-                                        distance=Decimal("150"),
+                                        distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WAP"
+                                                version='any',
+                                                ref='naptPoi:8100WAP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WAP"
+                                                version='any',
+                                                ref='naptPoi:8100WAP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WAP@g0"
+                                                version='any',
+                                                ref='naptPoi:8100WAP@g0'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -8264,38 +8264,38 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:WEM",
+                            id='oda:WEM',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 6, 22, 10, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Wembley Stadium"
+                                value='Wembley Stadium'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100WEM",
+                                        id='naptPoi:8100WEM',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 6, 22, 10, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wembley Stadium"
+                                            value='Wembley Stadium'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Wembley Stadium"
+                                                value='Wembley Stadium'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -8312,19 +8312,19 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         entrances=SiteEntrancesRelStructure(
                                             choice=[
                                                 PointOfInterestEntrance(
-                                                    id="naptPoi:8100WEM@g0",
+                                                    id='naptPoi:8100WEM@g0',
                                                     created=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
-                                                    version="any",
+                                                    version='any',
                                                     name=MultilingualString(
-                                                        value="Wembley Stadium Turnstiles"
+                                                        value='Wembley Stadium Turnstiles'
                                                     ),
                                                     centroid=SimplePointVersionStructure(
                                                         location=LocationStructure2(
@@ -8339,19 +8339,19 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
-                                                                ref="napt:type_of_place@PIE",
-                                                                version_ref="EXTERNAL"
+                                                                ref='napt:type_of_place@PIE',
+                                                                version_ref='EXTERNAL'
                                                             ),
                                                         ]
                                                     ),
                                                     check_constraints=CheckConstraintsRelStructure(
                                                         check_constraint_ref_or_check_constraint=[
                                                             CheckConstraint(
-                                                                id="oda:8100WEM@g0@EntrQ",
+                                                                id='oda:8100WEM@g0@EntrQ',
                                                                 created=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wembley Stadium Turnstiles Ticket Check Queue"
+                                                                    value='Wembley Stadium Turnstiles Ticket Check Queue'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.FORWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
@@ -8359,19 +8359,19 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WEM@g0@EntrQ",
-                                                                            version="any",
+                                                                            id='oda:8100WEM@g0@EntrQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT15M0S")
                                                                         ),
                                                                     ]
                                                                 )
                                                             ),
                                                             CheckConstraint(
-                                                                id="oda:8100WEM@g0@ExitQ",
+                                                                id='oda:8100WEM@g0@ExitQ',
                                                                 created=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
-                                                                version="any",
+                                                                version='any',
                                                                 name=MultilingualString(
-                                                                    value="Wembley Stadium Turnstiles Exit Congestion"
+                                                                    value='Wembley Stadium Turnstiles Exit Congestion'
                                                                 ),
                                                                 check_direction=CheckDirectionEnumeration.BACKWARDS,
                                                                 check_process=CheckProcessTypeEnumeration.EGRESS,
@@ -8379,8 +8379,8 @@ obj = PublicationDelivery(
                                                                 delays=CheckConstraintDelaysRelStructure(
                                                                     check_constraint_delay_ref_or_check_constraint_delay=[
                                                                         CheckConstraintDelay(
-                                                                            id="oda:8100WEM@g0@ExitQ",
-                                                                            version="any",
+                                                                            id='oda:8100WEM@g0@ExitQ',
+                                                                            version='any',
                                                                             average_delay=XmlDuration("PT5M0S")
                                                                         ),
                                                                     ]
@@ -8398,27 +8398,27 @@ obj = PublicationDelivery(
                             navigation_paths=NavigationPathsInFrameRelStructure(
                                 navigation_path=[
                                     NavigationPath(
-                                        id="oda:8100WEM_8100WEM@g0+8100WEM",
+                                        id='oda:8100WEM_8100WEM@g0+8100WEM',
                                         created=XmlDateTime(2011, 6, 22, 10, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wembley Stadium Turnstiles (Entry) to Spectator Area"
+                                            value='Wembley Stadium Turnstiles (Entry) to Spectator Area'
                                         ),
-                                        distance=Decimal("175"),
+                                        distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEM"
+                                                version='any',
+                                                ref='naptPoi:8100WEM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEM@g0"
+                                                version='any',
+                                                ref='naptPoi:8100WEM@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEM"
+                                                version='any',
+                                                ref='naptPoi:8100WEM'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -8426,27 +8426,27 @@ obj = PublicationDelivery(
                                         )
                                     ),
                                     NavigationPath(
-                                        id="oda:8100WEM+8100WEM_8100WEM@g0",
+                                        id='oda:8100WEM+8100WEM_8100WEM@g0',
                                         created=XmlDateTime(2011, 4, 21, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Wembley Stadium Spectator Area to Turnstiles (Exit)"
+                                            value='Wembley Stadium Spectator Area to Turnstiles (Exit)'
                                         ),
-                                        distance=Decimal("175"),
+                                        distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEM"
+                                                version='any',
+                                                ref='naptPoi:8100WEM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEM"
+                                                version='any',
+                                                ref='naptPoi:8100WEM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
-                                                version="any",
-                                                ref="naptPoi:8100WEM@g0"
+                                                version='any',
+                                                ref='naptPoi:8100WEM@g0'
                                             )
                                         ),
                                         transfer_duration=TransferDurationStructure(
@@ -8457,34 +8457,34 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:MIL",
+                            id='oda:MIL',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Millennium Stadium"
+                                value='Millennium Stadium'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100MIL",
+                                        id='naptPoi:8100MIL',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Millennium Stadium"
+                                            value='Millennium Stadium'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Millennium Stadium"
+                                                value='Millennium Stadium'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -8501,8 +8501,8 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         )
@@ -8511,34 +8511,34 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:HAM",
+                            id='oda:HAM',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Hampden Park"
+                                value='Hampden Park'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100HAM",
+                                        id='naptPoi:8100HAM',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Hampden Park"
+                                            value='Hampden Park'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Hampden Park"
+                                                value='Hampden Park'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -8555,8 +8555,8 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         )
@@ -8565,34 +8565,34 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:OLD",
+                            id='oda:OLD',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="Old Trafford"
+                                value='Old Trafford'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100OLD",
+                                        id='naptPoi:8100OLD',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="Old Trafford"
+                                            value='Old Trafford'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="Old Trafford"
+                                                value='Old Trafford'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -8609,8 +8609,8 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         )
@@ -8619,34 +8619,34 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:COV",
+                            id='oda:COV',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                            version="any",
+                            version='any',
                             name=MultilingualString(
-                                value="City of Coventry Stadium"
+                                value='City of Coventry Stadium'
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100COV",
+                                        id='naptPoi:8100COV',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
-                                            value="City of Coventry Stadium"
+                                            value='City of Coventry Stadium'
                                         ),
                                         description=[
                                             MultilingualString(
-                                                value="City of Coventry Stadium"
+                                                value='City of Coventry Stadium'
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -8663,8 +8663,8 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         )
@@ -8673,22 +8673,22 @@ obj = PublicationDelivery(
                             )
                         ),
                         SiteFrame(
-                            id="oda:SJP",
+                            id='oda:SJP',
                             created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                             changed=XmlDateTime(2011, 5, 27, 17, 0, 0),
                             modification=ModificationEnumeration.REVISE,
-                            version="any",
+                            version='any',
                             name=MultilingualString(
                                 value="St James' Park (Newcastle)"
                             ),
                             points_of_interest=PointsOfInterestInFrameRelStructure(
                                 point_of_interest=[
                                     PointOfInterest(
-                                        id="naptPoi:8100SJP",
+                                        id='naptPoi:8100SJP',
                                         created=XmlDateTime(2011, 4, 14, 17, 0, 0, 0, 0),
                                         changed=XmlDateTime(2011, 5, 27, 17, 0, 0),
                                         modification=ModificationEnumeration.REVISE,
-                                        version="any",
+                                        version='any',
                                         name=MultilingualString(
                                             value="St James' Park (Newcastle)"
                                         ),
@@ -8698,13 +8698,13 @@ obj = PublicationDelivery(
                                             ),
                                         ],
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
-                                            ref="Venue"
+                                            ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
-                                                    ref="napt:type_of_zone@POI",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_zone@POI',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
@@ -8721,8 +8721,8 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
-                                                    ref="napt:type_of_place@Venue",
-                                                    version_ref="EXTERNAL"
+                                                    ref='napt:type_of_place@Venue',
+                                                    version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         )

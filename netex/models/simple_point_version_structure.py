@@ -18,7 +18,7 @@ class SimplePointVersionStructure(EntityInVersionStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     location: Optional[LocationStructure2] = field(
         default=None,
@@ -26,5 +26,5 @@ class SimplePointVersionStructure(EntityInVersionStructure):
             "name": "Location",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

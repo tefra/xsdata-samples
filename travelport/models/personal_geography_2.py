@@ -18,6 +18,7 @@ class PersonalGeography2:
     city_code
         Passenger city code.
     """
+
     class Meta:
         name = "PersonalGeography"
         namespace = "http://www.travelport.com/schema/common_v32_0"
@@ -28,7 +29,7 @@ class PersonalGeography2:
             "name": "CountryCode",
             "type": "Element",
             "length": 2,
-        }
+        },
     )
     state_province_code: None | str = field(
         default=None,
@@ -36,7 +37,7 @@ class PersonalGeography2:
             "name": "StateProvinceCode",
             "type": "Element",
             "max_length": 6,
-        }
+        },
     )
     city_code: None | str = field(
         default=None,
@@ -44,5 +45,5 @@ class PersonalGeography2:
             "name": "CityCode",
             "type": "Element",
             "length": 3,
-        }
+        },
     )

@@ -44,6 +44,7 @@ class CustomField(TypeCustomField2):
         Defines if field as editable or not.
     overriden
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
 
@@ -53,14 +54,14 @@ class CustomField(TypeCustomField2):
             "name": "ActionRef",
             "type": "Element",
             "max_occurs": 999,
-        }
+        },
     )
     label: None | str = field(
         default=None,
         metadata={
             "name": "Label",
             "type": "Attribute",
-        }
+        },
     )
     searchable: None | object = field(
         default=None,
@@ -68,61 +69,61 @@ class CustomField(TypeCustomField2):
             "name": "Searchable",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     search_option: bool = field(
         default=False,
         metadata={
             "name": "SearchOption",
             "type": "Attribute",
-        }
+        },
     )
     search_option_display_order: None | int = field(
         default=None,
         metadata={
             "name": "SearchOptionDisplayOrder",
             "type": "Attribute",
-        }
+        },
     )
     hide: bool = field(
         default=False,
         metadata={
             "name": "Hide",
             "type": "Attribute",
-        }
+        },
     )
     min_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MinOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     max_occurs_override: None | int = field(
         default=None,
         metadata={
             "name": "MaxOccursOverride",
             "type": "Attribute",
-        }
+        },
     )
     inheritable_control_ind: bool = field(
         default=False,
         metadata={
             "name": "InheritableControlInd",
             "type": "Attribute",
-        }
+        },
     )
     read_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReadOnly",
             "type": "Attribute",
-        }
+        },
     )
     overriden: bool = field(
         default=False,
         metadata={
             "name": "Overriden",
             "type": "Attribute",
-        }
+        },
     )

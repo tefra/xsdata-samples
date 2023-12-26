@@ -1,7 +1,9 @@
 from dataclasses import dataclass, field
 from typing import List, Optional
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
-from datexii.models.eu.datexii.v2.measurement_site_record import MeasurementSiteRecord
+from datexii.models.eu.datexii.v2.measurement_site_record import (
+    MeasurementSiteRecord,
+)
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
@@ -22,6 +24,7 @@ class MeasurementSiteTable:
     :ivar id:
     :ivar version:
     """
+
     measurement_site_table_identification: Optional[str] = field(
         default=None,
         metadata={
@@ -29,7 +32,7 @@ class MeasurementSiteTable:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "max_length": 1024,
-        }
+        },
     )
     measurement_site_record: List[MeasurementSiteRecord] = field(
         default_factory=list,
@@ -38,7 +41,7 @@ class MeasurementSiteTable:
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
             "min_occurs": 1,
-        }
+        },
     )
     measurement_site_table_extension: Optional[ExtensionType] = field(
         default=None,
@@ -46,19 +49,19 @@ class MeasurementSiteTable:
             "name": "measurementSiteTableExtension",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-        }
+        },
     )
     id: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     version: Optional[str] = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
-        }
+        },
     )

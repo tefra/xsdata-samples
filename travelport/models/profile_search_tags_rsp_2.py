@@ -16,6 +16,7 @@ class ProfileSearchTagsRsp2(BaseRsp5):
     tag
         A tag that belongs to the agency.
     """
+
     class Meta:
         name = "ProfileSearchTagsRsp"
         namespace = "http://www.travelport.com/schema/uprofile_v37_0"
@@ -26,5 +27,5 @@ class ProfileSearchTagsRsp2(BaseRsp5):
             "name": "Tag",
             "type": "Element",
             "max_occurs": 15,
-        }
+        },
     )

@@ -31,6 +31,7 @@ class DataFilterTypeEnumSimple(Enum):
         incremented by 1 after filtering. Length of occurrence is 8 bit
         (minimum).
     """
+
     ALWAYS = "ALWAYS"
     MASKED_NEW_DIFFERS_MASKED_OLD = "MASKED-NEW-DIFFERS-MASKED-OLD"
     MASKED_NEW_DIFFERS_X = "MASKED-NEW-DIFFERS-X"

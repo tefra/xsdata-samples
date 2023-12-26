@@ -24,7 +24,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "SiteRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     level_ref: Optional[LevelRef] = field(
         default=None,
@@ -32,7 +32,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "LevelRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     class_of_use_ref: Optional[ClassOfUseRef] = field(
         default=None,
@@ -40,7 +40,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "ClassOfUseRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     check_constraints: Optional[CheckConstraintsRelStructure] = field(
         default=None,
@@ -48,7 +48,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "checkConstraints",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     equipment_places: Optional[EquipmentPlacesRelStructure] = field(
         default=None,
@@ -56,7 +56,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "equipmentPlaces",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     place_equipments: Optional[PlaceEquipmentsRelStructure] = field(
         default=None,
@@ -64,7 +64,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "placeEquipments",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     local_services: Optional[LocalServicesRelStructure] = field(
         default=None,
@@ -72,7 +72,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "localServices",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     label: Optional[MultilingualString] = field(
         default=None,
@@ -80,5 +80,5 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "name": "Label",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )

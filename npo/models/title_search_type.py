@@ -17,31 +17,31 @@ class TitleSearchType:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )
     type_value: None | TextualTypeEnum = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )
     match_type: None | StandardMatchType = field(
         default=None,
         metadata={
             "name": "matchType",
             "type": "Attribute",
-        }
+        },
     )
     match: None | Match = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

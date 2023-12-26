@@ -17,7 +17,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     description: Optional[MultilingualString] = field(
         default=None,
@@ -25,7 +25,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_first_in_sequence: Optional[bool] = field(
         default=None,
@@ -33,7 +33,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "IsFirstInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     is_last_in_sequence: Optional[bool] = field(
         default=None,
@@ -41,7 +41,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "IsLastInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     access_number_is_limited: Optional[bool] = field(
         default=None,
@@ -49,7 +49,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "AccessNumberIsLimited",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     minimum_access: Optional[int] = field(
         default=None,
@@ -57,7 +57,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "MinimumAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     maximum_access: Optional[int] = field(
         default=None,
@@ -65,7 +65,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "MaximumAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     access_number: Optional[int] = field(
         default=None,
@@ -73,11 +73,11 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "AccessNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-        }
+        },
     )
     order: Optional[int] = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

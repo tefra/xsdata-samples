@@ -17,5 +17,5 @@ class ExtendedRecordTypeDuplicatedGunsnumbers:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
             "length": 10,
             "pattern": r"G([0-9]{9})",
-        }
+        },
     )

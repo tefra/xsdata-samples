@@ -25,6 +25,7 @@ class VehicleUpsellOfferSearchCriteria:
     door_count
         The number of doors on the vehicle. Could be a range like '2-4'
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -34,33 +35,33 @@ class VehicleUpsellOfferSearchCriteria:
             "name": "VehicleClass",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     category: None | TypeVehicleCategory = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Attribute",
-        }
+        },
     )
     air_conditioning: None | bool = field(
         default=None,
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
-        }
+        },
     )
     transmission_type: None | TypeVehicleTransmission = field(
         default=None,
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
-        }
+        },
     )
     door_count: None | TypeDoorCount = field(
         default=None,
         metadata={
             "name": "DoorCount",
             "type": "Attribute",
-        }
+        },
     )

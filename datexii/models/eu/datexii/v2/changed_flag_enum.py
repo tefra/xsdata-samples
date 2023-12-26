@@ -10,5 +10,6 @@ class ChangedFlagEnum(Enum):
     :cvar CATALOGUE: Catalogue has changed indicator.
     :cvar FILTER: Filter has changed indicator.
     """
+
     CATALOGUE = "catalogue"
     FILTER = "filter"

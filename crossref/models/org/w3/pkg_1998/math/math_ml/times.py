@@ -15,5 +15,5 @@ class Times:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

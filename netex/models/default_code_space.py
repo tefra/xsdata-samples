@@ -13,5 +13,5 @@ class DefaultCodeSpace:
         default="",
         metadata={
             "required": True,
-        }
+        },
     )

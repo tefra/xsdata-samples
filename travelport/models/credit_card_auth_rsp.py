@@ -11,6 +11,7 @@ class CreditCardAuthRsp(BaseRsp1):
     """
     The response to the CreditCardAuthReq.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
@@ -22,5 +23,5 @@ class CreditCardAuthRsp(BaseRsp1):
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )

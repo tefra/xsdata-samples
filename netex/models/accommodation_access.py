@@ -14,5 +14,5 @@ class AccommodationAccess:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )

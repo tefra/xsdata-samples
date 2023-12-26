@@ -9,6 +9,7 @@ class AgentVoucherHistory1:
     """
     Agent Voucher Form of Payments.
     """
+
     class Meta:
         name = "AgentVoucherHistory"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -18,5 +19,5 @@ class AgentVoucherHistory1:
         metadata={
             "name": "Number",
             "type": "Attribute",
-        }
+        },
     )

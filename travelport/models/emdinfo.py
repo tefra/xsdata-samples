@@ -59,6 +59,7 @@ class Emdinfo:
         cases like URAdd, then instead of erroring out set this attribute to
         true.
     """
+
     class Meta:
         name = "EMDInfo"
         namespace = "http://www.travelport.com/schema/air_v52_0"
@@ -69,7 +70,7 @@ class Emdinfo:
             "name": "EMDTravelerInfo",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     supplier_locator: list[SupplierLocator1] = field(
         default_factory=list,
@@ -78,7 +79,7 @@ class Emdinfo:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
             "max_occurs": 999,
-        }
+        },
     )
     electronic_misc_document: list[ElectronicMiscDocument] = field(
         default_factory=list,
@@ -87,7 +88,7 @@ class Emdinfo:
             "type": "Element",
             "min_occurs": 1,
             "max_occurs": 999,
-        }
+        },
     )
     payment: None | Payment1 = field(
         default=None,
@@ -95,7 +96,7 @@ class Emdinfo:
             "name": "Payment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     form_of_payment: None | FormOfPayment1 = field(
         default=None,
@@ -103,14 +104,14 @@ class Emdinfo:
             "name": "FormOfPayment",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-        }
+        },
     )
     emdpricing_info: None | EmdpricingInfo = field(
         default=None,
         metadata={
             "name": "EMDPricingInfo",
             "type": "Element",
-        }
+        },
     )
     emdendorsement: list[str] = field(
         default_factory=list,
@@ -120,21 +121,21 @@ class Emdinfo:
             "max_occurs": 999,
             "min_length": 1,
             "max_length": 255,
-        }
+        },
     )
     fare_calc: None | str = field(
         default=None,
         metadata={
             "name": "FareCalc",
             "type": "Element",
-        }
+        },
     )
     emdcommission: None | Emdcommission = field(
         default=None,
         metadata={
             "name": "EMDCommission",
             "type": "Element",
-        }
+        },
     )
     provider_code: None | str = field(
         default=None,
@@ -144,7 +145,7 @@ class Emdinfo:
             "required": True,
             "min_length": 2,
             "max_length": 5,
-        }
+        },
     )
     provider_locator_code: None | str = field(
         default=None,
@@ -153,7 +154,7 @@ class Emdinfo:
             "type": "Attribute",
             "required": True,
             "max_length": 15,
-        }
+        },
     )
     supplier_code: None | str = field(
         default=None,
@@ -162,26 +163,26 @@ class Emdinfo:
             "type": "Attribute",
             "min_length": 1,
             "max_length": 5,
-        }
+        },
     )
     key: None | str = field(
         default=None,
         metadata={
             "name": "Key",
             "type": "Attribute",
-        }
+        },
     )
     el_stat: None | TypeElementStatus1 = field(
         default=None,
         metadata={
             "name": "ElStat",
             "type": "Attribute",
-        }
+        },
     )
     key_override: None | bool = field(
         default=None,
         metadata={
             "name": "KeyOverride",
             "type": "Attribute",
-        }
+        },
     )

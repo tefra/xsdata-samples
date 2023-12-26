@@ -9,6 +9,7 @@ class AirReservationLocatorCode:
     """
     Identifies the AirReservation LocatorCode within the Universal Record.
     """
+
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
@@ -18,5 +19,5 @@ class AirReservationLocatorCode:
             "required": True,
             "min_length": 5,
             "max_length": 8,
-        }
+        },
     )

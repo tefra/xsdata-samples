@@ -19,12 +19,12 @@ class Bpmndiagram(Diagram):
             "name": "BPMNPlane",
             "type": "Element",
             "required": True,
-        }
+        },
     )
     bpmnlabel_style: List[BpmnlabelStyle] = field(
         default_factory=list,
         metadata={
             "name": "BPMNLabelStyle",
             "type": "Element",
-        }
+        },
     )

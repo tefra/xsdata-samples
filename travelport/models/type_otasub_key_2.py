@@ -19,6 +19,7 @@ class TypeOtasubKey2:
     description
         A brief description of a subkey.
     """
+
     class Meta:
         name = "typeOTASubKey"
 
@@ -29,7 +30,7 @@ class TypeOtasubKey2:
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v37_0",
             "max_occurs": 999,
-        }
+        },
     )
     name: None | int = field(
         default=None,
@@ -37,12 +38,12 @@ class TypeOtasubKey2:
             "name": "Name",
             "type": "Attribute",
             "required": True,
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
             "type": "Attribute",
-        }
+        },
     )

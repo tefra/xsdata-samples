@@ -16,28 +16,28 @@ class ImageType2:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     credits: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     source: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     source_name: None | str = field(
         default=None,
@@ -45,25 +45,25 @@ class ImageType2:
             "name": "sourceName",
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     license: None | LicenseEnum = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-        }
+        },
     )
     type_value: None | ImageTypeEnum = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
-        }
+        },
     )
     url: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

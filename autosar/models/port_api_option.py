@@ -3,8 +3,12 @@ from typing import List, Optional
 from .annotation import VariationPoint
 from .boolean import Boolean
 from .communication_buffer_locking import CommunicationBufferLocking
-from .data_transformation_error_handling_enum import DataTransformationErrorHandlingEnum
-from .data_transformation_status_forwarding_enum import DataTransformationStatusForwardingEnum
+from .data_transformation_error_handling_enum import (
+    DataTransformationErrorHandlingEnum,
+)
+from .data_transformation_status_forwarding_enum import (
+    DataTransformationStatusForwardingEnum,
+)
 from .port_defined_argument_value import PortDefinedArgumentValue
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .ref import Ref
@@ -55,6 +59,7 @@ class PortApiOption:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "PORT-API-OPTION"
 
@@ -64,7 +69,7 @@ class PortApiOption:
             "name": "ENABLE-TAKE-ADDRESS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     error_handling: Optional[DataTransformationErrorHandlingEnum] = field(
         default=None,
@@ -72,7 +77,7 @@ class PortApiOption:
             "name": "ERROR-HANDLING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     indirect_api: Optional[Boolean] = field(
         default=None,
@@ -80,7 +85,7 @@ class PortApiOption:
             "name": "INDIRECT-API",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_arg_values: Optional["PortApiOption.PortArgValues"] = field(
         default=None,
@@ -88,7 +93,7 @@ class PortApiOption:
             "name": "PORT-ARG-VALUES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     port_ref: Optional["PortApiOption.PortRef"] = field(
         default=None,
@@ -96,7 +101,7 @@ class PortApiOption:
             "name": "PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     supported_features: Optional["PortApiOption.SupportedFeatures"] = field(
         default=None,
@@ -104,15 +109,17 @@ class PortApiOption:
             "name": "SUPPORTED-FEATURES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    transformer_status_forwarding: Optional[DataTransformationStatusForwardingEnum] = field(
+    transformer_status_forwarding: Optional[
+        DataTransformationStatusForwardingEnum
+    ] = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-STATUS-FORWARDING",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -120,14 +127,14 @@ class PortApiOption:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -135,7 +142,7 @@ class PortApiOption:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -146,7 +153,7 @@ class PortApiOption:
                 "name": "PORT-DEFINED-ARGUMENT-VALUE",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -157,7 +164,7 @@ class PortApiOption:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -168,5 +175,5 @@ class PortApiOption:
                 "name": "COMMUNICATION-BUFFER-LOCKING",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )

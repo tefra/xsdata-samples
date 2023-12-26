@@ -30,6 +30,7 @@ class TypeAddress1(TypeTckeyElement):
         Location, Billing, LocalLangInvoice, Home, Work). Util:
         ReferenceDataRetrieveReq, TypeCode PostalAddressType
     """
+
     class Meta:
         name = "typeAddress"
 
@@ -43,7 +44,7 @@ class TypeAddress1(TypeTckeyElement):
             "max_occurs": 3,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     city: None | str = field(
         default=None,
@@ -51,7 +52,7 @@ class TypeAddress1(TypeTckeyElement):
             "name": "City",
             "type": "Attribute",
             "max_length": 128,
-        }
+        },
     )
     state: None | str = field(
         default=None,
@@ -59,7 +60,7 @@ class TypeAddress1(TypeTckeyElement):
             "name": "State",
             "type": "Attribute",
             "max_length": 6,
-        }
+        },
     )
     other_state_province: None | str = field(
         default=None,
@@ -68,7 +69,7 @@ class TypeAddress1(TypeTckeyElement):
             "type": "Attribute",
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )
     country: None | str = field(
         default=None,
@@ -76,7 +77,7 @@ class TypeAddress1(TypeTckeyElement):
             "name": "Country",
             "type": "Attribute",
             "length": 2,
-        }
+        },
     )
     postal: None | str = field(
         default=None,
@@ -84,7 +85,7 @@ class TypeAddress1(TypeTckeyElement):
             "name": "Postal",
             "type": "Attribute",
             "max_length": 12,
-        }
+        },
     )
     type_value: None | str = field(
         default=None,
@@ -94,5 +95,5 @@ class TypeAddress1(TypeTckeyElement):
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

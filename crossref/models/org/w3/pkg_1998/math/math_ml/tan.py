@@ -15,5 +15,5 @@ class Tan:
         metadata={
             "type": "Wildcard",
             "namespace": "##any",
-        }
+        },
     )

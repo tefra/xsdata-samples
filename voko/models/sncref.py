@@ -11,5 +11,5 @@ class Sncref:
         default=None,
         metadata={
             "type": "Attribute",
-        }
+        },
     )

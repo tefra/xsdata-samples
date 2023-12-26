@@ -1,6 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Optional
-from .ethernet_coupling_port_scheduler_enum_simple import EthernetCouplingPortSchedulerEnumSimple
+from .ethernet_coupling_port_scheduler_enum_simple import (
+    EthernetCouplingPortSchedulerEnumSimple,
+)
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
@@ -22,6 +24,7 @@ class EthernetCouplingPortSchedulerEnum:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "ETHERNET-COUPLING-PORT-SCHEDULER-ENUM"
 
@@ -29,14 +32,14 @@ class EthernetCouplingPortSchedulerEnum:
         default=None,
         metadata={
             "required": True,
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -44,5 +47,5 @@ class EthernetCouplingPortSchedulerEnum:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )

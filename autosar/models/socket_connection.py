@@ -7,7 +7,9 @@ from .annotation import (
 )
 from .boolean import Boolean
 from .category_string import CategoryString
-from .i_pv_6_ext_header_filter_list_subtypes_enum import IPv6ExtHeaderFilterListSubtypesEnum
+from .i_pv_6_ext_header_filter_list_subtypes_enum import (
+    IPv6ExtHeaderFilterListSubtypesEnum,
+)
 from .identifier import Identifier
 from .logic_address_subtypes_enum import LogicAddressSubtypesEnum
 from .multi_language_overview_paragraph import MultiLanguageOverviewParagraph
@@ -19,7 +21,9 @@ from .so_ad_connector_type import SoAdConnectorType
 from .so_ad_protocol_type import SoAdProtocolType
 from .socket_address_subtypes_enum import SocketAddressSubtypesEnum
 from .socket_connection_ipdu_identifier import SocketConnectionIpduIdentifier
-from .tcp_option_filter_list_subtypes_enum import TcpOptionFilterListSubtypesEnum
+from .tcp_option_filter_list_subtypes_enum import (
+    TcpOptionFilterListSubtypesEnum,
+)
 from .time_value import TimeValue
 from .tp_connection_ident import TpConnectionIdent
 
@@ -132,6 +136,7 @@ class SocketConnection:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "SOCKET-CONNECTION"
 
@@ -141,7 +146,7 @@ class SocketConnection:
             "name": "DESC",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     category: Optional[CategoryString] = field(
         default=None,
@@ -149,7 +154,7 @@ class SocketConnection:
             "name": "CATEGORY",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     introduction: Optional[DocumentationBlock] = field(
         default=None,
@@ -157,7 +162,7 @@ class SocketConnection:
             "name": "INTRODUCTION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     admin_data: Optional[AdminData] = field(
         default=None,
@@ -165,23 +170,27 @@ class SocketConnection:
             "name": "ADMIN-DATA",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    allowed_i_pv_6_ext_headers_ref: Optional["SocketConnection.AllowedIPv6ExtHeadersRef"] = field(
+    allowed_i_pv_6_ext_headers_ref: Optional[
+        "SocketConnection.AllowedIPv6ExtHeadersRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ALLOWED-I-PV-6-EXT-HEADERS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    allowed_tcp_options_ref: Optional["SocketConnection.AllowedTcpOptionsRef"] = field(
+    allowed_tcp_options_ref: Optional[
+        "SocketConnection.AllowedTcpOptionsRef"
+    ] = field(
         default=None,
         metadata={
             "name": "ALLOWED-TCP-OPTIONS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     autosar_connector: Optional[SoAdConnectorType] = field(
         default=None,
@@ -189,7 +198,7 @@ class SocketConnection:
             "name": "AUTOSAR-CONNECTOR",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     client_ip_addr_from_connection_request: Optional[Boolean] = field(
         default=None,
@@ -197,7 +206,7 @@ class SocketConnection:
             "name": "CLIENT-IP-ADDR-FROM-CONNECTION-REQUEST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     client_port_from_connection_request: Optional[Boolean] = field(
         default=None,
@@ -205,7 +214,7 @@ class SocketConnection:
             "name": "CLIENT-PORT-FROM-CONNECTION-REQUEST",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     client_port_ref: Optional["SocketConnection.ClientPortRef"] = field(
         default=None,
@@ -213,23 +222,27 @@ class SocketConnection:
             "name": "CLIENT-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    do_ip_source_address_ref: Optional["SocketConnection.DoIpSourceAddressRef"] = field(
+    do_ip_source_address_ref: Optional[
+        "SocketConnection.DoIpSourceAddressRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DO-IP-SOURCE-ADDRESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    do_ip_target_address_ref: Optional["SocketConnection.DoIpTargetAddressRef"] = field(
+    do_ip_target_address_ref: Optional[
+        "SocketConnection.DoIpTargetAddressRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DO-IP-TARGET-ADDRESS-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     ident: Optional[TpConnectionIdent] = field(
         default=None,
@@ -237,7 +250,7 @@ class SocketConnection:
             "name": "IDENT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     local_port_ref: Optional["SocketConnection.LocalPortRef"] = field(
         default=None,
@@ -245,7 +258,7 @@ class SocketConnection:
             "name": "LOCAL-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     n_pdu_ref: Optional["SocketConnection.NPduRef"] = field(
         default=None,
@@ -253,7 +266,7 @@ class SocketConnection:
             "name": "N-PDU-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdus: Optional["SocketConnection.Pdus"] = field(
         default=None,
@@ -261,7 +274,7 @@ class SocketConnection:
             "name": "PDUS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_collection_max_buffer_size: Optional[PositiveInteger] = field(
         default=None,
@@ -269,7 +282,7 @@ class SocketConnection:
             "name": "PDU-COLLECTION-MAX-BUFFER-SIZE",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     pdu_collection_timeout: Optional[TimeValue] = field(
         default=None,
@@ -277,7 +290,7 @@ class SocketConnection:
             "name": "PDU-COLLECTION-TIMEOUT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     remote_port_ref: Optional["SocketConnection.RemotePortRef"] = field(
         default=None,
@@ -285,23 +298,27 @@ class SocketConnection:
             "name": "REMOTE-PORT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    runtime_ip_address_configuration: Optional[RuntimeAddressConfigurationEnum] = field(
+    runtime_ip_address_configuration: Optional[
+        RuntimeAddressConfigurationEnum
+    ] = field(
         default=None,
         metadata={
             "name": "RUNTIME-IP-ADDRESS-CONFIGURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
-    runtime_port_configuration: Optional[RuntimeAddressConfigurationEnum] = field(
+    runtime_port_configuration: Optional[
+        RuntimeAddressConfigurationEnum
+    ] = field(
         default=None,
         metadata={
             "name": "RUNTIME-PORT-CONFIGURATION",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     short_label: Optional[Identifier] = field(
         default=None,
@@ -309,7 +326,7 @@ class SocketConnection:
             "name": "SHORT-LABEL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     socket_protocol: Optional[SoAdProtocolType] = field(
         default=None,
@@ -317,7 +334,7 @@ class SocketConnection:
             "name": "SOCKET-PROTOCOL",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -325,14 +342,14 @@ class SocketConnection:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -340,7 +357,7 @@ class SocketConnection:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -351,7 +368,7 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -362,7 +379,7 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -373,7 +390,7 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -384,7 +401,7 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -395,7 +412,7 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -406,7 +423,7 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
@@ -417,18 +434,20 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
 
     @dataclass
     class Pdus:
-        socket_connection_ipdu_identifier: List[SocketConnectionIpduIdentifier] = field(
+        socket_connection_ipdu_identifier: List[
+            SocketConnectionIpduIdentifier
+        ] = field(
             default_factory=list,
             metadata={
                 "name": "SOCKET-CONNECTION-IPDU-IDENTIFIER",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
-            }
+            },
         )
 
     @dataclass
@@ -439,5 +458,5 @@ class SocketConnection:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )

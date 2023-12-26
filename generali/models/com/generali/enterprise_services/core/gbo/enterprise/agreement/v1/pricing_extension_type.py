@@ -1,9 +1,13 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Optional
-from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import BaseIdentifiedComponentType
+from generali.models.com.generali.enterprise_services.core.gbo.common.v1.base_identified_component_type import (
+    BaseIdentifiedComponentType,
+)
 
-__NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+__NAMESPACE__ = (
+    "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
+)
 
 
 @dataclass
@@ -14,7 +18,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "name": "Code",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     rate_basis: Optional[str] = field(
         default=None,
@@ -22,7 +26,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "name": "RateBasis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     rate_pc: Optional[Decimal] = field(
         default=None,
@@ -30,7 +34,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "name": "RatePC",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     exposure: Optional[Decimal] = field(
         default=None,
@@ -38,7 +42,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "name": "Exposure",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     sublimit: Optional[Decimal] = field(
         default=None,
@@ -46,7 +50,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "name": "Sublimit",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     premium: Optional[Decimal] = field(
         default=None,
@@ -54,7 +58,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "name": "Premium",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )
     comment: Optional[str] = field(
         default=None,
@@ -62,5 +66,5 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "name": "Comment",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-        }
+        },
     )

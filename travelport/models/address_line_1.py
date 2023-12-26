@@ -9,6 +9,7 @@ class AddressLine1:
     """
     Specifies a single line within an address.
     """
+
     class Meta:
         name = "AddressLine"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
@@ -19,5 +20,5 @@ class AddressLine1:
             "required": True,
             "min_length": 1,
             "max_length": 128,
-        }
+        },
     )

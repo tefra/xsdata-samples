@@ -46,6 +46,7 @@ class TypeFareGuarantee(Enum):
         To handle new enumerations added by provider but currently not
         recognized by API
     """
+
     AUTO = "Auto"
     MANUAL = "Manual"
     MANUAL_FARE = "ManualFare"

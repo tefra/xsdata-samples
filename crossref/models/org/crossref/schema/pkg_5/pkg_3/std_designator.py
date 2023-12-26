@@ -15,5 +15,5 @@ class StdDesignator:
             "required": True,
             "min_length": 2,
             "max_length": 150,
-        }
+        },
     )

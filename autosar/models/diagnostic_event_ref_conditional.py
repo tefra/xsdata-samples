@@ -26,16 +26,19 @@ class DiagnosticEventRefConditional:
         meaning for an AUTOSAR model and there is no requirement for
         AUTOSAR tools to manage the timestamp.
     """
+
     class Meta:
         name = "DIAGNOSTIC-EVENT-REF-CONDITIONAL"
 
-    diagnostic_event_ref: Optional["DiagnosticEventRefConditional.DiagnosticEventRef"] = field(
+    diagnostic_event_ref: Optional[
+        "DiagnosticEventRefConditional.DiagnosticEventRef"
+    ] = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     variation_point: Optional[VariationPoint] = field(
         default=None,
@@ -43,14 +46,14 @@ class DiagnosticEventRefConditional:
             "name": "VARIATION-POINT",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-        }
+        },
     )
     s: Optional[str] = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
-        }
+        },
     )
     t: Optional[str] = field(
         default=None,
@@ -58,7 +61,7 @@ class DiagnosticEventRefConditional:
             "name": "T",
             "type": "Attribute",
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        }
+        },
     )
 
     @dataclass
@@ -69,5 +72,5 @@ class DiagnosticEventRefConditional:
                 "name": "DEST",
                 "type": "Attribute",
                 "required": True,
-            }
+            },
         )
